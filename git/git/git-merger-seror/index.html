@@ -23,21 +23,21 @@
     var NexT = window.NexT || {};
     var CONFIG = {"hostname":"lzhwweb.github.io","root":"/nirvana/","images":"/nirvana/images","scheme":"Gemini","version":"8.2.2","exturl":false,"sidebar":{"position":"left","display":"post","padding":18,"offset":12},"copycode":false,"bookmark":{"enable":false,"color":"#222","save":"auto"},"fancybox":false,"mediumzoom":false,"lazyload":false,"pangu":false,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},"motion":{"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"fadeInDown","post_body":"fadeInDown","coll_header":"fadeInLeft","sidebar":"fadeInUp"}},"prism":false,"i18n":{"placeholder":"搜索...","empty":"没有找到任何搜索结果：${query}","hits_time":"找到 ${hits} 个搜索结果（用时 ${time} 毫秒）","hits":"找到 ${hits} 个搜索结果"}};
   </script>
-<meta name="description" content="使用 git branch -a 命令可以查看所有本地分支和远程分支（git branch -r 可以只查看远程分支）发现很多在远程仓库已经删除的分支在本地依然可以看到。 123456789101112# git branch -a  2-android-tableview-resize  20180131hotfix  master  release0308_v52  release0322*">
+<meta name="description" content="Git 的报错一、fatal: refusing to merge unrelated histories新建了一个仓库之后，把本地仓库进行关联提交、拉取的时候，出现了如下错误： 12fatal: &#39;master&#39; does not appear to be a git repositoryfatal: Could not read from remote repository.">
 <meta property="og:type" content="article">
-<meta property="og:title" content="Git 清除远端已删除的分支">
-<meta property="og:url" content="https://lzhwweb.github.io/nirvana/git/git/git-delete-orgin/index.html">
+<meta property="og:title" content="fatal: refusing to merge unrelated histories">
+<meta property="og:url" content="https://lzhwweb.github.io/nirvana/git/git/git-merger-seror/index.html">
 <meta property="og:site_name" content="涅槃快乐是金">
-<meta property="og:description" content="使用 git branch -a 命令可以查看所有本地分支和远程分支（git branch -r 可以只查看远程分支）发现很多在远程仓库已经删除的分支在本地依然可以看到。 123456789101112# git branch -a  2-android-tableview-resize  20180131hotfix  master  release0308_v52  release0322*">
+<meta property="og:description" content="Git 的报错一、fatal: refusing to merge unrelated histories新建了一个仓库之后，把本地仓库进行关联提交、拉取的时候，出现了如下错误： 12fatal: &#39;master&#39; does not appear to be a git repositoryfatal: Could not read from remote repository.">
 <meta property="og:locale" content="zh_CN">
-<meta property="article:published_time" content="2021-03-09T13:05:00.000Z">
-<meta property="article:modified_time" content="2021-03-09T13:09:15.369Z">
+<meta property="article:published_time" content="2021-03-09T13:23:37.000Z">
+<meta property="article:modified_time" content="2021-03-09T13:23:54.984Z">
 <meta property="article:author" content="nirvana">
 <meta property="article:tag" content="前端,javascript,node,git">
 <meta name="twitter:card" content="summary">
 
 
-<link rel="canonical" href="https://lzhwweb.github.io/nirvana/git/git/git-delete-orgin/">
+<link rel="canonical" href="https://lzhwweb.github.io/nirvana/git/git/git-merger-seror/">
 
 
 <script class="page-configurations">
@@ -49,7 +49,7 @@
     lang   : 'zh-CN'
   };
 </script>
-<title>Git 清除远端已删除的分支 | 涅槃快乐是金</title>
+<title>fatal: refusing to merge unrelated histories | 涅槃快乐是金</title>
   
 
 
@@ -213,7 +213,7 @@
   
 
   <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="zh-CN">
-    <link itemprop="mainEntityOfPage" href="https://lzhwweb.github.io/nirvana/git/git/git-delete-orgin/">
+    <link itemprop="mainEntityOfPage" href="https://lzhwweb.github.io/nirvana/git/git/git-merger-seror/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="image" content="/nirvana/images/avatar.gif">
@@ -226,7 +226,7 @@
     </span>
       <header class="post-header">
         <h1 class="post-title" itemprop="name headline">
-          Git 清除远端已删除的分支
+          fatal: refusing to merge unrelated histories
         </h1>
 
         <div class="post-meta-container">
@@ -238,7 +238,7 @@
       <span class="post-meta-item-text">发表于</span>
       
 
-      <time title="创建时间：2021-03-09 21:05:00 / 修改时间：21:09:15" itemprop="dateCreated datePublished" datetime="2021-03-09T21:05:00+08:00">2021-03-09</time>
+      <time title="创建时间：2021-03-09 21:23:37 / 修改时间：21:23:54" itemprop="dateCreated datePublished" datetime="2021-03-09T21:23:37+08:00">2021-03-09</time>
     </span>
     <span class="post-meta-item">
       <span class="post-meta-item-icon">
@@ -258,14 +258,14 @@
         <i class="far fa-file-word"></i>
       </span>
       <span class="post-meta-item-text">本文字数：</span>
-      <span>1.7k</span>
+      <span>629</span>
     </span>
     <span class="post-meta-item" title="阅读时长">
       <span class="post-meta-item-icon">
         <i class="far fa-clock"></i>
       </span>
       <span class="post-meta-item-text">阅读时长 &asymp;</span>
-      <span>2 分钟</span>
+      <span>1 分钟</span>
     </span>
 </div>
 
@@ -276,14 +276,13 @@
     
     
     <div class="post-body" itemprop="articleBody">
-        <p>使用 git branch -a 命令可以查看所有本地分支和远程分支（git branch -r 可以只查看远程分支）<br>发现很多在远程仓库已经删除的分支在本地依然可以看到。</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line"># git branch -a</span><br><span class="line">  2-android-tableview-resize</span><br><span class="line">  20180131hotfix</span><br><span class="line">  master</span><br><span class="line">  release0308_v52</span><br><span class="line">  release0322</span><br><span class="line">* release20180412_from0326</span><br><span class="line">  remotes&#x2F;origin&#x2F;2-android-tableview-resize</span><br><span class="line">  remotes&#x2F;origin&#x2F;20180131hotfix</span><br><span class="line">  remotes&#x2F;origin&#x2F;HEAD -&gt; origin&#x2F;master</span><br><span class="line">  remotes&#x2F;origin&#x2F;dev</span><br><span class="line">  remotes&#x2F;origin&#x2F;dev_cache_renxj</span><br></pre></td></tr></table></figure>
-
-<p>使用命令 git remote show origin，可以查看remote地址，远程分支，还有本地分支与之相对应关系等信息。</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br></pre></td><td class="code"><pre><span class="line"># git remote show origin</span><br><span class="line">* remote origin</span><br><span class="line">  Fetch URL: git@*********</span><br><span class="line">  Push  URL: git@**********</span><br><span class="line">  HEAD branch: master</span><br><span class="line">  Remote branches:</span><br><span class="line">    2-android-tableview-resize                        tracked</span><br><span class="line">    20180131hotfix                                    tracked</span><br><span class="line">    master                                            tracked</span><br><span class="line">    mergeFrom0808AndDev                               tracked</span><br><span class="line">    refs&#x2F;remotes&#x2F;origin&#x2F;3IN1                          stale (use &#39;git remote prune&#39; to remove)</span><br><span class="line">    refs&#x2F;remotes&#x2F;origin&#x2F;3IN1_v052                     stale (use &#39;git remote prune&#39; to remove)</span><br><span class="line">    refs&#x2F;remotes&#x2F;origin&#x2F;dev20171214                   stale (use &#39;git remote prune&#39; to remove)</span><br><span class="line">......</span><br><span class="line">    release1228                                       tracked</span><br><span class="line">    release20180130                                   tracked</span><br><span class="line">  Local branches configured for &#39;git pull&#39;:</span><br><span class="line">    2-android-tableview-resize                  merges with remote 2-android-tableview-resize</span><br><span class="line">    20180131hotfix                              merges with remote 20180131hotfix</span><br><span class="line">    3IN1                                        merges with remote 3IN1</span><br><span class="line">    dev                                         merges with remote dev</span><br><span class="line">    dev20171214                                 merges with remote dev20171214</span><br><span class="line">......</span><br><span class="line">  Local refs configured for &#39;git push&#39;:</span><br><span class="line">    2-android-tableview-resize                  pushes to 2-android-tableview-resize                  (up to date)</span><br><span class="line">    20180131hotfix                              pushes to 20180131hotfix                              (up to date)</span><br><span class="line">........</span><br></pre></td></tr></table></figure>
-<p>此时我们可以看到那些远程仓库已经不存在的分支，根据提示，使用 git remote prune origin 命令：</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">git remote prune origin</span><br><span class="line">Pruning origin</span><br><span class="line">URL: git@**********</span><br><span class="line"> * [pruned] origin&#x2F;3IN1</span><br><span class="line"> * [pruned] origin&#x2F;3IN1_v052</span><br><span class="line"> * [pruned] origin&#x2F;dev20171214</span><br><span class="line">........</span><br></pre></td></tr></table></figure>
-<p>这样就删除了那些远程仓库不存在的分支。</p>
+        <p>Git 的报错<br>一、fatal: refusing to merge unrelated histories<br>新建了一个仓库之后，把本地仓库进行关联提交、拉取的时候，出现了如下错误：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">fatal: &#39;master&#39; does not appear to be a git repository</span><br><span class="line">fatal: Could not read from remote repository.</span><br></pre></td></tr></table></figure>
+<p>二、解决方案<br>在你操作命令后面加 –allow-unrelated-histories<br>例如：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">git merge master --allow-unrelated-histories</span><br><span class="line">$ git pull --allow-unrelated-histories</span><br><span class="line">CONFLICT (add&#x2F;add): Merge conflict in .gitignore</span><br><span class="line">Auto-merging .gitignore</span><br><span class="line">Automatic merge failed; fix conflicts and then commit the result.</span><br></pre></td></tr></table></figure>
+<p>我这里由于使用了官方的 .gitignore 自动合并失败，需要手动合并之后再进行 add、commit 即可</p>
+<p>如果你是git pull或者git push报fatal: refusing to merge unrelated histories<br>同理：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">git pull origin master --allow-unrelated-histories &#x2F; git pull --allow-unrelated-histories</span><br></pre></td></tr></table></figure>
 
     </div>
 
@@ -297,14 +296,11 @@
 
           <div class="post-nav">
             <div class="post-nav-item">
-                <a href="/nirvana/git/git/gitCount/" rel="prev" title="Git统计每个人提交的Commit次数和代码行数">
-                  <i class="fa fa-chevron-left"></i> Git统计每个人提交的Commit次数和代码行数
+                <a href="/nirvana/git/git/git-users-set/" rel="prev" title="Git多账号配置">
+                  <i class="fa fa-chevron-left"></i> Git多账号配置
                 </a>
             </div>
             <div class="post-nav-item">
-                <a href="/nirvana/git/git/git-code-count/" rel="next" title="git代码统计">
-                  git代码统计 <i class="fa fa-chevron-right"></i>
-                </a>
             </div>
           </div>
     </footer>
