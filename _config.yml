@@ -8,14 +8,14 @@ subtitle: ''
 description: '个人学习笔记'
 keywords: 前端,javascript,node,git
 author: nirvana
-language: cn
+language: zh-CN
 timezone: ''
 avatar: https://avatars.githubusercontent.com/u/8438772?s=60&v=4
 # URL
 ## Set your site url here. For example, if you use GitHub Page, set url as 'https://username.github.io/project'
 url: https://lzhwweb.github.io/nirvana/
 root: /nirvana/
-permalink: :year/:month/:day/:title/
+permalink: :category/:title/
 permalink_defaults:
 pretty_urls:
   trailing_index: true # Set to false to remove trailing 'index.html' from permalinks
@@ -108,4 +108,9 @@ deploy:
 - type: git
   repo: 
     github: https://github.com/lzhwWeb/nirvana.git
-
+# 文章字数统计
+symbols_count_time:
+  symbols: true
+  time: true
+  total_symbols: true
+  total_time: true
