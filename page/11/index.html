@@ -179,7 +179,7 @@
   <nav class="site-state">
       <div class="site-state-item site-state-posts">
           <a href="/nirvana/archives">
-          <span class="site-state-item-count">177</span>
+          <span class="site-state-item-count">176</span>
           <span class="site-state-item-name">日志</span>
         </a>
       </div>
@@ -591,266 +591,6 @@ res.end();
   
 
   <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="">
-    <link itemprop="mainEntityOfPage" href="https://lzhwweb.github.io/nirvana/javascript/%E5%89%8D%E7%AB%AF/Javascript%E5%87%BD%E6%95%B0%E5%BC%8F%E7%BC%96%E7%A8%8B%E8%A6%81%E6%8E%8C%E6%8F%A1%E7%9A%84%E7%9F%A5%E8%AF%86%E7%82%B9%E8%AE%B2%E8%A7%A3-1/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="image" content="/nirvana/images/headphoto.jpeg">
-      <meta itemprop="name" content="nirvana">
-      <meta itemprop="description" content="个人学习笔记">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="涅槃快乐是金">
-    </span>
-      <header class="post-header">
-        <h2 class="post-title" itemprop="name headline">
-          <a href="/nirvana/javascript/%E5%89%8D%E7%AB%AF/Javascript%E5%87%BD%E6%95%B0%E5%BC%8F%E7%BC%96%E7%A8%8B%E8%A6%81%E6%8E%8C%E6%8F%A1%E7%9A%84%E7%9F%A5%E8%AF%86%E7%82%B9%E8%AE%B2%E8%A7%A3-1/" class="post-title-link" itemprop="url">Javascript函数式编程要掌握的知识点讲解-1</a>
-        </h2>
-
-        <div class="post-meta-container">
-          <div class="post-meta">
-    <span class="post-meta-item">
-      <span class="post-meta-item-icon">
-        <i class="far fa-calendar"></i>
-      </span>
-      <span class="post-meta-item-text">发表于</span>
-
-      <time title="创建时间：2021-03-11 21:12:40" itemprop="dateCreated datePublished" datetime="2021-03-11T21:12:40+08:00">2021-03-11</time>
-    </span>
-      <span class="post-meta-item">
-        <span class="post-meta-item-icon">
-          <i class="far fa-calendar-check"></i>
-        </span>
-        <span class="post-meta-item-text">更新于</span>
-        <time title="修改时间：2021-03-10 13:43:55" itemprop="dateModified" datetime="2021-03-10T13:43:55+08:00">2021-03-10</time>
-      </span>
-    <span class="post-meta-item">
-      <span class="post-meta-item-icon">
-        <i class="far fa-folder"></i>
-      </span>
-      <span class="post-meta-item-text">分类于</span>
-        <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-          <a href="/nirvana/categories/javascript/" itemprop="url" rel="index"><span itemprop="name">javascript</span></a>
-        </span>
-    </span>
-
-  
-      </div>
-      <div class="post-meta">
-    <span class="post-meta-item" title="本文字数">
-      <span class="post-meta-item-icon">
-        <i class="far fa-file-word"></i>
-      </span>
-      <span class="post-meta-item-text">本文字数：</span>
-      <span>18k</span>
-    </span>
-    <span class="post-meta-item" title="阅读时长">
-      <span class="post-meta-item-icon">
-        <i class="far fa-clock"></i>
-      </span>
-      <span class="post-meta-item-text">阅读时长 &asymp;</span>
-      <span>16 分钟</span>
-    </span>
-</div>
-
-        </div>
-      </header>
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-          <p><strong>一：理解call和apply 及arguments.callee</strong></p>
-<p>ECMAScript3给Function的原型定义了两个方法，他们是<code>Function.prototype.call</code> 和 <code>Function.prototype.apply</code>. 其实他们的作用是一样的，只是传递的参数不一样而已；</p>
-<p><strong>1. apply;</strong> 接受2个参数，第一个参数指定了函数体内this对象的指向，第二个参数为一个类似数组的集合，比如如下代码：</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line">var yunxi &#x3D; function(a,b)&#123;</span><br><span class="line"></span><br><span class="line">   console.log([a,b]); &#x2F;&#x2F; [1,2]</span><br><span class="line"></span><br><span class="line">   console.log(this &#x3D;&#x3D;&#x3D; window); &#x2F;&#x2F; true</span><br><span class="line"></span><br><span class="line">&#125;;</span><br><span class="line"></span><br><span class="line">yunxi.apply(null,[1,2]);</span><br></pre></td></tr></table></figure>
-
-<p>如上代码，我们第一个参数传入null，函数体内默认会指向与宿主对象，即window对象；因此我们可以在yunxi函数内打印下值为true即可看到：</p>
-<p>下面我们来看看使用call方法的实例如下：</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line">var yunxi &#x3D; function(a,b)&#123;</span><br><span class="line"></span><br><span class="line">   console.log([a,b]); &#x2F;&#x2F; [1,2]</span><br><span class="line"></span><br><span class="line">   console.log(this &#x3D;&#x3D;&#x3D; window); &#x2F;&#x2F; true</span><br><span class="line"></span><br><span class="line">&#125;;</span><br><span class="line"></span><br><span class="line">yunxi.call(null,1,2);</span><br></pre></td></tr></table></figure>
-
-<p>可以看到 call方法的第二个参数是以逗号隔开的参数；</p>
-<p><strong>那么call和apply用在什么地方呢？</strong></p>
-<p>1.call和apply 最常见的用途是改变函数体内的this指向，如下代码:</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line">var longen &#x3D; &#123;</span><br><span class="line">    name:&#39;yunxi&#39;</span><br><span class="line">&#125;;</span><br><span class="line">var longen2 &#x3D; &#123;</span><br><span class="line">    name: &#39;我叫涂根华&#39;</span><br><span class="line">&#125;;</span><br><span class="line">var name &#x3D; &quot;我是来测试的&quot;;</span><br><span class="line">var getName &#x3D; function()&#123;</span><br><span class="line">    return this.name;</span><br><span class="line">&#125;;</span><br><span class="line">console.log(getName()); &#x2F;&#x2F; 打印 &quot;我是来测试的&quot;;</span><br><span class="line">console.log(getName.call(longen)); &#x2F;&#x2F; 打印 yunxi</span><br><span class="line">console.log(getName.call(longen2)); &#x2F;&#x2F; 打印 &quot;我叫涂根华&quot;</span><br></pre></td></tr></table></figure>
-
-<p>第一次调用 <code>getName()</code>方法，因为它是普通函数调用，所以它的this指向与window，因此打印出全局对象的name的值；</p>
-<p>第二次调用<code>getName.call(longen);</code>执行这句代码后，getName这个方法的内部指针this指向于longen这个对象了，因此打印<code>this.name</code>实际上是longen.name，因此返回的是<code>name=”yunxi”;</code></p>
-<p>但是this指针也有列外的情况，比如一个点击元素，当我们点击一个元素的时候，this指针就指向与那个点击元素，但是当我们在内部再包含一个函数后，在函数内再继续调用this的话，那么现在的this指针就指向了window了；比如如下代码：</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">document.getElementById(&quot;longen&quot;).onclick &#x3D; function()&#123;</span><br><span class="line">    console.log(this); &#x2F;&#x2F; this 就指向于div元素对象了</span><br><span class="line">    var func &#x3D; function()&#123;</span><br><span class="line">        console.log(this); &#x2F;&#x2F; 打印出window对象</span><br><span class="line">    &#125;</span><br><span class="line">    func();</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-
-<p>如上代码。可以看到外部this指向与被点击的那个元素，内部普通函数调用，this指针都是指向于window对象。但是我们可以使用call或者apply方法来改变this的指针的；如下代码：</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">document.getElementById(&quot;longen&quot;).onclick &#x3D; function()&#123;</span><br><span class="line">    console.log(this); &#x2F;&#x2F; this 就指向于div元素对象了</span><br><span class="line">    var func &#x3D; function()&#123;</span><br><span class="line">        console.log(this); &#x2F;&#x2F; 就指向于div元素对象了</span><br><span class="line">    &#125;</span><br><span class="line">    func.call(this);</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-
-<p>如上代码我们使用call方法调用func函数，使this指向与func这个对象了，当然上面的方法我们还可以不使用call或者apply方法来改变this的指针，我们可以在外部先使用一个变量来保存this的指针，在内部调用的时候我们可以使用哪个变量即可，如下代码演示：</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">document.getElementById(&quot;longen&quot;).onclick &#x3D; function()&#123;</span><br><span class="line">    console.log(this); &#x2F;&#x2F; this 就指向于div元素对象了</span><br><span class="line">    var self &#x3D; this;</span><br><span class="line">    var func &#x3D; function()&#123;</span><br><span class="line">        console.log(self); &#x2F;&#x2F; 就指向于div元素对象了</span><br><span class="line">    &#125;</span><br><span class="line">    func();</span><br><span class="line">&#125;  </span><br></pre></td></tr></table></figure>
-
-<p><strong>arguments.callee的理解</strong></p>
-<p>callee是arguments的一个属性，它可以被用作当前函数或函数体执行的环境中，或者说调用一个匿名函数；返回的是当前正在被执行的Function对象；简单的来说就是当前执行环境的函数被调用时候，arguments.callee对象会指向与自身，就是当前的那个函数的引用；</p>
-<p>如下代码：</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line">var count &#x3D; 1;</span><br><span class="line">var test &#x3D; function() &#123;</span><br><span class="line">    console.log(count + &quot; -- &quot; + (test.length &#x3D;&#x3D; arguments.callee.length) );</span><br><span class="line">    &#x2F;&#x2F; 打印出 1 -- true 2 -- true  3 -- true </span><br><span class="line">    if (count++ &lt; 3) &#123;</span><br><span class="line">        &#x2F;&#x2F; 调用test()函数自身</span><br><span class="line">        arguments.callee();</span><br><span class="line">    &#125;</span><br><span class="line">&#125;;</span><br><span class="line">test();</span><br></pre></td></tr></table></figure>
-
-<p><code>arguments.callee()</code>的含义是调用当前正在执行的函数自身，比如上面的test的匿名函数；</p>
-<p><strong>Function.prototype.bind介绍</strong></p>
-<p>目前很多高级浏览器都支持<code>Function.prototype.bind</code>方法，该方法用来指定函数内部的this指向。为了支持各个浏览器，我们也可以自己来简单的模拟一个~</p>
-<p>如下代码：</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br></pre></td><td class="code"><pre><span class="line">Function.prototype.bind &#x3D; function(context) &#123;</span><br><span class="line">    var self &#x3D; this;</span><br><span class="line">    return function()&#123;</span><br><span class="line">        return self.apply(context,arguments);</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br><span class="line">var yunxi &#x3D; &#123;</span><br><span class="line">    name: &#39;yunxi&#39;</span><br><span class="line">&#125;;</span><br><span class="line"></span><br><span class="line">var func &#x3D; function()&#123;</span><br><span class="line">    console.log(this.name); &#x2F;&#x2F; yunxi</span><br><span class="line">&#125;.bind(yunxi);</span><br><span class="line"></span><br><span class="line">func();</span><br></pre></td></tr></table></figure>
-
-<p>如上代码所示：func这个函数使用调用bind这个方法，并且把对象yunxi作为参数传进去，然后bind函数使用return返回一个函数，当我们调用<code>func()</code>执行这个方法的时候，其实我们就是在调用bind方法内的return返回的那个函数，在返回的那个函数内context的上下文其实就是我们以参数yunxi对象传进去的，因此this指针指向与yunxi这个对象了~ 所以打印出<code>this.name</code> 就是yunxi那个对象的name了;</p>
-<p>除了上面我们看到的介绍apply或者call方法可以改变this指针外，我们还可以使用call或者apply来继承对象的方法；实质也就是改变this的指针了；</p>
-<p>比如有如下代码：</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><span class="line">var Yunxi &#x3D; function(name)&#123;</span><br><span class="line">    this.name &#x3D; name;</span><br><span class="line">&#125;;</span><br><span class="line"></span><br><span class="line">var Longen &#x3D; function()&#123;</span><br><span class="line">    Yunxi.apply(this,arguments);</span><br><span class="line">&#125;;</span><br><span class="line"></span><br><span class="line">Longen.prototype.getName &#x3D; function()&#123;</span><br><span class="line">    return this.name;</span><br><span class="line">&#125;;</span><br><span class="line"></span><br><span class="line">var longen &#x3D; new Longen(&quot;tugenhua&quot;);</span><br><span class="line">console.log(longen.getName());  &#x2F;&#x2F; 打印出tugenhua</span><br></pre></td></tr></table></figure>
-
-<p>如上代码：我先实例化Longen这个对象，把参数传进去，之后使用<code>Yunxi.apply(this,arguments)</code>这句代码来改变Longen这个对象的this的指针，使他指向了Yunxi这个对象，因此Yunxi这个对象保存了longen这个实例化对象的参数tugenhua，因此当我们调用<code>longen.getName</code>这个方法的时候，我们返回<code>this.name</code>，即我们可以认为返回的是<code>Yunxi.name</code> 因此返回的是 tugenhua，我们只是借用了下Yunxi这个对象内的<code>this.name</code>来保存Longen传进去的参数而已；</p>
-<p><strong>二：闭包的理解</strong></p>
-<p><strong>闭包的结构有如下2个特性</strong></p>
-<p>1.封闭性：外界无法访问闭包内部的数据，如果在闭包内声明变量，外界是无法访问的，除非闭包主动向外界提供访问接口；</p>
-<p>2.持久性：一般的函数，调用完毕之后，系统自动注销函数，而对于闭包来说，在外部函数被调用之后，闭包结构依然保存在</p>
-<p>系统中，闭包中的数据依然存在，从而实现对数据的持久使用。</p>
-<p>缺点：</p>
-<p>使用闭包会占有内存资源，过多的使用闭包会导致内存溢出等.</p>
-<p>如下代码：</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line">function a(x) &#123;</span><br><span class="line">    var a &#x3D; x;</span><br><span class="line">    var b &#x3D; function()&#123;</span><br><span class="line">        return a;</span><br><span class="line">    &#125;</span><br><span class="line">    return b;</span><br><span class="line">&#125;</span><br><span class="line">var b &#x3D; a(1);</span><br><span class="line">console.log(b()); &#x2F;&#x2F; 1</span><br></pre></td></tr></table></figure>
-
-<p>首先在a函数内定义了2个变量，1个是存储参数，另外一个是闭包结构，在闭包结构中保存着b函数内的a变量，默认情况下，当a函数调用完之后a变量会自动销毁的，但是由于闭包的影响，闭包中使用了外界的变量，因此a变量会一直保存在内存当中，因此变量a参数没有随着a函数销毁而被释放，因此引申出闭包的缺点是：过多的使用闭包会占有内存资源，或内存溢出等肯能性；</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line">&#x2F;&#x2F; 经典的闭包实列如下：</span><br><span class="line">function f(x)&#123;              &#x2F;&#x2F;外部函数</span><br><span class="line">    var a &#x3D; x;              &#x2F;&#x2F; 外部函数的局部变量，并传递参数</span><br><span class="line">    var b &#x3D; function()&#123;     &#x2F;&#x2F; 内部函数 </span><br><span class="line">        return a;           &#x2F;&#x2F; 访问外部函数中的局部变量</span><br><span class="line">    &#125;;</span><br><span class="line">    a++;                    &#x2F;&#x2F; 访问后，动态更新外部函数的变量</span><br><span class="line">    return b;               &#x2F;&#x2F; 返回内部函数</span><br><span class="line">&#125;</span><br><span class="line">var c &#x3D; f(5);               &#x2F;&#x2F; 调用外部函数并且赋值</span><br><span class="line">console.log(c());           &#x2F;&#x2F; 调用内部函数，返回外部函数更新后的值为6</span><br></pre></td></tr></table></figure>
-
-<p><strong>下面我们来看看如下使用闭包的列子</strong></p>
-<p>在如下代码中有2个函数，f函数的功能是：把数组类型的参数中每个元素的值分别封装在闭包结构中，然后把闭包存储在一个数组中，并返回这个数组，但是在函数e中调用函数f并向其传递一个数组<code>[&quot;a&quot;,&quot;b&quot;,&quot;c&quot;]</code>,然后遍历返回函数f返回数组，我们运行打印后发现都是c undefined，那是因为在执行f函数中的循环时候，把值虽然保存在temp中，但是每次循环后temp值在不断的变化，当for循环结束后，此时temp值为c，同时i变为3，因此当调用的时候 打印出来的是temp为3，arrs[3]变为undefined；因此打印出 c undefined</p>
-<p>解决闭包的缺陷我们可以再在外面包一层函数，每次循环的时候，把temp参数和i参数传递进去 如代码二</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br></pre></td><td class="code"><pre><span class="line">&#x2F;&#x2F; 代码一</span><br><span class="line">function f(x) &#123;</span><br><span class="line">    var arrs &#x3D; [];</span><br><span class="line">    for(var i &#x3D; 0; i &lt; x.length; i++) &#123;</span><br><span class="line">        var temp &#x3D; x[i];</span><br><span class="line">        arrs.push(function()&#123;</span><br><span class="line">            console.log(temp + &#39; &#39; +x[i]); &#x2F;&#x2F; c undefined</span><br><span class="line">        &#125;);</span><br><span class="line">    &#125;</span><br><span class="line">    return arrs;</span><br><span class="line">&#125;</span><br><span class="line">function e()&#123;</span><br><span class="line">    var ar &#x3D; f([&quot;a&quot;,&quot;b&quot;,&quot;c&quot;]);</span><br><span class="line">    for(var i &#x3D; 0,ilen &#x3D; ar.length; i &lt; ilen; i++) &#123;</span><br><span class="line">        ar[i]();</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br><span class="line">e(); </span><br><span class="line">&#x2F;&#x2F; 代码二：</span><br><span class="line">function f2(x) &#123;</span><br><span class="line">    var arrs &#x3D; [];</span><br><span class="line">    for(var i &#x3D; 0; i &lt; x.length; i++) &#123;</span><br><span class="line">        var temp &#x3D; x[i];</span><br><span class="line">        (function(temp,i)&#123;</span><br><span class="line">            arrs.push(function()&#123;</span><br><span class="line">                console.log(temp + &#39; &#39; +x[i]); &#x2F;&#x2F; c undefined</span><br><span class="line">            &#125;);</span><br><span class="line">        &#125;)(temp,i);</span><br><span class="line">    &#125;</span><br><span class="line">    return arrs;</span><br><span class="line">&#125;</span><br><span class="line">function e2()&#123;</span><br><span class="line">    var ar &#x3D; f2([&quot;a&quot;,&quot;b&quot;,&quot;c&quot;]);</span><br><span class="line">    for(var i &#x3D; 0,ilen &#x3D; ar.length; i &lt; ilen; i++) &#123;</span><br><span class="line">        ar[i]();</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br><span class="line">e2(); </span><br></pre></td></tr></table></figure>
-
-<p><strong>三：javascript中的this详解</strong></p>
-<p>this的指向常见的有如下几点需要常用到：</p>
-<ol>
-<li> 全局对象的this是指向与window；</li>
-<li> 作为普通函数调用。</li>
-<li> 作为对象方法调用。</li>
-<li> 构造器调用。</li>
-<li> <code>Function.prototype.call</code> 或 <code>Function.prototype.apply</code>调用。</li>
-</ol>
-<p>下面我们分别来介绍一下</p>
-<p><strong>1.全局对象的this；</strong></p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line">console.log(this); &#x2F;&#x2F; this指向于window</span><br><span class="line">setTimeout() 和 setInterval()函数内部的this指针是指向于window的，如下代码：</span><br><span class="line"> function test()&#123;</span><br><span class="line">    console.log(11);</span><br><span class="line"> &#125;</span><br><span class="line"> setTimeout(function()&#123;</span><br><span class="line">    console.log(this &#x3D;&#x3D;&#x3D; window); &#x2F;&#x2F; true</span><br><span class="line">    this.test(); &#x2F;&#x2F; 11 </span><br><span class="line"> &#125;);</span><br></pre></td></tr></table></figure>
-
-<p><strong>2.作为普通函数调用；</strong></p>
-<p>如下代码：</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">var name &#x3D; &quot;longen&quot;;</span><br><span class="line">function test()&#123;</span><br><span class="line">    return this.name;</span><br><span class="line">&#125;</span><br><span class="line">console.log(test()); &#x2F;&#x2F; longen</span><br></pre></td></tr></table></figure>
-
-<p>当作为普通函数调用时候，this总是指向了全局对象，在浏览器当中，全局对象一般指的是window；</p>
-<p><strong>3.作为对象的方法调用。</strong></p>
-<p>如下代码：</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">var obj &#x3D; &#123;</span><br><span class="line">    &quot;name&quot;: &quot;我的花名改为云溪了，就是为了好玩&quot;,</span><br><span class="line">    getName: function()&#123;</span><br><span class="line">        console.log(this); &#x2F;&#x2F; 在这里this指向于obj对象了</span><br><span class="line">        console.log(this.name); &#x2F;&#x2F; 打印 我的花名改为云溪了，就是为了好玩</span><br><span class="line">    &#125;</span><br><span class="line">&#125;;</span><br><span class="line">obj.getName(); &#x2F;&#x2F; 对象方法调用</span><br></pre></td></tr></table></figure>
-
-<p>但是呢，我们不能像如下一样调用对象了，如下调用对象的话，this还是执行了window，如下代码：</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line">var name &#x3D; &quot;全局对象名字&quot;;</span><br><span class="line">var obj &#x3D; &#123;</span><br><span class="line">    &quot;name&quot;: &quot;我的花名改为云溪了，就是为了好玩&quot;,</span><br><span class="line">    getName: function()&#123;</span><br><span class="line">        console.log(this);  &#x2F;&#x2F; window</span><br><span class="line">        console.log(this.name); &#x2F;&#x2F; 全局对象名字</span><br><span class="line">    &#125;</span><br><span class="line">&#125;;</span><br><span class="line">var yunxi &#x3D; obj.getName; </span><br><span class="line">yunxi();</span><br></pre></td></tr></table></figure>
-
-<p>运行yunxi()函数，还是会像调用普通函数一样，this指向了window的；</p>
-<p><strong>4.构造器调用。</strong><br>Javascript中不像Java一样，有类的概念，而JS中只能通过构造器创建对象，通过new 对象，当new运算符调用函数时候，该函数会返回一个对象，一般情况下，构造器里面的this就是指向返回的这个对象；</p>
-<p>如下代码：</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">var Obj &#x3D; function()&#123;</span><br><span class="line">    this.name &#x3D; &quot;yunxi&quot;;</span><br><span class="line">&#125;;</span><br><span class="line">var test &#x3D; new Obj();</span><br><span class="line">console.log(test.name); &#x2F;&#x2F; yunxi</span><br></pre></td></tr></table></figure>
-
-<p>注意：构造器函数第一个字母需要大写，这是为了区分普通函数还是构造器函数而言；</p>
-<p>如上代码：通过调用<code>new Obj()</code>方法 返回值保存到test变量中，那么test就是那个对象了，所以内部的this就指向与test对象了，因此<code>test.name</code>就引用到了内部的<code>this.name</code> 即输出 “yunxi”字符串；</p>
-<p>但是也有例外的情况，比如构造器显示地返回了一个对象的话，那么这次继续调用的话，那么会最终会返回这个对象，比如如下代码：</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">var obj &#x3D; function()&#123;</span><br><span class="line">    this.name &#x3D; &quot;yunxi&quot;;</span><br><span class="line">    return &#123;</span><br><span class="line">        &quot;age&quot;: &quot;27&quot;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;;</span><br><span class="line">var test &#x3D; new obj();</span><br><span class="line">console.log(test.name); &#x2F;&#x2F; undefined</span><br></pre></td></tr></table></figure>
-
-<p>那么继续调用的话，会返回unedfined，因为返回的是那个对象，对象里面没有name这个属性，因此值为undefined；</p>
-<p><strong>四：理解函数引用和函数调用的区别</strong></p>
-<p>看下面的代码分析:</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br></pre></td><td class="code"><pre><span class="line">&#x2F;&#x2F; 函数引用 代码一</span><br><span class="line">function f()&#123;</span><br><span class="line">    var x &#x3D; 5;</span><br><span class="line">    return x;</span><br><span class="line">&#125;</span><br><span class="line">var a &#x3D; f;</span><br><span class="line">var b &#x3D; f;</span><br><span class="line"></span><br><span class="line">console.log(a&#x3D;&#x3D;&#x3D;b); &#x2F;&#x2F; true</span><br><span class="line">&#x2F;&#x2F; 函数调用 代码二</span><br><span class="line">function f2() &#123;</span><br><span class="line">    var x &#x3D; 5;</span><br><span class="line">    return x;</span><br><span class="line">&#125;</span><br><span class="line">var a2 &#x3D; f2();</span><br><span class="line">var b2 &#x3D; f2();</span><br><span class="line">console.log(a2 &#x3D;&#x3D;&#x3D; b2);</span><br><span class="line"></span><br><span class="line">&#x2F;&#x2F; 函数调用 代码三</span><br><span class="line">function f3()&#123;</span><br><span class="line">    var x &#x3D; 5;</span><br><span class="line">    return function()&#123;</span><br><span class="line">        return x;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br><span class="line">var a3 &#x3D; f3();</span><br><span class="line">var b3 &#x3D; f3();</span><br><span class="line">console.log(a3 &#x3D;&#x3D;&#x3D; b3); &#x2F;&#x2F; false</span><br></pre></td></tr></table></figure>
-
-<p>如上的代码：代码一和代码二分部是函数引用和函数调用的列子，返回都为true，代码三也是函数调用的列子，返回且为false</p>
-<p>我们现在来理解下函数引用和函数调用的本质区别：当引用函数时候，多个变量内存存储的是函数的相同的入口指针，因此对于同一个函数来讲，无论多少个变量引用，他们都是相等的，因为对于引用类型(对象，数组，函数等)都是比较的是内存地址，如果他们内存地址一样的话，说明是相同的；但是对于函数调用来讲，比如代码三;每次调用的时候，都被分配一个新的内存地址，所以他们的内存地址不相同，因此他们会返回false，但是对于代码二来讲，我们看到他们没有返回函数，只是返回数值，他们比较的不是内存地址，而是比较值，所以他们的值相等，因此他们也返回true，我们也可以看看如下实列化一个对象的列子，他们也被分配到不同的内存地址，因此他们也是返回false的；如下代码测试：</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">function F()&#123;</span><br><span class="line">    this.x &#x3D; 5;</span><br><span class="line">&#125;</span><br><span class="line">var a &#x3D; new F();</span><br><span class="line">var b &#x3D; new F();</span><br><span class="line">console.log(a &#x3D;&#x3D;&#x3D; b); &#x2F;&#x2F; false</span><br></pre></td></tr></table></figure>
-
-<p><strong>五：理解js中的链式调用</strong></p>
-<p>我们使用jquery的时候，jquery的简单的语法及可实现链式调用方法，现在我们自己也封装一个链式调用的方法，来理解下 jquery中如何封装链式调用 无非就是每次调用一个方法的时候 给这个方法返回this即可，this指向该对象自身，我们看看代码：</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br></pre></td><td class="code"><pre><span class="line">&#x2F;&#x2F; 定义一个简单的对象，每次调用对象的方法的时候，该方法都返回该对象自身</span><br><span class="line">var obj &#x3D; &#123;</span><br><span class="line">    a: function()&#123;</span><br><span class="line">        console.log(&quot;输出a&quot;);</span><br><span class="line">        return this;</span><br><span class="line">    &#125;,</span><br><span class="line">    b:function()&#123;</span><br><span class="line">        console.log(&quot;输出b&quot;);</span><br><span class="line">        return this;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;;</span><br><span class="line">console.log(obj.a().b()); &#x2F;&#x2F; 输出a 输出b 输出this指向与obj这个对象</span><br><span class="line"></span><br><span class="line">&#x2F;&#x2F; 下面我们再看下 上面的通过Function扩展类型添加方法的demo如下：</span><br><span class="line">Function.prototype.method &#x3D; function(name,func) &#123;</span><br><span class="line">    if(!this.prototype[name]) &#123;</span><br><span class="line">        this.prototype[name] &#x3D; func;</span><br><span class="line">        return this;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">String.method(&#39;trim&#39;,function()&#123;</span><br><span class="line">    return this.replace(&#x2F;^\s+|\s+$&#x2F;g,&#39;&#39;);</span><br><span class="line">&#125;);</span><br><span class="line">String.method(&#39;log2&#39;,function()&#123;</span><br><span class="line">    console.log(&quot;链式调用&quot;);</span><br><span class="line">    return this;</span><br><span class="line">&#125;);</span><br><span class="line">String.method(&#39;r&#39;,function()&#123;</span><br><span class="line">    return this.replace(&#x2F;a&#x2F;,&#39;&#39;);</span><br><span class="line">&#125;);</span><br><span class="line">var str &#x3D; &quot; abc &quot;;</span><br><span class="line">console.log(str.trim().log2().r()); &#x2F;&#x2F; 输出链式调用和 bc</span><br></pre></td></tr></table></figure>
-
-<p><strong>六：理解使用函数实现历史记录–提高性能</strong></p>
-<p>函数可以使用对象去记住先前操作的结果，从而避免多余的运算。比如我们现在测试一个费波纳茨的算法，我们可以使用递归函数计算fibonacci数列，一个fibonacci数字是之前两个fibonacci数字之和，最前面的两个数字是0和1；代码如下：</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line">var count &#x3D; 0;</span><br><span class="line"> var fibonacci &#x3D; function(n) &#123;</span><br><span class="line">    count++;</span><br><span class="line">    return n &lt; 2 ? n : fibonacci(n-1) + fibonacci(n-2);</span><br><span class="line"> &#125;;</span><br><span class="line"> for(var i &#x3D; 0; i &lt;&#x3D; 10; i+&#x3D;1) &#123;</span><br><span class="line">    console.log(i+&quot;:&quot;+fibonacci(i));</span><br><span class="line"> &#125;</span><br><span class="line"> console.log(count); &#x2F;&#x2F; 453</span><br></pre></td></tr></table></figure>
-
-<p>我们可以看到如上 fibonacci函数总共调用了453次，for循环了11次，它自身调用了442次，如果我们使用下面的记忆函数的话，那么就可以减少他们的运算次数，从而提高性能；</p>
-<p>思路：先使用一个临时数组保存存储结果，当函数被调用的时候，先看是否已经有存储结果 如果有的话，就立即返回这个存储结果，否则的话，调用函数运算下；代码如下：</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br></pre></td><td class="code"><pre><span class="line">var count2 &#x3D; 0;</span><br><span class="line">var fibonacci2 &#x3D; (function()&#123;</span><br><span class="line">    var memo &#x3D; [0,1];</span><br><span class="line">    var fib &#x3D; function(n) &#123;</span><br><span class="line">        var result &#x3D; memo[n];</span><br><span class="line">        count2++;</span><br><span class="line">        if(typeof result !&#x3D;&#x3D; &#39;number&#39;) &#123;</span><br><span class="line">            result &#x3D; fib(n-1) + fib(n-2);</span><br><span class="line">            memo[n] &#x3D; result;</span><br><span class="line">        &#125;</span><br><span class="line">        return result;</span><br><span class="line">    &#125;;</span><br><span class="line">    return fib;</span><br><span class="line"> &#125;)();</span><br><span class="line"> for(var j &#x3D; 0; j &lt;&#x3D; 10; j+&#x3D;1) &#123;</span><br><span class="line">    console.log(j+&quot;:&quot;+fibonacci2(j));</span><br><span class="line"> &#125;</span><br><span class="line"> console.log(count2); &#x2F;&#x2F; 29</span><br></pre></td></tr></table></figure>
-
-<p>这个函数也返回了同样的结果，但是只调用了函数29次，循环了11次，也就是说函数自身调用了18次，从而减少无谓的函数的调用及运算，下面我们可以把这个函数进行抽象化，以构造带记忆功能的函数，如下代码：</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br></pre></td><td class="code"><pre><span class="line">var count3 &#x3D; 0;</span><br><span class="line">var memoizer &#x3D; function(memo,formula) &#123;</span><br><span class="line">    var recur &#x3D; function(n) &#123;</span><br><span class="line">        var result &#x3D; memo[n];</span><br><span class="line">        count3++;   &#x2F;&#x2F; 这句代码只是说明运行函数多少次，在代码中并无作用，实际使用上可以删掉</span><br><span class="line">        if(typeof result !&#x3D;&#x3D; &#39;number&#39;) &#123;</span><br><span class="line">            result &#x3D; formula(recur,n);</span><br><span class="line">            memo[n] &#x3D; result;</span><br><span class="line">        &#125;</span><br><span class="line">        return result;</span><br><span class="line">    &#125;;</span><br><span class="line">    return recur;</span><br><span class="line"> &#125;;</span><br><span class="line"> var fibonacci3 &#x3D; memoizer([0,1],function(recur,n)&#123;</span><br><span class="line">    return recur(n-1) + recur(n-2);</span><br><span class="line"> &#125;);</span><br><span class="line"> &#x2F;&#x2F; 调用方式如下</span><br><span class="line"> for(var k &#x3D; 0; k &lt;&#x3D;10; k+&#x3D;1) &#123;</span><br><span class="line">    console.log(k+&quot;:&quot;+fibonacci3(k));</span><br><span class="line"> &#125;</span><br><span class="line"> console.log(count3); &#x2F;&#x2F; 29</span><br></pre></td></tr></table></figure>
-
-<p>如上封装 memoizer 里面的参数是实现某个方法的计算公式，具体的可以根据需要自己手动更改，这边的思路无非就是想习惯使用对象去保存临时值，从而减少不必要的取值存储值的操作；</p>
-<p><strong>七：理解通过Function扩展类型</strong></p>
-<p>javascript 允许为语言的基本数据类型定义方法。通过<code>Object.prototype</code>添加原型方法，该方法可被所有的对象使用。</p>
-<p>这对函数，字符串，数字，正则和布尔值都适用，比如如下现在给<code>Function.prototype</code>增加方法，使该方法对所有函数都可用，代码如下：</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br></pre></td><td class="code"><pre><span class="line">Function.prototype.method &#x3D; function(name,func) &#123;</span><br><span class="line">    if(!this.prototype[name]) &#123;</span><br><span class="line">        this.prototype[name] &#x3D; func;</span><br><span class="line">        return this;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br><span class="line">Number.method(&#39;integer&#39;,function()&#123;</span><br><span class="line">    return Math[this &lt; 0 ? &#39;ceil&#39; : &#39;floor&#39;](this);</span><br><span class="line">&#125;);</span><br><span class="line">console.log((-10&#x2F;3).integer()); &#x2F;&#x2F; -3</span><br><span class="line"></span><br><span class="line">String.method(&#39;trim&#39;,function()&#123;</span><br><span class="line">    return this.replace(&#x2F;^\s+|\s+$&#x2F;g,&#39;&#39;);</span><br><span class="line">&#125;);</span><br><span class="line">console.log(&quot; abc &quot;.trim()); &#x2F;&#x2F; abc</span><br></pre></td></tr></table></figure>
-
-<p><strong>八：理解使用模块模式编写代码</strong></p>
-<p>使用函数和闭包可以构建模块，所谓模块，就是一个提供接口却隐藏状态与实现的函数或对象。使用函数构建模块的优点是：减少全局变量的使用；</p>
-<p>比如如下：我想为String扩展一个方法，该方法的作用是寻找字符串中的HTML字符字体并将其替换为对应的字符；</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br></pre></td><td class="code"><pre><span class="line">&#x2F;&#x2F; 如下代码：</span><br><span class="line">Function.prototype.method &#x3D; function(name,func) &#123;</span><br><span class="line">    if(!this.prototype[name]) &#123;</span><br><span class="line">        this.prototype[name] &#x3D; func;</span><br><span class="line">        return this;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br><span class="line">String.method(&#39;deentityify&#39;,function()&#123;</span><br><span class="line">    var entity &#x3D; &#123;</span><br><span class="line">        quot: &#39;&quot;&#39;,</span><br><span class="line">        It: &#39;&lt;&#39;,</span><br><span class="line">        gt: &#39;&gt;&#39;</span><br><span class="line">    &#125;;</span><br><span class="line">    return function()&#123;</span><br><span class="line">        return this.replace(&#x2F;&amp;([^&amp;;]+);&#x2F;g,function(a,b)&#123;</span><br><span class="line">            var r &#x3D; entity[b];</span><br><span class="line">            return typeof r &#x3D;&#x3D;&#x3D; &#39;string&#39; ? r : a;</span><br><span class="line">        &#125;);</span><br><span class="line">    &#125;</span><br><span class="line">&#125;());</span><br><span class="line">console.log(&quot;&amp;It;&quot;&gt;&quot;.deentityify()); &#x2F;&#x2F; &lt;&quot;&gt;</span><br></pre></td></tr></table></figure>
-
-<p>模块模式利用函数作用域和闭包来创建绑定对象与私有成员的关联，比如在上面的deentityify()方法才有权访问字符实体表entity这个数据对象；</p>
-<p>模块开发的一般形式是：定义了私有变量和函数的函数，利用闭包创建可以访问到的私有变量和函数的特权函数，最后返回这个特权函数，或把他们保存到可以访问的地方。</p>
-<p>模块模式一般会结合实例模式使用。javascript的实例就是使用对象字面量表示法创建的。对象的属性值可以是数值或者函数，并且属性值在该对象的生命周期中不会发生变化；比如如下代码属于模块模式：定义了一个私有变量name属性，和一个实例模式(对象字面量obj)并且返回这个对象字面量obj，对象字面量中的方法与私有变量name进行了绑定；</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br></pre></td><td class="code"><pre><span class="line">&#x2F;&#x2F; 比如如下经典的模块模式</span><br><span class="line">var MODULE &#x3D; (function()&#123;</span><br><span class="line">    var name &#x3D; &quot;tugenhua&quot;;</span><br><span class="line">    var obj &#x3D; &#123;</span><br><span class="line">        setName: function() &#123;</span><br><span class="line">            this.name &#x3D; name;</span><br><span class="line">        &#125;,</span><br><span class="line">        getName: function()&#123;</span><br><span class="line">            return this.name;</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;;</span><br><span class="line">    return obj;</span><br><span class="line">&#125;)();</span><br><span class="line">MODULE.setName()</span><br><span class="line">console.log(MODULE.getName()); &#x2F;&#x2F; tugenhua</span><br></pre></td></tr></table></figure>
-
-<p><strong>九：理解惰性实列化</strong></p>
-<p>在页面中javascript初始化执行的时候就实例化类，如果在页面中没有使用这个实列化的对象，就会造成一定的内存浪费和性能损耗；这时候，我们可以使用惰性实列化来解决这个问题，惰性就是把实列化推迟到需要使用它的时候才去做，做到 “按需供应”;</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br></pre></td><td class="code"><pre><span class="line">&#x2F;&#x2F; 惰性实列化代码如下</span><br><span class="line">var myNamespace &#x3D; function()&#123;</span><br><span class="line">    var Configure &#x3D; function()&#123;</span><br><span class="line">        var privateName &#x3D; &quot;tugenhua&quot;;</span><br><span class="line">        var privateGetName &#x3D; function()&#123;</span><br><span class="line">            return privateName;</span><br><span class="line">        &#125;;</span><br><span class="line">        var privateSetName &#x3D; function(name) &#123;</span><br><span class="line">            privateName &#x3D; name;</span><br><span class="line">        &#125;;</span><br><span class="line">        &#x2F;&#x2F; 返回单列对象</span><br><span class="line">        return &#123;</span><br><span class="line">            setName: function(name) &#123;</span><br><span class="line">                privateSetName(name);</span><br><span class="line">            &#125;,</span><br><span class="line">            getName: function()&#123;</span><br><span class="line">                return privateGetName();</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;;</span><br><span class="line">    &#x2F;&#x2F; 存储Configure实列</span><br><span class="line">    var instance;</span><br><span class="line">    return &#123;</span><br><span class="line">        init: function()&#123;</span><br><span class="line">            &#x2F;&#x2F; 如果不存在实列，就创建单列实列</span><br><span class="line">            if(!instance) &#123;</span><br><span class="line">                instance &#x3D; Configure();</span><br><span class="line">            &#125;</span><br><span class="line">            &#x2F;&#x2F; 创建Configure单列</span><br><span class="line">            for(var key in instance) &#123;</span><br><span class="line">                if(instance.hasOwnProperty(key)) &#123;</span><br><span class="line">                    this[key] &#x3D; instance[key];</span><br><span class="line">                &#125;</span><br><span class="line">            &#125;</span><br><span class="line">            this.init &#x3D; null;</span><br><span class="line">            return this;</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;();</span><br><span class="line">&#x2F;&#x2F; 调用方式</span><br><span class="line">myNamespace.init();</span><br><span class="line">var name &#x3D; myNamespace.getName();</span><br><span class="line">console.log(name); &#x2F;&#x2F; tugenhua</span><br></pre></td></tr></table></figure>
-
-<p>如上代码是惰性化实列代码：它包括一个单体Configure实列，直接返回init函数，先判断该单体是否被实列化，如果没有被实列化的话，则创建并执行实列化并返回该实列化，如果已经实列化了，则返回现有实列；执行完后，则销毁init方法，只初始化一次</p>
-<p><strong>十：推荐分支函数(解决兼容问题的更好的方法)</strong></p>
-<p>分支函数的作用是：可以解决兼容问题if或者else的重复判断的问题，我们一般的做法是：根据兼容的不同写if，else等，这些判断来实现兼容，但是这样明显就有一个缺点，每次执行这个函数的时候，都需要进行if和else的检测，效率明显不高，我们现在使用分支函数来实现当初始化的时候进行一些检测，在之后的运行代码过程中，代码就无需检测了；</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br></pre></td><td class="code"><pre><span class="line">&#x2F;&#x2F; 我们先来看看传统的封装ajax请求的函数</span><br><span class="line">&#x2F;&#x2F;创建XMLHttpRequest对象：</span><br><span class="line">var xmlhttp;</span><br><span class="line">function createxmlhttp()&#123;</span><br><span class="line">    if (window.XMLHttpRequest)&#123;</span><br><span class="line">        &#x2F;&#x2F; code for IE7+, Firefox, Chrome, Opera, Safari</span><br><span class="line">        xmlhttp&#x3D;new XMLHttpRequest();</span><br><span class="line">    &#125;</span><br><span class="line">    else&#123;</span><br><span class="line">      &#x2F;&#x2F; code for IE6, IE5</span><br><span class="line">      xmlhttp&#x3D;new ActiveXObject(&quot;Microsoft.XMLHTTP&quot;);</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br><span class="line">&#x2F;&#x2F; 下面我们看看分支函数代码如下：</span><br><span class="line">var XHR &#x3D; (function()&#123;</span><br><span class="line">    var standard &#x3D; &#123;</span><br><span class="line">        createXHR : function() &#123;</span><br><span class="line">            return new XMLHttpRequest();</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;;</span><br><span class="line">    var oldActionXObject &#x3D; &#123;</span><br><span class="line">        createXHR : function()&#123;</span><br><span class="line">            return new ActiveXObject(&quot;Microsoft.XMLHTTP&quot;);</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;;</span><br><span class="line">    var newActionXObject &#x3D; &#123;</span><br><span class="line">        createXHR : function()&#123;</span><br><span class="line">            return new ActiveXObject(&quot;Msxml2.XMLHTTP&quot;);</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;;</span><br><span class="line">    if(standard.createXHR) &#123;</span><br><span class="line">        return standard;</span><br><span class="line">    &#125;else &#123;</span><br><span class="line">        try&#123;</span><br><span class="line">            newActionXObject.createXHR();</span><br><span class="line">            return newActionXObject;</span><br><span class="line">        &#125;catch(e)&#123;</span><br><span class="line">            oldActionXObject.createXHR();</span><br><span class="line">            return oldActionXObject;</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;)();</span><br><span class="line">console.log(XHR.createXHR()); &#x2F;&#x2F;xmlHttpRequest对象</span><br></pre></td></tr></table></figure>
-
-<p>上面的代码就是分支函数，分支的原理是：声明几个不同名称的对象，且为该不同名称对象声明一个相同的方法，然后根据不同的浏览器设计来实现，接着开始进行浏览器检测，并且根据浏览器检测来返回哪一个对象，不论返回的是哪一个对象，最后它一致对外的接口都是createXHR方法的；</p>
-<p><strong>十一：惰性载入函数（也是解决兼容问题的）</strong></p>
-<p>和上面分支的原理是一样的，代码也可以按照上面的推荐分支风格编码的；解决的问题也是解决多个if条件判断的；代码如下：</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line">&#x2F;&#x2F; 代码如下：</span><br><span class="line">var addEvent &#x3D; function(el,type,handler)&#123;</span><br><span class="line">    addEvent &#x3D; el.addEventListener ? function(el,type,handler)&#123;</span><br><span class="line">        el.addEventListener(type,handler,false);</span><br><span class="line">    &#125; : function(el,type,handler) &#123;</span><br><span class="line">        el.attachEvent(&quot;on&quot; + type,handler);</span><br><span class="line">    &#125;</span><br><span class="line">    addEvent(el,type,handler);</span><br><span class="line">&#125;;</span><br></pre></td></tr></table></figure>
-
-<p>惰性载入函数也是在函数内部改变自身的一种方式，在重复执行的时候就不会再进行检测的；惰性载入函数的分支只会执行一次，即第一次调用的时候，其优点如下：</p>
-<ol>
-<li><p> 要执行的适当代码只有在实际调用函数时才执行。</p>
-</li>
-<li><p> 第一次调用该函数的时候，紧接着内部函数也会执行，但是正因为这个，所以后续继续调用该函数的话，后续的调用速度会很快；因此避免了多重条件；</p>
-</li>
-</ol>
-<p><strong>十二：理解函数节流</strong></p>
-<p>DOM操作的交互需要更多的内存和CPU时间，连续进行过多的DOM相关的操作可能会导致浏览器变慢甚至崩溃，函数节流的设计思想是让某些代码可以在间断的情况下连续重复执行，实现该方法可以使用定时器对该函数进行节流操作;</p>
-<p>比如：第一次调用函数的时候，创建一个定时器，在指定的时间间隔下执行代码。当第二次执行的时候，清除前一次的定时器并设置另一个，将其替换成一个新的定时器;</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br></pre></td><td class="code"><pre><span class="line">&#x2F;&#x2F; 如下简单函数节流代码演示</span><br><span class="line">var throttle &#x3D; &#123;</span><br><span class="line">    timeoutId: null,</span><br><span class="line">    &#x2F;&#x2F; 需要执行的方法</span><br><span class="line">    preformMethod: function()&#123;</span><br><span class="line"></span><br><span class="line">    &#125;,</span><br><span class="line">    &#x2F;&#x2F; 初始化需要调用的方法</span><br><span class="line">    process: function()&#123;</span><br><span class="line">        clearTimeout(this.timeoutId);</span><br><span class="line">        var self &#x3D; this;</span><br><span class="line">        self.timeoutId &#x3D; setTimeout(function()&#123;</span><br><span class="line">            self.preformMethod();</span><br><span class="line">        &#125;,100);</span><br><span class="line">    &#125;</span><br><span class="line">&#125;;</span><br><span class="line">&#x2F;&#x2F; 执行操作</span><br><span class="line">throttle.process();</span><br></pre></td></tr></table></figure>
-
-<p>函数节流解决的问题是一些代码(比如事件)无间断的执行，这可能会影响浏览器的性能，比如浏览器变慢或者直接崩溃。比如对于mouseover事件或者click事件，比如点击tab项菜单，无限的点击，有可能会导致浏览器会变慢操作，这时候我们可以使用函数节流的操作来解决；</p>
-<blockquote>
-<p>作者：涂根华<br>原文地址：<a target="_blank" rel="noopener" href="http://www.cnblogs.com/tugenhua0707/p/5046854.html">http://www.cnblogs.com/tugenhua0707/p/5046854.html</a></p>
-</blockquote>
-
-      
-    </div>
-
-    
-    
-    
-
-    <footer class="post-footer">
-        <div class="post-eof"></div>
-      
-    </footer>
-  </article>
-</div>
-
-
-
-
-    
-
-
-<div class="post-block">
-  
-  
-
-  <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="">
     <link itemprop="mainEntityOfPage" href="https://lzhwweb.github.io/nirvana/javascript/%E5%89%8D%E7%AB%AF/Javascript%E5%87%BD%E6%95%B0%E5%BC%8F%E7%BC%96%E7%A8%8B%E8%A6%81%E6%8E%8C%E6%8F%A1%E7%9A%84%E7%9F%A5%E8%AF%86%E7%82%B9%E8%AE%B2%E8%A7%A3/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
@@ -882,7 +622,7 @@ res.end();
           <i class="far fa-calendar-check"></i>
         </span>
         <span class="post-meta-item-text">更新于</span>
-        <time title="修改时间：2021-03-10 13:43:55" itemprop="dateModified" datetime="2021-03-10T13:43:55+08:00">2021-03-10</time>
+        <time title="修改时间：2021-03-10 22:09:45" itemprop="dateModified" datetime="2021-03-10T22:09:45+08:00">2021-03-10</time>
       </span>
     <span class="post-meta-item">
       <span class="post-meta-item-icon">
@@ -1562,7 +1302,7 @@ res.end();
     </span>
       <header class="post-header">
         <h2 class="post-title" itemprop="name headline">
-          <a href="/nirvana/javascript/%E5%89%8D%E7%AB%AF/%E7%A8%8B%E5%BA%8F%E7%8C%BF-%E7%A5%9E%E6%B3%A8%E9%87%8A%EF%BC%81%E6%81%B6%E6%90%9E%E6%B3%A8%E9%87%8A%EF%BC%81/" class="post-title-link" itemprop="url">程序猿-神注释！恶搞注释！</a>
+          <a href="/nirvana/javascript/%E5%89%8D%E7%AB%AF/%E7%A8%8B%E5%BA%8F%E7%8C%BF-%E7%A5%9E%E6%B3%A8%E9%87%8A%EF%BC%81%E6%81%B6%E6%90%9E%E6%B3%A8%E9%87%8A%EF%BC%81/" class="post-title-link" itemprop="url">程序猿 神注释！恶搞注释！</a>
         </h2>
 
         <div class="post-meta-container">
@@ -1580,7 +1320,7 @@ res.end();
           <i class="far fa-calendar-check"></i>
         </span>
         <span class="post-meta-item-text">更新于</span>
-        <time title="修改时间：2021-03-10 13:43:55" itemprop="dateModified" datetime="2021-03-10T13:43:55+08:00">2021-03-10</time>
+        <time title="修改时间：2021-03-10 22:05:39" itemprop="dateModified" datetime="2021-03-10T22:05:39+08:00">2021-03-10</time>
       </span>
     <span class="post-meta-item">
       <span class="post-meta-item-icon">
@@ -2076,6 +1816,157 @@ res.end();
 
 
 
+    
+
+
+<div class="post-block">
+  
+  
+
+  <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="">
+    <link itemprop="mainEntityOfPage" href="https://lzhwweb.github.io/nirvana/mac/mac/Mac-%EF%BC%9A%E4%BF%AE%E6%94%B9-DNS-%E5%8F%8A%E6%B8%85%E9%99%A4-DNS-%E7%BC%93%E5%AD%98/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/nirvana/images/headphoto.jpeg">
+      <meta itemprop="name" content="nirvana">
+      <meta itemprop="description" content="个人学习笔记">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="涅槃快乐是金">
+    </span>
+      <header class="post-header">
+        <h2 class="post-title" itemprop="name headline">
+          <a href="/nirvana/mac/mac/Mac-%EF%BC%9A%E4%BF%AE%E6%94%B9-DNS-%E5%8F%8A%E6%B8%85%E9%99%A4-DNS-%E7%BC%93%E5%AD%98/" class="post-title-link" itemprop="url">Mac-：修改-DNS-及清除-DNS-缓存</a>
+        </h2>
+
+        <div class="post-meta-container">
+          <div class="post-meta">
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-calendar"></i>
+      </span>
+      <span class="post-meta-item-text">发表于</span>
+      
+
+      <time title="创建时间：2021-03-10 21:12:40 / 修改时间：13:43:55" itemprop="dateCreated datePublished" datetime="2021-03-10T21:12:40+08:00">2021-03-10</time>
+    </span>
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-folder"></i>
+      </span>
+      <span class="post-meta-item-text">分类于</span>
+        <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+          <a href="/nirvana/categories/mac/" itemprop="url" rel="index"><span itemprop="name">mac</span></a>
+        </span>
+    </span>
+
+  
+      </div>
+      <div class="post-meta">
+    <span class="post-meta-item" title="本文字数">
+      <span class="post-meta-item-icon">
+        <i class="far fa-file-word"></i>
+      </span>
+      <span class="post-meta-item-text">本文字数：</span>
+      <span>795</span>
+    </span>
+    <span class="post-meta-item" title="阅读时长">
+      <span class="post-meta-item-icon">
+        <i class="far fa-clock"></i>
+      </span>
+      <span class="post-meta-item-text">阅读时长 &asymp;</span>
+      <span>1 分钟</span>
+    </span>
+</div>
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+          <ul>
+<li><ol>
+<li><p>在苹果菜单选择 “系统偏好设置”。</p>
+<p>   <img src="https://upload-images.jianshu.io/upload_images/10024246-134910c4b8f7de46.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240"></p>
+</li>
+</ol>
+</li>
+<li><ol>
+<li> 单击 “网络” 图标。</li>
+</ol>
+</li>
+</ul>
+<p><img src="https://upload-images.jianshu.io/upload_images/10024246-edd411652e2d5024.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240"></p>
+<ul>
+<li><ol>
+<li> 从列表中选择想要修改或当前正在使用的网络连接服务（例如 WI-FI 或以太网），然后点击 “高级”。</li>
+</ol>
+</li>
+</ul>
+<p><img src="https://upload-images.jianshu.io/upload_images/10024246-33b002edbd8a3a66.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240"></p>
+<ul>
+<li><ol>
+<li> 选择 DNS 标签，单击 “DNS 服务器” 左下角的 “+”，添加 119.29.29.29 和 114.114.114.114，然后单击右下角的 “好”。<br><img src="https://upload-images.jianshu.io/upload_images/10024246-f1ecd48ae2e2e8c1.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240"></li>
+</ol>
+</li>
+</ul>
+<h2 id="还原-OS-X-中的-DNS-缓存设置"><a href="#还原-OS-X-中的-DNS-缓存设置" class="headerlink" title="还原 OS X 中的 DNS 缓存设置"></a>还原 OS X 中的 DNS 缓存设置</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">了解如何还原（清空）DNS 缓存设置。</span><br><span class="line"></span><br></pre></td></tr></table></figure>
+
+<blockquote>
+<p>关于 DNS 缓存</p>
+</blockquote>
+<p>OS X 会将已解析的 DNS 查询的本地缓存保留一段时间，保留时间由 DNS 服务器定义。</p>
+<p>有时可能需要立即还原缓存设置并重新查询 DNS 服务器。</p>
+<p>例如，如果您是网络或服务器管理员且您的 DNS 服务器上的条目最近有更改，您可能需要执行此操作。</p>
+<p>如果您的 Mac 使用的不是您服务器上的最新 DNS 条目，您可重新启动 Mac 以更新其缓存的信息。</p>
+<p>如果您需要更新使用 OS X 的服务器上的 DNS 条目但又不能重新启动服务器，请使用以下适用于您所使用的 OS X 版本的命令。</p>
+<blockquote>
+<p>［应用程序］-［实用工具］-［终端］</p>
+</blockquote>
+<h2 id="OS-X-Yosemite-及更新机型"><a href="#OS-X-Yosemite-及更新机型" class="headerlink" title="OS X Yosemite 及更新机型"></a>OS X Yosemite 及更新机型</h2><blockquote>
+<p>在 OS X v10.10.4 或更高版本中，请使用以下 “终端” 命令来还原 DNS 缓存设置：</p>
+</blockquote>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">sudo killall -HUP mDNSResponder</span><br><span class="line"></span><br></pre></td></tr></table></figure>
+
+<blockquote>
+<p>在 OS X v10.10 至 v10.10.3 中，请使用以下 “终端” 命令来还原 DNS 缓存设置：</p>
+</blockquote>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">sudo discoveryutil mdnsflushcache</span><br><span class="line"></span><br></pre></td></tr></table></figure>
+
+<h2 id="OS-X-Mavericks、Mountain-Lion-和-Lion"><a href="#OS-X-Mavericks、Mountain-Lion-和-Lion" class="headerlink" title="OS X Mavericks、Mountain Lion 和 Lion"></a>OS X Mavericks、Mountain Lion 和 Lion</h2><p>在 OS X v10.9.5 及更低版本中，请使用以下 “终端” 命令来还原 DNS 缓存设置：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">sudo killall -HUP mDNSResponder</span><br><span class="line"></span><br></pre></td></tr></table></figure>
+
+<blockquote>
+<p>Mac OS X Snow Leopard</p>
+</blockquote>
+<p>在 OS X v10.6 至 v10.6.8 中，请使用以下 “终端” 命令来还原 DNS 缓存设置：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">sudo dscacheutil -flushcache</span><br><span class="line"></span><br></pre></td></tr></table></figure>
+
+<ul>
+<li>  DNS 清除缓存方法来自：<a target="_blank" rel="noopener" href="https://support.apple.com/zh-cn/HT202516">苹果官网</a></li>
+<li>  DNS 修改图片来自：<a target="_blank" rel="noopener" href="https://support.dnspod.cn/Kb/showarticle/tsid/240/#link1">DNSPOD</a></li>
+</ul>
+
+      
+    </div>
+
+    
+    
+    
+
+    <footer class="post-footer">
+        <div class="post-eof"></div>
+      
+    </footer>
+  </article>
+</div>
+
+
+
+
   <nav class="pagination">
     <a class="extend prev" rel="prev" href="/nirvana/page/10/"><i class="fa fa-angle-left" aria-label="上一页"></i></a><a class="page-number" href="/nirvana/">1</a><span class="space">&hellip;</span><a class="page-number" href="/nirvana/page/10/">10</a><span class="page-number current">11</span><a class="page-number" href="/nirvana/page/12/">12</a><span class="space">&hellip;</span><a class="page-number" href="/nirvana/page/18/">18</a><a class="extend next" rel="next" href="/nirvana/page/12/"><i class="fa fa-angle-right" aria-label="下一页"></i></a>
   </nav>
@@ -2123,14 +2014,14 @@ res.end();
       <i class="fa fa-chart-line"></i>
     </span>
       <span>站点总字数：</span>
-    <span title="站点总字数">539k</span>
+    <span title="站点总字数">522k</span>
   </span>
   <span class="post-meta-item">
     <span class="post-meta-item-icon">
       <i class="fa fa-coffee"></i>
     </span>
       <span>站点阅读时长 &asymp;</span>
-    <span title="站点阅读时长">8:10</span>
+    <span title="站点阅读时长">7:54</span>
   </span>
 </div>
   <div class="powered-by">由 <a href="https://hexo.io/" class="theme-link" rel="noopener" target="_blank">Hexo</a> & <a href="https://theme-next.js.org/" class="theme-link" rel="noopener" target="_blank">NexT.Gemini</a> 强力驱动

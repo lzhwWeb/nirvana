@@ -25,7 +25,7 @@
   </script>
 <meta name="description" content="数据和视图的分离-&gt;解耦（开放封闭原则）jq的数据与视图混在一块（意大利面条式代码），Vue的数据与视图分离 以数据驱动视图（只关心数据变化，DOM操作被封装）jq直接用js修改视图，Vue以数据驱动视图          数据不可变： 它要求你所有的数据都是不可变的，这意味着如果你想修改一个对象，那你应该创建一个新的对象用来修改，而不是修改已有的对象。 无状态： 主要是强调对于">
 <meta property="og:type" content="article">
-<meta property="og:title" content="FP-RP-FRP编程范式.md">
+<meta property="og:title" content="FP-RP-FRP编程范式">
 <meta property="og:url" content="https://lzhwweb.github.io/nirvana/javascript/%E5%89%8D%E7%AB%AF/FP-RP-FRP%E7%BC%96%E7%A8%8B%E8%8C%83%E5%BC%8F/index.html">
 <meta property="og:site_name" content="涅槃快乐是金">
 <meta property="og:description" content="数据和视图的分离-&gt;解耦（开放封闭原则）jq的数据与视图混在一块（意大利面条式代码），Vue的数据与视图分离 以数据驱动视图（只关心数据变化，DOM操作被封装）jq直接用js修改视图，Vue以数据驱动视图          数据不可变： 它要求你所有的数据都是不可变的，这意味着如果你想修改一个对象，那你应该创建一个新的对象用来修改，而不是修改已有的对象。 无状态： 主要是强调对于">
@@ -59,7 +59,7 @@
 <meta property="og:image" content="https://upload-images.jianshu.io/upload_images/10024246-c027a0b749c44425.jpeg?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240">
 <meta property="og:image" content="https://upload-images.jianshu.io/upload_images/10024246-1badbd997d2e324e.jpeg?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240">
 <meta property="article:published_time" content="2021-03-11T13:12:40.000Z">
-<meta property="article:modified_time" content="2021-03-10T05:43:55.066Z">
+<meta property="article:modified_time" content="2021-03-10T14:07:18.371Z">
 <meta property="article:author" content="nirvana">
 <meta property="article:tag" content="前端,javascript,node,git">
 <meta name="twitter:card" content="summary">
@@ -78,7 +78,7 @@
     lang   : 'zh-CN'
   };
 </script>
-<title>FP-RP-FRP编程范式.md | 涅槃快乐是金</title>
+<title>FP-RP-FRP编程范式 | 涅槃快乐是金</title>
   
 
 
@@ -210,7 +210,7 @@
   <nav class="site-state">
       <div class="site-state-item site-state-posts">
           <a href="/nirvana/archives">
-          <span class="site-state-item-count">177</span>
+          <span class="site-state-item-count">176</span>
           <span class="site-state-item-name">日志</span>
         </a>
       </div>
@@ -267,7 +267,7 @@
     </span>
       <header class="post-header">
         <h1 class="post-title" itemprop="name headline">
-          FP-RP-FRP编程范式.md
+          FP-RP-FRP编程范式
         </h1>
 
         <div class="post-meta-container">
@@ -285,7 +285,7 @@
           <i class="far fa-calendar-check"></i>
         </span>
         <span class="post-meta-item-text">更新于</span>
-        <time title="修改时间：2021-03-10 13:43:55" itemprop="dateModified" datetime="2021-03-10T13:43:55+08:00">2021-03-10</time>
+        <time title="修改时间：2021-03-10 22:07:18" itemprop="dateModified" datetime="2021-03-10T22:07:18+08:00">2021-03-10</time>
       </span>
     <span class="post-meta-item">
       <span class="post-meta-item-icon">
@@ -384,13 +384,13 @@
 
           <div class="post-nav">
             <div class="post-nav-item">
-                <a href="/nirvana/javascript/%E5%89%8D%E7%AB%AF/HTML5%E5%8E%BB%E9%99%A4input-%5Btype=search%5D-%E7%9A%84%E9%BB%98%E8%AE%A4%E8%BE%B9%E6%A1%86%E5%92%8C%E5%88%A0%E9%99%A4%E6%8C%89%E9%92%AE/" rel="prev" title="HTML5去除input-[type=search]-的默认边框和删除按钮">
-                  <i class="fa fa-chevron-left"></i> HTML5去除input-[type=search]-的默认边框和删除按钮
+                <a href="/nirvana/javascript/%E5%89%8D%E7%AB%AF/HTML5%E5%8E%BB%E9%99%A4input-%5Btype=search%5D-%E7%9A%84%E9%BB%98%E8%AE%A4%E8%BE%B9%E6%A1%86%E5%92%8C%E5%88%A0%E9%99%A4%E6%8C%89%E9%92%AE/" rel="prev" title="HTML5去除input[type=search]的默认边框和删除按钮">
+                  <i class="fa fa-chevron-left"></i> HTML5去除input[type=search]的默认边框和删除按钮
                 </a>
             </div>
             <div class="post-nav-item">
-                <a href="/nirvana/javascript/%E5%89%8D%E7%AB%AF/Error--Can't-resolve-'fs'-in-%EF%BC%88webpack-2%E9%85%8D%E7%BD%AECSS-loadeers%EF%BC%89/" rel="next" title="Error--Can't-resolve-'fs'-in-（webpack-2配置CSS-loadeers）">
-                  Error--Can't-resolve-'fs'-in-（webpack-2配置CSS-loadeers） <i class="fa fa-chevron-right"></i>
+                <a href="/nirvana/javascript/%E5%89%8D%E7%AB%AF/Error--Can't-resolve-'fs'-in-%EF%BC%88webpack-2%E9%85%8D%E7%BD%AECSS-loadeers%EF%BC%89/" rel="next" title="Error--Can't resolve 'fs' in （webpack 2配置CSS-loadeers）">
+                  Error--Can't resolve 'fs' in （webpack 2配置CSS-loadeers） <i class="fa fa-chevron-right"></i>
                 </a>
             </div>
           </div>
@@ -446,14 +446,14 @@
       <i class="fa fa-chart-line"></i>
     </span>
       <span>站点总字数：</span>
-    <span title="站点总字数">539k</span>
+    <span title="站点总字数">522k</span>
   </span>
   <span class="post-meta-item">
     <span class="post-meta-item-icon">
       <i class="fa fa-coffee"></i>
     </span>
       <span>站点阅读时长 &asymp;</span>
-    <span title="站点阅读时长">8:10</span>
+    <span title="站点阅读时长">7:54</span>
   </span>
 </div>
   <div class="powered-by">由 <a href="https://hexo.io/" class="theme-link" rel="noopener" target="_blank">Hexo</a> & <a href="https://theme-next.js.org/" class="theme-link" rel="noopener" target="_blank">NexT.Gemini</a> 强力驱动
