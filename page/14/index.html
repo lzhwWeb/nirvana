@@ -21,7 +21,7 @@
 
 <script class="hexo-configurations">
     var NexT = window.NexT || {};
-    var CONFIG = {"hostname":"lzhwweb.github.io","root":"/nirvana/","images":"/nirvana/images","scheme":"Gemini","version":"8.2.2","exturl":false,"sidebar":{"position":"left","display":"post","padding":18,"offset":12},"copycode":false,"bookmark":{"enable":false,"color":"#222","save":"auto"},"fancybox":false,"mediumzoom":false,"lazyload":false,"pangu":false,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},"motion":{"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"fadeInDown","post_body":"fadeInDown","coll_header":"fadeInLeft","sidebar":"fadeInUp"}},"prism":false,"i18n":{"placeholder":"搜索...","empty":"没有找到任何搜索结果：${query}","hits_time":"找到 ${hits} 个搜索结果（用时 ${time} 毫秒）","hits":"找到 ${hits} 个搜索结果"}};
+    var CONFIG = {"hostname":"lzhwweb.github.io","root":"/nirvana/","images":"/nirvana/images","scheme":"Gemini","version":"8.2.2","exturl":false,"sidebar":{"position":"left","display":"post","padding":18,"offset":12},"copycode":false,"bookmark":{"enable":false,"color":"#222","save":"auto"},"fancybox":false,"mediumzoom":false,"lazyload":false,"pangu":false,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},"motion":{"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"fadeInDown","post_body":"fadeInDown","coll_header":"fadeInLeft","sidebar":"fadeInUp"}},"prism":false,"i18n":{"placeholder":"搜索...","empty":"没有找到任何搜索结果：${query}","hits_time":"找到 ${hits} 个搜索结果（用时 ${time} 毫秒）","hits":"找到 ${hits} 个搜索结果"},"path":"/nirvana/search.xml","localsearch":{"enable":true,"trigger":"auto","top_n_per_article":1,"unescape":false,"preload":false}};
   </script>
 <meta name="description" content="个人学习笔记">
 <meta property="og:type" content="website">
@@ -115,6 +115,7 @@
 
   <div class="site-nav-right">
     <div class="toggle popup-trigger">
+        <i class="fa fa-search fa-fw fa-lg"></i>
     </div>
   </div>
 </div>
@@ -135,11 +136,37 @@
         <li class="menu-item menu-item-开发工具"><a href="/nirvana/categories/tool" rel="section">开发工具</a></li>
         <li class="menu-item menu-item-设计模式(ts)"><a href="/nirvana/categories/DesignPattern" rel="section">设计模式(TS)</a></li>
         <li class="menu-item menu-item-前端"><a href="/nirvana/categories/javascript" rel="section">前端</a></li>
+      <li class="menu-item menu-item-search">
+        <a role="button" class="popup-trigger"><i class="fa fa-search fa-fw"></i>搜索
+        </a>
+      </li>
   </ul>
 </nav>
 
 
 
+  <div class="search-pop-overlay">
+    <div class="popup search-popup"><div class="search-header">
+  <span class="search-icon">
+    <i class="fa fa-search"></i>
+  </span>
+  <div class="search-input-container">
+    <input autocomplete="off" autocapitalize="off" maxlength="80"
+           placeholder="搜索..." spellcheck="false"
+           type="search" class="search-input">
+  </div>
+  <span class="popup-btn-close" role="button">
+    <i class="fa fa-times-circle"></i>
+  </span>
+</div>
+<div class="search-result-container no-result">
+  <div class="search-result-icon">
+    <i class="fa fa-spinner fa-pulse fa-5x"></i>
+  </div>
+</div>
+
+    </div>
+  </div>
 
 </div>
         
@@ -222,7 +249,7 @@
   
 
   <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="">
-    <link itemprop="mainEntityOfPage" href="https://lzhwweb.github.io/nirvana/reactnative/react-native/Text%E7%BB%84%E4%BB%B6/">
+    <link itemprop="mainEntityOfPage" href="https://lzhwweb.github.io/nirvana/tool/%E5%BC%80%E5%8F%91%E5%B7%A5%E5%85%B7/chrome-%E8%B4%A6%E5%8F%B7%E6%89%8B%E5%8A%A8%E5%90%8C%E6%AD%A5/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="image" content="/nirvana/images/headphoto.jpeg">
@@ -235,7 +262,7 @@
     </span>
       <header class="post-header">
         <h2 class="post-title" itemprop="name headline">
-          <a href="/nirvana/reactnative/react-native/Text%E7%BB%84%E4%BB%B6/" class="post-title-link" itemprop="url">Text组件</a>
+          <a href="/nirvana/tool/%E5%BC%80%E5%8F%91%E5%B7%A5%E5%85%B7/chrome-%E8%B4%A6%E5%8F%B7%E6%89%8B%E5%8A%A8%E5%90%8C%E6%AD%A5/" class="post-title-link" itemprop="url">chrome 账号手动同步</a>
         </h2>
 
         <div class="post-meta-container">
@@ -247,7 +274,7 @@
       <span class="post-meta-item-text">发表于</span>
       
 
-      <time title="创建时间：2021-03-10 21:12:40 / 修改时间：13:43:55" itemprop="dateCreated datePublished" datetime="2021-03-10T21:12:40+08:00">2021-03-10</time>
+      <time title="创建时间：2021-03-10 21:12:40 / 修改时间：22:05:29" itemprop="dateCreated datePublished" datetime="2021-03-10T21:12:40+08:00">2021-03-10</time>
     </span>
     <span class="post-meta-item">
       <span class="post-meta-item-icon">
@@ -255,7 +282,7 @@
       </span>
       <span class="post-meta-item-text">分类于</span>
         <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-          <a href="/nirvana/categories/reactnative/" itemprop="url" rel="index"><span itemprop="name">reactnative</span></a>
+          <a href="/nirvana/categories/tool/" itemprop="url" rel="index"><span itemprop="name">tool</span></a>
         </span>
     </span>
 
@@ -267,14 +294,14 @@
         <i class="far fa-file-word"></i>
       </span>
       <span class="post-meta-item-text">本文字数：</span>
-      <span>5k</span>
+      <span>166</span>
     </span>
     <span class="post-meta-item" title="阅读时长">
       <span class="post-meta-item-icon">
         <i class="far fa-clock"></i>
       </span>
       <span class="post-meta-item-text">阅读时长 &asymp;</span>
-      <span>5 分钟</span>
+      <span>1 分钟</span>
     </span>
 </div>
 
@@ -285,49 +312,11 @@
     
     
     <div class="post-body" itemprop="articleBody">
-          <h2 id="介绍"><a href="#介绍" class="headerlink" title="介绍"></a>介绍</h2><p>该Text组件为React中一个基本组件，该和Android中的TextView组件相类似用来显示基本的文本信息，该控件除了基本的显示布局之外，可以进行嵌套显示，设置样式，以及可以做事件(例如:点击)处理。下面我们来一个实例：</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br></pre></td><td class="code"><pre><span class="line">&#x2F;**</span><br><span class="line"> * 进行简单Text组件使用实例</span><br><span class="line"> * Sample React Native App  test.android.js</span><br><span class="line"> * https:&#x2F;&#x2F;github.com&#x2F;facebook&#x2F;react-native</span><br><span class="line"> *&#x2F;</span><br><span class="line">&#39;use strict&#39;;</span><br><span class="line">import React, &#123; Component &#125; from &#39;react&#39;;</span><br><span class="line">import &#123;</span><br><span class="line">  AppRegistry,</span><br><span class="line">  Text,</span><br><span class="line">  View,</span><br><span class="line">  StyleSheet,</span><br><span class="line">&#125; from &#39;react-native&#39;;</span><br><span class="line">var styles &#x3D; StyleSheet.create(&#123;</span><br><span class="line">     titleBase:&#123;</span><br><span class="line">        margin:10,</span><br><span class="line">        textAlign:&#39;center&#39;,</span><br><span class="line">        color:&#39;red&#39;,</span><br><span class="line">        fontSize:28,</span><br><span class="line">        fontFamily:&#39;Cochin&#39;,</span><br><span class="line">     &#125;,</span><br><span class="line">     title:&#123;</span><br><span class="line">        color:&#39;green&#39;,</span><br><span class="line">        fontWeight:&#39;bold&#39;,</span><br><span class="line">     &#125;,</span><br><span class="line">&#125;);</span><br><span class="line">var TestText &#x3D; React.createClass(&#123;</span><br><span class="line">  render: function() &#123;</span><br><span class="line">    return (</span><br><span class="line">      &lt;Text style&#x3D;&#123;styles.titleBase&#125;&gt;</span><br><span class="line">         I am root text!</span><br><span class="line">         &lt;Text style&#x3D;&#123;styles.title&#125;&gt;</span><br><span class="line">              I am chid text!</span><br><span class="line">          &lt;&#x2F;Text&gt;</span><br><span class="line">      &lt;&#x2F;Text&gt;</span><br><span class="line">    );</span><br><span class="line">  &#125;</span><br><span class="line">&#125;);</span><br><span class="line">AppRegistry.registerComponent(&#39;TestText&#39;, () &#x3D;&gt; TestText);</span><br><span class="line"></span><br></pre></td></tr></table></figure>
-
-<p>上述实例采用TextView的嵌套方式，最外层的Text的Style titleBase定义相关风格，内层的风格style定义相关风格，我们可以看到运行效果，如果内层没有重写外层定义的样式，那么内层会进行继承。如果重写了样式，那么内层会根据自己定义的样式进行渲染，该和CSS样式表差不多。</p>
-<h2 id="属性方法-主要一些可用的属性"><a href="#属性方法-主要一些可用的属性" class="headerlink" title="属性方法(主要一些可用的属性)"></a>属性方法(主要一些可用的属性)</h2><ul>
-<li>  ①.allowFontScaling (bool):控制字体是否根据iOS的设置进行自动缩放-iOS平台,Android平台不适用</li>
-<li>  ②.numberOfLines (number):进行设置Text显示文本的行数，如果显示的内容超过了行数，默认其他多余的信息就不会显示了。</li>
-<li>  ③.onLayout (function) 当布局位置发生变动的时候自动进行触发该方法, 其中该function的参数如下: [code lang=”” start=”” highlight=””]{nativeEvent: {layout: {x, y, width, height}}}[/code]</li>
-<li>  ④.onPress (fcuntion) 该方法当文本发生点击的时候调用该方法.</li>
-</ul>
-<h2 id="风格样式"><a href="#风格样式" class="headerlink" title="风格样式"></a>风格样式</h2><ul>
-<li>  1.继承可以使用View组件的所有Style(具体查看<a target="_blank" rel="noopener" href="http://facebook.github.io/react-native/docs/view.html#style">http://facebook.github.io/react-native/docs/view.html#style</a>)</li>
-<li>  2.color:字体颜色</li>
-<li>  3.fontFamily 字体名称</li>
-<li>  4.fontSize 字体大小</li>
-<li>  5.fontStyle 字体风格(normal,italic)</li>
-<li>  6.fontWeight 字体粗细权重(“normal”, ‘bold’, ‘100’, ‘200’, ‘300’, ‘400’, ‘500’, ‘600’, ‘700’, ‘800’, ‘900’)</li>
-<li>  7.textShadowOffset 设置阴影效果{width: number, height: number}</li>
-<li>  8.textShadowRadius 阴影效果圆角</li>
-<li>  9..textShadowColor 阴影效果的颜色</li>
-<li>  10.letterSpacing 字符间距</li>
-<li>  11.lineHeight 行高</li>
-<li>  12.textAlign 文本对其方式(“auto”, ‘left’, ‘right’, ‘center’, ‘justify’)</li>
-<li>  13.textDecorationLine 横线位置 (“none”, ‘underline’, ‘line-through’, ‘underline line-through’)</li>
-<li>  14.textDecorationStyle 线的风格(“solid”, ‘double’, ‘dotted’, ‘dashed’)</li>
-<li>  15.textDecorationColor 线的颜色</li>
-<li>  16.writingDirection 文本方向(“auto”, ‘ltr’, ‘rtl’)</li>
-</ul>
-<h2 id="特别注意点"><a href="#特别注意点" class="headerlink" title="特别注意点"></a>特别注意点</h2><h3 id="嵌套特点"><a href="#嵌套特点" class="headerlink" title="嵌套特点"></a>嵌套特点</h3><p>和Web上面一直的设计方案，我们通过嵌套包裹的方案，相同的属性的文本可以用父标签进行包裹，然后内部特殊的文本采用子标签方案，具体例子如下:</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">&lt;Text style&#x3D;&#123;&#123;fontWeight: &#39;bold&#39;,fontSize:28&#125;&#125;&gt;</span><br><span class="line">      I am bold</span><br><span class="line">      &lt;Text style&#x3D;&#123;&#123;color: &#39;red&#39;&#125;&#125;&gt;</span><br><span class="line">        and red</span><br><span class="line">    &lt;&#x2F;Text&gt;</span><br><span class="line">&lt;&#x2F;Text&gt;</span><br><span class="line"></span><br></pre></td></tr></table></figure>
-
-<p>整体字体格式为bold以及字体大小为28，不过后边的’and red’的字体颜色为红色。</p>
-<h3 id="容器布局规则"><a href="#容器布局规则" class="headerlink" title="容器布局规则"></a>容器布局规则</h3><p>FlexBox(弹性布局),</p>
-<h3 id="样式继承规格"><a href="#样式继承规格" class="headerlink" title="样式继承规格"></a>样式继承规格</h3><p>组件可以嵌套，而且样式还支持继承，也就说父组件定义了相关样式，如果子组件没有重写样式的话，那么该子组件会继承父组件定义的样式。</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br></pre></td><td class="code"><pre><span class="line">&#x2F;**</span><br><span class="line"> *  Text组件实例演示</span><br><span class="line"> * Sample React Native App</span><br><span class="line"> * https:&#x2F;&#x2F;github.com&#x2F;facebook&#x2F;react-native</span><br><span class="line"> *&#x2F;</span><br><span class="line">&#39;use strict&#39;;</span><br><span class="line"></span><br><span class="line">import React, &#123; Component &#125; from &#39;react&#39;;</span><br><span class="line">import &#123;</span><br><span class="line">  AppRegistry,</span><br><span class="line">  Text,</span><br><span class="line">  View,</span><br><span class="line">  StyleSheet,</span><br><span class="line">&#125; from &#39;react-native&#39;;</span><br><span class="line">var TestText &#x3D; React.createClass(&#123;</span><br><span class="line">  render: function() &#123;</span><br><span class="line">    return (</span><br><span class="line">      &lt;View&gt;</span><br><span class="line">       &lt;Text style&#x3D;&#123;&#123;color:&#39;red&#39;&#125;&#125;&gt;</span><br><span class="line">          My Text One  红色。</span><br><span class="line">       &lt;&#x2F;Text&gt;</span><br><span class="line">       &lt;Text style&#x3D;&#123;&#123;color:&#39;green&#39;,fontSize:20&#125;&#125;&gt; My Text Two 绿色和字体大小。&lt;&#x2F;Text&gt;</span><br><span class="line">       &lt;Text style&#x3D;&#123;&#123;color:&#39;green&#39;,fontFamily:&#39;Cochin&#39;&#125;&#125;&gt; My Text Three 绿色和字体名称。&lt;&#x2F;Text&gt;</span><br><span class="line">       &lt;Text style&#x3D;&#123;&#123;color:&#39;pink&#39;,fontWeight:&#39;bold&#39;&#125;&#125;&gt; My Text Four 粉色和加粗。&lt;&#x2F;Text&gt;</span><br><span class="line">       &lt;Text style&#x3D;&#123;&#123;color:&#39;gray&#39;,fontStyle:&#39;italic&#39;&#125;&#125;&gt; My Text Five 灰色和斜体。&lt;&#x2F;Text&gt;</span><br><span class="line">       &lt;Text style&#x3D;&#123;&#123;textAlign:&#39;center&#39;,fontStyle:&#39;italic&#39;&#125;&#125;&gt; My Text Six 居中和斜体。&lt;&#x2F;Text&gt;</span><br><span class="line">       &lt;Text numberOfLines&#x3D;&#123;1&#125; style&#x3D;&#123;&#123;textAlign:&#39;center&#39;,fontStyle:&#39;italic&#39;&#125;&#125;&gt;测试行数My Text Six 居中和斜体。My Text Six 居中和斜体。 My Text Six 居中和斜体。&lt;&#x2F;Text&gt;</span><br><span class="line">       &lt;Text style&#x3D;&#123;&#123;marginLeft:50,marginTop:50,textAlign:&#39;center&#39;,fontStyle:&#39;italic&#39;&#125;&#125;&gt;设置文本的间距,居左，居顶部50&lt;&#x2F;Text&gt;</span><br><span class="line">       &lt;Text numberOfLines&#x3D;&#123;2&#125; style&#x3D;&#123;&#123;lineHeight:50,textAlign:&#39;center&#39;,fontStyle:&#39;italic&#39;&#125;&#125;&gt;</span><br><span class="line">          测试行高 测试行高 测试行高 测试行高 测试行高 测试行高 测试行高 测试行高 测试行高 测试行高 测试行高 </span><br><span class="line">          测试行高 测试行高 测试行高 测试行高 测试行高 测试行高</span><br><span class="line">       &lt;&#x2F;Text&gt;</span><br><span class="line">      &lt;&#x2F;View&gt;</span><br><span class="line">    );</span><br><span class="line">  &#125;</span><br><span class="line">&#125;);</span><br><span class="line">AppRegistry.registerComponent(&#39;TestText&#39;, () &#x3D;&gt; TestText);</span><br><span class="line"></span><br></pre></td></tr></table></figure>
-
-<h2 id="注"><a href="#注" class="headerlink" title="注"></a>注</h2><p>1、在使用Text的过程中，实现文本垂直居中、水平居中的效果（iOS和Android通用）</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br></pre></td><td class="code"><pre><span class="line">&lt;View  style&#x3D;&#123;styles.textView&#125;&gt;</span><br><span class="line">    &lt;Text style&#x3D;&#123;styles.text&#125;&gt; 水平垂直居中&lt;&#x2F;Text&gt;</span><br><span class="line">&lt;&#x2F;View&gt;</span><br><span class="line"></span><br><span class="line">textView:&#123;</span><br><span class="line">  flexDirection:&#39;column&#39;,</span><br><span class="line">  justifyContent:&#39;center&#39;,</span><br><span class="line">  alignItems:&#39;center&#39;,</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">text:&#123;</span><br><span class="line">    fontSize:12,</span><br><span class="line">    color:&#39;#f2f2f2&#39;,</span><br><span class="line">&#125;</span><br><span class="line"></span><br></pre></td></tr></table></figure>
-
-<p>尽量用view去包裹一层Text组件，text组件只负责基础的文字样式，View组件负责对齐方式等。</p>
-<p>2、在Android平台上，Text组件里使用paddingLeft 属性，不好使，直接顶着View了。</p>
-<p>解决方式：1）将paddingLeft放在View属性上;2）将paddingLeft修改为marginLeft</p>
-<p>建议使用第一种方案修改，把对齐方式交给view去处理，Text只负责文本属性的显示。</p>
+          <p>解决chrome不能自动同步问题，可以进行手动同步。</p>
+<p>不需要删除数据，不需要关闭账户！</p>
+<p>首先你懂得</p>
+<p>chrome地址栏中输入： chrome://sync-internals/<br>进行如图操作</p>
+<p>注意：目前这种方式是完全可行的，如果点击disable sync 再次点击 request 等待一会还是没有反应，且网络正常，请尝试关闭并打开一次浏览器再操作。<br><img src="https://upload-images.jianshu.io/upload_images/10024246-d2dfb140d7189280?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="image"><br><img src="https://upload-images.jianshu.io/upload_images/10024246-f0837051d08d3136?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="image"><br><img src="https://upload-images.jianshu.io/upload_images/10024246-c83c5ed3762650d6?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="image"></p>
 
       
     </div>
@@ -354,7 +343,7 @@
   
 
   <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="">
-    <link itemprop="mainEntityOfPage" href="https://lzhwweb.github.io/nirvana/reactnative/react-native/iOS-RN-0-45%E4%BB%A5%E4%B8%8A%E7%89%88%E6%9C%AC%E7%BD%91%E7%BB%9C%E9%97%AE%E9%A2%98%E6%97%A0%E6%B3%95%E5%90%AF%E5%8A%A8/">
+    <link itemprop="mainEntityOfPage" href="https://lzhwweb.github.io/nirvana/tool/%E5%BC%80%E5%8F%91%E5%B7%A5%E5%85%B7/%E5%B8%B8%E7%94%A8%E7%9A%84VS-Code%E6%8F%92%E4%BB%B6/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="image" content="/nirvana/images/headphoto.jpeg">
@@ -367,7 +356,7 @@
     </span>
       <header class="post-header">
         <h2 class="post-title" itemprop="name headline">
-          <a href="/nirvana/reactnative/react-native/iOS-RN-0-45%E4%BB%A5%E4%B8%8A%E7%89%88%E6%9C%AC%E7%BD%91%E7%BB%9C%E9%97%AE%E9%A2%98%E6%97%A0%E6%B3%95%E5%90%AF%E5%8A%A8/" class="post-title-link" itemprop="url">iOS-RN-0-45以上版本网络问题无法启动</a>
+          <a href="/nirvana/tool/%E5%BC%80%E5%8F%91%E5%B7%A5%E5%85%B7/%E5%B8%B8%E7%94%A8%E7%9A%84VS-Code%E6%8F%92%E4%BB%B6/" class="post-title-link" itemprop="url">常用的VS-Code插件</a>
         </h2>
 
         <div class="post-meta-container">
@@ -387,7 +376,7 @@
       </span>
       <span class="post-meta-item-text">分类于</span>
         <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-          <a href="/nirvana/categories/reactnative/" itemprop="url" rel="index"><span itemprop="name">reactnative</span></a>
+          <a href="/nirvana/categories/tool/" itemprop="url" rel="index"><span itemprop="name">tool</span></a>
         </span>
     </span>
 
@@ -399,14 +388,14 @@
         <i class="far fa-file-word"></i>
       </span>
       <span class="post-meta-item-text">本文字数：</span>
-      <span>1k</span>
+      <span>2.1k</span>
     </span>
     <span class="post-meta-item" title="阅读时长">
       <span class="post-meta-item-icon">
         <i class="far fa-clock"></i>
       </span>
       <span class="post-meta-item-text">阅读时长 &asymp;</span>
-      <span>1 分钟</span>
+      <span>2 分钟</span>
     </span>
 </div>
 
@@ -417,14 +406,17 @@
     
     
     <div class="post-body" itemprop="articleBody">
-          <p>RN iOS 0.45以上版本开始需要依赖一些第三方编译库，但这些库在国内下载都非常困难（一般的翻墙工具都很难下载）<br>未来RN不同版本可能依赖不同版本的第三方编译库，具体所需库和版本请查看<a target="_blank" rel="noopener" href="https://github.com/facebook/react-native/blob/master/scripts/ios-install-third-party.sh">ios-install-third-party.sh</a>文件，注意先把左上角的branch切换到对应的版本.</p>
-<p><img src="http://upload-images.jianshu.io/upload_images/10024246-4967270af295b740.jpg?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="1515804427550.jpg"></p>
-<p>在文件最下面找到需要第三方编译库</p>
-<p><img src="http://upload-images.jianshu.io/upload_images/10024246-182697a23377bd82.jpg?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="1515804585324.jpg"></p>
-<p>我现在使用的52版本的内容为</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">fetch_and_unpack glog-0.3.4.tar.gz https:&#x2F;&#x2F;github.com&#x2F;google&#x2F;glog&#x2F;archive&#x2F;v0.3.4.tar.gz 69f91cd5a1de35ead0bc4103ea87294b0206a456 &quot;\&quot;$SCRIPTDIR&#x2F;ios-configure-glog.sh\&quot;&quot;</span><br><span class="line">fetch_and_unpack double-conversion-1.1.5.tar.gz https:&#x2F;&#x2F;github.com&#x2F;google&#x2F;double-conversion&#x2F;archive&#x2F;v1.1.5.tar.gz 96a8aba1b4ce7d4a7a3c123be26c379c2fed1def</span><br><span class="line">fetch_and_unpack boost_1_63_0.tar.gz https:&#x2F;&#x2F;github.com&#x2F;react-native-community&#x2F;boost-for-react-native&#x2F;releases&#x2F;download&#x2F;v1.63.0-0&#x2F;boost_1_63_0.tar.gz c3f57e1d22a995e608983effbb752b54b6eab741</span><br><span class="line">fetch_and_unpack folly-2016.09.26.00.tar.gz https:&#x2F;&#x2F;github.com&#x2F;facebook&#x2F;folly&#x2F;archive&#x2F;v2016.09.26.00.tar.gz f3b928b5039235bad6cece638c597c6684d1e4e6</span><br></pre></td></tr></table></figure>
-
-<p>下载完后需要把文件copy到***~/.rncache***下，然后就可以运行RN程序了</p>
+          <h2 id="Bracket-Pair-Colorizer-2"><a href="#Bracket-Pair-Colorizer-2" class="headerlink" title="Bracket Pair Colorizer 2"></a>Bracket Pair Colorizer 2</h2><p><img src="https://upload-images.jianshu.io/upload_images/10024246-4e1925a599eb769a?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240"></p>
+<p>帮助我搞清楚 JavaScript 中复杂的嵌套 promise。顾名思义，它可以让方括号对变色，帮我弄清楚是否在某个地方搞糊涂了（例如缺少方括号）。它默认匹配 ()、[] 和{}等普通括号，但如果需要你也可以定义自定义括号。<br>它还有其他许多很酷的功能，例如定义颜色或为活动括号显示装订线之类。值得尝试一波。<br><strong>项目地址</strong><br><a target="_blank" rel="noopener" href="https://github.com/CoenraadS/Bracket-Pair-Colorizer-2">https://github.com/CoenraadS/Bracket-Pair-Colorizer-2</a><br> <strong>Marketplace</strong><br><a target="_blank" rel="noopener" href="https://marketplace.visualstudio.com/items?itemName=CoenraadS.bracket-pair-colorizer-2">https://marketplace.visualstudio.com/items?itemName=CoenraadS.bracket-pair-colorizer-2</a></p>
+<h2 id="NPM-Intellisense"><a href="#NPM-Intellisense" class="headerlink" title="NPM Intellisense"></a>NPM Intellisense</h2><p><img src="https://upload-images.jianshu.io/upload_images/10024246-db143f4cae36955c?imageMogr2/auto-orient/strip"></p>
+<p>如动图所示，它能自动完成以 NPM 包为目标的 require import 语句。这可以提供很多帮助，尤其是当你的项目变得很大，并且在 package.json 中包含很多依赖项时。<br> <strong>项目地址</strong><br><a target="_blank" rel="noopener" href="https://github.com/ChristianKohler/NpmIntellisense">https://github.com/ChristianKohler/NpmIntellisense</a><br><strong>Marketplace</strong><br><a target="_blank" rel="noopener" href="https://marketplace.visualstudio.com/items?itemName=christian-kohler.npm-intellisense">https://marketplace.visualstudio.com/items?itemName=christian-kohler.npm-intellisense</a></p>
+<h2 id="Path-Intellisense"><a href="#Path-Intellisense" class="headerlink" title="Path Intellisense"></a>Path Intellisense</h2><p><img src="https://upload-images.jianshu.io/upload_images/10024246-afb2416b7e73f8e8.gif?imageMogr2/auto-orient/strip"></p>
+<p>这是 NPM Intellisense 的姐妹插件。它会执行相同的自动补全，不过针对的是你的文件系统。<br><strong>项目地址</strong><br><a target="_blank" rel="noopener" href="https://github.com/ChristianKohler/PathIntellisense">https://github.com/ChristianKohler/PathIntellisense</a><br><strong>Marketplace</strong><br><a target="_blank" rel="noopener" href="https://marketplace.visualstudio.com/items?itemName=christian-kohler.path-intellisense">https://marketplace.visualstudio.com/items?itemName=christian-kohler.path-intellisense</a></p>
+<h2 id="Quokka-js"><a href="#Quokka-js" class="headerlink" title="Quokka.js"></a>Quokka.js</h2><p><img src="https://upload-images.jianshu.io/upload_images/10024246-ccab0e9d884fce5f.gif?imageMogr2/auto-orient/strip"><br>如果你只是想尝试一些东西，不想费劲先设置项目，那么这款工具就是一个很好的辅助。通过实时检查输出，它会立即将输出显示在 JavaScript/TypeScript 代码旁边，如动图所示。这是一个很好的扩展，特别适合调试目的。<br><strong>项目地址</strong><br><a target="_blank" rel="noopener" href="https://quokkajs.com/">https://quokkajs.com/</a><br><strong>Marketplace</strong><br><a target="_blank" rel="noopener" href="https://marketplace.visualstudio.com/items?itemName=WallabyJs.quokka-vscode">https://marketplace.visualstudio.com/items?itemName=WallabyJs.quokka-vscode</a></p>
+<h2 id="Docker"><a href="#Docker" class="headerlink" title="Docker"></a>Docker</h2><p>这个扩展是处理多个 Docker 映像和容器的必备，因为你可以用它快速浏览正在运行哪些容器、构建哪些映像以及创建哪些网络。<br><strong>项目地址</strong><br><a target="_blank" rel="noopener" href="https://github.com/microsoft/vscode-docker">https://github.com/microsoft/vscode-docker</a><br><strong>Marketplace</strong><br><a target="_blank" rel="noopener" href="https://marketplace.visualstudio.com/items?itemName=ms-azuretools.vscode-docker">https://marketplace.visualstudio.com/items?itemName=ms-azuretools.vscode-docker</a></p>
+<h2 id="Live-Server"><a href="#Live-Server" class="headerlink" title="Live Server"></a>Live Server</h2><p><img src="https://upload-images.jianshu.io/upload_images/10024246-6aae06bf0f4fff6b.gif?imageMogr2/auto-orient/strip"><br>这个扩展为本地开发服务器提供了热重载功能，也就是说它会在保存对文件所做的任何更改后立即刷新页面。它在状态栏中有一个漂亮的“Go Live”按钮，你只需单击一下即可启动服务器。<br><strong>项目地址</strong><br><a target="_blank" rel="noopener" href="https://github.com/ritwickdey/vscode-live-server">https://github.com/ritwickdey/vscode-live-server</a><br><strong>Marketplace</strong><br><a target="_blank" rel="noopener" href="https://marketplace.visualstudio.com/items?itemName=ritwickdey.LiveServer">https://marketplace.visualstudio.com/items?itemName=ritwickdey.LiveServer</a></p>
+<h2 id="Auto-Close-Tag-和-Auto-Rename-Tag"><a href="#Auto-Close-Tag-和-Auto-Rename-Tag" class="headerlink" title="Auto Close Tag 和 Auto Rename Tag"></a>Auto Close Tag 和 Auto Rename Tag</h2><p><img src="https://upload-images.jianshu.io/upload_images/10024246-879775d67e33686b.gif?imageMogr2/auto-orient/strip"><br>它们是 VS Code 的两个小插件，可通过自动重命名和关闭标签来帮助你维护 HTML 文件。这也适用于 React 自己的 JSX 语法。<br><strong>Auto Close Tag</strong><br><a target="_blank" rel="noopener" href="https://github.com/formulahendry/vscode-auto-close-tag/https://marketplace.visualstudio.com/items?itemName=formulahendry.auto-close-tag">https://github.com/formulahendry/vscode-auto-close-tag/https://marketplace.visualstudio.com/items?itemName=formulahendry.auto-close-tag</a><br> <strong>Auto Rename Tag</strong><br><a target="_blank" rel="noopener" href="https://github.com/formulahendry/vscode-auto-rename-tag/https://marketplace.visualstudio.com/items?itemName=formulahendry.auto-rename-tag">https://github.com/formulahendry/vscode-auto-rename-tag/https://marketplace.visualstudio.com/items?itemName=formulahendry.auto-rename-tag</a></p>
+<h2 id="Markdown-Preview-Enhanced"><a href="#Markdown-Preview-Enhanced" class="headerlink" title="Markdown Preview Enhanced"></a>Markdown Preview Enhanced</h2><p><img src="https://upload-images.jianshu.io/upload_images/10024246-fe3e4c69847e2ade.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240"><br> Markdown 预览工具。它不仅为你提供预览，而且还有同步滚动、PDF 导出和 PlantUML 的功能。<br><strong>项目地址</strong><br><a target="_blank" rel="noopener" href="https://github.com/shd101wyy/vscode-markdown-preview-enhanced">https://github.com/shd101wyy/vscode-markdown-preview-enhanced</a><br><strong>Marketplace</strong><br><a target="_blank" rel="noopener" href="https://marketplace.visualstudio.com/items?itemName=shd101wyy.markdown-preview-enhanced">https://marketplace.visualstudio.com/items?itemName=shd101wyy.markdown-preview-enhanced</a></p>
 
       
     </div>
@@ -451,7 +443,7 @@
   
 
   <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="">
-    <link itemprop="mainEntityOfPage" href="https://lzhwweb.github.io/nirvana/reactnative/react-native/react-native-0-63%E5%90%AF%E5%8A%A8%E9%97%AE%E9%A2%98/">
+    <link itemprop="mainEntityOfPage" href="https://lzhwweb.github.io/nirvana/tool/%E5%BC%80%E5%8F%91%E5%B7%A5%E5%85%B7/%E8%B0%B7%E6%AD%8C%E6%B5%8F%E8%A7%88%E5%99%A8SwitchyOmega%E6%8F%92%E4%BB%B6%E5%AE%89%E8%A3%85%E4%BD%BF%E7%94%A8%E6%95%99%E7%A8%8B/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="image" content="/nirvana/images/headphoto.jpeg">
@@ -464,7 +456,7 @@
     </span>
       <header class="post-header">
         <h2 class="post-title" itemprop="name headline">
-          <a href="/nirvana/reactnative/react-native/react-native-0-63%E5%90%AF%E5%8A%A8%E9%97%AE%E9%A2%98/" class="post-title-link" itemprop="url">react-native-0-63启动问题</a>
+          <a href="/nirvana/tool/%E5%BC%80%E5%8F%91%E5%B7%A5%E5%85%B7/%E8%B0%B7%E6%AD%8C%E6%B5%8F%E8%A7%88%E5%99%A8SwitchyOmega%E6%8F%92%E4%BB%B6%E5%AE%89%E8%A3%85%E4%BD%BF%E7%94%A8%E6%95%99%E7%A8%8B/" class="post-title-link" itemprop="url">谷歌浏览器SwitchyOmega插件安装使用教程</a>
         </h2>
 
         <div class="post-meta-container">
@@ -484,7 +476,7 @@
       </span>
       <span class="post-meta-item-text">分类于</span>
         <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-          <a href="/nirvana/categories/reactnative/" itemprop="url" rel="index"><span itemprop="name">reactnative</span></a>
+          <a href="/nirvana/categories/tool/" itemprop="url" rel="index"><span itemprop="name">tool</span></a>
         </span>
     </span>
 
@@ -496,7 +488,7 @@
         <i class="far fa-file-word"></i>
       </span>
       <span class="post-meta-item-text">本文字数：</span>
-      <span>520</span>
+      <span>563</span>
     </span>
     <span class="post-meta-item" title="阅读时长">
       <span class="post-meta-item-icon">
@@ -514,7 +506,27 @@
     
     
     <div class="post-body" itemprop="articleBody">
-          <p>1、<code>OpenSSL-Universal</code> requires CocoaPods version <code>&gt;= &quot;1.9</code>“<br>podinstall时提示需要把CocoaPods升级到1.9，但是通过brew install CocoaPods，发现安装的版本是1.6.1，brew upgrade CocoaPods 发现版本无法升级，后来查到1.9的版本需要通过<code>gem install -n /usr/local/bin cocoapods --pre</code>才能安装最新的版本<br>2、Typedef redefinition with different types (‘uint8_t’ (aka ‘unsigned char’) vs ‘enum clockid_t’)<br>changing <code>iOS Deployment Target</code> of <code>Flipper-Folly Pods</code> to “iOS 9.0”, this error disappeared.<br><a target="_blank" rel="noopener" href="https://user-images.githubusercontent.com/3139234/78309578-52984600-7586-11ea-9d27-cefdc6e7ca0f.png"><img src="https://upload-images.jianshu.io/upload_images/10024246-e337b36acb480adc.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240"></a><br>3、 ‘event2/event-config.h’ file not found<br> Flipper-Folly的版本有问题，需要指定版本<br>use_flipper!修改为use_flipper!({ ‘Flipper-Folly’ =&gt; ‘2.3.0’ })<br>重新pod install即可</p>
+          <p>SwitchyOmega是Chrome浏览器上的代理扩展程序,可以轻松快捷的管理和切换多个代理设置。接管浏览器代理方式，可瞬间切换代理和本地连接方式，配合socks5（等其他代理工具）可实现只代理部分国内无法访问的网站。</p>
+<p><img src="https://upload-images.jianshu.io/upload_images/10024246-61233ce7d20819e9.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240"></p>
+<blockquote>
+<p>安装方法</p>
+</blockquote>
+<p>1、在线安装</p>
+<p>在可以访问外网的环境下，从Chrome应用商店来安装：<a target="_blank" rel="noopener" href="https://chrome.google.com/webstore/detail/padekgcemlokbadohgkifijomclgjgif">https://chrome.google.com/webstore/detail/padekgcemlokbadohgkifijomclgjgif</a></p>
+<p>2、离线安装</p>
+<p>去github下载最新版安装包：<a target="_blank" rel="noopener" href="https://github.com/FelisCatus/SwitchyOmega/releases">https://github.com/FelisCatus/SwitchyOmega/releases</a></p>
+<blockquote>
+<p>使用方式</p>
+</blockquote>
+<p>1、新建一个情景模式</p>
+<p><img src="https://upload-images.jianshu.io/upload_images/10024246-3937342562f3571e.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="谷歌浏览器SwitchyOmega插件安装使用教程"></p>
+<p>上图中，前两种是最常用的，如果是第一次使用，那就记住前两种即可，第一种是指定代理的方式，每次访问一定会从设置的代理中走，第二种是动态切换的方式，比如说你想让百度走国内的网络，而让谷歌走国外的网络。</p>
+<p>2、配置情景模式</p>
+<p><img src="https://upload-images.jianshu.io/upload_images/10024246-27088b3d66156959.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="谷歌浏览器SwitchyOmega插件安装使用教程"></p>
+<p>我这里使用的是SSR的默认代理端口1080做演示，大家根据自己的代理工具来配置即可，注意“代理协议”别选错了。</p>
+<p>3、配置自动切换</p>
+<p><img src="https://upload-images.jianshu.io/upload_images/10024246-312d117ca68260d4.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="谷歌浏览器SwitchyOmega插件安装使用教程"></p>
+<p>前两步完成之后，就已经可以了，但是每次使用的时候，需要在浏览器上手动点一下来切换（不是之前提到的浏览器代理设置），而这一步配置了自动切换以后，会自动根据域名来匹配情景模式。</p>
 
       
     </div>
@@ -1266,6 +1278,7 @@
 <script src="/nirvana/js/utils.js"></script><script src="/nirvana/js/motion.js"></script><script src="/nirvana/js/next-boot.js"></script>
 
   
+<script src="/nirvana/js/local-search.js"></script>
 
 
 

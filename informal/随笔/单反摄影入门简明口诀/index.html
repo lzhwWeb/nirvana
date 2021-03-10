@@ -21,7 +21,7 @@
 
 <script class="hexo-configurations">
     var NexT = window.NexT || {};
-    var CONFIG = {"hostname":"lzhwweb.github.io","root":"/nirvana/","images":"/nirvana/images","scheme":"Gemini","version":"8.2.2","exturl":false,"sidebar":{"position":"left","display":"post","padding":18,"offset":12},"copycode":false,"bookmark":{"enable":false,"color":"#222","save":"auto"},"fancybox":false,"mediumzoom":false,"lazyload":false,"pangu":false,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},"motion":{"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"fadeInDown","post_body":"fadeInDown","coll_header":"fadeInLeft","sidebar":"fadeInUp"}},"prism":false,"i18n":{"placeholder":"搜索...","empty":"没有找到任何搜索结果：${query}","hits_time":"找到 ${hits} 个搜索结果（用时 ${time} 毫秒）","hits":"找到 ${hits} 个搜索结果"}};
+    var CONFIG = {"hostname":"lzhwweb.github.io","root":"/nirvana/","images":"/nirvana/images","scheme":"Gemini","version":"8.2.2","exturl":false,"sidebar":{"position":"left","display":"post","padding":18,"offset":12},"copycode":false,"bookmark":{"enable":false,"color":"#222","save":"auto"},"fancybox":false,"mediumzoom":false,"lazyload":false,"pangu":false,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},"motion":{"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"fadeInDown","post_body":"fadeInDown","coll_header":"fadeInLeft","sidebar":"fadeInUp"}},"prism":false,"i18n":{"placeholder":"搜索...","empty":"没有找到任何搜索结果：${query}","hits_time":"找到 ${hits} 个搜索结果（用时 ${time} 毫秒）","hits":"找到 ${hits} 个搜索结果"},"path":"/nirvana/search.xml","localsearch":{"enable":true,"trigger":"auto","top_n_per_article":1,"unescape":false,"preload":false}};
   </script>
 <meta name="description" content="单反摄影入门简明口诀（葵花宝典）    1、拍人像    拍人长焦大圈先，（AV光圈优先自动曝光模式，长焦大光圈浅景深，宜于突出主题虚化背景，通常F5.6及以上）    测光对焦眼脸线，（用中央重点测光或点测光，拍摄头部焦点对眼，半身对脸，全身对身体曲线）    多换角度背景远，（摄影者与被摄者多换角度，被摄者距离背景尽量远，以便虚化背景）    活用补光快门线。（活用闪光灯等补光设备，防止抖动">
 <meta property="og:type" content="article">
@@ -117,6 +117,7 @@
 
   <div class="site-nav-right">
     <div class="toggle popup-trigger">
+        <i class="fa fa-search fa-fw fa-lg"></i>
     </div>
   </div>
 </div>
@@ -137,11 +138,37 @@
         <li class="menu-item menu-item-开发工具"><a href="/nirvana/categories/tool" rel="section">开发工具</a></li>
         <li class="menu-item menu-item-设计模式(ts)"><a href="/nirvana/categories/DesignPattern" rel="section">设计模式(TS)</a></li>
         <li class="menu-item menu-item-前端"><a href="/nirvana/categories/javascript" rel="section">前端</a></li>
+      <li class="menu-item menu-item-search">
+        <a role="button" class="popup-trigger"><i class="fa fa-search fa-fw"></i>搜索
+        </a>
+      </li>
   </ul>
 </nav>
 
 
 
+  <div class="search-pop-overlay">
+    <div class="popup search-popup"><div class="search-header">
+  <span class="search-icon">
+    <i class="fa fa-search"></i>
+  </span>
+  <div class="search-input-container">
+    <input autocomplete="off" autocapitalize="off" maxlength="80"
+           placeholder="搜索..." spellcheck="false"
+           type="search" class="search-input">
+  </div>
+  <span class="popup-btn-close" role="button">
+    <i class="fa fa-times-circle"></i>
+  </span>
+</div>
+<div class="search-result-container no-result">
+  <div class="search-result-icon">
+    <i class="fa fa-spinner fa-pulse fa-5x"></i>
+  </div>
+</div>
+
+    </div>
+  </div>
 
 </div>
         
@@ -308,13 +335,13 @@
 
           <div class="post-nav">
             <div class="post-nav-item">
-                <a href="/nirvana/informal/%E9%9A%8F%E7%AC%94/%E5%AD%A9%E5%AD%90%EF%BC%8C%E4%BD%A0%E4%B8%BA%E4%BB%80%E4%B9%88%E8%A6%81%E5%8A%AA%E5%8A%9B%EF%BC%9F/" rel="prev" title="孩子，你为什么要努力？">
-                  <i class="fa fa-chevron-left"></i> 孩子，你为什么要努力？
+                <a href="/nirvana/informal/%E9%9A%8F%E7%AC%94/%E5%86%85%E5%8A%9F%E4%B8%8E%E6%88%90%E5%8A%9F/" rel="prev" title="内功与成功？">
+                  <i class="fa fa-chevron-left"></i> 内功与成功？
                 </a>
             </div>
             <div class="post-nav-item">
-                <a href="/nirvana/informal/%E9%9A%8F%E7%AC%94/%E5%86%85%E5%8A%9F%E4%B8%8E%E6%88%90%E5%8A%9F/" rel="next" title="内功与成功？">
-                  内功与成功？ <i class="fa fa-chevron-right"></i>
+                <a href="/nirvana/informal/%E9%9A%8F%E7%AC%94/2020%E5%B9%B4%E6%80%BB%E7%BB%93/" rel="next" title="2020三件事">
+                  2020三件事 <i class="fa fa-chevron-right"></i>
                 </a>
             </div>
           </div>
@@ -391,6 +418,7 @@
 <script src="/nirvana/js/utils.js"></script><script src="/nirvana/js/motion.js"></script><script src="/nirvana/js/next-boot.js"></script>
 
   
+<script src="/nirvana/js/local-search.js"></script>
 
 
 

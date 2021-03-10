@@ -21,7 +21,7 @@
 
 <script class="hexo-configurations">
     var NexT = window.NexT || {};
-    var CONFIG = {"hostname":"lzhwweb.github.io","root":"/nirvana/","images":"/nirvana/images","scheme":"Gemini","version":"8.2.2","exturl":false,"sidebar":{"position":"left","display":"post","padding":18,"offset":12},"copycode":false,"bookmark":{"enable":false,"color":"#222","save":"auto"},"fancybox":false,"mediumzoom":false,"lazyload":false,"pangu":false,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},"motion":{"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"fadeInDown","post_body":"fadeInDown","coll_header":"fadeInLeft","sidebar":"fadeInUp"}},"prism":false,"i18n":{"placeholder":"搜索...","empty":"没有找到任何搜索结果：${query}","hits_time":"找到 ${hits} 个搜索结果（用时 ${time} 毫秒）","hits":"找到 ${hits} 个搜索结果"}};
+    var CONFIG = {"hostname":"lzhwweb.github.io","root":"/nirvana/","images":"/nirvana/images","scheme":"Gemini","version":"8.2.2","exturl":false,"sidebar":{"position":"left","display":"post","padding":18,"offset":12},"copycode":false,"bookmark":{"enable":false,"color":"#222","save":"auto"},"fancybox":false,"mediumzoom":false,"lazyload":false,"pangu":false,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},"motion":{"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"fadeInDown","post_body":"fadeInDown","coll_header":"fadeInLeft","sidebar":"fadeInUp"}},"prism":false,"i18n":{"placeholder":"搜索...","empty":"没有找到任何搜索结果：${query}","hits_time":"找到 ${hits} 个搜索结果（用时 ${time} 毫秒）","hits":"找到 ${hits} 个搜索结果"},"path":"/nirvana/search.xml","localsearch":{"enable":true,"trigger":"auto","top_n_per_article":1,"unescape":false,"preload":false}};
   </script>
 <meta name="description" content="个人学习笔记">
 <meta property="og:type" content="website">
@@ -115,6 +115,7 @@
 
   <div class="site-nav-right">
     <div class="toggle popup-trigger">
+        <i class="fa fa-search fa-fw fa-lg"></i>
     </div>
   </div>
 </div>
@@ -135,11 +136,37 @@
         <li class="menu-item menu-item-开发工具"><a href="/nirvana/categories/tool" rel="section">开发工具</a></li>
         <li class="menu-item menu-item-设计模式(ts)"><a href="/nirvana/categories/DesignPattern" rel="section">设计模式(TS)</a></li>
         <li class="menu-item menu-item-前端"><a href="/nirvana/categories/javascript" rel="section">前端</a></li>
+      <li class="menu-item menu-item-search">
+        <a role="button" class="popup-trigger"><i class="fa fa-search fa-fw"></i>搜索
+        </a>
+      </li>
   </ul>
 </nav>
 
 
 
+  <div class="search-pop-overlay">
+    <div class="popup search-popup"><div class="search-header">
+  <span class="search-icon">
+    <i class="fa fa-search"></i>
+  </span>
+  <div class="search-input-container">
+    <input autocomplete="off" autocapitalize="off" maxlength="80"
+           placeholder="搜索..." spellcheck="false"
+           type="search" class="search-input">
+  </div>
+  <span class="popup-btn-close" role="button">
+    <i class="fa fa-times-circle"></i>
+  </span>
+</div>
+<div class="search-result-container no-result">
+  <div class="search-result-icon">
+    <i class="fa fa-spinner fa-pulse fa-5x"></i>
+  </div>
+</div>
+
+    </div>
+  </div>
 
 </div>
         
@@ -349,7 +376,7 @@
 </blockquote>
 <h2 id="webpack-的相关处理"><a href="#webpack-的相关处理" class="headerlink" title="webpack 的相关处理"></a>webpack 的相关处理</h2><p>运行以下命令安装相关依赖，并新建文件夹 src</p>
 <blockquote>
-<p>npm i -D webpack webpack-cli html-webpack-plugin <a href="mailto:&#x70;&#x72;&#x65;&#108;&#x6f;&#97;&#100;&#x2d;&#x77;&#x65;&#x62;&#112;&#x61;&#99;&#x6b;&#45;&#112;&#108;&#x75;&#x67;&#x69;&#x6e;&#x40;&#51;&#x2e;&#48;&#46;&#x30;&#45;&#x62;&#x65;&#116;&#97;&#x2e;&#52;">&#x70;&#x72;&#x65;&#108;&#x6f;&#97;&#100;&#x2d;&#x77;&#x65;&#x62;&#112;&#x61;&#99;&#x6b;&#45;&#112;&#108;&#x75;&#x67;&#x69;&#x6e;&#x40;&#51;&#x2e;&#48;&#46;&#x30;&#45;&#x62;&#x65;&#116;&#97;&#x2e;&#52;</a><br>mkdir src</p>
+<p>npm i -D webpack webpack-cli html-webpack-plugin <a href="mailto:&#x70;&#x72;&#101;&#x6c;&#x6f;&#x61;&#x64;&#x2d;&#x77;&#x65;&#98;&#x70;&#x61;&#x63;&#107;&#45;&#112;&#x6c;&#117;&#x67;&#x69;&#110;&#x40;&#51;&#x2e;&#x30;&#46;&#48;&#45;&#98;&#x65;&#116;&#x61;&#46;&#52;">&#x70;&#x72;&#101;&#x6c;&#x6f;&#x61;&#x64;&#x2d;&#x77;&#x65;&#98;&#x70;&#x61;&#x63;&#107;&#45;&#112;&#x6c;&#117;&#x67;&#x69;&#110;&#x40;&#51;&#x2e;&#x30;&#46;&#48;&#45;&#98;&#x65;&#116;&#x61;&#46;&#52;</a><br>mkdir src</p>
 </blockquote>
 <ul>
 <li>  PreloadWebpackPlugin 的当前版本 2.x 与 webpack 当前版本 4.x 不兼容，所以需要指定版本号为最新的 3.x beta</li>
@@ -1482,6 +1509,7 @@
 <script src="/nirvana/js/utils.js"></script><script src="/nirvana/js/motion.js"></script><script src="/nirvana/js/next-boot.js"></script>
 
   
+<script src="/nirvana/js/local-search.js"></script>
 
 
 

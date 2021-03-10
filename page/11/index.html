@@ -21,7 +21,7 @@
 
 <script class="hexo-configurations">
     var NexT = window.NexT || {};
-    var CONFIG = {"hostname":"lzhwweb.github.io","root":"/nirvana/","images":"/nirvana/images","scheme":"Gemini","version":"8.2.2","exturl":false,"sidebar":{"position":"left","display":"post","padding":18,"offset":12},"copycode":false,"bookmark":{"enable":false,"color":"#222","save":"auto"},"fancybox":false,"mediumzoom":false,"lazyload":false,"pangu":false,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},"motion":{"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"fadeInDown","post_body":"fadeInDown","coll_header":"fadeInLeft","sidebar":"fadeInUp"}},"prism":false,"i18n":{"placeholder":"搜索...","empty":"没有找到任何搜索结果：${query}","hits_time":"找到 ${hits} 个搜索结果（用时 ${time} 毫秒）","hits":"找到 ${hits} 个搜索结果"}};
+    var CONFIG = {"hostname":"lzhwweb.github.io","root":"/nirvana/","images":"/nirvana/images","scheme":"Gemini","version":"8.2.2","exturl":false,"sidebar":{"position":"left","display":"post","padding":18,"offset":12},"copycode":false,"bookmark":{"enable":false,"color":"#222","save":"auto"},"fancybox":false,"mediumzoom":false,"lazyload":false,"pangu":false,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},"motion":{"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"fadeInDown","post_body":"fadeInDown","coll_header":"fadeInLeft","sidebar":"fadeInUp"}},"prism":false,"i18n":{"placeholder":"搜索...","empty":"没有找到任何搜索结果：${query}","hits_time":"找到 ${hits} 个搜索结果（用时 ${time} 毫秒）","hits":"找到 ${hits} 个搜索结果"},"path":"/nirvana/search.xml","localsearch":{"enable":true,"trigger":"auto","top_n_per_article":1,"unescape":false,"preload":false}};
   </script>
 <meta name="description" content="个人学习笔记">
 <meta property="og:type" content="website">
@@ -115,6 +115,7 @@
 
   <div class="site-nav-right">
     <div class="toggle popup-trigger">
+        <i class="fa fa-search fa-fw fa-lg"></i>
     </div>
   </div>
 </div>
@@ -135,11 +136,37 @@
         <li class="menu-item menu-item-开发工具"><a href="/nirvana/categories/tool" rel="section">开发工具</a></li>
         <li class="menu-item menu-item-设计模式(ts)"><a href="/nirvana/categories/DesignPattern" rel="section">设计模式(TS)</a></li>
         <li class="menu-item menu-item-前端"><a href="/nirvana/categories/javascript" rel="section">前端</a></li>
+      <li class="menu-item menu-item-search">
+        <a role="button" class="popup-trigger"><i class="fa fa-search fa-fw"></i>搜索
+        </a>
+      </li>
   </ul>
 </nav>
 
 
 
+  <div class="search-pop-overlay">
+    <div class="popup search-popup"><div class="search-header">
+  <span class="search-icon">
+    <i class="fa fa-search"></i>
+  </span>
+  <div class="search-input-container">
+    <input autocomplete="off" autocapitalize="off" maxlength="80"
+           placeholder="搜索..." spellcheck="false"
+           type="search" class="search-input">
+  </div>
+  <span class="popup-btn-close" role="button">
+    <i class="fa fa-times-circle"></i>
+  </span>
+</div>
+<div class="search-result-container no-result">
+  <div class="search-result-icon">
+    <i class="fa fa-spinner fa-pulse fa-5x"></i>
+  </div>
+</div>
+
+    </div>
+  </div>
 
 </div>
         
@@ -1535,7 +1562,7 @@ res.end();
   
 
   <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="">
-    <link itemprop="mainEntityOfPage" href="https://lzhwweb.github.io/nirvana/tool/%E5%BC%80%E5%8F%91%E5%B7%A5%E5%85%B7/VSCode%E8%AE%BE%E7%BD%AE%E5%A4%A7%E5%B0%8F%E5%86%99%E8%BD%AC%E6%8D%A2%E7%9A%84%E5%BF%AB%E6%8D%B7%E9%94%AE/">
+    <link itemprop="mainEntityOfPage" href="https://lzhwweb.github.io/nirvana/mac/mac/MAC-%E8%93%9D%E7%89%99%E9%97%AE%E9%A2%98%E8%A7%A3%E5%86%B3%E5%8A%A0%E5%BC%BA%E7%89%88(-Airdrop-%E6%89%BE%E4%B8%8D%E5%88%B0,-%E8%93%9D%E7%89%99%E6%89%BE%E4%B8%8D%E5%88%B0%E7%AD%89-)/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="image" content="/nirvana/images/headphoto.jpeg">
@@ -1548,7 +1575,7 @@ res.end();
     </span>
       <header class="post-header">
         <h2 class="post-title" itemprop="name headline">
-          <a href="/nirvana/tool/%E5%BC%80%E5%8F%91%E5%B7%A5%E5%85%B7/VSCode%E8%AE%BE%E7%BD%AE%E5%A4%A7%E5%B0%8F%E5%86%99%E8%BD%AC%E6%8D%A2%E7%9A%84%E5%BF%AB%E6%8D%B7%E9%94%AE/" class="post-title-link" itemprop="url">VSCode设置大小写转换的快捷键</a>
+          <a href="/nirvana/mac/mac/MAC-%E8%93%9D%E7%89%99%E9%97%AE%E9%A2%98%E8%A7%A3%E5%86%B3%E5%8A%A0%E5%BC%BA%E7%89%88(-Airdrop-%E6%89%BE%E4%B8%8D%E5%88%B0,-%E8%93%9D%E7%89%99%E6%89%BE%E4%B8%8D%E5%88%B0%E7%AD%89-)/" class="post-title-link" itemprop="url">MAC-蓝牙问题解决加强版(-Airdrop-找不到,-蓝牙找不到等-)</a>
         </h2>
 
         <div class="post-meta-container">
@@ -1568,7 +1595,7 @@ res.end();
       </span>
       <span class="post-meta-item-text">分类于</span>
         <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-          <a href="/nirvana/categories/tool/" itemprop="url" rel="index"><span itemprop="name">tool</span></a>
+          <a href="/nirvana/categories/mac/" itemprop="url" rel="index"><span itemprop="name">mac</span></a>
         </span>
     </span>
 
@@ -1580,7 +1607,7 @@ res.end();
         <i class="far fa-file-word"></i>
       </span>
       <span class="post-meta-item-text">本文字数：</span>
-      <span>776</span>
+      <span>232</span>
     </span>
     <span class="post-meta-item" title="阅读时长">
       <span class="post-meta-item-icon">
@@ -1598,38 +1625,14 @@ res.end();
     
     
     <div class="post-body" itemprop="articleBody">
-          <p>一 、默认情况下VS Code的编辑菜单或快捷键中没有 转换为大写，转换为小写的功能</p>
-<p>解决方案1：使用键盘配置，开启转换为小写，转换为大写的快捷键 </p>
-<p>以VS中的 快捷键为例：</p>
-<p>小写 -》Ctrl+Shift+l</p>
-<p>大写=》Ctrl+Shift+U</p>
-<p>自定义大小写转换的快捷键步骤如下:</p>
-<p> 1.点击【文件】-【首选项】-【键盘快捷方式】菜单。</p>
-<p><img src="https://upload-images.jianshu.io/upload_images/10024246-d5ee5749c318312e.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240"> </p>
-<p><img src="https://upload-images.jianshu.io/upload_images/10024246-423b8ab14aade804.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240"></p>
-<p>2.输入 “转换为大写”, 会出现搜索结果【转换为大写】,鼠标悬停在该结果上, 点击前面的”加号” 或 双击, 会弹出输入自定义快捷键的弹窗。</p>
-<p><img src="https://upload-images.jianshu.io/upload_images/10024246-60e4e6fcbe5fa6b2.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240"> </p>
-<p><img src="https://upload-images.jianshu.io/upload_images/10024246-3f1c888971fb2a73.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240"> </p>
-<p>3.在键盘上面按下Ctrl、Shift和u, 然后按Enter键, 即可成功绑定转换为大写快捷键。</p>
-<p><img src="https://upload-images.jianshu.io/upload_images/10024246-65a4b55675f8717b.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240"> </p>
-<p><img src="https://upload-images.jianshu.io/upload_images/10024246-9ecd4ce60718de32.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240"></p>
-<p>4.同理，搜索”转换为小写”, 鼠标悬停在结果上, 点击前面的”加号” 或 双击, 弹出设置快捷键的弹窗，在键盘上面按下Ctrl、Shift和l, 然后按Enter键, 即可成功绑定转换为小写快捷键。</p>
-<p><img src="https://upload-images.jianshu.io/upload_images/10024246-7f3e695948c286af.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240"></p>
-<hr>
-<p>##解决方案2，直接修改keybings.json 添加配置</p>
-<pre><code>&#123;
-    &quot;key&quot;: &quot;ctrl+shift+u&quot;,
-    &quot;command&quot;: &quot;editor.action.transformToUppercase&quot;,
-    &quot;when&quot;: &quot;editorTextFocus&quot;
-&#125;,
-&#123;
-    &quot;key&quot;: &quot;ctrl+shift+l&quot;,
-    &quot;command&quot;: &quot;editor.action.transformToLowercase&quot;,
-    &quot;when&quot;: &quot;editorTextFocus&quot;
-&#125;
-</code></pre>
-<p>最终设置的自定义的大小写转换快捷键如下: </p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">转换为大写: Ctrl+Shift+u</span><br><span class="line">转换为小写: Ctrl+Shift+l</span><br></pre></td></tr></table></figure>
+          <p>如果你电脑出现了比如经常丢链接, 或者Hand off 不工作, Airdrop 找不到的话, 先升级到10.11.2 系统, 应该能解决很多已存的Bug.</p>
+<p>如果依然没有解决的话, 首先你可以先去删除bluetooth的配置文件. <br>在</p>
+<p>/Library/Preferences/</p>
+<p>目录里. </p>
+<p><img src="http://upload-images.jianshu.io/upload_images/10024246-5917f0bfaef81518.jpg?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" title="正在搜索“Preferences”.jpg"></p>
+<p>按 Command-shift-G , 找到后搜索 blue 就行了. </p>
+<p>删除后重启, 蓝牙配置就会重置了.  也可以尝试重启的时候按住 Command-Option-p-r 三声后松手, 也就是俗称的PR大法. 清理PR缓存. </p>
+<p>–</p>
 
       
     </div>
@@ -1656,7 +1659,7 @@ res.end();
   
 
   <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="">
-    <link itemprop="mainEntityOfPage" href="https://lzhwweb.github.io/nirvana/tool/%E5%BC%80%E5%8F%91%E5%B7%A5%E5%85%B7/chrome-%E8%B4%A6%E5%8F%B7%E6%89%8B%E5%8A%A8%E5%90%8C%E6%AD%A5/">
+    <link itemprop="mainEntityOfPage" href="https://lzhwweb.github.io/nirvana/mac/mac/Mac-OS-%E5%AE%89%E8%A3%85-Telnet/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="image" content="/nirvana/images/headphoto.jpeg">
@@ -1669,7 +1672,7 @@ res.end();
     </span>
       <header class="post-header">
         <h2 class="post-title" itemprop="name headline">
-          <a href="/nirvana/tool/%E5%BC%80%E5%8F%91%E5%B7%A5%E5%85%B7/chrome-%E8%B4%A6%E5%8F%B7%E6%89%8B%E5%8A%A8%E5%90%8C%E6%AD%A5/" class="post-title-link" itemprop="url">chrome 账号手动同步</a>
+          <a href="/nirvana/mac/mac/Mac-OS-%E5%AE%89%E8%A3%85-Telnet/" class="post-title-link" itemprop="url">Mac-OS-安装-Telnet</a>
         </h2>
 
         <div class="post-meta-container">
@@ -1681,7 +1684,7 @@ res.end();
       <span class="post-meta-item-text">发表于</span>
       
 
-      <time title="创建时间：2021-03-10 21:12:40 / 修改时间：22:05:29" itemprop="dateCreated datePublished" datetime="2021-03-10T21:12:40+08:00">2021-03-10</time>
+      <time title="创建时间：2021-03-10 21:12:40 / 修改时间：13:43:55" itemprop="dateCreated datePublished" datetime="2021-03-10T21:12:40+08:00">2021-03-10</time>
     </span>
     <span class="post-meta-item">
       <span class="post-meta-item-icon">
@@ -1689,7 +1692,7 @@ res.end();
       </span>
       <span class="post-meta-item-text">分类于</span>
         <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-          <a href="/nirvana/categories/tool/" itemprop="url" rel="index"><span itemprop="name">tool</span></a>
+          <a href="/nirvana/categories/mac/" itemprop="url" rel="index"><span itemprop="name">mac</span></a>
         </span>
     </span>
 
@@ -1701,14 +1704,14 @@ res.end();
         <i class="far fa-file-word"></i>
       </span>
       <span class="post-meta-item-text">本文字数：</span>
-      <span>166</span>
+      <span>3.2k</span>
     </span>
     <span class="post-meta-item" title="阅读时长">
       <span class="post-meta-item-icon">
         <i class="far fa-clock"></i>
       </span>
       <span class="post-meta-item-text">阅读时长 &asymp;</span>
-      <span>1 分钟</span>
+      <span>3 分钟</span>
     </span>
 </div>
 
@@ -1719,11 +1722,16 @@ res.end();
     
     
     <div class="post-body" itemprop="articleBody">
-          <p>解决chrome不能自动同步问题，可以进行手动同步。</p>
-<p>不需要删除数据，不需要关闭账户！</p>
-<p>首先你懂得</p>
-<p>chrome地址栏中输入： chrome://sync-internals/<br>进行如图操作</p>
-<p>注意：目前这种方式是完全可行的，如果点击disable sync 再次点击 request 等待一会还是没有反应，且网络正常，请尝试关闭并打开一次浏览器再操作。<br><img src="https://upload-images.jianshu.io/upload_images/10024246-d2dfb140d7189280?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="image"><br><img src="https://upload-images.jianshu.io/upload_images/10024246-f0837051d08d3136?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="image"><br><img src="https://upload-images.jianshu.io/upload_images/10024246-c83c5ed3762650d6?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="image"></p>
+          <p>使用 homebrew 安装telnet：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">brew install telnet</span><br></pre></td></tr></table></figure>
+<p>安装报错</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br></pre></td><td class="code"><pre><span class="line">$ brew install telnet</span><br><span class="line">Error: &#x2F;usr&#x2F;local&#x2F;Cellar is not writable. You should change the</span><br><span class="line">ownership and permissions of &#x2F;usr&#x2F;local&#x2F;Cellar back to your</span><br><span class="line">user account:</span><br><span class="line">  sudo chown -R $(whoami) &#x2F;usr&#x2F;local&#x2F;Cellar</span><br><span class="line">Warning: You are using macOS 10.15.</span><br><span class="line">We do not provide support for this pre-release version.</span><br><span class="line">You will encounter build failures with some formulae.</span><br><span class="line">Please create pull requests instead of asking for help on Homebrew&#39;s GitHub,</span><br><span class="line">Discourse, Twitter or IRC. You are responsible for resolving any issues you</span><br><span class="line">experience, as you are running this pre-release version.</span><br><span class="line"></span><br><span class="line">Error: The following directories are not writable by your user:</span><br><span class="line">&#x2F;usr&#x2F;local&#x2F;Cellar</span><br><span class="line">&#x2F;usr&#x2F;local&#x2F;Homebrew</span><br><span class="line">&#x2F;usr&#x2F;local&#x2F;etc</span><br><span class="line">&#x2F;usr&#x2F;local&#x2F;etc&#x2F;bash_completion.d</span><br><span class="line">&#x2F;usr&#x2F;local&#x2F;opt</span><br><span class="line">&#x2F;usr&#x2F;local&#x2F;var&#x2F;homebrew&#x2F;linked</span><br><span class="line">&#x2F;usr&#x2F;local&#x2F;var&#x2F;homebrew&#x2F;locks</span><br><span class="line"></span><br><span class="line">You should change the ownership of these directories to your user.</span><br><span class="line">  sudo chown -R $(whoami) &#x2F;usr&#x2F;local&#x2F;Cellar &#x2F;usr&#x2F;local&#x2F;Homebrew &#x2F;usr&#x2F;local&#x2F;etc &#x2F;usr&#x2F;local&#x2F;etc&#x2F;bash_completion.d &#x2F;usr&#x2F;local&#x2F;opt &#x2F;usr&#x2F;local&#x2F;var&#x2F;homebrew&#x2F;linked &#x2F;usr&#x2F;local&#x2F;var&#x2F;homebrew&#x2F;locks</span><br></pre></td></tr></table></figure>
+<p>说明你当前用户权限不对，需要sudo权限执行命令，增加用户权限</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">sudo chown -R $(whoami) &#x2F;usr&#x2F;local&#x2F;Cellar &#x2F;usr&#x2F;local&#x2F;Homebrew &#x2F;usr&#x2F;local&#x2F;etc </span><br></pre></td></tr></table></figure>
+<p>重新安装</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br></pre></td><td class="code"><pre><span class="line">$ brew install telnet</span><br><span class="line">Warning: You are using macOS 10.15.</span><br><span class="line">We do not provide support for this pre-release version.</span><br><span class="line">You will encounter build failures with some formulae.</span><br><span class="line">Please create pull requests instead of asking for help on Homebrew&#39;s GitHub,</span><br><span class="line">Discourse, Twitter or IRC. You are responsible for resolving any issues you</span><br><span class="line">experience, as you are running this pre-release version.</span><br><span class="line"></span><br><span class="line">&#x3D;&#x3D;&gt; Downloading https:&#x2F;&#x2F;opensource.apple.com&#x2F;tarballs&#x2F;remote_cmds&#x2F;remote_cmds-60</span><br><span class="line">######################################################################## 100.0%</span><br><span class="line">&#x3D;&#x3D;&gt; Downloading https:&#x2F;&#x2F;opensource.apple.com&#x2F;tarballs&#x2F;libtelnet&#x2F;libtelnet-13.tar</span><br><span class="line">######################################################################## 100.0%</span><br><span class="line">&#x3D;&#x3D;&gt; xcodebuild SYMROOT&#x3D;build -arch x86_64</span><br><span class="line">&#x3D;&#x3D;&gt; make -C telnet.tproj OBJROOT&#x3D;build&#x2F;Intermediates SYMROOT&#x3D;build&#x2F;Products DSTR</span><br><span class="line">🍺  &#x2F;usr&#x2F;local&#x2F;Cellar&#x2F;telnet&#x2F;60: 4 files, 142.3KB, built in 21 seconds</span><br><span class="line">&#x3D;&#x3D;&gt; &#96;brew cleanup&#96; has not been run in 30 days, running now...</span><br></pre></td></tr></table></figure>
+<p>执行telnet ip port命令</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br></pre></td><td class="code"><pre><span class="line">$ telnet baidu.com 443</span><br><span class="line">Trying 220.181.38.148...</span><br><span class="line">Connected to baidu.com.</span><br><span class="line">Escape character is &#39;^]&#39;.</span><br><span class="line">^</span><br><span class="line">HTTP&#x2F;1.1 302 Moved Temporarily</span><br><span class="line">Server: bfe&#x2F;1.0.8.18</span><br><span class="line">Date: Mon, 08 Feb 2021 02:31:59 GMT</span><br><span class="line">Content-Type: text&#x2F;html</span><br><span class="line">Content-Length: 161</span><br><span class="line">Connection: close</span><br><span class="line">Location: http:&#x2F;&#x2F;www.baidu.com&#x2F;error.html</span><br><span class="line"></span><br><span class="line">&lt;html&gt;</span><br><span class="line">&lt;head&gt;&lt;title&gt;302 Found&lt;&#x2F;title&gt;&lt;&#x2F;head&gt;</span><br><span class="line">&lt;body bgcolor&#x3D;&quot;white&quot;&gt;</span><br><span class="line">&lt;center&gt;&lt;h1&gt;302 Found&lt;&#x2F;h1&gt;&lt;&#x2F;center&gt;</span><br><span class="line">&lt;hr&gt;&lt;center&gt;bfe&#x2F;1.0.8.18&lt;&#x2F;center&gt;</span><br><span class="line">&lt;&#x2F;body&gt;</span><br><span class="line">&lt;&#x2F;html&gt;</span><br><span class="line">Connection closed by foreign host.</span><br></pre></td></tr></table></figure>
 
       
     </div>
@@ -1750,7 +1758,7 @@ res.end();
   
 
   <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="">
-    <link itemprop="mainEntityOfPage" href="https://lzhwweb.github.io/nirvana/tool/%E5%BC%80%E5%8F%91%E5%B7%A5%E5%85%B7/%E5%B8%B8%E7%94%A8%E7%9A%84VS-Code%E6%8F%92%E4%BB%B6/">
+    <link itemprop="mainEntityOfPage" href="https://lzhwweb.github.io/nirvana/mac/mac/Mac-%E5%9B%9B%E7%A7%8D%E4%BF%AE%E6%94%B9Hosts%E7%9A%84%E6%96%B9%E6%B3%95/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="image" content="/nirvana/images/headphoto.jpeg">
@@ -1763,7 +1771,7 @@ res.end();
     </span>
       <header class="post-header">
         <h2 class="post-title" itemprop="name headline">
-          <a href="/nirvana/tool/%E5%BC%80%E5%8F%91%E5%B7%A5%E5%85%B7/%E5%B8%B8%E7%94%A8%E7%9A%84VS-Code%E6%8F%92%E4%BB%B6/" class="post-title-link" itemprop="url">常用的VS-Code插件</a>
+          <a href="/nirvana/mac/mac/Mac-%E5%9B%9B%E7%A7%8D%E4%BF%AE%E6%94%B9Hosts%E7%9A%84%E6%96%B9%E6%B3%95/" class="post-title-link" itemprop="url">Mac-四种修改Hosts的方法</a>
         </h2>
 
         <div class="post-meta-container">
@@ -1783,7 +1791,7 @@ res.end();
       </span>
       <span class="post-meta-item-text">分类于</span>
         <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-          <a href="/nirvana/categories/tool/" itemprop="url" rel="index"><span itemprop="name">tool</span></a>
+          <a href="/nirvana/categories/mac/" itemprop="url" rel="index"><span itemprop="name">mac</span></a>
         </span>
     </span>
 
@@ -1795,14 +1803,14 @@ res.end();
         <i class="far fa-file-word"></i>
       </span>
       <span class="post-meta-item-text">本文字数：</span>
-      <span>2.1k</span>
+      <span>1.3k</span>
     </span>
     <span class="post-meta-item" title="阅读时长">
       <span class="post-meta-item-icon">
         <i class="far fa-clock"></i>
       </span>
       <span class="post-meta-item-text">阅读时长 &asymp;</span>
-      <span>2 分钟</span>
+      <span>1 分钟</span>
     </span>
 </div>
 
@@ -1813,17 +1821,35 @@ res.end();
     
     
     <div class="post-body" itemprop="articleBody">
-          <h2 id="Bracket-Pair-Colorizer-2"><a href="#Bracket-Pair-Colorizer-2" class="headerlink" title="Bracket Pair Colorizer 2"></a>Bracket Pair Colorizer 2</h2><p><img src="https://upload-images.jianshu.io/upload_images/10024246-4e1925a599eb769a?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240"></p>
-<p>帮助我搞清楚 JavaScript 中复杂的嵌套 promise。顾名思义，它可以让方括号对变色，帮我弄清楚是否在某个地方搞糊涂了（例如缺少方括号）。它默认匹配 ()、[] 和{}等普通括号，但如果需要你也可以定义自定义括号。<br>它还有其他许多很酷的功能，例如定义颜色或为活动括号显示装订线之类。值得尝试一波。<br><strong>项目地址</strong><br><a target="_blank" rel="noopener" href="https://github.com/CoenraadS/Bracket-Pair-Colorizer-2">https://github.com/CoenraadS/Bracket-Pair-Colorizer-2</a><br> <strong>Marketplace</strong><br><a target="_blank" rel="noopener" href="https://marketplace.visualstudio.com/items?itemName=CoenraadS.bracket-pair-colorizer-2">https://marketplace.visualstudio.com/items?itemName=CoenraadS.bracket-pair-colorizer-2</a></p>
-<h2 id="NPM-Intellisense"><a href="#NPM-Intellisense" class="headerlink" title="NPM Intellisense"></a>NPM Intellisense</h2><p><img src="https://upload-images.jianshu.io/upload_images/10024246-db143f4cae36955c?imageMogr2/auto-orient/strip"></p>
-<p>如动图所示，它能自动完成以 NPM 包为目标的 require import 语句。这可以提供很多帮助，尤其是当你的项目变得很大，并且在 package.json 中包含很多依赖项时。<br> <strong>项目地址</strong><br><a target="_blank" rel="noopener" href="https://github.com/ChristianKohler/NpmIntellisense">https://github.com/ChristianKohler/NpmIntellisense</a><br><strong>Marketplace</strong><br><a target="_blank" rel="noopener" href="https://marketplace.visualstudio.com/items?itemName=christian-kohler.npm-intellisense">https://marketplace.visualstudio.com/items?itemName=christian-kohler.npm-intellisense</a></p>
-<h2 id="Path-Intellisense"><a href="#Path-Intellisense" class="headerlink" title="Path Intellisense"></a>Path Intellisense</h2><p><img src="https://upload-images.jianshu.io/upload_images/10024246-afb2416b7e73f8e8.gif?imageMogr2/auto-orient/strip"></p>
-<p>这是 NPM Intellisense 的姐妹插件。它会执行相同的自动补全，不过针对的是你的文件系统。<br><strong>项目地址</strong><br><a target="_blank" rel="noopener" href="https://github.com/ChristianKohler/PathIntellisense">https://github.com/ChristianKohler/PathIntellisense</a><br><strong>Marketplace</strong><br><a target="_blank" rel="noopener" href="https://marketplace.visualstudio.com/items?itemName=christian-kohler.path-intellisense">https://marketplace.visualstudio.com/items?itemName=christian-kohler.path-intellisense</a></p>
-<h2 id="Quokka-js"><a href="#Quokka-js" class="headerlink" title="Quokka.js"></a>Quokka.js</h2><p><img src="https://upload-images.jianshu.io/upload_images/10024246-ccab0e9d884fce5f.gif?imageMogr2/auto-orient/strip"><br>如果你只是想尝试一些东西，不想费劲先设置项目，那么这款工具就是一个很好的辅助。通过实时检查输出，它会立即将输出显示在 JavaScript/TypeScript 代码旁边，如动图所示。这是一个很好的扩展，特别适合调试目的。<br><strong>项目地址</strong><br><a target="_blank" rel="noopener" href="https://quokkajs.com/">https://quokkajs.com/</a><br><strong>Marketplace</strong><br><a target="_blank" rel="noopener" href="https://marketplace.visualstudio.com/items?itemName=WallabyJs.quokka-vscode">https://marketplace.visualstudio.com/items?itemName=WallabyJs.quokka-vscode</a></p>
-<h2 id="Docker"><a href="#Docker" class="headerlink" title="Docker"></a>Docker</h2><p>这个扩展是处理多个 Docker 映像和容器的必备，因为你可以用它快速浏览正在运行哪些容器、构建哪些映像以及创建哪些网络。<br><strong>项目地址</strong><br><a target="_blank" rel="noopener" href="https://github.com/microsoft/vscode-docker">https://github.com/microsoft/vscode-docker</a><br><strong>Marketplace</strong><br><a target="_blank" rel="noopener" href="https://marketplace.visualstudio.com/items?itemName=ms-azuretools.vscode-docker">https://marketplace.visualstudio.com/items?itemName=ms-azuretools.vscode-docker</a></p>
-<h2 id="Live-Server"><a href="#Live-Server" class="headerlink" title="Live Server"></a>Live Server</h2><p><img src="https://upload-images.jianshu.io/upload_images/10024246-6aae06bf0f4fff6b.gif?imageMogr2/auto-orient/strip"><br>这个扩展为本地开发服务器提供了热重载功能，也就是说它会在保存对文件所做的任何更改后立即刷新页面。它在状态栏中有一个漂亮的“Go Live”按钮，你只需单击一下即可启动服务器。<br><strong>项目地址</strong><br><a target="_blank" rel="noopener" href="https://github.com/ritwickdey/vscode-live-server">https://github.com/ritwickdey/vscode-live-server</a><br><strong>Marketplace</strong><br><a target="_blank" rel="noopener" href="https://marketplace.visualstudio.com/items?itemName=ritwickdey.LiveServer">https://marketplace.visualstudio.com/items?itemName=ritwickdey.LiveServer</a></p>
-<h2 id="Auto-Close-Tag-和-Auto-Rename-Tag"><a href="#Auto-Close-Tag-和-Auto-Rename-Tag" class="headerlink" title="Auto Close Tag 和 Auto Rename Tag"></a>Auto Close Tag 和 Auto Rename Tag</h2><p><img src="https://upload-images.jianshu.io/upload_images/10024246-879775d67e33686b.gif?imageMogr2/auto-orient/strip"><br>它们是 VS Code 的两个小插件，可通过自动重命名和关闭标签来帮助你维护 HTML 文件。这也适用于 React 自己的 JSX 语法。<br><strong>Auto Close Tag</strong><br><a target="_blank" rel="noopener" href="https://github.com/formulahendry/vscode-auto-close-tag/https://marketplace.visualstudio.com/items?itemName=formulahendry.auto-close-tag">https://github.com/formulahendry/vscode-auto-close-tag/https://marketplace.visualstudio.com/items?itemName=formulahendry.auto-close-tag</a><br> <strong>Auto Rename Tag</strong><br><a target="_blank" rel="noopener" href="https://github.com/formulahendry/vscode-auto-rename-tag/https://marketplace.visualstudio.com/items?itemName=formulahendry.auto-rename-tag">https://github.com/formulahendry/vscode-auto-rename-tag/https://marketplace.visualstudio.com/items?itemName=formulahendry.auto-rename-tag</a></p>
-<h2 id="Markdown-Preview-Enhanced"><a href="#Markdown-Preview-Enhanced" class="headerlink" title="Markdown Preview Enhanced"></a>Markdown Preview Enhanced</h2><p><img src="https://upload-images.jianshu.io/upload_images/10024246-fe3e4c69847e2ade.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240"><br> Markdown 预览工具。它不仅为你提供预览，而且还有同步滚动、PDF 导出和 PlantUML 的功能。<br><strong>项目地址</strong><br><a target="_blank" rel="noopener" href="https://github.com/shd101wyy/vscode-markdown-preview-enhanced">https://github.com/shd101wyy/vscode-markdown-preview-enhanced</a><br><strong>Marketplace</strong><br><a target="_blank" rel="noopener" href="https://marketplace.visualstudio.com/items?itemName=shd101wyy.markdown-preview-enhanced">https://marketplace.visualstudio.com/items?itemName=shd101wyy.markdown-preview-enhanced</a></p>
+          <p>　　1、通过 VI 编辑器修改</p>
+<p>　　打开终端（应用程序——实用工具），运行：</p>
+<p>　　sudo vi /etc/hosts</p>
+<p><img src="https://upload-images.jianshu.io/upload_images/10024246-67eb013c22cf36b0.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="image"></p>
+<p>　　屏幕上会提示你输入密码（输入密码的时候不会有任何字符显示，甚至*都不会显示，输完之后按回车就是了），打开 hosts 文件之后按 i 键进入插入模式（可理解为编辑模式，如下图所示，会有「INSERT 」提示，即可插入编辑的意思），然后按照你的需要对该文件进行编辑，编辑完成之后按 ESC 键退出插入模式，之后按「 :wq+回车」保存退出，记得英文的冒号也是要输入的哦。</p>
+<p><img src="https://upload-images.jianshu.io/upload_images/10024246-3e19c469c281313b.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="image"></p>
+<p>　　VI 编辑器对于经常使用 Linux 的用户应该不会陌生，而且该编辑器是默认内置在 Mac 系统中的。但是，对于没有使用过 VI 的用户，还真得花一会儿功夫来学习其基本使用方法。另外VI编辑器是一个很好很强大的工具，想要玩好 Mac 的话，最好掌握这个工具的使用。</p>
+<p>　　2、直接在 Mac 系统下找到 Hosts 文件修改</p>
+<p>　　这应该算是最简单以及最直观的一个修改方法了。</p>
+<p>　　第一步、打开你的文件管理器也就是Finder ，Hosts自然也是在这个里面。</p>
+<p><img src="https://upload-images.jianshu.io/upload_images/10024246-7bf8749a01353aac.jpg?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="image"></p>
+<p>　　第二步、接下来请按快捷键组合 Shift+Command+G 三个组合按键查找文件，并输入 Hosts 文件的所在路径：/etc/hosts ，如图所示：</p>
+<p><img src="https://upload-images.jianshu.io/upload_images/10024246-8af91772eae318b4.jpg?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="image"></p>
+<p>　　第三步、在打开的文件夹当中找到「Hosts」文件夹。</p>
+<p><img src="https://upload-images.jianshu.io/upload_images/10024246-d249d67354796e5f.jpg?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="image"></p>
+<p>　　第四步、复制这个「hosts」文件到桌面上，鼠标右键点击/右击它，选择「打开方式」—「文本编辑」，打开这个「hosts」文件，然后将你要修改的内容直接在里面修改就好了。</p>
+<p><img src="https://upload-images.jianshu.io/upload_images/10024246-a60eca4f5ebbdbe7.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="image"></p>
+<p>　　第五步、将你修改好的 hosts 文件在复制回 Hosts 文件的所在（文件夹下）路径：/etc/hosts 之下替换原始的 hosts 文件就好了，这样你 Mac 系统下的 hosts 文件就被成功修改了。</p>
+<p><img src="https://upload-images.jianshu.io/upload_images/10024246-7f4fe79c935b1b22.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="image"></p>
+<p>　　3、使用 cat 命令合并文件</p>
+<p>　　这个方法比较适合当你想往 Hosts 文件中添加一些内容的情况，首先你需要把需要添加到 Hosts 文件中的内容保存为一个TXT文本文件（建议直接保存在你的用户目录），我这里拿保存在用户目录中的123.txt为例说明。</p>
+<p>　　同样是启动终端，然后运行下面两条命令：</p>
+<p>　　sudo -s</p>
+<p>　　cat ~/123.txt/etc/hosts</p>
+<p>　　~ 符号在 Mac 甚至所有基于 Unix 和 Linux 的系统中都是代表当前用户的用户目录，.代表当前目录，这回你就应该明白上面的命令中为什么是 ~/123.txt 了吧。</p>
+<p>　　4、直接在图形界面中修改</p>
+<p>　　打开 Finder，然后点击菜单栏中的 前往——前往文件夹（或者快捷键 Shift+Command+G），在路径中输入 /private，进入之后在 etc 文件夹上点击右键——显示简介，在文件夹简介窗口的最下面找到“共享与权限”，将 everyone 的权限修改为“读与写”，如果你发现不能修改的话，将右下角的那把小锁解开就可以修改了。</p>
+<p><img src="https://upload-images.jianshu.io/upload_images/10024246-0847ef6d184c1f5d.jpg?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="image"></p>
+<p>　　修改 etc 文件夹的权限之后，再进入 etc 文件夹下面，修改名为 hosts 文件的权限（同样是everyone读与写），修改完成之后，你就可以直接在 hosts 文件上点右键，通过“文本编辑”打开并编辑该文件了，不会出现没有权限的提示。修改并保存完成之后，记得将该文件和 etc 文件夹的权限还原。</p>
 
       
     </div>
@@ -1850,7 +1876,7 @@ res.end();
   
 
   <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="">
-    <link itemprop="mainEntityOfPage" href="https://lzhwweb.github.io/nirvana/tool/%E5%BC%80%E5%8F%91%E5%B7%A5%E5%85%B7/%E8%B0%B7%E6%AD%8C%E6%B5%8F%E8%A7%88%E5%99%A8SwitchyOmega%E6%8F%92%E4%BB%B6%E5%AE%89%E8%A3%85%E4%BD%BF%E7%94%A8%E6%95%99%E7%A8%8B/">
+    <link itemprop="mainEntityOfPage" href="https://lzhwweb.github.io/nirvana/mac/mac/Mac-%E6%95%88%E7%8E%87%E5%B7%A5%E5%85%B7%E8%BD%AF%E4%BB%B6-OpenInTerminal/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="image" content="/nirvana/images/headphoto.jpeg">
@@ -1863,7 +1889,7 @@ res.end();
     </span>
       <header class="post-header">
         <h2 class="post-title" itemprop="name headline">
-          <a href="/nirvana/tool/%E5%BC%80%E5%8F%91%E5%B7%A5%E5%85%B7/%E8%B0%B7%E6%AD%8C%E6%B5%8F%E8%A7%88%E5%99%A8SwitchyOmega%E6%8F%92%E4%BB%B6%E5%AE%89%E8%A3%85%E4%BD%BF%E7%94%A8%E6%95%99%E7%A8%8B/" class="post-title-link" itemprop="url">谷歌浏览器SwitchyOmega插件安装使用教程</a>
+          <a href="/nirvana/mac/mac/Mac-%E6%95%88%E7%8E%87%E5%B7%A5%E5%85%B7%E8%BD%AF%E4%BB%B6-OpenInTerminal/" class="post-title-link" itemprop="url">Mac-效率工具软件-OpenInTerminal</a>
         </h2>
 
         <div class="post-meta-container">
@@ -1883,7 +1909,7 @@ res.end();
       </span>
       <span class="post-meta-item-text">分类于</span>
         <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-          <a href="/nirvana/categories/tool/" itemprop="url" rel="index"><span itemprop="name">tool</span></a>
+          <a href="/nirvana/categories/mac/" itemprop="url" rel="index"><span itemprop="name">mac</span></a>
         </span>
     </span>
 
@@ -1895,7 +1921,7 @@ res.end();
         <i class="far fa-file-word"></i>
       </span>
       <span class="post-meta-item-text">本文字数：</span>
-      <span>563</span>
+      <span>313</span>
     </span>
     <span class="post-meta-item" title="阅读时长">
       <span class="post-meta-item-icon">
@@ -1913,27 +1939,23 @@ res.end();
     
     
     <div class="post-body" itemprop="articleBody">
-          <p>SwitchyOmega是Chrome浏览器上的代理扩展程序,可以轻松快捷的管理和切换多个代理设置。接管浏览器代理方式，可瞬间切换代理和本地连接方式，配合socks5（等其他代理工具）可实现只代理部分国内无法访问的网站。</p>
-<p><img src="https://upload-images.jianshu.io/upload_images/10024246-61233ce7d20819e9.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240"></p>
+          <p>软件是以 Finder 的扩展形式存在的，安装后你并不会在 Applications 文件夹中看到它。</p>
+<h4 id="总结来说有三点"><a href="#总结来说有三点" class="headerlink" title="总结来说有三点"></a>总结来说有三点</h4><ul>
+<li>可以快速从终端（Terminal）中打开某个目录</li>
+<li>可以快速用编辑器打开某个目录或者文件</li>
+<li>可以复制某个文件或者目录的路径<br><img src="https://upload-images.jianshu.io/upload_images/10024246-4dcfaae0ade1f4a7.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240"><br><img src="https://upload-images.jianshu.io/upload_images/10024246-ce3c7903db535631.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240"><h2 id="如何安装🖥"><a href="#如何安装🖥" class="headerlink" title="如何安装🖥"></a>如何安装🖥</h2></li>
+</ul>
+<h3 id="1-下载"><a href="#1-下载" class="headerlink" title="1. 下载"></a>1. 下载</h3><h4 id="a-Homebrew"><a href="#a-Homebrew" class="headerlink" title="a) Homebrew"></a>a) Homebrew</h4><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">brew install --cask openinterminal</span><br></pre></td></tr></table></figure>
+
+<h4 id="b-手动"><a href="#b-手动" class="headerlink" title="b) 手动"></a>b) 手动</h4><ol>
+<li> 从 <a target="_blank" rel="noopener" href="https://github.com/Ji4n1ng/OpenInTerminal/releases">release</a> 中下载。</li>
+<li> 将应用移动到 <code>应用程序</code> 文件夹。</li>
+</ol>
 <blockquote>
-<p>安装方法</p>
+<p>⚠️当您第一次运行应用程序时，macOS 将要求访问 <code>访达</code> 和 <code>终端</code>（或 <code>iTerm</code>）的权限。请给予应用程序权限。</p>
 </blockquote>
-<p>1、在线安装</p>
-<p>在可以访问外网的环境下，从Chrome应用商店来安装：<a target="_blank" rel="noopener" href="https://chrome.google.com/webstore/detail/padekgcemlokbadohgkifijomclgjgif">https://chrome.google.com/webstore/detail/padekgcemlokbadohgkifijomclgjgif</a></p>
-<p>2、离线安装</p>
-<p>去github下载最新版安装包：<a target="_blank" rel="noopener" href="https://github.com/FelisCatus/SwitchyOmega/releases">https://github.com/FelisCatus/SwitchyOmega/releases</a></p>
-<blockquote>
-<p>使用方式</p>
-</blockquote>
-<p>1、新建一个情景模式</p>
-<p><img src="https://upload-images.jianshu.io/upload_images/10024246-3937342562f3571e.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="谷歌浏览器SwitchyOmega插件安装使用教程"></p>
-<p>上图中，前两种是最常用的，如果是第一次使用，那就记住前两种即可，第一种是指定代理的方式，每次访问一定会从设置的代理中走，第二种是动态切换的方式，比如说你想让百度走国内的网络，而让谷歌走国外的网络。</p>
-<p>2、配置情景模式</p>
-<p><img src="https://upload-images.jianshu.io/upload_images/10024246-27088b3d66156959.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="谷歌浏览器SwitchyOmega插件安装使用教程"></p>
-<p>我这里使用的是SSR的默认代理端口1080做演示，大家根据自己的代理工具来配置即可，注意“代理协议”别选错了。</p>
-<p>3、配置自动切换</p>
-<p><img src="https://upload-images.jianshu.io/upload_images/10024246-312d117ca68260d4.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="谷歌浏览器SwitchyOmega插件安装使用教程"></p>
-<p>前两步完成之后，就已经可以了，但是每次使用的时候，需要在浏览器上手动点一下来切换（不是之前提到的浏览器代理设置），而这一步配置了自动切换以后，会自动根据域名来匹配情景模式。</p>
+<h3 id="2-打开-Finder-扩展权限"><a href="#2-打开-Finder-扩展权限" class="headerlink" title="2. 打开 Finder 扩展权限"></a><a target="_blank" rel="noopener" href="https://github.com/Ji4n1ng/OpenInTerminal/blob/master/Resources/README-zh.md#2-%E6%89%93%E5%BC%80-finder-%E6%89%A9%E5%B1%95%E6%9D%83%E9%99%90"></a>2. 打开 Finder 扩展权限</h3><p>打开 OpenInTerminal 应用。去 <code>系统偏好设置</code> -&gt; <code>扩展</code> -&gt; <code>访达扩展</code>，打开下图中的权限按钮。</p>
+<p><img src="https://upload-images.jianshu.io/upload_images/10024246-1f143a78e0bf16ca.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240"></p>
 
       
     </div>
@@ -2020,6 +2042,7 @@ res.end();
 <script src="/nirvana/js/utils.js"></script><script src="/nirvana/js/motion.js"></script><script src="/nirvana/js/next-boot.js"></script>
 
   
+<script src="/nirvana/js/local-search.js"></script>
 
 
 

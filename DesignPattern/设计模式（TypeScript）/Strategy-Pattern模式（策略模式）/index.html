@@ -21,7 +21,7 @@
 
 <script class="hexo-configurations">
     var NexT = window.NexT || {};
-    var CONFIG = {"hostname":"lzhwweb.github.io","root":"/nirvana/","images":"/nirvana/images","scheme":"Gemini","version":"8.2.2","exturl":false,"sidebar":{"position":"left","display":"post","padding":18,"offset":12},"copycode":false,"bookmark":{"enable":false,"color":"#222","save":"auto"},"fancybox":false,"mediumzoom":false,"lazyload":false,"pangu":false,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},"motion":{"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"fadeInDown","post_body":"fadeInDown","coll_header":"fadeInLeft","sidebar":"fadeInUp"}},"prism":false,"i18n":{"placeholder":"搜索...","empty":"没有找到任何搜索结果：${query}","hits_time":"找到 ${hits} 个搜索结果（用时 ${time} 毫秒）","hits":"找到 ${hits} 个搜索结果"}};
+    var CONFIG = {"hostname":"lzhwweb.github.io","root":"/nirvana/","images":"/nirvana/images","scheme":"Gemini","version":"8.2.2","exturl":false,"sidebar":{"position":"left","display":"post","padding":18,"offset":12},"copycode":false,"bookmark":{"enable":false,"color":"#222","save":"auto"},"fancybox":false,"mediumzoom":false,"lazyload":false,"pangu":false,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},"motion":{"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"fadeInDown","post_body":"fadeInDown","coll_header":"fadeInLeft","sidebar":"fadeInUp"}},"prism":false,"i18n":{"placeholder":"搜索...","empty":"没有找到任何搜索结果：${query}","hits_time":"找到 ${hits} 个搜索结果（用时 ${time} 毫秒）","hits":"找到 ${hits} 个搜索结果"},"path":"/nirvana/search.xml","localsearch":{"enable":true,"trigger":"auto","top_n_per_article":1,"unescape":false,"preload":false}};
   </script>
 <meta name="description" content="策略模式（Strategy Pattern）:一个类的行为或其算法可以在运行时更改。这种类型的设计模式属于行为型模式。 介绍 意图：定义一系列的算法,把它们一个个封装起来, 并且使它们可相互替换。 主要解决：在有多种算法相似的情况下，使用 if…else 所带来的复杂和难以维护。 何时使用：一个系统有许多许多类，而区分它们的只是他们直接的行为。 如何解决：将这些算法封装成一个一个的类，任意地替换。">
 <meta property="og:type" content="article">
@@ -119,6 +119,7 @@
 
   <div class="site-nav-right">
     <div class="toggle popup-trigger">
+        <i class="fa fa-search fa-fw fa-lg"></i>
     </div>
   </div>
 </div>
@@ -139,11 +140,37 @@
         <li class="menu-item menu-item-开发工具"><a href="/nirvana/categories/tool" rel="section">开发工具</a></li>
         <li class="menu-item menu-item-设计模式(ts)"><a href="/nirvana/categories/DesignPattern" rel="section">设计模式(TS)</a></li>
         <li class="menu-item menu-item-前端"><a href="/nirvana/categories/javascript" rel="section">前端</a></li>
+      <li class="menu-item menu-item-search">
+        <a role="button" class="popup-trigger"><i class="fa fa-search fa-fw"></i>搜索
+        </a>
+      </li>
   </ul>
 </nav>
 
 
 
+  <div class="search-pop-overlay">
+    <div class="popup search-popup"><div class="search-header">
+  <span class="search-icon">
+    <i class="fa fa-search"></i>
+  </span>
+  <div class="search-input-container">
+    <input autocomplete="off" autocapitalize="off" maxlength="80"
+           placeholder="搜索..." spellcheck="false"
+           type="search" class="search-input">
+  </div>
+  <span class="popup-btn-close" role="button">
+    <i class="fa fa-times-circle"></i>
+  </span>
+</div>
+<div class="search-result-container no-result">
+  <div class="search-result-icon">
+    <i class="fa fa-spinner fa-pulse fa-5x"></i>
+  </div>
+</div>
+
+    </div>
+  </div>
 
 </div>
         
@@ -336,13 +363,13 @@
 
           <div class="post-nav">
             <div class="post-nav-item">
-                <a href="/nirvana/DesignPattern/%E8%AE%BE%E8%AE%A1%E6%A8%A1%E5%BC%8F%EF%BC%88TypeScript%EF%BC%89/Template-Method%EF%BC%88%E6%A8%A1%E6%9D%BF%E6%96%B9%E6%B3%95%E8%AE%BE%E8%AE%A1%E6%A8%A1%E5%BC%8F%EF%BC%89/" rel="prev" title="Template-Method（模板方法设计模式）">
-                  <i class="fa fa-chevron-left"></i> Template-Method（模板方法设计模式）
+                <a href="/nirvana/DesignPattern/%E8%AE%BE%E8%AE%A1%E6%A8%A1%E5%BC%8F%EF%BC%88TypeScript%EF%BC%89/Visitor-Pattern(%E8%AE%BF%E9%97%AE%E8%80%85%E6%A8%A1%E5%BC%8F)/" rel="prev" title="Visitor-Pattern(访问者模式)">
+                  <i class="fa fa-chevron-left"></i> Visitor-Pattern(访问者模式)
                 </a>
             </div>
             <div class="post-nav-item">
-                <a href="/nirvana/DesignPattern/%E8%AE%BE%E8%AE%A1%E6%A8%A1%E5%BC%8F%EF%BC%88TypeScript%EF%BC%89/State-Pattern%E6%A8%A1%E5%BC%8F%EF%BC%88%E7%8A%B6%E6%80%81%E6%A8%A1%E5%BC%8F%EF%BC%89/" rel="next" title="State-Pattern模式（状态模式）">
-                  State-Pattern模式（状态模式） <i class="fa fa-chevron-right"></i>
+                <a href="/nirvana/DesignPattern/%E8%AE%BE%E8%AE%A1%E6%A8%A1%E5%BC%8F%EF%BC%88TypeScript%EF%BC%89/%E5%AE%8C%E7%BB%93%E6%84%9F%E6%83%B3/" rel="next" title="完结感想">
+                  完结感想 <i class="fa fa-chevron-right"></i>
                 </a>
             </div>
           </div>
@@ -419,6 +446,7 @@
 <script src="/nirvana/js/utils.js"></script><script src="/nirvana/js/motion.js"></script><script src="/nirvana/js/next-boot.js"></script>
 
   
+<script src="/nirvana/js/local-search.js"></script>
 
 
 

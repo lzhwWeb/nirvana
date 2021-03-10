@@ -21,7 +21,7 @@
 
 <script class="hexo-configurations">
     var NexT = window.NexT || {};
-    var CONFIG = {"hostname":"lzhwweb.github.io","root":"/nirvana/","images":"/nirvana/images","scheme":"Gemini","version":"8.2.2","exturl":false,"sidebar":{"position":"left","display":"post","padding":18,"offset":12},"copycode":false,"bookmark":{"enable":false,"color":"#222","save":"auto"},"fancybox":false,"mediumzoom":false,"lazyload":false,"pangu":false,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},"motion":{"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"fadeInDown","post_body":"fadeInDown","coll_header":"fadeInLeft","sidebar":"fadeInUp"}},"prism":false,"i18n":{"placeholder":"搜索...","empty":"没有找到任何搜索结果：${query}","hits_time":"找到 ${hits} 个搜索结果（用时 ${time} 毫秒）","hits":"找到 ${hits} 个搜索结果"}};
+    var CONFIG = {"hostname":"lzhwweb.github.io","root":"/nirvana/","images":"/nirvana/images","scheme":"Gemini","version":"8.2.2","exturl":false,"sidebar":{"position":"left","display":"post","padding":18,"offset":12},"copycode":false,"bookmark":{"enable":false,"color":"#222","save":"auto"},"fancybox":false,"mediumzoom":false,"lazyload":false,"pangu":false,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},"motion":{"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"fadeInDown","post_body":"fadeInDown","coll_header":"fadeInLeft","sidebar":"fadeInUp"}},"prism":false,"i18n":{"placeholder":"搜索...","empty":"没有找到任何搜索结果：${query}","hits_time":"找到 ${hits} 个搜索结果（用时 ${time} 毫秒）","hits":"找到 ${hits} 个搜索结果"},"path":"/nirvana/search.xml","localsearch":{"enable":true,"trigger":"auto","top_n_per_article":1,"unescape":false,"preload":false}};
   </script>
 <meta name="description" content="个人学习笔记">
 <meta property="og:type" content="website">
@@ -115,6 +115,7 @@
 
   <div class="site-nav-right">
     <div class="toggle popup-trigger">
+        <i class="fa fa-search fa-fw fa-lg"></i>
     </div>
   </div>
 </div>
@@ -135,11 +136,37 @@
         <li class="menu-item menu-item-开发工具"><a href="/nirvana/categories/tool" rel="section">开发工具</a></li>
         <li class="menu-item menu-item-设计模式(ts)"><a href="/nirvana/categories/DesignPattern" rel="section">设计模式(TS)</a></li>
         <li class="menu-item menu-item-前端"><a href="/nirvana/categories/javascript" rel="section">前端</a></li>
+      <li class="menu-item menu-item-search">
+        <a role="button" class="popup-trigger"><i class="fa fa-search fa-fw"></i>搜索
+        </a>
+      </li>
   </ul>
 </nav>
 
 
 
+  <div class="search-pop-overlay">
+    <div class="popup search-popup"><div class="search-header">
+  <span class="search-icon">
+    <i class="fa fa-search"></i>
+  </span>
+  <div class="search-input-container">
+    <input autocomplete="off" autocapitalize="off" maxlength="80"
+           placeholder="搜索..." spellcheck="false"
+           type="search" class="search-input">
+  </div>
+  <span class="popup-btn-close" role="button">
+    <i class="fa fa-times-circle"></i>
+  </span>
+</div>
+<div class="search-result-container no-result">
+  <div class="search-result-icon">
+    <i class="fa fa-spinner fa-pulse fa-5x"></i>
+  </div>
+</div>
+
+    </div>
+  </div>
 
 </div>
         
@@ -213,119 +240,6 @@
 
 
     <div class="main-inner index posts-expand">
-
-    
-
-
-<div class="post-block">
-  
-  
-
-  <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="">
-    <link itemprop="mainEntityOfPage" href="https://lzhwweb.github.io/nirvana/DesignPattern/%E8%AE%BE%E8%AE%A1%E6%A8%A1%E5%BC%8F%EF%BC%88TypeScript%EF%BC%89/Proxy-Pattern(%E4%BB%A3%E7%90%86%E6%A8%A1%E5%BC%8F)/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="image" content="/nirvana/images/headphoto.jpeg">
-      <meta itemprop="name" content="nirvana">
-      <meta itemprop="description" content="个人学习笔记">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="涅槃快乐是金">
-    </span>
-      <header class="post-header">
-        <h2 class="post-title" itemprop="name headline">
-          <a href="/nirvana/DesignPattern/%E8%AE%BE%E8%AE%A1%E6%A8%A1%E5%BC%8F%EF%BC%88TypeScript%EF%BC%89/Proxy-Pattern(%E4%BB%A3%E7%90%86%E6%A8%A1%E5%BC%8F)/" class="post-title-link" itemprop="url">Proxy-Pattern(代理模式)</a>
-        </h2>
-
-        <div class="post-meta-container">
-          <div class="post-meta">
-    <span class="post-meta-item">
-      <span class="post-meta-item-icon">
-        <i class="far fa-calendar"></i>
-      </span>
-      <span class="post-meta-item-text">发表于</span>
-
-      <time title="创建时间：2021-03-11 21:12:40" itemprop="dateCreated datePublished" datetime="2021-03-11T21:12:40+08:00">2021-03-11</time>
-    </span>
-      <span class="post-meta-item">
-        <span class="post-meta-item-icon">
-          <i class="far fa-calendar-check"></i>
-        </span>
-        <span class="post-meta-item-text">更新于</span>
-        <time title="修改时间：2021-03-10 13:43:55" itemprop="dateModified" datetime="2021-03-10T13:43:55+08:00">2021-03-10</time>
-      </span>
-    <span class="post-meta-item">
-      <span class="post-meta-item-icon">
-        <i class="far fa-folder"></i>
-      </span>
-      <span class="post-meta-item-text">分类于</span>
-        <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-          <a href="/nirvana/categories/DesignPattern/" itemprop="url" rel="index"><span itemprop="name">DesignPattern</span></a>
-        </span>
-    </span>
-
-  
-      </div>
-      <div class="post-meta">
-    <span class="post-meta-item" title="本文字数">
-      <span class="post-meta-item-icon">
-        <i class="far fa-file-word"></i>
-      </span>
-      <span class="post-meta-item-text">本文字数：</span>
-      <span>1.7k</span>
-    </span>
-    <span class="post-meta-item" title="阅读时长">
-      <span class="post-meta-item-icon">
-        <i class="far fa-clock"></i>
-      </span>
-      <span class="post-meta-item-text">阅读时长 &asymp;</span>
-      <span>2 分钟</span>
-    </span>
-</div>
-
-        </div>
-      </header>
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-          <p>代理模式（Proxy Pattern）：代理模式给某一个对象提供一个代理对象，并由代理对象控制对原对象的引用。这种类型的设计模式属于结构型模式。</p>
-<h2 id="介绍"><a href="#介绍" class="headerlink" title="介绍"></a>介绍</h2><ul>
-<li><strong>意图：</strong>为其他对象提供一种代理以控制对这个对象的访问。</li>
-<li><strong>主要解决：</strong>不直接操作对象的情况下,对此对象进行访问。</li>
-<li><strong>何时使用：</strong>想在访问一个类时做一些控制。</li>
-<li><strong>应用实例：</strong>买火车票不一定在火车站买，也可以去代售点。</li>
-<li><strong>优点：</strong><br>1、职责清晰。<br>2、高扩展性。<br>3、智能化。</li>
-<li><strong>缺点：</strong><br>1、由于在客户端和真实主题之间增加了代理对象，因此有些类型的代理模式可能会造成请求的处理速度变慢。<br>2、实现代理模式需要额外的工作，有些代理模式的实现非常复杂。</li>
-<li><strong>使用场景：</strong><br>1、远程代理。<br>2、虚拟代理。<br>3、Copy-on-Write 代理。<br>4、保护（Protect or Access）代理。<br>5、Cache代理。<br>6、防火墙（Firewall）代理。<br>7、同步化（Synchronization）代理。<br>8、智能引用（Smart Reference）代理。</li>
-<li><strong>注意事项：</strong><br>1、和适配器模式的区别：适配器模式主要改变所考虑对象的接口，而代理模式不能改变所代理类的接口。<br>2、和装饰器模式的区别：装饰器模式为了增强功能，而代理模式是为了加以控制。<h2 id="示例"><a href="#示例" class="headerlink" title="示例"></a>示例</h2><h5 id="BuyHouse-ts-创建服务类接口"><a href="#BuyHouse-ts-创建服务类接口" class="headerlink" title="BuyHouse.ts 创建服务类接口"></a>BuyHouse.ts 创建服务类接口</h5><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">export interface BuyHouse &#123;</span><br><span class="line">    buyHosue(): void;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-<h5 id="BuyHouseImpl-ts-实现服务接口"><a href="#BuyHouseImpl-ts-实现服务接口" class="headerlink" title="BuyHouseImpl.ts 实现服务接口"></a>BuyHouseImpl.ts 实现服务接口</h5><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line">import &#123; BuyHouse &#125; from &quot;.&#x2F;BuyHouse&quot;;</span><br><span class="line"></span><br><span class="line">export default class BuyHouseImpl implements BuyHouse &#123;</span><br><span class="line"></span><br><span class="line">    constructor() &#123;</span><br><span class="line"></span><br><span class="line">    &#125;</span><br><span class="line">    public buyHosue(): void &#123;</span><br><span class="line">        console.log(&quot;我要买房&quot;);</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-<h5 id="BuyHouseProxy-ts-创建代理类"><a href="#BuyHouseProxy-ts-创建代理类" class="headerlink" title="BuyHouseProxy.ts 创建代理类"></a>BuyHouseProxy.ts 创建代理类</h5><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><span class="line">import &#123; BuyHouse &#125; from &quot;.&#x2F;BuyHouse&quot;;</span><br><span class="line"></span><br><span class="line">export default class BuyHouseProxy implements BuyHouse &#123;</span><br><span class="line">    private buyHouse: BuyHouse;</span><br><span class="line">    constructor(buyHouse: BuyHouse) &#123;</span><br><span class="line">        this.buyHouse &#x3D; buyHouse;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    public buyHosue(): void &#123;</span><br><span class="line">        console.log(&quot;买房前准备&quot;);</span><br><span class="line">        this.buyHouse.buyHosue();</span><br><span class="line">        console.log(&quot;买房后装修&quot;);</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-<h5 id="index-ts"><a href="#index-ts" class="headerlink" title="index.ts"></a>index.ts</h5><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">import BuyHouseImpl from &quot;.&#x2F;BuyHouseImpl&quot;;</span><br><span class="line">import BuyHouseProxy from &quot;.&#x2F;BuyHouseProxy&quot;;</span><br><span class="line"></span><br><span class="line">const buyHouse &#x3D; new BuyHouseImpl();</span><br><span class="line">buyHouse.buyHosue();</span><br><span class="line">const buyHouseProxy &#x3D; new BuyHouseProxy(buyHouse);</span><br><span class="line">buyHouseProxy.buyHosue();</span><br></pre></td></tr></table></figure>
-<h2 id="类图"><a href="#类图" class="headerlink" title="类图"></a>类图</h2><img src="https://upload-images.jianshu.io/upload_images/10024246-b4f89a6249dd3f0b.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240"><h2 id="角色："><a href="#角色：" class="headerlink" title="角色："></a>角色：</h2></li>
-<li>Subject(主体)：声明了RealSubject和Proxy的共同接口。由于存在Subject角色，所以Client角色不必在意他所使用的的究竟是RealSubject还是Proxy。</li>
-<li>RealSubject（实际的主体）：也称为委托角色或者被代理角色。定义了代理对象所代表的目标对象。</li>
-<li>Proxy（代理人）：也叫委托类、代理类。Proxy角色处理来自Client的请求，代理对象通常在客户端调用传递给目标对象之前或之后，执行某个操作，而不是单纯地将调用传递给目标对象。</li>
-</ul>
-
-      
-    </div>
-
-    
-    
-    
-
-    <footer class="post-footer">
-        <div class="post-eof"></div>
-      
-    </footer>
-  </article>
-</div>
-
-
-
 
     
 
@@ -451,6 +365,119 @@
   
 
   <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="">
+    <link itemprop="mainEntityOfPage" href="https://lzhwweb.github.io/nirvana/DesignPattern/%E8%AE%BE%E8%AE%A1%E6%A8%A1%E5%BC%8F%EF%BC%88TypeScript%EF%BC%89/Proxy-Pattern(%E4%BB%A3%E7%90%86%E6%A8%A1%E5%BC%8F)/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/nirvana/images/headphoto.jpeg">
+      <meta itemprop="name" content="nirvana">
+      <meta itemprop="description" content="个人学习笔记">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="涅槃快乐是金">
+    </span>
+      <header class="post-header">
+        <h2 class="post-title" itemprop="name headline">
+          <a href="/nirvana/DesignPattern/%E8%AE%BE%E8%AE%A1%E6%A8%A1%E5%BC%8F%EF%BC%88TypeScript%EF%BC%89/Proxy-Pattern(%E4%BB%A3%E7%90%86%E6%A8%A1%E5%BC%8F)/" class="post-title-link" itemprop="url">Proxy-Pattern(代理模式)</a>
+        </h2>
+
+        <div class="post-meta-container">
+          <div class="post-meta">
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-calendar"></i>
+      </span>
+      <span class="post-meta-item-text">发表于</span>
+
+      <time title="创建时间：2021-03-11 21:12:40" itemprop="dateCreated datePublished" datetime="2021-03-11T21:12:40+08:00">2021-03-11</time>
+    </span>
+      <span class="post-meta-item">
+        <span class="post-meta-item-icon">
+          <i class="far fa-calendar-check"></i>
+        </span>
+        <span class="post-meta-item-text">更新于</span>
+        <time title="修改时间：2021-03-10 13:43:55" itemprop="dateModified" datetime="2021-03-10T13:43:55+08:00">2021-03-10</time>
+      </span>
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-folder"></i>
+      </span>
+      <span class="post-meta-item-text">分类于</span>
+        <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+          <a href="/nirvana/categories/DesignPattern/" itemprop="url" rel="index"><span itemprop="name">DesignPattern</span></a>
+        </span>
+    </span>
+
+  
+      </div>
+      <div class="post-meta">
+    <span class="post-meta-item" title="本文字数">
+      <span class="post-meta-item-icon">
+        <i class="far fa-file-word"></i>
+      </span>
+      <span class="post-meta-item-text">本文字数：</span>
+      <span>1.7k</span>
+    </span>
+    <span class="post-meta-item" title="阅读时长">
+      <span class="post-meta-item-icon">
+        <i class="far fa-clock"></i>
+      </span>
+      <span class="post-meta-item-text">阅读时长 &asymp;</span>
+      <span>2 分钟</span>
+    </span>
+</div>
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+          <p>代理模式（Proxy Pattern）：代理模式给某一个对象提供一个代理对象，并由代理对象控制对原对象的引用。这种类型的设计模式属于结构型模式。</p>
+<h2 id="介绍"><a href="#介绍" class="headerlink" title="介绍"></a>介绍</h2><ul>
+<li><strong>意图：</strong>为其他对象提供一种代理以控制对这个对象的访问。</li>
+<li><strong>主要解决：</strong>不直接操作对象的情况下,对此对象进行访问。</li>
+<li><strong>何时使用：</strong>想在访问一个类时做一些控制。</li>
+<li><strong>应用实例：</strong>买火车票不一定在火车站买，也可以去代售点。</li>
+<li><strong>优点：</strong><br>1、职责清晰。<br>2、高扩展性。<br>3、智能化。</li>
+<li><strong>缺点：</strong><br>1、由于在客户端和真实主题之间增加了代理对象，因此有些类型的代理模式可能会造成请求的处理速度变慢。<br>2、实现代理模式需要额外的工作，有些代理模式的实现非常复杂。</li>
+<li><strong>使用场景：</strong><br>1、远程代理。<br>2、虚拟代理。<br>3、Copy-on-Write 代理。<br>4、保护（Protect or Access）代理。<br>5、Cache代理。<br>6、防火墙（Firewall）代理。<br>7、同步化（Synchronization）代理。<br>8、智能引用（Smart Reference）代理。</li>
+<li><strong>注意事项：</strong><br>1、和适配器模式的区别：适配器模式主要改变所考虑对象的接口，而代理模式不能改变所代理类的接口。<br>2、和装饰器模式的区别：装饰器模式为了增强功能，而代理模式是为了加以控制。<h2 id="示例"><a href="#示例" class="headerlink" title="示例"></a>示例</h2><h5 id="BuyHouse-ts-创建服务类接口"><a href="#BuyHouse-ts-创建服务类接口" class="headerlink" title="BuyHouse.ts 创建服务类接口"></a>BuyHouse.ts 创建服务类接口</h5><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">export interface BuyHouse &#123;</span><br><span class="line">    buyHosue(): void;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<h5 id="BuyHouseImpl-ts-实现服务接口"><a href="#BuyHouseImpl-ts-实现服务接口" class="headerlink" title="BuyHouseImpl.ts 实现服务接口"></a>BuyHouseImpl.ts 实现服务接口</h5><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line">import &#123; BuyHouse &#125; from &quot;.&#x2F;BuyHouse&quot;;</span><br><span class="line"></span><br><span class="line">export default class BuyHouseImpl implements BuyHouse &#123;</span><br><span class="line"></span><br><span class="line">    constructor() &#123;</span><br><span class="line"></span><br><span class="line">    &#125;</span><br><span class="line">    public buyHosue(): void &#123;</span><br><span class="line">        console.log(&quot;我要买房&quot;);</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<h5 id="BuyHouseProxy-ts-创建代理类"><a href="#BuyHouseProxy-ts-创建代理类" class="headerlink" title="BuyHouseProxy.ts 创建代理类"></a>BuyHouseProxy.ts 创建代理类</h5><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><span class="line">import &#123; BuyHouse &#125; from &quot;.&#x2F;BuyHouse&quot;;</span><br><span class="line"></span><br><span class="line">export default class BuyHouseProxy implements BuyHouse &#123;</span><br><span class="line">    private buyHouse: BuyHouse;</span><br><span class="line">    constructor(buyHouse: BuyHouse) &#123;</span><br><span class="line">        this.buyHouse &#x3D; buyHouse;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    public buyHosue(): void &#123;</span><br><span class="line">        console.log(&quot;买房前准备&quot;);</span><br><span class="line">        this.buyHouse.buyHosue();</span><br><span class="line">        console.log(&quot;买房后装修&quot;);</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<h5 id="index-ts"><a href="#index-ts" class="headerlink" title="index.ts"></a>index.ts</h5><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">import BuyHouseImpl from &quot;.&#x2F;BuyHouseImpl&quot;;</span><br><span class="line">import BuyHouseProxy from &quot;.&#x2F;BuyHouseProxy&quot;;</span><br><span class="line"></span><br><span class="line">const buyHouse &#x3D; new BuyHouseImpl();</span><br><span class="line">buyHouse.buyHosue();</span><br><span class="line">const buyHouseProxy &#x3D; new BuyHouseProxy(buyHouse);</span><br><span class="line">buyHouseProxy.buyHosue();</span><br></pre></td></tr></table></figure>
+<h2 id="类图"><a href="#类图" class="headerlink" title="类图"></a>类图</h2><img src="https://upload-images.jianshu.io/upload_images/10024246-b4f89a6249dd3f0b.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240"><h2 id="角色："><a href="#角色：" class="headerlink" title="角色："></a>角色：</h2></li>
+<li>Subject(主体)：声明了RealSubject和Proxy的共同接口。由于存在Subject角色，所以Client角色不必在意他所使用的的究竟是RealSubject还是Proxy。</li>
+<li>RealSubject（实际的主体）：也称为委托角色或者被代理角色。定义了代理对象所代表的目标对象。</li>
+<li>Proxy（代理人）：也叫委托类、代理类。Proxy角色处理来自Client的请求，代理对象通常在客户端调用传递给目标对象之前或之后，执行某个操作，而不是单纯地将调用传递给目标对象。</li>
+</ul>
+
+      
+    </div>
+
+    
+    
+    
+
+    <footer class="post-footer">
+        <div class="post-eof"></div>
+      
+    </footer>
+  </article>
+</div>
+
+
+
+
+    
+
+
+<div class="post-block">
+  
+  
+
+  <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="">
     <link itemprop="mainEntityOfPage" href="https://lzhwweb.github.io/nirvana/DesignPattern/%E8%AE%BE%E8%AE%A1%E6%A8%A1%E5%BC%8F%EF%BC%88TypeScript%EF%BC%89/State-Pattern%E6%A8%A1%E5%BC%8F%EF%BC%88%E7%8A%B6%E6%80%81%E6%A8%A1%E5%BC%8F%EF%BC%89/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
@@ -538,127 +565,6 @@
 <li>State（状态）<br>State定义了根据不同状态进行不同处理的接口，该接口是那些<code>处理内容依赖于状态的方法的集合</code>。</li>
 <li>ConcreteState（具体状态）<br>ConcreteState角色表示各个具体的状态，实现了State的接口。示例中DayState和NightState</li>
 <li>Context（状况、前后关系、上下文）<br>Context角色持有当前状态的ConcreteState，此外，它还定义了供外部调用者使用State模式的接口。示例中Context和Safe类为该角色</li>
-</ul>
-
-      
-    </div>
-
-    
-    
-    
-
-    <footer class="post-footer">
-        <div class="post-eof"></div>
-      
-    </footer>
-  </article>
-</div>
-
-
-
-
-    
-
-
-<div class="post-block">
-  
-  
-
-  <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="">
-    <link itemprop="mainEntityOfPage" href="https://lzhwweb.github.io/nirvana/DesignPattern/%E8%AE%BE%E8%AE%A1%E6%A8%A1%E5%BC%8F%EF%BC%88TypeScript%EF%BC%89/Strategy-Pattern%E6%A8%A1%E5%BC%8F%EF%BC%88%E7%AD%96%E7%95%A5%E6%A8%A1%E5%BC%8F%EF%BC%89/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="image" content="/nirvana/images/headphoto.jpeg">
-      <meta itemprop="name" content="nirvana">
-      <meta itemprop="description" content="个人学习笔记">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="涅槃快乐是金">
-    </span>
-      <header class="post-header">
-        <h2 class="post-title" itemprop="name headline">
-          <a href="/nirvana/DesignPattern/%E8%AE%BE%E8%AE%A1%E6%A8%A1%E5%BC%8F%EF%BC%88TypeScript%EF%BC%89/Strategy-Pattern%E6%A8%A1%E5%BC%8F%EF%BC%88%E7%AD%96%E7%95%A5%E6%A8%A1%E5%BC%8F%EF%BC%89/" class="post-title-link" itemprop="url">Strategy-Pattern模式（策略模式）</a>
-        </h2>
-
-        <div class="post-meta-container">
-          <div class="post-meta">
-    <span class="post-meta-item">
-      <span class="post-meta-item-icon">
-        <i class="far fa-calendar"></i>
-      </span>
-      <span class="post-meta-item-text">发表于</span>
-
-      <time title="创建时间：2021-03-11 21:12:40" itemprop="dateCreated datePublished" datetime="2021-03-11T21:12:40+08:00">2021-03-11</time>
-    </span>
-      <span class="post-meta-item">
-        <span class="post-meta-item-icon">
-          <i class="far fa-calendar-check"></i>
-        </span>
-        <span class="post-meta-item-text">更新于</span>
-        <time title="修改时间：2021-03-10 13:43:55" itemprop="dateModified" datetime="2021-03-10T13:43:55+08:00">2021-03-10</time>
-      </span>
-    <span class="post-meta-item">
-      <span class="post-meta-item-icon">
-        <i class="far fa-folder"></i>
-      </span>
-      <span class="post-meta-item-text">分类于</span>
-        <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-          <a href="/nirvana/categories/DesignPattern/" itemprop="url" rel="index"><span itemprop="name">DesignPattern</span></a>
-        </span>
-    </span>
-
-  
-      </div>
-      <div class="post-meta">
-    <span class="post-meta-item" title="本文字数">
-      <span class="post-meta-item-icon">
-        <i class="far fa-file-word"></i>
-      </span>
-      <span class="post-meta-item-text">本文字数：</span>
-      <span>4.8k</span>
-    </span>
-    <span class="post-meta-item" title="阅读时长">
-      <span class="post-meta-item-icon">
-        <i class="far fa-clock"></i>
-      </span>
-      <span class="post-meta-item-text">阅读时长 &asymp;</span>
-      <span>4 分钟</span>
-    </span>
-</div>
-
-        </div>
-      </header>
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-          <p><strong>策略模式（Strategy Pattern）</strong>:一个类的行为或其算法可以在运行时更改。这种类型的设计模式属于行为型模式。</p>
-<h2 id="介绍"><a href="#介绍" class="headerlink" title="介绍"></a>介绍</h2><ul>
-<li><strong>意图：</strong>定义一系列的算法,把它们一个个封装起来, 并且使它们可相互替换。</li>
-<li><strong>主要解决：</strong>在有多种算法相似的情况下，使用 if…else 所带来的复杂和难以维护。</li>
-<li><strong>何时使用：</strong>一个系统有许多许多类，而区分它们的只是他们直接的行为。</li>
-<li><strong>如何解决：</strong>将这些算法封装成一个一个的类，任意地替换。</li>
-<li><strong>关键代码：</strong>实现同一个接口。</li>
-<li><strong>优点：</strong><br>1、算法可以自由切换。<br>2、避免使用多重条件判断。<br>3、扩展性良好。</li>
-<li><strong>缺点：</strong><br>1、策略类会增多。<br>2、所有策略类都需要对外暴露。<blockquote>
-<p>注意事项：如果一个系统的策略多于四个，就需要考虑使用混合模式，解决策略类膨胀的问题。</p>
-</blockquote>
-</li>
-</ul>
-<h2 id="示例"><a href="#示例" class="headerlink" title="示例"></a>示例</h2><h5 id="Hand-ts-表示猜拳游戏中的手势类"><a href="#Hand-ts-表示猜拳游戏中的手势类" class="headerlink" title="Hand.ts 表示猜拳游戏中的手势类"></a>Hand.ts 表示猜拳游戏中的手势类</h5><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br></pre></td><td class="code"><pre><span class="line">export default class Hand &#123;</span><br><span class="line">    public HANDVALUE_GUU &#x3D; 0;&#x2F;&#x2F;表示石头的值</span><br><span class="line">    public HANDVALUE_CHO &#x3D; 1;&#x2F;&#x2F;表示剪刀的值</span><br><span class="line">    public HANDVALUE_PAA &#x3D; 2;&#x2F;&#x2F;表示布的值</span><br><span class="line"></span><br><span class="line">    private name: Array&lt;string&gt; &#x3D; [&quot;石头&quot;, &quot;剪刀&quot;, &quot;布&quot;];</span><br><span class="line"></span><br><span class="line">    private handValue: number;</span><br><span class="line">    constructor(handValue: number) &#123;</span><br><span class="line">        this.handValue &#x3D; handValue;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    public getHand(handValue: number): Hand &#123;</span><br><span class="line">        return new Hand(handValue);</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    public isStrongerThan(h: Hand): boolean &#123;</span><br><span class="line">        return this.fight(h) &#x3D;&#x3D; 1;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    public isWeakerThan(h: Hand): boolean &#123;</span><br><span class="line">        return this.fight(h) &#x3D;&#x3D; -1;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    private fight(h: Hand): number &#123;</span><br><span class="line">        if (this.handValue &#x3D;&#x3D; h.handValue) &#123;</span><br><span class="line">            return 0;</span><br><span class="line">        &#125; else if ((this.handValue + 1) % 3 &gt; h.handValue) &#123;</span><br><span class="line">            return 1;</span><br><span class="line">        &#125; else &#123;</span><br><span class="line">            return -1;</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">    public toString(): string &#123;</span><br><span class="line">        return this.name[this.handValue];</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-<h5 id="Strategy-ts-表示猜拳游戏中的策略的类"><a href="#Strategy-ts-表示猜拳游戏中的策略的类" class="headerlink" title="Strategy.ts 表示猜拳游戏中的策略的类"></a>Strategy.ts 表示猜拳游戏中的策略的类</h5><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">import Hand from &quot;.&#x2F;Hand&quot;;</span><br><span class="line"></span><br><span class="line">export interface Strategy &#123;</span><br><span class="line">    nextHand(): Hand;</span><br><span class="line">    study(win: boolean): void;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-<h5 id="WinningStrategy-ts-表示如果这局获胜，那么下一局同样手势的类"><a href="#WinningStrategy-ts-表示如果这局获胜，那么下一局同样手势的类" class="headerlink" title="WinningStrategy.ts 表示如果这局获胜，那么下一局同样手势的类"></a>WinningStrategy.ts 表示如果这局获胜，那么下一局同样手势的类</h5><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br></pre></td><td class="code"><pre><span class="line">import &#123; Strategy &#125; from &quot;.&#x2F;type&quot;;</span><br><span class="line">import Hand from &quot;.&#x2F;Hand&quot;;</span><br><span class="line"></span><br><span class="line">export default class WinningStrategy implements Strategy &#123;</span><br><span class="line">    private win: boolean &#x3D; false;</span><br><span class="line">    private prevHand: Hand;</span><br><span class="line">    constructor() &#123;</span><br><span class="line">    &#125;</span><br><span class="line">    public nextHand(): Hand &#123;</span><br><span class="line">        if (!this.win) &#123;</span><br><span class="line">            const random &#x3D; Math.floor(Math.random() * 3);</span><br><span class="line">            const hand &#x3D; new Hand(random);</span><br><span class="line">            this.prevHand &#x3D; hand.getHand(random);</span><br><span class="line">        &#125;</span><br><span class="line">        return this.prevHand;</span><br><span class="line">    &#125;</span><br><span class="line">    public study(win: boolean) &#123;</span><br><span class="line">        this.win &#x3D; win;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-<h5 id="RandomStragegy-ts-表示每次都随机手势"><a href="#RandomStragegy-ts-表示每次都随机手势" class="headerlink" title="RandomStragegy.ts 表示每次都随机手势"></a>RandomStragegy.ts 表示每次都随机手势</h5><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><span class="line">import &#123; Strategy &#125; from &quot;.&#x2F;type&quot;;</span><br><span class="line">import Hand from &quot;.&#x2F;Hand&quot;;</span><br><span class="line"></span><br><span class="line">export default class RandomStragegy implements Strategy &#123;</span><br><span class="line">    constructor() &#123;</span><br><span class="line">    &#125;</span><br><span class="line">    public nextHand(): Hand &#123;</span><br><span class="line">        const random &#x3D; Math.floor(Math.random() * 3);</span><br><span class="line">        const hand &#x3D; new Hand(random);</span><br><span class="line">        return hand.getHand(random);</span><br><span class="line">    &#125;</span><br><span class="line">    public study(win: boolean) &#123;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-<h5 id="Player-ts-猜拳游戏的选手类"><a href="#Player-ts-猜拳游戏的选手类" class="headerlink" title="Player.ts 猜拳游戏的选手类"></a>Player.ts 猜拳游戏的选手类</h5><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br></pre></td><td class="code"><pre><span class="line">import &#123; Strategy &#125; from &quot;.&#x2F;type&quot;;</span><br><span class="line">import Hand from &quot;.&#x2F;Hand&quot;;</span><br><span class="line"></span><br><span class="line">export default class Play &#123;</span><br><span class="line">    private name: string;</span><br><span class="line">    private winCount: number &#x3D; 0;</span><br><span class="line">    private loseCount: number &#x3D; 0;</span><br><span class="line">    private gameCount: number &#x3D; 0;</span><br><span class="line">    private stragegy: Strategy</span><br><span class="line">    constructor(name: string, stragegy: Strategy) &#123;</span><br><span class="line">        this.name &#x3D; name;</span><br><span class="line">        this.stragegy &#x3D; stragegy;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    public nextHand(): Hand &#123;</span><br><span class="line">        return this.stragegy.nextHand()</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    public win(): void &#123;</span><br><span class="line">        this.stragegy.study(true);</span><br><span class="line">        this.winCount++;</span><br><span class="line">        this.gameCount++;</span><br><span class="line">    &#125;</span><br><span class="line">    public lose(): void &#123;</span><br><span class="line">        this.stragegy.study(false);</span><br><span class="line">        this.loseCount++;</span><br><span class="line">        this.gameCount++;</span><br><span class="line">    &#125;</span><br><span class="line">    public even() &#123;</span><br><span class="line">        this.gameCount++;</span><br><span class="line">    &#125;</span><br><span class="line">    public toString(): string &#123;</span><br><span class="line">        return &#96;[$&#123;this.name&#125;:$&#123;this.gameCount&#125; games,$&#123;this.winCount&#125; win,$&#123;this.loseCount&#125; lose]&#96;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-<h5 id="index-ts"><a href="#index-ts" class="headerlink" title="index.ts"></a>index.ts</h5><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br></pre></td><td class="code"><pre><span class="line">import Play from &quot;.&#x2F;Play&quot;;</span><br><span class="line">import WinningStrategy from &quot;.&#x2F;WinningStrategy&quot;;</span><br><span class="line">import RandomStragegy from &quot;.&#x2F;RandomStragegy&quot;;</span><br><span class="line"></span><br><span class="line">const play1: Play &#x3D; new Play(&quot;Trao&quot;, new WinningStrategy());&#x2F;&#x2F;坚持上一次赢</span><br><span class="line">const play2: Play &#x3D; new Play(&quot;Haha&quot;, new RandomStragegy());&#x2F;&#x2F;随机</span><br><span class="line">for (let i &#x3D; 0; i &lt; 20; i++) &#123;</span><br><span class="line">    const nextHand1 &#x3D; play1.nextHand();</span><br><span class="line">    const nextHand2 &#x3D; play2.nextHand();</span><br><span class="line">    if (nextHand1.isStrongerThan(nextHand2)) &#123;</span><br><span class="line">        console.log(&#96;Winner $&#123;play1.toString()&#125; $&#123;nextHand1.toString()&#125;&#96;);</span><br><span class="line">        play1.win();</span><br><span class="line">        play2.lose();</span><br><span class="line">    &#125; else if (nextHand2.isStrongerThan(nextHand1)) &#123;</span><br><span class="line">        console.log(&#96;Winner $&#123;play2.toString()&#125;  $&#123;nextHand2.toString()&#125;&#96;);</span><br><span class="line">        play2.win();</span><br><span class="line">        play1.lose();</span><br><span class="line">    &#125; else &#123;</span><br><span class="line">        console.log(&#96;Even... $&#123;nextHand1.toString()&#125;&#96;);</span><br><span class="line">        play2.even();</span><br><span class="line">        play1.even();</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-<h5 id="result"><a href="#result" class="headerlink" title="result"></a>result</h5><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br></pre></td><td class="code"><pre><span class="line">Even... 布</span><br><span class="line">Even... 布</span><br><span class="line">Even... 布</span><br><span class="line">Even... 剪刀</span><br><span class="line">Winner [Haha:5 games,1 win,0 lose]  剪刀</span><br><span class="line">Winner [Trao:6 games,1 win,1 lose] 剪刀</span><br><span class="line">Even... 剪刀</span><br><span class="line">Even... 剪刀</span><br><span class="line">Even... 剪刀</span><br><span class="line">Winner [Trao:10 games,2 win,1 lose] 剪刀</span><br><span class="line">Even... 剪刀</span><br><span class="line">Winner [Trao:12 games,3 win,1 lose] 剪刀</span><br><span class="line">Even... 剪刀</span><br><span class="line">Winner [Trao:14 games,4 win,1 lose] 剪刀</span><br><span class="line">Winner [Trao:15 games,5 win,1 lose] 剪刀</span><br><span class="line">Even... 剪刀</span><br><span class="line">Even... 剪刀</span><br><span class="line">Winner [Trao:18 games,6 win,1 lose] 剪刀</span><br><span class="line">Winner [Trao:19 games,7 win,1 lose] 剪刀</span><br><span class="line">Even... 剪刀</span><br><span class="line">————————————Result————————————————</span><br><span class="line">Result [Trao:20 games,7 win,1 lose]</span><br><span class="line">Result [Haha:20 games,1 win,7 lose]</span><br></pre></td></tr></table></figure>
-<h2 id="类图"><a href="#类图" class="headerlink" title="类图"></a>类图</h2><p><img src="https://upload-images.jianshu.io/upload_images/10024246-78dcce422e6de9d8.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240"></p>
-<h2 id="角色"><a href="#角色" class="headerlink" title="角色"></a>角色</h2><ul>
-<li>Strategy（策略）<br>Strategy角色决定实现策略所必须的接口</li>
-<li>ConcreteStrategy（具体的策略）<br>ConcreteStrategy角色负责实现Strategy角色的接口，即负责实现具体的策略（方法、算法）。</li>
-<li>Context（上下文）<br>负责使用Strategy角色。Context角色保存ConcreteStrategy角色的实例，彬使用ConcreteStrategy角色去实现需求</li>
 </ul>
 
       
@@ -820,6 +726,226 @@
   
 
   <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="">
+    <link itemprop="mainEntityOfPage" href="https://lzhwweb.github.io/nirvana/DesignPattern/%E8%AE%BE%E8%AE%A1%E6%A8%A1%E5%BC%8F%EF%BC%88TypeScript%EF%BC%89/%E5%AE%8C%E7%BB%93%E6%84%9F%E6%83%B3/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/nirvana/images/headphoto.jpeg">
+      <meta itemprop="name" content="nirvana">
+      <meta itemprop="description" content="个人学习笔记">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="涅槃快乐是金">
+    </span>
+      <header class="post-header">
+        <h2 class="post-title" itemprop="name headline">
+          <a href="/nirvana/DesignPattern/%E8%AE%BE%E8%AE%A1%E6%A8%A1%E5%BC%8F%EF%BC%88TypeScript%EF%BC%89/%E5%AE%8C%E7%BB%93%E6%84%9F%E6%83%B3/" class="post-title-link" itemprop="url">完结感想</a>
+        </h2>
+
+        <div class="post-meta-container">
+          <div class="post-meta">
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-calendar"></i>
+      </span>
+      <span class="post-meta-item-text">发表于</span>
+
+      <time title="创建时间：2021-03-11 21:12:40" itemprop="dateCreated datePublished" datetime="2021-03-11T21:12:40+08:00">2021-03-11</time>
+    </span>
+      <span class="post-meta-item">
+        <span class="post-meta-item-icon">
+          <i class="far fa-calendar-check"></i>
+        </span>
+        <span class="post-meta-item-text">更新于</span>
+        <time title="修改时间：2021-03-10 13:43:55" itemprop="dateModified" datetime="2021-03-10T13:43:55+08:00">2021-03-10</time>
+      </span>
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-folder"></i>
+      </span>
+      <span class="post-meta-item-text">分类于</span>
+        <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+          <a href="/nirvana/categories/DesignPattern/" itemprop="url" rel="index"><span itemprop="name">DesignPattern</span></a>
+        </span>
+    </span>
+
+  
+      </div>
+      <div class="post-meta">
+    <span class="post-meta-item" title="本文字数">
+      <span class="post-meta-item-icon">
+        <i class="far fa-file-word"></i>
+      </span>
+      <span class="post-meta-item-text">本文字数：</span>
+      <span>339</span>
+    </span>
+    <span class="post-meta-item" title="阅读时长">
+      <span class="post-meta-item-icon">
+        <i class="far fa-clock"></i>
+      </span>
+      <span class="post-meta-item-text">阅读时长 &asymp;</span>
+      <span>1 分钟</span>
+    </span>
+</div>
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+          <p>从2020.03.28到2021.01.11接近一年的时间才完成这个系列，还是有很多感触的。</p>
+<p>现在一直在用TS开发，TS解决了以前JS虽然是面向对象的语言，但是和java、C、PHP这种强类型的语言相比，没有明确的class，interface这些面向对象的定义，想做一些设计模式的开发就会写的不伦不类，有了TS终于能够写真正的面向对象的代码了。</p>
+<p>自从拿到看到关于《设计模式》这本书，就想写一下用TS来实现相关设计模式的想法，顺便复习下相关内容，本来计划1、2个月就能完成这件事，但是计划赶不上变化，其实就是拖延症，前面几分钟热度，后来就是给自己找各种理由，根本没写几个。</p>
+<p>直到最近碰到了日更活动，为了给自己一定的压力，就参与进去，才发现人的潜力是无穷的，逼一逼还是有潜力可挖的。🤩</p>
+
+      
+    </div>
+
+    
+    
+    
+
+    <footer class="post-footer">
+        <div class="post-eof"></div>
+      
+    </footer>
+  </article>
+</div>
+
+
+
+
+    
+
+
+<div class="post-block">
+  
+  
+
+  <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="">
+    <link itemprop="mainEntityOfPage" href="https://lzhwweb.github.io/nirvana/DesignPattern/%E8%AE%BE%E8%AE%A1%E6%A8%A1%E5%BC%8F%EF%BC%88TypeScript%EF%BC%89/Strategy-Pattern%E6%A8%A1%E5%BC%8F%EF%BC%88%E7%AD%96%E7%95%A5%E6%A8%A1%E5%BC%8F%EF%BC%89/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/nirvana/images/headphoto.jpeg">
+      <meta itemprop="name" content="nirvana">
+      <meta itemprop="description" content="个人学习笔记">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="涅槃快乐是金">
+    </span>
+      <header class="post-header">
+        <h2 class="post-title" itemprop="name headline">
+          <a href="/nirvana/DesignPattern/%E8%AE%BE%E8%AE%A1%E6%A8%A1%E5%BC%8F%EF%BC%88TypeScript%EF%BC%89/Strategy-Pattern%E6%A8%A1%E5%BC%8F%EF%BC%88%E7%AD%96%E7%95%A5%E6%A8%A1%E5%BC%8F%EF%BC%89/" class="post-title-link" itemprop="url">Strategy-Pattern模式（策略模式）</a>
+        </h2>
+
+        <div class="post-meta-container">
+          <div class="post-meta">
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-calendar"></i>
+      </span>
+      <span class="post-meta-item-text">发表于</span>
+
+      <time title="创建时间：2021-03-11 21:12:40" itemprop="dateCreated datePublished" datetime="2021-03-11T21:12:40+08:00">2021-03-11</time>
+    </span>
+      <span class="post-meta-item">
+        <span class="post-meta-item-icon">
+          <i class="far fa-calendar-check"></i>
+        </span>
+        <span class="post-meta-item-text">更新于</span>
+        <time title="修改时间：2021-03-10 13:43:55" itemprop="dateModified" datetime="2021-03-10T13:43:55+08:00">2021-03-10</time>
+      </span>
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-folder"></i>
+      </span>
+      <span class="post-meta-item-text">分类于</span>
+        <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+          <a href="/nirvana/categories/DesignPattern/" itemprop="url" rel="index"><span itemprop="name">DesignPattern</span></a>
+        </span>
+    </span>
+
+  
+      </div>
+      <div class="post-meta">
+    <span class="post-meta-item" title="本文字数">
+      <span class="post-meta-item-icon">
+        <i class="far fa-file-word"></i>
+      </span>
+      <span class="post-meta-item-text">本文字数：</span>
+      <span>4.8k</span>
+    </span>
+    <span class="post-meta-item" title="阅读时长">
+      <span class="post-meta-item-icon">
+        <i class="far fa-clock"></i>
+      </span>
+      <span class="post-meta-item-text">阅读时长 &asymp;</span>
+      <span>4 分钟</span>
+    </span>
+</div>
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+          <p><strong>策略模式（Strategy Pattern）</strong>:一个类的行为或其算法可以在运行时更改。这种类型的设计模式属于行为型模式。</p>
+<h2 id="介绍"><a href="#介绍" class="headerlink" title="介绍"></a>介绍</h2><ul>
+<li><strong>意图：</strong>定义一系列的算法,把它们一个个封装起来, 并且使它们可相互替换。</li>
+<li><strong>主要解决：</strong>在有多种算法相似的情况下，使用 if…else 所带来的复杂和难以维护。</li>
+<li><strong>何时使用：</strong>一个系统有许多许多类，而区分它们的只是他们直接的行为。</li>
+<li><strong>如何解决：</strong>将这些算法封装成一个一个的类，任意地替换。</li>
+<li><strong>关键代码：</strong>实现同一个接口。</li>
+<li><strong>优点：</strong><br>1、算法可以自由切换。<br>2、避免使用多重条件判断。<br>3、扩展性良好。</li>
+<li><strong>缺点：</strong><br>1、策略类会增多。<br>2、所有策略类都需要对外暴露。<blockquote>
+<p>注意事项：如果一个系统的策略多于四个，就需要考虑使用混合模式，解决策略类膨胀的问题。</p>
+</blockquote>
+</li>
+</ul>
+<h2 id="示例"><a href="#示例" class="headerlink" title="示例"></a>示例</h2><h5 id="Hand-ts-表示猜拳游戏中的手势类"><a href="#Hand-ts-表示猜拳游戏中的手势类" class="headerlink" title="Hand.ts 表示猜拳游戏中的手势类"></a>Hand.ts 表示猜拳游戏中的手势类</h5><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br></pre></td><td class="code"><pre><span class="line">export default class Hand &#123;</span><br><span class="line">    public HANDVALUE_GUU &#x3D; 0;&#x2F;&#x2F;表示石头的值</span><br><span class="line">    public HANDVALUE_CHO &#x3D; 1;&#x2F;&#x2F;表示剪刀的值</span><br><span class="line">    public HANDVALUE_PAA &#x3D; 2;&#x2F;&#x2F;表示布的值</span><br><span class="line"></span><br><span class="line">    private name: Array&lt;string&gt; &#x3D; [&quot;石头&quot;, &quot;剪刀&quot;, &quot;布&quot;];</span><br><span class="line"></span><br><span class="line">    private handValue: number;</span><br><span class="line">    constructor(handValue: number) &#123;</span><br><span class="line">        this.handValue &#x3D; handValue;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    public getHand(handValue: number): Hand &#123;</span><br><span class="line">        return new Hand(handValue);</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    public isStrongerThan(h: Hand): boolean &#123;</span><br><span class="line">        return this.fight(h) &#x3D;&#x3D; 1;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    public isWeakerThan(h: Hand): boolean &#123;</span><br><span class="line">        return this.fight(h) &#x3D;&#x3D; -1;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    private fight(h: Hand): number &#123;</span><br><span class="line">        if (this.handValue &#x3D;&#x3D; h.handValue) &#123;</span><br><span class="line">            return 0;</span><br><span class="line">        &#125; else if ((this.handValue + 1) % 3 &gt; h.handValue) &#123;</span><br><span class="line">            return 1;</span><br><span class="line">        &#125; else &#123;</span><br><span class="line">            return -1;</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">    public toString(): string &#123;</span><br><span class="line">        return this.name[this.handValue];</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<h5 id="Strategy-ts-表示猜拳游戏中的策略的类"><a href="#Strategy-ts-表示猜拳游戏中的策略的类" class="headerlink" title="Strategy.ts 表示猜拳游戏中的策略的类"></a>Strategy.ts 表示猜拳游戏中的策略的类</h5><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">import Hand from &quot;.&#x2F;Hand&quot;;</span><br><span class="line"></span><br><span class="line">export interface Strategy &#123;</span><br><span class="line">    nextHand(): Hand;</span><br><span class="line">    study(win: boolean): void;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<h5 id="WinningStrategy-ts-表示如果这局获胜，那么下一局同样手势的类"><a href="#WinningStrategy-ts-表示如果这局获胜，那么下一局同样手势的类" class="headerlink" title="WinningStrategy.ts 表示如果这局获胜，那么下一局同样手势的类"></a>WinningStrategy.ts 表示如果这局获胜，那么下一局同样手势的类</h5><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br></pre></td><td class="code"><pre><span class="line">import &#123; Strategy &#125; from &quot;.&#x2F;type&quot;;</span><br><span class="line">import Hand from &quot;.&#x2F;Hand&quot;;</span><br><span class="line"></span><br><span class="line">export default class WinningStrategy implements Strategy &#123;</span><br><span class="line">    private win: boolean &#x3D; false;</span><br><span class="line">    private prevHand: Hand;</span><br><span class="line">    constructor() &#123;</span><br><span class="line">    &#125;</span><br><span class="line">    public nextHand(): Hand &#123;</span><br><span class="line">        if (!this.win) &#123;</span><br><span class="line">            const random &#x3D; Math.floor(Math.random() * 3);</span><br><span class="line">            const hand &#x3D; new Hand(random);</span><br><span class="line">            this.prevHand &#x3D; hand.getHand(random);</span><br><span class="line">        &#125;</span><br><span class="line">        return this.prevHand;</span><br><span class="line">    &#125;</span><br><span class="line">    public study(win: boolean) &#123;</span><br><span class="line">        this.win &#x3D; win;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<h5 id="RandomStragegy-ts-表示每次都随机手势"><a href="#RandomStragegy-ts-表示每次都随机手势" class="headerlink" title="RandomStragegy.ts 表示每次都随机手势"></a>RandomStragegy.ts 表示每次都随机手势</h5><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><span class="line">import &#123; Strategy &#125; from &quot;.&#x2F;type&quot;;</span><br><span class="line">import Hand from &quot;.&#x2F;Hand&quot;;</span><br><span class="line"></span><br><span class="line">export default class RandomStragegy implements Strategy &#123;</span><br><span class="line">    constructor() &#123;</span><br><span class="line">    &#125;</span><br><span class="line">    public nextHand(): Hand &#123;</span><br><span class="line">        const random &#x3D; Math.floor(Math.random() * 3);</span><br><span class="line">        const hand &#x3D; new Hand(random);</span><br><span class="line">        return hand.getHand(random);</span><br><span class="line">    &#125;</span><br><span class="line">    public study(win: boolean) &#123;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<h5 id="Player-ts-猜拳游戏的选手类"><a href="#Player-ts-猜拳游戏的选手类" class="headerlink" title="Player.ts 猜拳游戏的选手类"></a>Player.ts 猜拳游戏的选手类</h5><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br></pre></td><td class="code"><pre><span class="line">import &#123; Strategy &#125; from &quot;.&#x2F;type&quot;;</span><br><span class="line">import Hand from &quot;.&#x2F;Hand&quot;;</span><br><span class="line"></span><br><span class="line">export default class Play &#123;</span><br><span class="line">    private name: string;</span><br><span class="line">    private winCount: number &#x3D; 0;</span><br><span class="line">    private loseCount: number &#x3D; 0;</span><br><span class="line">    private gameCount: number &#x3D; 0;</span><br><span class="line">    private stragegy: Strategy</span><br><span class="line">    constructor(name: string, stragegy: Strategy) &#123;</span><br><span class="line">        this.name &#x3D; name;</span><br><span class="line">        this.stragegy &#x3D; stragegy;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    public nextHand(): Hand &#123;</span><br><span class="line">        return this.stragegy.nextHand()</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    public win(): void &#123;</span><br><span class="line">        this.stragegy.study(true);</span><br><span class="line">        this.winCount++;</span><br><span class="line">        this.gameCount++;</span><br><span class="line">    &#125;</span><br><span class="line">    public lose(): void &#123;</span><br><span class="line">        this.stragegy.study(false);</span><br><span class="line">        this.loseCount++;</span><br><span class="line">        this.gameCount++;</span><br><span class="line">    &#125;</span><br><span class="line">    public even() &#123;</span><br><span class="line">        this.gameCount++;</span><br><span class="line">    &#125;</span><br><span class="line">    public toString(): string &#123;</span><br><span class="line">        return &#96;[$&#123;this.name&#125;:$&#123;this.gameCount&#125; games,$&#123;this.winCount&#125; win,$&#123;this.loseCount&#125; lose]&#96;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<h5 id="index-ts"><a href="#index-ts" class="headerlink" title="index.ts"></a>index.ts</h5><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br></pre></td><td class="code"><pre><span class="line">import Play from &quot;.&#x2F;Play&quot;;</span><br><span class="line">import WinningStrategy from &quot;.&#x2F;WinningStrategy&quot;;</span><br><span class="line">import RandomStragegy from &quot;.&#x2F;RandomStragegy&quot;;</span><br><span class="line"></span><br><span class="line">const play1: Play &#x3D; new Play(&quot;Trao&quot;, new WinningStrategy());&#x2F;&#x2F;坚持上一次赢</span><br><span class="line">const play2: Play &#x3D; new Play(&quot;Haha&quot;, new RandomStragegy());&#x2F;&#x2F;随机</span><br><span class="line">for (let i &#x3D; 0; i &lt; 20; i++) &#123;</span><br><span class="line">    const nextHand1 &#x3D; play1.nextHand();</span><br><span class="line">    const nextHand2 &#x3D; play2.nextHand();</span><br><span class="line">    if (nextHand1.isStrongerThan(nextHand2)) &#123;</span><br><span class="line">        console.log(&#96;Winner $&#123;play1.toString()&#125; $&#123;nextHand1.toString()&#125;&#96;);</span><br><span class="line">        play1.win();</span><br><span class="line">        play2.lose();</span><br><span class="line">    &#125; else if (nextHand2.isStrongerThan(nextHand1)) &#123;</span><br><span class="line">        console.log(&#96;Winner $&#123;play2.toString()&#125;  $&#123;nextHand2.toString()&#125;&#96;);</span><br><span class="line">        play2.win();</span><br><span class="line">        play1.lose();</span><br><span class="line">    &#125; else &#123;</span><br><span class="line">        console.log(&#96;Even... $&#123;nextHand1.toString()&#125;&#96;);</span><br><span class="line">        play2.even();</span><br><span class="line">        play1.even();</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<h5 id="result"><a href="#result" class="headerlink" title="result"></a>result</h5><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br></pre></td><td class="code"><pre><span class="line">Even... 布</span><br><span class="line">Even... 布</span><br><span class="line">Even... 布</span><br><span class="line">Even... 剪刀</span><br><span class="line">Winner [Haha:5 games,1 win,0 lose]  剪刀</span><br><span class="line">Winner [Trao:6 games,1 win,1 lose] 剪刀</span><br><span class="line">Even... 剪刀</span><br><span class="line">Even... 剪刀</span><br><span class="line">Even... 剪刀</span><br><span class="line">Winner [Trao:10 games,2 win,1 lose] 剪刀</span><br><span class="line">Even... 剪刀</span><br><span class="line">Winner [Trao:12 games,3 win,1 lose] 剪刀</span><br><span class="line">Even... 剪刀</span><br><span class="line">Winner [Trao:14 games,4 win,1 lose] 剪刀</span><br><span class="line">Winner [Trao:15 games,5 win,1 lose] 剪刀</span><br><span class="line">Even... 剪刀</span><br><span class="line">Even... 剪刀</span><br><span class="line">Winner [Trao:18 games,6 win,1 lose] 剪刀</span><br><span class="line">Winner [Trao:19 games,7 win,1 lose] 剪刀</span><br><span class="line">Even... 剪刀</span><br><span class="line">————————————Result————————————————</span><br><span class="line">Result [Trao:20 games,7 win,1 lose]</span><br><span class="line">Result [Haha:20 games,1 win,7 lose]</span><br></pre></td></tr></table></figure>
+<h2 id="类图"><a href="#类图" class="headerlink" title="类图"></a>类图</h2><p><img src="https://upload-images.jianshu.io/upload_images/10024246-78dcce422e6de9d8.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240"></p>
+<h2 id="角色"><a href="#角色" class="headerlink" title="角色"></a>角色</h2><ul>
+<li>Strategy（策略）<br>Strategy角色决定实现策略所必须的接口</li>
+<li>ConcreteStrategy（具体的策略）<br>ConcreteStrategy角色负责实现Strategy角色的接口，即负责实现具体的策略（方法、算法）。</li>
+<li>Context（上下文）<br>负责使用Strategy角色。Context角色保存ConcreteStrategy角色的实例，彬使用ConcreteStrategy角色去实现需求</li>
+</ul>
+
+      
+    </div>
+
+    
+    
+    
+
+    <footer class="post-footer">
+        <div class="post-eof"></div>
+      
+    </footer>
+  </article>
+</div>
+
+
+
+
+    
+
+
+<div class="post-block">
+  
+  
+
+  <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="">
     <link itemprop="mainEntityOfPage" href="https://lzhwweb.github.io/nirvana/DesignPattern/%E8%AE%BE%E8%AE%A1%E6%A8%A1%E5%BC%8F%EF%BC%88TypeScript%EF%BC%89/Visitor-Pattern(%E8%AE%BF%E9%97%AE%E8%80%85%E6%A8%A1%E5%BC%8F)/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
@@ -920,105 +1046,6 @@
 <li>ConcreteElement<br>ConcreteElement负责实现Element角色定义的接口</li>
 <li>ObjectStructure（对象结构）<br>ObjectStructure角色负责吃力Element角色的集合。ConcreteVisitor角色为每个Element都准备了处理方法。</li>
 </ul>
-
-      
-    </div>
-
-    
-    
-    
-
-    <footer class="post-footer">
-        <div class="post-eof"></div>
-      
-    </footer>
-  </article>
-</div>
-
-
-
-
-    
-
-
-<div class="post-block">
-  
-  
-
-  <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="">
-    <link itemprop="mainEntityOfPage" href="https://lzhwweb.github.io/nirvana/DesignPattern/%E8%AE%BE%E8%AE%A1%E6%A8%A1%E5%BC%8F%EF%BC%88TypeScript%EF%BC%89/%E5%AE%8C%E7%BB%93%E6%84%9F%E6%83%B3/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="image" content="/nirvana/images/headphoto.jpeg">
-      <meta itemprop="name" content="nirvana">
-      <meta itemprop="description" content="个人学习笔记">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="涅槃快乐是金">
-    </span>
-      <header class="post-header">
-        <h2 class="post-title" itemprop="name headline">
-          <a href="/nirvana/DesignPattern/%E8%AE%BE%E8%AE%A1%E6%A8%A1%E5%BC%8F%EF%BC%88TypeScript%EF%BC%89/%E5%AE%8C%E7%BB%93%E6%84%9F%E6%83%B3/" class="post-title-link" itemprop="url">完结感想</a>
-        </h2>
-
-        <div class="post-meta-container">
-          <div class="post-meta">
-    <span class="post-meta-item">
-      <span class="post-meta-item-icon">
-        <i class="far fa-calendar"></i>
-      </span>
-      <span class="post-meta-item-text">发表于</span>
-
-      <time title="创建时间：2021-03-11 21:12:40" itemprop="dateCreated datePublished" datetime="2021-03-11T21:12:40+08:00">2021-03-11</time>
-    </span>
-      <span class="post-meta-item">
-        <span class="post-meta-item-icon">
-          <i class="far fa-calendar-check"></i>
-        </span>
-        <span class="post-meta-item-text">更新于</span>
-        <time title="修改时间：2021-03-10 13:43:55" itemprop="dateModified" datetime="2021-03-10T13:43:55+08:00">2021-03-10</time>
-      </span>
-    <span class="post-meta-item">
-      <span class="post-meta-item-icon">
-        <i class="far fa-folder"></i>
-      </span>
-      <span class="post-meta-item-text">分类于</span>
-        <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-          <a href="/nirvana/categories/DesignPattern/" itemprop="url" rel="index"><span itemprop="name">DesignPattern</span></a>
-        </span>
-    </span>
-
-  
-      </div>
-      <div class="post-meta">
-    <span class="post-meta-item" title="本文字数">
-      <span class="post-meta-item-icon">
-        <i class="far fa-file-word"></i>
-      </span>
-      <span class="post-meta-item-text">本文字数：</span>
-      <span>339</span>
-    </span>
-    <span class="post-meta-item" title="阅读时长">
-      <span class="post-meta-item-icon">
-        <i class="far fa-clock"></i>
-      </span>
-      <span class="post-meta-item-text">阅读时长 &asymp;</span>
-      <span>1 分钟</span>
-    </span>
-</div>
-
-        </div>
-      </header>
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-          <p>从2020.03.28到2021.01.11接近一年的时间才完成这个系列，还是有很多感触的。</p>
-<p>现在一直在用TS开发，TS解决了以前JS虽然是面向对象的语言，但是和java、C、PHP这种强类型的语言相比，没有明确的class，interface这些面向对象的定义，想做一些设计模式的开发就会写的不伦不类，有了TS终于能够写真正的面向对象的代码了。</p>
-<p>自从拿到看到关于《设计模式》这本书，就想写一下用TS来实现相关设计模式的想法，顺便复习下相关内容，本来计划1、2个月就能完成这件事，但是计划赶不上变化，其实就是拖延症，前面几分钟热度，后来就是给自己找各种理由，根本没写几个。</p>
-<p>直到最近碰到了日更活动，为了给自己一定的压力，就参与进去，才发现人的潜力是无穷的，逼一逼还是有潜力可挖的。🤩</p>
 
       
     </div>
@@ -1482,6 +1509,7 @@
 <script src="/nirvana/js/utils.js"></script><script src="/nirvana/js/motion.js"></script><script src="/nirvana/js/next-boot.js"></script>
 
   
+<script src="/nirvana/js/local-search.js"></script>
 
 
 
