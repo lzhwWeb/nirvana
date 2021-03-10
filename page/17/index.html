@@ -170,6 +170,8 @@
 
         <div class="site-overview-wrap sidebar-panel">
           <div class="site-author site-overview-item animated" itemprop="author" itemscope itemtype="http://schema.org/Person">
+    <img class="site-author-image" itemprop="image" alt="nirvana"
+      src="https://avatars.githubusercontent.com/u/8438772?s=60&v=4">
   <p class="site-author-name" itemprop="name">nirvana</p>
   <div class="site-description" itemprop="description">个人学习笔记</div>
 </div>
@@ -220,10 +222,109 @@
   
 
   <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="">
+    <link itemprop="mainEntityOfPage" href="https://lzhwweb.github.io/nirvana/android/android/Android%E4%B8%8A%E8%B6%85%E7%BA%A7%E5%A5%BD%E7%94%A8%E7%9A%84%E5%89%8D%E7%AB%AF%E8%B0%83%E8%AF%95%E6%96%B9%E6%B3%95%EF%BC%88adb-reverse%EF%BC%89/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="https://avatars.githubusercontent.com/u/8438772?s=60&v=4">
+      <meta itemprop="name" content="nirvana">
+      <meta itemprop="description" content="个人学习笔记">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="涅槃快乐是金">
+    </span>
+      <header class="post-header">
+        <h2 class="post-title" itemprop="name headline">
+          <a href="/nirvana/android/android/Android%E4%B8%8A%E8%B6%85%E7%BA%A7%E5%A5%BD%E7%94%A8%E7%9A%84%E5%89%8D%E7%AB%AF%E8%B0%83%E8%AF%95%E6%96%B9%E6%B3%95%EF%BC%88adb-reverse%EF%BC%89/" class="post-title-link" itemprop="url">Android上超级好用的前端调试方法（adb-reverse）</a>
+        </h2>
+
+        <div class="post-meta-container">
+          <div class="post-meta">
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-calendar"></i>
+      </span>
+      <span class="post-meta-item-text">发表于</span>
+
+      <time title="创建时间：2021-03-09 21:12:40" itemprop="dateCreated datePublished" datetime="2021-03-09T21:12:40+08:00">2021-03-09</time>
+    </span>
+      <span class="post-meta-item">
+        <span class="post-meta-item-icon">
+          <i class="far fa-calendar-check"></i>
+        </span>
+        <span class="post-meta-item-text">更新于</span>
+        <time title="修改时间：2021-03-10 13:43:55" itemprop="dateModified" datetime="2021-03-10T13:43:55+08:00">2021-03-10</time>
+      </span>
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-folder"></i>
+      </span>
+      <span class="post-meta-item-text">分类于</span>
+        <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+          <a href="/nirvana/categories/android/" itemprop="url" rel="index"><span itemprop="name">android</span></a>
+        </span>
+    </span>
+
+  
+      </div>
+      <div class="post-meta">
+    <span class="post-meta-item" title="本文字数">
+      <span class="post-meta-item-icon">
+        <i class="far fa-file-word"></i>
+      </span>
+      <span class="post-meta-item-text">本文字数：</span>
+      <span>374</span>
+    </span>
+    <span class="post-meta-item" title="阅读时长">
+      <span class="post-meta-item-icon">
+        <i class="far fa-clock"></i>
+      </span>
+      <span class="post-meta-item-text">阅读时长 &asymp;</span>
+      <span>1 分钟</span>
+    </span>
+</div>
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+          <p>前端开发前端页面，经常需要改两行代码就要看看页面效果。如果是兼容桌面浏览器的页面还好办，在本地启动服务，写两句代码refresh一下就可以看到效果了，但是更多的时候，页面是必须在APP中加载，用到APP提供的JsApi的，桌面浏览器根本没法使用页面的功能。</p>
+<p>android手机可硬使用adb reverse，终端中输入执行一下adb，列出的帮助文档中，有这样一段：<br><img src="https://upload-images.jianshu.io/upload_images/10024246-f14f2905f7b87eb0.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240"></p>
+<p>Android允许我们通过ADB，把Android上的某个端口映射到电脑（adb forward），或者把电脑的某个端口映射到Android系统（adb reverse）。</p>
+<p>假设电脑上开启的服务，监听的端口为8000。Android手机通过USB连接电脑后，执行 adb reversetcp:8000 tcp:8000，然后在手机中访问127.0.0.1:8000，就可以访问到电脑上启动的服务了，</p>
+
+      
+    </div>
+
+    
+    
+    
+
+    <footer class="post-footer">
+        <div class="post-eof"></div>
+      
+    </footer>
+  </article>
+</div>
+
+
+
+
+    
+
+
+<div class="post-block">
+  
+  
+
+  <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="">
     <link itemprop="mainEntityOfPage" href="https://lzhwweb.github.io/nirvana/android/android/Mac-%E9%85%8D%E7%BD%AE-adb/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="image" content="/nirvana/images/avatar.gif">
+      <meta itemprop="image" content="https://avatars.githubusercontent.com/u/8438772?s=60&v=4">
       <meta itemprop="name" content="nirvana">
       <meta itemprop="description" content="个人学习笔记">
     </span>
@@ -243,10 +344,16 @@
         <i class="far fa-calendar"></i>
       </span>
       <span class="post-meta-item-text">发表于</span>
-      
 
-      <time title="创建时间：2021-03-09 21:12:40 / 修改时间：21:55:30" itemprop="dateCreated datePublished" datetime="2021-03-09T21:12:40+08:00">2021-03-09</time>
+      <time title="创建时间：2021-03-09 21:12:40" itemprop="dateCreated datePublished" datetime="2021-03-09T21:12:40+08:00">2021-03-09</time>
     </span>
+      <span class="post-meta-item">
+        <span class="post-meta-item-icon">
+          <i class="far fa-calendar-check"></i>
+        </span>
+        <span class="post-meta-item-text">更新于</span>
+        <time title="修改时间：2021-03-10 13:43:55" itemprop="dateModified" datetime="2021-03-10T13:43:55+08:00">2021-03-10</time>
+      </span>
     <span class="post-meta-item">
       <span class="post-meta-item-icon">
         <i class="far fa-folder"></i>
@@ -339,7 +446,7 @@
     <link itemprop="mainEntityOfPage" href="https://lzhwweb.github.io/nirvana/git/git/git-code-count/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="image" content="/nirvana/images/avatar.gif">
+      <meta itemprop="image" content="https://avatars.githubusercontent.com/u/8438772?s=60&v=4">
       <meta itemprop="name" content="nirvana">
       <meta itemprop="description" content="个人学习笔记">
     </span>
@@ -359,10 +466,16 @@
         <i class="far fa-calendar"></i>
       </span>
       <span class="post-meta-item-text">发表于</span>
-      
 
-      <time title="创建时间：2021-03-09 21:12:40 / 修改时间：21:12:55" itemprop="dateCreated datePublished" datetime="2021-03-09T21:12:40+08:00">2021-03-09</time>
+      <time title="创建时间：2021-03-09 21:12:40" itemprop="dateCreated datePublished" datetime="2021-03-09T21:12:40+08:00">2021-03-09</time>
     </span>
+      <span class="post-meta-item">
+        <span class="post-meta-item-icon">
+          <i class="far fa-calendar-check"></i>
+        </span>
+        <span class="post-meta-item-text">更新于</span>
+        <time title="修改时间：2021-03-10 13:43:55" itemprop="dateModified" datetime="2021-03-10T13:43:55+08:00">2021-03-10</time>
+      </span>
     <span class="post-meta-item">
       <span class="post-meta-item-icon">
         <i class="far fa-folder"></i>
@@ -459,7 +572,7 @@
     <link itemprop="mainEntityOfPage" href="https://lzhwweb.github.io/nirvana/linux/linux/Linux%E4%B8%8Biptables%E9%98%B2%E7%81%AB%E5%A2%99%E9%85%8D%E7%BD%AE%E8%AF%A6%E8%A7%A3/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="image" content="/nirvana/images/avatar.gif">
+      <meta itemprop="image" content="https://avatars.githubusercontent.com/u/8438772?s=60&v=4">
       <meta itemprop="name" content="nirvana">
       <meta itemprop="description" content="个人学习笔记">
     </span>
@@ -479,10 +592,16 @@
         <i class="far fa-calendar"></i>
       </span>
       <span class="post-meta-item-text">发表于</span>
-      
 
-      <time title="创建时间：2021-03-09 21:12:40 / 修改时间：21:52:07" itemprop="dateCreated datePublished" datetime="2021-03-09T21:12:40+08:00">2021-03-09</time>
+      <time title="创建时间：2021-03-09 21:12:40" itemprop="dateCreated datePublished" datetime="2021-03-09T21:12:40+08:00">2021-03-09</time>
     </span>
+      <span class="post-meta-item">
+        <span class="post-meta-item-icon">
+          <i class="far fa-calendar-check"></i>
+        </span>
+        <span class="post-meta-item-text">更新于</span>
+        <time title="修改时间：2021-03-10 13:43:55" itemprop="dateModified" datetime="2021-03-10T13:43:55+08:00">2021-03-10</time>
+      </span>
     <span class="post-meta-item">
       <span class="post-meta-item-icon">
         <i class="far fa-folder"></i>
@@ -583,7 +702,7 @@ iptables服务命令</li>
     <link itemprop="mainEntityOfPage" href="https://lzhwweb.github.io/nirvana/linux/linux/linux-%E6%9F%A5%E7%9C%8B%E6%95%B4%E4%B8%AA%E6%A0%B9%E7%9B%AE%E5%BD%95%E4%B8%8B%E5%90%84%E4%B8%AA%E6%96%87%E4%BB%B6%E5%8D%A0%E7%94%A8%E6%83%85%E5%86%B5/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="image" content="/nirvana/images/avatar.gif">
+      <meta itemprop="image" content="https://avatars.githubusercontent.com/u/8438772?s=60&v=4">
       <meta itemprop="name" content="nirvana">
       <meta itemprop="description" content="个人学习笔记">
     </span>
@@ -603,10 +722,16 @@ iptables服务命令</li>
         <i class="far fa-calendar"></i>
       </span>
       <span class="post-meta-item-text">发表于</span>
-      
 
-      <time title="创建时间：2021-03-09 21:12:40 / 修改时间：21:49:54" itemprop="dateCreated datePublished" datetime="2021-03-09T21:12:40+08:00">2021-03-09</time>
+      <time title="创建时间：2021-03-09 21:12:40" itemprop="dateCreated datePublished" datetime="2021-03-09T21:12:40+08:00">2021-03-09</time>
     </span>
+      <span class="post-meta-item">
+        <span class="post-meta-item-icon">
+          <i class="far fa-calendar-check"></i>
+        </span>
+        <span class="post-meta-item-text">更新于</span>
+        <time title="修改时间：2021-03-10 13:43:55" itemprop="dateModified" datetime="2021-03-10T13:43:55+08:00">2021-03-10</time>
+      </span>
     <span class="post-meta-item">
       <span class="post-meta-item-icon">
         <i class="far fa-folder"></i>
@@ -692,7 +817,7 @@ iptables服务命令</li>
     <link itemprop="mainEntityOfPage" href="https://lzhwweb.github.io/nirvana/linux/linux/linux%E4%B8%8Byum%E5%AE%89%E8%A3%85%E6%9C%80%E6%96%B0%E7%A8%B3%E5%AE%9A%E7%89%88nginx/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="image" content="/nirvana/images/avatar.gif">
+      <meta itemprop="image" content="https://avatars.githubusercontent.com/u/8438772?s=60&v=4">
       <meta itemprop="name" content="nirvana">
       <meta itemprop="description" content="个人学习笔记">
     </span>
@@ -712,10 +837,16 @@ iptables服务命令</li>
         <i class="far fa-calendar"></i>
       </span>
       <span class="post-meta-item-text">发表于</span>
-      
 
-      <time title="创建时间：2021-03-09 21:12:40 / 修改时间：21:52:23" itemprop="dateCreated datePublished" datetime="2021-03-09T21:12:40+08:00">2021-03-09</time>
+      <time title="创建时间：2021-03-09 21:12:40" itemprop="dateCreated datePublished" datetime="2021-03-09T21:12:40+08:00">2021-03-09</time>
     </span>
+      <span class="post-meta-item">
+        <span class="post-meta-item-icon">
+          <i class="far fa-calendar-check"></i>
+        </span>
+        <span class="post-meta-item-text">更新于</span>
+        <time title="修改时间：2021-03-10 13:43:55" itemprop="dateModified" datetime="2021-03-10T13:43:55+08:00">2021-03-10</time>
+      </span>
     <span class="post-meta-item">
       <span class="post-meta-item-icon">
         <i class="far fa-folder"></i>
@@ -796,7 +927,7 @@ iptables服务命令</li>
     <link itemprop="mainEntityOfPage" href="https://lzhwweb.github.io/nirvana/linux/linux/linux%E4%B8%8B%E5%AE%89%E8%A3%85nginx/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="image" content="/nirvana/images/avatar.gif">
+      <meta itemprop="image" content="https://avatars.githubusercontent.com/u/8438772?s=60&v=4">
       <meta itemprop="name" content="nirvana">
       <meta itemprop="description" content="个人学习笔记">
     </span>
@@ -816,10 +947,16 @@ iptables服务命令</li>
         <i class="far fa-calendar"></i>
       </span>
       <span class="post-meta-item-text">发表于</span>
-      
 
-      <time title="创建时间：2021-03-09 21:12:40 / 修改时间：21:51:36" itemprop="dateCreated datePublished" datetime="2021-03-09T21:12:40+08:00">2021-03-09</time>
+      <time title="创建时间：2021-03-09 21:12:40" itemprop="dateCreated datePublished" datetime="2021-03-09T21:12:40+08:00">2021-03-09</time>
     </span>
+      <span class="post-meta-item">
+        <span class="post-meta-item-icon">
+          <i class="far fa-calendar-check"></i>
+        </span>
+        <span class="post-meta-item-text">更新于</span>
+        <time title="修改时间：2021-03-10 13:43:55" itemprop="dateModified" datetime="2021-03-10T13:43:55+08:00">2021-03-10</time>
+      </span>
     <span class="post-meta-item">
       <span class="post-meta-item-icon">
         <i class="far fa-folder"></i>
@@ -928,7 +1065,7 @@ iptables服务命令</li>
     <link itemprop="mainEntityOfPage" href="https://lzhwweb.github.io/nirvana/linux/linux/linux%E4%B8%8B%E6%A3%80%E6%9F%A5%E6%98%AF%E5%90%A6%E5%AE%89%E8%A3%85%E8%BF%87%E6%9F%90%E8%BD%AF%E4%BB%B6%E5%8C%85/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="image" content="/nirvana/images/avatar.gif">
+      <meta itemprop="image" content="https://avatars.githubusercontent.com/u/8438772?s=60&v=4">
       <meta itemprop="name" content="nirvana">
       <meta itemprop="description" content="个人学习笔记">
     </span>
@@ -948,10 +1085,16 @@ iptables服务命令</li>
         <i class="far fa-calendar"></i>
       </span>
       <span class="post-meta-item-text">发表于</span>
-      
 
-      <time title="创建时间：2021-03-09 21:12:40 / 修改时间：21:51:52" itemprop="dateCreated datePublished" datetime="2021-03-09T21:12:40+08:00">2021-03-09</time>
+      <time title="创建时间：2021-03-09 21:12:40" itemprop="dateCreated datePublished" datetime="2021-03-09T21:12:40+08:00">2021-03-09</time>
     </span>
+      <span class="post-meta-item">
+        <span class="post-meta-item-icon">
+          <i class="far fa-calendar-check"></i>
+        </span>
+        <span class="post-meta-item-text">更新于</span>
+        <time title="修改时间：2021-03-10 13:43:55" itemprop="dateModified" datetime="2021-03-10T13:43:55+08:00">2021-03-10</time>
+      </span>
     <span class="post-meta-item">
       <span class="post-meta-item-icon">
         <i class="far fa-folder"></i>
@@ -1024,7 +1167,7 @@ iptables服务命令</li>
     <link itemprop="mainEntityOfPage" href="https://lzhwweb.github.io/nirvana/linux/linux/nginx%E6%97%A5%E5%B8%B8%E7%BB%B4%E6%8A%A4%E5%B8%B8%E7%94%A8%E5%91%BD%E4%BB%A4/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="image" content="/nirvana/images/avatar.gif">
+      <meta itemprop="image" content="https://avatars.githubusercontent.com/u/8438772?s=60&v=4">
       <meta itemprop="name" content="nirvana">
       <meta itemprop="description" content="个人学习笔记">
     </span>
@@ -1044,10 +1187,16 @@ iptables服务命令</li>
         <i class="far fa-calendar"></i>
       </span>
       <span class="post-meta-item-text">发表于</span>
-      
 
-      <time title="创建时间：2021-03-09 21:12:40 / 修改时间：21:53:02" itemprop="dateCreated datePublished" datetime="2021-03-09T21:12:40+08:00">2021-03-09</time>
+      <time title="创建时间：2021-03-09 21:12:40" itemprop="dateCreated datePublished" datetime="2021-03-09T21:12:40+08:00">2021-03-09</time>
     </span>
+      <span class="post-meta-item">
+        <span class="post-meta-item-icon">
+          <i class="far fa-calendar-check"></i>
+        </span>
+        <span class="post-meta-item-text">更新于</span>
+        <time title="修改时间：2021-03-10 13:43:55" itemprop="dateModified" datetime="2021-03-10T13:43:55+08:00">2021-03-10</time>
+      </span>
     <span class="post-meta-item">
       <span class="post-meta-item-icon">
         <i class="far fa-folder"></i>
@@ -1149,7 +1298,7 @@ iptables服务命令</li>
     <link itemprop="mainEntityOfPage" href="https://lzhwweb.github.io/nirvana/linux/linux/nginx%E8%87%AA%E5%8A%A8%E6%B7%BB%E5%8A%A0%E5%86%85%E7%BD%91%E7%AB%AF%E5%8F%A3/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="image" content="/nirvana/images/avatar.gif">
+      <meta itemprop="image" content="https://avatars.githubusercontent.com/u/8438772?s=60&v=4">
       <meta itemprop="name" content="nirvana">
       <meta itemprop="description" content="个人学习笔记">
     </span>
@@ -1177,7 +1326,7 @@ iptables服务命令</li>
           <i class="far fa-calendar-check"></i>
         </span>
         <span class="post-meta-item-text">更新于</span>
-        <time title="修改时间：2021-03-10 10:18:32" itemprop="dateModified" datetime="2021-03-10T10:18:32+08:00">2021-03-10</time>
+        <time title="修改时间：2021-03-10 13:43:55" itemprop="dateModified" datetime="2021-03-10T13:43:55+08:00">2021-03-10</time>
       </span>
     <span class="post-meta-item">
       <span class="post-meta-item-icon">
@@ -1220,108 +1369,6 @@ iptables服务命令</li>
 <h2 id="原因："><a href="#原因：" class="headerlink" title="原因："></a>原因：</h2><p>通过端口映射时，nginx会自动添加内网端口，修改路径导致路径访问出错；</p>
 <h2 id="解决："><a href="#解决：" class="headerlink" title="解决："></a>解决：</h2><p>在server里面加入</p>
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">port_in_redirect off;&#x2F;&#x2F;关闭自动添加端口</span><br></pre></td></tr></table></figure>
-
-      
-    </div>
-
-    
-    
-    
-
-    <footer class="post-footer">
-        <div class="post-eof"></div>
-      
-    </footer>
-  </article>
-</div>
-
-
-
-
-    
-
-
-<div class="post-block">
-  
-  
-
-  <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="">
-    <link itemprop="mainEntityOfPage" href="https://lzhwweb.github.io/nirvana/informal/%E9%9A%8F%E7%AC%94/2020%E5%B9%B4%E6%80%BB%E7%BB%93/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="image" content="/nirvana/images/avatar.gif">
-      <meta itemprop="name" content="nirvana">
-      <meta itemprop="description" content="个人学习笔记">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="涅槃快乐是金">
-    </span>
-      <header class="post-header">
-        <h2 class="post-title" itemprop="name headline">
-          <a href="/nirvana/informal/%E9%9A%8F%E7%AC%94/2020%E5%B9%B4%E6%80%BB%E7%BB%93/" class="post-title-link" itemprop="url">2020三件事</a>
-        </h2>
-
-        <div class="post-meta-container">
-          <div class="post-meta">
-    <span class="post-meta-item">
-      <span class="post-meta-item-icon">
-        <i class="far fa-calendar"></i>
-      </span>
-      <span class="post-meta-item-text">发表于</span>
-
-      <time title="创建时间：2021-03-09 21:12:40" itemprop="dateCreated datePublished" datetime="2021-03-09T21:12:40+08:00">2021-03-09</time>
-    </span>
-      <span class="post-meta-item">
-        <span class="post-meta-item-icon">
-          <i class="far fa-calendar-check"></i>
-        </span>
-        <span class="post-meta-item-text">更新于</span>
-        <time title="修改时间：2021-03-10 10:16:29" itemprop="dateModified" datetime="2021-03-10T10:16:29+08:00">2021-03-10</time>
-      </span>
-    <span class="post-meta-item">
-      <span class="post-meta-item-icon">
-        <i class="far fa-folder"></i>
-      </span>
-      <span class="post-meta-item-text">分类于</span>
-        <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-          <a href="/nirvana/categories/informal/" itemprop="url" rel="index"><span itemprop="name">informal</span></a>
-        </span>
-    </span>
-
-  
-      </div>
-      <div class="post-meta">
-    <span class="post-meta-item" title="本文字数">
-      <span class="post-meta-item-icon">
-        <i class="far fa-file-word"></i>
-      </span>
-      <span class="post-meta-item-text">本文字数：</span>
-      <span>421</span>
-    </span>
-    <span class="post-meta-item" title="阅读时长">
-      <span class="post-meta-item-icon">
-        <i class="far fa-clock"></i>
-      </span>
-      <span class="post-meta-item-text">阅读时长 &asymp;</span>
-      <span>1 分钟</span>
-    </span>
-</div>
-
-        </div>
-      </header>
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-          <p>##2020三件事：</p>
-<ul>
-<li>户口迁移：<br>自从毕业后，来到这边10多年，终于把户口迁移过来，同时小朋友的户口也转过来，小朋友上学不再像被歧视一样被统筹，每年都要提交积分信息，转学也先被歧视。</li>
-<li>解决住房：<br>上班10多年，一直租房住，大件东西不敢买，每天担心被房东赶，办积分还要求房东，想更新个家具都先想想这个能不能带走。19年终于把房子买下来，花了3个月前后折腾，有过争吵和取舍。庆幸在年前疫情没爆发的时候住了进去。房子虽然小，但是是自己的，也敢瞎折腾了。</li>
-<li>个人晋升：<br>今年工作上有了一定的提升，团队变大了，事情更多了，每天想安静的写个代码都很难，更多的是和外部产品、业务去扯皮，团队内要平衡大家的需求和期望。更痛苦的是要绩效排名，总要排个A、B、C、D的先后，更痛苦的是和人员沟通，用领导的话说“绩效好，怎么沟通气氛都是融洽的；绩效不好，如何沟通都是尴尬的”。期望21年在这块有新的提升。</li>
-</ul>
-<p>遗憾：<br> 生活中对小朋友和家人的关心不够。和小朋友的沟通不够耐心，后面要改进。</p>
 
       
     </div>
