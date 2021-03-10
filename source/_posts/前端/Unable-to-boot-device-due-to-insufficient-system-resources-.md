@@ -1,5 +1,5 @@
 ---
-title: Unable-to-boot-device-due-to-insufficient-system-resources-
+title: Unable to boot device due to insufficient system resources
 date: 2021-03-11 21:12:40
 category: javascript
 ---

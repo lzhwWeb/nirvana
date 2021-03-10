@@ -1,5 +1,5 @@
 ---
-title: FP-RP-FRP编程范式.md
+title: FP-RP-FRP编程范式
 date: 2021-03-11 21:12:40
 category: javascript
 ---

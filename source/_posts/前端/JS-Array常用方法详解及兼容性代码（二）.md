@@ -1,5 +1,5 @@
 ---
-title: JS-Array常用方法详解及兼容性代码（二）
+title: JS Array常用方法详解及兼容性代码（二）
 date: 2021-03-11 21:12:40
 category: javascript
 ---

@@ -1,5 +1,5 @@
 ---
-title: 如何在纯-JavaScript-中使用-GraphQL
+title: 如何在纯 JavaScript 中使用GraphQL
 date: 2021-03-11 21:12:40
 category: javascript
 ---

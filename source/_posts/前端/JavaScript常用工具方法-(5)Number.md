@@ -1,5 +1,5 @@
 ---
-title: JavaScript常用工具方法-(5)Number
+title: JavaScript常用工具方法(5)Number
 date: 2021-03-11 21:12:40
 category: javascript
 ---

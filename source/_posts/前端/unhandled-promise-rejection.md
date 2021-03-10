@@ -1,5 +1,5 @@
 ---
-title: unhandled-promise-rejection
+title: unhandled promise rejection
 date: 2021-03-11 21:12:40
 category: javascript
 ---

@@ -1,5 +1,5 @@
 ---
-title: typeScript-Decorators-的this作用域
+title: typeScript Decorators 的this作用域
 date: 2021-03-11 21:12:40
 category: javascript
 ---

@@ -1,5 +1,5 @@
 ---
-title: nrm-——-快速切换-NPM-源
+title: nrm-——-快速切换NPM源
 date: 2021-03-11 21:12:40
 category: javascript
 ---

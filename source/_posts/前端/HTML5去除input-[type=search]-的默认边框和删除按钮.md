@@ -1,5 +1,5 @@
 ---
-title: HTML5去除input-[type=search]-的默认边框和删除按钮
+title: HTML5去除input[type=search]的默认边框和删除按钮
 date: 2021-03-11 21:12:40
 category: javascript
 ---

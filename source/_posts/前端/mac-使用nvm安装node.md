@@ -1,5 +1,5 @@
 ---
-title: mac-使用nvm安装node
+title: mac 使用nvm安装node
 date: 2021-03-11 21:12:40
 category: javascript
 ---

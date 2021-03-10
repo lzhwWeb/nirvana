@@ -1,5 +1,5 @@
 ---
-title: chrome-账号手动同步
+title: chrome 账号手动同步
 date: 2021-03-10 21:12:40
 category: tool
 ---

@@ -1,5 +1,5 @@
 ---
-title: inquirer-js-——-用户与命令行交互的工具
+title: inquirer.js-——-用户与命令行交互的工具
 date: 2021-03-11 21:12:40
 category: javascript
 ---

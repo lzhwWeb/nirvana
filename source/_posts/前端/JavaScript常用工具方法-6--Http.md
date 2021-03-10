@@ -1,5 +1,5 @@
 ---
-title: JavaScript常用工具方法-6--Http
+title: JavaScript常用工具方法6--Http
 date: 2021-03-11 21:12:40
 category: javascript
 ---

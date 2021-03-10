@@ -1,5 +1,5 @@
 ---
-title: dependencies-devDependencies-peerDependencies-optionalDependencies-bun
+title: dependencies/devDependencies/peerDependencies/optionalDependencies/bundledDependencies
 date: 2021-03-11 21:12:40
 category: javascript
 ---

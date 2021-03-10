@@ -1,5 +1,5 @@
 ---
-title: JavaScript常用工具方法-（7）-Storage-储存操作
+title: JavaScript常用工具方法（7）Storage 储存操作
 date: 2021-03-11 21:12:40
 category: javascript
 ---

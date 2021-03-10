@@ -1,5 +1,5 @@
 ---
-title: nrm管理工具切换-NPM-镜像源
+title: nrm管理工具切换 NPM 镜像源
 date: 2021-03-11 21:12:40
 category: javascript
 ---

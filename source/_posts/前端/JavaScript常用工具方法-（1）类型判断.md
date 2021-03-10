@@ -1,5 +1,5 @@
 ---
-title: JavaScript常用工具方法-（1）类型判断
+title: JavaScript常用工具方法（1）类型判断
 date: 2021-03-11 21:12:40
 category: javascript
 ---

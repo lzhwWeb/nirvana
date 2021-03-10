@@ -1,5 +1,5 @@
 ---
-title: node服务端解决socket-io跨域问题express,koa
+title: node服务端解决socket.io跨域问题express,koa
 date: 2021-03-11 21:12:40
 category: javascript
 ---

@@ -1,5 +1,5 @@
 ---
-title: JavaScript常用工具方法-（3）Array
+title: JavaScript常用工具方法（3）Array
 date: 2021-03-11 21:12:40
 category: javascript
 ---
