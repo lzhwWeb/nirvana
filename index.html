@@ -125,6 +125,16 @@
   <ul class="main-menu menu">
         <li class="menu-item menu-item-home"><a href="/nirvana/" rel="section">首页</a></li>
         <li class="menu-item menu-item-git"><a href="/nirvana/categories/git" rel="section">git</a></li>
+        <li class="menu-item menu-item-linux"><a href="/nirvana/categories/linux" rel="section">linux</a></li>
+        <li class="menu-item menu-item-android"><a href="/nirvana/categories/android" rel="section">android</a></li>
+        <li class="menu-item menu-item-随笔"><a href="/nirvana/categories/informal" rel="section">随笔</a></li>
+        <li class="menu-item menu-item-mac"><a href="/nirvana/categories/mac" rel="section">mac</a></li>
+        <li class="menu-item menu-item-react-native"><a href="/nirvana/categories/reactnative" rel="section">react-native</a></li>
+        <li class="menu-item menu-item-算法"><a href="/nirvana/categories/algorithm" rel="section">算法</a></li>
+        <li class="menu-item menu-item-读书笔记"><a href="/nirvana/categories/note" rel="section">读书笔记</a></li>
+        <li class="menu-item menu-item-开发工具"><a href="/nirvana/categories/tool" rel="section">开发工具</a></li>
+        <li class="menu-item menu-item-设计模式(ts)"><a href="/nirvana/categories/DesignPattern" rel="section">设计模式(TS)</a></li>
+        <li class="menu-item menu-item-前端"><a href="/nirvana/categories/javascript" rel="section">前端</a></li>
   </ul>
 </nav>
 
@@ -167,12 +177,12 @@
   <nav class="site-state">
       <div class="site-state-item site-state-posts">
           <a href="/nirvana/archives">
-          <span class="site-state-item-count">9</span>
+          <span class="site-state-item-count">178</span>
           <span class="site-state-item-name">日志</span>
         </a>
       </div>
       <div class="site-state-item site-state-categories">
-        <span class="site-state-item-count">1</span>
+        <span class="site-state-item-count">11</span>
         <span class="site-state-item-name">分类</span>
       </div>
   </nav>
@@ -210,7 +220,7 @@
   
 
   <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="">
-    <link itemprop="mainEntityOfPage" href="https://lzhwweb.github.io/nirvana/git/git/git-merger-seror/">
+    <link itemprop="mainEntityOfPage" href="https://lzhwweb.github.io/nirvana/javascript/%E5%89%8D%E7%AB%AF/2019-04-26/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="image" content="/nirvana/images/avatar.gif">
@@ -223,7 +233,7 @@
     </span>
       <header class="post-header">
         <h2 class="post-title" itemprop="name headline">
-          <a href="/nirvana/git/git/git-merger-seror/" class="post-title-link" itemprop="url">fatal: refusing to merge unrelated histories</a>
+          <a href="/nirvana/javascript/%E5%89%8D%E7%AB%AF/2019-04-26/" class="post-title-link" itemprop="url">Fri Apr 26 2019 00:00:00 GMT+0800 (GMT+08:00)</a>
         </h2>
 
         <div class="post-meta-container">
@@ -233,17 +243,23 @@
         <i class="far fa-calendar"></i>
       </span>
       <span class="post-meta-item-text">发表于</span>
-      
 
-      <time title="创建时间：2021-03-09 21:23:37 / 修改时间：21:23:54" itemprop="dateCreated datePublished" datetime="2021-03-09T21:23:37+08:00">2021-03-09</time>
+      <time title="创建时间：2021-03-11 21:12:40" itemprop="dateCreated datePublished" datetime="2021-03-11T21:12:40+08:00">2021-03-11</time>
     </span>
+      <span class="post-meta-item">
+        <span class="post-meta-item-icon">
+          <i class="far fa-calendar-check"></i>
+        </span>
+        <span class="post-meta-item-text">更新于</span>
+        <time title="修改时间：2021-03-10 12:58:00" itemprop="dateModified" datetime="2021-03-10T12:58:00+08:00">2021-03-10</time>
+      </span>
     <span class="post-meta-item">
       <span class="post-meta-item-icon">
         <i class="far fa-folder"></i>
       </span>
       <span class="post-meta-item-text">分类于</span>
         <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-          <a href="/nirvana/categories/git/" itemprop="url" rel="index"><span itemprop="name">git</span></a>
+          <a href="/nirvana/categories/javascript/" itemprop="url" rel="index"><span itemprop="name">javascript</span></a>
         </span>
     </span>
 
@@ -255,7 +271,7 @@
         <i class="far fa-file-word"></i>
       </span>
       <span class="post-meta-item-text">本文字数：</span>
-      <span>629</span>
+      <span>392</span>
     </span>
     <span class="post-meta-item" title="阅读时长">
       <span class="post-meta-item-icon">
@@ -273,13 +289,13 @@
     
     
     <div class="post-body" itemprop="articleBody">
-          <p>Git 的报错<br>一、fatal: refusing to merge unrelated histories<br>新建了一个仓库之后，把本地仓库进行关联提交、拉取的时候，出现了如下错误：</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">fatal: &#39;master&#39; does not appear to be a git repository</span><br><span class="line">fatal: Could not read from remote repository.</span><br></pre></td></tr></table></figure>
-<p>二、解决方案<br>在你操作命令后面加 –allow-unrelated-histories<br>例如：</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">git merge master --allow-unrelated-histories</span><br><span class="line">$ git pull --allow-unrelated-histories</span><br><span class="line">CONFLICT (add&#x2F;add): Merge conflict in .gitignore</span><br><span class="line">Auto-merging .gitignore</span><br><span class="line">Automatic merge failed; fix conflicts and then commit the result.</span><br></pre></td></tr></table></figure>
-<p>我这里由于使用了官方的 .gitignore 自动合并失败，需要手动合并之后再进行 add、commit 即可</p>
-<p>如果你是git pull或者git push报fatal: refusing to merge unrelated histories<br>同理：</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">git pull origin master --allow-unrelated-histories &#x2F; git pull --allow-unrelated-histories</span><br></pre></td></tr></table></figure>
+          <p>resizeMode<br>决定当组件尺寸和图片尺寸不成比例的时候如何调整图片的大小。</p>
+<p>cover: 在保持图片宽高比的前提下缩放图片，直到宽度和高度都大于等于容器视图的尺寸（如果容器有 padding 内衬的话，则相应减去）。译注：这样图片完全覆盖甚至超出容器，容器中不留任何空白。</p>
+<p>contain: 在保持图片宽高比的前提下缩放图片，直到宽度和高度都小于等于容器视图的尺寸（如果容器有 padding 内衬的话，则相应减去）。译注：这样图片完全被包裹在容器中，容器中可能留有空白。</p>
+<p>stretch: 拉伸图片且不维持宽高比，直到宽高都刚好填满容器。</p>
+<p>repeat: 重复平铺图片直到填满容器。图片会维持原始尺寸，但是当尺寸超过容器时会在保持宽高比的前提下缩放到能被容器包裹。</p>
+<p>center: 居中不拉伸。</p>
+<p>类型    必填<br>enum(‘cover’, ‘contain’, ‘stretch’, ‘repeat’, ‘center’)    否</p>
 
       
     </div>
@@ -306,7 +322,7 @@
   
 
   <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="">
-    <link itemprop="mainEntityOfPage" href="https://lzhwweb.github.io/nirvana/git/git/git-users-set/">
+    <link itemprop="mainEntityOfPage" href="https://lzhwweb.github.io/nirvana/javascript/%E5%89%8D%E7%AB%AF/CSS3%E7%9A%84REM%E8%AE%BE%E7%BD%AE%E5%AD%97%E4%BD%93/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="image" content="/nirvana/images/avatar.gif">
@@ -319,7 +335,7 @@
     </span>
       <header class="post-header">
         <h2 class="post-title" itemprop="name headline">
-          <a href="/nirvana/git/git/git-users-set/" class="post-title-link" itemprop="url">Git多账号配置</a>
+          <a href="/nirvana/javascript/%E5%89%8D%E7%AB%AF/CSS3%E7%9A%84REM%E8%AE%BE%E7%BD%AE%E5%AD%97%E4%BD%93/" class="post-title-link" itemprop="url">CSS3的REM设置字体</a>
         </h2>
 
         <div class="post-meta-container">
@@ -329,17 +345,23 @@
         <i class="far fa-calendar"></i>
       </span>
       <span class="post-meta-item-text">发表于</span>
-      
 
-      <time title="创建时间：2021-03-09 21:22:47 / 修改时间：21:23:03" itemprop="dateCreated datePublished" datetime="2021-03-09T21:22:47+08:00">2021-03-09</time>
+      <time title="创建时间：2021-03-11 21:12:40" itemprop="dateCreated datePublished" datetime="2021-03-11T21:12:40+08:00">2021-03-11</time>
     </span>
+      <span class="post-meta-item">
+        <span class="post-meta-item-icon">
+          <i class="far fa-calendar-check"></i>
+        </span>
+        <span class="post-meta-item-text">更新于</span>
+        <time title="修改时间：2021-03-10 12:58:00" itemprop="dateModified" datetime="2021-03-10T12:58:00+08:00">2021-03-10</time>
+      </span>
     <span class="post-meta-item">
       <span class="post-meta-item-icon">
         <i class="far fa-folder"></i>
       </span>
       <span class="post-meta-item-text">分类于</span>
         <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-          <a href="/nirvana/categories/git/" itemprop="url" rel="index"><span itemprop="name">git</span></a>
+          <a href="/nirvana/categories/javascript/" itemprop="url" rel="index"><span itemprop="name">javascript</span></a>
         </span>
     </span>
 
@@ -351,7 +373,7 @@
         <i class="far fa-file-word"></i>
       </span>
       <span class="post-meta-item-text">本文字数：</span>
-      <span>2.1k</span>
+      <span>2.3k</span>
     </span>
     <span class="post-meta-item" title="阅读时长">
       <span class="post-meta-item-icon">
@@ -369,32 +391,46 @@
     
     
     <div class="post-body" itemprop="articleBody">
-          <h3 id="一、如何生成ssh密钥"><a href="#一、如何生成ssh密钥" class="headerlink" title="一、如何生成ssh密钥"></a>一、如何生成ssh密钥</h3><h4 id="1-1-设置Git的user-name和user-email"><a href="#1-1-设置Git的user-name和user-email" class="headerlink" title="1.1 设置Git的user.name和user.email"></a>1.1 设置Git的user.name和user.email</h4><p>为了生成多账户，这里展示的局部的git配置，并不是全局的账户配置(全局配置：在config后面加上–list)。</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">&#x2F;&#x2F;github账号</span><br><span class="line">$ git config user.name &quot;zhangsan&quot;</span><br><span class="line">$ git config user.email &quot;zhangsan@gmail.com&quot;</span><br><span class="line"></span><br><span class="line">&#x2F;&#x2F;gitlab账号</span><br><span class="line">$ git config user.name &quot;zhangsan&quot;</span><br><span class="line">$ git config user.email &quot;zhangsan@qq.com&quot;</span><br></pre></td></tr></table></figure>
-
-<h4 id="1-2-生成SSH密钥"><a href="#1-2-生成SSH密钥" class="headerlink" title="1.2 生成SSH密钥"></a>1.2 生成SSH密钥</h4><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">&#x2F;&#x2F;github账号</span><br><span class="line">$ ssh-keygen -t rsa -C “zhangsan@gmail.com”</span><br><span class="line"></span><br><span class="line">&#x2F;&#x2F;gitlab账号</span><br><span class="line">$ ssh-keygen -t rsa -C “zhangsan@qq.com”</span><br></pre></td></tr></table></figure>
-
-<p>文件命名后，按2次回车，密码为空。</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br></pre></td><td class="code"><pre><span class="line">Enter passphrase (empty for no passphrase):</span><br><span class="line">Enter same passphrase again:</span><br><span class="line">Your identification has been saved in &#x2F;Users&#x2F;zhangsan&#x2F;.ssh&#x2F;github_id_rsa.</span><br><span class="line">Your public key has been saved in &#x2F;Users&#x2F;zhangsan&#x2F;.ssh&#x2F;github_id_rsa.pub.</span><br><span class="line">The key fingerprint is:</span><br><span class="line">SHA256:mRAluu98izlMRIQhaezphUvRHnkEH5HFm+aAX6wtXBU zhangsan@gmail.com</span><br><span class="line">The key&#39;s randomart image is:</span><br><span class="line">+---[RSA 2048]----+</span><br><span class="line">| ..ooBB*o E.     |</span><br><span class="line">|  &#x3D;.&#x3D;o++. .      |</span><br><span class="line">| o &#x3D;.&#x3D;o. +       |</span><br><span class="line">|  &#x3D; +.o.Bo       |</span><br><span class="line">| o o.+ OS        |</span><br><span class="line">|  o  .* o        |</span><br><span class="line">|     o..         |</span><br><span class="line">|     ooo.        |</span><br><span class="line">|      &#x3D;o..       |</span><br><span class="line">+----[SHA256]-----+</span><br><span class="line"></span><br></pre></td></tr></table></figure>
-
-<p>将上面ssh密钥生成步骤重复一次，最后得到四个文件：github_id_rsa、github_id_rsa.pub和gitlab_id_rsa、gitlab_id_rsa.pub</p>
-<h3 id="二、多账号配置"><a href="#二、多账号配置" class="headerlink" title="二、多账号配置"></a>二、多账号配置</h3><p>在~/.ssh目录下，增加config配置文件(注：无后缀名)，配置规范如下(可配置多个git账号):</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">#Host host（Host简称，使用命令ssh host可连接远程服务器，如：ssh github）</span><br><span class="line">  #User&#x2F;Email 登录用户名(如：zhangsan&#x2F;zhangsan@gmail.com)</span><br><span class="line">  #HostName 主机名用ip或域名，建议使用域名(如:github.com)</span><br><span class="line">  #Port 服务器open-ssh端口（默认：22,默认时一般不写此行</span><br><span class="line">  #IdentityFile 证书文件路径（如~&#x2F;.ssh&#x2F;id_rsa_*)</span><br></pre></td></tr></table></figure>
-
-<p>接下来，举个具体的栗子：</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line">#github zhangsan@gmail.com</span><br><span class="line">host github</span><br><span class="line">    Hostname github.com</span><br><span class="line">    User zhangsan</span><br><span class="line">    IdentityFile ~&#x2F;.ssh&#x2F;github_id_rsa</span><br><span class="line"></span><br><span class="line">#gitlab zhangsan@qq.com</span><br><span class="line">host gitlab</span><br><span class="line">    Hostname gitlab.*.com</span><br><span class="line">    User zhangsan</span><br><span class="line">    IdentityFile ~&#x2F;.ssh&#x2F;gitlab_id_rsa</span><br></pre></td></tr></table></figure>
-
-<p>注意事项：</p>
-<ul>
-<li>在配置文件中的，IdentityFile文件位置是rsa私钥，不是.pub公钥</li>
-<li>push代码的时候注意下，得check下本的user.name和user.email,若没有进行生成操作。建议最好设置一个全局的user.name和user.email,然后需要特定的配置的git仓库，就单独配置(当前配置查询命令:$ git config –list)</li>
-</ul>
-<h3 id="三、ssh-add增加新的私钥"><a href="#三、ssh-add增加新的私钥" class="headerlink" title="三、ssh-add增加新的私钥"></a>三、ssh-add增加新的私钥</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">&#x2F;&#x2F;github账号</span><br><span class="line">$ ssh-add ~&#x2F;.ssh&#x2F;github_id_rsa</span><br><span class="line"></span><br><span class="line">&#x2F;&#x2F;gitlab账号</span><br><span class="line">$ ssh-add ~&#x2F;.ssh&#x2F;gitlab_id_rsa</span><br></pre></td></tr></table></figure>
-
-<blockquote>
-<p>该命令如果报错：Could not open a connection to your authentication agent.无法连接到ssh agent，可执行ssh-agent bash命令后再执行ssh-add命令。</p>
-</blockquote>
-<p>上面的配置完成完成，使用命令ssh-add -l可以看到所有的密钥列表,ssh-add的作用主要将密钥添加到 ssh-agent 的高速缓存中，这样在当前会话中就不需要再次输入密码了<br>具体的可以参考<a target="_blank" rel="noopener" href="https://wiki.archlinux.org/index.php/SSH_keys_%28%E7%AE%80%E4%BD%93%E4%B8%AD%E6%96%87%29">SSH Keys</a></p>
+          <p>在Web中使用什么单位来定义页面的字体大小，至今天为止都还在激烈的争论着，有人说PX做为单位好，有人说EM优点多，还有人在说百分比方便，以至于出现了CSS Font-Size: em vs. px vs. pt vs. percent这样的PK大局。不幸的是，仍然有不同的利弊，使各种技术都不太理想，但又无法不去用。真是进也难，退也难呀。</p>
+<p>最近在学习em的相关知识的时候，无意之间让我拾得一宝，就是使用rem来设置Web页面的字体大小。让我一下子就来劲了，一口气看完并测试了一回，还真是爽歪歪的呀。师傅说好东西不能吃独食，于我就在这里给大家吹吹这个从没见过的REM。</p>
+<p>在详细介绍rem之前，我们先一起来回顾一下我们常用的两种记量单位，也是备受争论的两个：</p>
+<p>1、PX为单位</p>
+<p>2、EM为单位</p>
+<p>PX为单位<br>在Web页面初期制作中，我们都是使用“px”来设置我们的文本，因为他比较稳定和精确。但是这种方法存在一个问题，当用户在浏览器中浏览我们制作的Web页面时，他改变了浏览器的字体大小，这时会使用我们的Web页面布局被打破。这样对于那些关心自己网站可用性的用户来说，就是一个大问题了。因此，这时就提出了使用“em”来定义Web页面的字体。</p>
+<p>em为单位<br>前面也说了，使用是“px”为单位是比较方便，而又一致，但在浏览器中放大或缩放浏览页面时会存在一个问题，要解决这个问题，我们可以使用“em”单位。Richard Rutter’在《How to size text using ems》一文中有做过详细的介绍，追至早一点，Richard Rutter也在《How to Size Text in CSS》中进行过深入的剖析。</p>
+<p>这种技术需要一个参考点，一般都是以的“font-size”为基准。比如说我们使用“1em”等于“10px”来改变默认值“1em=16px”，这样一来，我们设置字体大小相当于“14px”时，只需要将其值设置为“1.4em”。</p>
+<p>body {</p>
+<p>font-size: 62.5%;/<em>10 ÷ 16 × 100% = 62.5%</em>/</p>
+<p>}</p>
+<p>h1 {</p>
+<p>font-size: 2.4em; /*2.4em × 10 = 24px */</p>
+<p>}</p>
+<p>p {</p>
+<p>font-size: 1.4em; /*1.4em × 10 = 14px */</p>
+<p>}</p>
+<p>li {</p>
+<p>font-size: 1.4em; /*1.4 × ? = 14px ? */</p>
+<p>}</p>
+<p>为什么“li”的“1.4em”是不是“14px”将是一个问号呢？如果你了解过“em”后，你会觉得这个问题是多问的。前面也简单的介绍过一回，在使用“em”作单位时，一定需要知道其父元素的设置，因为“em”就是一个相对值，而且是一个相对于父元素的值，其真正的计算公式是：</p>
+<p>1 ÷ 父元素的font-size × 需要转换的像素值 = em值</p>
+<p>这样的情况下“1.4em”可以是“14px”,也可以是“20px”，或者说是“24px”，总之是一个不确定值，那么解决这样的问题，要么你知道其父元素的值，要么呢在任何子元素中都使用“1em”。这样一来可能又不是我们所需要的方法。</p>
+<p>这里我只是简单的介绍了一个这两个单位的使用，具体一点的大家可以参阅：</p>
+<p>Best Practices的站长Kyle的《CSS Font-Size: em vs. px vs. pt vs. percent》</p>
+<p>Converting px into percentage and em for relative CSS font sizes</p>
+<p>Em Vs Percent Widths</p>
+<p>CSS: Units of Measurement</p>
+<p>Jennifer Kyrnin的Using Points, Pixels, Ems, or Percentages for CSS Fonts</p>
+<p>Rem为单位</p>
+<p>  CSS3的出现，他同时引进了一些新的单位，包括我们今天所说的rem。在W3C官网上是这样描述rem的——“font size of the root element” 。下面我们就一起来详细的了解rem。</p>
+<p>前面说了“em”是相对于其父元素来设置字体大小的，这样就会存在一个问题，进行任何元素设置，都有可能需要知道他父元素的大小，在我们多次使用时，就会带来无法预知的错误风险。而rem是相对于根元素，这样就意味着，我们只需要在根元素确定一个参考值，，在根元素中设置多大的字体，这完全可以根据您自己的需，大家也可以参考下图：</p>
+<p><img src="https://upload-images.jianshu.io/upload_images/10024246-a9ca7cd8c5a5eb5f.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240"></p>
+<p>我们来看一个简单的代码实例：</p>
+<p>html {font-size: 62.5%;/<em>10 ÷ 16 × 100% = 62.5%</em>/}  </p>
+<p>body {font-size: 1.4rem;/*1.4 × 10px = 14px */}  </p>
+<p>h1 { font-size: 2.4rem;/<em>2.4 × 10px = 24px</em>/}</p>
+<p>我在根元素中定义了一个基本字体大小为62.5%（也就是10px。设置这个值主要方便计算，如果没有设置，将是以“16px”为基准 ）。从上面的计算结果，我们使用“rem”就像使用“px”一样的方便，而且同时解决了“px”和“em”两者不同之处。</p>
+<p>浏览器的兼容性<br>rem是CSS3新引进来的一个度量单位，大家心里肯定会觉得心灰意冷呀，担心浏览器的支持情况。其实大家不用害怕，你可能会惊讶，支持的浏览器还是蛮多的，比如：Mozilla Firefox 3.6+、Apple Safari 5+、Google Chrome、IE9+和Opera11+。只是可怜的IE6-8无法，你们就把他们当透明了吧，我向来都是如此。</p>
+<p>不过使用单位设置字体，可不能完全不考虑IE了，如果你想使用这个REM，但也想兼容IE下的效果，可你可考虑“px”和“rem”一起使用，用”px”来实现IE6-8下的效果，然后使用“Rem”来实现代浏览器的效果。就让IE6-8不能随文字的改变而改变吧，谁让这个Ie6-8这么二呢？哈。。。。大家不仿试试，还蛮有意思，说不定这个就是主流的度量单位了。、</p>
 
       
     </div>
@@ -421,7 +457,7 @@
   
 
   <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="">
-    <link itemprop="mainEntityOfPage" href="https://lzhwweb.github.io/nirvana/git/git/git-photo-show/">
+    <link itemprop="mainEntityOfPage" href="https://lzhwweb.github.io/nirvana/javascript/%E5%89%8D%E7%AB%AF/CodeReview%E6%80%BB%E7%BB%93/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="image" content="/nirvana/images/avatar.gif">
@@ -434,7 +470,7 @@
     </span>
       <header class="post-header">
         <h2 class="post-title" itemprop="name headline">
-          <a href="/nirvana/git/git/git-photo-show/" class="post-title-link" itemprop="url">图解Git</a>
+          <a href="/nirvana/javascript/%E5%89%8D%E7%AB%AF/CodeReview%E6%80%BB%E7%BB%93/" class="post-title-link" itemprop="url">CodeReview总结</a>
         </h2>
 
         <div class="post-meta-container">
@@ -444,17 +480,23 @@
         <i class="far fa-calendar"></i>
       </span>
       <span class="post-meta-item-text">发表于</span>
-      
 
-      <time title="创建时间：2021-03-09 21:22:05 / 修改时间：21:22:25" itemprop="dateCreated datePublished" datetime="2021-03-09T21:22:05+08:00">2021-03-09</time>
+      <time title="创建时间：2021-03-11 21:12:40" itemprop="dateCreated datePublished" datetime="2021-03-11T21:12:40+08:00">2021-03-11</time>
     </span>
+      <span class="post-meta-item">
+        <span class="post-meta-item-icon">
+          <i class="far fa-calendar-check"></i>
+        </span>
+        <span class="post-meta-item-text">更新于</span>
+        <time title="修改时间：2021-03-10 13:17:22" itemprop="dateModified" datetime="2021-03-10T13:17:22+08:00">2021-03-10</time>
+      </span>
     <span class="post-meta-item">
       <span class="post-meta-item-icon">
         <i class="far fa-folder"></i>
       </span>
       <span class="post-meta-item-text">分类于</span>
         <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-          <a href="/nirvana/categories/git/" itemprop="url" rel="index"><span itemprop="name">git</span></a>
+          <a href="/nirvana/categories/javascript/" itemprop="url" rel="index"><span itemprop="name">javascript</span></a>
         </span>
     </span>
 
@@ -466,14 +508,14 @@
         <i class="far fa-file-word"></i>
       </span>
       <span class="post-meta-item-text">本文字数：</span>
-      <span>3.2k</span>
+      <span>2.2k</span>
     </span>
     <span class="post-meta-item" title="阅读时长">
       <span class="post-meta-item-icon">
         <i class="far fa-clock"></i>
       </span>
       <span class="post-meta-item-text">阅读时长 &asymp;</span>
-      <span>3 分钟</span>
+      <span>2 分钟</span>
     </span>
 </div>
 
@@ -484,85 +526,692 @@
     
     
     <div class="post-body" itemprop="articleBody">
-          <p>此页图解git中的最常用命令。如果你稍微理解git的工作原理，这篇文章能够让你理解的更透彻。 如果你想知道这个站点怎样产生，请前往<a target="_blank" rel="noopener" href="http://github.com/MarkLodato/visual-git-guide">GitHub repository</a>。</p>
-<h2 id="正文"><a href="#正文" class="headerlink" title="正文"></a>正文</h2><ol>
-<li> [基本用法]</li>
-<li> [约定]</li>
-<li>[命令详解]<ol>
-<li> [Diff]</li>
-<li> [Commit]</li>
-<li> [Checkout]</li>
-<li> [Detached HEAD(匿名分支提交)]</li>
-<li> [Reset]</li>
-<li> [Merge]</li>
-<li> [Cherry Pick]</li>
-<li> [Rebase]</li>
-</ol>
+          <p>我们时常会听到团队成员说：</p>
+<ul>
+<li>“这个项目搞代码审查简直是在浪费时间。”</li>
+<li>“我没时间做代码审查。”</li>
+<li>“发布会延迟，是因为我那个卑鄙的同事还没有审查过我的代码。”</li>
+<li>“你能相信我的同事居然要求我改我的代码吗？我这么优雅完美的代码哪里还需要改呢。”</li>
+</ul>
+<h2 id="我们为什么要做代码审查？"><a href="#我们为什么要做代码审查？" class="headerlink" title="我们为什么要做代码审查？"></a><strong>我们为什么要做代码审查？</strong></h2><p>任何专业的软件开发人员其最重要的目标之一就是要不断提高自己的工作质量。但是只有团队协作才能力往一处使，劲往一处用，提高软件质量。代码审查是实现这一目标最重要的途径之一。特别是，代码审查可以：</p>
+<ul>
+<li>  从另一个角度发现缺陷和更好的解决办法。</li>
+<li>  确保至少另外还有一人熟悉你的代码。</li>
+<li>  通过翻阅资深开发人员的代码，帮助培训新员工。</li>
+<li>  促进知识共享。</li>
+<li>  激励开发人员更好地写代码、解决代码中的问题，以免在审查时被别人揪出来。</li>
+</ul>
+<h2 id="代码审查要彻底"><a href="#代码审查要彻底" class="headerlink" title="代码审查要彻底"></a><strong>代码审查要彻底</strong></h2><p>然而，除非能实实在在彻彻底底地在代码审查上花时间和精力，否则上述目标是很难实现的。</p>
+<p>我的看法是大概25％的原始开发时间应该花在代码审查上。举个例子，如果一个开发人员需要用两天时间来实现某个程式，那么就应该花大约4小时进行审查。</p>
+<p>当然时间并不是最重要的，关键是要看你能否正确审查代码。你必须了解你正在审查的代码。这意味着你不仅仅要知道它的的语法，还必须理解代码是如何融入应用程序这个大环境下，成为组件或库的一部分。如果你不能把握每一行代码的含义，那么你的审查就不到位，也不会非常有价值。这也是为什么良好执行的代码审查，大多不可能迅速被完成：因为我们需要时间来研究各种代码，如能触发给定功能以确保第三方API正确使用的代码。</p>
+<p>在审查时，除了要寻找代码缺陷和其他问题，你还应该确保：</p>
+<ul>
+<li>  囊括所有必要的测试。</li>
+<li>  已经写入了恰当的设计文档。</li>
+</ul>
+<p>即使是那些擅于写测试和文档的开发人员，也会在改变代码的时候忘记更新。代码评审时就应该确保这些资料不会随着时间而变得毫无用处。</p>
+<h2 id="避免过度的代码审查"><a href="#避免过度的代码审查" class="headerlink" title="避免过度的代码审查"></a><strong>避免过度的代码审查</strong></h2><p>开发人员应该努力清空积压的审查任务。有一种方法是在早上代码审查，在开始自己的开发工作之前先搞定审查任务。当然你也可以午饭前后或者是一天结束之时审查代码。总而言之，你应该将代码当作是日常工作的一部分，而不是工作的负累，所以你应该避免：</p>
+<ul>
+<li>  没有时间处理积压的审查任务。</li>
+<li>  由于审查的没有完成而导致了延迟发布。</li>
+<li>  傻乎乎地再去审查已经不相干的代码，在交给你之后已经被改的面目全非。</li>
+<li>  因为时间紧迫急急忙忙地走个过场。</li>
+</ul>
+<h2 id="编写可审查的代码"><a href="#编写可审查的代码" class="headerlink" title="编写可审查的代码"></a><strong>编写可审查的代码</strong></h2><p>出现代码积压而失控的问题，审查人员并不是唯一一个需要负责的人。举个例子，如果你的同事花了一周时间为一个大型程序添加了乱七八糟的代码，那么发布的补丁就会变得很难审查，有太多的内容需要理解和钻研。甚至于连代码目的和基本架构都看得云里雾里。这是写代码的不是。</p>
+<p>在编写可审查的代码之前，还需要做一些准备。如果需要做一些棘手的架构决策，那么最好和审查人员先讨论一番。这将能让你的代码更容易审阅和理解，因为他们提前已经知道你想实现什么以及计划如何实现。这也可以避免，要是审查人员之后提出一个截然不同又更好的方法，而导致你不得不重写一大片代码的情况。</p>
+<p>项目架构应该在设计文档中详细描述。这很重要，因为它能让新的项目人员更快地理解现有的代码库，还能有助于审查人员更好地完成他们的工作。此外，单元测试能让审查人员更好地理解各个组件的使用。</p>
+<p>如果在你的补丁中还包含了第三方代码，那么单独提交。试想一下，要是代码中间插进去9000行jQuery，是不是大大增加了审查的难度！</p>
+<p>创建可审查代码最重要的步骤之一就是给你的代码审查做注释。这需要你自己预先审查过，然后在你认为有助于审查人员理解的地方添加注释。我发现，注释后的代码审查所需的时间相对较短（通常只需几分钟）。当然，代码注释还是应该酌情使用。此外，有研究表明，开发人员自己在给代码注释的时候也会发现许多存在的缺陷。</p>
+<h2 id="代码重构"><a href="#代码重构" class="headerlink" title="代码重构"></a><strong>代码重构</strong></h2><p>有时候，我们必须重构代码库。如果恰巧碰到的是一个大型的应用程序，那可能就会需要几天的时间（甚至更多），同时会产生大量的补丁。在这种情况下，想要做到标准流程的代码评审可能是不切实际的。</p>
+<p>最好的解决办法是逐步重构代码。先给定一个合理范围，确定相应的代码库，然后朝着目标方向做整改和重构。第一部分完成之后，审查并发布，然后进行第二部分的重构……，直到全部完成。这种阶段式的方法可能并不总是可行的，但是如果我们在思考和规划时使用这样的方法，可以避免重构时大规模的单片补丁。当然这种方式可能需要的重构时间更多，但是也会产出更高质量的代码，以及更加轻松的审查过程。</p>
+<h2 id="解决争端"><a href="#解决争端" class="headerlink" title="解决争端"></a><strong>解决争端</strong></h2><p>毫无疑问，团队中的每个成员都是人才，但是这也很容易导致在面对特定的编码问题时，会出现意见分歧的情况。作为开发人员，我们应该保持开放的态度，并且也要能虚心接受审查人员给出的不同意见。</p>
+<p>而作为审查人员，说话要委婉。在提建议之前，先考虑一下你的意见是否真的更好或者仅仅只是因为品味不同而已。如果你选择的代码区域确实需要改进的，那么整个说服过程就会简单得多。并且话要这样讲，“这里还值得考虑一下……”，“有人建议说……”，而不是“我闭着眼睛写的算法也能比你的高效。”</p>
+<p>当然如果你们双方都不肯妥协的话，可以要求你们都尊重的开发人员来看一看，给出他的意见。<br>译文链接：<a target="_blank" rel="noopener" href="http://www.codeceo.com/article/code-review-5-tips.html">http://www.codeceo.com/article/code-review-5-tips.html</a><br>英文原文：<a target="_blank" rel="noopener" href="https://medium.com/@salsita/practical-lessons-in-peer-code-review-b4dbc84e88d3">Practical Lessons in Peer Code Review</a></p>
+
+      
+    </div>
+
+    
+    
+    
+
+    <footer class="post-footer">
+        <div class="post-eof"></div>
+      
+    </footer>
+  </article>
+</div>
+
+
+
+
+    
+
+
+<div class="post-block">
+  
+  
+
+  <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="">
+    <link itemprop="mainEntityOfPage" href="https://lzhwweb.github.io/nirvana/javascript/%E5%89%8D%E7%AB%AF/Console%E6%96%B0%E5%AD%A6%E4%B9%A0/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/nirvana/images/avatar.gif">
+      <meta itemprop="name" content="nirvana">
+      <meta itemprop="description" content="个人学习笔记">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="涅槃快乐是金">
+    </span>
+      <header class="post-header">
+        <h2 class="post-title" itemprop="name headline">
+          <a href="/nirvana/javascript/%E5%89%8D%E7%AB%AF/Console%E6%96%B0%E5%AD%A6%E4%B9%A0/" class="post-title-link" itemprop="url">Console新学习</a>
+        </h2>
+
+        <div class="post-meta-container">
+          <div class="post-meta">
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-calendar"></i>
+      </span>
+      <span class="post-meta-item-text">发表于</span>
+
+      <time title="创建时间：2021-03-11 21:12:40" itemprop="dateCreated datePublished" datetime="2021-03-11T21:12:40+08:00">2021-03-11</time>
+    </span>
+      <span class="post-meta-item">
+        <span class="post-meta-item-icon">
+          <i class="far fa-calendar-check"></i>
+        </span>
+        <span class="post-meta-item-text">更新于</span>
+        <time title="修改时间：2021-03-10 13:17:22" itemprop="dateModified" datetime="2021-03-10T13:17:22+08:00">2021-03-10</time>
+      </span>
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-folder"></i>
+      </span>
+      <span class="post-meta-item-text">分类于</span>
+        <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+          <a href="/nirvana/categories/javascript/" itemprop="url" rel="index"><span itemprop="name">javascript</span></a>
+        </span>
+    </span>
+
+  
+      </div>
+      <div class="post-meta">
+    <span class="post-meta-item" title="本文字数">
+      <span class="post-meta-item-icon">
+        <i class="far fa-file-word"></i>
+      </span>
+      <span class="post-meta-item-text">本文字数：</span>
+      <span>1.6k</span>
+    </span>
+    <span class="post-meta-item" title="阅读时长">
+      <span class="post-meta-item-icon">
+        <i class="far fa-clock"></i>
+      </span>
+      <span class="post-meta-item-text">阅读时长 &asymp;</span>
+      <span>1 分钟</span>
+    </span>
+</div>
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+          <p>接着上一篇<a href="/nirvana/javascript/%E5%89%8D%E7%AB%AF/%E5%89%8D%E7%AB%AF%E5%AE%9E%E7%94%A8%E7%9A%84%E8%B0%83%E8%AF%95%E5%91%BD%E4%BB%A4console%E4%BD%BF%E7%94%A8">前端实用的调试命令console使用</a></p>
+<h4 id="查看所有方法"><a href="#查看所有方法" class="headerlink" title="查看所有方法"></a>查看所有方法</h4><p><code>console</code> 除了上面的几个方法还有什么方法呢？<code>log</code> 除了能打印字符串外，还能打印出对象，我们可以利用 <code>console.log</code> 打印自己。</p>
+<p>代码：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">console.log(console);</span><br></pre></td></tr></table></figure>
+
+<p>输出：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br></pre></td><td class="code"><pre><span class="line">Object &#123;</span><br><span class="line">    assert: ...,</span><br><span class="line">    clear: ...,</span><br><span class="line">    count: ...,</span><br><span class="line">    debug: ...,</span><br><span class="line">    dir: ...,</span><br><span class="line">    dirxml: ...,</span><br><span class="line">    error: ...,</span><br><span class="line">    group: ...,</span><br><span class="line">    groupCollapsed: ...,</span><br><span class="line">    groupEnd: ...,</span><br><span class="line">    info: ...,</span><br><span class="line">    log: ...,</span><br><span class="line">    markTimeline: ...,</span><br><span class="line">    profile: ...,</span><br><span class="line">    profileEnd: ...,</span><br><span class="line">    table: ...,</span><br><span class="line">    time: ...,</span><br><span class="line">    timeEnd: ...,</span><br><span class="line">    timeStamp: ...,</span><br><span class="line">    timeline: ...,</span><br><span class="line">    timelineEnd: ...,</span><br><span class="line">    trace: ...,</span><br><span class="line">    warn: ...</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<p>上面的 <code>console</code> 是 <code>chrome浏览器</code>中打印出来的 。<br>我们可以在 <code>开发环境</code> 中，<code>合理的利用</code> 这些方法来帮助我们开发。</p>
+<h4 id="十一：清理控制台"><a href="#十一：清理控制台" class="headerlink" title="十一：清理控制台"></a>十一：清理控制台</h4><p>如果我们在控制台调试的时候。浏览器和命令行 <code>clear</code> 一样提供了一个清理函数 <code>console.clear()</code> 。</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">console.clear()</span><br></pre></td></tr></table></figure>
+
+<p>当然我们也可以用 <code>chrome</code> 的 <code>command line api</code> 来清理控制台。</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">clear()</span><br></pre></td></tr></table></figure>
+
+<p>又或者可以使用按键Mac上 <code>cmd + k</code> ，Win <code>ctrl + l</code>（我用的是<code>chrome浏览器</code>）。</p>
+<h4 id="十二：分组并展开"><a href="#十二：分组并展开" class="headerlink" title="十二：分组并展开"></a>十二：分组并展开</h4><p>当代码非常长，或者我们需要把一个函数，或者一个文件中的函数等区分出来。我们可以使用分组来实现。<br>上一篇用group可以分组，但是每次都要手动展开，我们可以使用 <code>console.groupCollapsed</code> ，用法和 <code>console.group</code> 类似。</p>
+<p>代码：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line">console.group(&#39;人&#39;);</span><br><span class="line">console.log(&quot;手&quot;);</span><br><span class="line">console.log(&quot;脚&quot;);</span><br><span class="line">console.groupEnd();</span><br><span class="line"></span><br><span class="line">console.group(&#39;修仙&#39;);</span><br><span class="line">console.log(&quot;法力无边&quot;);</span><br><span class="line">console.log(&quot;腾云架雾&quot;);</span><br><span class="line">console.groupEnd();</span><br></pre></td></tr></table></figure>
+
+<p>输出：</p>
+<p><img src="https://upload-images.jianshu.io/upload_images/10024246-88f3c68fa9f3197c.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240"></p>
+<p>##十三：查看运行堆栈</p>
+<p> <code>console.trace</code> 可以看透运行时的结果栈。<br>代码：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line">function add(num) &#123;</span><br><span class="line">    if (0 &lt; num) &#123;</span><br><span class="line">        console.trace(&quot;现在num的值为&quot;, num);</span><br><span class="line">        return num + add(num - 1);</span><br><span class="line">    &#125; else &#123;</span><br><span class="line">        return 0;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">var a &#x3D;3;</span><br><span class="line">add(3);</span><br></pre></td></tr></table></figure>
+
+<p>输出：</p>
+<p><img src="https://upload-images.jianshu.io/upload_images/10024246-111b03c67baabdb6.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240"></p>
+<h4 id="十四：统计次数"><a href="#十四：统计次数" class="headerlink" title="十四：统计次数"></a>十四：统计次数</h4><p>有时候我们需要统计一个函数或者被调用了几次，我们通常会增加一个变量 <code>count</code> 来记录，然后在控制台中查看。这样相当的麻烦，我们可以使用 <code>console.count</code> 函数来帮忙我们记录次数，并输出。</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line">function hi(name) &#123;</span><br><span class="line">    console.count(name);</span><br><span class="line">    return &quot;hi &quot; + name;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">for(var i &#x3D; 0; i &lt; 10; i++) &#123;</span><br><span class="line">    if(i &lt; 4) &#123;</span><br><span class="line">        hi(&quot;person&quot;);</span><br><span class="line">    &#125; else &#123;</span><br><span class="line">        hi(&quot;god&quot;);</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p>结果：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line">person: 1</span><br><span class="line">person: 2</span><br><span class="line">person: 3</span><br><span class="line">person: 4</span><br><span class="line">god: 1</span><br><span class="line">god: 2</span><br><span class="line">god: 3</span><br><span class="line">god: 4</span><br><span class="line">god: 5</span><br><span class="line">god: 6</span><br><span class="line"></span><br></pre></td></tr></table></figure>
+
+      
+    </div>
+
+    
+    
+    
+
+    <footer class="post-footer">
+        <div class="post-eof"></div>
+      
+    </footer>
+  </article>
+</div>
+
+
+
+
+    
+
+
+<div class="post-block">
+  
+  
+
+  <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="">
+    <link itemprop="mainEntityOfPage" href="https://lzhwweb.github.io/nirvana/javascript/%E5%89%8D%E7%AB%AF/Error--Can't-resolve-'fs'-in-%EF%BC%88webpack-2%E9%85%8D%E7%BD%AECSS-loadeers%EF%BC%89/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/nirvana/images/avatar.gif">
+      <meta itemprop="name" content="nirvana">
+      <meta itemprop="description" content="个人学习笔记">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="涅槃快乐是金">
+    </span>
+      <header class="post-header">
+        <h2 class="post-title" itemprop="name headline">
+          <a href="/nirvana/javascript/%E5%89%8D%E7%AB%AF/Error--Can't-resolve-'fs'-in-%EF%BC%88webpack-2%E9%85%8D%E7%BD%AECSS-loadeers%EF%BC%89/" class="post-title-link" itemprop="url">Error--Can't-resolve-'fs'-in-（webpack-2配置CSS-loadeers）</a>
+        </h2>
+
+        <div class="post-meta-container">
+          <div class="post-meta">
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-calendar"></i>
+      </span>
+      <span class="post-meta-item-text">发表于</span>
+
+      <time title="创建时间：2021-03-11 21:12:40" itemprop="dateCreated datePublished" datetime="2021-03-11T21:12:40+08:00">2021-03-11</time>
+    </span>
+      <span class="post-meta-item">
+        <span class="post-meta-item-icon">
+          <i class="far fa-calendar-check"></i>
+        </span>
+        <span class="post-meta-item-text">更新于</span>
+        <time title="修改时间：2021-03-10 13:17:22" itemprop="dateModified" datetime="2021-03-10T13:17:22+08:00">2021-03-10</time>
+      </span>
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-folder"></i>
+      </span>
+      <span class="post-meta-item-text">分类于</span>
+        <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+          <a href="/nirvana/categories/javascript/" itemprop="url" rel="index"><span itemprop="name">javascript</span></a>
+        </span>
+    </span>
+
+  
+      </div>
+      <div class="post-meta">
+    <span class="post-meta-item" title="本文字数">
+      <span class="post-meta-item-icon">
+        <i class="far fa-file-word"></i>
+      </span>
+      <span class="post-meta-item-text">本文字数：</span>
+      <span>522</span>
+    </span>
+    <span class="post-meta-item" title="阅读时长">
+      <span class="post-meta-item-icon">
+        <i class="far fa-clock"></i>
+      </span>
+      <span class="post-meta-item-text">阅读时长 &asymp;</span>
+      <span>1 分钟</span>
+    </span>
+</div>
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+          <h4 id="前言，在之前有配置过webpack-2-中css-loaders，但是怎么也不正确"><a href="#前言，在之前有配置过webpack-2-中css-loaders，但是怎么也不正确" class="headerlink" title="前言，在之前有配置过webpack 2 中css loaders，但是怎么也不正确"></a>前言，在之前有配置过webpack 2 中css loaders，但是怎么也不正确</h4><p>报错：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">ERROR in .&#x2F;~&#x2F;convert-source-map&#x2F;index.js</span><br><span class="line">Module not found: Error: Can&#39;t resolve &#39;fs&#39; in &#39;&#x2F;Users&#x2F;ceshi&#x2F;Desktop&#x2F;webpack&#x2F;node_modules&#x2F;convert-source-map&#39;</span><br><span class="line"> @ .&#x2F;~&#x2F;convert-source-map&#x2F;index.js 2:9-22</span><br><span class="line"> @ .&#x2F;~&#x2F;css-loader&#x2F;lib&#x2F;css-base.js</span><br><span class="line"> @ .&#x2F;~&#x2F;css-loader!.&#x2F;app&#x2F;style.css</span><br><span class="line"> @ .&#x2F;app&#x2F;style.css</span><br><span class="line"> @ .&#x2F;app&#x2F;main.js</span><br></pre></td></tr></table></figure>
+
+<p><img src="https://upload-images.jianshu.io/upload_images/10024246-e3392ce8d53748bc.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240"></p>
+<p>解决方法，修改webpack的配置文件，增加一句代码</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">node: &#123;</span><br><span class="line">       fs: &#39;empty&#39;</span><br><span class="line">   &#125;,</span><br></pre></td></tr></table></figure>
+
+<p><img src="https://upload-images.jianshu.io/upload_images/10024246-525a508c7db21758.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240"></p>
+
+      
+    </div>
+
+    
+    
+    
+
+    <footer class="post-footer">
+        <div class="post-eof"></div>
+      
+    </footer>
+  </article>
+</div>
+
+
+
+
+    
+
+
+<div class="post-block">
+  
+  
+
+  <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="">
+    <link itemprop="mainEntityOfPage" href="https://lzhwweb.github.io/nirvana/javascript/%E5%89%8D%E7%AB%AF/FP-RP-FRP%E7%BC%96%E7%A8%8B%E8%8C%83%E5%BC%8F/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/nirvana/images/avatar.gif">
+      <meta itemprop="name" content="nirvana">
+      <meta itemprop="description" content="个人学习笔记">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="涅槃快乐是金">
+    </span>
+      <header class="post-header">
+        <h2 class="post-title" itemprop="name headline">
+          <a href="/nirvana/javascript/%E5%89%8D%E7%AB%AF/FP-RP-FRP%E7%BC%96%E7%A8%8B%E8%8C%83%E5%BC%8F/" class="post-title-link" itemprop="url">FP-RP-FRP编程范式.md</a>
+        </h2>
+
+        <div class="post-meta-container">
+          <div class="post-meta">
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-calendar"></i>
+      </span>
+      <span class="post-meta-item-text">发表于</span>
+
+      <time title="创建时间：2021-03-11 21:12:40" itemprop="dateCreated datePublished" datetime="2021-03-11T21:12:40+08:00">2021-03-11</time>
+    </span>
+      <span class="post-meta-item">
+        <span class="post-meta-item-icon">
+          <i class="far fa-calendar-check"></i>
+        </span>
+        <span class="post-meta-item-text">更新于</span>
+        <time title="修改时间：2021-03-10 13:14:04" itemprop="dateModified" datetime="2021-03-10T13:14:04+08:00">2021-03-10</time>
+      </span>
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-folder"></i>
+      </span>
+      <span class="post-meta-item-text">分类于</span>
+        <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+          <a href="/nirvana/categories/javascript/" itemprop="url" rel="index"><span itemprop="name">javascript</span></a>
+        </span>
+    </span>
+
+  
+      </div>
+      <div class="post-meta">
+    <span class="post-meta-item" title="本文字数">
+      <span class="post-meta-item-icon">
+        <i class="far fa-file-word"></i>
+      </span>
+      <span class="post-meta-item-text">本文字数：</span>
+      <span>914</span>
+    </span>
+    <span class="post-meta-item" title="阅读时长">
+      <span class="post-meta-item-icon">
+        <i class="far fa-clock"></i>
+      </span>
+      <span class="post-meta-item-text">阅读时长 &asymp;</span>
+      <span>1 分钟</span>
+    </span>
+</div>
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+          <p><img src="https://upload-images.jianshu.io/upload_images/10024246-e551555c2919e46c.jpeg?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240"></p>
+<p><img src="https://upload-images.jianshu.io/upload_images/10024246-837712d823c88c44.jpeg?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240"></p>
+<p><img src="https://upload-images.jianshu.io/upload_images/10024246-7ab8e5e5c0fa23fa.jpeg?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240"></p>
+<p><img src="https://upload-images.jianshu.io/upload_images/10024246-820693fcfaded8bc.jpeg?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240"></p>
+<p><img src="https://upload-images.jianshu.io/upload_images/10024246-0dd0666c417ff235.jpeg?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240"></p>
+<blockquote>
+<p>数据和视图的分离-&gt;解耦（开放封闭原则）jq的数据与视图混在一块（意大利面条式代码），Vue的数据与视图分离 以数据驱动视图（只关心数据变化，DOM操作被封装）jq直接用js修改视图，Vue以数据驱动视图</p>
+</blockquote>
+<p><img src="https://upload-images.jianshu.io/upload_images/10024246-42d5fd6651b5c730.jpeg?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240"></p>
+<p><img src="https://upload-images.jianshu.io/upload_images/10024246-c4476563b9f416e1.jpeg?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240"></p>
+<p><img src="https://upload-images.jianshu.io/upload_images/10024246-61c4c317ab6a1925.jpeg?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240"></p>
+<p><img src="https://upload-images.jianshu.io/upload_images/10024246-1b0d1dad4068ccde.jpeg?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240"></p>
+<p><img src="https://upload-images.jianshu.io/upload_images/10024246-488439027be1a632.jpeg?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240"></p>
+<p><img src="https://upload-images.jianshu.io/upload_images/10024246-11073c21bc77376b.jpeg?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240"></p>
+<p><img src="https://upload-images.jianshu.io/upload_images/10024246-cbb9a98c4e60d8ec.jpeg?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240"><br><img src="https://upload-images.jianshu.io/upload_images/10024246-cb1449cf1705be2c.jpeg?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240"></p>
+<blockquote>
+<p>数据不可变： 它要求你所有的数据都是不可变的，这意味着如果你想修改一个对象，那你应该创建一个新的对象用来修改，而不是修改已有的对象。 无状态： 主要是强调对于一个函数，不管你何时运行，它都应该像第一次运行一样，给定相同的输入，给出相同的输出，完全不依赖外部状态的变化。 为了实现这个目标，函数式编程提出函数应该具备的特性：没有副作用和纯函数。</p>
+</blockquote>
+<p><img src="https://upload-images.jianshu.io/upload_images/10024246-7fe37c43559a2198.jpeg?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240"></p>
+<p><img src="https://upload-images.jianshu.io/upload_images/10024246-bfbb62895921c27e.jpeg?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240"></p>
+<blockquote>
+<p>在不纯的版本中，checkAge 的结果将取决于 minimum 这个可变变量的值。换句话说，它取决于系统状态（system state）；，因为它引入了外部的环境，从而增加了认知负荷。但这种依赖状态是影响系统复杂度的罪魁祸首，输入值之外的因素能够左右 checkAge 的返回值，不仅让它变得不纯，而且导致每次我们思考整个软件的时候都痛苦不堪。 另一方面，使用纯函数的形式，函数就能做到自给自足。</p>
+</blockquote>
+<p><img src="https://upload-images.jianshu.io/upload_images/10024246-44dafec478425db0.jpeg?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240"></p>
+<blockquote>
+<p>保证函数没有副作用，一来能保证数据的不可变性，二来能避免很多因为共享状态带来的问题。当你一个人维护代码时候可能还不明显，但随着项目的迭代，项目参与人数增加，大家对同一变量的依赖和引用越来越多，这种问题会越来越严重。最终可能连维护者自己都不清楚变量到底是在哪里被改变而产生Bug。<code>传递引用一时爽，代码重构火葬场</code>  </p>
+</blockquote>
+<p><img src="https://upload-images.jianshu.io/upload_images/10024246-e4daf335f0fe4716.jpeg?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240"></p>
+<p><img src="https://upload-images.jianshu.io/upload_images/10024246-15e68c71c8faa114.jpeg?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240"></p>
+<p><img src="https://upload-images.jianshu.io/upload_images/10024246-c933554bb5a211a3.jpeg?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240"></p>
+<blockquote>
+<p>为什么这个单元函数很重要？还记得我们之前说过的，函数的返回值，有且只有一个嘛？ 如果我们想顺利的组装流水线，那我就必须保证我每个加工站的输出刚好能流向下个工作站的输入。因此，在流水线上的加工站必须都是单元函数。</p>
+</blockquote>
+<p><img src="https://upload-images.jianshu.io/upload_images/10024246-f0ab24af87d1c69a.jpeg?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240"></p>
+<p><img src="https://upload-images.jianshu.io/upload_images/10024246-01a3212c7593560d.jpeg?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240"></p>
+<p><img src="https://upload-images.jianshu.io/upload_images/10024246-e5e473d34cd15743.jpeg?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240"></p>
+<p><img src="https://upload-images.jianshu.io/upload_images/10024246-4fdfb5310ffc3c0c.jpeg?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240"></p>
+<blockquote>
+<p>函数组合的好处显而易见，它让代码变得简单而富有可读性，同时通过不同的组合方式，我们可以轻易组合出其他常用函数，让我们的代码更具表现力</p>
+</blockquote>
+<p><img src="https://upload-images.jianshu.io/upload_images/10024246-c947c9ccd7dccd73.jpeg?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240"></p>
+<p><img src="https://upload-images.jianshu.io/upload_images/10024246-d1f499f381e2ff6c.jpeg?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240"></p>
+<blockquote>
+<p>函数式编程很理想，但是我们还是要与外部数据进行交互，不然我们的代码就没有意义当一套复杂的数据响应被应用于一套复杂的应用中时，开发者往往在响应来响应去的连环嵌套响应中被搞昏头，因为数据的响应而牵一发动全身，导致整个响应很难控制，这是数据响应必须解决的问题。</p>
+</blockquote>
+<p><img src="https://upload-images.jianshu.io/upload_images/10024246-dee5d9f145d85c79.jpeg?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240"></p>
+<p><img src="https://upload-images.jianshu.io/upload_images/10024246-c027a0b749c44425.jpeg?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240"></p>
+<p><img src="https://upload-images.jianshu.io/upload_images/10024246-1badbd997d2e324e.jpeg?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240"></p>
+
+      
+    </div>
+
+    
+    
+    
+
+    <footer class="post-footer">
+        <div class="post-eof"></div>
+      
+    </footer>
+  </article>
+</div>
+
+
+
+
+    
+
+
+<div class="post-block">
+  
+  
+
+  <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="">
+    <link itemprop="mainEntityOfPage" href="https://lzhwweb.github.io/nirvana/javascript/%E5%89%8D%E7%AB%AF/HTML5%E5%8E%BB%E9%99%A4input-[type=search]-%E7%9A%84%E9%BB%98%E8%AE%A4%E8%BE%B9%E6%A1%86%E5%92%8C%E5%88%A0%E9%99%A4%E6%8C%89%E9%92%AE/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/nirvana/images/avatar.gif">
+      <meta itemprop="name" content="nirvana">
+      <meta itemprop="description" content="个人学习笔记">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="涅槃快乐是金">
+    </span>
+      <header class="post-header">
+        <h2 class="post-title" itemprop="name headline">
+          <a href="/nirvana/javascript/%E5%89%8D%E7%AB%AF/HTML5%E5%8E%BB%E9%99%A4input-%5Btype=search%5D-%E7%9A%84%E9%BB%98%E8%AE%A4%E8%BE%B9%E6%A1%86%E5%92%8C%E5%88%A0%E9%99%A4%E6%8C%89%E9%92%AE/" class="post-title-link" itemprop="url">HTML5去除input-[type=search]-的默认边框和删除按钮</a>
+        </h2>
+
+        <div class="post-meta-container">
+          <div class="post-meta">
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-calendar"></i>
+      </span>
+      <span class="post-meta-item-text">发表于</span>
+
+      <time title="创建时间：2021-03-11 21:12:40" itemprop="dateCreated datePublished" datetime="2021-03-11T21:12:40+08:00">2021-03-11</time>
+    </span>
+      <span class="post-meta-item">
+        <span class="post-meta-item-icon">
+          <i class="far fa-calendar-check"></i>
+        </span>
+        <span class="post-meta-item-text">更新于</span>
+        <time title="修改时间：2021-03-10 13:14:04" itemprop="dateModified" datetime="2021-03-10T13:14:04+08:00">2021-03-10</time>
+      </span>
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-folder"></i>
+      </span>
+      <span class="post-meta-item-text">分类于</span>
+        <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+          <a href="/nirvana/categories/javascript/" itemprop="url" rel="index"><span itemprop="name">javascript</span></a>
+        </span>
+    </span>
+
+  
+      </div>
+      <div class="post-meta">
+    <span class="post-meta-item" title="本文字数">
+      <span class="post-meta-item-icon">
+        <i class="far fa-file-word"></i>
+      </span>
+      <span class="post-meta-item-text">本文字数：</span>
+      <span>473</span>
+    </span>
+    <span class="post-meta-item" title="阅读时长">
+      <span class="post-meta-item-icon">
+        <i class="far fa-clock"></i>
+      </span>
+      <span class="post-meta-item-text">阅读时长 &asymp;</span>
+      <span>1 分钟</span>
+    </span>
+</div>
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+          <p>input [type=search]  是HTML新属性 ， 定义用于搜索的文本字段；</p>
+<p>x-webkit-speech  属性：在GOOGLE浏览器上  还会显示一个小话筒</p>
+<p> autocomplete=”off”  属性  关闭浏览器自动记录之前输入的值</p>
+<p>webkit内核浏览器里 input 框类型如果是 type=”search” </p>
+<p>那么将会有边框问题，border:0px 也不能起到作用；</p>
+<p>解决办法是在CSS里写上</p>
+<p>input[type=”search”]{-webkit-appearance:none;} </p>
+<p>既可解决。</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line">input[type&#x3D;search] &#123;</span><br><span class="line">-webkit-appearance: textfield;</span><br><span class="line">-webkit-box-sizing: content-box;</span><br><span class="line">font-family: inherit;</span><br><span class="line">font-size: 100%;</span><br><span class="line">&#125;</span><br><span class="line">input::-webkit-search-decoration,</span><br><span class="line">input::-webkit-search-cancel-button &#123;</span><br><span class="line">display: none;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+      
+    </div>
+
+    
+    
+    
+
+    <footer class="post-footer">
+        <div class="post-eof"></div>
+      
+    </footer>
+  </article>
+</div>
+
+
+
+
+    
+
+
+<div class="post-block">
+  
+  
+
+  <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="">
+    <link itemprop="mainEntityOfPage" href="https://lzhwweb.github.io/nirvana/javascript/%E5%89%8D%E7%AB%AF/HTTPS-%E4%B8%BA%E4%BB%80%E4%B9%88%E5%AE%89%E5%85%A8--%E7%9C%9F%E7%9A%84%E5%AE%89%E5%85%A8%E5%90%97-/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/nirvana/images/avatar.gif">
+      <meta itemprop="name" content="nirvana">
+      <meta itemprop="description" content="个人学习笔记">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="涅槃快乐是金">
+    </span>
+      <header class="post-header">
+        <h2 class="post-title" itemprop="name headline">
+          <a href="/nirvana/javascript/%E5%89%8D%E7%AB%AF/HTTPS-%E4%B8%BA%E4%BB%80%E4%B9%88%E5%AE%89%E5%85%A8--%E7%9C%9F%E7%9A%84%E5%AE%89%E5%85%A8%E5%90%97-/" class="post-title-link" itemprop="url">HTTPS-为什么安全--真的安全吗-</a>
+        </h2>
+
+        <div class="post-meta-container">
+          <div class="post-meta">
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-calendar"></i>
+      </span>
+      <span class="post-meta-item-text">发表于</span>
+
+      <time title="创建时间：2021-03-11 21:12:40" itemprop="dateCreated datePublished" datetime="2021-03-11T21:12:40+08:00">2021-03-11</time>
+    </span>
+      <span class="post-meta-item">
+        <span class="post-meta-item-icon">
+          <i class="far fa-calendar-check"></i>
+        </span>
+        <span class="post-meta-item-text">更新于</span>
+        <time title="修改时间：2021-03-10 13:14:20" itemprop="dateModified" datetime="2021-03-10T13:14:20+08:00">2021-03-10</time>
+      </span>
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-folder"></i>
+      </span>
+      <span class="post-meta-item-text">分类于</span>
+        <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+          <a href="/nirvana/categories/javascript/" itemprop="url" rel="index"><span itemprop="name">javascript</span></a>
+        </span>
+    </span>
+
+  
+      </div>
+      <div class="post-meta">
+    <span class="post-meta-item" title="本文字数">
+      <span class="post-meta-item-icon">
+        <i class="far fa-file-word"></i>
+      </span>
+      <span class="post-meta-item-text">本文字数：</span>
+      <span>2.7k</span>
+    </span>
+    <span class="post-meta-item" title="阅读时长">
+      <span class="post-meta-item-icon">
+        <i class="far fa-clock"></i>
+      </span>
+      <span class="post-meta-item-text">阅读时长 &asymp;</span>
+      <span>2 分钟</span>
+    </span>
+</div>
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+          <p><strong>一、HTTPS 为什么安全</strong></p>
+<p>HTTPS，也称作 HTTP over TLS，TLS 前身是 SSL，会有各个版本。</p>
+<p><img src="https://upload-images.jianshu.io/upload_images/10024246-fd6d4d24b72aadc1.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240"></p>
+<p>TLS协议在TCP/IP协议栈中的关系</p>
+<p>上图描述了在TCP/IP协议栈中TLS(各子协议）和 HTTP 的关系。HTTP+TLS 也就是 HTTPS，和 HTTP 相比，<strong>HTTPS的优势：</strong></p>
+<ul>
+<li><p>  <strong>数据完整性：内容传输经过完整性校验</strong></p>
 </li>
-<li> [技术说明]<h2 id="基本用法"><a href="#基本用法" class="headerlink" title="基本用法"></a>基本用法</h2></li>
-</ol>
-<p><img src="https://upload-images.jianshu.io/upload_images/10024246-21fba1e1da263d7f.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="image"></p>
-<p>上面的四条命令在工作目录、暂存目录(也叫做索引)和仓库之间复制文件。</p>
-<ul>
-<li>  <code>git add *files*</code> 把当前文件放入暂存区域。</li>
-<li>  <code>git commit</code> 给暂存区域生成快照并提交。</li>
-<li>  <code>git reset -- *files*</code> 用来撤销最后一次<code>git add *files*</code>，你也可以用<code>git reset</code> 撤销所有暂存区域文件。</li>
-<li>  <code>git checkout -- *files*</code> 把文件从暂存区域复制到工作目录，用来丢弃本地修改。</li>
+<li><p>  <strong>数据隐私性：内容经过对称加密，每个连接生成一个唯一的加密密钥</strong></p>
+</li>
+<li><p>  <strong>身份认证：第三方无法伪造服务端（客户端）身份</strong></p>
+</li>
 </ul>
-<p>你可以用 <code>git reset -p</code>, <code>git checkout -p</code>, or <code>git add -p</code>进入交互模式。</p>
-<p>也可以跳过暂存区域直接从仓库取出文件或者直接提交代码。</p>
-<p><img src="https://upload-images.jianshu.io/upload_images/10024246-b11b76b0bcc94af7.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="image"></p>
-<ul>
-<li>  <code>git commit -a </code>相当于运行 <tt>git add</tt> 把所有当前目录下的文件加入暂存区域再运行。<tt>git commit</tt>.</li>
-<li>  <code>git commit *files*</code> 进行一次包含最后一次提交加上工作目录中文件快照的提交。并且文件被添加到暂存区域。</li>
-<li>  <code>git checkout HEAD -- *files*</code> 回滚到复制最后一次提交。</li>
-</ul>
-<h2 id="约定"><a href="#约定" class="headerlink" title="约定"></a>约定</h2><p>后文中以下面的形式使用图片。</p>
-<p><img src="https://upload-images.jianshu.io/upload_images/10024246-44414f76381618de.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="image"></p>
-<p>绿色的5位字符表示提交的ID，分别指向父节点。分支用橘色显示，分别指向特定的提交。当前分支由附在其上的<em>HEAD</em>标识。 这张图片里显示最后5次提交，<em>ed489</em>是最新提交。 <em>master</em>分支指向此次提交，另一个<em>maint</em>分支指向祖父提交节点。</p>
-<h2 id="命令详解"><a href="#命令详解" class="headerlink" title="命令详解"></a>命令详解</h2><h3 id="Diff"><a href="#Diff" class="headerlink" title="Diff"></a>Diff</h3><p>有许多种方法查看两次提交之间的变动。下面是一些示例。</p>
-<p><img src="https://upload-images.jianshu.io/upload_images/10024246-5a06c9ce6b7befa2.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="image"></p>
-<h3 id="Commit"><a href="#Commit" class="headerlink" title="Commit"></a>Commit</h3><p>提交时，git用暂存区域的文件创建一个新的提交，并把此时的节点设为父节点。然后把当前分支指向新的提交节点。下图中，当前分支是<em>master</em>。 在运行命令之前，<em>master</em>指向<em>ed489</em>，提交后，<em>master</em>指向新的节点<em>f0cec</em>并以<em>ed489</em>作为父节点。</p>
-<p><img src="https://upload-images.jianshu.io/upload_images/10024246-b44f25aad754924b.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="image"></p>
-<p>即便当前分支是某次提交的祖父节点，git会同样操作。下图中，在<em>master</em>分支的祖父节点<em>maint</em>分支进行一次提交，生成了<em>1800b</em>。 这样，<em>maint</em>分支就不再是<em>master</em>分支的祖父节点。此时，<a target="_blank" rel="noopener" href="http://marklodato.github.io/visual-git-guide/index-zh-cn.html?no-svg#merge">合并</a> (或者 <a target="_blank" rel="noopener" href="http://marklodato.github.io/visual-git-guide/index-zh-cn.html?no-svg#rebase">衍合</a>) 是必须的。</p>
-<p>[图片上传失败…(image-face28-1612013134102)]</p>
-<p>如果想更改一次提交，使用 <code>git commit --amend</code>。git会使用与当前提交相同的父节点进行一次新提交，旧的提交会被取消。</p>
-<p><img src="https://upload-images.jianshu.io/upload_images/10024246-e025ed294d826da7.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="image"></p>
-<p>另一个例子是<a target="_blank" rel="noopener" href="http://marklodato.github.io/visual-git-guide/index-zh-cn.html?no-svg#detached">分离HEAD提交</a>,后文讲。</p>
-<h3 id="Checkout"><a href="#Checkout" class="headerlink" title="Checkout"></a>Checkout</h3><p>checkout命令用于从历史提交（或者暂存区域）中拷贝文件到工作目录，也可用于切换分支。</p>
-<p>当给定某个文件名（或者打开-p选项，或者文件名和-p选项同时打开）时，git会从指定的提交中拷贝文件到暂存区域和工作目录。比如，<code>git checkout HEAD~ foo.c</code>会将提交节点<em>HEAD~</em>(即当前提交节点的父节点)中的<code>foo.c</code>复制到工作目录并且加到暂存区域中。（如果命令中没有指定提交节点，则会从暂存区域中拷贝内容。）注意当前分支不会发生变化。</p>
-<p><img src="https://upload-images.jianshu.io/upload_images/10024246-113bd8642deaa38c.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="image"></p>
-<p>当不指定文件名，而是给出一个（本地）分支时，那么<em>HEAD</em>标识会移动到那个分支（也就是说，我们“切换”到那个分支了），然后暂存区域和工作目录中的内容会和<em>HEAD</em>对应的提交节点一致。新提交节点（下图中的a47c3）中的所有文件都会被复制（到暂存区域和工作目录中）；只存在于老的提交节点（ed489）中的文件会被删除；不属于上述两者的文件会被忽略，不受影响。</p>
-<p><img src="https://upload-images.jianshu.io/upload_images/10024246-563a8ca86c55a731.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="image"></p>
-<p>如果既没有指定文件名，也没有指定分支名，而是一个标签、远程分支、SHA-1值或者是像<em>master~3</em>类似的东西，就得到一个匿名分支，称作<em>detached HEAD</em>（被分离的<em>HEAD</em>标识）。这样可以很方便地在历史版本之间互相切换。比如说你想要编译1.6.6.1版本的git，你可以运行<code>git checkout v1.6.6.1</code>（这是一个标签，而非分支名），编译，安装，然后切换回另一个分支，比如说<code>git checkout master</code>。然而，当提交操作涉及到“分离的HEAD”时，其行为会略有不同，详情见在<a target="_blank" rel="noopener" href="http://marklodato.github.io/visual-git-guide/index-zh-cn.html?no-svg#detached">下面</a>。</p>
-<p><img src="https://upload-images.jianshu.io/upload_images/10024246-b472fff024260193.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="image"></p>
-<h3 id="HEAD标识处于分离状态时的提交操作"><a href="#HEAD标识处于分离状态时的提交操作" class="headerlink" title="HEAD标识处于分离状态时的提交操作"></a>HEAD标识处于分离状态时的提交操作</h3><p>当<em>HEAD</em>处于分离状态（不依附于任一分支）时，提交操作可以正常进行，但是不会更新任何已命名的分支。(你可以认为这是在更新一个匿名分支。)</p>
-<p><img src="https://upload-images.jianshu.io/upload_images/10024246-150bf058f35ed3ac.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="image"></p>
-<p>一旦此后你切换到别的分支，比如说<em>master</em>，那么这个提交节点（可能）再也不会被引用到，然后就会被丢弃掉了。注意这个命令之后就不会有东西引用<em>2eecb</em>。</p>
-<p><img src="https://upload-images.jianshu.io/upload_images/10024246-dd8b15b2ecedc54b.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="image"></p>
-<p>但是，如果你想保存这个状态，可以用命令<code>git checkout -b *name*</code>来创建一个新的分支。</p>
-<p><img src="https://upload-images.jianshu.io/upload_images/10024246-3e76fdcb7b6da5d8.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="image"></p>
-<h3 id="Reset"><a href="#Reset" class="headerlink" title="Reset"></a>Reset</h3><p>reset命令把当前分支指向另一个位置，并且有选择的变动工作目录和索引。也用来在从历史仓库中复制文件到索引，而不动工作目录。</p>
-<p>如果不给选项，那么当前分支指向到那个提交。如果用<code>--hard</code>选项，那么工作目录也更新，如果用<code>--soft</code>选项，那么都不变。</p>
-<p><img src="https://upload-images.jianshu.io/upload_images/10024246-bf3a8d9893504070.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="image"></p>
-<p>如果没有给出提交点的版本号，那么默认用<em>HEAD</em>。这样，分支指向不变，但是索引会回滚到最后一次提交，如果用<code>--hard</code>选项，工作目录也同样。</p>
-<p><img src="https://upload-images.jianshu.io/upload_images/10024246-32131cd6574f60b3.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="image"></p>
-<p>如果给了文件名(或者 <code>-p</code>选项), 那么工作效果和带文件名的<a target="_blank" rel="noopener" href="http://marklodato.github.io/visual-git-guide/index-zh-cn.html?no-svg#checkout">checkout</a>差不多，除了索引被更新。</p>
-<p><img src="https://upload-images.jianshu.io/upload_images/10024246-02a7ce801083fe56.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="image"></p>
-<h3 id="Merge"><a href="#Merge" class="headerlink" title="Merge"></a>Merge</h3><p>merge 命令把不同分支合并起来。合并前，索引必须和当前提交相同。如果另一个分支是当前提交的祖父节点，那么合并命令将什么也不做。 另一种情况是如果当前提交是另一个分支的祖父节点，就导致<em>fast-forward</em>合并。指向只是简单的移动，并生成一个新的提交。</p>
-<p>[图片上传失败…(image-b862fd-1612013134101)]</p>
-<p>否则就是一次真正的合并。默认把当前提交(<em>ed489</em> 如下所示)和另一个提交(<em>33104</em>)以及他们的共同祖父节点(<em>b325c</em>)进行一次<a target="_blank" rel="noopener" href="http://en.wikipedia.org/wiki/Three-way_merge">三方合并</a>。结果是先保存当前目录和索引，然后和父节点<em>33104</em>一起做一次新提交。</p>
-<p><img src="https://upload-images.jianshu.io/upload_images/10024246-3b6ce794ec8a9f6e.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="image"></p>
-<h3 id="Cherry-Pick"><a href="#Cherry-Pick" class="headerlink" title="Cherry Pick"></a>Cherry Pick</h3><p>cherry-pick命令”复制”一个提交节点并在当前分支做一次完全一样的新提交。</p>
-<p><img src="https://upload-images.jianshu.io/upload_images/10024246-50cdee8c86b2dada.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="image"></p>
-<h3 id="Rebase"><a href="#Rebase" class="headerlink" title="Rebase"></a>Rebase</h3><p>衍合是合并命令的另一种选择。合并把两个父分支合并进行一次提交，提交历史不是线性的。衍合在当前分支上重演另一个分支的历史，提交历史是线性的。 本质上，这是线性化的自动的 <a target="_blank" rel="noopener" href="http://marklodato.github.io/visual-git-guide/index-zh-cn.html?no-svg#cherry-pick">cherry-pick</a></p>
-<p><img src="https://upload-images.jianshu.io/upload_images/10024246-5614bb07293b87f8.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="image"></p>
-<p>上面的命令都在<em>topic</em>分支中进行，而不是<em>master</em>分支，在<em>master</em>分支上重演，并且把分支指向新的节点。注意旧提交没有被引用，将被回收。</p>
-<p>要限制回滚范围，使用<code>--onto</code>选项。下面的命令在<em>master</em>分支上重演当前分支从<em>169a6</em>以来的最近几个提交，即<em>2c33a</em>。</p>
-<p><img src="https://upload-images.jianshu.io/upload_images/10024246-e4361997b8397e13.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="image"></p>
-<p>同样有<code>git rebase --interactive</code>让你更方便的完成一些复杂操作，比如丢弃、重排、修改、合并提交。没有图片体现这些，细节看这里:<a target="_blank" rel="noopener" href="http://www.kernel.org/pub/software/scm/git/docs/git-rebase.html#_interactive_mode">git-rebase(1)</a></p>
-<h2 id="技术说明"><a href="#技术说明" class="headerlink" title="技术说明"></a>技术说明</h2><p>文件内容并没有真正存储在索引(<em>.git/index</em>)或者提交对象中，而是以blob的形式分别存储在数据库中(<em>.git/objects</em>)，并用SHA-1值来校验。 索引文件用识别码列出相关的blob文件以及别的数据。对于提交来说，以树(<em>tree</em>)的形式存储，同样用对于的哈希值识别。树对应着工作目录中的文件夹，树中包含的 树或者blob对象对应着相应的子目录和文件。每次提交都存储下它的上一级树的识别码。</p>
-<p>如果用detached HEAD提交，那么最后一次提交会被the reflog for HEAD引用。但是过一段时间就失效，最终被回收，与<code>git commit --amend</code>或者<code>git rebase</code>很像。</p>
+<p>上面内容参考了HTTPS工作原理。（石头在N 久前用印象笔记收藏的，现在好多原文访问不了了）</p>
+<p><img src="https://upload-images.jianshu.io/upload_images/10024246-5719d83a695f5af8.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240"></p>
+<p>HTTPS 原理</p>
+<p>上图就是大致介绍了 HTTPS 的握手流程，感兴趣的同学可以用 WireShark 抓包详细看看其中的每一个步骤，有助于理解 HTTPS 的完整流程。这里，我就不详述了。</p>
+<p><strong>大致就是客户端和服务端通过“握手会谈”商量出一个双方支持的加密算法和相应随机参数，得到一对密钥，后续的传输的内容都通过这对密钥进行加解密。</strong></p>
+<p>这对密钥很牛皮，比如要加密传输消息『tangleithu』，客户端通过公钥加密得到的密文『xyyaabbccdd』进行传输，服务端用自己的私钥对密文解密，恰好能得到『tangleithu』。中间错一位都不行，这样就保证了数据完整和隐私性。</p>
+<p><strong>因此，你在通过 HTTPS 访问网站的时候，就算流量被截取监听，获取到的信息也是加密的，啥实质性的内容也看不到。</strong></p>
+<p>例如，如下图所示，当我访问某个网站，此时通过 wireshark 抓包得到的信息，能获得仅仅是一些通信的IP地址而已。<br><img src="https://upload-images.jianshu.io/upload_images/10024246-ce31fa33f0af5bd4.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240"></p>
+<p><code>HTTPS加密传输</code></p>
+<p>这下放心了吗？</p>
+<p>摸鱼的过程中，就算访问的 IP 地址被知道了，好像也无关紧要？</p>
+<p>其实，有了 IP 地址也能获取不少信息了。<br><img src="https://upload-images.jianshu.io/upload_images/10024246-948f6a8849792d67.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240"></p>
+<p>还好这个 IP 搜出来是 github，而不是……</p>
+<p>你或许会高兴，连个网站域名都看不到，可以放心摸鱼了。不过，这是真的吗？</p>
+<p><strong>二、HTTPS 真的安全吗？</strong></p>
+<p><strong>HTTPS 真的完全安全吗？连访问的域名都获取不到？答案是否定的。</strong></p>
+<p><strong>上述 HTTPS 在握手阶段有一个很重要的东西 —— 证书。</strong></p>
+<p><strong>1.SNI —— 域名裸奔</strong></p>
+<p>当访问 HTTPS 站点时，会首先与服务器建立 SSL 连接，第一步就是请求服务器的证书。</p>
+<p>当一个 Server IP 只对应一个域名（站点）时，很方便，任意客户端请求过来，无脑返回该域名（服务）对应的证书即可。但 IP 地址（IPv4）是有限的呀，多个域名复用同一个 IP 地址的时候怎么办？</p>
+<p>服务器在发送证书时，不知道浏览器访问的是哪个域名，所以不能根据不同域名发送不同的证书。</p>
+<p>因此 TLS 协议升级了，多了 SNI 这个东西，SNI 即 Server Name Indication，是为了解决一个服务器使用多个域名和证书的 SSL/TLS 扩展。</p>
+<p>现在主流客户端都支持这个协议的。别问我怎么知道这个点的，之前工作上因为这个事情还费了老大劲儿……</p>
+<p>它的原理是：在与服务器建立 SSL 连接之前，先发送要访问站点的域名（Hostname），这样服务器会根据这个域名返回一个合适的证书。此时还没有办法进行加解密，因此至少这个域名是裸奔的。</p>
+<p>如下图所示，上面的截图其实是访问网站的抓包情况，客户端发送握手请求时，很自觉带上了自己的域名。</p>
+<p><img src="https://upload-images.jianshu.io/upload_images/10024246-0a184ff9bbd874b4.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240"></p>
+<p>HTTPS SNI</p>
+<p>因此，即便是 HTTPS，访问的域名信息也是裸奔状态。你上班期间访问小电影网站，都留下了痕迹，若接入了公司网络，就自然而然被抓个正着。</p>
+<p>除了域名是裸奔外，其实还有更严重的风险，那就是中间人攻击。</p>
+<p><strong>2.中间人攻击</strong></p>
+<p>前面也提到 HTTPS 中的关键其实在于这个证书。从名字可以看出来，中间人攻击就是在客户端、服务器之间多了个『中介』，『中介』在客户端、服务器双方中伪装对方，如下图所示，这个『MitmProxy』充当了中间人，互相欺骗：</p>
+<p><img src="https://upload-images.jianshu.io/upload_images/10024246-4d75f48b1a4baae1.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240"></p>
+<p>中间人攻击，来源 evil0x</p>
+<p>可以安装 MitmProxy 或者 Fiddler 之类的抓包软件尝试一把，然后开启代理。</p>
+<p>此时用手机访问百度，得到的信息如下：</p>
+<p><img src="https://upload-images.jianshu.io/upload_images/10024246-61b38a14afc3cfbf.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240"></p>
+<p>证书信任前</p>
+<p>提示，连接不是私密连接，其实就是浏览器识别了证书不太对劲，没有信任。而如果此时手机安装了 Fiddler 的证书，就会正常访问。</p>
+<p><img src="https://upload-images.jianshu.io/upload_images/10024246-c8a43fe23891db6c.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240"></p>
+<p>证书信任后可正常访问</p>
+<p>因此，当你信任证书后，在中间人面前，又是一览无余了。</p>
+<p>而如果你用了公司电脑，估计你有相应的操作让信任证书吧，或者手机上是否有安装类似的客户端软件吧？</p>
+<p>抓紧时间看看手机的证书安装明细</p>
+<p><strong>三、如何防止信息安全，反爬</strong></p>
+<p>前面提到，要实施中间人攻击，关键在于证书是否得到信任。浏览器的行为是证书可以让用户授权是否信任，而 APP 就可以开发者自己控制。</p>
+<p>比如我尝试通过类似的方式对某匿名社区进行抓包解密 HTTPS，但最终失败了，为什么呢？</p>
+<p><img src="https://upload-images.jianshu.io/upload_images/10024246-890b702b230b7c79.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240"></p>
+<p>这就要谈到『SSL Pinning』技术。</p>
+<p>App 可以自己检验 SSL 握手时服务端返回的证书是否合法，“SSL pinning” 技术说的就是在 App 中只信任固定的证书或者公钥。</p>
+<p>因为在握手阶段服务端的证书必须返回给客户端，如果客户端在打包的时候，就把服务端证书放到本地，在握手校验证书的环节进行比较，服务端返回的证书和本地内置的证书一模一样，才发起网络请求。否则，直接断开连接，不可用。</p>
+<p>当然，一般情况下，用这种技术也就能防止 HTTPS 信息被解密了。</p>
+<p>不过，也还有其他的技术能够破解这种方法，比如 Android 下的一些 Hook 技术，具体而言就是绕过本地证书强校验的逻辑。感兴趣的同学可以抱着学习目的研究一下。不过据说这种方式需要对系统进行 Root、越狱等，需要一些更高权限的设置。</p>
+<p>因此，也告诫我们，一定不要乱安装一些软件，稍不注意可能就中招，让自己在互联网上进行裸奔。一方面个人隐私信息等泄露，另外一个方面可能一些非常重要的如账户密码等也可能被窃取。</p>
+<p><strong>四、可能的监控手段有哪些？</strong></p>
+<p>办公电脑当然要接入公司网络，通过上面介绍的内容，你也应该知道，你在什么时候浏览了哪些网站，公司其实都是一清二楚的。</p>
+<p>若自己的手机如果接入了公司网络也是一模一样（连 Agent 软件都不需要装）。这就提醒我们，私人上网尽量用自己的移动网络呀。</p>
+<p>上面提到，如一些涉及隐私的敏感信息，如一些 PC 软件、手机 App 自己内部加密传输的话，内容加密（包括但不限于 HTTPS）不被破解也问题不大。</p>
+<p>不过，这当然依赖这些软件设计者的水平了。比如同一个匿名用户对外展示的 ID 不能相同，如果是同一个的话也恰好暴露了逻辑漏洞。</p>
+<p>当然，我们还是不要抱有侥幸心理，在监管的要求下，如果确实有一些违法等不恰当的言论等，始终还是有门路找到你的。</p>
+<p>更何况，一般办公电脑都会预安装一些公司安全软件，至于这些软件究竟都干了些什么，有没有进行传说中悄悄截图什么的，这就因人（公司）而异了。（不讨论类似行为是否涉及到侵犯了员工隐私等问题）</p>
 
       
     </div>
@@ -589,7 +1238,7 @@
   
 
   <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="">
-    <link itemprop="mainEntityOfPage" href="https://lzhwweb.github.io/nirvana/git/git/git-seach-special-char/">
+    <link itemprop="mainEntityOfPage" href="https://lzhwweb.github.io/nirvana/javascript/%E5%89%8D%E7%AB%AF/IOS-SyntaxError--Invalid-regular-expression--invalid-group-specifier-n/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="image" content="/nirvana/images/avatar.gif">
@@ -602,7 +1251,7 @@
     </span>
       <header class="post-header">
         <h2 class="post-title" itemprop="name headline">
-          <a href="/nirvana/git/git/git-seach-special-char/" class="post-title-link" itemprop="url">如何在Github中搜索特殊字符</a>
+          <a href="/nirvana/javascript/%E5%89%8D%E7%AB%AF/IOS-SyntaxError--Invalid-regular-expression--invalid-group-specifier-n/" class="post-title-link" itemprop="url">IOS-SyntaxError--Invalid-regular-expression--invalid-group-specifier-n</a>
         </h2>
 
         <div class="post-meta-container">
@@ -612,17 +1261,23 @@
         <i class="far fa-calendar"></i>
       </span>
       <span class="post-meta-item-text">发表于</span>
-      
 
-      <time title="创建时间：2021-03-09 21:21:13 / 修改时间：21:21:30" itemprop="dateCreated datePublished" datetime="2021-03-09T21:21:13+08:00">2021-03-09</time>
+      <time title="创建时间：2021-03-11 21:12:40" itemprop="dateCreated datePublished" datetime="2021-03-11T21:12:40+08:00">2021-03-11</time>
     </span>
+      <span class="post-meta-item">
+        <span class="post-meta-item-icon">
+          <i class="far fa-calendar-check"></i>
+        </span>
+        <span class="post-meta-item-text">更新于</span>
+        <time title="修改时间：2021-03-10 13:14:04" itemprop="dateModified" datetime="2021-03-10T13:14:04+08:00">2021-03-10</time>
+      </span>
     <span class="post-meta-item">
       <span class="post-meta-item-icon">
         <i class="far fa-folder"></i>
       </span>
       <span class="post-meta-item-text">分类于</span>
         <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-          <a href="/nirvana/categories/git/" itemprop="url" rel="index"><span itemprop="name">git</span></a>
+          <a href="/nirvana/categories/javascript/" itemprop="url" rel="index"><span itemprop="name">javascript</span></a>
         </span>
     </span>
 
@@ -634,7 +1289,7 @@
         <i class="far fa-file-word"></i>
       </span>
       <span class="post-meta-item-text">本文字数：</span>
-      <span>186</span>
+      <span>560</span>
     </span>
     <span class="post-meta-item" title="阅读时长">
       <span class="post-meta-item-icon">
@@ -652,12 +1307,157 @@
     
     
     <div class="post-body" itemprop="articleBody">
-          <p>github仓库中搜索包含特殊字符的字符串(例如” example.com”或” Example：”)<br>##方法<br>使用空格代替字符，然后将搜索词放在引号中。 它会给您最接近的结果。<br>我有一个库调用sg.createNode，所以我搜索了”sg createNote”，其中大多数返回的结果包括sg.createNote。</p>
-<p>##结果</p>
-<p><img src="https://upload-images.jianshu.io/upload_images/10024246-e3184421d579a0d4.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240"></p>
+          <p>如果正则表达式中包含零宽断言的话 , 在安卓手机上正常 , 但是在ios上会报以下错误</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">Info Warn Error SyntaxError: Invalid regular expression: invalid group specifier name</span><br></pre></td></tr></table></figure>
+<p><code>常用零宽断言：?&lt;=、?&lt;!、?!、?=</code>;<br> <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">let reg &#x3D; new RegExp(&#96;(?&lt;&#x3D;\\b$&#123;key&#125;&#x3D;)[^&amp;]*&#96;) , str &#x3D; this.params || &#39;&#39;, target &#x3D; str.match(reg); if(target) &#123;  return target[0] &#125;</span><br></pre></td></tr></table></figure><br>这种写法在安卓是正常的，IOS就不行，因为该正则包含了零宽断言，会导致页面空白，打不开，需要相对应的转换才能使用</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">let reg &#x3D; new RegExp(&#96;(^|&amp;)$&#123;key&#125;&#x3D;([^&amp;]*)(&amp;|$)&#96;),str &#x3D; this.params || &#39;&#39;, target &#x3D; str.match(reg);if(target) &#123; return target[2]&#125;</span><br></pre></td></tr></table></figure>
+
+      
+    </div>
+
+    
+    
+    
+
+    <footer class="post-footer">
+        <div class="post-eof"></div>
+      
+    </footer>
+  </article>
+</div>
+
+
+
+
+    
+
+
+<div class="post-block">
+  
+  
+
+  <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="">
+    <link itemprop="mainEntityOfPage" href="https://lzhwweb.github.io/nirvana/javascript/%E5%89%8D%E7%AB%AF/JS-Array%E5%B8%B8%E7%94%A8%E6%96%B9%E6%B3%95%E8%AF%A6%E8%A7%A3%E5%8F%8A%E5%85%BC%E5%AE%B9%E6%80%A7%E4%BB%A3%E7%A0%81%EF%BC%88%E4%B8%80%EF%BC%89/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/nirvana/images/avatar.gif">
+      <meta itemprop="name" content="nirvana">
+      <meta itemprop="description" content="个人学习笔记">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="涅槃快乐是金">
+    </span>
+      <header class="post-header">
+        <h2 class="post-title" itemprop="name headline">
+          <a href="/nirvana/javascript/%E5%89%8D%E7%AB%AF/JS-Array%E5%B8%B8%E7%94%A8%E6%96%B9%E6%B3%95%E8%AF%A6%E8%A7%A3%E5%8F%8A%E5%85%BC%E5%AE%B9%E6%80%A7%E4%BB%A3%E7%A0%81%EF%BC%88%E4%B8%80%EF%BC%89/" class="post-title-link" itemprop="url">JS-Array常用方法详解及兼容性代码（一）</a>
+        </h2>
+
+        <div class="post-meta-container">
+          <div class="post-meta">
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-calendar"></i>
+      </span>
+      <span class="post-meta-item-text">发表于</span>
+
+      <time title="创建时间：2021-03-11 21:12:40" itemprop="dateCreated datePublished" datetime="2021-03-11T21:12:40+08:00">2021-03-11</time>
+    </span>
+      <span class="post-meta-item">
+        <span class="post-meta-item-icon">
+          <i class="far fa-calendar-check"></i>
+        </span>
+        <span class="post-meta-item-text">更新于</span>
+        <time title="修改时间：2021-03-10 13:08:48" itemprop="dateModified" datetime="2021-03-10T13:08:48+08:00">2021-03-10</time>
+      </span>
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-folder"></i>
+      </span>
+      <span class="post-meta-item-text">分类于</span>
+        <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+          <a href="/nirvana/categories/javascript/" itemprop="url" rel="index"><span itemprop="name">javascript</span></a>
+        </span>
+    </span>
+
+  
+      </div>
+      <div class="post-meta">
+    <span class="post-meta-item" title="本文字数">
+      <span class="post-meta-item-icon">
+        <i class="far fa-file-word"></i>
+      </span>
+      <span class="post-meta-item-text">本文字数：</span>
+      <span>7k</span>
+    </span>
+    <span class="post-meta-item" title="阅读时长">
+      <span class="post-meta-item-icon">
+        <i class="far fa-clock"></i>
+      </span>
+      <span class="post-meta-item-text">阅读时长 &asymp;</span>
+      <span>6 分钟</span>
+    </span>
+</div>
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+          <p>[ES5中，Array新增API之forEach、filter、map、reduce]</p>
+<h2 id="一：-forEach"><a href="#一：-forEach" class="headerlink" title="一： forEach"></a>一： forEach</h2><p>forEach() 方法对数组的每个元素执行一次提供的函数。<br><strong>注意:</strong> <code>没有返回一个新数组! &amp; 没有返回值!</code><br><strong>应用场景：</strong>为一些相同的元素，绑定事件处理器！</p>
+<p><strong>语法:</strong></p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">array.forEach(callback(currentValue, index, array)&#123;</span><br><span class="line">    &#x2F;&#x2F;do something</span><br><span class="line">&#125;, this)</span><br><span class="line"></span><br><span class="line">array.forEach(callback[, thisArg])</span><br></pre></td></tr></table></figure>
+
+<p><strong>参数：</strong><br><code>callback</code>:<br>为数组中每个元素执行的函数，该函数接收三个参数：</p>
 <blockquote>
-<p>暂时没有找到能够精准匹配特殊字符的方法，但是已经基本够用了</p>
+<p><code>currentValue(当前值)</code><br>数组中正在处理的当前元素。<br><code>index(索引)</code><br>数组中正在处理的当前元素的索引。<br><code>array</code><br>forEach()方法正在操作的数组。</p>
 </blockquote>
+<p><code>thisArg</code>可选<br>可选参数。当执行回调 函数时用作this的值(参考对象)。</p>
+<p><strong>返回值</strong><br>undefined</p>
+<p><strong>注意：</strong><code>没有办法中止或者跳出 forEach 循环，除了抛出一个异常。如果你需要这样，使用forEach()方法是错误的，你可以用一个简单的循环作为替代。如果您正在测试一个数组里的元素是否符合某条件，且需要返回一个布尔值，那么可使用 Array.every或 Array.some。如果可用，新方法 find()或者findIndex 也可被用于真值测试的提早终止。</code></p>
+<p><strong>兼容旧环境</strong></p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br></pre></td><td class="code"><pre><span class="line">if (!Array.prototype.forEach) &#123;</span><br><span class="line"></span><br><span class="line">  Array.prototype.forEach &#x3D; function(callback, thisArg) &#123;</span><br><span class="line"></span><br><span class="line">    var T, k;</span><br><span class="line"></span><br><span class="line">    if (this &#x3D;&#x3D; null) &#123;</span><br><span class="line">      throw new TypeError(&#39; this is null or not defined&#39;);</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    &#x2F;&#x2F; 1. Let O be the result of calling toObject() passing the</span><br><span class="line">    &#x2F;&#x2F; |this| value as the argument.</span><br><span class="line">    var O &#x3D; Object(this);</span><br><span class="line"></span><br><span class="line">    &#x2F;&#x2F; 2. Let lenValue be the result of calling the Get() internal</span><br><span class="line">    &#x2F;&#x2F; method of O with the argument &quot;length&quot;.</span><br><span class="line">    &#x2F;&#x2F; 3. Let len be toUint32(lenValue).</span><br><span class="line">    var len &#x3D; O.length &gt;&gt;&gt; 0;</span><br><span class="line"></span><br><span class="line">    &#x2F;&#x2F; 4. If isCallable(callback) is false, throw a TypeError exception. </span><br><span class="line">    &#x2F;&#x2F; See: http:&#x2F;&#x2F;es5.github.com&#x2F;#x9.11</span><br><span class="line">    if (typeof callback !&#x3D;&#x3D; &quot;function&quot;) &#123;</span><br><span class="line">      throw new TypeError(callback + &#39; is not a function&#39;);</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    &#x2F;&#x2F; 5. If thisArg was supplied, let T be thisArg; else let</span><br><span class="line">    &#x2F;&#x2F; T be undefined.</span><br><span class="line">    if (arguments.length &gt; 1) &#123;</span><br><span class="line">      T &#x3D; thisArg;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    &#x2F;&#x2F; 6. Let k be 0</span><br><span class="line">    k &#x3D; 0;</span><br><span class="line"></span><br><span class="line">    &#x2F;&#x2F; 7. Repeat, while k &lt; len</span><br><span class="line">    while (k &lt; len) &#123;</span><br><span class="line"></span><br><span class="line">      var kValue;</span><br><span class="line"></span><br><span class="line">      &#x2F;&#x2F; a. Let Pk be ToString(k).</span><br><span class="line">      &#x2F;&#x2F;    This is implicit for LHS operands of the in operator</span><br><span class="line">      &#x2F;&#x2F; b. Let kPresent be the result of calling the HasProperty</span><br><span class="line">      &#x2F;&#x2F;    internal method of O with argument Pk.</span><br><span class="line">      &#x2F;&#x2F;    This step can be combined with c</span><br><span class="line">      &#x2F;&#x2F; c. If kPresent is true, then</span><br><span class="line">      if (k in O) &#123;</span><br><span class="line"></span><br><span class="line">        &#x2F;&#x2F; i. Let kValue be the result of calling the Get internal</span><br><span class="line">        &#x2F;&#x2F; method of O with argument Pk.</span><br><span class="line">        kValue &#x3D; O[k];</span><br><span class="line"></span><br><span class="line">        &#x2F;&#x2F; ii. Call the Call internal method of callback with T as</span><br><span class="line">        &#x2F;&#x2F; the this value and argument list containing kValue, k, and O.</span><br><span class="line">        callback.call(T, kValue, k, O);</span><br><span class="line">      &#125;</span><br><span class="line">      &#x2F;&#x2F; d. Increase k by 1.</span><br><span class="line">      k++;</span><br><span class="line">    &#125;</span><br><span class="line">    &#x2F;&#x2F; 8. return undefined</span><br><span class="line">  &#125;;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<h2 id="二：filter"><a href="#二：filter" class="headerlink" title="二：filter"></a>二：filter</h2><p>filter() 方法创建一个新数组, 其包含通过所提供函数实现的测试的所有元素。 </p>
+<p><strong>语法:</strong></p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">var new_array &#x3D; arr.filter(callback[, thisArg])</span><br></pre></td></tr></table></figure>
+
+<p><strong>参数：</strong><br><code>callback</code>:<br>用来测试数组的每个元素的函数。调用时使用参数 (element, index, array)。<br>返回true表示保留该元素（通过测试），false则不保留<br><code>thisArg</code>可选<br>可选参数。当执行回调 函数时用作this的值(参考对象)。</p>
+<p><strong>返回值</strong><br>一个新的通过测试的元素的集合的数组</p>
+<p><strong>注意：</strong><code>filter 不会改变原数组，它返回过滤后的新数组。</code></p>
+<p><strong>兼容旧环境</strong></p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br></pre></td><td class="code"><pre><span class="line">if (!Array.prototype.filter)</span><br><span class="line">&#123;</span><br><span class="line">  Array.prototype.filter &#x3D; function(fun &#x2F;* , thisArg*&#x2F;)</span><br><span class="line">  &#123;</span><br><span class="line">    &quot;use strict&quot;;</span><br><span class="line"></span><br><span class="line">    if (this &#x3D;&#x3D;&#x3D; void 0 || this &#x3D;&#x3D;&#x3D; null)</span><br><span class="line">      throw new TypeError();</span><br><span class="line"></span><br><span class="line">    var t &#x3D; Object(this);</span><br><span class="line">    var len &#x3D; t.length &gt;&gt;&gt; 0;</span><br><span class="line">    if (typeof fun !&#x3D;&#x3D; &quot;function&quot;)</span><br><span class="line">      throw new TypeError();</span><br><span class="line"></span><br><span class="line">    var res &#x3D; [];</span><br><span class="line">    var thisArg &#x3D; arguments.length &gt;&#x3D; 2 ? arguments[1] : void 0;</span><br><span class="line">    for (var i &#x3D; 0; i &lt; len; i++)</span><br><span class="line">    &#123;</span><br><span class="line">      if (i in t)</span><br><span class="line">      &#123;</span><br><span class="line">        var val &#x3D; t[i];</span><br><span class="line"></span><br><span class="line">        &#x2F;&#x2F; NOTE: Technically this should Object.defineProperty at</span><br><span class="line">        &#x2F;&#x2F;       the next index, as push can be affected by</span><br><span class="line">        &#x2F;&#x2F;       properties on Object.prototype and Array.prototype.</span><br><span class="line">        &#x2F;&#x2F;       But that method&#39;s new, and collisions should be</span><br><span class="line">        &#x2F;&#x2F;       rare, so use the more-compatible alternative.</span><br><span class="line">        if (fun.call(thisArg, val, i, t))</span><br><span class="line">          res.push(val);</span><br><span class="line">      &#125;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    return res;</span><br><span class="line">  &#125;;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<h2 id="三：map"><a href="#三：map" class="headerlink" title="三：map"></a>三：map</h2><p>map() 方法创建一个新数组，其结果是该数组中的每个元素都调用一个提供的函数后返回的结果。<br><strong>语法:</strong></p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">let new_array &#x3D; arr.map(function callback(currentValue, index, array) &#123; </span><br><span class="line">    &#x2F;&#x2F; Return element for new_array </span><br><span class="line">&#125;[, thisArg])</span><br></pre></td></tr></table></figure>
+
+<p><strong>参数：</strong><br><code>callback</code>:<br>生成新数组元素的函数，使用三个参数：</p>
+<blockquote>
+<p><code>currentValue</code><br>callback 的第一个参数，数组中正在处理的当前元素。<br><code>index</code><br>callback 的第二个参数，数组中正在处理的当前元素的索引。<br><code>array</code><br>callback 的第三个参数，map 方法被调用的数组。</p>
+</blockquote>
+<p><code>thisArg</code>可选<br>可选参数。当执行回调 函数时用作this的值(参考对象)。</p>
+<p><strong>返回值</strong><br>一个新数组，每个元素都是回调函数的结果。</p>
+<p><strong>注意：</strong><code>不修改调用它的原数组本身（当然可以在 callback 执行时改变原数组）。</code></p>
+<p><strong>兼容旧环境</strong></p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br></pre></td><td class="code"><pre><span class="line">if (!Array.prototype.map) &#123;</span><br><span class="line">  Array.prototype.map &#x3D; function(callback, thisArg) &#123;</span><br><span class="line"></span><br><span class="line">    var T, A, k;</span><br><span class="line"></span><br><span class="line">    if (this &#x3D;&#x3D; null) &#123;</span><br><span class="line">      throw new TypeError(&quot; this is null or not defined&quot;);</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    &#x2F;&#x2F; 1. 将O赋值为调用map方法的数组.</span><br><span class="line">    var O &#x3D; Object(this);</span><br><span class="line"></span><br><span class="line">    &#x2F;&#x2F; 2.将len赋值为数组O的长度.</span><br><span class="line">    var len &#x3D; O.length &gt;&gt;&gt; 0;</span><br><span class="line"></span><br><span class="line">    &#x2F;&#x2F; 3.如果callback不是函数,则抛出TypeError异常.</span><br><span class="line">    if (Object.prototype.toString.call(callback) !&#x3D; &quot;[object Function]&quot;) &#123;</span><br><span class="line">      throw new TypeError(callback + &quot; is not a function&quot;);</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    &#x2F;&#x2F; 4. 如果参数thisArg有值,则将T赋值为thisArg;否则T为undefined.</span><br><span class="line">    if (thisArg) &#123;</span><br><span class="line">      T &#x3D; thisArg;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    &#x2F;&#x2F; 5. 创建新数组A,长度为原数组O长度len</span><br><span class="line">    A &#x3D; new Array(len);</span><br><span class="line"></span><br><span class="line">    &#x2F;&#x2F; 6. 将k赋值为0</span><br><span class="line">    k &#x3D; 0;</span><br><span class="line"></span><br><span class="line">    &#x2F;&#x2F; 7. 当 k &lt; len 时,执行循环.</span><br><span class="line">    while(k &lt; len) &#123;</span><br><span class="line"></span><br><span class="line">      var kValue, mappedValue;</span><br><span class="line"></span><br><span class="line">      &#x2F;&#x2F;遍历O,k为原数组索引</span><br><span class="line">      if (k in O) &#123;</span><br><span class="line"></span><br><span class="line">        &#x2F;&#x2F;kValue为索引k对应的值.</span><br><span class="line">        kValue &#x3D; O[ k ];</span><br><span class="line"></span><br><span class="line">        &#x2F;&#x2F; 执行callback,this指向T,参数有三个.分别是kValue:值,k:索引,O:原数组.</span><br><span class="line">        mappedValue &#x3D; callback.call(T, kValue, k, O);</span><br><span class="line"></span><br><span class="line">        &#x2F;&#x2F; 返回值添加到新数组A中.</span><br><span class="line">        A[ k ] &#x3D; mappedValue;</span><br><span class="line">      &#125;</span><br><span class="line">      &#x2F;&#x2F; k自增1</span><br><span class="line">      k++;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    &#x2F;&#x2F; 8. 返回新数组A</span><br><span class="line">    return A;</span><br><span class="line">  &#125;;      </span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<h2 id="四：reduce"><a href="#四：reduce" class="headerlink" title="四：reduce"></a>四：reduce</h2><p>reduce() 方法对累加器和数组中的每个元素（从左到右）应用一个函数，将其减少为单个值。<br><strong>语法:</strong></p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">arr.reduce(callback[, initialValue])</span><br></pre></td></tr></table></figure>
+
+<p><strong>参数：</strong><br><code>callback</code>:<br>执行数组中每个值的函数，包含四个参数：</p>
+<blockquote>
+<p><code>accumulator</code><br>累加器累加回调的返回值; 它是上一次调用回调时返回的累积值，或initialValue（如下所示）。<br><code>currentValue</code><br>数组中正在处理的元素。<br><code>currentIndex</code>可选<br>数组中正在处理的当前元素的索引。 如果提供了initialValue，则索引号为0，否则为索引为1。<br><code>array</code>可选<br>调用reduce的数组</p>
+</blockquote>
+<p><code>initialValue</code>可选<br>用作第一个调用 callback的第一个参数的值。 如果没有提供初始值，则将使用数组中的第一个元素。 在没有初始值的空数组上调用 reduce 将报错。</p>
+<p><strong>返回值</strong><br>函数累计处理的结果</p>
+<p><strong>注意：</strong><code>如果没有提供initialValue，reduce 会从索引1的地方开始执行 callback 方法，跳过第一个索引。如果提供initialValue，从索引0开始。</code></p>
+<p><strong>兼容旧环境</strong></p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br></pre></td><td class="code"><pre><span class="line">if (!Array.prototype.reduce) &#123;</span><br><span class="line">  Object.defineProperty(Array.prototype, &#39;reduce&#39;, &#123;</span><br><span class="line">    value: function(callback &#x2F;*, initialValue*&#x2F;) &#123;</span><br><span class="line">      if (this &#x3D;&#x3D;&#x3D; null) &#123;</span><br><span class="line">        throw new TypeError( &#39;Array.prototype.reduce &#39; + </span><br><span class="line">          &#39;called on null or undefined&#39; );</span><br><span class="line">      &#125;</span><br><span class="line">      if (typeof callback !&#x3D;&#x3D; &#39;function&#39;) &#123;</span><br><span class="line">        throw new TypeError( callback +</span><br><span class="line">          &#39; is not a function&#39;);</span><br><span class="line">      &#125;</span><br><span class="line"></span><br><span class="line">      &#x2F;&#x2F; 1. Let O be ? ToObject(this value).</span><br><span class="line">      var o &#x3D; Object(this);</span><br><span class="line"></span><br><span class="line">      &#x2F;&#x2F; 2. Let len be ? ToLength(? Get(O, &quot;length&quot;)).</span><br><span class="line">      var len &#x3D; o.length &gt;&gt;&gt; 0; </span><br><span class="line"></span><br><span class="line">      &#x2F;&#x2F; Steps 3, 4, 5, 6, 7      </span><br><span class="line">      var k &#x3D; 0; </span><br><span class="line">      var value;</span><br><span class="line"></span><br><span class="line">      if (arguments.length &gt;&#x3D; 2) &#123;</span><br><span class="line">        value &#x3D; arguments[1];</span><br><span class="line">      &#125; else &#123;</span><br><span class="line">        while (k &lt; len &amp;&amp; !(k in o)) &#123;</span><br><span class="line">          k++; </span><br><span class="line">        &#125;</span><br><span class="line"></span><br><span class="line">        &#x2F;&#x2F; 3. If len is 0 and initialValue is not present,</span><br><span class="line">        &#x2F;&#x2F;    throw a TypeError exception.</span><br><span class="line">        if (k &gt;&#x3D; len) &#123;</span><br><span class="line">          throw new TypeError( &#39;Reduce of empty array &#39; +</span><br><span class="line">            &#39;with no initial value&#39; );</span><br><span class="line">        &#125;</span><br><span class="line">        value &#x3D; o[k++];</span><br><span class="line">      &#125;</span><br><span class="line"></span><br><span class="line">      &#x2F;&#x2F; 8. Repeat, while k &lt; len</span><br><span class="line">      while (k &lt; len) &#123;</span><br><span class="line">        &#x2F;&#x2F; a. Let Pk be ! ToString(k).</span><br><span class="line">        &#x2F;&#x2F; b. Let kPresent be ? HasProperty(O, Pk).</span><br><span class="line">        &#x2F;&#x2F; c. If kPresent is true, then</span><br><span class="line">        &#x2F;&#x2F;    i.  Let kValue be ? Get(O, Pk).</span><br><span class="line">        &#x2F;&#x2F;    ii. Let accumulator be ? Call(</span><br><span class="line">        &#x2F;&#x2F;          callbackfn, undefined,</span><br><span class="line">        &#x2F;&#x2F;          « accumulator, kValue, k, O »).</span><br><span class="line">        if (k in o) &#123;</span><br><span class="line">          value &#x3D; callback(value, o[k], k, o);</span><br><span class="line">        &#125;</span><br><span class="line"></span><br><span class="line">        &#x2F;&#x2F; d. Increase k by 1.      </span><br><span class="line">        k++;</span><br><span class="line">      &#125;</span><br><span class="line"></span><br><span class="line">      &#x2F;&#x2F; 9. Return accumulator.</span><br><span class="line">      return value;</span><br><span class="line">    &#125;</span><br><span class="line">  &#125;);</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+
+
+
 
       
     </div>
@@ -676,756 +1476,9 @@
 
 
 
-    
-
-
-<div class="post-block">
-  
-  
-
-  <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="">
-    <link itemprop="mainEntityOfPage" href="https://lzhwweb.github.io/nirvana/git/git/git-seach/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="image" content="/nirvana/images/avatar.gif">
-      <meta itemprop="name" content="nirvana">
-      <meta itemprop="description" content="个人学习笔记">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="涅槃快乐是金">
-    </span>
-      <header class="post-header">
-        <h2 class="post-title" itemprop="name headline">
-          <a href="/nirvana/git/git/git-seach/" class="post-title-link" itemprop="url">GitHub 常用搜索语法</a>
-        </h2>
-
-        <div class="post-meta-container">
-          <div class="post-meta">
-    <span class="post-meta-item">
-      <span class="post-meta-item-icon">
-        <i class="far fa-calendar"></i>
-      </span>
-      <span class="post-meta-item-text">发表于</span>
-      
-
-      <time title="创建时间：2021-03-09 21:19:18 / 修改时间：21:19:38" itemprop="dateCreated datePublished" datetime="2021-03-09T21:19:18+08:00">2021-03-09</time>
-    </span>
-    <span class="post-meta-item">
-      <span class="post-meta-item-icon">
-        <i class="far fa-folder"></i>
-      </span>
-      <span class="post-meta-item-text">分类于</span>
-        <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-          <a href="/nirvana/categories/git/" itemprop="url" rel="index"><span itemprop="name">git</span></a>
-        </span>
-    </span>
-
-  
-      </div>
-      <div class="post-meta">
-    <span class="post-meta-item" title="本文字数">
-      <span class="post-meta-item-icon">
-        <i class="far fa-file-word"></i>
-      </span>
-      <span class="post-meta-item-text">本文字数：</span>
-      <span>3.6k</span>
-    </span>
-    <span class="post-meta-item" title="阅读时长">
-      <span class="post-meta-item-icon">
-        <i class="far fa-clock"></i>
-      </span>
-      <span class="post-meta-item-text">阅读时长 &asymp;</span>
-      <span>3 分钟</span>
-    </span>
-</div>
-
-        </div>
-      </header>
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-          <p><strong><a target="_blank" rel="noopener" href="https://docs.github.com/cn/github/searching-for-information-on-github/searching-for-repositories">官网</a></strong></p>
-<h1 id="搜索仓库"><a href="#搜索仓库" class="headerlink" title="搜索仓库"></a>搜索仓库</h1><p>您可以在 GitHub 上搜索仓库，并使用这些仓库搜索限定符的任意组合缩小结果范围。<br>您可以在所有 GitHub 内全局搜索仓库，也可以在特定组织内搜索仓库<br>要在搜索结果中包括复刻，您需要将 <code>fork:true</code> 或 <code>fork:only</code> 添加到查询。 </p>
-<p><strong>Tips:</strong></p>
-<ul>
-<li>  有关可以添加到任何搜索限定符以进一步改善结果的搜索语法列表，请参阅“<a target="_blank" rel="noopener" href="https://docs.github.com/cn/free-pro-team@latest/articles/understanding-the-search-syntax">了解搜索语法</a>”。</li>
-<li>  对多个字词的搜索词使用引号。 例如，如果要搜索具有标签 “In progress” 的议题，可搜索 <code>label:&quot;in progress&quot;</code>。 搜索不区分大小写。</li>
-</ul>
-<h3 id="按仓库名称、说明或自述文件内容搜索"><a href="#按仓库名称、说明或自述文件内容搜索" class="headerlink" title="按仓库名称、说明或自述文件内容搜索"></a>按仓库名称、说明或自述文件内容搜索</h3><p>通过 <code>in</code> 限定符，您可以将搜索限制为仓库名称、仓库说明、自述文件内容或这些的任意组合。 如果省略此限定符，则只搜索仓库名称和说明。</p>
-<table>
-<thead>
-<tr>
-<th>限定符</th>
-<th>示例</th>
-</tr>
-</thead>
-<tbody><tr>
-<td><code>in:name</code></td>
-<td><strong>jquery in:name</strong> matches repositories with “jquery” in the repository name.</td>
-</tr>
-<tr>
-<td><code>in:description</code></td>
-<td><strong>jquery in:name,description</strong> matches repositories with “jquery” in the repository name or description.</td>
-</tr>
-<tr>
-<td><code>in:readme</code></td>
-<td><strong>jquery in:readme</strong>  matches repositories mentioning “jquery” in the repository’s README file.</td>
-</tr>
-<tr>
-<td><code>repo:owner/name</code></td>
-<td><strong>repo:octocat/hello-world</strong> 匹配特定仓库名称。</td>
-</tr>
-</tbody></table>
-<h3 id="基于仓库的内容搜索"><a href="#基于仓库的内容搜索" class="headerlink" title="基于仓库的内容搜索"></a>基于仓库的内容搜索</h3><p>除了使用 <code>in:readme</code> 以外，无法通过搜索仓库内的特定内容来查找仓库。 要搜索仓库内的特定文件或内容，您可以使用查找器或代码特定的搜索限定符。<br>| 限定符 | 示例 |<br>| — | — |<br>| <code>in:readme</code> | <strong>octocat in:readme</strong> matches repositories mentioning “octocat” in the repository’s README file. |</p>
-<h3 id="在用户或组织的仓库内搜索"><a href="#在用户或组织的仓库内搜索" class="headerlink" title="在用户或组织的仓库内搜索"></a>在用户或组织的仓库内搜索</h3><p>要在特定用户或组织拥有的所有仓库中搜索，您可以使用 <code>user</code> 或 <code>org</code> 限定符。</p>
-<table>
-<thead>
-<tr>
-<th>限定符</th>
-<th>示例</th>
-</tr>
-</thead>
-<tbody><tr>
-<td><code>user:*USERNAME*</code></td>
-<td><strong>user:defunkt forks:&gt;100</strong> 匹配来自 @defunkt、拥有超过 100 复刻的仓库。</td>
-</tr>
-<tr>
-<td><code>org:*ORGNAME*</code></td>
-<td><strong>org:github</strong> 匹配来自 GitHub 的仓库。</td>
-</tr>
-</tbody></table>
-<h3 id="按仓库大小搜索"><a href="#按仓库大小搜索" class="headerlink" title="按仓库大小搜索"></a>按仓库大小搜索</h3><p>The <code>size</code> qualifier finds repositories that match a certain size (in kilobytes), using greater than, less than, and range qualifiers<br>| 限定符 | 示例 |<br>| — | — |<br>| <code>size:*n*</code> | <strong>size:1000</strong> 匹配恰好为 1 MB 的仓库。 |<br>|  | <strong>size:&gt;=30000</strong> 匹配至少为 30 MB 的仓库。 |<br>|  | <strong>size:&lt;50</strong> 匹配小于 50 KB 的仓库。 |<br>|  | <strong>size:50..120</strong> 匹配介于 50 KB 与 120 KB 之间的仓库。 |</p>
-<h3 id="按关注者数量搜索"><a href="#按关注者数量搜索" class="headerlink" title="按关注者数量搜索"></a>按关注者数量搜索</h3><table>
-<thead>
-<tr>
-<th>限定符</th>
-<th>示例</th>
-</tr>
-</thead>
-<tbody><tr>
-<td><code>followers:*n*</code></td>
-<td><strong>node followers:&gt;=10000</strong> 匹配有 10,000 或更多关注者提及文字 “node” 的仓库。</td>
-</tr>
-<tr>
-<td></td>
-<td><strong>styleguide linter followers:1..10</strong> 匹配拥有 1 到 10 个关注者并且提及 “styleguide linter” 一词的的仓库。</td>
-</tr>
-</tbody></table>
-<h3 id="按复刻数量搜索"><a href="#按复刻数量搜索" class="headerlink" title="按复刻数量搜索"></a>按复刻数量搜索</h3><table>
-<thead>
-<tr>
-<th>限定符</th>
-<th>示例</th>
-</tr>
-</thead>
-<tbody><tr>
-<td><code>forks:*n*</code></td>
-<td><strong>forks:5</strong> 匹配具有至少 205 个复刻的仓库。</td>
-</tr>
-<tr>
-<td></td>
-<td><strong>forks:&lt;90</strong> 匹配具有少于 90 个复刻的仓库。</td>
-</tr>
-<tr>
-<td></td>
-<td><strong>forks:10..20</strong> 匹配具有 10 到 20 个复刻的仓库。</td>
-</tr>
-</tbody></table>
-<h3 id="按星号数量搜索"><a href="#按星号数量搜索" class="headerlink" title="按星号数量搜索"></a>按星号数量搜索</h3><table>
-<thead>
-<tr>
-<th>限定符</th>
-<th>示例</th>
-</tr>
-</thead>
-<tbody><tr>
-<td><code>stars:*n*</code></td>
-<td><strong>stars:500</strong> 匹配恰好具有 500 个星号的仓库。</td>
-</tr>
-<tr>
-<td></td>
-<td><strong>stars:10..20</strong> 匹配具有 10 到 20 个星号、小于 1000 KB 的仓库。</td>
-</tr>
-<tr>
-<td></td>
-<td><strong>stars:&gt;=500 fork:true language:php</strong> 匹配具有至少 500 个星号，包括复刻的星号（以 PHP 编写）的仓库。</td>
-</tr>
-</tbody></table>
-<h3 id="按仓库创建或上次更新时间搜索"><a href="#按仓库创建或上次更新时间搜索" class="headerlink" title="按仓库创建或上次更新时间搜索"></a>按仓库创建或上次更新时间搜索</h3><p>您可以基于创建时间或上次更新时间过滤仓库。 对于仓库创建，您可以使用 <code>created</code> 限定符；要了解仓库上次更新的时间，您要使用 <code>pushed</code> 限定符。 <code>pushed</code> 限定符将返回仓库列表，按仓库中任意分支上最近进行的提交排序。</p>
-<p>两者均采用日期作为参数。 日期格式必须遵循 <a target="_blank" rel="noopener" href="http://en.wikipedia.org/wiki/ISO_8601">ISO8601</a>标准，即 <code>YYYY-MM-DD</code>（年-月-日）。 您也可以在日期后添加可选的时间信息 <code>THH:MM:SS+00:00</code>，以便按小时、分钟和秒进行搜索。 这是 <code>T</code>，随后是 <code>HH:MM:SS</code>（时-分-秒）和 UTC 偏移 (<code>+00:00</code>)。</p>
-<table>
-<thead>
-<tr>
-<th>限定符</th>
-<th>示例</th>
-</tr>
-</thead>
-<tbody><tr>
-<td><code>created:*YYYY-MM-DD*</code></td>
-<td><strong>webos created:&lt;2011-01-01</strong> 匹配具有 “webos” 字样、在 2011 年之前创建的仓库。</td>
-</tr>
-<tr>
-<td><code>pushed:*YYYY-MM-DD*</code></td>
-<td><strong>css pushed:&gt;2013-02-01</strong> 匹配具有 “css” 字样、在 2013 年 1 月之后收到推送的仓库。</td>
-</tr>
-<tr>
-<td></td>
-<td><strong>case pushed:&gt;=2013-03-06 fork:only</strong> 匹配具有 “case” 字样、在 2013 年 3 月 6 日或之后收到推送并且作为复刻的仓库。</td>
-</tr>
-</tbody></table>
-<h3 id="按语言搜索"><a href="#按语言搜索" class="headerlink" title="按语言搜索"></a>按语言搜索</h3><p>You can search repositories based on the language of the code in the repositories.</p>
-<table>
-<thead>
-<tr>
-<th>限定符</th>
-<th>示例</th>
-</tr>
-</thead>
-<tbody><tr>
-<td><code>language:*LANGUAGE*</code></td>
-<td><strong>rails language:javascript</strong> 匹配具有 “rails” 字样、以 JavaScript 编写的仓库。</td>
-</tr>
-</tbody></table>
-<h3 id="按主题搜索"><a href="#按主题搜索" class="headerlink" title="按主题搜索"></a>按主题搜索</h3><table>
-<thead>
-<tr>
-<th>限定符</th>
-<th>示例</th>
-</tr>
-</thead>
-<tbody><tr>
-<td><code>topic:*TOPIC*</code></td>
-<td><strong>topic:jekyll</strong> 匹配已归类为 “jekyll” 主题的仓库。</td>
-</tr>
-</tbody></table>
-<h3 id="按主题数量搜索"><a href="#按主题数量搜索" class="headerlink" title="按主题数量搜索"></a>按主题数量搜索</h3><table>
-<thead>
-<tr>
-<th>限定符</th>
-<th>示例</th>
-</tr>
-</thead>
-<tbody><tr>
-<td><code>topics:*n*</code></td>
-<td><strong>topics:5</strong> 匹配具有五个主题的仓库。</td>
-</tr>
-<tr>
-<td></td>
-<td><strong>topics:&gt;3</strong>  匹配超过三个主题的仓库。</td>
-</tr>
-</tbody></table>
-<h3 id="按许可搜索"><a href="#按许可搜索" class="headerlink" title="按许可搜索"></a>按许可搜索</h3><table>
-<thead>
-<tr>
-<th>限定符</th>
-<th>示例</th>
-</tr>
-</thead>
-<tbody><tr>
-<td><code>license:*LICENSE_KEYWORD*</code></td>
-<td><strong>license:apache-2.0</strong>  匹配根据 Apache License 2.0 授权的仓库。</td>
-</tr>
-</tbody></table>
-<h3 id="Search-by-repository-visibility"><a href="#Search-by-repository-visibility" class="headerlink" title="Search by repository visibility"></a>Search by repository visibility</h3><p>You can filter your search based on the visibility of the repositories. </p>
-<table>
-<thead>
-<tr>
-<th>Qualifier</th>
-<th>Example</th>
-</tr>
-</thead>
-<tbody><tr>
-<td><code>is:public</code></td>
-<td><strong>is:public org:github</strong>  matches public repositories owned by GitHub.</td>
-</tr>
-<tr>
-<td><code>is:internal</code></td>
-<td><strong>is:internal test</strong> matches internal repositories that you can access and contain the word “test”.</td>
-</tr>
-<tr>
-<td><code>is:private</code></td>
-<td><strong>is:private pages</strong>  matches private repositories that you can access and contain the word “pages.”</td>
-</tr>
-</tbody></table>
-<h3 id="基于仓库是否为镜像搜索"><a href="#基于仓库是否为镜像搜索" class="headerlink" title="基于仓库是否为镜像搜索"></a>基于仓库是否为镜像搜索</h3><table>
-<thead>
-<tr>
-<th>限定符</th>
-<th>示例</th>
-</tr>
-</thead>
-<tbody><tr>
-<td><code>mirror:true</code></td>
-<td><strong>mirror:true GNOME</strong>  matches repositories that are mirrors and contain the word “GNOME.”</td>
-</tr>
-<tr>
-<td><code>mirror:false</code></td>
-<td><strong>mirror:false GNOME</strong>  matches repositories that are not mirrors and contain the word “GNOME.”</td>
-</tr>
-</tbody></table>
-<h3 id="基于仓库是否已存档搜索"><a href="#基于仓库是否已存档搜索" class="headerlink" title="基于仓库是否已存档搜索"></a>基于仓库是否已存档搜索</h3><table>
-<thead>
-<tr>
-<th>限定符</th>
-<th>示例</th>
-</tr>
-</thead>
-<tbody><tr>
-<td><code>archived:true</code></td>
-<td><strong>archived:true GNOME</strong>  matches repositories that are archived and contain the word “GNOME.”</td>
-</tr>
-<tr>
-<td><code>archived:false</code></td>
-<td><strong>archived:false GNOME</strong> matches repositories that are not archived and contain the word “GNOME.”</td>
-</tr>
-</tbody></table>
-<h3 id="基于具有-good-first-issue-或-help-wanted-标签的议题数量搜索"><a href="#基于具有-good-first-issue-或-help-wanted-标签的议题数量搜索" class="headerlink" title="基于具有 good first issue 或 help wanted 标签的议题数量搜索"></a>基于具有 <code>good first issue</code> 或 <code>help wanted</code> 标签的议题数量搜索</h3><p>您可以使用限定符 <code>help-wanted-issues:&gt;n</code> 和 <code>good-first-issues:&gt;n</code> 搜索具有最少数量标签为 <code>help-wanted</code> 或 <code>good-first-issue</code> 议题的仓库。。</p>
-<table>
-<thead>
-<tr>
-<th>限定符</th>
-<th>示例</th>
-</tr>
-</thead>
-<tbody><tr>
-<td><code>good-first-issues:&gt;n</code></td>
-<td><strong>good-first-issues:&gt;2 javascript</strong>  匹配具有超过两个标签为 <code>good-first-issue</code> 的议题且包含 “javascript” 字样的仓库。</td>
-</tr>
-<tr>
-<td><code>help-wanted-issues:&gt;n</code></td>
-<td><strong>help-wanted-issues:&gt;4 react</strong>  匹配具有超过四个标签为 <code>help-wanted</code> 的议题且包含 “React” 字样的仓库。</td>
-</tr>
-</tbody></table>
-
-      
-    </div>
-
-    
-    
-    
-
-    <footer class="post-footer">
-        <div class="post-eof"></div>
-      
-    </footer>
-  </article>
-</div>
-
-
-
-
-    
-
-
-<div class="post-block">
-  
-  
-
-  <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="">
-    <link itemprop="mainEntityOfPage" href="https://lzhwweb.github.io/nirvana/git/git/git-code-count/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="image" content="/nirvana/images/avatar.gif">
-      <meta itemprop="name" content="nirvana">
-      <meta itemprop="description" content="个人学习笔记">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="涅槃快乐是金">
-    </span>
-      <header class="post-header">
-        <h2 class="post-title" itemprop="name headline">
-          <a href="/nirvana/git/git/git-code-count/" class="post-title-link" itemprop="url">git代码统计</a>
-        </h2>
-
-        <div class="post-meta-container">
-          <div class="post-meta">
-    <span class="post-meta-item">
-      <span class="post-meta-item-icon">
-        <i class="far fa-calendar"></i>
-      </span>
-      <span class="post-meta-item-text">发表于</span>
-      
-
-      <time title="创建时间：2021-03-09 21:12:40 / 修改时间：21:12:55" itemprop="dateCreated datePublished" datetime="2021-03-09T21:12:40+08:00">2021-03-09</time>
-    </span>
-    <span class="post-meta-item">
-      <span class="post-meta-item-icon">
-        <i class="far fa-folder"></i>
-      </span>
-      <span class="post-meta-item-text">分类于</span>
-        <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-          <a href="/nirvana/categories/git/" itemprop="url" rel="index"><span itemprop="name">git</span></a>
-        </span>
-    </span>
-
-  
-      </div>
-      <div class="post-meta">
-    <span class="post-meta-item" title="本文字数">
-      <span class="post-meta-item-icon">
-        <i class="far fa-file-word"></i>
-      </span>
-      <span class="post-meta-item-text">本文字数：</span>
-      <span>1.7k</span>
-    </span>
-    <span class="post-meta-item" title="阅读时长">
-      <span class="post-meta-item-icon">
-        <i class="far fa-clock"></i>
-      </span>
-      <span class="post-meta-item-text">阅读时长 &asymp;</span>
-      <span>2 分钟</span>
-    </span>
-</div>
-
-        </div>
-      </header>
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-          <h2 id="命令行"><a href="#命令行" class="headerlink" title="命令行"></a>命令行</h2><h3 id="查看git上的个人代码量："><a href="#查看git上的个人代码量：" class="headerlink" title="查看git上的个人代码量："></a>查看git上的个人代码量：</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">git log --author&#x3D;&quot;username&quot; --pretty&#x3D;tformat: --numstat | awk &#39;&#123; add +&#x3D; $1; subs +&#x3D; $2; loc +&#x3D; $1 - $2 &#125; END &#123; printf &quot;added lines: %s, removed lines: %s, total lines: %s\n&quot;, add, subs, loc &#125;&#39; -</span><br></pre></td></tr></table></figure>
-
-<p>结果示例：(记得修改 username)</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">added lines: 120745, removed lines: 71738, total lines: 49007</span><br></pre></td></tr></table></figure>
-
-<h3 id="统计每个人增删行数"><a href="#统计每个人增删行数" class="headerlink" title="统计每个人增删行数"></a>统计每个人增删行数</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">git log --format&#x3D;&#39;%aN&#39; | sort -u | while read name; do echo -en &quot;$name\t&quot;; git log --author&#x3D;&quot;$name&quot; --pretty&#x3D;tformat: --numstat | awk &#39;&#123; add +&#x3D; $1; subs +&#x3D; $2; loc +&#x3D; $1 - $2 &#125; END &#123; printf &quot;added lines: %s, removed lines: %s, total lines: %s\n&quot;, add, subs, loc &#125;&#39; -; done</span><br></pre></td></tr></table></figure>
-
-<p>结果示例</p>
-<p><img src="https://upload-images.jianshu.io/upload_images/10024246-9d65172280d94945.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240"></p>
-<p>###统计时间段每个人增删行数</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">git log  --format&#x3D;&#39;%aN&#39; | sort -u | while read name; do echo -en &quot;$name\t&quot;; git log --author&#x3D;&quot;$name&quot; --pretty&#x3D;tformat:  --since &#x3D;&#x3D;2020-1-1 --until&#x3D;2020-2-15 --numstat | awk &#39;&#123; add +&#x3D; $1; subs +&#x3D; $2; loc +&#x3D; $1 - $2 &#125; END &#123; printf &quot;added lines: %s, removed lines: %s, total lines: %s\n&quot;, add, subs, loc &#125;&#39; -; done</span><br></pre></td></tr></table></figure>
-
-<h3 id="查看仓库提交者排名前-5"><a href="#查看仓库提交者排名前-5" class="headerlink" title="查看仓库提交者排名前 5"></a>查看仓库提交者排名前 5</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">git log --pretty&#x3D;&#39;%aN&#39; | sort | uniq -c | sort -k1 -n -r | head -n 5</span><br></pre></td></tr></table></figure>
-
-<h3 id="贡献值统计"><a href="#贡献值统计" class="headerlink" title="贡献值统计"></a>贡献值统计</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">git log --pretty&#x3D;&#39;%aN&#39; | sort -u | wc -l</span><br></pre></td></tr></table></figure>
-
-<h3 id="提交数统计"><a href="#提交数统计" class="headerlink" title="提交数统计"></a>提交数统计</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">git log --oneline | wc -l</span><br></pre></td></tr></table></figure>
-
-<h3 id="添加或修改的代码行数："><a href="#添加或修改的代码行数：" class="headerlink" title="添加或修改的代码行数："></a>添加或修改的代码行数：</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">git log --stat|perl -ne &#39;END &#123; print $c &#125; $c +&#x3D; $1 if &#x2F;(\d+) insertions&#x2F;&#39;</span><br></pre></td></tr></table></figure>
-
-<h2 id="使用gitstats"><a href="#使用gitstats" class="headerlink" title="使用gitstats"></a>使用gitstats</h2><p><a target="_blank" rel="noopener" href="https://github.com/hoxu/gitstats">GitStats项目</a>，用Python开发的一个工具，通过封装Git命令来实现统计出来代码情况并且生成可浏览的网页。官方文档可以参考这里。</p>
-<h3 id="使用方法"><a href="#使用方法" class="headerlink" title="使用方法"></a>使用方法</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">git clone git:&#x2F;&#x2F;github.com&#x2F;hoxu&#x2F;gitstats.git</span><br><span class="line">cd gitstats</span><br><span class="line">.&#x2F;gitstats 你的项目的位置 生成统计的文件夹位置</span><br></pre></td></tr></table></figure>
-<p>可能会提示(我的为 mac os)</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">env: python2: No such file or directory</span><br></pre></td></tr></table></figure>
-<p>可以进行 python2 的链接</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">sudo ln -sf &#x2F;usr&#x2F;bin&#x2F;python2.7 &#x2F;usr&#x2F;local&#x2F;bin&#x2F;python2</span><br></pre></td></tr></table></figure>
-
-<p>没有安装gnuplot画图程序，那么需要安装再执行：</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">&#x2F;&#x2F;mac osx</span><br><span class="line">brew install gnuplot</span><br><span class="line">&#x2F;&#x2F;centos linux</span><br><span class="line">yum install gnuplot</span><br></pre></td></tr></table></figure>
-
-<p>生成的统计文件为HTML：<br><img src="https://upload-images.jianshu.io/upload_images/10024246-194e0a1a7127a69f.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240"></p>
-
-      
-    </div>
-
-    
-    
-    
-
-    <footer class="post-footer">
-        <div class="post-eof"></div>
-      
-    </footer>
-  </article>
-</div>
-
-
-
-
-    
-
-
-<div class="post-block">
-  
-  
-
-  <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="">
-    <link itemprop="mainEntityOfPage" href="https://lzhwweb.github.io/nirvana/git/git/git-delete-orgin/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="image" content="/nirvana/images/avatar.gif">
-      <meta itemprop="name" content="nirvana">
-      <meta itemprop="description" content="个人学习笔记">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="涅槃快乐是金">
-    </span>
-      <header class="post-header">
-        <h2 class="post-title" itemprop="name headline">
-          <a href="/nirvana/git/git/git-delete-orgin/" class="post-title-link" itemprop="url">Git 清除远端已删除的分支</a>
-        </h2>
-
-        <div class="post-meta-container">
-          <div class="post-meta">
-    <span class="post-meta-item">
-      <span class="post-meta-item-icon">
-        <i class="far fa-calendar"></i>
-      </span>
-      <span class="post-meta-item-text">发表于</span>
-      
-
-      <time title="创建时间：2021-03-09 21:05:00 / 修改时间：21:09:15" itemprop="dateCreated datePublished" datetime="2021-03-09T21:05:00+08:00">2021-03-09</time>
-    </span>
-    <span class="post-meta-item">
-      <span class="post-meta-item-icon">
-        <i class="far fa-folder"></i>
-      </span>
-      <span class="post-meta-item-text">分类于</span>
-        <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-          <a href="/nirvana/categories/git/" itemprop="url" rel="index"><span itemprop="name">git</span></a>
-        </span>
-    </span>
-
-  
-      </div>
-      <div class="post-meta">
-    <span class="post-meta-item" title="本文字数">
-      <span class="post-meta-item-icon">
-        <i class="far fa-file-word"></i>
-      </span>
-      <span class="post-meta-item-text">本文字数：</span>
-      <span>1.7k</span>
-    </span>
-    <span class="post-meta-item" title="阅读时长">
-      <span class="post-meta-item-icon">
-        <i class="far fa-clock"></i>
-      </span>
-      <span class="post-meta-item-text">阅读时长 &asymp;</span>
-      <span>2 分钟</span>
-    </span>
-</div>
-
-        </div>
-      </header>
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-          <p>使用 git branch -a 命令可以查看所有本地分支和远程分支（git branch -r 可以只查看远程分支）<br>发现很多在远程仓库已经删除的分支在本地依然可以看到。</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line"># git branch -a</span><br><span class="line">  2-android-tableview-resize</span><br><span class="line">  20180131hotfix</span><br><span class="line">  master</span><br><span class="line">  release0308_v52</span><br><span class="line">  release0322</span><br><span class="line">* release20180412_from0326</span><br><span class="line">  remotes&#x2F;origin&#x2F;2-android-tableview-resize</span><br><span class="line">  remotes&#x2F;origin&#x2F;20180131hotfix</span><br><span class="line">  remotes&#x2F;origin&#x2F;HEAD -&gt; origin&#x2F;master</span><br><span class="line">  remotes&#x2F;origin&#x2F;dev</span><br><span class="line">  remotes&#x2F;origin&#x2F;dev_cache_renxj</span><br></pre></td></tr></table></figure>
-
-<p>使用命令 git remote show origin，可以查看remote地址，远程分支，还有本地分支与之相对应关系等信息。</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br></pre></td><td class="code"><pre><span class="line"># git remote show origin</span><br><span class="line">* remote origin</span><br><span class="line">  Fetch URL: git@*********</span><br><span class="line">  Push  URL: git@**********</span><br><span class="line">  HEAD branch: master</span><br><span class="line">  Remote branches:</span><br><span class="line">    2-android-tableview-resize                        tracked</span><br><span class="line">    20180131hotfix                                    tracked</span><br><span class="line">    master                                            tracked</span><br><span class="line">    mergeFrom0808AndDev                               tracked</span><br><span class="line">    refs&#x2F;remotes&#x2F;origin&#x2F;3IN1                          stale (use &#39;git remote prune&#39; to remove)</span><br><span class="line">    refs&#x2F;remotes&#x2F;origin&#x2F;3IN1_v052                     stale (use &#39;git remote prune&#39; to remove)</span><br><span class="line">    refs&#x2F;remotes&#x2F;origin&#x2F;dev20171214                   stale (use &#39;git remote prune&#39; to remove)</span><br><span class="line">......</span><br><span class="line">    release1228                                       tracked</span><br><span class="line">    release20180130                                   tracked</span><br><span class="line">  Local branches configured for &#39;git pull&#39;:</span><br><span class="line">    2-android-tableview-resize                  merges with remote 2-android-tableview-resize</span><br><span class="line">    20180131hotfix                              merges with remote 20180131hotfix</span><br><span class="line">    3IN1                                        merges with remote 3IN1</span><br><span class="line">    dev                                         merges with remote dev</span><br><span class="line">    dev20171214                                 merges with remote dev20171214</span><br><span class="line">......</span><br><span class="line">  Local refs configured for &#39;git push&#39;:</span><br><span class="line">    2-android-tableview-resize                  pushes to 2-android-tableview-resize                  (up to date)</span><br><span class="line">    20180131hotfix                              pushes to 20180131hotfix                              (up to date)</span><br><span class="line">........</span><br></pre></td></tr></table></figure>
-<p>此时我们可以看到那些远程仓库已经不存在的分支，根据提示，使用 git remote prune origin 命令：</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">git remote prune origin</span><br><span class="line">Pruning origin</span><br><span class="line">URL: git@**********</span><br><span class="line"> * [pruned] origin&#x2F;3IN1</span><br><span class="line"> * [pruned] origin&#x2F;3IN1_v052</span><br><span class="line"> * [pruned] origin&#x2F;dev20171214</span><br><span class="line">........</span><br></pre></td></tr></table></figure>
-<p>这样就删除了那些远程仓库不存在的分支。</p>
-
-      
-    </div>
-
-    
-    
-    
-
-    <footer class="post-footer">
-        <div class="post-eof"></div>
-      
-    </footer>
-  </article>
-</div>
-
-
-
-
-    
-
-
-<div class="post-block">
-  
-  
-
-  <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="">
-    <link itemprop="mainEntityOfPage" href="https://lzhwweb.github.io/nirvana/git/git/gitCount/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="image" content="/nirvana/images/avatar.gif">
-      <meta itemprop="name" content="nirvana">
-      <meta itemprop="description" content="个人学习笔记">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="涅槃快乐是金">
-    </span>
-      <header class="post-header">
-        <h2 class="post-title" itemprop="name headline">
-          <a href="/nirvana/git/git/gitCount/" class="post-title-link" itemprop="url">Git统计每个人提交的Commit次数和代码行数</a>
-        </h2>
-
-        <div class="post-meta-container">
-          <div class="post-meta">
-    <span class="post-meta-item">
-      <span class="post-meta-item-icon">
-        <i class="far fa-calendar"></i>
-      </span>
-      <span class="post-meta-item-text">发表于</span>
-      
-
-      <time title="创建时间：2021-03-09 20:35:36 / 修改时间：20:59:44" itemprop="dateCreated datePublished" datetime="2021-03-09T20:35:36+08:00">2021-03-09</time>
-    </span>
-    <span class="post-meta-item">
-      <span class="post-meta-item-icon">
-        <i class="far fa-folder"></i>
-      </span>
-      <span class="post-meta-item-text">分类于</span>
-        <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-          <a href="/nirvana/categories/git/" itemprop="url" rel="index"><span itemprop="name">git</span></a>
-        </span>
-    </span>
-
-  
-      </div>
-      <div class="post-meta">
-    <span class="post-meta-item" title="本文字数">
-      <span class="post-meta-item-icon">
-        <i class="far fa-file-word"></i>
-      </span>
-      <span class="post-meta-item-text">本文字数：</span>
-      <span>388</span>
-    </span>
-    <span class="post-meta-item" title="阅读时长">
-      <span class="post-meta-item-icon">
-        <i class="far fa-clock"></i>
-      </span>
-      <span class="post-meta-item-text">阅读时长 &asymp;</span>
-      <span>1 分钟</span>
-    </span>
-</div>
-
-        </div>
-      </header>
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-          <p>提交次<code>git shortlog --numbered --summary</code><br>查看所有的<code>commit数git log --oneline | wc -l</code><br>提交删除行数<code>git log --author=&quot;$(git config --get user.name)&quot; --pretty=tformat: --numstat | awk &#39;&#123; add += $1 ; subs += $2 ; loc += $1 - $2 &#125; END &#123; printf &quot;added lines: %s removed lines : %s total lines: %s\n&quot;,add,subs,loc &#125;&#39;</code><br>使用cloc统计代码行数给力：<br>安装<code>brew install cloc</code><br>统计目录下的所有文件，代码行数<code>cloc ./</code><br>排除文件夹<code>cloc ./ --exclude-dir=Pods,Tests,Utility</code></p>
-
-      
-    </div>
-
-    
-    
-    
-
-    <footer class="post-footer">
-        <div class="post-eof"></div>
-      
-    </footer>
-  </article>
-</div>
-
-
-
-
-    
-
-
-<div class="post-block">
-  
-  
-
-  <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="">
-    <link itemprop="mainEntityOfPage" href="https://lzhwweb.github.io/nirvana/git/hello-world/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="image" content="/nirvana/images/avatar.gif">
-      <meta itemprop="name" content="nirvana">
-      <meta itemprop="description" content="个人学习笔记">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="涅槃快乐是金">
-    </span>
-      <header class="post-header">
-        <h2 class="post-title" itemprop="name headline">
-          <a href="/nirvana/git/hello-world/" class="post-title-link" itemprop="url">Hello World</a>
-        </h2>
-
-        <div class="post-meta-container">
-          <div class="post-meta">
-    <span class="post-meta-item">
-      <span class="post-meta-item-icon">
-        <i class="far fa-calendar"></i>
-      </span>
-      <span class="post-meta-item-text">发表于</span>
-      
-
-      <time title="创建时间：2021-03-09 14:35:04 / 修改时间：21:02:33" itemprop="dateCreated datePublished" datetime="2021-03-09T14:35:04+08:00">2021-03-09</time>
-    </span>
-    <span class="post-meta-item">
-      <span class="post-meta-item-icon">
-        <i class="far fa-folder"></i>
-      </span>
-      <span class="post-meta-item-text">分类于</span>
-        <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-          <a href="/nirvana/categories/git/" itemprop="url" rel="index"><span itemprop="name">git</span></a>
-        </span>
-    </span>
-
-  
-      </div>
-      <div class="post-meta">
-    <span class="post-meta-item" title="本文字数">
-      <span class="post-meta-item-icon">
-        <i class="far fa-file-word"></i>
-      </span>
-      <span class="post-meta-item-text">本文字数：</span>
-      <span>367</span>
-    </span>
-    <span class="post-meta-item" title="阅读时长">
-      <span class="post-meta-item-icon">
-        <i class="far fa-clock"></i>
-      </span>
-      <span class="post-meta-item-text">阅读时长 &asymp;</span>
-      <span>1 分钟</span>
-    </span>
-</div>
-
-        </div>
-      </header>
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-          <p>Welcome to <a target="_blank" rel="noopener" href="https://hexo.io/">Hexo</a>! This is your very first post. Check <a target="_blank" rel="noopener" href="https://hexo.io/docs/">documentation</a> for more info. If you get any problems when using Hexo, you can find the answer in <a target="_blank" rel="noopener" href="https://hexo.io/docs/troubleshooting.html">troubleshooting</a> or you can ask me on <a target="_blank" rel="noopener" href="https://github.com/hexojs/hexo/issues">GitHub</a>.</p>
-<h2 id="Quick-Start"><a href="#Quick-Start" class="headerlink" title="Quick Start"></a>Quick Start</h2><h3 id="Create-a-new-post"><a href="#Create-a-new-post" class="headerlink" title="Create a new post"></a>Create a new post</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo new <span class="string">&quot;My New Post&quot;</span></span><br></pre></td></tr></table></figure>
-
-<p>More info: <a target="_blank" rel="noopener" href="https://hexo.io/docs/writing.html">Writing</a></p>
-<h3 id="Run-server"><a href="#Run-server" class="headerlink" title="Run server"></a>Run server</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo server</span><br></pre></td></tr></table></figure>
-
-<p>More info: <a target="_blank" rel="noopener" href="https://hexo.io/docs/server.html">Server</a></p>
-<h3 id="Generate-static-files"><a href="#Generate-static-files" class="headerlink" title="Generate static files"></a>Generate static files</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo generate</span><br></pre></td></tr></table></figure>
-
-<p>More info: <a target="_blank" rel="noopener" href="https://hexo.io/docs/generating.html">Generating</a></p>
-<h3 id="Deploy-to-remote-sites"><a href="#Deploy-to-remote-sites" class="headerlink" title="Deploy to remote sites"></a>Deploy to remote sites</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo deploy</span><br></pre></td></tr></table></figure>
-
-<p>More info: <a target="_blank" rel="noopener" href="https://hexo.io/docs/one-command-deployment.html">Deployment</a></p>
-
-      
-    </div>
-
-    
-    
-    
-
-    <footer class="post-footer">
-        <div class="post-eof"></div>
-      
-    </footer>
-  </article>
-</div>
-
-
-
-
+  <nav class="pagination">
+    <span class="page-number current">1</span><a class="page-number" href="/nirvana/page/2/">2</a><span class="space">&hellip;</span><a class="page-number" href="/nirvana/page/18/">18</a><a class="extend next" rel="next" href="/nirvana/page/2/"><i class="fa fa-angle-right" aria-label="下一页"></i></a>
+  </nav>
 
 
 <script>
@@ -1470,14 +1523,14 @@
       <i class="fa fa-chart-line"></i>
     </span>
       <span>站点总字数：</span>
-    <span title="站点总字数">14k</span>
+    <span title="站点总字数">540k</span>
   </span>
   <span class="post-meta-item">
     <span class="post-meta-item-icon">
       <i class="fa fa-coffee"></i>
     </span>
       <span>站点阅读时长 &asymp;</span>
-    <span title="站点阅读时长">13 分钟</span>
+    <span title="站点阅读时长">8:11</span>
   </span>
 </div>
   <div class="powered-by">由 <a href="https://hexo.io/" class="theme-link" rel="noopener" target="_blank">Hexo</a> & <a href="https://theme-next.js.org/" class="theme-link" rel="noopener" target="_blank">NexT.Gemini</a> 强力驱动

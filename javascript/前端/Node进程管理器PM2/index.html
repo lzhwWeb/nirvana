@@ -1,0 +1,483 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=2">
+<meta name="theme-color" content="#222">
+<meta name="generator" content="Hexo 5.4.0">
+ <meta name="referrer" content="no-referrer"/>
+
+  <link rel="apple-touch-icon" sizes="180x180" href="/nirvana/images/apple-touch-icon-next.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="/nirvana/images/favicon-32x32-next.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="/nirvana/images/favicon-16x16-next.png">
+  <link rel="mask-icon" href="/nirvana/images/logo.svg" color="#222">
+
+<link rel="stylesheet" href="/nirvana/css/main.css">
+
+
+
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@5.15.2/css/all.min.css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/animate.css@3.1.1/animate.min.css">
+
+<script class="hexo-configurations">
+    var NexT = window.NexT || {};
+    var CONFIG = {"hostname":"lzhwweb.github.io","root":"/nirvana/","images":"/nirvana/images","scheme":"Gemini","version":"8.2.2","exturl":false,"sidebar":{"position":"left","display":"post","padding":18,"offset":12},"copycode":false,"bookmark":{"enable":false,"color":"#222","save":"auto"},"fancybox":false,"mediumzoom":false,"lazyload":false,"pangu":false,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},"motion":{"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"fadeInDown","post_body":"fadeInDown","coll_header":"fadeInLeft","sidebar":"fadeInUp"}},"prism":false,"i18n":{"placeholder":"搜索...","empty":"没有找到任何搜索结果：${query}","hits_time":"找到 ${hits} 个搜索结果（用时 ${time} 毫秒）","hits":"找到 ${hits} 个搜索结果"}};
+  </script>
+<meta name="description" content="PM2是一个带有负载均衡功能的Node应用的进程管理器。PM2可以利用服务器上的所有CPU，并保证进程永远都活着，0秒的重载，部署管理多个Node项目。PM2是Node线上部署完美的管理工具。 1、基本指令12345678910111213141516npm install pm2 -g ： 全局安装。pm2 start app.js ： 启动服务，入口文件是app.js。pm2 start ap">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Node进程管理器PM2">
+<meta property="og:url" content="https://lzhwweb.github.io/nirvana/javascript/%E5%89%8D%E7%AB%AF/Node%E8%BF%9B%E7%A8%8B%E7%AE%A1%E7%90%86%E5%99%A8PM2/index.html">
+<meta property="og:site_name" content="涅槃快乐是金">
+<meta property="og:description" content="PM2是一个带有负载均衡功能的Node应用的进程管理器。PM2可以利用服务器上的所有CPU，并保证进程永远都活着，0秒的重载，部署管理多个Node项目。PM2是Node线上部署完美的管理工具。 1、基本指令12345678910111213141516npm install pm2 -g ： 全局安装。pm2 start app.js ： 启动服务，入口文件是app.js。pm2 start ap">
+<meta property="og:locale" content="zh_CN">
+<meta property="og:image" content="http://upload-images.jianshu.io/upload_images/10024246-dbf8192d633005bd?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240">
+<meta property="og:image" content="http://upload-images.jianshu.io/upload_images/10024246-f1ba4e586096426d?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240">
+<meta property="og:image" content="http://upload-images.jianshu.io/upload_images/10024246-15f8e419621a2c5b?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240">
+<meta property="og:image" content="http://upload-images.jianshu.io/upload_images/10024246-999dcbf8be916146?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240">
+<meta property="article:published_time" content="2021-03-11T13:12:40.000Z">
+<meta property="article:modified_time" content="2021-03-10T05:17:22.470Z">
+<meta property="article:author" content="nirvana">
+<meta property="article:tag" content="前端,javascript,node,git">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="http://upload-images.jianshu.io/upload_images/10024246-dbf8192d633005bd?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240">
+
+
+<link rel="canonical" href="https://lzhwweb.github.io/nirvana/javascript/%E5%89%8D%E7%AB%AF/Node%E8%BF%9B%E7%A8%8B%E7%AE%A1%E7%90%86%E5%99%A8PM2/">
+
+
+<script class="page-configurations">
+  // https://hexo.io/docs/variables.html
+  CONFIG.page = {
+    sidebar: "",
+    isHome : false,
+    isPost : true,
+    lang   : 'zh-CN'
+  };
+</script>
+<title>Node进程管理器PM2 | 涅槃快乐是金</title>
+  
+
+
+
+
+  <noscript>
+  <style>
+  body { margin-top: 2rem; }
+
+  .use-motion .menu-item,
+  .use-motion .sidebar,
+  .use-motion .post-block,
+  .use-motion .pagination,
+  .use-motion .comments,
+  .use-motion .post-header,
+  .use-motion .post-body,
+  .use-motion .collection-header {
+    visibility: visible;
+  }
+
+  .use-motion .header,
+  .use-motion .site-brand-container .toggle,
+  .use-motion .footer { opacity: initial; }
+
+  .use-motion .site-title,
+  .use-motion .site-subtitle,
+  .use-motion .custom-logo-image {
+    opacity: initial;
+    top: initial;
+  }
+
+  .use-motion .logo-line {
+    transform: scaleX(1);
+  }
+
+  .search-pop-overlay, .sidebar-nav { display: none; }
+  .sidebar-panel { display: block; }
+  </style>
+</noscript>
+
+</head>
+
+<body itemscope itemtype="http://schema.org/WebPage" class="use-motion">
+  <div class="headband"></div>
+
+  <main class="main">
+    <header class="header" itemscope itemtype="http://schema.org/WPHeader">
+      <div class="header-inner"><div class="site-brand-container">
+  <div class="site-nav-toggle">
+    <div class="toggle" aria-label="切换导航栏" role="button">
+        <span class="toggle-line"></span>
+        <span class="toggle-line"></span>
+        <span class="toggle-line"></span>
+    </div>
+  </div>
+
+  <div class="site-meta">
+
+    <a href="/nirvana/" class="brand" rel="start">
+      <i class="logo-line"></i>
+      <h1 class="site-title">涅槃快乐是金</h1>
+      <i class="logo-line"></i>
+    </a>
+  </div>
+
+  <div class="site-nav-right">
+    <div class="toggle popup-trigger">
+    </div>
+  </div>
+</div>
+
+
+
+<nav class="site-nav">
+  <ul class="main-menu menu">
+        <li class="menu-item menu-item-home"><a href="/nirvana/" rel="section">首页</a></li>
+        <li class="menu-item menu-item-git"><a href="/nirvana/categories/git" rel="section">git</a></li>
+        <li class="menu-item menu-item-linux"><a href="/nirvana/categories/linux" rel="section">linux</a></li>
+        <li class="menu-item menu-item-android"><a href="/nirvana/categories/android" rel="section">android</a></li>
+        <li class="menu-item menu-item-随笔"><a href="/nirvana/categories/informal" rel="section">随笔</a></li>
+        <li class="menu-item menu-item-mac"><a href="/nirvana/categories/mac" rel="section">mac</a></li>
+        <li class="menu-item menu-item-react-native"><a href="/nirvana/categories/reactnative" rel="section">react-native</a></li>
+        <li class="menu-item menu-item-算法"><a href="/nirvana/categories/algorithm" rel="section">算法</a></li>
+        <li class="menu-item menu-item-读书笔记"><a href="/nirvana/categories/note" rel="section">读书笔记</a></li>
+        <li class="menu-item menu-item-开发工具"><a href="/nirvana/categories/tool" rel="section">开发工具</a></li>
+        <li class="menu-item menu-item-设计模式(ts)"><a href="/nirvana/categories/DesignPattern" rel="section">设计模式(TS)</a></li>
+        <li class="menu-item menu-item-前端"><a href="/nirvana/categories/javascript" rel="section">前端</a></li>
+  </ul>
+</nav>
+
+
+
+
+</div>
+        
+  
+  <div class="toggle sidebar-toggle" role="button">
+    <span class="toggle-line"></span>
+    <span class="toggle-line"></span>
+    <span class="toggle-line"></span>
+  </div>
+
+  <aside class="sidebar">
+
+    <div class="sidebar-inner sidebar-nav-active sidebar-toc-active">
+      <ul class="sidebar-nav">
+        <li class="sidebar-nav-toc">
+          文章目录
+        </li>
+        <li class="sidebar-nav-overview">
+          站点概览
+        </li>
+      </ul>
+
+      <div class="sidebar-panel-container">
+        <!--noindex-->
+        <div class="post-toc-wrap sidebar-panel">
+            <div class="post-toc animated"><ol class="nav"><li class="nav-item nav-level-4"><a class="nav-link" href="#1%E3%80%81%E5%9F%BA%E6%9C%AC%E6%8C%87%E4%BB%A4"><span class="nav-number">1.</span> <span class="nav-text">1、基本指令</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#2%E3%80%81%E6%9F%A5%E7%9C%8B%E6%9C%8D%E5%8A%A1%E8%BF%9B%E7%A8%8B%E6%95%B0"><span class="nav-number">2.</span> <span class="nav-text">2、查看服务进程数</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#3%E3%80%81-%E6%98%AF%E5%90%A6%E9%9C%80%E8%A6%81nginx"><span class="nav-number">3.</span> <span class="nav-text">3、 是否需要nginx</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#4%E3%80%81fork%E4%B8%8Ecluster%E5%90%AF%E5%8A%A8%E6%A8%A1%E5%BC%8F"><span class="nav-number">4.</span> <span class="nav-text">4、fork与cluster启动模式</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#5%E3%80%81pm2%E7%9A%84%E7%9B%91%E6%8E%A7"><span class="nav-number">5.</span> <span class="nav-text">5、pm2的监控</span></a><ol class="nav-child"><li class="nav-item nav-level-5"><a class="nav-link" href="#%E2%91%A0cli%E6%96%B9%E5%BC%8F%E7%9B%91%E6%8E%A7"><span class="nav-number">5.1.</span> <span class="nav-text">①cli方式监控</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#%E2%91%A1pm2-list%E5%B1%95%E7%A4%BA%E5%BD%93%E5%89%8D%E6%89%80%E6%9C%89pm2%E7%9A%84%E7%AE%A1%E7%90%86%E9%A1%B9%E7%9B%AE"><span class="nav-number">5.2.</span> <span class="nav-text">②pm2 list展示当前所有pm2的管理项目</span></a></li></ol></li><li class="nav-item nav-level-4"><a class="nav-link" href="#6%E3%80%81%E6%97%A5%E5%BF%97%E9%97%AE%E9%A2%98"><span class="nav-number">6.</span> <span class="nav-text">6、日志问题</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#7%E3%80%81%E9%AB%98%E7%BA%A7%E7%94%A8%E6%B3%95"><span class="nav-number">7.</span> <span class="nav-text">7、高级用法</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#8%E3%80%81%E7%A8%B3%E5%AE%9A%E8%BF%90%E8%A1%8C%E5%BB%BA%E8%AE%AE"><span class="nav-number">8.</span> <span class="nav-text">8、稳定运行建议</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#9%E3%80%81%E8%87%AA%E5%8A%A8%E5%8C%96%E9%83%A8%E7%BD%B2"><span class="nav-number">9.</span> <span class="nav-text">9、自动化部署</span></a></li></ol></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%8F%82%E8%80%83%E8%B5%84%E6%96%99%EF%BC%9A"><span class="nav-number"></span> <span class="nav-text">参考资料：</span></a></div>
+        </div>
+        <!--/noindex-->
+
+        <div class="site-overview-wrap sidebar-panel">
+          <div class="site-author site-overview-item animated" itemprop="author" itemscope itemtype="http://schema.org/Person">
+  <p class="site-author-name" itemprop="name">nirvana</p>
+  <div class="site-description" itemprop="description">个人学习笔记</div>
+</div>
+<div class="site-state-wrap site-overview-item animated">
+  <nav class="site-state">
+      <div class="site-state-item site-state-posts">
+          <a href="/nirvana/archives">
+          <span class="site-state-item-count">178</span>
+          <span class="site-state-item-name">日志</span>
+        </a>
+      </div>
+      <div class="site-state-item site-state-categories">
+        <span class="site-state-item-count">11</span>
+        <span class="site-state-item-name">分类</span>
+      </div>
+  </nav>
+</div>
+
+
+
+        </div>
+      </div>
+    </div>
+  </aside>
+  <div class="sidebar-dimmer"></div>
+
+
+    </header>
+
+    
+  <div class="back-to-top" role="button">
+    <i class="fa fa-arrow-up"></i>
+    <span>0%</span>
+  </div>
+
+<noscript>
+  <div class="noscript-warning">Theme NexT works best with JavaScript enabled</div>
+</noscript>
+
+
+    <div class="main-inner post posts-expand">
+
+
+  
+
+
+<div class="post-block">
+  
+  
+
+  <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="zh-CN">
+    <link itemprop="mainEntityOfPage" href="https://lzhwweb.github.io/nirvana/javascript/%E5%89%8D%E7%AB%AF/Node%E8%BF%9B%E7%A8%8B%E7%AE%A1%E7%90%86%E5%99%A8PM2/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/nirvana/images/avatar.gif">
+      <meta itemprop="name" content="nirvana">
+      <meta itemprop="description" content="个人学习笔记">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="涅槃快乐是金">
+    </span>
+      <header class="post-header">
+        <h1 class="post-title" itemprop="name headline">
+          Node进程管理器PM2
+        </h1>
+
+        <div class="post-meta-container">
+          <div class="post-meta">
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-calendar"></i>
+      </span>
+      <span class="post-meta-item-text">发表于</span>
+
+      <time title="创建时间：2021-03-11 21:12:40" itemprop="dateCreated datePublished" datetime="2021-03-11T21:12:40+08:00">2021-03-11</time>
+    </span>
+      <span class="post-meta-item">
+        <span class="post-meta-item-icon">
+          <i class="far fa-calendar-check"></i>
+        </span>
+        <span class="post-meta-item-text">更新于</span>
+        <time title="修改时间：2021-03-10 13:17:22" itemprop="dateModified" datetime="2021-03-10T13:17:22+08:00">2021-03-10</time>
+      </span>
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-folder"></i>
+      </span>
+      <span class="post-meta-item-text">分类于</span>
+        <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+          <a href="/nirvana/categories/javascript/" itemprop="url" rel="index"><span itemprop="name">javascript</span></a>
+        </span>
+    </span>
+
+  
+      </div>
+      <div class="post-meta">
+    <span class="post-meta-item" title="本文字数">
+      <span class="post-meta-item-icon">
+        <i class="far fa-file-word"></i>
+      </span>
+      <span class="post-meta-item-text">本文字数：</span>
+      <span>4.5k</span>
+    </span>
+    <span class="post-meta-item" title="阅读时长">
+      <span class="post-meta-item-icon">
+        <i class="far fa-clock"></i>
+      </span>
+      <span class="post-meta-item-text">阅读时长 &asymp;</span>
+      <span>4 分钟</span>
+    </span>
+</div>
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+        <p><code>PM2</code>是一个带有<strong>负载均衡</strong>功能的<code>Node</code>应用的进程管理器。<code>PM2</code>可以利用服务器上的<strong>所有CPU</strong>，并保证进程永远都活着，<strong>0秒的重载</strong>，部署管理<strong>多个</strong>Node项目。<code>PM2</code>是<code>Node</code>线上部署完美的管理工具。</p>
+<h4 id="1、基本指令"><a href="#1、基本指令" class="headerlink" title="1、基本指令"></a>1、基本指令</h4><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br></pre></td><td class="code"><pre><span class="line">npm install pm2 -g ： 全局安装。</span><br><span class="line"></span><br><span class="line">pm2 start app.js ： 启动服务，入口文件是app.js。</span><br><span class="line"></span><br><span class="line">pm2 start app.js -i [n] --name [name] ： 启动n个进程，名字命名为name。</span><br><span class="line"></span><br><span class="line">npm restart  [name or id] ： 重启服务。</span><br><span class="line"></span><br><span class="line">npm reload  [name or id] ： 和rastart功能相同，但是可以实现0s的无缝衔接；如果有nginx的使用经验，可以</span><br><span class="line">对比nginx reload指令。</span><br><span class="line"></span><br><span class="line">pm2 start app.js --max_memory_restart 1024M ： 当内存超过1024M时自动重启。 如果工程中有比较棘手的内</span><br><span class="line">存泄露问题，这个算是一个折中方案。</span><br><span class="line"></span><br><span class="line">pm2 monit ： 对服务进行监控。</span><br><span class="line"></span><br></pre></td></tr></table></figure>
+
+<h4 id="2、查看服务进程数"><a href="#2、查看服务进程数" class="headerlink" title="2、查看服务进程数"></a>2、查看服务进程数</h4><p>至于要启动几个进程，可以通过服务器的内核数进行确定，几个内核就启动几个服务。指令如下：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line"># 查看物理CPU个数</span><br><span class="line"> cat &#x2F;proc&#x2F;cpuinfo| grep &quot;physical id&quot; | sort| uniq | wc -l</span><br><span class="line"></span><br><span class="line"> # 查看每个物理CPU中core的个数(即核数)</span><br><span class="line"> cat &#x2F;proc&#x2F;cpuinfo| grep &quot;cpu cores&quot;| uniq</span><br><span class="line"></span><br><span class="line"> # 查看逻辑CPU的个数</span><br><span class="line"> cat &#x2F;proc&#x2F;cpuinfo| grep &quot;processor&quot;| wc -l</span><br><span class="line"></span><br></pre></td></tr></table></figure>
+
+<p>当然可以启动多个端口，一个端口号对应一个服务，这样的话就需要nignx来做负载均衡了。</p>
+<h4 id="3、-是否需要nginx"><a href="#3、-是否需要nginx" class="headerlink" title="3、 是否需要nginx"></a>3、 是否需要nginx</h4><p>nginx可以做的事情主要有两个：</p>
+<blockquote>
+<ol>
+<li> 反向代理，实现简单的负载均衡： 如果有多台服务器或者一台服务器多个端口，可以考虑用nginx。</li>
+<li> 静态资源缓存：把一些静态资源（如静态页面，js等资源文件）放到nginx里，可以极大的提高服务的性能。</li>
+</ol>
+</blockquote>
+<h4 id="4、fork与cluster启动模式"><a href="#4、fork与cluster启动模式" class="headerlink" title="4、fork与cluster启动模式"></a>4、fork与cluster启动模式</h4><p>开发环境中多以fork的方式启动，生产环境中多用cluster方式启动</p>
+<p><a target="_blank" rel="noopener" href="https://camo.githubusercontent.com/73722a2868ba4cfad76e1e57a6ae2dd06e512e04/687474703a2f2f7777312e73696e61696d672e636e2f6c617267652f616534396261353767793166646f7a7134333167616a32316630303963373730"><img src="http://upload-images.jianshu.io/upload_images/10024246-dbf8192d633005bd?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240"></a> </p>
+<p>上面的示例图中可以看一“watching”一项，这个项默认是disabled，可以通过如下命令开启</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">pm2 start app.js --name m --watch</span><br></pre></td></tr></table></figure>
+
+<p><strong>建议：这个适合在开发时用，可以省不少时间，生产环境下最好不要用</strong></p>
+<ol>
+<li><p> cluster是fork的派生，cluster支持所有cluster拥有的特性；</p>
+</li>
+<li><p> fork不支持socket地址端口复用，cluster支持地址端口复用。因为只有node的cluster模块支持socket选项SO_REUSEADDR；</p>
+</li>
+</ol>
+<p><code>fork不可以启动多个实例进程，cluster可以启动多个实例。但node的child_process.fork是可以实现启动多个进程的，但是为什么没有实现呢？就个人理解，node多为提供网络服务，启动多个实例需要地址端口复用，此时便可使用cluster模式实现，但fork模式并不支持地址端口复用，多实例进程启动会产生异常错误。但对于常驻任务脚本而言，不需要提供网络服务，此时多进程启动可以实现，同时也提高了任务处理效率。对于上述需求，可以两种方式实现，一是配置app0,app1,app2方式启动多个进程，二是通过应用实例自身调用child_process.fork多进程编程实现；</code></p>
+<p>fork模式可以应用于其他语言，如php，python，perl，ruby，bash，coffee， 而cluster只能应用于node;</p>
+<p>fork不支持定时重启，cluster支持定时重启。定时重启也就是配置中的cron_restart配置项。</p>
+<h4 id="5、pm2的监控"><a href="#5、pm2的监控" class="headerlink" title="5、pm2的监控"></a>5、pm2的监控</h4><p>pm2的监控有两种方式：</p>
+<h5 id="①cli方式监控"><a href="#①cli方式监控" class="headerlink" title="①cli方式监控"></a>①cli方式监控</h5><p>pm2 monit是专门用来监控的命令，监控项包括cpu与内存</p>
+<p><a target="_blank" rel="noopener" href="https://camo.githubusercontent.com/26aaca8e82f519f00ecf5800ac232430364d3736/687474703a2f2f7777312e73696e61696d672e636e2f6c617267652f616534396261353767793166646f7a7876773475356a32316b77306470343161"><img src="http://upload-images.jianshu.io/upload_images/10024246-f1ba4e586096426d?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240"></a> </p>
+<p>缺点monit展示内容太过粗糙，不够详细</p>
+<h5 id="②pm2-list展示当前所有pm2的管理项目"><a href="#②pm2-list展示当前所有pm2的管理项目" class="headerlink" title="②pm2 list展示当前所有pm2的管理项目"></a>②pm2 list展示当前所有pm2的管理项目</h5><p><a target="_blank" rel="noopener" href="https://camo.githubusercontent.com/ced3e54eb50b8cdfad838f6114d1661f292ae735/687474703a2f2f7777312e73696e61696d672e636e2f6c617267652f6165343962613537677931666470303061377177306a32316663306361677035"><img src="http://upload-images.jianshu.io/upload_images/10024246-15f8e419621a2c5b?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240"></a> </p>
+<p>可以查看出每个进程的运行状态。</p>
+<p>如果需要更详细的监控内容，对于cli而言一般都是可以实现的。</p>
+<p>这种监控方式的缺点：</p>
+<blockquote>
+<p>a. 不够直观，需要自己去执行命令并分析结果；</p>
+</blockquote>
+<blockquote>
+<p>b. 不便于多台服务器的应用监控管理；</p>
+</blockquote>
+<h4 id="6、日志问题"><a href="#6、日志问题" class="headerlink" title="6、日志问题"></a>6、日志问题</h4><p>日志系统对于任意应用而言，通常都是必不可少的一个辅助功能。pm2的相关文件默认存放于$HOME/.pm2/目录下，其日志主要有两类：</p>
+<p><a target="_blank" rel="noopener" href="https://camo.githubusercontent.com/7b9ac5eb511f8f93e60ed37bd9dbfeb03d43c63d/687474703a2f2f7777312e73696e61696d672e636e2f6c617267652f61653439626135376779316664703067317a356a626a32316b32303673713564"><img src="http://upload-images.jianshu.io/upload_images/10024246-999dcbf8be916146?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240"></a> </p>
+<p>a. pm2自身的日志，存放于$HOME/.pm2/pm2.log；</p>
+<p>b. pm2所管理的应用的日志，存放于$HOME/.pm2/logs/目录下，标准谁出日志存放于${APP_NAME}_out.log，标准错误日志存放于${APP_NAME}_error.log；</p>
+<p>这里之所以把日志单独说明一下是因为，如果程序开发不严谨，为了调试程序，导致应用产生大量标准输出，使服务器本身记录大量的日志，导致服务磁盘满载问题。一般而言，pm2管理的应用本身都有自己日志系统，所以对于这种不必要的输出内容需禁用日志，重定向到/dev/null。</p>
+<p>与crontab比较，也有类似情况，crontab自身日志，与其管理的应用本身的输出。应用脚本输出一定需要重定向到/dev/null，因为该输出内容会以邮件的形式发送给用户，内容存储在邮件文件，会产生意向不到的结果，或会导致脚本压根不被执行；</p>
+<h4 id="7、高级用法"><a href="#7、高级用法" class="headerlink" title="7、高级用法"></a>7、高级用法</h4><p>pm2支持配置文件启动：<br>pm2 ecosystem： 生成配置文件ecosystem.json<br>pm2 startOrRestart /file/path/ecosystem.json : 通过配置文件启动服务</p>
+<p>如下是开发时ecosystem.json的内容：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br></pre></td><td class="code"><pre><span class="line">&#123;</span><br><span class="line">    &#x2F;**</span><br><span class="line">    * Application configuration section</span><br><span class="line">    * http:&#x2F;&#x2F;pm2.keymetrics.io&#x2F;docs&#x2F;usage&#x2F;application-declaration&#x2F;</span><br><span class="line">    * 多个服务，依次放到apps对应的数组里</span><br><span class="line">    *&#x2F;</span><br><span class="line">    apps : [</span><br><span class="line">    &#x2F;&#x2F; First application</span><br><span class="line">        &#123;</span><br><span class="line">            name      : &quot;nova&quot;,</span><br><span class="line">            max_memory_restart: &quot;300M&quot;,</span><br><span class="line">            script    : &quot;&#x2F;root&#x2F;nova&#x2F;app.js&quot;,</span><br><span class="line">            out_file : &quot;&#x2F;logs&#x2F;nova_out.log&quot;,</span><br><span class="line">            error_file : &quot;&#x2F;logs&#x2F;nova_error.log&quot;,</span><br><span class="line">            instances  : 4,</span><br><span class="line">            exec_mode  : &quot;cluster&quot;,</span><br><span class="line">            env: &#123;</span><br><span class="line">                NODE_ENV: &quot;production&quot;</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;</span><br><span class="line">    ]</span><br><span class="line"> &#125;</span><br><span class="line"></span><br></pre></td></tr></table></figure>
+
+<p>上述采用cluster模式启动了4个服务进程；如果服务占用的内存超过300M，会自动进行重启。</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br></pre></td><td class="code"><pre><span class="line"> 配置项</span><br><span class="line"></span><br><span class="line">name  应用进程名称；</span><br><span class="line"></span><br><span class="line">script  启动脚本路径；</span><br><span class="line"></span><br><span class="line">cwd  应用启动的路径，关于script与cwd的区别举例说明：在&#x2F;home&#x2F;polo&#x2F;目录下运行&#x2F;data&#x2F;release&#x2F;node&#x2F;</span><br><span class="line">index.js，此处script为&#x2F;data&#x2F;release&#x2F;node&#x2F;index.js，cwd为&#x2F;home&#x2F;polo&#x2F;；</span><br><span class="line"></span><br><span class="line">args  传递给脚本的参数；</span><br><span class="line"></span><br><span class="line">interpreter  指定的脚本解释器；</span><br><span class="line"></span><br><span class="line">interpreter_args  传递给解释器的参数；</span><br><span class="line"></span><br><span class="line">instances  应用启动实例个数，仅在cluster模式有效，默认为fork；</span><br><span class="line"></span><br><span class="line">exec_mode  应用启动模式，支持fork和cluster模式；</span><br><span class="line"></span><br><span class="line">watch  监听重启，启用情况下，文件夹或子文件夹下变化应用自动重启；</span><br><span class="line"></span><br><span class="line">ignore_watch  忽略监听的文件夹，支持正则表达式；</span><br><span class="line"></span><br><span class="line">max_memory_restart  最大内存限制数，超出自动重启；</span><br><span class="line"></span><br><span class="line">env  环境变量，object类型，如&#123;&quot;NODE_ENV&quot;:&quot;production&quot;, &quot;ID&quot;: &quot;42&quot;&#125;；</span><br><span class="line"></span><br><span class="line">log_date_format  指定日志日期格式，如YYYY-MM-DD HH:mm:ss；</span><br><span class="line"></span><br><span class="line">error_file  记录标准错误流，$HOME&#x2F;.pm2&#x2F;logs&#x2F;XXXerr.log)，代码错误可在此文件查找；</span><br><span class="line"></span><br><span class="line">out_file  记录标准输出流，$HOME&#x2F;.pm2&#x2F;logs&#x2F;XXXout.log)，如应用打印大量的标准输出，会导致pm2日志过大；</span><br><span class="line"></span><br><span class="line">min_uptime  应用运行少于时间被认为是异常启动；</span><br><span class="line"></span><br><span class="line">max_restarts  最大异常重启次数，即小于min_uptime运行时间重启次数；</span><br><span class="line"></span><br><span class="line">autorestart  默认为true, 发生异常的情况下自动重启；</span><br><span class="line"></span><br><span class="line">cron_restart  crontab时间格式重启应用，目前只支持cluster模式；</span><br><span class="line"></span><br><span class="line">force  默认false，如果true，可以重复启动一个脚本。pm2不建议这么做；</span><br><span class="line"></span><br><span class="line">restart_delay  异常重启情况下，延时重启时间；</span><br><span class="line"></span><br></pre></td></tr></table></figure>
+
+<h4 id="8、稳定运行建议"><a href="#8、稳定运行建议" class="headerlink" title="8、稳定运行建议"></a>8、稳定运行建议</h4><p>PM2是一款非常优秀的Node进程管理工具，它有着丰富的特性：能够充分利用多核CPU且能够负载均衡、能够帮助应用在崩溃后、指定时间(cluster model)和超出最大内存限制等情况下实现自动重启。</p>
+<p>个人几点看法保证常驻应用进程稳定运行：</p>
+<ol>
+<li><p> 定时重启，应用进程运行时间久了或许总会产生一些意料之外的问题，定时可以规避一些不可测的情况；</p>
+</li>
+<li><p> 最大内存限制，根据观察设定合理内存限制，保证应用异常运行；</p>
+</li>
+<li><p> 合理min_uptime，min_uptime是应用正常启动的最小持续运行时长，超出此时间则被判定为异常启动；</p>
+</li>
+<li><p> 设定异常重启延时restart_delay，对于异常情况导致应用停止，设定异常重启延迟可防止应用在不可测情况下不断重启的导致重启次数过多等问题；</p>
+</li>
+<li><p> 设置异常重启次数，如果应用不断异常重启，并超过一定的限制次数，说明此时的环境长时间处于不可控状态，服务器异常。此时便可停止尝试，发出错误警告通知等。</p>
+</li>
+</ol>
+<p>关于pm2的使用，主要还是运用于常驻脚本。</p>
+<h4 id="9、自动化部署"><a href="#9、自动化部署" class="headerlink" title="9、自动化部署"></a>9、自动化部署</h4><p>通过shell脚本实现资源拉取、服务重启、nginx缓存更新等操作，再配合pm2的监控功能，就初步达到了一个后端工程部署的标配了。</p>
+<h2 id="参考资料："><a href="#参考资料：" class="headerlink" title="参考资料："></a>参考资料：</h2><p><a target="_blank" rel="noopener" href="http://pm2.keymetrics.io/">1.pm2官网</a><br><a target="_blank" rel="noopener" href="https://github.com/Unitech/pm2">2.pm2 github</a></p>
+
+    </div>
+
+    
+    
+    
+
+    <footer class="post-footer">
+
+        
+
+          <div class="post-nav">
+            <div class="post-nav-item">
+                <a href="/nirvana/javascript/%E5%89%8D%E7%AB%AF/TypeScript%E6%B3%9B%E5%9E%8B%E7%9A%84%E5%9F%BA%E6%9C%AC%E4%BD%BF%E7%94%A8%E5%92%8C%E7%90%86%E8%A7%A3/" rel="prev" title="TypeScript泛型的基本使用和理解">
+                  <i class="fa fa-chevron-left"></i> TypeScript泛型的基本使用和理解
+                </a>
+            </div>
+            <div class="post-nav-item">
+                <a href="/nirvana/javascript/%E5%89%8D%E7%AB%AF/Mac%E5%BA%94%E7%94%A8%E7%A8%8B%E5%BA%8F%E6%97%A0%E6%B3%95%E6%89%93%E5%BC%80%E6%88%96%E6%96%87%E4%BB%B6%E6%8D%9F%E5%9D%8F%E7%9A%84%E5%A4%84%E7%90%86%E6%96%B9%E6%B3%95/" rel="next" title="Mac应用程序无法打开或文件损坏的处理方法">
+                  Mac应用程序无法打开或文件损坏的处理方法 <i class="fa fa-chevron-right"></i>
+                </a>
+            </div>
+          </div>
+    </footer>
+  </article>
+</div>
+
+
+
+
+
+
+
+<script>
+  window.addEventListener('tabs:register', () => {
+    let { activeClass } = CONFIG.comments;
+    if (CONFIG.comments.storage) {
+      activeClass = localStorage.getItem('comments_active') || activeClass;
+    }
+    if (activeClass) {
+      const activeTab = document.querySelector(`a[href="#comment-${activeClass}"]`);
+      if (activeTab) {
+        activeTab.click();
+      }
+    }
+  });
+  if (CONFIG.comments.storage) {
+    window.addEventListener('tabs:click', event => {
+      if (!event.target.matches('.tabs-comment .tab-content .tab-pane')) return;
+      const commentClass = event.target.classList[1];
+      localStorage.setItem('comments_active', commentClass);
+    });
+  }
+</script>
+</div>
+  </main>
+
+  <footer class="footer">
+    <div class="footer-inner">
+
+
+<div class="copyright">
+  &copy; 
+  <span itemprop="copyrightYear">2021</span>
+  <span class="with-love">
+    <i class="fa fa-heart"></i>
+  </span>
+  <span class="author" itemprop="copyrightHolder">nirvana</span>
+</div>
+<div class="wordcount">
+  <span class="post-meta-item">
+    <span class="post-meta-item-icon">
+      <i class="fa fa-chart-line"></i>
+    </span>
+      <span>站点总字数：</span>
+    <span title="站点总字数">540k</span>
+  </span>
+  <span class="post-meta-item">
+    <span class="post-meta-item-icon">
+      <i class="fa fa-coffee"></i>
+    </span>
+      <span>站点阅读时长 &asymp;</span>
+    <span title="站点阅读时长">8:11</span>
+  </span>
+</div>
+  <div class="powered-by">由 <a href="https://hexo.io/" class="theme-link" rel="noopener" target="_blank">Hexo</a> & <a href="https://theme-next.js.org/" class="theme-link" rel="noopener" target="_blank">NexT.Gemini</a> 强力驱动
+  </div>
+
+    </div>
+  </footer>
+
+  
+  <script src="https://cdn.jsdelivr.net/npm/animejs@3.2.1/lib/anime.min.js"></script>
+<script src="/nirvana/js/utils.js"></script><script src="/nirvana/js/motion.js"></script><script src="/nirvana/js/next-boot.js"></script>
+
+  
+
+
+
+
+
+
+  
+
+
+
+
+
+</body>
+</html>

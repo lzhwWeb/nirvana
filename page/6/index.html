@@ -1,0 +1,1490 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=2">
+<meta name="theme-color" content="#222">
+<meta name="generator" content="Hexo 5.4.0">
+ <meta name="referrer" content="no-referrer"/>
+
+  <link rel="apple-touch-icon" sizes="180x180" href="/nirvana/images/apple-touch-icon-next.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="/nirvana/images/favicon-32x32-next.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="/nirvana/images/favicon-16x16-next.png">
+  <link rel="mask-icon" href="/nirvana/images/logo.svg" color="#222">
+
+<link rel="stylesheet" href="/nirvana/css/main.css">
+
+
+
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@5.15.2/css/all.min.css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/animate.css@3.1.1/animate.min.css">
+
+<script class="hexo-configurations">
+    var NexT = window.NexT || {};
+    var CONFIG = {"hostname":"lzhwweb.github.io","root":"/nirvana/","images":"/nirvana/images","scheme":"Gemini","version":"8.2.2","exturl":false,"sidebar":{"position":"left","display":"post","padding":18,"offset":12},"copycode":false,"bookmark":{"enable":false,"color":"#222","save":"auto"},"fancybox":false,"mediumzoom":false,"lazyload":false,"pangu":false,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},"motion":{"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"fadeInDown","post_body":"fadeInDown","coll_header":"fadeInLeft","sidebar":"fadeInUp"}},"prism":false,"i18n":{"placeholder":"搜索...","empty":"没有找到任何搜索结果：${query}","hits_time":"找到 ${hits} 个搜索结果（用时 ${time} 毫秒）","hits":"找到 ${hits} 个搜索结果"}};
+  </script>
+<meta name="description" content="个人学习笔记">
+<meta property="og:type" content="website">
+<meta property="og:title" content="涅槃快乐是金">
+<meta property="og:url" content="https://lzhwweb.github.io/nirvana/page/6/index.html">
+<meta property="og:site_name" content="涅槃快乐是金">
+<meta property="og:description" content="个人学习笔记">
+<meta property="og:locale" content="zh_CN">
+<meta property="article:author" content="nirvana">
+<meta property="article:tag" content="前端,javascript,node,git">
+<meta name="twitter:card" content="summary">
+
+
+<link rel="canonical" href="https://lzhwweb.github.io/nirvana/page/6/">
+
+
+<script class="page-configurations">
+  // https://hexo.io/docs/variables.html
+  CONFIG.page = {
+    sidebar: "",
+    isHome : true,
+    isPost : false,
+    lang   : 'zh-CN'
+  };
+</script>
+<title>涅槃快乐是金</title>
+  
+
+
+
+
+  <noscript>
+  <style>
+  body { margin-top: 2rem; }
+
+  .use-motion .menu-item,
+  .use-motion .sidebar,
+  .use-motion .post-block,
+  .use-motion .pagination,
+  .use-motion .comments,
+  .use-motion .post-header,
+  .use-motion .post-body,
+  .use-motion .collection-header {
+    visibility: visible;
+  }
+
+  .use-motion .header,
+  .use-motion .site-brand-container .toggle,
+  .use-motion .footer { opacity: initial; }
+
+  .use-motion .site-title,
+  .use-motion .site-subtitle,
+  .use-motion .custom-logo-image {
+    opacity: initial;
+    top: initial;
+  }
+
+  .use-motion .logo-line {
+    transform: scaleX(1);
+  }
+
+  .search-pop-overlay, .sidebar-nav { display: none; }
+  .sidebar-panel { display: block; }
+  </style>
+</noscript>
+
+</head>
+
+<body itemscope itemtype="http://schema.org/WebPage" class="use-motion">
+  <div class="headband"></div>
+
+  <main class="main">
+    <header class="header" itemscope itemtype="http://schema.org/WPHeader">
+      <div class="header-inner"><div class="site-brand-container">
+  <div class="site-nav-toggle">
+    <div class="toggle" aria-label="切换导航栏" role="button">
+        <span class="toggle-line"></span>
+        <span class="toggle-line"></span>
+        <span class="toggle-line"></span>
+    </div>
+  </div>
+
+  <div class="site-meta">
+
+    <a href="/nirvana/" class="brand" rel="start">
+      <i class="logo-line"></i>
+      <h1 class="site-title">涅槃快乐是金</h1>
+      <i class="logo-line"></i>
+    </a>
+  </div>
+
+  <div class="site-nav-right">
+    <div class="toggle popup-trigger">
+    </div>
+  </div>
+</div>
+
+
+
+<nav class="site-nav">
+  <ul class="main-menu menu">
+        <li class="menu-item menu-item-home"><a href="/nirvana/" rel="section">首页</a></li>
+        <li class="menu-item menu-item-git"><a href="/nirvana/categories/git" rel="section">git</a></li>
+        <li class="menu-item menu-item-linux"><a href="/nirvana/categories/linux" rel="section">linux</a></li>
+        <li class="menu-item menu-item-android"><a href="/nirvana/categories/android" rel="section">android</a></li>
+        <li class="menu-item menu-item-随笔"><a href="/nirvana/categories/informal" rel="section">随笔</a></li>
+        <li class="menu-item menu-item-mac"><a href="/nirvana/categories/mac" rel="section">mac</a></li>
+        <li class="menu-item menu-item-react-native"><a href="/nirvana/categories/reactnative" rel="section">react-native</a></li>
+        <li class="menu-item menu-item-算法"><a href="/nirvana/categories/algorithm" rel="section">算法</a></li>
+        <li class="menu-item menu-item-读书笔记"><a href="/nirvana/categories/note" rel="section">读书笔记</a></li>
+        <li class="menu-item menu-item-开发工具"><a href="/nirvana/categories/tool" rel="section">开发工具</a></li>
+        <li class="menu-item menu-item-设计模式(ts)"><a href="/nirvana/categories/DesignPattern" rel="section">设计模式(TS)</a></li>
+        <li class="menu-item menu-item-前端"><a href="/nirvana/categories/javascript" rel="section">前端</a></li>
+  </ul>
+</nav>
+
+
+
+
+</div>
+        
+  
+  <div class="toggle sidebar-toggle" role="button">
+    <span class="toggle-line"></span>
+    <span class="toggle-line"></span>
+    <span class="toggle-line"></span>
+  </div>
+
+  <aside class="sidebar">
+
+    <div class="sidebar-inner sidebar-overview-active">
+      <ul class="sidebar-nav">
+        <li class="sidebar-nav-toc">
+          文章目录
+        </li>
+        <li class="sidebar-nav-overview">
+          站点概览
+        </li>
+      </ul>
+
+      <div class="sidebar-panel-container">
+        <!--noindex-->
+        <div class="post-toc-wrap sidebar-panel">
+        </div>
+        <!--/noindex-->
+
+        <div class="site-overview-wrap sidebar-panel">
+          <div class="site-author site-overview-item animated" itemprop="author" itemscope itemtype="http://schema.org/Person">
+  <p class="site-author-name" itemprop="name">nirvana</p>
+  <div class="site-description" itemprop="description">个人学习笔记</div>
+</div>
+<div class="site-state-wrap site-overview-item animated">
+  <nav class="site-state">
+      <div class="site-state-item site-state-posts">
+          <a href="/nirvana/archives">
+          <span class="site-state-item-count">178</span>
+          <span class="site-state-item-name">日志</span>
+        </a>
+      </div>
+      <div class="site-state-item site-state-categories">
+        <span class="site-state-item-count">11</span>
+        <span class="site-state-item-name">分类</span>
+      </div>
+  </nav>
+</div>
+
+
+
+        </div>
+      </div>
+    </div>
+  </aside>
+  <div class="sidebar-dimmer"></div>
+
+
+    </header>
+
+    
+  <div class="back-to-top" role="button">
+    <i class="fa fa-arrow-up"></i>
+    <span>0%</span>
+  </div>
+
+<noscript>
+  <div class="noscript-warning">Theme NexT works best with JavaScript enabled</div>
+</noscript>
+
+
+    <div class="main-inner index posts-expand">
+
+    
+
+
+<div class="post-block">
+  
+  
+
+  <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="">
+    <link itemprop="mainEntityOfPage" href="https://lzhwweb.github.io/nirvana/javascript/%E5%89%8D%E7%AB%AF/pointer-events/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/nirvana/images/avatar.gif">
+      <meta itemprop="name" content="nirvana">
+      <meta itemprop="description" content="个人学习笔记">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="涅槃快乐是金">
+    </span>
+      <header class="post-header">
+        <h2 class="post-title" itemprop="name headline">
+          <a href="/nirvana/javascript/%E5%89%8D%E7%AB%AF/pointer-events/" class="post-title-link" itemprop="url">pointer-events</a>
+        </h2>
+
+        <div class="post-meta-container">
+          <div class="post-meta">
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-calendar"></i>
+      </span>
+      <span class="post-meta-item-text">发表于</span>
+
+      <time title="创建时间：2021-03-11 21:12:40" itemprop="dateCreated datePublished" datetime="2021-03-11T21:12:40+08:00">2021-03-11</time>
+    </span>
+      <span class="post-meta-item">
+        <span class="post-meta-item-icon">
+          <i class="far fa-calendar-check"></i>
+        </span>
+        <span class="post-meta-item-text">更新于</span>
+        <time title="修改时间：2021-03-10 12:57:59" itemprop="dateModified" datetime="2021-03-10T12:57:59+08:00">2021-03-10</time>
+      </span>
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-folder"></i>
+      </span>
+      <span class="post-meta-item-text">分类于</span>
+        <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+          <a href="/nirvana/categories/javascript/" itemprop="url" rel="index"><span itemprop="name">javascript</span></a>
+        </span>
+    </span>
+
+  
+      </div>
+      <div class="post-meta">
+    <span class="post-meta-item" title="本文字数">
+      <span class="post-meta-item-icon">
+        <i class="far fa-file-word"></i>
+      </span>
+      <span class="post-meta-item-text">本文字数：</span>
+      <span>1.2k</span>
+    </span>
+    <span class="post-meta-item" title="阅读时长">
+      <span class="post-meta-item-icon">
+        <i class="far fa-clock"></i>
+      </span>
+      <span class="post-meta-item-text">阅读时长 &asymp;</span>
+      <span>1 分钟</span>
+    </span>
+</div>
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+          <p>pointer-events<br>语法：<br>pointer-events：auto| none | visiblepainted | visiblefill | visiblestroke | visible | painted | fill | stroke | all<br>默认值：auto<br>适用于：所有元素<br>继承性：有<br>动画性：否<br>计算值：指定值</p>
+<ul>
+<li>取值：<br>auto：<br>与pointer-events属性未指定时的表现效果相同。在svg内容上与visiblepainted值相同<br>none：<br>元素永远不会成为鼠标事件的target。但是，当其后代元素的pointer-events属性指定其他值时，鼠标事件可以指向后代元素，在这种情况下，鼠标事件将在捕获或冒泡阶触发父元素的事件侦听器。<br>其他值只能应用在SVG上。</li>
+</ul>
+<p>说明：<br>设置或检索在何时成为属性事件的target。<br>使用pointer-events来阻止元素成为鼠标事件目标不一定意味着元素上的事件侦听器永不会触发。如果元素后代明确指定了pointer-events属性并允许其成为鼠标事件的目标，那么指向该元素的任何事件在事件传播过程中都将通过父元素，并以适当的方式触发其上的事件侦听器。当然位于屏幕上在父元素上但不在后代元素上的鼠标活动都不会被父元素和后代元素捕获（将会穿过父元素而指向位于其下面的元素）。<br>对应的脚本特性为pointerEvents。<br>兼容性：<br>浅绿 = 支持</p>
+<p>红色 = 不支持</p>
+<p>粉色 = 部分支持<br><img src="https://upload-images.jianshu.io/upload_images/10024246-2b69550f256cac89.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240"></p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br></pre></td><td class="code"><pre><span class="line">&lt;!DOCTYPE html&gt;</span><br><span class="line">&lt;html lang&#x3D;&quot;zh-cmn-Hans&quot;&gt;</span><br><span class="line">&lt;head&gt;</span><br><span class="line">&lt;meta charset&#x3D;&quot;utf-8&quot; &#x2F;&gt;</span><br><span class="line">&lt;title&gt;&lt;&#x2F;title&gt;</span><br><span class="line"></span><br><span class="line">&lt;style&gt;</span><br><span class="line">a[href&#x3D;&quot;http:&#x2F;&#x2F;example.com&quot;] &#123;</span><br><span class="line">	pointer-events: none;</span><br><span class="line">&#125;</span><br><span class="line">&lt;&#x2F;style&gt;</span><br><span class="line">&lt;&#x2F;head&gt;</span><br><span class="line">&lt;body&gt;</span><br><span class="line">&lt;ul&gt;</span><br><span class="line">	&lt;li&gt;&lt;a href&#x3D;&quot;https:&#x2F;&#x2F;html.cn&#x2F;&quot;&gt;HTML中文网&lt;&#x2F;a&gt;&lt;&#x2F;li&gt;</span><br><span class="line">	&lt;li&gt;&lt;a href&#x3D;&quot;http:&#x2F;&#x2F;example.com&quot;&gt;一个不能点击的链接&lt;&#x2F;a&gt;&lt;&#x2F;li&gt;</span><br><span class="line">&lt;&#x2F;ul&gt;</span><br><span class="line">&lt;&#x2F;body&gt;</span><br><span class="line">&lt;&#x2F;html&gt;</span><br></pre></td></tr></table></figure>
+
+      
+    </div>
+
+    
+    
+    
+
+    <footer class="post-footer">
+        <div class="post-eof"></div>
+      
+    </footer>
+  </article>
+</div>
+
+
+
+
+    
+
+
+<div class="post-block">
+  
+  
+
+  <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="">
+    <link itemprop="mainEntityOfPage" href="https://lzhwweb.github.io/nirvana/javascript/%E5%89%8D%E7%AB%AF/prefetch-%E5%92%8C-preload-%E5%8F%8A-webpack-%E7%9A%84%E7%9B%B8%E5%85%B3%E5%A4%84%E7%90%86/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/nirvana/images/avatar.gif">
+      <meta itemprop="name" content="nirvana">
+      <meta itemprop="description" content="个人学习笔记">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="涅槃快乐是金">
+    </span>
+      <header class="post-header">
+        <h2 class="post-title" itemprop="name headline">
+          <a href="/nirvana/javascript/%E5%89%8D%E7%AB%AF/prefetch-%E5%92%8C-preload-%E5%8F%8A-webpack-%E7%9A%84%E7%9B%B8%E5%85%B3%E5%A4%84%E7%90%86/" class="post-title-link" itemprop="url">prefetch-和-preload-及-webpack-的相关处理</a>
+        </h2>
+
+        <div class="post-meta-container">
+          <div class="post-meta">
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-calendar"></i>
+      </span>
+      <span class="post-meta-item-text">发表于</span>
+
+      <time title="创建时间：2021-03-11 21:12:40" itemprop="dateCreated datePublished" datetime="2021-03-11T21:12:40+08:00">2021-03-11</time>
+    </span>
+      <span class="post-meta-item">
+        <span class="post-meta-item-icon">
+          <i class="far fa-calendar-check"></i>
+        </span>
+        <span class="post-meta-item-text">更新于</span>
+        <time title="修改时间：2021-03-10 13:17:22" itemprop="dateModified" datetime="2021-03-10T13:17:22+08:00">2021-03-10</time>
+      </span>
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-folder"></i>
+      </span>
+      <span class="post-meta-item-text">分类于</span>
+        <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+          <a href="/nirvana/categories/javascript/" itemprop="url" rel="index"><span itemprop="name">javascript</span></a>
+        </span>
+    </span>
+
+  
+      </div>
+      <div class="post-meta">
+    <span class="post-meta-item" title="本文字数">
+      <span class="post-meta-item-icon">
+        <i class="far fa-file-word"></i>
+      </span>
+      <span class="post-meta-item-text">本文字数：</span>
+      <span>4.6k</span>
+    </span>
+    <span class="post-meta-item" title="阅读时长">
+      <span class="post-meta-item-icon">
+        <i class="far fa-clock"></i>
+      </span>
+      <span class="post-meta-item-text">阅读时长 &asymp;</span>
+      <span>4 分钟</span>
+    </span>
+</div>
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+          <p>使用预取和预加载是网站性能和用户体验提升的一个很好的途径，本文介绍了使用 prefetch 和 prefetch 进行预取和预加载的方法，并使用 webpack 进行实现</p>
+<h2 id="Link-的链接类型"><a href="#Link-的链接类型" class="headerlink" title="Link 的链接类型"></a>Link 的链接类型</h2><p><a target="_blank" rel="noopener" href="https://developer.mozilla.org/zh-CN/docs/Web/HTML/Element/link"><code>&lt;link&gt;</code></a> 标签的 <code>rel</code> 属性可以定义链接类型，<code>prefetch</code> 是其中的一种，与 <code>href</code> 配合使用可以预取或预加载对应资源</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">&lt;link rel&#x3D;&quot;prefetch&quot; herf&#x3D;&quot;URL&quot;&gt;</span><br><span class="line"></span><br></pre></td></tr></table></figure>
+
+<p><code>preload</code> 是另外一种类型，同样用 href 定义资源地址，但其处理预取外，还会对资源进行解析，所以还要增加属性 as，说明资源的类型</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">&lt;link rel&#x3D;&quot;preload&quot; href&#x3D;&quot;URL&quot; as&#x3D;&quot;MIME_TYPE&quot;&gt;</span><br><span class="line"></span><br></pre></td></tr></table></figure>
+
+<h2 id="预取资源"><a href="#预取资源" class="headerlink" title="预取资源"></a>预取资源</h2><p><code>prefetch</code> 表示用户在接下来的浏览中（例如在下一个页面），有可能用到对应资源，提示浏览器要在闲时获取对应资源</p>
+<p>先新建文件夹 prefetch-preload-demo（本文所有代码将在此创建），安装相关依赖，并新建文件夹 static</p>
+<blockquote>
+<p>mkdir prefetch-preload-demo<br>cd prefetch-preload-demo<br>npm init -y<br>npm i -D http-server<br>mkdir static</p>
+</blockquote>
+<p>在 static 中创建 <code>prefetch.html</code>， <code>main.js</code> 和 <code>script.js</code></p>
+<p><code>prefetch.html</code> 定义了一个 <code>rel</code> 为 <code>prefetch</code> 的链接</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line">&lt;html&gt;</span><br><span class="line">&lt;head&gt;</span><br><span class="line">&lt;title&gt;Prefetch&lt;&#x2F;title&gt;</span><br><span class="line">&lt;meta charset&#x3D;&quot;utf-8&quot;&gt;</span><br><span class="line">&lt;meta name&#x3D;&quot;viewport&quot; content&#x3D;&quot;width&#x3D;device-width, initial-scale&#x3D;1, maximum-scale&#x3D;1&quot;&gt;</span><br><span class="line">&lt;link rel&#x3D;&quot;prefetch&quot; href&#x3D;&quot;script.js&quot;&gt;</span><br><span class="line">&lt;&#x2F;head&gt;</span><br><span class="line">&lt;body&gt;</span><br><span class="line">&lt;script src&#x3D;&quot;main.js&quot;&gt;&lt;&#x2F;script&gt;</span><br><span class="line">&lt;&#x2F;body&gt;</span><br><span class="line">&lt;&#x2F;html&gt;</span><br><span class="line"></span><br></pre></td></tr></table></figure>
+
+<p><code>main.js</code> 创建了一个按钮，并绑定了点击事件</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line">let button &#x3D; document.createElement(&#39;button&#39;);</span><br><span class="line">button.innerHTML &#x3D; &#39;Add Script&#39;;</span><br><span class="line">button.addEventListener(&#39;click&#39;, e &#x3D;&gt; &#123;</span><br><span class="line">  let script &#x3D; document.createElement(&quot;script&quot;);</span><br><span class="line">  script.src &#x3D; &quot;script.js&quot;;</span><br><span class="line">  document.head.appendChild(script);</span><br><span class="line">&#125;);</span><br><span class="line">document.body.appendChild(button);</span><br><span class="line"></span><br></pre></td></tr></table></figure>
+
+<p><code>script.js</code> 只是简单的打印了一下</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">console.log(&#39;script run&#39;);</span><br><span class="line"></span><br></pre></td></tr></table></figure>
+
+<p>运行服务器（也可在 <code>package.json</code> 中增加 <code>server</code> 脚本）</p>
+<blockquote>
+<p>npx http-server</p>
+</blockquote>
+<p>访问 <a target="_blank" rel="noopener" href="http://localhost:8080/">http://localhost:8080</a> 并导航至 <code>static</code> 中，点击 prefetch.html，或者直接访问线上<a target="_blank" rel="noopener" href="https://chanvinxiao.com/demo/html/prefetch.html">页面</a>，初始状态下，查看控制台的网络选项卡下的内容如下（不要勾选 <code>Disable Cache</code>，点击右侧齿轮，勾选 <code>Use large request rows</code>）</p>
+<p><img src="https://upload-images.jianshu.io/upload_images/10024246-866a5d00121799d6.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240"></p>
+<ul>
+<li>  <code>script.js</code> 被 fetch 下来，size 列的两个数字，275 B 表示下载的字节大小，0 B 表示解析的字节大小（即目前并没有解析）</li>
+<li>  控制台是空的，即脚本没有运行</li>
+</ul>
+<p>点击页面上的 <code>Add Script</code>，会在页面增加地址为 <code>script.js</code> 的 <code>&lt;script&gt;</code> 标签，此时网络选项卡会增加以下内容</p>
+<p><img src="https://upload-images.jianshu.io/upload_images/10024246-b41e6c0e3f87d223.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240"></p>
+<ul>
+<li>  下载字节量为 <code>(prefetch cache)</code> ，即直接从预取缓存获取资源，下面的解析后的字节不再为 0</li>
+<li>  控制台打印出脚本中的调试内容，即这时脚本才被解析并运行</li>
+</ul>
+<h2 id="预加载资源"><a href="#预加载资源" class="headerlink" title="预加载资源"></a>预加载资源</h2><p><code>preload</code> 表示用户在当前的浏览中（往往是在当前页面），极有可以可能用到对应资源，提示浏览器要优先获取对应资源</p>
+<p>将 prefetch.html 的 link 标签的 prefetch 改为 <code>preload</code>，并增加资源类型 <code>as</code> 为 <code>script</code>，即得 preload.html</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">&lt;link rel&#x3D;&quot;preload&quot; href&#x3D;&quot;script.js&quot; as&#x3D;&quot;script&quot;&gt;</span><br><span class="line"></span><br></pre></td></tr></table></figure>
+
+<p>访问本地服务器对应的 <code>prefetch.html</code>，或者直接访问线上<a target="_blank" rel="noopener" href="https://chanvinxiao.com/demo/html/preload.html">页面</a>，初始状态下，查看控制台的网络选项卡下的内容如下</p>
+<p><img src="https://upload-images.jianshu.io/upload_images/10024246-4a5afe30da8888f1.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240"></p>
+<ul>
+<li>  <code>script.js</code> 被优先下载， size 列的解压字节不再为 0，即 <code>preload</code> 除了把脚本下载了下来，还进行了解析</li>
+<li>  控制台目前仍为空，即脚本虽然被解析，但并没有运行</li>
+</ul>
+<p>点击 <code>Add Script</code>，网络选项卡并没有增加任何记录，但是控制台输出了脚本的打印内容</p>
+<ul>
+<li>  因为脚本已经解析完成，所以连从缓存获取都不需要了，直接运行即可</li>
+<li>  如果没有在 3 秒内点击 <code>Add Script</code>，控制台会进行警告，因为没有及时使用应该优先加载的资源</li>
+</ul>
+<blockquote>
+<p>The resource <a target="_blank" rel="noopener" href="https://chanvinxiao.com/demo/html/script.js">https://chanvinxiao.com/demo/html/script.js</a> was preloaded using link preload but not used within a few seconds from the window’s load event. Please make sure it has an appropriate <code>as</code> value and it is preloaded intentionally.</p>
+</blockquote>
+<h2 id="webpack-的相关处理"><a href="#webpack-的相关处理" class="headerlink" title="webpack 的相关处理"></a>webpack 的相关处理</h2><p>运行以下命令安装相关依赖，并新建文件夹 src</p>
+<blockquote>
+<p>npm i -D webpack webpack-cli html-webpack-plugin <a href="mailto:&#x70;&#x72;&#x65;&#108;&#x6f;&#x61;&#100;&#x2d;&#x77;&#x65;&#x62;&#x70;&#x61;&#x63;&#107;&#x2d;&#112;&#108;&#x75;&#103;&#105;&#x6e;&#x40;&#51;&#x2e;&#48;&#x2e;&#48;&#x2d;&#98;&#101;&#116;&#97;&#46;&#x34;">&#x70;&#x72;&#x65;&#108;&#x6f;&#x61;&#100;&#x2d;&#x77;&#x65;&#x62;&#x70;&#x61;&#x63;&#107;&#x2d;&#112;&#108;&#x75;&#103;&#105;&#x6e;&#x40;&#51;&#x2e;&#48;&#x2e;&#48;&#x2d;&#98;&#101;&#116;&#97;&#46;&#x34;</a><br>mkdir src</p>
+</blockquote>
+<ul>
+<li>  PreloadWebpackPlugin 的当前版本 2.x 与 webpack 当前版本 4.x 不兼容，所以需要指定版本号为最新的 3.x beta</li>
+</ul>
+<p>将 <code>main.js</code> 与 <code>script.js</code> 复制到 src 中，并将 <code>main.js</code> 的点击事件处理更新为</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">button.addEventListener(&#39;click&#39;, e &#x3D;&gt; &#123;</span><br><span class="line">  import(&#x2F;* webpackChunkName: &quot;script&quot; *&#x2F; &#39;.&#x2F;script.js&#39;);</span><br><span class="line">&#125;);</span><br><span class="line"></span><br></pre></td></tr></table></figure>
+
+<ul>
+<li>  <a target="_blank" rel="noopener" href="https://webpack.js.org/api/module-methods/#import-1">import()</a> 为动态加载脚本，webpack 会生成类似以上动态创建 <code>script</code> 标签的代码</li>
+<li>  import 里的注释为特殊含义的魔法注释，如果不设置 webpackChunkName，加载的脚本将被按数字次序命名</li>
+</ul>
+<p>增加 <code>webpack.config.js</code> 如下</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line">const HtmlWebpackPlugin &#x3D; require(&#39;html-webpack-plugin&#39;);</span><br><span class="line">const PreloadWebpackPlugin &#x3D; require(&#39;preload-webpack-plugin&#39;);</span><br><span class="line"></span><br><span class="line">module.exports &#x3D; &#123;</span><br><span class="line">  entry: &#39;.&#x2F;src&#x2F;main.js&#39;,</span><br><span class="line">  plugins: [</span><br><span class="line">    new HtmlWebpackPlugin(&#123;</span><br><span class="line">      filename: &#39;preload.html&#39;</span><br><span class="line">    &#125;),</span><br><span class="line">    new PreloadWebpackPlugin()</span><br><span class="line">  ]</span><br><span class="line">&#125;</span><br><span class="line"></span><br></pre></td></tr></table></figure>
+
+<ul>
+<li>  <a target="_blank" rel="noopener" href="https://webpack.js.org/plugins/html-webpack-plugin/">HtmlWebpackPlugin</a> 将自动生成相应的 html 文件，默认为 index.html，这里通过设置 <code>filename</code> 选项更改</li>
+<li>  <a target="_blank" rel="noopener" href="https://github.com/GoogleChrome/preload-webpack-plugin">PreloadWebpackPlugin</a> 为 HtmlWebpackPlugin 的插件，默认为其动态加载资源增加链接类型为 <code>preload</code> 的 <code>link</code> 标签，其 <code>as</code> 的值可根据后缀自动判断</li>
+</ul>
+<p>PreloadWebpackPlugin 也支持 prefetch，需要增加 <code>rel</code> 选项为 <code>prefetch</code></p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">new HtmlWebpackPlugin(&#123;</span><br><span class="line">  filename: &#39;prefetch.html&#39;</span><br><span class="line">&#125;),</span><br><span class="line">new PreloadWebpackPlugin(&#123;</span><br><span class="line">  rel: &#39;prefetch&#39;</span><br><span class="line">&#125;)</span><br><span class="line"></span><br></pre></td></tr></table></figure>
+
+<p>不过要同时生成 preload.html 和 prefetch.html，需要在对应的 PreloadWebpackPlugin 中设置 <code>excludeHtmlNames</code> 排除对方，否则会同时产生 preload 和 prefetch 的 link 标签</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><span class="line">new HtmlWebpackPlugin(&#123;</span><br><span class="line">  filename: &#39;preload.html&#39;</span><br><span class="line">&#125;),</span><br><span class="line">new HtmlWebpackPlugin(&#123;</span><br><span class="line">  filename: &#39;prefetch.html&#39;</span><br><span class="line">&#125;),</span><br><span class="line">new PreloadWebpackPlugin(&#123;</span><br><span class="line">  excludeHtmlNames: [&#39;prefetch.html&#39;]</span><br><span class="line">&#125;),</span><br><span class="line">new PreloadWebpackPlugin(&#123;</span><br><span class="line">  rel: &#39;prefetch&#39;,</span><br><span class="line">  excludeHtmlNames: [&#39;preload.html&#39;]</span><br><span class="line">&#125;)</span><br><span class="line"></span><br></pre></td></tr></table></figure>
+
+<p>构建文件（也可在 <code>package.json</code> 中增加 <code>build</code> 脚本）</p>
+<blockquote>
+<p>npx webpack</p>
+</blockquote>
+<p><code>dist</code> 文件夹中将生成 prefetch.html 和 preload.html，访问本地服务器对应地址，即可得到与以上静态页面同样的效果</p>
+<h2 id="总结"><a href="#总结" class="headerlink" title="总结"></a>总结</h2><p>此文使用静态页面和 webpack 打包两种方式演示了预取和预加载的实现 <a target="_blank" rel="noopener" href="https://github.com/vinzid/prefetch-preload-demo"></a>，主要技术点如下：</p>
+<ul>
+<li>  ELEMENT.appendChild 动态创建脚本</li>
+<li>  import() 动态加载脚本并设置魔法注释</li>
+<li>  html-webpack-plugin 及其插件的配置</li>
+</ul>
+
+      
+    </div>
+
+    
+    
+    
+
+    <footer class="post-footer">
+        <div class="post-eof"></div>
+      
+    </footer>
+  </article>
+</div>
+
+
+
+
+    
+
+
+<div class="post-block">
+  
+  
+
+  <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="">
+    <link itemprop="mainEntityOfPage" href="https://lzhwweb.github.io/nirvana/javascript/%E5%89%8D%E7%AB%AF/react-loadable%E6%87%92%E5%8A%A0%E8%BD%BD/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/nirvana/images/avatar.gif">
+      <meta itemprop="name" content="nirvana">
+      <meta itemprop="description" content="个人学习笔记">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="涅槃快乐是金">
+    </span>
+      <header class="post-header">
+        <h2 class="post-title" itemprop="name headline">
+          <a href="/nirvana/javascript/%E5%89%8D%E7%AB%AF/react-loadable%E6%87%92%E5%8A%A0%E8%BD%BD/" class="post-title-link" itemprop="url">react-loadable懒加载</a>
+        </h2>
+
+        <div class="post-meta-container">
+          <div class="post-meta">
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-calendar"></i>
+      </span>
+      <span class="post-meta-item-text">发表于</span>
+
+      <time title="创建时间：2021-03-11 21:12:40" itemprop="dateCreated datePublished" datetime="2021-03-11T21:12:40+08:00">2021-03-11</time>
+    </span>
+      <span class="post-meta-item">
+        <span class="post-meta-item-icon">
+          <i class="far fa-calendar-check"></i>
+        </span>
+        <span class="post-meta-item-text">更新于</span>
+        <time title="修改时间：2021-03-10 12:58:00" itemprop="dateModified" datetime="2021-03-10T12:58:00+08:00">2021-03-10</time>
+      </span>
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-folder"></i>
+      </span>
+      <span class="post-meta-item-text">分类于</span>
+        <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+          <a href="/nirvana/categories/javascript/" itemprop="url" rel="index"><span itemprop="name">javascript</span></a>
+        </span>
+    </span>
+
+  
+      </div>
+      <div class="post-meta">
+    <span class="post-meta-item" title="本文字数">
+      <span class="post-meta-item-icon">
+        <i class="far fa-file-word"></i>
+      </span>
+      <span class="post-meta-item-text">本文字数：</span>
+      <span>5k</span>
+    </span>
+    <span class="post-meta-item" title="阅读时长">
+      <span class="post-meta-item-icon">
+        <i class="far fa-clock"></i>
+      </span>
+      <span class="post-meta-item-text">阅读时长 &asymp;</span>
+      <span>5 分钟</span>
+    </span>
+</div>
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+          <h4 id="简介"><a href="#简介" class="headerlink" title="简介"></a>简介</h4><p><strong>react-loadable</strong><br>官网最精简的描述：</p>
+<blockquote>
+<p>A higher order component for loading components with dynamic imports.<br>用于加载带有动态导入的组件的高阶组件。</p>
+</blockquote>
+<p>React Loadable是一个小型库，它使以组件为中心的代码分割变得非常容易。</p>
+<h4 id="背景"><a href="#背景" class="headerlink" title="背景"></a>背景</h4><p>当你的React应用，你把它和Webpack捆绑在一起，一切都很顺利。但有一天你会注意到你的应用程序包变得如此之大以至于它会减慢速度。<br>是时候开始分解你的应用程序代码了!</p>
+<p>例如以下情景：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br></pre></td><td class="code"><pre><span class="line">class Root extends React.Component &#123;</span><br><span class="line">    render() &#123;</span><br><span class="line">        return (</span><br><span class="line">            &lt;Router&gt;</span><br><span class="line">                &lt;div&gt;</span><br><span class="line">                    &lt;Route exact path&#x3D;&quot;&#x2F;&quot; component&#x3D;&#123;PCIndex&#125;&gt;&lt;&#x2F;Route&gt;</span><br><span class="line">                    &lt;Route path&#x3D;&quot;&#x2F;details&#x2F;:id&quot; component&#x3D;&#123;PCDetails&#125;&gt;&lt;&#x2F;Route&gt;</span><br><span class="line">                &lt;&#x2F;div&gt;</span><br><span class="line">            &lt;&#x2F;Router&gt;</span><br><span class="line">        );</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">ReactDOM.render(</span><br><span class="line">    &lt;Root &#x2F;&gt;,</span><br><span class="line">    document.getElementById(&#39;app&#39;));</span><br></pre></td></tr></table></figure>
+
+<p><strong>这种写法缺点：</strong><br>在首页直接加载了组件，如果很多的时候，那么你的应用首屏展现的时候就会变得非常慢了。</p>
+<p><strong>react-loadable的作用</strong><br>由于路由只是组件，我们仍然可以在路由级别轻松地进行代码拆分。<br>在你的应用程序中引入新的代码分割点应该是如此简单，以至于你不会再三考虑。这应该是一个改变几行代码和其他一切都应该自动化的问题。<br>Loadable是一个高阶组件(一个创建组件的函数)，它允许您在将任何模块呈现到应用程序之前动态加载它。</p>
+<h4 id="概念"><a href="#概念" class="headerlink" title="概念"></a>概念</h4><p><strong>import()</strong><br>当您在Webpack 2+中使用import()时，它将自动为您分割代码，而不需要额外的配置。<br>这意味着只需切换到import()并使用React Loadable，就可以轻松地试验新的代码分割点。找出最适合你的应用程序的。</p>
+<p><strong>Loading…</strong><br>呈现静态“Loading…”不能与用户进行足够的通信。您还需要考虑错误状态、超时，并使之成为一种良好的体验。</p>
+<p><strong>Loadable</strong><br>用于在呈现模块之前动态加载模块的高阶组件，在模块不可用时呈现加载组件。</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">const LoadableComponent &#x3D; Loadable(&#123;</span><br><span class="line">  loader: () &#x3D;&gt; import(&#39;.&#x2F;Bar&#39;),</span><br><span class="line">  loading: Loading,</span><br><span class="line">  delay: 200,</span><br><span class="line">  timeout: 10000,</span><br><span class="line">&#125;);</span><br></pre></td></tr></table></figure>
+
+<p><strong>Loadable.Map</strong><br>允许并行加载多个资源的高阶组件。<br>可加载的。地图的选择。加载器接受函数对象，并需要一个选项。渲染方法。</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line">Loadable.Map(&#123;</span><br><span class="line">  loader: &#123;</span><br><span class="line">    Bar: () &#x3D;&gt; import(&#39;.&#x2F;Bar&#39;),</span><br><span class="line">    i18n: () &#x3D;&gt; fetch(&#39;.&#x2F;i18n&#x2F;bar.json&#39;).then(res &#x3D;&gt; res.json()),</span><br><span class="line">  &#125;,</span><br><span class="line">  render(loaded, props) &#123;</span><br><span class="line">    let Bar &#x3D; loaded.Bar.default;</span><br><span class="line">    let i18n &#x3D; loaded.i18n;</span><br><span class="line">    return &lt;Bar &#123;...props&#125; i18n&#x3D;&#123;i18n&#125;&#x2F;&gt;;</span><br><span class="line">  &#125;</span><br><span class="line">&#125;);</span><br></pre></td></tr></table></figure>
+
+<h4 id="简单使用"><a href="#简单使用" class="headerlink" title="简单使用"></a>简单使用</h4><p>安装</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">npm i react-loadable</span><br></pre></td></tr></table></figure>
+
+<p><strong>懒加载配置/router/index.js</strong></p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br><span class="line">63</span><br><span class="line">64</span><br><span class="line">65</span><br><span class="line">66</span><br><span class="line">67</span><br><span class="line">68</span><br><span class="line">69</span><br><span class="line">70</span><br><span class="line">71</span><br><span class="line">72</span><br><span class="line">73</span><br><span class="line">74</span><br><span class="line">75</span><br><span class="line">76</span><br><span class="line">77</span><br><span class="line">78</span><br><span class="line">79</span><br><span class="line">80</span><br></pre></td><td class="code"><pre><span class="line">import React from &#39;react&#39;</span><br><span class="line">import Loadable from &quot;react-loadable&quot;</span><br><span class="line"></span><br><span class="line">let config &#x3D; [</span><br><span class="line">    &#123;</span><br><span class="line">        name: &#39;&#x2F;&#39;,</span><br><span class="line">        path: &#39;&#x2F;&#39;,</span><br><span class="line">        exact: true,</span><br><span class="line">        component: Loadable(&#123;</span><br><span class="line">            loader: () &#x3D;&gt; import(&#39;..&#x2F;components&#x2F;pc&#x2F;pc_blog_content&#39;),</span><br><span class="line">            loading: () &#x3D;&gt; &lt;div &#x2F;&gt;</span><br><span class="line">        &#125;)</span><br><span class="line">    &#125;,</span><br><span class="line">    &#123;</span><br><span class="line">        name: &#39;home&#39;,</span><br><span class="line">        path: &#39;&#x2F;home&#39;,</span><br><span class="line">        exact: true,</span><br><span class="line">        component: Loadable(&#123;</span><br><span class="line">            loader: () &#x3D;&gt; import(&#39;..&#x2F;components&#x2F;&#x2F;pc&#x2F;pc_blog_content&#39;),</span><br><span class="line">            loading: () &#x3D;&gt; &lt;div &#x2F;&gt;</span><br><span class="line">        &#125;)</span><br><span class="line">    &#125;,</span><br><span class="line">    &#123;</span><br><span class="line">        name: &#39;detail&#39;,</span><br><span class="line">        path: &#39;&#x2F;detail&#x2F;:id&#39;,</span><br><span class="line">        exact: false,</span><br><span class="line">        component: Loadable(&#123;</span><br><span class="line">            loader: () &#x3D;&gt; import(&#39;..&#x2F;components&#x2F;pc&#x2F;pc_article_detail&#39;),</span><br><span class="line">            loading: () &#x3D;&gt; &lt;div &#x2F;&gt;</span><br><span class="line">        &#125;)</span><br><span class="line">    &#125;,</span><br><span class="line">    &#123;</span><br><span class="line">        name: &#39;timeline&#39;,</span><br><span class="line">        path: &#39;&#x2F;timeline&#39;,</span><br><span class="line">        exact: true,</span><br><span class="line">        component: Loadable(&#123;</span><br><span class="line">            loader: () &#x3D;&gt; import(&#39;..&#x2F;components&#x2F;pc&#x2F;pc_timeline_index&#39;),</span><br><span class="line">            loading: () &#x3D;&gt; &lt;div &#x2F;&gt;</span><br><span class="line">        &#125;)</span><br><span class="line">    &#125;,</span><br><span class="line">    &#123;</span><br><span class="line">        name: &#39;album&#39;,</span><br><span class="line">        path: &#39;&#x2F;album&#39;,</span><br><span class="line">        exact: true,</span><br><span class="line">        component: Loadable(&#123;</span><br><span class="line">            loader: () &#x3D;&gt; import(&#39;..&#x2F;components&#x2F;pc&#x2F;pc_album_index&#39;),</span><br><span class="line">            loading: () &#x3D;&gt; &lt;div &#x2F;&gt;</span><br><span class="line">        &#125;)</span><br><span class="line">    &#125;,</span><br><span class="line">    &#123;</span><br><span class="line">        name: &#39;message&#39;,</span><br><span class="line">        path: &#39;&#x2F;message&#39;,</span><br><span class="line">        exact: true,</span><br><span class="line">        component: Loadable(&#123;</span><br><span class="line">            loader: () &#x3D;&gt; import(&#39;..&#x2F;components&#x2F;pc&#x2F;pc_message_index&#39;),</span><br><span class="line">            loading: () &#x3D;&gt; &lt;div &#x2F;&gt;</span><br><span class="line">        &#125;)</span><br><span class="line">    &#125;,</span><br><span class="line">    &#123;</span><br><span class="line">        name: &#39;about&#39;,</span><br><span class="line">        path: &#39;&#x2F;about&#39;,</span><br><span class="line">        exact: true,</span><br><span class="line">        component: Loadable(&#123;</span><br><span class="line">            loader: () &#x3D;&gt; import(&#39;..&#x2F;components&#x2F;pc&#x2F;pc_aboutme_index&#39;),</span><br><span class="line">            loading: () &#x3D;&gt; &lt;div &#x2F;&gt;</span><br><span class="line">        &#125;)</span><br><span class="line">    &#125;,</span><br><span class="line">    &#123;</span><br><span class="line">        name: &#39;albumlList&#39;,</span><br><span class="line">        path: &#39;&#x2F;albumList&#x2F;:id&#39;,</span><br><span class="line">        exact: false,</span><br><span class="line">        component: Loadable(&#123;</span><br><span class="line">            loader: () &#x3D;&gt; import(&#39;..&#x2F;components&#x2F;pc&#x2F;pc_album_list&#39;),</span><br><span class="line">            loading: () &#x3D;&gt; &lt;div &#x2F;&gt;</span><br><span class="line">        &#125;)</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">]</span><br><span class="line"></span><br><span class="line">export default config</span><br></pre></td></tr></table></figure>
+
+<p>结合react-router4<br>官网参考<br><a target="_blank" rel="noopener" href="https://reacttraining.com/react-router/web/guides/code-splitting">https://reacttraining.com/rea…</a></p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br></pre></td><td class="code"><pre><span class="line">import React from &#39;react&#39;;</span><br><span class="line">import ReactDOM from &#39;react-dom&#39;;</span><br><span class="line">import PCBlogIndex from &#39;.&#x2F;components&#x2F;pc&#x2F;pc_blog_index&#39;</span><br><span class="line">&#x2F;&#x2F;这句就是引入react-loadable</span><br><span class="line">import routers from &#39;.&#x2F;router&#x2F;index&#39;;</span><br><span class="line">import &#123; BrowserRouter as Router, Route, Switch &#125; from &quot;react-router-dom&quot;;</span><br><span class="line">import &#123; Provider &#125; from &#39;react-redux&#39;</span><br><span class="line">import configureStore from &#39;.&#x2F;store&#x2F;configureStore&#39;</span><br><span class="line">const store &#x3D; configureStore();</span><br><span class="line"></span><br><span class="line">class Root extends React.Component &#123;</span><br><span class="line"></span><br><span class="line">    render() &#123;</span><br><span class="line">        return (</span><br><span class="line">            &lt;Provider store&#x3D;&#123;store&#125;&gt;</span><br><span class="line">            &lt;Router&gt;</span><br><span class="line">                &lt;Switch&gt;</span><br><span class="line">                    &lt;PCBlogIndex&gt;</span><br><span class="line">                             &#123;&#x2F;* 导入相关路由配置 *&#x2F;&#125;</span><br><span class="line">                        &#123;routers.map((r, key) &#x3D;&gt; &lt;Route component&#x3D;&#123;r.component&#125; exact&#x3D;&#123;!!r.exact&#125; key&#x3D;&#123;key&#125; path&#x3D;&#123;r.path&#125; &#x2F;&gt;)&#125;</span><br><span class="line">                    &lt;&#x2F;PCBlogIndex&gt;</span><br><span class="line">                &lt;&#x2F;Switch&gt;</span><br><span class="line">            &lt;&#x2F;Router&gt;</span><br><span class="line">            &lt;&#x2F;Provider&gt;</span><br><span class="line">        );</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">ReactDOM.render(</span><br><span class="line">    &lt;Root &#x2F;&gt;,</span><br><span class="line">    document.getElementById(&#39;app&#39;));</span><br></pre></td></tr></table></figure>
+
+<h4 id="总结"><a href="#总结" class="headerlink" title="总结"></a>总结</h4><p>关于react-loadable服务器渲染等更加高级操作可以参考官网<br><a target="_blank" rel="noopener" href="https://github.com/jamiebuilds/react-loadable">https://github.com/jamiebuild…</a><br>至于普通的操作按上面两步操作，结合官网的相关配置API，估计你能够实现懒加载的功能了。</p>
+
+      
+    </div>
+
+    
+    
+    
+
+    <footer class="post-footer">
+        <div class="post-eof"></div>
+      
+    </footer>
+  </article>
+</div>
+
+
+
+
+    
+
+
+<div class="post-block">
+  
+  
+
+  <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="">
+    <link itemprop="mainEntityOfPage" href="https://lzhwweb.github.io/nirvana/javascript/%E5%89%8D%E7%AB%AF/require%E5%92%8Cimport/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/nirvana/images/avatar.gif">
+      <meta itemprop="name" content="nirvana">
+      <meta itemprop="description" content="个人学习笔记">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="涅槃快乐是金">
+    </span>
+      <header class="post-header">
+        <h2 class="post-title" itemprop="name headline">
+          <a href="/nirvana/javascript/%E5%89%8D%E7%AB%AF/require%E5%92%8Cimport/" class="post-title-link" itemprop="url">require和import</a>
+        </h2>
+
+        <div class="post-meta-container">
+          <div class="post-meta">
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-calendar"></i>
+      </span>
+      <span class="post-meta-item-text">发表于</span>
+
+      <time title="创建时间：2021-03-11 21:12:40" itemprop="dateCreated datePublished" datetime="2021-03-11T21:12:40+08:00">2021-03-11</time>
+    </span>
+      <span class="post-meta-item">
+        <span class="post-meta-item-icon">
+          <i class="far fa-calendar-check"></i>
+        </span>
+        <span class="post-meta-item-text">更新于</span>
+        <time title="修改时间：2021-03-10 13:14:04" itemprop="dateModified" datetime="2021-03-10T13:14:04+08:00">2021-03-10</time>
+      </span>
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-folder"></i>
+      </span>
+      <span class="post-meta-item-text">分类于</span>
+        <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+          <a href="/nirvana/categories/javascript/" itemprop="url" rel="index"><span itemprop="name">javascript</span></a>
+        </span>
+    </span>
+
+  
+      </div>
+      <div class="post-meta">
+    <span class="post-meta-item" title="本文字数">
+      <span class="post-meta-item-icon">
+        <i class="far fa-file-word"></i>
+      </span>
+      <span class="post-meta-item-text">本文字数：</span>
+      <span>6k</span>
+    </span>
+    <span class="post-meta-item" title="阅读时长">
+      <span class="post-meta-item-icon">
+        <i class="far fa-clock"></i>
+      </span>
+      <span class="post-meta-item-text">阅读时长 &asymp;</span>
+      <span>5 分钟</span>
+    </span>
+</div>
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+          <hr>
+<p>ES6标准发布后，module成为标准，标准的使用是以export指令导出接口，以import引入模块，但是在我们一贯的node模块中，我们采用的是CommonJS规范，使用require引入模块，使用module.exports导出接口。</p>
+<p>#####<a target="_blank" rel="noopener" href="http://wiki.commonjs.org/wiki/Modules/1.1">CommonJS</a><br>CommonJS定义的模块分为:{模块引用(require)} {模块定义(exports)} {模块标识(module)}<br>require()用来引入外部模块；exports对象用于导出当前模块的方法或变量，唯一的导出口；module对象就代表模块本身。<br>require统治了ES6之前的所有模块化编程，即使现在，在ES6 module被完全实现之前，还是这样。</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line">&#x2F;&#x2F; a.js</span><br><span class="line"></span><br><span class="line">&#x2F;&#x2F; -------- node -----------</span><br><span class="line">module.exports &#x3D; &#123;</span><br><span class="line">  a : function() &#123;&#125;,</span><br><span class="line">  b : &#39;xxx&#39;</span><br><span class="line">&#125;;</span><br><span class="line">&#x2F;&#x2F; b.js</span><br><span class="line"></span><br><span class="line">&#x2F;&#x2F; ------------ node ---------</span><br><span class="line">var m &#x3D; require(&#39;.&#x2F;a&#39;);</span><br><span class="line">m.a();</span><br></pre></td></tr></table></figure>
+<p><strong>require()是同步方法</strong><br>ES6发布的module并没有直接采用CommonJS，甚至连require都没有采用，也就是说require仍然只是node的一个私有的全局方法，module.exports也只是node私有的一个全局变量属性</p>
+<p><em><strong>注意：module.exports方法不会多次生效，只执行最后一行语句的导出方法，这个与下面要介绍的export是有区别的，后面会介绍这个</strong></em></p>
+<p>###ES6 模块<br>ES6 模块不是对象，而是通过export命令显式指定输出的代码，再通过import命令输入。<br>模块功能主要由两个命令构成：export和import。export命令用于规定模块的对外接口，import命令用于输入其他模块提供的功能。</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">&#x2F;&#x2F; ES6模块</span><br><span class="line">import &#123; stat, exists, readFile &#125; from &#39;fs&#39;;</span><br></pre></td></tr></table></figure>
+<p>上面代码的实质是从fs模块加载 3 个方法，其他方法不加载。这种加载称为“编译时加载”或者静态加载，即 ES6 可以在编译时就完成模块加载，效率要比 CommonJS 模块的加载方式高。但是这样会造成import时无法动态加载</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">&#x2F;&#x2F;react native根据平台动态加载js，无法使用import方式加载</span><br><span class="line">var NativeAPI &#x3D; require(&#39;.&#x2F;Native_API&#x2F;NativeAPI.&#39; + Platform.OS);</span><br></pre></td></tr></table></figure>
+<p>###<a target="_blank" rel="noopener" href="https://developer.mozilla.org/en-US/docs/web/javascript/reference/statements/export">export</a>导出模块</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">&#x2F;&#x2F; module &quot;my-module.js&quot;</span><br><span class="line">function cube(x) &#123;</span><br><span class="line">  return x * x * x;</span><br><span class="line">&#125;</span><br><span class="line">const foo &#x3D; Math.PI + Math.SQRT2;</span><br><span class="line">export &#123; cube, foo &#125;;</span><br></pre></td></tr></table></figure>
+<p><strong>注意，export命令规定的是对外的接口，必须与模块内部的变量建立一一对应关系。但是module.exports是可以的</strong></p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line">&#x2F;&#x2F; 错误演示</span><br><span class="line">&#x2F;&#x2F; 报错</span><br><span class="line">export 1; &#x2F;&#x2F; 绝对不可以</span><br><span class="line"></span><br><span class="line">&#x2F;&#x2F; 报错</span><br><span class="line">var a &#x3D; 100;</span><br><span class="line">export a;</span><br><span class="line"></span><br><span class="line">&#x2F;&#x2F;module.exports</span><br><span class="line">var a &#x3D; 1;</span><br><span class="line">module.exports &#x3D; a</span><br></pre></td></tr></table></figure>
+<p>export在导出接口的时候，必须与模块内部的变量具有一一对应的关系。直接导出1没有任何意义，也不可能在import的时候有一个变量与之对应。 export a 虽然看上去成立，但是 a 的值是一个数字，根本无法完成解构，因此必须写成 export {a} 的形式。即使a被赋值为一个function，也是不允许的。</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line">&#x2F;&#x2F; 写法一</span><br><span class="line">export var m &#x3D; 1;</span><br><span class="line"></span><br><span class="line">&#x2F;&#x2F; 写法二</span><br><span class="line">var m &#x3D; 1;</span><br><span class="line">export &#123;m&#125;;</span><br><span class="line"></span><br><span class="line">&#x2F;&#x2F; 写法三</span><br><span class="line">var n &#x3D; 1;</span><br><span class="line">export &#123;n as m&#125;;</span><br></pre></td></tr></table></figure>
+
+<p><em><strong>注意：export可以在代码中导出多个</strong></em></p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">var m &#x3D; 1;</span><br><span class="line">export &#123;m&#125;;&#x2F;&#x2F;导出m</span><br><span class="line"></span><br><span class="line">var b &#x3D; 2;</span><br><span class="line">export &#123;b&#125;&#x2F;&#x2F;导出b</span><br></pre></td></tr></table></figure>
+
+<p>###<a target="_blank" rel="noopener" href="https://developer.mozilla.org/en-US/docs/web/javascript/reference/statements/import">import</a>导入模块</p>
+<p>import的语法跟require不同，而且import必须放在文件的最开始，且前面不允许有其他逻辑代码。</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">&#x2F;&#x2F; import &quot;user.js&quot;</span><br><span class="line">import &#123; cube, foo &#125; from &#39;my-module&#39;;</span><br><span class="line">console.log(cube(3)); &#x2F;&#x2F; 27</span><br><span class="line">console.log(foo);    &#x2F;&#x2F; 4.555806215962888</span><br></pre></td></tr></table></figure>
+
+<p>import后面跟上花括号的形式是最基本的用法，花括号里面的变量与export后面的变量一一对应。这里，你必须了解 <a target="_blank" rel="noopener" href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/Destructuring_assignment">对象的解构赋值</a> 的知识，也可参考<a target="_blank" rel="noopener" href="http://es6.ruanyifeng.com/#docs/destructuring">阮一峰的结构赋值</a></p>
+<p>###as关键字<br>简单的说就是取一个别名。export中可以用，import中其实可以用：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">&#x2F;&#x2F; a.js</span><br><span class="line">var a &#x3D; function() &#123;&#125;;</span><br><span class="line">export &#123;a as fun&#125;;</span><br><span class="line"></span><br><span class="line">&#x2F;&#x2F; b.js</span><br><span class="line">import &#123;fun as a&#125; from &#39;.&#x2F;a&#39;;</span><br><span class="line">a();</span><br></pre></td></tr></table></figure>
+<p>export的时候，对外提供的接口是fun，它是a.js内部a这个函数的别名，但是在模块外面，认不到a，只能认到fun。<br>import中的as就很简单，就是你在使用模块里面的方法的时候，给这个方法取一个别名，好在当前的文件里面使用。<strong>两个不同文件可能都export同一个fun的对象</strong><br>###export default 命令<br>export default命令，为模块指定默认输出。</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line">&#x2F;&#x2F; 第一组</span><br><span class="line">export default function crc32() &#123; &#x2F;&#x2F; 输出</span><br><span class="line">  &#x2F;&#x2F; ...</span><br><span class="line">&#125;</span><br><span class="line">import crc32 from &#39;crc32&#39;; &#x2F;&#x2F; 输入</span><br><span class="line"></span><br><span class="line">&#x2F;&#x2F; 第二组</span><br><span class="line">export function crc32() &#123; &#x2F;&#x2F; 输出</span><br><span class="line">  &#x2F;&#x2F; ...</span><br><span class="line">&#125;;</span><br><span class="line">import &#123;crc32&#125; from &#39;crc32&#39;; &#x2F;&#x2F; 输入</span><br></pre></td></tr></table></figure>
+<p>default其实是as的语法糖，这个语法糖的好处就是import的时候，可以省去花括号{}。<br>###*符号<br>*代表所有</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">import * as _ from &#39;xxx.js&#39;;&#x2F;&#x2F;表示把xxx模块中的所有接口挂载到 _ 这个对象上</span><br></pre></td></tr></table></figure>
+<p>通过*号直接继承某一个模块的接口</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">export * from &#39;_&#39;;</span><br><span class="line"></span><br><span class="line">&#x2F;&#x2F; 等效于：</span><br><span class="line">import * as all from &#39;_&#39;;</span><br><span class="line">export all;</span><br></pre></td></tr></table></figure>
+<p>尽量少用，它使用的所有的export的接口，但是你当前模块其实并不一定需要用到所有的接口，还是用{}按照需要去引用</p>
+<p>###Require Or Import<br>require理论上可以运用在代码的任何地方，甚至不需要赋值给某个变量之后再使用；但是import则不同，它是编译时的（require是运行时的），它必须放在文件开头，而且使用格式也是确定的，不容置疑。它不会将整个模块运行后赋值给某个变量，而是只选择import的接口进行编译，这样在性能上比require好很多。</p>
+<p>按照规范<em><strong>module.exports =&gt;require，export=&gt;import</strong></em>，但是现在开发为了兼容低版本的JS引擎会对import进行降级处理，会把import转换成require；这样就造成了各种方法可以混合使用，如</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br><span class="line">63</span><br><span class="line">64</span><br><span class="line">65</span><br><span class="line">66</span><br><span class="line">67</span><br><span class="line">68</span><br><span class="line">69</span><br><span class="line">70</span><br></pre></td><td class="code"><pre><span class="line">&#x2F;&#x2F;import.js:导出模块a和d</span><br><span class="line">export class a &#123;&#x2F;&#x2F;分开导出</span><br><span class="line">    constructor(arg&#x3D;2) &#123;</span><br><span class="line">        this.t &#x3D; 1;</span><br><span class="line">        this.t2 &#x3D; arg;</span><br><span class="line">    &#125;</span><br><span class="line">    b()&#123;</span><br><span class="line">        console.log(&#39;b&#39;);</span><br><span class="line">        console.log(this.t2);</span><br><span class="line">    &#125;</span><br><span class="line">    c()&#123;</span><br><span class="line">        console.log(&#39;c&#39;)</span><br><span class="line">        console.log(this.t);</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br><span class="line">var d &#x3D; function()&#123;</span><br><span class="line">&#125;;</span><br><span class="line">export &#123;d&#125;;</span><br><span class="line"></span><br><span class="line">&#x2F;&#x2F;require.js:导出模块a,d,e</span><br><span class="line">class a &#123;&#x2F;&#x2F;分开导出</span><br><span class="line">    constructor(arg&#x3D;2) &#123;</span><br><span class="line">        this.t &#x3D; 1;</span><br><span class="line">        this.t2 &#x3D; arg;</span><br><span class="line">    &#125;</span><br><span class="line">    b()&#123;</span><br><span class="line">        console.log(&#39;b&#39;);</span><br><span class="line">        console.log(this.t2);</span><br><span class="line">    &#125;</span><br><span class="line">    c()&#123;</span><br><span class="line">        console.log(&#39;c&#39;)</span><br><span class="line">        console.log(this.t);</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br><span class="line">var d &#x3D; function()&#123;</span><br><span class="line">    console.log(d)</span><br><span class="line">&#125;;</span><br><span class="line">var e &#x3D; 1</span><br><span class="line">module.exports &#x3D; &#123;a,d,e&#125;;</span><br><span class="line"></span><br><span class="line">&#x2F;&#x2F;index.js</span><br><span class="line">var require_a &#x3D; require(&#39;.&#x2F;require&#39;)</span><br><span class="line">var import_a &#x3D; require(&#39;.&#x2F;import&#39;)</span><br><span class="line">import &#123;a as test&#125; from &#39;.&#x2F;import&#39;</span><br><span class="line">import a from &#39;.&#x2F;require&#39;</span><br><span class="line">import * as all_require from &#39;.&#x2F;require&#39;</span><br><span class="line">import * as all_import from &#39;.&#x2F;import&#39;</span><br><span class="line"></span><br><span class="line">console.log(require_a);&#x2F;&#x2F;&#123;a: ƒ, d: ƒ, e: 1&#125;</span><br><span class="line">console.log(import_a);&#x2F;&#x2F;&#123;a: ƒ, d: ƒ, __esModule: true&#125;</span><br><span class="line">console.log(test);&#x2F;&#x2F;ƒ a()</span><br><span class="line">console.log(a);&#x2F;&#x2F;&#123;a: ƒ, d: ƒ, e: 1&#125;</span><br><span class="line">console.log(all_require);&#x2F;&#x2F;&#123;a: ƒ, d: ƒ, e: 1, default: &#123;…&#125;&#125;</span><br><span class="line">console.log(all_import);&#x2F;&#x2F;&#123;a: ƒ, d: ƒ, __esModule: true&#125;</span><br><span class="line"></span><br><span class="line">&#x2F;&#x2F;a1,a2数据不影响</span><br><span class="line">&#x2F;&#x2F;constructor可传参数，但参数名不能与变量名相同</span><br><span class="line">var a1 &#x3D; new test();</span><br><span class="line">var a2 &#x3D; new test(4);</span><br><span class="line"></span><br><span class="line">console.log(a1.t,a1.t2);&#x2F;&#x2F;1,2</span><br><span class="line">a1.b();&#x2F;&#x2F;b,2</span><br><span class="line">a1.t&#x3D;3;</span><br><span class="line">a1.c();&#x2F;&#x2F;c,3</span><br><span class="line"></span><br><span class="line">console.log(a2.t,a2.t2);&#x2F;&#x2F;1,4</span><br><span class="line">a2.b();&#x2F;&#x2F;b,4</span><br><span class="line">a2.t&#x3D;5;</span><br><span class="line">a2.c();&#x2F;&#x2F;c,5</span><br><span class="line"></span><br></pre></td></tr></table></figure>
+<p>可以看到在混用时require和import在编码是是都可以使用的，需要注意的是require是把所有模块加载进去，与import * 基本相同，但是import *会增加default属性。import需要指定模块名，如果不存在会返回undefined。</p>
+<p><em><strong>require 取到整个对象</strong></em></p>
+<p><em><strong>import a 取到default的对象，如果无default对象，在编译时会报错</strong></em></p>
+<p><em><strong>import {a} 取到 a对象</strong></em></p>
+<p><em><strong>import * as XX 取到所有对象，并放到XX里面</strong></em></p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">&#x2F;&#x2F;a.js</span><br><span class="line">export default class xxxx &#123;&#125;</span><br><span class="line"></span><br><span class="line">var xxx &#x3D; require(&#39;.&#x2F;a.js&#39;);&#x2F;&#x2F;&#123;default:ƒ xxx()&#125;</span><br><span class="line">import xxx from &#39;.&#x2F;a.js&#39;;&#x2F;&#x2F;ƒ xxx()</span><br></pre></td></tr></table></figure>
+<p>当export有default时,在使用require时，需要从default中才能取到要使用的对象，而import可以直接拿到对应的属性</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">&#x2F;&#x2F;a.js</span><br><span class="line">module.exports &#x3D; class a &#123;&#125;</span><br><span class="line"></span><br><span class="line">var a &#x3D; require(&#39;.&#x2F;a.js&#39;);&#x2F;&#x2F;ƒ xxx()</span><br><span class="line">import a from &#39;.&#x2F;a.js&#39;;&#x2F;&#x2F;ƒ xxx()</span><br></pre></td></tr></table></figure>
+<p>如果module.exports导出的是单一的对象时，使用require和import取到的对象是同样的，都是可以直接使用，和default的效果基本一致。</p>
+<p><em><strong>注意：webpack3在module.exports编译时，在模块前自增加了default属性</strong></em></p>
+
+      
+    </div>
+
+    
+    
+    
+
+    <footer class="post-footer">
+        <div class="post-eof"></div>
+      
+    </footer>
+  </article>
+</div>
+
+
+
+
+    
+
+
+<div class="post-block">
+  
+  
+
+  <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="">
+    <link itemprop="mainEntityOfPage" href="https://lzhwweb.github.io/nirvana/javascript/%E5%89%8D%E7%AB%AF/socke-io-emit-%E6%96%B9%E6%B3%95/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/nirvana/images/avatar.gif">
+      <meta itemprop="name" content="nirvana">
+      <meta itemprop="description" content="个人学习笔记">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="涅槃快乐是金">
+    </span>
+      <header class="post-header">
+        <h2 class="post-title" itemprop="name headline">
+          <a href="/nirvana/javascript/%E5%89%8D%E7%AB%AF/socke-io-emit-%E6%96%B9%E6%B3%95/" class="post-title-link" itemprop="url">socke-io-emit-方法</a>
+        </h2>
+
+        <div class="post-meta-container">
+          <div class="post-meta">
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-calendar"></i>
+      </span>
+      <span class="post-meta-item-text">发表于</span>
+
+      <time title="创建时间：2021-03-11 21:12:40" itemprop="dateCreated datePublished" datetime="2021-03-11T21:12:40+08:00">2021-03-11</time>
+    </span>
+      <span class="post-meta-item">
+        <span class="post-meta-item-icon">
+          <i class="far fa-calendar-check"></i>
+        </span>
+        <span class="post-meta-item-text">更新于</span>
+        <time title="修改时间：2021-03-10 12:58:00" itemprop="dateModified" datetime="2021-03-10T12:58:00+08:00">2021-03-10</time>
+      </span>
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-folder"></i>
+      </span>
+      <span class="post-meta-item-text">分类于</span>
+        <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+          <a href="/nirvana/categories/javascript/" itemprop="url" rel="index"><span itemprop="name">javascript</span></a>
+        </span>
+    </span>
+
+  
+      </div>
+      <div class="post-meta">
+    <span class="post-meta-item" title="本文字数">
+      <span class="post-meta-item-icon">
+        <i class="far fa-file-word"></i>
+      </span>
+      <span class="post-meta-item-text">本文字数：</span>
+      <span>2.4k</span>
+    </span>
+    <span class="post-meta-item" title="阅读时长">
+      <span class="post-meta-item-icon">
+        <i class="far fa-clock"></i>
+      </span>
+      <span class="post-meta-item-text">阅读时长 &asymp;</span>
+      <span>2 分钟</span>
+    </span>
+</div>
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+          <p>emit可以很方便的发送数据,例如：</p>
+<p>socket.emit(‘action’);表示发送了一个action命令，命令是字符串的，在另一端接收时，可以这么写： socket.on(‘action’,function(){…});</p>
+<p>socket.emit(‘action’,data);表示发送了一个action命令，还有data数据，在另一端接收时，可以这么写： socket.on(‘action’,function(data){…});</p>
+<p>socket.emit(action,arg1,arg2); 表示发送了一个action命令，还有两个数据，在另一端接收时，可以这么写： socket.on(‘action’,function(arg1,arg2){…});</p>
+<p>socket.emit(action,arg1,arg2,arg3,arg4); 如果是多个参数，就也应该知道什么意思了，同上</p>
+<p>在emit方法中包含回调函数，例如：</p>
+<p>socket.emit(‘action’,data, function(arg1,arg2){…} );那么这里面有一个回调函数可以在另一端调用，另一端可以这么写：socket.on(‘action’,function(data,fn){   fn(‘a’,’b’) ;  });</p>
+<p>上面的data数据可以有0个或者多个，相应的在另一端改变function中参数的个数即可，function中的参数个数和顺序应该和发送时一致</p>
+<p>上面的fn表示另一个端传递过来的参数，是个函数，写fn(‘a’,’b’) ;会回调函数执行。一次发送不应该写多个回调，否则只有最后一个起效，回调应作为最后一个参数。</p>
+<p>例子：一个js文件(内容是下面的服务器端)，同一目录下放一个helloworld.html文件(内容是下面的客户端)，启动服务器，访问<a target="_blank" rel="noopener" href="http://127.0.0.1/">http://127.0.0.1/</a></p>
+<p>客户端：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br></pre></td><td class="code"><pre><span class="line">&lt;!DOCTYPE HTML PUBLIC &quot;-&#x2F;&#x2F;W3C&#x2F;&#x2F;DTD HTML 4.01 Transitional&#x2F;&#x2F;EN&quot; &quot;http:&#x2F;&#x2F;www.w3.org&#x2F;TR&#x2F;html4&#x2F;loose.dtd&quot;&gt;</span><br><span class="line">&lt;html&gt;</span><br><span class="line"> &lt;head&gt;</span><br><span class="line">  &lt;title&gt; New Document &lt;&#x2F;title&gt;</span><br><span class="line">  &lt;meta name&#x3D;&quot;Generator&quot; content&#x3D;&quot;EditPlus&quot;&gt;</span><br><span class="line">  &lt;meta name&#x3D;&quot;Author&quot; content&#x3D;&quot;&quot;&gt;</span><br><span class="line">  &lt;meta name&#x3D;&quot;Keywords&quot; content&#x3D;&quot;&quot;&gt;</span><br><span class="line">  &lt;meta name&#x3D;&quot;Description&quot; content&#x3D;&quot;&quot;&gt;</span><br><span class="line"> &lt;&#x2F;head&gt;</span><br><span class="line">	&lt;script src&#x3D;&quot;&#x2F;socket.io&#x2F;socket.io.js&quot;&gt;&lt;&#x2F;script&gt;</span><br><span class="line">&lt;script&gt;</span><br><span class="line">  var socket &#x3D; io.connect(&#39;ws:&#x2F;&#x2F;127.0.0.1&#x2F;&#39;);</span><br><span class="line">  socket.emit(&#39;msg&#39;,&#39;You get my message?&#39;,function(data)&#123;</span><br><span class="line">    alert(data);</span><br><span class="line">   &#125;); </span><br><span class="line">&lt;&#x2F;script&gt;</span><br><span class="line"> &lt;body&gt;</span><br><span class="line"> </span><br><span class="line"> &lt;&#x2F;body&gt;</span><br><span class="line">&lt;&#x2F;html&gt;</span><br></pre></td></tr></table></figure>
+<p>服务器端： </p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br></pre></td><td class="code"><pre><span class="line">var server&#x3D;require(&#39;http&#39;).createServer(handler); </span><br><span class="line">var io &#x3D; require(&#39;socket.io&#39;).listen(server);</span><br><span class="line">var fs&#x3D;require(&#39;fs&#39;);</span><br><span class="line">server.listen(80);</span><br><span class="line">function handler(req,res)&#123;</span><br><span class="line">	fs.readFile(__dirname+&#39;&#x2F;helloworld.html&#39;,</span><br><span class="line">	function(err, data)&#123;</span><br><span class="line">		if(err)&#123;</span><br><span class="line">			res.writeHead(500);</span><br><span class="line">			return res.end(&#39;Error loading index.html&#39;);</span><br><span class="line">		&#125;</span><br><span class="line">		res.writeHead(200);</span><br><span class="line">		res.end(data);</span><br><span class="line">	&#125;);</span><br><span class="line">&#125;</span><br><span class="line">io.sockets.on(&#39;connection&#39;, function (socket) &#123;</span><br><span class="line">	  socket.on(&#39;msg&#39;, function (data,fn) &#123;</span><br><span class="line">		console.log(&#39;received message from client:&#39;+data);</span><br><span class="line">		fn(&#39;The server has been successfully received your message:&#39;+data);</span><br><span class="line">	  &#125;); </span><br><span class="line">&#125;);</span><br></pre></td></tr></table></figure>
+
+      
+    </div>
+
+    
+    
+    
+
+    <footer class="post-footer">
+        <div class="post-eof"></div>
+      
+    </footer>
+  </article>
+</div>
+
+
+
+
+    
+
+
+<div class="post-block">
+  
+  
+
+  <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="">
+    <link itemprop="mainEntityOfPage" href="https://lzhwweb.github.io/nirvana/javascript/%E5%89%8D%E7%AB%AF/ts-node%E7%9B%B4%E6%8E%A5%E8%BF%90%E8%A1%8Ctypescript%E6%96%87%E4%BB%B6/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/nirvana/images/avatar.gif">
+      <meta itemprop="name" content="nirvana">
+      <meta itemprop="description" content="个人学习笔记">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="涅槃快乐是金">
+    </span>
+      <header class="post-header">
+        <h2 class="post-title" itemprop="name headline">
+          <a href="/nirvana/javascript/%E5%89%8D%E7%AB%AF/ts-node%E7%9B%B4%E6%8E%A5%E8%BF%90%E8%A1%8Ctypescript%E6%96%87%E4%BB%B6/" class="post-title-link" itemprop="url">ts-node直接运行typescript文件</a>
+        </h2>
+
+        <div class="post-meta-container">
+          <div class="post-meta">
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-calendar"></i>
+      </span>
+      <span class="post-meta-item-text">发表于</span>
+
+      <time title="创建时间：2021-03-11 21:12:40" itemprop="dateCreated datePublished" datetime="2021-03-11T21:12:40+08:00">2021-03-11</time>
+    </span>
+      <span class="post-meta-item">
+        <span class="post-meta-item-icon">
+          <i class="far fa-calendar-check"></i>
+        </span>
+        <span class="post-meta-item-text">更新于</span>
+        <time title="修改时间：2021-03-10 13:09:50" itemprop="dateModified" datetime="2021-03-10T13:09:50+08:00">2021-03-10</time>
+      </span>
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-folder"></i>
+      </span>
+      <span class="post-meta-item-text">分类于</span>
+        <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+          <a href="/nirvana/categories/javascript/" itemprop="url" rel="index"><span itemprop="name">javascript</span></a>
+        </span>
+    </span>
+
+  
+      </div>
+      <div class="post-meta">
+    <span class="post-meta-item" title="本文字数">
+      <span class="post-meta-item-icon">
+        <i class="far fa-file-word"></i>
+      </span>
+      <span class="post-meta-item-text">本文字数：</span>
+      <span>376</span>
+    </span>
+    <span class="post-meta-item" title="阅读时长">
+      <span class="post-meta-item-icon">
+        <i class="far fa-clock"></i>
+      </span>
+      <span class="post-meta-item-text">阅读时长 &asymp;</span>
+      <span>1 分钟</span>
+    </span>
+</div>
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+          <p>  正常ts文件都要编译成JS文件才能运行，但是在开发时有时需要运行ts文件，但是每次都要配置package.json，还要安装，后来看到ts-node可以在vscode上运行ts文件。</p>
+<h3 id="安装环境"><a href="#安装环境" class="headerlink" title="安装环境"></a>安装环境</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">&#x2F;&#x2F;全局安装typescript和typescript-node</span><br><span class="line">npm install -g typescript</span><br><span class="line">npm install -g typescript-node</span><br></pre></td></tr></table></figure>
+<p>  安装完成后就可以不用手动去编译成js文件，可以直接运行ts文件</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">&#x2F;&#x2F;foo.ts</span><br><span class="line">let foo &#x3D; &#123;</span><br><span class="line">  baz: &#123;</span><br><span class="line">    a: 1</span><br><span class="line">  &#125;</span><br><span class="line">&#125;</span><br><span class="line">console.log(foo);</span><br></pre></td></tr></table></figure>
+<h3 id="执行命令-ts-node-ts"><a href="#执行命令-ts-node-ts" class="headerlink" title="执行命令***ts-node ****.ts***"></a>执行命令***ts-node ****.ts***</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">$ ts-node foo.ts</span><br><span class="line">&#123; baz: &#123; a: 1 &#125; &#125;</span><br></pre></td></tr></table></figure>
+
+      
+    </div>
+
+    
+    
+    
+
+    <footer class="post-footer">
+        <div class="post-eof"></div>
+      
+    </footer>
+  </article>
+</div>
+
+
+
+
+    
+
+
+<div class="post-block">
+  
+  
+
+  <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="">
+    <link itemprop="mainEntityOfPage" href="https://lzhwweb.github.io/nirvana/javascript/%E5%89%8D%E7%AB%AF/typeScript-Decorators-%E7%9A%84this%E4%BD%9C%E7%94%A8%E5%9F%9F/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/nirvana/images/avatar.gif">
+      <meta itemprop="name" content="nirvana">
+      <meta itemprop="description" content="个人学习笔记">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="涅槃快乐是金">
+    </span>
+      <header class="post-header">
+        <h2 class="post-title" itemprop="name headline">
+          <a href="/nirvana/javascript/%E5%89%8D%E7%AB%AF/typeScript-Decorators-%E7%9A%84this%E4%BD%9C%E7%94%A8%E5%9F%9F/" class="post-title-link" itemprop="url">typeScript-Decorators-的this作用域</a>
+        </h2>
+
+        <div class="post-meta-container">
+          <div class="post-meta">
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-calendar"></i>
+      </span>
+      <span class="post-meta-item-text">发表于</span>
+
+      <time title="创建时间：2021-03-11 21:12:40" itemprop="dateCreated datePublished" datetime="2021-03-11T21:12:40+08:00">2021-03-11</time>
+    </span>
+      <span class="post-meta-item">
+        <span class="post-meta-item-icon">
+          <i class="far fa-calendar-check"></i>
+        </span>
+        <span class="post-meta-item-text">更新于</span>
+        <time title="修改时间：2021-03-10 12:57:59" itemprop="dateModified" datetime="2021-03-10T12:57:59+08:00">2021-03-10</time>
+      </span>
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-folder"></i>
+      </span>
+      <span class="post-meta-item-text">分类于</span>
+        <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+          <a href="/nirvana/categories/javascript/" itemprop="url" rel="index"><span itemprop="name">javascript</span></a>
+        </span>
+    </span>
+
+  
+      </div>
+      <div class="post-meta">
+    <span class="post-meta-item" title="本文字数">
+      <span class="post-meta-item-icon">
+        <i class="far fa-file-word"></i>
+      </span>
+      <span class="post-meta-item-text">本文字数：</span>
+      <span>1.6k</span>
+    </span>
+    <span class="post-meta-item" title="阅读时长">
+      <span class="post-meta-item-icon">
+        <i class="far fa-clock"></i>
+      </span>
+      <span class="post-meta-item-text">阅读时长 &asymp;</span>
+      <span>1 分钟</span>
+    </span>
+</div>
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+          <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line">class FooBar &#123;</span><br><span class="line">    @log</span><br><span class="line">    public foo(arg): void &#123; </span><br><span class="line">        console.log(this);</span><br><span class="line">        this.bar(arg);</span><br><span class="line">    &#125;</span><br><span class="line">    @log</span><br><span class="line">    private bar(arg) : void &#123; </span><br><span class="line">        console.log(this, &quot;bar&quot;, arg);</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line">function log(target: Function, key: string, value: any) &#123;</span><br><span class="line">    return &#123;</span><br><span class="line">        value: (...args: any[]) &#x3D;&gt; &#123;</span><br><span class="line">            var a &#x3D; args.map(a &#x3D;&gt; JSON.stringify(a)).join();</span><br><span class="line">            var result &#x3D; value.value.apply(this, args); &#x2F;&#x2F; How to avoid hard coded this?</span><br><span class="line">            var r &#x3D; JSON.stringify(result);</span><br><span class="line">            console.log(&#96;Call: $&#123;key&#125;($&#123;a&#125;) &#x3D;&gt; $&#123;r&#125;&#96;);</span><br><span class="line">            return result;</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<p>这个时候会提示<strong>Uncaught TypeError: this.bar is not a function</strong>.<br>这是由于log中使用了箭头函数，改变了方法的作用域。this对象指向的是当前函数的上下文，而不是调用log方法的this对象。这边不要使用箭头函数</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line">function log(target: Object, key: string, value: any) &#123;</span><br><span class="line">    return &#123;</span><br><span class="line">        value: function(...args: any[]) &#123;</span><br><span class="line">            var a &#x3D; args.map(a &#x3D;&gt; JSON.stringify(a)).join();</span><br><span class="line">            var result &#x3D; value.value.apply(this, args);</span><br><span class="line">            var r &#x3D; JSON.stringify(result);</span><br><span class="line">            console.log(&#96;Call: $&#123;key&#125;($&#123;a&#125;) &#x3D;&gt; $&#123;r&#125;&#96;);</span><br><span class="line">            return result;</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<p>建议编辑descriptor/value 参数作为返回值。因此我们暂存了 descriptor 中当前value，避免覆盖其他注解对这个 descriptor 可能的修改。</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line">function log(target: Object, key: string, descriptor: TypedPropertyDescriptor&lt;any&gt;) &#123;</span><br><span class="line">    var originalMethod &#x3D; descriptor.value;</span><br><span class="line"></span><br><span class="line">    descriptor.value &#x3D; function(...args: any[]) &#123;</span><br><span class="line">        var a &#x3D; args.map(a &#x3D;&gt; JSON.stringify(a)).join();</span><br><span class="line">        var result &#x3D; originalMethod.apply(this, args);</span><br><span class="line">        var r &#x3D; JSON.stringify(result);</span><br><span class="line">        console.log(&#96;Call: $&#123;key&#125;($&#123;a&#125;) &#x3D;&gt; $&#123;r&#125;&#96;);</span><br><span class="line">        return result;</span><br><span class="line">    &#125;;</span><br><span class="line"></span><br><span class="line">    return descriptor;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<p>请参看 <a href="https://link.zhihu.com/?target=http://stackoverflow.com/questions/30329832/how-to-avoid-hard-coded-this-in-decorators%23answer-30330602">Stack-Overflow 上的答案</a> 了解上面两个问题的更多信息</p>
+
+      
+    </div>
+
+    
+    
+    
+
+    <footer class="post-footer">
+        <div class="post-eof"></div>
+      
+    </footer>
+  </article>
+</div>
+
+
+
+
+    
+
+
+<div class="post-block">
+  
+  
+
+  <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="">
+    <link itemprop="mainEntityOfPage" href="https://lzhwweb.github.io/nirvana/javascript/%E5%89%8D%E7%AB%AF/unhandled-promise-rejection/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/nirvana/images/avatar.gif">
+      <meta itemprop="name" content="nirvana">
+      <meta itemprop="description" content="个人学习笔记">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="涅槃快乐是金">
+    </span>
+      <header class="post-header">
+        <h2 class="post-title" itemprop="name headline">
+          <a href="/nirvana/javascript/%E5%89%8D%E7%AB%AF/unhandled-promise-rejection/" class="post-title-link" itemprop="url">unhandled-promise-rejection</a>
+        </h2>
+
+        <div class="post-meta-container">
+          <div class="post-meta">
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-calendar"></i>
+      </span>
+      <span class="post-meta-item-text">发表于</span>
+
+      <time title="创建时间：2021-03-11 21:12:40" itemprop="dateCreated datePublished" datetime="2021-03-11T21:12:40+08:00">2021-03-11</time>
+    </span>
+      <span class="post-meta-item">
+        <span class="post-meta-item-icon">
+          <i class="far fa-calendar-check"></i>
+        </span>
+        <span class="post-meta-item-text">更新于</span>
+        <time title="修改时间：2021-03-10 13:10:43" itemprop="dateModified" datetime="2021-03-10T13:10:43+08:00">2021-03-10</time>
+      </span>
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-folder"></i>
+      </span>
+      <span class="post-meta-item-text">分类于</span>
+        <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+          <a href="/nirvana/categories/javascript/" itemprop="url" rel="index"><span itemprop="name">javascript</span></a>
+        </span>
+    </span>
+
+  
+      </div>
+      <div class="post-meta">
+    <span class="post-meta-item" title="本文字数">
+      <span class="post-meta-item-icon">
+        <i class="far fa-file-word"></i>
+      </span>
+      <span class="post-meta-item-text">本文字数：</span>
+      <span>3k</span>
+    </span>
+    <span class="post-meta-item" title="阅读时长">
+      <span class="post-meta-item-icon">
+        <i class="far fa-clock"></i>
+      </span>
+      <span class="post-meta-item-text">阅读时长 &asymp;</span>
+      <span>3 分钟</span>
+    </span>
+</div>
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+          <p>  Node 如下的报错：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">(node:17928) UnhandledPromiseRejectionWarning: Unhandled promise rejection (rejection id: 2): Error</span><br><span class="line">(node:17928) [DEP0018] DeprecationWarning: Unhandled promise rejections are deprecated. In the future, promise rejections that are not handled will terminate the Node.js process with a non-zero exit code.</span><br></pre></td></tr></table></figure>
+<p>先来看一下 unhandled promise rejection。</p>
+<h3 id="在什么情况下会出现：UnhandledPromiseRejectionWarning"><a href="#在什么情况下会出现：UnhandledPromiseRejectionWarning" class="headerlink" title="在什么情况下会出现：UnhandledPromiseRejectionWarning"></a>在什么情况下会出现：UnhandledPromiseRejectionWarning</h3><blockquote>
+<p>或者说：什么是 unhandled promise rejection</p>
+</blockquote>
+<p>当 Promise 的状态变为 rejection 时，我们没有正确处理，让其一直冒泡（propagation），直至被进程捕获。这个 Promise 就被称为 unhandled promise rejection。</p>
+<p>Promise 的异常，有两种触发方式：</p>
+<ul>
+<li>主动调用 reject 方法</li>
+<li>抛出异常（exception）<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line">&#x2F;&#x2F; reject</span><br><span class="line">new Promise((resolve, reject) &#x3D;&gt; &#123;</span><br><span class="line">  reject(&#39;timeout&#39;);</span><br><span class="line">&#125;);</span><br><span class="line"></span><br><span class="line">&#x2F;&#x2F; exception</span><br><span class="line">new Promise((resolve, reject) &#x3D;&gt; &#123;</span><br><span class="line">  undefinedVariable();</span><br><span class="line">&#125;);</span><br></pre></td></tr></table></figure>
+我们有两种方式去处理 rejection，方式二 是 方式一 的语法糖。<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br></pre></td><td class="code"><pre><span class="line">&#x2F;&#x2F; 方式一 .then(undefined, () &#x3D;&gt; &#123;&#125;)</span><br><span class="line">new Promise((resolve, reject) &#x3D;&gt; &#123;</span><br><span class="line">  &#x2F;&#x2F; ...</span><br><span class="line">  reject(&#39;timeout&#39;);</span><br><span class="line">&#125;).then(undefined, (error) &#x3D;&gt; &#123;</span><br><span class="line">  console.error(error);</span><br><span class="line">&#125;);</span><br><span class="line"></span><br><span class="line">&#x2F;&#x2F; 方式二 .catch(() &#x3D;&gt; &#123;&#125;)</span><br><span class="line">new Promise((resolve, reject) &#x3D;&gt; &#123;</span><br><span class="line">  &#x2F;&#x2F; ...</span><br><span class="line">  reject(&#39;timeout&#39;)</span><br><span class="line">&#125;).catch((error) &#x3D;&gt; &#123;</span><br><span class="line">  console.error(error);</span><br><span class="line">&#125;)</span><br></pre></td></tr></table></figure>
+关键点是：不能在让异常继续往上抛（propagation）了，否则还是会触发 unhandled promise rejection。如下代码所示：<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br></pre></td><td class="code"><pre><span class="line">&#x2F;&#x2F; 方式一</span><br><span class="line">new Promise((resolve, reject) &#x3D;&gt; &#123;</span><br><span class="line">  &#x2F;&#x2F; ...</span><br><span class="line">  reject(&#39;timeout&#39;);</span><br><span class="line">&#125;).then(undefined, (error) &#x3D;&gt; &#123;</span><br><span class="line">  throw new Error(error);</span><br><span class="line">&#125;);</span><br><span class="line"></span><br><span class="line">&#x2F;&#x2F; 方式二</span><br><span class="line">new Promise((resolve, reject) &#x3D;&gt; &#123;</span><br><span class="line">  &#x2F;&#x2F; ...</span><br><span class="line">  reject(&#39;timeout&#39;);</span><br><span class="line">&#125;).catch((error) &#x3D;&gt; &#123;</span><br><span class="line">  throw new Error(error);</span><br><span class="line">&#125;);</span><br></pre></td></tr></table></figure>
+原因在于：不论 .then(onFulfilled, onRejection) 中的 onFulfilled 还是 onRejection 返回的都是 Promise，如果在他们内部抛出了异常，那么意味着接下来的 then chains 还是 rejection 的。<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">const promise2 &#x3D; (new Promise((resolve, reject) &#x3D;&gt; &#123;</span><br><span class="line">  &#x2F;&#x2F; ...</span><br><span class="line">  reject(&#39;timeout&#39;);</span><br><span class="line">&#125;).catch((error) &#x3D;&gt; &#123;</span><br><span class="line">  throw new Error(error);</span><br><span class="line">&#125;));</span><br></pre></td></tr></table></figure>
+在这里，对于 promise2 来讲，它的 rejectiton 还没有被 handle。所以，还需要做如下处理：<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line">const promise2 &#x3D; (new Promise((resolve, reject) &#x3D;&gt; &#123;</span><br><span class="line">  &#x2F;&#x2F; ...</span><br><span class="line">  reject(&#39;timeout&#39;);</span><br><span class="line">&#125;).catch((error) &#x3D;&gt; &#123;</span><br><span class="line">  throw new Error(error);</span><br><span class="line">&#125;));</span><br><span class="line"></span><br><span class="line">promise2.catch((error) &#x3D;&gt; &#123;</span><br><span class="line">  console.error(error);</span><br><span class="line">&#125;);</span><br></pre></td></tr></table></figure>
+<h3 id="Async-Await-中"><a href="#Async-Await-中" class="headerlink" title="Async/Await 中"></a>Async/Await 中</h3>在 Async/Await 中，unhandled promise rejection 是这样触发：<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br></pre></td><td class="code"><pre><span class="line">&#x2F;&#x2F; Promise 未能阻止异常抛出</span><br><span class="line">;(async () &#x3D;&gt; &#123;</span><br><span class="line">  await (new Promise((resolve, reject) &#x3D;&gt; &#123;</span><br><span class="line">    reject(&#39;timeout&#39;);</span><br><span class="line">  &#125;));</span><br><span class="line">&#125;)();</span><br><span class="line"></span><br><span class="line">&#x2F;&#x2F; async 没有妥善处理异常</span><br><span class="line">;(async () &#x3D;&gt; &#123;</span><br><span class="line">  try &#123;</span><br><span class="line">    await (new Promise((resolve, reject) &#x3D;&gt; &#123;</span><br><span class="line">      reject(&#39;timeout&#39;);</span><br><span class="line">    &#125;));</span><br><span class="line">  &#125; catch(e) &#123;</span><br><span class="line">    throw new Error(e);</span><br><span class="line">  &#125;</span><br><span class="line">&#125;)();</span><br></pre></td></tr></table></figure>
+<h3 id="怎么得到-错误堆栈"><a href="#怎么得到-错误堆栈" class="headerlink" title="怎么得到 错误堆栈"></a>怎么得到 错误堆栈</h3><blockquote>
+<p>Node.js v8.1.2 Documentation: <a target="_blank" rel="noopener" href="https://nodejs.org/api/process.html#process_event_unhandledrejection">https://nodejs.org/api/process.html#process_event_unhandledrejection</a></p>
+</blockquote>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">process.on(&#39;unhandledRejection&#39;, (reason, p) &#x3D;&gt; &#123;</span><br><span class="line">  console.log(&#39;Unhandled Rejection at:&#39;, p, &#39;reason:&#39;, reason);</span><br><span class="line">  &#x2F;&#x2F; application specific logging, throwing an error, or other logic here</span><br><span class="line">&#125;);</span><br></pre></td></tr></table></figure></li>
+</ul>
+
+      
+    </div>
+
+    
+    
+    
+
+    <footer class="post-footer">
+        <div class="post-eof"></div>
+      
+    </footer>
+  </article>
+</div>
+
+
+
+
+    
+
+
+<div class="post-block">
+  
+  
+
+  <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="">
+    <link itemprop="mainEntityOfPage" href="https://lzhwweb.github.io/nirvana/javascript/%E5%89%8D%E7%AB%AF/webpack-bundle-analyzer%E5%8F%AF%E8%A7%86%E5%8C%96%E5%88%86%E6%9E%90%E5%8C%85%E5%A4%A7%E5%B0%8F/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/nirvana/images/avatar.gif">
+      <meta itemprop="name" content="nirvana">
+      <meta itemprop="description" content="个人学习笔记">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="涅槃快乐是金">
+    </span>
+      <header class="post-header">
+        <h2 class="post-title" itemprop="name headline">
+          <a href="/nirvana/javascript/%E5%89%8D%E7%AB%AF/webpack-bundle-analyzer%E5%8F%AF%E8%A7%86%E5%8C%96%E5%88%86%E6%9E%90%E5%8C%85%E5%A4%A7%E5%B0%8F/" class="post-title-link" itemprop="url">webpack-bundle-analyzer可视化分析包大小</a>
+        </h2>
+
+        <div class="post-meta-container">
+          <div class="post-meta">
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-calendar"></i>
+      </span>
+      <span class="post-meta-item-text">发表于</span>
+
+      <time title="创建时间：2021-03-11 21:12:40" itemprop="dateCreated datePublished" datetime="2021-03-11T21:12:40+08:00">2021-03-11</time>
+    </span>
+      <span class="post-meta-item">
+        <span class="post-meta-item-icon">
+          <i class="far fa-calendar-check"></i>
+        </span>
+        <span class="post-meta-item-text">更新于</span>
+        <time title="修改时间：2021-03-10 13:10:58" itemprop="dateModified" datetime="2021-03-10T13:10:58+08:00">2021-03-10</time>
+      </span>
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-folder"></i>
+      </span>
+      <span class="post-meta-item-text">分类于</span>
+        <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+          <a href="/nirvana/categories/javascript/" itemprop="url" rel="index"><span itemprop="name">javascript</span></a>
+        </span>
+    </span>
+
+  
+      </div>
+      <div class="post-meta">
+    <span class="post-meta-item" title="本文字数">
+      <span class="post-meta-item-icon">
+        <i class="far fa-file-word"></i>
+      </span>
+      <span class="post-meta-item-text">本文字数：</span>
+      <span>2.1k</span>
+    </span>
+    <span class="post-meta-item" title="阅读时长">
+      <span class="post-meta-item-icon">
+        <i class="far fa-clock"></i>
+      </span>
+      <span class="post-meta-item-text">阅读时长 &asymp;</span>
+      <span>2 分钟</span>
+    </span>
+</div>
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+          <p>前端开发现在由于使用node进行开发，会安装很多依赖，但是很多依赖的资源是不透明的，构建完成后，需要分析生产文件到底依赖那些资源，每个资源占据多少空间，这样才能有针对性的优化。所以需要有个方便分析包大小的工具，可以按需优化。<br>先看webpack-bundle-analyzer的效果图（官方效果图）：<br><img src="https://upload-images.jianshu.io/upload_images/10024246-0a46514a70cd94d0.gif?imageMogr2/auto-orient/strip"></p>
+<h2 id="一、安装"><a href="#一、安装" class="headerlink" title="一、安装"></a>一、安装</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">npm install webpack-bundle-analyzer –save-dev</span><br></pre></td></tr></table></figure>
+<h2 id="二、配置"><a href="#二、配置" class="headerlink" title="二、配置"></a>二、配置</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">&#x2F;&#x2F; 分析包内容 </span><br><span class="line">const BundleAnalyzerPlugin &#x3D; require(&#39;webpack-bundle-analyzer&#39;).BundleAnalyzerPlugin; </span><br><span class="line">module.exports &#x3D; &#123; </span><br><span class="line">plugins: [ </span><br><span class="line">&#x2F;&#x2F; 开启 BundleAnalyzerPlugin </span><br><span class="line">new BundleAnalyzerPlugin(), </span><br><span class="line">    ], </span><br><span class="line">&#125;;   </span><br></pre></td></tr></table></figure>
+<p>该插件的默认配置，一般无需修改<br> <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br></pre></td><td class="code"><pre><span class="line">new BundleAnalyzerPlugin(&#123;</span><br><span class="line">  &#x2F;&#x2F;  可以是&#96;server&#96;，&#96;static&#96;或&#96;disabled&#96;。</span><br><span class="line">  &#x2F;&#x2F;  在&#96;server&#96;模式下，分析器将启动HTTP服务器来显示软件包报告。</span><br><span class="line">  &#x2F;&#x2F;  在“静态”模式下，会生成带有报告的单个HTML文件。</span><br><span class="line">  &#x2F;&#x2F;  在&#96;disabled&#96;模式下，你可以使用这个插件来将&#96;generateStatsFile&#96;设置为&#96;true&#96;来生成Webpack Stats JSON文件。</span><br><span class="line">  analyzerMode: &#39;server&#39;,</span><br><span class="line">  &#x2F;&#x2F;  将在“服务器”模式下使用的主机启动HTTP服务器。</span><br><span class="line">  analyzerHost: &#39;127.0.0.1&#39;,</span><br><span class="line">  &#x2F;&#x2F;  将在“服务器”模式下使用的端口启动HTTP服务器。</span><br><span class="line">  analyzerPort: 8888, </span><br><span class="line">  &#x2F;&#x2F;  路径捆绑，将在&#96;static&#96;模式下生成的报告文件。</span><br><span class="line">  &#x2F;&#x2F;  相对于捆绑输出目录。</span><br><span class="line">  reportFilename: &#39;report.html&#39;,</span><br><span class="line">  &#x2F;&#x2F;  模块大小默认显示在报告中。</span><br><span class="line">  &#x2F;&#x2F;  应该是&#96;stat&#96;，&#96;parsed&#96;或者&#96;gzip&#96;中的一个。</span><br><span class="line">  &#x2F;&#x2F;  有关更多信息，请参见“定义”一节。</span><br><span class="line">  defaultSizes: &#39;parsed&#39;,</span><br><span class="line">  &#x2F;&#x2F;  在默认浏览器中自动打开报告</span><br><span class="line">  openAnalyzer: true,</span><br><span class="line">  &#x2F;&#x2F;  如果为true，则Webpack Stats JSON文件将在bundle输出目录中生成</span><br><span class="line">  generateStatsFile: false, </span><br><span class="line">  &#x2F;&#x2F;  如果&#96;generateStatsFile&#96;为&#96;true&#96;，将会生成Webpack Stats JSON文件的名字。</span><br><span class="line">  &#x2F;&#x2F;  相对于捆绑输出目录。</span><br><span class="line">  statsFilename: &#39;stats.json&#39;,</span><br><span class="line">  &#x2F;&#x2F;  stats.toJson（）方法的选项。</span><br><span class="line">  &#x2F;&#x2F;  例如，您可以使用&#96;source：false&#96;选项排除统计文件中模块的来源。</span><br><span class="line">  &#x2F;&#x2F;  在这里查看更多选项：https：  &#x2F;&#x2F;github.com&#x2F;webpack&#x2F;webpack&#x2F;blob&#x2F;webpack-1&#x2F;lib&#x2F;Stats.js#L21</span><br><span class="line">  statsOptions: null,</span><br><span class="line">  logLevel: &#39;info&#39; &#x2F;&#x2F; 日志级别。可以是&#39;信息&#39;，&#39;警告&#39;，&#39;错误&#39;或&#39;沉默&#39;。</span><br><span class="line">&#125;)</span><br></pre></td></tr></table></figure></p>
+<h5 id="三、启动"><a href="#三、启动" class="headerlink" title="三、启动"></a>三、启动</h5><p>在package.json的scripts里加入下面这句话，就可以npm run build之后看到webpack-bundle-analyzer的效果：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">&quot;analyz&quot;: &quot;NODE_ENV&#x3D;production npm_config_report&#x3D;true npm run build&quot;</span><br></pre></td></tr></table></figure>
+<p>浏览器打开127.0.0.1:8888地址可以看到效果图。</p>
+<h5 id="四：模块功能："><a href="#四：模块功能：" class="headerlink" title="四：模块功能："></a>四：模块功能：</h5><ul>
+<li>意识到你的文件打包压缩后中真正的内容</li>
+<li>找出哪些模块组成最大的大小</li>
+<li>找到错误的模块</li>
+<li>最好的事情是它支持缩小捆绑！它解析它们以获得实际大小的捆绑模块。它也显示他们的gzipped大小！</li>
+</ul>
+
+      
+    </div>
+
+    
+    
+    
+
+    <footer class="post-footer">
+        <div class="post-eof"></div>
+      
+    </footer>
+  </article>
+</div>
+
+
+
+
+    
+
+
+<div class="post-block">
+  
+  
+
+  <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="">
+    <link itemprop="mainEntityOfPage" href="https://lzhwweb.github.io/nirvana/javascript/%E5%89%8D%E7%AB%AF/webpack-getaddrinfo-ENOTFOUND-localhost-%E9%94%99%E8%AF%AF/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/nirvana/images/avatar.gif">
+      <meta itemprop="name" content="nirvana">
+      <meta itemprop="description" content="个人学习笔记">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="涅槃快乐是金">
+    </span>
+      <header class="post-header">
+        <h2 class="post-title" itemprop="name headline">
+          <a href="/nirvana/javascript/%E5%89%8D%E7%AB%AF/webpack-getaddrinfo-ENOTFOUND-localhost-%E9%94%99%E8%AF%AF/" class="post-title-link" itemprop="url">webpack-getaddrinfo-ENOTFOUND-localhost-错误</a>
+        </h2>
+
+        <div class="post-meta-container">
+          <div class="post-meta">
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-calendar"></i>
+      </span>
+      <span class="post-meta-item-text">发表于</span>
+
+      <time title="创建时间：2021-03-11 21:12:40" itemprop="dateCreated datePublished" datetime="2021-03-11T21:12:40+08:00">2021-03-11</time>
+    </span>
+      <span class="post-meta-item">
+        <span class="post-meta-item-icon">
+          <i class="far fa-calendar-check"></i>
+        </span>
+        <span class="post-meta-item-text">更新于</span>
+        <time title="修改时间：2021-03-10 12:57:59" itemprop="dateModified" datetime="2021-03-10T12:57:59+08:00">2021-03-10</time>
+      </span>
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-folder"></i>
+      </span>
+      <span class="post-meta-item-text">分类于</span>
+        <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+          <a href="/nirvana/categories/javascript/" itemprop="url" rel="index"><span itemprop="name">javascript</span></a>
+        </span>
+    </span>
+
+  
+      </div>
+      <div class="post-meta">
+    <span class="post-meta-item" title="本文字数">
+      <span class="post-meta-item-icon">
+        <i class="far fa-file-word"></i>
+      </span>
+      <span class="post-meta-item-text">本文字数：</span>
+      <span>235</span>
+    </span>
+    <span class="post-meta-item" title="阅读时长">
+      <span class="post-meta-item-icon">
+        <i class="far fa-clock"></i>
+      </span>
+      <span class="post-meta-item-text">阅读时长 &asymp;</span>
+      <span>1 分钟</span>
+    </span>
+</div>
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+          <p>原因 没有指定 localhost<br>在host 文件中添加<br>127.0.0.1 localhost</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">events.js:141</span><br><span class="line">      throw er; &#x2F;&#x2F; Unhandled &#39;error&#39; event</span><br><span class="line">      ^</span><br><span class="line"></span><br><span class="line">Error: getaddrinfo ENOTFOUND localhost</span><br><span class="line">    at errnoException (dns.js:27:10)</span><br><span class="line">    at GetAddrInfoReqWrap.onlookup [as oncomplete] (dns.js:78:26)</span><br></pre></td></tr></table></figure>
+
+      
+    </div>
+
+    
+    
+    
+
+    <footer class="post-footer">
+        <div class="post-eof"></div>
+      
+    </footer>
+  </article>
+</div>
+
+
+
+
+  <nav class="pagination">
+    <a class="extend prev" rel="prev" href="/nirvana/page/5/"><i class="fa fa-angle-left" aria-label="上一页"></i></a><a class="page-number" href="/nirvana/">1</a><span class="space">&hellip;</span><a class="page-number" href="/nirvana/page/5/">5</a><span class="page-number current">6</span><a class="page-number" href="/nirvana/page/7/">7</a><span class="space">&hellip;</span><a class="page-number" href="/nirvana/page/18/">18</a><a class="extend next" rel="next" href="/nirvana/page/7/"><i class="fa fa-angle-right" aria-label="下一页"></i></a>
+  </nav>
+
+
+<script>
+  window.addEventListener('tabs:register', () => {
+    let { activeClass } = CONFIG.comments;
+    if (CONFIG.comments.storage) {
+      activeClass = localStorage.getItem('comments_active') || activeClass;
+    }
+    if (activeClass) {
+      const activeTab = document.querySelector(`a[href="#comment-${activeClass}"]`);
+      if (activeTab) {
+        activeTab.click();
+      }
+    }
+  });
+  if (CONFIG.comments.storage) {
+    window.addEventListener('tabs:click', event => {
+      if (!event.target.matches('.tabs-comment .tab-content .tab-pane')) return;
+      const commentClass = event.target.classList[1];
+      localStorage.setItem('comments_active', commentClass);
+    });
+  }
+</script>
+</div>
+  </main>
+
+  <footer class="footer">
+    <div class="footer-inner">
+
+
+<div class="copyright">
+  &copy; 
+  <span itemprop="copyrightYear">2021</span>
+  <span class="with-love">
+    <i class="fa fa-heart"></i>
+  </span>
+  <span class="author" itemprop="copyrightHolder">nirvana</span>
+</div>
+<div class="wordcount">
+  <span class="post-meta-item">
+    <span class="post-meta-item-icon">
+      <i class="fa fa-chart-line"></i>
+    </span>
+      <span>站点总字数：</span>
+    <span title="站点总字数">540k</span>
+  </span>
+  <span class="post-meta-item">
+    <span class="post-meta-item-icon">
+      <i class="fa fa-coffee"></i>
+    </span>
+      <span>站点阅读时长 &asymp;</span>
+    <span title="站点阅读时长">8:11</span>
+  </span>
+</div>
+  <div class="powered-by">由 <a href="https://hexo.io/" class="theme-link" rel="noopener" target="_blank">Hexo</a> & <a href="https://theme-next.js.org/" class="theme-link" rel="noopener" target="_blank">NexT.Gemini</a> 强力驱动
+  </div>
+
+    </div>
+  </footer>
+
+  
+  <script src="https://cdn.jsdelivr.net/npm/animejs@3.2.1/lib/anime.min.js"></script>
+<script src="/nirvana/js/utils.js"></script><script src="/nirvana/js/motion.js"></script><script src="/nirvana/js/next-boot.js"></script>
+
+  
+
+
+
+
+
+
+  
+
+
+
+
+
+</body>
+</html>

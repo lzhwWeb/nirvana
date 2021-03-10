@@ -1,0 +1,1709 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=2">
+<meta name="theme-color" content="#222">
+<meta name="generator" content="Hexo 5.4.0">
+ <meta name="referrer" content="no-referrer"/>
+
+  <link rel="apple-touch-icon" sizes="180x180" href="/nirvana/images/apple-touch-icon-next.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="/nirvana/images/favicon-32x32-next.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="/nirvana/images/favicon-16x16-next.png">
+  <link rel="mask-icon" href="/nirvana/images/logo.svg" color="#222">
+
+<link rel="stylesheet" href="/nirvana/css/main.css">
+
+
+
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@5.15.2/css/all.min.css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/animate.css@3.1.1/animate.min.css">
+
+<script class="hexo-configurations">
+    var NexT = window.NexT || {};
+    var CONFIG = {"hostname":"lzhwweb.github.io","root":"/nirvana/","images":"/nirvana/images","scheme":"Gemini","version":"8.2.2","exturl":false,"sidebar":{"position":"left","display":"post","padding":18,"offset":12},"copycode":false,"bookmark":{"enable":false,"color":"#222","save":"auto"},"fancybox":false,"mediumzoom":false,"lazyload":false,"pangu":false,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},"motion":{"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"fadeInDown","post_body":"fadeInDown","coll_header":"fadeInLeft","sidebar":"fadeInUp"}},"prism":false,"i18n":{"placeholder":"搜索...","empty":"没有找到任何搜索结果：${query}","hits_time":"找到 ${hits} 个搜索结果（用时 ${time} 毫秒）","hits":"找到 ${hits} 个搜索结果"}};
+  </script>
+<meta name="description" content="个人学习笔记">
+<meta property="og:type" content="website">
+<meta property="og:title" content="涅槃快乐是金">
+<meta property="og:url" content="https://lzhwweb.github.io/nirvana/page/16/index.html">
+<meta property="og:site_name" content="涅槃快乐是金">
+<meta property="og:description" content="个人学习笔记">
+<meta property="og:locale" content="zh_CN">
+<meta property="article:author" content="nirvana">
+<meta property="article:tag" content="前端,javascript,node,git">
+<meta name="twitter:card" content="summary">
+
+
+<link rel="canonical" href="https://lzhwweb.github.io/nirvana/page/16/">
+
+
+<script class="page-configurations">
+  // https://hexo.io/docs/variables.html
+  CONFIG.page = {
+    sidebar: "",
+    isHome : true,
+    isPost : false,
+    lang   : 'zh-CN'
+  };
+</script>
+<title>涅槃快乐是金</title>
+  
+
+
+
+
+  <noscript>
+  <style>
+  body { margin-top: 2rem; }
+
+  .use-motion .menu-item,
+  .use-motion .sidebar,
+  .use-motion .post-block,
+  .use-motion .pagination,
+  .use-motion .comments,
+  .use-motion .post-header,
+  .use-motion .post-body,
+  .use-motion .collection-header {
+    visibility: visible;
+  }
+
+  .use-motion .header,
+  .use-motion .site-brand-container .toggle,
+  .use-motion .footer { opacity: initial; }
+
+  .use-motion .site-title,
+  .use-motion .site-subtitle,
+  .use-motion .custom-logo-image {
+    opacity: initial;
+    top: initial;
+  }
+
+  .use-motion .logo-line {
+    transform: scaleX(1);
+  }
+
+  .search-pop-overlay, .sidebar-nav { display: none; }
+  .sidebar-panel { display: block; }
+  </style>
+</noscript>
+
+</head>
+
+<body itemscope itemtype="http://schema.org/WebPage" class="use-motion">
+  <div class="headband"></div>
+
+  <main class="main">
+    <header class="header" itemscope itemtype="http://schema.org/WPHeader">
+      <div class="header-inner"><div class="site-brand-container">
+  <div class="site-nav-toggle">
+    <div class="toggle" aria-label="切换导航栏" role="button">
+        <span class="toggle-line"></span>
+        <span class="toggle-line"></span>
+        <span class="toggle-line"></span>
+    </div>
+  </div>
+
+  <div class="site-meta">
+
+    <a href="/nirvana/" class="brand" rel="start">
+      <i class="logo-line"></i>
+      <h1 class="site-title">涅槃快乐是金</h1>
+      <i class="logo-line"></i>
+    </a>
+  </div>
+
+  <div class="site-nav-right">
+    <div class="toggle popup-trigger">
+    </div>
+  </div>
+</div>
+
+
+
+<nav class="site-nav">
+  <ul class="main-menu menu">
+        <li class="menu-item menu-item-home"><a href="/nirvana/" rel="section">首页</a></li>
+        <li class="menu-item menu-item-git"><a href="/nirvana/categories/git" rel="section">git</a></li>
+        <li class="menu-item menu-item-linux"><a href="/nirvana/categories/linux" rel="section">linux</a></li>
+        <li class="menu-item menu-item-android"><a href="/nirvana/categories/android" rel="section">android</a></li>
+        <li class="menu-item menu-item-随笔"><a href="/nirvana/categories/informal" rel="section">随笔</a></li>
+        <li class="menu-item menu-item-mac"><a href="/nirvana/categories/mac" rel="section">mac</a></li>
+        <li class="menu-item menu-item-react-native"><a href="/nirvana/categories/reactnative" rel="section">react-native</a></li>
+        <li class="menu-item menu-item-算法"><a href="/nirvana/categories/algorithm" rel="section">算法</a></li>
+        <li class="menu-item menu-item-读书笔记"><a href="/nirvana/categories/note" rel="section">读书笔记</a></li>
+        <li class="menu-item menu-item-开发工具"><a href="/nirvana/categories/tool" rel="section">开发工具</a></li>
+        <li class="menu-item menu-item-设计模式(ts)"><a href="/nirvana/categories/DesignPattern" rel="section">设计模式(TS)</a></li>
+        <li class="menu-item menu-item-前端"><a href="/nirvana/categories/javascript" rel="section">前端</a></li>
+  </ul>
+</nav>
+
+
+
+
+</div>
+        
+  
+  <div class="toggle sidebar-toggle" role="button">
+    <span class="toggle-line"></span>
+    <span class="toggle-line"></span>
+    <span class="toggle-line"></span>
+  </div>
+
+  <aside class="sidebar">
+
+    <div class="sidebar-inner sidebar-overview-active">
+      <ul class="sidebar-nav">
+        <li class="sidebar-nav-toc">
+          文章目录
+        </li>
+        <li class="sidebar-nav-overview">
+          站点概览
+        </li>
+      </ul>
+
+      <div class="sidebar-panel-container">
+        <!--noindex-->
+        <div class="post-toc-wrap sidebar-panel">
+        </div>
+        <!--/noindex-->
+
+        <div class="site-overview-wrap sidebar-panel">
+          <div class="site-author site-overview-item animated" itemprop="author" itemscope itemtype="http://schema.org/Person">
+  <p class="site-author-name" itemprop="name">nirvana</p>
+  <div class="site-description" itemprop="description">个人学习笔记</div>
+</div>
+<div class="site-state-wrap site-overview-item animated">
+  <nav class="site-state">
+      <div class="site-state-item site-state-posts">
+          <a href="/nirvana/archives">
+          <span class="site-state-item-count">178</span>
+          <span class="site-state-item-name">日志</span>
+        </a>
+      </div>
+      <div class="site-state-item site-state-categories">
+        <span class="site-state-item-count">11</span>
+        <span class="site-state-item-name">分类</span>
+      </div>
+  </nav>
+</div>
+
+
+
+        </div>
+      </div>
+    </div>
+  </aside>
+  <div class="sidebar-dimmer"></div>
+
+
+    </header>
+
+    
+  <div class="back-to-top" role="button">
+    <i class="fa fa-arrow-up"></i>
+    <span>0%</span>
+  </div>
+
+<noscript>
+  <div class="noscript-warning">Theme NexT works best with JavaScript enabled</div>
+</noscript>
+
+
+    <div class="main-inner index posts-expand">
+
+    
+
+
+<div class="post-block">
+  
+  
+
+  <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="">
+    <link itemprop="mainEntityOfPage" href="https://lzhwweb.github.io/nirvana/uncategorized/mac/%E5%9C%A8-Mac-%E4%B8%8A%E5%AE%89%E8%A3%9D-Windows%E8%BD%AF%E4%BB%B6/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/nirvana/images/avatar.gif">
+      <meta itemprop="name" content="nirvana">
+      <meta itemprop="description" content="个人学习笔记">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="涅槃快乐是金">
+    </span>
+      <header class="post-header">
+        <h2 class="post-title" itemprop="name headline">
+          <a href="/nirvana/uncategorized/mac/%E5%9C%A8-Mac-%E4%B8%8A%E5%AE%89%E8%A3%9D-Windows%E8%BD%AF%E4%BB%B6/" class="post-title-link" itemprop="url">未命名</a>
+        </h2>
+
+        <div class="post-meta-container">
+          <div class="post-meta">
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-calendar"></i>
+      </span>
+      <span class="post-meta-item-text">发表于</span>
+
+      <time title="创建时间：2021-03-09 21:45:46" itemprop="dateCreated datePublished" datetime="2021-03-09T21:45:46+08:00">2021-03-09</time>
+    </span>
+
+  
+      </div>
+      <div class="post-meta">
+    <span class="post-meta-item" title="本文字数">
+      <span class="post-meta-item-icon">
+        <i class="far fa-file-word"></i>
+      </span>
+      <span class="post-meta-item-text">本文字数：</span>
+      <span>0</span>
+    </span>
+    <span class="post-meta-item" title="阅读时长">
+      <span class="post-meta-item-icon">
+        <i class="far fa-clock"></i>
+      </span>
+      <span class="post-meta-item-text">阅读时长 &asymp;</span>
+      <span>1 分钟</span>
+    </span>
+</div>
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+          
+      
+    </div>
+
+    
+    
+    
+
+    <footer class="post-footer">
+        <div class="post-eof"></div>
+      
+    </footer>
+  </article>
+</div>
+
+
+
+
+    
+
+
+<div class="post-block">
+  
+  
+
+  <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="">
+    <link itemprop="mainEntityOfPage" href="https://lzhwweb.github.io/nirvana/uncategorized/%E9%9A%8F%E7%AC%94/%E4%BD%A0%E6%83%B3%E8%A6%81%E7%9A%84%E5%92%8C%E5%AD%A9%E5%AD%90%E6%83%B3%E8%A6%81%E7%9A%84/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/nirvana/images/avatar.gif">
+      <meta itemprop="name" content="nirvana">
+      <meta itemprop="description" content="个人学习笔记">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="涅槃快乐是金">
+    </span>
+      <header class="post-header">
+        <h2 class="post-title" itemprop="name headline">
+          <a href="/nirvana/uncategorized/%E9%9A%8F%E7%AC%94/%E4%BD%A0%E6%83%B3%E8%A6%81%E7%9A%84%E5%92%8C%E5%AD%A9%E5%AD%90%E6%83%B3%E8%A6%81%E7%9A%84/" class="post-title-link" itemprop="url">未命名</a>
+        </h2>
+
+        <div class="post-meta-container">
+          <div class="post-meta">
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-calendar"></i>
+      </span>
+      <span class="post-meta-item-text">发表于</span>
+
+      <time title="创建时间：2021-03-09 21:45:46" itemprop="dateCreated datePublished" datetime="2021-03-09T21:45:46+08:00">2021-03-09</time>
+    </span>
+
+  
+      </div>
+      <div class="post-meta">
+    <span class="post-meta-item" title="本文字数">
+      <span class="post-meta-item-icon">
+        <i class="far fa-file-word"></i>
+      </span>
+      <span class="post-meta-item-text">本文字数：</span>
+      <span>0</span>
+    </span>
+    <span class="post-meta-item" title="阅读时长">
+      <span class="post-meta-item-icon">
+        <i class="far fa-clock"></i>
+      </span>
+      <span class="post-meta-item-text">阅读时长 &asymp;</span>
+      <span>1 分钟</span>
+    </span>
+</div>
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+          
+      
+    </div>
+
+    
+    
+    
+
+    <footer class="post-footer">
+        <div class="post-eof"></div>
+      
+    </footer>
+  </article>
+</div>
+
+
+
+
+    
+
+
+<div class="post-block">
+  
+  
+
+  <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="">
+    <link itemprop="mainEntityOfPage" href="https://lzhwweb.github.io/nirvana/uncategorized/%E9%9A%8F%E7%AC%94/%E9%80%89%E6%8B%A9%E6%9D%83%E6%98%AF%E6%9C%80%E5%A4%A7%E7%9A%84%E8%87%AA%E7%94%B1/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/nirvana/images/avatar.gif">
+      <meta itemprop="name" content="nirvana">
+      <meta itemprop="description" content="个人学习笔记">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="涅槃快乐是金">
+    </span>
+      <header class="post-header">
+        <h2 class="post-title" itemprop="name headline">
+          <a href="/nirvana/uncategorized/%E9%9A%8F%E7%AC%94/%E9%80%89%E6%8B%A9%E6%9D%83%E6%98%AF%E6%9C%80%E5%A4%A7%E7%9A%84%E8%87%AA%E7%94%B1/" class="post-title-link" itemprop="url">未命名</a>
+        </h2>
+
+        <div class="post-meta-container">
+          <div class="post-meta">
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-calendar"></i>
+      </span>
+      <span class="post-meta-item-text">发表于</span>
+
+      <time title="创建时间：2021-03-09 21:45:46" itemprop="dateCreated datePublished" datetime="2021-03-09T21:45:46+08:00">2021-03-09</time>
+    </span>
+
+  
+      </div>
+      <div class="post-meta">
+    <span class="post-meta-item" title="本文字数">
+      <span class="post-meta-item-icon">
+        <i class="far fa-file-word"></i>
+      </span>
+      <span class="post-meta-item-text">本文字数：</span>
+      <span>0</span>
+    </span>
+    <span class="post-meta-item" title="阅读时长">
+      <span class="post-meta-item-icon">
+        <i class="far fa-clock"></i>
+      </span>
+      <span class="post-meta-item-text">阅读时长 &asymp;</span>
+      <span>1 分钟</span>
+    </span>
+</div>
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+          
+      
+    </div>
+
+    
+    
+    
+
+    <footer class="post-footer">
+        <div class="post-eof"></div>
+      
+    </footer>
+  </article>
+</div>
+
+
+
+
+    
+
+
+<div class="post-block">
+  
+  
+
+  <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="">
+    <link itemprop="mainEntityOfPage" href="https://lzhwweb.github.io/nirvana/uncategorized/%E8%AF%BB%E4%B9%A6%E7%AC%94%E8%AE%B0/%E8%BE%9E%E6%97%A7%E8%BF%8E%E6%96%B0/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/nirvana/images/avatar.gif">
+      <meta itemprop="name" content="nirvana">
+      <meta itemprop="description" content="个人学习笔记">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="涅槃快乐是金">
+    </span>
+      <header class="post-header">
+        <h2 class="post-title" itemprop="name headline">
+          <a href="/nirvana/uncategorized/%E8%AF%BB%E4%B9%A6%E7%AC%94%E8%AE%B0/%E8%BE%9E%E6%97%A7%E8%BF%8E%E6%96%B0/" class="post-title-link" itemprop="url">未命名</a>
+        </h2>
+
+        <div class="post-meta-container">
+          <div class="post-meta">
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-calendar"></i>
+      </span>
+      <span class="post-meta-item-text">发表于</span>
+
+      <time title="创建时间：2021-03-09 21:45:45" itemprop="dateCreated datePublished" datetime="2021-03-09T21:45:45+08:00">2021-03-09</time>
+    </span>
+
+  
+      </div>
+      <div class="post-meta">
+    <span class="post-meta-item" title="本文字数">
+      <span class="post-meta-item-icon">
+        <i class="far fa-file-word"></i>
+      </span>
+      <span class="post-meta-item-text">本文字数：</span>
+      <span>573</span>
+    </span>
+    <span class="post-meta-item" title="阅读时长">
+      <span class="post-meta-item-icon">
+        <i class="far fa-clock"></i>
+      </span>
+      <span class="post-meta-item-text">阅读时长 &asymp;</span>
+      <span>1 分钟</span>
+    </span>
+</div>
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+          <!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>辞旧迎新</title>
+    <style type="text/css" media="all">
+      body {
+        margin: 0;
+        font-family: "Helvetica Neue", Helvetica, Arial, "Hiragino Sans GB", sans-serif;
+        font-size: 14px;
+        line-height: 20px;
+        color: #777;
+        background-color: white;
+      }
+      .container {
+        width: 700px;
+        margin-right: auto;
+        margin-left: auto;
+      }
+
+      .post {
+        font-family: Georgia, "Times New Roman", Times, "SimSun", serif;
+        position: relative;
+        padding: 70px;
+        bottom: 0;
+        overflow-y: auto;
+        font-size: 16px;
+        font-weight: normal;
+        line-height: 25px;
+        color: #515151;
+      }
+
+      .post h1{
+        font-size: 50px;
+        font-weight: 500;
+        line-height: 60px;
+        margin-bottom: 40px;
+        color: inherit;
+      }
+
+      .post p {
+        margin: 0 0 35px 0;
+      }
+
+      .post img {
+        border: 1px solid #D9D9D9;
+      }
+
+      .post a {
+        color: #28A1C5;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <div class="post">
+        <h1 class="title">辞旧迎新</h1>
+        <div class="show-content">
+          
+        </div>
+      </div>
+    </div>
+  </body>
+</html>
+
+      
+    </div>
+
+    
+    
+    
+
+    <footer class="post-footer">
+        <div class="post-eof"></div>
+      
+    </footer>
+  </article>
+</div>
+
+
+
+
+    
+
+
+<div class="post-block">
+  
+  
+
+  <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="">
+    <link itemprop="mainEntityOfPage" href="https://lzhwweb.github.io/nirvana/uncategorized/%E9%9A%8F%E7%AC%94/%E6%9C%80%E2%80%B3%E6%AE%8B%E5%BF%8D%E2%80%B3%E7%9A%84%E5%81%B7%E6%8B%8D%E7%85%A7%EF%BC%9A%E5%88%AB%E6%AD%BB%E4%BA%86%EF%BC%8C%E6%88%91%E7%88%B1%E4%BD%A0%EF%BC%81/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/nirvana/images/avatar.gif">
+      <meta itemprop="name" content="nirvana">
+      <meta itemprop="description" content="个人学习笔记">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="涅槃快乐是金">
+    </span>
+      <header class="post-header">
+        <h2 class="post-title" itemprop="name headline">
+          <a href="/nirvana/uncategorized/%E9%9A%8F%E7%AC%94/%E6%9C%80%E2%80%B3%E6%AE%8B%E5%BF%8D%E2%80%B3%E7%9A%84%E5%81%B7%E6%8B%8D%E7%85%A7%EF%BC%9A%E5%88%AB%E6%AD%BB%E4%BA%86%EF%BC%8C%E6%88%91%E7%88%B1%E4%BD%A0%EF%BC%81/" class="post-title-link" itemprop="url">未命名</a>
+        </h2>
+
+        <div class="post-meta-container">
+          <div class="post-meta">
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-calendar"></i>
+      </span>
+      <span class="post-meta-item-text">发表于</span>
+
+      <time title="创建时间：2021-03-09 21:45:45" itemprop="dateCreated datePublished" datetime="2021-03-09T21:45:45+08:00">2021-03-09</time>
+    </span>
+      <span class="post-meta-item">
+        <span class="post-meta-item-icon">
+          <i class="far fa-calendar-check"></i>
+        </span>
+        <span class="post-meta-item-text">更新于</span>
+        <time title="修改时间：2021-03-10 09:55:07" itemprop="dateModified" datetime="2021-03-10T09:55:07+08:00">2021-03-10</time>
+      </span>
+
+  
+      </div>
+      <div class="post-meta">
+    <span class="post-meta-item" title="本文字数">
+      <span class="post-meta-item-icon">
+        <i class="far fa-file-word"></i>
+      </span>
+      <span class="post-meta-item-text">本文字数：</span>
+      <span>3.4k</span>
+    </span>
+    <span class="post-meta-item" title="阅读时长">
+      <span class="post-meta-item-icon">
+        <i class="far fa-clock"></i>
+      </span>
+      <span class="post-meta-item-text">阅读时长 &asymp;</span>
+      <span>3 分钟</span>
+    </span>
+</div>
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+          <!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>最″残忍″的偷拍照：别死了，我爱你！</title>
+    <style type="text/css" media="all">
+      body {
+        margin: 0;
+        font-family: "Helvetica Neue", Helvetica, Arial, "Hiragino Sans GB", sans-serif;
+        font-size: 14px;
+        line-height: 20px;
+        color: #777;
+        background-color: white;
+      }
+      .container {
+        width: 700px;
+        margin-right: auto;
+        margin-left: auto;
+      }
+
+      .post {
+        font-family: Georgia, "Times New Roman", Times, "SimSun", serif;
+        position: relative;
+        padding: 70px;
+        bottom: 0;
+        overflow-y: auto;
+        font-size: 16px;
+        font-weight: normal;
+        line-height: 25px;
+        color: #515151;
+      }
+
+      .post h1{
+        font-size: 50px;
+        font-weight: 500;
+        line-height: 60px;
+        margin-bottom: 40px;
+        color: inherit;
+      }
+
+      .post p {
+        margin: 0 0 35px 0;
+      }
+
+      .post img {
+        border: 1px solid #D9D9D9;
+      }
+
+      .post a {
+        color: #28A1C5;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <div class="post">
+        <h1 class="title">最″残忍″的偷拍照：别死了，我爱你！</h1>
+        <div class="show-content">
+          <p><i><b>转自微博<a href="https://weibo.com/ttarticle/p/show?id=2309404222517488295595" target="_blank">https://weibo.com/ttarticle/p/show?id=2309404222517488295595</a></b></i></p><p>桌子的生活观 出品</p><p><b>01.</b></p><p>在百度上面，关于自杀的结果有47,100,000个，每天都有无数人搜索自杀，可是搜索后弹出来的第一条信息是这样的：</p><div class="image-package">
+<img class="uploaded-img" src="http://upload-images.jianshu.io/upload_images/10024246-c0120df83a664b0f?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" style="min-height:200px;min-width:200px;" width="auto" height="auto"><br><div class="image-caption"></div>
+</div><p><b>这个世界虽然不完美，我们仍可以治愈自己，</b>并且提供免费咨询电话，一下子就让人的心里温暖起来。</p><p>有人在网上问怎样最轻松自杀？</p><div class="image-package">
+<img class="uploaded-img" src="http://upload-images.jianshu.io/upload_images/10024246-a255c86f457ff061?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" style="min-height:200px;min-width:200px;" width="auto" height="auto"><br><div class="image-caption"></div>
+</div><p>最后一句<b>好好活着</b>，真的让人眼泪差点掉下来。</p><p>还有很多热心网友跟帖：</p><div class="image-package">
+<img class="uploaded-img" src="http://upload-images.jianshu.io/upload_images/10024246-3778300b222548ef?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" style="min-height:200px;min-width:200px;" width="auto" height="auto"><br><div class="image-caption"></div>
+</div><p>还有人问手上的动脉在哪里：</p><div class="image-package">
+<img class="uploaded-img" src="http://upload-images.jianshu.io/upload_images/10024246-14084e975ab904f5?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" style="min-height:200px;min-width:200px;" width="auto" height="auto"><br><div class="image-caption"></div>
+</div><p><b>“别找了，我爱你”</b>一句话就让我泪流满面。</p><p><b>谢谢你们，这么温暖的陌生人。</b></p><p><b>你永远不会知道，一个陌生人的善意，将会对一个濒临绝望的人带来多大的生活勇气。</b></p><p><b>02.</b></p><p>过年的时候，在呼和浩特，一个残疾的行乞者从新华大街乘坐29路公交车到呼铁局下车，一路上难免遭到个别乘客的嫌弃和冷言冷语。</p><p>骗子一般不会在过年的时候出来乞讨，还有他的穿着打扮，司机师傅一眼就知道他不是骗子。</p><p>就在他下车的那一瞬间，司机师傅掏出100元给他，祝他新年快乐。</p><p>一边是个别乘客的白眼，一边是司机师傅的暖心举动，行乞者满眼都是眼泪，就在路边呜呜地哭起来……</p><p>如果不是被生活逼得不行，谁会在过年的时候出来乞讨啊？</p><div class="image-package">
+<img class="uploaded-img" src="http://upload-images.jianshu.io/upload_images/10024246-1f7847f08c7fa0fc?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" style="min-height:200px;min-width:200px;" width="auto" height="auto"><br><div class="image-caption"></div>
+</div><div class="image-package">
+<img class="uploaded-img" src="http://upload-images.jianshu.io/upload_images/10024246-bb98b79825b4981d?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" style="min-height:200px;min-width:200px;" width="auto" height="auto"><br><div class="image-caption"></div>
+</div><p><b>生而为人，请善待每一个人。</b></p><p><b>03.</b></p><p>在郑州金水路英协路口，一环卫阿姨将自己带的鸡蛋早餐让给了盲人乞讨者，并将鸡蛋剥皮放入盲人口中，盲人激动的跪地感谢。</p><div class="image-package">
+<img class="uploaded-img" src="http://upload-images.jianshu.io/upload_images/10024246-4dda2e23cb0c0e6f?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" style="min-height:200px;min-width:200px;" width="auto" height="auto"><br><div class="image-caption"></div>
+</div><div class="image-package">
+<img class="uploaded-img" src="http://upload-images.jianshu.io/upload_images/10024246-d156ae5e8358fa1c?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" style="min-height:200px;min-width:200px;" width="auto" height="auto"><br><div class="image-caption"></div>
+</div><p>或许，只有生活艰难的人，更能体会到生存艰难人的不易。</p><p><b>下跪有时候并不代表奴性，只是身无长物的时候，这是表达感激的最高形式。</b></p><p><b>即使是一道最微弱的光，我们也要把它洒向最需要温暖的地方。</b></p><p><b>04</b>.</p><p>一位60多岁的老太太接到了一个诈骗电话，对方谎称是他儿子，但他儿子在两年前已经死了。</p><p>可那骗子的声音和她儿子实在太像，她舍不得挂断。骗子说得口干舌燥，发现骗不了她，她便把真相都说了，最后老太太请求对方"最后再说一句吧。"</p><p>骗子思考片刻说：<b>"妈，保重啊。"</b>挂了电话。</p><div class="image-package">
+<img class="uploaded-img" src="http://upload-images.jianshu.io/upload_images/10024246-0339ebf2cbeb85d5?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" style="min-height:200px;min-width:200px;" width="auto" height="auto"><br><div class="image-caption"></div>
+</div><p>读到这里，我鼻子一酸，眼泪哗哗直流。</p><p>“妈，保重啊，”，我相信那个骗子一定也对自己的母亲说过很多次，他良心未泯，希望他能迷途知返，不要让爱自己的人失望。</p><p><b>05.</b></p><p>韩国岁月号沉没了，这五个最要好的朋友也随着船的沉没，与自己的家人天人永隔。</p><div class="image-package">
+<img class="uploaded-img" src="http://upload-images.jianshu.io/upload_images/10024246-1bf165236c28f2ee?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" style="min-height:200px;min-width:200px;" width="auto" height="auto"><br><div class="image-caption"></div>
+</div><p>后来，他们的儿子也成了最好的朋友，他们回到当年父亲拍照的地方，每个人坐到自己父亲当年的位置，摆出一样的姿势。</p><div class="image-package">
+<img class="uploaded-img" src="http://upload-images.jianshu.io/upload_images/10024246-f964a88ccdb4ba3f?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" style="min-height:200px;min-width:200px;" width="auto" height="auto"><br><div class="image-caption"></div>
+</div><p><b>这样的照片看得很心酸，但是生命就是如此神奇，上一辈的友谊在那一次事故中结束了，还是可以在下一辈的身上得以延续。</b></p><p><b>06.</b></p><p>如果能回到过去，你会对过去的自己说什么？</p><p>日本一位76岁叫秀夫的老爷爷，很想对年轻时候的自己说一件事情。</p><div class="image-package">
+<img class="uploaded-img" src="http://upload-images.jianshu.io/upload_images/10024246-af34a9d637b87032?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" style="min-height:200px;min-width:200px;" width="auto" height="auto"><br><div class="image-caption"></div>
+</div><p><b>白云苍狗，世事无常，在这个薄情的世界上，原来还有人如此深情地活着。</b></p><p>明天和意外不知道哪个会先来临，所以啊，一定要趁现在，好好珍惜身边的爱人。</p><p><b>07.</b></p><p>63岁的老何是抚顺人，他和老伴来到沈阳打工。他们的日子虽然不太富有，但是两人在相濡以沫的日子里非常满足。</p><p>有一天，他的老伴去药房买药，可是在回来的路上突发心肌梗塞倒地猝死。</p><p>老何赶到后，紧紧地抱着自己的老伴，嘴里不停嘟囔着：“今天不让你出来，你非得出来，怎么今天就走了呢？”</p><p>那个时候的沈阳是零下24度，老何抱着老伴的尸体再冰天雪地里坐了两个小时仍然不肯撒手。</p><div class="image-package">
+<img class="uploaded-img" src="http://upload-images.jianshu.io/upload_images/10024246-1f622e2a957b9965?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" style="min-height:200px;min-width:200px;" width="auto" height="auto"><br><div class="image-caption"></div>
+</div><div class="image-package">
+<img class="uploaded-img" src="http://upload-images.jianshu.io/upload_images/10024246-bcd646338882f950?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" style="min-height:200px;min-width:200px;" width="auto" height="auto"><br><div class="image-caption"></div>
+</div><p>群众们怕他冻坏了，找来纸壳、塑料泡沫，让老爷子垫在身下别着凉，老何一边谢谢一边说：“我不冷，我没事，我还不想起来，我想最后再抱她一会儿，以后都没有机会了。”</p><p>于是，十几名群众主动围成一圈给这对夫妻遮风，希望他们“团圆”的时间能再长一点，在场的所有人都为之动容。</p><p>“太感动了，此生做夫妻能这般，是任何金钱和荣华富贵都换不来的。”</p><p><b>人们常说，少年夫妻老来伴，其实这句话最朴实，也最深情。</b></p><p><b>年少时陪伴在我身边的那个人啊，虽然历经岁月的风霜，但你离去的时候，我仍然舍不得放手。</b></p><p><b>08.</b></p><p>孩子和爸爸、妈妈、奶奶在路边等车，这个时候的他是开心的，因为只要和爸爸妈妈在一起就很开心啊。</p><div class="image-package">
+<img class="uploaded-img" src="http://upload-images.jianshu.io/upload_images/10024246-e25d6a5348d4a635?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" style="min-height:200px;min-width:200px;" width="auto" height="auto"><br><div class="image-caption"></div>
+</div><div class="image-package">
+<img class="uploaded-img" src="http://upload-images.jianshu.io/upload_images/10024246-47858c4f6b3086eb?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" style="min-height:200px;min-width:200px;" width="auto" height="auto"><br><div class="image-caption"></div>
+</div><div class="image-package">
+<img class="uploaded-img" src="http://upload-images.jianshu.io/upload_images/10024246-b320e7d46a17bac7?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" style="min-height:200px;min-width:200px;" width="auto" height="auto"><br><div class="image-caption"></div>
+</div><p>可是接下来他才知道，爸爸妈妈又要离开自己了。</p><p>他嚎啕大哭，想要追上汽车，可是却被奶奶扯住了。</p><div class="image-package">
+<img class="uploaded-img" src="http://upload-images.jianshu.io/upload_images/10024246-e9340467ffd18887?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" style="min-height:200px;min-width:200px;" width="auto" height="auto"><br><div class="image-caption"></div>
+</div><div class="image-package">
+<img class="uploaded-img" src="http://upload-images.jianshu.io/upload_images/10024246-a1324ab57b67ab40?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" style="min-height:200px;min-width:200px;" width="auto" height="auto"><br><div class="image-caption"></div>
+</div><div class="image-package">
+<img class="uploaded-img" src="http://upload-images.jianshu.io/upload_images/10024246-d5bc2cde9df16f83?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" style="min-height:200px;min-width:200px;" width="auto" height="auto"><br><div class="image-caption"></div>
+</div><p>最后奶奶抱着他，孤独地走回家，那是一个冰冷的家，没有爸爸和妈妈的家。</p><div class="image-package">
+<img class="uploaded-img" src="http://upload-images.jianshu.io/upload_images/10024246-9ffc66f3d631423e?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" style="min-height:200px;min-width:200px;" width="auto" height="auto"><br><div class="image-caption"></div>
+</div><p>或许我们很多人从小就要和父母面对这样的离别，希望这样的别离不要发生在我们的下一代身上。</p><p>曾经有人问我，为什么要努力赚钱？这就是最好的理由，为了能够和自己的孩子生活在一起！</p><p><b>希望每个孩子都能拥有美好的童年，都有父母陪在身边。</b></p><p><b>09.</b></p><p>一个孩子的父亲在工地上干活，每天挥汗如雨，非常累。</p><p>孩子担心他太累，又担心他的安危，于是在父亲的安全帽上画了一顶皇冠。</p><p><b>也许在别人眼中他是做着又脏又累的活儿，但在孩子眼中，他就是国王。</b></p><div class="image-package">
+<img class="uploaded-img" src="http://upload-images.jianshu.io/upload_images/10024246-4a2a77949a017a5d?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" style="min-height:200px;min-width:200px;" width="auto" height="auto"><br><div class="image-caption"></div>
+</div><p>这是一个孩子对父亲稚嫩的爱，如此温暖，又如此心酸。</p><p>我猜这位父亲的孩子一定是一位小公主吧，你还记得自己为父亲做过什么吗？</p><p><b>10.</b></p><p>这是经济大萧条时期，一位父亲在背上背着牌子在街头找工作。</p><div class="image-package">
+<img class="uploaded-img" src="http://upload-images.jianshu.io/upload_images/10024246-7478c93dff50fab8?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" style="min-height:200px;min-width:200px;" width="auto" height="auto"><br><div class="image-caption"></div>
+</div><p>纸板上写着：“我知晓三个行业，会说三门语言，奋斗了三年，有三个孩子，失业三个月。但我只想要一份工作。”</p><p>他是谁的父亲，又是谁的丈夫呢？每次回家还有嗷嗷待哺的三个孩子，还有一个等着他赚钱的妻子，这样的场面真的不忍直视。</p><p><b>生活从未容易，如果你觉得容易，不过是有人在帮你承担不易。</b></p><p><b>11.</b></p><p>发生空袭后，弟弟不幸去世了。哥哥把他背在背上，带着他去火葬场，他的眼神是如此的坚定，即使眼泪快要流下来了，他也含泪坚强忍住。</p><div class="image-package">
+<img class="uploaded-img" src="http://upload-images.jianshu.io/upload_images/10024246-4926557698939691?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" style="min-height:200px;min-width:200px;" width="auto" height="auto"><br><div class="image-caption"></div>
+</div><p>这一生，和你相处的时间太短了。既然无法护你周全，那么你生命的最后一程，就由我来送你吧。</p><p>哪怕前面炮火纷飞，哪怕要失去我的生命，这是我作为一个哥哥的使命。</p><p><b>若有来生，愿我们都生活在和平年代，愿你还愿意做我的弟弟。</b></p><p><b>12.</b></p><p>很多时候，我觉得人生就像是图片中这只在暴风雪中的小鸟一样，虽遭遇漫天的飞雪和冰雹，但也只是弯弯身体，然后用头去直接迎接，从不退后半步！</p><div class="image-package">
+<img class="uploaded-img" src="http://upload-images.jianshu.io/upload_images/10024246-394000d3cfbedb04?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" style="min-height:200px;min-width:200px;" width="auto" height="auto"><br><div class="image-caption"></div>
+</div><p>卖糖葫芦的大叔说：<b>生活中的一个个挫折，就像是冰糖葫芦一样，竹竿刺进了身体，却成为了一生的脊梁。</b></p><div class="image-package">
+<img class="uploaded-img" src="http://upload-images.jianshu.io/upload_images/10024246-d8d7eb5ec32cef75?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" style="min-height:200px;min-width:200px;" width="auto" height="auto"><br><div class="image-caption"></div>
+</div><p>曾经听过一个故事：</p><p>一个男人梦见他和上帝走在沙滩上，他看到他的生命片段在天空中闪现，他转过身去，看到沙滩上有两行脚印，贯穿了他人生大部分时光，那是他和上帝的脚印。</p><p><b>可是他发现，在他一生中最糟糕的日子里，只有一行脚印。</b></p><p>男人对上帝说：你承诺过会和我同行的，为什么在我最需要你的时候抛弃了我？”</p><p>上帝回答他：<b>这里之所以只有一行脚印，是因为在那些最糟糕的日子里，是我背负着你前行。</b></p><div class="image-package">
+<img class="uploaded-img" src="http://upload-images.jianshu.io/upload_images/10024246-fed657f626f15f65?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" style="min-height:200px;min-width:200px;" width="auto" height="auto"><br><div class="image-caption"></div>
+</div><p>原来，真的有人一直在偷偷爱着我们，只是你不知道而已。</p><p>或许，我们每个人都小心翼翼地活着，或许我们每一次努力都已经竭尽全力，但是请相信，上天从未抛弃任何一个坚强的灵魂，也从不会辜负每一段最灰暗的苦难。</p><p><b>愿你有好运气，如果没有，愿你在不幸中学会慈悲；</b></p><p><b>愿你被很多人爱，如果没有，愿你在寂寞中学会宽容。</b></p><p><b>愿你被这个世界温柔以待，如果没有，请别忘了，我爱你。</b></p><p>作者：桌子，前南方航空公司职员，现教育培训行业先行者，兼职男模，签约专栏作家。微博@桌子的生活观 。</p>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>
+
+      
+    </div>
+
+    
+    
+    
+
+    <footer class="post-footer">
+        <div class="post-eof"></div>
+      
+    </footer>
+  </article>
+</div>
+
+
+
+
+    
+
+
+<div class="post-block">
+  
+  
+
+  <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="">
+    <link itemprop="mainEntityOfPage" href="https://lzhwweb.github.io/nirvana/git/git/git-merger-seror/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/nirvana/images/avatar.gif">
+      <meta itemprop="name" content="nirvana">
+      <meta itemprop="description" content="个人学习笔记">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="涅槃快乐是金">
+    </span>
+      <header class="post-header">
+        <h2 class="post-title" itemprop="name headline">
+          <a href="/nirvana/git/git/git-merger-seror/" class="post-title-link" itemprop="url">fatal: refusing to merge unrelated histories</a>
+        </h2>
+
+        <div class="post-meta-container">
+          <div class="post-meta">
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-calendar"></i>
+      </span>
+      <span class="post-meta-item-text">发表于</span>
+      
+
+      <time title="创建时间：2021-03-09 21:23:37 / 修改时间：21:23:54" itemprop="dateCreated datePublished" datetime="2021-03-09T21:23:37+08:00">2021-03-09</time>
+    </span>
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-folder"></i>
+      </span>
+      <span class="post-meta-item-text">分类于</span>
+        <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+          <a href="/nirvana/categories/git/" itemprop="url" rel="index"><span itemprop="name">git</span></a>
+        </span>
+    </span>
+
+  
+      </div>
+      <div class="post-meta">
+    <span class="post-meta-item" title="本文字数">
+      <span class="post-meta-item-icon">
+        <i class="far fa-file-word"></i>
+      </span>
+      <span class="post-meta-item-text">本文字数：</span>
+      <span>629</span>
+    </span>
+    <span class="post-meta-item" title="阅读时长">
+      <span class="post-meta-item-icon">
+        <i class="far fa-clock"></i>
+      </span>
+      <span class="post-meta-item-text">阅读时长 &asymp;</span>
+      <span>1 分钟</span>
+    </span>
+</div>
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+          <p>Git 的报错<br>一、fatal: refusing to merge unrelated histories<br>新建了一个仓库之后，把本地仓库进行关联提交、拉取的时候，出现了如下错误：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">fatal: &#39;master&#39; does not appear to be a git repository</span><br><span class="line">fatal: Could not read from remote repository.</span><br></pre></td></tr></table></figure>
+<p>二、解决方案<br>在你操作命令后面加 –allow-unrelated-histories<br>例如：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">git merge master --allow-unrelated-histories</span><br><span class="line">$ git pull --allow-unrelated-histories</span><br><span class="line">CONFLICT (add&#x2F;add): Merge conflict in .gitignore</span><br><span class="line">Auto-merging .gitignore</span><br><span class="line">Automatic merge failed; fix conflicts and then commit the result.</span><br></pre></td></tr></table></figure>
+<p>我这里由于使用了官方的 .gitignore 自动合并失败，需要手动合并之后再进行 add、commit 即可</p>
+<p>如果你是git pull或者git push报fatal: refusing to merge unrelated histories<br>同理：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">git pull origin master --allow-unrelated-histories &#x2F; git pull --allow-unrelated-histories</span><br></pre></td></tr></table></figure>
+
+      
+    </div>
+
+    
+    
+    
+
+    <footer class="post-footer">
+        <div class="post-eof"></div>
+      
+    </footer>
+  </article>
+</div>
+
+
+
+
+    
+
+
+<div class="post-block">
+  
+  
+
+  <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="">
+    <link itemprop="mainEntityOfPage" href="https://lzhwweb.github.io/nirvana/git/git/git-users-set/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/nirvana/images/avatar.gif">
+      <meta itemprop="name" content="nirvana">
+      <meta itemprop="description" content="个人学习笔记">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="涅槃快乐是金">
+    </span>
+      <header class="post-header">
+        <h2 class="post-title" itemprop="name headline">
+          <a href="/nirvana/git/git/git-users-set/" class="post-title-link" itemprop="url">Git多账号配置</a>
+        </h2>
+
+        <div class="post-meta-container">
+          <div class="post-meta">
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-calendar"></i>
+      </span>
+      <span class="post-meta-item-text">发表于</span>
+      
+
+      <time title="创建时间：2021-03-09 21:22:47 / 修改时间：21:23:03" itemprop="dateCreated datePublished" datetime="2021-03-09T21:22:47+08:00">2021-03-09</time>
+    </span>
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-folder"></i>
+      </span>
+      <span class="post-meta-item-text">分类于</span>
+        <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+          <a href="/nirvana/categories/git/" itemprop="url" rel="index"><span itemprop="name">git</span></a>
+        </span>
+    </span>
+
+  
+      </div>
+      <div class="post-meta">
+    <span class="post-meta-item" title="本文字数">
+      <span class="post-meta-item-icon">
+        <i class="far fa-file-word"></i>
+      </span>
+      <span class="post-meta-item-text">本文字数：</span>
+      <span>2.1k</span>
+    </span>
+    <span class="post-meta-item" title="阅读时长">
+      <span class="post-meta-item-icon">
+        <i class="far fa-clock"></i>
+      </span>
+      <span class="post-meta-item-text">阅读时长 &asymp;</span>
+      <span>2 分钟</span>
+    </span>
+</div>
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+          <h3 id="一、如何生成ssh密钥"><a href="#一、如何生成ssh密钥" class="headerlink" title="一、如何生成ssh密钥"></a>一、如何生成ssh密钥</h3><h4 id="1-1-设置Git的user-name和user-email"><a href="#1-1-设置Git的user-name和user-email" class="headerlink" title="1.1 设置Git的user.name和user.email"></a>1.1 设置Git的user.name和user.email</h4><p>为了生成多账户，这里展示的局部的git配置，并不是全局的账户配置(全局配置：在config后面加上–list)。</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">&#x2F;&#x2F;github账号</span><br><span class="line">$ git config user.name &quot;zhangsan&quot;</span><br><span class="line">$ git config user.email &quot;zhangsan@gmail.com&quot;</span><br><span class="line"></span><br><span class="line">&#x2F;&#x2F;gitlab账号</span><br><span class="line">$ git config user.name &quot;zhangsan&quot;</span><br><span class="line">$ git config user.email &quot;zhangsan@qq.com&quot;</span><br></pre></td></tr></table></figure>
+
+<h4 id="1-2-生成SSH密钥"><a href="#1-2-生成SSH密钥" class="headerlink" title="1.2 生成SSH密钥"></a>1.2 生成SSH密钥</h4><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">&#x2F;&#x2F;github账号</span><br><span class="line">$ ssh-keygen -t rsa -C “zhangsan@gmail.com”</span><br><span class="line"></span><br><span class="line">&#x2F;&#x2F;gitlab账号</span><br><span class="line">$ ssh-keygen -t rsa -C “zhangsan@qq.com”</span><br></pre></td></tr></table></figure>
+
+<p>文件命名后，按2次回车，密码为空。</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br></pre></td><td class="code"><pre><span class="line">Enter passphrase (empty for no passphrase):</span><br><span class="line">Enter same passphrase again:</span><br><span class="line">Your identification has been saved in &#x2F;Users&#x2F;zhangsan&#x2F;.ssh&#x2F;github_id_rsa.</span><br><span class="line">Your public key has been saved in &#x2F;Users&#x2F;zhangsan&#x2F;.ssh&#x2F;github_id_rsa.pub.</span><br><span class="line">The key fingerprint is:</span><br><span class="line">SHA256:mRAluu98izlMRIQhaezphUvRHnkEH5HFm+aAX6wtXBU zhangsan@gmail.com</span><br><span class="line">The key&#39;s randomart image is:</span><br><span class="line">+---[RSA 2048]----+</span><br><span class="line">| ..ooBB*o E.     |</span><br><span class="line">|  &#x3D;.&#x3D;o++. .      |</span><br><span class="line">| o &#x3D;.&#x3D;o. +       |</span><br><span class="line">|  &#x3D; +.o.Bo       |</span><br><span class="line">| o o.+ OS        |</span><br><span class="line">|  o  .* o        |</span><br><span class="line">|     o..         |</span><br><span class="line">|     ooo.        |</span><br><span class="line">|      &#x3D;o..       |</span><br><span class="line">+----[SHA256]-----+</span><br><span class="line"></span><br></pre></td></tr></table></figure>
+
+<p>将上面ssh密钥生成步骤重复一次，最后得到四个文件：github_id_rsa、github_id_rsa.pub和gitlab_id_rsa、gitlab_id_rsa.pub</p>
+<h3 id="二、多账号配置"><a href="#二、多账号配置" class="headerlink" title="二、多账号配置"></a>二、多账号配置</h3><p>在~/.ssh目录下，增加config配置文件(注：无后缀名)，配置规范如下(可配置多个git账号):</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">#Host host（Host简称，使用命令ssh host可连接远程服务器，如：ssh github）</span><br><span class="line">  #User&#x2F;Email 登录用户名(如：zhangsan&#x2F;zhangsan@gmail.com)</span><br><span class="line">  #HostName 主机名用ip或域名，建议使用域名(如:github.com)</span><br><span class="line">  #Port 服务器open-ssh端口（默认：22,默认时一般不写此行</span><br><span class="line">  #IdentityFile 证书文件路径（如~&#x2F;.ssh&#x2F;id_rsa_*)</span><br></pre></td></tr></table></figure>
+
+<p>接下来，举个具体的栗子：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line">#github zhangsan@gmail.com</span><br><span class="line">host github</span><br><span class="line">    Hostname github.com</span><br><span class="line">    User zhangsan</span><br><span class="line">    IdentityFile ~&#x2F;.ssh&#x2F;github_id_rsa</span><br><span class="line"></span><br><span class="line">#gitlab zhangsan@qq.com</span><br><span class="line">host gitlab</span><br><span class="line">    Hostname gitlab.*.com</span><br><span class="line">    User zhangsan</span><br><span class="line">    IdentityFile ~&#x2F;.ssh&#x2F;gitlab_id_rsa</span><br></pre></td></tr></table></figure>
+
+<p>注意事项：</p>
+<ul>
+<li>在配置文件中的，IdentityFile文件位置是rsa私钥，不是.pub公钥</li>
+<li>push代码的时候注意下，得check下本的user.name和user.email,若没有进行生成操作。建议最好设置一个全局的user.name和user.email,然后需要特定的配置的git仓库，就单独配置(当前配置查询命令:$ git config –list)</li>
+</ul>
+<h3 id="三、ssh-add增加新的私钥"><a href="#三、ssh-add增加新的私钥" class="headerlink" title="三、ssh-add增加新的私钥"></a>三、ssh-add增加新的私钥</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">&#x2F;&#x2F;github账号</span><br><span class="line">$ ssh-add ~&#x2F;.ssh&#x2F;github_id_rsa</span><br><span class="line"></span><br><span class="line">&#x2F;&#x2F;gitlab账号</span><br><span class="line">$ ssh-add ~&#x2F;.ssh&#x2F;gitlab_id_rsa</span><br></pre></td></tr></table></figure>
+
+<blockquote>
+<p>该命令如果报错：Could not open a connection to your authentication agent.无法连接到ssh agent，可执行ssh-agent bash命令后再执行ssh-add命令。</p>
+</blockquote>
+<p>上面的配置完成完成，使用命令ssh-add -l可以看到所有的密钥列表,ssh-add的作用主要将密钥添加到 ssh-agent 的高速缓存中，这样在当前会话中就不需要再次输入密码了<br>具体的可以参考<a target="_blank" rel="noopener" href="https://wiki.archlinux.org/index.php/SSH_keys_%28%E7%AE%80%E4%BD%93%E4%B8%AD%E6%96%87%29">SSH Keys</a></p>
+
+      
+    </div>
+
+    
+    
+    
+
+    <footer class="post-footer">
+        <div class="post-eof"></div>
+      
+    </footer>
+  </article>
+</div>
+
+
+
+
+    
+
+
+<div class="post-block">
+  
+  
+
+  <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="">
+    <link itemprop="mainEntityOfPage" href="https://lzhwweb.github.io/nirvana/git/git/git-photo-show/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/nirvana/images/avatar.gif">
+      <meta itemprop="name" content="nirvana">
+      <meta itemprop="description" content="个人学习笔记">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="涅槃快乐是金">
+    </span>
+      <header class="post-header">
+        <h2 class="post-title" itemprop="name headline">
+          <a href="/nirvana/git/git/git-photo-show/" class="post-title-link" itemprop="url">图解Git</a>
+        </h2>
+
+        <div class="post-meta-container">
+          <div class="post-meta">
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-calendar"></i>
+      </span>
+      <span class="post-meta-item-text">发表于</span>
+
+      <time title="创建时间：2021-03-09 21:22:05" itemprop="dateCreated datePublished" datetime="2021-03-09T21:22:05+08:00">2021-03-09</time>
+    </span>
+      <span class="post-meta-item">
+        <span class="post-meta-item-icon">
+          <i class="far fa-calendar-check"></i>
+        </span>
+        <span class="post-meta-item-text">更新于</span>
+        <time title="修改时间：2021-03-10 10:19:06" itemprop="dateModified" datetime="2021-03-10T10:19:06+08:00">2021-03-10</time>
+      </span>
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-folder"></i>
+      </span>
+      <span class="post-meta-item-text">分类于</span>
+        <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+          <a href="/nirvana/categories/git/" itemprop="url" rel="index"><span itemprop="name">git</span></a>
+        </span>
+    </span>
+
+  
+      </div>
+      <div class="post-meta">
+    <span class="post-meta-item" title="本文字数">
+      <span class="post-meta-item-icon">
+        <i class="far fa-file-word"></i>
+      </span>
+      <span class="post-meta-item-text">本文字数：</span>
+      <span>3.2k</span>
+    </span>
+    <span class="post-meta-item" title="阅读时长">
+      <span class="post-meta-item-icon">
+        <i class="far fa-clock"></i>
+      </span>
+      <span class="post-meta-item-text">阅读时长 &asymp;</span>
+      <span>3 分钟</span>
+    </span>
+</div>
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+          <p>此页图解git中的最常用命令。如果你稍微理解git的工作原理，这篇文章能够让你理解的更透彻。 如果你想知道这个站点怎样产生，请前往<a target="_blank" rel="noopener" href="http://github.com/MarkLodato/visual-git-guide">GitHub repository</a>。</p>
+<h2 id="正文"><a href="#正文" class="headerlink" title="正文"></a>正文</h2><ol>
+<li> [基本用法]</li>
+<li> [约定]</li>
+<li>[命令详解]<ol>
+<li> [Diff]</li>
+<li> [Commit]</li>
+<li> [Checkout]</li>
+<li> [Detached HEAD(匿名分支提交)]</li>
+<li> [Reset]</li>
+<li> [Merge]</li>
+<li> [Cherry Pick]</li>
+<li> [Rebase]</li>
+</ol>
+</li>
+<li> [技术说明]<h2 id="基本用法"><a href="#基本用法" class="headerlink" title="基本用法"></a>基本用法</h2></li>
+</ol>
+<p><img src="https://upload-images.jianshu.io/upload_images/10024246-21fba1e1da263d7f.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="image"></p>
+<p>上面的四条命令在工作目录、暂存目录(也叫做索引)和仓库之间复制文件。</p>
+<ul>
+<li>  <code>git add *files*</code> 把当前文件放入暂存区域。</li>
+<li>  <code>git commit</code> 给暂存区域生成快照并提交。</li>
+<li>  <code>git reset -- *files*</code> 用来撤销最后一次<code>git add *files*</code>，你也可以用<code>git reset</code> 撤销所有暂存区域文件。</li>
+<li>  <code>git checkout -- *files*</code> 把文件从暂存区域复制到工作目录，用来丢弃本地修改。</li>
+</ul>
+<p>你可以用 <code>git reset -p</code>, <code>git checkout -p</code>, or <code>git add -p</code>进入交互模式。</p>
+<p>也可以跳过暂存区域直接从仓库取出文件或者直接提交代码。</p>
+<p><img src="https://upload-images.jianshu.io/upload_images/10024246-b11b76b0bcc94af7.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="image"></p>
+<ul>
+<li>  <code>git commit -a </code>相当于运行 <tt>git add</tt> 把所有当前目录下的文件加入暂存区域再运行。<tt>git commit</tt>.</li>
+<li>  <code>git commit *files*</code> 进行一次包含最后一次提交加上工作目录中文件快照的提交。并且文件被添加到暂存区域。</li>
+<li>  <code>git checkout HEAD -- *files*</code> 回滚到复制最后一次提交。</li>
+</ul>
+<h2 id="约定"><a href="#约定" class="headerlink" title="约定"></a>约定</h2><p>后文中以下面的形式使用图片。</p>
+<p><img src="https://upload-images.jianshu.io/upload_images/10024246-44414f76381618de.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="image"></p>
+<p>绿色的5位字符表示提交的ID，分别指向父节点。分支用橘色显示，分别指向特定的提交。当前分支由附在其上的<em>HEAD</em>标识。 这张图片里显示最后5次提交，<em>ed489</em>是最新提交。 <em>master</em>分支指向此次提交，另一个<em>maint</em>分支指向祖父提交节点。</p>
+<h2 id="命令详解"><a href="#命令详解" class="headerlink" title="命令详解"></a>命令详解</h2><h3 id="Diff"><a href="#Diff" class="headerlink" title="Diff"></a>Diff</h3><p>有许多种方法查看两次提交之间的变动。下面是一些示例。</p>
+<p><img src="https://upload-images.jianshu.io/upload_images/10024246-5a06c9ce6b7befa2.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="image"></p>
+<h3 id="Commit"><a href="#Commit" class="headerlink" title="Commit"></a>Commit</h3><p>提交时，git用暂存区域的文件创建一个新的提交，并把此时的节点设为父节点。然后把当前分支指向新的提交节点。下图中，当前分支是<em>master</em>。 在运行命令之前，<em>master</em>指向<em>ed489</em>，提交后，<em>master</em>指向新的节点<em>f0cec</em>并以<em>ed489</em>作为父节点。</p>
+<p><img src="https://upload-images.jianshu.io/upload_images/10024246-b44f25aad754924b.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="image"></p>
+<p>即便当前分支是某次提交的祖父节点，git会同样操作。下图中，在<em>master</em>分支的祖父节点<em>maint</em>分支进行一次提交，生成了<em>1800b</em>。 这样，<em>maint</em>分支就不再是<em>master</em>分支的祖父节点。此时，<a target="_blank" rel="noopener" href="http://marklodato.github.io/visual-git-guide/index-zh-cn.html?no-svg#merge">合并</a> (或者 <a target="_blank" rel="noopener" href="http://marklodato.github.io/visual-git-guide/index-zh-cn.html?no-svg#rebase">衍合</a>) 是必须的。</p>
+<p>[图片上传失败…(image-face28-1612013134102)]</p>
+<p>如果想更改一次提交，使用 <code>git commit --amend</code>。git会使用与当前提交相同的父节点进行一次新提交，旧的提交会被取消。</p>
+<p><img src="https://upload-images.jianshu.io/upload_images/10024246-e025ed294d826da7.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="image"></p>
+<p>另一个例子是<a target="_blank" rel="noopener" href="http://marklodato.github.io/visual-git-guide/index-zh-cn.html?no-svg#detached">分离HEAD提交</a>,后文讲。</p>
+<h3 id="Checkout"><a href="#Checkout" class="headerlink" title="Checkout"></a>Checkout</h3><p>checkout命令用于从历史提交（或者暂存区域）中拷贝文件到工作目录，也可用于切换分支。</p>
+<p>当给定某个文件名（或者打开-p选项，或者文件名和-p选项同时打开）时，git会从指定的提交中拷贝文件到暂存区域和工作目录。比如，<code>git checkout HEAD~ foo.c</code>会将提交节点<em>HEAD~</em>(即当前提交节点的父节点)中的<code>foo.c</code>复制到工作目录并且加到暂存区域中。（如果命令中没有指定提交节点，则会从暂存区域中拷贝内容。）注意当前分支不会发生变化。</p>
+<p><img src="https://upload-images.jianshu.io/upload_images/10024246-113bd8642deaa38c.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="image"></p>
+<p>当不指定文件名，而是给出一个（本地）分支时，那么<em>HEAD</em>标识会移动到那个分支（也就是说，我们“切换”到那个分支了），然后暂存区域和工作目录中的内容会和<em>HEAD</em>对应的提交节点一致。新提交节点（下图中的a47c3）中的所有文件都会被复制（到暂存区域和工作目录中）；只存在于老的提交节点（ed489）中的文件会被删除；不属于上述两者的文件会被忽略，不受影响。</p>
+<p><img src="https://upload-images.jianshu.io/upload_images/10024246-563a8ca86c55a731.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="image"></p>
+<p>如果既没有指定文件名，也没有指定分支名，而是一个标签、远程分支、SHA-1值或者是像<em>master~3</em>类似的东西，就得到一个匿名分支，称作<em>detached HEAD</em>（被分离的<em>HEAD</em>标识）。这样可以很方便地在历史版本之间互相切换。比如说你想要编译1.6.6.1版本的git，你可以运行<code>git checkout v1.6.6.1</code>（这是一个标签，而非分支名），编译，安装，然后切换回另一个分支，比如说<code>git checkout master</code>。然而，当提交操作涉及到“分离的HEAD”时，其行为会略有不同，详情见在<a target="_blank" rel="noopener" href="http://marklodato.github.io/visual-git-guide/index-zh-cn.html?no-svg#detached">下面</a>。</p>
+<p><img src="https://upload-images.jianshu.io/upload_images/10024246-b472fff024260193.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="image"></p>
+<h3 id="HEAD标识处于分离状态时的提交操作"><a href="#HEAD标识处于分离状态时的提交操作" class="headerlink" title="HEAD标识处于分离状态时的提交操作"></a>HEAD标识处于分离状态时的提交操作</h3><p>当<em>HEAD</em>处于分离状态（不依附于任一分支）时，提交操作可以正常进行，但是不会更新任何已命名的分支。(你可以认为这是在更新一个匿名分支。)</p>
+<p><img src="https://upload-images.jianshu.io/upload_images/10024246-150bf058f35ed3ac.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="image"></p>
+<p>一旦此后你切换到别的分支，比如说<em>master</em>，那么这个提交节点（可能）再也不会被引用到，然后就会被丢弃掉了。注意这个命令之后就不会有东西引用<em>2eecb</em>。</p>
+<p><img src="https://upload-images.jianshu.io/upload_images/10024246-dd8b15b2ecedc54b.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="image"></p>
+<p>但是，如果你想保存这个状态，可以用命令<code>git checkout -b *name*</code>来创建一个新的分支。</p>
+<p><img src="https://upload-images.jianshu.io/upload_images/10024246-3e76fdcb7b6da5d8.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="image"></p>
+<h3 id="Reset"><a href="#Reset" class="headerlink" title="Reset"></a>Reset</h3><p>reset命令把当前分支指向另一个位置，并且有选择的变动工作目录和索引。也用来在从历史仓库中复制文件到索引，而不动工作目录。</p>
+<p>如果不给选项，那么当前分支指向到那个提交。如果用<code>--hard</code>选项，那么工作目录也更新，如果用<code>--soft</code>选项，那么都不变。</p>
+<p><img src="https://upload-images.jianshu.io/upload_images/10024246-bf3a8d9893504070.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="image"></p>
+<p>如果没有给出提交点的版本号，那么默认用<em>HEAD</em>。这样，分支指向不变，但是索引会回滚到最后一次提交，如果用<code>--hard</code>选项，工作目录也同样。</p>
+<p><img src="https://upload-images.jianshu.io/upload_images/10024246-32131cd6574f60b3.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="image"></p>
+<p>如果给了文件名(或者 <code>-p</code>选项), 那么工作效果和带文件名的<a target="_blank" rel="noopener" href="http://marklodato.github.io/visual-git-guide/index-zh-cn.html?no-svg#checkout">checkout</a>差不多，除了索引被更新。</p>
+<p><img src="https://upload-images.jianshu.io/upload_images/10024246-02a7ce801083fe56.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="image"></p>
+<h3 id="Merge"><a href="#Merge" class="headerlink" title="Merge"></a>Merge</h3><p>merge 命令把不同分支合并起来。合并前，索引必须和当前提交相同。如果另一个分支是当前提交的祖父节点，那么合并命令将什么也不做。 另一种情况是如果当前提交是另一个分支的祖父节点，就导致<em>fast-forward</em>合并。指向只是简单的移动，并生成一个新的提交。</p>
+<p>[图片上传失败…(image-b862fd-1612013134101)]</p>
+<p>否则就是一次真正的合并。默认把当前提交(<em>ed489</em> 如下所示)和另一个提交(<em>33104</em>)以及他们的共同祖父节点(<em>b325c</em>)进行一次<a target="_blank" rel="noopener" href="http://en.wikipedia.org/wiki/Three-way_merge">三方合并</a>。结果是先保存当前目录和索引，然后和父节点<em>33104</em>一起做一次新提交。</p>
+<p><img src="https://upload-images.jianshu.io/upload_images/10024246-3b6ce794ec8a9f6e.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="image"></p>
+<h3 id="Cherry-Pick"><a href="#Cherry-Pick" class="headerlink" title="Cherry Pick"></a>Cherry Pick</h3><p>cherry-pick命令”复制”一个提交节点并在当前分支做一次完全一样的新提交。</p>
+<p><img src="https://upload-images.jianshu.io/upload_images/10024246-50cdee8c86b2dada.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="image"></p>
+<h3 id="Rebase"><a href="#Rebase" class="headerlink" title="Rebase"></a>Rebase</h3><p>衍合是合并命令的另一种选择。合并把两个父分支合并进行一次提交，提交历史不是线性的。衍合在当前分支上重演另一个分支的历史，提交历史是线性的。 本质上，这是线性化的自动的 <a target="_blank" rel="noopener" href="http://marklodato.github.io/visual-git-guide/index-zh-cn.html?no-svg#cherry-pick">cherry-pick</a></p>
+<p><img src="https://upload-images.jianshu.io/upload_images/10024246-5614bb07293b87f8.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="image"></p>
+<p>上面的命令都在<em>topic</em>分支中进行，而不是<em>master</em>分支，在<em>master</em>分支上重演，并且把分支指向新的节点。注意旧提交没有被引用，将被回收。</p>
+<p>要限制回滚范围，使用<code>--onto</code>选项。下面的命令在<em>master</em>分支上重演当前分支从<em>169a6</em>以来的最近几个提交，即<em>2c33a</em>。</p>
+<p><img src="https://upload-images.jianshu.io/upload_images/10024246-e4361997b8397e13.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="image"></p>
+<p>同样有<code>git rebase --interactive</code>让你更方便的完成一些复杂操作，比如丢弃、重排、修改、合并提交。没有图片体现这些，细节看这里:<a target="_blank" rel="noopener" href="http://www.kernel.org/pub/software/scm/git/docs/git-rebase.html#_interactive_mode">git-rebase(1)</a></p>
+<h2 id="技术说明"><a href="#技术说明" class="headerlink" title="技术说明"></a>技术说明</h2><p>文件内容并没有真正存储在索引(<em>.git/index</em>)或者提交对象中，而是以blob的形式分别存储在数据库中(<em>.git/objects</em>)，并用SHA-1值来校验。 索引文件用识别码列出相关的blob文件以及别的数据。对于提交来说，以树(<em>tree</em>)的形式存储，同样用对于的哈希值识别。树对应着工作目录中的文件夹，树中包含的 树或者blob对象对应着相应的子目录和文件。每次提交都存储下它的上一级树的识别码。</p>
+<p>如果用detached HEAD提交，那么最后一次提交会被the reflog for HEAD引用。但是过一段时间就失效，最终被回收，与<code>git commit --amend</code>或者<code>git rebase</code>很像。</p>
+
+      
+    </div>
+
+    
+    
+    
+
+    <footer class="post-footer">
+        <div class="post-eof"></div>
+      
+    </footer>
+  </article>
+</div>
+
+
+
+
+    
+
+
+<div class="post-block">
+  
+  
+
+  <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="">
+    <link itemprop="mainEntityOfPage" href="https://lzhwweb.github.io/nirvana/git/git/git-seach-special-char/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/nirvana/images/avatar.gif">
+      <meta itemprop="name" content="nirvana">
+      <meta itemprop="description" content="个人学习笔记">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="涅槃快乐是金">
+    </span>
+      <header class="post-header">
+        <h2 class="post-title" itemprop="name headline">
+          <a href="/nirvana/git/git/git-seach-special-char/" class="post-title-link" itemprop="url">如何在Github中搜索特殊字符</a>
+        </h2>
+
+        <div class="post-meta-container">
+          <div class="post-meta">
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-calendar"></i>
+      </span>
+      <span class="post-meta-item-text">发表于</span>
+
+      <time title="创建时间：2021-03-09 21:21:13" itemprop="dateCreated datePublished" datetime="2021-03-09T21:21:13+08:00">2021-03-09</time>
+    </span>
+      <span class="post-meta-item">
+        <span class="post-meta-item-icon">
+          <i class="far fa-calendar-check"></i>
+        </span>
+        <span class="post-meta-item-text">更新于</span>
+        <time title="修改时间：2021-03-10 10:18:54" itemprop="dateModified" datetime="2021-03-10T10:18:54+08:00">2021-03-10</time>
+      </span>
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-folder"></i>
+      </span>
+      <span class="post-meta-item-text">分类于</span>
+        <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+          <a href="/nirvana/categories/git/" itemprop="url" rel="index"><span itemprop="name">git</span></a>
+        </span>
+    </span>
+
+  
+      </div>
+      <div class="post-meta">
+    <span class="post-meta-item" title="本文字数">
+      <span class="post-meta-item-icon">
+        <i class="far fa-file-word"></i>
+      </span>
+      <span class="post-meta-item-text">本文字数：</span>
+      <span>182</span>
+    </span>
+    <span class="post-meta-item" title="阅读时长">
+      <span class="post-meta-item-icon">
+        <i class="far fa-clock"></i>
+      </span>
+      <span class="post-meta-item-text">阅读时长 &asymp;</span>
+      <span>1 分钟</span>
+    </span>
+</div>
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+          <p>github仓库中搜索包含特殊字符的字符串(例如” example.com”或” Example：”)</p>
+<h2 id="方法"><a href="#方法" class="headerlink" title="方法"></a>方法</h2><p>使用空格代替字符，然后将搜索词放在引号中。 它会给您最接近的结果。<br>我有一个库调用sg.createNode，所以我搜索了”sg createNote”，其中大多数返回的结果包括sg.createNote。</p>
+<h2 id="结果"><a href="#结果" class="headerlink" title="结果"></a>结果</h2><p><img src="https://upload-images.jianshu.io/upload_images/10024246-e3184421d579a0d4.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240"></p>
+<blockquote>
+<p>暂时没有找到能够精准匹配特殊字符的方法，但是已经基本够用了</p>
+</blockquote>
+
+      
+    </div>
+
+    
+    
+    
+
+    <footer class="post-footer">
+        <div class="post-eof"></div>
+      
+    </footer>
+  </article>
+</div>
+
+
+
+
+    
+
+
+<div class="post-block">
+  
+  
+
+  <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="">
+    <link itemprop="mainEntityOfPage" href="https://lzhwweb.github.io/nirvana/git/git/git-seach/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/nirvana/images/avatar.gif">
+      <meta itemprop="name" content="nirvana">
+      <meta itemprop="description" content="个人学习笔记">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="涅槃快乐是金">
+    </span>
+      <header class="post-header">
+        <h2 class="post-title" itemprop="name headline">
+          <a href="/nirvana/git/git/git-seach/" class="post-title-link" itemprop="url">GitHub 常用搜索语法</a>
+        </h2>
+
+        <div class="post-meta-container">
+          <div class="post-meta">
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-calendar"></i>
+      </span>
+      <span class="post-meta-item-text">发表于</span>
+      
+
+      <time title="创建时间：2021-03-09 21:19:18 / 修改时间：21:19:38" itemprop="dateCreated datePublished" datetime="2021-03-09T21:19:18+08:00">2021-03-09</time>
+    </span>
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-folder"></i>
+      </span>
+      <span class="post-meta-item-text">分类于</span>
+        <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+          <a href="/nirvana/categories/git/" itemprop="url" rel="index"><span itemprop="name">git</span></a>
+        </span>
+    </span>
+
+  
+      </div>
+      <div class="post-meta">
+    <span class="post-meta-item" title="本文字数">
+      <span class="post-meta-item-icon">
+        <i class="far fa-file-word"></i>
+      </span>
+      <span class="post-meta-item-text">本文字数：</span>
+      <span>3.6k</span>
+    </span>
+    <span class="post-meta-item" title="阅读时长">
+      <span class="post-meta-item-icon">
+        <i class="far fa-clock"></i>
+      </span>
+      <span class="post-meta-item-text">阅读时长 &asymp;</span>
+      <span>3 分钟</span>
+    </span>
+</div>
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+          <p><strong><a target="_blank" rel="noopener" href="https://docs.github.com/cn/github/searching-for-information-on-github/searching-for-repositories">官网</a></strong></p>
+<h1 id="搜索仓库"><a href="#搜索仓库" class="headerlink" title="搜索仓库"></a>搜索仓库</h1><p>您可以在 GitHub 上搜索仓库，并使用这些仓库搜索限定符的任意组合缩小结果范围。<br>您可以在所有 GitHub 内全局搜索仓库，也可以在特定组织内搜索仓库<br>要在搜索结果中包括复刻，您需要将 <code>fork:true</code> 或 <code>fork:only</code> 添加到查询。 </p>
+<p><strong>Tips:</strong></p>
+<ul>
+<li>  有关可以添加到任何搜索限定符以进一步改善结果的搜索语法列表，请参阅“<a target="_blank" rel="noopener" href="https://docs.github.com/cn/free-pro-team@latest/articles/understanding-the-search-syntax">了解搜索语法</a>”。</li>
+<li>  对多个字词的搜索词使用引号。 例如，如果要搜索具有标签 “In progress” 的议题，可搜索 <code>label:&quot;in progress&quot;</code>。 搜索不区分大小写。</li>
+</ul>
+<h3 id="按仓库名称、说明或自述文件内容搜索"><a href="#按仓库名称、说明或自述文件内容搜索" class="headerlink" title="按仓库名称、说明或自述文件内容搜索"></a>按仓库名称、说明或自述文件内容搜索</h3><p>通过 <code>in</code> 限定符，您可以将搜索限制为仓库名称、仓库说明、自述文件内容或这些的任意组合。 如果省略此限定符，则只搜索仓库名称和说明。</p>
+<table>
+<thead>
+<tr>
+<th>限定符</th>
+<th>示例</th>
+</tr>
+</thead>
+<tbody><tr>
+<td><code>in:name</code></td>
+<td><strong>jquery in:name</strong> matches repositories with “jquery” in the repository name.</td>
+</tr>
+<tr>
+<td><code>in:description</code></td>
+<td><strong>jquery in:name,description</strong> matches repositories with “jquery” in the repository name or description.</td>
+</tr>
+<tr>
+<td><code>in:readme</code></td>
+<td><strong>jquery in:readme</strong>  matches repositories mentioning “jquery” in the repository’s README file.</td>
+</tr>
+<tr>
+<td><code>repo:owner/name</code></td>
+<td><strong>repo:octocat/hello-world</strong> 匹配特定仓库名称。</td>
+</tr>
+</tbody></table>
+<h3 id="基于仓库的内容搜索"><a href="#基于仓库的内容搜索" class="headerlink" title="基于仓库的内容搜索"></a>基于仓库的内容搜索</h3><p>除了使用 <code>in:readme</code> 以外，无法通过搜索仓库内的特定内容来查找仓库。 要搜索仓库内的特定文件或内容，您可以使用查找器或代码特定的搜索限定符。<br>| 限定符 | 示例 |<br>| — | — |<br>| <code>in:readme</code> | <strong>octocat in:readme</strong> matches repositories mentioning “octocat” in the repository’s README file. |</p>
+<h3 id="在用户或组织的仓库内搜索"><a href="#在用户或组织的仓库内搜索" class="headerlink" title="在用户或组织的仓库内搜索"></a>在用户或组织的仓库内搜索</h3><p>要在特定用户或组织拥有的所有仓库中搜索，您可以使用 <code>user</code> 或 <code>org</code> 限定符。</p>
+<table>
+<thead>
+<tr>
+<th>限定符</th>
+<th>示例</th>
+</tr>
+</thead>
+<tbody><tr>
+<td><code>user:*USERNAME*</code></td>
+<td><strong>user:defunkt forks:&gt;100</strong> 匹配来自 @defunkt、拥有超过 100 复刻的仓库。</td>
+</tr>
+<tr>
+<td><code>org:*ORGNAME*</code></td>
+<td><strong>org:github</strong> 匹配来自 GitHub 的仓库。</td>
+</tr>
+</tbody></table>
+<h3 id="按仓库大小搜索"><a href="#按仓库大小搜索" class="headerlink" title="按仓库大小搜索"></a>按仓库大小搜索</h3><p>The <code>size</code> qualifier finds repositories that match a certain size (in kilobytes), using greater than, less than, and range qualifiers<br>| 限定符 | 示例 |<br>| — | — |<br>| <code>size:*n*</code> | <strong>size:1000</strong> 匹配恰好为 1 MB 的仓库。 |<br>|  | <strong>size:&gt;=30000</strong> 匹配至少为 30 MB 的仓库。 |<br>|  | <strong>size:&lt;50</strong> 匹配小于 50 KB 的仓库。 |<br>|  | <strong>size:50..120</strong> 匹配介于 50 KB 与 120 KB 之间的仓库。 |</p>
+<h3 id="按关注者数量搜索"><a href="#按关注者数量搜索" class="headerlink" title="按关注者数量搜索"></a>按关注者数量搜索</h3><table>
+<thead>
+<tr>
+<th>限定符</th>
+<th>示例</th>
+</tr>
+</thead>
+<tbody><tr>
+<td><code>followers:*n*</code></td>
+<td><strong>node followers:&gt;=10000</strong> 匹配有 10,000 或更多关注者提及文字 “node” 的仓库。</td>
+</tr>
+<tr>
+<td></td>
+<td><strong>styleguide linter followers:1..10</strong> 匹配拥有 1 到 10 个关注者并且提及 “styleguide linter” 一词的的仓库。</td>
+</tr>
+</tbody></table>
+<h3 id="按复刻数量搜索"><a href="#按复刻数量搜索" class="headerlink" title="按复刻数量搜索"></a>按复刻数量搜索</h3><table>
+<thead>
+<tr>
+<th>限定符</th>
+<th>示例</th>
+</tr>
+</thead>
+<tbody><tr>
+<td><code>forks:*n*</code></td>
+<td><strong>forks:5</strong> 匹配具有至少 205 个复刻的仓库。</td>
+</tr>
+<tr>
+<td></td>
+<td><strong>forks:&lt;90</strong> 匹配具有少于 90 个复刻的仓库。</td>
+</tr>
+<tr>
+<td></td>
+<td><strong>forks:10..20</strong> 匹配具有 10 到 20 个复刻的仓库。</td>
+</tr>
+</tbody></table>
+<h3 id="按星号数量搜索"><a href="#按星号数量搜索" class="headerlink" title="按星号数量搜索"></a>按星号数量搜索</h3><table>
+<thead>
+<tr>
+<th>限定符</th>
+<th>示例</th>
+</tr>
+</thead>
+<tbody><tr>
+<td><code>stars:*n*</code></td>
+<td><strong>stars:500</strong> 匹配恰好具有 500 个星号的仓库。</td>
+</tr>
+<tr>
+<td></td>
+<td><strong>stars:10..20</strong> 匹配具有 10 到 20 个星号、小于 1000 KB 的仓库。</td>
+</tr>
+<tr>
+<td></td>
+<td><strong>stars:&gt;=500 fork:true language:php</strong> 匹配具有至少 500 个星号，包括复刻的星号（以 PHP 编写）的仓库。</td>
+</tr>
+</tbody></table>
+<h3 id="按仓库创建或上次更新时间搜索"><a href="#按仓库创建或上次更新时间搜索" class="headerlink" title="按仓库创建或上次更新时间搜索"></a>按仓库创建或上次更新时间搜索</h3><p>您可以基于创建时间或上次更新时间过滤仓库。 对于仓库创建，您可以使用 <code>created</code> 限定符；要了解仓库上次更新的时间，您要使用 <code>pushed</code> 限定符。 <code>pushed</code> 限定符将返回仓库列表，按仓库中任意分支上最近进行的提交排序。</p>
+<p>两者均采用日期作为参数。 日期格式必须遵循 <a target="_blank" rel="noopener" href="http://en.wikipedia.org/wiki/ISO_8601">ISO8601</a>标准，即 <code>YYYY-MM-DD</code>（年-月-日）。 您也可以在日期后添加可选的时间信息 <code>THH:MM:SS+00:00</code>，以便按小时、分钟和秒进行搜索。 这是 <code>T</code>，随后是 <code>HH:MM:SS</code>（时-分-秒）和 UTC 偏移 (<code>+00:00</code>)。</p>
+<table>
+<thead>
+<tr>
+<th>限定符</th>
+<th>示例</th>
+</tr>
+</thead>
+<tbody><tr>
+<td><code>created:*YYYY-MM-DD*</code></td>
+<td><strong>webos created:&lt;2011-01-01</strong> 匹配具有 “webos” 字样、在 2011 年之前创建的仓库。</td>
+</tr>
+<tr>
+<td><code>pushed:*YYYY-MM-DD*</code></td>
+<td><strong>css pushed:&gt;2013-02-01</strong> 匹配具有 “css” 字样、在 2013 年 1 月之后收到推送的仓库。</td>
+</tr>
+<tr>
+<td></td>
+<td><strong>case pushed:&gt;=2013-03-06 fork:only</strong> 匹配具有 “case” 字样、在 2013 年 3 月 6 日或之后收到推送并且作为复刻的仓库。</td>
+</tr>
+</tbody></table>
+<h3 id="按语言搜索"><a href="#按语言搜索" class="headerlink" title="按语言搜索"></a>按语言搜索</h3><p>You can search repositories based on the language of the code in the repositories.</p>
+<table>
+<thead>
+<tr>
+<th>限定符</th>
+<th>示例</th>
+</tr>
+</thead>
+<tbody><tr>
+<td><code>language:*LANGUAGE*</code></td>
+<td><strong>rails language:javascript</strong> 匹配具有 “rails” 字样、以 JavaScript 编写的仓库。</td>
+</tr>
+</tbody></table>
+<h3 id="按主题搜索"><a href="#按主题搜索" class="headerlink" title="按主题搜索"></a>按主题搜索</h3><table>
+<thead>
+<tr>
+<th>限定符</th>
+<th>示例</th>
+</tr>
+</thead>
+<tbody><tr>
+<td><code>topic:*TOPIC*</code></td>
+<td><strong>topic:jekyll</strong> 匹配已归类为 “jekyll” 主题的仓库。</td>
+</tr>
+</tbody></table>
+<h3 id="按主题数量搜索"><a href="#按主题数量搜索" class="headerlink" title="按主题数量搜索"></a>按主题数量搜索</h3><table>
+<thead>
+<tr>
+<th>限定符</th>
+<th>示例</th>
+</tr>
+</thead>
+<tbody><tr>
+<td><code>topics:*n*</code></td>
+<td><strong>topics:5</strong> 匹配具有五个主题的仓库。</td>
+</tr>
+<tr>
+<td></td>
+<td><strong>topics:&gt;3</strong>  匹配超过三个主题的仓库。</td>
+</tr>
+</tbody></table>
+<h3 id="按许可搜索"><a href="#按许可搜索" class="headerlink" title="按许可搜索"></a>按许可搜索</h3><table>
+<thead>
+<tr>
+<th>限定符</th>
+<th>示例</th>
+</tr>
+</thead>
+<tbody><tr>
+<td><code>license:*LICENSE_KEYWORD*</code></td>
+<td><strong>license:apache-2.0</strong>  匹配根据 Apache License 2.0 授权的仓库。</td>
+</tr>
+</tbody></table>
+<h3 id="Search-by-repository-visibility"><a href="#Search-by-repository-visibility" class="headerlink" title="Search by repository visibility"></a>Search by repository visibility</h3><p>You can filter your search based on the visibility of the repositories. </p>
+<table>
+<thead>
+<tr>
+<th>Qualifier</th>
+<th>Example</th>
+</tr>
+</thead>
+<tbody><tr>
+<td><code>is:public</code></td>
+<td><strong>is:public org:github</strong>  matches public repositories owned by GitHub.</td>
+</tr>
+<tr>
+<td><code>is:internal</code></td>
+<td><strong>is:internal test</strong> matches internal repositories that you can access and contain the word “test”.</td>
+</tr>
+<tr>
+<td><code>is:private</code></td>
+<td><strong>is:private pages</strong>  matches private repositories that you can access and contain the word “pages.”</td>
+</tr>
+</tbody></table>
+<h3 id="基于仓库是否为镜像搜索"><a href="#基于仓库是否为镜像搜索" class="headerlink" title="基于仓库是否为镜像搜索"></a>基于仓库是否为镜像搜索</h3><table>
+<thead>
+<tr>
+<th>限定符</th>
+<th>示例</th>
+</tr>
+</thead>
+<tbody><tr>
+<td><code>mirror:true</code></td>
+<td><strong>mirror:true GNOME</strong>  matches repositories that are mirrors and contain the word “GNOME.”</td>
+</tr>
+<tr>
+<td><code>mirror:false</code></td>
+<td><strong>mirror:false GNOME</strong>  matches repositories that are not mirrors and contain the word “GNOME.”</td>
+</tr>
+</tbody></table>
+<h3 id="基于仓库是否已存档搜索"><a href="#基于仓库是否已存档搜索" class="headerlink" title="基于仓库是否已存档搜索"></a>基于仓库是否已存档搜索</h3><table>
+<thead>
+<tr>
+<th>限定符</th>
+<th>示例</th>
+</tr>
+</thead>
+<tbody><tr>
+<td><code>archived:true</code></td>
+<td><strong>archived:true GNOME</strong>  matches repositories that are archived and contain the word “GNOME.”</td>
+</tr>
+<tr>
+<td><code>archived:false</code></td>
+<td><strong>archived:false GNOME</strong> matches repositories that are not archived and contain the word “GNOME.”</td>
+</tr>
+</tbody></table>
+<h3 id="基于具有-good-first-issue-或-help-wanted-标签的议题数量搜索"><a href="#基于具有-good-first-issue-或-help-wanted-标签的议题数量搜索" class="headerlink" title="基于具有 good first issue 或 help wanted 标签的议题数量搜索"></a>基于具有 <code>good first issue</code> 或 <code>help wanted</code> 标签的议题数量搜索</h3><p>您可以使用限定符 <code>help-wanted-issues:&gt;n</code> 和 <code>good-first-issues:&gt;n</code> 搜索具有最少数量标签为 <code>help-wanted</code> 或 <code>good-first-issue</code> 议题的仓库。。</p>
+<table>
+<thead>
+<tr>
+<th>限定符</th>
+<th>示例</th>
+</tr>
+</thead>
+<tbody><tr>
+<td><code>good-first-issues:&gt;n</code></td>
+<td><strong>good-first-issues:&gt;2 javascript</strong>  匹配具有超过两个标签为 <code>good-first-issue</code> 的议题且包含 “javascript” 字样的仓库。</td>
+</tr>
+<tr>
+<td><code>help-wanted-issues:&gt;n</code></td>
+<td><strong>help-wanted-issues:&gt;4 react</strong>  匹配具有超过四个标签为 <code>help-wanted</code> 的议题且包含 “React” 字样的仓库。</td>
+</tr>
+</tbody></table>
+
+      
+    </div>
+
+    
+    
+    
+
+    <footer class="post-footer">
+        <div class="post-eof"></div>
+      
+    </footer>
+  </article>
+</div>
+
+
+
+
+  <nav class="pagination">
+    <a class="extend prev" rel="prev" href="/nirvana/page/15/"><i class="fa fa-angle-left" aria-label="上一页"></i></a><a class="page-number" href="/nirvana/">1</a><span class="space">&hellip;</span><a class="page-number" href="/nirvana/page/15/">15</a><span class="page-number current">16</span><a class="page-number" href="/nirvana/page/17/">17</a><a class="page-number" href="/nirvana/page/18/">18</a><a class="extend next" rel="next" href="/nirvana/page/17/"><i class="fa fa-angle-right" aria-label="下一页"></i></a>
+  </nav>
+
+
+<script>
+  window.addEventListener('tabs:register', () => {
+    let { activeClass } = CONFIG.comments;
+    if (CONFIG.comments.storage) {
+      activeClass = localStorage.getItem('comments_active') || activeClass;
+    }
+    if (activeClass) {
+      const activeTab = document.querySelector(`a[href="#comment-${activeClass}"]`);
+      if (activeTab) {
+        activeTab.click();
+      }
+    }
+  });
+  if (CONFIG.comments.storage) {
+    window.addEventListener('tabs:click', event => {
+      if (!event.target.matches('.tabs-comment .tab-content .tab-pane')) return;
+      const commentClass = event.target.classList[1];
+      localStorage.setItem('comments_active', commentClass);
+    });
+  }
+</script>
+</div>
+  </main>
+
+  <footer class="footer">
+    <div class="footer-inner">
+
+
+<div class="copyright">
+  &copy; 
+  <span itemprop="copyrightYear">2021</span>
+  <span class="with-love">
+    <i class="fa fa-heart"></i>
+  </span>
+  <span class="author" itemprop="copyrightHolder">nirvana</span>
+</div>
+<div class="wordcount">
+  <span class="post-meta-item">
+    <span class="post-meta-item-icon">
+      <i class="fa fa-chart-line"></i>
+    </span>
+      <span>站点总字数：</span>
+    <span title="站点总字数">540k</span>
+  </span>
+  <span class="post-meta-item">
+    <span class="post-meta-item-icon">
+      <i class="fa fa-coffee"></i>
+    </span>
+      <span>站点阅读时长 &asymp;</span>
+    <span title="站点阅读时长">8:11</span>
+  </span>
+</div>
+  <div class="powered-by">由 <a href="https://hexo.io/" class="theme-link" rel="noopener" target="_blank">Hexo</a> & <a href="https://theme-next.js.org/" class="theme-link" rel="noopener" target="_blank">NexT.Gemini</a> 强力驱动
+  </div>
+
+    </div>
+  </footer>
+
+  
+  <script src="https://cdn.jsdelivr.net/npm/animejs@3.2.1/lib/anime.min.js"></script>
+<script src="/nirvana/js/utils.js"></script><script src="/nirvana/js/motion.js"></script><script src="/nirvana/js/next-boot.js"></script>
+
+  
+
+
+
+
+
+
+  
+
+
+
+
+
+</body>
+</html>

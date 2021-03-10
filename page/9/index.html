@@ -1,0 +1,1487 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=2">
+<meta name="theme-color" content="#222">
+<meta name="generator" content="Hexo 5.4.0">
+ <meta name="referrer" content="no-referrer"/>
+
+  <link rel="apple-touch-icon" sizes="180x180" href="/nirvana/images/apple-touch-icon-next.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="/nirvana/images/favicon-32x32-next.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="/nirvana/images/favicon-16x16-next.png">
+  <link rel="mask-icon" href="/nirvana/images/logo.svg" color="#222">
+
+<link rel="stylesheet" href="/nirvana/css/main.css">
+
+
+
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@5.15.2/css/all.min.css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/animate.css@3.1.1/animate.min.css">
+
+<script class="hexo-configurations">
+    var NexT = window.NexT || {};
+    var CONFIG = {"hostname":"lzhwweb.github.io","root":"/nirvana/","images":"/nirvana/images","scheme":"Gemini","version":"8.2.2","exturl":false,"sidebar":{"position":"left","display":"post","padding":18,"offset":12},"copycode":false,"bookmark":{"enable":false,"color":"#222","save":"auto"},"fancybox":false,"mediumzoom":false,"lazyload":false,"pangu":false,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},"motion":{"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"fadeInDown","post_body":"fadeInDown","coll_header":"fadeInLeft","sidebar":"fadeInUp"}},"prism":false,"i18n":{"placeholder":"搜索...","empty":"没有找到任何搜索结果：${query}","hits_time":"找到 ${hits} 个搜索结果（用时 ${time} 毫秒）","hits":"找到 ${hits} 个搜索结果"}};
+  </script>
+<meta name="description" content="个人学习笔记">
+<meta property="og:type" content="website">
+<meta property="og:title" content="涅槃快乐是金">
+<meta property="og:url" content="https://lzhwweb.github.io/nirvana/page/9/index.html">
+<meta property="og:site_name" content="涅槃快乐是金">
+<meta property="og:description" content="个人学习笔记">
+<meta property="og:locale" content="zh_CN">
+<meta property="article:author" content="nirvana">
+<meta property="article:tag" content="前端,javascript,node,git">
+<meta name="twitter:card" content="summary">
+
+
+<link rel="canonical" href="https://lzhwweb.github.io/nirvana/page/9/">
+
+
+<script class="page-configurations">
+  // https://hexo.io/docs/variables.html
+  CONFIG.page = {
+    sidebar: "",
+    isHome : true,
+    isPost : false,
+    lang   : 'zh-CN'
+  };
+</script>
+<title>涅槃快乐是金</title>
+  
+
+
+
+
+  <noscript>
+  <style>
+  body { margin-top: 2rem; }
+
+  .use-motion .menu-item,
+  .use-motion .sidebar,
+  .use-motion .post-block,
+  .use-motion .pagination,
+  .use-motion .comments,
+  .use-motion .post-header,
+  .use-motion .post-body,
+  .use-motion .collection-header {
+    visibility: visible;
+  }
+
+  .use-motion .header,
+  .use-motion .site-brand-container .toggle,
+  .use-motion .footer { opacity: initial; }
+
+  .use-motion .site-title,
+  .use-motion .site-subtitle,
+  .use-motion .custom-logo-image {
+    opacity: initial;
+    top: initial;
+  }
+
+  .use-motion .logo-line {
+    transform: scaleX(1);
+  }
+
+  .search-pop-overlay, .sidebar-nav { display: none; }
+  .sidebar-panel { display: block; }
+  </style>
+</noscript>
+
+</head>
+
+<body itemscope itemtype="http://schema.org/WebPage" class="use-motion">
+  <div class="headband"></div>
+
+  <main class="main">
+    <header class="header" itemscope itemtype="http://schema.org/WPHeader">
+      <div class="header-inner"><div class="site-brand-container">
+  <div class="site-nav-toggle">
+    <div class="toggle" aria-label="切换导航栏" role="button">
+        <span class="toggle-line"></span>
+        <span class="toggle-line"></span>
+        <span class="toggle-line"></span>
+    </div>
+  </div>
+
+  <div class="site-meta">
+
+    <a href="/nirvana/" class="brand" rel="start">
+      <i class="logo-line"></i>
+      <h1 class="site-title">涅槃快乐是金</h1>
+      <i class="logo-line"></i>
+    </a>
+  </div>
+
+  <div class="site-nav-right">
+    <div class="toggle popup-trigger">
+    </div>
+  </div>
+</div>
+
+
+
+<nav class="site-nav">
+  <ul class="main-menu menu">
+        <li class="menu-item menu-item-home"><a href="/nirvana/" rel="section">首页</a></li>
+        <li class="menu-item menu-item-git"><a href="/nirvana/categories/git" rel="section">git</a></li>
+        <li class="menu-item menu-item-linux"><a href="/nirvana/categories/linux" rel="section">linux</a></li>
+        <li class="menu-item menu-item-android"><a href="/nirvana/categories/android" rel="section">android</a></li>
+        <li class="menu-item menu-item-随笔"><a href="/nirvana/categories/informal" rel="section">随笔</a></li>
+        <li class="menu-item menu-item-mac"><a href="/nirvana/categories/mac" rel="section">mac</a></li>
+        <li class="menu-item menu-item-react-native"><a href="/nirvana/categories/reactnative" rel="section">react-native</a></li>
+        <li class="menu-item menu-item-算法"><a href="/nirvana/categories/algorithm" rel="section">算法</a></li>
+        <li class="menu-item menu-item-读书笔记"><a href="/nirvana/categories/note" rel="section">读书笔记</a></li>
+        <li class="menu-item menu-item-开发工具"><a href="/nirvana/categories/tool" rel="section">开发工具</a></li>
+        <li class="menu-item menu-item-设计模式(ts)"><a href="/nirvana/categories/DesignPattern" rel="section">设计模式(TS)</a></li>
+        <li class="menu-item menu-item-前端"><a href="/nirvana/categories/javascript" rel="section">前端</a></li>
+  </ul>
+</nav>
+
+
+
+
+</div>
+        
+  
+  <div class="toggle sidebar-toggle" role="button">
+    <span class="toggle-line"></span>
+    <span class="toggle-line"></span>
+    <span class="toggle-line"></span>
+  </div>
+
+  <aside class="sidebar">
+
+    <div class="sidebar-inner sidebar-overview-active">
+      <ul class="sidebar-nav">
+        <li class="sidebar-nav-toc">
+          文章目录
+        </li>
+        <li class="sidebar-nav-overview">
+          站点概览
+        </li>
+      </ul>
+
+      <div class="sidebar-panel-container">
+        <!--noindex-->
+        <div class="post-toc-wrap sidebar-panel">
+        </div>
+        <!--/noindex-->
+
+        <div class="site-overview-wrap sidebar-panel">
+          <div class="site-author site-overview-item animated" itemprop="author" itemscope itemtype="http://schema.org/Person">
+  <p class="site-author-name" itemprop="name">nirvana</p>
+  <div class="site-description" itemprop="description">个人学习笔记</div>
+</div>
+<div class="site-state-wrap site-overview-item animated">
+  <nav class="site-state">
+      <div class="site-state-item site-state-posts">
+          <a href="/nirvana/archives">
+          <span class="site-state-item-count">178</span>
+          <span class="site-state-item-name">日志</span>
+        </a>
+      </div>
+      <div class="site-state-item site-state-categories">
+        <span class="site-state-item-count">11</span>
+        <span class="site-state-item-name">分类</span>
+      </div>
+  </nav>
+</div>
+
+
+
+        </div>
+      </div>
+    </div>
+  </aside>
+  <div class="sidebar-dimmer"></div>
+
+
+    </header>
+
+    
+  <div class="back-to-top" role="button">
+    <i class="fa fa-arrow-up"></i>
+    <span>0%</span>
+  </div>
+
+<noscript>
+  <div class="noscript-warning">Theme NexT works best with JavaScript enabled</div>
+</noscript>
+
+
+    <div class="main-inner index posts-expand">
+
+    
+
+
+<div class="post-block">
+  
+  
+
+  <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="">
+    <link itemprop="mainEntityOfPage" href="https://lzhwweb.github.io/nirvana/DesignPattern/%E8%AE%BE%E8%AE%A1%E6%A8%A1%E5%BC%8F%EF%BC%88TypeScript%EF%BC%89/Composite%E6%A8%A1%E5%BC%8F%EF%BC%88%E7%BB%84%E5%90%88%E5%AE%9E%E4%BD%93%E6%A8%A1%E5%BC%8F%EF%BC%89/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/nirvana/images/avatar.gif">
+      <meta itemprop="name" content="nirvana">
+      <meta itemprop="description" content="个人学习笔记">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="涅槃快乐是金">
+    </span>
+      <header class="post-header">
+        <h2 class="post-title" itemprop="name headline">
+          <a href="/nirvana/DesignPattern/%E8%AE%BE%E8%AE%A1%E6%A8%A1%E5%BC%8F%EF%BC%88TypeScript%EF%BC%89/Composite%E6%A8%A1%E5%BC%8F%EF%BC%88%E7%BB%84%E5%90%88%E5%AE%9E%E4%BD%93%E6%A8%A1%E5%BC%8F%EF%BC%89/" class="post-title-link" itemprop="url">Composite模式（组合实体模式）</a>
+        </h2>
+
+        <div class="post-meta-container">
+          <div class="post-meta">
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-calendar"></i>
+      </span>
+      <span class="post-meta-item-text">发表于</span>
+
+      <time title="创建时间：2021-03-11 21:12:40" itemprop="dateCreated datePublished" datetime="2021-03-11T21:12:40+08:00">2021-03-11</time>
+    </span>
+      <span class="post-meta-item">
+        <span class="post-meta-item-icon">
+          <i class="far fa-calendar-check"></i>
+        </span>
+        <span class="post-meta-item-text">更新于</span>
+        <time title="修改时间：2021-03-10 10:53:50" itemprop="dateModified" datetime="2021-03-10T10:53:50+08:00">2021-03-10</time>
+      </span>
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-folder"></i>
+      </span>
+      <span class="post-meta-item-text">分类于</span>
+        <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+          <a href="/nirvana/categories/DesignPattern/" itemprop="url" rel="index"><span itemprop="name">DesignPattern</span></a>
+        </span>
+    </span>
+
+  
+      </div>
+      <div class="post-meta">
+    <span class="post-meta-item" title="本文字数">
+      <span class="post-meta-item-icon">
+        <i class="far fa-file-word"></i>
+      </span>
+      <span class="post-meta-item-text">本文字数：</span>
+      <span>2.7k</span>
+    </span>
+    <span class="post-meta-item" title="阅读时长">
+      <span class="post-meta-item-icon">
+        <i class="far fa-clock"></i>
+      </span>
+      <span class="post-meta-item-text">阅读时长 &asymp;</span>
+      <span>2 分钟</span>
+    </span>
+</div>
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+          <h2 id="组合实体模式"><a href="#组合实体模式" class="headerlink" title="组合实体模式"></a>组合实体模式</h2><p>组合实体模式（Composite Entity Pattern）能够是容器和内容具有一致性，创造出递归结构的模式。<br>常见使用场景：如树形菜单、文件夹菜单、部门组织架构图等。</p>
+<h2 id="示例："><a href="#示例：" class="headerlink" title="示例："></a>示例：</h2><h3 id="Component-抽象类"><a href="#Component-抽象类" class="headerlink" title="Component:抽象类"></a>Component:抽象类</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">export default abstract class Component &#123;</span><br><span class="line">    public abstract Opertion(): void; &#x2F;&#x2F;操作</span><br><span class="line">    public abstract Add(Child: Component): void;&#x2F;&#x2F;添加子节点</span><br><span class="line">    public abstract Remove(index: number): void;&#x2F;&#x2F;删除节点</span><br><span class="line">    public abstract getChild(index: number): Array&lt;Component&gt;;&#x2F;&#x2F;获取子节点</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<h3 id="Leaf-叶子类"><a href="#Leaf-叶子类" class="headerlink" title="Leaf:叶子类"></a>Leaf:叶子类</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br></pre></td><td class="code"><pre><span class="line">import Component from &quot;.&#x2F;Component&quot;;</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">export default class Leaf extends Component &#123;</span><br><span class="line"></span><br><span class="line">    private leafName: string;</span><br><span class="line"></span><br><span class="line">    constructor(leafName: string) &#123;</span><br><span class="line">        super();</span><br><span class="line">        this.leafName &#x3D; leafName;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    public Opertion(): void &#123;</span><br><span class="line">        console.log(this.leafName + &quot;正在迎风摇摆&quot;);</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    public Add(Child: Component): void &#123;</span><br><span class="line"></span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    public Remove(index: number): void &#123;</span><br><span class="line"></span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    public getChild(index: number): Array&lt;Component&gt; &#123;</span><br><span class="line">        return null;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<h3 id="Trunk-树干类"><a href="#Trunk-树干类" class="headerlink" title="Trunk:树干类"></a>Trunk:树干类</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br></pre></td><td class="code"><pre><span class="line">import Component from &quot;.&#x2F;Component&quot;;</span><br><span class="line"></span><br><span class="line">export default class Trunk extends Component &#123;</span><br><span class="line"></span><br><span class="line">    private TrunkName: string;</span><br><span class="line"></span><br><span class="line">    private components: Array&lt;Component&gt; &#x3D; []; &#x2F;&#x2F;多个子节点</span><br><span class="line"></span><br><span class="line">    constructor(TrunkName: string) &#123;</span><br><span class="line">        super();</span><br><span class="line">        this.TrunkName &#x3D; TrunkName;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    public Opertion(): void &#123;</span><br><span class="line">        console.log(this.TrunkName + &quot;树干正在抵御秋风&quot;);</span><br><span class="line">        this.components.forEach((item, index) &#x3D;&gt; &#123;</span><br><span class="line">            item.Opertion();</span><br><span class="line">        &#125;)</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    public Add(Child: Component): void &#123;</span><br><span class="line">        this.components.push(Child);</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    public Remove(index: number): void &#123;</span><br><span class="line">        this.components.splice(index, 1);</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    public getChild(index: number): Array&lt;Component&gt; &#123;</span><br><span class="line">        return this.components;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<h3 id="index-ts"><a href="#index-ts" class="headerlink" title="index.ts"></a>index.ts</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br></pre></td><td class="code"><pre><span class="line">import Trunk from &quot;.&#x2F;Trunk&quot;;</span><br><span class="line">import Leaf from &quot;.&#x2F;Leaf&quot;;</span><br><span class="line"></span><br><span class="line">const root: Trunk &#x3D; new Trunk(&quot;树根&quot;);</span><br><span class="line"></span><br><span class="line">const trunk: Trunk &#x3D; new Trunk(&quot;主干&quot;);</span><br><span class="line"></span><br><span class="line">const t1: Trunk &#x3D; new Trunk(&quot;主分支&quot;);</span><br><span class="line">const t2: Trunk &#x3D; new Trunk(&quot;第一分支&quot;);</span><br><span class="line">const t3: Trunk &#x3D; new Trunk(&quot;第二分支&quot;);</span><br><span class="line"></span><br><span class="line">const l1: Leaf &#x3D; new Leaf(&quot;分叶1&quot;);</span><br><span class="line">const l2: Leaf &#x3D; new Leaf(&quot;分叶2&quot;);</span><br><span class="line">const l3: Leaf &#x3D; new Leaf(&quot;分叶3&quot;);</span><br><span class="line">const l4: Leaf &#x3D; new Leaf(&quot;分叶4&quot;);</span><br><span class="line">const l5: Leaf &#x3D; new Leaf(&quot;分叶5&quot;);</span><br><span class="line"></span><br><span class="line">root.Add(trunk);</span><br><span class="line">trunk.Add(t1);</span><br><span class="line"></span><br><span class="line">t1.Add(t2);</span><br><span class="line">t1.Add(t3);</span><br><span class="line"></span><br><span class="line">t2.Add(l1);</span><br><span class="line">t2.Add(l3);</span><br><span class="line">t2.Add(l5);</span><br><span class="line"></span><br><span class="line">t3.Add(l2);</span><br><span class="line">t3.Add(l4);</span><br><span class="line"></span><br><span class="line">root.Opertion();</span><br></pre></td></tr></table></figure>
+<h3 id="result"><a href="#result" class="headerlink" title="result"></a>result</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line">树根树干正在抵御秋风</span><br><span class="line">主干树干正在抵御秋风</span><br><span class="line">主分支树干正在抵御秋风</span><br><span class="line">第一分支树干正在抵御秋风</span><br><span class="line">分叶1正在迎风摇摆</span><br><span class="line">分叶3正在迎风摇摆</span><br><span class="line">分叶5正在迎风摇摆</span><br><span class="line">第二分支树干正在抵御秋风</span><br><span class="line">分叶2正在迎风摇摆</span><br><span class="line">分叶4正在迎风摇摆</span><br></pre></td></tr></table></figure>
+<h3 id="类图"><a href="#类图" class="headerlink" title="类图"></a>类图</h3><p><img src="https://upload-images.jianshu.io/upload_images/10024246-d9e5cb13d2a82048.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="类图"></p>
+<h3 id="composite模式"><a href="#composite模式" class="headerlink" title="composite模式"></a>composite模式</h3><p>composite模式主要有一下几类角色</p>
+<ul>
+<li>leaf 树叶<br>表示内容的角色，该角色中不能放入其他对象，对应我们实例程序中的leaf</li>
+<li>Composite 复合物<br>表示容器的角色，可以放入小容器和内容，也就是leaf和composite，此实例中，由Trunk类代表composite</li>
+<li>component<br>是leaf和composite角色具有一致性的角色，一般作为leaf和composite的父类，定义一些共有的行为和属性，此例中的component类代表</li>
+</ul>
+
+      
+    </div>
+
+    
+    
+    
+
+    <footer class="post-footer">
+        <div class="post-eof"></div>
+      
+    </footer>
+  </article>
+</div>
+
+
+
+
+    
+
+
+<div class="post-block">
+  
+  
+
+  <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="">
+    <link itemprop="mainEntityOfPage" href="https://lzhwweb.github.io/nirvana/DesignPattern/%E8%AE%BE%E8%AE%A1%E6%A8%A1%E5%BC%8F%EF%BC%88TypeScript%EF%BC%89/Decorator%E6%A8%A1%E5%BC%8F%EF%BC%88%E8%A3%85%E9%A5%B0%E5%99%A8%E6%A8%A1%E5%BC%8F%EF%BC%89/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/nirvana/images/avatar.gif">
+      <meta itemprop="name" content="nirvana">
+      <meta itemprop="description" content="个人学习笔记">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="涅槃快乐是金">
+    </span>
+      <header class="post-header">
+        <h2 class="post-title" itemprop="name headline">
+          <a href="/nirvana/DesignPattern/%E8%AE%BE%E8%AE%A1%E6%A8%A1%E5%BC%8F%EF%BC%88TypeScript%EF%BC%89/Decorator%E6%A8%A1%E5%BC%8F%EF%BC%88%E8%A3%85%E9%A5%B0%E5%99%A8%E6%A8%A1%E5%BC%8F%EF%BC%89/" class="post-title-link" itemprop="url">Decorator模式（装饰器模式）</a>
+        </h2>
+
+        <div class="post-meta-container">
+          <div class="post-meta">
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-calendar"></i>
+      </span>
+      <span class="post-meta-item-text">发表于</span>
+
+      <time title="创建时间：2021-03-11 21:12:40" itemprop="dateCreated datePublished" datetime="2021-03-11T21:12:40+08:00">2021-03-11</time>
+    </span>
+      <span class="post-meta-item">
+        <span class="post-meta-item-icon">
+          <i class="far fa-calendar-check"></i>
+        </span>
+        <span class="post-meta-item-text">更新于</span>
+        <time title="修改时间：2021-03-10 10:54:27" itemprop="dateModified" datetime="2021-03-10T10:54:27+08:00">2021-03-10</time>
+      </span>
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-folder"></i>
+      </span>
+      <span class="post-meta-item-text">分类于</span>
+        <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+          <a href="/nirvana/categories/DesignPattern/" itemprop="url" rel="index"><span itemprop="name">DesignPattern</span></a>
+        </span>
+    </span>
+
+  
+      </div>
+      <div class="post-meta">
+    <span class="post-meta-item" title="本文字数">
+      <span class="post-meta-item-icon">
+        <i class="far fa-file-word"></i>
+      </span>
+      <span class="post-meta-item-text">本文字数：</span>
+      <span>4.4k</span>
+    </span>
+    <span class="post-meta-item" title="阅读时长">
+      <span class="post-meta-item-icon">
+        <i class="far fa-clock"></i>
+      </span>
+      <span class="post-meta-item-text">阅读时长 &asymp;</span>
+      <span>4 分钟</span>
+    </span>
+</div>
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+          <p>装饰器模式（Decorator Pattern）允许向一个现有的对象添加新的功能，同时又不改变其结构。这种类型的设计模式属于结构型模式，它是作为现有的类的一个包装。</p>
+<h2 id="介绍"><a href="#介绍" class="headerlink" title="介绍"></a>介绍</h2><ul>
+<li>意图：动态地给一个对象添加一些额外的职责。就增加功能来说，装饰器模式相比生成子类更为灵活。</li>
+<li>主要解决：一般的，我们为了扩展一个类经常使用继承方式实现，由于继承为类引入静态特征，并且随着扩展功能的增多，子类会很膨胀。</li>
+<li>优点：装饰类和被装饰类可以独立发展，不会相互耦合，装饰模式是继承的一个替代模式，装饰模式可以动态扩展一个实现类的功能。</li>
+<li>缺点：</li>
+</ul>
+<p>1.多层装饰比较复杂。<br>2.会导致程序中增加很多功能类似的很小的类</p>
+<ul>
+<li>使用场景：<br>1、扩展一个类的功能。<br>2、动态增加功能，动态撤销。</li>
+</ul>
+<p><em>注意事项：可代替继承。</em></p>
+<h2 id="示例"><a href="#示例" class="headerlink" title="示例"></a>示例</h2><h5 id="Display-ts-用于显示字符串的抽象类"><a href="#Display-ts-用于显示字符串的抽象类" class="headerlink" title="Display.ts 用于显示字符串的抽象类"></a>Display.ts 用于显示字符串的抽象类</h5><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line">export default abstract class Display &#123;</span><br><span class="line">    public abstract getColumns(): number;&#x2F;&#x2F;获取横向字符数</span><br><span class="line">    public abstract getRows(): number;&#x2F;&#x2F;获取纵向行数</span><br><span class="line">    public abstract getRowText(row: number): string;&#x2F;&#x2F;获取第row行的字符串</span><br><span class="line">    &#x2F;**</span><br><span class="line">      *显示所有字符</span><br><span class="line">    *&#x2F;</span><br><span class="line">    public show(): void &#123;</span><br><span class="line">        for (let i &#x3D; 0; i &lt; this.getRows(); i++) &#123;</span><br><span class="line">            console.log(this.getRowText(i));</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<h5 id="StringDisplay-ts-用于显示单行字符串的类"><a href="#StringDisplay-ts-用于显示单行字符串的类" class="headerlink" title="StringDisplay.ts 用于显示单行字符串的类"></a>StringDisplay.ts 用于显示单行字符串的类</h5><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br></pre></td><td class="code"><pre><span class="line">import Display from &quot;.&#x2F;Display&quot;;</span><br><span class="line"></span><br><span class="line">export default class StringDisplay extends Display &#123;</span><br><span class="line">    private str: string;&#x2F;&#x2F;要显示的字符串</span><br><span class="line">    constructor(str: string) &#123;</span><br><span class="line">        super();</span><br><span class="line">        this.str &#x3D; str;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    public getColumns(): number &#123;&#x2F;&#x2F;字符数</span><br><span class="line">        return this.str.length;</span><br><span class="line">    &#125;</span><br><span class="line">    public getRows(): number &#123;&#x2F;&#x2F;行数1</span><br><span class="line">        return 1;</span><br><span class="line">    &#125;</span><br><span class="line">    public getRowText(row: number): string &#123;&#x2F;&#x2F;只显示第一行</span><br><span class="line">        if (row &#x3D;&#x3D; 0) &#123;</span><br><span class="line">            return this.str;</span><br><span class="line">        &#125; else &#123;</span><br><span class="line">            return null;</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<h5 id="Border-ts-用于显示装饰边框的抽象类"><a href="#Border-ts-用于显示装饰边框的抽象类" class="headerlink" title="Border.ts 用于显示装饰边框的抽象类"></a>Border.ts 用于显示装饰边框的抽象类</h5><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line">import Display from &quot;.&#x2F;Display&quot;;</span><br><span class="line"></span><br><span class="line">export default abstract class Border extends Display &#123;</span><br><span class="line">    protected display: Display;&#x2F;&#x2F;装饰物</span><br><span class="line">    constructor(display: Display) &#123;</span><br><span class="line">        super();</span><br><span class="line">        this.display &#x3D; display;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<h5 id="SideBorder-ts-用于显示左右边框的类"><a href="#SideBorder-ts-用于显示左右边框的类" class="headerlink" title="SideBorder.ts 用于显示左右边框的类"></a>SideBorder.ts 用于显示左右边框的类</h5><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br></pre></td><td class="code"><pre><span class="line">import Display from &quot;.&#x2F;Display&quot;;</span><br><span class="line">import Border from &quot;.&#x2F;Border&quot;;</span><br><span class="line"></span><br><span class="line">export default class SideBorder extends Border &#123;</span><br><span class="line">    private borderChar: string;&#x2F;&#x2F;装饰边框的字符</span><br><span class="line">    constructor(display: Display, ch: string) &#123;&#x2F;&#x2F;指定Display和装饰边框字符</span><br><span class="line">        super(display);</span><br><span class="line">        this.borderChar &#x3D; ch;</span><br><span class="line">    &#125;</span><br><span class="line">    public getColumns(): number &#123;</span><br><span class="line">        return 1 + this.display.getColumns() + 1;&#x2F;&#x2F;字符数加上两侧边框的字符数</span><br><span class="line">    &#125;</span><br><span class="line">    public getRows(): number &#123;</span><br><span class="line">        return this.display.getRows();</span><br><span class="line">    &#125;</span><br><span class="line">    public getRowText(row: number) &#123;&#x2F;&#x2F;字符串加上边框</span><br><span class="line">        return this.borderChar + this.display.getRowText(row) + this.borderChar;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<h5 id="FullBorder-ts-显示上下左右边框"><a href="#FullBorder-ts-显示上下左右边框" class="headerlink" title="FullBorder.ts  显示上下左右边框"></a>FullBorder.ts  显示上下左右边框</h5><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br></pre></td><td class="code"><pre><span class="line">import Display from &quot;.&#x2F;Display&quot;;</span><br><span class="line">import Border from &quot;.&#x2F;Border&quot;;</span><br><span class="line"></span><br><span class="line">export default class FullBorder extends Border &#123;</span><br><span class="line">    constructor(display: Display) &#123;</span><br><span class="line">        super(display);</span><br><span class="line">    &#125;</span><br><span class="line">    public getColumns(): number &#123;</span><br><span class="line">        return 1 + this.display.getColumns() + 1;&#x2F;&#x2F;增加左右边框字符数</span><br><span class="line">    &#125;</span><br><span class="line">    public getRows(): number &#123;</span><br><span class="line">        return this.display.getRows() + 2;&#x2F;&#x2F;增加上下边框字符数</span><br><span class="line">    &#125;</span><br><span class="line">    public getRowText(row: number) &#123;</span><br><span class="line">        if (row &#x3D;&#x3D; 0 || row &#x3D;&#x3D; this.display.getRows() + 1) &#123;&#x2F;&#x2F;上线边框</span><br><span class="line">            return &#96;+$&#123;this.makeLine(&#39;-&#39;, this.display.getColumns())&#125;+&#96;;</span><br><span class="line">        &#125; else &#123;</span><br><span class="line">            return &#96;|$&#123;this.display.getRowText(row - 1)&#125;|&#96;;&#x2F;&#x2F;左右边框</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">    private makeLine(ch: string, count: number) &#123;</span><br><span class="line">        let str &#x3D; &quot;&quot;;</span><br><span class="line">        for (let i &#x3D; 0; i &lt; count; i++) &#123;</span><br><span class="line">            str &#x3D; str + ch;</span><br><span class="line">        &#125;</span><br><span class="line">        return str;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<h5 id="index-ts"><a href="#index-ts" class="headerlink" title="index.ts"></a>index.ts</h5><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br></pre></td><td class="code"><pre><span class="line">import Display from &quot;.&#x2F;Display&quot;;</span><br><span class="line">import StringDisplay from &quot;.&#x2F;StringDisplay&quot;;</span><br><span class="line">import SideBorder from &quot;.&#x2F;SideBorder&quot;;</span><br><span class="line">import FullBorder from &quot;.&#x2F;FullBorder&quot;;</span><br><span class="line"></span><br><span class="line">const b1: Display &#x3D; new StringDisplay(&quot;Hello,World.&quot;);&#x2F;&#x2F;直接显示</span><br><span class="line">const b2: Display &#x3D; new SideBorder(b1, &#39;#&#39;);&#x2F;&#x2F;增加左右边框&#39;#&#39;</span><br><span class="line">const b3: Display &#x3D; new FullBorder(b2);&#x2F;&#x2F;上下左右都加边框</span><br><span class="line"></span><br><span class="line">b1.show();</span><br><span class="line">b2.show();</span><br><span class="line">b3.show();</span><br><span class="line"></span><br><span class="line">const b4: Display &#x3D; new SideBorder(&#x2F;&#x2F;多层边框</span><br><span class="line">    new FullBorder(</span><br><span class="line">        new FullBorder(</span><br><span class="line">            new SideBorder(</span><br><span class="line">                new FullBorder(new StringDisplay(&quot;Hello,World.&quot;)), &quot;*&quot;</span><br><span class="line">            )</span><br><span class="line">        )</span><br><span class="line">    ), &quot;&#x2F;&quot;</span><br><span class="line">)</span><br><span class="line"></span><br><span class="line">b4.show();</span><br></pre></td></tr></table></figure>
+<h5 id="result"><a href="#result" class="headerlink" title="result"></a>result</h5><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line">Hello,World.                       &#x2F;&#x2F;b1</span><br><span class="line">#Hello,World.#                     &#x2F;&#x2F;b2   </span><br><span class="line">+--------------+                  &#x2F;&#x2F;b3</span><br><span class="line">|#Hello,World.#|</span><br><span class="line">+--------------+</span><br><span class="line">&#x2F;+------------------+&#x2F;            &#x2F;&#x2F;b4</span><br><span class="line">&#x2F;|+----------------+|&#x2F;</span><br><span class="line">&#x2F;||*+------------+*||&#x2F;</span><br><span class="line">&#x2F;||*|Hello,World.|*||&#x2F;</span><br><span class="line">&#x2F;||*+------------+*||&#x2F;</span><br><span class="line">&#x2F;|+----------------+|&#x2F;</span><br><span class="line">&#x2F;+------------------+&#x2F;</span><br></pre></td></tr></table></figure>
+<h2 id="类图"><a href="#类图" class="headerlink" title="类图"></a>类图</h2><p><img src="https://upload-images.jianshu.io/upload_images/10024246-4099bfc084274a3f.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="类图"></p>
+<h2 id="角色"><a href="#角色" class="headerlink" title="角色"></a>角色</h2><ul>
+<li>Component<br>增加功能时的核心角色。示例中Display类扮演该角色</li>
+<li>ConcreteComponent<br>该角色实现了Component角色定义的接口。在示例中StringDisplay类扮演该角色</li>
+<li>Decorator（装饰物）<br>该角色具有与Component角色相同的接口，在内部保存了了被装饰的对象-&gt;Component。Decorator橘色知道自己要装饰的对象。在示例中，Border类扮演该角色</li>
+<li>ConcreteDecorator（具体的装饰物）<br>该角色是具体的Decorator角色，示例中SideBorder类和FullBorder类扮演该角色</li>
+</ul>
+
+      
+    </div>
+
+    
+    
+    
+
+    <footer class="post-footer">
+        <div class="post-eof"></div>
+      
+    </footer>
+  </article>
+</div>
+
+
+
+
+    
+
+
+<div class="post-block">
+  
+  
+
+  <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="">
+    <link itemprop="mainEntityOfPage" href="https://lzhwweb.github.io/nirvana/DesignPattern/%E8%AE%BE%E8%AE%A1%E6%A8%A1%E5%BC%8F%EF%BC%88TypeScript%EF%BC%89/Facade%E6%A8%A1%E5%BC%8F%EF%BC%88%E9%97%A8%E9%9D%A2%E6%A8%A1%E5%BC%8F%EF%BC%89/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/nirvana/images/avatar.gif">
+      <meta itemprop="name" content="nirvana">
+      <meta itemprop="description" content="个人学习笔记">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="涅槃快乐是金">
+    </span>
+      <header class="post-header">
+        <h2 class="post-title" itemprop="name headline">
+          <a href="/nirvana/DesignPattern/%E8%AE%BE%E8%AE%A1%E6%A8%A1%E5%BC%8F%EF%BC%88TypeScript%EF%BC%89/Facade%E6%A8%A1%E5%BC%8F%EF%BC%88%E9%97%A8%E9%9D%A2%E6%A8%A1%E5%BC%8F%EF%BC%89/" class="post-title-link" itemprop="url">Facade模式（门面模式）</a>
+        </h2>
+
+        <div class="post-meta-container">
+          <div class="post-meta">
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-calendar"></i>
+      </span>
+      <span class="post-meta-item-text">发表于</span>
+
+      <time title="创建时间：2021-03-11 21:12:40" itemprop="dateCreated datePublished" datetime="2021-03-11T21:12:40+08:00">2021-03-11</time>
+    </span>
+      <span class="post-meta-item">
+        <span class="post-meta-item-icon">
+          <i class="far fa-calendar-check"></i>
+        </span>
+        <span class="post-meta-item-text">更新于</span>
+        <time title="修改时间：2021-03-10 10:54:43" itemprop="dateModified" datetime="2021-03-10T10:54:43+08:00">2021-03-10</time>
+      </span>
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-folder"></i>
+      </span>
+      <span class="post-meta-item-text">分类于</span>
+        <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+          <a href="/nirvana/categories/DesignPattern/" itemprop="url" rel="index"><span itemprop="name">DesignPattern</span></a>
+        </span>
+    </span>
+
+  
+      </div>
+      <div class="post-meta">
+    <span class="post-meta-item" title="本文字数">
+      <span class="post-meta-item-icon">
+        <i class="far fa-file-word"></i>
+      </span>
+      <span class="post-meta-item-text">本文字数：</span>
+      <span>2.1k</span>
+    </span>
+    <span class="post-meta-item" title="阅读时长">
+      <span class="post-meta-item-icon">
+        <i class="far fa-clock"></i>
+      </span>
+      <span class="post-meta-item-text">阅读时长 &asymp;</span>
+      <span>2 分钟</span>
+    </span>
+</div>
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+          <p>门面模式（Facade Pattern）：互相关联的复杂类，统一整合出对外部暴露可以访问系统的接口。这种类型的设计模式属于结构型模式，它向现有的系统添加一个接口，来隐藏系统的复杂性。</p>
+<h2 id="介绍"><a href="#介绍" class="headerlink" title="介绍"></a>介绍</h2><ul>
+<li><strong>意图：</strong>为子系统中的一组接口提供一个一致的界面，门面模式定义了一个高层接口。</li>
+<li><strong>主要解决：</strong>降低访问复杂系统的内部子系统时的复杂度，简化客户端与之的接口。</li>
+<li><strong>何时使用：</strong><br>1、客户端不需要知道系统内部的复杂联系，整个系统只需提供一个”接待员”即可。<br>2、定义系统的入口。</li>
+<li> <strong>优点：</strong><br>1、减少系统相互依赖。<br>2、提高灵活性。<br>3、提高了安全性。</li>
+<li><strong>缺点：</strong>不符合开闭原则，如果要改东西很麻烦，继承重写都不合适。</li>
+<li><strong>使用场景：</strong><br>1、为复杂的模块或子系统提供外界访问的模块。<br>2、子系统相对独立。<br>3、预防低水平人员带来的风险。</li>
+</ul>
+<p><em>注意事项：在层次化结构中，可以使用外观模式定义系统中每一层的入口。</em></p>
+<h2 id="示例"><a href="#示例" class="headerlink" title="示例"></a>示例</h2><h5 id="Shape-ts-模型接口"><a href="#Shape-ts-模型接口" class="headerlink" title="Shape.ts 模型接口"></a>Shape.ts 模型接口</h5><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">export interface Shape &#123;</span><br><span class="line">    draw(): void;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<h5 id="Rectangle-ts-矩形类"><a href="#Rectangle-ts-矩形类" class="headerlink" title="Rectangle.ts 矩形类"></a>Rectangle.ts 矩形类</h5><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">import &#123; Shape &#125; from &quot;.&#x2F;Shape&quot;;</span><br><span class="line"></span><br><span class="line">export default class Rectangle implements Shape &#123;</span><br><span class="line">    public draw(): void &#123;</span><br><span class="line">        console.log(&quot;Rectangle::draw()&quot;);</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<h5 id="Square-ts-正方形类"><a href="#Square-ts-正方形类" class="headerlink" title="Square.ts 正方形类"></a>Square.ts 正方形类</h5><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">import &#123; Shape &#125; from &quot;.&#x2F;Shape&quot;;</span><br><span class="line"></span><br><span class="line">export default class Square implements Shape &#123;</span><br><span class="line"></span><br><span class="line">    public draw(): void &#123;</span><br><span class="line">        console.log(&quot;Square::draw()&quot;);</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<h5 id="Circle-ts-圆形类"><a href="#Circle-ts-圆形类" class="headerlink" title="Circle.ts 圆形类"></a>Circle.ts 圆形类</h5><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">import &#123; Shape &#125; from &quot;.&#x2F;Shape&quot;;</span><br><span class="line"></span><br><span class="line">export default class Circle implements Shape &#123;</span><br><span class="line"></span><br><span class="line">    public draw(): void &#123;</span><br><span class="line">        console.log(&quot;Circle::draw()&quot;);</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<h5 id="ShapeMaker-ts-图形绘制门面类"><a href="#ShapeMaker-ts-图形绘制门面类" class="headerlink" title="ShapeMaker.ts 图形绘制门面类"></a>ShapeMaker.ts 图形绘制门面类</h5><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br></pre></td><td class="code"><pre><span class="line">import &#123; Shape &#125; from &quot;.&#x2F;Shape&quot;;</span><br><span class="line">import Circle from &quot;.&#x2F;Circle&quot;;</span><br><span class="line">import Rectangle from &quot;.&#x2F;Rectangle&quot;;</span><br><span class="line">import Square from &quot;.&#x2F;Square&quot;;</span><br><span class="line"></span><br><span class="line">export default class ShapeMaker &#123;</span><br><span class="line">    private circle: Shape;</span><br><span class="line">    private rectangle: Shape;</span><br><span class="line">    private square: Shape;</span><br><span class="line"></span><br><span class="line">    constructor() &#123;</span><br><span class="line">        this.circle &#x3D; new Circle();</span><br><span class="line">        this.rectangle &#x3D; new Rectangle();</span><br><span class="line">        this.square &#x3D; new Square();</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    public drawCircle(): void &#123;&#x2F;&#x2F;绘制圆形</span><br><span class="line">        this.circle.draw();</span><br><span class="line">    &#125;</span><br><span class="line">    public drawRectangle(): void &#123;&#x2F;&#x2F;绘制矩形</span><br><span class="line">        this.rectangle.draw();</span><br><span class="line">    &#125;</span><br><span class="line">    public drawSquare(): void &#123;&#x2F;&#x2F;绘制正方形</span><br><span class="line">        this.square.draw();</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<h5 id="index-ts"><a href="#index-ts" class="headerlink" title="index.ts"></a>index.ts</h5><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">import ShapeMaker from &quot;.&#x2F;ShapeMaker&quot;;</span><br><span class="line"></span><br><span class="line">const shapeMaker: ShapeMaker &#x3D; new ShapeMaker();</span><br><span class="line"></span><br><span class="line">shapeMaker.drawCircle();</span><br><span class="line">shapeMaker.drawRectangle();</span><br><span class="line">shapeMaker.drawSquare();      </span><br></pre></td></tr></table></figure>
+<h5 id="result"><a href="#result" class="headerlink" title="result"></a>result</h5><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">Circle::draw()</span><br><span class="line">Rectangle::draw()</span><br><span class="line">Square::draw()</span><br></pre></td></tr></table></figure>
+<h2 id="类图"><a href="#类图" class="headerlink" title="类图"></a>类图</h2><p><img src="https://upload-images.jianshu.io/upload_images/10024246-02e9be36dbdd957c.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="类图"></p>
+<h2 id="角色"><a href="#角色" class="headerlink" title="角色"></a>角色</h2><ul>
+<li>Facade （门面）<br>Facde角色向系统外部提供统一接口。示例中ShapeMaker类扮演该角色</li>
+<li>其他角色<br>Facade角色调用这些角色进行工作，但是其他角色各自完成自己的工作，并不知道Facade角色，示例中的Circle、Rectangle、Square扮演该角色</li>
+<li>Client（请求角色）<br>负责调用Facade角色，并不包括在Facade模式中</li>
+</ul>
+
+      
+    </div>
+
+    
+    
+    
+
+    <footer class="post-footer">
+        <div class="post-eof"></div>
+      
+    </footer>
+  </article>
+</div>
+
+
+
+
+    
+
+
+<div class="post-block">
+  
+  
+
+  <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="">
+    <link itemprop="mainEntityOfPage" href="https://lzhwweb.github.io/nirvana/DesignPattern/%E8%AE%BE%E8%AE%A1%E6%A8%A1%E5%BC%8F%EF%BC%88TypeScript%EF%BC%89/Factory-Method(%E5%B7%A5%E5%8E%82%E6%A8%A1%E5%BC%8F)/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/nirvana/images/avatar.gif">
+      <meta itemprop="name" content="nirvana">
+      <meta itemprop="description" content="个人学习笔记">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="涅槃快乐是金">
+    </span>
+      <header class="post-header">
+        <h2 class="post-title" itemprop="name headline">
+          <a href="/nirvana/DesignPattern/%E8%AE%BE%E8%AE%A1%E6%A8%A1%E5%BC%8F%EF%BC%88TypeScript%EF%BC%89/Factory-Method(%E5%B7%A5%E5%8E%82%E6%A8%A1%E5%BC%8F)/" class="post-title-link" itemprop="url">Factory-Method(工厂模式)</a>
+        </h2>
+
+        <div class="post-meta-container">
+          <div class="post-meta">
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-calendar"></i>
+      </span>
+      <span class="post-meta-item-text">发表于</span>
+
+      <time title="创建时间：2021-03-11 21:12:40" itemprop="dateCreated datePublished" datetime="2021-03-11T21:12:40+08:00">2021-03-11</time>
+    </span>
+      <span class="post-meta-item">
+        <span class="post-meta-item-icon">
+          <i class="far fa-calendar-check"></i>
+        </span>
+        <span class="post-meta-item-text">更新于</span>
+        <time title="修改时间：2021-03-10 10:54:56" itemprop="dateModified" datetime="2021-03-10T10:54:56+08:00">2021-03-10</time>
+      </span>
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-folder"></i>
+      </span>
+      <span class="post-meta-item-text">分类于</span>
+        <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+          <a href="/nirvana/categories/DesignPattern/" itemprop="url" rel="index"><span itemprop="name">DesignPattern</span></a>
+        </span>
+    </span>
+
+  
+      </div>
+      <div class="post-meta">
+    <span class="post-meta-item" title="本文字数">
+      <span class="post-meta-item-icon">
+        <i class="far fa-file-word"></i>
+      </span>
+      <span class="post-meta-item-text">本文字数：</span>
+      <span>2.6k</span>
+    </span>
+    <span class="post-meta-item" title="阅读时长">
+      <span class="post-meta-item-icon">
+        <i class="far fa-clock"></i>
+      </span>
+      <span class="post-meta-item-text">阅读时长 &asymp;</span>
+      <span>2 分钟</span>
+    </span>
+</div>
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+          <h3 id="工厂模式"><a href="#工厂模式" class="headerlink" title="工厂模式"></a>工厂模式</h3><blockquote>
+<p>这种类型的设计模式属于创建型模式，它提供了一种创建对象的最佳方式。<br>在工厂模式中，我们在创建对象时不会对客户端暴露创建逻辑，并且是通过使用一个共同的接口来指向新创建的对象。</p>
+</blockquote>
+<h3 id="介绍"><a href="#介绍" class="headerlink" title="介绍"></a>介绍</h3><ul>
+<li><strong>意图：</strong>定义一个创建对象的接口，让其子类自己决定实例化哪一个工厂类，工厂模式使其创建过程延迟到子类进行。</li>
+<li><strong>何时使用：</strong>我们明确地计划不同条件下创建不同实例时。</li>
+<li><strong>如何解决：</strong>让其子类实现工厂接口，返回的也是一个抽象的产品。</li>
+<li><strong>关键代码：</strong>创建过程在其子类执行。</li>
+<li><strong>优点：</strong><blockquote>
+<ol>
+<li>一个调用者想创建一个对象，只要知道其名称就可以了。  </li>
+<li>扩展性高，如果想增加一个产品，只要扩展一个工厂类就可以。 </li>
+<li>屏蔽产品的具体实现，调用者只关心产品的接口。</li>
+</ol>
+</blockquote>
+</li>
+<li><strong>缺点：</strong>每次增加一个产品时，都需要增加一个具体类和对象实现工厂，使得系统中类的个数成倍增加，在一定程度上增加了系统的复杂度，同时也增加了系统具体类的依赖。<h3 id="Product类："><a href="#Product类：" class="headerlink" title="Product类："></a>Product类：</h3>用来表示”产品“的类，声明了use的抽象方法。use的实现交给子类<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">export default abstract class Product &#123;</span><br><span class="line">    public abstract use(): void;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<h3 id="Factory类"><a href="#Factory类" class="headerlink" title="Factory类:"></a>Factory类:</h3>使用<a target="_blank" rel="noopener" href="https://www.jianshu.com/p/61549520cddc">Template Method</a>模式，声明了creatProduct（生产产品）和registerProduct（注册产品）的抽象方法。具体实现交给子类<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line">import Product from &#39;.&#x2F;Product&#39;;</span><br><span class="line">export default abstract class Factory &#123;</span><br><span class="line">    public create(owner: String): Product &#123;</span><br><span class="line">        const p: Product &#x3D; this.creatProduct(owner);</span><br><span class="line">        this.registerProduct(p);</span><br><span class="line">        return p;</span><br><span class="line">    &#125;</span><br><span class="line">    protected abstract creatProduct(owner: String): Product;</span><br><span class="line">    protected abstract registerProduct(Product: Product): void;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<h3 id="IDCard类："><a href="#IDCard类：" class="headerlink" title="IDCard类："></a>IDCard类：</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br></pre></td><td class="code"><pre><span class="line">import Product from &#39;.&#x2F;Product&#39;;</span><br><span class="line">export default class IDCard extends Product &#123;</span><br><span class="line">    private owner: String;</span><br><span class="line">    constructor(owner: String) &#123;</span><br><span class="line">        super();</span><br><span class="line">        console.log(&#96;制作$&#123;owner&#125;的ID卡！&#96;);</span><br><span class="line">        this.owner &#x3D; owner;</span><br><span class="line">    &#125;</span><br><span class="line">    public use(): void &#123;</span><br><span class="line">        console.log(&#96;使用$&#123;this.owner&#125;的ID卡&#96;);</span><br><span class="line">    &#125;</span><br><span class="line">    public getOwner(): String &#123;</span><br><span class="line">        return this.owner;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<h3 id="IDCardFactory类："><a href="#IDCardFactory类：" class="headerlink" title="IDCardFactory类："></a>IDCardFactory类：</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br></pre></td><td class="code"><pre><span class="line">import Factory from &#39;.&#x2F;Factory&#39;;</span><br><span class="line">import Product from &#39;.&#x2F;Product&#39;;</span><br><span class="line">import IDCard from &#39;.&#x2F;IDCard&#39;;</span><br><span class="line">export default class IDCardFactory extends Factory &#123;</span><br><span class="line">    private owners: Array&lt;String&gt; &#x3D; new Array();</span><br><span class="line">    protected creatProduct(owner: String): Product &#123;</span><br><span class="line">        return new IDCard(owner);</span><br><span class="line">    &#125;</span><br><span class="line">    protected registerProduct(product: Product) &#123;</span><br><span class="line">        &#x2F;&#x2F;转换product类型为IDCard</span><br><span class="line">        this.owners.push((product as IDCard).getOwner());</span><br><span class="line">    &#125;</span><br><span class="line">    public getOwners(): Array&lt;String&gt; &#123;</span><br><span class="line">        return this.owners;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<h3 id="main函数"><a href="#main函数" class="headerlink" title="main函数"></a>main函数</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line">import IDCardFactory from &#39;.&#x2F;IDCardFactory&#39;;</span><br><span class="line">import Product from &#39;.&#x2F;Product&#39;;</span><br><span class="line"></span><br><span class="line">const factory &#x3D; new IDCardFactory();</span><br><span class="line">const card1: Product &#x3D; factory.create(&quot;小明&quot;);</span><br><span class="line">const card2: Product &#x3D; factory.create(&quot;小红&quot;);</span><br><span class="line">const card3: Product &#x3D; factory.create(&quot;小刚&quot;);</span><br><span class="line"></span><br><span class="line">card1.use();</span><br><span class="line">card2.use();</span><br><span class="line">card3.use();</span><br><span class="line">console.log(factory.getOwners());</span><br></pre></td></tr></table></figure>
+<h3 id="输出："><a href="#输出：" class="headerlink" title="输出："></a>输出：</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">制作小明的ID卡！</span><br><span class="line">制作小红的ID卡！</span><br><span class="line">制作小刚的ID卡！</span><br><span class="line">使用小明的ID卡</span><br><span class="line">使用小红的ID卡</span><br><span class="line">使用小刚的ID卡</span><br><span class="line">[ &#39;小明&#39;, &#39;小红&#39;, &#39;小刚&#39; ]</span><br></pre></td></tr></table></figure>
+<h3 id="结构："><a href="#结构：" class="headerlink" title="结构："></a>结构：</h3></li>
+</ul>
+<p><strong>Product(产品)：</strong>属于框架这一方，是抽象类，定义在Factory Method模式中生产的那些实例所持有的接口（API），具体由子类ConcreteProduct角色决定。<br><strong>Creator(创建者)：</strong>属于框架这一方，负责生产Product角色的抽闲类，具体处理由子类ConcreteCreator角色决定<br><strong>ConcreteProduct(具体产品)：</strong>属于具体加工方，决定了具体的产品。<br><strong>ConcreteCreator(具体的创造者)：</strong>属于具体加工方，负责生产具体的产品</p>
+<h3 id="类图："><a href="#类图：" class="headerlink" title="类图："></a>类图：</h3><p><img src="https://upload-images.jianshu.io/upload_images/10024246-378922e9df56e360.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="Factory Method模式类图"></p>
+
+      
+    </div>
+
+    
+    
+    
+
+    <footer class="post-footer">
+        <div class="post-eof"></div>
+      
+    </footer>
+  </article>
+</div>
+
+
+
+
+    
+
+
+<div class="post-block">
+  
+  
+
+  <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="">
+    <link itemprop="mainEntityOfPage" href="https://lzhwweb.github.io/nirvana/DesignPattern/%E8%AE%BE%E8%AE%A1%E6%A8%A1%E5%BC%8F%EF%BC%88TypeScript%EF%BC%89/Flyweight-Pattern(%E4%BA%AB%E5%85%83%E6%A8%A1%E5%BC%8F)/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/nirvana/images/avatar.gif">
+      <meta itemprop="name" content="nirvana">
+      <meta itemprop="description" content="个人学习笔记">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="涅槃快乐是金">
+    </span>
+      <header class="post-header">
+        <h2 class="post-title" itemprop="name headline">
+          <a href="/nirvana/DesignPattern/%E8%AE%BE%E8%AE%A1%E6%A8%A1%E5%BC%8F%EF%BC%88TypeScript%EF%BC%89/Flyweight-Pattern(%E4%BA%AB%E5%85%83%E6%A8%A1%E5%BC%8F)/" class="post-title-link" itemprop="url">Flyweight-Pattern(享元模式)</a>
+        </h2>
+
+        <div class="post-meta-container">
+          <div class="post-meta">
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-calendar"></i>
+      </span>
+      <span class="post-meta-item-text">发表于</span>
+
+      <time title="创建时间：2021-03-11 21:12:40" itemprop="dateCreated datePublished" datetime="2021-03-11T21:12:40+08:00">2021-03-11</time>
+    </span>
+      <span class="post-meta-item">
+        <span class="post-meta-item-icon">
+          <i class="far fa-calendar-check"></i>
+        </span>
+        <span class="post-meta-item-text">更新于</span>
+        <time title="修改时间：2021-03-10 10:55:23" itemprop="dateModified" datetime="2021-03-10T10:55:23+08:00">2021-03-10</time>
+      </span>
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-folder"></i>
+      </span>
+      <span class="post-meta-item-text">分类于</span>
+        <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+          <a href="/nirvana/categories/DesignPattern/" itemprop="url" rel="index"><span itemprop="name">DesignPattern</span></a>
+        </span>
+    </span>
+
+  
+      </div>
+      <div class="post-meta">
+    <span class="post-meta-item" title="本文字数">
+      <span class="post-meta-item-icon">
+        <i class="far fa-file-word"></i>
+      </span>
+      <span class="post-meta-item-text">本文字数：</span>
+      <span>3.5k</span>
+    </span>
+    <span class="post-meta-item" title="阅读时长">
+      <span class="post-meta-item-icon">
+        <i class="far fa-clock"></i>
+      </span>
+      <span class="post-meta-item-text">阅读时长 &asymp;</span>
+      <span>3 分钟</span>
+    </span>
+</div>
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+          <p>**享元模式（Flyweight Pattern）:**通过尽量共享示例来避免new出实例，以减少内存占用和提高性能。这种类型的设计模式属于结构型模式。<br>系统只使用少量的对象，而这些对象都很相似，状态变化很小，可以实现对象的多次复用。由于享元模式要求能够共享的对象必须是细粒度对象，因此它又称为轻量级模式，它是一种对象结构型模式。</p>
+<h2 id="介绍"><a href="#介绍" class="headerlink" title="介绍"></a>介绍</h2><ul>
+<li><strong>意图：</strong>运用共享技术有效地支持大量细粒度的对象。</li>
+<li><strong>主要解决：</strong>在有大量对象时，有可能会造成内存溢出，我们把其中共同的部分抽象出来，如果有相同的业务请求，直接返回在内存中已有的对象，避免重新创建。</li>
+<li><strong>应用实例：</strong><br>1、JAVA 中的 String，如果有则返回，如果没有则创建一个字符串保存在字符串缓存池里面。<br>2、数据库的数据池。</li>
+<li><strong>优点：</strong><br>1、极大减少内存中相似或相同对象数量，节约系统资源，提供系统性能<br>2、提高效率，由于创建对象的数量减少，所以对系统内存的需求也减小，使得速度更快，效率更高。<br>3、享元模式中的外部状态相对独立，且不影响内部状态</li>
+<li><strong>缺点：</strong>为了使对象可以共享，需要将享元对象的部分状态外部化，分离内部状态和外部状态，使程序逻辑复杂</li>
+<li><strong>使用场景：</strong> 1、系统有大量相似对象。 2、需要缓冲池的场景。<blockquote>
+<p>注意事项： 1、注意划分外部状态和内部状态，否则可能会引起线程安全问题。 2、这些类必须有一个工厂对象加以控制。</p>
+</blockquote>
+<h2 id="示例"><a href="#示例" class="headerlink" title="示例"></a>示例</h2><h5 id="Employer-ts-雇员抽象类"><a href="#Employer-ts-雇员抽象类" class="headerlink" title="Employer.ts 雇员抽象类"></a>Employer.ts 雇员抽象类</h5><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">export default abstract class Employer&#123;</span><br><span class="line">    protected  _company:string &#x3D; &quot;COMPANY&quot;;&#x2F;&#x2F;公共属性</span><br><span class="line">    protected  _companyAddress:string &#x3D; &quot;ADDRESS&quot;;&#x2F;&#x2F;公共属性</span><br><span class="line"></span><br><span class="line">    public abstract  SetPropertity(name:string, age:string):void;</span><br><span class="line">    public abstract  ShowInformation():void;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<h5 id="CreatEmployer-ts-创建一个具体雇员的类"><a href="#CreatEmployer-ts-创建一个具体雇员的类" class="headerlink" title="CreatEmployer.ts 创建一个具体雇员的类"></a>CreatEmployer.ts 创建一个具体雇员的类</h5><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br></pre></td><td class="code"><pre><span class="line">import Employer from &quot;.&#x2F;Employer&quot;;</span><br><span class="line"></span><br><span class="line">export default class CreatEmployer extends Employer &#123;</span><br><span class="line">    private _name: string; &#x2F;&#x2F;特有属性</span><br><span class="line">    private _age: string;</span><br><span class="line">    private _id: string &#x3D; &quot;01&quot;;</span><br><span class="line">    constructor(id: string) &#123;</span><br><span class="line">        super();</span><br><span class="line">        this._id &#x3D; id;</span><br><span class="line">    &#125;</span><br><span class="line">    public SetPropertity(name: string, age: string): void &#123;</span><br><span class="line">        this._age &#x3D; age;</span><br><span class="line">        this._name &#x3D; name;</span><br><span class="line">    &#125;</span><br><span class="line">    public ShowInformation(): void &#123;</span><br><span class="line">        console.log(</span><br><span class="line">            &#96;company:$&#123;this._company&#125; companyAddress:$&#123;this._companyAddress&#125; name:$&#123;this._name&#125; id:$&#123;this._id&#125;  age:$&#123;this._age&#125;&#96;</span><br><span class="line">        );</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br><span class="line"></span><br></pre></td></tr></table></figure>
+<h5 id="EmployerFactory-ts-雇员工厂"><a href="#EmployerFactory-ts-雇员工厂" class="headerlink" title="EmployerFactory.ts 雇员工厂"></a>EmployerFactory.ts 雇员工厂</h5><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br></pre></td><td class="code"><pre><span class="line">import Employer from &quot;.&#x2F;Employer&quot;;</span><br><span class="line">import CreatEmployer from &quot;.&#x2F;CreatEmployer&quot;;</span><br><span class="line"></span><br><span class="line">export default class EmployerFactory &#123;</span><br><span class="line">    private static emploryerFactory: EmployerFactory;</span><br><span class="line">    &#x2F;**</span><br><span class="line">     * 获取唯一对象</span><br><span class="line">     *&#x2F;</span><br><span class="line">    public static getEmployerFactory(): EmployerFactory &#123;</span><br><span class="line">        &#x2F;&#x2F;判断士兵对象是否存在</span><br><span class="line">        if (this.emploryerFactory &#x3D;&#x3D; null) &#123;</span><br><span class="line">            &#x2F;&#x2F;不存在就创建新的对象</span><br><span class="line">            this.emploryerFactory &#x3D; new EmployerFactory();</span><br><span class="line">        &#125;</span><br><span class="line">        &#x2F;&#x2F;返回对象</span><br><span class="line">        return this.emploryerFactory;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    public GetEmployer(id: string): Employer &#123;</span><br><span class="line">        let employer: Employer &#x3D; new CreatEmployer(id);</span><br><span class="line">        return employer;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br><span class="line"></span><br></pre></td></tr></table></figure>
+<h5 id="index-ts"><a href="#index-ts" class="headerlink" title="index.ts"></a>index.ts</h5><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br></pre></td><td class="code"><pre><span class="line">import Employer from &quot;.&#x2F;Employer&quot;;</span><br><span class="line">import EmployerFactory from &quot;.&#x2F;EmployerFactory&quot;;</span><br><span class="line"></span><br><span class="line">const employer1: Employer &#x3D; EmployerFactory.getEmployerFactory().GetEmployer(</span><br><span class="line">    &quot;01&quot;</span><br><span class="line">);</span><br><span class="line">employer1.SetPropertity(&quot;jasen&quot;, &quot;24&quot;);</span><br><span class="line">employer1.ShowInformation();</span><br><span class="line"></span><br><span class="line">const employer2: Employer &#x3D; EmployerFactory.getEmployerFactory().GetEmployer(</span><br><span class="line">    &quot;02&quot;</span><br><span class="line">);</span><br><span class="line">employer2.SetPropertity(&quot;tt&quot;, &quot;44&quot;);</span><br><span class="line">employer2.ShowInformation();</span><br><span class="line"></span><br></pre></td></tr></table></figure>
+<h5 id="result"><a href="#result" class="headerlink" title="result"></a>result</h5><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">company:COMPANY companyAddress:ADDRESS name:jasen id:01  age:24</span><br><span class="line">company:COMPANY companyAddress:ADDRESS name:tt id:02  age:44</span><br></pre></td></tr></table></figure>
+<h2 id="类图"><a href="#类图" class="headerlink" title="类图"></a>类图</h2><img src="https://upload-images.jianshu.io/upload_images/10024246-1c81c144830027ee.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240"></li>
+</ul>
+<h2 id="角色"><a href="#角色" class="headerlink" title="角色"></a>角色</h2><ul>
+<li><p><strong>Flyweight（抽象享元类）</strong><br>通常是接口或抽象类，抽象享元类中声明了具体享元类公共方法，这些方法可以向外界提供享元对象的内部数据（内部状态），同时也可以通过这些方法来设置外部数据（外部状态）</p>
+</li>
+<li><p><strong>ConcreteFlyweight（具体享元类）</strong><br>继承抽象享元类，在具体享元类中为内部状态提供存储空间。通常可以结合单例模式来设计具体享元类，为每一个具体享元类提供唯一的享元对象</p>
+</li>
+<li><p><strong>UnshareConcreteFlyweight（非分享具体享元类）</strong><br>并不是所有的具体享元类都需要被共享，不能被共享的子类可以设计为非共享具体享元类，当需要一个非共享具体享元类的对象时可以直接通过实例化创建</p>
+</li>
+<li><p><strong>FlyweightFactory（享元工厂类）</strong><br>创建并管理享元对象，将各种具体享元类存储到一个享元池中，享元池一般为“键值对”集合，可以结合工厂模式进行设计。当用户请求一个具体享元对象时，享元池中如果保存的有就直接返回给用户，如果没有就创建该享元对象返回给用户并存储到享元池中</p>
+<h2 id="对比"><a href="#对比" class="headerlink" title="对比"></a>对比</h2></li>
+<li><p>享元模式和工厂模式、单例模式<br>在区分出不同种类的外部状态后，创建新对象时需要选择不同种类的共享对象，这时就可以使用工厂模式来提供共享对象，在共享对象的维护上，经常会采用单例模式来提供单实例的共享对象。</p>
+</li>
+<li><p>享元模式和组合模式<br>在使用工厂模式来提供共享对象时，比如某些时候共享对象中的某些状态就是对象不需要的，可以引入组合模式来提升自定义共享对象的自由度，对共享对象的组成部分进一步归类、分层，来实现更复杂的多层次对象结构，当然系统也会更难维护。</p>
+</li>
+<li><p>享元模式和策略模式<br>策略模式中的策略属于一系列功能单一、细粒度的细粒度对象，可以作为目标对象来考虑引入享元模式进行优化，但是前提是这些策略是会被频繁使用的，如果不经常使用，就没有必要了。</p>
+</li>
+</ul>
+
+      
+    </div>
+
+    
+    
+    
+
+    <footer class="post-footer">
+        <div class="post-eof"></div>
+      
+    </footer>
+  </article>
+</div>
+
+
+
+
+    
+
+
+<div class="post-block">
+  
+  
+
+  <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="">
+    <link itemprop="mainEntityOfPage" href="https://lzhwweb.github.io/nirvana/DesignPattern/%E8%AE%BE%E8%AE%A1%E6%A8%A1%E5%BC%8F%EF%BC%88TypeScript%EF%BC%89/Interpreter-Pattern(%E8%A7%A3%E9%87%8A%E5%99%A8%E6%A8%A1%E5%BC%8F%EF%BC%89/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/nirvana/images/avatar.gif">
+      <meta itemprop="name" content="nirvana">
+      <meta itemprop="description" content="个人学习笔记">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="涅槃快乐是金">
+    </span>
+      <header class="post-header">
+        <h2 class="post-title" itemprop="name headline">
+          <a href="/nirvana/DesignPattern/%E8%AE%BE%E8%AE%A1%E6%A8%A1%E5%BC%8F%EF%BC%88TypeScript%EF%BC%89/Interpreter-Pattern(%E8%A7%A3%E9%87%8A%E5%99%A8%E6%A8%A1%E5%BC%8F%EF%BC%89/" class="post-title-link" itemprop="url">Interpreter-Pattern(解释器模式）</a>
+        </h2>
+
+        <div class="post-meta-container">
+          <div class="post-meta">
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-calendar"></i>
+      </span>
+      <span class="post-meta-item-text">发表于</span>
+
+      <time title="创建时间：2021-03-11 21:12:40" itemprop="dateCreated datePublished" datetime="2021-03-11T21:12:40+08:00">2021-03-11</time>
+    </span>
+      <span class="post-meta-item">
+        <span class="post-meta-item-icon">
+          <i class="far fa-calendar-check"></i>
+        </span>
+        <span class="post-meta-item-text">更新于</span>
+        <time title="修改时间：2021-03-10 10:55:44" itemprop="dateModified" datetime="2021-03-10T10:55:44+08:00">2021-03-10</time>
+      </span>
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-folder"></i>
+      </span>
+      <span class="post-meta-item-text">分类于</span>
+        <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+          <a href="/nirvana/categories/DesignPattern/" itemprop="url" rel="index"><span itemprop="name">DesignPattern</span></a>
+        </span>
+    </span>
+
+  
+      </div>
+      <div class="post-meta">
+    <span class="post-meta-item" title="本文字数">
+      <span class="post-meta-item-icon">
+        <i class="far fa-file-word"></i>
+      </span>
+      <span class="post-meta-item-text">本文字数：</span>
+      <span>3.5k</span>
+    </span>
+    <span class="post-meta-item" title="阅读时长">
+      <span class="post-meta-item-icon">
+        <i class="far fa-clock"></i>
+      </span>
+      <span class="post-meta-item-text">阅读时长 &asymp;</span>
+      <span>3 分钟</span>
+    </span>
+</div>
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+          <p><strong>解释器模式（Interpreter Pattern）</strong>：提供了评估语言的语法或表达式的方式，它属于行为型模式。这种模式实现了一个表达式接口，该接口解释一个特定的上下文。这种模式被用在 SQL 解析、符号处理引擎等。</p>
+<h2 id="介绍"><a href="#介绍" class="headerlink" title="介绍"></a>介绍</h2><ul>
+<li><strong>意图：</strong>给定一个语言，定义它的文法表示，并定义一个解释器，这个解释器使用该标识来解释语言中的句子。</li>
+<li><strong>主要解决：</strong>对于一些固定文法构建一个解释句子的解释器。</li>
+<li><strong>何时使用：</strong>如果一种特定类型的问题发生的频率足够高，那么可能就值得将该问题的各个实例表述为一个简单语言中的句子。这样就可以构建一个解释器，该解释器通过解释这些句子来解决该问题。</li>
+<li><strong>应用实例：</strong>编译器、运算表达式计算。</li>
+<li><strong>优点：</strong><br>1、可扩展性比较好，灵活。<br>2、增加了新的解释表达式的方式。<br>3、易于实现简单文法。</li>
+<li><strong>缺点：</strong><br>1、可利用场景比较少。<br>2、对于复杂的文法比较难维护。<br>3、解释器模式会引起类膨胀。<br>4、解释器模式采用递归调用方法。</li>
+<li><strong>使用场景：</strong><br>1、可以将一个需要解释执行的语言中的句子表示为一个抽象语法树。<br>2、一些重复出现的问题可以用一种简单的语言来进行表达。<br>3、一个简单语法需要解释的场景。<br>4、这种模式被用在 SQL 解析、符号处理引擎等。<br>5、EL表达式式的处理<br>6、正则表达式解释器<br>7、数学表达式解析器</li>
+</ul>
+<blockquote>
+<p>注意事项：是一种不常用的设计模式 – 用于描述如何构成一个简单的语言解释器，主要用于使用面向对象语言开发的 编译器和解释器设计。<br>当我们需要开发一种新的语言时，可以考虑使用解释器模式。<br> 尽量不要使用解释器模式，后期维护会有很大麻烦。</p>
+</blockquote>
+<h2 id="示例"><a href="#示例" class="headerlink" title="示例"></a>示例</h2><blockquote>
+<p>用解释器模式设计一个“韶粵通”公交车卡的读卡器程序。<br>说明：假如“韶粵通”公交车读卡器可以判断乘客的身份，如果是“韶关”或者“广州”的“老人” “妇女”“儿童”就可以免费乘车，其他人员乘车一次扣 2 元。<br>设计其文法规则如下。<br><expression> ::= <city>的<person><br><city> ::= 韶关|广州<br><person> ::= 老人|妇女|儿童</p>
+</blockquote>
+<h5 id="Expression-ts-抽象表达式类"><a href="#Expression-ts-抽象表达式类" class="headerlink" title="Expression.ts //抽象表达式类"></a>Expression.ts //抽象表达式类</h5><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">export interface Expression &#123;</span><br><span class="line">    interpret(info: string): boolean;</span><br><span class="line">&#125;</span><br><span class="line"></span><br></pre></td></tr></table></figure>
+<h5 id="TerminalExpression-ts-终结符表达式类"><a href="#TerminalExpression-ts-终结符表达式类" class="headerlink" title="TerminalExpression.ts //终结符表达式类"></a>TerminalExpression.ts //终结符表达式类</h5><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br></pre></td><td class="code"><pre><span class="line">import &#123; Expression &#125; from &quot;.&#x2F;Expression&quot;;</span><br><span class="line"></span><br><span class="line">export default class TerminalExpression implements Expression &#123;</span><br><span class="line">    private set &#x3D; new Array&lt;string&gt;();</span><br><span class="line">    constructor(data: string[]) &#123;</span><br><span class="line">        for (let i &#x3D; 0; i &lt; data.length; i++) &#123;</span><br><span class="line">            this.set.push(data[i]);</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">    public interpret(info: string): boolean &#123;</span><br><span class="line">        if (this.set.indexOf(info) &gt;&#x3D; 0) &#123;</span><br><span class="line">            return true;</span><br><span class="line">        &#125;</span><br><span class="line">        return false;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br><span class="line"></span><br></pre></td></tr></table></figure>
+<h5 id="AndExpression-ts-非终结符表达式类"><a href="#AndExpression-ts-非终结符表达式类" class="headerlink" title="AndExpression.ts 非终结符表达式类"></a>AndExpression.ts 非终结符表达式类</h5><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br></pre></td><td class="code"><pre><span class="line">import &#123; Expression &#125; from &quot;.&#x2F;Expression&quot;;</span><br><span class="line"></span><br><span class="line">export default class AndExpression implements Expression &#123;</span><br><span class="line">    private city: Expression;</span><br><span class="line">    private person: Expression;</span><br><span class="line">    constructor(city: Expression, person: Expression) &#123;</span><br><span class="line">        this.city &#x3D; city;</span><br><span class="line">        this.person &#x3D; person;</span><br><span class="line">    &#125;</span><br><span class="line">    public interpret(info: string): boolean &#123;</span><br><span class="line">        const s &#x3D; info.split(&quot;的&quot;);</span><br><span class="line">        return this.city.interpret(s[0]) &amp;&amp; this.person.interpret(s[1]);</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br><span class="line"></span><br></pre></td></tr></table></figure>
+<h5 id="Context-ts-环境类"><a href="#Context-ts-环境类" class="headerlink" title="Context.ts //环境类"></a>Context.ts //环境类</h5><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br></pre></td><td class="code"><pre><span class="line">import TerminalExpression from &quot;.&#x2F;TerminalExpression&quot;;</span><br><span class="line">import &#123; Expression &#125; from &quot;.&#x2F;Expression&quot;;</span><br><span class="line">import AndExpression from &quot;.&#x2F;AndExpression&quot;;</span><br><span class="line"></span><br><span class="line">export default class Context &#123;</span><br><span class="line">    private citys &#x3D; [&quot;韶关&quot;, &quot;广州&quot;];</span><br><span class="line">    private persons &#x3D; [&quot;老人&quot;, &quot;妇女&quot;, &quot;儿童&quot;];</span><br><span class="line">    private cityPerson: Expression;</span><br><span class="line">    constructor() &#123;</span><br><span class="line">        const city: Expression &#x3D; new TerminalExpression(this.citys);</span><br><span class="line">        const person: Expression &#x3D; new TerminalExpression(this.persons);</span><br><span class="line">        this.cityPerson &#x3D; new AndExpression(city, person);</span><br><span class="line">    &#125;</span><br><span class="line">    public freeRide(info: string): void &#123;</span><br><span class="line">        const ok &#x3D; this.cityPerson.interpret(info);</span><br><span class="line">        if (ok) &#123;</span><br><span class="line">            console.log(&quot;您是&quot; + info + &quot;，您本次乘车免费！&quot;);</span><br><span class="line">        &#125; else &#123;</span><br><span class="line">            console.log(info + &quot;，您不是免费人员，本次乘车扣费2元！&quot;);</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br><span class="line"></span><br></pre></td></tr></table></figure>
+<h5 id="index-ts"><a href="#index-ts" class="headerlink" title="index.ts"></a>index.ts</h5><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line">import Context from &quot;.&#x2F;Context&quot;;</span><br><span class="line"></span><br><span class="line">const bus: Context &#x3D; new Context();</span><br><span class="line">bus.freeRide(&quot;韶关的老人&quot;);</span><br><span class="line">bus.freeRide(&quot;韶关的年轻人&quot;);</span><br><span class="line">bus.freeRide(&quot;广州的妇女&quot;);</span><br><span class="line">bus.freeRide(&quot;广州的儿童&quot;);</span><br><span class="line">bus.freeRide(&quot;山东的儿童&quot;);</span><br><span class="line"></span><br></pre></td></tr></table></figure>
+<h5 id="result"><a href="#result" class="headerlink" title="result"></a>result</h5><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">您是韶关的老人，您本次乘车免费！</span><br><span class="line">韶关的年轻人，您不是免费人员，本次乘车扣费2元！</span><br><span class="line">您是广州的妇女，您本次乘车免费！</span><br><span class="line">您是广州的儿童，您本次乘车免费！</span><br><span class="line">山东的儿童，您不是免费人员，本次乘车扣费2元！</span><br></pre></td></tr></table></figure>
+<h2 id="类图"><a href="#类图" class="headerlink" title="类图"></a>类图</h2><p><img src="https://upload-images.jianshu.io/upload_images/10024246-2f43bf4016b5d82f.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240"></p>
+<h2 id="角色"><a href="#角色" class="headerlink" title="角色"></a>角色</h2><ul>
+<li><strong>AbstractExpression：</strong>(抽象表达式)<br>声明一个抽象的解释操作，这个接口被抽象语法树中所有的节点所共享；定义语法树节点的共同接口。</li>
+<li><strong>TernimalExpression：</strong>（终结符表达式）<br>一个句子中的每个终结符需要该类的一个实例，它实现与文法中的终结符相关联的解释操作；</li>
+<li><strong>NonternimalExpression：</strong>（非终结符表达式）<ul>
+<li>对于文法中的每一条规则都需要一个NonternimalExpression类；</li>
+<li>为文法中的的每个符号都维护一个AbstractExpression类型的实例变量；</li>
+<li>为文法中的非终结符实现解释操作，在实现时，一般要递归地调用表示文法符号的那些对象的解释操作；</li>
+</ul>
+</li>
+<li><strong>Context：</strong>（上下文）<br>包含解释器之外的一些必要信息；</li>
+<li><strong>Client：</strong>（请求者）<br>构建一个需要进行解释操作的文法句子，然后调用解释操作进行解释。<h2 id="执行时序"><a href="#执行时序" class="headerlink" title="执行时序"></a>执行时序</h2>实际进行解释时，按照以下时序进行的：<br>1、Client构建一个句子，它是NonterminalExpression和TerminalExpression的实例的一个抽象语法树，然后初始化上下文并调用解释操作；<br>2、每一非终结符表达式节点定义相应子表达式的解释操作。而各终结符表达式的解释操作构成了递归的基础；<br>3、每一节点的解释操作用上下文来存储和访问解释器的状态</li>
+</ul>
+
+      
+    </div>
+
+    
+    
+    
+
+    <footer class="post-footer">
+        <div class="post-eof"></div>
+      
+    </footer>
+  </article>
+</div>
+
+
+
+
+    
+
+
+<div class="post-block">
+  
+  
+
+  <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="">
+    <link itemprop="mainEntityOfPage" href="https://lzhwweb.github.io/nirvana/DesignPattern/%E8%AE%BE%E8%AE%A1%E6%A8%A1%E5%BC%8F%EF%BC%88TypeScript%EF%BC%89/Iterator%E6%A8%A1%E5%BC%8F/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/nirvana/images/avatar.gif">
+      <meta itemprop="name" content="nirvana">
+      <meta itemprop="description" content="个人学习笔记">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="涅槃快乐是金">
+    </span>
+      <header class="post-header">
+        <h2 class="post-title" itemprop="name headline">
+          <a href="/nirvana/DesignPattern/%E8%AE%BE%E8%AE%A1%E6%A8%A1%E5%BC%8F%EF%BC%88TypeScript%EF%BC%89/Iterator%E6%A8%A1%E5%BC%8F/" class="post-title-link" itemprop="url">Iterator模式</a>
+        </h2>
+
+        <div class="post-meta-container">
+          <div class="post-meta">
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-calendar"></i>
+      </span>
+      <span class="post-meta-item-text">发表于</span>
+
+      <time title="创建时间：2021-03-11 21:12:40" itemprop="dateCreated datePublished" datetime="2021-03-11T21:12:40+08:00">2021-03-11</time>
+    </span>
+      <span class="post-meta-item">
+        <span class="post-meta-item-icon">
+          <i class="far fa-calendar-check"></i>
+        </span>
+        <span class="post-meta-item-text">更新于</span>
+        <time title="修改时间：2021-03-10 10:56:16" itemprop="dateModified" datetime="2021-03-10T10:56:16+08:00">2021-03-10</time>
+      </span>
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-folder"></i>
+      </span>
+      <span class="post-meta-item-text">分类于</span>
+        <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+          <a href="/nirvana/categories/DesignPattern/" itemprop="url" rel="index"><span itemprop="name">DesignPattern</span></a>
+        </span>
+    </span>
+
+  
+      </div>
+      <div class="post-meta">
+    <span class="post-meta-item" title="本文字数">
+      <span class="post-meta-item-icon">
+        <i class="far fa-file-word"></i>
+      </span>
+      <span class="post-meta-item-text">本文字数：</span>
+      <span>2.5k</span>
+    </span>
+    <span class="post-meta-item" title="阅读时长">
+      <span class="post-meta-item-icon">
+        <i class="far fa-clock"></i>
+      </span>
+      <span class="post-meta-item-text">阅读时长 &asymp;</span>
+      <span>2 分钟</span>
+    </span>
+</div>
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+          <p>将（Book）放置到书架（BookShelf）中，并将书名按顺序显示</p>
+<h2 id="接口："><a href="#接口：" class="headerlink" title="接口："></a>接口：</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line">import Book from &quot;.&#x2F;Book&quot;;</span><br><span class="line">&#x2F;&#x2F;Aggregate接口是所要遍历的集合的接口</span><br><span class="line">export interface Aggregate &#123;</span><br><span class="line">    bookIterator: BookIterator;</span><br><span class="line">&#125;</span><br><span class="line">&#x2F;&#x2F;Iterator接口，用于遍历集合中的元素</span><br><span class="line">export interface BookIterator &#123;</span><br><span class="line">    hasNext(): boolean;&#x2F;&#x2F;是否有下一个</span><br><span class="line">    next(): Book;&#x2F;&#x2F;获取下一个元素</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p>#Book类：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br></pre></td><td class="code"><pre><span class="line">&#x2F;**</span><br><span class="line"> * class Book</span><br><span class="line"> *&#x2F;</span><br><span class="line">export default class Book &#123;</span><br><span class="line">    private name: string;</span><br><span class="line">    &#x2F;**</span><br><span class="line">     * Book</span><br><span class="line">     *&#x2F;</span><br><span class="line">    constructor(name: string) &#123;</span><br><span class="line">        this.name &#x3D; name;</span><br><span class="line">    &#125;</span><br><span class="line">    public getName(): string &#123;</span><br><span class="line">        return this.name</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p>#BookShelf类：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br></pre></td><td class="code"><pre><span class="line">import Book from &quot;.&#x2F;Book&quot;;</span><br><span class="line">import &#123; BookIterator &#125; from &quot;.&#x2F;Aggregate&quot;;</span><br><span class="line">import BookShelfIterator from &quot;.&#x2F;BookShelfIterator&quot;;</span><br><span class="line">export default class BookShelf &#123;</span><br><span class="line">    private books: Array&lt;Book&gt;;</span><br><span class="line">    private last: number &#x3D; 0;</span><br><span class="line">    constructor(maxsize: number) &#123;</span><br><span class="line">        this.books &#x3D; new Array&lt;Book&gt;(maxsize);</span><br><span class="line">    &#125;</span><br><span class="line">    &#x2F;**</span><br><span class="line">     * appendBook</span><br><span class="line">     *&#x2F;</span><br><span class="line">    public appendBook(book: Book): void &#123;</span><br><span class="line">        this.books[this.last] &#x3D; book;</span><br><span class="line">        this.last++;</span><br><span class="line">    &#125;</span><br><span class="line">    &#x2F;**</span><br><span class="line">     * getBookAt</span><br><span class="line">     *&#x2F;</span><br><span class="line">    public getBookAt(index: number): Book &#123;</span><br><span class="line">        return this.books[index]</span><br><span class="line">    &#125;</span><br><span class="line">    &#x2F;**</span><br><span class="line">     * getLength</span><br><span class="line">     *&#x2F;</span><br><span class="line">    public getLength(): number &#123;</span><br><span class="line">        return this.last;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    &#x2F;**</span><br><span class="line">     * name</span><br><span class="line">     *&#x2F;</span><br><span class="line">    public bookIterator(): BookIterator &#123;</span><br><span class="line">        return new BookShelfIterator(this);</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p>#BookShelfIterator类</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br></pre></td><td class="code"><pre><span class="line"> import BookShelf from &quot;.&#x2F;BookShelf&quot;;</span><br><span class="line">import Book from &quot;.&#x2F;Book&quot;;</span><br><span class="line">import &#123; BookIterator &#125; from &quot;.&#x2F;Aggregate&quot;;</span><br><span class="line">export default class BookShelfIterator implements BookIterator &#123;</span><br><span class="line">    private bookShelf: BookShelf;</span><br><span class="line">    private index: number;</span><br><span class="line">    constructor(bookShelf: BookShelf) &#123;</span><br><span class="line">        this.bookShelf &#x3D; bookShelf;</span><br><span class="line">        this.index &#x3D; 0;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    &#x2F;**</span><br><span class="line">     * hasNext</span><br><span class="line">     *&#x2F;</span><br><span class="line">    public hasNext(): boolean &#123;</span><br><span class="line">        if (this.index &lt; this.bookShelf.getLength()) &#123;</span><br><span class="line">            return true;</span><br><span class="line">        &#125; else &#123;</span><br><span class="line">            return false;</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">    &#x2F;**</span><br><span class="line">     * next</span><br><span class="line">     *&#x2F;</span><br><span class="line">    public next(): Book &#123;</span><br><span class="line">        const book &#x3D; this.bookShelf.getBookAt(this.index);</span><br><span class="line">        this.index++;</span><br><span class="line">        return book;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p>#index入口</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line">import BookShelf from &quot;.&#x2F;BookShelf&quot;;</span><br><span class="line">import Book from &quot;.&#x2F;Book&quot;;</span><br><span class="line"></span><br><span class="line">let bookShelf &#x3D; new BookShelf(4);</span><br><span class="line">bookShelf.appendBook(new Book(&quot;test1&quot;));</span><br><span class="line">bookShelf.appendBook(new Book(&quot;test2&quot;));</span><br><span class="line">bookShelf.appendBook(new Book(&quot;test3&quot;));</span><br><span class="line">bookShelf.appendBook(new Book(&quot;test4&quot;));</span><br><span class="line">const it &#x3D; bookShelf.bookIterator();</span><br><span class="line">while (it.hasNext()) &#123;</span><br><span class="line">    const book &#x3D; it.next();</span><br><span class="line">    console.log(book.getName());</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+      
+    </div>
+
+    
+    
+    
+
+    <footer class="post-footer">
+        <div class="post-eof"></div>
+      
+    </footer>
+  </article>
+</div>
+
+
+
+
+    
+
+
+<div class="post-block">
+  
+  
+
+  <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="">
+    <link itemprop="mainEntityOfPage" href="https://lzhwweb.github.io/nirvana/DesignPattern/%E8%AE%BE%E8%AE%A1%E6%A8%A1%E5%BC%8F%EF%BC%88TypeScript%EF%BC%89/Mediator%E6%A8%A1%E5%BC%8F%EF%BC%88%E4%B8%AD%E4%BB%8B%E8%80%85%E6%A8%A1%E5%BC%8F%EF%BC%89/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/nirvana/images/avatar.gif">
+      <meta itemprop="name" content="nirvana">
+      <meta itemprop="description" content="个人学习笔记">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="涅槃快乐是金">
+    </span>
+      <header class="post-header">
+        <h2 class="post-title" itemprop="name headline">
+          <a href="/nirvana/DesignPattern/%E8%AE%BE%E8%AE%A1%E6%A8%A1%E5%BC%8F%EF%BC%88TypeScript%EF%BC%89/Mediator%E6%A8%A1%E5%BC%8F%EF%BC%88%E4%B8%AD%E4%BB%8B%E8%80%85%E6%A8%A1%E5%BC%8F%EF%BC%89/" class="post-title-link" itemprop="url">Mediator模式（中介者模式）</a>
+        </h2>
+
+        <div class="post-meta-container">
+          <div class="post-meta">
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-calendar"></i>
+      </span>
+      <span class="post-meta-item-text">发表于</span>
+
+      <time title="创建时间：2021-03-11 21:12:40" itemprop="dateCreated datePublished" datetime="2021-03-11T21:12:40+08:00">2021-03-11</time>
+    </span>
+      <span class="post-meta-item">
+        <span class="post-meta-item-icon">
+          <i class="far fa-calendar-check"></i>
+        </span>
+        <span class="post-meta-item-text">更新于</span>
+        <time title="修改时间：2021-03-10 10:56:28" itemprop="dateModified" datetime="2021-03-10T10:56:28+08:00">2021-03-10</time>
+      </span>
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-folder"></i>
+      </span>
+      <span class="post-meta-item-text">分类于</span>
+        <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+          <a href="/nirvana/categories/DesignPattern/" itemprop="url" rel="index"><span itemprop="name">DesignPattern</span></a>
+        </span>
+    </span>
+
+  
+      </div>
+      <div class="post-meta">
+    <span class="post-meta-item" title="本文字数">
+      <span class="post-meta-item-icon">
+        <i class="far fa-file-word"></i>
+      </span>
+      <span class="post-meta-item-text">本文字数：</span>
+      <span>4.6k</span>
+    </span>
+    <span class="post-meta-item" title="阅读时长">
+      <span class="post-meta-item-icon">
+        <i class="far fa-clock"></i>
+      </span>
+      <span class="post-meta-item-text">阅读时长 &asymp;</span>
+      <span>4 分钟</span>
+    </span>
+</div>
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+          <p><strong>中介者模式</strong>（Mediator Pattern）提供了一个中介类，该类通常处理不同类之间的通信，降低多个对象和类之间的通信复杂性，并支持松耦合，使代码易于维护。中介者模式属于行为型模式。</p>
+<h2 id="介绍"><a href="#介绍" class="headerlink" title="介绍"></a>介绍</h2><ul>
+<li><strong>意图：</strong>中介者使各对象不需要显式地相互引用，从而使其耦合松散，而且可以独立地改变它们之间的交互。</li>
+<li><strong>主要解决：</strong>对象与对象之间存在大量的关联关系</li>
+<li><strong>何时使用：</strong>多个类相互耦合，形成了网状结构。</li>
+<li><strong>如何解决：</strong>将上述网状结构分离为星型结构。</li>
+<li>**应用实例： **MVC 框架，其中C（控制器）就是 M（模型）和 V（视图）的中介者。</li>
+<li><strong>优点：</strong><br>1、降低了类的复杂度，将一对多转化成了一对一。<br>2、各个类之间的解耦。<br>3、符合迪米特原则。</li>
+<li><strong>缺点：</strong>中介者会庞大，变得复杂难以维护。</li>
+<li><strong>使用场景：</strong><br>1、系统中对象之间存在比较复杂的引用关系，导致它们之间的依赖关系结构混乱而且难以复用该对象。<br>2、想通过一个中间类来封装多个类中的行为，而又不想生成太多的子类。</li>
+</ul>
+<p><em>注意事项：不应当在职责混乱的时候使用。</em></p>
+<h2 id="示例"><a href="#示例" class="headerlink" title="示例"></a>示例</h2><h5 id="SmartDevice-ts-智能设备类-抽象同事角色"><a href="#SmartDevice-ts-智能设备类-抽象同事角色" class="headerlink" title="SmartDevice.ts 智能设备类(抽象同事角色)"></a>SmartDevice.ts 智能设备类(抽象同事角色)</h5><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">import SmartMediator from &quot;.&#x2F;SmartMediator&quot;;</span><br><span class="line"></span><br><span class="line">export default abstract class SmartDevice &#123;</span><br><span class="line">    &#x2F;&#x2F;相关设备打开之后 使其进入准备状态</span><br><span class="line">    public abstract readyState(instruction: string): void;</span><br><span class="line">    &#x2F;&#x2F;操作该设备</span><br><span class="line">    public abstract operateDevice(instruction: string, mediator: SmartMediator): void;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<h5 id="CurtainDevice-ts-窗帘设备-具体同事角色"><a href="#CurtainDevice-ts-窗帘设备-具体同事角色" class="headerlink" title="CurtainDevice.ts 窗帘设备(具体同事角色)"></a>CurtainDevice.ts 窗帘设备(具体同事角色)</h5><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br></pre></td><td class="code"><pre><span class="line">import SmartDevice from &quot;.&#x2F;SmartDevice&quot;;</span><br><span class="line">import SmartMediator from &quot;.&#x2F;SmartMediator&quot;;</span><br><span class="line"></span><br><span class="line">export default class CurtainDevice extends SmartDevice &#123;</span><br><span class="line"></span><br><span class="line">    public operateDevice(instruction: string, mediator: SmartMediator): void &#123;</span><br><span class="line">        console.log(&#96;窗帘已$&#123;instruction&#125;&#96;);&#x2F;&#x2F;通过传入指令，打开或关闭窗帘</span><br><span class="line">        mediator.curtain(instruction);&#x2F;&#x2F;窗帘通过中介者唤醒音乐设备和洗浴设备</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    public readyState(instruction: string): void &#123;</span><br><span class="line">        &#x2F;&#x2F;如果其他设备开启则调用此方法，唤醒窗帘</span><br><span class="line">        console.log(&#96;窗帘设备准备$&#123;instruction&#125;&#96;);</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<h5 id="MusicDevice-ts-音响设备-具体同事角色"><a href="#MusicDevice-ts-音响设备-具体同事角色" class="headerlink" title="MusicDevice.ts 音响设备(具体同事角色)"></a>MusicDevice.ts 音响设备(具体同事角色)</h5><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br></pre></td><td class="code"><pre><span class="line">import SmartDevice from &quot;.&#x2F;SmartDevice&quot;;</span><br><span class="line">import SmartMediator from &quot;.&#x2F;SmartMediator&quot;;</span><br><span class="line"></span><br><span class="line">export default class MusicDevice extends SmartDevice &#123;</span><br><span class="line"></span><br><span class="line">    public operateDevice(instruction: string, mediator: SmartMediator): void &#123;</span><br><span class="line">        console.log(&#96;音乐设备已$&#123;instruction&#125;&#96;);&#x2F;&#x2F;通过传入指令，打开或关闭窗帘</span><br><span class="line">        mediator.curtain(instruction);&#x2F;&#x2F;窗帘通过中介者唤醒音乐设备和洗浴设备</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    public readyState(instruction: string): void &#123;</span><br><span class="line">        &#x2F;&#x2F;如果其他设备开启则调用此方法，唤醒窗帘</span><br><span class="line">        console.log(&#96;音乐设备准备$&#123;instruction&#125;&#96;);</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<h5 id="BathDevice-ts-洗浴设备-具体同事角色"><a href="#BathDevice-ts-洗浴设备-具体同事角色" class="headerlink" title="BathDevice.ts 洗浴设备(具体同事角色)"></a>BathDevice.ts 洗浴设备(具体同事角色)</h5><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br></pre></td><td class="code"><pre><span class="line">import SmartDevice from &quot;.&#x2F;SmartDevice&quot;;</span><br><span class="line">import SmartMediator from &quot;.&#x2F;SmartMediator&quot;;</span><br><span class="line"></span><br><span class="line">export default class BathDevice extends SmartDevice &#123;</span><br><span class="line"></span><br><span class="line">    public operateDevice(instruction: string, mediator: SmartMediator): void &#123;</span><br><span class="line">        console.log(&#96;洗浴设备$&#123;instruction&#125;&#96;);&#x2F;&#x2F;通过传入指令，打开或关闭窗帘</span><br><span class="line">        mediator.curtain(instruction);&#x2F;&#x2F;窗帘通过中介者唤醒音乐设备和洗浴设备</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    public readyState(instruction: string): void &#123;</span><br><span class="line">        &#x2F;&#x2F;如果其他设备开启则调用此方法，唤醒窗帘</span><br><span class="line">        console.log(&#96;洗浴设备正在准备$&#123;instruction&#125;&#96;);</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<h5 id="SmartMediator-ts-抽象中介者"><a href="#SmartMediator-ts-抽象中介者" class="headerlink" title="SmartMediator.ts 抽象中介者"></a>SmartMediator.ts 抽象中介者</h5><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br></pre></td><td class="code"><pre><span class="line">import SmartDevice from &quot;.&#x2F;SmartDevice&quot;;</span><br><span class="line"></span><br><span class="line">export default abstract class SmartMediator &#123;</span><br><span class="line">    &#x2F;&#x2F;保留所有设备的引用是为了当接收指令时可以唤醒其他设备的操作</span><br><span class="line">    public bd: SmartDevice;</span><br><span class="line">    public md: SmartDevice;</span><br><span class="line">    public cd: SmartDevice;</span><br><span class="line">    constructor(bd: SmartDevice, md: SmartDevice, cd: SmartDevice) &#123;</span><br><span class="line">        this.bd &#x3D; bd;</span><br><span class="line">        this.md &#x3D; md;</span><br><span class="line">        this.cd &#x3D; cd;</span><br><span class="line">    &#125;</span><br><span class="line">    public abstract music(instruction: string): void;</span><br><span class="line">    public abstract curtain(instruction: string): void;</span><br><span class="line">    public abstract bath(instruction: string): void;</span><br><span class="line">&#125;</span><br><span class="line"></span><br></pre></td></tr></table></figure>
+<h5 id="Shape-ts-具体中介者"><a href="#Shape-ts-具体中介者" class="headerlink" title="Shape.ts 具体中介者"></a>Shape.ts 具体中介者</h5><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br></pre></td><td class="code"><pre><span class="line">import SmartDevice from &quot;.&#x2F;SmartDevice&quot;;</span><br><span class="line">import SmartMediator from &quot;.&#x2F;SmartMediator&quot;;</span><br><span class="line"></span><br><span class="line">export default class ConcreteMediator extends SmartMediator &#123;</span><br><span class="line"></span><br><span class="line">    constructor(bd: SmartDevice, cd: SmartDevice, md: SmartDevice) &#123;</span><br><span class="line">        super(bd, cd, md);</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    public music(instruction: string): void &#123;&#x2F;&#x2F;音乐被唤醒后，使其他设备进入准备状态</span><br><span class="line">        this.cd.readyState(instruction);&#x2F;&#x2F;调用窗帘的准备方法</span><br><span class="line">        this.bd.readyState(instruction);&#x2F;&#x2F;调用洗浴设备的准备方法</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    public curtain(instruction: string): void &#123;</span><br><span class="line">        this.md.readyState(instruction);</span><br><span class="line">        this.bd.readyState(instruction);</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    public bath(instruction: string): void &#123;</span><br><span class="line">        this.cd.readyState(instruction);</span><br><span class="line">        this.md.readyState(instruction);</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">&#125;</span><br><span class="line"></span><br></pre></td></tr></table></figure>
+<h5 id="Shape-ts-模型接口"><a href="#Shape-ts-模型接口" class="headerlink" title="Shape.ts 模型接口"></a>Shape.ts 模型接口</h5><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">export interface Shape &#123;</span><br><span class="line">    draw(): void;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<h5 id="index-ts"><a href="#index-ts" class="headerlink" title="index.ts"></a>index.ts</h5><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><span class="line">import SmartDevice from &quot;.&#x2F;SmartDevice&quot;;</span><br><span class="line">import BathDevice from &quot;.&#x2F;BathDevice&quot;;</span><br><span class="line">import CurtainDevice from &quot;.&#x2F;CurtainDevice&quot;;</span><br><span class="line">import MusicDevice from &quot;.&#x2F;MusicDevice&quot;;</span><br><span class="line">import ConcreteMediator from &quot;.&#x2F;ConcreteMediator&quot;;</span><br><span class="line">import SmartMediator from &quot;.&#x2F;SmartMediator&quot;;</span><br><span class="line"></span><br><span class="line">const bd: SmartDevice &#x3D; new BathDevice();</span><br><span class="line">const cd: SmartDevice &#x3D; new CurtainDevice();</span><br><span class="line">const md: SmartDevice &#x3D; new MusicDevice();</span><br><span class="line">const sm: SmartMediator &#x3D; new ConcreteMediator(bd, cd, md);&#x2F;&#x2F;把设备引用都保存在调停者中</span><br><span class="line">cd.operateDevice(&quot;open&quot;, sm); &#x2F;&#x2F;开启窗帘</span><br><span class="line">md.operateDevice(&quot;close&quot;, sm);&#x2F;&#x2F;关闭音乐</span><br><span class="line"></span><br></pre></td></tr></table></figure>
+<h5 id="result"><a href="#result" class="headerlink" title="result"></a>result</h5><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">窗帘已open</span><br><span class="line">窗帘设备准备open</span><br><span class="line">洗浴设备正在准备open</span><br><span class="line">音乐设备已close</span><br><span class="line">窗帘设备准备close</span><br><span class="line">洗浴设备正在准备close</span><br></pre></td></tr></table></figure>
+<h2 id="类图"><a href="#类图" class="headerlink" title="类图"></a>类图</h2><p><img src="https://upload-images.jianshu.io/upload_images/10024246-c92933af9be4cd59.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="类图"></p>
+<h2 id="角色"><a href="#角色" class="headerlink" title="角色"></a>角色</h2><ul>
+<li>抽象中介者（mediator）<br>定义一个接口用于和对象通信（SmartDevice）</li>
+<li>具体中介者（concretemediator）<br>协调各同事对象实现协作，了解维护各个同事</li>
+<li>抽象同事角色（colleague）<br>规定了同事的基本类型</li>
+<li>具体同事角色（concreteColleague）<br>每个同事都知道中介者对象，要与同事通信则把通信告诉中介者</li>
+</ul>
+
+      
+    </div>
+
+    
+    
+    
+
+    <footer class="post-footer">
+        <div class="post-eof"></div>
+      
+    </footer>
+  </article>
+</div>
+
+
+
+
+    
+
+
+<div class="post-block">
+  
+  
+
+  <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="">
+    <link itemprop="mainEntityOfPage" href="https://lzhwweb.github.io/nirvana/DesignPattern/%E8%AE%BE%E8%AE%A1%E6%A8%A1%E5%BC%8F%EF%BC%88TypeScript%EF%BC%89/Memento-Pattern%EF%BC%88%E5%A4%87%E5%BF%98%E5%BD%95%E6%A8%A1%E5%BC%8F%EF%BC%89/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/nirvana/images/avatar.gif">
+      <meta itemprop="name" content="nirvana">
+      <meta itemprop="description" content="个人学习笔记">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="涅槃快乐是金">
+    </span>
+      <header class="post-header">
+        <h2 class="post-title" itemprop="name headline">
+          <a href="/nirvana/DesignPattern/%E8%AE%BE%E8%AE%A1%E6%A8%A1%E5%BC%8F%EF%BC%88TypeScript%EF%BC%89/Memento-Pattern%EF%BC%88%E5%A4%87%E5%BF%98%E5%BD%95%E6%A8%A1%E5%BC%8F%EF%BC%89/" class="post-title-link" itemprop="url">Memento-Pattern（备忘录模式）</a>
+        </h2>
+
+        <div class="post-meta-container">
+          <div class="post-meta">
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-calendar"></i>
+      </span>
+      <span class="post-meta-item-text">发表于</span>
+
+      <time title="创建时间：2021-03-11 21:12:40" itemprop="dateCreated datePublished" datetime="2021-03-11T21:12:40+08:00">2021-03-11</time>
+    </span>
+      <span class="post-meta-item">
+        <span class="post-meta-item-icon">
+          <i class="far fa-calendar-check"></i>
+        </span>
+        <span class="post-meta-item-text">更新于</span>
+        <time title="修改时间：2021-03-10 10:56:43" itemprop="dateModified" datetime="2021-03-10T10:56:43+08:00">2021-03-10</time>
+      </span>
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-folder"></i>
+      </span>
+      <span class="post-meta-item-text">分类于</span>
+        <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+          <a href="/nirvana/categories/DesignPattern/" itemprop="url" rel="index"><span itemprop="name">DesignPattern</span></a>
+        </span>
+    </span>
+
+  
+      </div>
+      <div class="post-meta">
+    <span class="post-meta-item" title="本文字数">
+      <span class="post-meta-item-icon">
+        <i class="far fa-file-word"></i>
+      </span>
+      <span class="post-meta-item-text">本文字数：</span>
+      <span>5.1k</span>
+    </span>
+    <span class="post-meta-item" title="阅读时长">
+      <span class="post-meta-item-icon">
+        <i class="far fa-clock"></i>
+      </span>
+      <span class="post-meta-item-text">阅读时长 &asymp;</span>
+      <span>5 分钟</span>
+    </span>
+</div>
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+          <h2 id="备忘录模式"><a href="#备忘录模式" class="headerlink" title="备忘录模式"></a>备忘录模式</h2><p>备忘录模式（Memento Pattern）保存一个对象的某个状态，以便在适当的时候恢复对象。备忘录模式属于行为型模式。</p>
+<h2 id="使用场景"><a href="#使用场景" class="headerlink" title="使用场景"></a>使用场景</h2><p>使用Memento模式可以实现应用程序的以下功能</p>
+<ul>
+<li>Undo（撤销）</li>
+<li>Redo（重做）</li>
+<li>History（历史记录）</li>
+<li>Snapshot（快照）<h2 id="实现"><a href="#实现" class="headerlink" title="实现"></a>实现</h2>手机水果和获取金钱数的掷骰子游戏<h3 id="Memento类：表示主人公"><a href="#Memento类：表示主人公" class="headerlink" title="Memento类：表示主人公"></a>Memento类：表示主人公</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br></pre></td><td class="code"><pre><span class="line">&#x2F;**</span><br><span class="line"> * Memento类，主人公</span><br><span class="line"> *&#x2F;</span><br><span class="line">export default class Memento &#123;</span><br><span class="line">    public money: number;&#x2F;&#x2F;金钱</span><br><span class="line">    public fruits: Array&lt;string&gt;;&#x2F;&#x2F;水果</span><br><span class="line">    &#x2F;**</span><br><span class="line">     * 获取当前金钱</span><br><span class="line">     *&#x2F;</span><br><span class="line">    public getMoney(): number &#123;</span><br><span class="line">        return this.money;</span><br><span class="line">    &#125;</span><br><span class="line">    constructor(money: number) &#123;</span><br><span class="line">        this.money &#x3D; money;</span><br><span class="line">        this.fruits &#x3D; new Array();</span><br><span class="line">    &#125;</span><br><span class="line">    &#x2F;**</span><br><span class="line">     * 添加水果</span><br><span class="line">     * @param fruit 水果</span><br><span class="line">     *&#x2F;</span><br><span class="line">    public addFruit(fruit: string) &#123;</span><br><span class="line">        this.fruits.push(fruit);</span><br><span class="line">    &#125;</span><br><span class="line">    &#x2F;**</span><br><span class="line">     * 获取当前水果</span><br><span class="line">     *&#x2F;</span><br><span class="line">    public getFruits(): Array&lt;string&gt; &#123;</span><br><span class="line">        return JSON.parse(JSON.stringify(this.fruits));</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+Gamer类：表示游戏主人公的类<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br><span class="line">63</span><br><span class="line">64</span><br><span class="line">65</span><br><span class="line">66</span><br><span class="line">67</span><br><span class="line">68</span><br><span class="line">69</span><br></pre></td><td class="code"><pre><span class="line">import Memento from &quot;.&#x2F;Memento&quot;;</span><br><span class="line"></span><br><span class="line">export default class Gamer &#123;</span><br><span class="line">    private money: number;&#x2F;&#x2F;所持金钱</span><br><span class="line">    private fruits: Array&lt;string&gt; &#x3D; new Array();&#x2F;&#x2F;获得的水果</span><br><span class="line">    private fruitname: string[] &#x3D; [&quot;苹果&quot;, &quot;葡萄&quot;, &quot;香蕉&quot;, &quot;橘子&quot;];&#x2F;&#x2F;水果种类</span><br><span class="line">    constructor(money: number) &#123;&#x2F;&#x2F;构造函数</span><br><span class="line">        this.money &#x3D; money;</span><br><span class="line">    &#125;</span><br><span class="line">    &#x2F;**</span><br><span class="line">     * 获取当前所持金钱</span><br><span class="line">     *&#x2F;</span><br><span class="line">    public getMoney(): number &#123;</span><br><span class="line">        return this.money;</span><br><span class="line">    &#125;</span><br><span class="line">    &#x2F;**</span><br><span class="line">     * 掷骰子游戏</span><br><span class="line">     *&#x2F;</span><br><span class="line">    public bet(): void &#123;</span><br><span class="line">        const dice &#x3D; Math.ceil(Math.random() * 6);&#x2F;&#x2F;骰子随机数</span><br><span class="line">        if (dice &#x3D;&#x3D; 1) &#123;&#x2F;&#x2F;1金钱+100</span><br><span class="line">            this.money +&#x3D; 100;</span><br><span class="line">            console.log(&quot;所持金钱增加了。&quot;)</span><br><span class="line">        &#125; else if (dice &#x3D;&#x3D; 2) &#123;&#x2F;&#x2F;2金钱减半</span><br><span class="line">            this.money &#x2F;&#x3D; 2;</span><br><span class="line">            console.log(&quot;所持金钱减半&quot;);</span><br><span class="line">        &#125; else if (dice &#x3D;&#x3D; 6) &#123;&#x2F;&#x2F;6获取水果</span><br><span class="line">            const f &#x3D; this.getFruit();</span><br><span class="line">            console.log(&#96;获得了水果（$&#123;f&#125;）。&#96;);</span><br><span class="line">            this.fruits.push(f)</span><br><span class="line">        &#125; else &#123;&#x2F;&#x2F;其他没奖励</span><br><span class="line">            console.log(&quot;什么都没有发生。&quot;)</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">    &#x2F;**</span><br><span class="line">     * 创建快照</span><br><span class="line">     *&#x2F;</span><br><span class="line">    public createMemento(): Memento &#123;</span><br><span class="line">        const m: Memento &#x3D; new Memento(this.money);</span><br><span class="line">        this.fruits.forEach((item) &#x3D;&gt; &#123;</span><br><span class="line">            if (item.indexOf(&quot;好吃的&quot;) &#x3D;&#x3D; 0) &#123;&#x2F;&#x2F;只保存还吃的水果</span><br><span class="line">                m.addFruit(item)</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;)</span><br><span class="line">        return m;</span><br><span class="line">    &#125;</span><br><span class="line">    &#x2F;**</span><br><span class="line">     * 撤销操作</span><br><span class="line">     * @param memento 快照</span><br><span class="line">     *&#x2F;</span><br><span class="line">    public restoreMemento(memento: Memento) &#123;</span><br><span class="line">        this.money &#x3D; memento.money;</span><br><span class="line">        this.fruits &#x3D; memento.getFruits();</span><br><span class="line">    &#125;</span><br><span class="line">    public toString(): string &#123;</span><br><span class="line">        return &#96;[money &#x3D; $&#123;this.money&#125;, fruits &#x3D; $&#123;JSON.stringify(this.fruits)&#125;]&#96;</span><br><span class="line">    &#125;</span><br><span class="line">    &#x2F;**</span><br><span class="line">     * 获取水果，增加随机数，只有大于0.5才表示水果是好吃的</span><br><span class="line">     *&#x2F;</span><br><span class="line">    private getFruit(): string &#123;</span><br><span class="line">        let prefix &#x3D; &quot;&quot;;</span><br><span class="line">        if (Math.random() &gt;&#x3D; 0.5) &#123;</span><br><span class="line">            prefix &#x3D; &quot;好吃的&quot;;</span><br><span class="line">        &#125;</span><br><span class="line"></span><br><span class="line">        return &#96;$&#123;prefix&#125;$&#123;this.fruitname[Math.floor(Math.random() * this.fruitname.length)]&#125; &#96;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+#index.ts运行<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br></pre></td><td class="code"><pre><span class="line">import Gamer from &quot;.&#x2F;Gamer&quot;;</span><br><span class="line">import Memento from &quot;.&#x2F;Memento&quot;;</span><br><span class="line"></span><br><span class="line">const gamer: Gamer &#x3D; new Gamer(100);</span><br><span class="line">let memento: Memento &#x3D; gamer.createMemento();</span><br><span class="line">for (let i &#x3D; 0; i &lt; 100; i++) &#123;</span><br><span class="line">    console.log(&#96;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;$&#123;i&#125;&#96;);</span><br><span class="line">    console.log(&#96;当前状态：$&#123;gamer&#125;&#96;);</span><br><span class="line">    gamer.bet();</span><br><span class="line">    console.log(&#96;所持金钱为$&#123;gamer.getMoney()&#125;元&#96;);</span><br><span class="line">    console.log(&#96;$&#123;gamer.getMoney()&#125;元,$&#123;memento.getMoney()&#125;&#96;);</span><br><span class="line">    if (gamer.getMoney() &gt; memento.getMoney()) &#123;</span><br><span class="line">        console.log(&quot;所持金钱增加了许多，因此保存当前游戏状态&quot;);</span><br><span class="line">        memento &#x3D; gamer.createMemento();</span><br><span class="line">    &#125; else if (gamer.getMoney() &lt; memento.getMoney() &#x2F; 2) &#123;</span><br><span class="line">        console.log(&quot;所持金钱减少了许多，因此将游戏恢复至以前的状态&quot;);</span><br><span class="line">        gamer.restoreMemento(memento);</span><br><span class="line"></span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<h2 id="结果"><a href="#结果" class="headerlink" title="结果"></a>结果</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br></pre></td><td class="code"><pre><span class="line">&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;0</span><br><span class="line">当前状态：[money &#x3D; 100, fruits &#x3D; []]</span><br><span class="line">所持金钱增加了。</span><br><span class="line">所持金钱为200元</span><br><span class="line">200元,100</span><br><span class="line">所持金钱增加了许多，因此保存当前游戏状态</span><br><span class="line">&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;1</span><br><span class="line">当前状态：[money &#x3D; 200, fruits &#x3D; []]</span><br><span class="line">所持金钱减半</span><br><span class="line">所持金钱为100元</span><br><span class="line">100元,200</span><br><span class="line">&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;2</span><br><span class="line">当前状态：[money &#x3D; 100, fruits &#x3D; []]</span><br><span class="line">所持金钱增加了。</span><br><span class="line">所持金钱为200元</span><br><span class="line">200元,200</span><br><span class="line">&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;3</span><br><span class="line">当前状态：[money &#x3D; 200, fruits &#x3D; []]</span><br><span class="line">所持金钱减半</span><br><span class="line">所持金钱为100元</span><br><span class="line">100元,200</span><br><span class="line">&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;4</span><br><span class="line">当前状态：[money &#x3D; 100, fruits &#x3D; []]</span><br><span class="line">什么都没有发生。</span><br><span class="line">所持金钱为100元</span><br><span class="line">100元,200</span><br><span class="line">&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;5</span><br><span class="line">当前状态：[money &#x3D; 100, fruits &#x3D; []]</span><br><span class="line">什么都没有发生。</span><br><span class="line">所持金钱为100元</span><br><span class="line">100元,200</span><br><span class="line">&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;6</span><br><span class="line">当前状态：[money &#x3D; 100, fruits &#x3D; []]</span><br><span class="line">什么都没有发生。</span><br><span class="line">所持金钱为100元</span><br><span class="line">100元,200</span><br><span class="line">&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;7</span><br><span class="line">当前状态：[money &#x3D; 100, fruits &#x3D; []]</span><br><span class="line">所持金钱增加了。</span><br><span class="line">所持金钱为200元</span><br><span class="line">200元,200</span><br><span class="line">&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;8</span><br><span class="line">当前状态：[money &#x3D; 200, fruits &#x3D; []]</span><br><span class="line">什么都没有发生。</span><br><span class="line">所持金钱为200元</span><br><span class="line">200元,200</span><br><span class="line">&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;9</span><br><span class="line">当前状态：[money &#x3D; 200, fruits &#x3D; []]</span><br><span class="line">什么都没有发生。</span><br><span class="line">所持金钱为200元</span><br><span class="line">200元,200</span><br></pre></td></tr></table></figure>
+##类图<br><img src="https://upload-images.jianshu.io/upload_images/10024246-965b1afc66f88f92.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="类图"></li>
+</ul>
+<h2 id="结构"><a href="#结构" class="headerlink" title="结构"></a>结构</h2><ul>
+<li>Originator（生成者）<br>Originator角色保存自己的最新状态时生产Memento角色，当吧以前保存的Memento角色传递给Originator角色时，它会将自己恢复至生成该Memento角色时的状态。在示例中Gamer类扮演该角色</li>
+<li>Memento（备忘录）<br>Memento角色会将Originator角色的内部信息整合在一起，在Memento角色中虽然保存了Originator角色信息，但不会向外部公开这些信息<br>Memento角色有以下两种接口（API）</li>
+<li><code>wide interface---宽接口</code><br>宽接口是指所有用于获取恢复对象状态信息的方法的集合。由于宽接口会暴露所有信息，所以能使用宽接口的只有Originator角色</li>
+<li><code>narrow interface ---窄接口</code><br>可以通过窄接口获取的Memento的信息有限，有效放在信息泄露</li>
+</ul>
+<p>示例中Memento类扮演该角色</p>
+<ul>
+<li>Caretaker（负责人）<br>当Caretaker角色想要保存当前Originator角色状态时，会通知Originator角色，Originator接到同事后会生成Memento角色的实例并返回给Caretaker角色。为了Originator状态恢复，Caretaker会一直保存Memento实例。<br>示例中index扮演该角色</li>
+</ul>
+
+      
+    </div>
+
+    
+    
+    
+
+    <footer class="post-footer">
+        <div class="post-eof"></div>
+      
+    </footer>
+  </article>
+</div>
+
+
+
+
+    
+
+
+<div class="post-block">
+  
+  
+
+  <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="">
+    <link itemprop="mainEntityOfPage" href="https://lzhwweb.github.io/nirvana/DesignPattern/%E8%AE%BE%E8%AE%A1%E6%A8%A1%E5%BC%8F%EF%BC%88TypeScript%EF%BC%89/Observer%E6%A8%A1%E5%BC%8F%EF%BC%88%E8%A7%82%E5%AF%9F%E8%80%85%E6%A8%A1%E5%BC%8F%EF%BC%89/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/nirvana/images/avatar.gif">
+      <meta itemprop="name" content="nirvana">
+      <meta itemprop="description" content="个人学习笔记">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="涅槃快乐是金">
+    </span>
+      <header class="post-header">
+        <h2 class="post-title" itemprop="name headline">
+          <a href="/nirvana/DesignPattern/%E8%AE%BE%E8%AE%A1%E6%A8%A1%E5%BC%8F%EF%BC%88TypeScript%EF%BC%89/Observer%E6%A8%A1%E5%BC%8F%EF%BC%88%E8%A7%82%E5%AF%9F%E8%80%85%E6%A8%A1%E5%BC%8F%EF%BC%89/" class="post-title-link" itemprop="url">Observer模式（观察者模式）</a>
+        </h2>
+
+        <div class="post-meta-container">
+          <div class="post-meta">
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-calendar"></i>
+      </span>
+      <span class="post-meta-item-text">发表于</span>
+
+      <time title="创建时间：2021-03-11 21:12:40" itemprop="dateCreated datePublished" datetime="2021-03-11T21:12:40+08:00">2021-03-11</time>
+    </span>
+      <span class="post-meta-item">
+        <span class="post-meta-item-icon">
+          <i class="far fa-calendar-check"></i>
+        </span>
+        <span class="post-meta-item-text">更新于</span>
+        <time title="修改时间：2021-03-10 10:56:57" itemprop="dateModified" datetime="2021-03-10T10:56:57+08:00">2021-03-10</time>
+      </span>
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-folder"></i>
+      </span>
+      <span class="post-meta-item-text">分类于</span>
+        <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+          <a href="/nirvana/categories/DesignPattern/" itemprop="url" rel="index"><span itemprop="name">DesignPattern</span></a>
+        </span>
+    </span>
+
+  
+      </div>
+      <div class="post-meta">
+    <span class="post-meta-item" title="本文字数">
+      <span class="post-meta-item-icon">
+        <i class="far fa-file-word"></i>
+      </span>
+      <span class="post-meta-item-text">本文字数：</span>
+      <span>5.2k</span>
+    </span>
+    <span class="post-meta-item" title="阅读时长">
+      <span class="post-meta-item-icon">
+        <i class="far fa-clock"></i>
+      </span>
+      <span class="post-meta-item-text">阅读时长 &asymp;</span>
+      <span>5 分钟</span>
+    </span>
+</div>
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+          <p>观察者模式（Observer Pattern）:当观察对象的状态变化时，会自动通知给观察者。观察者模式属于行为型模式。</p>
+<h2 id="介绍"><a href="#介绍" class="headerlink" title="介绍"></a>介绍</h2><ul>
+<li><strong>意图：</strong>当被观察对象的状态变化时，所有依赖于它的对象都得到通知并被自动更新。</li>
+<li><strong>主要解决：</strong>被观察对象状态改变给其他对象通知的问题，而且要考虑到易用和低耦合，保证高度的协作。</li>
+<li><strong>何时使用：</strong>被观察对象的状态发生改变，所有的依赖对象（观察者对象）都将得到通知，进行广播通知。</li>
+<li><strong>如何解决：</strong>使用面向对象技术，可以将这种依赖关系弱化。</li>
+<li><strong>优点：</strong><br>1、观察者和被观察者是抽象耦合的。<br>2、建立一套触发机制。</li>
+<li><strong>缺点：</strong><br>1、如果一个被观察者对象有很多的直接和间接的观察者的话，将所有的观察者都通知到会花费很多时间。<br>2、如果在观察者和观察目标之间有循环依赖的话，观察目标会触发它们之间进行循环调用，可能导致系统崩溃。<br>3、观察者模式没有相应的机制让观察者知道所观察的目标对象是怎么发生变化的，而仅仅只是知道观察目标发生了变化。</li>
+</ul>
+<p><em>注意事项：1、避免循环引用。2、如果顺序执行，某一观察者错误会导致系统卡壳，一般采用异步方式。</em></p>
+<h2 id="示例"><a href="#示例" class="headerlink" title="示例"></a>示例</h2><h5 id="Observer-ts-表示观察者的接口"><a href="#Observer-ts-表示观察者的接口" class="headerlink" title="Observer.ts 表示观察者的接口"></a>Observer.ts 表示观察者的接口</h5><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">import NumberGenerator from &quot;.&#x2F;NumberGenerator&quot;;</span><br><span class="line"></span><br><span class="line">export interface Observer &#123;</span><br><span class="line">    update(generator: NumberGenerator): void;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<h5 id="NumberGenerator-ts-表示生产数值对象的抽象类"><a href="#NumberGenerator-ts-表示生产数值对象的抽象类" class="headerlink" title="NumberGenerator.ts 表示生产数值对象的抽象类"></a>NumberGenerator.ts 表示生产数值对象的抽象类</h5><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br></pre></td><td class="code"><pre><span class="line">import &#123; Observer &#125; from &quot;.&#x2F;Observer&quot;;</span><br><span class="line"></span><br><span class="line">export default abstract class NumberGenerator &#123;</span><br><span class="line">    private observers: Array&lt;Observer&gt; &#x3D; new Array();</span><br><span class="line">    public addObserver(observer: Observer): void &#123;&#x2F;&#x2F;注册Observe</span><br><span class="line">        this.observers.push(observer);</span><br><span class="line">    &#125;</span><br><span class="line">    public delete(observer: Observer) &#123;&#x2F;&#x2F;删除Observe</span><br><span class="line">        const index &#x3D; this.observers.indexOf(observer);</span><br><span class="line">        this.observers.splice(index, 1);</span><br><span class="line">    &#125;</span><br><span class="line">    public notifyObservers() &#123;&#x2F;&#x2F;通知被Observe对象变化</span><br><span class="line">        this.observers.forEach((observer) &#x3D;&gt; &#123;</span><br><span class="line">            observer.update(this);</span><br><span class="line">        &#125;)</span><br><span class="line">    &#125;</span><br><span class="line">    public abstract getNumber(): number;</span><br><span class="line">    public abstract execute(): void;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<h5 id="RandomNumberGenerator-ts-生产随机数的类"><a href="#RandomNumberGenerator-ts-生产随机数的类" class="headerlink" title="RandomNumberGenerator.ts 生产随机数的类"></a>RandomNumberGenerator.ts 生产随机数的类</h5><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><span class="line">import NumberGenerator from &quot;.&#x2F;NumberGenerator&quot;;</span><br><span class="line"></span><br><span class="line">export default class RandomNumberGenerator extends NumberGenerator &#123;</span><br><span class="line">    private num: number;</span><br><span class="line">    public getNumber(): number &#123;</span><br><span class="line">        return this.num;</span><br><span class="line">    &#125;</span><br><span class="line">    public execute(): void &#123;</span><br><span class="line">        for (let i &#x3D; 0; i &lt; 10; i++) &#123;&#x2F;&#x2F;变化10次</span><br><span class="line">            this.num &#x3D; Math.ceil(Math.random() * 30);&#x2F;&#x2F;生产随机数</span><br><span class="line">            this.notifyObservers();&#x2F;&#x2F;通知数值变化</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<h5 id="DigitObserver-ts-表示以数字形式显示数值的类"><a href="#DigitObserver-ts-表示以数字形式显示数值的类" class="headerlink" title="DigitObserver.ts 表示以数字形式显示数值的类"></a>DigitObserver.ts 表示以数字形式显示数值的类</h5><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">import &#123; Observer &#125; from &quot;.&#x2F;Observer&quot;;</span><br><span class="line">import NumberGenerator from &quot;.&#x2F;NumberGenerator&quot;;</span><br><span class="line"></span><br><span class="line">export default class DigitObserver implements Observer &#123;</span><br><span class="line">    public update(generator: NumberGenerator) &#123;</span><br><span class="line">        console.log(&#96;DigitObserver:$&#123;generator.getNumber()&#125;&#96;)</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<h5 id="GraphObserver-ts-表示以简单图形表示数值的类"><a href="#GraphObserver-ts-表示以简单图形表示数值的类" class="headerlink" title="GraphObserver.ts 表示以简单图形表示数值的类"></a>GraphObserver.ts 表示以简单图形表示数值的类</h5><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line">import &#123; Observer &#125; from &quot;.&#x2F;Observer&quot;;</span><br><span class="line">import NumberGenerator from &quot;.&#x2F;NumberGenerator&quot;;</span><br><span class="line"></span><br><span class="line">export default class GraphObserver implements Observer &#123;</span><br><span class="line">    public update(generator: NumberGenerator): void &#123;</span><br><span class="line">        let str &#x3D; &#96;DigitObserver:&#96;;</span><br><span class="line">        const count: number &#x3D; generator.getNumber();</span><br><span class="line">        for (let i &#x3D; 0; i &lt; count; i++) &#123;</span><br><span class="line">            str +&#x3D; &quot;*&quot;;</span><br><span class="line">        &#125;</span><br><span class="line">        console.log(str);</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<h5 id="IncrementNumberGenerator-ts-自增数据变化"><a href="#IncrementNumberGenerator-ts-自增数据变化" class="headerlink" title="IncrementNumberGenerator.ts 自增数据变化"></a>IncrementNumberGenerator.ts 自增数据变化</h5><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br></pre></td><td class="code"><pre><span class="line">import NumberGenerator from &quot;.&#x2F;NumberGenerator&quot;</span><br><span class="line"></span><br><span class="line">export default class IncrementNumberGenerator extends NumberGenerator &#123;</span><br><span class="line">    private num: number;&#x2F;&#x2F;自增开始数据</span><br><span class="line">    private step: number;&#x2F;&#x2F;每次自增数据</span><br><span class="line">    private end: number;&#x2F;&#x2F;最大数值</span><br><span class="line">    constructor(num: number, end: number, step: number) &#123;</span><br><span class="line">        super();</span><br><span class="line">        this.num &#x3D; num;</span><br><span class="line">        this.step &#x3D; step;</span><br><span class="line">        this.end &#x3D; end;</span><br><span class="line">    &#125;</span><br><span class="line">    public getNumber(): number &#123;</span><br><span class="line">        return this.num;</span><br><span class="line">    &#125;</span><br><span class="line">    public execute(): void &#123;</span><br><span class="line">        while (this.num &lt; this.end) &#123;</span><br><span class="line">            this.notifyObservers();</span><br><span class="line">            this.num +&#x3D; this.step;</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<h5 id="index-ts"><a href="#index-ts" class="headerlink" title="index.ts"></a>index.ts</h5><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line">import DigitObserver from &quot;.&#x2F;DigitObserver&quot;;</span><br><span class="line">import &#123; Observer &#125; from &quot;.&#x2F;Observer&quot;;</span><br><span class="line">import GraphObserver from &quot;.&#x2F;GraphObserver&quot;;</span><br><span class="line">import IncrementNumberGenerator from &quot;.&#x2F;IncrementNumberGenerator&quot;;</span><br><span class="line"></span><br><span class="line">const generator: IncrementNumberGenerator &#x3D; new IncrementNumberGenerator(10, 50, 5);</span><br><span class="line">const observer1: Observer &#x3D; new DigitObserver();</span><br><span class="line">const observer2: Observer &#x3D; new GraphObserver();</span><br><span class="line">generator.addObserver(observer1);</span><br><span class="line">generator.addObserver(observer2);</span><br><span class="line">generator.execute();</span><br></pre></td></tr></table></figure>
+<h5 id="result"><a href="#result" class="headerlink" title="result"></a>result</h5><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br></pre></td><td class="code"><pre><span class="line">******IncrementNumberGenerator********</span><br><span class="line">DigitObserver:10</span><br><span class="line">DigitObserver:**********</span><br><span class="line">DigitObserver:15</span><br><span class="line">DigitObserver:***************</span><br><span class="line">DigitObserver:20</span><br><span class="line">DigitObserver:********************</span><br><span class="line">DigitObserver:25</span><br><span class="line">DigitObserver:*************************</span><br><span class="line">DigitObserver:30</span><br><span class="line">DigitObserver:******************************</span><br><span class="line">DigitObserver:35</span><br><span class="line">DigitObserver:***********************************</span><br><span class="line">DigitObserver:40</span><br><span class="line">DigitObserver:****************************************</span><br><span class="line">DigitObserver:45</span><br><span class="line">DigitObserver:*********************************************</span><br><span class="line">******RandomNumberGenerator********</span><br><span class="line">DigitObserver:6</span><br><span class="line">DigitObserver:******</span><br><span class="line">DigitObserver:3</span><br><span class="line">DigitObserver:***</span><br><span class="line">DigitObserver:12</span><br><span class="line">DigitObserver:************</span><br><span class="line">DigitObserver:23</span><br><span class="line">DigitObserver:***********************</span><br><span class="line">DigitObserver:27</span><br><span class="line">DigitObserver:***************************</span><br><span class="line">DigitObserver:3</span><br><span class="line">DigitObserver:***</span><br><span class="line">DigitObserver:30</span><br><span class="line">DigitObserver:******************************</span><br><span class="line">DigitObserver:5</span><br><span class="line">DigitObserver:*****</span><br><span class="line">DigitObserver:29</span><br><span class="line">DigitObserver:*****************************</span><br><span class="line">DigitObserver:26</span><br><span class="line">DigitObserver:**************************</span><br></pre></td></tr></table></figure>
+<h2 id="类图"><a href="#类图" class="headerlink" title="类图"></a>类图</h2><p><img src="https://upload-images.jianshu.io/upload_images/10024246-df33cae6f551999c.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="类图"></p>
+<h2 id="角色"><a href="#角色" class="headerlink" title="角色"></a>角色</h2><ul>
+<li>Subject（观察对象）<br>Subject角色表示观察对象，Subject角色定义了注册观察者和删除观察者的方法，此外，它还声明了“获取现在的状态”的方法。在示例中NumberGenerator扮演该角色</li>
+<li>ConcreteSubject（具体的观察对象）<br>ConcreteSubject角色表示具体的观察者对象，当自身状态变化时，它会通知所以已经注册的Observe角色，示例中RandomNumberGenerator、IncrementNumberGenerator扮演该角色</li>
+<li>Observer（观察者）<br>Observer角色负责解释来自Subject角色的状态变化的通知，为此，它声明了update方法。示例中Observer接口扮演此角色</li>
+<li>ConcreteObserver（具体的观察者）<br>ConcreteObserver角色表示具体的Observer。当他的update方法被调用后，它去获取要观察的对象的最新状态，在示例中，由DigitObserver、GraphObserver扮演此角色</li>
+</ul>
+
+      
+    </div>
+
+    
+    
+    
+
+    <footer class="post-footer">
+        <div class="post-eof"></div>
+      
+    </footer>
+  </article>
+</div>
+
+
+
+
+  <nav class="pagination">
+    <a class="extend prev" rel="prev" href="/nirvana/page/8/"><i class="fa fa-angle-left" aria-label="上一页"></i></a><a class="page-number" href="/nirvana/">1</a><span class="space">&hellip;</span><a class="page-number" href="/nirvana/page/8/">8</a><span class="page-number current">9</span><a class="page-number" href="/nirvana/page/10/">10</a><span class="space">&hellip;</span><a class="page-number" href="/nirvana/page/18/">18</a><a class="extend next" rel="next" href="/nirvana/page/10/"><i class="fa fa-angle-right" aria-label="下一页"></i></a>
+  </nav>
+
+
+<script>
+  window.addEventListener('tabs:register', () => {
+    let { activeClass } = CONFIG.comments;
+    if (CONFIG.comments.storage) {
+      activeClass = localStorage.getItem('comments_active') || activeClass;
+    }
+    if (activeClass) {
+      const activeTab = document.querySelector(`a[href="#comment-${activeClass}"]`);
+      if (activeTab) {
+        activeTab.click();
+      }
+    }
+  });
+  if (CONFIG.comments.storage) {
+    window.addEventListener('tabs:click', event => {
+      if (!event.target.matches('.tabs-comment .tab-content .tab-pane')) return;
+      const commentClass = event.target.classList[1];
+      localStorage.setItem('comments_active', commentClass);
+    });
+  }
+</script>
+</div>
+  </main>
+
+  <footer class="footer">
+    <div class="footer-inner">
+
+
+<div class="copyright">
+  &copy; 
+  <span itemprop="copyrightYear">2021</span>
+  <span class="with-love">
+    <i class="fa fa-heart"></i>
+  </span>
+  <span class="author" itemprop="copyrightHolder">nirvana</span>
+</div>
+<div class="wordcount">
+  <span class="post-meta-item">
+    <span class="post-meta-item-icon">
+      <i class="fa fa-chart-line"></i>
+    </span>
+      <span>站点总字数：</span>
+    <span title="站点总字数">540k</span>
+  </span>
+  <span class="post-meta-item">
+    <span class="post-meta-item-icon">
+      <i class="fa fa-coffee"></i>
+    </span>
+      <span>站点阅读时长 &asymp;</span>
+    <span title="站点阅读时长">8:11</span>
+  </span>
+</div>
+  <div class="powered-by">由 <a href="https://hexo.io/" class="theme-link" rel="noopener" target="_blank">Hexo</a> & <a href="https://theme-next.js.org/" class="theme-link" rel="noopener" target="_blank">NexT.Gemini</a> 强力驱动
+  </div>
+
+    </div>
+  </footer>
+
+  
+  <script src="https://cdn.jsdelivr.net/npm/animejs@3.2.1/lib/anime.min.js"></script>
+<script src="/nirvana/js/utils.js"></script><script src="/nirvana/js/motion.js"></script><script src="/nirvana/js/next-boot.js"></script>
+
+  
+
+
+
+
+
+
+  
+
+
+
+
+
+</body>
+</html>
