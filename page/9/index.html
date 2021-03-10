@@ -177,7 +177,7 @@
   <nav class="site-state">
       <div class="site-state-item site-state-posts">
           <a href="/nirvana/archives">
-          <span class="site-state-item-count">178</span>
+          <span class="site-state-item-count">177</span>
           <span class="site-state-item-name">日志</span>
         </a>
       </div>
@@ -211,114 +211,6 @@
 
 
     <div class="main-inner index posts-expand">
-
-    
-
-
-<div class="post-block">
-  
-  
-
-  <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="">
-    <link itemprop="mainEntityOfPage" href="https://lzhwweb.github.io/nirvana/DesignPattern/%E8%AE%BE%E8%AE%A1%E6%A8%A1%E5%BC%8F%EF%BC%88TypeScript%EF%BC%89/Composite%E6%A8%A1%E5%BC%8F%EF%BC%88%E7%BB%84%E5%90%88%E5%AE%9E%E4%BD%93%E6%A8%A1%E5%BC%8F%EF%BC%89/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="image" content="/nirvana/images/avatar.gif">
-      <meta itemprop="name" content="nirvana">
-      <meta itemprop="description" content="个人学习笔记">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="涅槃快乐是金">
-    </span>
-      <header class="post-header">
-        <h2 class="post-title" itemprop="name headline">
-          <a href="/nirvana/DesignPattern/%E8%AE%BE%E8%AE%A1%E6%A8%A1%E5%BC%8F%EF%BC%88TypeScript%EF%BC%89/Composite%E6%A8%A1%E5%BC%8F%EF%BC%88%E7%BB%84%E5%90%88%E5%AE%9E%E4%BD%93%E6%A8%A1%E5%BC%8F%EF%BC%89/" class="post-title-link" itemprop="url">Composite模式（组合实体模式）</a>
-        </h2>
-
-        <div class="post-meta-container">
-          <div class="post-meta">
-    <span class="post-meta-item">
-      <span class="post-meta-item-icon">
-        <i class="far fa-calendar"></i>
-      </span>
-      <span class="post-meta-item-text">发表于</span>
-
-      <time title="创建时间：2021-03-11 21:12:40" itemprop="dateCreated datePublished" datetime="2021-03-11T21:12:40+08:00">2021-03-11</time>
-    </span>
-      <span class="post-meta-item">
-        <span class="post-meta-item-icon">
-          <i class="far fa-calendar-check"></i>
-        </span>
-        <span class="post-meta-item-text">更新于</span>
-        <time title="修改时间：2021-03-10 10:53:50" itemprop="dateModified" datetime="2021-03-10T10:53:50+08:00">2021-03-10</time>
-      </span>
-    <span class="post-meta-item">
-      <span class="post-meta-item-icon">
-        <i class="far fa-folder"></i>
-      </span>
-      <span class="post-meta-item-text">分类于</span>
-        <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-          <a href="/nirvana/categories/DesignPattern/" itemprop="url" rel="index"><span itemprop="name">DesignPattern</span></a>
-        </span>
-    </span>
-
-  
-      </div>
-      <div class="post-meta">
-    <span class="post-meta-item" title="本文字数">
-      <span class="post-meta-item-icon">
-        <i class="far fa-file-word"></i>
-      </span>
-      <span class="post-meta-item-text">本文字数：</span>
-      <span>2.7k</span>
-    </span>
-    <span class="post-meta-item" title="阅读时长">
-      <span class="post-meta-item-icon">
-        <i class="far fa-clock"></i>
-      </span>
-      <span class="post-meta-item-text">阅读时长 &asymp;</span>
-      <span>2 分钟</span>
-    </span>
-</div>
-
-        </div>
-      </header>
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-          <h2 id="组合实体模式"><a href="#组合实体模式" class="headerlink" title="组合实体模式"></a>组合实体模式</h2><p>组合实体模式（Composite Entity Pattern）能够是容器和内容具有一致性，创造出递归结构的模式。<br>常见使用场景：如树形菜单、文件夹菜单、部门组织架构图等。</p>
-<h2 id="示例："><a href="#示例：" class="headerlink" title="示例："></a>示例：</h2><h3 id="Component-抽象类"><a href="#Component-抽象类" class="headerlink" title="Component:抽象类"></a>Component:抽象类</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">export default abstract class Component &#123;</span><br><span class="line">    public abstract Opertion(): void; &#x2F;&#x2F;操作</span><br><span class="line">    public abstract Add(Child: Component): void;&#x2F;&#x2F;添加子节点</span><br><span class="line">    public abstract Remove(index: number): void;&#x2F;&#x2F;删除节点</span><br><span class="line">    public abstract getChild(index: number): Array&lt;Component&gt;;&#x2F;&#x2F;获取子节点</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-<h3 id="Leaf-叶子类"><a href="#Leaf-叶子类" class="headerlink" title="Leaf:叶子类"></a>Leaf:叶子类</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br></pre></td><td class="code"><pre><span class="line">import Component from &quot;.&#x2F;Component&quot;;</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">export default class Leaf extends Component &#123;</span><br><span class="line"></span><br><span class="line">    private leafName: string;</span><br><span class="line"></span><br><span class="line">    constructor(leafName: string) &#123;</span><br><span class="line">        super();</span><br><span class="line">        this.leafName &#x3D; leafName;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    public Opertion(): void &#123;</span><br><span class="line">        console.log(this.leafName + &quot;正在迎风摇摆&quot;);</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    public Add(Child: Component): void &#123;</span><br><span class="line"></span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    public Remove(index: number): void &#123;</span><br><span class="line"></span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    public getChild(index: number): Array&lt;Component&gt; &#123;</span><br><span class="line">        return null;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-<h3 id="Trunk-树干类"><a href="#Trunk-树干类" class="headerlink" title="Trunk:树干类"></a>Trunk:树干类</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br></pre></td><td class="code"><pre><span class="line">import Component from &quot;.&#x2F;Component&quot;;</span><br><span class="line"></span><br><span class="line">export default class Trunk extends Component &#123;</span><br><span class="line"></span><br><span class="line">    private TrunkName: string;</span><br><span class="line"></span><br><span class="line">    private components: Array&lt;Component&gt; &#x3D; []; &#x2F;&#x2F;多个子节点</span><br><span class="line"></span><br><span class="line">    constructor(TrunkName: string) &#123;</span><br><span class="line">        super();</span><br><span class="line">        this.TrunkName &#x3D; TrunkName;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    public Opertion(): void &#123;</span><br><span class="line">        console.log(this.TrunkName + &quot;树干正在抵御秋风&quot;);</span><br><span class="line">        this.components.forEach((item, index) &#x3D;&gt; &#123;</span><br><span class="line">            item.Opertion();</span><br><span class="line">        &#125;)</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    public Add(Child: Component): void &#123;</span><br><span class="line">        this.components.push(Child);</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    public Remove(index: number): void &#123;</span><br><span class="line">        this.components.splice(index, 1);</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    public getChild(index: number): Array&lt;Component&gt; &#123;</span><br><span class="line">        return this.components;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-<h3 id="index-ts"><a href="#index-ts" class="headerlink" title="index.ts"></a>index.ts</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br></pre></td><td class="code"><pre><span class="line">import Trunk from &quot;.&#x2F;Trunk&quot;;</span><br><span class="line">import Leaf from &quot;.&#x2F;Leaf&quot;;</span><br><span class="line"></span><br><span class="line">const root: Trunk &#x3D; new Trunk(&quot;树根&quot;);</span><br><span class="line"></span><br><span class="line">const trunk: Trunk &#x3D; new Trunk(&quot;主干&quot;);</span><br><span class="line"></span><br><span class="line">const t1: Trunk &#x3D; new Trunk(&quot;主分支&quot;);</span><br><span class="line">const t2: Trunk &#x3D; new Trunk(&quot;第一分支&quot;);</span><br><span class="line">const t3: Trunk &#x3D; new Trunk(&quot;第二分支&quot;);</span><br><span class="line"></span><br><span class="line">const l1: Leaf &#x3D; new Leaf(&quot;分叶1&quot;);</span><br><span class="line">const l2: Leaf &#x3D; new Leaf(&quot;分叶2&quot;);</span><br><span class="line">const l3: Leaf &#x3D; new Leaf(&quot;分叶3&quot;);</span><br><span class="line">const l4: Leaf &#x3D; new Leaf(&quot;分叶4&quot;);</span><br><span class="line">const l5: Leaf &#x3D; new Leaf(&quot;分叶5&quot;);</span><br><span class="line"></span><br><span class="line">root.Add(trunk);</span><br><span class="line">trunk.Add(t1);</span><br><span class="line"></span><br><span class="line">t1.Add(t2);</span><br><span class="line">t1.Add(t3);</span><br><span class="line"></span><br><span class="line">t2.Add(l1);</span><br><span class="line">t2.Add(l3);</span><br><span class="line">t2.Add(l5);</span><br><span class="line"></span><br><span class="line">t3.Add(l2);</span><br><span class="line">t3.Add(l4);</span><br><span class="line"></span><br><span class="line">root.Opertion();</span><br></pre></td></tr></table></figure>
-<h3 id="result"><a href="#result" class="headerlink" title="result"></a>result</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line">树根树干正在抵御秋风</span><br><span class="line">主干树干正在抵御秋风</span><br><span class="line">主分支树干正在抵御秋风</span><br><span class="line">第一分支树干正在抵御秋风</span><br><span class="line">分叶1正在迎风摇摆</span><br><span class="line">分叶3正在迎风摇摆</span><br><span class="line">分叶5正在迎风摇摆</span><br><span class="line">第二分支树干正在抵御秋风</span><br><span class="line">分叶2正在迎风摇摆</span><br><span class="line">分叶4正在迎风摇摆</span><br></pre></td></tr></table></figure>
-<h3 id="类图"><a href="#类图" class="headerlink" title="类图"></a>类图</h3><p><img src="https://upload-images.jianshu.io/upload_images/10024246-d9e5cb13d2a82048.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="类图"></p>
-<h3 id="composite模式"><a href="#composite模式" class="headerlink" title="composite模式"></a>composite模式</h3><p>composite模式主要有一下几类角色</p>
-<ul>
-<li>leaf 树叶<br>表示内容的角色，该角色中不能放入其他对象，对应我们实例程序中的leaf</li>
-<li>Composite 复合物<br>表示容器的角色，可以放入小容器和内容，也就是leaf和composite，此实例中，由Trunk类代表composite</li>
-<li>component<br>是leaf和composite角色具有一致性的角色，一般作为leaf和composite的父类，定义一些共有的行为和属性，此例中的component类代表</li>
-</ul>
-
-      
-    </div>
-
-    
-    
-    
-
-    <footer class="post-footer">
-        <div class="post-eof"></div>
-      
-    </footer>
-  </article>
-</div>
-
-
-
 
     
 
@@ -1403,6 +1295,109 @@ Gamer类：表示游戏主人公的类<figure class="highlight plain"><table><tr
 
 
 
+    
+
+
+<div class="post-block">
+  
+  
+
+  <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="">
+    <link itemprop="mainEntityOfPage" href="https://lzhwweb.github.io/nirvana/DesignPattern/%E8%AE%BE%E8%AE%A1%E6%A8%A1%E5%BC%8F%EF%BC%88TypeScript%EF%BC%89/Prototype-Pattern(%E5%8E%9F%E5%9E%8B%E6%A8%A1%E5%BC%8F%EF%BC%89/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/nirvana/images/avatar.gif">
+      <meta itemprop="name" content="nirvana">
+      <meta itemprop="description" content="个人学习笔记">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="涅槃快乐是金">
+    </span>
+      <header class="post-header">
+        <h2 class="post-title" itemprop="name headline">
+          <a href="/nirvana/DesignPattern/%E8%AE%BE%E8%AE%A1%E6%A8%A1%E5%BC%8F%EF%BC%88TypeScript%EF%BC%89/Prototype-Pattern(%E5%8E%9F%E5%9E%8B%E6%A8%A1%E5%BC%8F%EF%BC%89/" class="post-title-link" itemprop="url">Prototype-Pattern(原型模式）</a>
+        </h2>
+
+        <div class="post-meta-container">
+          <div class="post-meta">
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-calendar"></i>
+      </span>
+      <span class="post-meta-item-text">发表于</span>
+
+      <time title="创建时间：2021-03-11 21:12:40" itemprop="dateCreated datePublished" datetime="2021-03-11T21:12:40+08:00">2021-03-11</time>
+    </span>
+      <span class="post-meta-item">
+        <span class="post-meta-item-icon">
+          <i class="far fa-calendar-check"></i>
+        </span>
+        <span class="post-meta-item-text">更新于</span>
+        <time title="修改时间：2021-03-10 10:57:10" itemprop="dateModified" datetime="2021-03-10T10:57:10+08:00">2021-03-10</time>
+      </span>
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-folder"></i>
+      </span>
+      <span class="post-meta-item-text">分类于</span>
+        <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+          <a href="/nirvana/categories/DesignPattern/" itemprop="url" rel="index"><span itemprop="name">DesignPattern</span></a>
+        </span>
+    </span>
+
+  
+      </div>
+      <div class="post-meta">
+    <span class="post-meta-item" title="本文字数">
+      <span class="post-meta-item-icon">
+        <i class="far fa-file-word"></i>
+      </span>
+      <span class="post-meta-item-text">本文字数：</span>
+      <span>1.8k</span>
+    </span>
+    <span class="post-meta-item" title="阅读时长">
+      <span class="post-meta-item-icon">
+        <i class="far fa-clock"></i>
+      </span>
+      <span class="post-meta-item-text">阅读时长 &asymp;</span>
+      <span>2 分钟</span>
+    </span>
+</div>
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+          <p><strong>原型模式（Prototype Pattern）</strong>：是指原型实例指向创建对象的种类，并通过拷贝这些原型创建新的对象，是一种用来创建对象的模式，也就是创建一个对象作为另一个对象的prototype属性。这种类型的设计模式属于创建型模式<br>在js中原型设计模式的使用要比java、C中要简单的多。</p>
+<h2 id="1、Object-create"><a href="#1、Object-create" class="headerlink" title="1、Object.create()"></a>1、Object.create()</h2><blockquote>
+<p>1、定义: 创建一个可指定原型对象的并可以包含可选自定义属性的对象；<br>2、 Object.create(proto [, properties]);  可选，用于配置新对象的属性;</p>
+</blockquote>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br></pre></td><td class="code"><pre><span class="line">方法说明</span><br><span class="line">1. proto: 要创建新对象的 原型，必须，可为 null; 这个 proto 要是已经创建的[new过]，或 对象.prototype 才有价值;</span><br><span class="line"></span><br><span class="line">2. properties: 可选，结构为:</span><br><span class="line"></span><br><span class="line">&#123;</span><br><span class="line"></span><br><span class="line">     propField: &#123;</span><br><span class="line"></span><br><span class="line">           value: &#39;val&#39;|&#123;&#125;|function()&#123;&#125;,</span><br><span class="line"></span><br><span class="line">           writable: true|false,</span><br><span class="line"></span><br><span class="line">           enumerable: true|false,</span><br><span class="line"></span><br><span class="line">           configurable: true|false,</span><br><span class="line"></span><br><span class="line">           get:function()&#123;return 10&#125;,</span><br><span class="line"></span><br><span class="line">           set:function(value)&#123;&#125;</span><br><span class="line"></span><br><span class="line">     &#125;</span><br><span class="line"></span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">自定的属性有以下的四种本置属性：</span><br><span class="line"></span><br><span class="line">value: 自定义属性值;</span><br><span class="line"></span><br><span class="line">writable: 该项值是否可编辑，默认为 false, 当为 true 时，obj.prodField 可赋值；否则只读;</span><br><span class="line"></span><br><span class="line">enumerable: 可枚举; </span><br><span class="line"></span><br><span class="line">confirurable: 可配置;</span><br><span class="line">还可以包含 set, get 访问器方法；</span><br><span class="line">其中，[set, get] 与 value 和 writable 不能同时出现；</span><br><span class="line"></span><br></pre></td></tr></table></figure>
+<h5 id="示例"><a href="#示例" class="headerlink" title="示例"></a>示例</h5><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br></pre></td><td class="code"><pre><span class="line">* 原型模式使用</span><br><span class="line"> * Object.create</span><br><span class="line"> * **&#x2F;</span><br><span class="line">const person &#x3D; &#123;</span><br><span class="line">  isHuman: false,</span><br><span class="line">  printIntroduction: function() &#123;</span><br><span class="line">    console.log(&#96;My name is $&#123;this.name&#125;. Am I human? $&#123;this.isHuman&#125;&#96;);</span><br><span class="line">  &#125;</span><br><span class="line">&#125;;</span><br><span class="line"></span><br><span class="line">const me &#x3D; Object.create(person);</span><br><span class="line"></span><br><span class="line">me.name &#x3D; &#39;Matthew&#39;; &#x2F;&#x2F; &quot;name&quot; is a property set on &quot;me&quot;, but not on &quot;person&quot;</span><br><span class="line">me.isHuman &#x3D; true; &#x2F;&#x2F; inherited properties can be overwritten</span><br><span class="line"></span><br><span class="line">me.printIntroduction();</span><br><span class="line">&#x2F;&#x2F; expected output: &quot;My name is Matthew. Am I human? true&quot;</span><br></pre></td></tr></table></figure>
+<h2 id="2、prototype-来创建对象变量"><a href="#2、prototype-来创建对象变量" class="headerlink" title="2、prototype 来创建对象变量"></a>2、prototype 来创建对象变量</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br></pre></td><td class="code"><pre><span class="line">&#x2F;***</span><br><span class="line"> * 使用prototype来创建实例对象</span><br><span class="line"> * @param name</span><br><span class="line"> * @returns &#123;createPerson.Person&#125;</span><br><span class="line"> *&#x2F;</span><br><span class="line">function createPerson(name)&#123;</span><br><span class="line">  function  Person()&#123;</span><br><span class="line">&#125;;</span><br><span class="line"> </span><br><span class="line">  Person.prototype &#x3D; person;</span><br><span class="line">  let newPerson &#x3D; new Person();</span><br><span class="line">  newPerson.name &#x3D; name;</span><br><span class="line">  return newPerson;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">let me &#x3D; createPerson(&quot;Matthew&quot;);</span><br><span class="line">me.isHuman &#x3D; true;</span><br><span class="line"></span><br><span class="line">me.printIntroduction();</span><br><span class="line">&#x2F;&#x2F; expected output: &quot;My name is Matthew. Am I human? true&quot;</span><br></pre></td></tr></table></figure>
+<h2 id="java版类图"><a href="#java版类图" class="headerlink" title="java版类图"></a><code>java版类图</code></h2><p><img src="https://upload-images.jianshu.io/upload_images/10024246-b2c242cddd8b223f.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240"></p>
+
+      
+    </div>
+
+    
+    
+    
+
+    <footer class="post-footer">
+        <div class="post-eof"></div>
+      
+    </footer>
+  </article>
+</div>
+
+
+
+
   <nav class="pagination">
     <a class="extend prev" rel="prev" href="/nirvana/page/8/"><i class="fa fa-angle-left" aria-label="上一页"></i></a><a class="page-number" href="/nirvana/">1</a><span class="space">&hellip;</span><a class="page-number" href="/nirvana/page/8/">8</a><span class="page-number current">9</span><a class="page-number" href="/nirvana/page/10/">10</a><span class="space">&hellip;</span><a class="page-number" href="/nirvana/page/18/">18</a><a class="extend next" rel="next" href="/nirvana/page/10/"><i class="fa fa-angle-right" aria-label="下一页"></i></a>
   </nav>
@@ -1450,14 +1445,14 @@ Gamer类：表示游戏主人公的类<figure class="highlight plain"><table><tr
       <i class="fa fa-chart-line"></i>
     </span>
       <span>站点总字数：</span>
-    <span title="站点总字数">540k</span>
+    <span title="站点总字数">539k</span>
   </span>
   <span class="post-meta-item">
     <span class="post-meta-item-icon">
       <i class="fa fa-coffee"></i>
     </span>
       <span>站点阅读时长 &asymp;</span>
-    <span title="站点阅读时长">8:11</span>
+    <span title="站点阅读时长">8:10</span>
   </span>
 </div>
   <div class="powered-by">由 <a href="https://hexo.io/" class="theme-link" rel="noopener" target="_blank">Hexo</a> & <a href="https://theme-next.js.org/" class="theme-link" rel="noopener" target="_blank">NexT.Gemini</a> 强力驱动
