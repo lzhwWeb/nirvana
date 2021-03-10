@@ -179,7 +179,7 @@
   <nav class="site-state">
       <div class="site-state-item site-state-posts">
           <a href="/nirvana/archives">
-          <span class="site-state-item-count">176</span>
+          <span class="site-state-item-count">177</span>
           <span class="site-state-item-name">日志</span>
         </a>
       </div>
@@ -213,6 +213,576 @@
 
 
     <div class="main-inner index posts-expand">
+
+    
+
+
+<div class="post-block">
+  
+  
+
+  <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="">
+    <link itemprop="mainEntityOfPage" href="https://lzhwweb.github.io/nirvana/mac/mac/macOS-%E5%AE%89%E8%A3%85-Docker/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/nirvana/images/headphoto.jpeg">
+      <meta itemprop="name" content="nirvana">
+      <meta itemprop="description" content="个人学习笔记">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="涅槃快乐是金">
+    </span>
+      <header class="post-header">
+        <h2 class="post-title" itemprop="name headline">
+          <a href="/nirvana/mac/mac/macOS-%E5%AE%89%E8%A3%85-Docker/" class="post-title-link" itemprop="url">macOS-安装-Docker</a>
+        </h2>
+
+        <div class="post-meta-container">
+          <div class="post-meta">
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-calendar"></i>
+      </span>
+      <span class="post-meta-item-text">发表于</span>
+      
+
+      <time title="创建时间：2021-03-10 21:12:40 / 修改时间：13:43:55" itemprop="dateCreated datePublished" datetime="2021-03-10T21:12:40+08:00">2021-03-10</time>
+    </span>
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-folder"></i>
+      </span>
+      <span class="post-meta-item-text">分类于</span>
+        <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+          <a href="/nirvana/categories/mac/" itemprop="url" rel="index"><span itemprop="name">mac</span></a>
+        </span>
+    </span>
+
+  
+      </div>
+      <div class="post-meta">
+    <span class="post-meta-item" title="本文字数">
+      <span class="post-meta-item-icon">
+        <i class="far fa-file-word"></i>
+      </span>
+      <span class="post-meta-item-text">本文字数：</span>
+      <span>808</span>
+    </span>
+    <span class="post-meta-item" title="阅读时长">
+      <span class="post-meta-item-icon">
+        <i class="far fa-clock"></i>
+      </span>
+      <span class="post-meta-item-text">阅读时长 &asymp;</span>
+      <span>1 分钟</span>
+    </span>
+</div>
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+          <h1 id="macOS"><a href="#macOS" class="headerlink" title="macOS"></a>macOS</h1><h1 id=""><a href="#" class="headerlink" title=""></a></h1><p>系统要求<a target="_blank" rel="noopener" href="https://yeasy.gitbook.io/docker_practice/install/mac#xi-tong-yao-qiu"></a></p>
+<p><a target="_blank" rel="noopener" href="https://docs.docker.com/docker-for-mac/">Docker Desktop for Mac</a> 要求系统最低为 macOS Mojave 10.14。</p>
+<h1 id="-1"><a href="#-1" class="headerlink" title=""></a></h1><p>安装<a target="_blank" rel="noopener" href="https://yeasy.gitbook.io/docker_practice/install/mac#an-zhuang"></a></p>
+<h2 id="-2"><a href="#-2" class="headerlink" title=""></a></h2><p>使用 Homebrew 安装<a target="_blank" rel="noopener" href="https://yeasy.gitbook.io/docker_practice/install/mac#shi-yong-homebrew-an-zhuang"></a></p>
+<p><a target="_blank" rel="noopener" href="https://brew.sh/">Homebrew</a> 的 <a target="_blank" rel="noopener" href="https://github.com/Homebrew/homebrew-cask">Cask</a> 已经支持 Docker Desktop for Mac，因此可以很方便的使用 Homebrew Cask 来进行安装：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ brew cask install docker</span><br></pre></td></tr></table></figure>
+<h2 id="手动下载安装"><a href="#手动下载安装" class="headerlink" title="手动下载安装"></a>手动下载安装</h2><p>如果需要手动下载，请点击以下链接下载 <a target="_blank" rel="noopener" href="https://download.docker.com/mac/stable/Docker.dmg">Stable</a> 或 <a target="_blank" rel="noopener" href="https://download.docker.com/mac/edge/Docker.dmg">Edge</a> 版本的 Docker Desktop for Mac。</p>
+<p>如同 macOS 其它软件一样，安装也非常简单，双击下载的 <code>.dmg</code> 文件，然后将那只叫 <a target="_blank" rel="noopener" href="https://www.docker.com/blog/call-me-moby-dock/">Moby</a> 的鲸鱼图标拖拽到 <code>Application</code> 文件夹即可（其间需要输入用户密码）。<br><img src="https://upload-images.jianshu.io/upload_images/10024246-ed67d3f5d80f1b0a.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240"></p>
+<h1 id="运行"><a href="#运行" class="headerlink" title="运行"></a>运行</h1><p>从应用中找到 Docker 图标并点击运行。</p>
+<p><img src="https://upload-images.jianshu.io/upload_images/10024246-53121fff4bb2948c.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240"></p>
+<p>运行之后，会在右上角菜单栏看到多了一个鲸鱼图标，这个图标表明了 Docker 的运行状态。</p>
+<p><img src="https://upload-images.jianshu.io/upload_images/10024246-23ece114e822f25d.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240"></p>
+<p>每次点击鲸鱼图标会弹出操作菜单。</p>
+<p><img src="https://upload-images.jianshu.io/upload_images/10024246-b9ea98917ad76fe3.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240"></p>
+<p>之后，你可以在终端通过命令检查安装后的 Docker 版本。</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">$ docker --version</span><br><span class="line"></span><br><span class="line">Docker version 19.03.8, build afacb8b</span><br><span class="line"></span><br><span class="line">$ docker-compose --version</span><br><span class="line"></span><br><span class="line">docker-compose version 1.25.5, build 8a1c60f6</span><br></pre></td></tr></table></figure>
+
+<p>如果 <code>docker version</code>、<code>docker info</code> 都正常的话，可以尝试运行一个 <a target="_blank" rel="noopener" href="https://hub.docker.com/_/nginx/">Nginx 服务器</a>：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ docker run -d -p 80:80 --name webserver nginx</span><br></pre></td></tr></table></figure>
+
+<p>服务运行后，可以访问 <a target="_blank" rel="noopener" href="http://localhost/">http://localhost</a>，如果看到了 “Welcome to nginx!”，就说明 Docker Desktop for Mac 安装成功了。<br><img src="https://upload-images.jianshu.io/upload_images/10024246-0e37b4c4c52d946a.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="image.png"></p>
+<p>要停止 Nginx 服务器并删除执行下面的命令：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">$ docker stop webserver</span><br><span class="line"></span><br><span class="line">$ docker rm webserver</span><br><span class="line"></span><br></pre></td></tr></table></figure>
+
+<h1 id="镜像加速"><a href="#镜像加速" class="headerlink" title="镜像加速"></a>镜像加速</h1><p>如果在使用过程中发现拉取 Docker 镜像十分缓慢，可以配置 Docker <a target="_blank" rel="noopener" href="https://yeasy.gitbook.io/docker_practice/install/mirror">国内镜像加速</a>。</p>
+<h1 id="-3"><a href="#-3" class="headerlink" title=""></a></h1><p>参考链接<a target="_blank" rel="noopener" href="https://yeasy.gitbook.io/docker_practice/install/mac#can-kao-lian-jie"></a></p>
+<ul>
+<li>  <a target="_blank" rel="noopener" href="https://docs.docker.com/docker-for-mac/install/">官方文档</a></li>
+</ul>
+
+      
+    </div>
+
+    
+    
+    
+
+    <footer class="post-footer">
+        <div class="post-eof"></div>
+      
+    </footer>
+  </article>
+</div>
+
+
+
+
+    
+
+
+<div class="post-block">
+  
+  
+
+  <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="">
+    <link itemprop="mainEntityOfPage" href="https://lzhwweb.github.io/nirvana/mac/mac/macOS%E7%B3%BB%E7%BB%9F%E4%B8%8B%E5%AE%89%E8%A3%85Homebrew%E6%85%A2/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/nirvana/images/headphoto.jpeg">
+      <meta itemprop="name" content="nirvana">
+      <meta itemprop="description" content="个人学习笔记">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="涅槃快乐是金">
+    </span>
+      <header class="post-header">
+        <h2 class="post-title" itemprop="name headline">
+          <a href="/nirvana/mac/mac/macOS%E7%B3%BB%E7%BB%9F%E4%B8%8B%E5%AE%89%E8%A3%85Homebrew%E6%85%A2/" class="post-title-link" itemprop="url">macOS系统下安装Homebrew慢</a>
+        </h2>
+
+        <div class="post-meta-container">
+          <div class="post-meta">
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-calendar"></i>
+      </span>
+      <span class="post-meta-item-text">发表于</span>
+      
+
+      <time title="创建时间：2021-03-10 21:12:40 / 修改时间：13:43:55" itemprop="dateCreated datePublished" datetime="2021-03-10T21:12:40+08:00">2021-03-10</time>
+    </span>
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-folder"></i>
+      </span>
+      <span class="post-meta-item-text">分类于</span>
+        <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+          <a href="/nirvana/categories/mac/" itemprop="url" rel="index"><span itemprop="name">mac</span></a>
+        </span>
+    </span>
+
+  
+      </div>
+      <div class="post-meta">
+    <span class="post-meta-item" title="本文字数">
+      <span class="post-meta-item-icon">
+        <i class="far fa-file-word"></i>
+      </span>
+      <span class="post-meta-item-text">本文字数：</span>
+      <span>1.8k</span>
+    </span>
+    <span class="post-meta-item" title="阅读时长">
+      <span class="post-meta-item-icon">
+        <i class="far fa-clock"></i>
+      </span>
+      <span class="post-meta-item-text">阅读时长 &asymp;</span>
+      <span>2 分钟</span>
+    </span>
+</div>
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+          <h4 id="1-获取install文件并编辑"><a href="#1-获取install文件并编辑" class="headerlink" title="1.获取install文件并编辑"></a>1.获取install文件并编辑</h4><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">cd ~</span><br><span class="line">curl -fsSL https:&#x2F;&#x2F;raw.githubusercontent.com&#x2F;Homebrew&#x2F;install&#x2F;master&#x2F;install &gt;&gt; brew_install</span><br></pre></td></tr></table></figure>
+
+<blockquote>
+<p>编辑的话直接在Finder里面搜索brew_install，双击之后打开，一般会用<strong>Xcode</strong>打开。原文说的“<strong>注释掉BREW_REPO = “<a target="_blank" rel="noopener" href="https://github.com/Homebrew/brew&quot;.freeze%E5%92%8CCORE_TAP_REPO">https://github.com/Homebrew/brew&quot;.freeze和CORE_TAP_REPO</a> = “<a target="_blank" rel="noopener" href="https://github.com/Homebrew/homebrew-core&quot;.freeze">https://github.com/Homebrew/homebrew-core&quot;.freeze</a></strong>”，新版没有<strong>CORE_TAP_REPO</strong>这一行，不过没关系，新增上去就行了。</p>
+</blockquote>
+<p><strong>修改后代码和截图如下</strong></p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line">#!&#x2F;usr&#x2F;bin&#x2F;ruby</span><br><span class="line"># This script installs to &#x2F;usr&#x2F;local only. To install elsewhere (which is</span><br><span class="line"># unsupported) you can untar https:&#x2F;&#x2F;github.com&#x2F;Homebrew&#x2F;brew&#x2F;tarball&#x2F;master</span><br><span class="line"># anywhere you like.</span><br><span class="line">HOMEBREW_PREFIX &#x3D; &quot;&#x2F;usr&#x2F;local&quot;.freeze</span><br><span class="line">HOMEBREW_REPOSITORY &#x3D; &quot;&#x2F;usr&#x2F;local&#x2F;Homebrew&quot;.freeze</span><br><span class="line">HOMEBREW_CORE_TAP &#x3D; &quot;&#x2F;usr&#x2F;local&#x2F;Homebrew&#x2F;Library&#x2F;Taps&#x2F;homebrew&#x2F;homebrew-core&quot;.freeze</span><br><span class="line">HOMEBREW_CACHE &#x3D; &quot;#&#123;ENV[&quot;HOME&quot;]&#125;&#x2F;Library&#x2F;Caches&#x2F;Homebrew&quot;.freeze</span><br><span class="line">#BREW_REPO &#x3D; &quot;https:&#x2F;&#x2F;github.com&#x2F;Homebrew&#x2F;brew&quot;.freeze#修改前</span><br><span class="line">BREW_REPO &#x3D; &quot;git:&#x2F;&#x2F;mirrors.ustc.edu.cn&#x2F;brew.git&quot;.freeze#修改后</span><br><span class="line">CORE_TAP_REPO &#x3D; &quot;git:&#x2F;&#x2F;mirrors.ustc.edu.cn&#x2F;homebrew-core.git&quot;.freeze#新增</span><br></pre></td></tr></table></figure>
+
+<p><img src="https://upload-images.jianshu.io/upload_images/10024246-03688f54a0acd5dc.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240"></p>
+<h4 id="2-开始安装"><a href="#2-开始安装" class="headerlink" title="2.开始安装"></a>2.开始安装</h4><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">&#x2F;usr&#x2F;bin&#x2F;ruby ~&#x2F;brew_install</span><br></pre></td></tr></table></figure>
+
+<blockquote>
+<p>在这里我没有遇到原文下面提问的朋友遇到的卡住报错不动等问题，仅停顿了一会儿。</p>
+</blockquote>
+<h4 id="3-替换源"><a href="#3-替换源" class="headerlink" title="3.替换源"></a>3.替换源</h4><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">#替换homebrew默认源</span><br><span class="line">cd &quot;$(brew --repo)&quot;</span><br><span class="line">git remote set-url origin git:&#x2F;&#x2F;mirrors.ustc.edu.cn&#x2F;brew.git</span><br><span class="line"></span><br><span class="line">#替换homebrew-core源</span><br><span class="line">cd &quot;$(brew --repo)&#x2F;Library&#x2F;Taps&#x2F;homebrew&#x2F;homebrew-core&quot;</span><br><span class="line">git remote set-url origin git:&#x2F;&#x2F;mirrors.ustc.edu.cn&#x2F;homebrew-core.git</span><br><span class="line"></span><br></pre></td></tr></table></figure>
+
+<h4 id="4-brew更新"><a href="#4-brew更新" class="headerlink" title="4.brew更新"></a>4.brew更新</h4><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">brew update</span><br></pre></td></tr></table></figure>
+
+<p><strong>最后:</strong></p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">echo &#39;export HOMEBREW_BOTTLE_DOMAIN&#x3D;https:&#x2F;&#x2F;mirrors.ustc.edu.cn&#x2F;homebrew-bottles&#39; &gt;&gt; ~&#x2F;.bash_profile</span><br><span class="line">source ~&#x2F;.bash_profile</span><br></pre></td></tr></table></figure>
+
+      
+    </div>
+
+    
+    
+    
+
+    <footer class="post-footer">
+        <div class="post-eof"></div>
+      
+    </footer>
+  </article>
+</div>
+
+
+
+
+    
+
+
+<div class="post-block">
+  
+  
+
+  <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="">
+    <link itemprop="mainEntityOfPage" href="https://lzhwweb.github.io/nirvana/mac/mac/mac%E4%B8%8B%E5%AE%89%E8%A3%85nginx/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/nirvana/images/headphoto.jpeg">
+      <meta itemprop="name" content="nirvana">
+      <meta itemprop="description" content="个人学习笔记">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="涅槃快乐是金">
+    </span>
+      <header class="post-header">
+        <h2 class="post-title" itemprop="name headline">
+          <a href="/nirvana/mac/mac/mac%E4%B8%8B%E5%AE%89%E8%A3%85nginx/" class="post-title-link" itemprop="url">mac下安装nginx</a>
+        </h2>
+
+        <div class="post-meta-container">
+          <div class="post-meta">
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-calendar"></i>
+      </span>
+      <span class="post-meta-item-text">发表于</span>
+      
+
+      <time title="创建时间：2021-03-10 21:12:40 / 修改时间：13:43:55" itemprop="dateCreated datePublished" datetime="2021-03-10T21:12:40+08:00">2021-03-10</time>
+    </span>
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-folder"></i>
+      </span>
+      <span class="post-meta-item-text">分类于</span>
+        <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+          <a href="/nirvana/categories/mac/" itemprop="url" rel="index"><span itemprop="name">mac</span></a>
+        </span>
+    </span>
+
+  
+      </div>
+      <div class="post-meta">
+    <span class="post-meta-item" title="本文字数">
+      <span class="post-meta-item-icon">
+        <i class="far fa-file-word"></i>
+      </span>
+      <span class="post-meta-item-text">本文字数：</span>
+      <span>2.6k</span>
+    </span>
+    <span class="post-meta-item" title="阅读时长">
+      <span class="post-meta-item-icon">
+        <i class="far fa-clock"></i>
+      </span>
+      <span class="post-meta-item-text">阅读时长 &asymp;</span>
+      <span>2 分钟</span>
+    </span>
+</div>
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+          <p>安装工具：</p>
+<p><a target="_blank" rel="noopener" href="https://brew.sh/index_zh-cn.html">homebrew</a>（还没用过的小伙伴可以点链接进行了解或者自行百度）</p>
+<p>步骤：</p>
+<p>　　1、打开终端，习惯性命令：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">brew update</span><br></pre></td></tr></table></figure>
+<p>//结果：Already up-to-date.</pre></p>
+<p>　　2、终端继续执行命令：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">brew search nginx   &#x2F;&#x2F;查询要安装的软件是否存在</span><br></pre></td></tr></table></figure>
+
+<p>　　3、这里我们多执行一步“废”命令，不过有利于我们后面的配置：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">brew info nginx</span><br></pre></td></tr></table></figure>
+
+<p>　　运行结果：</p>
+<p>　　<img src="https://upload-images.jianshu.io/upload_images/10024246-4c9ce6a852151bf0.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240"></p>
+<p>　　我们可以看到，nginx在本地还未安装（Not installed），nginx的来源（From），Docroot默认为/usr/local/var/www，在/usr/local/etc/nginx/nginx.conf配置文件中默认端口被配置为8080从而使nginx运行时不需要加sudo，nginx将在/usr/local/etc/nginx/servers/目录中加载所有文件，以及我们可以通过最简单的命令 ‘nginx’ 来启动nginx。</p>
+<p>　　4、正式开始安装：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">brew install nginx</span><br></pre></td></tr></table></figure>
+
+<p><img src="https://upload-images.jianshu.io/upload_images/10024246-de5daa8180b3f4c3.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240"></p>
+<p>　　5、查看nginx安装目录（是否如info所说）：　</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">open &#x2F;usr&#x2F;local&#x2F;etc&#x2F;nginx&#x2F;</span><br></pre></td></tr></table></figure>
+
+<p>　　　　<img src="https://upload-images.jianshu.io/upload_images/10024246-90142c4098d678f3.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240"></p>
+<p>　　成功打开nginx目录，也可以看到如info所说servers目录以及nginx.conf的配置文件（后面会用到这个配置文件）。但我们并没有找到nginx被安装到了哪里。</p>
+<p>　　终端继续执行：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">open &#x2F;usr&#x2F;local&#x2F;Cellar&#x2F;nginx  &#x2F;&#x2F;其实这个才是nginx被安装到的目录</span><br></pre></td></tr></table></figure>
+
+<p>　　<img src="https://upload-images.jianshu.io/upload_images/10024246-4a716a1bef024b54.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240"></p>
+<p>　　会看到一个以当前安装的nginx的版本号为名称的文件夹，这个就是我们安装的nginx根目录啦。进入1.12.2_1/bin 目录，会看到nginx的可执行启动文件。</p>
+<p>　　同样的，我们在1.12.2_1/目录下还可以看到一个名字为html的快捷方式文件夹（暂且就这么叫吧），进入该目录我们会发现其实它指向的就是/usr/local/var/www目录，这个在上面我们查看的info信息中有提到（Dcroot）</p>
+<p> 　　6、启动nginx，终端输入如下命令：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">nginx</span><br></pre></td></tr></table></figure>
+
+<p>　　没有报错即为启动成功。<br>　　7、访问验证：</p>
+<p>　　　　打开浏览器访问localhost:8080,这里跟网上的一些教程会有些不一样，正常情况下到这一步就会能看到nginx的欢迎界面啦，然而博主却遇到了坑爹的情况（如果你能正常看到nginx欢迎界面，可以直接跳过这一步了）</p>
+<p><img src="https://upload-images.jianshu.io/upload_images/10024246-c85425af5395d326.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240"></p>
+<p> 　　想必这个错误大家都很熟悉了，我就不再多做解释，接下来直接说原因（该原因仅为猜测，因为无从验证）：安装的nginx会默认在html（也就是/usr/local/var/www）目录下生成一个欢迎页面文件，而出现上面这种情况就是欢迎页面文件没有生成（至于为什么没有生成就不得而知了，一切都是猜测）。</p>
+<p>　　那在解决这个问题之前，我们先来了解一下nginx的配置文件吧（nginx.conf）:</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">cat &#x2F;usr&#x2F;local&#x2F;etc&#x2F;nginx&#x2F;nginx.conf</span><br></pre></td></tr></table></figure>
+
+<p>　　显示配置文件的代码为：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br></pre></td><td class="code"><pre><span class="line">#user  nobody;</span><br><span class="line">worker_processes 1;</span><br><span class="line"></span><br><span class="line">#error_log  logs&#x2F;error.log;</span><br><span class="line">#error_log  logs&#x2F;error.log  notice;</span><br><span class="line">#error_log  logs&#x2F;error.log  info;</span><br><span class="line"></span><br><span class="line">#pid        logs&#x2F;nginx.pid;</span><br><span class="line"></span><br><span class="line">events &#123;</span><br><span class="line">    worker_connections 1024;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">http &#123;</span><br><span class="line">    include       mime.types;</span><br><span class="line">    default_type  application&#x2F;octet-stream;</span><br><span class="line"></span><br><span class="line">    #log_format  main &#39;$remote_addr - $remote_user [$time_local] &quot;$request&quot; &#39; # &#39;$status $body_bytes_sent &quot;$http_referer&quot; &#39; # &#39;&quot;$http_user_agent&quot; &quot;$http_x_forwarded_for&quot;&#39;;</span><br><span class="line"></span><br><span class="line">    #access_log  logs&#x2F;access.log  main;</span><br><span class="line"></span><br><span class="line">    sendfile        on;</span><br><span class="line">    #tcp_nopush     on;</span><br><span class="line"></span><br><span class="line">    #keepalive_timeout 0;</span><br><span class="line">    keepalive_timeout 65;</span><br><span class="line"></span><br><span class="line">    #gzip  on;</span><br><span class="line"></span><br><span class="line">    server &#123;</span><br><span class="line">　　　　 #侦听8080端口</span><br><span class="line">        listen 8080;</span><br><span class="line">　　　　 #定义使用 localhost访问</span><br><span class="line">        server_name  localhost;</span><br><span class="line"></span><br><span class="line">        #charset koi8-r;</span><br><span class="line"></span><br><span class="line">        #access_log  logs&#x2F;host.access.log  main;</span><br><span class="line"></span><br><span class="line">        location &#x2F; &#123;</span><br><span class="line">　　　　　　　#定义服务器的默认网站根目录位置</span><br><span class="line">            root   html;</span><br><span class="line">　　　　　　  #定义首页索引文件的名称</span><br><span class="line">            index  index.html index.htm;</span><br><span class="line">        &#125;</span><br><span class="line">　　　　　...</span><br><span class="line">　　　　　...</span><br><span class="line">　　　　　... (注释代码太多，就不全部贴出来了)  include servers&#x2F;*;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p>　　通过配置文件我们可以看到其默认的网站根目录为html（即/usr/local/var/www），而默认的索引文件为index.html 和 index.htm，这下就找到原因了，原来我们的根目录少了首页索引文件，那就来手动创建一个吧：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">cd &#x2F;usr&#x2F;local&#x2F;var&#x2F;www&#x2F;                      &#x2F;&#x2F;进入到www目录下</span><br><span class="line">touch index.html                            &#x2F;&#x2F;创建一个新的index.html文件</span><br><span class="line">vim index.html                              &#x2F;&#x2F;编辑该文件 &lt;&#x2F;pre&gt;</span><br><span class="line">&#96;&#96;&#96;&#96;</span><br><span class="line">　　将如下代码写入index.html文件中：</span><br></pre></td></tr></table></figure>
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>title</title>
+</head>
+<body>
+    <div>
+        <h1>我的nginx欢迎页面</h1>
+    </div>
+</body>
+</html>
+```
+
+
+<p>　　回到浏览器（localhost:8080）刷新：</p>
+<p><img src="https://upload-images.jianshu.io/upload_images/10024246-669dfb5bb1851e49.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240"></p>
+<p>　　OK，大功告成啦！</p>
+
+      
+    </div>
+
+    
+    
+    
+
+    <footer class="post-footer">
+        <div class="post-eof"></div>
+      
+    </footer>
+  </article>
+</div>
+
+
+
+
+    
+
+
+<div class="post-block">
+  
+  
+
+  <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="">
+    <link itemprop="mainEntityOfPage" href="https://lzhwweb.github.io/nirvana/mac/mac/mac%E7%BB%88%E7%AB%AF%E5%88%87%E6%8D%A2%E7%94%A8%E6%88%B7/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/nirvana/images/headphoto.jpeg">
+      <meta itemprop="name" content="nirvana">
+      <meta itemprop="description" content="个人学习笔记">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="涅槃快乐是金">
+    </span>
+      <header class="post-header">
+        <h2 class="post-title" itemprop="name headline">
+          <a href="/nirvana/mac/mac/mac%E7%BB%88%E7%AB%AF%E5%88%87%E6%8D%A2%E7%94%A8%E6%88%B7/" class="post-title-link" itemprop="url">mac终端切换用户</a>
+        </h2>
+
+        <div class="post-meta-container">
+          <div class="post-meta">
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-calendar"></i>
+      </span>
+      <span class="post-meta-item-text">发表于</span>
+      
+
+      <time title="创建时间：2021-03-10 21:12:40 / 修改时间：13:43:55" itemprop="dateCreated datePublished" datetime="2021-03-10T21:12:40+08:00">2021-03-10</time>
+    </span>
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-folder"></i>
+      </span>
+      <span class="post-meta-item-text">分类于</span>
+        <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+          <a href="/nirvana/categories/mac/" itemprop="url" rel="index"><span itemprop="name">mac</span></a>
+        </span>
+    </span>
+
+  
+      </div>
+      <div class="post-meta">
+    <span class="post-meta-item" title="本文字数">
+      <span class="post-meta-item-icon">
+        <i class="far fa-file-word"></i>
+      </span>
+      <span class="post-meta-item-text">本文字数：</span>
+      <span>359</span>
+    </span>
+    <span class="post-meta-item" title="阅读时长">
+      <span class="post-meta-item-icon">
+        <i class="far fa-clock"></i>
+      </span>
+      <span class="post-meta-item-text">阅读时长 &asymp;</span>
+      <span>1 分钟</span>
+    </span>
+</div>
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+          <p>1、mac终端切换用户到root<br>sudo -i即可</p>
+<p>2、mac终端切换成普通用户<br>su - test（test为用户名）即可</p>
+<p>3、mac可以设置命令别名<br>如ll，正常情况下，mac终端不识别ll命令，但是alias 命令设置别名后，终端即可以设别ll命令：alias ll=’ls -la’；但是没有修改系统文件，则该命令只能临时生效，下次再打开终端，还是不能识别ll命令，永久生效办法，请修改系统文件，方法有多种，请自行百度（如果不是ll命令，其他命令同理）<br>————————————————<br>版权声明：本文为CSDN博主「CoberOJ_」的原创文章，遵循 CC 4.0 BY-SA 版权协议，转载请附上原文出处链接及本声明。<br>原文链接：<a target="_blank" rel="noopener" href="https://blog.csdn.net/huodoubi/article/details/69948483">https://blog.csdn.net/huodoubi/article/details/69948483</a></p>
+
+      
+    </div>
+
+    
+    
+    
+
+    <footer class="post-footer">
+        <div class="post-eof"></div>
+      
+    </footer>
+  </article>
+</div>
+
+
+
+
+    
+
+
+<div class="post-block">
+  
+  
+
+  <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="">
+    <link itemprop="mainEntityOfPage" href="https://lzhwweb.github.io/nirvana/mac/mac/%E5%88%A9%E7%94%A8proxychains%E5%9C%A8%E7%BB%88%E7%AB%AF%E4%BD%BF%E7%94%A8socks5%E4%BB%A3%E7%90%86/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/nirvana/images/headphoto.jpeg">
+      <meta itemprop="name" content="nirvana">
+      <meta itemprop="description" content="个人学习笔记">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="涅槃快乐是金">
+    </span>
+      <header class="post-header">
+        <h2 class="post-title" itemprop="name headline">
+          <a href="/nirvana/mac/mac/%E5%88%A9%E7%94%A8proxychains%E5%9C%A8%E7%BB%88%E7%AB%AF%E4%BD%BF%E7%94%A8socks5%E4%BB%A3%E7%90%86/" class="post-title-link" itemprop="url">利用proxychains在终端使用socks5代理</a>
+        </h2>
+
+        <div class="post-meta-container">
+          <div class="post-meta">
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-calendar"></i>
+      </span>
+      <span class="post-meta-item-text">发表于</span>
+      
+
+      <time title="创建时间：2021-03-10 21:12:40 / 修改时间：13:43:55" itemprop="dateCreated datePublished" datetime="2021-03-10T21:12:40+08:00">2021-03-10</time>
+    </span>
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-folder"></i>
+      </span>
+      <span class="post-meta-item-text">分类于</span>
+        <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+          <a href="/nirvana/categories/mac/" itemprop="url" rel="index"><span itemprop="name">mac</span></a>
+        </span>
+    </span>
+
+  
+      </div>
+      <div class="post-meta">
+    <span class="post-meta-item" title="本文字数">
+      <span class="post-meta-item-icon">
+        <i class="far fa-file-word"></i>
+      </span>
+      <span class="post-meta-item-text">本文字数：</span>
+      <span>879</span>
+    </span>
+    <span class="post-meta-item" title="阅读时长">
+      <span class="post-meta-item-icon">
+        <i class="far fa-clock"></i>
+      </span>
+      <span class="post-meta-item-text">阅读时长 &asymp;</span>
+      <span>1 分钟</span>
+    </span>
+</div>
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+          <h3 id="1-proxychains安装"><a href="#1-proxychains安装" class="headerlink" title="1.proxychains安装"></a>1.proxychains安装</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">git clone https:&#x2F;&#x2F;github.com&#x2F;rofl0r&#x2F;proxychains-ng.git</span><br><span class="line">cd proxychains-ng</span><br><span class="line">.&#x2F;configure</span><br><span class="line">make &amp;&amp; make install</span><br><span class="line">cp .&#x2F;src&#x2F;proxychains.conf &#x2F;etc&#x2F;proxychains.conf</span><br><span class="line">cd .. &amp;&amp; rm -rf proxychains-ng (先修改再cp)</span><br></pre></td></tr></table></figure>
+<p>也可以用<code>brew install proxychains-ng</code>安装。<br>2.编辑proxychains配置</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">vim &#x2F;etc&#x2F;proxychains.conf</span><br></pre></td></tr></table></figure>
+<p>3.将socks4 127.0.0.1 9095改为</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">socks5 127.0.0.1 1080</span><br></pre></td></tr></table></figure>
+<p><em><strong>ps: 默认的socks4 127.0.0.1 9095是tor代理，而socks5 127.0.0.1 1080是shadowsocks的代理。</strong></em></p>
+<p>proxychains.conf文件说明了代理配置格式,如下,这里根据自己使用的代理来配置就行了。</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line">ProxyList format</span><br><span class="line"> 94 #       type  ip  port  [user pass]</span><br><span class="line"> 95 #       (values separated by &#39;tab&#39; or &#39;blank&#39;)</span><br><span class="line"> 96 #</span><br><span class="line"> 97 #       only numeric ipv4 addresses are valid</span><br><span class="line"> 98 #</span><br><span class="line"> 99 #</span><br><span class="line">100 #        Examples:</span><br><span class="line">101 #</span><br><span class="line">102 #       socks5  192.168.67.78   1080    lamer   secret</span><br><span class="line">103 #       http    192.168.89.3    8080    justu   hidden</span><br><span class="line">104 #       socks4  192.168.1.49    1080</span><br><span class="line">105 #       http    192.168.39.93   8080</span><br></pre></td></tr></table></figure>
+<p>4.使用方法<br>在需要代理的命令前加上 proxychains4 ，如：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">proxychains4 wget http:&#x2F;&#x2F;xxx.com&#x2F;xxx.zip</span><br></pre></td></tr></table></figure>
+
+      
+    </div>
+
+    
+    
+    
+
+    <footer class="post-footer">
+        <div class="post-eof"></div>
+      
+    </footer>
+  </article>
+</div>
+
+
+
 
     
 
@@ -743,540 +1313,6 @@
 
 
 
-    
-
-
-<div class="post-block">
-  
-  
-
-  <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="">
-    <link itemprop="mainEntityOfPage" href="https://lzhwweb.github.io/nirvana/reactnative/react-native/Text%E7%BB%84%E4%BB%B6/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="image" content="/nirvana/images/headphoto.jpeg">
-      <meta itemprop="name" content="nirvana">
-      <meta itemprop="description" content="个人学习笔记">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="涅槃快乐是金">
-    </span>
-      <header class="post-header">
-        <h2 class="post-title" itemprop="name headline">
-          <a href="/nirvana/reactnative/react-native/Text%E7%BB%84%E4%BB%B6/" class="post-title-link" itemprop="url">Text组件</a>
-        </h2>
-
-        <div class="post-meta-container">
-          <div class="post-meta">
-    <span class="post-meta-item">
-      <span class="post-meta-item-icon">
-        <i class="far fa-calendar"></i>
-      </span>
-      <span class="post-meta-item-text">发表于</span>
-      
-
-      <time title="创建时间：2021-03-10 21:12:40 / 修改时间：13:43:55" itemprop="dateCreated datePublished" datetime="2021-03-10T21:12:40+08:00">2021-03-10</time>
-    </span>
-    <span class="post-meta-item">
-      <span class="post-meta-item-icon">
-        <i class="far fa-folder"></i>
-      </span>
-      <span class="post-meta-item-text">分类于</span>
-        <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-          <a href="/nirvana/categories/reactnative/" itemprop="url" rel="index"><span itemprop="name">reactnative</span></a>
-        </span>
-    </span>
-
-  
-      </div>
-      <div class="post-meta">
-    <span class="post-meta-item" title="本文字数">
-      <span class="post-meta-item-icon">
-        <i class="far fa-file-word"></i>
-      </span>
-      <span class="post-meta-item-text">本文字数：</span>
-      <span>5k</span>
-    </span>
-    <span class="post-meta-item" title="阅读时长">
-      <span class="post-meta-item-icon">
-        <i class="far fa-clock"></i>
-      </span>
-      <span class="post-meta-item-text">阅读时长 &asymp;</span>
-      <span>5 分钟</span>
-    </span>
-</div>
-
-        </div>
-      </header>
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-          <h2 id="介绍"><a href="#介绍" class="headerlink" title="介绍"></a>介绍</h2><p>该Text组件为React中一个基本组件，该和Android中的TextView组件相类似用来显示基本的文本信息，该控件除了基本的显示布局之外，可以进行嵌套显示，设置样式，以及可以做事件(例如:点击)处理。下面我们来一个实例：</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br></pre></td><td class="code"><pre><span class="line">&#x2F;**</span><br><span class="line"> * 进行简单Text组件使用实例</span><br><span class="line"> * Sample React Native App  test.android.js</span><br><span class="line"> * https:&#x2F;&#x2F;github.com&#x2F;facebook&#x2F;react-native</span><br><span class="line"> *&#x2F;</span><br><span class="line">&#39;use strict&#39;;</span><br><span class="line">import React, &#123; Component &#125; from &#39;react&#39;;</span><br><span class="line">import &#123;</span><br><span class="line">  AppRegistry,</span><br><span class="line">  Text,</span><br><span class="line">  View,</span><br><span class="line">  StyleSheet,</span><br><span class="line">&#125; from &#39;react-native&#39;;</span><br><span class="line">var styles &#x3D; StyleSheet.create(&#123;</span><br><span class="line">     titleBase:&#123;</span><br><span class="line">        margin:10,</span><br><span class="line">        textAlign:&#39;center&#39;,</span><br><span class="line">        color:&#39;red&#39;,</span><br><span class="line">        fontSize:28,</span><br><span class="line">        fontFamily:&#39;Cochin&#39;,</span><br><span class="line">     &#125;,</span><br><span class="line">     title:&#123;</span><br><span class="line">        color:&#39;green&#39;,</span><br><span class="line">        fontWeight:&#39;bold&#39;,</span><br><span class="line">     &#125;,</span><br><span class="line">&#125;);</span><br><span class="line">var TestText &#x3D; React.createClass(&#123;</span><br><span class="line">  render: function() &#123;</span><br><span class="line">    return (</span><br><span class="line">      &lt;Text style&#x3D;&#123;styles.titleBase&#125;&gt;</span><br><span class="line">         I am root text!</span><br><span class="line">         &lt;Text style&#x3D;&#123;styles.title&#125;&gt;</span><br><span class="line">              I am chid text!</span><br><span class="line">          &lt;&#x2F;Text&gt;</span><br><span class="line">      &lt;&#x2F;Text&gt;</span><br><span class="line">    );</span><br><span class="line">  &#125;</span><br><span class="line">&#125;);</span><br><span class="line">AppRegistry.registerComponent(&#39;TestText&#39;, () &#x3D;&gt; TestText);</span><br><span class="line"></span><br></pre></td></tr></table></figure>
-
-<p>上述实例采用TextView的嵌套方式，最外层的Text的Style titleBase定义相关风格，内层的风格style定义相关风格，我们可以看到运行效果，如果内层没有重写外层定义的样式，那么内层会进行继承。如果重写了样式，那么内层会根据自己定义的样式进行渲染，该和CSS样式表差不多。</p>
-<h2 id="属性方法-主要一些可用的属性"><a href="#属性方法-主要一些可用的属性" class="headerlink" title="属性方法(主要一些可用的属性)"></a>属性方法(主要一些可用的属性)</h2><ul>
-<li>  ①.allowFontScaling (bool):控制字体是否根据iOS的设置进行自动缩放-iOS平台,Android平台不适用</li>
-<li>  ②.numberOfLines (number):进行设置Text显示文本的行数，如果显示的内容超过了行数，默认其他多余的信息就不会显示了。</li>
-<li>  ③.onLayout (function) 当布局位置发生变动的时候自动进行触发该方法, 其中该function的参数如下: [code lang=”” start=”” highlight=””]{nativeEvent: {layout: {x, y, width, height}}}[/code]</li>
-<li>  ④.onPress (fcuntion) 该方法当文本发生点击的时候调用该方法.</li>
-</ul>
-<h2 id="风格样式"><a href="#风格样式" class="headerlink" title="风格样式"></a>风格样式</h2><ul>
-<li>  1.继承可以使用View组件的所有Style(具体查看<a target="_blank" rel="noopener" href="http://facebook.github.io/react-native/docs/view.html#style">http://facebook.github.io/react-native/docs/view.html#style</a>)</li>
-<li>  2.color:字体颜色</li>
-<li>  3.fontFamily 字体名称</li>
-<li>  4.fontSize 字体大小</li>
-<li>  5.fontStyle 字体风格(normal,italic)</li>
-<li>  6.fontWeight 字体粗细权重(“normal”, ‘bold’, ‘100’, ‘200’, ‘300’, ‘400’, ‘500’, ‘600’, ‘700’, ‘800’, ‘900’)</li>
-<li>  7.textShadowOffset 设置阴影效果{width: number, height: number}</li>
-<li>  8.textShadowRadius 阴影效果圆角</li>
-<li>  9..textShadowColor 阴影效果的颜色</li>
-<li>  10.letterSpacing 字符间距</li>
-<li>  11.lineHeight 行高</li>
-<li>  12.textAlign 文本对其方式(“auto”, ‘left’, ‘right’, ‘center’, ‘justify’)</li>
-<li>  13.textDecorationLine 横线位置 (“none”, ‘underline’, ‘line-through’, ‘underline line-through’)</li>
-<li>  14.textDecorationStyle 线的风格(“solid”, ‘double’, ‘dotted’, ‘dashed’)</li>
-<li>  15.textDecorationColor 线的颜色</li>
-<li>  16.writingDirection 文本方向(“auto”, ‘ltr’, ‘rtl’)</li>
-</ul>
-<h2 id="特别注意点"><a href="#特别注意点" class="headerlink" title="特别注意点"></a>特别注意点</h2><h3 id="嵌套特点"><a href="#嵌套特点" class="headerlink" title="嵌套特点"></a>嵌套特点</h3><p>和Web上面一直的设计方案，我们通过嵌套包裹的方案，相同的属性的文本可以用父标签进行包裹，然后内部特殊的文本采用子标签方案，具体例子如下:</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">&lt;Text style&#x3D;&#123;&#123;fontWeight: &#39;bold&#39;,fontSize:28&#125;&#125;&gt;</span><br><span class="line">      I am bold</span><br><span class="line">      &lt;Text style&#x3D;&#123;&#123;color: &#39;red&#39;&#125;&#125;&gt;</span><br><span class="line">        and red</span><br><span class="line">    &lt;&#x2F;Text&gt;</span><br><span class="line">&lt;&#x2F;Text&gt;</span><br><span class="line"></span><br></pre></td></tr></table></figure>
-
-<p>整体字体格式为bold以及字体大小为28，不过后边的’and red’的字体颜色为红色。</p>
-<h3 id="容器布局规则"><a href="#容器布局规则" class="headerlink" title="容器布局规则"></a>容器布局规则</h3><p>FlexBox(弹性布局),</p>
-<h3 id="样式继承规格"><a href="#样式继承规格" class="headerlink" title="样式继承规格"></a>样式继承规格</h3><p>组件可以嵌套，而且样式还支持继承，也就说父组件定义了相关样式，如果子组件没有重写样式的话，那么该子组件会继承父组件定义的样式。</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br></pre></td><td class="code"><pre><span class="line">&#x2F;**</span><br><span class="line"> *  Text组件实例演示</span><br><span class="line"> * Sample React Native App</span><br><span class="line"> * https:&#x2F;&#x2F;github.com&#x2F;facebook&#x2F;react-native</span><br><span class="line"> *&#x2F;</span><br><span class="line">&#39;use strict&#39;;</span><br><span class="line"></span><br><span class="line">import React, &#123; Component &#125; from &#39;react&#39;;</span><br><span class="line">import &#123;</span><br><span class="line">  AppRegistry,</span><br><span class="line">  Text,</span><br><span class="line">  View,</span><br><span class="line">  StyleSheet,</span><br><span class="line">&#125; from &#39;react-native&#39;;</span><br><span class="line">var TestText &#x3D; React.createClass(&#123;</span><br><span class="line">  render: function() &#123;</span><br><span class="line">    return (</span><br><span class="line">      &lt;View&gt;</span><br><span class="line">       &lt;Text style&#x3D;&#123;&#123;color:&#39;red&#39;&#125;&#125;&gt;</span><br><span class="line">          My Text One  红色。</span><br><span class="line">       &lt;&#x2F;Text&gt;</span><br><span class="line">       &lt;Text style&#x3D;&#123;&#123;color:&#39;green&#39;,fontSize:20&#125;&#125;&gt; My Text Two 绿色和字体大小。&lt;&#x2F;Text&gt;</span><br><span class="line">       &lt;Text style&#x3D;&#123;&#123;color:&#39;green&#39;,fontFamily:&#39;Cochin&#39;&#125;&#125;&gt; My Text Three 绿色和字体名称。&lt;&#x2F;Text&gt;</span><br><span class="line">       &lt;Text style&#x3D;&#123;&#123;color:&#39;pink&#39;,fontWeight:&#39;bold&#39;&#125;&#125;&gt; My Text Four 粉色和加粗。&lt;&#x2F;Text&gt;</span><br><span class="line">       &lt;Text style&#x3D;&#123;&#123;color:&#39;gray&#39;,fontStyle:&#39;italic&#39;&#125;&#125;&gt; My Text Five 灰色和斜体。&lt;&#x2F;Text&gt;</span><br><span class="line">       &lt;Text style&#x3D;&#123;&#123;textAlign:&#39;center&#39;,fontStyle:&#39;italic&#39;&#125;&#125;&gt; My Text Six 居中和斜体。&lt;&#x2F;Text&gt;</span><br><span class="line">       &lt;Text numberOfLines&#x3D;&#123;1&#125; style&#x3D;&#123;&#123;textAlign:&#39;center&#39;,fontStyle:&#39;italic&#39;&#125;&#125;&gt;测试行数My Text Six 居中和斜体。My Text Six 居中和斜体。 My Text Six 居中和斜体。&lt;&#x2F;Text&gt;</span><br><span class="line">       &lt;Text style&#x3D;&#123;&#123;marginLeft:50,marginTop:50,textAlign:&#39;center&#39;,fontStyle:&#39;italic&#39;&#125;&#125;&gt;设置文本的间距,居左，居顶部50&lt;&#x2F;Text&gt;</span><br><span class="line">       &lt;Text numberOfLines&#x3D;&#123;2&#125; style&#x3D;&#123;&#123;lineHeight:50,textAlign:&#39;center&#39;,fontStyle:&#39;italic&#39;&#125;&#125;&gt;</span><br><span class="line">          测试行高 测试行高 测试行高 测试行高 测试行高 测试行高 测试行高 测试行高 测试行高 测试行高 测试行高 </span><br><span class="line">          测试行高 测试行高 测试行高 测试行高 测试行高 测试行高</span><br><span class="line">       &lt;&#x2F;Text&gt;</span><br><span class="line">      &lt;&#x2F;View&gt;</span><br><span class="line">    );</span><br><span class="line">  &#125;</span><br><span class="line">&#125;);</span><br><span class="line">AppRegistry.registerComponent(&#39;TestText&#39;, () &#x3D;&gt; TestText);</span><br><span class="line"></span><br></pre></td></tr></table></figure>
-
-<h2 id="注"><a href="#注" class="headerlink" title="注"></a>注</h2><p>1、在使用Text的过程中，实现文本垂直居中、水平居中的效果（iOS和Android通用）</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br></pre></td><td class="code"><pre><span class="line">&lt;View  style&#x3D;&#123;styles.textView&#125;&gt;</span><br><span class="line">    &lt;Text style&#x3D;&#123;styles.text&#125;&gt; 水平垂直居中&lt;&#x2F;Text&gt;</span><br><span class="line">&lt;&#x2F;View&gt;</span><br><span class="line"></span><br><span class="line">textView:&#123;</span><br><span class="line">  flexDirection:&#39;column&#39;,</span><br><span class="line">  justifyContent:&#39;center&#39;,</span><br><span class="line">  alignItems:&#39;center&#39;,</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">text:&#123;</span><br><span class="line">    fontSize:12,</span><br><span class="line">    color:&#39;#f2f2f2&#39;,</span><br><span class="line">&#125;</span><br><span class="line"></span><br></pre></td></tr></table></figure>
-
-<p>尽量用view去包裹一层Text组件，text组件只负责基础的文字样式，View组件负责对齐方式等。</p>
-<p>2、在Android平台上，Text组件里使用paddingLeft 属性，不好使，直接顶着View了。</p>
-<p>解决方式：1）将paddingLeft放在View属性上;2）将paddingLeft修改为marginLeft</p>
-<p>建议使用第一种方案修改，把对齐方式交给view去处理，Text只负责文本属性的显示。</p>
-
-      
-    </div>
-
-    
-    
-    
-
-    <footer class="post-footer">
-        <div class="post-eof"></div>
-      
-    </footer>
-  </article>
-</div>
-
-
-
-
-    
-
-
-<div class="post-block">
-  
-  
-
-  <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="">
-    <link itemprop="mainEntityOfPage" href="https://lzhwweb.github.io/nirvana/reactnative/react-native/iOS-RN-0-45%E4%BB%A5%E4%B8%8A%E7%89%88%E6%9C%AC%E7%BD%91%E7%BB%9C%E9%97%AE%E9%A2%98%E6%97%A0%E6%B3%95%E5%90%AF%E5%8A%A8/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="image" content="/nirvana/images/headphoto.jpeg">
-      <meta itemprop="name" content="nirvana">
-      <meta itemprop="description" content="个人学习笔记">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="涅槃快乐是金">
-    </span>
-      <header class="post-header">
-        <h2 class="post-title" itemprop="name headline">
-          <a href="/nirvana/reactnative/react-native/iOS-RN-0-45%E4%BB%A5%E4%B8%8A%E7%89%88%E6%9C%AC%E7%BD%91%E7%BB%9C%E9%97%AE%E9%A2%98%E6%97%A0%E6%B3%95%E5%90%AF%E5%8A%A8/" class="post-title-link" itemprop="url">iOS-RN-0-45以上版本网络问题无法启动</a>
-        </h2>
-
-        <div class="post-meta-container">
-          <div class="post-meta">
-    <span class="post-meta-item">
-      <span class="post-meta-item-icon">
-        <i class="far fa-calendar"></i>
-      </span>
-      <span class="post-meta-item-text">发表于</span>
-      
-
-      <time title="创建时间：2021-03-10 21:12:40 / 修改时间：13:43:55" itemprop="dateCreated datePublished" datetime="2021-03-10T21:12:40+08:00">2021-03-10</time>
-    </span>
-    <span class="post-meta-item">
-      <span class="post-meta-item-icon">
-        <i class="far fa-folder"></i>
-      </span>
-      <span class="post-meta-item-text">分类于</span>
-        <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-          <a href="/nirvana/categories/reactnative/" itemprop="url" rel="index"><span itemprop="name">reactnative</span></a>
-        </span>
-    </span>
-
-  
-      </div>
-      <div class="post-meta">
-    <span class="post-meta-item" title="本文字数">
-      <span class="post-meta-item-icon">
-        <i class="far fa-file-word"></i>
-      </span>
-      <span class="post-meta-item-text">本文字数：</span>
-      <span>1k</span>
-    </span>
-    <span class="post-meta-item" title="阅读时长">
-      <span class="post-meta-item-icon">
-        <i class="far fa-clock"></i>
-      </span>
-      <span class="post-meta-item-text">阅读时长 &asymp;</span>
-      <span>1 分钟</span>
-    </span>
-</div>
-
-        </div>
-      </header>
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-          <p>RN iOS 0.45以上版本开始需要依赖一些第三方编译库，但这些库在国内下载都非常困难（一般的翻墙工具都很难下载）<br>未来RN不同版本可能依赖不同版本的第三方编译库，具体所需库和版本请查看<a target="_blank" rel="noopener" href="https://github.com/facebook/react-native/blob/master/scripts/ios-install-third-party.sh">ios-install-third-party.sh</a>文件，注意先把左上角的branch切换到对应的版本.</p>
-<p><img src="http://upload-images.jianshu.io/upload_images/10024246-4967270af295b740.jpg?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="1515804427550.jpg"></p>
-<p>在文件最下面找到需要第三方编译库</p>
-<p><img src="http://upload-images.jianshu.io/upload_images/10024246-182697a23377bd82.jpg?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="1515804585324.jpg"></p>
-<p>我现在使用的52版本的内容为</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">fetch_and_unpack glog-0.3.4.tar.gz https:&#x2F;&#x2F;github.com&#x2F;google&#x2F;glog&#x2F;archive&#x2F;v0.3.4.tar.gz 69f91cd5a1de35ead0bc4103ea87294b0206a456 &quot;\&quot;$SCRIPTDIR&#x2F;ios-configure-glog.sh\&quot;&quot;</span><br><span class="line">fetch_and_unpack double-conversion-1.1.5.tar.gz https:&#x2F;&#x2F;github.com&#x2F;google&#x2F;double-conversion&#x2F;archive&#x2F;v1.1.5.tar.gz 96a8aba1b4ce7d4a7a3c123be26c379c2fed1def</span><br><span class="line">fetch_and_unpack boost_1_63_0.tar.gz https:&#x2F;&#x2F;github.com&#x2F;react-native-community&#x2F;boost-for-react-native&#x2F;releases&#x2F;download&#x2F;v1.63.0-0&#x2F;boost_1_63_0.tar.gz c3f57e1d22a995e608983effbb752b54b6eab741</span><br><span class="line">fetch_and_unpack folly-2016.09.26.00.tar.gz https:&#x2F;&#x2F;github.com&#x2F;facebook&#x2F;folly&#x2F;archive&#x2F;v2016.09.26.00.tar.gz f3b928b5039235bad6cece638c597c6684d1e4e6</span><br></pre></td></tr></table></figure>
-
-<p>下载完后需要把文件copy到***~/.rncache***下，然后就可以运行RN程序了</p>
-
-      
-    </div>
-
-    
-    
-    
-
-    <footer class="post-footer">
-        <div class="post-eof"></div>
-      
-    </footer>
-  </article>
-</div>
-
-
-
-
-    
-
-
-<div class="post-block">
-  
-  
-
-  <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="">
-    <link itemprop="mainEntityOfPage" href="https://lzhwweb.github.io/nirvana/reactnative/react-native/react-native-0-63%E5%90%AF%E5%8A%A8%E9%97%AE%E9%A2%98/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="image" content="/nirvana/images/headphoto.jpeg">
-      <meta itemprop="name" content="nirvana">
-      <meta itemprop="description" content="个人学习笔记">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="涅槃快乐是金">
-    </span>
-      <header class="post-header">
-        <h2 class="post-title" itemprop="name headline">
-          <a href="/nirvana/reactnative/react-native/react-native-0-63%E5%90%AF%E5%8A%A8%E9%97%AE%E9%A2%98/" class="post-title-link" itemprop="url">react-native-0-63启动问题</a>
-        </h2>
-
-        <div class="post-meta-container">
-          <div class="post-meta">
-    <span class="post-meta-item">
-      <span class="post-meta-item-icon">
-        <i class="far fa-calendar"></i>
-      </span>
-      <span class="post-meta-item-text">发表于</span>
-      
-
-      <time title="创建时间：2021-03-10 21:12:40 / 修改时间：13:43:55" itemprop="dateCreated datePublished" datetime="2021-03-10T21:12:40+08:00">2021-03-10</time>
-    </span>
-    <span class="post-meta-item">
-      <span class="post-meta-item-icon">
-        <i class="far fa-folder"></i>
-      </span>
-      <span class="post-meta-item-text">分类于</span>
-        <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-          <a href="/nirvana/categories/reactnative/" itemprop="url" rel="index"><span itemprop="name">reactnative</span></a>
-        </span>
-    </span>
-
-  
-      </div>
-      <div class="post-meta">
-    <span class="post-meta-item" title="本文字数">
-      <span class="post-meta-item-icon">
-        <i class="far fa-file-word"></i>
-      </span>
-      <span class="post-meta-item-text">本文字数：</span>
-      <span>520</span>
-    </span>
-    <span class="post-meta-item" title="阅读时长">
-      <span class="post-meta-item-icon">
-        <i class="far fa-clock"></i>
-      </span>
-      <span class="post-meta-item-text">阅读时长 &asymp;</span>
-      <span>1 分钟</span>
-    </span>
-</div>
-
-        </div>
-      </header>
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-          <p>1、<code>OpenSSL-Universal</code> requires CocoaPods version <code>&gt;= &quot;1.9</code>“<br>podinstall时提示需要把CocoaPods升级到1.9，但是通过brew install CocoaPods，发现安装的版本是1.6.1，brew upgrade CocoaPods 发现版本无法升级，后来查到1.9的版本需要通过<code>gem install -n /usr/local/bin cocoapods --pre</code>才能安装最新的版本<br>2、Typedef redefinition with different types (‘uint8_t’ (aka ‘unsigned char’) vs ‘enum clockid_t’)<br>changing <code>iOS Deployment Target</code> of <code>Flipper-Folly Pods</code> to “iOS 9.0”, this error disappeared.<br><a target="_blank" rel="noopener" href="https://user-images.githubusercontent.com/3139234/78309578-52984600-7586-11ea-9d27-cefdc6e7ca0f.png"><img src="https://upload-images.jianshu.io/upload_images/10024246-e337b36acb480adc.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240"></a><br>3、 ‘event2/event-config.h’ file not found<br> Flipper-Folly的版本有问题，需要指定版本<br>use_flipper!修改为use_flipper!({ ‘Flipper-Folly’ =&gt; ‘2.3.0’ })<br>重新pod install即可</p>
-
-      
-    </div>
-
-    
-    
-    
-
-    <footer class="post-footer">
-        <div class="post-eof"></div>
-      
-    </footer>
-  </article>
-</div>
-
-
-
-
-    
-
-
-<div class="post-block">
-  
-  
-
-  <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="">
-    <link itemprop="mainEntityOfPage" href="https://lzhwweb.github.io/nirvana/tool/%E5%BC%80%E5%8F%91%E5%B7%A5%E5%85%B7/VSCode%E8%AE%BE%E7%BD%AE%E5%A4%A7%E5%B0%8F%E5%86%99%E8%BD%AC%E6%8D%A2%E7%9A%84%E5%BF%AB%E6%8D%B7%E9%94%AE/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="image" content="/nirvana/images/headphoto.jpeg">
-      <meta itemprop="name" content="nirvana">
-      <meta itemprop="description" content="个人学习笔记">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="涅槃快乐是金">
-    </span>
-      <header class="post-header">
-        <h2 class="post-title" itemprop="name headline">
-          <a href="/nirvana/tool/%E5%BC%80%E5%8F%91%E5%B7%A5%E5%85%B7/VSCode%E8%AE%BE%E7%BD%AE%E5%A4%A7%E5%B0%8F%E5%86%99%E8%BD%AC%E6%8D%A2%E7%9A%84%E5%BF%AB%E6%8D%B7%E9%94%AE/" class="post-title-link" itemprop="url">VSCode设置大小写转换的快捷键</a>
-        </h2>
-
-        <div class="post-meta-container">
-          <div class="post-meta">
-    <span class="post-meta-item">
-      <span class="post-meta-item-icon">
-        <i class="far fa-calendar"></i>
-      </span>
-      <span class="post-meta-item-text">发表于</span>
-      
-
-      <time title="创建时间：2021-03-10 21:12:40 / 修改时间：13:43:55" itemprop="dateCreated datePublished" datetime="2021-03-10T21:12:40+08:00">2021-03-10</time>
-    </span>
-    <span class="post-meta-item">
-      <span class="post-meta-item-icon">
-        <i class="far fa-folder"></i>
-      </span>
-      <span class="post-meta-item-text">分类于</span>
-        <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-          <a href="/nirvana/categories/tool/" itemprop="url" rel="index"><span itemprop="name">tool</span></a>
-        </span>
-    </span>
-
-  
-      </div>
-      <div class="post-meta">
-    <span class="post-meta-item" title="本文字数">
-      <span class="post-meta-item-icon">
-        <i class="far fa-file-word"></i>
-      </span>
-      <span class="post-meta-item-text">本文字数：</span>
-      <span>776</span>
-    </span>
-    <span class="post-meta-item" title="阅读时长">
-      <span class="post-meta-item-icon">
-        <i class="far fa-clock"></i>
-      </span>
-      <span class="post-meta-item-text">阅读时长 &asymp;</span>
-      <span>1 分钟</span>
-    </span>
-</div>
-
-        </div>
-      </header>
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-          <p>一 、默认情况下VS Code的编辑菜单或快捷键中没有 转换为大写，转换为小写的功能</p>
-<p>解决方案1：使用键盘配置，开启转换为小写，转换为大写的快捷键 </p>
-<p>以VS中的 快捷键为例：</p>
-<p>小写 -》Ctrl+Shift+l</p>
-<p>大写=》Ctrl+Shift+U</p>
-<p>自定义大小写转换的快捷键步骤如下:</p>
-<p> 1.点击【文件】-【首选项】-【键盘快捷方式】菜单。</p>
-<p><img src="https://upload-images.jianshu.io/upload_images/10024246-d5ee5749c318312e.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240"> </p>
-<p><img src="https://upload-images.jianshu.io/upload_images/10024246-423b8ab14aade804.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240"></p>
-<p>2.输入 “转换为大写”, 会出现搜索结果【转换为大写】,鼠标悬停在该结果上, 点击前面的”加号” 或 双击, 会弹出输入自定义快捷键的弹窗。</p>
-<p><img src="https://upload-images.jianshu.io/upload_images/10024246-60e4e6fcbe5fa6b2.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240"> </p>
-<p><img src="https://upload-images.jianshu.io/upload_images/10024246-3f1c888971fb2a73.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240"> </p>
-<p>3.在键盘上面按下Ctrl、Shift和u, 然后按Enter键, 即可成功绑定转换为大写快捷键。</p>
-<p><img src="https://upload-images.jianshu.io/upload_images/10024246-65a4b55675f8717b.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240"> </p>
-<p><img src="https://upload-images.jianshu.io/upload_images/10024246-9ecd4ce60718de32.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240"></p>
-<p>4.同理，搜索”转换为小写”, 鼠标悬停在结果上, 点击前面的”加号” 或 双击, 弹出设置快捷键的弹窗，在键盘上面按下Ctrl、Shift和l, 然后按Enter键, 即可成功绑定转换为小写快捷键。</p>
-<p><img src="https://upload-images.jianshu.io/upload_images/10024246-7f3e695948c286af.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240"></p>
-<hr>
-<p>##解决方案2，直接修改keybings.json 添加配置</p>
-<pre><code>&#123;
-    &quot;key&quot;: &quot;ctrl+shift+u&quot;,
-    &quot;command&quot;: &quot;editor.action.transformToUppercase&quot;,
-    &quot;when&quot;: &quot;editorTextFocus&quot;
-&#125;,
-&#123;
-    &quot;key&quot;: &quot;ctrl+shift+l&quot;,
-    &quot;command&quot;: &quot;editor.action.transformToLowercase&quot;,
-    &quot;when&quot;: &quot;editorTextFocus&quot;
-&#125;
-</code></pre>
-<p>最终设置的自定义的大小写转换快捷键如下: </p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">转换为大写: Ctrl+Shift+u</span><br><span class="line">转换为小写: Ctrl+Shift+l</span><br></pre></td></tr></table></figure>
-
-      
-    </div>
-
-    
-    
-    
-
-    <footer class="post-footer">
-        <div class="post-eof"></div>
-      
-    </footer>
-  </article>
-</div>
-
-
-
-
-    
-
-
-<div class="post-block">
-  
-  
-
-  <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="">
-    <link itemprop="mainEntityOfPage" href="https://lzhwweb.github.io/nirvana/tool/%E5%BC%80%E5%8F%91%E5%B7%A5%E5%85%B7/chrome-%E8%B4%A6%E5%8F%B7%E6%89%8B%E5%8A%A8%E5%90%8C%E6%AD%A5/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="image" content="/nirvana/images/headphoto.jpeg">
-      <meta itemprop="name" content="nirvana">
-      <meta itemprop="description" content="个人学习笔记">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="涅槃快乐是金">
-    </span>
-      <header class="post-header">
-        <h2 class="post-title" itemprop="name headline">
-          <a href="/nirvana/tool/%E5%BC%80%E5%8F%91%E5%B7%A5%E5%85%B7/chrome-%E8%B4%A6%E5%8F%B7%E6%89%8B%E5%8A%A8%E5%90%8C%E6%AD%A5/" class="post-title-link" itemprop="url">chrome 账号手动同步</a>
-        </h2>
-
-        <div class="post-meta-container">
-          <div class="post-meta">
-    <span class="post-meta-item">
-      <span class="post-meta-item-icon">
-        <i class="far fa-calendar"></i>
-      </span>
-      <span class="post-meta-item-text">发表于</span>
-      
-
-      <time title="创建时间：2021-03-10 21:12:40 / 修改时间：22:05:29" itemprop="dateCreated datePublished" datetime="2021-03-10T21:12:40+08:00">2021-03-10</time>
-    </span>
-    <span class="post-meta-item">
-      <span class="post-meta-item-icon">
-        <i class="far fa-folder"></i>
-      </span>
-      <span class="post-meta-item-text">分类于</span>
-        <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-          <a href="/nirvana/categories/tool/" itemprop="url" rel="index"><span itemprop="name">tool</span></a>
-        </span>
-    </span>
-
-  
-      </div>
-      <div class="post-meta">
-    <span class="post-meta-item" title="本文字数">
-      <span class="post-meta-item-icon">
-        <i class="far fa-file-word"></i>
-      </span>
-      <span class="post-meta-item-text">本文字数：</span>
-      <span>166</span>
-    </span>
-    <span class="post-meta-item" title="阅读时长">
-      <span class="post-meta-item-icon">
-        <i class="far fa-clock"></i>
-      </span>
-      <span class="post-meta-item-text">阅读时长 &asymp;</span>
-      <span>1 分钟</span>
-    </span>
-</div>
-
-        </div>
-      </header>
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-          <p>解决chrome不能自动同步问题，可以进行手动同步。</p>
-<p>不需要删除数据，不需要关闭账户！</p>
-<p>首先你懂得</p>
-<p>chrome地址栏中输入： chrome://sync-internals/<br>进行如图操作</p>
-<p>注意：目前这种方式是完全可行的，如果点击disable sync 再次点击 request 等待一会还是没有反应，且网络正常，请尝试关闭并打开一次浏览器再操作。<br><img src="https://upload-images.jianshu.io/upload_images/10024246-d2dfb140d7189280?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="image"><br><img src="https://upload-images.jianshu.io/upload_images/10024246-f0837051d08d3136?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="image"><br><img src="https://upload-images.jianshu.io/upload_images/10024246-c83c5ed3762650d6?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="image"></p>
-
-      
-    </div>
-
-    
-    
-    
-
-    <footer class="post-footer">
-        <div class="post-eof"></div>
-      
-    </footer>
-  </article>
-</div>
-
-
-
-
   <nav class="pagination">
     <a class="extend prev" rel="prev" href="/nirvana/page/12/"><i class="fa fa-angle-left" aria-label="上一页"></i></a><a class="page-number" href="/nirvana/">1</a><span class="space">&hellip;</span><a class="page-number" href="/nirvana/page/12/">12</a><span class="page-number current">13</span><a class="page-number" href="/nirvana/page/14/">14</a><span class="space">&hellip;</span><a class="page-number" href="/nirvana/page/18/">18</a><a class="extend next" rel="next" href="/nirvana/page/14/"><i class="fa fa-angle-right" aria-label="下一页"></i></a>
   </nav>
@@ -1324,14 +1360,14 @@
       <i class="fa fa-chart-line"></i>
     </span>
       <span>站点总字数：</span>
-    <span title="站点总字数">522k</span>
+    <span title="站点总字数">524k</span>
   </span>
   <span class="post-meta-item">
     <span class="post-meta-item-icon">
       <i class="fa fa-coffee"></i>
     </span>
       <span>站点阅读时长 &asymp;</span>
-    <span title="站点阅读时长">7:54</span>
+    <span title="站点阅读时长">7:57</span>
   </span>
 </div>
   <div class="powered-by">由 <a href="https://hexo.io/" class="theme-link" rel="noopener" target="_blank">Hexo</a> & <a href="https://theme-next.js.org/" class="theme-link" rel="noopener" target="_blank">NexT.Gemini</a> 强力驱动
