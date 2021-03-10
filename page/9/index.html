@@ -171,7 +171,7 @@
         <div class="site-overview-wrap sidebar-panel">
           <div class="site-author site-overview-item animated" itemprop="author" itemscope itemtype="http://schema.org/Person">
     <img class="site-author-image" itemprop="image" alt="nirvana"
-      src="https://avatars.githubusercontent.com/u/8438772?s=60&v=4">
+      src="/nirvana/images/headphoto.jpeg">
   <p class="site-author-name" itemprop="name">nirvana</p>
   <div class="site-description" itemprop="description">个人学习笔记</div>
 </div>
@@ -225,7 +225,7 @@
     <link itemprop="mainEntityOfPage" href="https://lzhwweb.github.io/nirvana/DesignPattern/%E8%AE%BE%E8%AE%A1%E6%A8%A1%E5%BC%8F%EF%BC%88TypeScript%EF%BC%89/Decorator%E6%A8%A1%E5%BC%8F%EF%BC%88%E8%A3%85%E9%A5%B0%E5%99%A8%E6%A8%A1%E5%BC%8F%EF%BC%89/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="image" content="https://avatars.githubusercontent.com/u/8438772?s=60&v=4">
+      <meta itemprop="image" content="/nirvana/images/headphoto.jpeg">
       <meta itemprop="name" content="nirvana">
       <meta itemprop="description" content="个人学习笔记">
     </span>
@@ -346,7 +346,7 @@
     <link itemprop="mainEntityOfPage" href="https://lzhwweb.github.io/nirvana/DesignPattern/%E8%AE%BE%E8%AE%A1%E6%A8%A1%E5%BC%8F%EF%BC%88TypeScript%EF%BC%89/Facade%E6%A8%A1%E5%BC%8F%EF%BC%88%E9%97%A8%E9%9D%A2%E6%A8%A1%E5%BC%8F%EF%BC%89/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="image" content="https://avatars.githubusercontent.com/u/8438772?s=60&v=4">
+      <meta itemprop="image" content="/nirvana/images/headphoto.jpeg">
       <meta itemprop="name" content="nirvana">
       <meta itemprop="description" content="个人学习笔记">
     </span>
@@ -461,10 +461,131 @@
   
 
   <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="">
+    <link itemprop="mainEntityOfPage" href="https://lzhwweb.github.io/nirvana/DesignPattern/%E8%AE%BE%E8%AE%A1%E6%A8%A1%E5%BC%8F%EF%BC%88TypeScript%EF%BC%89/Factory-Method(%E5%B7%A5%E5%8E%82%E6%A8%A1%E5%BC%8F)/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/nirvana/images/headphoto.jpeg">
+      <meta itemprop="name" content="nirvana">
+      <meta itemprop="description" content="个人学习笔记">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="涅槃快乐是金">
+    </span>
+      <header class="post-header">
+        <h2 class="post-title" itemprop="name headline">
+          <a href="/nirvana/DesignPattern/%E8%AE%BE%E8%AE%A1%E6%A8%A1%E5%BC%8F%EF%BC%88TypeScript%EF%BC%89/Factory-Method(%E5%B7%A5%E5%8E%82%E6%A8%A1%E5%BC%8F)/" class="post-title-link" itemprop="url">Factory-Method(工厂模式)</a>
+        </h2>
+
+        <div class="post-meta-container">
+          <div class="post-meta">
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-calendar"></i>
+      </span>
+      <span class="post-meta-item-text">发表于</span>
+
+      <time title="创建时间：2021-03-11 21:12:40" itemprop="dateCreated datePublished" datetime="2021-03-11T21:12:40+08:00">2021-03-11</time>
+    </span>
+      <span class="post-meta-item">
+        <span class="post-meta-item-icon">
+          <i class="far fa-calendar-check"></i>
+        </span>
+        <span class="post-meta-item-text">更新于</span>
+        <time title="修改时间：2021-03-10 13:43:55" itemprop="dateModified" datetime="2021-03-10T13:43:55+08:00">2021-03-10</time>
+      </span>
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-folder"></i>
+      </span>
+      <span class="post-meta-item-text">分类于</span>
+        <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+          <a href="/nirvana/categories/DesignPattern/" itemprop="url" rel="index"><span itemprop="name">DesignPattern</span></a>
+        </span>
+    </span>
+
+  
+      </div>
+      <div class="post-meta">
+    <span class="post-meta-item" title="本文字数">
+      <span class="post-meta-item-icon">
+        <i class="far fa-file-word"></i>
+      </span>
+      <span class="post-meta-item-text">本文字数：</span>
+      <span>2.6k</span>
+    </span>
+    <span class="post-meta-item" title="阅读时长">
+      <span class="post-meta-item-icon">
+        <i class="far fa-clock"></i>
+      </span>
+      <span class="post-meta-item-text">阅读时长 &asymp;</span>
+      <span>2 分钟</span>
+    </span>
+</div>
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+          <h3 id="工厂模式"><a href="#工厂模式" class="headerlink" title="工厂模式"></a>工厂模式</h3><blockquote>
+<p>这种类型的设计模式属于创建型模式，它提供了一种创建对象的最佳方式。<br>在工厂模式中，我们在创建对象时不会对客户端暴露创建逻辑，并且是通过使用一个共同的接口来指向新创建的对象。</p>
+</blockquote>
+<h3 id="介绍"><a href="#介绍" class="headerlink" title="介绍"></a>介绍</h3><ul>
+<li><strong>意图：</strong>定义一个创建对象的接口，让其子类自己决定实例化哪一个工厂类，工厂模式使其创建过程延迟到子类进行。</li>
+<li><strong>何时使用：</strong>我们明确地计划不同条件下创建不同实例时。</li>
+<li><strong>如何解决：</strong>让其子类实现工厂接口，返回的也是一个抽象的产品。</li>
+<li><strong>关键代码：</strong>创建过程在其子类执行。</li>
+<li><strong>优点：</strong><blockquote>
+<ol>
+<li>一个调用者想创建一个对象，只要知道其名称就可以了。  </li>
+<li>扩展性高，如果想增加一个产品，只要扩展一个工厂类就可以。 </li>
+<li>屏蔽产品的具体实现，调用者只关心产品的接口。</li>
+</ol>
+</blockquote>
+</li>
+<li><strong>缺点：</strong>每次增加一个产品时，都需要增加一个具体类和对象实现工厂，使得系统中类的个数成倍增加，在一定程度上增加了系统的复杂度，同时也增加了系统具体类的依赖。<h3 id="Product类："><a href="#Product类：" class="headerlink" title="Product类："></a>Product类：</h3>用来表示”产品“的类，声明了use的抽象方法。use的实现交给子类<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">export default abstract class Product &#123;</span><br><span class="line">    public abstract use(): void;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<h3 id="Factory类"><a href="#Factory类" class="headerlink" title="Factory类:"></a>Factory类:</h3>使用<a target="_blank" rel="noopener" href="https://www.jianshu.com/p/61549520cddc">Template Method</a>模式，声明了creatProduct（生产产品）和registerProduct（注册产品）的抽象方法。具体实现交给子类<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line">import Product from &#39;.&#x2F;Product&#39;;</span><br><span class="line">export default abstract class Factory &#123;</span><br><span class="line">    public create(owner: String): Product &#123;</span><br><span class="line">        const p: Product &#x3D; this.creatProduct(owner);</span><br><span class="line">        this.registerProduct(p);</span><br><span class="line">        return p;</span><br><span class="line">    &#125;</span><br><span class="line">    protected abstract creatProduct(owner: String): Product;</span><br><span class="line">    protected abstract registerProduct(Product: Product): void;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<h3 id="IDCard类："><a href="#IDCard类：" class="headerlink" title="IDCard类："></a>IDCard类：</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br></pre></td><td class="code"><pre><span class="line">import Product from &#39;.&#x2F;Product&#39;;</span><br><span class="line">export default class IDCard extends Product &#123;</span><br><span class="line">    private owner: String;</span><br><span class="line">    constructor(owner: String) &#123;</span><br><span class="line">        super();</span><br><span class="line">        console.log(&#96;制作$&#123;owner&#125;的ID卡！&#96;);</span><br><span class="line">        this.owner &#x3D; owner;</span><br><span class="line">    &#125;</span><br><span class="line">    public use(): void &#123;</span><br><span class="line">        console.log(&#96;使用$&#123;this.owner&#125;的ID卡&#96;);</span><br><span class="line">    &#125;</span><br><span class="line">    public getOwner(): String &#123;</span><br><span class="line">        return this.owner;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<h3 id="IDCardFactory类："><a href="#IDCardFactory类：" class="headerlink" title="IDCardFactory类："></a>IDCardFactory类：</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br></pre></td><td class="code"><pre><span class="line">import Factory from &#39;.&#x2F;Factory&#39;;</span><br><span class="line">import Product from &#39;.&#x2F;Product&#39;;</span><br><span class="line">import IDCard from &#39;.&#x2F;IDCard&#39;;</span><br><span class="line">export default class IDCardFactory extends Factory &#123;</span><br><span class="line">    private owners: Array&lt;String&gt; &#x3D; new Array();</span><br><span class="line">    protected creatProduct(owner: String): Product &#123;</span><br><span class="line">        return new IDCard(owner);</span><br><span class="line">    &#125;</span><br><span class="line">    protected registerProduct(product: Product) &#123;</span><br><span class="line">        &#x2F;&#x2F;转换product类型为IDCard</span><br><span class="line">        this.owners.push((product as IDCard).getOwner());</span><br><span class="line">    &#125;</span><br><span class="line">    public getOwners(): Array&lt;String&gt; &#123;</span><br><span class="line">        return this.owners;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<h3 id="main函数"><a href="#main函数" class="headerlink" title="main函数"></a>main函数</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line">import IDCardFactory from &#39;.&#x2F;IDCardFactory&#39;;</span><br><span class="line">import Product from &#39;.&#x2F;Product&#39;;</span><br><span class="line"></span><br><span class="line">const factory &#x3D; new IDCardFactory();</span><br><span class="line">const card1: Product &#x3D; factory.create(&quot;小明&quot;);</span><br><span class="line">const card2: Product &#x3D; factory.create(&quot;小红&quot;);</span><br><span class="line">const card3: Product &#x3D; factory.create(&quot;小刚&quot;);</span><br><span class="line"></span><br><span class="line">card1.use();</span><br><span class="line">card2.use();</span><br><span class="line">card3.use();</span><br><span class="line">console.log(factory.getOwners());</span><br></pre></td></tr></table></figure>
+<h3 id="输出："><a href="#输出：" class="headerlink" title="输出："></a>输出：</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">制作小明的ID卡！</span><br><span class="line">制作小红的ID卡！</span><br><span class="line">制作小刚的ID卡！</span><br><span class="line">使用小明的ID卡</span><br><span class="line">使用小红的ID卡</span><br><span class="line">使用小刚的ID卡</span><br><span class="line">[ &#39;小明&#39;, &#39;小红&#39;, &#39;小刚&#39; ]</span><br></pre></td></tr></table></figure>
+<h3 id="结构："><a href="#结构：" class="headerlink" title="结构："></a>结构：</h3></li>
+</ul>
+<p><strong>Product(产品)：</strong>属于框架这一方，是抽象类，定义在Factory Method模式中生产的那些实例所持有的接口（API），具体由子类ConcreteProduct角色决定。<br><strong>Creator(创建者)：</strong>属于框架这一方，负责生产Product角色的抽闲类，具体处理由子类ConcreteCreator角色决定<br><strong>ConcreteProduct(具体产品)：</strong>属于具体加工方，决定了具体的产品。<br><strong>ConcreteCreator(具体的创造者)：</strong>属于具体加工方，负责生产具体的产品</p>
+<h3 id="类图："><a href="#类图：" class="headerlink" title="类图："></a>类图：</h3><p><img src="https://upload-images.jianshu.io/upload_images/10024246-378922e9df56e360.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="Factory Method模式类图"></p>
+
+      
+    </div>
+
+    
+    
+    
+
+    <footer class="post-footer">
+        <div class="post-eof"></div>
+      
+    </footer>
+  </article>
+</div>
+
+
+
+
+    
+
+
+<div class="post-block">
+  
+  
+
+  <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="">
     <link itemprop="mainEntityOfPage" href="https://lzhwweb.github.io/nirvana/DesignPattern/%E8%AE%BE%E8%AE%A1%E6%A8%A1%E5%BC%8F%EF%BC%88TypeScript%EF%BC%89/Flyweight-Pattern(%E4%BA%AB%E5%85%83%E6%A8%A1%E5%BC%8F)/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="image" content="https://avatars.githubusercontent.com/u/8438772?s=60&v=4">
+      <meta itemprop="image" content="/nirvana/images/headphoto.jpeg">
       <meta itemprop="name" content="nirvana">
       <meta itemprop="description" content="个人学习笔记">
     </span>
@@ -589,131 +710,10 @@
   
 
   <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="">
-    <link itemprop="mainEntityOfPage" href="https://lzhwweb.github.io/nirvana/DesignPattern/%E8%AE%BE%E8%AE%A1%E6%A8%A1%E5%BC%8F%EF%BC%88TypeScript%EF%BC%89/Factory-Method(%E5%B7%A5%E5%8E%82%E6%A8%A1%E5%BC%8F)/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="image" content="https://avatars.githubusercontent.com/u/8438772?s=60&v=4">
-      <meta itemprop="name" content="nirvana">
-      <meta itemprop="description" content="个人学习笔记">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="涅槃快乐是金">
-    </span>
-      <header class="post-header">
-        <h2 class="post-title" itemprop="name headline">
-          <a href="/nirvana/DesignPattern/%E8%AE%BE%E8%AE%A1%E6%A8%A1%E5%BC%8F%EF%BC%88TypeScript%EF%BC%89/Factory-Method(%E5%B7%A5%E5%8E%82%E6%A8%A1%E5%BC%8F)/" class="post-title-link" itemprop="url">Factory-Method(工厂模式)</a>
-        </h2>
-
-        <div class="post-meta-container">
-          <div class="post-meta">
-    <span class="post-meta-item">
-      <span class="post-meta-item-icon">
-        <i class="far fa-calendar"></i>
-      </span>
-      <span class="post-meta-item-text">发表于</span>
-
-      <time title="创建时间：2021-03-11 21:12:40" itemprop="dateCreated datePublished" datetime="2021-03-11T21:12:40+08:00">2021-03-11</time>
-    </span>
-      <span class="post-meta-item">
-        <span class="post-meta-item-icon">
-          <i class="far fa-calendar-check"></i>
-        </span>
-        <span class="post-meta-item-text">更新于</span>
-        <time title="修改时间：2021-03-10 13:43:55" itemprop="dateModified" datetime="2021-03-10T13:43:55+08:00">2021-03-10</time>
-      </span>
-    <span class="post-meta-item">
-      <span class="post-meta-item-icon">
-        <i class="far fa-folder"></i>
-      </span>
-      <span class="post-meta-item-text">分类于</span>
-        <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-          <a href="/nirvana/categories/DesignPattern/" itemprop="url" rel="index"><span itemprop="name">DesignPattern</span></a>
-        </span>
-    </span>
-
-  
-      </div>
-      <div class="post-meta">
-    <span class="post-meta-item" title="本文字数">
-      <span class="post-meta-item-icon">
-        <i class="far fa-file-word"></i>
-      </span>
-      <span class="post-meta-item-text">本文字数：</span>
-      <span>2.6k</span>
-    </span>
-    <span class="post-meta-item" title="阅读时长">
-      <span class="post-meta-item-icon">
-        <i class="far fa-clock"></i>
-      </span>
-      <span class="post-meta-item-text">阅读时长 &asymp;</span>
-      <span>2 分钟</span>
-    </span>
-</div>
-
-        </div>
-      </header>
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-          <h3 id="工厂模式"><a href="#工厂模式" class="headerlink" title="工厂模式"></a>工厂模式</h3><blockquote>
-<p>这种类型的设计模式属于创建型模式，它提供了一种创建对象的最佳方式。<br>在工厂模式中，我们在创建对象时不会对客户端暴露创建逻辑，并且是通过使用一个共同的接口来指向新创建的对象。</p>
-</blockquote>
-<h3 id="介绍"><a href="#介绍" class="headerlink" title="介绍"></a>介绍</h3><ul>
-<li><strong>意图：</strong>定义一个创建对象的接口，让其子类自己决定实例化哪一个工厂类，工厂模式使其创建过程延迟到子类进行。</li>
-<li><strong>何时使用：</strong>我们明确地计划不同条件下创建不同实例时。</li>
-<li><strong>如何解决：</strong>让其子类实现工厂接口，返回的也是一个抽象的产品。</li>
-<li><strong>关键代码：</strong>创建过程在其子类执行。</li>
-<li><strong>优点：</strong><blockquote>
-<ol>
-<li>一个调用者想创建一个对象，只要知道其名称就可以了。  </li>
-<li>扩展性高，如果想增加一个产品，只要扩展一个工厂类就可以。 </li>
-<li>屏蔽产品的具体实现，调用者只关心产品的接口。</li>
-</ol>
-</blockquote>
-</li>
-<li><strong>缺点：</strong>每次增加一个产品时，都需要增加一个具体类和对象实现工厂，使得系统中类的个数成倍增加，在一定程度上增加了系统的复杂度，同时也增加了系统具体类的依赖。<h3 id="Product类："><a href="#Product类：" class="headerlink" title="Product类："></a>Product类：</h3>用来表示”产品“的类，声明了use的抽象方法。use的实现交给子类<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">export default abstract class Product &#123;</span><br><span class="line">    public abstract use(): void;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-<h3 id="Factory类"><a href="#Factory类" class="headerlink" title="Factory类:"></a>Factory类:</h3>使用<a target="_blank" rel="noopener" href="https://www.jianshu.com/p/61549520cddc">Template Method</a>模式，声明了creatProduct（生产产品）和registerProduct（注册产品）的抽象方法。具体实现交给子类<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line">import Product from &#39;.&#x2F;Product&#39;;</span><br><span class="line">export default abstract class Factory &#123;</span><br><span class="line">    public create(owner: String): Product &#123;</span><br><span class="line">        const p: Product &#x3D; this.creatProduct(owner);</span><br><span class="line">        this.registerProduct(p);</span><br><span class="line">        return p;</span><br><span class="line">    &#125;</span><br><span class="line">    protected abstract creatProduct(owner: String): Product;</span><br><span class="line">    protected abstract registerProduct(Product: Product): void;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-<h3 id="IDCard类："><a href="#IDCard类：" class="headerlink" title="IDCard类："></a>IDCard类：</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br></pre></td><td class="code"><pre><span class="line">import Product from &#39;.&#x2F;Product&#39;;</span><br><span class="line">export default class IDCard extends Product &#123;</span><br><span class="line">    private owner: String;</span><br><span class="line">    constructor(owner: String) &#123;</span><br><span class="line">        super();</span><br><span class="line">        console.log(&#96;制作$&#123;owner&#125;的ID卡！&#96;);</span><br><span class="line">        this.owner &#x3D; owner;</span><br><span class="line">    &#125;</span><br><span class="line">    public use(): void &#123;</span><br><span class="line">        console.log(&#96;使用$&#123;this.owner&#125;的ID卡&#96;);</span><br><span class="line">    &#125;</span><br><span class="line">    public getOwner(): String &#123;</span><br><span class="line">        return this.owner;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-<h3 id="IDCardFactory类："><a href="#IDCardFactory类：" class="headerlink" title="IDCardFactory类："></a>IDCardFactory类：</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br></pre></td><td class="code"><pre><span class="line">import Factory from &#39;.&#x2F;Factory&#39;;</span><br><span class="line">import Product from &#39;.&#x2F;Product&#39;;</span><br><span class="line">import IDCard from &#39;.&#x2F;IDCard&#39;;</span><br><span class="line">export default class IDCardFactory extends Factory &#123;</span><br><span class="line">    private owners: Array&lt;String&gt; &#x3D; new Array();</span><br><span class="line">    protected creatProduct(owner: String): Product &#123;</span><br><span class="line">        return new IDCard(owner);</span><br><span class="line">    &#125;</span><br><span class="line">    protected registerProduct(product: Product) &#123;</span><br><span class="line">        &#x2F;&#x2F;转换product类型为IDCard</span><br><span class="line">        this.owners.push((product as IDCard).getOwner());</span><br><span class="line">    &#125;</span><br><span class="line">    public getOwners(): Array&lt;String&gt; &#123;</span><br><span class="line">        return this.owners;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-<h3 id="main函数"><a href="#main函数" class="headerlink" title="main函数"></a>main函数</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line">import IDCardFactory from &#39;.&#x2F;IDCardFactory&#39;;</span><br><span class="line">import Product from &#39;.&#x2F;Product&#39;;</span><br><span class="line"></span><br><span class="line">const factory &#x3D; new IDCardFactory();</span><br><span class="line">const card1: Product &#x3D; factory.create(&quot;小明&quot;);</span><br><span class="line">const card2: Product &#x3D; factory.create(&quot;小红&quot;);</span><br><span class="line">const card3: Product &#x3D; factory.create(&quot;小刚&quot;);</span><br><span class="line"></span><br><span class="line">card1.use();</span><br><span class="line">card2.use();</span><br><span class="line">card3.use();</span><br><span class="line">console.log(factory.getOwners());</span><br></pre></td></tr></table></figure>
-<h3 id="输出："><a href="#输出：" class="headerlink" title="输出："></a>输出：</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">制作小明的ID卡！</span><br><span class="line">制作小红的ID卡！</span><br><span class="line">制作小刚的ID卡！</span><br><span class="line">使用小明的ID卡</span><br><span class="line">使用小红的ID卡</span><br><span class="line">使用小刚的ID卡</span><br><span class="line">[ &#39;小明&#39;, &#39;小红&#39;, &#39;小刚&#39; ]</span><br></pre></td></tr></table></figure>
-<h3 id="结构："><a href="#结构：" class="headerlink" title="结构："></a>结构：</h3></li>
-</ul>
-<p><strong>Product(产品)：</strong>属于框架这一方，是抽象类，定义在Factory Method模式中生产的那些实例所持有的接口（API），具体由子类ConcreteProduct角色决定。<br><strong>Creator(创建者)：</strong>属于框架这一方，负责生产Product角色的抽闲类，具体处理由子类ConcreteCreator角色决定<br><strong>ConcreteProduct(具体产品)：</strong>属于具体加工方，决定了具体的产品。<br><strong>ConcreteCreator(具体的创造者)：</strong>属于具体加工方，负责生产具体的产品</p>
-<h3 id="类图："><a href="#类图：" class="headerlink" title="类图："></a>类图：</h3><p><img src="https://upload-images.jianshu.io/upload_images/10024246-378922e9df56e360.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="Factory Method模式类图"></p>
-
-      
-    </div>
-
-    
-    
-    
-
-    <footer class="post-footer">
-        <div class="post-eof"></div>
-      
-    </footer>
-  </article>
-</div>
-
-
-
-
-    
-
-
-<div class="post-block">
-  
-  
-
-  <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="">
     <link itemprop="mainEntityOfPage" href="https://lzhwweb.github.io/nirvana/DesignPattern/%E8%AE%BE%E8%AE%A1%E6%A8%A1%E5%BC%8F%EF%BC%88TypeScript%EF%BC%89/Interpreter-Pattern(%E8%A7%A3%E9%87%8A%E5%99%A8%E6%A8%A1%E5%BC%8F%EF%BC%89/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="image" content="https://avatars.githubusercontent.com/u/8438772?s=60&v=4">
+      <meta itemprop="image" content="/nirvana/images/headphoto.jpeg">
       <meta itemprop="name" content="nirvana">
       <meta itemprop="description" content="个人学习笔记">
     </span>
@@ -843,7 +843,7 @@
     <link itemprop="mainEntityOfPage" href="https://lzhwweb.github.io/nirvana/DesignPattern/%E8%AE%BE%E8%AE%A1%E6%A8%A1%E5%BC%8F%EF%BC%88TypeScript%EF%BC%89/Iterator%E6%A8%A1%E5%BC%8F/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="image" content="https://avatars.githubusercontent.com/u/8438772?s=60&v=4">
+      <meta itemprop="image" content="/nirvana/images/headphoto.jpeg">
       <meta itemprop="name" content="nirvana">
       <meta itemprop="description" content="个人学习笔记">
     </span>
@@ -948,7 +948,7 @@
     <link itemprop="mainEntityOfPage" href="https://lzhwweb.github.io/nirvana/DesignPattern/%E8%AE%BE%E8%AE%A1%E6%A8%A1%E5%BC%8F%EF%BC%88TypeScript%EF%BC%89/Mediator%E6%A8%A1%E5%BC%8F%EF%BC%88%E4%B8%AD%E4%BB%8B%E8%80%85%E6%A8%A1%E5%BC%8F%EF%BC%89/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="image" content="https://avatars.githubusercontent.com/u/8438772?s=60&v=4">
+      <meta itemprop="image" content="/nirvana/images/headphoto.jpeg">
       <meta itemprop="name" content="nirvana">
       <meta itemprop="description" content="个人学习笔记">
     </span>
@@ -1071,7 +1071,7 @@
     <link itemprop="mainEntityOfPage" href="https://lzhwweb.github.io/nirvana/DesignPattern/%E8%AE%BE%E8%AE%A1%E6%A8%A1%E5%BC%8F%EF%BC%88TypeScript%EF%BC%89/Memento-Pattern%EF%BC%88%E5%A4%87%E5%BF%98%E5%BD%95%E6%A8%A1%E5%BC%8F%EF%BC%89/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="image" content="https://avatars.githubusercontent.com/u/8438772?s=60&v=4">
+      <meta itemprop="image" content="/nirvana/images/headphoto.jpeg">
       <meta itemprop="name" content="nirvana">
       <meta itemprop="description" content="个人学习笔记">
     </span>
@@ -1188,7 +1188,7 @@ Gamer类：表示游戏主人公的类<figure class="highlight plain"><table><tr
     <link itemprop="mainEntityOfPage" href="https://lzhwweb.github.io/nirvana/DesignPattern/%E8%AE%BE%E8%AE%A1%E6%A8%A1%E5%BC%8F%EF%BC%88TypeScript%EF%BC%89/Observer%E6%A8%A1%E5%BC%8F%EF%BC%88%E8%A7%82%E5%AF%9F%E8%80%85%E6%A8%A1%E5%BC%8F%EF%BC%89/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="image" content="https://avatars.githubusercontent.com/u/8438772?s=60&v=4">
+      <meta itemprop="image" content="/nirvana/images/headphoto.jpeg">
       <meta itemprop="name" content="nirvana">
       <meta itemprop="description" content="个人学习笔记">
     </span>
@@ -1308,7 +1308,7 @@ Gamer类：表示游戏主人公的类<figure class="highlight plain"><table><tr
     <link itemprop="mainEntityOfPage" href="https://lzhwweb.github.io/nirvana/DesignPattern/%E8%AE%BE%E8%AE%A1%E6%A8%A1%E5%BC%8F%EF%BC%88TypeScript%EF%BC%89/Prototype-Pattern(%E5%8E%9F%E5%9E%8B%E6%A8%A1%E5%BC%8F%EF%BC%89/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="image" content="https://avatars.githubusercontent.com/u/8438772?s=60&v=4">
+      <meta itemprop="image" content="/nirvana/images/headphoto.jpeg">
       <meta itemprop="name" content="nirvana">
       <meta itemprop="description" content="个人学习笔记">
     </span>
