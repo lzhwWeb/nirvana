@@ -1,5 +1,5 @@
 ---
-title: IOS Invalid regular expression:/ invalid group specifier name
+title: IOS Invalid regular expression： invalid group specifier name
 date: 2021-03-11 21:12:40
 category: javascript
 ---
