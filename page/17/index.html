@@ -206,7 +206,7 @@
   <nav class="site-state">
       <div class="site-state-item site-state-posts">
           <a href="/nirvana/archives">
-          <span class="site-state-item-count">177</span>
+          <span class="site-state-item-count">178</span>
           <span class="site-state-item-name">日志</span>
         </a>
       </div>
@@ -249,7 +249,7 @@
   
 
   <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="">
-    <link itemprop="mainEntityOfPage" href="https://lzhwweb.github.io/nirvana/git/git/git-code-count/">
+    <link itemprop="mainEntityOfPage" href="https://lzhwweb.github.io/nirvana/git/git/git-seach/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="image" content="/nirvana/images/headphoto.jpeg">
@@ -262,7 +262,7 @@
     </span>
       <header class="post-header">
         <h2 class="post-title" itemprop="name headline">
-          <a href="/nirvana/git/git/git-code-count/" class="post-title-link" itemprop="url">git代码统计</a>
+          <a href="/nirvana/git/git/git-seach/" class="post-title-link" itemprop="url">GitHub 常用搜索语法</a>
         </h2>
 
         <div class="post-meta-container">
@@ -273,7 +273,7 @@
       </span>
       <span class="post-meta-item-text">发表于</span>
 
-      <time title="创建时间：2021-03-09 21:12:40" itemprop="dateCreated datePublished" datetime="2021-03-09T21:12:40+08:00">2021-03-09</time>
+      <time title="创建时间：2021-03-09 21:19:18" itemprop="dateCreated datePublished" datetime="2021-03-09T21:19:18+08:00">2021-03-09</time>
     </span>
       <span class="post-meta-item">
         <span class="post-meta-item-icon">
@@ -300,14 +300,14 @@
         <i class="far fa-file-word"></i>
       </span>
       <span class="post-meta-item-text">本文字数：</span>
-      <span>1.7k</span>
+      <span>3.6k</span>
     </span>
     <span class="post-meta-item" title="阅读时长">
       <span class="post-meta-item-icon">
         <i class="far fa-clock"></i>
       </span>
       <span class="post-meta-item-text">阅读时长 &asymp;</span>
-      <span>2 分钟</span>
+      <span>3 分钟</span>
     </span>
 </div>
 
@@ -318,37 +318,380 @@
     
     
     <div class="post-body" itemprop="articleBody">
-          <h2 id="命令行"><a href="#命令行" class="headerlink" title="命令行"></a>命令行</h2><h3 id="查看git上的个人代码量："><a href="#查看git上的个人代码量：" class="headerlink" title="查看git上的个人代码量："></a>查看git上的个人代码量：</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">git log --author&#x3D;&quot;username&quot; --pretty&#x3D;tformat: --numstat | awk &#39;&#123; add +&#x3D; $1; subs +&#x3D; $2; loc +&#x3D; $1 - $2 &#125; END &#123; printf &quot;added lines: %s, removed lines: %s, total lines: %s\n&quot;, add, subs, loc &#125;&#39; -</span><br></pre></td></tr></table></figure>
+          <p><strong><a target="_blank" rel="noopener" href="https://docs.github.com/cn/github/searching-for-information-on-github/searching-for-repositories">官网</a></strong></p>
+<h1 id="搜索仓库"><a href="#搜索仓库" class="headerlink" title="搜索仓库"></a>搜索仓库</h1><p>您可以在 GitHub 上搜索仓库，并使用这些仓库搜索限定符的任意组合缩小结果范围。<br>您可以在所有 GitHub 内全局搜索仓库，也可以在特定组织内搜索仓库<br>要在搜索结果中包括复刻，您需要将 <code>fork:true</code> 或 <code>fork:only</code> 添加到查询。 </p>
+<p><strong>Tips:</strong></p>
+<ul>
+<li>  有关可以添加到任何搜索限定符以进一步改善结果的搜索语法列表，请参阅“<a target="_blank" rel="noopener" href="https://docs.github.com/cn/free-pro-team@latest/articles/understanding-the-search-syntax">了解搜索语法</a>”。</li>
+<li>  对多个字词的搜索词使用引号。 例如，如果要搜索具有标签 “In progress” 的议题，可搜索 <code>label:&quot;in progress&quot;</code>。 搜索不区分大小写。</li>
+</ul>
+<h3 id="按仓库名称、说明或自述文件内容搜索"><a href="#按仓库名称、说明或自述文件内容搜索" class="headerlink" title="按仓库名称、说明或自述文件内容搜索"></a>按仓库名称、说明或自述文件内容搜索</h3><p>通过 <code>in</code> 限定符，您可以将搜索限制为仓库名称、仓库说明、自述文件内容或这些的任意组合。 如果省略此限定符，则只搜索仓库名称和说明。</p>
+<table>
+<thead>
+<tr>
+<th>限定符</th>
+<th>示例</th>
+</tr>
+</thead>
+<tbody><tr>
+<td><code>in:name</code></td>
+<td><strong>jquery in:name</strong> matches repositories with “jquery” in the repository name.</td>
+</tr>
+<tr>
+<td><code>in:description</code></td>
+<td><strong>jquery in:name,description</strong> matches repositories with “jquery” in the repository name or description.</td>
+</tr>
+<tr>
+<td><code>in:readme</code></td>
+<td><strong>jquery in:readme</strong>  matches repositories mentioning “jquery” in the repository’s README file.</td>
+</tr>
+<tr>
+<td><code>repo:owner/name</code></td>
+<td><strong>repo:octocat/hello-world</strong> 匹配特定仓库名称。</td>
+</tr>
+</tbody></table>
+<h3 id="基于仓库的内容搜索"><a href="#基于仓库的内容搜索" class="headerlink" title="基于仓库的内容搜索"></a>基于仓库的内容搜索</h3><p>除了使用 <code>in:readme</code> 以外，无法通过搜索仓库内的特定内容来查找仓库。 要搜索仓库内的特定文件或内容，您可以使用查找器或代码特定的搜索限定符。<br>| 限定符 | 示例 |<br>| — | — |<br>| <code>in:readme</code> | <strong>octocat in:readme</strong> matches repositories mentioning “octocat” in the repository’s README file. |</p>
+<h3 id="在用户或组织的仓库内搜索"><a href="#在用户或组织的仓库内搜索" class="headerlink" title="在用户或组织的仓库内搜索"></a>在用户或组织的仓库内搜索</h3><p>要在特定用户或组织拥有的所有仓库中搜索，您可以使用 <code>user</code> 或 <code>org</code> 限定符。</p>
+<table>
+<thead>
+<tr>
+<th>限定符</th>
+<th>示例</th>
+</tr>
+</thead>
+<tbody><tr>
+<td><code>user:*USERNAME*</code></td>
+<td><strong>user:defunkt forks:&gt;100</strong> 匹配来自 @defunkt、拥有超过 100 复刻的仓库。</td>
+</tr>
+<tr>
+<td><code>org:*ORGNAME*</code></td>
+<td><strong>org:github</strong> 匹配来自 GitHub 的仓库。</td>
+</tr>
+</tbody></table>
+<h3 id="按仓库大小搜索"><a href="#按仓库大小搜索" class="headerlink" title="按仓库大小搜索"></a>按仓库大小搜索</h3><p>The <code>size</code> qualifier finds repositories that match a certain size (in kilobytes), using greater than, less than, and range qualifiers<br>| 限定符 | 示例 |<br>| — | — |<br>| <code>size:*n*</code> | <strong>size:1000</strong> 匹配恰好为 1 MB 的仓库。 |<br>|  | <strong>size:&gt;=30000</strong> 匹配至少为 30 MB 的仓库。 |<br>|  | <strong>size:&lt;50</strong> 匹配小于 50 KB 的仓库。 |<br>|  | <strong>size:50..120</strong> 匹配介于 50 KB 与 120 KB 之间的仓库。 |</p>
+<h3 id="按关注者数量搜索"><a href="#按关注者数量搜索" class="headerlink" title="按关注者数量搜索"></a>按关注者数量搜索</h3><table>
+<thead>
+<tr>
+<th>限定符</th>
+<th>示例</th>
+</tr>
+</thead>
+<tbody><tr>
+<td><code>followers:*n*</code></td>
+<td><strong>node followers:&gt;=10000</strong> 匹配有 10,000 或更多关注者提及文字 “node” 的仓库。</td>
+</tr>
+<tr>
+<td></td>
+<td><strong>styleguide linter followers:1..10</strong> 匹配拥有 1 到 10 个关注者并且提及 “styleguide linter” 一词的的仓库。</td>
+</tr>
+</tbody></table>
+<h3 id="按复刻数量搜索"><a href="#按复刻数量搜索" class="headerlink" title="按复刻数量搜索"></a>按复刻数量搜索</h3><table>
+<thead>
+<tr>
+<th>限定符</th>
+<th>示例</th>
+</tr>
+</thead>
+<tbody><tr>
+<td><code>forks:*n*</code></td>
+<td><strong>forks:5</strong> 匹配具有至少 205 个复刻的仓库。</td>
+</tr>
+<tr>
+<td></td>
+<td><strong>forks:&lt;90</strong> 匹配具有少于 90 个复刻的仓库。</td>
+</tr>
+<tr>
+<td></td>
+<td><strong>forks:10..20</strong> 匹配具有 10 到 20 个复刻的仓库。</td>
+</tr>
+</tbody></table>
+<h3 id="按星号数量搜索"><a href="#按星号数量搜索" class="headerlink" title="按星号数量搜索"></a>按星号数量搜索</h3><table>
+<thead>
+<tr>
+<th>限定符</th>
+<th>示例</th>
+</tr>
+</thead>
+<tbody><tr>
+<td><code>stars:*n*</code></td>
+<td><strong>stars:500</strong> 匹配恰好具有 500 个星号的仓库。</td>
+</tr>
+<tr>
+<td></td>
+<td><strong>stars:10..20</strong> 匹配具有 10 到 20 个星号、小于 1000 KB 的仓库。</td>
+</tr>
+<tr>
+<td></td>
+<td><strong>stars:&gt;=500 fork:true language:php</strong> 匹配具有至少 500 个星号，包括复刻的星号（以 PHP 编写）的仓库。</td>
+</tr>
+</tbody></table>
+<h3 id="按仓库创建或上次更新时间搜索"><a href="#按仓库创建或上次更新时间搜索" class="headerlink" title="按仓库创建或上次更新时间搜索"></a>按仓库创建或上次更新时间搜索</h3><p>您可以基于创建时间或上次更新时间过滤仓库。 对于仓库创建，您可以使用 <code>created</code> 限定符；要了解仓库上次更新的时间，您要使用 <code>pushed</code> 限定符。 <code>pushed</code> 限定符将返回仓库列表，按仓库中任意分支上最近进行的提交排序。</p>
+<p>两者均采用日期作为参数。 日期格式必须遵循 <a target="_blank" rel="noopener" href="http://en.wikipedia.org/wiki/ISO_8601">ISO8601</a>标准，即 <code>YYYY-MM-DD</code>（年-月-日）。 您也可以在日期后添加可选的时间信息 <code>THH:MM:SS+00:00</code>，以便按小时、分钟和秒进行搜索。 这是 <code>T</code>，随后是 <code>HH:MM:SS</code>（时-分-秒）和 UTC 偏移 (<code>+00:00</code>)。</p>
+<table>
+<thead>
+<tr>
+<th>限定符</th>
+<th>示例</th>
+</tr>
+</thead>
+<tbody><tr>
+<td><code>created:*YYYY-MM-DD*</code></td>
+<td><strong>webos created:&lt;2011-01-01</strong> 匹配具有 “webos” 字样、在 2011 年之前创建的仓库。</td>
+</tr>
+<tr>
+<td><code>pushed:*YYYY-MM-DD*</code></td>
+<td><strong>css pushed:&gt;2013-02-01</strong> 匹配具有 “css” 字样、在 2013 年 1 月之后收到推送的仓库。</td>
+</tr>
+<tr>
+<td></td>
+<td><strong>case pushed:&gt;=2013-03-06 fork:only</strong> 匹配具有 “case” 字样、在 2013 年 3 月 6 日或之后收到推送并且作为复刻的仓库。</td>
+</tr>
+</tbody></table>
+<h3 id="按语言搜索"><a href="#按语言搜索" class="headerlink" title="按语言搜索"></a>按语言搜索</h3><p>You can search repositories based on the language of the code in the repositories.</p>
+<table>
+<thead>
+<tr>
+<th>限定符</th>
+<th>示例</th>
+</tr>
+</thead>
+<tbody><tr>
+<td><code>language:*LANGUAGE*</code></td>
+<td><strong>rails language:javascript</strong> 匹配具有 “rails” 字样、以 JavaScript 编写的仓库。</td>
+</tr>
+</tbody></table>
+<h3 id="按主题搜索"><a href="#按主题搜索" class="headerlink" title="按主题搜索"></a>按主题搜索</h3><table>
+<thead>
+<tr>
+<th>限定符</th>
+<th>示例</th>
+</tr>
+</thead>
+<tbody><tr>
+<td><code>topic:*TOPIC*</code></td>
+<td><strong>topic:jekyll</strong> 匹配已归类为 “jekyll” 主题的仓库。</td>
+</tr>
+</tbody></table>
+<h3 id="按主题数量搜索"><a href="#按主题数量搜索" class="headerlink" title="按主题数量搜索"></a>按主题数量搜索</h3><table>
+<thead>
+<tr>
+<th>限定符</th>
+<th>示例</th>
+</tr>
+</thead>
+<tbody><tr>
+<td><code>topics:*n*</code></td>
+<td><strong>topics:5</strong> 匹配具有五个主题的仓库。</td>
+</tr>
+<tr>
+<td></td>
+<td><strong>topics:&gt;3</strong>  匹配超过三个主题的仓库。</td>
+</tr>
+</tbody></table>
+<h3 id="按许可搜索"><a href="#按许可搜索" class="headerlink" title="按许可搜索"></a>按许可搜索</h3><table>
+<thead>
+<tr>
+<th>限定符</th>
+<th>示例</th>
+</tr>
+</thead>
+<tbody><tr>
+<td><code>license:*LICENSE_KEYWORD*</code></td>
+<td><strong>license:apache-2.0</strong>  匹配根据 Apache License 2.0 授权的仓库。</td>
+</tr>
+</tbody></table>
+<h3 id="Search-by-repository-visibility"><a href="#Search-by-repository-visibility" class="headerlink" title="Search by repository visibility"></a>Search by repository visibility</h3><p>You can filter your search based on the visibility of the repositories. </p>
+<table>
+<thead>
+<tr>
+<th>Qualifier</th>
+<th>Example</th>
+</tr>
+</thead>
+<tbody><tr>
+<td><code>is:public</code></td>
+<td><strong>is:public org:github</strong>  matches public repositories owned by GitHub.</td>
+</tr>
+<tr>
+<td><code>is:internal</code></td>
+<td><strong>is:internal test</strong> matches internal repositories that you can access and contain the word “test”.</td>
+</tr>
+<tr>
+<td><code>is:private</code></td>
+<td><strong>is:private pages</strong>  matches private repositories that you can access and contain the word “pages.”</td>
+</tr>
+</tbody></table>
+<h3 id="基于仓库是否为镜像搜索"><a href="#基于仓库是否为镜像搜索" class="headerlink" title="基于仓库是否为镜像搜索"></a>基于仓库是否为镜像搜索</h3><table>
+<thead>
+<tr>
+<th>限定符</th>
+<th>示例</th>
+</tr>
+</thead>
+<tbody><tr>
+<td><code>mirror:true</code></td>
+<td><strong>mirror:true GNOME</strong>  matches repositories that are mirrors and contain the word “GNOME.”</td>
+</tr>
+<tr>
+<td><code>mirror:false</code></td>
+<td><strong>mirror:false GNOME</strong>  matches repositories that are not mirrors and contain the word “GNOME.”</td>
+</tr>
+</tbody></table>
+<h3 id="基于仓库是否已存档搜索"><a href="#基于仓库是否已存档搜索" class="headerlink" title="基于仓库是否已存档搜索"></a>基于仓库是否已存档搜索</h3><table>
+<thead>
+<tr>
+<th>限定符</th>
+<th>示例</th>
+</tr>
+</thead>
+<tbody><tr>
+<td><code>archived:true</code></td>
+<td><strong>archived:true GNOME</strong>  matches repositories that are archived and contain the word “GNOME.”</td>
+</tr>
+<tr>
+<td><code>archived:false</code></td>
+<td><strong>archived:false GNOME</strong> matches repositories that are not archived and contain the word “GNOME.”</td>
+</tr>
+</tbody></table>
+<h3 id="基于具有-good-first-issue-或-help-wanted-标签的议题数量搜索"><a href="#基于具有-good-first-issue-或-help-wanted-标签的议题数量搜索" class="headerlink" title="基于具有 good first issue 或 help wanted 标签的议题数量搜索"></a>基于具有 <code>good first issue</code> 或 <code>help wanted</code> 标签的议题数量搜索</h3><p>您可以使用限定符 <code>help-wanted-issues:&gt;n</code> 和 <code>good-first-issues:&gt;n</code> 搜索具有最少数量标签为 <code>help-wanted</code> 或 <code>good-first-issue</code> 议题的仓库。。</p>
+<table>
+<thead>
+<tr>
+<th>限定符</th>
+<th>示例</th>
+</tr>
+</thead>
+<tbody><tr>
+<td><code>good-first-issues:&gt;n</code></td>
+<td><strong>good-first-issues:&gt;2 javascript</strong>  匹配具有超过两个标签为 <code>good-first-issue</code> 的议题且包含 “javascript” 字样的仓库。</td>
+</tr>
+<tr>
+<td><code>help-wanted-issues:&gt;n</code></td>
+<td><strong>help-wanted-issues:&gt;4 react</strong>  匹配具有超过四个标签为 <code>help-wanted</code> 的议题且包含 “React” 字样的仓库。</td>
+</tr>
+</tbody></table>
 
-<p>结果示例：(记得修改 username)</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">added lines: 120745, removed lines: 71738, total lines: 49007</span><br></pre></td></tr></table></figure>
+      
+    </div>
 
-<h3 id="统计每个人增删行数"><a href="#统计每个人增删行数" class="headerlink" title="统计每个人增删行数"></a>统计每个人增删行数</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">git log --format&#x3D;&#39;%aN&#39; | sort -u | while read name; do echo -en &quot;$name\t&quot;; git log --author&#x3D;&quot;$name&quot; --pretty&#x3D;tformat: --numstat | awk &#39;&#123; add +&#x3D; $1; subs +&#x3D; $2; loc +&#x3D; $1 - $2 &#125; END &#123; printf &quot;added lines: %s, removed lines: %s, total lines: %s\n&quot;, add, subs, loc &#125;&#39; -; done</span><br></pre></td></tr></table></figure>
+    
+    
+    
 
-<p>结果示例</p>
-<p><img src="https://upload-images.jianshu.io/upload_images/10024246-9d65172280d94945.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240"></p>
-<p>###统计时间段每个人增删行数</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">git log  --format&#x3D;&#39;%aN&#39; | sort -u | while read name; do echo -en &quot;$name\t&quot;; git log --author&#x3D;&quot;$name&quot; --pretty&#x3D;tformat:  --since &#x3D;&#x3D;2020-1-1 --until&#x3D;2020-2-15 --numstat | awk &#39;&#123; add +&#x3D; $1; subs +&#x3D; $2; loc +&#x3D; $1 - $2 &#125; END &#123; printf &quot;added lines: %s, removed lines: %s, total lines: %s\n&quot;, add, subs, loc &#125;&#39; -; done</span><br></pre></td></tr></table></figure>
+    <footer class="post-footer">
+        <div class="post-eof"></div>
+      
+    </footer>
+  </article>
+</div>
 
-<h3 id="查看仓库提交者排名前-5"><a href="#查看仓库提交者排名前-5" class="headerlink" title="查看仓库提交者排名前 5"></a>查看仓库提交者排名前 5</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">git log --pretty&#x3D;&#39;%aN&#39; | sort | uniq -c | sort -k1 -n -r | head -n 5</span><br></pre></td></tr></table></figure>
 
-<h3 id="贡献值统计"><a href="#贡献值统计" class="headerlink" title="贡献值统计"></a>贡献值统计</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">git log --pretty&#x3D;&#39;%aN&#39; | sort -u | wc -l</span><br></pre></td></tr></table></figure>
 
-<h3 id="提交数统计"><a href="#提交数统计" class="headerlink" title="提交数统计"></a>提交数统计</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">git log --oneline | wc -l</span><br></pre></td></tr></table></figure>
 
-<h3 id="添加或修改的代码行数："><a href="#添加或修改的代码行数：" class="headerlink" title="添加或修改的代码行数："></a>添加或修改的代码行数：</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">git log --stat|perl -ne &#39;END &#123; print $c &#125; $c +&#x3D; $1 if &#x2F;(\d+) insertions&#x2F;&#39;</span><br></pre></td></tr></table></figure>
+    
 
-<h2 id="使用gitstats"><a href="#使用gitstats" class="headerlink" title="使用gitstats"></a>使用gitstats</h2><p><a target="_blank" rel="noopener" href="https://github.com/hoxu/gitstats">GitStats项目</a>，用Python开发的一个工具，通过封装Git命令来实现统计出来代码情况并且生成可浏览的网页。官方文档可以参考这里。</p>
-<h3 id="使用方法"><a href="#使用方法" class="headerlink" title="使用方法"></a>使用方法</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">git clone git:&#x2F;&#x2F;github.com&#x2F;hoxu&#x2F;gitstats.git</span><br><span class="line">cd gitstats</span><br><span class="line">.&#x2F;gitstats 你的项目的位置 生成统计的文件夹位置</span><br></pre></td></tr></table></figure>
-<p>可能会提示(我的为 mac os)</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">env: python2: No such file or directory</span><br></pre></td></tr></table></figure>
-<p>可以进行 python2 的链接</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">sudo ln -sf &#x2F;usr&#x2F;bin&#x2F;python2.7 &#x2F;usr&#x2F;local&#x2F;bin&#x2F;python2</span><br></pre></td></tr></table></figure>
 
-<p>没有安装gnuplot画图程序，那么需要安装再执行：</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">&#x2F;&#x2F;mac osx</span><br><span class="line">brew install gnuplot</span><br><span class="line">&#x2F;&#x2F;centos linux</span><br><span class="line">yum install gnuplot</span><br></pre></td></tr></table></figure>
+<div class="post-block">
+  
+  
 
-<p>生成的统计文件为HTML：<br><img src="https://upload-images.jianshu.io/upload_images/10024246-194e0a1a7127a69f.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240"></p>
+  <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="">
+    <link itemprop="mainEntityOfPage" href="https://lzhwweb.github.io/nirvana/android/android/Mac-%E9%85%8D%E7%BD%AE-adb/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/nirvana/images/headphoto.jpeg">
+      <meta itemprop="name" content="nirvana">
+      <meta itemprop="description" content="个人学习笔记">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="涅槃快乐是金">
+    </span>
+      <header class="post-header">
+        <h2 class="post-title" itemprop="name headline">
+          <a href="/nirvana/android/android/Mac-%E9%85%8D%E7%BD%AE-adb/" class="post-title-link" itemprop="url">Mac-配置-adb</a>
+        </h2>
+
+        <div class="post-meta-container">
+          <div class="post-meta">
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-calendar"></i>
+      </span>
+      <span class="post-meta-item-text">发表于</span>
+
+      <time title="创建时间：2021-03-09 21:12:40" itemprop="dateCreated datePublished" datetime="2021-03-09T21:12:40+08:00">2021-03-09</time>
+    </span>
+      <span class="post-meta-item">
+        <span class="post-meta-item-icon">
+          <i class="far fa-calendar-check"></i>
+        </span>
+        <span class="post-meta-item-text">更新于</span>
+        <time title="修改时间：2021-03-10 13:43:55" itemprop="dateModified" datetime="2021-03-10T13:43:55+08:00">2021-03-10</time>
+      </span>
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-folder"></i>
+      </span>
+      <span class="post-meta-item-text">分类于</span>
+        <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+          <a href="/nirvana/categories/android/" itemprop="url" rel="index"><span itemprop="name">android</span></a>
+        </span>
+    </span>
+
+  
+      </div>
+      <div class="post-meta">
+    <span class="post-meta-item" title="本文字数">
+      <span class="post-meta-item-icon">
+        <i class="far fa-file-word"></i>
+      </span>
+      <span class="post-meta-item-text">本文字数：</span>
+      <span>791</span>
+    </span>
+    <span class="post-meta-item" title="阅读时长">
+      <span class="post-meta-item-icon">
+        <i class="far fa-clock"></i>
+      </span>
+      <span class="post-meta-item-text">阅读时长 &asymp;</span>
+      <span>1 分钟</span>
+    </span>
+</div>
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+          <p>第一步：打开终端，进入根目录。</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$HOME (进入根目录)</span><br></pre></td></tr></table></figure>
+
+<p>第二步：创建 .bash_profile 文件（已存在则无需创建）。</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">touch .bash_profile （创建 .bash_profile 文件）</span><br></pre></td></tr></table></figure>
+<p>第三步：打开并编辑 .bash_profile 文件。</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">open -e .bash_profile （打开编辑 .bash_profile）</span><br></pre></td></tr></table></figure>
+<p>在该文件中配置 adb 的路径信息，比如我的（注意替换为你的路径）：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">export ANDROID_HOME&#x3D;&#x2F;Users&#x2F;mac&#x2F;Library&#x2F;Android&#x2F;sdk</span><br><span class="line">export PATH&#x3D;$PATH:$ANDROID_HOME&#x2F;tools</span><br><span class="line">export PATH&#x3D;$PATH:$ANDROID_HOME&#x2F;platform-tools</span><br></pre></td></tr></table></figure>
+<p>第四步：使配置生效。</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">source .bash_profile</span><br></pre></td></tr></table></figure>
+<p>到这里， 如果输入 adb 后并没有提示：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">-bash: adb: command not found</span><br></pre></td></tr></table></figure>
+<p>就表示已经配置成功了。</p>
+<p>但是如果你此时退出终端，然后重新打开终端输入 adb，又提示你：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">-bash: adb: command not found</span><br></pre></td></tr></table></figure>
+<p>那么你就需要做如下操作了，首先检查你的 shell：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">echo $SHELL</span><br></pre></td></tr></table></figure>
+<p>如果是 base，就把：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">~&#x2F;.bash_profile</span><br></pre></td></tr></table></figure>
+<p>追加到 ~/.bashrc 末尾。</p>
+<p>如果是 zsh，就把</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">~&#x2F;.bash_profile</span><br></pre></td></tr></table></figure>
+<p>追加到 ~/.zshrc 末尾。</p>
+<p>如果没有对于的 .bashrc 、.zshrc 文件，那么按照上面对应的命令新建一个即可。<br>这里以 shell 为 base 以及没有 .bashrc 文件为例，贴一下终端代码：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">$HOME</span><br><span class="line">touch .bashrc</span><br><span class="line">open -e .bashrc</span><br></pre></td></tr></table></figure>
+<p>将 ~/.bash_profile 保存到刚打开的文件中，重新打开终端</p>
 
       
     </div>
@@ -474,7 +817,7 @@
   
 
   <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="">
-    <link itemprop="mainEntityOfPage" href="https://lzhwweb.github.io/nirvana/android/android/Mac-%E9%85%8D%E7%BD%AE-adb/">
+    <link itemprop="mainEntityOfPage" href="https://lzhwweb.github.io/nirvana/git/git/git-code-count/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="image" content="/nirvana/images/headphoto.jpeg">
@@ -487,7 +830,7 @@
     </span>
       <header class="post-header">
         <h2 class="post-title" itemprop="name headline">
-          <a href="/nirvana/android/android/Mac-%E9%85%8D%E7%BD%AE-adb/" class="post-title-link" itemprop="url">Mac-配置-adb</a>
+          <a href="/nirvana/git/git/git-code-count/" class="post-title-link" itemprop="url">git代码统计</a>
         </h2>
 
         <div class="post-meta-container">
@@ -513,7 +856,7 @@
       </span>
       <span class="post-meta-item-text">分类于</span>
         <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-          <a href="/nirvana/categories/android/" itemprop="url" rel="index"><span itemprop="name">android</span></a>
+          <a href="/nirvana/categories/git/" itemprop="url" rel="index"><span itemprop="name">git</span></a>
         </span>
     </span>
 
@@ -525,14 +868,14 @@
         <i class="far fa-file-word"></i>
       </span>
       <span class="post-meta-item-text">本文字数：</span>
-      <span>791</span>
+      <span>1.7k</span>
     </span>
     <span class="post-meta-item" title="阅读时长">
       <span class="post-meta-item-icon">
         <i class="far fa-clock"></i>
       </span>
       <span class="post-meta-item-text">阅读时长 &asymp;</span>
-      <span>1 分钟</span>
+      <span>2 分钟</span>
     </span>
 </div>
 
@@ -543,33 +886,37 @@
     
     
     <div class="post-body" itemprop="articleBody">
-          <p>第一步：打开终端，进入根目录。</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$HOME (进入根目录)</span><br></pre></td></tr></table></figure>
+          <h2 id="命令行"><a href="#命令行" class="headerlink" title="命令行"></a>命令行</h2><h3 id="查看git上的个人代码量："><a href="#查看git上的个人代码量：" class="headerlink" title="查看git上的个人代码量："></a>查看git上的个人代码量：</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">git log --author&#x3D;&quot;username&quot; --pretty&#x3D;tformat: --numstat | awk &#39;&#123; add +&#x3D; $1; subs +&#x3D; $2; loc +&#x3D; $1 - $2 &#125; END &#123; printf &quot;added lines: %s, removed lines: %s, total lines: %s\n&quot;, add, subs, loc &#125;&#39; -</span><br></pre></td></tr></table></figure>
 
-<p>第二步：创建 .bash_profile 文件（已存在则无需创建）。</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">touch .bash_profile （创建 .bash_profile 文件）</span><br></pre></td></tr></table></figure>
-<p>第三步：打开并编辑 .bash_profile 文件。</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">open -e .bash_profile （打开编辑 .bash_profile）</span><br></pre></td></tr></table></figure>
-<p>在该文件中配置 adb 的路径信息，比如我的（注意替换为你的路径）：</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">export ANDROID_HOME&#x3D;&#x2F;Users&#x2F;mac&#x2F;Library&#x2F;Android&#x2F;sdk</span><br><span class="line">export PATH&#x3D;$PATH:$ANDROID_HOME&#x2F;tools</span><br><span class="line">export PATH&#x3D;$PATH:$ANDROID_HOME&#x2F;platform-tools</span><br></pre></td></tr></table></figure>
-<p>第四步：使配置生效。</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">source .bash_profile</span><br></pre></td></tr></table></figure>
-<p>到这里， 如果输入 adb 后并没有提示：</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">-bash: adb: command not found</span><br></pre></td></tr></table></figure>
-<p>就表示已经配置成功了。</p>
-<p>但是如果你此时退出终端，然后重新打开终端输入 adb，又提示你：</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">-bash: adb: command not found</span><br></pre></td></tr></table></figure>
-<p>那么你就需要做如下操作了，首先检查你的 shell：</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">echo $SHELL</span><br></pre></td></tr></table></figure>
-<p>如果是 base，就把：</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">~&#x2F;.bash_profile</span><br></pre></td></tr></table></figure>
-<p>追加到 ~/.bashrc 末尾。</p>
-<p>如果是 zsh，就把</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">~&#x2F;.bash_profile</span><br></pre></td></tr></table></figure>
-<p>追加到 ~/.zshrc 末尾。</p>
-<p>如果没有对于的 .bashrc 、.zshrc 文件，那么按照上面对应的命令新建一个即可。<br>这里以 shell 为 base 以及没有 .bashrc 文件为例，贴一下终端代码：</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">$HOME</span><br><span class="line">touch .bashrc</span><br><span class="line">open -e .bashrc</span><br></pre></td></tr></table></figure>
-<p>将 ~/.bash_profile 保存到刚打开的文件中，重新打开终端</p>
+<p>结果示例：(记得修改 username)</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">added lines: 120745, removed lines: 71738, total lines: 49007</span><br></pre></td></tr></table></figure>
+
+<h3 id="统计每个人增删行数"><a href="#统计每个人增删行数" class="headerlink" title="统计每个人增删行数"></a>统计每个人增删行数</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">git log --format&#x3D;&#39;%aN&#39; | sort -u | while read name; do echo -en &quot;$name\t&quot;; git log --author&#x3D;&quot;$name&quot; --pretty&#x3D;tformat: --numstat | awk &#39;&#123; add +&#x3D; $1; subs +&#x3D; $2; loc +&#x3D; $1 - $2 &#125; END &#123; printf &quot;added lines: %s, removed lines: %s, total lines: %s\n&quot;, add, subs, loc &#125;&#39; -; done</span><br></pre></td></tr></table></figure>
+
+<p>结果示例</p>
+<p><img src="https://upload-images.jianshu.io/upload_images/10024246-9d65172280d94945.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240"></p>
+<p>###统计时间段每个人增删行数</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">git log  --format&#x3D;&#39;%aN&#39; | sort -u | while read name; do echo -en &quot;$name\t&quot;; git log --author&#x3D;&quot;$name&quot; --pretty&#x3D;tformat:  --since &#x3D;&#x3D;2020-1-1 --until&#x3D;2020-2-15 --numstat | awk &#39;&#123; add +&#x3D; $1; subs +&#x3D; $2; loc +&#x3D; $1 - $2 &#125; END &#123; printf &quot;added lines: %s, removed lines: %s, total lines: %s\n&quot;, add, subs, loc &#125;&#39; -; done</span><br></pre></td></tr></table></figure>
+
+<h3 id="查看仓库提交者排名前-5"><a href="#查看仓库提交者排名前-5" class="headerlink" title="查看仓库提交者排名前 5"></a>查看仓库提交者排名前 5</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">git log --pretty&#x3D;&#39;%aN&#39; | sort | uniq -c | sort -k1 -n -r | head -n 5</span><br></pre></td></tr></table></figure>
+
+<h3 id="贡献值统计"><a href="#贡献值统计" class="headerlink" title="贡献值统计"></a>贡献值统计</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">git log --pretty&#x3D;&#39;%aN&#39; | sort -u | wc -l</span><br></pre></td></tr></table></figure>
+
+<h3 id="提交数统计"><a href="#提交数统计" class="headerlink" title="提交数统计"></a>提交数统计</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">git log --oneline | wc -l</span><br></pre></td></tr></table></figure>
+
+<h3 id="添加或修改的代码行数："><a href="#添加或修改的代码行数：" class="headerlink" title="添加或修改的代码行数："></a>添加或修改的代码行数：</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">git log --stat|perl -ne &#39;END &#123; print $c &#125; $c +&#x3D; $1 if &#x2F;(\d+) insertions&#x2F;&#39;</span><br></pre></td></tr></table></figure>
+
+<h2 id="使用gitstats"><a href="#使用gitstats" class="headerlink" title="使用gitstats"></a>使用gitstats</h2><p><a target="_blank" rel="noopener" href="https://github.com/hoxu/gitstats">GitStats项目</a>，用Python开发的一个工具，通过封装Git命令来实现统计出来代码情况并且生成可浏览的网页。官方文档可以参考这里。</p>
+<h3 id="使用方法"><a href="#使用方法" class="headerlink" title="使用方法"></a>使用方法</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">git clone git:&#x2F;&#x2F;github.com&#x2F;hoxu&#x2F;gitstats.git</span><br><span class="line">cd gitstats</span><br><span class="line">.&#x2F;gitstats 你的项目的位置 生成统计的文件夹位置</span><br></pre></td></tr></table></figure>
+<p>可能会提示(我的为 mac os)</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">env: python2: No such file or directory</span><br></pre></td></tr></table></figure>
+<p>可以进行 python2 的链接</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">sudo ln -sf &#x2F;usr&#x2F;bin&#x2F;python2.7 &#x2F;usr&#x2F;local&#x2F;bin&#x2F;python2</span><br></pre></td></tr></table></figure>
+
+<p>没有安装gnuplot画图程序，那么需要安装再执行：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">&#x2F;&#x2F;mac osx</span><br><span class="line">brew install gnuplot</span><br><span class="line">&#x2F;&#x2F;centos linux</span><br><span class="line">yum install gnuplot</span><br></pre></td></tr></table></figure>
+
+<p>生成的统计文件为HTML：<br><img src="https://upload-images.jianshu.io/upload_images/10024246-194e0a1a7127a69f.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240"></p>
 
       
     </div>
@@ -1314,106 +1661,6 @@ iptables服务命令</li>
 
 
 
-    
-
-
-<div class="post-block">
-  
-  
-
-  <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="">
-    <link itemprop="mainEntityOfPage" href="https://lzhwweb.github.io/nirvana/linux/linux/nginx%E8%87%AA%E5%8A%A8%E6%B7%BB%E5%8A%A0%E5%86%85%E7%BD%91%E7%AB%AF%E5%8F%A3/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="image" content="/nirvana/images/headphoto.jpeg">
-      <meta itemprop="name" content="nirvana">
-      <meta itemprop="description" content="个人学习笔记">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="涅槃快乐是金">
-    </span>
-      <header class="post-header">
-        <h2 class="post-title" itemprop="name headline">
-          <a href="/nirvana/linux/linux/nginx%E8%87%AA%E5%8A%A8%E6%B7%BB%E5%8A%A0%E5%86%85%E7%BD%91%E7%AB%AF%E5%8F%A3/" class="post-title-link" itemprop="url">nginx自动添加内网端口</a>
-        </h2>
-
-        <div class="post-meta-container">
-          <div class="post-meta">
-    <span class="post-meta-item">
-      <span class="post-meta-item-icon">
-        <i class="far fa-calendar"></i>
-      </span>
-      <span class="post-meta-item-text">发表于</span>
-
-      <time title="创建时间：2021-03-09 21:12:40" itemprop="dateCreated datePublished" datetime="2021-03-09T21:12:40+08:00">2021-03-09</time>
-    </span>
-      <span class="post-meta-item">
-        <span class="post-meta-item-icon">
-          <i class="far fa-calendar-check"></i>
-        </span>
-        <span class="post-meta-item-text">更新于</span>
-        <time title="修改时间：2021-03-10 13:43:55" itemprop="dateModified" datetime="2021-03-10T13:43:55+08:00">2021-03-10</time>
-      </span>
-    <span class="post-meta-item">
-      <span class="post-meta-item-icon">
-        <i class="far fa-folder"></i>
-      </span>
-      <span class="post-meta-item-text">分类于</span>
-        <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-          <a href="/nirvana/categories/linux/" itemprop="url" rel="index"><span itemprop="name">linux</span></a>
-        </span>
-    </span>
-
-  
-      </div>
-      <div class="post-meta">
-    <span class="post-meta-item" title="本文字数">
-      <span class="post-meta-item-icon">
-        <i class="far fa-file-word"></i>
-      </span>
-      <span class="post-meta-item-text">本文字数：</span>
-      <span>346</span>
-    </span>
-    <span class="post-meta-item" title="阅读时长">
-      <span class="post-meta-item-icon">
-        <i class="far fa-clock"></i>
-      </span>
-      <span class="post-meta-item-text">阅读时长 &asymp;</span>
-      <span>1 分钟</span>
-    </span>
-</div>
-
-        </div>
-      </header>
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-          <h2 id="现象："><a href="#现象：" class="headerlink" title="现象："></a>现象：</h2><p>1.内网nginx服务器提供web的端口为8080；<br>2.通过路由的转换，将8080端口映射为外网的80端口（<code>www.test.com</code>）；<br>3.访问二级目录<code>www.test.com/test</code>,此时nginx会出现访问出错，并自动更改端口为内网的8080，即<code>www.test.com:8080/test/</code>；<br>4.排除了nginx自动添加斜杠的问题，因为nginx从0.8.48这个版本后就已经设置为自动添加了，即</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">server_name_in_redirect off;&#x2F;&#x2F;默认是off了</span><br></pre></td></tr></table></figure>
-<h2 id="原因："><a href="#原因：" class="headerlink" title="原因："></a>原因：</h2><p>通过端口映射时，nginx会自动添加内网端口，修改路径导致路径访问出错；</p>
-<h2 id="解决："><a href="#解决：" class="headerlink" title="解决："></a>解决：</h2><p>在server里面加入</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">port_in_redirect off;&#x2F;&#x2F;关闭自动添加端口</span><br></pre></td></tr></table></figure>
-
-      
-    </div>
-
-    
-    
-    
-
-    <footer class="post-footer">
-        <div class="post-eof"></div>
-      
-    </footer>
-  </article>
-</div>
-
-
-
-
   <nav class="pagination">
     <a class="extend prev" rel="prev" href="/nirvana/page/16/"><i class="fa fa-angle-left" aria-label="上一页"></i></a><a class="page-number" href="/nirvana/">1</a><span class="space">&hellip;</span><a class="page-number" href="/nirvana/page/16/">16</a><span class="page-number current">17</span><a class="page-number" href="/nirvana/page/18/">18</a><a class="extend next" rel="next" href="/nirvana/page/18/"><i class="fa fa-angle-right" aria-label="下一页"></i></a>
   </nav>
@@ -1461,14 +1708,14 @@ iptables服务命令</li>
       <i class="fa fa-chart-line"></i>
     </span>
       <span>站点总字数：</span>
-    <span title="站点总字数">524k</span>
+    <span title="站点总字数">527k</span>
   </span>
   <span class="post-meta-item">
     <span class="post-meta-item-icon">
       <i class="fa fa-coffee"></i>
     </span>
       <span>站点阅读时长 &asymp;</span>
-    <span title="站点阅读时长">7:57</span>
+    <span title="站点阅读时长">7:59</span>
   </span>
 </div>
   <div class="powered-by">由 <a href="https://hexo.io/" class="theme-link" rel="noopener" target="_blank">Hexo</a> & <a href="https://theme-next.js.org/" class="theme-link" rel="noopener" target="_blank">NexT.Gemini</a> 强力驱动

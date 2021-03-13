@@ -206,7 +206,7 @@
   <nav class="site-state">
       <div class="site-state-item site-state-posts">
           <a href="/nirvana/archives">
-          <span class="site-state-item-count">177</span>
+          <span class="site-state-item-count">178</span>
           <span class="site-state-item-name">日志</span>
         </a>
       </div>
@@ -240,6 +240,117 @@
 
 
     <div class="main-inner index posts-expand">
+
+    
+
+
+<div class="post-block">
+  
+  
+
+  <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="">
+    <link itemprop="mainEntityOfPage" href="https://lzhwweb.github.io/nirvana/javascript/%E5%89%8D%E7%AB%AF/js%E9%98%B2%E6%8A%96%E5%92%8C%E8%8A%82%E6%B5%81/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/nirvana/images/headphoto.jpeg">
+      <meta itemprop="name" content="nirvana">
+      <meta itemprop="description" content="个人学习笔记">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="涅槃快乐是金">
+    </span>
+      <header class="post-header">
+        <h2 class="post-title" itemprop="name headline">
+          <a href="/nirvana/javascript/%E5%89%8D%E7%AB%AF/js%E9%98%B2%E6%8A%96%E5%92%8C%E8%8A%82%E6%B5%81/" class="post-title-link" itemprop="url">js防抖和节流</a>
+        </h2>
+
+        <div class="post-meta-container">
+          <div class="post-meta">
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-calendar"></i>
+      </span>
+      <span class="post-meta-item-text">发表于</span>
+
+      <time title="创建时间：2021-03-11 21:12:40" itemprop="dateCreated datePublished" datetime="2021-03-11T21:12:40+08:00">2021-03-11</time>
+    </span>
+      <span class="post-meta-item">
+        <span class="post-meta-item-icon">
+          <i class="far fa-calendar-check"></i>
+        </span>
+        <span class="post-meta-item-text">更新于</span>
+        <time title="修改时间：2021-03-10 13:43:55" itemprop="dateModified" datetime="2021-03-10T13:43:55+08:00">2021-03-10</time>
+      </span>
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-folder"></i>
+      </span>
+      <span class="post-meta-item-text">分类于</span>
+        <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+          <a href="/nirvana/categories/javascript/" itemprop="url" rel="index"><span itemprop="name">javascript</span></a>
+        </span>
+    </span>
+
+  
+      </div>
+      <div class="post-meta">
+    <span class="post-meta-item" title="本文字数">
+      <span class="post-meta-item-icon">
+        <i class="far fa-file-word"></i>
+      </span>
+      <span class="post-meta-item-text">本文字数：</span>
+      <span>3k</span>
+    </span>
+    <span class="post-meta-item" title="阅读时长">
+      <span class="post-meta-item-icon">
+        <i class="far fa-clock"></i>
+      </span>
+      <span class="post-meta-item-text">阅读时长 &asymp;</span>
+      <span>3 分钟</span>
+    </span>
+</div>
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+          <p>防抖和节流是针对响应跟不上触发频率这类问题的两种解决方案。应用场景有很多，输入框持续输入，将输入内容远程校验、多次触发点击事件、onScroll等等。 处理不当或者放任不管就容易引起浏览器卡死。<br>针对快速连续触发和不可控的高频触发问题， 给出debounce 和 throttling了两种解决策略；</p>
+<h2 id="防抖-debounce-—"><a href="#防抖-debounce-—" class="headerlink" title="防抖(debounce)—"></a>防抖(debounce)—</h2><p>策略是当事件被触发时，设定一个周期延迟执行动作，若期间又被触发，则重新设定周期，直到周期结束，执行动作。 这是debounce的基本思想，在后期又扩展了前缘debounce，即执行动作在前，然后设定周期，周期内有事件被触发，不执行动作，且周期重新设定。</p>
+<p><code>延迟debounce</code></p>
+<p><img src="https://upload-images.jianshu.io/upload_images/10024246-e3337fe492ae59fc?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="延迟debounce"></p>
+<p><code>前缘debounce</code></p>
+<p><img src="https://upload-images.jianshu.io/upload_images/10024246-759614d16bd50daa?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="前缘debounce"></p>
+<p>debounce的特点是当事件快速连续不断触发时，动作只会执行一次。 延迟debounce，是在周期结束时执行，前缘debounce，是在周期开始时执行。但当触发有间断，且间断大于我们设定的时间间隔时，动作就会有多次执行。</p>
+<p><strong>效果：</strong>如果短时间内大量触发同一事件，只会执行一次函数。</p>
+<p><strong>实现：</strong>既然前面都提到了计时，那实现的关键就在于setTimeout这个函数，由于还需要一个变量来保存计时，考虑维护全局纯净，可以借助闭包来实现：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br></pre></td><td class="code"><pre><span class="line">&#x2F;*</span><br><span class="line">* fn [function] 需要防抖的函数</span><br><span class="line">* delay [number] 毫秒，防抖期限值</span><br><span class="line">*&#x2F;</span><br><span class="line">function debounce(fn,delay)&#123;</span><br><span class="line">    let timer &#x3D; null &#x2F;&#x2F;借助闭包</span><br><span class="line">    return function() &#123;</span><br><span class="line">        if(timer)&#123;</span><br><span class="line">            clearTimeout(timer) &#x2F;&#x2F;进入该分支语句，说明当前正在一个计时过程中，并且又触发了相同事件。所以要取消当前的计时，重新开始计时</span><br><span class="line">            timer &#x3D; setTimeout(fn,delay) </span><br><span class="line">        &#125;else&#123;</span><br><span class="line">            timer &#x3D; setTimeout(fn,delay) &#x2F;&#x2F; 进入该分支说明当前并没有在计时，那么就开始一个计时</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p>稍微简化下：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br></pre></td><td class="code"><pre><span class="line">&#x2F;*****************************简化后的分割线 ******************************&#x2F;</span><br><span class="line">function debounce(fn,delay)&#123;</span><br><span class="line">    let timer &#x3D; null &#x2F;&#x2F;借助闭包</span><br><span class="line">    return function() &#123;</span><br><span class="line">        if(timer)&#123;</span><br><span class="line">            clearTimeout(timer) </span><br><span class="line">        &#125;</span><br><span class="line">        timer &#x3D; setTimeout(fn,delay) &#x2F;&#x2F; 简化写法</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br><span class="line">&#x2F;&#x2F; 然后是旧代码</span><br><span class="line">function showTop  () &#123;</span><br><span class="line">    var scrollTop &#x3D; document.body.scrollTop || document.documentElement.scrollTop;</span><br><span class="line">　　console.log(&#39;滚动条位置：&#39; + scrollTop);</span><br><span class="line">&#125;</span><br><span class="line">window.onscroll &#x3D; debounce(showTop,1000) &#x2F;&#x2F; 为了方便观察效果我们取个大点的间断值，实际使用根据需要来配置</span><br><span class="line">&#96;&#96;&#96;&#96;</span><br><span class="line">此时会发现，必须在停止滚动1秒以后，才会打印出滚动条位置。</span><br><span class="line"></span><br><span class="line">## 节流(throttle)---</span><br><span class="line">策略是，让函数执行一次后，在某个时间段内暂时失效，过了这段时间后再重新激活（类似于技能冷却时间）。 节流策略也分前缘和延迟两种。与debounce类似，延迟是指 周期结束后执行动作，前缘是指执行动作后再开始周期。</span><br><span class="line"></span><br><span class="line">&#96;延迟throttling&#96;：</span><br><span class="line"></span><br><span class="line">![延迟throttling](https:&#x2F;&#x2F;upload-images.jianshu.io&#x2F;upload_images&#x2F;10024246-170a946907e707c2?imageMogr2&#x2F;auto-orient&#x2F;strip%7CimageView2&#x2F;2&#x2F;w&#x2F;1240)</span><br><span class="line"></span><br><span class="line">前缘throttling ：</span><br><span class="line"></span><br><span class="line">![前缘throttling ](https:&#x2F;&#x2F;upload-images.jianshu.io&#x2F;upload_images&#x2F;10024246-1f3724b815810fcf?imageMogr2&#x2F;auto-orient&#x2F;strip%7CimageView2&#x2F;2&#x2F;w&#x2F;1240)</span><br><span class="line"></span><br><span class="line">throttling的特点在连续高频触发事件时，动作会被定期执行，响应平滑。</span><br><span class="line">**效果：**如果短时间内大量触发同一事件，那么在函数执行一次之后，该函数在指定的时间期限内不再工作，直至过了这段时间才重新生效。</span><br><span class="line"></span><br><span class="line">**实现：** 这里借助setTimeout来做一个简单的实现，加上一个状态位valid来表示当前函数是否处于工作状态。</span><br></pre></td></tr></table></figure>
+<p>function throttle(fn,delay){<br>    let run = true<br>    return function () {<br>      if (!run) {<br>        return  // 如果开关关闭了，那就直接不执行下边的代码<br>      }<br>      run = false // 持续触发的话，run一直是false，就会停在上边的判断那里<br>      setTimeout(() =&gt; {<br>        func.apply(this, arguments)<br>        run = true // 定时器到时间之后，会把开关打开，我们的函数就会被执行<br>      }, delay)<br>    }<br>}<br>/* 请注意，节流函数并不止上面这种实现方案,<br>   例如可以完全不借助setTimeout，可以把状态位换成时间戳，然后利用时间戳差值是否大于指定间隔时间来做判定。<br>   也可以直接将setTimeout的返回的标记当做判断条件-判断当前定时器是否存在，如果存在表示还在冷却，并且在执行fn之后消除定时器表示激活，原理都一样<br>    */<br>// 以下照旧<br>function showTop  () {<br>    var scrollTop = document.body.scrollTop || document.documentElement.scrollTop;<br>　　console.log(‘滚动条位置：’ + scrollTop);<br>}<br>window.onscroll = throttle(showTop,1000) </p>
+<pre><code>## 总结
+防抖和节流巧妙地用了setTimeout，来控制函数执行的时机，优点很明显，可以节约性能，不至于多次触发复杂的业务逻辑而造成页面卡顿。复杂情况可参考underscope.js的[throttle](https://underscorejs.net/#throttle)和[debounce](https://underscorejs.net/#debounce)
+</code></pre>
+
+      
+    </div>
+
+    
+    
+    
+
+    <footer class="post-footer">
+        <div class="post-eof"></div>
+      
+    </footer>
+  </article>
+</div>
+
+
+
 
     
 
@@ -1382,109 +1493,6 @@
 
 
 
-    
-
-
-<div class="post-block">
-  
-  
-
-  <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="">
-    <link itemprop="mainEntityOfPage" href="https://lzhwweb.github.io/nirvana/javascript/%E5%89%8D%E7%AB%AF/pointer-events/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="image" content="/nirvana/images/headphoto.jpeg">
-      <meta itemprop="name" content="nirvana">
-      <meta itemprop="description" content="个人学习笔记">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="涅槃快乐是金">
-    </span>
-      <header class="post-header">
-        <h2 class="post-title" itemprop="name headline">
-          <a href="/nirvana/javascript/%E5%89%8D%E7%AB%AF/pointer-events/" class="post-title-link" itemprop="url">pointer-events</a>
-        </h2>
-
-        <div class="post-meta-container">
-          <div class="post-meta">
-    <span class="post-meta-item">
-      <span class="post-meta-item-icon">
-        <i class="far fa-calendar"></i>
-      </span>
-      <span class="post-meta-item-text">发表于</span>
-
-      <time title="创建时间：2021-03-11 21:12:40" itemprop="dateCreated datePublished" datetime="2021-03-11T21:12:40+08:00">2021-03-11</time>
-    </span>
-      <span class="post-meta-item">
-        <span class="post-meta-item-icon">
-          <i class="far fa-calendar-check"></i>
-        </span>
-        <span class="post-meta-item-text">更新于</span>
-        <time title="修改时间：2021-03-10 13:43:55" itemprop="dateModified" datetime="2021-03-10T13:43:55+08:00">2021-03-10</time>
-      </span>
-    <span class="post-meta-item">
-      <span class="post-meta-item-icon">
-        <i class="far fa-folder"></i>
-      </span>
-      <span class="post-meta-item-text">分类于</span>
-        <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-          <a href="/nirvana/categories/javascript/" itemprop="url" rel="index"><span itemprop="name">javascript</span></a>
-        </span>
-    </span>
-
-  
-      </div>
-      <div class="post-meta">
-    <span class="post-meta-item" title="本文字数">
-      <span class="post-meta-item-icon">
-        <i class="far fa-file-word"></i>
-      </span>
-      <span class="post-meta-item-text">本文字数：</span>
-      <span>1.2k</span>
-    </span>
-    <span class="post-meta-item" title="阅读时长">
-      <span class="post-meta-item-icon">
-        <i class="far fa-clock"></i>
-      </span>
-      <span class="post-meta-item-text">阅读时长 &asymp;</span>
-      <span>1 分钟</span>
-    </span>
-</div>
-
-        </div>
-      </header>
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-          <p>pointer-events<br>语法：<br>pointer-events：auto| none | visiblepainted | visiblefill | visiblestroke | visible | painted | fill | stroke | all<br>默认值：auto<br>适用于：所有元素<br>继承性：有<br>动画性：否<br>计算值：指定值</p>
-<ul>
-<li>取值：<br>auto：<br>与pointer-events属性未指定时的表现效果相同。在svg内容上与visiblepainted值相同<br>none：<br>元素永远不会成为鼠标事件的target。但是，当其后代元素的pointer-events属性指定其他值时，鼠标事件可以指向后代元素，在这种情况下，鼠标事件将在捕获或冒泡阶触发父元素的事件侦听器。<br>其他值只能应用在SVG上。</li>
-</ul>
-<p>说明：<br>设置或检索在何时成为属性事件的target。<br>使用pointer-events来阻止元素成为鼠标事件目标不一定意味着元素上的事件侦听器永不会触发。如果元素后代明确指定了pointer-events属性并允许其成为鼠标事件的目标，那么指向该元素的任何事件在事件传播过程中都将通过父元素，并以适当的方式触发其上的事件侦听器。当然位于屏幕上在父元素上但不在后代元素上的鼠标活动都不会被父元素和后代元素捕获（将会穿过父元素而指向位于其下面的元素）。<br>对应的脚本特性为pointerEvents。<br>兼容性：<br>浅绿 = 支持</p>
-<p>红色 = 不支持</p>
-<p>粉色 = 部分支持<br><img src="https://upload-images.jianshu.io/upload_images/10024246-2b69550f256cac89.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240"></p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br></pre></td><td class="code"><pre><span class="line">&lt;!DOCTYPE html&gt;</span><br><span class="line">&lt;html lang&#x3D;&quot;zh-cmn-Hans&quot;&gt;</span><br><span class="line">&lt;head&gt;</span><br><span class="line">&lt;meta charset&#x3D;&quot;utf-8&quot; &#x2F;&gt;</span><br><span class="line">&lt;title&gt;&lt;&#x2F;title&gt;</span><br><span class="line"></span><br><span class="line">&lt;style&gt;</span><br><span class="line">a[href&#x3D;&quot;http:&#x2F;&#x2F;example.com&quot;] &#123;</span><br><span class="line">	pointer-events: none;</span><br><span class="line">&#125;</span><br><span class="line">&lt;&#x2F;style&gt;</span><br><span class="line">&lt;&#x2F;head&gt;</span><br><span class="line">&lt;body&gt;</span><br><span class="line">&lt;ul&gt;</span><br><span class="line">	&lt;li&gt;&lt;a href&#x3D;&quot;https:&#x2F;&#x2F;html.cn&#x2F;&quot;&gt;HTML中文网&lt;&#x2F;a&gt;&lt;&#x2F;li&gt;</span><br><span class="line">	&lt;li&gt;&lt;a href&#x3D;&quot;http:&#x2F;&#x2F;example.com&quot;&gt;一个不能点击的链接&lt;&#x2F;a&gt;&lt;&#x2F;li&gt;</span><br><span class="line">&lt;&#x2F;ul&gt;</span><br><span class="line">&lt;&#x2F;body&gt;</span><br><span class="line">&lt;&#x2F;html&gt;</span><br></pre></td></tr></table></figure>
-
-      
-    </div>
-
-    
-    
-    
-
-    <footer class="post-footer">
-        <div class="post-eof"></div>
-      
-    </footer>
-  </article>
-</div>
-
-
-
-
   <nav class="pagination">
     <a class="extend prev" rel="prev" href="/nirvana/page/4/"><i class="fa fa-angle-left" aria-label="上一页"></i></a><a class="page-number" href="/nirvana/">1</a><span class="space">&hellip;</span><a class="page-number" href="/nirvana/page/4/">4</a><span class="page-number current">5</span><a class="page-number" href="/nirvana/page/6/">6</a><span class="space">&hellip;</span><a class="page-number" href="/nirvana/page/18/">18</a><a class="extend next" rel="next" href="/nirvana/page/6/"><i class="fa fa-angle-right" aria-label="下一页"></i></a>
   </nav>
@@ -1532,14 +1540,14 @@
       <i class="fa fa-chart-line"></i>
     </span>
       <span>站点总字数：</span>
-    <span title="站点总字数">524k</span>
+    <span title="站点总字数">527k</span>
   </span>
   <span class="post-meta-item">
     <span class="post-meta-item-icon">
       <i class="fa fa-coffee"></i>
     </span>
       <span>站点阅读时长 &asymp;</span>
-    <span title="站点阅读时长">7:57</span>
+    <span title="站点阅读时长">7:59</span>
   </span>
 </div>
   <div class="powered-by">由 <a href="https://hexo.io/" class="theme-link" rel="noopener" target="_blank">Hexo</a> & <a href="https://theme-next.js.org/" class="theme-link" rel="noopener" target="_blank">NexT.Gemini</a> 强力驱动
