@@ -206,7 +206,7 @@
   <nav class="site-state">
       <div class="site-state-item site-state-posts">
           <a href="/nirvana/archives">
-          <span class="site-state-item-count">178</span>
+          <span class="site-state-item-count">179</span>
           <span class="site-state-item-name">日志</span>
         </a>
       </div>
@@ -240,6 +240,115 @@
 
 
     <div class="main-inner index posts-expand">
+
+    
+
+
+<div class="post-block">
+  
+  
+
+  <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="">
+    <link itemprop="mainEntityOfPage" href="https://lzhwweb.github.io/nirvana/javascript/%E5%89%8D%E7%AB%AF/nrm%E7%AE%A1%E7%90%86%E5%B7%A5%E5%85%B7%E5%88%87%E6%8D%A2-NPM-%E9%95%9C%E5%83%8F%E6%BA%90/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/nirvana/images/headphoto.jpeg">
+      <meta itemprop="name" content="nirvana">
+      <meta itemprop="description" content="个人学习笔记">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="涅槃快乐是金">
+    </span>
+      <header class="post-header">
+        <h2 class="post-title" itemprop="name headline">
+          <a href="/nirvana/javascript/%E5%89%8D%E7%AB%AF/nrm%E7%AE%A1%E7%90%86%E5%B7%A5%E5%85%B7%E5%88%87%E6%8D%A2-NPM-%E9%95%9C%E5%83%8F%E6%BA%90/" class="post-title-link" itemprop="url">nrm管理工具切换 NPM 镜像源</a>
+        </h2>
+
+        <div class="post-meta-container">
+          <div class="post-meta">
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-calendar"></i>
+      </span>
+      <span class="post-meta-item-text">发表于</span>
+
+      <time title="创建时间：2021-03-11 21:12:40" itemprop="dateCreated datePublished" datetime="2021-03-11T21:12:40+08:00">2021-03-11</time>
+    </span>
+      <span class="post-meta-item">
+        <span class="post-meta-item-icon">
+          <i class="far fa-calendar-check"></i>
+        </span>
+        <span class="post-meta-item-text">更新于</span>
+        <time title="修改时间：2021-03-10 22:11:02" itemprop="dateModified" datetime="2021-03-10T22:11:02+08:00">2021-03-10</time>
+      </span>
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-folder"></i>
+      </span>
+      <span class="post-meta-item-text">分类于</span>
+        <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+          <a href="/nirvana/categories/javascript/" itemprop="url" rel="index"><span itemprop="name">javascript</span></a>
+        </span>
+    </span>
+
+  
+      </div>
+      <div class="post-meta">
+    <span class="post-meta-item" title="本文字数">
+      <span class="post-meta-item-icon">
+        <i class="far fa-file-word"></i>
+      </span>
+      <span class="post-meta-item-text">本文字数：</span>
+      <span>831</span>
+    </span>
+    <span class="post-meta-item" title="阅读时长">
+      <span class="post-meta-item-icon">
+        <i class="far fa-clock"></i>
+      </span>
+      <span class="post-meta-item-text">阅读时长 &asymp;</span>
+      <span>1 分钟</span>
+    </span>
+</div>
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+          <p>由于 <code>npm原始源</code>会请求国外服务器，对于国内的开发者着实不友好，使用 <code>nrm</code>(全称：NPM registry manager) 可以快速地在不同 <code>npm镜像源</code>之间进行快速切换。<br><strong>github 地址:</strong><a target="_blank" rel="noopener" href="https://github.com/Pana/nrm">nrm – NPM registry manager</a></p>
+<h1 id="安装"><a href="#安装" class="headerlink" title="安装"></a>安装</h1><p>[图片上传中…(image.png-72bb4a-1590129698542-0)]</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">&gt; npm install -g nrm</span><br></pre></td></tr></table></figure>
+
+<blockquote>
+<p>npm install packageName -g<br>// 安装 npm 包的指令，-g 是 global 的缩写，意为全局安装</p>
+</blockquote>
+<h1 id="使用"><a href="#使用" class="headerlink" title="使用"></a>使用</h1><p>执行 <code>nrm ls</code> 命令可查看所有可切换的 <code>npm镜像源</code> , 带 <code>*</code> 为当前正在使用的 <code>npm镜像源</code>。</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">&gt;nrm ls</span><br><span class="line">  npm ---- https:&#x2F;&#x2F;registry.npmjs.org&#x2F;</span><br><span class="line">  cnpm --- http:&#x2F;&#x2F;r.cnpmjs.org&#x2F;</span><br><span class="line">* taobao - https:&#x2F;&#x2F;registry.npm.taobao.org&#x2F;</span><br><span class="line">  nj ----- https:&#x2F;&#x2F;registry.nodejitsu.com&#x2F;</span><br><span class="line">  rednpm - http:&#x2F;&#x2F;registry.mirror.cqupt.edu.cn&#x2F;</span><br><span class="line">  npmMirror  https:&#x2F;&#x2F;skimdb.npmjs.com&#x2F;registry&#x2F;</span><br><span class="line">  edunpm - http:&#x2F;&#x2F;registry.enpmjs.org&#x2F;</span><br></pre></td></tr></table></figure>
+
+<p>执行 <code>nrm use npmImageName</code> 即可切换到列表中存在的 <code>npm镜像源</code>，使用淘宝镜像为例：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">&gt;nrm use taobao</span><br><span class="line">Registry has been set to: https:&#x2F;&#x2F;registry.npm.taobao.org&#x2F;</span><br></pre></td></tr></table></figure>
+
+<p>此后再调用 <code>npm install</code> 下载任意包都会使用新的 <code>npm镜像源</code>进行下载。</p>
+
+      
+    </div>
+
+    
+    
+    
+
+    <footer class="post-footer">
+        <div class="post-eof"></div>
+      
+    </footer>
+  </article>
+</div>
+
+
+
 
     
 
@@ -479,7 +588,7 @@
 </blockquote>
 <h2 id="webpack-的相关处理"><a href="#webpack-的相关处理" class="headerlink" title="webpack 的相关处理"></a>webpack 的相关处理</h2><p>运行以下命令安装相关依赖，并新建文件夹 src</p>
 <blockquote>
-<p>npm i -D webpack webpack-cli html-webpack-plugin <a href="mailto:&#x70;&#114;&#101;&#108;&#111;&#x61;&#100;&#x2d;&#119;&#x65;&#98;&#112;&#x61;&#99;&#107;&#x2d;&#112;&#108;&#x75;&#x67;&#105;&#110;&#x40;&#x33;&#46;&#x30;&#46;&#48;&#x2d;&#x62;&#x65;&#116;&#x61;&#x2e;&#52;">&#x70;&#114;&#101;&#108;&#111;&#x61;&#100;&#x2d;&#119;&#x65;&#98;&#112;&#x61;&#99;&#107;&#x2d;&#112;&#108;&#x75;&#x67;&#105;&#110;&#x40;&#x33;&#46;&#x30;&#46;&#48;&#x2d;&#x62;&#x65;&#116;&#x61;&#x2e;&#52;</a><br>mkdir src</p>
+<p>npm i -D webpack webpack-cli html-webpack-plugin <a href="mailto:&#112;&#x72;&#x65;&#108;&#111;&#97;&#x64;&#45;&#119;&#101;&#98;&#x70;&#97;&#99;&#x6b;&#x2d;&#112;&#108;&#x75;&#103;&#x69;&#110;&#64;&#51;&#46;&#48;&#46;&#48;&#x2d;&#98;&#101;&#116;&#97;&#x2e;&#52;">&#112;&#x72;&#x65;&#108;&#111;&#97;&#x64;&#45;&#119;&#101;&#98;&#x70;&#97;&#99;&#x6b;&#x2d;&#112;&#108;&#x75;&#103;&#x69;&#110;&#64;&#51;&#46;&#48;&#46;&#48;&#x2d;&#98;&#101;&#116;&#97;&#x2e;&#52;</a><br>mkdir src</p>
 </blockquote>
 <ul>
 <li>  PreloadWebpackPlugin 的当前版本 2.x 与 webpack 当前版本 4.x 不兼容，所以需要指定版本号为最新的 3.x beta</li>
@@ -1338,103 +1447,6 @@
 
 
 
-    
-
-
-<div class="post-block">
-  
-  
-
-  <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="">
-    <link itemprop="mainEntityOfPage" href="https://lzhwweb.github.io/nirvana/javascript/%E5%89%8D%E7%AB%AF/webpack-getaddrinfo-ENOTFOUND-localhost-%E9%94%99%E8%AF%AF/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="image" content="/nirvana/images/headphoto.jpeg">
-      <meta itemprop="name" content="nirvana">
-      <meta itemprop="description" content="个人学习笔记">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="涅槃快乐是金">
-    </span>
-      <header class="post-header">
-        <h2 class="post-title" itemprop="name headline">
-          <a href="/nirvana/javascript/%E5%89%8D%E7%AB%AF/webpack-getaddrinfo-ENOTFOUND-localhost-%E9%94%99%E8%AF%AF/" class="post-title-link" itemprop="url">webpack getaddrinfo ENOTFOUND localhost错误</a>
-        </h2>
-
-        <div class="post-meta-container">
-          <div class="post-meta">
-    <span class="post-meta-item">
-      <span class="post-meta-item-icon">
-        <i class="far fa-calendar"></i>
-      </span>
-      <span class="post-meta-item-text">发表于</span>
-
-      <time title="创建时间：2021-03-11 21:12:40" itemprop="dateCreated datePublished" datetime="2021-03-11T21:12:40+08:00">2021-03-11</time>
-    </span>
-      <span class="post-meta-item">
-        <span class="post-meta-item-icon">
-          <i class="far fa-calendar-check"></i>
-        </span>
-        <span class="post-meta-item-text">更新于</span>
-        <time title="修改时间：2021-03-10 22:13:14" itemprop="dateModified" datetime="2021-03-10T22:13:14+08:00">2021-03-10</time>
-      </span>
-    <span class="post-meta-item">
-      <span class="post-meta-item-icon">
-        <i class="far fa-folder"></i>
-      </span>
-      <span class="post-meta-item-text">分类于</span>
-        <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-          <a href="/nirvana/categories/javascript/" itemprop="url" rel="index"><span itemprop="name">javascript</span></a>
-        </span>
-    </span>
-
-  
-      </div>
-      <div class="post-meta">
-    <span class="post-meta-item" title="本文字数">
-      <span class="post-meta-item-icon">
-        <i class="far fa-file-word"></i>
-      </span>
-      <span class="post-meta-item-text">本文字数：</span>
-      <span>235</span>
-    </span>
-    <span class="post-meta-item" title="阅读时长">
-      <span class="post-meta-item-icon">
-        <i class="far fa-clock"></i>
-      </span>
-      <span class="post-meta-item-text">阅读时长 &asymp;</span>
-      <span>1 分钟</span>
-    </span>
-</div>
-
-        </div>
-      </header>
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-          <p>原因 没有指定 localhost<br>在host 文件中添加<br>127.0.0.1 localhost</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">events.js:141</span><br><span class="line">      throw er; &#x2F;&#x2F; Unhandled &#39;error&#39; event</span><br><span class="line">      ^</span><br><span class="line"></span><br><span class="line">Error: getaddrinfo ENOTFOUND localhost</span><br><span class="line">    at errnoException (dns.js:27:10)</span><br><span class="line">    at GetAddrInfoReqWrap.onlookup [as oncomplete] (dns.js:78:26)</span><br></pre></td></tr></table></figure>
-
-      
-    </div>
-
-    
-    
-    
-
-    <footer class="post-footer">
-        <div class="post-eof"></div>
-      
-    </footer>
-  </article>
-</div>
-
-
-
-
   <nav class="pagination">
     <a class="extend prev" rel="prev" href="/nirvana/page/5/"><i class="fa fa-angle-left" aria-label="上一页"></i></a><a class="page-number" href="/nirvana/">1</a><span class="space">&hellip;</span><a class="page-number" href="/nirvana/page/5/">5</a><span class="page-number current">6</span><a class="page-number" href="/nirvana/page/7/">7</a><span class="space">&hellip;</span><a class="page-number" href="/nirvana/page/18/">18</a><a class="extend next" rel="next" href="/nirvana/page/7/"><i class="fa fa-angle-right" aria-label="下一页"></i></a>
   </nav>
@@ -1482,14 +1494,14 @@
       <i class="fa fa-chart-line"></i>
     </span>
       <span>站点总字数：</span>
-    <span title="站点总字数">527k</span>
+    <span title="站点总字数">528k</span>
   </span>
   <span class="post-meta-item">
     <span class="post-meta-item-icon">
       <i class="fa fa-coffee"></i>
     </span>
       <span>站点阅读时长 &asymp;</span>
-    <span title="站点阅读时长">7:59</span>
+    <span title="站点阅读时长">8:01</span>
   </span>
 </div>
   <div class="powered-by">由 <a href="https://hexo.io/" class="theme-link" rel="noopener" target="_blank">Hexo</a> & <a href="https://theme-next.js.org/" class="theme-link" rel="noopener" target="_blank">NexT.Gemini</a> 强力驱动

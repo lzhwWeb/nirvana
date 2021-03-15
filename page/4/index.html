@@ -206,7 +206,7 @@
   <nav class="site-state">
       <div class="site-state-item site-state-posts">
           <a href="/nirvana/archives">
-          <span class="site-state-item-count">178</span>
+          <span class="site-state-item-count">179</span>
           <span class="site-state-item-name">日志</span>
         </a>
       </div>
@@ -240,6 +240,126 @@
 
 
     <div class="main-inner index posts-expand">
+
+    
+
+
+<div class="post-block">
+  
+  
+
+  <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="">
+    <link itemprop="mainEntityOfPage" href="https://lzhwweb.github.io/nirvana/javascript/%E5%89%8D%E7%AB%AF/URL%E7%BC%96%E7%A0%81/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/nirvana/images/headphoto.jpeg">
+      <meta itemprop="name" content="nirvana">
+      <meta itemprop="description" content="个人学习笔记">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="涅槃快乐是金">
+    </span>
+      <header class="post-header">
+        <h2 class="post-title" itemprop="name headline">
+          <a href="/nirvana/javascript/%E5%89%8D%E7%AB%AF/URL%E7%BC%96%E7%A0%81/" class="post-title-link" itemprop="url">URL编码</a>
+        </h2>
+
+        <div class="post-meta-container">
+          <div class="post-meta">
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-calendar"></i>
+      </span>
+      <span class="post-meta-item-text">发表于</span>
+
+      <time title="创建时间：2021-03-11 21:12:40" itemprop="dateCreated datePublished" datetime="2021-03-11T21:12:40+08:00">2021-03-11</time>
+    </span>
+      <span class="post-meta-item">
+        <span class="post-meta-item-icon">
+          <i class="far fa-calendar-check"></i>
+        </span>
+        <span class="post-meta-item-text">更新于</span>
+        <time title="修改时间：2021-03-10 13:43:55" itemprop="dateModified" datetime="2021-03-10T13:43:55+08:00">2021-03-10</time>
+      </span>
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-folder"></i>
+      </span>
+      <span class="post-meta-item-text">分类于</span>
+        <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+          <a href="/nirvana/categories/javascript/" itemprop="url" rel="index"><span itemprop="name">javascript</span></a>
+        </span>
+    </span>
+
+  
+      </div>
+      <div class="post-meta">
+    <span class="post-meta-item" title="本文字数">
+      <span class="post-meta-item-icon">
+        <i class="far fa-file-word"></i>
+      </span>
+      <span class="post-meta-item-text">本文字数：</span>
+      <span>4k</span>
+    </span>
+    <span class="post-meta-item" title="阅读时长">
+      <span class="post-meta-item-icon">
+        <i class="far fa-clock"></i>
+      </span>
+      <span class="post-meta-item-text">阅读时长 &asymp;</span>
+      <span>4 分钟</span>
+    </span>
+</div>
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+          <p>URL的架构——————-<br><scheme>://<username>:<password>@<host>:<port>/<parameters>?<query>#<fragment><br>&lt;模式&gt; ://&lt;用户名&gt;:&lt;密码&gt;@&lt;主机地址&gt;:&lt;端口&gt;/&lt;路径&gt;;&lt;参数&gt;?&lt;查询&gt;#&lt;信息片断&gt;</p>
+<p>模式——-<br>通常是指用来访问URL所标明地址的资源的协议.<br>如果一个模式向IANA注册过,那么它就是官方的(如HTTP,FTP)<br>但也有非官方的(未注册)的模式在普遍使用,(如SFTP,svn)<br>scheme: 为一部分,//不属于分隔符的一部分,是URL下一部分的开始.</p>
+<p>{ …..//&lt;用户名&gt;:&lt;密码&gt;@&lt;主机地址&gt;:&lt;端口&gt;…}—————————————————————<br>构成了URL的权限控制部分</p>
+<p>只提供用户名<br><a href="ftp://some_user@code.google.com/">ftp://some_user@code.google.com/</a><br>提供用户名和密码<br><a href="ftp://some_user:password@code.google.com/">ftp://some_user:password@code.google.com/</a><br>如果你不提供用户名和密码,而你试图访问的URL要求你提供,那么应用程序(如:浏览器)将提供一些默认值.</p>
+<p>主机———<br>主机地址可以是域名或IP地址,正如我们所知,域名会解析成IP地址(通过DNS查找)以确定我们正在尝试访问<br>的机器的地址.</p>
+<p>端口——–<br>它告诉我们,我们连接到机器上的指定应用正在监听什么网络端口,如果省略,则使用默认值 ,HTTP的默认为80</p>
+<p>路径——–<br>以 / 作为前缀从URL组成部分中分离.一个路径由一系列的 / 字符分隔的片断组成.<br>告诉我们资源在服务器上的位置,每个路径片断都可以包含参数,以 ;  号与路径片断隔开,如:<br><a target="_blank" rel="noopener" href="http://www.soon.com/aaa;para1=xxx/bbb;para2=yyy/my.html">http://www.soon.com/aaa;para1=xxx/bbb;para2=yyy/my.html</a><br>这样的URL是完全有效的.</p>
+<p>参数———<br>它们可以出现在路径之后,查询字符串之前,以 ; 号与URL的其它部分和其它参数隔开,如:<br><a target="_blank" rel="noopener" href="http://www.soon.com/aaa/bbb/ccc/my.html;para1=xyz;para2=abc">http://www.soon.com/aaa/bbb/ccc/my.html;para1=xyz;para2=abc</a><br>它们不是很常见.</p>
+<p>查询———<br>它们十分常见.<br>这是发送一些参数到服务器资源上的首选方式.<br>这些以  关键字=值  的查询对以?号与URL的其它部分隔开,并且以&amp;符号与其它的 [查询对] 分开.使用 ; 号将 [查询对] 分开也是合法的. </p>
+<blockquote>
+<p><a target="_blank" rel="noopener" href="http://www.soon.com/bbs/about.html?para1=ok&amp;para2=yes">http://www.soon.com/bbs/about.html?para1=ok&amp;para2=yes</a>    等价于<br><a target="_blank" rel="noopener" href="http://www.soon.com/bbs/about.html?para1=ok;para2=yes">http://www.soon.com/bbs/about.html?para1=ok;para2=yes</a></p>
+</blockquote>
+<p>信息片断—————<br>这是一个URL的可选部分,用于描述资源的一个特定部分.我们通常看到它们用于链接到HTML文档中的特定部分.信息片断以#号与URL的其它部分隔开.当从服务器请求一个以URL寻址的资源时,客户端通常不会发送信息片断到服务器(至少HTTP协议不会).一旦客户端获取资源,它将使用信息片断处理有关部分.————————– 上面是URL的九大部分 —————————–</p>
+<p> URL该如何进行正确的编码?哪些字符可以在URL中安全的使用?<br> 哪些字符不能使用?</p>
+<h2 id="URL的特殊字符"><a href="#URL的特殊字符" class="headerlink" title=" URL的特殊字符"></a> URL的特殊字符</h2><p> 当几种特定的字符集合出现在URL中时,你必须特别注意:</p>
+<p>首先,在URL中有特殊意义的字符,也就是保留字符:<br> ;    /    ?   :     @     &amp;     =     +    $     ,        {10个}<br> 这意味着,这些字符通常在URL中使用时,是有特殊含义的(如 “:”把每一个部分分隔开来),如果一个URL的某一部分(如查询参数的一部分)可能包含这些字符之一,则应该在放入URL之前对其进行转义处理.<br>  第二组需要注意的字符集是非保留字符集.如下:<br>  -  _   .   !   ~   *   ‘   (   )             {9个}<br> 这些字符可以被用于URL的任何位置(有些地方,不允许它们出现.使用它们作为URL的一部分时,你不需要进行编码/转义处理.你可以对它们进行转义操作且不影响URL的语义,但不建议这么做.<br>第三组  不推荐字符 也就是避用字符集合使用它们是不明智的:<br>{  }  |   \   ^  [   ]   `::数字1键前::       {8个}<br>不明智的原因:网关有时会修改这样的字符,或者将其作为分隔符使用.这并不意味着网关总会修改这些字符,但这种情况可能发生.如果真是要使用这些字符,请做转义处理.<br>第四组   例外字符集<br>这组字符集是所有的ASCII控制字符组成.包含空格字符以下列字符:<br>&lt;   &gt;   #   %   “      {5 个}<br>控制字符是不可打印的US-ASCII字符(十六进制00~1F及7F)<br>如果使用,请转义处理.有些字符#(哈希)和%(百分比)在URL上下文中有着特殊含义,你可以把它们当作保留字符对待.这个集合中的其它字符无法被打印,因此对它们进行转义是唯一的表示方式, &lt;   &gt;   “   这三个字符需要被转义，因为这些字符通常用来在文本中分隔URL</p>
+<p>编码/转义————————-<br>通常将它的ASCII十六进制值加上一个%字符．<br>如空格字符的URL编码是　%20<br>%字符本身被编码为%25</p>
+<p>这就是你所需要知道的所有URL的特殊字符，当然，从这些字符外，英文字母<br>和数字是可以直接使用而不需要进行编码的：）</p>
+<p>！！！　必须记住<br>URL应该始终保持其编码形式．只有当你要拆分URL的时候，才应该对其进行<br>解码．每个URL部分，都必须分别进行编码．<br>应该避免重复编码／解码一个URL．如果你编码一个URL一次，但解码两次，而<br>这个URL包含%字符，那么你将破坏掉你的URL<br>可以查看　RFC 2396 中的定义</p>
+<p>绝对URL和相对URL———————————-<br>如果一个URL包含scheme部分的话（如http），那它就可以被看做绝对URL．<br>但相对URL就有点复杂了．<br>相对URL永远是代表着相对于另外一个URL而言的，其它的URL被称为base URL.<br>将相对URL变成绝对URL的形式，我们首先要了解它的base URL，接着把它跟相<br>对URL的语法结合之后就得到绝对URL．<br>在一个HTML文档中看到的相对URL，在这种情况有两个方法找到它的对应的<br>base URL．<br>１,base URL可能由html的<base>标签指出．<br>２,如果没有指定base标签，那么该html文档的url地址就被视为它的base URL.<br>一旦我们有了base URL ,我们就可以试着将我们的相对URL转成绝对URL.<br>首先要将相对URL拆分成单个的结构（scheme,authority(host,post),path,query<br>string,fragment)<br>拆解完成后，有几个地方需要注意，因为它们可能说明我们转换的相对URL不一定对．<br>１,如果没有［scheme］［authority］或［path］，那么这个相对URL是base URL的<br>一个引用．<br>２,如果有［scheme］，那么这个相对URL其实是绝对URL，所以用绝对URL的方式处理．<br>３,如果没有［scheme］，但是有［authority(host,post)］，那么我们相对URL可能是网路位址那么我们根据base URL的［模式］并且把它跟相对URL用://结合起来．<br>４,如果没有上述的这些特殊情形，那我们得到的则是一个完全的相对URL．现在我们需要根据如下的程序进行处理．<br>５,我们从base URL继承它的scheme以及authority(host,post).<br>６,如果相对URL开头是一个/，那么它是一个绝对路径，我们可以通过继承得到的authoruity和host，用适当的分隔号产生绝对url<br>７,如果相对URL的开头不是一个/，那我们把base URL中／以后的东西都移除．然后把我们相对URL加上去得到最后的路径，再根据前面的几个字符对相对URL做一点小处理．<br>８,如果最后的路径包含./　　<br>我们直接把它去掉（这代表我们的相对URL由./开始，就像./blah.html)<br>９,如果最后的路径包含../　　<br>我们可以去掉它并且把路径上移一个区段，就好像把所有像样的路径组合都去掉＂＜segment＞/../＂,持续这个过程，直到找不到任何的../这表示我们的相对路径开头是多个../像是../blah.htm或../../blah.html<br>１０,如果路径的结尾是.. ,那就去掉它并且把路径上移一个区段，比如移除””<segment>/../“<br> 这表示我们的相对路径是．．<br> １１,如果路径的结尾是．，那就把它去掉，表示我们的相对路径很有可能是．<br> 根据这些规则我们可以简单把相对URL的query或者fragment利用合适的分隔符号<br> 包含到我们的URL中去，这样就将相对URL转换成了绝对URL．</p>
+<p> 范例：<br> base:  <a target="_blank" rel="noopener" href="http://www.blah.com/yadda1/yadda2/yadda3?param1=foo#barrelative:rel1">http://www.blah.com/yadda1/yadda2/yadda3?param1=foo#barrelative:rel1</a><br> final  :  <a target="_blank" rel="noopener" href="http://www.blah.com/yadda1/yadda2/rel1">http://www.blah.com/yadda1/yadda2/rel1</a></p>
+<p> base:  <a target="_blank" rel="noopener" href="http://www.blah.com/yadda1/yadda2/yadda3?param1=foo#barrelative:/rel1">http://www.blah.com/yadda1/yadda2/yadda3?param1=foo#barrelative:/rel1</a><br> final :   <a target="_blank" rel="noopener" href="http://www.blah.com/rel1">http://www.blah.com/rel1</a></p>
+<p> base:  <a target="_blank" rel="noopener" href="http://www.blah.com/yadda1/yadda2/yadda3?param1=foo#barrelative:../rel1">http://www.blah.com/yadda1/yadda2/yadda3?param1=foo#barrelative:../rel1</a><br> base:  <a target="_blank" rel="noopener" href="http://www.blah.com/yadda1/rel1">http://www.blah.com/yadda1/rel1</a></p>
+<p> base:  <a target="_blank" rel="noopener" href="http://www.blah.com/yadda1/yadda2/yadda3?param1=foo#barrelative:./rel1?param2=baz#bar2">http://www.blah.com/yadda1/yadda2/yadda3?param1=foo#barrelative:./rel1?param2=baz#bar2</a><br> final:    <a target="_blank" rel="noopener" href="http://www.blah.com/yadda1/yadda2/rel1?param2=baz#bar2">http://www.blah.com/yadda1/yadda2/rel1?param2=baz#bar2</a></p>
+<p>base:    <a target="_blank" rel="noopener" href="http://www.blah.com/yadda1/yadda2/yadda3?param1=foo#barrelative">http://www.blah.com/yadda1/yadda2/yadda3?param1=foo#barrelative</a>: ..<br> final :    <a target="_blank" rel="noopener" href="http://www.blah.com/yadda1/">http://www.blah.com/yadda1/</a></p>
+
+      
+    </div>
+
+    
+    
+    
+
+    <footer class="post-footer">
+        <div class="post-eof"></div>
+      
+    </footer>
+  </article>
+</div>
+
+
+
 
     
 
@@ -1475,149 +1595,6 @@
 
 
 
-    
-
-
-<div class="post-block">
-  
-  
-
-  <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="">
-    <link itemprop="mainEntityOfPage" href="https://lzhwweb.github.io/nirvana/javascript/%E5%89%8D%E7%AB%AF/javascript%E8%BF%B7%E4%BD%A0%E5%BA%93/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="image" content="/nirvana/images/headphoto.jpeg">
-      <meta itemprop="name" content="nirvana">
-      <meta itemprop="description" content="个人学习笔记">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="涅槃快乐是金">
-    </span>
-      <header class="post-header">
-        <h2 class="post-title" itemprop="name headline">
-          <a href="/nirvana/javascript/%E5%89%8D%E7%AB%AF/javascript%E8%BF%B7%E4%BD%A0%E5%BA%93/" class="post-title-link" itemprop="url">javascript迷你库</a>
-        </h2>
-
-        <div class="post-meta-container">
-          <div class="post-meta">
-    <span class="post-meta-item">
-      <span class="post-meta-item-icon">
-        <i class="far fa-calendar"></i>
-      </span>
-      <span class="post-meta-item-text">发表于</span>
-
-      <time title="创建时间：2021-03-11 21:12:40" itemprop="dateCreated datePublished" datetime="2021-03-11T21:12:40+08:00">2021-03-11</time>
-    </span>
-      <span class="post-meta-item">
-        <span class="post-meta-item-icon">
-          <i class="far fa-calendar-check"></i>
-        </span>
-        <span class="post-meta-item-text">更新于</span>
-        <time title="修改时间：2021-03-10 13:43:55" itemprop="dateModified" datetime="2021-03-10T13:43:55+08:00">2021-03-10</time>
-      </span>
-    <span class="post-meta-item">
-      <span class="post-meta-item-icon">
-        <i class="far fa-folder"></i>
-      </span>
-      <span class="post-meta-item-text">分类于</span>
-        <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-          <a href="/nirvana/categories/javascript/" itemprop="url" rel="index"><span itemprop="name">javascript</span></a>
-        </span>
-    </span>
-
-  
-      </div>
-      <div class="post-meta">
-    <span class="post-meta-item" title="本文字数">
-      <span class="post-meta-item-icon">
-        <i class="far fa-file-word"></i>
-      </span>
-      <span class="post-meta-item-text">本文字数：</span>
-      <span>1.2k</span>
-    </span>
-    <span class="post-meta-item" title="阅读时长">
-      <span class="post-meta-item-icon">
-        <i class="far fa-clock"></i>
-      </span>
-      <span class="post-meta-item-text">阅读时长 &asymp;</span>
-      <span>1 分钟</span>
-    </span>
-</div>
-
-        </div>
-      </header>
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-          <p>这些库的共性是非常小，而且功能单一。</p>
-<p><strong><a target="_blank" rel="noopener" href="https://github.com/js-coder/cookie.js">cookie.js</a></strong></p>
-<p>如果你操作过cookie的接口，那么你一定会感觉这东西的规范真的是太复杂了，根本记不住啊，其实你是对的，因为cookie的接口设计的是有问题的，也就是说设计的太底层了，根本不友好，那么来试试这个js库吧。</p>
-<p><strong><a target="_blank" rel="noopener" href="https://github.com/marcuswestin/store.js">store.js</a></strong></p>
-<p>再来说说浏览器的localStore吧，这东西太赞了，可惜尼玛每个浏览器都实现的各不相同，我也是醉了，如果你也有同样的烦恼，不如来试试这个迷你库，它有更简单的api，最重要的是他解决了跨浏览器问题，甚至解决了低版本浏览器(ie6)不支持localStore的问题。</p>
-<p><strong><a target="_blank" rel="noopener" href="https://github.com/yanhaijing/data.js">data.js</a></strong></p>
-<blockquote>
-<p>data.js 是带有消息通知的数据中心，我称其为会说话的数据。旨在让编程变得简单，世界变得美好</p>
-</blockquote>
-<p>如果你使用模块化编程，或者在node环境下的话，你一定纠结过不同模块间到底如何共享数据的问题（虽然这是反模式），全局变量。。。那么试试这个迷你库吧，简单可以来，会让你消除上面的烦恼问题，同时他还支持消息，当数据更新时，会发出消息。</p>
-<p><strong><a target="_blank" rel="noopener" href="https://github.com/yanhaijing/template.js">template.js</a></strong></p>
-<blockquote>
-<p>template.js 一款javascript模板引擎，简单，好用。</p>
-</blockquote>
-<p><strong><a target="_blank" rel="noopener" href="https://github.com/yanhaijing/lodjs">lodJS</a></strong></p>
-<blockquote>
-<p>JavaScript模块加载器，基于AMD。迄今为止，对AMD理解最好的实现</p>
-</blockquote>
-<p><strong><a target="_blank" rel="noopener" href="http://lab.ejci.net/favico.js/">favico.js</a></strong></p>
-<p>在favico上添加数字书不是很nice，点击下面的官网查看效果，这肯定要逼死强迫症了。</p>
-<p>**<a target="_blank" rel="noopener" href="http://lab.ejci.net/favico.js/">官网</a>**。</p>
-<p><strong><a target="_blank" rel="noopener" href="http://modernizr.com/">Modernizr</a></strong></p>
-<p>这个就不过多解释了，各种html css js检测器，功能检测哦。</p>
-<p><strong><a target="_blank" rel="noopener" href="http://visionmedia.github.io/move.js/">Move.js</a></strong></p>
-<p>如果你操作过css3的属性，一定会觉得非常痛苦的，那不如来试试合格，css3动画瞬间变得简单了。</p>
-<p><strong><a target="_blank" rel="noopener" href="http://dmauro.github.io/Keypress/">Keypress</a></strong></p>
-<p>一定记不住键盘上每个键的键位码吧，来试试这个，直观的展示，再也不需要记忆了。</p>
-<p><strong><a target="_blank" rel="noopener" href="http://matthewhudson.me/projects/device.js/">device.js</a></strong></p>
-<p>你想检测用户的设备，试试这个吧，比jq.browser全面多了。</p>
-<p><strong><a target="_blank" rel="noopener" href="http://arasatasaygin.github.io/is.js/">is.js</a></strong></p>
-<p>迷你检查库，这个几乎涵盖了全部的各种检测。</p>
-<p><strong><a target="_blank" rel="noopener" href="https://github.com/es-shims/es5-shim">es5-shim</a></strong></p>
-<p>还没使用es5，只能鄙视你了，担心兼容性，用这个吧，主要是为了es6打基础啊。</p>
-<p><strong><a target="_blank" rel="noopener" href="https://github.com/jakearchibald/es6-promise">es6-promise</a></strong></p>
-<p>promise太好用了，兼容性问题靠这个全解决了。</p>
-<p><strong><a target="_blank" rel="noopener" href="https://github.com/wagerfield/parallax">parallax</a></strong></p>
-<p>先来看个视差效果的<a target="_blank" rel="noopener" href="http://zhidao.baidu.com/s/10year/index.html">demo</a>，是不是很赞，如果你也想实现这个效果，那么来试试这个吧。</p>
-<p><strong><a target="_blank" rel="noopener" href="https://github.com/jaredreich/notie.js">notie.js</a></strong></p>
-<p>还在使用弹窗通知用户，太low了，快来试试这款非阻塞式，小清新的通知插件吧，对移动端有好，界面好到爆炸啊。</p>
-<p><strong><a target="_blank" rel="noopener" href="https://github.com/overtrue/share.js">share.js</a></strong></p>
-<blockquote>
-<p>一键分享到微博、QQ空间、QQ好友、微信、腾讯微博、豆瓣、Facebook、Twitter、Linkedin、Google+、点点等社交网站。</p>
-</blockquote>
-<p>如果你受够了分享组件的烦恼，那么来试试这个对移动端有好的分享组件吧，界面优美，看起来很赞。</p>
-<p><a target="_blank" rel="noopener" href="http://overtrue.me/share.js/">demo</a></p>
-<p><strong><a target="_blank" rel="noopener" href="https://github.com/josdejong/mathjs">mathjs</a></strong></p>
-<p>js自带的数学运算不能满足你的需求了，那试试这个，扩展了很多数学运算。</p>
-<p>这里是<a target="_blank" rel="noopener" href="http://mathjs.org/">官网</a>。<br><img src="https://upload-images.jianshu.io/upload_images/10024246-9777fdb7c06afbdb.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240"></p>
-
-      
-    </div>
-
-    
-    
-    
-
-    <footer class="post-footer">
-        <div class="post-eof"></div>
-      
-    </footer>
-  </article>
-</div>
-
-
-
-
   <nav class="pagination">
     <a class="extend prev" rel="prev" href="/nirvana/page/3/"><i class="fa fa-angle-left" aria-label="上一页"></i></a><a class="page-number" href="/nirvana/">1</a><span class="space">&hellip;</span><a class="page-number" href="/nirvana/page/3/">3</a><span class="page-number current">4</span><a class="page-number" href="/nirvana/page/5/">5</a><span class="space">&hellip;</span><a class="page-number" href="/nirvana/page/18/">18</a><a class="extend next" rel="next" href="/nirvana/page/5/"><i class="fa fa-angle-right" aria-label="下一页"></i></a>
   </nav>
@@ -1665,14 +1642,14 @@
       <i class="fa fa-chart-line"></i>
     </span>
       <span>站点总字数：</span>
-    <span title="站点总字数">527k</span>
+    <span title="站点总字数">528k</span>
   </span>
   <span class="post-meta-item">
     <span class="post-meta-item-icon">
       <i class="fa fa-coffee"></i>
     </span>
       <span>站点阅读时长 &asymp;</span>
-    <span title="站点阅读时长">7:59</span>
+    <span title="站点阅读时长">8:01</span>
   </span>
 </div>
   <div class="powered-by">由 <a href="https://hexo.io/" class="theme-link" rel="noopener" target="_blank">Hexo</a> & <a href="https://theme-next.js.org/" class="theme-link" rel="noopener" target="_blank">NexT.Gemini</a> 强力驱动
