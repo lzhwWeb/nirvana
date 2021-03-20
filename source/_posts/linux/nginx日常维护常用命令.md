@@ -3,17 +3,17 @@ title: nginx日常维护常用命令
 date: 2021-03-09 21:12:40
 category: linux
 ---
+
 这篇文章主要介绍了nginx日常维护如nginx启动、重启、关闭等常用命令,需要的朋友可以参考下
-=
 
-**一、简明nginx常用命令**
+## **一、简明nginx常用命令**
 
-1\. 启动 Nginx
+##### 1\. 启动 Nginx
 
 ```
 @ubuntu:sudo ./sbin/nginx
 ```
-2\. 停止 Nginx
+##### 2\. 停止 Nginx
 
 ```
 @ubuntu:sudo ./sbin/nginx -s stop
@@ -21,7 +21,7 @@ category: linux
 ```
 -s都是采用向 Nginx 发送信号的方式。
 
-3\. Nginx 重载配置
+##### 3\. Nginx 重载配置
 
 ```
 @ubuntu:sudo ./sbin/nginx -s reload
@@ -31,14 +31,14 @@ category: linux
 ```
 @ubuntu:service nginx reload
 ```
-4\. 指定配置文件
+##### 4\. 指定配置文件
 
 ```
 @ubuntu:sudo ./sbin/nginx -c /usr/local/nginx/conf/nginx.conf
 ```
 -c表示configuration，指定配置文件。
 
-5\. 查看 Nginx 版本
+##### 5\. 查看 Nginx 版本
 有两种可以查看 Nginx 的版本信息的参数。第一种如下：
 
 ```
@@ -54,7 +54,7 @@ nginx: built by gcc 4.3.3 (Ubuntu 4.3.3-5ubuntu4) 
 nginx: TLS SNI support enabled
 nginx: configure arguments: --with-http_ssl_module --with-openssl=/home/luming/openssl-1.0.0d/
 ```
-6\. 检查配置文件是否正确
+##### 6\. 检查配置文件是否正确
 
 ```
 @ubuntu:/usr/local/nginx$ ./sbin/nginx -t
@@ -73,7 +73,7 @@ nginx: configuration file /usr/local/nginx/conf/nginx.conf test is successful
 ```
 如果显示如上，则表示配置文件正确。否则，会有相关提示。
 
-7\. 显示帮助信息
+##### 7\. 显示帮助信息
 
 ```
 @ubuntu:/user/local/nginx$ ./sbin/nginx -h
@@ -85,9 +85,11 @@ nginx: configuration file /usr/local/nginx/conf/nginx.conf test is successful
 ```
 以上这些涵盖了 Nginx 日常维护的所有基本操作，另外还有向 master 进程发送信号的相关命令，我们会在下面看到。
 
-**二、在Linux下通过master发送信号的相关命令**
+## 二、在Linux下通过master发送信号的相关命令
 
-**停止操作** 停止操作是通过向nginx进程发送信号（什么是信号请参阅linux文 章）来进行的
+##### **停止操作** 
+停止操作是通过向nginx进程发送信号（什么是信号请参阅linux文 章）来进行的
+
 步骤1：查询nginx主进程号
 ps -ef | grep nginx
 在进程列表里 面找master进程，它的编号就是主进程号了。
@@ -102,7 +104,7 @@ pkill -9 nginx
 另外， 若在nginx.conf配置了pid文件存放路径则该文件存放的就是Nginx主进程号，如果没指定则放在nginx的logs目录下。有了pid文 件，我们就不用先查询Nginx的主进程号，而直接向Nginx发送信号了，命令如下：
 kill -信号类型 '/usr/nginx/logs/nginx.pid' （推荐）
 
-**平滑重启**
+##### **平滑重启**
 如果更改了配置就要重启Nginx，要先关闭Nginx再打开？不是的，可以向Nginx 发送信号，平滑重启。
 平滑重启命令：
 kill -HUP 住进称号或进程号文件路径
@@ -121,7 +123,7 @@ nginx -t （推荐）
 或
 /usr/nginx/sbin/nginx -t
 
-**平滑升级**
+##### **平滑升级**
 如果服务器正在运行的Nginx要进行升级、添加或删除模块时，我们需 要停掉服务器并做相应修改，这样服务器就要在一段时间内停止服务，Nginx可以在不停机的情况下进行各种升级动作而不影响服务器运行。
 步骤1：
 如 果升级Nginx程序，先用新程序替换旧程序文件，编译安装的话新程序直接编译到Nginx安装目录中。
