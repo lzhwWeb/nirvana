@@ -1,0 +1,539 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=2">
+<meta name="theme-color" content="#222">
+<meta name="generator" content="Hexo 5.4.0">
+ <meta name="referrer" content="no-referrer"/>
+
+  <link rel="apple-touch-icon" sizes="180x180" href="/nirvana/images/apple-touch-icon-next.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="/nirvana/images/favicon-32x32-next.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="/nirvana/images/favicon-16x16-next.png">
+  <link rel="mask-icon" href="/nirvana/images/logo.svg" color="#222">
+
+<link rel="stylesheet" href="/nirvana/css/main.css">
+
+
+
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@5.15.2/css/all.min.css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/animate.css@3.1.1/animate.min.css">
+
+<script class="hexo-configurations">
+    var NexT = window.NexT || {};
+    var CONFIG = {"hostname":"lzhwweb.github.io","root":"/nirvana/","images":"/nirvana/images","scheme":"Gemini","version":"8.2.2","exturl":false,"sidebar":{"position":"left","display":"post","padding":18,"offset":12},"copycode":false,"bookmark":{"enable":false,"color":"#222","save":"auto"},"fancybox":false,"mediumzoom":false,"lazyload":false,"pangu":false,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},"motion":{"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"fadeInDown","post_body":"fadeInDown","coll_header":"fadeInLeft","sidebar":"fadeInUp"}},"prism":false,"i18n":{"placeholder":"搜索...","empty":"没有找到任何搜索结果：${query}","hits_time":"找到 ${hits} 个搜索结果（用时 ${time} 毫秒）","hits":"找到 ${hits} 个搜索结果"},"path":"/nirvana/search.xml","localsearch":{"enable":true,"trigger":"auto","top_n_per_article":1,"unescape":false,"preload":false}};
+  </script>
+<meta name="description" content="最近进行React Native的一些优化工作，发现React Native提供了很多简单方便的配置，但是自己一直没有使用过，而且React Native提供了非常好的help功能，会列出对应的说明和example，这边简单整理下一些常用的命令。 1. 查看所有命令 react-native –help1234567891011121314151617181920212223242526mac:r">
+<meta property="og:type" content="article">
+<meta property="og:title" content="React-Native-基本命令汇总">
+<meta property="og:url" content="https://lzhwweb.github.io/nirvana/reactnative/react-native/React-Native-%E5%9F%BA%E6%9C%AC%E5%91%BD%E4%BB%A4%E6%B1%87%E6%80%BB/index.html">
+<meta property="og:site_name" content="涅槃快乐是金">
+<meta property="og:description" content="最近进行React Native的一些优化工作，发现React Native提供了很多简单方便的配置，但是自己一直没有使用过，而且React Native提供了非常好的help功能，会列出对应的说明和example，这边简单整理下一些常用的命令。 1. 查看所有命令 react-native –help1234567891011121314151617181920212223242526mac:r">
+<meta property="og:locale" content="zh_CN">
+<meta property="article:published_time" content="2021-03-10T13:12:40.000Z">
+<meta property="article:modified_time" content="2021-03-10T05:43:55.061Z">
+<meta property="article:author" content="nirvana">
+<meta property="article:tag" content="前端,javascript,node,git">
+<meta name="twitter:card" content="summary">
+
+
+<link rel="canonical" href="https://lzhwweb.github.io/nirvana/reactnative/react-native/React-Native-%E5%9F%BA%E6%9C%AC%E5%91%BD%E4%BB%A4%E6%B1%87%E6%80%BB/">
+
+
+<script class="page-configurations">
+  // https://hexo.io/docs/variables.html
+  CONFIG.page = {
+    sidebar: "",
+    isHome : false,
+    isPost : true,
+    lang   : 'zh-CN'
+  };
+</script>
+<title>React-Native-基本命令汇总 | 涅槃快乐是金</title>
+  
+
+
+
+
+  <noscript>
+  <style>
+  body { margin-top: 2rem; }
+
+  .use-motion .menu-item,
+  .use-motion .sidebar,
+  .use-motion .post-block,
+  .use-motion .pagination,
+  .use-motion .comments,
+  .use-motion .post-header,
+  .use-motion .post-body,
+  .use-motion .collection-header {
+    visibility: visible;
+  }
+
+  .use-motion .header,
+  .use-motion .site-brand-container .toggle,
+  .use-motion .footer { opacity: initial; }
+
+  .use-motion .site-title,
+  .use-motion .site-subtitle,
+  .use-motion .custom-logo-image {
+    opacity: initial;
+    top: initial;
+  }
+
+  .use-motion .logo-line {
+    transform: scaleX(1);
+  }
+
+  .search-pop-overlay, .sidebar-nav { display: none; }
+  .sidebar-panel { display: block; }
+  </style>
+</noscript>
+
+</head>
+
+<body itemscope itemtype="http://schema.org/WebPage" class="use-motion">
+  <div class="headband"></div>
+
+  <main class="main">
+    <header class="header" itemscope itemtype="http://schema.org/WPHeader">
+      <div class="header-inner"><div class="site-brand-container">
+  <div class="site-nav-toggle">
+    <div class="toggle" aria-label="切换导航栏" role="button">
+        <span class="toggle-line"></span>
+        <span class="toggle-line"></span>
+        <span class="toggle-line"></span>
+    </div>
+  </div>
+
+  <div class="site-meta">
+
+    <a href="/nirvana/" class="brand" rel="start">
+      <i class="logo-line"></i>
+      <h1 class="site-title">涅槃快乐是金</h1>
+      <i class="logo-line"></i>
+    </a>
+  </div>
+
+  <div class="site-nav-right">
+    <div class="toggle popup-trigger">
+        <i class="fa fa-search fa-fw fa-lg"></i>
+    </div>
+  </div>
+</div>
+
+
+
+<nav class="site-nav">
+  <ul class="main-menu menu">
+        <li class="menu-item menu-item-home"><a href="/nirvana/" rel="section">首页</a></li>
+        <li class="menu-item menu-item-git"><a href="/nirvana/categories/git" rel="section">git</a></li>
+        <li class="menu-item menu-item-linux"><a href="/nirvana/categories/linux" rel="section">linux</a></li>
+        <li class="menu-item menu-item-android"><a href="/nirvana/categories/android" rel="section">android</a></li>
+        <li class="menu-item menu-item-随笔"><a href="/nirvana/categories/informal" rel="section">随笔</a></li>
+        <li class="menu-item menu-item-mac"><a href="/nirvana/categories/mac" rel="section">mac</a></li>
+        <li class="menu-item menu-item-react-native"><a href="/nirvana/categories/reactnative" rel="section">react-native</a></li>
+        <li class="menu-item menu-item-算法"><a href="/nirvana/categories/algorithm" rel="section">算法</a></li>
+        <li class="menu-item menu-item-读书笔记"><a href="/nirvana/categories/note" rel="section">读书笔记</a></li>
+        <li class="menu-item menu-item-开发工具"><a href="/nirvana/categories/tool" rel="section">开发工具</a></li>
+        <li class="menu-item menu-item-设计模式(ts)"><a href="/nirvana/categories/DesignPattern" rel="section">设计模式(TS)</a></li>
+        <li class="menu-item menu-item-前端"><a href="/nirvana/categories/javascript" rel="section">前端</a></li>
+      <li class="menu-item menu-item-search">
+        <a role="button" class="popup-trigger"><i class="fa fa-search fa-fw"></i>搜索
+        </a>
+      </li>
+  </ul>
+</nav>
+
+
+
+  <div class="search-pop-overlay">
+    <div class="popup search-popup"><div class="search-header">
+  <span class="search-icon">
+    <i class="fa fa-search"></i>
+  </span>
+  <div class="search-input-container">
+    <input autocomplete="off" autocapitalize="off" maxlength="80"
+           placeholder="搜索..." spellcheck="false"
+           type="search" class="search-input">
+  </div>
+  <span class="popup-btn-close" role="button">
+    <i class="fa fa-times-circle"></i>
+  </span>
+</div>
+<div class="search-result-container no-result">
+  <div class="search-result-icon">
+    <i class="fa fa-spinner fa-pulse fa-5x"></i>
+  </div>
+</div>
+
+    </div>
+  </div>
+
+</div>
+        
+  
+  <div class="toggle sidebar-toggle" role="button">
+    <span class="toggle-line"></span>
+    <span class="toggle-line"></span>
+    <span class="toggle-line"></span>
+  </div>
+
+  <aside class="sidebar">
+
+    <div class="sidebar-inner sidebar-nav-active sidebar-toc-active">
+      <ul class="sidebar-nav">
+        <li class="sidebar-nav-toc">
+          文章目录
+        </li>
+        <li class="sidebar-nav-overview">
+          站点概览
+        </li>
+      </ul>
+
+      <div class="sidebar-panel-container">
+        <!--noindex-->
+        <div class="post-toc-wrap sidebar-panel">
+            <div class="post-toc animated"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#1-%E6%9F%A5%E7%9C%8B%E6%89%80%E6%9C%89%E5%91%BD%E4%BB%A4-react-native-%E2%80%93help"><span class="nav-text">1. 查看所有命令 react-native –help</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#2-%E6%9C%80%E5%B8%B8%E7%94%A8%E7%9A%84%E5%90%AF%E5%8A%A8%E5%91%BD%E4%BB%A4react-native-start"><span class="nav-text">2. 最常用的启动命令react-native start</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#3-iOS%E5%90%AF%E5%8A%A8%E5%91%BD%E4%BB%A4-react-native-%E2%80%93run-ios"><span class="nav-text">3. iOS启动命令 react-native –run-ios</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#4-Android-%E5%90%AF%E5%8A%A8%E5%91%BD%E4%BB%A4-react-native-run-android"><span class="nav-text">4. Android 启动命令 react-native run-android</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#5-%E7%94%9F%E6%88%90bundle%E6%96%87%E4%BB%B6-react-native-bundle"><span class="nav-text">5. 生成bundle文件 react-native bundle</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#5-%E7%94%9F%E6%88%90unbundle%E6%96%87%E4%BB%B6-react-native-unbundle"><span class="nav-text">5. 生成unbundle文件 react-native unbundle</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#6-%E6%9F%A5%E7%9C%8BReact-Native%E7%9B%B8%E5%85%B3%E7%9A%84%E4%BF%A1%E6%81%AF-react-native-info"><span class="nav-text">6. 查看React Native相关的信息 react-native info</span></a></li></ol></div>
+        </div>
+        <!--/noindex-->
+
+        <div class="site-overview-wrap sidebar-panel">
+          <div class="site-author site-overview-item animated" itemprop="author" itemscope itemtype="http://schema.org/Person">
+    <img class="site-author-image" itemprop="image" alt="nirvana"
+      src="/nirvana/images/headphoto.jpeg">
+  <p class="site-author-name" itemprop="name">nirvana</p>
+  <div class="site-description" itemprop="description">个人学习笔记</div>
+</div>
+<div class="site-state-wrap site-overview-item animated">
+  <nav class="site-state">
+      <div class="site-state-item site-state-posts">
+          <a href="/nirvana/archives">
+          <span class="site-state-item-count">11</span>
+          <span class="site-state-item-name">日志</span>
+        </a>
+      </div>
+      <div class="site-state-item site-state-categories">
+        <span class="site-state-item-count">2</span>
+        <span class="site-state-item-name">分类</span>
+      </div>
+  </nav>
+</div>
+  <div class="links-of-author site-overview-item animated">
+      <span class="links-of-author-item">
+        <a href="https://github.com/lzhwWeb" title="GitHub → https:&#x2F;&#x2F;github.com&#x2F;lzhwWeb" rel="noopener" target="_blank"><i class="fab fa-github fa-fw"></i></a>
+      </span>
+  </div>
+
+
+
+        </div>
+      </div>
+        <div class="back-to-top animated" role="button">
+          <i class="fa fa-arrow-up"></i>
+          <span>0%</span>
+        </div>
+    </div>
+  </aside>
+  <div class="sidebar-dimmer"></div>
+
+
+    </header>
+
+    
+
+<noscript>
+  <div class="noscript-warning">Theme NexT works best with JavaScript enabled</div>
+</noscript>
+
+
+    <div class="main-inner post posts-expand">
+
+
+  
+
+
+<div class="post-block">
+  
+  
+
+  <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="zh-CN">
+    <link itemprop="mainEntityOfPage" href="https://lzhwweb.github.io/nirvana/reactnative/react-native/React-Native-%E5%9F%BA%E6%9C%AC%E5%91%BD%E4%BB%A4%E6%B1%87%E6%80%BB/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/nirvana/images/headphoto.jpeg">
+      <meta itemprop="name" content="nirvana">
+      <meta itemprop="description" content="个人学习笔记">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="涅槃快乐是金">
+    </span>
+      <header class="post-header">
+        <h1 class="post-title" itemprop="name headline">
+          React-Native-基本命令汇总
+        </h1>
+
+        <div class="post-meta-container">
+          <div class="post-meta">
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-calendar"></i>
+      </span>
+      <span class="post-meta-item-text">发表于</span>
+      
+
+      <time title="创建时间：2021-03-10 21:12:40 / 修改时间：13:43:55" itemprop="dateCreated datePublished" datetime="2021-03-10T21:12:40+08:00">2021-03-10</time>
+    </span>
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-folder"></i>
+      </span>
+      <span class="post-meta-item-text">分类于</span>
+        <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+          <a href="/nirvana/categories/reactnative/" itemprop="url" rel="index"><span itemprop="name">reactnative</span></a>
+        </span>
+    </span>
+
+  
+    <span id="/nirvana/reactnative/react-native/React-Native-%E5%9F%BA%E6%9C%AC%E5%91%BD%E4%BB%A4%E6%B1%87%E6%80%BB/" class="post-meta-item leancloud_visitors" data-flag-title="React-Native-基本命令汇总" title="阅读次数">
+      <span class="post-meta-item-icon">
+        <i class="far fa-eye"></i>
+      </span>
+      <span class="post-meta-item-text">阅读次数：</span>
+      <span class="leancloud-visitors-count"></span>
+    </span>
+      </div>
+      <div class="post-meta">
+    <span class="post-meta-item" title="本文字数">
+      <span class="post-meta-item-icon">
+        <i class="far fa-file-word"></i>
+      </span>
+      <span class="post-meta-item-text">本文字数：</span>
+      <span>8k</span>
+    </span>
+    <span class="post-meta-item" title="阅读时长">
+      <span class="post-meta-item-icon">
+        <i class="far fa-clock"></i>
+      </span>
+      <span class="post-meta-item-text">阅读时长 &asymp;</span>
+      <span>7 分钟</span>
+    </span>
+</div>
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+        <p>最近进行React Native的一些优化工作，发现React Native提供了很多简单方便的配置，但是自己一直没有使用过，而且React Native提供了非常好的help功能，会列出对应的说明和example，这边简单整理下一些常用的命令。</p>
+<h2 id="1-查看所有命令-react-native-–help"><a href="#1-查看所有命令-react-native-–help" class="headerlink" title="1. 查看所有命令 react-native –help"></a>1. 查看所有命令 <em><strong>react-native –help</strong></em></h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br></pre></td><td class="code"><pre><span class="line">mac:react-native --help</span><br><span class="line"></span><br><span class="line">  Usage: react-native [options] [command]</span><br><span class="line"></span><br><span class="line">  Options:</span><br><span class="line"></span><br><span class="line">    -V, --version                      output the version number</span><br><span class="line">    -h, --help                         output usage information</span><br><span class="line"></span><br><span class="line">  Commands:</span><br><span class="line"></span><br><span class="line">    start [options]                    starts the webserver</span><br><span class="line">    run-ios [options]                  builds your app and starts it on iOS simulator</span><br><span class="line">    run-android [options]              builds your app and starts it on a connected Android emulator or device</span><br><span class="line">    new-library [options]              generates a native library bridge</span><br><span class="line">    bundle [options]                   builds the javascript bundle for offline use</span><br><span class="line">    unbundle [options]                 builds javascript as &quot;unbundle&quot; for offline use</span><br><span class="line">    eject [options]                    Re-create the iOS and Android folders and native code</span><br><span class="line">    link [options] [packageName]       links all native dependencies (updates native build files)</span><br><span class="line">    unlink [options] &lt;packageName&gt;     unlink native dependency</span><br><span class="line">    install [options] &lt;packageName&gt;    install and link native dependencies</span><br><span class="line">    uninstall [options] &lt;packageName&gt;  uninstall and unlink native dependencies</span><br><span class="line">    upgrade [options]                  upgrade your app&#39;s template files to the latest version; run this after updating the react-native version in your package.json and running npm install</span><br><span class="line">    log-android [options]              starts adb logcat</span><br><span class="line">    log-ios [options]                  starts iOS device syslog tail</span><br><span class="line">    info [options]                     Get relevant version info about OS, toolchain and libraries</span><br></pre></td></tr></table></figure>
+
+<h2 id="2-最常用的启动命令react-native-start"><a href="#2-最常用的启动命令react-native-start" class="headerlink" title="2. 最常用的启动命令react-native start"></a>2. 最常用的启动命令<em><strong>react-native start</strong></em></h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br></pre></td><td class="code"><pre><span class="line">mac:react-native start --help</span><br><span class="line">react-native start [options]</span><br><span class="line">  starts the webserver</span><br><span class="line"></span><br><span class="line">  Options:</span><br><span class="line"></span><br><span class="line">    --port [number]                                                (default: 8081)</span><br><span class="line">    --host [string]                                                (default: )</span><br><span class="line">    --root [list]                                                 add another root(s) to be used by the packager in this project (default: )</span><br><span class="line">    --projectRoots [list]                                         override the root(s) to be used by the packager (default: &#x2F;Users&#x2F;mac&#x2F;mallCategory)</span><br><span class="line">    --assetExts [list]                                            Specify any additional asset extensions to be used by the packager (default: )</span><br><span class="line">    --sourceExts [list]                                           Specify any additional source extensions to be used by the packager (default: )</span><br><span class="line">    --platforms [list]                                            Specify any additional platforms to be used by the packager (default: )</span><br><span class="line">    --providesModuleNodeModules [list]                            Specify any npm packages that import dependencies with providesModule (default: react-native,react-native-windows)</span><br><span class="line">    --max-workers [number]                                        Specifies the maximum number of workers the worker-pool will spawn for transforming files. This defaults to the number of the cores available on your machine.</span><br><span class="line">    --skipflow                                                    Disable flow checks</span><br><span class="line">    --nonPersistent                                               Disable file watcher</span><br><span class="line">    --transformer [string]                                        Specify a custom transformer to be used</span><br><span class="line">    --reset-cache, --resetCache                                   Removes cached files</span><br><span class="line">    --custom-log-reporter-path, --customLogReporterPath [string]  Path to a JavaScript file that exports a log reporter as a replacement for TerminalReporter</span><br><span class="line">    --verbose                                                     Enables logging</span><br><span class="line">    --https                                                       Enables https connections to the server</span><br><span class="line">    --key [path]                                                  Path to custom SSL key</span><br><span class="line">    --cert [path]                                                 Path to custom SSL cert</span><br><span class="line">    --config [string]                                             Path to the CLI configuration file</span><br><span class="line">    -h, --help                                                    output usage information</span><br></pre></td></tr></table></figure>
+
+<h2 id="3-iOS启动命令-react-native-–run-ios"><a href="#3-iOS启动命令-react-native-–run-ios" class="headerlink" title="3. iOS启动命令 react-native –run-ios"></a>3. iOS启动命令 <em><strong>react-native –run-ios</strong></em></h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br></pre></td><td class="code"><pre><span class="line">mac: react-native run-ios --help</span><br><span class="line"></span><br><span class="line">  react-native run-ios [options]</span><br><span class="line">  builds your app and starts it on iOS simulator</span><br><span class="line"></span><br><span class="line">  Options:</span><br><span class="line"></span><br><span class="line">    --simulator [string]      Explicitly set simulator to use (default: iPhone 6)</span><br><span class="line">    --configuration [string]  Explicitly set the scheme configuration to use</span><br><span class="line">    --scheme [string]         Explicitly set Xcode scheme to use</span><br><span class="line">    --project-path [string]   Path relative to project root where the Xcode project (.xcodeproj) lives. The default is &#39;ios&#39;. (default: ios)</span><br><span class="line">    --device [string]         Explicitly set device to use by name.  The value is not required if you have a single device connected.</span><br><span class="line">    --udid [string]           Explicitly set device to use by udid</span><br><span class="line">    --no-packager             Do not launch packager while building</span><br><span class="line">    --verbose                 Do not use xcpretty even if installed</span><br><span class="line">    --config [string]         Path to the CLI configuration file</span><br><span class="line">    -h, --help                output usage information</span><br><span class="line"></span><br><span class="line">  Example usage:</span><br><span class="line"></span><br><span class="line">    Run on a different simulator, e.g. iPhone 5:</span><br><span class="line">    react-native run-ios --simulator &quot;iPhone 5&quot;</span><br><span class="line"></span><br><span class="line">    Pass a non-standard location of iOS directory:</span><br><span class="line">    react-native run-ios --project-path &quot;.&#x2F;app&#x2F;ios&quot;</span><br><span class="line"></span><br><span class="line">    Run on a connected device, e.g. Max&#39;s iPhone:</span><br><span class="line">    react-native run-ios --device &quot;Max&#39;s iPhone&quot;</span><br></pre></td></tr></table></figure>
+<h2 id="4-Android-启动命令-react-native-run-android"><a href="#4-Android-启动命令-react-native-run-android" class="headerlink" title="4. Android 启动命令 react-native run-android"></a>4. Android 启动命令 <em><strong>react-native run-android</strong></em></h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br></pre></td><td class="code"><pre><span class="line">mac: react-native run-android --help</span><br><span class="line"></span><br><span class="line">  react-native run-android [options]</span><br><span class="line">  builds your app and starts it on a connected Android emulator or device</span><br><span class="line"></span><br><span class="line">  Options:</span><br><span class="line"></span><br><span class="line">    --install-debug</span><br><span class="line">    --root [string]           Override the root directory for the android build (which contains the android directory) (default: )</span><br><span class="line">    --flavor [string]         --flavor has been deprecated. Use --variant instead</span><br><span class="line">    --variant [string]</span><br><span class="line">    --appFolder [string]      Specify a different application folder name for the android source. (default: app)</span><br><span class="line">    --appId [string]          Specify an applicationId to launch after build. (default: )</span><br><span class="line">    --appIdSuffix [string]    Specify an applicationIdSuffix to launch after build. (default: )</span><br><span class="line">    --main-activity [string]  Name of the activity to start (default: MainActivity)</span><br><span class="line">    --deviceId [string]       builds your app and starts it on a specific device&#x2F;simulator with the given device id (listed by running &quot;adb devices&quot; on the command line).</span><br><span class="line">    --no-packager             Do not launch packager while building</span><br><span class="line">    --port [number]            (default: 8081)</span><br><span class="line">    --config [string]         Path to the CLI configuration file</span><br><span class="line">    -h, --help                output usage information</span><br></pre></td></tr></table></figure>
+
+<h2 id="5-生成bundle文件-react-native-bundle"><a href="#5-生成bundle文件-react-native-bundle" class="headerlink" title="5. 生成bundle文件 react-native bundle"></a>5. 生成bundle文件 <em><strong>react-native bundle</strong></em></h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br></pre></td><td class="code"><pre><span class="line">mac: react-native bundle --help</span><br><span class="line"></span><br><span class="line">  react-native bundle [options]</span><br><span class="line">  builds the javascript bundle for offline use</span><br><span class="line"></span><br><span class="line">  Options:</span><br><span class="line"></span><br><span class="line">    --entry-file &lt;path&gt;                Path to the root JS file, either absolute or relative to JS root</span><br><span class="line">    --platform [string]                Either &quot;ios&quot; or &quot;android&quot; (default: ios)</span><br><span class="line">    --transformer [string]             Specify a custom transformer to be used</span><br><span class="line">    --dev [boolean]                    If false, warnings are disabled and the bundle is minified (default: true)</span><br><span class="line">    --bundle-output &lt;string&gt;           File name where to store the resulting bundle, ex. &#x2F;tmp&#x2F;groups.bundle</span><br><span class="line">    --bundle-encoding [string]         Encoding the bundle should be written in (https:&#x2F;&#x2F;nodejs.org&#x2F;api&#x2F;buffer.html#buffer_buffer). (default: utf8)</span><br><span class="line">    --max-workers [number]             Specifies the maximum number of workers the worker-pool will spawn for transforming files.This defaults to the number of the cores available on your machine.</span><br><span class="line">    --sourcemap-output [string]        File name where to store the sourcemap file for resulting bundle, ex. &#x2F;tmp&#x2F;groups.map</span><br><span class="line">    --sourcemap-sources-root [string]  Path to make sourcemap&#39;s sources entries relative to, ex. &#x2F;root&#x2F;dir</span><br><span class="line">    --sourcemap-use-absolute-path      Report SourceMapURL using its full path</span><br><span class="line">    --assets-dest [string]             Directory name where to store assets referenced in the bundle</span><br><span class="line">    --verbose                          Enables logging</span><br><span class="line">    --reset-cache                      Removes cached files</span><br><span class="line">    --read-global-cache                Try to fetch transformed JS code from the global cache, if configured.</span><br><span class="line">    --config [string]                  Path to the CLI configuration file</span><br><span class="line">    -h, --help                         output usage information</span><br></pre></td></tr></table></figure>
+<h2 id="5-生成unbundle文件-react-native-unbundle"><a href="#5-生成unbundle文件-react-native-unbundle" class="headerlink" title="5. 生成unbundle文件 react-native unbundle"></a>5. 生成unbundle文件 <em><strong>react-native unbundle</strong></em></h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br></pre></td><td class="code"><pre><span class="line">mac: react-native unbundle --help</span><br><span class="line"></span><br><span class="line">  react-native unbundle [options]</span><br><span class="line">  builds javascript as &quot;unbundle&quot; for offline use</span><br><span class="line"></span><br><span class="line">  Options:</span><br><span class="line"></span><br><span class="line">    --entry-file &lt;path&gt;                Path to the root JS file, either absolute or relative to JS root</span><br><span class="line">    --platform [string]                Either &quot;ios&quot; or &quot;android&quot; (default: ios)</span><br><span class="line">    --transformer [string]             Specify a custom transformer to be used</span><br><span class="line">    --dev [boolean]                    If false, warnings are disabled and the bundle is minified (default: true)</span><br><span class="line">    --bundle-output &lt;string&gt;           File name where to store the resulting bundle, ex. &#x2F;tmp&#x2F;groups.bundle</span><br><span class="line">    --bundle-encoding [string]         Encoding the bundle should be written in (https:&#x2F;&#x2F;nodejs.org&#x2F;api&#x2F;buffer.html#buffer_buffer). (default: utf8)</span><br><span class="line">    --max-workers [number]             Specifies the maximum number of workers the worker-pool will spawn for transforming files.This defaults to the number of the cores available on your machine.</span><br><span class="line">    --sourcemap-output [string]        File name where to store the sourcemap file for resulting bundle, ex. &#x2F;tmp&#x2F;groups.map</span><br><span class="line">    --sourcemap-sources-root [string]  Path to make sourcemap&#39;s sources entries relative to, ex. &#x2F;root&#x2F;dir</span><br><span class="line">    --sourcemap-use-absolute-path      Report SourceMapURL using its full path</span><br><span class="line">    --assets-dest [string]             Directory name where to store assets referenced in the bundle</span><br><span class="line">    --verbose                          Enables logging</span><br><span class="line">    --reset-cache                      Removes cached files</span><br><span class="line">    --read-global-cache                Try to fetch transformed JS code from the global cache, if configured.</span><br><span class="line">    --indexed-unbundle                 Force indexed unbundle file format, even when building for android</span><br><span class="line">    --config [string]                  Path to the CLI configuration file</span><br><span class="line">    -h, --help                         output usage information</span><br></pre></td></tr></table></figure>
+
+<h2 id="6-查看React-Native相关的信息-react-native-info"><a href="#6-查看React-Native相关的信息-react-native-info" class="headerlink" title="6. 查看React Native相关的信息 react-native info"></a>6. 查看React Native相关的信息 <em><strong>react-native info</strong></em></h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><span class="line">mac: react-native info</span><br><span class="line"></span><br><span class="line">Environment:</span><br><span class="line">  OS: macOS High Sierra 10.13.6</span><br><span class="line">  Node: 10.0.0</span><br><span class="line">  Yarn: 1.9.4</span><br><span class="line">  npm: 5.6.0</span><br><span class="line">  Watchman: 4.7.0</span><br><span class="line">  Xcode: Xcode 10.1 Build version 10B61</span><br><span class="line">  Android Studio: 1.4 AI-141.2343393</span><br><span class="line"></span><br><span class="line">Packages: (wanted &#x3D;&gt; installed)</span><br><span class="line">  react: 16.2.0</span><br><span class="line">  react-native: 0.52.0</span><br></pre></td></tr></table></figure>
+
+    </div>
+
+    
+    
+    
+
+    <footer class="post-footer">
+
+        
+
+          <div class="post-nav">
+            <div class="post-nav-item">
+                <a href="/nirvana/reactnative/react-native/React-native-%E6%8A%80%E6%9C%AF%E5%9C%A8%E5%A3%B9%E9%92%B1%E5%8C%85%E4%B8%AD%E7%9A%84%E5%AE%9E%E8%B7%B5%E5%8F%8A%E4%BC%98%E5%8C%96/" rel="prev" title="React-native-技术在壹钱包中的实践及优化">
+                  <i class="fa fa-chevron-left"></i> React-native-技术在壹钱包中的实践及优化
+                </a>
+            </div>
+            <div class="post-nav-item">
+                <a href="/nirvana/reactnative/react-native/React-Native-1px%E5%A4%84%E7%90%86/" rel="next" title="React-Native-1px处理">
+                  React-Native-1px处理 <i class="fa fa-chevron-right"></i>
+                </a>
+            </div>
+          </div>
+    </footer>
+  </article>
+</div>
+
+
+
+
+
+
+
+<script>
+  window.addEventListener('tabs:register', () => {
+    let { activeClass } = CONFIG.comments;
+    if (CONFIG.comments.storage) {
+      activeClass = localStorage.getItem('comments_active') || activeClass;
+    }
+    if (activeClass) {
+      const activeTab = document.querySelector(`a[href="#comment-${activeClass}"]`);
+      if (activeTab) {
+        activeTab.click();
+      }
+    }
+  });
+  if (CONFIG.comments.storage) {
+    window.addEventListener('tabs:click', event => {
+      if (!event.target.matches('.tabs-comment .tab-content .tab-pane')) return;
+      const commentClass = event.target.classList[1];
+      localStorage.setItem('comments_active', commentClass);
+    });
+  }
+</script>
+</div>
+  </main>
+
+  <footer class="footer">
+    <div class="footer-inner">
+
+
+<div class="copyright">
+  &copy; 
+  <span itemprop="copyrightYear">2021</span>
+  <span class="with-love">
+    <i class="fa fa-heart"></i>
+  </span>
+  <span class="author" itemprop="copyrightHolder">nirvana</span>
+</div>
+<div class="wordcount">
+  <span class="post-meta-item">
+    <span class="post-meta-item-icon">
+      <i class="fa fa-chart-line"></i>
+    </span>
+      <span>站点总字数：</span>
+    <span title="站点总字数">39k</span>
+  </span>
+  <span class="post-meta-item">
+    <span class="post-meta-item-icon">
+      <i class="fa fa-coffee"></i>
+    </span>
+      <span>站点阅读时长 &asymp;</span>
+    <span title="站点阅读时长">36 分钟</span>
+  </span>
+</div>
+  <div class="powered-by">由 <a href="https://hexo.io/" class="theme-link" rel="noopener" target="_blank">Hexo</a> & <a href="https://theme-next.js.org/" class="theme-link" rel="noopener" target="_blank">NexT.Gemini</a> 强力驱动
+  </div>
+
+    </div>
+  </footer>
+
+  
+  <script src="https://cdn.jsdelivr.net/npm/animejs@3.2.1/lib/anime.min.js"></script>
+<script src="/nirvana/js/utils.js"></script><script src="/nirvana/js/motion.js"></script><script src="/nirvana/js/next-boot.js"></script>
+
+  
+<script src="/nirvana/js/local-search.js"></script>
+
+
+
+
+
+
+  
+
+
+<script>
+  (function() {
+    function leancloudSelector(url) {
+      url = encodeURI(url);
+      return document.getElementById(url).querySelector('.leancloud-visitors-count');
+    }
+
+    function addCount(Counter) {
+      const visitors = document.querySelector('.leancloud_visitors');
+      const url = decodeURI(visitors.id);
+      const title = visitors.dataset.flagTitle;
+
+      Counter('get', '/classes/Counter?where=' + encodeURIComponent(JSON.stringify({ url })))
+        .then(response => response.json())
+        .then(({ results }) => {
+          if (results.length > 0) {
+            const counter = results[0];
+            leancloudSelector(url).innerText = counter.time + 1;
+            Counter('put', '/classes/Counter/' + counter.objectId, { time: { '__op': 'Increment', 'amount': 1 } })
+              .catch(error => {
+                console.error('Failed to save visitor count', error);
+              });
+          } else {
+              leancloudSelector(url).innerText = 'Counter not initialized! More info at console err msg.';
+              console.error('ATTENTION! LeanCloud counter has security bug, see how to solve it here: https://github.com/theme-next/hexo-leancloud-counter-security. \n However, you can still use LeanCloud without security, by setting `security` option to `false`.');
+            
+          }
+        })
+        .catch(error => {
+          console.error('LeanCloud Counter Error', error);
+        });
+    }
+
+    function showTime(Counter) {
+      const visitors = document.querySelectorAll('.leancloud_visitors');
+      const entries = [...visitors].map(element => {
+        return decodeURI(element.id);
+      });
+
+      Counter('get', '/classes/Counter?where=' + encodeURIComponent(JSON.stringify({ url: { '$in': entries } })))
+        .then(response => response.json())
+        .then(({ results }) => {
+          for (let url of entries) {
+            const target = results.find(item => item.url === url);
+            leancloudSelector(url).innerText = target ? target.time : 0;
+          }
+        })
+        .catch(error => {
+          console.error('LeanCloud Counter Error', error);
+        });
+    }
+
+    const { app_id, app_key, server_url } = {"enable":true,"app_id":"SPsNUvBhME7XmrjzCfHkUu3e-gzGzoHsz","app_key":"4TONafemiIzvJUwqLa7WveoL","server_url":"https://leancloud.cn","security":true,"betterPerformance":false};
+    function fetchData(api_server) {
+      const Counter = (method, url, data) => {
+        return fetch(`${api_server}/1.1${url}`, {
+          method,
+          headers: {
+            'X-LC-Id'     : app_id,
+            'X-LC-Key'    : app_key,
+            'Content-Type': 'application/json',
+          },
+          body: JSON.stringify(data)
+        });
+      };
+      if (CONFIG.page.isPost) {
+        if (CONFIG.hostname !== location.hostname) return;
+        addCount(Counter);
+      } else if (document.querySelectorAll('.post-title-link').length >= 1) {
+        showTime(Counter);
+      }
+    }
+
+    const api_server = app_id.slice(-9) === '-MdYXbMMI' ? `https://${app_id.slice(0, 8).toLowerCase()}.api.lncldglobal.com` : server_url;
+
+    if (api_server) {
+      fetchData(api_server);
+    } else {
+      fetch('https://app-router.leancloud.cn/2/route?appId=' + app_id)
+        .then(response => response.json())
+        .then(({ api_server }) => {
+          fetchData('https://' + api_server);
+        });
+    }
+  })();
+</script>
+
+
+
+</body>
+</html>
