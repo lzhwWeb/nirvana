@@ -1060,40 +1060,34 @@ iptables服务命令</li>
   <entry>
     <title>nginx日常维护常用命令</title>
     <url>/nirvana/linux/linux/nginx%E6%97%A5%E5%B8%B8%E7%BB%B4%E6%8A%A4%E5%B8%B8%E7%94%A8%E5%91%BD%E4%BB%A4/</url>
-    <content><![CDATA[<h1 id="这篇文章主要介绍了nginx日常维护如nginx启动、重启、关闭等常用命令-需要的朋友可以参考下"><a href="#这篇文章主要介绍了nginx日常维护如nginx启动、重启、关闭等常用命令-需要的朋友可以参考下" class="headerlink" title="这篇文章主要介绍了nginx日常维护如nginx启动、重启、关闭等常用命令,需要的朋友可以参考下"></a>这篇文章主要介绍了nginx日常维护如nginx启动、重启、关闭等常用命令,需要的朋友可以参考下</h1><p><strong>一、简明nginx常用命令</strong></p>
-<p>1. 启动 Nginx</p>
-<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">@ubuntu:sudo .&#x2F;sbin&#x2F;nginx</span><br></pre></td></tr></table></figure>
-<p>2. 停止 Nginx</p>
-<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">@ubuntu:sudo .&#x2F;sbin&#x2F;nginx -s stop</span><br><span class="line">@ubuntu:sudo .&#x2F;sbin&#x2F;nginx -s quit</span><br></pre></td></tr></table></figure>
+    <content><![CDATA[<p>这篇文章主要介绍了nginx日常维护如nginx启动、重启、关闭等常用命令,需要的朋友可以参考下</p>
+<h2 id="一、简明nginx常用命令"><a href="#一、简明nginx常用命令" class="headerlink" title="一、简明nginx常用命令"></a><strong>一、简明nginx常用命令</strong></h2><h5 id="1-启动-Nginx"><a href="#1-启动-Nginx" class="headerlink" title="1. 启动 Nginx"></a>1. 启动 Nginx</h5><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">@ubuntu:sudo .&#x2F;sbin&#x2F;nginx</span><br></pre></td></tr></table></figure>
+<h5 id="2-停止-Nginx"><a href="#2-停止-Nginx" class="headerlink" title="2. 停止 Nginx"></a>2. 停止 Nginx</h5><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">@ubuntu:sudo .&#x2F;sbin&#x2F;nginx -s stop</span><br><span class="line">@ubuntu:sudo .&#x2F;sbin&#x2F;nginx -s quit</span><br></pre></td></tr></table></figure>
 <p>-s都是采用向 Nginx 发送信号的方式。</p>
-<p>3. Nginx 重载配置</p>
-<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">@ubuntu:sudo .&#x2F;sbin&#x2F;nginx -s reload</span><br></pre></td></tr></table></figure>
+<h5 id="3-Nginx-重载配置"><a href="#3-Nginx-重载配置" class="headerlink" title="3. Nginx 重载配置"></a>3. Nginx 重载配置</h5><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">@ubuntu:sudo .&#x2F;sbin&#x2F;nginx -s reload</span><br></pre></td></tr></table></figure>
 <p>上述是采用向 Nginx 发送信号的方式，或者使用：</p>
 <figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">@ubuntu:service nginx reload</span><br></pre></td></tr></table></figure>
-<p>4. 指定配置文件</p>
-<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">@ubuntu:sudo .&#x2F;sbin&#x2F;nginx -c &#x2F;usr&#x2F;local&#x2F;nginx&#x2F;conf&#x2F;nginx.conf</span><br></pre></td></tr></table></figure>
+<h5 id="4-指定配置文件"><a href="#4-指定配置文件" class="headerlink" title="4. 指定配置文件"></a>4. 指定配置文件</h5><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">@ubuntu:sudo .&#x2F;sbin&#x2F;nginx -c &#x2F;usr&#x2F;local&#x2F;nginx&#x2F;conf&#x2F;nginx.conf</span><br></pre></td></tr></table></figure>
 <p>-c表示configuration，指定配置文件。</p>
-<p>5. 查看 Nginx 版本<br>有两种可以查看 Nginx 的版本信息的参数。第一种如下：</p>
+<h5 id="5-查看-Nginx-版本"><a href="#5-查看-Nginx-版本" class="headerlink" title="5. 查看 Nginx 版本"></a>5. 查看 Nginx 版本</h5><p>有两种可以查看 Nginx 的版本信息的参数。第一种如下：</p>
 <figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">@ubuntu:&#x2F;usr&#x2F;local&#x2F;nginx$ .&#x2F;sbin&#x2F;nginx -v</span><br><span class="line">nginx: nginx version: nginx&#x2F;1.0.0</span><br></pre></td></tr></table></figure>
 <p>另一种显示的是详细的版本信息：</p>
 <figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">@ubuntu:&#x2F;usr&#x2F;local&#x2F;nginx$ .&#x2F;sbin&#x2F;nginx -V</span><br><span class="line">nginx: nginx version: nginx&#x2F;1.0.0</span><br><span class="line">nginx: built by gcc 4.3.3 (Ubuntu 4.3.3-5ubuntu4) </span><br><span class="line">nginx: TLS SNI support enabled</span><br><span class="line">nginx: configure arguments: --with-http_ssl_module --with-openssl&#x3D;&#x2F;home&#x2F;luming&#x2F;openssl-1.0.0d&#x2F;</span><br></pre></td></tr></table></figure>
-<p>6. 检查配置文件是否正确</p>
-<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">@ubuntu:&#x2F;usr&#x2F;local&#x2F;nginx$ .&#x2F;sbin&#x2F;nginx -t</span><br><span class="line">nginx: [alert] could not open error log file: open() &quot;&#x2F;usr&#x2F;local&#x2F;nginx&#x2F;logs&#x2F;error.log&quot; failed (13: Permission denied)</span><br><span class="line">nginx: the configuration file &#x2F;usr&#x2F;local&#x2F;nginx&#x2F;conf&#x2F;nginx.conf syntax is ok</span><br><span class="line">2012&#x2F;01&#x2F;09 16:45:09 [emerg] 23898#0: open() &quot;&#x2F;usr&#x2F;local&#x2F;nginx&#x2F;logs&#x2F;nginx.pid&quot; failed (13: Permission denied)</span><br><span class="line">nginx: configuration file &#x2F;usr&#x2F;local&#x2F;nginx&#x2F;conf&#x2F;nginx.conf test failed</span><br></pre></td></tr></table></figure>
+<h5 id="6-检查配置文件是否正确"><a href="#6-检查配置文件是否正确" class="headerlink" title="6. 检查配置文件是否正确"></a>6. 检查配置文件是否正确</h5><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">@ubuntu:&#x2F;usr&#x2F;local&#x2F;nginx$ .&#x2F;sbin&#x2F;nginx -t</span><br><span class="line">nginx: [alert] could not open error log file: open() &quot;&#x2F;usr&#x2F;local&#x2F;nginx&#x2F;logs&#x2F;error.log&quot; failed (13: Permission denied)</span><br><span class="line">nginx: the configuration file &#x2F;usr&#x2F;local&#x2F;nginx&#x2F;conf&#x2F;nginx.conf syntax is ok</span><br><span class="line">2012&#x2F;01&#x2F;09 16:45:09 [emerg] 23898#0: open() &quot;&#x2F;usr&#x2F;local&#x2F;nginx&#x2F;logs&#x2F;nginx.pid&quot; failed (13: Permission denied)</span><br><span class="line">nginx: configuration file &#x2F;usr&#x2F;local&#x2F;nginx&#x2F;conf&#x2F;nginx.conf test failed</span><br></pre></td></tr></table></figure>
 <p>如果出现如上的提示信息，表示没有访问错误日志文件和进程，可以sudo（super user do）一下：</p>
 <figure class="highlight plain"><table><tr><td class="code"><pre><span class="line"></span><br><span class="line">poerchant@ubuntu:&#x2F;usr&#x2F;local&#x2F;nginx$ sudo .&#x2F;sbin&#x2F;nginx -t</span><br><span class="line">nginx: the configuration file &#x2F;usr&#x2F;local&#x2F;nginx&#x2F;conf&#x2F;nginx.conf syntax is ok</span><br><span class="line">nginx: configuration file &#x2F;usr&#x2F;local&#x2F;nginx&#x2F;conf&#x2F;nginx.conf test is successful</span><br></pre></td></tr></table></figure>
 <p>如果显示如上，则表示配置文件正确。否则，会有相关提示。</p>
-<p>7. 显示帮助信息</p>
-<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">@ubuntu:&#x2F;user&#x2F;local&#x2F;nginx$ .&#x2F;sbin&#x2F;nginx -h</span><br></pre></td></tr></table></figure>
+<h5 id="7-显示帮助信息"><a href="#7-显示帮助信息" class="headerlink" title="7. 显示帮助信息"></a>7. 显示帮助信息</h5><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">@ubuntu:&#x2F;user&#x2F;local&#x2F;nginx$ .&#x2F;sbin&#x2F;nginx -h</span><br></pre></td></tr></table></figure>
 <p>或者：</p>
 <figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">@ubuntu:&#x2F;user&#x2F;local&#x2F;nginx$ .&#x2F;sbin&#x2F;nginx -?</span><br></pre></td></tr></table></figure>
 <p>以上这些涵盖了 Nginx 日常维护的所有基本操作，另外还有向 master 进程发送信号的相关命令，我们会在下面看到。</p>
-<p><strong>二、在Linux下通过master发送信号的相关命令</strong></p>
-<p><strong>停止操作</strong> 停止操作是通过向nginx进程发送信号（什么是信号请参阅linux文 章）来进行的<br>步骤1：查询nginx主进程号<br>ps -ef | grep nginx<br>在进程列表里 面找master进程，它的编号就是主进程号了。<br>步骤2：发送信号<br>从容停止Nginx：<br>kill -QUIT 主进程号<br>快速停止Nginx：<br>kill -TERM 主进程号<br>强制停止Nginx：<br>pkill -9 nginx</p>
+<h2 id="二、在Linux下通过master发送信号的相关命令"><a href="#二、在Linux下通过master发送信号的相关命令" class="headerlink" title="二、在Linux下通过master发送信号的相关命令"></a>二、在Linux下通过master发送信号的相关命令</h2><h5 id="停止操作"><a href="#停止操作" class="headerlink" title="停止操作"></a><strong>停止操作</strong></h5><p>停止操作是通过向nginx进程发送信号（什么是信号请参阅linux文 章）来进行的</p>
+<p>步骤1：查询nginx主进程号<br>ps -ef | grep nginx<br>在进程列表里 面找master进程，它的编号就是主进程号了。<br>步骤2：发送信号<br>从容停止Nginx：<br>kill -QUIT 主进程号<br>快速停止Nginx：<br>kill -TERM 主进程号<br>强制停止Nginx：<br>pkill -9 nginx</p>
 <p>另外， 若在nginx.conf配置了pid文件存放路径则该文件存放的就是Nginx主进程号，如果没指定则放在nginx的logs目录下。有了pid文 件，我们就不用先查询Nginx的主进程号，而直接向Nginx发送信号了，命令如下：<br>kill -信号类型 ‘/usr/nginx/logs/nginx.pid’ （推荐）</p>
-<p><strong>平滑重启</strong><br>如果更改了配置就要重启Nginx，要先关闭Nginx再打开？不是的，可以向Nginx 发送信号，平滑重启。<br>平滑重启命令：<br>kill -HUP 住进称号或进程号文件路径<br>或者使用</p>
+<h5 id="平滑重启"><a href="#平滑重启" class="headerlink" title="平滑重启"></a><strong>平滑重启</strong></h5><p>如果更改了配置就要重启Nginx，要先关闭Nginx再打开？不是的，可以向Nginx 发送信号，平滑重启。<br>平滑重启命令：<br>kill -HUP 住进称号或进程号文件路径<br>或者使用</p>
 <figure class="highlight plain"><table><tr><td class="code"><pre><span class="line"></span><br><span class="line">nginx -s reload（推荐）</span><br><span class="line">或</span><br><span class="line">&#x2F;usr&#x2F;nginx&#x2F;sbin&#x2F;nginx -s reload</span><br></pre></td></tr></table></figure>
 <p>注意，修改了配置文件后最好先检查一下修改过的配置文件是否正 确，以免重启后Nginx出现错误影响服务器稳定运行。判断Nginx配置是否正确命令如下：<br>nginx -t -c /usr/nginx/conf/nginx.conf<br>或者<br>nginx -t （推荐）<br>或<br>/usr/nginx/sbin/nginx -t</p>
-<p><strong>平滑升级</strong><br>如果服务器正在运行的Nginx要进行升级、添加或删除模块时，我们需 要停掉服务器并做相应修改，这样服务器就要在一段时间内停止服务，Nginx可以在不停机的情况下进行各种升级动作而不影响服务器运行。<br>步骤1：<br>如 果升级Nginx程序，先用新程序替换旧程序文件，编译安装的话新程序直接编译到Nginx安装目录中。<br>步 骤2：执行命令<br>kill -USR2 旧版程序的主进程号或进程文件名<br>此时旧的Nginx主进程将会把自己的进程文件改名为.oldbin，然后执行新版 Nginx。新旧Nginx会同市运行，共同处理请求。<br>这时要逐步停止旧版 Nginx，输入命令：<br>kill -WINCH 旧版主进程号<br>慢慢旧的工作进程就都会随着任务执行完毕而退出，新版的Nginx的工作进程会逐渐取代旧版 工作进程。</p>
+<h5 id="平滑升级"><a href="#平滑升级" class="headerlink" title="平滑升级"></a><strong>平滑升级</strong></h5><p>如果服务器正在运行的Nginx要进行升级、添加或删除模块时，我们需 要停掉服务器并做相应修改，这样服务器就要在一段时间内停止服务，Nginx可以在不停机的情况下进行各种升级动作而不影响服务器运行。<br>步骤1：<br>如 果升级Nginx程序，先用新程序替换旧程序文件，编译安装的话新程序直接编译到Nginx安装目录中。<br>步 骤2：执行命令<br>kill -USR2 旧版程序的主进程号或进程文件名<br>此时旧的Nginx主进程将会把自己的进程文件改名为.oldbin，然后执行新版 Nginx。新旧Nginx会同市运行，共同处理请求。<br>这时要逐步停止旧版 Nginx，输入命令：<br>kill -WINCH 旧版主进程号<br>慢慢旧的工作进程就都会随着任务执行完毕而退出，新版的Nginx的工作进程会逐渐取代旧版 工作进程。</p>
 <p>此 时，我们可以决定使用新版还是恢复到旧版。<br>不重载配置启动新/旧工作进程<br>kill -HUP 旧/新版主进程号<br>从容关闭旧/新进程<br>kill -QUIT 旧/新主进程号<br>如果此时报错，提示还有进程没有结束就用下面命令先关闭旧/新工作进程，再关闭主进程号：<br>kill -TERM 旧/新工作进程号</p>
 <p>这样下来，如果要恢复到旧版本，只需要上面的几个步 骤都是操作新版主进程号，如果要用新版本就上面的几个步骤都操作旧版主进程号就行了。</p>
 ]]></content>
