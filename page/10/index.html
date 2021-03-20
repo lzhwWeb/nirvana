@@ -820,6 +820,113 @@
   
 
   <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="">
+    <link itemprop="mainEntityOfPage" href="https://lzhwweb.github.io/nirvana/javascript/%E5%89%8D%E7%AB%AF/%E4%BF%AE%E5%A4%8Dimage%E5%9C%A8hexo%E8%87%AA%E5%BB%BA%E5%8D%9A%E5%AE%A2%E6%98%BE%E7%A4%BA403/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/nirvana/images/headphoto.jpeg">
+      <meta itemprop="name" content="nirvana">
+      <meta itemprop="description" content="个人学习笔记">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="涅槃快乐是金">
+    </span>
+      <header class="post-header">
+        <h2 class="post-title" itemprop="name headline">
+          <a href="/nirvana/javascript/%E5%89%8D%E7%AB%AF/%E4%BF%AE%E5%A4%8Dimage%E5%9C%A8hexo%E8%87%AA%E5%BB%BA%E5%8D%9A%E5%AE%A2%E6%98%BE%E7%A4%BA403/" class="post-title-link" itemprop="url">修复image在hexo自建博客显示403</a>
+        </h2>
+
+        <div class="post-meta-container">
+          <div class="post-meta">
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-calendar"></i>
+      </span>
+      <span class="post-meta-item-text">发表于</span>
+
+      <time title="创建时间：2021-03-11 21:12:40" itemprop="dateCreated datePublished" datetime="2021-03-11T21:12:40+08:00">2021-03-11</time>
+    </span>
+      <span class="post-meta-item">
+        <span class="post-meta-item-icon">
+          <i class="far fa-calendar-check"></i>
+        </span>
+        <span class="post-meta-item-text">更新于</span>
+        <time title="修改时间：2021-03-10 13:43:55" itemprop="dateModified" datetime="2021-03-10T13:43:55+08:00">2021-03-10</time>
+      </span>
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-folder"></i>
+      </span>
+      <span class="post-meta-item-text">分类于</span>
+        <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+          <a href="/nirvana/categories/javascript/" itemprop="url" rel="index"><span itemprop="name">javascript</span></a>
+        </span>
+    </span>
+
+  
+    <span id="/nirvana/javascript/%E5%89%8D%E7%AB%AF/%E4%BF%AE%E5%A4%8Dimage%E5%9C%A8hexo%E8%87%AA%E5%BB%BA%E5%8D%9A%E5%AE%A2%E6%98%BE%E7%A4%BA403/" class="post-meta-item leancloud_visitors" data-flag-title="修复image在hexo自建博客显示403" title="阅读次数">
+      <span class="post-meta-item-icon">
+        <i class="far fa-eye"></i>
+      </span>
+      <span class="post-meta-item-text">阅读次数：</span>
+      <span class="leancloud-visitors-count"></span>
+    </span>
+      </div>
+      <div class="post-meta">
+    <span class="post-meta-item" title="本文字数">
+      <span class="post-meta-item-icon">
+        <i class="far fa-file-word"></i>
+      </span>
+      <span class="post-meta-item-text">本文字数：</span>
+      <span>304</span>
+    </span>
+    <span class="post-meta-item" title="阅读时长">
+      <span class="post-meta-item-icon">
+        <i class="far fa-clock"></i>
+      </span>
+      <span class="post-meta-item-text">阅读时长 &asymp;</span>
+      <span>1 分钟</span>
+    </span>
+</div>
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+          <p>使用hexo自建个人博客，本地localhost Debug的时候完全可以显示，但是将网站部署到服务器后就会图片全部无法显示，遇到这样的错误<br>打开google开发者工具<br>可以看到，加载图片时显示403<br><img src="https://upload-images.jianshu.io/upload_images/10024246-21238a83cbe055a6.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240"></p>
+<p>解决方案：利用html中的meta标签关闭浏览器的UrlReferer<br>访问</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">themes&#x2F;next(主题)&#x2F;layout&#x2F;_partials&#x2F;head&#x2F;head.njk</span><br></pre></td></tr></table></figure>
+<p>在里面的<head></head>中添加下面代码即可</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">&lt;meta name&#x3D;&quot;referrer&quot; content&#x3D;&quot;no-referrer&quot;&#x2F;&gt;</span><br></pre></td></tr></table></figure>
+
+      
+    </div>
+
+    
+    
+    
+
+    <footer class="post-footer">
+        <div class="post-eof"></div>
+      
+    </footer>
+  </article>
+</div>
+
+
+
+
+    
+
+
+<div class="post-block">
+  
+  
+
+  <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="">
     <link itemprop="mainEntityOfPage" href="https://lzhwweb.github.io/nirvana/javascript/%E5%89%8D%E7%AB%AF/%E5%89%8D%E7%AB%AF%E5%AE%9E%E7%94%A8%E7%9A%84%E8%B0%83%E8%AF%95%E5%91%BD%E4%BB%A4console%E4%BD%BF%E7%94%A8/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
@@ -930,113 +1037,6 @@
 <h2 id="十：性能分析"><a href="#十：性能分析" class="headerlink" title="十：性能分析"></a>十：性能分析</h2><p>性能分析（Profiler）就是分析程序各个部分的运行时间，找出瓶颈所在，使用的方法是console.profile()。<br>console.profile()的使用非常简单：在需要开始profile的地方插入console.profile()，在结束profile的地方插入console.profileEnd()即可。</p>
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br></pre></td><td class="code"><pre><span class="line">function doTask()&#123;</span><br><span class="line">    doSubTaskA(1000);</span><br><span class="line">    doSubTaskA(100000);</span><br><span class="line">    doSubTaskB(10000);</span><br><span class="line">    doSubTaskC(1000,10000);</span><br><span class="line">&#125;</span><br><span class="line">function doSubTaskA(count)&#123;</span><br><span class="line">    for(var i&#x3D;0;i&lt;count;i++)&#123;&#125;</span><br><span class="line">&#125;</span><br><span class="line"> </span><br><span class="line">function doSubTaskB(count)&#123;</span><br><span class="line">    for(var i&#x3D;0;i&lt;count;i++)&#123;&#125;</span><br><span class="line">&#125;</span><br><span class="line"> </span><br><span class="line">function doSubTaskC(countX,countY)&#123;</span><br><span class="line">    for(var i&#x3D;0;i&lt;countX;i++)&#123;</span><br><span class="line">        for(var j&#x3D;0;j&lt;countY;j++)&#123;&#125; </span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br><span class="line">console.profile();</span><br><span class="line">doTask();</span><br><span class="line">console.profileEnd();</span><br></pre></td></tr></table></figure>
 <p><img src="https://upload-images.jianshu.io/upload_images/10024246-a0a1594caf107dfb.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240"></p>
-
-      
-    </div>
-
-    
-    
-    
-
-    <footer class="post-footer">
-        <div class="post-eof"></div>
-      
-    </footer>
-  </article>
-</div>
-
-
-
-
-    
-
-
-<div class="post-block">
-  
-  
-
-  <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="">
-    <link itemprop="mainEntityOfPage" href="https://lzhwweb.github.io/nirvana/javascript/%E5%89%8D%E7%AB%AF/%E4%BF%AE%E5%A4%8Dimage%E5%9C%A8hexo%E8%87%AA%E5%BB%BA%E5%8D%9A%E5%AE%A2%E6%98%BE%E7%A4%BA403/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="image" content="/nirvana/images/headphoto.jpeg">
-      <meta itemprop="name" content="nirvana">
-      <meta itemprop="description" content="个人学习笔记">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="涅槃快乐是金">
-    </span>
-      <header class="post-header">
-        <h2 class="post-title" itemprop="name headline">
-          <a href="/nirvana/javascript/%E5%89%8D%E7%AB%AF/%E4%BF%AE%E5%A4%8Dimage%E5%9C%A8hexo%E8%87%AA%E5%BB%BA%E5%8D%9A%E5%AE%A2%E6%98%BE%E7%A4%BA403/" class="post-title-link" itemprop="url">修复image在hexo自建博客显示403</a>
-        </h2>
-
-        <div class="post-meta-container">
-          <div class="post-meta">
-    <span class="post-meta-item">
-      <span class="post-meta-item-icon">
-        <i class="far fa-calendar"></i>
-      </span>
-      <span class="post-meta-item-text">发表于</span>
-
-      <time title="创建时间：2021-03-11 21:12:40" itemprop="dateCreated datePublished" datetime="2021-03-11T21:12:40+08:00">2021-03-11</time>
-    </span>
-      <span class="post-meta-item">
-        <span class="post-meta-item-icon">
-          <i class="far fa-calendar-check"></i>
-        </span>
-        <span class="post-meta-item-text">更新于</span>
-        <time title="修改时间：2021-03-10 13:43:55" itemprop="dateModified" datetime="2021-03-10T13:43:55+08:00">2021-03-10</time>
-      </span>
-    <span class="post-meta-item">
-      <span class="post-meta-item-icon">
-        <i class="far fa-folder"></i>
-      </span>
-      <span class="post-meta-item-text">分类于</span>
-        <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-          <a href="/nirvana/categories/javascript/" itemprop="url" rel="index"><span itemprop="name">javascript</span></a>
-        </span>
-    </span>
-
-  
-    <span id="/nirvana/javascript/%E5%89%8D%E7%AB%AF/%E4%BF%AE%E5%A4%8Dimage%E5%9C%A8hexo%E8%87%AA%E5%BB%BA%E5%8D%9A%E5%AE%A2%E6%98%BE%E7%A4%BA403/" class="post-meta-item leancloud_visitors" data-flag-title="修复image在hexo自建博客显示403" title="阅读次数">
-      <span class="post-meta-item-icon">
-        <i class="far fa-eye"></i>
-      </span>
-      <span class="post-meta-item-text">阅读次数：</span>
-      <span class="leancloud-visitors-count"></span>
-    </span>
-      </div>
-      <div class="post-meta">
-    <span class="post-meta-item" title="本文字数">
-      <span class="post-meta-item-icon">
-        <i class="far fa-file-word"></i>
-      </span>
-      <span class="post-meta-item-text">本文字数：</span>
-      <span>304</span>
-    </span>
-    <span class="post-meta-item" title="阅读时长">
-      <span class="post-meta-item-icon">
-        <i class="far fa-clock"></i>
-      </span>
-      <span class="post-meta-item-text">阅读时长 &asymp;</span>
-      <span>1 分钟</span>
-    </span>
-</div>
-
-        </div>
-      </header>
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-          <p>使用hexo自建个人博客，本地localhost Debug的时候完全可以显示，但是将网站部署到服务器后就会图片全部无法显示，遇到这样的错误<br>打开google开发者工具<br>可以看到，加载图片时显示403<br><img src="https://upload-images.jianshu.io/upload_images/10024246-21238a83cbe055a6.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240"></p>
-<p>解决方案：利用html中的meta标签关闭浏览器的UrlReferer<br>访问</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">themes&#x2F;next(主题)&#x2F;layout&#x2F;_partials&#x2F;head&#x2F;head.njk</span><br></pre></td></tr></table></figure>
-<p>在里面的<head></head>中添加下面代码即可</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">&lt;meta name&#x3D;&quot;referrer&quot; content&#x3D;&quot;no-referrer&quot;&#x2F;&gt;</span><br></pre></td></tr></table></figure>
 
       
     </div>
@@ -1911,7 +1911,7 @@
         });
     }
 
-    const { app_id, app_key, server_url } = {"enable":true,"app_id":"SPsNUvBhME7XmrjzCfHkUu3e-gzGzoHsz","app_key":"4TONafemiIzvJUwqLa7WveoL","server_url":null,"security":true};
+    const { app_id, app_key, server_url } = {"enable":true,"app_id":"SPsNUvBhME7XmrjzCfHkUu3e-gzGzoHsz","app_key":"4TONafemiIzvJUwqLa7WveoL","server_url":"https://lzhwweb.github.io/nirvana","security":true,"betterPerformance":false};
     function fetchData(api_server) {
       const Counter = (method, url, data) => {
         return fetch(`${api_server}/1.1${url}`, {

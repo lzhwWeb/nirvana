@@ -615,6 +615,126 @@ Gamer类：表示游戏主人公的类<figure class="highlight plain"><table><tr
   
 
   <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="">
+    <link itemprop="mainEntityOfPage" href="https://lzhwweb.github.io/nirvana/DesignPattern/%E8%AE%BE%E8%AE%A1%E6%A8%A1%E5%BC%8F%EF%BC%88TypeScript%EF%BC%89/Proxy-Pattern(%E4%BB%A3%E7%90%86%E6%A8%A1%E5%BC%8F)/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/nirvana/images/headphoto.jpeg">
+      <meta itemprop="name" content="nirvana">
+      <meta itemprop="description" content="个人学习笔记">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="涅槃快乐是金">
+    </span>
+      <header class="post-header">
+        <h2 class="post-title" itemprop="name headline">
+          <a href="/nirvana/DesignPattern/%E8%AE%BE%E8%AE%A1%E6%A8%A1%E5%BC%8F%EF%BC%88TypeScript%EF%BC%89/Proxy-Pattern(%E4%BB%A3%E7%90%86%E6%A8%A1%E5%BC%8F)/" class="post-title-link" itemprop="url">Proxy-Pattern(代理模式)</a>
+        </h2>
+
+        <div class="post-meta-container">
+          <div class="post-meta">
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-calendar"></i>
+      </span>
+      <span class="post-meta-item-text">发表于</span>
+
+      <time title="创建时间：2021-03-11 21:12:40" itemprop="dateCreated datePublished" datetime="2021-03-11T21:12:40+08:00">2021-03-11</time>
+    </span>
+      <span class="post-meta-item">
+        <span class="post-meta-item-icon">
+          <i class="far fa-calendar-check"></i>
+        </span>
+        <span class="post-meta-item-text">更新于</span>
+        <time title="修改时间：2021-03-10 13:43:55" itemprop="dateModified" datetime="2021-03-10T13:43:55+08:00">2021-03-10</time>
+      </span>
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-folder"></i>
+      </span>
+      <span class="post-meta-item-text">分类于</span>
+        <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+          <a href="/nirvana/categories/DesignPattern/" itemprop="url" rel="index"><span itemprop="name">DesignPattern</span></a>
+        </span>
+    </span>
+
+  
+    <span id="/nirvana/DesignPattern/%E8%AE%BE%E8%AE%A1%E6%A8%A1%E5%BC%8F%EF%BC%88TypeScript%EF%BC%89/Proxy-Pattern(%E4%BB%A3%E7%90%86%E6%A8%A1%E5%BC%8F)/" class="post-meta-item leancloud_visitors" data-flag-title="Proxy-Pattern(代理模式)" title="阅读次数">
+      <span class="post-meta-item-icon">
+        <i class="far fa-eye"></i>
+      </span>
+      <span class="post-meta-item-text">阅读次数：</span>
+      <span class="leancloud-visitors-count"></span>
+    </span>
+      </div>
+      <div class="post-meta">
+    <span class="post-meta-item" title="本文字数">
+      <span class="post-meta-item-icon">
+        <i class="far fa-file-word"></i>
+      </span>
+      <span class="post-meta-item-text">本文字数：</span>
+      <span>1.7k</span>
+    </span>
+    <span class="post-meta-item" title="阅读时长">
+      <span class="post-meta-item-icon">
+        <i class="far fa-clock"></i>
+      </span>
+      <span class="post-meta-item-text">阅读时长 &asymp;</span>
+      <span>2 分钟</span>
+    </span>
+</div>
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+          <p>代理模式（Proxy Pattern）：代理模式给某一个对象提供一个代理对象，并由代理对象控制对原对象的引用。这种类型的设计模式属于结构型模式。</p>
+<h2 id="介绍"><a href="#介绍" class="headerlink" title="介绍"></a>介绍</h2><ul>
+<li><strong>意图：</strong>为其他对象提供一种代理以控制对这个对象的访问。</li>
+<li><strong>主要解决：</strong>不直接操作对象的情况下,对此对象进行访问。</li>
+<li><strong>何时使用：</strong>想在访问一个类时做一些控制。</li>
+<li><strong>应用实例：</strong>买火车票不一定在火车站买，也可以去代售点。</li>
+<li><strong>优点：</strong><br>1、职责清晰。<br>2、高扩展性。<br>3、智能化。</li>
+<li><strong>缺点：</strong><br>1、由于在客户端和真实主题之间增加了代理对象，因此有些类型的代理模式可能会造成请求的处理速度变慢。<br>2、实现代理模式需要额外的工作，有些代理模式的实现非常复杂。</li>
+<li><strong>使用场景：</strong><br>1、远程代理。<br>2、虚拟代理。<br>3、Copy-on-Write 代理。<br>4、保护（Protect or Access）代理。<br>5、Cache代理。<br>6、防火墙（Firewall）代理。<br>7、同步化（Synchronization）代理。<br>8、智能引用（Smart Reference）代理。</li>
+<li><strong>注意事项：</strong><br>1、和适配器模式的区别：适配器模式主要改变所考虑对象的接口，而代理模式不能改变所代理类的接口。<br>2、和装饰器模式的区别：装饰器模式为了增强功能，而代理模式是为了加以控制。<h2 id="示例"><a href="#示例" class="headerlink" title="示例"></a>示例</h2><h5 id="BuyHouse-ts-创建服务类接口"><a href="#BuyHouse-ts-创建服务类接口" class="headerlink" title="BuyHouse.ts 创建服务类接口"></a>BuyHouse.ts 创建服务类接口</h5><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">export interface BuyHouse &#123;</span><br><span class="line">    buyHosue(): void;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<h5 id="BuyHouseImpl-ts-实现服务接口"><a href="#BuyHouseImpl-ts-实现服务接口" class="headerlink" title="BuyHouseImpl.ts 实现服务接口"></a>BuyHouseImpl.ts 实现服务接口</h5><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line">import &#123; BuyHouse &#125; from &quot;.&#x2F;BuyHouse&quot;;</span><br><span class="line"></span><br><span class="line">export default class BuyHouseImpl implements BuyHouse &#123;</span><br><span class="line"></span><br><span class="line">    constructor() &#123;</span><br><span class="line"></span><br><span class="line">    &#125;</span><br><span class="line">    public buyHosue(): void &#123;</span><br><span class="line">        console.log(&quot;我要买房&quot;);</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<h5 id="BuyHouseProxy-ts-创建代理类"><a href="#BuyHouseProxy-ts-创建代理类" class="headerlink" title="BuyHouseProxy.ts 创建代理类"></a>BuyHouseProxy.ts 创建代理类</h5><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><span class="line">import &#123; BuyHouse &#125; from &quot;.&#x2F;BuyHouse&quot;;</span><br><span class="line"></span><br><span class="line">export default class BuyHouseProxy implements BuyHouse &#123;</span><br><span class="line">    private buyHouse: BuyHouse;</span><br><span class="line">    constructor(buyHouse: BuyHouse) &#123;</span><br><span class="line">        this.buyHouse &#x3D; buyHouse;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    public buyHosue(): void &#123;</span><br><span class="line">        console.log(&quot;买房前准备&quot;);</span><br><span class="line">        this.buyHouse.buyHosue();</span><br><span class="line">        console.log(&quot;买房后装修&quot;);</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<h5 id="index-ts"><a href="#index-ts" class="headerlink" title="index.ts"></a>index.ts</h5><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">import BuyHouseImpl from &quot;.&#x2F;BuyHouseImpl&quot;;</span><br><span class="line">import BuyHouseProxy from &quot;.&#x2F;BuyHouseProxy&quot;;</span><br><span class="line"></span><br><span class="line">const buyHouse &#x3D; new BuyHouseImpl();</span><br><span class="line">buyHouse.buyHosue();</span><br><span class="line">const buyHouseProxy &#x3D; new BuyHouseProxy(buyHouse);</span><br><span class="line">buyHouseProxy.buyHosue();</span><br></pre></td></tr></table></figure>
+<h2 id="类图"><a href="#类图" class="headerlink" title="类图"></a>类图</h2><img src="https://upload-images.jianshu.io/upload_images/10024246-b4f89a6249dd3f0b.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240"><h2 id="角色："><a href="#角色：" class="headerlink" title="角色："></a>角色：</h2></li>
+<li>Subject(主体)：声明了RealSubject和Proxy的共同接口。由于存在Subject角色，所以Client角色不必在意他所使用的的究竟是RealSubject还是Proxy。</li>
+<li>RealSubject（实际的主体）：也称为委托角色或者被代理角色。定义了代理对象所代表的目标对象。</li>
+<li>Proxy（代理人）：也叫委托类、代理类。Proxy角色处理来自Client的请求，代理对象通常在客户端调用传递给目标对象之前或之后，执行某个操作，而不是单纯地将调用传递给目标对象。</li>
+</ul>
+
+      
+    </div>
+
+    
+    
+    
+
+    <footer class="post-footer">
+        <div class="post-eof"></div>
+      
+    </footer>
+  </article>
+</div>
+
+
+
+
+    
+
+
+<div class="post-block">
+  
+  
+
+  <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="">
     <link itemprop="mainEntityOfPage" href="https://lzhwweb.github.io/nirvana/DesignPattern/%E8%AE%BE%E8%AE%A1%E6%A8%A1%E5%BC%8F%EF%BC%88TypeScript%EF%BC%89/Singleton%E6%A8%A1%E5%BC%8F/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
@@ -712,126 +832,6 @@ Gamer类：表示游戏主人公的类<figure class="highlight plain"><table><tr
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line">初始化TicketMaker</span><br><span class="line">第0个1000</span><br><span class="line">第1个1001</span><br><span class="line">第2个1002</span><br><span class="line">第3个1003</span><br><span class="line">第4个1004</span><br><span class="line">第0个1005</span><br><span class="line">第1个1006</span><br><span class="line">第2个1007</span><br><span class="line">第3个1008</span><br><span class="line">第4个1009</span><br><span class="line">true</span><br></pre></td></tr></table></figure>
 <h3 id="结构："><a href="#结构：" class="headerlink" title="结构："></a>结构：</h3><p>**Singleton:**Singleton角色有一个返回唯一实例的static方法，改方法总是返回同一实例</p>
 <h3 id="类图："><a href="#类图：" class="headerlink" title="类图："></a>类图：</h3><p><img src="https://upload-images.jianshu.io/upload_images/5180339-a9aade0286215a70.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/246/format/webp" alt="Singleton类图"></p>
-
-      
-    </div>
-
-    
-    
-    
-
-    <footer class="post-footer">
-        <div class="post-eof"></div>
-      
-    </footer>
-  </article>
-</div>
-
-
-
-
-    
-
-
-<div class="post-block">
-  
-  
-
-  <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="">
-    <link itemprop="mainEntityOfPage" href="https://lzhwweb.github.io/nirvana/DesignPattern/%E8%AE%BE%E8%AE%A1%E6%A8%A1%E5%BC%8F%EF%BC%88TypeScript%EF%BC%89/Proxy-Pattern(%E4%BB%A3%E7%90%86%E6%A8%A1%E5%BC%8F)/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="image" content="/nirvana/images/headphoto.jpeg">
-      <meta itemprop="name" content="nirvana">
-      <meta itemprop="description" content="个人学习笔记">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="涅槃快乐是金">
-    </span>
-      <header class="post-header">
-        <h2 class="post-title" itemprop="name headline">
-          <a href="/nirvana/DesignPattern/%E8%AE%BE%E8%AE%A1%E6%A8%A1%E5%BC%8F%EF%BC%88TypeScript%EF%BC%89/Proxy-Pattern(%E4%BB%A3%E7%90%86%E6%A8%A1%E5%BC%8F)/" class="post-title-link" itemprop="url">Proxy-Pattern(代理模式)</a>
-        </h2>
-
-        <div class="post-meta-container">
-          <div class="post-meta">
-    <span class="post-meta-item">
-      <span class="post-meta-item-icon">
-        <i class="far fa-calendar"></i>
-      </span>
-      <span class="post-meta-item-text">发表于</span>
-
-      <time title="创建时间：2021-03-11 21:12:40" itemprop="dateCreated datePublished" datetime="2021-03-11T21:12:40+08:00">2021-03-11</time>
-    </span>
-      <span class="post-meta-item">
-        <span class="post-meta-item-icon">
-          <i class="far fa-calendar-check"></i>
-        </span>
-        <span class="post-meta-item-text">更新于</span>
-        <time title="修改时间：2021-03-10 13:43:55" itemprop="dateModified" datetime="2021-03-10T13:43:55+08:00">2021-03-10</time>
-      </span>
-    <span class="post-meta-item">
-      <span class="post-meta-item-icon">
-        <i class="far fa-folder"></i>
-      </span>
-      <span class="post-meta-item-text">分类于</span>
-        <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-          <a href="/nirvana/categories/DesignPattern/" itemprop="url" rel="index"><span itemprop="name">DesignPattern</span></a>
-        </span>
-    </span>
-
-  
-    <span id="/nirvana/DesignPattern/%E8%AE%BE%E8%AE%A1%E6%A8%A1%E5%BC%8F%EF%BC%88TypeScript%EF%BC%89/Proxy-Pattern(%E4%BB%A3%E7%90%86%E6%A8%A1%E5%BC%8F)/" class="post-meta-item leancloud_visitors" data-flag-title="Proxy-Pattern(代理模式)" title="阅读次数">
-      <span class="post-meta-item-icon">
-        <i class="far fa-eye"></i>
-      </span>
-      <span class="post-meta-item-text">阅读次数：</span>
-      <span class="leancloud-visitors-count"></span>
-    </span>
-      </div>
-      <div class="post-meta">
-    <span class="post-meta-item" title="本文字数">
-      <span class="post-meta-item-icon">
-        <i class="far fa-file-word"></i>
-      </span>
-      <span class="post-meta-item-text">本文字数：</span>
-      <span>1.7k</span>
-    </span>
-    <span class="post-meta-item" title="阅读时长">
-      <span class="post-meta-item-icon">
-        <i class="far fa-clock"></i>
-      </span>
-      <span class="post-meta-item-text">阅读时长 &asymp;</span>
-      <span>2 分钟</span>
-    </span>
-</div>
-
-        </div>
-      </header>
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-          <p>代理模式（Proxy Pattern）：代理模式给某一个对象提供一个代理对象，并由代理对象控制对原对象的引用。这种类型的设计模式属于结构型模式。</p>
-<h2 id="介绍"><a href="#介绍" class="headerlink" title="介绍"></a>介绍</h2><ul>
-<li><strong>意图：</strong>为其他对象提供一种代理以控制对这个对象的访问。</li>
-<li><strong>主要解决：</strong>不直接操作对象的情况下,对此对象进行访问。</li>
-<li><strong>何时使用：</strong>想在访问一个类时做一些控制。</li>
-<li><strong>应用实例：</strong>买火车票不一定在火车站买，也可以去代售点。</li>
-<li><strong>优点：</strong><br>1、职责清晰。<br>2、高扩展性。<br>3、智能化。</li>
-<li><strong>缺点：</strong><br>1、由于在客户端和真实主题之间增加了代理对象，因此有些类型的代理模式可能会造成请求的处理速度变慢。<br>2、实现代理模式需要额外的工作，有些代理模式的实现非常复杂。</li>
-<li><strong>使用场景：</strong><br>1、远程代理。<br>2、虚拟代理。<br>3、Copy-on-Write 代理。<br>4、保护（Protect or Access）代理。<br>5、Cache代理。<br>6、防火墙（Firewall）代理。<br>7、同步化（Synchronization）代理。<br>8、智能引用（Smart Reference）代理。</li>
-<li><strong>注意事项：</strong><br>1、和适配器模式的区别：适配器模式主要改变所考虑对象的接口，而代理模式不能改变所代理类的接口。<br>2、和装饰器模式的区别：装饰器模式为了增强功能，而代理模式是为了加以控制。<h2 id="示例"><a href="#示例" class="headerlink" title="示例"></a>示例</h2><h5 id="BuyHouse-ts-创建服务类接口"><a href="#BuyHouse-ts-创建服务类接口" class="headerlink" title="BuyHouse.ts 创建服务类接口"></a>BuyHouse.ts 创建服务类接口</h5><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">export interface BuyHouse &#123;</span><br><span class="line">    buyHosue(): void;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-<h5 id="BuyHouseImpl-ts-实现服务接口"><a href="#BuyHouseImpl-ts-实现服务接口" class="headerlink" title="BuyHouseImpl.ts 实现服务接口"></a>BuyHouseImpl.ts 实现服务接口</h5><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line">import &#123; BuyHouse &#125; from &quot;.&#x2F;BuyHouse&quot;;</span><br><span class="line"></span><br><span class="line">export default class BuyHouseImpl implements BuyHouse &#123;</span><br><span class="line"></span><br><span class="line">    constructor() &#123;</span><br><span class="line"></span><br><span class="line">    &#125;</span><br><span class="line">    public buyHosue(): void &#123;</span><br><span class="line">        console.log(&quot;我要买房&quot;);</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-<h5 id="BuyHouseProxy-ts-创建代理类"><a href="#BuyHouseProxy-ts-创建代理类" class="headerlink" title="BuyHouseProxy.ts 创建代理类"></a>BuyHouseProxy.ts 创建代理类</h5><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><span class="line">import &#123; BuyHouse &#125; from &quot;.&#x2F;BuyHouse&quot;;</span><br><span class="line"></span><br><span class="line">export default class BuyHouseProxy implements BuyHouse &#123;</span><br><span class="line">    private buyHouse: BuyHouse;</span><br><span class="line">    constructor(buyHouse: BuyHouse) &#123;</span><br><span class="line">        this.buyHouse &#x3D; buyHouse;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    public buyHosue(): void &#123;</span><br><span class="line">        console.log(&quot;买房前准备&quot;);</span><br><span class="line">        this.buyHouse.buyHosue();</span><br><span class="line">        console.log(&quot;买房后装修&quot;);</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-<h5 id="index-ts"><a href="#index-ts" class="headerlink" title="index.ts"></a>index.ts</h5><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">import BuyHouseImpl from &quot;.&#x2F;BuyHouseImpl&quot;;</span><br><span class="line">import BuyHouseProxy from &quot;.&#x2F;BuyHouseProxy&quot;;</span><br><span class="line"></span><br><span class="line">const buyHouse &#x3D; new BuyHouseImpl();</span><br><span class="line">buyHouse.buyHosue();</span><br><span class="line">const buyHouseProxy &#x3D; new BuyHouseProxy(buyHouse);</span><br><span class="line">buyHouseProxy.buyHosue();</span><br></pre></td></tr></table></figure>
-<h2 id="类图"><a href="#类图" class="headerlink" title="类图"></a>类图</h2><img src="https://upload-images.jianshu.io/upload_images/10024246-b4f89a6249dd3f0b.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240"><h2 id="角色："><a href="#角色：" class="headerlink" title="角色："></a>角色：</h2></li>
-<li>Subject(主体)：声明了RealSubject和Proxy的共同接口。由于存在Subject角色，所以Client角色不必在意他所使用的的究竟是RealSubject还是Proxy。</li>
-<li>RealSubject（实际的主体）：也称为委托角色或者被代理角色。定义了代理对象所代表的目标对象。</li>
-<li>Proxy（代理人）：也叫委托类、代理类。Proxy角色处理来自Client的请求，代理对象通常在客户端调用传递给目标对象之前或之后，执行某个操作，而不是单纯地将调用传递给目标对象。</li>
-</ul>
 
       
     </div>
@@ -1609,7 +1609,7 @@ Gamer类：表示游戏主人公的类<figure class="highlight plain"><table><tr
         });
     }
 
-    const { app_id, app_key, server_url } = {"enable":true,"app_id":"SPsNUvBhME7XmrjzCfHkUu3e-gzGzoHsz","app_key":"4TONafemiIzvJUwqLa7WveoL","server_url":null,"security":true};
+    const { app_id, app_key, server_url } = {"enable":true,"app_id":"SPsNUvBhME7XmrjzCfHkUu3e-gzGzoHsz","app_key":"4TONafemiIzvJUwqLa7WveoL","server_url":"https://lzhwweb.github.io/nirvana","security":true,"betterPerformance":false};
     function fetchData(api_server) {
       const Counter = (method, url, data) => {
         return fetch(`${api_server}/1.1${url}`, {
