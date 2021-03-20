@@ -1,0 +1,12 @@
+
+leancloud_counter_security:
+  enable_sync: true
+  app_id: SPsNUvBhME7XmrjzCfHkUu3e-gzGzoHsz   # 同前文的id
+  app_key: 4TONafemiIzvJUwqLa7WveoL # 同前文的key
+  username: nirvana
+  password: anavrin
+  server_url: https://leancloud.cn # <your server url>
+
+  deploy:
+  # other deployer
+  - type: leancloud_counter_security_sync
