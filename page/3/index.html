@@ -206,7 +206,7 @@
   <nav class="site-state">
       <div class="site-state-item site-state-posts">
           <a href="/nirvana/archives">
-          <span class="site-state-item-count">182</span>
+          <span class="site-state-item-count">183</span>
           <span class="site-state-item-name">日志</span>
         </a>
       </div>
@@ -245,6 +245,136 @@
 
 
     <div class="main-inner index posts-expand">
+
+    
+
+
+<div class="post-block">
+  
+  
+
+  <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="">
+    <link itemprop="mainEntityOfPage" href="https://lzhwweb.github.io/nirvana/DesignPattern/%E8%AE%BE%E8%AE%A1%E6%A8%A1%E5%BC%8F%EF%BC%88TypeScript%EF%BC%89/Mediator%E6%A8%A1%E5%BC%8F%EF%BC%88%E4%B8%AD%E4%BB%8B%E8%80%85%E6%A8%A1%E5%BC%8F%EF%BC%89/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/nirvana/images/headphoto.jpeg">
+      <meta itemprop="name" content="nirvana">
+      <meta itemprop="description" content="个人学习笔记">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="涅槃快乐是金">
+    </span>
+      <header class="post-header">
+        <h2 class="post-title" itemprop="name headline">
+          <a href="/nirvana/DesignPattern/%E8%AE%BE%E8%AE%A1%E6%A8%A1%E5%BC%8F%EF%BC%88TypeScript%EF%BC%89/Mediator%E6%A8%A1%E5%BC%8F%EF%BC%88%E4%B8%AD%E4%BB%8B%E8%80%85%E6%A8%A1%E5%BC%8F%EF%BC%89/" class="post-title-link" itemprop="url">Mediator模式（中介者模式）</a>
+        </h2>
+
+        <div class="post-meta-container">
+          <div class="post-meta">
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-calendar"></i>
+      </span>
+      <span class="post-meta-item-text">发表于</span>
+
+      <time title="创建时间：2021-03-11 21:12:40" itemprop="dateCreated datePublished" datetime="2021-03-11T21:12:40+08:00">2021-03-11</time>
+    </span>
+      <span class="post-meta-item">
+        <span class="post-meta-item-icon">
+          <i class="far fa-calendar-check"></i>
+        </span>
+        <span class="post-meta-item-text">更新于</span>
+        <time title="修改时间：2021-03-10 13:43:55" itemprop="dateModified" datetime="2021-03-10T13:43:55+08:00">2021-03-10</time>
+      </span>
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-folder"></i>
+      </span>
+      <span class="post-meta-item-text">分类于</span>
+        <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+          <a href="/nirvana/categories/DesignPattern/" itemprop="url" rel="index"><span itemprop="name">DesignPattern</span></a>
+        </span>
+    </span>
+
+  
+    <span id="/nirvana/DesignPattern/%E8%AE%BE%E8%AE%A1%E6%A8%A1%E5%BC%8F%EF%BC%88TypeScript%EF%BC%89/Mediator%E6%A8%A1%E5%BC%8F%EF%BC%88%E4%B8%AD%E4%BB%8B%E8%80%85%E6%A8%A1%E5%BC%8F%EF%BC%89/" class="post-meta-item leancloud_visitors" data-flag-title="Mediator模式（中介者模式）" title="阅读次数">
+      <span class="post-meta-item-icon">
+        <i class="far fa-eye"></i>
+      </span>
+      <span class="post-meta-item-text">阅读次数：</span>
+      <span class="leancloud-visitors-count"></span>
+    </span>
+      </div>
+      <div class="post-meta">
+    <span class="post-meta-item" title="本文字数">
+      <span class="post-meta-item-icon">
+        <i class="far fa-file-word"></i>
+      </span>
+      <span class="post-meta-item-text">本文字数：</span>
+      <span>4.6k</span>
+    </span>
+    <span class="post-meta-item" title="阅读时长">
+      <span class="post-meta-item-icon">
+        <i class="far fa-clock"></i>
+      </span>
+      <span class="post-meta-item-text">阅读时长 &asymp;</span>
+      <span>4 分钟</span>
+    </span>
+</div>
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+          <p><strong>中介者模式</strong>（Mediator Pattern）提供了一个中介类，该类通常处理不同类之间的通信，降低多个对象和类之间的通信复杂性，并支持松耦合，使代码易于维护。中介者模式属于行为型模式。</p>
+<h2 id="介绍"><a href="#介绍" class="headerlink" title="介绍"></a>介绍</h2><ul>
+<li><strong>意图：</strong>中介者使各对象不需要显式地相互引用，从而使其耦合松散，而且可以独立地改变它们之间的交互。</li>
+<li><strong>主要解决：</strong>对象与对象之间存在大量的关联关系</li>
+<li><strong>何时使用：</strong>多个类相互耦合，形成了网状结构。</li>
+<li><strong>如何解决：</strong>将上述网状结构分离为星型结构。</li>
+<li>**应用实例： **MVC 框架，其中C（控制器）就是 M（模型）和 V（视图）的中介者。</li>
+<li><strong>优点：</strong><br>1、降低了类的复杂度，将一对多转化成了一对一。<br>2、各个类之间的解耦。<br>3、符合迪米特原则。</li>
+<li><strong>缺点：</strong>中介者会庞大，变得复杂难以维护。</li>
+<li><strong>使用场景：</strong><br>1、系统中对象之间存在比较复杂的引用关系，导致它们之间的依赖关系结构混乱而且难以复用该对象。<br>2、想通过一个中间类来封装多个类中的行为，而又不想生成太多的子类。</li>
+</ul>
+<p><em>注意事项：不应当在职责混乱的时候使用。</em></p>
+<h2 id="示例"><a href="#示例" class="headerlink" title="示例"></a>示例</h2><h5 id="SmartDevice-ts-智能设备类-抽象同事角色"><a href="#SmartDevice-ts-智能设备类-抽象同事角色" class="headerlink" title="SmartDevice.ts 智能设备类(抽象同事角色)"></a>SmartDevice.ts 智能设备类(抽象同事角色)</h5><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">import SmartMediator from &quot;.&#x2F;SmartMediator&quot;;</span><br><span class="line"></span><br><span class="line">export default abstract class SmartDevice &#123;</span><br><span class="line">    &#x2F;&#x2F;相关设备打开之后 使其进入准备状态</span><br><span class="line">    public abstract readyState(instruction: string): void;</span><br><span class="line">    &#x2F;&#x2F;操作该设备</span><br><span class="line">    public abstract operateDevice(instruction: string, mediator: SmartMediator): void;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<h5 id="CurtainDevice-ts-窗帘设备-具体同事角色"><a href="#CurtainDevice-ts-窗帘设备-具体同事角色" class="headerlink" title="CurtainDevice.ts 窗帘设备(具体同事角色)"></a>CurtainDevice.ts 窗帘设备(具体同事角色)</h5><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br></pre></td><td class="code"><pre><span class="line">import SmartDevice from &quot;.&#x2F;SmartDevice&quot;;</span><br><span class="line">import SmartMediator from &quot;.&#x2F;SmartMediator&quot;;</span><br><span class="line"></span><br><span class="line">export default class CurtainDevice extends SmartDevice &#123;</span><br><span class="line"></span><br><span class="line">    public operateDevice(instruction: string, mediator: SmartMediator): void &#123;</span><br><span class="line">        console.log(&#96;窗帘已$&#123;instruction&#125;&#96;);&#x2F;&#x2F;通过传入指令，打开或关闭窗帘</span><br><span class="line">        mediator.curtain(instruction);&#x2F;&#x2F;窗帘通过中介者唤醒音乐设备和洗浴设备</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    public readyState(instruction: string): void &#123;</span><br><span class="line">        &#x2F;&#x2F;如果其他设备开启则调用此方法，唤醒窗帘</span><br><span class="line">        console.log(&#96;窗帘设备准备$&#123;instruction&#125;&#96;);</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<h5 id="MusicDevice-ts-音响设备-具体同事角色"><a href="#MusicDevice-ts-音响设备-具体同事角色" class="headerlink" title="MusicDevice.ts 音响设备(具体同事角色)"></a>MusicDevice.ts 音响设备(具体同事角色)</h5><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br></pre></td><td class="code"><pre><span class="line">import SmartDevice from &quot;.&#x2F;SmartDevice&quot;;</span><br><span class="line">import SmartMediator from &quot;.&#x2F;SmartMediator&quot;;</span><br><span class="line"></span><br><span class="line">export default class MusicDevice extends SmartDevice &#123;</span><br><span class="line"></span><br><span class="line">    public operateDevice(instruction: string, mediator: SmartMediator): void &#123;</span><br><span class="line">        console.log(&#96;音乐设备已$&#123;instruction&#125;&#96;);&#x2F;&#x2F;通过传入指令，打开或关闭窗帘</span><br><span class="line">        mediator.curtain(instruction);&#x2F;&#x2F;窗帘通过中介者唤醒音乐设备和洗浴设备</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    public readyState(instruction: string): void &#123;</span><br><span class="line">        &#x2F;&#x2F;如果其他设备开启则调用此方法，唤醒窗帘</span><br><span class="line">        console.log(&#96;音乐设备准备$&#123;instruction&#125;&#96;);</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<h5 id="BathDevice-ts-洗浴设备-具体同事角色"><a href="#BathDevice-ts-洗浴设备-具体同事角色" class="headerlink" title="BathDevice.ts 洗浴设备(具体同事角色)"></a>BathDevice.ts 洗浴设备(具体同事角色)</h5><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br></pre></td><td class="code"><pre><span class="line">import SmartDevice from &quot;.&#x2F;SmartDevice&quot;;</span><br><span class="line">import SmartMediator from &quot;.&#x2F;SmartMediator&quot;;</span><br><span class="line"></span><br><span class="line">export default class BathDevice extends SmartDevice &#123;</span><br><span class="line"></span><br><span class="line">    public operateDevice(instruction: string, mediator: SmartMediator): void &#123;</span><br><span class="line">        console.log(&#96;洗浴设备$&#123;instruction&#125;&#96;);&#x2F;&#x2F;通过传入指令，打开或关闭窗帘</span><br><span class="line">        mediator.curtain(instruction);&#x2F;&#x2F;窗帘通过中介者唤醒音乐设备和洗浴设备</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    public readyState(instruction: string): void &#123;</span><br><span class="line">        &#x2F;&#x2F;如果其他设备开启则调用此方法，唤醒窗帘</span><br><span class="line">        console.log(&#96;洗浴设备正在准备$&#123;instruction&#125;&#96;);</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<h5 id="SmartMediator-ts-抽象中介者"><a href="#SmartMediator-ts-抽象中介者" class="headerlink" title="SmartMediator.ts 抽象中介者"></a>SmartMediator.ts 抽象中介者</h5><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br></pre></td><td class="code"><pre><span class="line">import SmartDevice from &quot;.&#x2F;SmartDevice&quot;;</span><br><span class="line"></span><br><span class="line">export default abstract class SmartMediator &#123;</span><br><span class="line">    &#x2F;&#x2F;保留所有设备的引用是为了当接收指令时可以唤醒其他设备的操作</span><br><span class="line">    public bd: SmartDevice;</span><br><span class="line">    public md: SmartDevice;</span><br><span class="line">    public cd: SmartDevice;</span><br><span class="line">    constructor(bd: SmartDevice, md: SmartDevice, cd: SmartDevice) &#123;</span><br><span class="line">        this.bd &#x3D; bd;</span><br><span class="line">        this.md &#x3D; md;</span><br><span class="line">        this.cd &#x3D; cd;</span><br><span class="line">    &#125;</span><br><span class="line">    public abstract music(instruction: string): void;</span><br><span class="line">    public abstract curtain(instruction: string): void;</span><br><span class="line">    public abstract bath(instruction: string): void;</span><br><span class="line">&#125;</span><br><span class="line"></span><br></pre></td></tr></table></figure>
+<h5 id="Shape-ts-具体中介者"><a href="#Shape-ts-具体中介者" class="headerlink" title="Shape.ts 具体中介者"></a>Shape.ts 具体中介者</h5><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br></pre></td><td class="code"><pre><span class="line">import SmartDevice from &quot;.&#x2F;SmartDevice&quot;;</span><br><span class="line">import SmartMediator from &quot;.&#x2F;SmartMediator&quot;;</span><br><span class="line"></span><br><span class="line">export default class ConcreteMediator extends SmartMediator &#123;</span><br><span class="line"></span><br><span class="line">    constructor(bd: SmartDevice, cd: SmartDevice, md: SmartDevice) &#123;</span><br><span class="line">        super(bd, cd, md);</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    public music(instruction: string): void &#123;&#x2F;&#x2F;音乐被唤醒后，使其他设备进入准备状态</span><br><span class="line">        this.cd.readyState(instruction);&#x2F;&#x2F;调用窗帘的准备方法</span><br><span class="line">        this.bd.readyState(instruction);&#x2F;&#x2F;调用洗浴设备的准备方法</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    public curtain(instruction: string): void &#123;</span><br><span class="line">        this.md.readyState(instruction);</span><br><span class="line">        this.bd.readyState(instruction);</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    public bath(instruction: string): void &#123;</span><br><span class="line">        this.cd.readyState(instruction);</span><br><span class="line">        this.md.readyState(instruction);</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">&#125;</span><br><span class="line"></span><br></pre></td></tr></table></figure>
+<h5 id="Shape-ts-模型接口"><a href="#Shape-ts-模型接口" class="headerlink" title="Shape.ts 模型接口"></a>Shape.ts 模型接口</h5><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">export interface Shape &#123;</span><br><span class="line">    draw(): void;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<h5 id="index-ts"><a href="#index-ts" class="headerlink" title="index.ts"></a>index.ts</h5><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><span class="line">import SmartDevice from &quot;.&#x2F;SmartDevice&quot;;</span><br><span class="line">import BathDevice from &quot;.&#x2F;BathDevice&quot;;</span><br><span class="line">import CurtainDevice from &quot;.&#x2F;CurtainDevice&quot;;</span><br><span class="line">import MusicDevice from &quot;.&#x2F;MusicDevice&quot;;</span><br><span class="line">import ConcreteMediator from &quot;.&#x2F;ConcreteMediator&quot;;</span><br><span class="line">import SmartMediator from &quot;.&#x2F;SmartMediator&quot;;</span><br><span class="line"></span><br><span class="line">const bd: SmartDevice &#x3D; new BathDevice();</span><br><span class="line">const cd: SmartDevice &#x3D; new CurtainDevice();</span><br><span class="line">const md: SmartDevice &#x3D; new MusicDevice();</span><br><span class="line">const sm: SmartMediator &#x3D; new ConcreteMediator(bd, cd, md);&#x2F;&#x2F;把设备引用都保存在调停者中</span><br><span class="line">cd.operateDevice(&quot;open&quot;, sm); &#x2F;&#x2F;开启窗帘</span><br><span class="line">md.operateDevice(&quot;close&quot;, sm);&#x2F;&#x2F;关闭音乐</span><br><span class="line"></span><br></pre></td></tr></table></figure>
+<h5 id="result"><a href="#result" class="headerlink" title="result"></a>result</h5><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">窗帘已open</span><br><span class="line">窗帘设备准备open</span><br><span class="line">洗浴设备正在准备open</span><br><span class="line">音乐设备已close</span><br><span class="line">窗帘设备准备close</span><br><span class="line">洗浴设备正在准备close</span><br></pre></td></tr></table></figure>
+<h2 id="类图"><a href="#类图" class="headerlink" title="类图"></a>类图</h2><p><img src="https://upload-images.jianshu.io/upload_images/10024246-c92933af9be4cd59.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="类图"></p>
+<h2 id="角色"><a href="#角色" class="headerlink" title="角色"></a>角色</h2><ul>
+<li>抽象中介者（mediator）<br>定义一个接口用于和对象通信（SmartDevice）</li>
+<li>具体中介者（concretemediator）<br>协调各同事对象实现协作，了解维护各个同事</li>
+<li>抽象同事角色（colleague）<br>规定了同事的基本类型</li>
+<li>具体同事角色（concreteColleague）<br>每个同事都知道中介者对象，要与同事通信则把通信告诉中介者</li>
+</ul>
+
+      
+    </div>
+
+    
+    
+    
+
+    <footer class="post-footer">
+        <div class="post-eof"></div>
+      
+    </footer>
+  </article>
+</div>
+
+
+
 
     
 
@@ -1373,112 +1503,6 @@ Gamer类：表示游戏主人公的类<figure class="highlight plain"><table><tr
 
 
 
-    
-
-
-<div class="post-block">
-  
-  
-
-  <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="">
-    <link itemprop="mainEntityOfPage" href="https://lzhwweb.github.io/nirvana/DesignPattern/%E8%AE%BE%E8%AE%A1%E6%A8%A1%E5%BC%8F%EF%BC%88TypeScript%EF%BC%89/%E5%AE%8C%E7%BB%93%E6%84%9F%E6%83%B3/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="image" content="/nirvana/images/headphoto.jpeg">
-      <meta itemprop="name" content="nirvana">
-      <meta itemprop="description" content="个人学习笔记">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="涅槃快乐是金">
-    </span>
-      <header class="post-header">
-        <h2 class="post-title" itemprop="name headline">
-          <a href="/nirvana/DesignPattern/%E8%AE%BE%E8%AE%A1%E6%A8%A1%E5%BC%8F%EF%BC%88TypeScript%EF%BC%89/%E5%AE%8C%E7%BB%93%E6%84%9F%E6%83%B3/" class="post-title-link" itemprop="url">完结感想</a>
-        </h2>
-
-        <div class="post-meta-container">
-          <div class="post-meta">
-    <span class="post-meta-item">
-      <span class="post-meta-item-icon">
-        <i class="far fa-calendar"></i>
-      </span>
-      <span class="post-meta-item-text">发表于</span>
-
-      <time title="创建时间：2021-03-11 21:12:40" itemprop="dateCreated datePublished" datetime="2021-03-11T21:12:40+08:00">2021-03-11</time>
-    </span>
-      <span class="post-meta-item">
-        <span class="post-meta-item-icon">
-          <i class="far fa-calendar-check"></i>
-        </span>
-        <span class="post-meta-item-text">更新于</span>
-        <time title="修改时间：2021-03-10 13:43:55" itemprop="dateModified" datetime="2021-03-10T13:43:55+08:00">2021-03-10</time>
-      </span>
-    <span class="post-meta-item">
-      <span class="post-meta-item-icon">
-        <i class="far fa-folder"></i>
-      </span>
-      <span class="post-meta-item-text">分类于</span>
-        <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-          <a href="/nirvana/categories/DesignPattern/" itemprop="url" rel="index"><span itemprop="name">DesignPattern</span></a>
-        </span>
-    </span>
-
-  
-    <span id="/nirvana/DesignPattern/%E8%AE%BE%E8%AE%A1%E6%A8%A1%E5%BC%8F%EF%BC%88TypeScript%EF%BC%89/%E5%AE%8C%E7%BB%93%E6%84%9F%E6%83%B3/" class="post-meta-item leancloud_visitors" data-flag-title="完结感想" title="阅读次数">
-      <span class="post-meta-item-icon">
-        <i class="far fa-eye"></i>
-      </span>
-      <span class="post-meta-item-text">阅读次数：</span>
-      <span class="leancloud-visitors-count"></span>
-    </span>
-      </div>
-      <div class="post-meta">
-    <span class="post-meta-item" title="本文字数">
-      <span class="post-meta-item-icon">
-        <i class="far fa-file-word"></i>
-      </span>
-      <span class="post-meta-item-text">本文字数：</span>
-      <span>339</span>
-    </span>
-    <span class="post-meta-item" title="阅读时长">
-      <span class="post-meta-item-icon">
-        <i class="far fa-clock"></i>
-      </span>
-      <span class="post-meta-item-text">阅读时长 &asymp;</span>
-      <span>1 分钟</span>
-    </span>
-</div>
-
-        </div>
-      </header>
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-          <p>从2020.03.28到2021.01.11接近一年的时间才完成这个系列，还是有很多感触的。</p>
-<p>现在一直在用TS开发，TS解决了以前JS虽然是面向对象的语言，但是和java、C、PHP这种强类型的语言相比，没有明确的class，interface这些面向对象的定义，想做一些设计模式的开发就会写的不伦不类，有了TS终于能够写真正的面向对象的代码了。</p>
-<p>自从拿到看到关于《设计模式》这本书，就想写一下用TS来实现相关设计模式的想法，顺便复习下相关内容，本来计划1、2个月就能完成这件事，但是计划赶不上变化，其实就是拖延症，前面几分钟热度，后来就是给自己找各种理由，根本没写几个。</p>
-<p>直到最近碰到了日更活动，为了给自己一定的压力，就参与进去，才发现人的潜力是无穷的，逼一逼还是有潜力可挖的。🤩</p>
-
-      
-    </div>
-
-    
-    
-    
-
-    <footer class="post-footer">
-        <div class="post-eof"></div>
-      
-    </footer>
-  </article>
-</div>
-
-
-
-
   <nav class="pagination">
     <a class="extend prev" rel="prev" href="/nirvana/page/2/"><i class="fa fa-angle-left" aria-label="上一页"></i></a><a class="page-number" href="/nirvana/">1</a><a class="page-number" href="/nirvana/page/2/">2</a><span class="page-number current">3</span><a class="page-number" href="/nirvana/page/4/">4</a><span class="space">&hellip;</span><a class="page-number" href="/nirvana/page/19/">19</a><a class="extend next" rel="next" href="/nirvana/page/4/"><i class="fa fa-angle-right" aria-label="下一页"></i></a>
   </nav>
@@ -1526,14 +1550,14 @@ Gamer类：表示游戏主人公的类<figure class="highlight plain"><table><tr
       <i class="fa fa-chart-line"></i>
     </span>
       <span>站点总字数：</span>
-    <span title="站点总字数">532k</span>
+    <span title="站点总字数">534k</span>
   </span>
   <span class="post-meta-item">
     <span class="post-meta-item-icon">
       <i class="fa fa-coffee"></i>
     </span>
       <span>站点阅读时长 &asymp;</span>
-    <span title="站点阅读时长">8:04</span>
+    <span title="站点阅读时长">8:06</span>
   </span>
 </div>
   <div class="powered-by">由 <a href="https://hexo.io/" class="theme-link" rel="noopener" target="_blank">Hexo</a> & <a href="https://theme-next.js.org/" class="theme-link" rel="noopener" target="_blank">NexT.Gemini</a> 强力驱动

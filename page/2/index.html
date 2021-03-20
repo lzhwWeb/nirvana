@@ -206,7 +206,7 @@
   <nav class="site-state">
       <div class="site-state-item site-state-posts">
           <a href="/nirvana/archives">
-          <span class="site-state-item-count">182</span>
+          <span class="site-state-item-count">183</span>
           <span class="site-state-item-name">日志</span>
         </a>
       </div>
@@ -245,6 +245,154 @@
 
 
     <div class="main-inner index posts-expand">
+
+    
+
+
+<div class="post-block">
+  
+  
+
+  <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="">
+    <link itemprop="mainEntityOfPage" href="https://lzhwweb.github.io/nirvana/DesignPattern/%E8%AE%BE%E8%AE%A1%E6%A8%A1%E5%BC%8F%EF%BC%88TypeScript%EF%BC%89/Builder-Pattern%EF%BC%88%E5%BB%BA%E9%80%A0%E8%80%85%E6%A8%A1%E5%BC%8F%EF%BC%89/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/nirvana/images/headphoto.jpeg">
+      <meta itemprop="name" content="nirvana">
+      <meta itemprop="description" content="个人学习笔记">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="涅槃快乐是金">
+    </span>
+      <header class="post-header">
+        <h2 class="post-title" itemprop="name headline">
+          <a href="/nirvana/DesignPattern/%E8%AE%BE%E8%AE%A1%E6%A8%A1%E5%BC%8F%EF%BC%88TypeScript%EF%BC%89/Builder-Pattern%EF%BC%88%E5%BB%BA%E9%80%A0%E8%80%85%E6%A8%A1%E5%BC%8F%EF%BC%89/" class="post-title-link" itemprop="url">Builder-Pattern（建造者模式）</a>
+        </h2>
+
+        <div class="post-meta-container">
+          <div class="post-meta">
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-calendar"></i>
+      </span>
+      <span class="post-meta-item-text">发表于</span>
+
+      <time title="创建时间：2021-03-11 21:12:40" itemprop="dateCreated datePublished" datetime="2021-03-11T21:12:40+08:00">2021-03-11</time>
+    </span>
+      <span class="post-meta-item">
+        <span class="post-meta-item-icon">
+          <i class="far fa-calendar-check"></i>
+        </span>
+        <span class="post-meta-item-text">更新于</span>
+        <time title="修改时间：2021-03-10 13:43:55" itemprop="dateModified" datetime="2021-03-10T13:43:55+08:00">2021-03-10</time>
+      </span>
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-folder"></i>
+      </span>
+      <span class="post-meta-item-text">分类于</span>
+        <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+          <a href="/nirvana/categories/DesignPattern/" itemprop="url" rel="index"><span itemprop="name">DesignPattern</span></a>
+        </span>
+    </span>
+
+  
+    <span id="/nirvana/DesignPattern/%E8%AE%BE%E8%AE%A1%E6%A8%A1%E5%BC%8F%EF%BC%88TypeScript%EF%BC%89/Builder-Pattern%EF%BC%88%E5%BB%BA%E9%80%A0%E8%80%85%E6%A8%A1%E5%BC%8F%EF%BC%89/" class="post-meta-item leancloud_visitors" data-flag-title="Builder-Pattern（建造者模式）" title="阅读次数">
+      <span class="post-meta-item-icon">
+        <i class="far fa-eye"></i>
+      </span>
+      <span class="post-meta-item-text">阅读次数：</span>
+      <span class="leancloud-visitors-count"></span>
+    </span>
+      </div>
+      <div class="post-meta">
+    <span class="post-meta-item" title="本文字数">
+      <span class="post-meta-item-icon">
+        <i class="far fa-file-word"></i>
+      </span>
+      <span class="post-meta-item-text">本文字数：</span>
+      <span>4.7k</span>
+    </span>
+    <span class="post-meta-item" title="阅读时长">
+      <span class="post-meta-item-icon">
+        <i class="far fa-clock"></i>
+      </span>
+      <span class="post-meta-item-text">阅读时长 &asymp;</span>
+      <span>4 分钟</span>
+    </span>
+</div>
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+          <p><strong>建造者模式（Builder Pattern）：</strong>组装具有复杂结构的实例。这种类型的设计模式属于创建型模式。</p>
+<h2 id="介绍"><a href="#介绍" class="headerlink" title="介绍"></a>介绍</h2><ul>
+<li><strong>意图：</strong>将一个复杂的构建与其表示相分离，使得同样的构建过程可以创建不同的表示。</li>
+<li><strong>主要解决：</strong>主要解决在软件系统中，有时候面临着”一个复杂对象”的创建工作，其通常由各个部分的子对象用一定的算法构成；由于需求的变化，这个复杂对象的各个部分经常面临着剧烈的变化，但是将它们组合在一起的算法却相对稳定。</li>
+<li><strong>何时使用：</strong>一些基本部件不会变，而其组合经常变化的时候。</li>
+<li><strong>应用实例：</strong> 去肯德基，汉堡、可乐、薯条、炸鸡翅等是不变的，而其组合是经常变化的，生成出所谓的”套餐”。</li>
+<li><strong>优点：</strong><br>1、建造者独立，易扩展。<br>2、便于控制细节风险。</li>
+<li><strong>缺点：</strong><br>1、产品必须有共同点，范围有限制。<br>2、如内部变化复杂，会有很多的建造类。</li>
+<li><strong>使用场景：</strong><br>1、需要生成的对象具有复杂的内部结构。<br>2、需要生成的对象内部属性本身相互依赖。</li>
+</ul>
+<blockquote>
+<p>注意事项：与工厂模式的区别是：建造者模式更加关注与零件装配的顺序。</p>
+</blockquote>
+<h2 id="示例"><a href="#示例" class="headerlink" title="示例"></a>示例</h2><p>type.ts 定义食物接口和包装接口</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><span class="line">&#x2F;**</span><br><span class="line"> * 食物接口</span><br><span class="line"> *&#x2F;</span><br><span class="line">export interface Food &#123;</span><br><span class="line">    name(): string;</span><br><span class="line">    packing(): Packing;</span><br><span class="line">    price(): number;</span><br><span class="line">&#125;</span><br><span class="line">&#x2F;**</span><br><span class="line"> * 包装接口</span><br><span class="line"> *&#x2F;</span><br><span class="line">export interface Packing &#123;</span><br><span class="line">    pack(): string</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p>Wrapper.ts 纸质包装类</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">import &#123; Packing &#125; from &quot;.&#x2F;type&quot;;</span><br><span class="line"></span><br><span class="line">export default class Wrapper implements Packing &#123;</span><br><span class="line">    public pack(): string &#123;</span><br><span class="line">        return &quot;Wrapper&quot;;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p>Bottle.ts 定义瓶装类</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">import &#123; Packing &#125; from &quot;.&#x2F;type&quot;;</span><br><span class="line"></span><br><span class="line">export default class Bottle implements Packing &#123;</span><br><span class="line">    public pack(): string &#123;</span><br><span class="line">        return &quot;Bottle&quot;;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p>Burger.ts 实现食物接口没定义包装为纸质</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line">import &#123; Food, Packing &#125; from &quot;.&#x2F;type&quot;;</span><br><span class="line">import Wrapper from &quot;.&#x2F;Wrapper&quot;;</span><br><span class="line"></span><br><span class="line">export default abstract class Burger implements Food &#123;</span><br><span class="line">    public abstract name(): string;</span><br><span class="line">    public packing(): Packing &#123;</span><br><span class="line">        return new Wrapper();</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    public abstract price(): number;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p>ColdDrink.ts 冷饮类实现食物接口，并指定包装为瓶装</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line">import &#123; Food, Packing &#125; from &quot;.&#x2F;type&quot;;</span><br><span class="line">import Bottle from &quot;.&#x2F;Bottle&quot;;</span><br><span class="line"></span><br><span class="line">export default abstract class ColdDrink implements Food &#123;</span><br><span class="line">    public abstract name(): string;</span><br><span class="line">    public packing(): Packing &#123;</span><br><span class="line">        return new Bottle();</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    public abstract price(): number;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p>VegBurger.ts 蔬菜汉堡类</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line">import Burger from &quot;.&#x2F;Burger&quot;;</span><br><span class="line"></span><br><span class="line">export default class VegBurger extends Burger &#123;</span><br><span class="line">    public price(): number &#123;</span><br><span class="line">        return 25;</span><br><span class="line">    &#125;</span><br><span class="line">    public name(): string &#123;</span><br><span class="line">        return &quot;Veg Burger&quot;;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p>ChickenBurger.ts 鸡肉堡类</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line">import Burger from &quot;.&#x2F;Burger&quot;;</span><br><span class="line"></span><br><span class="line">export default class ChickenBurger extends Burger &#123;</span><br><span class="line"></span><br><span class="line">    public price(): number &#123;</span><br><span class="line">        return 50.5;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    public name(): string &#123;</span><br><span class="line">        return &quot;Chicken Burger&quot;;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p>Pepsi.ts 百事饮料类</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line">import ColdDrink from &quot;.&#x2F;ColdDrink&quot;;</span><br><span class="line"></span><br><span class="line">export default class Pepsi extends ColdDrink &#123;</span><br><span class="line"></span><br><span class="line">    public price(): number &#123;</span><br><span class="line">        return 35.0;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    public name(): string &#123;</span><br><span class="line">        return &quot;Pepsi&quot;;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p>Coke.ts 可口可乐类继承自冷饮</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line">import ColdDrink from &quot;.&#x2F;ColdDrink&quot;;</span><br><span class="line"></span><br><span class="line">export default class Coke extends ColdDrink &#123;</span><br><span class="line"></span><br><span class="line">    public price(): number &#123;</span><br><span class="line">        return 30.0;</span><br><span class="line">    &#125;</span><br><span class="line">    public name(): string &#123;</span><br><span class="line">        return &quot;Coke&quot;;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p>Meal.ts 套餐类，里面有食物和总价</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br></pre></td><td class="code"><pre><span class="line">import &#123; Food &#125; from &quot;.&#x2F;type&quot;;</span><br><span class="line"></span><br><span class="line">export default class Meal &#123;</span><br><span class="line">    private items &#x3D; new Array&lt;Food&gt;();</span><br><span class="line"></span><br><span class="line">    public addItem(item: Food): void &#123;</span><br><span class="line">        this.items.push(item);</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    public getCost(): number &#123;</span><br><span class="line">        let cost &#x3D; 0;</span><br><span class="line">        for (const item of this.items) &#123;</span><br><span class="line">            cost +&#x3D; item.price();</span><br><span class="line">        &#125;</span><br><span class="line">        return cost;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    public showItems(): void &#123;</span><br><span class="line">        for (const item of this.items) &#123;</span><br><span class="line">            console.log(&#96;Food : $&#123;item.name()&#125;, Packing : $&#123;item.packing().pack()&#125;, Price : $&#123;item.price()&#125;&#96;);</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p>MealBuilder.ts 创建套餐，有蔬菜和没蔬菜的套餐</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br></pre></td><td class="code"><pre><span class="line">import Meal from &quot;.&#x2F;Meal&quot;;</span><br><span class="line">import VegBurger from &quot;.&#x2F;VegBurger&quot;;</span><br><span class="line">import Coke from &quot;.&#x2F;Coke&quot;;</span><br><span class="line">import ChickenBurger from &quot;.&#x2F;ChickenBurger&quot;;</span><br><span class="line">import Pepsi from &quot;.&#x2F;Pepsi&quot;;</span><br><span class="line"></span><br><span class="line">export default class MealBuilder &#123;</span><br><span class="line"></span><br><span class="line">    public prepareVegMeal(): Meal &#123;</span><br><span class="line">        const meal &#x3D; new Meal();</span><br><span class="line">        meal.addItem(new VegBurger());</span><br><span class="line">        meal.addItem(new Coke());</span><br><span class="line">        return meal;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    public prepareNonVegMeal(): Meal &#123;</span><br><span class="line">        const meal &#x3D; new Meal();</span><br><span class="line">        meal.addItem(new ChickenBurger());</span><br><span class="line">        meal.addItem(new Pepsi());</span><br><span class="line">        return meal;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p>index.ts </p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line">import MealBuilder from &quot;.&#x2F;MealBuilder&quot;;</span><br><span class="line"></span><br><span class="line">const mealBuilder &#x3D; new MealBuilder();</span><br><span class="line"></span><br><span class="line">const vegMeal &#x3D; mealBuilder.prepareVegMeal();</span><br><span class="line">console.log(&quot;-----Veg Meal-------&quot;);</span><br><span class="line">vegMeal.showItems();</span><br><span class="line">console.log(&quot;Total Cost: &quot; + vegMeal.getCost());</span><br><span class="line"></span><br><span class="line">const nonVegMeal &#x3D; mealBuilder.prepareNonVegMeal();</span><br><span class="line">console.log(&quot;-----Non-Veg Meal-----&quot;);</span><br><span class="line">nonVegMeal.showItems();</span><br><span class="line">console.log(&quot;Total Cost: &quot; + nonVegMeal.getCost());</span><br></pre></td></tr></table></figure>
+<p>result</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">-----Veg Meal-------</span><br><span class="line">Food : Veg Burger, Packing : Wrapper, Price : 25</span><br><span class="line">Food : Coke, Packing : Bottle, Price : 30</span><br><span class="line">Total Cost: 55</span><br><span class="line">-----Non-Veg Meal-----</span><br><span class="line">Food : Chicken Burger, Packing : Wrapper, Price : 50.5</span><br><span class="line">Food : Pepsi, Packing : Bottle, Price : 35</span><br><span class="line">Total Cost: 85.5</span><br></pre></td></tr></table></figure>
+<h2 id="类图"><a href="#类图" class="headerlink" title="类图"></a>类图</h2><p><img src="https://upload-images.jianshu.io/upload_images/10024246-b5a8ab23b145195d.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240"></p>
+<h2 id="角色"><a href="#角色" class="headerlink" title="角色"></a>角色</h2><ul>
+<li>Builder（建造者）<br>Builder角色负责定义用于生产实例的接口，Builder角色中有用于生产实例的方法</li>
+<li>ConcreteBuilder(具体的建造者)<br>ConcreteBuilder角色时负责实现Builder角色的接口的类，定义了在生产实例时实际被调用的犯法，此外，在ConcreteBuilder中还定义了获取最终生产结果的方法</li>
+<li>Director（监工）<br>Director角色负责使用Builder角色的接口来生产实例，不依赖于ConcreteBuilder角色。它只调用在Builder角色中被定义的方法</li>
+<li>Client（使用者）<br>该角色使用了Builder模式。</li>
+</ul>
+
+      
+    </div>
+
+    
+    
+    
+
+    <footer class="post-footer">
+        <div class="post-eof"></div>
+      
+    </footer>
+  </article>
+</div>
+
+
+
 
     
 
@@ -1384,136 +1532,6 @@
 
 
 
-    
-
-
-<div class="post-block">
-  
-  
-
-  <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="">
-    <link itemprop="mainEntityOfPage" href="https://lzhwweb.github.io/nirvana/DesignPattern/%E8%AE%BE%E8%AE%A1%E6%A8%A1%E5%BC%8F%EF%BC%88TypeScript%EF%BC%89/Mediator%E6%A8%A1%E5%BC%8F%EF%BC%88%E4%B8%AD%E4%BB%8B%E8%80%85%E6%A8%A1%E5%BC%8F%EF%BC%89/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="image" content="/nirvana/images/headphoto.jpeg">
-      <meta itemprop="name" content="nirvana">
-      <meta itemprop="description" content="个人学习笔记">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="涅槃快乐是金">
-    </span>
-      <header class="post-header">
-        <h2 class="post-title" itemprop="name headline">
-          <a href="/nirvana/DesignPattern/%E8%AE%BE%E8%AE%A1%E6%A8%A1%E5%BC%8F%EF%BC%88TypeScript%EF%BC%89/Mediator%E6%A8%A1%E5%BC%8F%EF%BC%88%E4%B8%AD%E4%BB%8B%E8%80%85%E6%A8%A1%E5%BC%8F%EF%BC%89/" class="post-title-link" itemprop="url">Mediator模式（中介者模式）</a>
-        </h2>
-
-        <div class="post-meta-container">
-          <div class="post-meta">
-    <span class="post-meta-item">
-      <span class="post-meta-item-icon">
-        <i class="far fa-calendar"></i>
-      </span>
-      <span class="post-meta-item-text">发表于</span>
-
-      <time title="创建时间：2021-03-11 21:12:40" itemprop="dateCreated datePublished" datetime="2021-03-11T21:12:40+08:00">2021-03-11</time>
-    </span>
-      <span class="post-meta-item">
-        <span class="post-meta-item-icon">
-          <i class="far fa-calendar-check"></i>
-        </span>
-        <span class="post-meta-item-text">更新于</span>
-        <time title="修改时间：2021-03-10 13:43:55" itemprop="dateModified" datetime="2021-03-10T13:43:55+08:00">2021-03-10</time>
-      </span>
-    <span class="post-meta-item">
-      <span class="post-meta-item-icon">
-        <i class="far fa-folder"></i>
-      </span>
-      <span class="post-meta-item-text">分类于</span>
-        <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-          <a href="/nirvana/categories/DesignPattern/" itemprop="url" rel="index"><span itemprop="name">DesignPattern</span></a>
-        </span>
-    </span>
-
-  
-    <span id="/nirvana/DesignPattern/%E8%AE%BE%E8%AE%A1%E6%A8%A1%E5%BC%8F%EF%BC%88TypeScript%EF%BC%89/Mediator%E6%A8%A1%E5%BC%8F%EF%BC%88%E4%B8%AD%E4%BB%8B%E8%80%85%E6%A8%A1%E5%BC%8F%EF%BC%89/" class="post-meta-item leancloud_visitors" data-flag-title="Mediator模式（中介者模式）" title="阅读次数">
-      <span class="post-meta-item-icon">
-        <i class="far fa-eye"></i>
-      </span>
-      <span class="post-meta-item-text">阅读次数：</span>
-      <span class="leancloud-visitors-count"></span>
-    </span>
-      </div>
-      <div class="post-meta">
-    <span class="post-meta-item" title="本文字数">
-      <span class="post-meta-item-icon">
-        <i class="far fa-file-word"></i>
-      </span>
-      <span class="post-meta-item-text">本文字数：</span>
-      <span>4.6k</span>
-    </span>
-    <span class="post-meta-item" title="阅读时长">
-      <span class="post-meta-item-icon">
-        <i class="far fa-clock"></i>
-      </span>
-      <span class="post-meta-item-text">阅读时长 &asymp;</span>
-      <span>4 分钟</span>
-    </span>
-</div>
-
-        </div>
-      </header>
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-          <p><strong>中介者模式</strong>（Mediator Pattern）提供了一个中介类，该类通常处理不同类之间的通信，降低多个对象和类之间的通信复杂性，并支持松耦合，使代码易于维护。中介者模式属于行为型模式。</p>
-<h2 id="介绍"><a href="#介绍" class="headerlink" title="介绍"></a>介绍</h2><ul>
-<li><strong>意图：</strong>中介者使各对象不需要显式地相互引用，从而使其耦合松散，而且可以独立地改变它们之间的交互。</li>
-<li><strong>主要解决：</strong>对象与对象之间存在大量的关联关系</li>
-<li><strong>何时使用：</strong>多个类相互耦合，形成了网状结构。</li>
-<li><strong>如何解决：</strong>将上述网状结构分离为星型结构。</li>
-<li>**应用实例： **MVC 框架，其中C（控制器）就是 M（模型）和 V（视图）的中介者。</li>
-<li><strong>优点：</strong><br>1、降低了类的复杂度，将一对多转化成了一对一。<br>2、各个类之间的解耦。<br>3、符合迪米特原则。</li>
-<li><strong>缺点：</strong>中介者会庞大，变得复杂难以维护。</li>
-<li><strong>使用场景：</strong><br>1、系统中对象之间存在比较复杂的引用关系，导致它们之间的依赖关系结构混乱而且难以复用该对象。<br>2、想通过一个中间类来封装多个类中的行为，而又不想生成太多的子类。</li>
-</ul>
-<p><em>注意事项：不应当在职责混乱的时候使用。</em></p>
-<h2 id="示例"><a href="#示例" class="headerlink" title="示例"></a>示例</h2><h5 id="SmartDevice-ts-智能设备类-抽象同事角色"><a href="#SmartDevice-ts-智能设备类-抽象同事角色" class="headerlink" title="SmartDevice.ts 智能设备类(抽象同事角色)"></a>SmartDevice.ts 智能设备类(抽象同事角色)</h5><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">import SmartMediator from &quot;.&#x2F;SmartMediator&quot;;</span><br><span class="line"></span><br><span class="line">export default abstract class SmartDevice &#123;</span><br><span class="line">    &#x2F;&#x2F;相关设备打开之后 使其进入准备状态</span><br><span class="line">    public abstract readyState(instruction: string): void;</span><br><span class="line">    &#x2F;&#x2F;操作该设备</span><br><span class="line">    public abstract operateDevice(instruction: string, mediator: SmartMediator): void;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-<h5 id="CurtainDevice-ts-窗帘设备-具体同事角色"><a href="#CurtainDevice-ts-窗帘设备-具体同事角色" class="headerlink" title="CurtainDevice.ts 窗帘设备(具体同事角色)"></a>CurtainDevice.ts 窗帘设备(具体同事角色)</h5><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br></pre></td><td class="code"><pre><span class="line">import SmartDevice from &quot;.&#x2F;SmartDevice&quot;;</span><br><span class="line">import SmartMediator from &quot;.&#x2F;SmartMediator&quot;;</span><br><span class="line"></span><br><span class="line">export default class CurtainDevice extends SmartDevice &#123;</span><br><span class="line"></span><br><span class="line">    public operateDevice(instruction: string, mediator: SmartMediator): void &#123;</span><br><span class="line">        console.log(&#96;窗帘已$&#123;instruction&#125;&#96;);&#x2F;&#x2F;通过传入指令，打开或关闭窗帘</span><br><span class="line">        mediator.curtain(instruction);&#x2F;&#x2F;窗帘通过中介者唤醒音乐设备和洗浴设备</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    public readyState(instruction: string): void &#123;</span><br><span class="line">        &#x2F;&#x2F;如果其他设备开启则调用此方法，唤醒窗帘</span><br><span class="line">        console.log(&#96;窗帘设备准备$&#123;instruction&#125;&#96;);</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-<h5 id="MusicDevice-ts-音响设备-具体同事角色"><a href="#MusicDevice-ts-音响设备-具体同事角色" class="headerlink" title="MusicDevice.ts 音响设备(具体同事角色)"></a>MusicDevice.ts 音响设备(具体同事角色)</h5><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br></pre></td><td class="code"><pre><span class="line">import SmartDevice from &quot;.&#x2F;SmartDevice&quot;;</span><br><span class="line">import SmartMediator from &quot;.&#x2F;SmartMediator&quot;;</span><br><span class="line"></span><br><span class="line">export default class MusicDevice extends SmartDevice &#123;</span><br><span class="line"></span><br><span class="line">    public operateDevice(instruction: string, mediator: SmartMediator): void &#123;</span><br><span class="line">        console.log(&#96;音乐设备已$&#123;instruction&#125;&#96;);&#x2F;&#x2F;通过传入指令，打开或关闭窗帘</span><br><span class="line">        mediator.curtain(instruction);&#x2F;&#x2F;窗帘通过中介者唤醒音乐设备和洗浴设备</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    public readyState(instruction: string): void &#123;</span><br><span class="line">        &#x2F;&#x2F;如果其他设备开启则调用此方法，唤醒窗帘</span><br><span class="line">        console.log(&#96;音乐设备准备$&#123;instruction&#125;&#96;);</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-<h5 id="BathDevice-ts-洗浴设备-具体同事角色"><a href="#BathDevice-ts-洗浴设备-具体同事角色" class="headerlink" title="BathDevice.ts 洗浴设备(具体同事角色)"></a>BathDevice.ts 洗浴设备(具体同事角色)</h5><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br></pre></td><td class="code"><pre><span class="line">import SmartDevice from &quot;.&#x2F;SmartDevice&quot;;</span><br><span class="line">import SmartMediator from &quot;.&#x2F;SmartMediator&quot;;</span><br><span class="line"></span><br><span class="line">export default class BathDevice extends SmartDevice &#123;</span><br><span class="line"></span><br><span class="line">    public operateDevice(instruction: string, mediator: SmartMediator): void &#123;</span><br><span class="line">        console.log(&#96;洗浴设备$&#123;instruction&#125;&#96;);&#x2F;&#x2F;通过传入指令，打开或关闭窗帘</span><br><span class="line">        mediator.curtain(instruction);&#x2F;&#x2F;窗帘通过中介者唤醒音乐设备和洗浴设备</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    public readyState(instruction: string): void &#123;</span><br><span class="line">        &#x2F;&#x2F;如果其他设备开启则调用此方法，唤醒窗帘</span><br><span class="line">        console.log(&#96;洗浴设备正在准备$&#123;instruction&#125;&#96;);</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-<h5 id="SmartMediator-ts-抽象中介者"><a href="#SmartMediator-ts-抽象中介者" class="headerlink" title="SmartMediator.ts 抽象中介者"></a>SmartMediator.ts 抽象中介者</h5><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br></pre></td><td class="code"><pre><span class="line">import SmartDevice from &quot;.&#x2F;SmartDevice&quot;;</span><br><span class="line"></span><br><span class="line">export default abstract class SmartMediator &#123;</span><br><span class="line">    &#x2F;&#x2F;保留所有设备的引用是为了当接收指令时可以唤醒其他设备的操作</span><br><span class="line">    public bd: SmartDevice;</span><br><span class="line">    public md: SmartDevice;</span><br><span class="line">    public cd: SmartDevice;</span><br><span class="line">    constructor(bd: SmartDevice, md: SmartDevice, cd: SmartDevice) &#123;</span><br><span class="line">        this.bd &#x3D; bd;</span><br><span class="line">        this.md &#x3D; md;</span><br><span class="line">        this.cd &#x3D; cd;</span><br><span class="line">    &#125;</span><br><span class="line">    public abstract music(instruction: string): void;</span><br><span class="line">    public abstract curtain(instruction: string): void;</span><br><span class="line">    public abstract bath(instruction: string): void;</span><br><span class="line">&#125;</span><br><span class="line"></span><br></pre></td></tr></table></figure>
-<h5 id="Shape-ts-具体中介者"><a href="#Shape-ts-具体中介者" class="headerlink" title="Shape.ts 具体中介者"></a>Shape.ts 具体中介者</h5><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br></pre></td><td class="code"><pre><span class="line">import SmartDevice from &quot;.&#x2F;SmartDevice&quot;;</span><br><span class="line">import SmartMediator from &quot;.&#x2F;SmartMediator&quot;;</span><br><span class="line"></span><br><span class="line">export default class ConcreteMediator extends SmartMediator &#123;</span><br><span class="line"></span><br><span class="line">    constructor(bd: SmartDevice, cd: SmartDevice, md: SmartDevice) &#123;</span><br><span class="line">        super(bd, cd, md);</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    public music(instruction: string): void &#123;&#x2F;&#x2F;音乐被唤醒后，使其他设备进入准备状态</span><br><span class="line">        this.cd.readyState(instruction);&#x2F;&#x2F;调用窗帘的准备方法</span><br><span class="line">        this.bd.readyState(instruction);&#x2F;&#x2F;调用洗浴设备的准备方法</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    public curtain(instruction: string): void &#123;</span><br><span class="line">        this.md.readyState(instruction);</span><br><span class="line">        this.bd.readyState(instruction);</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    public bath(instruction: string): void &#123;</span><br><span class="line">        this.cd.readyState(instruction);</span><br><span class="line">        this.md.readyState(instruction);</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">&#125;</span><br><span class="line"></span><br></pre></td></tr></table></figure>
-<h5 id="Shape-ts-模型接口"><a href="#Shape-ts-模型接口" class="headerlink" title="Shape.ts 模型接口"></a>Shape.ts 模型接口</h5><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">export interface Shape &#123;</span><br><span class="line">    draw(): void;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-<h5 id="index-ts"><a href="#index-ts" class="headerlink" title="index.ts"></a>index.ts</h5><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><span class="line">import SmartDevice from &quot;.&#x2F;SmartDevice&quot;;</span><br><span class="line">import BathDevice from &quot;.&#x2F;BathDevice&quot;;</span><br><span class="line">import CurtainDevice from &quot;.&#x2F;CurtainDevice&quot;;</span><br><span class="line">import MusicDevice from &quot;.&#x2F;MusicDevice&quot;;</span><br><span class="line">import ConcreteMediator from &quot;.&#x2F;ConcreteMediator&quot;;</span><br><span class="line">import SmartMediator from &quot;.&#x2F;SmartMediator&quot;;</span><br><span class="line"></span><br><span class="line">const bd: SmartDevice &#x3D; new BathDevice();</span><br><span class="line">const cd: SmartDevice &#x3D; new CurtainDevice();</span><br><span class="line">const md: SmartDevice &#x3D; new MusicDevice();</span><br><span class="line">const sm: SmartMediator &#x3D; new ConcreteMediator(bd, cd, md);&#x2F;&#x2F;把设备引用都保存在调停者中</span><br><span class="line">cd.operateDevice(&quot;open&quot;, sm); &#x2F;&#x2F;开启窗帘</span><br><span class="line">md.operateDevice(&quot;close&quot;, sm);&#x2F;&#x2F;关闭音乐</span><br><span class="line"></span><br></pre></td></tr></table></figure>
-<h5 id="result"><a href="#result" class="headerlink" title="result"></a>result</h5><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">窗帘已open</span><br><span class="line">窗帘设备准备open</span><br><span class="line">洗浴设备正在准备open</span><br><span class="line">音乐设备已close</span><br><span class="line">窗帘设备准备close</span><br><span class="line">洗浴设备正在准备close</span><br></pre></td></tr></table></figure>
-<h2 id="类图"><a href="#类图" class="headerlink" title="类图"></a>类图</h2><p><img src="https://upload-images.jianshu.io/upload_images/10024246-c92933af9be4cd59.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="类图"></p>
-<h2 id="角色"><a href="#角色" class="headerlink" title="角色"></a>角色</h2><ul>
-<li>抽象中介者（mediator）<br>定义一个接口用于和对象通信（SmartDevice）</li>
-<li>具体中介者（concretemediator）<br>协调各同事对象实现协作，了解维护各个同事</li>
-<li>抽象同事角色（colleague）<br>规定了同事的基本类型</li>
-<li>具体同事角色（concreteColleague）<br>每个同事都知道中介者对象，要与同事通信则把通信告诉中介者</li>
-</ul>
-
-      
-    </div>
-
-    
-    
-    
-
-    <footer class="post-footer">
-        <div class="post-eof"></div>
-      
-    </footer>
-  </article>
-</div>
-
-
-
-
   <nav class="pagination">
     <a class="extend prev" rel="prev" href="/nirvana/"><i class="fa fa-angle-left" aria-label="上一页"></i></a><a class="page-number" href="/nirvana/">1</a><span class="page-number current">2</span><a class="page-number" href="/nirvana/page/3/">3</a><span class="space">&hellip;</span><a class="page-number" href="/nirvana/page/19/">19</a><a class="extend next" rel="next" href="/nirvana/page/3/"><i class="fa fa-angle-right" aria-label="下一页"></i></a>
   </nav>
@@ -1561,14 +1579,14 @@
       <i class="fa fa-chart-line"></i>
     </span>
       <span>站点总字数：</span>
-    <span title="站点总字数">532k</span>
+    <span title="站点总字数">534k</span>
   </span>
   <span class="post-meta-item">
     <span class="post-meta-item-icon">
       <i class="fa fa-coffee"></i>
     </span>
       <span>站点阅读时长 &asymp;</span>
-    <span title="站点阅读时长">8:04</span>
+    <span title="站点阅读时长">8:06</span>
   </span>
 </div>
   <div class="powered-by">由 <a href="https://hexo.io/" class="theme-link" rel="noopener" target="_blank">Hexo</a> & <a href="https://theme-next.js.org/" class="theme-link" rel="noopener" target="_blank">NexT.Gemini</a> 强力驱动

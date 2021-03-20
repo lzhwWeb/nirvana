@@ -7516,4 +7516,83 @@ res.end();
 </html>
 ]]></content>
   </entry>
+  <entry>
+    <title>Hexo Next leancloud文章阅读次数配置</title>
+    <url>/nirvana/javascript/%E5%89%8D%E7%AB%AF/Hexo-Next-leancloud/</url>
+    <content><![CDATA[<h1 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h1><p>由于<code>Next</code>主题修复了<code>leancloud</code>的安全问题, 导致以前<code>leancloud</code>失效, 所以重新介绍如何配置<code>leancloud</code></p>
+<blockquote>
+<p>所有使用该插件而未经修复的NexT站点或使用类似方法集成Leancloud访客统计功能的站点都被认为是不安全的，请尽快修复</p>
+</blockquote>
+<p>效果如图<br><img src="https://upload-images.jianshu.io/upload_images/10024246-4c34cbaf05fa0929.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240"></p>
+<h1 id="注册Leancloud并创建应用"><a href="#注册Leancloud并创建应用" class="headerlink" title="注册Leancloud并创建应用"></a>注册Leancloud并创建应用</h1><ol>
+<li><p> 首先，前往Leancloud官网<a href="https://leancloud.cn/dashboard/login.html#/signup">leancloud.cn</a>进行注册，并登陆。</p>
+</li>
+<li><p>点击<strong>创建应用</strong><br> <img src="https://upload-images.jianshu.io/upload_images/10024246-89aca6e79e05f569.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240"></p>
+</li>
+<li><p>输入应用的名称(随便起都行), 选择<strong>开发版</strong>, 点击<strong>创建</strong><br> <img src="https://upload-images.jianshu.io/upload_images/10024246-097016813d541b77.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240"></p>
+</li>
+<li><p>创建成功后点击右上角的设置<strong>小齿轮</strong><br> <img src="https://upload-images.jianshu.io/upload_images/10024246-3db198f1151cdcbf.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240"></p>
+</li>
+<li><p>点击<strong>存储</strong>-<strong>创建Class</strong>-<strong>Class名称</strong>设置为<code>Counter</code>(必须为<code>Counter</code>)-选择<strong>无限制</strong>-点击<strong>创建</strong><br> <img src="https://upload-images.jianshu.io/upload_images/10024246-432bb8b837df5c25.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240"></p>
+</li>
+<li><p>创建后点击<strong>设置</strong>-点击<strong>应用Key</strong>-获取<strong>App ID</strong>和<strong>App Key</strong><br> <img src="https://upload-images.jianshu.io/upload_images/10024246-9535fa3e0ed7959c.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240"></p>
+</li>
+<li><p>将获取到的<strong>App ID</strong>和<strong>App Key</strong>设置到<code>Next</code>主题配置文件<code>_config.yml</code><br> <em>配置文件已存在这个配置, 只要把id和key加上去就好了</em></p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">leancloud_visitors:</span><br><span class="line"> enable: true</span><br><span class="line"> app_id: &lt;&lt;your app id&gt;&gt;</span><br><span class="line"> app_key: &lt;&lt;your app key&gt;&gt;</span><br></pre></td></tr></table></figure></li>
+<li><p>点击<strong>安全中心</strong>, 填写自己博客对应的域名（注意协议、域名和端口号需严格一致）<br> <img src="https://upload-images.jianshu.io/upload_images/10024246-0a2fe8df57f0f3c6.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240"></p>
+</li>
+<li><p>点击<strong>云引擎</strong>-点击<strong>部署</strong>-点击<strong>在线编辑</strong><br> <img src="https://upload-images.jianshu.io/upload_images/10024246-e403d7af8cb3c367.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240"></p>
+</li>
+<li><p> 点击<strong>创建函数</strong>-选择<strong>Hook</strong>-AV.Cloud.选择<strong>beforeSave</strong>-类选择<strong>Counter</strong>-<strong>添加代码</strong>-点击<strong>保存</strong></p>
+</li>
+</ol>
+<p><img src="https://upload-images.jianshu.io/upload_images/10024246-fd6294350d1575b8.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240"></p>
+<p><img src="https://upload-images.jianshu.io/upload_images/10024246-e68e0a9d45123d5a.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240"></p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">var query &#x3D; new AV.Query(&quot;Counter&quot;);</span><br><span class="line">if (request.object.updatedKeys.indexOf(&#39;time&#39;) !&#x3D;&#x3D; -1) &#123;</span><br><span class="line">     return query.get(request.object.id).then(function (obj) &#123;</span><br><span class="line">     if (obj.get(&quot;time&quot;) + 1 !&#x3D;&#x3D; request.object.get(&quot;time&quot;)) &#123;</span><br><span class="line">     throw new AV.Cloud.Error(&#39;Invalid update!&#39;);</span><br><span class="line">   &#125;</span><br><span class="line"> &#125;)</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<ol start="11">
+<li>点击<strong>部署</strong><br><img src="https://upload-images.jianshu.io/upload_images/10024246-6f2cb6e065606ee4.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240"></li>
+</ol>
+<pre><code>![](https://upload-images.jianshu.io/upload_images/10024246-7f0f70d529036253.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240)
+</code></pre>
+<ol start="12">
+<li>待出现红框处的成功部署信息后，点击<strong>关闭</strong><br><img src="https://upload-images.jianshu.io/upload_images/10024246-74bb624ee196b414.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240"></li>
+</ol>
+<h1 id="设置权限"><a href="#设置权限" class="headerlink" title="设置权限"></a>设置权限</h1><ol>
+<li> 打开<code>Next</code>主题配置文件<code>_config.yml</code>, 将leancloud_visitors下的security设置为true（如没有则新增）</li>
+</ol>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">leancloud_visitors:</span><br><span class="line"> enable: true</span><br><span class="line"> app_id: &lt;&lt;your app id&gt;&gt; # 同前文的id</span><br><span class="line"> app_key: &lt;&lt;your app key&gt;&gt; # 同前文的key</span><br><span class="line"> # Dependencies: https:&#x2F;&#x2F;github.com&#x2F;theme-next&#x2F;hexo-leancloud-counter-security</span><br><span class="line"> security: true</span><br><span class="line"> # 由于Leancloud免费版的云引擎存在请求线程数和运行时间限制以及休眠机制，</span><br><span class="line"> # 很多时候访客数量加载会很慢。</span><br><span class="line"> # 如果设置betterPerformance为true，</span><br><span class="line"> # 则网页则会在提交请求之前直接显示访客人数为查询到的人数+1，以增加用户体验。</span><br><span class="line"> betterPerformance: false</span><br></pre></td></tr></table></figure>
+
+<ol start="2">
+<li><p> 打开站点配置文件<code>_config.yml</code></p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">leancloud_counter_security:</span><br><span class="line"> enable_sync: true</span><br><span class="line"> app_id: &lt;&lt;your app id&gt;&gt;   # 同前文的id</span><br><span class="line"> app_key: &lt;&lt;your app key&gt;&gt; # 同前文的key</span><br><span class="line"> username: </span><br><span class="line"> password:</span><br></pre></td></tr></table></figure></li>
+<li><p> 打开命令行<code>cmd</code>并进入站点文件夹，键入以下命令以安装<code>hexo-leancloud-counter-security</code>插件</p>
+</li>
+</ol>
+<p>复制 </p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">npm install hexo-leancloud-counter-security --save</span><br></pre></td></tr></table></figure>
+
+<ol start="4">
+<li> 接着键入命令<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">hexo lc-counter register &lt;&lt;username&gt;&gt; &lt;&lt;password&gt;&gt;</span><br></pre></td></tr></table></figure></li>
+</ol>
+<p><strong>PS:</strong> 将<code>&lt;&lt;username&gt;&gt;</code>和<code>&lt;&lt;password&gt;&gt;</code>替换为你自己的用户名和密码（不必与leancloud的账号）相同。<strong>此用户名和密码将在hexo部署时使用。</strong></p>
+<ol start="5">
+<li> 打开站点配置文件<code>_config.yml</code>, 将<code>&lt;&lt;username&gt;&gt;</code>和<code>&lt;&lt;password&gt;&gt;</code>替换为你刚刚设置的用户名和密码</li>
+</ol>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">leancloud_counter_security:</span><br><span class="line"> enable_sync: true</span><br><span class="line"> app_id: &lt;&lt;your app id&gt;&gt;   # 同前文的id</span><br><span class="line"> app_key: &lt;&lt;your app key&gt;&gt; # 同前文的key</span><br><span class="line"> username: &lt;&lt;username&gt;&gt;    #如留空则将在部署时询问</span><br><span class="line"> password: &lt;&lt;password&gt;&gt;    #建议留空以保证安全性，如留空则将在部署时询问</span><br></pre></td></tr></table></figure>
+
+<ol start="6">
+<li><p>返回Leancloud控制台的应用内, 检查_User表中是否出现一条记录（图示以用户名为admin为例）<br> <img src="https://upload-images.jianshu.io/upload_images/10024246-999c5edc89f7b563.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240"></p>
+</li>
+<li><p>进入<strong>Counter</strong>表, 打开<strong>权限设置</strong><br> <img src="https://upload-images.jianshu.io/upload_images/10024246-787b5c61ae91e7f2.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240"></p>
+<p> <img src="https://upload-images.jianshu.io/upload_images/10024246-37f02ef456350fe9.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240"></p>
+<p> <img src="https://upload-images.jianshu.io/upload_images/10024246-65c41acaf06d5c02.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240"></p>
+<p> <img src="https://upload-images.jianshu.io/upload_images/10024246-7f8593a5f8c45141.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240"></p>
+</li>
+</ol>
+<p><strong>至此配置完成</strong></p>
+]]></content>
+      <categories>
+        <category>javascript</category>
+      </categories>
+  </entry>
 </search>

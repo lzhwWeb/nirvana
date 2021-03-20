@@ -206,7 +206,7 @@
   <nav class="site-state">
       <div class="site-state-item site-state-posts">
           <a href="/nirvana/archives">
-          <span class="site-state-item-count">182</span>
+          <span class="site-state-item-count">183</span>
           <span class="site-state-item-name">日志</span>
         </a>
       </div>
@@ -245,6 +245,130 @@
 
 
     <div class="main-inner index posts-expand">
+
+    
+
+
+<div class="post-block">
+  
+  
+
+  <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="">
+    <link itemprop="mainEntityOfPage" href="https://lzhwweb.github.io/nirvana/javascript/%E5%89%8D%E7%AB%AF/nrm-%E2%80%94%E2%80%94-%E5%BF%AB%E9%80%9F%E5%88%87%E6%8D%A2-NPM-%E6%BA%90/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/nirvana/images/headphoto.jpeg">
+      <meta itemprop="name" content="nirvana">
+      <meta itemprop="description" content="个人学习笔记">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="涅槃快乐是金">
+    </span>
+      <header class="post-header">
+        <h2 class="post-title" itemprop="name headline">
+          <a href="/nirvana/javascript/%E5%89%8D%E7%AB%AF/nrm-%E2%80%94%E2%80%94-%E5%BF%AB%E9%80%9F%E5%88%87%E6%8D%A2-NPM-%E6%BA%90/" class="post-title-link" itemprop="url">nrm-——-快速切换NPM源</a>
+        </h2>
+
+        <div class="post-meta-container">
+          <div class="post-meta">
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-calendar"></i>
+      </span>
+      <span class="post-meta-item-text">发表于</span>
+
+      <time title="创建时间：2021-03-11 21:12:40" itemprop="dateCreated datePublished" datetime="2021-03-11T21:12:40+08:00">2021-03-11</time>
+    </span>
+      <span class="post-meta-item">
+        <span class="post-meta-item-icon">
+          <i class="far fa-calendar-check"></i>
+        </span>
+        <span class="post-meta-item-text">更新于</span>
+        <time title="修改时间：2021-03-10 22:10:55" itemprop="dateModified" datetime="2021-03-10T22:10:55+08:00">2021-03-10</time>
+      </span>
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-folder"></i>
+      </span>
+      <span class="post-meta-item-text">分类于</span>
+        <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+          <a href="/nirvana/categories/javascript/" itemprop="url" rel="index"><span itemprop="name">javascript</span></a>
+        </span>
+    </span>
+
+  
+    <span id="/nirvana/javascript/%E5%89%8D%E7%AB%AF/nrm-%E2%80%94%E2%80%94-%E5%BF%AB%E9%80%9F%E5%88%87%E6%8D%A2-NPM-%E6%BA%90/" class="post-meta-item leancloud_visitors" data-flag-title="nrm-——-快速切换NPM源" title="阅读次数">
+      <span class="post-meta-item-icon">
+        <i class="far fa-eye"></i>
+      </span>
+      <span class="post-meta-item-text">阅读次数：</span>
+      <span class="leancloud-visitors-count"></span>
+    </span>
+      </div>
+      <div class="post-meta">
+    <span class="post-meta-item" title="本文字数">
+      <span class="post-meta-item-icon">
+        <i class="far fa-file-word"></i>
+      </span>
+      <span class="post-meta-item-text">本文字数：</span>
+      <span>950</span>
+    </span>
+    <span class="post-meta-item" title="阅读时长">
+      <span class="post-meta-item-icon">
+        <i class="far fa-clock"></i>
+      </span>
+      <span class="post-meta-item-text">阅读时长 &asymp;</span>
+      <span>1 分钟</span>
+    </span>
+</div>
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+          <p>不同地区访问不同的镜像速度可能有差异，然后各个镜像各自都可能有少数包暂时没有同步，因此，有时候需要切换 NPM 镜像。相比每次切换时都手动指定相应参数，使用***nrm ***要方便的多。<br>npm registry 管理工具 <a target="_blank" rel="noopener" href="https://github.com/Pana/nrm">nrm</a>, 能够查看和切换当前使用的registry.</p>
+<p>###Install</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ npm install -g nrm</span><br></pre></td></tr></table></figure>
+<p>###列出可选的源</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">$ nrm ls</span><br><span class="line"></span><br><span class="line">* npm ---- https:&#x2F;&#x2F;registry.npmjs.org&#x2F;</span><br><span class="line">  cnpm --- http:&#x2F;&#x2F;r.cnpmjs.org&#x2F;</span><br><span class="line">  eu ----- http:&#x2F;&#x2F;registry.npmjs.eu&#x2F;</span><br><span class="line">  au ----- http:&#x2F;&#x2F;registry.npmjs.org.au&#x2F;</span><br><span class="line">  sl ----- http:&#x2F;&#x2F;npm.strongloop.com&#x2F;</span><br><span class="line">  nj ----- https:&#x2F;&#x2F;registry.nodejitsu.com&#x2F;</span><br></pre></td></tr></table></figure>
+<p>带 <code>*</code>的是当前使用的源，上面的输出表明当前源是官方源。</p>
+<p>###切换<br>切换到cnpm</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">$ nrm use cnpm &#x2F;&#x2F;switch registry to cnpm</span><br><span class="line"></span><br><span class="line">    Registry has been set to: http:&#x2F;&#x2F;r.cnpmjs.org&#x2F;</span><br></pre></td></tr></table></figure>
+<h3 id="增加源"><a href="#增加源" class="headerlink" title="增加源"></a>增加源</h3><p>你可以增加定制的源，特别适用于添加企业内部的私有源。<a target="_blank" rel="noopener" href="http://segmentfault.com/a/1190000000368906">私有源可以使用cnpmjs架设</a>。</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">nrm add  &lt;registry&gt; &lt;url&gt; [home]</span><br><span class="line"></span><br></pre></td></tr></table></figure>
+
+<h3 id="删除源"><a href="#删除源" class="headerlink" title="删除源"></a>删除源</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">nrm del &lt;registry&gt;</span><br><span class="line"></span><br></pre></td></tr></table></figure>
+
+<h3 id="测试速度"><a href="#测试速度" class="headerlink" title="测试速度"></a>测试速度</h3><p>你还可以通过 <code>nrm test</code> 测试相应源的响应时间。</p>
+<p>例如，测试官方源的响应时间：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">; nrm test npm                                                                                                                               </span><br><span class="line"></span><br><span class="line">  npm ---- 1328ms</span><br><span class="line"></span><br></pre></td></tr></table></figure>
+
+<p>测试所有源的响应时间：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line">; nrm test                                                                                                                                   </span><br><span class="line"></span><br><span class="line">  npm ---- 891ms</span><br><span class="line">  cnpm --- 1213ms</span><br><span class="line">  eu ----- 3859ms</span><br><span class="line">  au ----- 1073ms</span><br><span class="line">  sl ----- 4150ms</span><br><span class="line">  nj ----- 8008ms</span><br><span class="line"></span><br></pre></td></tr></table></figure>
+
+<p>注意，为了取得较准确的结果，可以考虑多次测试取平均值。</p>
+<h2 id="项目主页"><a href="#项目主页" class="headerlink" title="项目主页"></a>项目主页</h2><p><a target="_blank" rel="noopener" href="https://github.com/Pana/nrm">github.com/Pana/nrm</a></p>
+
+      
+    </div>
+
+    
+    
+    
+
+    <footer class="post-footer">
+        <div class="post-eof"></div>
+      
+    </footer>
+  </article>
+</div>
+
+
+
 
     
 
@@ -1407,121 +1531,6 @@
 
 
 
-    
-
-
-<div class="post-block">
-  
-  
-
-  <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="">
-    <link itemprop="mainEntityOfPage" href="https://lzhwweb.github.io/nirvana/javascript/%E5%89%8D%E7%AB%AF/webpack-bundle-analyzer%E5%8F%AF%E8%A7%86%E5%8C%96%E5%88%86%E6%9E%90%E5%8C%85%E5%A4%A7%E5%B0%8F/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="image" content="/nirvana/images/headphoto.jpeg">
-      <meta itemprop="name" content="nirvana">
-      <meta itemprop="description" content="个人学习笔记">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="涅槃快乐是金">
-    </span>
-      <header class="post-header">
-        <h2 class="post-title" itemprop="name headline">
-          <a href="/nirvana/javascript/%E5%89%8D%E7%AB%AF/webpack-bundle-analyzer%E5%8F%AF%E8%A7%86%E5%8C%96%E5%88%86%E6%9E%90%E5%8C%85%E5%A4%A7%E5%B0%8F/" class="post-title-link" itemprop="url">webpack-bundle-analyzer可视化分析包大小</a>
-        </h2>
-
-        <div class="post-meta-container">
-          <div class="post-meta">
-    <span class="post-meta-item">
-      <span class="post-meta-item-icon">
-        <i class="far fa-calendar"></i>
-      </span>
-      <span class="post-meta-item-text">发表于</span>
-
-      <time title="创建时间：2021-03-11 21:12:40" itemprop="dateCreated datePublished" datetime="2021-03-11T21:12:40+08:00">2021-03-11</time>
-    </span>
-      <span class="post-meta-item">
-        <span class="post-meta-item-icon">
-          <i class="far fa-calendar-check"></i>
-        </span>
-        <span class="post-meta-item-text">更新于</span>
-        <time title="修改时间：2021-03-10 13:43:55" itemprop="dateModified" datetime="2021-03-10T13:43:55+08:00">2021-03-10</time>
-      </span>
-    <span class="post-meta-item">
-      <span class="post-meta-item-icon">
-        <i class="far fa-folder"></i>
-      </span>
-      <span class="post-meta-item-text">分类于</span>
-        <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-          <a href="/nirvana/categories/javascript/" itemprop="url" rel="index"><span itemprop="name">javascript</span></a>
-        </span>
-    </span>
-
-  
-    <span id="/nirvana/javascript/%E5%89%8D%E7%AB%AF/webpack-bundle-analyzer%E5%8F%AF%E8%A7%86%E5%8C%96%E5%88%86%E6%9E%90%E5%8C%85%E5%A4%A7%E5%B0%8F/" class="post-meta-item leancloud_visitors" data-flag-title="webpack-bundle-analyzer可视化分析包大小" title="阅读次数">
-      <span class="post-meta-item-icon">
-        <i class="far fa-eye"></i>
-      </span>
-      <span class="post-meta-item-text">阅读次数：</span>
-      <span class="leancloud-visitors-count"></span>
-    </span>
-      </div>
-      <div class="post-meta">
-    <span class="post-meta-item" title="本文字数">
-      <span class="post-meta-item-icon">
-        <i class="far fa-file-word"></i>
-      </span>
-      <span class="post-meta-item-text">本文字数：</span>
-      <span>2.1k</span>
-    </span>
-    <span class="post-meta-item" title="阅读时长">
-      <span class="post-meta-item-icon">
-        <i class="far fa-clock"></i>
-      </span>
-      <span class="post-meta-item-text">阅读时长 &asymp;</span>
-      <span>2 分钟</span>
-    </span>
-</div>
-
-        </div>
-      </header>
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-          <p>前端开发现在由于使用node进行开发，会安装很多依赖，但是很多依赖的资源是不透明的，构建完成后，需要分析生产文件到底依赖那些资源，每个资源占据多少空间，这样才能有针对性的优化。所以需要有个方便分析包大小的工具，可以按需优化。<br>先看webpack-bundle-analyzer的效果图（官方效果图）：<br><img src="https://upload-images.jianshu.io/upload_images/10024246-0a46514a70cd94d0.gif?imageMogr2/auto-orient/strip"></p>
-<h2 id="一、安装"><a href="#一、安装" class="headerlink" title="一、安装"></a>一、安装</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">npm install webpack-bundle-analyzer –save-dev</span><br></pre></td></tr></table></figure>
-<h2 id="二、配置"><a href="#二、配置" class="headerlink" title="二、配置"></a>二、配置</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">&#x2F;&#x2F; 分析包内容 </span><br><span class="line">const BundleAnalyzerPlugin &#x3D; require(&#39;webpack-bundle-analyzer&#39;).BundleAnalyzerPlugin; </span><br><span class="line">module.exports &#x3D; &#123; </span><br><span class="line">plugins: [ </span><br><span class="line">&#x2F;&#x2F; 开启 BundleAnalyzerPlugin </span><br><span class="line">new BundleAnalyzerPlugin(), </span><br><span class="line">    ], </span><br><span class="line">&#125;;   </span><br></pre></td></tr></table></figure>
-<p>该插件的默认配置，一般无需修改<br> <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br></pre></td><td class="code"><pre><span class="line">new BundleAnalyzerPlugin(&#123;</span><br><span class="line">  &#x2F;&#x2F;  可以是&#96;server&#96;，&#96;static&#96;或&#96;disabled&#96;。</span><br><span class="line">  &#x2F;&#x2F;  在&#96;server&#96;模式下，分析器将启动HTTP服务器来显示软件包报告。</span><br><span class="line">  &#x2F;&#x2F;  在“静态”模式下，会生成带有报告的单个HTML文件。</span><br><span class="line">  &#x2F;&#x2F;  在&#96;disabled&#96;模式下，你可以使用这个插件来将&#96;generateStatsFile&#96;设置为&#96;true&#96;来生成Webpack Stats JSON文件。</span><br><span class="line">  analyzerMode: &#39;server&#39;,</span><br><span class="line">  &#x2F;&#x2F;  将在“服务器”模式下使用的主机启动HTTP服务器。</span><br><span class="line">  analyzerHost: &#39;127.0.0.1&#39;,</span><br><span class="line">  &#x2F;&#x2F;  将在“服务器”模式下使用的端口启动HTTP服务器。</span><br><span class="line">  analyzerPort: 8888, </span><br><span class="line">  &#x2F;&#x2F;  路径捆绑，将在&#96;static&#96;模式下生成的报告文件。</span><br><span class="line">  &#x2F;&#x2F;  相对于捆绑输出目录。</span><br><span class="line">  reportFilename: &#39;report.html&#39;,</span><br><span class="line">  &#x2F;&#x2F;  模块大小默认显示在报告中。</span><br><span class="line">  &#x2F;&#x2F;  应该是&#96;stat&#96;，&#96;parsed&#96;或者&#96;gzip&#96;中的一个。</span><br><span class="line">  &#x2F;&#x2F;  有关更多信息，请参见“定义”一节。</span><br><span class="line">  defaultSizes: &#39;parsed&#39;,</span><br><span class="line">  &#x2F;&#x2F;  在默认浏览器中自动打开报告</span><br><span class="line">  openAnalyzer: true,</span><br><span class="line">  &#x2F;&#x2F;  如果为true，则Webpack Stats JSON文件将在bundle输出目录中生成</span><br><span class="line">  generateStatsFile: false, </span><br><span class="line">  &#x2F;&#x2F;  如果&#96;generateStatsFile&#96;为&#96;true&#96;，将会生成Webpack Stats JSON文件的名字。</span><br><span class="line">  &#x2F;&#x2F;  相对于捆绑输出目录。</span><br><span class="line">  statsFilename: &#39;stats.json&#39;,</span><br><span class="line">  &#x2F;&#x2F;  stats.toJson（）方法的选项。</span><br><span class="line">  &#x2F;&#x2F;  例如，您可以使用&#96;source：false&#96;选项排除统计文件中模块的来源。</span><br><span class="line">  &#x2F;&#x2F;  在这里查看更多选项：https：  &#x2F;&#x2F;github.com&#x2F;webpack&#x2F;webpack&#x2F;blob&#x2F;webpack-1&#x2F;lib&#x2F;Stats.js#L21</span><br><span class="line">  statsOptions: null,</span><br><span class="line">  logLevel: &#39;info&#39; &#x2F;&#x2F; 日志级别。可以是&#39;信息&#39;，&#39;警告&#39;，&#39;错误&#39;或&#39;沉默&#39;。</span><br><span class="line">&#125;)</span><br></pre></td></tr></table></figure></p>
-<h5 id="三、启动"><a href="#三、启动" class="headerlink" title="三、启动"></a>三、启动</h5><p>在package.json的scripts里加入下面这句话，就可以npm run build之后看到webpack-bundle-analyzer的效果：</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">&quot;analyz&quot;: &quot;NODE_ENV&#x3D;production npm_config_report&#x3D;true npm run build&quot;</span><br></pre></td></tr></table></figure>
-<p>浏览器打开127.0.0.1:8888地址可以看到效果图。</p>
-<h5 id="四：模块功能："><a href="#四：模块功能：" class="headerlink" title="四：模块功能："></a>四：模块功能：</h5><ul>
-<li>意识到你的文件打包压缩后中真正的内容</li>
-<li>找出哪些模块组成最大的大小</li>
-<li>找到错误的模块</li>
-<li>最好的事情是它支持缩小捆绑！它解析它们以获得实际大小的捆绑模块。它也显示他们的gzipped大小！</li>
-</ul>
-
-      
-    </div>
-
-    
-    
-    
-
-    <footer class="post-footer">
-        <div class="post-eof"></div>
-      
-    </footer>
-  </article>
-</div>
-
-
-
-
   <nav class="pagination">
     <a class="extend prev" rel="prev" href="/nirvana/page/8/"><i class="fa fa-angle-left" aria-label="上一页"></i></a><a class="page-number" href="/nirvana/">1</a><span class="space">&hellip;</span><a class="page-number" href="/nirvana/page/8/">8</a><span class="page-number current">9</span><a class="page-number" href="/nirvana/page/10/">10</a><span class="space">&hellip;</span><a class="page-number" href="/nirvana/page/19/">19</a><a class="extend next" rel="next" href="/nirvana/page/10/"><i class="fa fa-angle-right" aria-label="下一页"></i></a>
   </nav>
@@ -1569,14 +1578,14 @@
       <i class="fa fa-chart-line"></i>
     </span>
       <span>站点总字数：</span>
-    <span title="站点总字数">532k</span>
+    <span title="站点总字数">534k</span>
   </span>
   <span class="post-meta-item">
     <span class="post-meta-item-icon">
       <i class="fa fa-coffee"></i>
     </span>
       <span>站点阅读时长 &asymp;</span>
-    <span title="站点阅读时长">8:04</span>
+    <span title="站点阅读时长">8:06</span>
   </span>
 </div>
   <div class="powered-by">由 <a href="https://hexo.io/" class="theme-link" rel="noopener" target="_blank">Hexo</a> & <a href="https://theme-next.js.org/" class="theme-link" rel="noopener" target="_blank">NexT.Gemini</a> 强力驱动
