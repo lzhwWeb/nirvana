@@ -1,0 +1,534 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=2">
+<meta name="theme-color" content="#222">
+<meta name="generator" content="Hexo 5.4.0">
+ <meta name="referrer" content="no-referrer"/>
+
+  <link rel="apple-touch-icon" sizes="180x180" href="/nirvana/images/apple-touch-icon-next.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="/nirvana/images/favicon-32x32-next.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="/nirvana/images/favicon-16x16-next.png">
+  <link rel="mask-icon" href="/nirvana/images/logo.svg" color="#222">
+
+<link rel="stylesheet" href="/nirvana/css/main.css">
+
+
+
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@5.15.2/css/all.min.css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/animate.css@3.1.1/animate.min.css">
+
+<script class="hexo-configurations">
+    var NexT = window.NexT || {};
+    var CONFIG = {"hostname":"lzhwweb.github.io","root":"/nirvana/","images":"/nirvana/images","scheme":"Gemini","version":"8.2.2","exturl":false,"sidebar":{"position":"left","display":"post","padding":18,"offset":12},"copycode":false,"bookmark":{"enable":false,"color":"#222","save":"auto"},"fancybox":false,"mediumzoom":false,"lazyload":false,"pangu":false,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},"motion":{"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"fadeInDown","post_body":"fadeInDown","coll_header":"fadeInLeft","sidebar":"fadeInUp"}},"prism":false,"i18n":{"placeholder":"搜索...","empty":"没有找到任何搜索结果：${query}","hits_time":"找到 ${hits} 个搜索结果（用时 ${time} 毫秒）","hits":"找到 ${hits} 个搜索结果"},"path":"/nirvana/search.xml","localsearch":{"enable":true,"trigger":"auto","top_n_per_article":1,"unescape":false,"preload":false}};
+  </script>
+<meta name="description" content="2. Date1234567891011121314151617181920212223242526272829303132333435363738394041424344454647484950515253545556575859606162636465666768697071727374757677787980818283848586878889909192939495969798991001">
+<meta property="og:type" content="article">
+<meta property="og:title" content="JavaScript常用工具方法（2）Date">
+<meta property="og:url" content="https://lzhwweb.github.io/nirvana/javascript/%E5%89%8D%E7%AB%AF/JavaScript%E5%B8%B8%E7%94%A8%E5%B7%A5%E5%85%B7%E6%96%B9%E6%B3%95-%EF%BC%882%EF%BC%89Date/index.html">
+<meta property="og:site_name" content="涅槃快乐是金">
+<meta property="og:description" content="2. Date1234567891011121314151617181920212223242526272829303132333435363738394041424344454647484950515253545556575859606162636465666768697071727374757677787980818283848586878889909192939495969798991001">
+<meta property="og:locale" content="zh_CN">
+<meta property="article:published_time" content="2021-03-11T13:12:40.000Z">
+<meta property="article:modified_time" content="2021-03-10T14:08:34.643Z">
+<meta property="article:author" content="nirvana">
+<meta property="article:tag" content="前端,javascript,node,git">
+<meta name="twitter:card" content="summary">
+
+
+<link rel="canonical" href="https://lzhwweb.github.io/nirvana/javascript/%E5%89%8D%E7%AB%AF/JavaScript%E5%B8%B8%E7%94%A8%E5%B7%A5%E5%85%B7%E6%96%B9%E6%B3%95-%EF%BC%882%EF%BC%89Date/">
+
+
+<script class="page-configurations">
+  // https://hexo.io/docs/variables.html
+  CONFIG.page = {
+    sidebar: "",
+    isHome : false,
+    isPost : true,
+    lang   : 'zh-CN'
+  };
+</script>
+<title>JavaScript常用工具方法（2）Date | 涅槃快乐是金</title>
+  
+
+
+
+
+  <noscript>
+  <style>
+  body { margin-top: 2rem; }
+
+  .use-motion .menu-item,
+  .use-motion .sidebar,
+  .use-motion .post-block,
+  .use-motion .pagination,
+  .use-motion .comments,
+  .use-motion .post-header,
+  .use-motion .post-body,
+  .use-motion .collection-header {
+    visibility: visible;
+  }
+
+  .use-motion .header,
+  .use-motion .site-brand-container .toggle,
+  .use-motion .footer { opacity: initial; }
+
+  .use-motion .site-title,
+  .use-motion .site-subtitle,
+  .use-motion .custom-logo-image {
+    opacity: initial;
+    top: initial;
+  }
+
+  .use-motion .logo-line {
+    transform: scaleX(1);
+  }
+
+  .search-pop-overlay, .sidebar-nav { display: none; }
+  .sidebar-panel { display: block; }
+  </style>
+</noscript>
+
+</head>
+
+<body itemscope itemtype="http://schema.org/WebPage" class="use-motion">
+  <div class="headband"></div>
+
+  <main class="main">
+    <header class="header" itemscope itemtype="http://schema.org/WPHeader">
+      <div class="header-inner"><div class="site-brand-container">
+  <div class="site-nav-toggle">
+    <div class="toggle" aria-label="切换导航栏" role="button">
+        <span class="toggle-line"></span>
+        <span class="toggle-line"></span>
+        <span class="toggle-line"></span>
+    </div>
+  </div>
+
+  <div class="site-meta">
+
+    <a href="/nirvana/" class="brand" rel="start">
+      <i class="logo-line"></i>
+      <h1 class="site-title">涅槃快乐是金</h1>
+      <i class="logo-line"></i>
+    </a>
+  </div>
+
+  <div class="site-nav-right">
+    <div class="toggle popup-trigger">
+        <i class="fa fa-search fa-fw fa-lg"></i>
+    </div>
+  </div>
+</div>
+
+
+
+<nav class="site-nav">
+  <ul class="main-menu menu">
+        <li class="menu-item menu-item-home"><a href="/nirvana/" rel="section">首页</a></li>
+        <li class="menu-item menu-item-git"><a href="/nirvana/categories/git" rel="section">git</a></li>
+        <li class="menu-item menu-item-linux"><a href="/nirvana/categories/linux" rel="section">linux</a></li>
+        <li class="menu-item menu-item-android"><a href="/nirvana/categories/android" rel="section">android</a></li>
+        <li class="menu-item menu-item-随笔"><a href="/nirvana/categories/informal" rel="section">随笔</a></li>
+        <li class="menu-item menu-item-mac"><a href="/nirvana/categories/mac" rel="section">mac</a></li>
+        <li class="menu-item menu-item-react-native"><a href="/nirvana/categories/reactnative" rel="section">react-native</a></li>
+        <li class="menu-item menu-item-算法"><a href="/nirvana/categories/algorithm" rel="section">算法</a></li>
+        <li class="menu-item menu-item-读书笔记"><a href="/nirvana/categories/note" rel="section">读书笔记</a></li>
+        <li class="menu-item menu-item-开发工具"><a href="/nirvana/categories/tool" rel="section">开发工具</a></li>
+        <li class="menu-item menu-item-设计模式(ts)"><a href="/nirvana/categories/DesignPattern" rel="section">设计模式(TS)</a></li>
+        <li class="menu-item menu-item-前端"><a href="/nirvana/categories/javascript" rel="section">前端</a></li>
+      <li class="menu-item menu-item-search">
+        <a role="button" class="popup-trigger"><i class="fa fa-search fa-fw"></i>搜索
+        </a>
+      </li>
+  </ul>
+</nav>
+
+
+
+  <div class="search-pop-overlay">
+    <div class="popup search-popup"><div class="search-header">
+  <span class="search-icon">
+    <i class="fa fa-search"></i>
+  </span>
+  <div class="search-input-container">
+    <input autocomplete="off" autocapitalize="off" maxlength="80"
+           placeholder="搜索..." spellcheck="false"
+           type="search" class="search-input">
+  </div>
+  <span class="popup-btn-close" role="button">
+    <i class="fa fa-times-circle"></i>
+  </span>
+</div>
+<div class="search-result-container no-result">
+  <div class="search-result-icon">
+    <i class="fa fa-spinner fa-pulse fa-5x"></i>
+  </div>
+</div>
+
+    </div>
+  </div>
+
+</div>
+        
+  
+  <div class="toggle sidebar-toggle" role="button">
+    <span class="toggle-line"></span>
+    <span class="toggle-line"></span>
+    <span class="toggle-line"></span>
+  </div>
+
+  <aside class="sidebar">
+
+    <div class="sidebar-inner sidebar-nav-active sidebar-toc-active">
+      <ul class="sidebar-nav">
+        <li class="sidebar-nav-toc">
+          文章目录
+        </li>
+        <li class="sidebar-nav-overview">
+          站点概览
+        </li>
+      </ul>
+
+      <div class="sidebar-panel-container">
+        <!--noindex-->
+        <div class="post-toc-wrap sidebar-panel">
+            <div class="post-toc animated"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#2-Date"><span class="nav-text">2. Date</span></a></li></ol></div>
+        </div>
+        <!--/noindex-->
+
+        <div class="site-overview-wrap sidebar-panel">
+          <div class="site-author site-overview-item animated" itemprop="author" itemscope itemtype="http://schema.org/Person">
+    <img class="site-author-image" itemprop="image" alt="nirvana"
+      src="/nirvana/images/headphoto.jpeg">
+  <p class="site-author-name" itemprop="name">nirvana</p>
+  <div class="site-description" itemprop="description">个人学习笔记</div>
+</div>
+<div class="site-state-wrap site-overview-item animated">
+  <nav class="site-state">
+      <div class="site-state-item site-state-posts">
+          <a href="/nirvana/archives">
+          <span class="site-state-item-count">182</span>
+          <span class="site-state-item-name">日志</span>
+        </a>
+      </div>
+      <div class="site-state-item site-state-categories">
+        <span class="site-state-item-count">11</span>
+        <span class="site-state-item-name">分类</span>
+      </div>
+  </nav>
+</div>
+  <div class="links-of-author site-overview-item animated">
+      <span class="links-of-author-item">
+        <a href="https://github.com/lzhwWeb" title="GitHub → https:&#x2F;&#x2F;github.com&#x2F;lzhwWeb" rel="noopener" target="_blank"><i class="fab fa-github fa-fw"></i></a>
+      </span>
+  </div>
+
+
+
+        </div>
+      </div>
+        <div class="back-to-top animated" role="button">
+          <i class="fa fa-arrow-up"></i>
+          <span>0%</span>
+        </div>
+    </div>
+  </aside>
+  <div class="sidebar-dimmer"></div>
+
+
+    </header>
+
+    
+
+<noscript>
+  <div class="noscript-warning">Theme NexT works best with JavaScript enabled</div>
+</noscript>
+
+
+    <div class="main-inner post posts-expand">
+
+
+  
+
+
+<div class="post-block">
+  
+  
+
+  <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="zh-CN">
+    <link itemprop="mainEntityOfPage" href="https://lzhwweb.github.io/nirvana/javascript/%E5%89%8D%E7%AB%AF/JavaScript%E5%B8%B8%E7%94%A8%E5%B7%A5%E5%85%B7%E6%96%B9%E6%B3%95-%EF%BC%882%EF%BC%89Date/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/nirvana/images/headphoto.jpeg">
+      <meta itemprop="name" content="nirvana">
+      <meta itemprop="description" content="个人学习笔记">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="涅槃快乐是金">
+    </span>
+      <header class="post-header">
+        <h1 class="post-title" itemprop="name headline">
+          JavaScript常用工具方法（2）Date
+        </h1>
+
+        <div class="post-meta-container">
+          <div class="post-meta">
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-calendar"></i>
+      </span>
+      <span class="post-meta-item-text">发表于</span>
+
+      <time title="创建时间：2021-03-11 21:12:40" itemprop="dateCreated datePublished" datetime="2021-03-11T21:12:40+08:00">2021-03-11</time>
+    </span>
+      <span class="post-meta-item">
+        <span class="post-meta-item-icon">
+          <i class="far fa-calendar-check"></i>
+        </span>
+        <span class="post-meta-item-text">更新于</span>
+        <time title="修改时间：2021-03-10 22:08:34" itemprop="dateModified" datetime="2021-03-10T22:08:34+08:00">2021-03-10</time>
+      </span>
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-folder"></i>
+      </span>
+      <span class="post-meta-item-text">分类于</span>
+        <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+          <a href="/nirvana/categories/javascript/" itemprop="url" rel="index"><span itemprop="name">javascript</span></a>
+        </span>
+    </span>
+
+  
+    <span id="/nirvana/javascript/%E5%89%8D%E7%AB%AF/JavaScript%E5%B8%B8%E7%94%A8%E5%B7%A5%E5%85%B7%E6%96%B9%E6%B3%95-%EF%BC%882%EF%BC%89Date/" class="post-meta-item leancloud_visitors" data-flag-title="JavaScript常用工具方法（2）Date" title="阅读次数">
+      <span class="post-meta-item-icon">
+        <i class="far fa-eye"></i>
+      </span>
+      <span class="post-meta-item-text">阅读次数：</span>
+      <span class="leancloud-visitors-count"></span>
+    </span>
+      </div>
+      <div class="post-meta">
+    <span class="post-meta-item" title="本文字数">
+      <span class="post-meta-item-icon">
+        <i class="far fa-file-word"></i>
+      </span>
+      <span class="post-meta-item-text">本文字数：</span>
+      <span>7k</span>
+    </span>
+    <span class="post-meta-item" title="阅读时长">
+      <span class="post-meta-item-icon">
+        <i class="far fa-clock"></i>
+      </span>
+      <span class="post-meta-item-text">阅读时长 &asymp;</span>
+      <span>6 分钟</span>
+    </span>
+</div>
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+        <h2 id="2-Date"><a href="#2-Date" class="headerlink" title="2. Date"></a>2. Date</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br><span class="line">63</span><br><span class="line">64</span><br><span class="line">65</span><br><span class="line">66</span><br><span class="line">67</span><br><span class="line">68</span><br><span class="line">69</span><br><span class="line">70</span><br><span class="line">71</span><br><span class="line">72</span><br><span class="line">73</span><br><span class="line">74</span><br><span class="line">75</span><br><span class="line">76</span><br><span class="line">77</span><br><span class="line">78</span><br><span class="line">79</span><br><span class="line">80</span><br><span class="line">81</span><br><span class="line">82</span><br><span class="line">83</span><br><span class="line">84</span><br><span class="line">85</span><br><span class="line">86</span><br><span class="line">87</span><br><span class="line">88</span><br><span class="line">89</span><br><span class="line">90</span><br><span class="line">91</span><br><span class="line">92</span><br><span class="line">93</span><br><span class="line">94</span><br><span class="line">95</span><br><span class="line">96</span><br><span class="line">97</span><br><span class="line">98</span><br><span class="line">99</span><br><span class="line">100</span><br><span class="line">101</span><br><span class="line">102</span><br><span class="line">103</span><br><span class="line">104</span><br><span class="line">105</span><br><span class="line">106</span><br><span class="line">107</span><br><span class="line">108</span><br><span class="line">109</span><br><span class="line">110</span><br><span class="line">111</span><br><span class="line">112</span><br><span class="line">113</span><br><span class="line">114</span><br><span class="line">115</span><br><span class="line">116</span><br><span class="line">117</span><br><span class="line">118</span><br><span class="line">119</span><br><span class="line">120</span><br><span class="line">121</span><br><span class="line">122</span><br><span class="line">123</span><br><span class="line">124</span><br><span class="line">125</span><br><span class="line">126</span><br><span class="line">127</span><br><span class="line">128</span><br><span class="line">129</span><br><span class="line">130</span><br><span class="line">131</span><br><span class="line">132</span><br><span class="line">133</span><br><span class="line">134</span><br><span class="line">135</span><br><span class="line">136</span><br><span class="line">137</span><br><span class="line">138</span><br><span class="line">139</span><br><span class="line">140</span><br><span class="line">141</span><br><span class="line">142</span><br><span class="line">143</span><br><span class="line">144</span><br><span class="line">145</span><br><span class="line">146</span><br><span class="line">147</span><br><span class="line">148</span><br><span class="line">149</span><br><span class="line">150</span><br><span class="line">151</span><br><span class="line">152</span><br><span class="line">153</span><br><span class="line">154</span><br><span class="line">155</span><br><span class="line">156</span><br><span class="line">157</span><br><span class="line">158</span><br><span class="line">159</span><br><span class="line">160</span><br><span class="line">161</span><br><span class="line">162</span><br><span class="line">163</span><br><span class="line">164</span><br><span class="line">165</span><br><span class="line">166</span><br><span class="line">167</span><br><span class="line">168</span><br><span class="line">169</span><br><span class="line">170</span><br><span class="line">171</span><br><span class="line">172</span><br><span class="line">173</span><br><span class="line">174</span><br><span class="line">175</span><br><span class="line">176</span><br><span class="line">177</span><br><span class="line">178</span><br><span class="line">179</span><br><span class="line">180</span><br><span class="line">181</span><br><span class="line">182</span><br><span class="line">183</span><br><span class="line">184</span><br><span class="line">185</span><br><span class="line">186</span><br><span class="line">187</span><br><span class="line">188</span><br><span class="line">189</span><br><span class="line">190</span><br><span class="line">191</span><br><span class="line">192</span><br><span class="line">193</span><br><span class="line">194</span><br><span class="line">195</span><br><span class="line">196</span><br><span class="line">197</span><br><span class="line">198</span><br><span class="line">199</span><br><span class="line">200</span><br><span class="line">201</span><br><span class="line">202</span><br><span class="line">203</span><br><span class="line">204</span><br><span class="line">205</span><br><span class="line">206</span><br><span class="line">207</span><br><span class="line">208</span><br><span class="line">209</span><br><span class="line">210</span><br><span class="line">211</span><br><span class="line">212</span><br><span class="line">213</span><br><span class="line">214</span><br></pre></td><td class="code"><pre><span class="line">&#x2F;**</span><br><span class="line"> * 格式化时间</span><br><span class="line"> * </span><br><span class="line"> * @param  &#123;time&#125; 时间</span><br><span class="line"> * @param  &#123;cFormat&#125; 格式</span><br><span class="line"> * @return &#123;String&#125; 字符串</span><br><span class="line"> *</span><br><span class="line"> * @example formatTime(&#39;2018-1-29&#39;, &#39;&#123;y&#125;&#x2F;&#123;m&#125;&#x2F;&#123;d&#125; &#123;h&#125;:&#123;i&#125;:&#123;s&#125;&#39;) &#x2F;&#x2F; -&gt; 2018&#x2F;01&#x2F;29 00:00:00</span><br><span class="line"> *&#x2F;</span><br><span class="line">formatTime(time, cFormat) &#123;</span><br><span class="line">    if (arguments.length &#x3D;&#x3D;&#x3D; 0) return null</span><br><span class="line">    if ((time + &#39;&#39;).length &#x3D;&#x3D;&#x3D; 10) &#123;</span><br><span class="line">        time &#x3D; +time * 1000</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    var format &#x3D; cFormat || &#39;&#123;y&#125;-&#123;m&#125;-&#123;d&#125; &#123;h&#125;:&#123;i&#125;:&#123;s&#125;&#39;, date</span><br><span class="line">    if (typeof time &#x3D;&#x3D;&#x3D; &#39;object&#39;) &#123;</span><br><span class="line">        date &#x3D; time</span><br><span class="line">    &#125; else &#123;</span><br><span class="line">        date &#x3D; new Date(time)</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    var formatObj &#x3D; &#123;</span><br><span class="line">        y: date.getFullYear(),</span><br><span class="line">        m: date.getMonth() + 1,</span><br><span class="line">        d: date.getDate(),</span><br><span class="line">        h: date.getHours(),</span><br><span class="line">        i: date.getMinutes(),</span><br><span class="line">        s: date.getSeconds(),</span><br><span class="line">        a: date.getDay()</span><br><span class="line">    &#125;</span><br><span class="line">    var time_str &#x3D; format.replace(&#x2F;&#123;(y|m|d|h|i|s|a)+&#125;&#x2F;g, (result, key) &#x3D;&gt; &#123;</span><br><span class="line">        var value &#x3D; formatObj[key]</span><br><span class="line">        if (key &#x3D;&#x3D;&#x3D; &#39;a&#39;) return [&#39;一&#39;, &#39;二&#39;, &#39;三&#39;, &#39;四&#39;, &#39;五&#39;, &#39;六&#39;, &#39;日&#39;][value - 1]</span><br><span class="line">        if (result.length &gt; 0 &amp;&amp; value &lt; 10) &#123;</span><br><span class="line">            value &#x3D; &#39;0&#39; + value</span><br><span class="line">        &#125;</span><br><span class="line">        return value || 0</span><br><span class="line">    &#125;)</span><br><span class="line">    return time_str</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">&#x2F;**</span><br><span class="line"> * 返回指定长度的月份集合</span><br><span class="line"> * </span><br><span class="line"> * @param  &#123;time&#125; 时间</span><br><span class="line"> * @param  &#123;len&#125; 长度</span><br><span class="line"> * @param  &#123;direction&#125; 方向：  1: 前几个月;  2: 后几个月;  3:前后几个月  默认 3</span><br><span class="line"> * @return &#123;Array&#125; 数组</span><br><span class="line"> * </span><br><span class="line"> * @example   getMonths(&#39;2018-1-29&#39;, 6, 1)  &#x2F;&#x2F; -&gt;  [&quot;2018-1&quot;, &quot;2017-12&quot;, &quot;2017-11&quot;, &quot;2017-10&quot;, &quot;2017-9&quot;, &quot;2017-8&quot;, &quot;2017-7&quot;]</span><br><span class="line"> *&#x2F;</span><br><span class="line">getMonths(time, len, direction) &#123;</span><br><span class="line">    var mm &#x3D; new Date(time).getMonth(),</span><br><span class="line">        yy &#x3D; new Date(time).getFullYear(),</span><br><span class="line">        direction &#x3D; isNaN(direction) ? 3 : direction,</span><br><span class="line">        index &#x3D; mm;</span><br><span class="line">    var cutMonth &#x3D; function(index) &#123;</span><br><span class="line">        if ( index &lt;&#x3D; len &amp;&amp; index &gt;&#x3D; -len) &#123;</span><br><span class="line">            return direction &#x3D;&#x3D;&#x3D; 1 ? formatPre(index).concat(cutMonth(++index)):</span><br><span class="line">                direction &#x3D;&#x3D;&#x3D; 2 ? formatNext(index).concat(cutMonth(++index)):formatCurr(index).concat(cutMonth(++index))</span><br><span class="line">        &#125;</span><br><span class="line">        return []</span><br><span class="line">    &#125;</span><br><span class="line">    var formatNext &#x3D; function(i) &#123;</span><br><span class="line">        var y &#x3D; Math.floor(i&#x2F;12),</span><br><span class="line">            m &#x3D; i%12</span><br><span class="line">        return [yy+y + &#39;-&#39; + (m+1)]</span><br><span class="line">    &#125;</span><br><span class="line">    var formatPre &#x3D; function(i) &#123;</span><br><span class="line">        var y &#x3D; Math.ceil(i&#x2F;12),</span><br><span class="line">            m &#x3D; i%12</span><br><span class="line">        m &#x3D; m&#x3D;&#x3D;&#x3D;0 ? 12 : m</span><br><span class="line">        return [yy-y + &#39;-&#39; + (13 - m)]</span><br><span class="line">    &#125;</span><br><span class="line">    var formatCurr &#x3D; function(i) &#123;</span><br><span class="line">        var y &#x3D; Math.floor(i&#x2F;12),</span><br><span class="line">            yNext &#x3D; Math.ceil(i&#x2F;12),</span><br><span class="line">            m &#x3D; i%12,</span><br><span class="line">            mNext &#x3D; m&#x3D;&#x3D;&#x3D;0 ? 12 : m</span><br><span class="line">        return [yy-yNext + &#39;-&#39; + (13 - mNext),yy+y + &#39;-&#39; + (m+1)]</span><br><span class="line">    &#125;</span><br><span class="line">    &#x2F;&#x2F; 数组去重</span><br><span class="line">    var unique &#x3D; function(arr) &#123;</span><br><span class="line">        if ( Array.hasOwnProperty(&#39;from&#39;) ) &#123;</span><br><span class="line">            return Array.from(new Set(arr));</span><br><span class="line">        &#125;else&#123;</span><br><span class="line">            var n &#x3D; &#123;&#125;,r&#x3D;[]; </span><br><span class="line">            for(var i &#x3D; 0; i &lt; arr.length; i++)&#123;</span><br><span class="line">                if (!n[arr[i]])&#123;</span><br><span class="line">                    n[arr[i]] &#x3D; true; </span><br><span class="line">                    r.push(arr[i]);</span><br><span class="line">                &#125;</span><br><span class="line">            &#125;</span><br><span class="line">            return r;</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">    return direction !&#x3D;&#x3D; 3 ? cutMonth(index) : unique(cutMonth(index).sort(function(t1, t2)&#123;</span><br><span class="line">        return new Date(t1).getTime() - new Date(t2).getTime()</span><br><span class="line">    &#125;))</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">&#x2F;**</span><br><span class="line"> * 返回指定长度的天数集合</span><br><span class="line"> * </span><br><span class="line"> * @param  &#123;time&#125; 时间</span><br><span class="line"> * @param  &#123;len&#125; 长度</span><br><span class="line"> * @param  &#123;direction&#125; 方向： 1: 前几天;  2: 后几天;  3:前后几天  默认 3</span><br><span class="line"> * @return &#123;Array&#125; 数组</span><br><span class="line"> *</span><br><span class="line"> * @example date.getDays(&#39;2018-1-29&#39;, 6) &#x2F;&#x2F; -&gt; [&quot;2018-1-26&quot;, &quot;2018-1-27&quot;, &quot;2018-1-28&quot;, &quot;2018-1-29&quot;, &quot;2018-1-30&quot;, &quot;2018-1-31&quot;, &quot;2018-2-1&quot;]</span><br><span class="line"> *&#x2F;</span><br><span class="line">getDays(time, len, diretion) &#123;</span><br><span class="line">    var tt &#x3D; new Date(time)</span><br><span class="line">    var getDay &#x3D; function(day) &#123;</span><br><span class="line">        var t &#x3D; new Date(time)</span><br><span class="line">        t.setDate(t.getDate() + day)</span><br><span class="line">        var m &#x3D; t.getMonth()+1</span><br><span class="line">        return t.getFullYear()+&#39;-&#39;+m+&#39;-&#39;+t.getDate()</span><br><span class="line">    &#125;</span><br><span class="line">    var arr &#x3D; []</span><br><span class="line">    if (diretion &#x3D;&#x3D;&#x3D; 1) &#123;</span><br><span class="line">        for (var i &#x3D; 1; i &lt;&#x3D; len; i++) &#123;</span><br><span class="line">            arr.unshift(getDay(-i))</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;else if(diretion &#x3D;&#x3D;&#x3D; 2) &#123;</span><br><span class="line">        for (var i &#x3D; 1; i &lt;&#x3D; len; i++) &#123;</span><br><span class="line">            arr.push(getDay(i))</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;else &#123;</span><br><span class="line">        for (var i &#x3D; 1; i &lt;&#x3D; len; i++) &#123;</span><br><span class="line">            arr.unshift(getDay(-i))</span><br><span class="line">        &#125;</span><br><span class="line">        arr.push(tt.getFullYear()+&#39;-&#39;+(tt.getMonth()+1)+&#39;-&#39;+tt.getDate())</span><br><span class="line">        for (var i &#x3D; 1; i &lt;&#x3D; len; i++) &#123;</span><br><span class="line">            arr.push(getDay(i))</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">    return diretion &#x3D;&#x3D;&#x3D; 1 ? arr.concat([tt.getFullYear()+&#39;-&#39;+(tt.getMonth()+1)+&#39;-&#39;+tt.getDate()]) : </span><br><span class="line">        diretion &#x3D;&#x3D;&#x3D; 2 ? [tt.getFullYear()+&#39;-&#39;+(tt.getMonth()+1)+&#39;-&#39;+tt.getDate()].concat(arr) : arr</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">&#x2F;**</span><br><span class="line"> * @param  &#123;s&#125; 秒数</span><br><span class="line"> * @return &#123;String&#125; 字符串 </span><br><span class="line"> *</span><br><span class="line"> * @example formatHMS(3610) &#x2F;&#x2F; -&gt; 1h0m10s</span><br><span class="line"> *&#x2F;</span><br><span class="line">formatHMS (s) &#123;</span><br><span class="line">    var str &#x3D; &#39;&#39;</span><br><span class="line">    if (s &gt; 3600) &#123;</span><br><span class="line">        str &#x3D; Math.floor(s&#x2F;3600)+&#39;h&#39;+Math.floor(s%3600&#x2F;60)+&#39;m&#39;+s%60+&#39;s&#39;</span><br><span class="line">    &#125;else if(s &gt; 60) &#123;</span><br><span class="line">        str &#x3D; Math.floor(s&#x2F;60)+&#39;m&#39;+s%60+&#39;s&#39;</span><br><span class="line">    &#125;else&#123;</span><br><span class="line">        str &#x3D; s%60+&#39;s&#39;</span><br><span class="line">    &#125;</span><br><span class="line">    return str</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">&#x2F;*获取某月有多少天*&#x2F;</span><br><span class="line">getMonthOfDay (time) &#123;</span><br><span class="line">    var date &#x3D; new Date(time)</span><br><span class="line">    var year &#x3D; date.getFullYear()</span><br><span class="line">    var mouth &#x3D; date.getMonth() + 1</span><br><span class="line">    var days</span><br><span class="line"></span><br><span class="line">    &#x2F;&#x2F;当月份为二月时，根据闰年还是非闰年判断天数</span><br><span class="line">    if (mouth &#x3D;&#x3D; 2) &#123;</span><br><span class="line">        days &#x3D; (year%4&#x3D;&#x3D;0 &amp;&amp; year%100&#x3D;&#x3D;0 &amp;&amp; year%400&#x3D;&#x3D;0) || (year%4&#x3D;&#x3D;0 &amp;&amp; year%100!&#x3D;0) ? 28 : 29</span><br><span class="line">    &#125; else if (mouth &#x3D;&#x3D; 1 || mouth &#x3D;&#x3D; 3 || mouth &#x3D;&#x3D; 5 || mouth &#x3D;&#x3D; 7 || mouth &#x3D;&#x3D; 8 || mouth &#x3D;&#x3D; 10 || mouth &#x3D;&#x3D; 12) &#123;</span><br><span class="line">        &#x2F;&#x2F;月份为：1,3,5,7,8,10,12 时，为大月.则天数为31；</span><br><span class="line">        days &#x3D; 31</span><br><span class="line">    &#125; else &#123;</span><br><span class="line">        &#x2F;&#x2F;其他月份，天数为：30.</span><br><span class="line">        days &#x3D; 30</span><br><span class="line">    &#125;</span><br><span class="line">    return days</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">&#x2F;*获取某年有多少天*&#x2F;</span><br><span class="line">getYearOfDay (time) &#123;</span><br><span class="line">    var firstDayYear &#x3D; this.getFirstDayOfYear(time);</span><br><span class="line">    var lastDayYear &#x3D; this.getLastDayOfYear(time);</span><br><span class="line">    var numSecond &#x3D; (new Date(lastDayYear).getTime() - new Date(firstDayYear).getTime())&#x2F;1000;</span><br><span class="line">    return Math.ceil(numSecond&#x2F;(24*3600));</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">&#x2F;*获取某年的第一天*&#x2F;</span><br><span class="line">getFirstDayOfYear (time) &#123;</span><br><span class="line">    var year &#x3D; new Date(time).getFullYear();</span><br><span class="line">    return year + &quot;-01-01 00:00:00&quot;;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">&#x2F;*获取某年最后一天*&#x2F;</span><br><span class="line">getLastDayOfYear (time) &#123;</span><br><span class="line">    var year &#x3D; new Date(time).getFullYear();</span><br><span class="line">    var dateString &#x3D; year + &quot;-12-01 00:00:00&quot;;</span><br><span class="line">    var endDay &#x3D; this.getMonthOfDay(dateString);</span><br><span class="line">    return year + &quot;-12-&quot; + endDay + &quot; 23:59:59&quot;;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">&#x2F;*获取某个日期是当年中的第几天*&#x2F;</span><br><span class="line">getDayOfYear (time) &#123;</span><br><span class="line">    var firstDayYear &#x3D; this.getFirstDayOfYear(time);</span><br><span class="line">    var numSecond &#x3D; (new Date(time).getTime() - new Date(firstDayYear).getTime())&#x2F;1000;</span><br><span class="line">    return Math.ceil(numSecond&#x2F;(24*3600));</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">&#x2F;*获取某个日期在这一年的第几周*&#x2F;</span><br><span class="line">getDayOfYearWeek (time) &#123;</span><br><span class="line">    var numdays &#x3D; this.getDayOfYear(time);</span><br><span class="line">    return Math.ceil(numdays &#x2F; 7);</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+    </div>
+
+    
+    
+    
+
+    <footer class="post-footer">
+
+        
+
+          <div class="post-nav">
+            <div class="post-nav-item">
+                <a href="/nirvana/javascript/%E5%89%8D%E7%AB%AF/JavaScript%E5%B8%B8%E7%94%A8%E5%B7%A5%E5%85%B7%E6%96%B9%E6%B3%95-%EF%BC%883%EF%BC%89Array/" rel="prev" title="JavaScript常用工具方法（3）Array">
+                  <i class="fa fa-chevron-left"></i> JavaScript常用工具方法（3）Array
+                </a>
+            </div>
+            <div class="post-nav-item">
+                <a href="/nirvana/javascript/%E5%89%8D%E7%AB%AF/JavaScript%E5%B8%B8%E7%94%A8%E5%B7%A5%E5%85%B7%E6%96%B9%E6%B3%95-%EF%BC%881%EF%BC%89%E7%B1%BB%E5%9E%8B%E5%88%A4%E6%96%AD/" rel="next" title="JavaScript常用工具方法（1）类型判断">
+                  JavaScript常用工具方法（1）类型判断 <i class="fa fa-chevron-right"></i>
+                </a>
+            </div>
+          </div>
+    </footer>
+  </article>
+</div>
+
+
+
+
+
+
+
+<script>
+  window.addEventListener('tabs:register', () => {
+    let { activeClass } = CONFIG.comments;
+    if (CONFIG.comments.storage) {
+      activeClass = localStorage.getItem('comments_active') || activeClass;
+    }
+    if (activeClass) {
+      const activeTab = document.querySelector(`a[href="#comment-${activeClass}"]`);
+      if (activeTab) {
+        activeTab.click();
+      }
+    }
+  });
+  if (CONFIG.comments.storage) {
+    window.addEventListener('tabs:click', event => {
+      if (!event.target.matches('.tabs-comment .tab-content .tab-pane')) return;
+      const commentClass = event.target.classList[1];
+      localStorage.setItem('comments_active', commentClass);
+    });
+  }
+</script>
+</div>
+  </main>
+
+  <footer class="footer">
+    <div class="footer-inner">
+
+
+<div class="copyright">
+  &copy; 
+  <span itemprop="copyrightYear">2021</span>
+  <span class="with-love">
+    <i class="fa fa-heart"></i>
+  </span>
+  <span class="author" itemprop="copyrightHolder">nirvana</span>
+</div>
+<div class="wordcount">
+  <span class="post-meta-item">
+    <span class="post-meta-item-icon">
+      <i class="fa fa-chart-line"></i>
+    </span>
+      <span>站点总字数：</span>
+    <span title="站点总字数">532k</span>
+  </span>
+  <span class="post-meta-item">
+    <span class="post-meta-item-icon">
+      <i class="fa fa-coffee"></i>
+    </span>
+      <span>站点阅读时长 &asymp;</span>
+    <span title="站点阅读时长">8:04</span>
+  </span>
+</div>
+  <div class="powered-by">由 <a href="https://hexo.io/" class="theme-link" rel="noopener" target="_blank">Hexo</a> & <a href="https://theme-next.js.org/" class="theme-link" rel="noopener" target="_blank">NexT.Gemini</a> 强力驱动
+  </div>
+
+    </div>
+  </footer>
+
+  
+  <script src="https://cdn.jsdelivr.net/npm/animejs@3.2.1/lib/anime.min.js"></script>
+<script src="/nirvana/js/utils.js"></script><script src="/nirvana/js/motion.js"></script><script src="/nirvana/js/next-boot.js"></script>
+
+  
+<script src="/nirvana/js/local-search.js"></script>
+
+
+
+
+
+
+  
+
+
+<script>
+  (function() {
+    function leancloudSelector(url) {
+      url = encodeURI(url);
+      return document.getElementById(url).querySelector('.leancloud-visitors-count');
+    }
+
+    function addCount(Counter) {
+      const visitors = document.querySelector('.leancloud_visitors');
+      const url = decodeURI(visitors.id);
+      const title = visitors.dataset.flagTitle;
+
+      Counter('get', '/classes/Counter?where=' + encodeURIComponent(JSON.stringify({ url })))
+        .then(response => response.json())
+        .then(({ results }) => {
+          if (results.length > 0) {
+            const counter = results[0];
+            leancloudSelector(url).innerText = counter.time + 1;
+            Counter('put', '/classes/Counter/' + counter.objectId, { time: { '__op': 'Increment', 'amount': 1 } })
+              .catch(error => {
+                console.error('Failed to save visitor count', error);
+              });
+          } else {
+              leancloudSelector(url).innerText = 'Counter not initialized! More info at console err msg.';
+              console.error('ATTENTION! LeanCloud counter has security bug, see how to solve it here: https://github.com/theme-next/hexo-leancloud-counter-security. \n However, you can still use LeanCloud without security, by setting `security` option to `false`.');
+            
+          }
+        })
+        .catch(error => {
+          console.error('LeanCloud Counter Error', error);
+        });
+    }
+
+    function showTime(Counter) {
+      const visitors = document.querySelectorAll('.leancloud_visitors');
+      const entries = [...visitors].map(element => {
+        return decodeURI(element.id);
+      });
+
+      Counter('get', '/classes/Counter?where=' + encodeURIComponent(JSON.stringify({ url: { '$in': entries } })))
+        .then(response => response.json())
+        .then(({ results }) => {
+          for (let url of entries) {
+            const target = results.find(item => item.url === url);
+            leancloudSelector(url).innerText = target ? target.time : 0;
+          }
+        })
+        .catch(error => {
+          console.error('LeanCloud Counter Error', error);
+        });
+    }
+
+    const { app_id, app_key, server_url } = {"enable":true,"app_id":"SPsNUvBhME7XmrjzCfHkUu3e-gzGzoHsz","app_key":"4TONafemiIzvJUwqLa7WveoL","server_url":"https://leancloud.cn","security":true,"betterPerformance":false};
+    function fetchData(api_server) {
+      const Counter = (method, url, data) => {
+        return fetch(`${api_server}/1.1${url}`, {
+          method,
+          headers: {
+            'X-LC-Id'     : app_id,
+            'X-LC-Key'    : app_key,
+            'Content-Type': 'application/json',
+          },
+          body: JSON.stringify(data)
+        });
+      };
+      if (CONFIG.page.isPost) {
+        if (CONFIG.hostname !== location.hostname) return;
+        addCount(Counter);
+      } else if (document.querySelectorAll('.post-title-link').length >= 1) {
+        showTime(Counter);
+      }
+    }
+
+    const api_server = app_id.slice(-9) === '-MdYXbMMI' ? `https://${app_id.slice(0, 8).toLowerCase()}.api.lncldglobal.com` : server_url;
+
+    if (api_server) {
+      fetchData(api_server);
+    } else {
+      fetch('https://app-router.leancloud.cn/2/route?appId=' + app_id)
+        .then(response => response.json())
+        .then(({ api_server }) => {
+          fetchData('https://' + api_server);
+        });
+    }
+  })();
+</script>
+
+
+
+</body>
+</html>

@@ -1,0 +1,552 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=2">
+<meta name="theme-color" content="#222">
+<meta name="generator" content="Hexo 5.4.0">
+ <meta name="referrer" content="no-referrer"/>
+
+  <link rel="apple-touch-icon" sizes="180x180" href="/nirvana/images/apple-touch-icon-next.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="/nirvana/images/favicon-32x32-next.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="/nirvana/images/favicon-16x16-next.png">
+  <link rel="mask-icon" href="/nirvana/images/logo.svg" color="#222">
+
+<link rel="stylesheet" href="/nirvana/css/main.css">
+
+
+
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@5.15.2/css/all.min.css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/animate.css@3.1.1/animate.min.css">
+
+<script class="hexo-configurations">
+    var NexT = window.NexT || {};
+    var CONFIG = {"hostname":"lzhwweb.github.io","root":"/nirvana/","images":"/nirvana/images","scheme":"Gemini","version":"8.2.2","exturl":false,"sidebar":{"position":"left","display":"post","padding":18,"offset":12},"copycode":false,"bookmark":{"enable":false,"color":"#222","save":"auto"},"fancybox":false,"mediumzoom":false,"lazyload":false,"pangu":false,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},"motion":{"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"fadeInDown","post_body":"fadeInDown","coll_header":"fadeInLeft","sidebar":"fadeInUp"}},"prism":false,"i18n":{"placeholder":"搜索...","empty":"没有找到任何搜索结果：${query}","hits_time":"找到 ${hits} 个搜索结果（用时 ${time} 毫秒）","hits":"找到 ${hits} 个搜索结果"},"path":"/nirvana/search.xml","localsearch":{"enable":true,"trigger":"auto","top_n_per_article":1,"unescape":false,"preload":false}};
+  </script>
+<meta name="description" content="防抖和节流是针对响应跟不上触发频率这类问题的两种解决方案。应用场景有很多，输入框持续输入，将输入内容远程校验、多次触发点击事件、onScroll等等。 处理不当或者放任不管就容易引起浏览器卡死。针对快速连续触发和不可控的高频触发问题， 给出debounce 和 throttling了两种解决策略； 防抖(debounce)—策略是当事件被触发时，设定一个周期延迟执行动作，若期间又被触发，则重新设定">
+<meta property="og:type" content="article">
+<meta property="og:title" content="js防抖和节流">
+<meta property="og:url" content="https://lzhwweb.github.io/nirvana/javascript/%E5%89%8D%E7%AB%AF/js%E9%98%B2%E6%8A%96%E5%92%8C%E8%8A%82%E6%B5%81/index.html">
+<meta property="og:site_name" content="涅槃快乐是金">
+<meta property="og:description" content="防抖和节流是针对响应跟不上触发频率这类问题的两种解决方案。应用场景有很多，输入框持续输入，将输入内容远程校验、多次触发点击事件、onScroll等等。 处理不当或者放任不管就容易引起浏览器卡死。针对快速连续触发和不可控的高频触发问题， 给出debounce 和 throttling了两种解决策略； 防抖(debounce)—策略是当事件被触发时，设定一个周期延迟执行动作，若期间又被触发，则重新设定">
+<meta property="og:locale" content="zh_CN">
+<meta property="og:image" content="https://upload-images.jianshu.io/upload_images/10024246-e3337fe492ae59fc?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240">
+<meta property="og:image" content="https://upload-images.jianshu.io/upload_images/10024246-759614d16bd50daa?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240">
+<meta property="article:published_time" content="2021-03-11T13:12:40.000Z">
+<meta property="article:modified_time" content="2021-03-10T05:43:55.079Z">
+<meta property="article:author" content="nirvana">
+<meta property="article:tag" content="前端,javascript,node,git">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="https://upload-images.jianshu.io/upload_images/10024246-e3337fe492ae59fc?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240">
+
+
+<link rel="canonical" href="https://lzhwweb.github.io/nirvana/javascript/%E5%89%8D%E7%AB%AF/js%E9%98%B2%E6%8A%96%E5%92%8C%E8%8A%82%E6%B5%81/">
+
+
+<script class="page-configurations">
+  // https://hexo.io/docs/variables.html
+  CONFIG.page = {
+    sidebar: "",
+    isHome : false,
+    isPost : true,
+    lang   : 'zh-CN'
+  };
+</script>
+<title>js防抖和节流 | 涅槃快乐是金</title>
+  
+
+
+
+
+  <noscript>
+  <style>
+  body { margin-top: 2rem; }
+
+  .use-motion .menu-item,
+  .use-motion .sidebar,
+  .use-motion .post-block,
+  .use-motion .pagination,
+  .use-motion .comments,
+  .use-motion .post-header,
+  .use-motion .post-body,
+  .use-motion .collection-header {
+    visibility: visible;
+  }
+
+  .use-motion .header,
+  .use-motion .site-brand-container .toggle,
+  .use-motion .footer { opacity: initial; }
+
+  .use-motion .site-title,
+  .use-motion .site-subtitle,
+  .use-motion .custom-logo-image {
+    opacity: initial;
+    top: initial;
+  }
+
+  .use-motion .logo-line {
+    transform: scaleX(1);
+  }
+
+  .search-pop-overlay, .sidebar-nav { display: none; }
+  .sidebar-panel { display: block; }
+  </style>
+</noscript>
+
+</head>
+
+<body itemscope itemtype="http://schema.org/WebPage" class="use-motion">
+  <div class="headband"></div>
+
+  <main class="main">
+    <header class="header" itemscope itemtype="http://schema.org/WPHeader">
+      <div class="header-inner"><div class="site-brand-container">
+  <div class="site-nav-toggle">
+    <div class="toggle" aria-label="切换导航栏" role="button">
+        <span class="toggle-line"></span>
+        <span class="toggle-line"></span>
+        <span class="toggle-line"></span>
+    </div>
+  </div>
+
+  <div class="site-meta">
+
+    <a href="/nirvana/" class="brand" rel="start">
+      <i class="logo-line"></i>
+      <h1 class="site-title">涅槃快乐是金</h1>
+      <i class="logo-line"></i>
+    </a>
+  </div>
+
+  <div class="site-nav-right">
+    <div class="toggle popup-trigger">
+        <i class="fa fa-search fa-fw fa-lg"></i>
+    </div>
+  </div>
+</div>
+
+
+
+<nav class="site-nav">
+  <ul class="main-menu menu">
+        <li class="menu-item menu-item-home"><a href="/nirvana/" rel="section">首页</a></li>
+        <li class="menu-item menu-item-git"><a href="/nirvana/categories/git" rel="section">git</a></li>
+        <li class="menu-item menu-item-linux"><a href="/nirvana/categories/linux" rel="section">linux</a></li>
+        <li class="menu-item menu-item-android"><a href="/nirvana/categories/android" rel="section">android</a></li>
+        <li class="menu-item menu-item-随笔"><a href="/nirvana/categories/informal" rel="section">随笔</a></li>
+        <li class="menu-item menu-item-mac"><a href="/nirvana/categories/mac" rel="section">mac</a></li>
+        <li class="menu-item menu-item-react-native"><a href="/nirvana/categories/reactnative" rel="section">react-native</a></li>
+        <li class="menu-item menu-item-算法"><a href="/nirvana/categories/algorithm" rel="section">算法</a></li>
+        <li class="menu-item menu-item-读书笔记"><a href="/nirvana/categories/note" rel="section">读书笔记</a></li>
+        <li class="menu-item menu-item-开发工具"><a href="/nirvana/categories/tool" rel="section">开发工具</a></li>
+        <li class="menu-item menu-item-设计模式(ts)"><a href="/nirvana/categories/DesignPattern" rel="section">设计模式(TS)</a></li>
+        <li class="menu-item menu-item-前端"><a href="/nirvana/categories/javascript" rel="section">前端</a></li>
+      <li class="menu-item menu-item-search">
+        <a role="button" class="popup-trigger"><i class="fa fa-search fa-fw"></i>搜索
+        </a>
+      </li>
+  </ul>
+</nav>
+
+
+
+  <div class="search-pop-overlay">
+    <div class="popup search-popup"><div class="search-header">
+  <span class="search-icon">
+    <i class="fa fa-search"></i>
+  </span>
+  <div class="search-input-container">
+    <input autocomplete="off" autocapitalize="off" maxlength="80"
+           placeholder="搜索..." spellcheck="false"
+           type="search" class="search-input">
+  </div>
+  <span class="popup-btn-close" role="button">
+    <i class="fa fa-times-circle"></i>
+  </span>
+</div>
+<div class="search-result-container no-result">
+  <div class="search-result-icon">
+    <i class="fa fa-spinner fa-pulse fa-5x"></i>
+  </div>
+</div>
+
+    </div>
+  </div>
+
+</div>
+        
+  
+  <div class="toggle sidebar-toggle" role="button">
+    <span class="toggle-line"></span>
+    <span class="toggle-line"></span>
+    <span class="toggle-line"></span>
+  </div>
+
+  <aside class="sidebar">
+
+    <div class="sidebar-inner sidebar-nav-active sidebar-toc-active">
+      <ul class="sidebar-nav">
+        <li class="sidebar-nav-toc">
+          文章目录
+        </li>
+        <li class="sidebar-nav-overview">
+          站点概览
+        </li>
+      </ul>
+
+      <div class="sidebar-panel-container">
+        <!--noindex-->
+        <div class="post-toc-wrap sidebar-panel">
+            <div class="post-toc animated"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#%E9%98%B2%E6%8A%96-debounce-%E2%80%94"><span class="nav-text">防抖(debounce)—</span></a></li></ol></div>
+        </div>
+        <!--/noindex-->
+
+        <div class="site-overview-wrap sidebar-panel">
+          <div class="site-author site-overview-item animated" itemprop="author" itemscope itemtype="http://schema.org/Person">
+    <img class="site-author-image" itemprop="image" alt="nirvana"
+      src="/nirvana/images/headphoto.jpeg">
+  <p class="site-author-name" itemprop="name">nirvana</p>
+  <div class="site-description" itemprop="description">个人学习笔记</div>
+</div>
+<div class="site-state-wrap site-overview-item animated">
+  <nav class="site-state">
+      <div class="site-state-item site-state-posts">
+          <a href="/nirvana/archives">
+          <span class="site-state-item-count">182</span>
+          <span class="site-state-item-name">日志</span>
+        </a>
+      </div>
+      <div class="site-state-item site-state-categories">
+        <span class="site-state-item-count">11</span>
+        <span class="site-state-item-name">分类</span>
+      </div>
+  </nav>
+</div>
+  <div class="links-of-author site-overview-item animated">
+      <span class="links-of-author-item">
+        <a href="https://github.com/lzhwWeb" title="GitHub → https:&#x2F;&#x2F;github.com&#x2F;lzhwWeb" rel="noopener" target="_blank"><i class="fab fa-github fa-fw"></i></a>
+      </span>
+  </div>
+
+
+
+        </div>
+      </div>
+        <div class="back-to-top animated" role="button">
+          <i class="fa fa-arrow-up"></i>
+          <span>0%</span>
+        </div>
+    </div>
+  </aside>
+  <div class="sidebar-dimmer"></div>
+
+
+    </header>
+
+    
+
+<noscript>
+  <div class="noscript-warning">Theme NexT works best with JavaScript enabled</div>
+</noscript>
+
+
+    <div class="main-inner post posts-expand">
+
+
+  
+
+
+<div class="post-block">
+  
+  
+
+  <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="zh-CN">
+    <link itemprop="mainEntityOfPage" href="https://lzhwweb.github.io/nirvana/javascript/%E5%89%8D%E7%AB%AF/js%E9%98%B2%E6%8A%96%E5%92%8C%E8%8A%82%E6%B5%81/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/nirvana/images/headphoto.jpeg">
+      <meta itemprop="name" content="nirvana">
+      <meta itemprop="description" content="个人学习笔记">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="涅槃快乐是金">
+    </span>
+      <header class="post-header">
+        <h1 class="post-title" itemprop="name headline">
+          js防抖和节流
+        </h1>
+
+        <div class="post-meta-container">
+          <div class="post-meta">
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-calendar"></i>
+      </span>
+      <span class="post-meta-item-text">发表于</span>
+
+      <time title="创建时间：2021-03-11 21:12:40" itemprop="dateCreated datePublished" datetime="2021-03-11T21:12:40+08:00">2021-03-11</time>
+    </span>
+      <span class="post-meta-item">
+        <span class="post-meta-item-icon">
+          <i class="far fa-calendar-check"></i>
+        </span>
+        <span class="post-meta-item-text">更新于</span>
+        <time title="修改时间：2021-03-10 13:43:55" itemprop="dateModified" datetime="2021-03-10T13:43:55+08:00">2021-03-10</time>
+      </span>
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-folder"></i>
+      </span>
+      <span class="post-meta-item-text">分类于</span>
+        <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+          <a href="/nirvana/categories/javascript/" itemprop="url" rel="index"><span itemprop="name">javascript</span></a>
+        </span>
+    </span>
+
+  
+    <span id="/nirvana/javascript/%E5%89%8D%E7%AB%AF/js%E9%98%B2%E6%8A%96%E5%92%8C%E8%8A%82%E6%B5%81/" class="post-meta-item leancloud_visitors" data-flag-title="js防抖和节流" title="阅读次数">
+      <span class="post-meta-item-icon">
+        <i class="far fa-eye"></i>
+      </span>
+      <span class="post-meta-item-text">阅读次数：</span>
+      <span class="leancloud-visitors-count"></span>
+    </span>
+      </div>
+      <div class="post-meta">
+    <span class="post-meta-item" title="本文字数">
+      <span class="post-meta-item-icon">
+        <i class="far fa-file-word"></i>
+      </span>
+      <span class="post-meta-item-text">本文字数：</span>
+      <span>3k</span>
+    </span>
+    <span class="post-meta-item" title="阅读时长">
+      <span class="post-meta-item-icon">
+        <i class="far fa-clock"></i>
+      </span>
+      <span class="post-meta-item-text">阅读时长 &asymp;</span>
+      <span>3 分钟</span>
+    </span>
+</div>
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+        <p>防抖和节流是针对响应跟不上触发频率这类问题的两种解决方案。应用场景有很多，输入框持续输入，将输入内容远程校验、多次触发点击事件、onScroll等等。 处理不当或者放任不管就容易引起浏览器卡死。<br>针对快速连续触发和不可控的高频触发问题， 给出debounce 和 throttling了两种解决策略；</p>
+<h2 id="防抖-debounce-—"><a href="#防抖-debounce-—" class="headerlink" title="防抖(debounce)—"></a>防抖(debounce)—</h2><p>策略是当事件被触发时，设定一个周期延迟执行动作，若期间又被触发，则重新设定周期，直到周期结束，执行动作。 这是debounce的基本思想，在后期又扩展了前缘debounce，即执行动作在前，然后设定周期，周期内有事件被触发，不执行动作，且周期重新设定。</p>
+<p><code>延迟debounce</code></p>
+<p><img src="https://upload-images.jianshu.io/upload_images/10024246-e3337fe492ae59fc?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="延迟debounce"></p>
+<p><code>前缘debounce</code></p>
+<p><img src="https://upload-images.jianshu.io/upload_images/10024246-759614d16bd50daa?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="前缘debounce"></p>
+<p>debounce的特点是当事件快速连续不断触发时，动作只会执行一次。 延迟debounce，是在周期结束时执行，前缘debounce，是在周期开始时执行。但当触发有间断，且间断大于我们设定的时间间隔时，动作就会有多次执行。</p>
+<p><strong>效果：</strong>如果短时间内大量触发同一事件，只会执行一次函数。</p>
+<p><strong>实现：</strong>既然前面都提到了计时，那实现的关键就在于setTimeout这个函数，由于还需要一个变量来保存计时，考虑维护全局纯净，可以借助闭包来实现：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br></pre></td><td class="code"><pre><span class="line">&#x2F;*</span><br><span class="line">* fn [function] 需要防抖的函数</span><br><span class="line">* delay [number] 毫秒，防抖期限值</span><br><span class="line">*&#x2F;</span><br><span class="line">function debounce(fn,delay)&#123;</span><br><span class="line">    let timer &#x3D; null &#x2F;&#x2F;借助闭包</span><br><span class="line">    return function() &#123;</span><br><span class="line">        if(timer)&#123;</span><br><span class="line">            clearTimeout(timer) &#x2F;&#x2F;进入该分支语句，说明当前正在一个计时过程中，并且又触发了相同事件。所以要取消当前的计时，重新开始计时</span><br><span class="line">            timer &#x3D; setTimeout(fn,delay) </span><br><span class="line">        &#125;else&#123;</span><br><span class="line">            timer &#x3D; setTimeout(fn,delay) &#x2F;&#x2F; 进入该分支说明当前并没有在计时，那么就开始一个计时</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p>稍微简化下：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br></pre></td><td class="code"><pre><span class="line">&#x2F;*****************************简化后的分割线 ******************************&#x2F;</span><br><span class="line">function debounce(fn,delay)&#123;</span><br><span class="line">    let timer &#x3D; null &#x2F;&#x2F;借助闭包</span><br><span class="line">    return function() &#123;</span><br><span class="line">        if(timer)&#123;</span><br><span class="line">            clearTimeout(timer) </span><br><span class="line">        &#125;</span><br><span class="line">        timer &#x3D; setTimeout(fn,delay) &#x2F;&#x2F; 简化写法</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br><span class="line">&#x2F;&#x2F; 然后是旧代码</span><br><span class="line">function showTop  () &#123;</span><br><span class="line">    var scrollTop &#x3D; document.body.scrollTop || document.documentElement.scrollTop;</span><br><span class="line">　　console.log(&#39;滚动条位置：&#39; + scrollTop);</span><br><span class="line">&#125;</span><br><span class="line">window.onscroll &#x3D; debounce(showTop,1000) &#x2F;&#x2F; 为了方便观察效果我们取个大点的间断值，实际使用根据需要来配置</span><br><span class="line">&#96;&#96;&#96;&#96;</span><br><span class="line">此时会发现，必须在停止滚动1秒以后，才会打印出滚动条位置。</span><br><span class="line"></span><br><span class="line">## 节流(throttle)---</span><br><span class="line">策略是，让函数执行一次后，在某个时间段内暂时失效，过了这段时间后再重新激活（类似于技能冷却时间）。 节流策略也分前缘和延迟两种。与debounce类似，延迟是指 周期结束后执行动作，前缘是指执行动作后再开始周期。</span><br><span class="line"></span><br><span class="line">&#96;延迟throttling&#96;：</span><br><span class="line"></span><br><span class="line">![延迟throttling](https:&#x2F;&#x2F;upload-images.jianshu.io&#x2F;upload_images&#x2F;10024246-170a946907e707c2?imageMogr2&#x2F;auto-orient&#x2F;strip%7CimageView2&#x2F;2&#x2F;w&#x2F;1240)</span><br><span class="line"></span><br><span class="line">前缘throttling ：</span><br><span class="line"></span><br><span class="line">![前缘throttling ](https:&#x2F;&#x2F;upload-images.jianshu.io&#x2F;upload_images&#x2F;10024246-1f3724b815810fcf?imageMogr2&#x2F;auto-orient&#x2F;strip%7CimageView2&#x2F;2&#x2F;w&#x2F;1240)</span><br><span class="line"></span><br><span class="line">throttling的特点在连续高频触发事件时，动作会被定期执行，响应平滑。</span><br><span class="line">**效果：**如果短时间内大量触发同一事件，那么在函数执行一次之后，该函数在指定的时间期限内不再工作，直至过了这段时间才重新生效。</span><br><span class="line"></span><br><span class="line">**实现：** 这里借助setTimeout来做一个简单的实现，加上一个状态位valid来表示当前函数是否处于工作状态。</span><br></pre></td></tr></table></figure>
+<p>function throttle(fn,delay){<br>    let run = true<br>    return function () {<br>      if (!run) {<br>        return  // 如果开关关闭了，那就直接不执行下边的代码<br>      }<br>      run = false // 持续触发的话，run一直是false，就会停在上边的判断那里<br>      setTimeout(() =&gt; {<br>        func.apply(this, arguments)<br>        run = true // 定时器到时间之后，会把开关打开，我们的函数就会被执行<br>      }, delay)<br>    }<br>}<br>/* 请注意，节流函数并不止上面这种实现方案,<br>   例如可以完全不借助setTimeout，可以把状态位换成时间戳，然后利用时间戳差值是否大于指定间隔时间来做判定。<br>   也可以直接将setTimeout的返回的标记当做判断条件-判断当前定时器是否存在，如果存在表示还在冷却，并且在执行fn之后消除定时器表示激活，原理都一样<br>    */<br>// 以下照旧<br>function showTop  () {<br>    var scrollTop = document.body.scrollTop || document.documentElement.scrollTop;<br>　　console.log(‘滚动条位置：’ + scrollTop);<br>}<br>window.onscroll = throttle(showTop,1000) </p>
+<pre><code>## 总结
+防抖和节流巧妙地用了setTimeout，来控制函数执行的时机，优点很明显，可以节约性能，不至于多次触发复杂的业务逻辑而造成页面卡顿。复杂情况可参考underscope.js的[throttle](https://underscorejs.net/#throttle)和[debounce](https://underscorejs.net/#debounce)
+</code></pre>
+
+    </div>
+
+    
+    
+    
+
+    <footer class="post-footer">
+
+        
+
+          <div class="post-nav">
+            <div class="post-nav-item">
+                <a href="/nirvana/javascript/%E5%89%8D%E7%AB%AF/node-js%E4%B8%AD%E4%BD%BF%E7%94%A8yargs%E6%9D%A5%E5%A4%84%E7%90%86%E5%91%BD%E4%BB%A4%E8%A1%8C%E5%8F%82%E6%95%B0/" rel="prev" title="node.js中使用yargs来处理命令行参数">
+                  <i class="fa fa-chevron-left"></i> node.js中使用yargs来处理命令行参数
+                </a>
+            </div>
+            <div class="post-nav-item">
+                <a href="/nirvana/javascript/%E5%89%8D%E7%AB%AF/mini-css-extract-plugin%E7%AE%80%E4%BB%8B/" rel="next" title="mini-css-extract-plugin简介">
+                  mini-css-extract-plugin简介 <i class="fa fa-chevron-right"></i>
+                </a>
+            </div>
+          </div>
+    </footer>
+  </article>
+</div>
+
+
+
+
+
+
+
+<script>
+  window.addEventListener('tabs:register', () => {
+    let { activeClass } = CONFIG.comments;
+    if (CONFIG.comments.storage) {
+      activeClass = localStorage.getItem('comments_active') || activeClass;
+    }
+    if (activeClass) {
+      const activeTab = document.querySelector(`a[href="#comment-${activeClass}"]`);
+      if (activeTab) {
+        activeTab.click();
+      }
+    }
+  });
+  if (CONFIG.comments.storage) {
+    window.addEventListener('tabs:click', event => {
+      if (!event.target.matches('.tabs-comment .tab-content .tab-pane')) return;
+      const commentClass = event.target.classList[1];
+      localStorage.setItem('comments_active', commentClass);
+    });
+  }
+</script>
+</div>
+  </main>
+
+  <footer class="footer">
+    <div class="footer-inner">
+
+
+<div class="copyright">
+  &copy; 
+  <span itemprop="copyrightYear">2021</span>
+  <span class="with-love">
+    <i class="fa fa-heart"></i>
+  </span>
+  <span class="author" itemprop="copyrightHolder">nirvana</span>
+</div>
+<div class="wordcount">
+  <span class="post-meta-item">
+    <span class="post-meta-item-icon">
+      <i class="fa fa-chart-line"></i>
+    </span>
+      <span>站点总字数：</span>
+    <span title="站点总字数">532k</span>
+  </span>
+  <span class="post-meta-item">
+    <span class="post-meta-item-icon">
+      <i class="fa fa-coffee"></i>
+    </span>
+      <span>站点阅读时长 &asymp;</span>
+    <span title="站点阅读时长">8:04</span>
+  </span>
+</div>
+  <div class="powered-by">由 <a href="https://hexo.io/" class="theme-link" rel="noopener" target="_blank">Hexo</a> & <a href="https://theme-next.js.org/" class="theme-link" rel="noopener" target="_blank">NexT.Gemini</a> 强力驱动
+  </div>
+
+    </div>
+  </footer>
+
+  
+  <script src="https://cdn.jsdelivr.net/npm/animejs@3.2.1/lib/anime.min.js"></script>
+<script src="/nirvana/js/utils.js"></script><script src="/nirvana/js/motion.js"></script><script src="/nirvana/js/next-boot.js"></script>
+
+  
+<script src="/nirvana/js/local-search.js"></script>
+
+
+
+
+
+
+  
+
+
+<script>
+  (function() {
+    function leancloudSelector(url) {
+      url = encodeURI(url);
+      return document.getElementById(url).querySelector('.leancloud-visitors-count');
+    }
+
+    function addCount(Counter) {
+      const visitors = document.querySelector('.leancloud_visitors');
+      const url = decodeURI(visitors.id);
+      const title = visitors.dataset.flagTitle;
+
+      Counter('get', '/classes/Counter?where=' + encodeURIComponent(JSON.stringify({ url })))
+        .then(response => response.json())
+        .then(({ results }) => {
+          if (results.length > 0) {
+            const counter = results[0];
+            leancloudSelector(url).innerText = counter.time + 1;
+            Counter('put', '/classes/Counter/' + counter.objectId, { time: { '__op': 'Increment', 'amount': 1 } })
+              .catch(error => {
+                console.error('Failed to save visitor count', error);
+              });
+          } else {
+              leancloudSelector(url).innerText = 'Counter not initialized! More info at console err msg.';
+              console.error('ATTENTION! LeanCloud counter has security bug, see how to solve it here: https://github.com/theme-next/hexo-leancloud-counter-security. \n However, you can still use LeanCloud without security, by setting `security` option to `false`.');
+            
+          }
+        })
+        .catch(error => {
+          console.error('LeanCloud Counter Error', error);
+        });
+    }
+
+    function showTime(Counter) {
+      const visitors = document.querySelectorAll('.leancloud_visitors');
+      const entries = [...visitors].map(element => {
+        return decodeURI(element.id);
+      });
+
+      Counter('get', '/classes/Counter?where=' + encodeURIComponent(JSON.stringify({ url: { '$in': entries } })))
+        .then(response => response.json())
+        .then(({ results }) => {
+          for (let url of entries) {
+            const target = results.find(item => item.url === url);
+            leancloudSelector(url).innerText = target ? target.time : 0;
+          }
+        })
+        .catch(error => {
+          console.error('LeanCloud Counter Error', error);
+        });
+    }
+
+    const { app_id, app_key, server_url } = {"enable":true,"app_id":"SPsNUvBhME7XmrjzCfHkUu3e-gzGzoHsz","app_key":"4TONafemiIzvJUwqLa7WveoL","server_url":"https://leancloud.cn","security":true,"betterPerformance":false};
+    function fetchData(api_server) {
+      const Counter = (method, url, data) => {
+        return fetch(`${api_server}/1.1${url}`, {
+          method,
+          headers: {
+            'X-LC-Id'     : app_id,
+            'X-LC-Key'    : app_key,
+            'Content-Type': 'application/json',
+          },
+          body: JSON.stringify(data)
+        });
+      };
+      if (CONFIG.page.isPost) {
+        if (CONFIG.hostname !== location.hostname) return;
+        addCount(Counter);
+      } else if (document.querySelectorAll('.post-title-link').length >= 1) {
+        showTime(Counter);
+      }
+    }
+
+    const api_server = app_id.slice(-9) === '-MdYXbMMI' ? `https://${app_id.slice(0, 8).toLowerCase()}.api.lncldglobal.com` : server_url;
+
+    if (api_server) {
+      fetchData(api_server);
+    } else {
+      fetch('https://app-router.leancloud.cn/2/route?appId=' + app_id)
+        .then(response => response.json())
+        .then(({ api_server }) => {
+          fetchData('https://' + api_server);
+        });
+    }
+  })();
+</script>
+
+
+
+</body>
+</html>

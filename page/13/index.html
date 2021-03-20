@@ -1,0 +1,1535 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=2">
+<meta name="theme-color" content="#222">
+<meta name="generator" content="Hexo 5.4.0">
+ <meta name="referrer" content="no-referrer"/>
+
+  <link rel="apple-touch-icon" sizes="180x180" href="/nirvana/images/apple-touch-icon-next.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="/nirvana/images/favicon-32x32-next.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="/nirvana/images/favicon-16x16-next.png">
+  <link rel="mask-icon" href="/nirvana/images/logo.svg" color="#222">
+
+<link rel="stylesheet" href="/nirvana/css/main.css">
+
+
+
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@5.15.2/css/all.min.css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/animate.css@3.1.1/animate.min.css">
+
+<script class="hexo-configurations">
+    var NexT = window.NexT || {};
+    var CONFIG = {"hostname":"lzhwweb.github.io","root":"/nirvana/","images":"/nirvana/images","scheme":"Gemini","version":"8.2.2","exturl":false,"sidebar":{"position":"left","display":"post","padding":18,"offset":12},"copycode":false,"bookmark":{"enable":false,"color":"#222","save":"auto"},"fancybox":false,"mediumzoom":false,"lazyload":false,"pangu":false,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},"motion":{"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"fadeInDown","post_body":"fadeInDown","coll_header":"fadeInLeft","sidebar":"fadeInUp"}},"prism":false,"i18n":{"placeholder":"搜索...","empty":"没有找到任何搜索结果：${query}","hits_time":"找到 ${hits} 个搜索结果（用时 ${time} 毫秒）","hits":"找到 ${hits} 个搜索结果"},"path":"/nirvana/search.xml","localsearch":{"enable":true,"trigger":"auto","top_n_per_article":1,"unescape":false,"preload":false}};
+  </script>
+<meta name="description" content="个人学习笔记">
+<meta property="og:type" content="website">
+<meta property="og:title" content="涅槃快乐是金">
+<meta property="og:url" content="https://lzhwweb.github.io/nirvana/page/13/index.html">
+<meta property="og:site_name" content="涅槃快乐是金">
+<meta property="og:description" content="个人学习笔记">
+<meta property="og:locale" content="zh_CN">
+<meta property="article:author" content="nirvana">
+<meta property="article:tag" content="前端,javascript,node,git">
+<meta name="twitter:card" content="summary">
+
+
+<link rel="canonical" href="https://lzhwweb.github.io/nirvana/page/13/">
+
+
+<script class="page-configurations">
+  // https://hexo.io/docs/variables.html
+  CONFIG.page = {
+    sidebar: "",
+    isHome : true,
+    isPost : false,
+    lang   : 'zh-CN'
+  };
+</script>
+<title>涅槃快乐是金</title>
+  
+
+
+
+
+  <noscript>
+  <style>
+  body { margin-top: 2rem; }
+
+  .use-motion .menu-item,
+  .use-motion .sidebar,
+  .use-motion .post-block,
+  .use-motion .pagination,
+  .use-motion .comments,
+  .use-motion .post-header,
+  .use-motion .post-body,
+  .use-motion .collection-header {
+    visibility: visible;
+  }
+
+  .use-motion .header,
+  .use-motion .site-brand-container .toggle,
+  .use-motion .footer { opacity: initial; }
+
+  .use-motion .site-title,
+  .use-motion .site-subtitle,
+  .use-motion .custom-logo-image {
+    opacity: initial;
+    top: initial;
+  }
+
+  .use-motion .logo-line {
+    transform: scaleX(1);
+  }
+
+  .search-pop-overlay, .sidebar-nav { display: none; }
+  .sidebar-panel { display: block; }
+  </style>
+</noscript>
+
+</head>
+
+<body itemscope itemtype="http://schema.org/WebPage" class="use-motion">
+  <div class="headband"></div>
+
+  <main class="main">
+    <header class="header" itemscope itemtype="http://schema.org/WPHeader">
+      <div class="header-inner"><div class="site-brand-container">
+  <div class="site-nav-toggle">
+    <div class="toggle" aria-label="切换导航栏" role="button">
+        <span class="toggle-line"></span>
+        <span class="toggle-line"></span>
+        <span class="toggle-line"></span>
+    </div>
+  </div>
+
+  <div class="site-meta">
+
+    <a href="/nirvana/" class="brand" rel="start">
+      <i class="logo-line"></i>
+      <h1 class="site-title">涅槃快乐是金</h1>
+      <i class="logo-line"></i>
+    </a>
+  </div>
+
+  <div class="site-nav-right">
+    <div class="toggle popup-trigger">
+        <i class="fa fa-search fa-fw fa-lg"></i>
+    </div>
+  </div>
+</div>
+
+
+
+<nav class="site-nav">
+  <ul class="main-menu menu">
+        <li class="menu-item menu-item-home"><a href="/nirvana/" rel="section">首页</a></li>
+        <li class="menu-item menu-item-git"><a href="/nirvana/categories/git" rel="section">git</a></li>
+        <li class="menu-item menu-item-linux"><a href="/nirvana/categories/linux" rel="section">linux</a></li>
+        <li class="menu-item menu-item-android"><a href="/nirvana/categories/android" rel="section">android</a></li>
+        <li class="menu-item menu-item-随笔"><a href="/nirvana/categories/informal" rel="section">随笔</a></li>
+        <li class="menu-item menu-item-mac"><a href="/nirvana/categories/mac" rel="section">mac</a></li>
+        <li class="menu-item menu-item-react-native"><a href="/nirvana/categories/reactnative" rel="section">react-native</a></li>
+        <li class="menu-item menu-item-算法"><a href="/nirvana/categories/algorithm" rel="section">算法</a></li>
+        <li class="menu-item menu-item-读书笔记"><a href="/nirvana/categories/note" rel="section">读书笔记</a></li>
+        <li class="menu-item menu-item-开发工具"><a href="/nirvana/categories/tool" rel="section">开发工具</a></li>
+        <li class="menu-item menu-item-设计模式(ts)"><a href="/nirvana/categories/DesignPattern" rel="section">设计模式(TS)</a></li>
+        <li class="menu-item menu-item-前端"><a href="/nirvana/categories/javascript" rel="section">前端</a></li>
+      <li class="menu-item menu-item-search">
+        <a role="button" class="popup-trigger"><i class="fa fa-search fa-fw"></i>搜索
+        </a>
+      </li>
+  </ul>
+</nav>
+
+
+
+  <div class="search-pop-overlay">
+    <div class="popup search-popup"><div class="search-header">
+  <span class="search-icon">
+    <i class="fa fa-search"></i>
+  </span>
+  <div class="search-input-container">
+    <input autocomplete="off" autocapitalize="off" maxlength="80"
+           placeholder="搜索..." spellcheck="false"
+           type="search" class="search-input">
+  </div>
+  <span class="popup-btn-close" role="button">
+    <i class="fa fa-times-circle"></i>
+  </span>
+</div>
+<div class="search-result-container no-result">
+  <div class="search-result-icon">
+    <i class="fa fa-spinner fa-pulse fa-5x"></i>
+  </div>
+</div>
+
+    </div>
+  </div>
+
+</div>
+        
+  
+  <div class="toggle sidebar-toggle" role="button">
+    <span class="toggle-line"></span>
+    <span class="toggle-line"></span>
+    <span class="toggle-line"></span>
+  </div>
+
+  <aside class="sidebar">
+
+    <div class="sidebar-inner sidebar-overview-active">
+      <ul class="sidebar-nav">
+        <li class="sidebar-nav-toc">
+          文章目录
+        </li>
+        <li class="sidebar-nav-overview">
+          站点概览
+        </li>
+      </ul>
+
+      <div class="sidebar-panel-container">
+        <!--noindex-->
+        <div class="post-toc-wrap sidebar-panel">
+        </div>
+        <!--/noindex-->
+
+        <div class="site-overview-wrap sidebar-panel">
+          <div class="site-author site-overview-item animated" itemprop="author" itemscope itemtype="http://schema.org/Person">
+    <img class="site-author-image" itemprop="image" alt="nirvana"
+      src="/nirvana/images/headphoto.jpeg">
+  <p class="site-author-name" itemprop="name">nirvana</p>
+  <div class="site-description" itemprop="description">个人学习笔记</div>
+</div>
+<div class="site-state-wrap site-overview-item animated">
+  <nav class="site-state">
+      <div class="site-state-item site-state-posts">
+          <a href="/nirvana/archives">
+          <span class="site-state-item-count">182</span>
+          <span class="site-state-item-name">日志</span>
+        </a>
+      </div>
+      <div class="site-state-item site-state-categories">
+        <span class="site-state-item-count">11</span>
+        <span class="site-state-item-name">分类</span>
+      </div>
+  </nav>
+</div>
+  <div class="links-of-author site-overview-item animated">
+      <span class="links-of-author-item">
+        <a href="https://github.com/lzhwWeb" title="GitHub → https:&#x2F;&#x2F;github.com&#x2F;lzhwWeb" rel="noopener" target="_blank"><i class="fab fa-github fa-fw"></i></a>
+      </span>
+  </div>
+
+
+
+        </div>
+      </div>
+        <div class="back-to-top animated" role="button">
+          <i class="fa fa-arrow-up"></i>
+          <span>0%</span>
+        </div>
+    </div>
+  </aside>
+  <div class="sidebar-dimmer"></div>
+
+
+    </header>
+
+    
+
+<noscript>
+  <div class="noscript-warning">Theme NexT works best with JavaScript enabled</div>
+</noscript>
+
+
+    <div class="main-inner index posts-expand">
+
+    
+
+
+<div class="post-block">
+  
+  
+
+  <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="">
+    <link itemprop="mainEntityOfPage" href="https://lzhwweb.github.io/nirvana/reactnative/react-native/iOS-RN-0-45%E4%BB%A5%E4%B8%8A%E7%89%88%E6%9C%AC%E7%BD%91%E7%BB%9C%E9%97%AE%E9%A2%98%E6%97%A0%E6%B3%95%E5%90%AF%E5%8A%A8/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/nirvana/images/headphoto.jpeg">
+      <meta itemprop="name" content="nirvana">
+      <meta itemprop="description" content="个人学习笔记">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="涅槃快乐是金">
+    </span>
+      <header class="post-header">
+        <h2 class="post-title" itemprop="name headline">
+          <a href="/nirvana/reactnative/react-native/iOS-RN-0-45%E4%BB%A5%E4%B8%8A%E7%89%88%E6%9C%AC%E7%BD%91%E7%BB%9C%E9%97%AE%E9%A2%98%E6%97%A0%E6%B3%95%E5%90%AF%E5%8A%A8/" class="post-title-link" itemprop="url">iOS-RN-0-45以上版本网络问题无法启动</a>
+        </h2>
+
+        <div class="post-meta-container">
+          <div class="post-meta">
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-calendar"></i>
+      </span>
+      <span class="post-meta-item-text">发表于</span>
+      
+
+      <time title="创建时间：2021-03-10 21:12:40 / 修改时间：13:43:55" itemprop="dateCreated datePublished" datetime="2021-03-10T21:12:40+08:00">2021-03-10</time>
+    </span>
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-folder"></i>
+      </span>
+      <span class="post-meta-item-text">分类于</span>
+        <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+          <a href="/nirvana/categories/reactnative/" itemprop="url" rel="index"><span itemprop="name">reactnative</span></a>
+        </span>
+    </span>
+
+  
+    <span id="/nirvana/reactnative/react-native/iOS-RN-0-45%E4%BB%A5%E4%B8%8A%E7%89%88%E6%9C%AC%E7%BD%91%E7%BB%9C%E9%97%AE%E9%A2%98%E6%97%A0%E6%B3%95%E5%90%AF%E5%8A%A8/" class="post-meta-item leancloud_visitors" data-flag-title="iOS-RN-0-45以上版本网络问题无法启动" title="阅读次数">
+      <span class="post-meta-item-icon">
+        <i class="far fa-eye"></i>
+      </span>
+      <span class="post-meta-item-text">阅读次数：</span>
+      <span class="leancloud-visitors-count"></span>
+    </span>
+      </div>
+      <div class="post-meta">
+    <span class="post-meta-item" title="本文字数">
+      <span class="post-meta-item-icon">
+        <i class="far fa-file-word"></i>
+      </span>
+      <span class="post-meta-item-text">本文字数：</span>
+      <span>1k</span>
+    </span>
+    <span class="post-meta-item" title="阅读时长">
+      <span class="post-meta-item-icon">
+        <i class="far fa-clock"></i>
+      </span>
+      <span class="post-meta-item-text">阅读时长 &asymp;</span>
+      <span>1 分钟</span>
+    </span>
+</div>
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+          <p>RN iOS 0.45以上版本开始需要依赖一些第三方编译库，但这些库在国内下载都非常困难（一般的翻墙工具都很难下载）<br>未来RN不同版本可能依赖不同版本的第三方编译库，具体所需库和版本请查看<a target="_blank" rel="noopener" href="https://github.com/facebook/react-native/blob/master/scripts/ios-install-third-party.sh">ios-install-third-party.sh</a>文件，注意先把左上角的branch切换到对应的版本.</p>
+<p><img src="http://upload-images.jianshu.io/upload_images/10024246-4967270af295b740.jpg?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="1515804427550.jpg"></p>
+<p>在文件最下面找到需要第三方编译库</p>
+<p><img src="http://upload-images.jianshu.io/upload_images/10024246-182697a23377bd82.jpg?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="1515804585324.jpg"></p>
+<p>我现在使用的52版本的内容为</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">fetch_and_unpack glog-0.3.4.tar.gz https:&#x2F;&#x2F;github.com&#x2F;google&#x2F;glog&#x2F;archive&#x2F;v0.3.4.tar.gz 69f91cd5a1de35ead0bc4103ea87294b0206a456 &quot;\&quot;$SCRIPTDIR&#x2F;ios-configure-glog.sh\&quot;&quot;</span><br><span class="line">fetch_and_unpack double-conversion-1.1.5.tar.gz https:&#x2F;&#x2F;github.com&#x2F;google&#x2F;double-conversion&#x2F;archive&#x2F;v1.1.5.tar.gz 96a8aba1b4ce7d4a7a3c123be26c379c2fed1def</span><br><span class="line">fetch_and_unpack boost_1_63_0.tar.gz https:&#x2F;&#x2F;github.com&#x2F;react-native-community&#x2F;boost-for-react-native&#x2F;releases&#x2F;download&#x2F;v1.63.0-0&#x2F;boost_1_63_0.tar.gz c3f57e1d22a995e608983effbb752b54b6eab741</span><br><span class="line">fetch_and_unpack folly-2016.09.26.00.tar.gz https:&#x2F;&#x2F;github.com&#x2F;facebook&#x2F;folly&#x2F;archive&#x2F;v2016.09.26.00.tar.gz f3b928b5039235bad6cece638c597c6684d1e4e6</span><br></pre></td></tr></table></figure>
+
+<p>下载完后需要把文件copy到***~/.rncache***下，然后就可以运行RN程序了</p>
+
+      
+    </div>
+
+    
+    
+    
+
+    <footer class="post-footer">
+        <div class="post-eof"></div>
+      
+    </footer>
+  </article>
+</div>
+
+
+
+
+    
+
+
+<div class="post-block">
+  
+  
+
+  <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="">
+    <link itemprop="mainEntityOfPage" href="https://lzhwweb.github.io/nirvana/mac/mac/Mac-OS-%E5%AE%89%E8%A3%85-Telnet/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/nirvana/images/headphoto.jpeg">
+      <meta itemprop="name" content="nirvana">
+      <meta itemprop="description" content="个人学习笔记">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="涅槃快乐是金">
+    </span>
+      <header class="post-header">
+        <h2 class="post-title" itemprop="name headline">
+          <a href="/nirvana/mac/mac/Mac-OS-%E5%AE%89%E8%A3%85-Telnet/" class="post-title-link" itemprop="url">Mac-OS-安装-Telnet</a>
+        </h2>
+
+        <div class="post-meta-container">
+          <div class="post-meta">
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-calendar"></i>
+      </span>
+      <span class="post-meta-item-text">发表于</span>
+      
+
+      <time title="创建时间：2021-03-10 21:12:40 / 修改时间：13:43:55" itemprop="dateCreated datePublished" datetime="2021-03-10T21:12:40+08:00">2021-03-10</time>
+    </span>
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-folder"></i>
+      </span>
+      <span class="post-meta-item-text">分类于</span>
+        <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+          <a href="/nirvana/categories/mac/" itemprop="url" rel="index"><span itemprop="name">mac</span></a>
+        </span>
+    </span>
+
+  
+    <span id="/nirvana/mac/mac/Mac-OS-%E5%AE%89%E8%A3%85-Telnet/" class="post-meta-item leancloud_visitors" data-flag-title="Mac-OS-安装-Telnet" title="阅读次数">
+      <span class="post-meta-item-icon">
+        <i class="far fa-eye"></i>
+      </span>
+      <span class="post-meta-item-text">阅读次数：</span>
+      <span class="leancloud-visitors-count"></span>
+    </span>
+      </div>
+      <div class="post-meta">
+    <span class="post-meta-item" title="本文字数">
+      <span class="post-meta-item-icon">
+        <i class="far fa-file-word"></i>
+      </span>
+      <span class="post-meta-item-text">本文字数：</span>
+      <span>3.2k</span>
+    </span>
+    <span class="post-meta-item" title="阅读时长">
+      <span class="post-meta-item-icon">
+        <i class="far fa-clock"></i>
+      </span>
+      <span class="post-meta-item-text">阅读时长 &asymp;</span>
+      <span>3 分钟</span>
+    </span>
+</div>
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+          <p>使用 homebrew 安装telnet：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">brew install telnet</span><br></pre></td></tr></table></figure>
+<p>安装报错</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br></pre></td><td class="code"><pre><span class="line">$ brew install telnet</span><br><span class="line">Error: &#x2F;usr&#x2F;local&#x2F;Cellar is not writable. You should change the</span><br><span class="line">ownership and permissions of &#x2F;usr&#x2F;local&#x2F;Cellar back to your</span><br><span class="line">user account:</span><br><span class="line">  sudo chown -R $(whoami) &#x2F;usr&#x2F;local&#x2F;Cellar</span><br><span class="line">Warning: You are using macOS 10.15.</span><br><span class="line">We do not provide support for this pre-release version.</span><br><span class="line">You will encounter build failures with some formulae.</span><br><span class="line">Please create pull requests instead of asking for help on Homebrew&#39;s GitHub,</span><br><span class="line">Discourse, Twitter or IRC. You are responsible for resolving any issues you</span><br><span class="line">experience, as you are running this pre-release version.</span><br><span class="line"></span><br><span class="line">Error: The following directories are not writable by your user:</span><br><span class="line">&#x2F;usr&#x2F;local&#x2F;Cellar</span><br><span class="line">&#x2F;usr&#x2F;local&#x2F;Homebrew</span><br><span class="line">&#x2F;usr&#x2F;local&#x2F;etc</span><br><span class="line">&#x2F;usr&#x2F;local&#x2F;etc&#x2F;bash_completion.d</span><br><span class="line">&#x2F;usr&#x2F;local&#x2F;opt</span><br><span class="line">&#x2F;usr&#x2F;local&#x2F;var&#x2F;homebrew&#x2F;linked</span><br><span class="line">&#x2F;usr&#x2F;local&#x2F;var&#x2F;homebrew&#x2F;locks</span><br><span class="line"></span><br><span class="line">You should change the ownership of these directories to your user.</span><br><span class="line">  sudo chown -R $(whoami) &#x2F;usr&#x2F;local&#x2F;Cellar &#x2F;usr&#x2F;local&#x2F;Homebrew &#x2F;usr&#x2F;local&#x2F;etc &#x2F;usr&#x2F;local&#x2F;etc&#x2F;bash_completion.d &#x2F;usr&#x2F;local&#x2F;opt &#x2F;usr&#x2F;local&#x2F;var&#x2F;homebrew&#x2F;linked &#x2F;usr&#x2F;local&#x2F;var&#x2F;homebrew&#x2F;locks</span><br></pre></td></tr></table></figure>
+<p>说明你当前用户权限不对，需要sudo权限执行命令，增加用户权限</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">sudo chown -R $(whoami) &#x2F;usr&#x2F;local&#x2F;Cellar &#x2F;usr&#x2F;local&#x2F;Homebrew &#x2F;usr&#x2F;local&#x2F;etc </span><br></pre></td></tr></table></figure>
+<p>重新安装</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br></pre></td><td class="code"><pre><span class="line">$ brew install telnet</span><br><span class="line">Warning: You are using macOS 10.15.</span><br><span class="line">We do not provide support for this pre-release version.</span><br><span class="line">You will encounter build failures with some formulae.</span><br><span class="line">Please create pull requests instead of asking for help on Homebrew&#39;s GitHub,</span><br><span class="line">Discourse, Twitter or IRC. You are responsible for resolving any issues you</span><br><span class="line">experience, as you are running this pre-release version.</span><br><span class="line"></span><br><span class="line">&#x3D;&#x3D;&gt; Downloading https:&#x2F;&#x2F;opensource.apple.com&#x2F;tarballs&#x2F;remote_cmds&#x2F;remote_cmds-60</span><br><span class="line">######################################################################## 100.0%</span><br><span class="line">&#x3D;&#x3D;&gt; Downloading https:&#x2F;&#x2F;opensource.apple.com&#x2F;tarballs&#x2F;libtelnet&#x2F;libtelnet-13.tar</span><br><span class="line">######################################################################## 100.0%</span><br><span class="line">&#x3D;&#x3D;&gt; xcodebuild SYMROOT&#x3D;build -arch x86_64</span><br><span class="line">&#x3D;&#x3D;&gt; make -C telnet.tproj OBJROOT&#x3D;build&#x2F;Intermediates SYMROOT&#x3D;build&#x2F;Products DSTR</span><br><span class="line">🍺  &#x2F;usr&#x2F;local&#x2F;Cellar&#x2F;telnet&#x2F;60: 4 files, 142.3KB, built in 21 seconds</span><br><span class="line">&#x3D;&#x3D;&gt; &#96;brew cleanup&#96; has not been run in 30 days, running now...</span><br></pre></td></tr></table></figure>
+<p>执行telnet ip port命令</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br></pre></td><td class="code"><pre><span class="line">$ telnet baidu.com 443</span><br><span class="line">Trying 220.181.38.148...</span><br><span class="line">Connected to baidu.com.</span><br><span class="line">Escape character is &#39;^]&#39;.</span><br><span class="line">^</span><br><span class="line">HTTP&#x2F;1.1 302 Moved Temporarily</span><br><span class="line">Server: bfe&#x2F;1.0.8.18</span><br><span class="line">Date: Mon, 08 Feb 2021 02:31:59 GMT</span><br><span class="line">Content-Type: text&#x2F;html</span><br><span class="line">Content-Length: 161</span><br><span class="line">Connection: close</span><br><span class="line">Location: http:&#x2F;&#x2F;www.baidu.com&#x2F;error.html</span><br><span class="line"></span><br><span class="line">&lt;html&gt;</span><br><span class="line">&lt;head&gt;&lt;title&gt;302 Found&lt;&#x2F;title&gt;&lt;&#x2F;head&gt;</span><br><span class="line">&lt;body bgcolor&#x3D;&quot;white&quot;&gt;</span><br><span class="line">&lt;center&gt;&lt;h1&gt;302 Found&lt;&#x2F;h1&gt;&lt;&#x2F;center&gt;</span><br><span class="line">&lt;hr&gt;&lt;center&gt;bfe&#x2F;1.0.8.18&lt;&#x2F;center&gt;</span><br><span class="line">&lt;&#x2F;body&gt;</span><br><span class="line">&lt;&#x2F;html&gt;</span><br><span class="line">Connection closed by foreign host.</span><br></pre></td></tr></table></figure>
+
+      
+    </div>
+
+    
+    
+    
+
+    <footer class="post-footer">
+        <div class="post-eof"></div>
+      
+    </footer>
+  </article>
+</div>
+
+
+
+
+    
+
+
+<div class="post-block">
+  
+  
+
+  <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="">
+    <link itemprop="mainEntityOfPage" href="https://lzhwweb.github.io/nirvana/mac/mac/MAC-%E8%93%9D%E7%89%99%E9%97%AE%E9%A2%98%E8%A7%A3%E5%86%B3%E5%8A%A0%E5%BC%BA%E7%89%88(-Airdrop-%E6%89%BE%E4%B8%8D%E5%88%B0,-%E8%93%9D%E7%89%99%E6%89%BE%E4%B8%8D%E5%88%B0%E7%AD%89-)/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/nirvana/images/headphoto.jpeg">
+      <meta itemprop="name" content="nirvana">
+      <meta itemprop="description" content="个人学习笔记">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="涅槃快乐是金">
+    </span>
+      <header class="post-header">
+        <h2 class="post-title" itemprop="name headline">
+          <a href="/nirvana/mac/mac/MAC-%E8%93%9D%E7%89%99%E9%97%AE%E9%A2%98%E8%A7%A3%E5%86%B3%E5%8A%A0%E5%BC%BA%E7%89%88(-Airdrop-%E6%89%BE%E4%B8%8D%E5%88%B0,-%E8%93%9D%E7%89%99%E6%89%BE%E4%B8%8D%E5%88%B0%E7%AD%89-)/" class="post-title-link" itemprop="url">MAC-蓝牙问题解决加强版(-Airdrop-找不到,-蓝牙找不到等-)</a>
+        </h2>
+
+        <div class="post-meta-container">
+          <div class="post-meta">
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-calendar"></i>
+      </span>
+      <span class="post-meta-item-text">发表于</span>
+      
+
+      <time title="创建时间：2021-03-10 21:12:40 / 修改时间：13:43:55" itemprop="dateCreated datePublished" datetime="2021-03-10T21:12:40+08:00">2021-03-10</time>
+    </span>
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-folder"></i>
+      </span>
+      <span class="post-meta-item-text">分类于</span>
+        <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+          <a href="/nirvana/categories/mac/" itemprop="url" rel="index"><span itemprop="name">mac</span></a>
+        </span>
+    </span>
+
+  
+    <span id="/nirvana/mac/mac/MAC-%E8%93%9D%E7%89%99%E9%97%AE%E9%A2%98%E8%A7%A3%E5%86%B3%E5%8A%A0%E5%BC%BA%E7%89%88(-Airdrop-%E6%89%BE%E4%B8%8D%E5%88%B0,-%E8%93%9D%E7%89%99%E6%89%BE%E4%B8%8D%E5%88%B0%E7%AD%89-)/" class="post-meta-item leancloud_visitors" data-flag-title="MAC-蓝牙问题解决加强版(-Airdrop-找不到,-蓝牙找不到等-)" title="阅读次数">
+      <span class="post-meta-item-icon">
+        <i class="far fa-eye"></i>
+      </span>
+      <span class="post-meta-item-text">阅读次数：</span>
+      <span class="leancloud-visitors-count"></span>
+    </span>
+      </div>
+      <div class="post-meta">
+    <span class="post-meta-item" title="本文字数">
+      <span class="post-meta-item-icon">
+        <i class="far fa-file-word"></i>
+      </span>
+      <span class="post-meta-item-text">本文字数：</span>
+      <span>232</span>
+    </span>
+    <span class="post-meta-item" title="阅读时长">
+      <span class="post-meta-item-icon">
+        <i class="far fa-clock"></i>
+      </span>
+      <span class="post-meta-item-text">阅读时长 &asymp;</span>
+      <span>1 分钟</span>
+    </span>
+</div>
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+          <p>如果你电脑出现了比如经常丢链接, 或者Hand off 不工作, Airdrop 找不到的话, 先升级到10.11.2 系统, 应该能解决很多已存的Bug.</p>
+<p>如果依然没有解决的话, 首先你可以先去删除bluetooth的配置文件. <br>在</p>
+<p>/Library/Preferences/</p>
+<p>目录里. </p>
+<p><img src="http://upload-images.jianshu.io/upload_images/10024246-5917f0bfaef81518.jpg?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" title="正在搜索“Preferences”.jpg"></p>
+<p>按 Command-shift-G , 找到后搜索 blue 就行了. </p>
+<p>删除后重启, 蓝牙配置就会重置了.  也可以尝试重启的时候按住 Command-Option-p-r 三声后松手, 也就是俗称的PR大法. 清理PR缓存. </p>
+<p>–</p>
+
+      
+    </div>
+
+    
+    
+    
+
+    <footer class="post-footer">
+        <div class="post-eof"></div>
+      
+    </footer>
+  </article>
+</div>
+
+
+
+
+    
+
+
+<div class="post-block">
+  
+  
+
+  <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="">
+    <link itemprop="mainEntityOfPage" href="https://lzhwweb.github.io/nirvana/mac/mac/Mac-%E5%9B%9B%E7%A7%8D%E4%BF%AE%E6%94%B9Hosts%E7%9A%84%E6%96%B9%E6%B3%95/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/nirvana/images/headphoto.jpeg">
+      <meta itemprop="name" content="nirvana">
+      <meta itemprop="description" content="个人学习笔记">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="涅槃快乐是金">
+    </span>
+      <header class="post-header">
+        <h2 class="post-title" itemprop="name headline">
+          <a href="/nirvana/mac/mac/Mac-%E5%9B%9B%E7%A7%8D%E4%BF%AE%E6%94%B9Hosts%E7%9A%84%E6%96%B9%E6%B3%95/" class="post-title-link" itemprop="url">Mac-四种修改Hosts的方法</a>
+        </h2>
+
+        <div class="post-meta-container">
+          <div class="post-meta">
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-calendar"></i>
+      </span>
+      <span class="post-meta-item-text">发表于</span>
+      
+
+      <time title="创建时间：2021-03-10 21:12:40 / 修改时间：13:43:55" itemprop="dateCreated datePublished" datetime="2021-03-10T21:12:40+08:00">2021-03-10</time>
+    </span>
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-folder"></i>
+      </span>
+      <span class="post-meta-item-text">分类于</span>
+        <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+          <a href="/nirvana/categories/mac/" itemprop="url" rel="index"><span itemprop="name">mac</span></a>
+        </span>
+    </span>
+
+  
+    <span id="/nirvana/mac/mac/Mac-%E5%9B%9B%E7%A7%8D%E4%BF%AE%E6%94%B9Hosts%E7%9A%84%E6%96%B9%E6%B3%95/" class="post-meta-item leancloud_visitors" data-flag-title="Mac-四种修改Hosts的方法" title="阅读次数">
+      <span class="post-meta-item-icon">
+        <i class="far fa-eye"></i>
+      </span>
+      <span class="post-meta-item-text">阅读次数：</span>
+      <span class="leancloud-visitors-count"></span>
+    </span>
+      </div>
+      <div class="post-meta">
+    <span class="post-meta-item" title="本文字数">
+      <span class="post-meta-item-icon">
+        <i class="far fa-file-word"></i>
+      </span>
+      <span class="post-meta-item-text">本文字数：</span>
+      <span>1.3k</span>
+    </span>
+    <span class="post-meta-item" title="阅读时长">
+      <span class="post-meta-item-icon">
+        <i class="far fa-clock"></i>
+      </span>
+      <span class="post-meta-item-text">阅读时长 &asymp;</span>
+      <span>1 分钟</span>
+    </span>
+</div>
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+          <p>　　1、通过 VI 编辑器修改</p>
+<p>　　打开终端（应用程序——实用工具），运行：</p>
+<p>　　sudo vi /etc/hosts</p>
+<p><img src="https://upload-images.jianshu.io/upload_images/10024246-67eb013c22cf36b0.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="image"></p>
+<p>　　屏幕上会提示你输入密码（输入密码的时候不会有任何字符显示，甚至*都不会显示，输完之后按回车就是了），打开 hosts 文件之后按 i 键进入插入模式（可理解为编辑模式，如下图所示，会有「INSERT 」提示，即可插入编辑的意思），然后按照你的需要对该文件进行编辑，编辑完成之后按 ESC 键退出插入模式，之后按「 :wq+回车」保存退出，记得英文的冒号也是要输入的哦。</p>
+<p><img src="https://upload-images.jianshu.io/upload_images/10024246-3e19c469c281313b.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="image"></p>
+<p>　　VI 编辑器对于经常使用 Linux 的用户应该不会陌生，而且该编辑器是默认内置在 Mac 系统中的。但是，对于没有使用过 VI 的用户，还真得花一会儿功夫来学习其基本使用方法。另外VI编辑器是一个很好很强大的工具，想要玩好 Mac 的话，最好掌握这个工具的使用。</p>
+<p>　　2、直接在 Mac 系统下找到 Hosts 文件修改</p>
+<p>　　这应该算是最简单以及最直观的一个修改方法了。</p>
+<p>　　第一步、打开你的文件管理器也就是Finder ，Hosts自然也是在这个里面。</p>
+<p><img src="https://upload-images.jianshu.io/upload_images/10024246-7bf8749a01353aac.jpg?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="image"></p>
+<p>　　第二步、接下来请按快捷键组合 Shift+Command+G 三个组合按键查找文件，并输入 Hosts 文件的所在路径：/etc/hosts ，如图所示：</p>
+<p><img src="https://upload-images.jianshu.io/upload_images/10024246-8af91772eae318b4.jpg?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="image"></p>
+<p>　　第三步、在打开的文件夹当中找到「Hosts」文件夹。</p>
+<p><img src="https://upload-images.jianshu.io/upload_images/10024246-d249d67354796e5f.jpg?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="image"></p>
+<p>　　第四步、复制这个「hosts」文件到桌面上，鼠标右键点击/右击它，选择「打开方式」—「文本编辑」，打开这个「hosts」文件，然后将你要修改的内容直接在里面修改就好了。</p>
+<p><img src="https://upload-images.jianshu.io/upload_images/10024246-a60eca4f5ebbdbe7.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="image"></p>
+<p>　　第五步、将你修改好的 hosts 文件在复制回 Hosts 文件的所在（文件夹下）路径：/etc/hosts 之下替换原始的 hosts 文件就好了，这样你 Mac 系统下的 hosts 文件就被成功修改了。</p>
+<p><img src="https://upload-images.jianshu.io/upload_images/10024246-7f4fe79c935b1b22.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="image"></p>
+<p>　　3、使用 cat 命令合并文件</p>
+<p>　　这个方法比较适合当你想往 Hosts 文件中添加一些内容的情况，首先你需要把需要添加到 Hosts 文件中的内容保存为一个TXT文本文件（建议直接保存在你的用户目录），我这里拿保存在用户目录中的123.txt为例说明。</p>
+<p>　　同样是启动终端，然后运行下面两条命令：</p>
+<p>　　sudo -s</p>
+<p>　　cat ~/123.txt/etc/hosts</p>
+<p>　　~ 符号在 Mac 甚至所有基于 Unix 和 Linux 的系统中都是代表当前用户的用户目录，.代表当前目录，这回你就应该明白上面的命令中为什么是 ~/123.txt 了吧。</p>
+<p>　　4、直接在图形界面中修改</p>
+<p>　　打开 Finder，然后点击菜单栏中的 前往——前往文件夹（或者快捷键 Shift+Command+G），在路径中输入 /private，进入之后在 etc 文件夹上点击右键——显示简介，在文件夹简介窗口的最下面找到“共享与权限”，将 everyone 的权限修改为“读与写”，如果你发现不能修改的话，将右下角的那把小锁解开就可以修改了。</p>
+<p><img src="https://upload-images.jianshu.io/upload_images/10024246-0847ef6d184c1f5d.jpg?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="image"></p>
+<p>　　修改 etc 文件夹的权限之后，再进入 etc 文件夹下面，修改名为 hosts 文件的权限（同样是everyone读与写），修改完成之后，你就可以直接在 hosts 文件上点右键，通过“文本编辑”打开并编辑该文件了，不会出现没有权限的提示。修改并保存完成之后，记得将该文件和 etc 文件夹的权限还原。</p>
+
+      
+    </div>
+
+    
+    
+    
+
+    <footer class="post-footer">
+        <div class="post-eof"></div>
+      
+    </footer>
+  </article>
+</div>
+
+
+
+
+    
+
+
+<div class="post-block">
+  
+  
+
+  <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="">
+    <link itemprop="mainEntityOfPage" href="https://lzhwweb.github.io/nirvana/mac/mac/Mac-%E6%95%88%E7%8E%87%E5%B7%A5%E5%85%B7%E8%BD%AF%E4%BB%B6-OpenInTerminal/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/nirvana/images/headphoto.jpeg">
+      <meta itemprop="name" content="nirvana">
+      <meta itemprop="description" content="个人学习笔记">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="涅槃快乐是金">
+    </span>
+      <header class="post-header">
+        <h2 class="post-title" itemprop="name headline">
+          <a href="/nirvana/mac/mac/Mac-%E6%95%88%E7%8E%87%E5%B7%A5%E5%85%B7%E8%BD%AF%E4%BB%B6-OpenInTerminal/" class="post-title-link" itemprop="url">Mac-效率工具软件-OpenInTerminal</a>
+        </h2>
+
+        <div class="post-meta-container">
+          <div class="post-meta">
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-calendar"></i>
+      </span>
+      <span class="post-meta-item-text">发表于</span>
+      
+
+      <time title="创建时间：2021-03-10 21:12:40 / 修改时间：13:43:55" itemprop="dateCreated datePublished" datetime="2021-03-10T21:12:40+08:00">2021-03-10</time>
+    </span>
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-folder"></i>
+      </span>
+      <span class="post-meta-item-text">分类于</span>
+        <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+          <a href="/nirvana/categories/mac/" itemprop="url" rel="index"><span itemprop="name">mac</span></a>
+        </span>
+    </span>
+
+  
+    <span id="/nirvana/mac/mac/Mac-%E6%95%88%E7%8E%87%E5%B7%A5%E5%85%B7%E8%BD%AF%E4%BB%B6-OpenInTerminal/" class="post-meta-item leancloud_visitors" data-flag-title="Mac-效率工具软件-OpenInTerminal" title="阅读次数">
+      <span class="post-meta-item-icon">
+        <i class="far fa-eye"></i>
+      </span>
+      <span class="post-meta-item-text">阅读次数：</span>
+      <span class="leancloud-visitors-count"></span>
+    </span>
+      </div>
+      <div class="post-meta">
+    <span class="post-meta-item" title="本文字数">
+      <span class="post-meta-item-icon">
+        <i class="far fa-file-word"></i>
+      </span>
+      <span class="post-meta-item-text">本文字数：</span>
+      <span>313</span>
+    </span>
+    <span class="post-meta-item" title="阅读时长">
+      <span class="post-meta-item-icon">
+        <i class="far fa-clock"></i>
+      </span>
+      <span class="post-meta-item-text">阅读时长 &asymp;</span>
+      <span>1 分钟</span>
+    </span>
+</div>
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+          <p>软件是以 Finder 的扩展形式存在的，安装后你并不会在 Applications 文件夹中看到它。</p>
+<h4 id="总结来说有三点"><a href="#总结来说有三点" class="headerlink" title="总结来说有三点"></a>总结来说有三点</h4><ul>
+<li>可以快速从终端（Terminal）中打开某个目录</li>
+<li>可以快速用编辑器打开某个目录或者文件</li>
+<li>可以复制某个文件或者目录的路径<br><img src="https://upload-images.jianshu.io/upload_images/10024246-4dcfaae0ade1f4a7.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240"><br><img src="https://upload-images.jianshu.io/upload_images/10024246-ce3c7903db535631.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240"><h2 id="如何安装🖥"><a href="#如何安装🖥" class="headerlink" title="如何安装🖥"></a>如何安装🖥</h2></li>
+</ul>
+<h3 id="1-下载"><a href="#1-下载" class="headerlink" title="1. 下载"></a>1. 下载</h3><h4 id="a-Homebrew"><a href="#a-Homebrew" class="headerlink" title="a) Homebrew"></a>a) Homebrew</h4><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">brew install --cask openinterminal</span><br></pre></td></tr></table></figure>
+
+<h4 id="b-手动"><a href="#b-手动" class="headerlink" title="b) 手动"></a>b) 手动</h4><ol>
+<li> 从 <a target="_blank" rel="noopener" href="https://github.com/Ji4n1ng/OpenInTerminal/releases">release</a> 中下载。</li>
+<li> 将应用移动到 <code>应用程序</code> 文件夹。</li>
+</ol>
+<blockquote>
+<p>⚠️当您第一次运行应用程序时，macOS 将要求访问 <code>访达</code> 和 <code>终端</code>（或 <code>iTerm</code>）的权限。请给予应用程序权限。</p>
+</blockquote>
+<h3 id="2-打开-Finder-扩展权限"><a href="#2-打开-Finder-扩展权限" class="headerlink" title="2. 打开 Finder 扩展权限"></a><a target="_blank" rel="noopener" href="https://github.com/Ji4n1ng/OpenInTerminal/blob/master/Resources/README-zh.md#2-%E6%89%93%E5%BC%80-finder-%E6%89%A9%E5%B1%95%E6%9D%83%E9%99%90"></a>2. 打开 Finder 扩展权限</h3><p>打开 OpenInTerminal 应用。去 <code>系统偏好设置</code> -&gt; <code>扩展</code> -&gt; <code>访达扩展</code>，打开下图中的权限按钮。</p>
+<p><img src="https://upload-images.jianshu.io/upload_images/10024246-1f143a78e0bf16ca.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240"></p>
+
+      
+    </div>
+
+    
+    
+    
+
+    <footer class="post-footer">
+        <div class="post-eof"></div>
+      
+    </footer>
+  </article>
+</div>
+
+
+
+
+    
+
+
+<div class="post-block">
+  
+  
+
+  <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="">
+    <link itemprop="mainEntityOfPage" href="https://lzhwweb.github.io/nirvana/mac/mac/Mac-%EF%BC%9A%E4%BF%AE%E6%94%B9-DNS-%E5%8F%8A%E6%B8%85%E9%99%A4-DNS-%E7%BC%93%E5%AD%98/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/nirvana/images/headphoto.jpeg">
+      <meta itemprop="name" content="nirvana">
+      <meta itemprop="description" content="个人学习笔记">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="涅槃快乐是金">
+    </span>
+      <header class="post-header">
+        <h2 class="post-title" itemprop="name headline">
+          <a href="/nirvana/mac/mac/Mac-%EF%BC%9A%E4%BF%AE%E6%94%B9-DNS-%E5%8F%8A%E6%B8%85%E9%99%A4-DNS-%E7%BC%93%E5%AD%98/" class="post-title-link" itemprop="url">Mac-：修改-DNS-及清除-DNS-缓存</a>
+        </h2>
+
+        <div class="post-meta-container">
+          <div class="post-meta">
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-calendar"></i>
+      </span>
+      <span class="post-meta-item-text">发表于</span>
+      
+
+      <time title="创建时间：2021-03-10 21:12:40 / 修改时间：13:43:55" itemprop="dateCreated datePublished" datetime="2021-03-10T21:12:40+08:00">2021-03-10</time>
+    </span>
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-folder"></i>
+      </span>
+      <span class="post-meta-item-text">分类于</span>
+        <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+          <a href="/nirvana/categories/mac/" itemprop="url" rel="index"><span itemprop="name">mac</span></a>
+        </span>
+    </span>
+
+  
+    <span id="/nirvana/mac/mac/Mac-%EF%BC%9A%E4%BF%AE%E6%94%B9-DNS-%E5%8F%8A%E6%B8%85%E9%99%A4-DNS-%E7%BC%93%E5%AD%98/" class="post-meta-item leancloud_visitors" data-flag-title="Mac-：修改-DNS-及清除-DNS-缓存" title="阅读次数">
+      <span class="post-meta-item-icon">
+        <i class="far fa-eye"></i>
+      </span>
+      <span class="post-meta-item-text">阅读次数：</span>
+      <span class="leancloud-visitors-count"></span>
+    </span>
+      </div>
+      <div class="post-meta">
+    <span class="post-meta-item" title="本文字数">
+      <span class="post-meta-item-icon">
+        <i class="far fa-file-word"></i>
+      </span>
+      <span class="post-meta-item-text">本文字数：</span>
+      <span>795</span>
+    </span>
+    <span class="post-meta-item" title="阅读时长">
+      <span class="post-meta-item-icon">
+        <i class="far fa-clock"></i>
+      </span>
+      <span class="post-meta-item-text">阅读时长 &asymp;</span>
+      <span>1 分钟</span>
+    </span>
+</div>
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+          <ul>
+<li><ol>
+<li><p>在苹果菜单选择 “系统偏好设置”。</p>
+<p>   <img src="https://upload-images.jianshu.io/upload_images/10024246-134910c4b8f7de46.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240"></p>
+</li>
+</ol>
+</li>
+<li><ol>
+<li> 单击 “网络” 图标。</li>
+</ol>
+</li>
+</ul>
+<p><img src="https://upload-images.jianshu.io/upload_images/10024246-edd411652e2d5024.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240"></p>
+<ul>
+<li><ol>
+<li> 从列表中选择想要修改或当前正在使用的网络连接服务（例如 WI-FI 或以太网），然后点击 “高级”。</li>
+</ol>
+</li>
+</ul>
+<p><img src="https://upload-images.jianshu.io/upload_images/10024246-33b002edbd8a3a66.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240"></p>
+<ul>
+<li><ol>
+<li> 选择 DNS 标签，单击 “DNS 服务器” 左下角的 “+”，添加 119.29.29.29 和 114.114.114.114，然后单击右下角的 “好”。<br><img src="https://upload-images.jianshu.io/upload_images/10024246-f1ecd48ae2e2e8c1.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240"></li>
+</ol>
+</li>
+</ul>
+<h2 id="还原-OS-X-中的-DNS-缓存设置"><a href="#还原-OS-X-中的-DNS-缓存设置" class="headerlink" title="还原 OS X 中的 DNS 缓存设置"></a>还原 OS X 中的 DNS 缓存设置</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">了解如何还原（清空）DNS 缓存设置。</span><br><span class="line"></span><br></pre></td></tr></table></figure>
+
+<blockquote>
+<p>关于 DNS 缓存</p>
+</blockquote>
+<p>OS X 会将已解析的 DNS 查询的本地缓存保留一段时间，保留时间由 DNS 服务器定义。</p>
+<p>有时可能需要立即还原缓存设置并重新查询 DNS 服务器。</p>
+<p>例如，如果您是网络或服务器管理员且您的 DNS 服务器上的条目最近有更改，您可能需要执行此操作。</p>
+<p>如果您的 Mac 使用的不是您服务器上的最新 DNS 条目，您可重新启动 Mac 以更新其缓存的信息。</p>
+<p>如果您需要更新使用 OS X 的服务器上的 DNS 条目但又不能重新启动服务器，请使用以下适用于您所使用的 OS X 版本的命令。</p>
+<blockquote>
+<p>［应用程序］-［实用工具］-［终端］</p>
+</blockquote>
+<h2 id="OS-X-Yosemite-及更新机型"><a href="#OS-X-Yosemite-及更新机型" class="headerlink" title="OS X Yosemite 及更新机型"></a>OS X Yosemite 及更新机型</h2><blockquote>
+<p>在 OS X v10.10.4 或更高版本中，请使用以下 “终端” 命令来还原 DNS 缓存设置：</p>
+</blockquote>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">sudo killall -HUP mDNSResponder</span><br><span class="line"></span><br></pre></td></tr></table></figure>
+
+<blockquote>
+<p>在 OS X v10.10 至 v10.10.3 中，请使用以下 “终端” 命令来还原 DNS 缓存设置：</p>
+</blockquote>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">sudo discoveryutil mdnsflushcache</span><br><span class="line"></span><br></pre></td></tr></table></figure>
+
+<h2 id="OS-X-Mavericks、Mountain-Lion-和-Lion"><a href="#OS-X-Mavericks、Mountain-Lion-和-Lion" class="headerlink" title="OS X Mavericks、Mountain Lion 和 Lion"></a>OS X Mavericks、Mountain Lion 和 Lion</h2><p>在 OS X v10.9.5 及更低版本中，请使用以下 “终端” 命令来还原 DNS 缓存设置：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">sudo killall -HUP mDNSResponder</span><br><span class="line"></span><br></pre></td></tr></table></figure>
+
+<blockquote>
+<p>Mac OS X Snow Leopard</p>
+</blockquote>
+<p>在 OS X v10.6 至 v10.6.8 中，请使用以下 “终端” 命令来还原 DNS 缓存设置：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">sudo dscacheutil -flushcache</span><br><span class="line"></span><br></pre></td></tr></table></figure>
+
+<ul>
+<li>  DNS 清除缓存方法来自：<a target="_blank" rel="noopener" href="https://support.apple.com/zh-cn/HT202516">苹果官网</a></li>
+<li>  DNS 修改图片来自：<a target="_blank" rel="noopener" href="https://support.dnspod.cn/Kb/showarticle/tsid/240/#link1">DNSPOD</a></li>
+</ul>
+
+      
+    </div>
+
+    
+    
+    
+
+    <footer class="post-footer">
+        <div class="post-eof"></div>
+      
+    </footer>
+  </article>
+</div>
+
+
+
+
+    
+
+
+<div class="post-block">
+  
+  
+
+  <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="">
+    <link itemprop="mainEntityOfPage" href="https://lzhwweb.github.io/nirvana/mac/mac/Mac%E6%95%99%E7%A8%8B%EF%BC%9A%E5%A6%82%E4%BD%95%E5%88%A0%E9%99%A4-DS_Store%E6%96%87%E4%BB%B6%E4%B8%94%E4%B8%8D%E5%86%8D%E7%94%9F/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/nirvana/images/headphoto.jpeg">
+      <meta itemprop="name" content="nirvana">
+      <meta itemprop="description" content="个人学习笔记">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="涅槃快乐是金">
+    </span>
+      <header class="post-header">
+        <h2 class="post-title" itemprop="name headline">
+          <a href="/nirvana/mac/mac/Mac%E6%95%99%E7%A8%8B%EF%BC%9A%E5%A6%82%E4%BD%95%E5%88%A0%E9%99%A4-DS_Store%E6%96%87%E4%BB%B6%E4%B8%94%E4%B8%8D%E5%86%8D%E7%94%9F/" class="post-title-link" itemprop="url">Mac教程：如何删除-DS_Store文件且不再生</a>
+        </h2>
+
+        <div class="post-meta-container">
+          <div class="post-meta">
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-calendar"></i>
+      </span>
+      <span class="post-meta-item-text">发表于</span>
+      
+
+      <time title="创建时间：2021-03-10 21:12:40 / 修改时间：13:43:55" itemprop="dateCreated datePublished" datetime="2021-03-10T21:12:40+08:00">2021-03-10</time>
+    </span>
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-folder"></i>
+      </span>
+      <span class="post-meta-item-text">分类于</span>
+        <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+          <a href="/nirvana/categories/mac/" itemprop="url" rel="index"><span itemprop="name">mac</span></a>
+        </span>
+    </span>
+
+  
+    <span id="/nirvana/mac/mac/Mac%E6%95%99%E7%A8%8B%EF%BC%9A%E5%A6%82%E4%BD%95%E5%88%A0%E9%99%A4-DS_Store%E6%96%87%E4%BB%B6%E4%B8%94%E4%B8%8D%E5%86%8D%E7%94%9F/" class="post-meta-item leancloud_visitors" data-flag-title="Mac教程：如何删除-DS_Store文件且不再生" title="阅读次数">
+      <span class="post-meta-item-icon">
+        <i class="far fa-eye"></i>
+      </span>
+      <span class="post-meta-item-text">阅读次数：</span>
+      <span class="leancloud-visitors-count"></span>
+    </span>
+      </div>
+      <div class="post-meta">
+    <span class="post-meta-item" title="本文字数">
+      <span class="post-meta-item-icon">
+        <i class="far fa-file-word"></i>
+      </span>
+      <span class="post-meta-item-text">本文字数：</span>
+      <span>497</span>
+    </span>
+    <span class="post-meta-item" title="阅读时长">
+      <span class="post-meta-item-icon">
+        <i class="far fa-clock"></i>
+      </span>
+      <span class="post-meta-item-text">阅读时长 &asymp;</span>
+      <span>1 分钟</span>
+    </span>
+</div>
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+          <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">.DS_Store文件重新生成非常令人困扰，我们可以用终端命令简单的处理掉。</span><br></pre></td></tr></table></figure>
+<p>　　在 Mac OS X 系统下，几乎绝大部分文件夹中都包含 .DS_Store 隐藏文件，这里保存着针对这个目录的特殊信息和设置配置，例如查看方式、图标大小以及这个目录的一些附属元数据。<br>       而在 OS X 系统中，这些文件是默认隐藏起来的，但是当我们将这些文件转移共享到 Windows 系统的时候，它们就会变成可见状态，并且看起来非常像是一些垃圾文件。<br>　　许多用户会选择在 Windows 系统中将这些 .DS_Store 文件删除，但是它们会重新生成，这一点非常令人困扰。对于这个问题，我们可以用终端命令简单的处理掉，并且防止 DS_Store 文件的再生。</p>
+<p>　　我们需要打开终端窗口，并输入删除命令：sudo find / -name “.DS_Store” -depth -exec rm {} ;</p>
+<p>　　按下回车键盘之后，终端会提示用户名和密码，直接输入密码再按回车即可。</p>
+<p>　　删除后继续在终端输入：defaults write com.apple.desktopservices DSDontWriteNetworkStores true</p>
+<p>　　然后按下回车，就可以防止 .DS_Store 文件的再生了。</p>
+
+      
+    </div>
+
+    
+    
+    
+
+    <footer class="post-footer">
+        <div class="post-eof"></div>
+      
+    </footer>
+  </article>
+</div>
+
+
+
+
+    
+
+
+<div class="post-block">
+  
+  
+
+  <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="">
+    <link itemprop="mainEntityOfPage" href="https://lzhwweb.github.io/nirvana/mac/mac/McAfee-Agent-%E5%8D%A0%E7%94%A88081-%E7%AB%AF%E5%8F%A3%E5%8F%B7/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/nirvana/images/headphoto.jpeg">
+      <meta itemprop="name" content="nirvana">
+      <meta itemprop="description" content="个人学习笔记">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="涅槃快乐是金">
+    </span>
+      <header class="post-header">
+        <h2 class="post-title" itemprop="name headline">
+          <a href="/nirvana/mac/mac/McAfee-Agent-%E5%8D%A0%E7%94%A88081-%E7%AB%AF%E5%8F%A3%E5%8F%B7/" class="post-title-link" itemprop="url">McAfee-Agent-占用8081-端口号</a>
+        </h2>
+
+        <div class="post-meta-container">
+          <div class="post-meta">
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-calendar"></i>
+      </span>
+      <span class="post-meta-item-text">发表于</span>
+      
+
+      <time title="创建时间：2021-03-10 21:12:40 / 修改时间：13:43:55" itemprop="dateCreated datePublished" datetime="2021-03-10T21:12:40+08:00">2021-03-10</time>
+    </span>
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-folder"></i>
+      </span>
+      <span class="post-meta-item-text">分类于</span>
+        <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+          <a href="/nirvana/categories/mac/" itemprop="url" rel="index"><span itemprop="name">mac</span></a>
+        </span>
+    </span>
+
+  
+    <span id="/nirvana/mac/mac/McAfee-Agent-%E5%8D%A0%E7%94%A88081-%E7%AB%AF%E5%8F%A3%E5%8F%B7/" class="post-meta-item leancloud_visitors" data-flag-title="McAfee-Agent-占用8081-端口号" title="阅读次数">
+      <span class="post-meta-item-icon">
+        <i class="far fa-eye"></i>
+      </span>
+      <span class="post-meta-item-text">阅读次数：</span>
+      <span class="leancloud-visitors-count"></span>
+    </span>
+      </div>
+      <div class="post-meta">
+    <span class="post-meta-item" title="本文字数">
+      <span class="post-meta-item-icon">
+        <i class="far fa-file-word"></i>
+      </span>
+      <span class="post-meta-item-text">本文字数：</span>
+      <span>239</span>
+    </span>
+    <span class="post-meta-item" title="阅读时长">
+      <span class="post-meta-item-icon">
+        <i class="far fa-clock"></i>
+      </span>
+      <span class="post-meta-item-text">阅读时长 &asymp;</span>
+      <span>1 分钟</span>
+    </span>
+</div>
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+          <p>公司电脑被标装，McAfee Agent关不掉</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">sudo lsof -n -i4TCP:8081</span><br><span class="line">sudo launchctl list | grep 5693</span><br><span class="line">sudo launchctl remove com.mcafee.agent.macmn</span><br></pre></td></tr></table></figure>
+
+<p>如果需要暂时禁用mac上装的mcafee，可以在命令行里先su到之前有管理员权限的账户，然后跑命令：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">sudo &#x2F;usr&#x2F;local&#x2F;McAfee&#x2F;AntiMalware&#x2F;VSControl stopoas</span><br></pre></td></tr></table></figure>
+
+      
+    </div>
+
+    
+    
+    
+
+    <footer class="post-footer">
+        <div class="post-eof"></div>
+      
+    </footer>
+  </article>
+</div>
+
+
+
+
+    
+
+
+<div class="post-block">
+  
+  
+
+  <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="">
+    <link itemprop="mainEntityOfPage" href="https://lzhwweb.github.io/nirvana/mac/mac/OSX---%E9%99%8D%E7%BA%A7Safari-12%E5%88%B011-1-2/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/nirvana/images/headphoto.jpeg">
+      <meta itemprop="name" content="nirvana">
+      <meta itemprop="description" content="个人学习笔记">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="涅槃快乐是金">
+    </span>
+      <header class="post-header">
+        <h2 class="post-title" itemprop="name headline">
+          <a href="/nirvana/mac/mac/OSX---%E9%99%8D%E7%BA%A7Safari-12%E5%88%B011-1-2/" class="post-title-link" itemprop="url">OSX---降级Safari-12到11-1-2</a>
+        </h2>
+
+        <div class="post-meta-container">
+          <div class="post-meta">
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-calendar"></i>
+      </span>
+      <span class="post-meta-item-text">发表于</span>
+      
+
+      <time title="创建时间：2021-03-10 21:12:40 / 修改时间：13:43:55" itemprop="dateCreated datePublished" datetime="2021-03-10T21:12:40+08:00">2021-03-10</time>
+    </span>
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-folder"></i>
+      </span>
+      <span class="post-meta-item-text">分类于</span>
+        <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+          <a href="/nirvana/categories/mac/" itemprop="url" rel="index"><span itemprop="name">mac</span></a>
+        </span>
+    </span>
+
+  
+    <span id="/nirvana/mac/mac/OSX---%E9%99%8D%E7%BA%A7Safari-12%E5%88%B011-1-2/" class="post-meta-item leancloud_visitors" data-flag-title="OSX---降级Safari-12到11-1-2" title="阅读次数">
+      <span class="post-meta-item-icon">
+        <i class="far fa-eye"></i>
+      </span>
+      <span class="post-meta-item-text">阅读次数：</span>
+      <span class="leancloud-visitors-count"></span>
+    </span>
+      </div>
+      <div class="post-meta">
+    <span class="post-meta-item" title="本文字数">
+      <span class="post-meta-item-icon">
+        <i class="far fa-file-word"></i>
+      </span>
+      <span class="post-meta-item-text">本文字数：</span>
+      <span>528</span>
+    </span>
+    <span class="post-meta-item" title="阅读时长">
+      <span class="post-meta-item-icon">
+        <i class="far fa-clock"></i>
+      </span>
+      <span class="post-meta-item-text">阅读时长 &asymp;</span>
+      <span>1 分钟</span>
+    </span>
+</div>
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+          <h3 id="操作"><a href="#操作" class="headerlink" title="操作"></a>操作</h3><h4 id="工具"><a href="#工具" class="headerlink" title="工具"></a>工具</h4><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">Pacifist : https:&#x2F;&#x2F;www.charlessoft.com&#x2F;cgi-bin&#x2F;pacifist_download.cgi?type&#x3D;zip</span><br></pre></td></tr></table></figure>
+
+<h4 id="Safari-11"><a href="#Safari-11" class="headerlink" title="Safari 11"></a>Safari 11</h4><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">https:&#x2F;&#x2F;www.newasp.net&#x2F;soft&#x2F;109641.html</span><br></pre></td></tr></table></figure>
+
+<h4 id="步骤"><a href="#步骤" class="headerlink" title="步骤"></a>步骤</h4><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">1 . 重启系统, 按住⌘-R不松手</span><br><span class="line">2 . 在实用工具(Utilities)下打开终端,输入csrutil disable, 然后回车; 你就看到提示系统完整性保护(SIP: System Integrity Protection)已禁用</span><br><span class="line">3 . 输入reboot回车重启电脑</span><br><span class="line">4 . 打开Pacifist, 点击 打开Safari 11.1.软件包, 选择Safari 11.1.2包的内容,点击安装按钮;</span><br><span class="line">5 . 给予管理员权限, 并一路替换,就可以了</span><br><span class="line">6 . 如果你想启用SIP, 那么重启启动系统,按住⌘-R不松手; 输入csrutil enable回车.开启SIP</span><br></pre></td></tr></table></figure>
+
+<h4 id="使用pacifist安装safari"><a href="#使用pacifist安装safari" class="headerlink" title="使用pacifist安装safari"></a>使用pacifist安装safari</h4><p><img src="http://upload-images.jianshu.io/upload_images/10024246-137076307d06f5c0.jpg?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240"></p>
+<h3 id="后记"><a href="#后记" class="headerlink" title="后记"></a>后记</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">1 . 一旦升级到 mojave 版本,是不能降级到 safari11.1.2版本的.</span><br><span class="line">2 . 如果这么操作怎么都不成功, 完全卸载 safari 再直接安装吧.</span><br></pre></td></tr></table></figure>
+
+      
+    </div>
+
+    
+    
+    
+
+    <footer class="post-footer">
+        <div class="post-eof"></div>
+      
+    </footer>
+  </article>
+</div>
+
+
+
+
+    
+
+
+<div class="post-block">
+  
+  
+
+  <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="">
+    <link itemprop="mainEntityOfPage" href="https://lzhwweb.github.io/nirvana/mac/mac/mac-brew%E5%AE%89%E8%A3%85node-%E7%AE%A1%E7%90%86%E5%B7%A5%E5%85%B7n/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/nirvana/images/headphoto.jpeg">
+      <meta itemprop="name" content="nirvana">
+      <meta itemprop="description" content="个人学习笔记">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="涅槃快乐是金">
+    </span>
+      <header class="post-header">
+        <h2 class="post-title" itemprop="name headline">
+          <a href="/nirvana/mac/mac/mac-brew%E5%AE%89%E8%A3%85node-%E7%AE%A1%E7%90%86%E5%B7%A5%E5%85%B7n/" class="post-title-link" itemprop="url">mac-brew安装node-管理工具n</a>
+        </h2>
+
+        <div class="post-meta-container">
+          <div class="post-meta">
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-calendar"></i>
+      </span>
+      <span class="post-meta-item-text">发表于</span>
+      
+
+      <time title="创建时间：2021-03-10 21:12:40 / 修改时间：13:43:55" itemprop="dateCreated datePublished" datetime="2021-03-10T21:12:40+08:00">2021-03-10</time>
+    </span>
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-folder"></i>
+      </span>
+      <span class="post-meta-item-text">分类于</span>
+        <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+          <a href="/nirvana/categories/mac/" itemprop="url" rel="index"><span itemprop="name">mac</span></a>
+        </span>
+    </span>
+
+  
+    <span id="/nirvana/mac/mac/mac-brew%E5%AE%89%E8%A3%85node-%E7%AE%A1%E7%90%86%E5%B7%A5%E5%85%B7n/" class="post-meta-item leancloud_visitors" data-flag-title="mac-brew安装node-管理工具n" title="阅读次数">
+      <span class="post-meta-item-icon">
+        <i class="far fa-eye"></i>
+      </span>
+      <span class="post-meta-item-text">阅读次数：</span>
+      <span class="leancloud-visitors-count"></span>
+    </span>
+      </div>
+      <div class="post-meta">
+    <span class="post-meta-item" title="本文字数">
+      <span class="post-meta-item-icon">
+        <i class="far fa-file-word"></i>
+      </span>
+      <span class="post-meta-item-text">本文字数：</span>
+      <span>167</span>
+    </span>
+    <span class="post-meta-item" title="阅读时长">
+      <span class="post-meta-item-icon">
+        <i class="far fa-clock"></i>
+      </span>
+      <span class="post-meta-item-text">阅读时长 &asymp;</span>
+      <span>1 分钟</span>
+    </span>
+</div>
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+          <h2 id="安装"><a href="#安装" class="headerlink" title="安装"></a>安装</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">brew install n</span><br></pre></td></tr></table></figure>
+<h2 id="安装-激活版本"><a href="#安装-激活版本" class="headerlink" title="安装/激活版本"></a>安装/激活版本</h2><p>只需执行n <version>即可安装node。如果<version>已经安装（通过n），n将激活该版本。<br>例如：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">$ n 10.0.1</span><br><span class="line">$ n 16.9.1</span><br></pre></td></tr></table></figure>
+<p>n单独执行是查看当前安装的版本，使用向上和向下箭头键导航并按enter或右箭头键进行选择，使用^ C（控制+ C）退出选择屏幕。</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">$ n</span><br><span class="line"> </span><br><span class="line">  10.8.14</span><br><span class="line">ο 10.8.17</span><br><span class="line">  10.9.6</span><br></pre></td></tr></table></figure>
+
+      
+    </div>
+
+    
+    
+    
+
+    <footer class="post-footer">
+        <div class="post-eof"></div>
+      
+    </footer>
+  </article>
+</div>
+
+
+
+
+  <nav class="pagination">
+    <a class="extend prev" rel="prev" href="/nirvana/page/12/"><i class="fa fa-angle-left" aria-label="上一页"></i></a><a class="page-number" href="/nirvana/">1</a><span class="space">&hellip;</span><a class="page-number" href="/nirvana/page/12/">12</a><span class="page-number current">13</span><a class="page-number" href="/nirvana/page/14/">14</a><span class="space">&hellip;</span><a class="page-number" href="/nirvana/page/19/">19</a><a class="extend next" rel="next" href="/nirvana/page/14/"><i class="fa fa-angle-right" aria-label="下一页"></i></a>
+  </nav>
+
+
+<script>
+  window.addEventListener('tabs:register', () => {
+    let { activeClass } = CONFIG.comments;
+    if (CONFIG.comments.storage) {
+      activeClass = localStorage.getItem('comments_active') || activeClass;
+    }
+    if (activeClass) {
+      const activeTab = document.querySelector(`a[href="#comment-${activeClass}"]`);
+      if (activeTab) {
+        activeTab.click();
+      }
+    }
+  });
+  if (CONFIG.comments.storage) {
+    window.addEventListener('tabs:click', event => {
+      if (!event.target.matches('.tabs-comment .tab-content .tab-pane')) return;
+      const commentClass = event.target.classList[1];
+      localStorage.setItem('comments_active', commentClass);
+    });
+  }
+</script>
+</div>
+  </main>
+
+  <footer class="footer">
+    <div class="footer-inner">
+
+
+<div class="copyright">
+  &copy; 
+  <span itemprop="copyrightYear">2021</span>
+  <span class="with-love">
+    <i class="fa fa-heart"></i>
+  </span>
+  <span class="author" itemprop="copyrightHolder">nirvana</span>
+</div>
+<div class="wordcount">
+  <span class="post-meta-item">
+    <span class="post-meta-item-icon">
+      <i class="fa fa-chart-line"></i>
+    </span>
+      <span>站点总字数：</span>
+    <span title="站点总字数">532k</span>
+  </span>
+  <span class="post-meta-item">
+    <span class="post-meta-item-icon">
+      <i class="fa fa-coffee"></i>
+    </span>
+      <span>站点阅读时长 &asymp;</span>
+    <span title="站点阅读时长">8:04</span>
+  </span>
+</div>
+  <div class="powered-by">由 <a href="https://hexo.io/" class="theme-link" rel="noopener" target="_blank">Hexo</a> & <a href="https://theme-next.js.org/" class="theme-link" rel="noopener" target="_blank">NexT.Gemini</a> 强力驱动
+  </div>
+
+    </div>
+  </footer>
+
+  
+  <script src="https://cdn.jsdelivr.net/npm/animejs@3.2.1/lib/anime.min.js"></script>
+<script src="/nirvana/js/utils.js"></script><script src="/nirvana/js/motion.js"></script><script src="/nirvana/js/next-boot.js"></script>
+
+  
+<script src="/nirvana/js/local-search.js"></script>
+
+
+
+
+
+
+  
+
+
+<script>
+  (function() {
+    function leancloudSelector(url) {
+      url = encodeURI(url);
+      return document.getElementById(url).querySelector('.leancloud-visitors-count');
+    }
+
+    function addCount(Counter) {
+      const visitors = document.querySelector('.leancloud_visitors');
+      const url = decodeURI(visitors.id);
+      const title = visitors.dataset.flagTitle;
+
+      Counter('get', '/classes/Counter?where=' + encodeURIComponent(JSON.stringify({ url })))
+        .then(response => response.json())
+        .then(({ results }) => {
+          if (results.length > 0) {
+            const counter = results[0];
+            leancloudSelector(url).innerText = counter.time + 1;
+            Counter('put', '/classes/Counter/' + counter.objectId, { time: { '__op': 'Increment', 'amount': 1 } })
+              .catch(error => {
+                console.error('Failed to save visitor count', error);
+              });
+          } else {
+              leancloudSelector(url).innerText = 'Counter not initialized! More info at console err msg.';
+              console.error('ATTENTION! LeanCloud counter has security bug, see how to solve it here: https://github.com/theme-next/hexo-leancloud-counter-security. \n However, you can still use LeanCloud without security, by setting `security` option to `false`.');
+            
+          }
+        })
+        .catch(error => {
+          console.error('LeanCloud Counter Error', error);
+        });
+    }
+
+    function showTime(Counter) {
+      const visitors = document.querySelectorAll('.leancloud_visitors');
+      const entries = [...visitors].map(element => {
+        return decodeURI(element.id);
+      });
+
+      Counter('get', '/classes/Counter?where=' + encodeURIComponent(JSON.stringify({ url: { '$in': entries } })))
+        .then(response => response.json())
+        .then(({ results }) => {
+          for (let url of entries) {
+            const target = results.find(item => item.url === url);
+            leancloudSelector(url).innerText = target ? target.time : 0;
+          }
+        })
+        .catch(error => {
+          console.error('LeanCloud Counter Error', error);
+        });
+    }
+
+    const { app_id, app_key, server_url } = {"enable":true,"app_id":"SPsNUvBhME7XmrjzCfHkUu3e-gzGzoHsz","app_key":"4TONafemiIzvJUwqLa7WveoL","server_url":"https://leancloud.cn","security":true,"betterPerformance":false};
+    function fetchData(api_server) {
+      const Counter = (method, url, data) => {
+        return fetch(`${api_server}/1.1${url}`, {
+          method,
+          headers: {
+            'X-LC-Id'     : app_id,
+            'X-LC-Key'    : app_key,
+            'Content-Type': 'application/json',
+          },
+          body: JSON.stringify(data)
+        });
+      };
+      if (CONFIG.page.isPost) {
+        if (CONFIG.hostname !== location.hostname) return;
+        addCount(Counter);
+      } else if (document.querySelectorAll('.post-title-link').length >= 1) {
+        showTime(Counter);
+      }
+    }
+
+    const api_server = app_id.slice(-9) === '-MdYXbMMI' ? `https://${app_id.slice(0, 8).toLowerCase()}.api.lncldglobal.com` : server_url;
+
+    if (api_server) {
+      fetchData(api_server);
+    } else {
+      fetch('https://app-router.leancloud.cn/2/route?appId=' + app_id)
+        .then(response => response.json())
+        .then(({ api_server }) => {
+          fetchData('https://' + api_server);
+        });
+    }
+  })();
+</script>
+
+
+
+</body>
+</html>

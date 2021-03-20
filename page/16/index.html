@@ -1,0 +1,1757 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=2">
+<meta name="theme-color" content="#222">
+<meta name="generator" content="Hexo 5.4.0">
+ <meta name="referrer" content="no-referrer"/>
+
+  <link rel="apple-touch-icon" sizes="180x180" href="/nirvana/images/apple-touch-icon-next.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="/nirvana/images/favicon-32x32-next.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="/nirvana/images/favicon-16x16-next.png">
+  <link rel="mask-icon" href="/nirvana/images/logo.svg" color="#222">
+
+<link rel="stylesheet" href="/nirvana/css/main.css">
+
+
+
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@5.15.2/css/all.min.css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/animate.css@3.1.1/animate.min.css">
+
+<script class="hexo-configurations">
+    var NexT = window.NexT || {};
+    var CONFIG = {"hostname":"lzhwweb.github.io","root":"/nirvana/","images":"/nirvana/images","scheme":"Gemini","version":"8.2.2","exturl":false,"sidebar":{"position":"left","display":"post","padding":18,"offset":12},"copycode":false,"bookmark":{"enable":false,"color":"#222","save":"auto"},"fancybox":false,"mediumzoom":false,"lazyload":false,"pangu":false,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},"motion":{"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"fadeInDown","post_body":"fadeInDown","coll_header":"fadeInLeft","sidebar":"fadeInUp"}},"prism":false,"i18n":{"placeholder":"搜索...","empty":"没有找到任何搜索结果：${query}","hits_time":"找到 ${hits} 个搜索结果（用时 ${time} 毫秒）","hits":"找到 ${hits} 个搜索结果"},"path":"/nirvana/search.xml","localsearch":{"enable":true,"trigger":"auto","top_n_per_article":1,"unescape":false,"preload":false}};
+  </script>
+<meta name="description" content="个人学习笔记">
+<meta property="og:type" content="website">
+<meta property="og:title" content="涅槃快乐是金">
+<meta property="og:url" content="https://lzhwweb.github.io/nirvana/page/16/index.html">
+<meta property="og:site_name" content="涅槃快乐是金">
+<meta property="og:description" content="个人学习笔记">
+<meta property="og:locale" content="zh_CN">
+<meta property="article:author" content="nirvana">
+<meta property="article:tag" content="前端,javascript,node,git">
+<meta name="twitter:card" content="summary">
+
+
+<link rel="canonical" href="https://lzhwweb.github.io/nirvana/page/16/">
+
+
+<script class="page-configurations">
+  // https://hexo.io/docs/variables.html
+  CONFIG.page = {
+    sidebar: "",
+    isHome : true,
+    isPost : false,
+    lang   : 'zh-CN'
+  };
+</script>
+<title>涅槃快乐是金</title>
+  
+
+
+
+
+  <noscript>
+  <style>
+  body { margin-top: 2rem; }
+
+  .use-motion .menu-item,
+  .use-motion .sidebar,
+  .use-motion .post-block,
+  .use-motion .pagination,
+  .use-motion .comments,
+  .use-motion .post-header,
+  .use-motion .post-body,
+  .use-motion .collection-header {
+    visibility: visible;
+  }
+
+  .use-motion .header,
+  .use-motion .site-brand-container .toggle,
+  .use-motion .footer { opacity: initial; }
+
+  .use-motion .site-title,
+  .use-motion .site-subtitle,
+  .use-motion .custom-logo-image {
+    opacity: initial;
+    top: initial;
+  }
+
+  .use-motion .logo-line {
+    transform: scaleX(1);
+  }
+
+  .search-pop-overlay, .sidebar-nav { display: none; }
+  .sidebar-panel { display: block; }
+  </style>
+</noscript>
+
+</head>
+
+<body itemscope itemtype="http://schema.org/WebPage" class="use-motion">
+  <div class="headband"></div>
+
+  <main class="main">
+    <header class="header" itemscope itemtype="http://schema.org/WPHeader">
+      <div class="header-inner"><div class="site-brand-container">
+  <div class="site-nav-toggle">
+    <div class="toggle" aria-label="切换导航栏" role="button">
+        <span class="toggle-line"></span>
+        <span class="toggle-line"></span>
+        <span class="toggle-line"></span>
+    </div>
+  </div>
+
+  <div class="site-meta">
+
+    <a href="/nirvana/" class="brand" rel="start">
+      <i class="logo-line"></i>
+      <h1 class="site-title">涅槃快乐是金</h1>
+      <i class="logo-line"></i>
+    </a>
+  </div>
+
+  <div class="site-nav-right">
+    <div class="toggle popup-trigger">
+        <i class="fa fa-search fa-fw fa-lg"></i>
+    </div>
+  </div>
+</div>
+
+
+
+<nav class="site-nav">
+  <ul class="main-menu menu">
+        <li class="menu-item menu-item-home"><a href="/nirvana/" rel="section">首页</a></li>
+        <li class="menu-item menu-item-git"><a href="/nirvana/categories/git" rel="section">git</a></li>
+        <li class="menu-item menu-item-linux"><a href="/nirvana/categories/linux" rel="section">linux</a></li>
+        <li class="menu-item menu-item-android"><a href="/nirvana/categories/android" rel="section">android</a></li>
+        <li class="menu-item menu-item-随笔"><a href="/nirvana/categories/informal" rel="section">随笔</a></li>
+        <li class="menu-item menu-item-mac"><a href="/nirvana/categories/mac" rel="section">mac</a></li>
+        <li class="menu-item menu-item-react-native"><a href="/nirvana/categories/reactnative" rel="section">react-native</a></li>
+        <li class="menu-item menu-item-算法"><a href="/nirvana/categories/algorithm" rel="section">算法</a></li>
+        <li class="menu-item menu-item-读书笔记"><a href="/nirvana/categories/note" rel="section">读书笔记</a></li>
+        <li class="menu-item menu-item-开发工具"><a href="/nirvana/categories/tool" rel="section">开发工具</a></li>
+        <li class="menu-item menu-item-设计模式(ts)"><a href="/nirvana/categories/DesignPattern" rel="section">设计模式(TS)</a></li>
+        <li class="menu-item menu-item-前端"><a href="/nirvana/categories/javascript" rel="section">前端</a></li>
+      <li class="menu-item menu-item-search">
+        <a role="button" class="popup-trigger"><i class="fa fa-search fa-fw"></i>搜索
+        </a>
+      </li>
+  </ul>
+</nav>
+
+
+
+  <div class="search-pop-overlay">
+    <div class="popup search-popup"><div class="search-header">
+  <span class="search-icon">
+    <i class="fa fa-search"></i>
+  </span>
+  <div class="search-input-container">
+    <input autocomplete="off" autocapitalize="off" maxlength="80"
+           placeholder="搜索..." spellcheck="false"
+           type="search" class="search-input">
+  </div>
+  <span class="popup-btn-close" role="button">
+    <i class="fa fa-times-circle"></i>
+  </span>
+</div>
+<div class="search-result-container no-result">
+  <div class="search-result-icon">
+    <i class="fa fa-spinner fa-pulse fa-5x"></i>
+  </div>
+</div>
+
+    </div>
+  </div>
+
+</div>
+        
+  
+  <div class="toggle sidebar-toggle" role="button">
+    <span class="toggle-line"></span>
+    <span class="toggle-line"></span>
+    <span class="toggle-line"></span>
+  </div>
+
+  <aside class="sidebar">
+
+    <div class="sidebar-inner sidebar-overview-active">
+      <ul class="sidebar-nav">
+        <li class="sidebar-nav-toc">
+          文章目录
+        </li>
+        <li class="sidebar-nav-overview">
+          站点概览
+        </li>
+      </ul>
+
+      <div class="sidebar-panel-container">
+        <!--noindex-->
+        <div class="post-toc-wrap sidebar-panel">
+        </div>
+        <!--/noindex-->
+
+        <div class="site-overview-wrap sidebar-panel">
+          <div class="site-author site-overview-item animated" itemprop="author" itemscope itemtype="http://schema.org/Person">
+    <img class="site-author-image" itemprop="image" alt="nirvana"
+      src="/nirvana/images/headphoto.jpeg">
+  <p class="site-author-name" itemprop="name">nirvana</p>
+  <div class="site-description" itemprop="description">个人学习笔记</div>
+</div>
+<div class="site-state-wrap site-overview-item animated">
+  <nav class="site-state">
+      <div class="site-state-item site-state-posts">
+          <a href="/nirvana/archives">
+          <span class="site-state-item-count">182</span>
+          <span class="site-state-item-name">日志</span>
+        </a>
+      </div>
+      <div class="site-state-item site-state-categories">
+        <span class="site-state-item-count">11</span>
+        <span class="site-state-item-name">分类</span>
+      </div>
+  </nav>
+</div>
+  <div class="links-of-author site-overview-item animated">
+      <span class="links-of-author-item">
+        <a href="https://github.com/lzhwWeb" title="GitHub → https:&#x2F;&#x2F;github.com&#x2F;lzhwWeb" rel="noopener" target="_blank"><i class="fab fa-github fa-fw"></i></a>
+      </span>
+  </div>
+
+
+
+        </div>
+      </div>
+        <div class="back-to-top animated" role="button">
+          <i class="fa fa-arrow-up"></i>
+          <span>0%</span>
+        </div>
+    </div>
+  </aside>
+  <div class="sidebar-dimmer"></div>
+
+
+    </header>
+
+    
+
+<noscript>
+  <div class="noscript-warning">Theme NexT works best with JavaScript enabled</div>
+</noscript>
+
+
+    <div class="main-inner index posts-expand">
+
+    
+
+
+<div class="post-block">
+  
+  
+
+  <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="">
+    <link itemprop="mainEntityOfPage" href="https://lzhwweb.github.io/nirvana/algorithm/%E7%AE%97%E6%B3%95%E5%AD%A6%E4%B9%A0/%E7%AE%97%E6%B3%95%E2%80%94%E2%80%94%E4%BA%8C%E5%88%86%E6%B3%95%E6%9F%A5%E6%89%BE%EF%BC%88binarySearch%EF%BC%89/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/nirvana/images/headphoto.jpeg">
+      <meta itemprop="name" content="nirvana">
+      <meta itemprop="description" content="个人学习笔记">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="涅槃快乐是金">
+    </span>
+      <header class="post-header">
+        <h2 class="post-title" itemprop="name headline">
+          <a href="/nirvana/algorithm/%E7%AE%97%E6%B3%95%E5%AD%A6%E4%B9%A0/%E7%AE%97%E6%B3%95%E2%80%94%E2%80%94%E4%BA%8C%E5%88%86%E6%B3%95%E6%9F%A5%E6%89%BE%EF%BC%88binarySearch%EF%BC%89/" class="post-title-link" itemprop="url">算法——二分法查找（binarySearch）</a>
+        </h2>
+
+        <div class="post-meta-container">
+          <div class="post-meta">
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-calendar"></i>
+      </span>
+      <span class="post-meta-item-text">发表于</span>
+      
+
+      <time title="创建时间：2021-03-10 21:12:40 / 修改时间：13:43:55" itemprop="dateCreated datePublished" datetime="2021-03-10T21:12:40+08:00">2021-03-10</time>
+    </span>
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-folder"></i>
+      </span>
+      <span class="post-meta-item-text">分类于</span>
+        <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+          <a href="/nirvana/categories/algorithm/" itemprop="url" rel="index"><span itemprop="name">algorithm</span></a>
+        </span>
+    </span>
+
+  
+    <span id="/nirvana/algorithm/%E7%AE%97%E6%B3%95%E5%AD%A6%E4%B9%A0/%E7%AE%97%E6%B3%95%E2%80%94%E2%80%94%E4%BA%8C%E5%88%86%E6%B3%95%E6%9F%A5%E6%89%BE%EF%BC%88binarySearch%EF%BC%89/" class="post-meta-item leancloud_visitors" data-flag-title="算法——二分法查找（binarySearch）" title="阅读次数">
+      <span class="post-meta-item-icon">
+        <i class="far fa-eye"></i>
+      </span>
+      <span class="post-meta-item-text">阅读次数：</span>
+      <span class="leancloud-visitors-count"></span>
+    </span>
+      </div>
+      <div class="post-meta">
+    <span class="post-meta-item" title="本文字数">
+      <span class="post-meta-item-icon">
+        <i class="far fa-file-word"></i>
+      </span>
+      <span class="post-meta-item-text">本文字数：</span>
+      <span>1.3k</span>
+    </span>
+    <span class="post-meta-item" title="阅读时长">
+      <span class="post-meta-item-icon">
+        <i class="far fa-clock"></i>
+      </span>
+      <span class="post-meta-item-text">阅读时长 &asymp;</span>
+      <span>1 分钟</span>
+    </span>
+</div>
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+          <p>二分法查找，也称为折半法，是一种在有序数组中查找特定元素的搜索算法。</p>
+<p>二分法查找的思路如下：<br>（1）首先，从数组的中间元素开始搜索，如果该元素正好是目标元素，则搜索过程结束，否则执行下一步。<br>（2）如果目标元素大于/小于中间元素，则在数组大于/小于中间元素的那一半区域查找，然后重复步骤（1）的操作。<br>（3）如果某一步数组为空，则表示找不到目标元素。<br>这种搜索算法每一次比较都使搜索范围缩小一半。时间复杂度<code>O(logn)</code>。</p>
+<h5 id="非递归写法"><a href="#非递归写法" class="headerlink" title="非递归写法"></a>非递归写法</h5><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br></pre></td><td class="code"><pre><span class="line">&#x2F;**</span><br><span class="line"> * 二分法查找</span><br><span class="line"> * @param &#123;array[T]&#125; arr 查询数组</span><br><span class="line"> * @param &#123;T&#125; key 查找对象</span><br><span class="line"> *&#x2F;</span><br><span class="line">function binarySearch(arr, key) &#123;</span><br><span class="line">  var start &#x3D; 0; &#x2F;&#x2F;数组最小索引值</span><br><span class="line">  var end &#x3D; arr.length - 1; &#x2F;&#x2F;数组最大索引值</span><br><span class="line">  while (start &lt;&#x3D; end) &#123;</span><br><span class="line">    var mid &#x3D; Math.floor((start + end) &#x2F; 2);</span><br><span class="line">    if (key &#x3D;&#x3D; arr[mid]) &#123;</span><br><span class="line">      return mid;</span><br><span class="line">    &#125; else if (key &gt; arr[mid]) &#123;</span><br><span class="line">      start &#x3D; mid + 1;</span><br><span class="line">    &#125; else &#123;</span><br><span class="line">      end &#x3D; mid - 1;</span><br><span class="line">    &#125;</span><br><span class="line">  &#125;</span><br><span class="line">  return null; &#x2F;&#x2F;start&gt;end的情况，这种情况下key的值大于arr中最大的元素值或者key的值小于arr中最小的元素值</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<h5 id="递归写法"><a href="#递归写法" class="headerlink" title="递归写法"></a>递归写法</h5><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br></pre></td><td class="code"><pre><span class="line">&#x2F;**</span><br><span class="line"> * 递归方式二分法查询</span><br><span class="line"> * @param &#123;array[T]&#125; arr 查询数组</span><br><span class="line"> * @param &#123;number&#125; start 开始位置</span><br><span class="line"> * @param &#123;number&#125; end 结束位置</span><br><span class="line"> * @param &#123;T&#125; key 查找对象</span><br><span class="line"> *&#x2F;</span><br><span class="line">function binarySearch(arr, start, end, key) &#123;</span><br><span class="line">  if (start &gt; end) &#123;</span><br><span class="line">    return null;</span><br><span class="line">  &#125;</span><br><span class="line">  var mid &#x3D; Math.floor((start + end) &#x2F; 2);</span><br><span class="line">  if (key &#x3D;&#x3D; arr[mid]) &#123;</span><br><span class="line">    return mid;</span><br><span class="line">  &#125; else if (key &lt; arr[mid]) &#123;</span><br><span class="line">    end &#x3D; mid - 1;</span><br><span class="line">    return binarySearch(arr, start, end, key);</span><br><span class="line">  &#125; else &#123;</span><br><span class="line">    start &#x3D; mid + 1;</span><br><span class="line">    return binarySearch(arr, start, end, key);</span><br><span class="line">  &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+      
+    </div>
+
+    
+    
+    
+
+    <footer class="post-footer">
+        <div class="post-eof"></div>
+      
+    </footer>
+  </article>
+</div>
+
+
+
+
+    
+
+
+<div class="post-block">
+  
+  
+
+  <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="">
+    <link itemprop="mainEntityOfPage" href="https://lzhwweb.github.io/nirvana/algorithm/%E7%AE%97%E6%B3%95%E5%AD%A6%E4%B9%A0/%E7%BA%BF%E6%80%A7%E6%9F%A5%E6%89%BE/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/nirvana/images/headphoto.jpeg">
+      <meta itemprop="name" content="nirvana">
+      <meta itemprop="description" content="个人学习笔记">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="涅槃快乐是金">
+    </span>
+      <header class="post-header">
+        <h2 class="post-title" itemprop="name headline">
+          <a href="/nirvana/algorithm/%E7%AE%97%E6%B3%95%E5%AD%A6%E4%B9%A0/%E7%BA%BF%E6%80%A7%E6%9F%A5%E6%89%BE/" class="post-title-link" itemprop="url">线性查找</a>
+        </h2>
+
+        <div class="post-meta-container">
+          <div class="post-meta">
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-calendar"></i>
+      </span>
+      <span class="post-meta-item-text">发表于</span>
+      
+
+      <time title="创建时间：2021-03-10 21:12:40 / 修改时间：13:43:55" itemprop="dateCreated datePublished" datetime="2021-03-10T21:12:40+08:00">2021-03-10</time>
+    </span>
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-folder"></i>
+      </span>
+      <span class="post-meta-item-text">分类于</span>
+        <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+          <a href="/nirvana/categories/algorithm/" itemprop="url" rel="index"><span itemprop="name">algorithm</span></a>
+        </span>
+    </span>
+
+  
+    <span id="/nirvana/algorithm/%E7%AE%97%E6%B3%95%E5%AD%A6%E4%B9%A0/%E7%BA%BF%E6%80%A7%E6%9F%A5%E6%89%BE/" class="post-meta-item leancloud_visitors" data-flag-title="线性查找" title="阅读次数">
+      <span class="post-meta-item-icon">
+        <i class="far fa-eye"></i>
+      </span>
+      <span class="post-meta-item-text">阅读次数：</span>
+      <span class="leancloud-visitors-count"></span>
+    </span>
+      </div>
+      <div class="post-meta">
+    <span class="post-meta-item" title="本文字数">
+      <span class="post-meta-item-icon">
+        <i class="far fa-file-word"></i>
+      </span>
+      <span class="post-meta-item-text">本文字数：</span>
+      <span>388</span>
+    </span>
+    <span class="post-meta-item" title="阅读时长">
+      <span class="post-meta-item-icon">
+        <i class="far fa-clock"></i>
+      </span>
+      <span class="post-meta-item-text">阅读时长 &asymp;</span>
+      <span>1 分钟</span>
+    </span>
+</div>
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+          <p><strong>线性查找</strong>又称顺序查找，是一种最简单的查找方法，它的基本思想是从第一个记录开始，逐个比较记录的关键字，直到和给定的K值相等，则查找成功；若比较结果与文件中n个记录的关键字都不等，则查找失败。<br><strong>算法思想：</strong>目标元素值挨个与数组元素比较，直达找到目标元素为止。<br><strong>算法优点：</strong>实现简单，应用范围广。<br><strong>算法缺点：</strong>效率极低，需要一个元素一个元素的比较，最坏情况下需要把数组中的元素都比较一遍。时间复杂度<code>O(n)</code></p>
+<h5 id="示例"><a href="#示例" class="headerlink" title="示例"></a>示例</h5><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line">function seqSearch(arr, value) &#123;</span><br><span class="line">    &#x2F;&#x2F;线性查找是逐一比对，发现有相同值，就返回下标</span><br><span class="line">    for (let i &#x3D; 0; i &lt; arr.length; i++) &#123;</span><br><span class="line">        if (arr[i] &#x3D;&#x3D;&#x3D; value) &#123;</span><br><span class="line">            return i</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">    return -1;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+      
+    </div>
+
+    
+    
+    
+
+    <footer class="post-footer">
+        <div class="post-eof"></div>
+      
+    </footer>
+  </article>
+</div>
+
+
+
+
+    
+
+
+<div class="post-block">
+  
+  
+
+  <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="">
+    <link itemprop="mainEntityOfPage" href="https://lzhwweb.github.io/nirvana/algorithm/%E7%AE%97%E6%B3%95%E5%AD%A6%E4%B9%A0/%E9%80%89%E6%8B%A9%E6%8E%92%E5%BA%8F/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/nirvana/images/headphoto.jpeg">
+      <meta itemprop="name" content="nirvana">
+      <meta itemprop="description" content="个人学习笔记">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="涅槃快乐是金">
+    </span>
+      <header class="post-header">
+        <h2 class="post-title" itemprop="name headline">
+          <a href="/nirvana/algorithm/%E7%AE%97%E6%B3%95%E5%AD%A6%E4%B9%A0/%E9%80%89%E6%8B%A9%E6%8E%92%E5%BA%8F/" class="post-title-link" itemprop="url">选择排序</a>
+        </h2>
+
+        <div class="post-meta-container">
+          <div class="post-meta">
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-calendar"></i>
+      </span>
+      <span class="post-meta-item-text">发表于</span>
+      
+
+      <time title="创建时间：2021-03-10 21:12:40 / 修改时间：13:43:55" itemprop="dateCreated datePublished" datetime="2021-03-10T21:12:40+08:00">2021-03-10</time>
+    </span>
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-folder"></i>
+      </span>
+      <span class="post-meta-item-text">分类于</span>
+        <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+          <a href="/nirvana/categories/algorithm/" itemprop="url" rel="index"><span itemprop="name">algorithm</span></a>
+        </span>
+    </span>
+
+  
+    <span id="/nirvana/algorithm/%E7%AE%97%E6%B3%95%E5%AD%A6%E4%B9%A0/%E9%80%89%E6%8B%A9%E6%8E%92%E5%BA%8F/" class="post-meta-item leancloud_visitors" data-flag-title="选择排序" title="阅读次数">
+      <span class="post-meta-item-icon">
+        <i class="far fa-eye"></i>
+      </span>
+      <span class="post-meta-item-text">阅读次数：</span>
+      <span class="leancloud-visitors-count"></span>
+    </span>
+      </div>
+      <div class="post-meta">
+    <span class="post-meta-item" title="本文字数">
+      <span class="post-meta-item-icon">
+        <i class="far fa-file-word"></i>
+      </span>
+      <span class="post-meta-item-text">本文字数：</span>
+      <span>901</span>
+    </span>
+    <span class="post-meta-item" title="阅读时长">
+      <span class="post-meta-item-icon">
+        <i class="far fa-clock"></i>
+      </span>
+      <span class="post-meta-item-text">阅读时长 &asymp;</span>
+      <span>1 分钟</span>
+    </span>
+</div>
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+          <p>选择排序的思想其实和冒泡排序有点类似，都是在一次排序后把最小的元素放到最前面。但是过程不同，冒泡排序是通过相邻的比较和交换。而选择排序是通过对整体的选择。<br>举个栗子，对5,3,8,6,4这个无序序列进行简单选择排序，首先要选择5以外的最小数来和5交换，也就是选择3和5交换，一次排序后就变成了3,5,8,6,4.对剩下的序列一次进行选择和交换，最终就会得到一个有序序列。<br>其实选择排序可以看成冒泡排序的优化，因为其目的相同，只是选择排序只有在确定了最小数的前提下才进行交换，大大减少了交换的次数。选择排序的时间复杂度为O(n^2)。</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br></pre></td><td class="code"><pre><span class="line">&#x2F;**</span><br><span class="line"> * 选择排序，每次先选择一个最小的，放到前面</span><br><span class="line"> * @param &#123;Array&lt;Number&gt;&#125; arry 要排序的数组</span><br><span class="line"> *&#x2F;</span><br><span class="line">function SelectSort(arry: Array&lt;Number&gt;): Array&lt;Number&gt; &#123;</span><br><span class="line">    if (arry.length &#x3D;&#x3D; 0) &#123;&#x2F;&#x2F;判断数组不为空</span><br><span class="line">        return [];</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    for (let i &#x3D; 0; i &lt; arry.length - 1; i++) &#123;&#x2F;&#x2F;从0开始,只需要比较n-1次</span><br><span class="line">        for (let j &#x3D; i + 1; j &lt; arry.length; j++) &#123;&#x2F;&#x2F;比较从i+1开始</span><br><span class="line">            if (arry[i] &gt; arry[j]) &#123;&#x2F;&#x2F;交换</span><br><span class="line">                let temp &#x3D; arry[i];</span><br><span class="line">                arry[i] &#x3D; arry[j];</span><br><span class="line">                arry[j] &#x3D; temp;</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;</span><br><span class="line">        console.log(JSON.stringify(arry))</span><br><span class="line">    &#125;</span><br><span class="line">    return arry;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p>结果：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">SelectSort([8,7,6,5,4]);</span><br><span class="line"> [4,8,7,6,5]</span><br><span class="line"> [4,5,8,7,6]</span><br><span class="line"> [4,5,6,8,7]</span><br><span class="line"> [4,5,6,7,8]</span><br></pre></td></tr></table></figure>
+
+      
+    </div>
+
+    
+    
+    
+
+    <footer class="post-footer">
+        <div class="post-eof"></div>
+      
+    </footer>
+  </article>
+</div>
+
+
+
+
+    
+
+
+<div class="post-block">
+  
+  
+
+  <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="">
+    <link itemprop="mainEntityOfPage" href="https://lzhwweb.github.io/nirvana/informal/%E9%9A%8F%E7%AC%94/%E6%A0%A1%E9%95%BF-%E6%8A%80%E6%9C%AF%E6%88%90%E9%95%BF%E5%9B%9B%E4%B8%AA%E9%98%B6%E6%AE%B5%E9%9C%80%E8%A6%81%E7%9A%84%E6%9E%B6%E6%9E%84%E7%9F%A5%E8%AF%86/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/nirvana/images/headphoto.jpeg">
+      <meta itemprop="name" content="nirvana">
+      <meta itemprop="description" content="个人学习笔记">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="涅槃快乐是金">
+    </span>
+      <header class="post-header">
+        <h2 class="post-title" itemprop="name headline">
+          <a href="/nirvana/informal/%E9%9A%8F%E7%AC%94/%E6%A0%A1%E9%95%BF-%E6%8A%80%E6%9C%AF%E6%88%90%E9%95%BF%E5%9B%9B%E4%B8%AA%E9%98%B6%E6%AE%B5%E9%9C%80%E8%A6%81%E7%9A%84%E6%9E%B6%E6%9E%84%E7%9F%A5%E8%AF%86/" class="post-title-link" itemprop="url">校长-技术成长四个阶段需要的架构知识</a>
+        </h2>
+
+        <div class="post-meta-container">
+          <div class="post-meta">
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-calendar"></i>
+      </span>
+      <span class="post-meta-item-text">发表于</span>
+      
+
+      <time title="创建时间：2021-03-10 21:12:40 / 修改时间：13:43:55" itemprop="dateCreated datePublished" datetime="2021-03-10T21:12:40+08:00">2021-03-10</time>
+    </span>
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-folder"></i>
+      </span>
+      <span class="post-meta-item-text">分类于</span>
+        <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+          <a href="/nirvana/categories/informal/" itemprop="url" rel="index"><span itemprop="name">informal</span></a>
+        </span>
+    </span>
+
+  
+    <span id="/nirvana/informal/%E9%9A%8F%E7%AC%94/%E6%A0%A1%E9%95%BF-%E6%8A%80%E6%9C%AF%E6%88%90%E9%95%BF%E5%9B%9B%E4%B8%AA%E9%98%B6%E6%AE%B5%E9%9C%80%E8%A6%81%E7%9A%84%E6%9E%B6%E6%9E%84%E7%9F%A5%E8%AF%86/" class="post-meta-item leancloud_visitors" data-flag-title="校长-技术成长四个阶段需要的架构知识" title="阅读次数">
+      <span class="post-meta-item-icon">
+        <i class="far fa-eye"></i>
+      </span>
+      <span class="post-meta-item-text">阅读次数：</span>
+      <span class="leancloud-visitors-count"></span>
+    </span>
+      </div>
+      <div class="post-meta">
+    <span class="post-meta-item" title="本文字数">
+      <span class="post-meta-item-icon">
+        <i class="far fa-file-word"></i>
+      </span>
+      <span class="post-meta-item-text">本文字数：</span>
+      <span>5.2k</span>
+    </span>
+    <span class="post-meta-item" title="阅读时长">
+      <span class="post-meta-item-icon">
+        <i class="far fa-clock"></i>
+      </span>
+      <span class="post-meta-item-text">阅读时长 &asymp;</span>
+      <span>5 分钟</span>
+    </span>
+</div>
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+          <p> <br>转载：<a target="_blank" rel="noopener" href="https://weibo.com/ttarticle/p/show?id=2309403963470512042120">https://weibo.com/ttarticle/p/show?id=2309403963470512042120</a><br>编者按：本文是李庆丰在高可用架构后花园群 3.19 北京光华路安妮意大利餐厅下午茶活动的演讲。转载请注明来自@高可用架构。</p>
+<blockquote>
+<p>李庆丰（校长），微博研发中心高级技术经理，当前负责微博消息箱及开放平台的技术研发工作，曾主导微博平台服务稳定性保障及 SLA 体系建设，推进微博平台化、微博多机房部署、微博容器化及混合云等项目。十年互联网架构研发及技术管理经验，专注高性能高可用架构。 <br>（小编注：庆丰由于主导了微博平台 2011 - 2015 年毕业生新兵训练营工作，随着这些新人的成长以及在关键岗位发挥作用，庆丰已经是桃李满天下，所以也被尊称为校长）</p>
+</blockquote>
+<p><img src="https://upload-images.jianshu.io/upload_images/10024246-ebea276f4117cbc2.jpg?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240"></p>
+<p>(图： 3.19 高可用架构后花园聚会现场)</p>
+<p>今天的下午茶活动，与很多技术圈的老朋友详谈甚欢，听到了几位老朋友的分享颇为受益，我也给小伙伴分享我的一点心得。</p>
+<p><strong>技术成长需要什么架构知识？</strong></p>
+<p>初入工程师这行时我有一个梦想，希望具备强大技术架构能力，让服务于亿级用户的产品稳定运行于其上，今天我看到身边很多架构师都走到这一步。</p>
+<p>但对于当年刚入行的我来讲，要达到这一点还只是个梦想，因为那时我并不知道应该怎样构建这样的架构，甚至连需要学习哪些知识都不知道。</p>
+<p>我相信很多工程师在成长的路程上也跟我一样，会被一个大大的问号困扰很久：如果要成为一个大牛，应该<strong>需要什么样的技术路线****？</strong></p>
+<p>今天跟大家分享下通过观察身边的案例，我总结的一些在技术成长方面的心得体会。</p>
+<p><strong>架构师是怎样炼成的？</strong>让我们从圣斗士说起。</p>
+<p><img src="https://upload-images.jianshu.io/upload_images/10024246-586efacfc3841b3b.jpg?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="image"></p>
+<p><strong>技术人成长之路四阶段</strong></p>
+<p>小时候有一部我特别喜爱的动画片——圣斗士星矢，现在来看，这俨然就是一个技术大牛的成长之路。（小编：校长果然是老司机了：）</p>
+<p><strong>1. 从接受训练成为圣斗士，</strong>就像刚刚入门的初级工程师</p>
+<p>大多数的应届毕业生，虽然之前学习了编程语言及算法基础，能用代码解决一些简单的业务问题，但编码规范与真正的业务开发实践的要求还是有些距离。</p>
+<p>个别彪悍的同学，毕业时能力已经达到中高级工程师的水平了，就可以略过这个阶段。</p>
+<p>这一阶段最重要的是<strong>夯实编程基础，养成好的开发习惯</strong>。比如：基础库API的使用、并发线程机制、基础算法、优雅的单元测试等。</p>
+<p><strong>这个阶段与其挑选薪资，不如挑选合适的锻炼环境</strong>，比如寻找有良好的技术氛围、有合适的导师，有挑战的项目的团队。</p>
+<p><strong>2. 到获得青铜圣衣打败暗黑圣斗士，</strong>就像中/高级工程师</p>
+<p>工作 1 - 3 年的工程师，在实战中积累了一些开发经验，了解常用技术框架原理并可以在实际工作中快速搭建服务；了解常用的设计模式，让程序的扩展性变得更好，也可以开始胜任解决相对复杂的一些问题，负责中等规模的服务开发和维护；</p>
+<p><strong>这一阶段最重要的是寻找可能的机会进行架构实践</strong>，学习别人的架构经验，最终总结吸收为自己的经验或理论。多研究下典型场景的架构设计很重要，比如：典型社交场景的微博架构，典型电商场景的京东淘宝架构等。</p>
+<p>如果公司有合适的历练项目，则多向项目中的前辈学习。但<strong>更多的人遭遇的可能是不那么理想的环境</strong>，参与的项目不需要太高技术含量，身边也没有资深的前辈学习。</p>
+<p>这种情况下，<strong>在满足项目交付时间的前提下</strong>，可以更主动去积极寻找项目中可以值得优化的点，通过网上阅读的案例，引入更合适的技术来解决，给自己创造使用一流技术的实践机会。</p>
+<p><strong>3. 到击败白银圣斗士，</strong>就像架构师</p>
+<p>此阶段，部分 3 - 5 年或经验更久的工程师，随着在工作中不断遇到复杂问题和技术挑战，工程师对原有的技术框架和设计模式有了更深的理解，再根据实际场景的应变，开始能够独立设计和维护大型服务功能。他们具备针对特定场景完成合适的架构设计的能力，在团队中承担高级工程师或架构师角色；</p>
+<p>上文之所以说部分工程师，是因为并不是所有人都能跨过中高级工程师这个槛，成为一名合格架构师。</p>
+<p>这一阶段是架构知识由泛到专的过程。在特定业务场景下，能够对架构有清晰的目标，并利用已有架构技巧实现目标与成本的平衡，最终满足业务要求。比如作为一个合格的互联网架构师，需要理解常用缓存、存储资源的特性及优缺点，具备架构选型和实现的能力。</p>
+<p>另外，我觉得在大多数人看来，中、高级工程师差异还是很大的；而高级工程师和架构师反而过渡不是那么明显。</p>
+<p><strong>4. 再到战胜十二黄金圣斗士救出自由女神雅典娜</strong></p>
+<p>工程师到这个阶段，已经不能用时间年限来衡量了，<strong>更多的是需要对这个行业的热爱和合适的成长平台</strong>。</p>
+<p>随着具体场景下架构设计实践经验的增多，一小部分架构师能够把这些经验抽象为一种通用的理论，形成架构设计的理念，并能够用这种理念指导影响团队中的其他人，加上对于技术如何应用到行业的深刻理解，成为一个公司的首席架构师；</p>
+<p><strong>成长为首席架构师，除了个人的努力和不断学习总结积累外，一个好的实践锻炼平台至关重要。</strong></p>
+<p>就像高可用架构方向，如果没有亲身经历过高并发、海量数据的服务架构设计和开发的过程，很难凭空想象可能的场景问题和技术挑战，实践经验的总结抽象也就无从谈起；</p>
+<p>在这个成长的过程中，圣斗士们通过不断的磨难激发出了第六感、小宇宙，从而使他们变得越来越强大；而工程师也是在解决服务性能瓶颈、服务器宕机、异常峰值应对、分布式数据一致性、海量数据存储等问题中，不断的总结出经验和教训，从而变得越来越有经验。最终，极个别的一些首席架构师脱颖而出，成为了大师。</p>
+<p>吴军博士在《硅谷之谜》中也提到，这类工程师通过对行业及技术的理解，<strong>具备做出行业最好产品的能力</strong>，并进一步可以做出给世界带来惊喜的产品，比如 iPhone 及 Google Glass 的总设计师。</p>
+<p>高可用架构群就有很多首席架构师级别的前辈，他们在技术架构、技术管理等方面传到解惑，成为技术人员成长的引路人。</p>
+<p><img src="https://upload-images.jianshu.io/upload_images/10024246-acc7f195ab0187e1.jpg?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240"></p>
+<p>在技术人员成长的各个阶段，需要具备的知识和技能不同，从最初的语法规范的学习，到后来设计模式的灵活运用，再到对架构的理解和抽象，对技术人的素质要求越来越高。特别是架构知识，这是技术人成长中非常具有挑战的那部分，涉及了方方面面的问题，看似杂乱无章，实际还是有迹可循的。</p>
+<p><strong>架构知识拓扑</strong></p>
+<p><strong>所谓架构，在互联网的场景，就是保障服务高性能、高可用、可扩展的一系列技术措施。架构的维护成本是评价其好坏的重要因素。</strong></p>
+<p><strong>1. 互联网架构的要求</strong></p>
+<p>具体来看就是通过一系列的技术手段达到以下要求：</p>
+<ul>
+<li><p>  性能要足够快以能够满足业务需求；</p>
+</li>
+<li><p>  业务流量峰值能够扛得住；</p>
+</li>
+<li><p>  突发异常流量能够应对的来；</p>
+</li>
+<li><p>  部分服务器宕机不影响整理服务；</p>
+</li>
+<li><p>  能够随着业务的增长保持有节奏的容量扩容；</p>
+</li>
+<li><p>  再高级点就是，资源成本要足够低，研发效率要足够高，支持异地容灾，资源弹性伸缩提高资源利用率等。</p>
+</li>
+</ul>
+<p>然而，所有这些针对架构的要求和保证，都需要建立在一定标准之上，如果没有标准，服务的好坏，性能的高低就没法界定，所以，为服务制定 <strong>SLA（Service-Level Agreement）</strong>就变得非常重要。</p>
+<p><strong>2. SLA 设置</strong></p>
+<p>SLA 从<strong>性能、容量、程度</strong>三个方面对服务好坏做了约定，比如一个服务的 SLA 可以简单的描述为：</p>
+<p><strong>99.9% 请求响应时间 &lt; 100ms；最大 QPS 2W；</strong></p>
+<p>这里就规定了最大容量 2W QPS，性能上99.9% 的请求小于 100ms 响应，其中 99.9% 就是程度，这 3 个指标会让我们很好的了解服务的状况。</p>
+<p>SLA 体系是架构的基础，即作为对外部的保证，也是对内部的约束。</p>
+<p><strong>3. 监控的要求</strong></p>
+<p>另一方面，好的架构应该时刻了解服务所处的状态，以保证能适时作出合适的应对策略，这让<strong>监控体系</strong>变得非常重要。就像打红警游戏，有个间谍卫星和电力仪表盘是多么重要！</p>
+<p>所以，你需要知道如何能让你的监控系统实时准确的反馈相关数据信息，<strong>实时、方便、直观</strong>是衡量一个监控系统好坏的重要指标。</p>
+<p><strong>总结：拓扑结构</strong></p>
+<p>有了以上两个重要基础，架构设计变得不再那么困难，通过 SLA，你已经知道目标是什么、通过监控体系，你已经知道问题在哪里，剩下的就是通过一系列措施去解决它们。比如，选择合适的存储资源，适当的容错和降级策略，为了架构解耦而做的服务治理和隔离，高可用的异地容灾，为了极致性能而做的网络拓扑调整，以及为了运维效率和资源利用率做的弹性伸缩。这些知识相互关联，互为制约，是设计一个好的架构的重要知识基础。</p>
+<p>下图是我在负责微博多个项目的 SLA 时候提出的架构要点。</p>
+<p><img src="https://upload-images.jianshu.io/upload_images/10024246-b3e715dd68d5dfe5.jpg?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="image"></p>
+<p>架构知识都掌握了也不一定就能设计出好的架构，还需要针对具体业务场景灵活的变通。一般分为 2 个层次：术与道。</p>
+<p><strong>架构上的术与道</strong></p>
+<p>在前面提到，架构师与首席架构师都具备架构设计的能力和经验，但他们却有着术与道的区别。架构上的术，就是针对特定场景的解决方案；架构上的道，是一种思想和理论，能够指导很多通用问题的解决，它更有整理性、全局观。</p>
+<p>由术向道的转变，是一个大量亲身架构实践和总结的过程。一方面这取决于你是否有一个好的发挥平台，如果没有这种锻炼平台，大量的亲身架构实践将无从谈起，这种转变几乎不可能实现；另一方面，经验的总结和抽象也不是闭门造车，和业界的高手共同交流探讨是避免走进误区及快速拓展思路的好方法，所以经常的技术分享，适当的技术社群互动就显得非常必要。</p>
+<p>通过不断的学习和努力，很多人可以成为架构师，但只有很少的人能成为首席，一个很重要的原因是，除了出色的学习、抽象、总结能力外，大量复杂问题的架构实践至关重要；而这一点一般只有在较大的平台才能遇到。</p>
+<p>架构知识说了不少，我们如何高效的获得这些知识呢？</p>
+<p><strong>技术阅读</strong></p>
+<p>对于工程师来讲，我一直认为我们生活在最好的时代。互联网的蓬勃发展给了我们很多的历练和成长机会，技术社区的繁荣让我们自我学习和提高成为可能。在这个年代，<strong>技术人员的成长在一定程度取决于知识获取及消化能力。</strong></p>
+<p>技术博客，技术丛书，技术文章，技术公众号，让技术知识和思想在工程师群体中自由传播，形成技术成长的肥沃土壤，比如从类似「ArchNotes」高可用架构这样的公众号就可以学到大量一线架构师分享的知识与经验。</p>
+<p>然而，伴随着技术社区的繁荣，技术知识变得越来越丰富，甚至太丰富了，以至于我们几乎无法全部消化这些信息，我们需要有选择、有甄别的来看；有些需要泛读，有些则需要精读甚至去实践。 </p>
+<p>初级工程师在夯实基础阶段需要系统的学习基础知识，这个阶段看书会让你的知识吸收更系统，博客和技术文章作为辅助知识扩展就好了。其他阶段则需要逐渐养成良好的知识获取习惯，比如：每个月看一本专业方向的书，每天定时浏览固定方向的博客或公众号文章，确保系统知识和架构经验都能够不断的获取和吸收。</p>
+<p>一般来讲，技术博客或者公众号，是扩展技术视野，吸收他人实践经验的好的方式和渠道；技术丛书则是系统学习某一方面知识的最有效途径。</p>
+<p>这么丰富的知识内容，这么多样的展现方式，是技术人共同分享贡献的成果；每个身临其中的技术人既是贡献者，也是受益者，他们学习别人的经验，分享自己的思想，在相互影响中共同进步。</p>
+<p><strong>学习与分享</strong></p>
+<p>关于学习与分享，让我想起了 Tim 在高可用架构群第一次分享时候引用的那段话：</p>
+<blockquote>
+<p>你有一个苹果，我有一个苹果，交换后每人还是一个苹果；你有一种思想，我有一种思想，交换后每个人会有两种思想</p>
+</blockquote>
+<p>这句话完美诠释了分享与交流的价值。</p>
+<p>要成长就必须去不断倾听别人的分享，学习别人的经验。分享知识的人多了，大家的学习成本就会降低，成长速度就会变快，大家就会相互促进更快的成长。</p>
+<p>根据我自己的体会，<strong>对外分享还是一个自我总结、积累以及进一步提高的过程</strong>。为了避免分享给大家错误的知识，我一般会对分享内容进行多次 review，把之前模糊的、不十分确定的问题搞清楚（分享后被人问住或质疑总是分享者不想碰到的），这个过程往往让我对问题的本质有新的认识。</p>
+<p>好的分享还会带来很多讨论和咨询，<strong>促进对问题的更全面认识和思考</strong>。比如 2015 年我在 ArchSummit 大会分享了《新浪微博高可用服务保障体系演进》，现场和会后有很多小伙伴专门来找我一起探讨相关问题，其中有不少场景是我没有遇到的，也给了我很多新的启发。</p>
+<p>所以，学习与分享是一个互相促进的过程，学习别人的经验，把自己的实践总结分享出来，技术慢慢的积累，再分享，不断成长，不断学习。。。</p>
+<p><img src="https://upload-images.jianshu.io/upload_images/10024246-07ad0f510206994e.jpg?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="image"></p>
+<p>所以，我今年除了写些技术文章，我还计划给自己一个新的挑战，写一本关于架构的书：《大型网站高可用服务架构实践》。</p>
+<p>写到这的时候，其实我犹豫了很久，想做为啥非要说出来？我之前写过一些技术文章，感觉还不错，所以，就有过写一本书的想法，但真准备去做的时候，发现写书和写一篇技术文章差别非常大。技术文章一般阐述解决一个问题，但书是让人系统学习某一领域的方式，需要有条理的阐述解决一系列问题，并且还需要让大家有兴趣坚持读下去，想想都很有挑战。</p>
+<p><img src="https://upload-images.jianshu.io/upload_images/10024246-b53f7b14f39ac0af.jpg?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240"></p>
+<p>今天前面同学分享时提到，如果实在感觉困难就倒逼一下自己，所以为了让自己能坚持下来，我就尝试下这种方式，让“太忙了、没时间”等借口少一些机会，说不定还能吸引一些感兴趣的小伙伴一起参与。</p>
+<p>2016 年，大家一起加油！</p>
+<p><em>转载请注明来自@高可用架构</em></p>
+
+      
+    </div>
+
+    
+    
+    
+
+    <footer class="post-footer">
+        <div class="post-eof"></div>
+      
+    </footer>
+  </article>
+</div>
+
+
+
+
+    
+
+
+<div class="post-block">
+  
+  
+
+  <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="">
+    <link itemprop="mainEntityOfPage" href="https://lzhwweb.github.io/nirvana/uncategorized/%E9%9A%8F%E7%AC%94/%E9%80%89%E6%8B%A9%E6%9D%83%E6%98%AF%E6%9C%80%E5%A4%A7%E7%9A%84%E8%87%AA%E7%94%B1/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/nirvana/images/headphoto.jpeg">
+      <meta itemprop="name" content="nirvana">
+      <meta itemprop="description" content="个人学习笔记">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="涅槃快乐是金">
+    </span>
+      <header class="post-header">
+        <h2 class="post-title" itemprop="name headline">
+          <a href="/nirvana/uncategorized/%E9%9A%8F%E7%AC%94/%E9%80%89%E6%8B%A9%E6%9D%83%E6%98%AF%E6%9C%80%E5%A4%A7%E7%9A%84%E8%87%AA%E7%94%B1/" class="post-title-link" itemprop="url">未命名</a>
+        </h2>
+
+        <div class="post-meta-container">
+          <div class="post-meta">
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-calendar"></i>
+      </span>
+      <span class="post-meta-item-text">发表于</span>
+
+      <time title="创建时间：2021-03-10 13:43:55" itemprop="dateCreated datePublished" datetime="2021-03-10T13:43:55+08:00">2021-03-10</time>
+    </span>
+
+  
+    <span id="/nirvana/uncategorized/%E9%9A%8F%E7%AC%94/%E9%80%89%E6%8B%A9%E6%9D%83%E6%98%AF%E6%9C%80%E5%A4%A7%E7%9A%84%E8%87%AA%E7%94%B1/" class="post-meta-item leancloud_visitors" data-flag-title="" title="阅读次数">
+      <span class="post-meta-item-icon">
+        <i class="far fa-eye"></i>
+      </span>
+      <span class="post-meta-item-text">阅读次数：</span>
+      <span class="leancloud-visitors-count"></span>
+    </span>
+      </div>
+      <div class="post-meta">
+    <span class="post-meta-item" title="本文字数">
+      <span class="post-meta-item-icon">
+        <i class="far fa-file-word"></i>
+      </span>
+      <span class="post-meta-item-text">本文字数：</span>
+      <span>0</span>
+    </span>
+    <span class="post-meta-item" title="阅读时长">
+      <span class="post-meta-item-icon">
+        <i class="far fa-clock"></i>
+      </span>
+      <span class="post-meta-item-text">阅读时长 &asymp;</span>
+      <span>1 分钟</span>
+    </span>
+</div>
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+          
+      
+    </div>
+
+    
+    
+    
+
+    <footer class="post-footer">
+        <div class="post-eof"></div>
+      
+    </footer>
+  </article>
+</div>
+
+
+
+
+    
+
+
+<div class="post-block">
+  
+  
+
+  <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="">
+    <link itemprop="mainEntityOfPage" href="https://lzhwweb.github.io/nirvana/uncategorized/%E9%9A%8F%E7%AC%94/%E6%9C%80%E2%80%B3%E6%AE%8B%E5%BF%8D%E2%80%B3%E7%9A%84%E5%81%B7%E6%8B%8D%E7%85%A7%EF%BC%9A%E5%88%AB%E6%AD%BB%E4%BA%86%EF%BC%8C%E6%88%91%E7%88%B1%E4%BD%A0%EF%BC%81/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/nirvana/images/headphoto.jpeg">
+      <meta itemprop="name" content="nirvana">
+      <meta itemprop="description" content="个人学习笔记">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="涅槃快乐是金">
+    </span>
+      <header class="post-header">
+        <h2 class="post-title" itemprop="name headline">
+          <a href="/nirvana/uncategorized/%E9%9A%8F%E7%AC%94/%E6%9C%80%E2%80%B3%E6%AE%8B%E5%BF%8D%E2%80%B3%E7%9A%84%E5%81%B7%E6%8B%8D%E7%85%A7%EF%BC%9A%E5%88%AB%E6%AD%BB%E4%BA%86%EF%BC%8C%E6%88%91%E7%88%B1%E4%BD%A0%EF%BC%81/" class="post-title-link" itemprop="url">未命名</a>
+        </h2>
+
+        <div class="post-meta-container">
+          <div class="post-meta">
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-calendar"></i>
+      </span>
+      <span class="post-meta-item-text">发表于</span>
+
+      <time title="创建时间：2021-03-10 13:43:55" itemprop="dateCreated datePublished" datetime="2021-03-10T13:43:55+08:00">2021-03-10</time>
+    </span>
+
+  
+    <span id="/nirvana/uncategorized/%E9%9A%8F%E7%AC%94/%E6%9C%80%E2%80%B3%E6%AE%8B%E5%BF%8D%E2%80%B3%E7%9A%84%E5%81%B7%E6%8B%8D%E7%85%A7%EF%BC%9A%E5%88%AB%E6%AD%BB%E4%BA%86%EF%BC%8C%E6%88%91%E7%88%B1%E4%BD%A0%EF%BC%81/" class="post-meta-item leancloud_visitors" data-flag-title="" title="阅读次数">
+      <span class="post-meta-item-icon">
+        <i class="far fa-eye"></i>
+      </span>
+      <span class="post-meta-item-text">阅读次数：</span>
+      <span class="leancloud-visitors-count"></span>
+    </span>
+      </div>
+      <div class="post-meta">
+    <span class="post-meta-item" title="本文字数">
+      <span class="post-meta-item-icon">
+        <i class="far fa-file-word"></i>
+      </span>
+      <span class="post-meta-item-text">本文字数：</span>
+      <span>3.4k</span>
+    </span>
+    <span class="post-meta-item" title="阅读时长">
+      <span class="post-meta-item-icon">
+        <i class="far fa-clock"></i>
+      </span>
+      <span class="post-meta-item-text">阅读时长 &asymp;</span>
+      <span>3 分钟</span>
+    </span>
+</div>
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+          <!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>最″残忍″的偷拍照：别死了，我爱你！</title>
+    <style type="text/css" media="all">
+      body {
+        margin: 0;
+        font-family: "Helvetica Neue", Helvetica, Arial, "Hiragino Sans GB", sans-serif;
+        font-size: 14px;
+        line-height: 20px;
+        color: #777;
+        background-color: white;
+      }
+      .container {
+        width: 700px;
+        margin-right: auto;
+        margin-left: auto;
+      }
+
+      .post {
+        font-family: Georgia, "Times New Roman", Times, "SimSun", serif;
+        position: relative;
+        padding: 70px;
+        bottom: 0;
+        overflow-y: auto;
+        font-size: 16px;
+        font-weight: normal;
+        line-height: 25px;
+        color: #515151;
+      }
+
+      .post h1{
+        font-size: 50px;
+        font-weight: 500;
+        line-height: 60px;
+        margin-bottom: 40px;
+        color: inherit;
+      }
+
+      .post p {
+        margin: 0 0 35px 0;
+      }
+
+      .post img {
+        border: 1px solid #D9D9D9;
+      }
+
+      .post a {
+        color: #28A1C5;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <div class="post">
+        <h1 class="title">最″残忍″的偷拍照：别死了，我爱你！</h1>
+        <div class="show-content">
+          <p><i><b>转自微博<a href="https://weibo.com/ttarticle/p/show?id=2309404222517488295595" target="_blank">https://weibo.com/ttarticle/p/show?id=2309404222517488295595</a></b></i></p><p>桌子的生活观 出品</p><p><b>01.</b></p><p>在百度上面，关于自杀的结果有47,100,000个，每天都有无数人搜索自杀，可是搜索后弹出来的第一条信息是这样的：</p><div class="image-package">
+<img class="uploaded-img" src="http://upload-images.jianshu.io/upload_images/10024246-c0120df83a664b0f?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" style="min-height:200px;min-width:200px;" width="auto" height="auto"><br><div class="image-caption"></div>
+</div><p><b>这个世界虽然不完美，我们仍可以治愈自己，</b>并且提供免费咨询电话，一下子就让人的心里温暖起来。</p><p>有人在网上问怎样最轻松自杀？</p><div class="image-package">
+<img class="uploaded-img" src="http://upload-images.jianshu.io/upload_images/10024246-a255c86f457ff061?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" style="min-height:200px;min-width:200px;" width="auto" height="auto"><br><div class="image-caption"></div>
+</div><p>最后一句<b>好好活着</b>，真的让人眼泪差点掉下来。</p><p>还有很多热心网友跟帖：</p><div class="image-package">
+<img class="uploaded-img" src="http://upload-images.jianshu.io/upload_images/10024246-3778300b222548ef?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" style="min-height:200px;min-width:200px;" width="auto" height="auto"><br><div class="image-caption"></div>
+</div><p>还有人问手上的动脉在哪里：</p><div class="image-package">
+<img class="uploaded-img" src="http://upload-images.jianshu.io/upload_images/10024246-14084e975ab904f5?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" style="min-height:200px;min-width:200px;" width="auto" height="auto"><br><div class="image-caption"></div>
+</div><p><b>“别找了，我爱你”</b>一句话就让我泪流满面。</p><p><b>谢谢你们，这么温暖的陌生人。</b></p><p><b>你永远不会知道，一个陌生人的善意，将会对一个濒临绝望的人带来多大的生活勇气。</b></p><p><b>02.</b></p><p>过年的时候，在呼和浩特，一个残疾的行乞者从新华大街乘坐29路公交车到呼铁局下车，一路上难免遭到个别乘客的嫌弃和冷言冷语。</p><p>骗子一般不会在过年的时候出来乞讨，还有他的穿着打扮，司机师傅一眼就知道他不是骗子。</p><p>就在他下车的那一瞬间，司机师傅掏出100元给他，祝他新年快乐。</p><p>一边是个别乘客的白眼，一边是司机师傅的暖心举动，行乞者满眼都是眼泪，就在路边呜呜地哭起来……</p><p>如果不是被生活逼得不行，谁会在过年的时候出来乞讨啊？</p><div class="image-package">
+<img class="uploaded-img" src="http://upload-images.jianshu.io/upload_images/10024246-1f7847f08c7fa0fc?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" style="min-height:200px;min-width:200px;" width="auto" height="auto"><br><div class="image-caption"></div>
+</div><div class="image-package">
+<img class="uploaded-img" src="http://upload-images.jianshu.io/upload_images/10024246-bb98b79825b4981d?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" style="min-height:200px;min-width:200px;" width="auto" height="auto"><br><div class="image-caption"></div>
+</div><p><b>生而为人，请善待每一个人。</b></p><p><b>03.</b></p><p>在郑州金水路英协路口，一环卫阿姨将自己带的鸡蛋早餐让给了盲人乞讨者，并将鸡蛋剥皮放入盲人口中，盲人激动的跪地感谢。</p><div class="image-package">
+<img class="uploaded-img" src="http://upload-images.jianshu.io/upload_images/10024246-4dda2e23cb0c0e6f?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" style="min-height:200px;min-width:200px;" width="auto" height="auto"><br><div class="image-caption"></div>
+</div><div class="image-package">
+<img class="uploaded-img" src="http://upload-images.jianshu.io/upload_images/10024246-d156ae5e8358fa1c?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" style="min-height:200px;min-width:200px;" width="auto" height="auto"><br><div class="image-caption"></div>
+</div><p>或许，只有生活艰难的人，更能体会到生存艰难人的不易。</p><p><b>下跪有时候并不代表奴性，只是身无长物的时候，这是表达感激的最高形式。</b></p><p><b>即使是一道最微弱的光，我们也要把它洒向最需要温暖的地方。</b></p><p><b>04</b>.</p><p>一位60多岁的老太太接到了一个诈骗电话，对方谎称是他儿子，但他儿子在两年前已经死了。</p><p>可那骗子的声音和她儿子实在太像，她舍不得挂断。骗子说得口干舌燥，发现骗不了她，她便把真相都说了，最后老太太请求对方"最后再说一句吧。"</p><p>骗子思考片刻说：<b>"妈，保重啊。"</b>挂了电话。</p><div class="image-package">
+<img class="uploaded-img" src="http://upload-images.jianshu.io/upload_images/10024246-0339ebf2cbeb85d5?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" style="min-height:200px;min-width:200px;" width="auto" height="auto"><br><div class="image-caption"></div>
+</div><p>读到这里，我鼻子一酸，眼泪哗哗直流。</p><p>“妈，保重啊，”，我相信那个骗子一定也对自己的母亲说过很多次，他良心未泯，希望他能迷途知返，不要让爱自己的人失望。</p><p><b>05.</b></p><p>韩国岁月号沉没了，这五个最要好的朋友也随着船的沉没，与自己的家人天人永隔。</p><div class="image-package">
+<img class="uploaded-img" src="http://upload-images.jianshu.io/upload_images/10024246-1bf165236c28f2ee?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" style="min-height:200px;min-width:200px;" width="auto" height="auto"><br><div class="image-caption"></div>
+</div><p>后来，他们的儿子也成了最好的朋友，他们回到当年父亲拍照的地方，每个人坐到自己父亲当年的位置，摆出一样的姿势。</p><div class="image-package">
+<img class="uploaded-img" src="http://upload-images.jianshu.io/upload_images/10024246-f964a88ccdb4ba3f?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" style="min-height:200px;min-width:200px;" width="auto" height="auto"><br><div class="image-caption"></div>
+</div><p><b>这样的照片看得很心酸，但是生命就是如此神奇，上一辈的友谊在那一次事故中结束了，还是可以在下一辈的身上得以延续。</b></p><p><b>06.</b></p><p>如果能回到过去，你会对过去的自己说什么？</p><p>日本一位76岁叫秀夫的老爷爷，很想对年轻时候的自己说一件事情。</p><div class="image-package">
+<img class="uploaded-img" src="http://upload-images.jianshu.io/upload_images/10024246-af34a9d637b87032?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" style="min-height:200px;min-width:200px;" width="auto" height="auto"><br><div class="image-caption"></div>
+</div><p><b>白云苍狗，世事无常，在这个薄情的世界上，原来还有人如此深情地活着。</b></p><p>明天和意外不知道哪个会先来临，所以啊，一定要趁现在，好好珍惜身边的爱人。</p><p><b>07.</b></p><p>63岁的老何是抚顺人，他和老伴来到沈阳打工。他们的日子虽然不太富有，但是两人在相濡以沫的日子里非常满足。</p><p>有一天，他的老伴去药房买药，可是在回来的路上突发心肌梗塞倒地猝死。</p><p>老何赶到后，紧紧地抱着自己的老伴，嘴里不停嘟囔着：“今天不让你出来，你非得出来，怎么今天就走了呢？”</p><p>那个时候的沈阳是零下24度，老何抱着老伴的尸体再冰天雪地里坐了两个小时仍然不肯撒手。</p><div class="image-package">
+<img class="uploaded-img" src="http://upload-images.jianshu.io/upload_images/10024246-1f622e2a957b9965?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" style="min-height:200px;min-width:200px;" width="auto" height="auto"><br><div class="image-caption"></div>
+</div><div class="image-package">
+<img class="uploaded-img" src="http://upload-images.jianshu.io/upload_images/10024246-bcd646338882f950?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" style="min-height:200px;min-width:200px;" width="auto" height="auto"><br><div class="image-caption"></div>
+</div><p>群众们怕他冻坏了，找来纸壳、塑料泡沫，让老爷子垫在身下别着凉，老何一边谢谢一边说：“我不冷，我没事，我还不想起来，我想最后再抱她一会儿，以后都没有机会了。”</p><p>于是，十几名群众主动围成一圈给这对夫妻遮风，希望他们“团圆”的时间能再长一点，在场的所有人都为之动容。</p><p>“太感动了，此生做夫妻能这般，是任何金钱和荣华富贵都换不来的。”</p><p><b>人们常说，少年夫妻老来伴，其实这句话最朴实，也最深情。</b></p><p><b>年少时陪伴在我身边的那个人啊，虽然历经岁月的风霜，但你离去的时候，我仍然舍不得放手。</b></p><p><b>08.</b></p><p>孩子和爸爸、妈妈、奶奶在路边等车，这个时候的他是开心的，因为只要和爸爸妈妈在一起就很开心啊。</p><div class="image-package">
+<img class="uploaded-img" src="http://upload-images.jianshu.io/upload_images/10024246-e25d6a5348d4a635?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" style="min-height:200px;min-width:200px;" width="auto" height="auto"><br><div class="image-caption"></div>
+</div><div class="image-package">
+<img class="uploaded-img" src="http://upload-images.jianshu.io/upload_images/10024246-47858c4f6b3086eb?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" style="min-height:200px;min-width:200px;" width="auto" height="auto"><br><div class="image-caption"></div>
+</div><div class="image-package">
+<img class="uploaded-img" src="http://upload-images.jianshu.io/upload_images/10024246-b320e7d46a17bac7?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" style="min-height:200px;min-width:200px;" width="auto" height="auto"><br><div class="image-caption"></div>
+</div><p>可是接下来他才知道，爸爸妈妈又要离开自己了。</p><p>他嚎啕大哭，想要追上汽车，可是却被奶奶扯住了。</p><div class="image-package">
+<img class="uploaded-img" src="http://upload-images.jianshu.io/upload_images/10024246-e9340467ffd18887?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" style="min-height:200px;min-width:200px;" width="auto" height="auto"><br><div class="image-caption"></div>
+</div><div class="image-package">
+<img class="uploaded-img" src="http://upload-images.jianshu.io/upload_images/10024246-a1324ab57b67ab40?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" style="min-height:200px;min-width:200px;" width="auto" height="auto"><br><div class="image-caption"></div>
+</div><div class="image-package">
+<img class="uploaded-img" src="http://upload-images.jianshu.io/upload_images/10024246-d5bc2cde9df16f83?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" style="min-height:200px;min-width:200px;" width="auto" height="auto"><br><div class="image-caption"></div>
+</div><p>最后奶奶抱着他，孤独地走回家，那是一个冰冷的家，没有爸爸和妈妈的家。</p><div class="image-package">
+<img class="uploaded-img" src="http://upload-images.jianshu.io/upload_images/10024246-9ffc66f3d631423e?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" style="min-height:200px;min-width:200px;" width="auto" height="auto"><br><div class="image-caption"></div>
+</div><p>或许我们很多人从小就要和父母面对这样的离别，希望这样的别离不要发生在我们的下一代身上。</p><p>曾经有人问我，为什么要努力赚钱？这就是最好的理由，为了能够和自己的孩子生活在一起！</p><p><b>希望每个孩子都能拥有美好的童年，都有父母陪在身边。</b></p><p><b>09.</b></p><p>一个孩子的父亲在工地上干活，每天挥汗如雨，非常累。</p><p>孩子担心他太累，又担心他的安危，于是在父亲的安全帽上画了一顶皇冠。</p><p><b>也许在别人眼中他是做着又脏又累的活儿，但在孩子眼中，他就是国王。</b></p><div class="image-package">
+<img class="uploaded-img" src="http://upload-images.jianshu.io/upload_images/10024246-4a2a77949a017a5d?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" style="min-height:200px;min-width:200px;" width="auto" height="auto"><br><div class="image-caption"></div>
+</div><p>这是一个孩子对父亲稚嫩的爱，如此温暖，又如此心酸。</p><p>我猜这位父亲的孩子一定是一位小公主吧，你还记得自己为父亲做过什么吗？</p><p><b>10.</b></p><p>这是经济大萧条时期，一位父亲在背上背着牌子在街头找工作。</p><div class="image-package">
+<img class="uploaded-img" src="http://upload-images.jianshu.io/upload_images/10024246-7478c93dff50fab8?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" style="min-height:200px;min-width:200px;" width="auto" height="auto"><br><div class="image-caption"></div>
+</div><p>纸板上写着：“我知晓三个行业，会说三门语言，奋斗了三年，有三个孩子，失业三个月。但我只想要一份工作。”</p><p>他是谁的父亲，又是谁的丈夫呢？每次回家还有嗷嗷待哺的三个孩子，还有一个等着他赚钱的妻子，这样的场面真的不忍直视。</p><p><b>生活从未容易，如果你觉得容易，不过是有人在帮你承担不易。</b></p><p><b>11.</b></p><p>发生空袭后，弟弟不幸去世了。哥哥把他背在背上，带着他去火葬场，他的眼神是如此的坚定，即使眼泪快要流下来了，他也含泪坚强忍住。</p><div class="image-package">
+<img class="uploaded-img" src="http://upload-images.jianshu.io/upload_images/10024246-4926557698939691?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" style="min-height:200px;min-width:200px;" width="auto" height="auto"><br><div class="image-caption"></div>
+</div><p>这一生，和你相处的时间太短了。既然无法护你周全，那么你生命的最后一程，就由我来送你吧。</p><p>哪怕前面炮火纷飞，哪怕要失去我的生命，这是我作为一个哥哥的使命。</p><p><b>若有来生，愿我们都生活在和平年代，愿你还愿意做我的弟弟。</b></p><p><b>12.</b></p><p>很多时候，我觉得人生就像是图片中这只在暴风雪中的小鸟一样，虽遭遇漫天的飞雪和冰雹，但也只是弯弯身体，然后用头去直接迎接，从不退后半步！</p><div class="image-package">
+<img class="uploaded-img" src="http://upload-images.jianshu.io/upload_images/10024246-394000d3cfbedb04?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" style="min-height:200px;min-width:200px;" width="auto" height="auto"><br><div class="image-caption"></div>
+</div><p>卖糖葫芦的大叔说：<b>生活中的一个个挫折，就像是冰糖葫芦一样，竹竿刺进了身体，却成为了一生的脊梁。</b></p><div class="image-package">
+<img class="uploaded-img" src="http://upload-images.jianshu.io/upload_images/10024246-d8d7eb5ec32cef75?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" style="min-height:200px;min-width:200px;" width="auto" height="auto"><br><div class="image-caption"></div>
+</div><p>曾经听过一个故事：</p><p>一个男人梦见他和上帝走在沙滩上，他看到他的生命片段在天空中闪现，他转过身去，看到沙滩上有两行脚印，贯穿了他人生大部分时光，那是他和上帝的脚印。</p><p><b>可是他发现，在他一生中最糟糕的日子里，只有一行脚印。</b></p><p>男人对上帝说：你承诺过会和我同行的，为什么在我最需要你的时候抛弃了我？”</p><p>上帝回答他：<b>这里之所以只有一行脚印，是因为在那些最糟糕的日子里，是我背负着你前行。</b></p><div class="image-package">
+<img class="uploaded-img" src="http://upload-images.jianshu.io/upload_images/10024246-fed657f626f15f65?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" style="min-height:200px;min-width:200px;" width="auto" height="auto"><br><div class="image-caption"></div>
+</div><p>原来，真的有人一直在偷偷爱着我们，只是你不知道而已。</p><p>或许，我们每个人都小心翼翼地活着，或许我们每一次努力都已经竭尽全力，但是请相信，上天从未抛弃任何一个坚强的灵魂，也从不会辜负每一段最灰暗的苦难。</p><p><b>愿你有好运气，如果没有，愿你在不幸中学会慈悲；</b></p><p><b>愿你被很多人爱，如果没有，愿你在寂寞中学会宽容。</b></p><p><b>愿你被这个世界温柔以待，如果没有，请别忘了，我爱你。</b></p><p>作者：桌子，前南方航空公司职员，现教育培训行业先行者，兼职男模，签约专栏作家。微博@桌子的生活观 。</p>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>
+
+      
+    </div>
+
+    
+    
+    
+
+    <footer class="post-footer">
+        <div class="post-eof"></div>
+      
+    </footer>
+  </article>
+</div>
+
+
+
+
+    
+
+
+<div class="post-block">
+  
+  
+
+  <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="">
+    <link itemprop="mainEntityOfPage" href="https://lzhwweb.github.io/nirvana/uncategorized/%E8%AF%BB%E4%B9%A6%E7%AC%94%E8%AE%B0/%E8%BE%9E%E6%97%A7%E8%BF%8E%E6%96%B0/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/nirvana/images/headphoto.jpeg">
+      <meta itemprop="name" content="nirvana">
+      <meta itemprop="description" content="个人学习笔记">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="涅槃快乐是金">
+    </span>
+      <header class="post-header">
+        <h2 class="post-title" itemprop="name headline">
+          <a href="/nirvana/uncategorized/%E8%AF%BB%E4%B9%A6%E7%AC%94%E8%AE%B0/%E8%BE%9E%E6%97%A7%E8%BF%8E%E6%96%B0/" class="post-title-link" itemprop="url">未命名</a>
+        </h2>
+
+        <div class="post-meta-container">
+          <div class="post-meta">
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-calendar"></i>
+      </span>
+      <span class="post-meta-item-text">发表于</span>
+
+      <time title="创建时间：2021-03-10 13:43:55" itemprop="dateCreated datePublished" datetime="2021-03-10T13:43:55+08:00">2021-03-10</time>
+    </span>
+
+  
+    <span id="/nirvana/uncategorized/%E8%AF%BB%E4%B9%A6%E7%AC%94%E8%AE%B0/%E8%BE%9E%E6%97%A7%E8%BF%8E%E6%96%B0/" class="post-meta-item leancloud_visitors" data-flag-title="" title="阅读次数">
+      <span class="post-meta-item-icon">
+        <i class="far fa-eye"></i>
+      </span>
+      <span class="post-meta-item-text">阅读次数：</span>
+      <span class="leancloud-visitors-count"></span>
+    </span>
+      </div>
+      <div class="post-meta">
+    <span class="post-meta-item" title="本文字数">
+      <span class="post-meta-item-icon">
+        <i class="far fa-file-word"></i>
+      </span>
+      <span class="post-meta-item-text">本文字数：</span>
+      <span>573</span>
+    </span>
+    <span class="post-meta-item" title="阅读时长">
+      <span class="post-meta-item-icon">
+        <i class="far fa-clock"></i>
+      </span>
+      <span class="post-meta-item-text">阅读时长 &asymp;</span>
+      <span>1 分钟</span>
+    </span>
+</div>
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+          <!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>辞旧迎新</title>
+    <style type="text/css" media="all">
+      body {
+        margin: 0;
+        font-family: "Helvetica Neue", Helvetica, Arial, "Hiragino Sans GB", sans-serif;
+        font-size: 14px;
+        line-height: 20px;
+        color: #777;
+        background-color: white;
+      }
+      .container {
+        width: 700px;
+        margin-right: auto;
+        margin-left: auto;
+      }
+
+      .post {
+        font-family: Georgia, "Times New Roman", Times, "SimSun", serif;
+        position: relative;
+        padding: 70px;
+        bottom: 0;
+        overflow-y: auto;
+        font-size: 16px;
+        font-weight: normal;
+        line-height: 25px;
+        color: #515151;
+      }
+
+      .post h1{
+        font-size: 50px;
+        font-weight: 500;
+        line-height: 60px;
+        margin-bottom: 40px;
+        color: inherit;
+      }
+
+      .post p {
+        margin: 0 0 35px 0;
+      }
+
+      .post img {
+        border: 1px solid #D9D9D9;
+      }
+
+      .post a {
+        color: #28A1C5;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <div class="post">
+        <h1 class="title">辞旧迎新</h1>
+        <div class="show-content">
+          
+        </div>
+      </div>
+    </div>
+  </body>
+</html>
+
+      
+    </div>
+
+    
+    
+    
+
+    <footer class="post-footer">
+        <div class="post-eof"></div>
+      
+    </footer>
+  </article>
+</div>
+
+
+
+
+    
+
+
+<div class="post-block">
+  
+  
+
+  <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="">
+    <link itemprop="mainEntityOfPage" href="https://lzhwweb.github.io/nirvana/uncategorized/%E9%9A%8F%E7%AC%94/%E4%BD%A0%E6%83%B3%E8%A6%81%E7%9A%84%E5%92%8C%E5%AD%A9%E5%AD%90%E6%83%B3%E8%A6%81%E7%9A%84/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/nirvana/images/headphoto.jpeg">
+      <meta itemprop="name" content="nirvana">
+      <meta itemprop="description" content="个人学习笔记">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="涅槃快乐是金">
+    </span>
+      <header class="post-header">
+        <h2 class="post-title" itemprop="name headline">
+          <a href="/nirvana/uncategorized/%E9%9A%8F%E7%AC%94/%E4%BD%A0%E6%83%B3%E8%A6%81%E7%9A%84%E5%92%8C%E5%AD%A9%E5%AD%90%E6%83%B3%E8%A6%81%E7%9A%84/" class="post-title-link" itemprop="url">未命名</a>
+        </h2>
+
+        <div class="post-meta-container">
+          <div class="post-meta">
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-calendar"></i>
+      </span>
+      <span class="post-meta-item-text">发表于</span>
+
+      <time title="创建时间：2021-03-10 13:43:55" itemprop="dateCreated datePublished" datetime="2021-03-10T13:43:55+08:00">2021-03-10</time>
+    </span>
+
+  
+    <span id="/nirvana/uncategorized/%E9%9A%8F%E7%AC%94/%E4%BD%A0%E6%83%B3%E8%A6%81%E7%9A%84%E5%92%8C%E5%AD%A9%E5%AD%90%E6%83%B3%E8%A6%81%E7%9A%84/" class="post-meta-item leancloud_visitors" data-flag-title="" title="阅读次数">
+      <span class="post-meta-item-icon">
+        <i class="far fa-eye"></i>
+      </span>
+      <span class="post-meta-item-text">阅读次数：</span>
+      <span class="leancloud-visitors-count"></span>
+    </span>
+      </div>
+      <div class="post-meta">
+    <span class="post-meta-item" title="本文字数">
+      <span class="post-meta-item-icon">
+        <i class="far fa-file-word"></i>
+      </span>
+      <span class="post-meta-item-text">本文字数：</span>
+      <span>0</span>
+    </span>
+    <span class="post-meta-item" title="阅读时长">
+      <span class="post-meta-item-icon">
+        <i class="far fa-clock"></i>
+      </span>
+      <span class="post-meta-item-text">阅读时长 &asymp;</span>
+      <span>1 分钟</span>
+    </span>
+</div>
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+          
+      
+    </div>
+
+    
+    
+    
+
+    <footer class="post-footer">
+        <div class="post-eof"></div>
+      
+    </footer>
+  </article>
+</div>
+
+
+
+
+    
+
+
+<div class="post-block">
+  
+  
+
+  <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="">
+    <link itemprop="mainEntityOfPage" href="https://lzhwweb.github.io/nirvana/uncategorized/react-native/react-native%E5%B8%83%E5%B1%80/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/nirvana/images/headphoto.jpeg">
+      <meta itemprop="name" content="nirvana">
+      <meta itemprop="description" content="个人学习笔记">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="涅槃快乐是金">
+    </span>
+      <header class="post-header">
+        <h2 class="post-title" itemprop="name headline">
+          <a href="/nirvana/uncategorized/react-native/react-native%E5%B8%83%E5%B1%80/" class="post-title-link" itemprop="url">未命名</a>
+        </h2>
+
+        <div class="post-meta-container">
+          <div class="post-meta">
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-calendar"></i>
+      </span>
+      <span class="post-meta-item-text">发表于</span>
+
+      <time title="创建时间：2021-03-10 13:43:55" itemprop="dateCreated datePublished" datetime="2021-03-10T13:43:55+08:00">2021-03-10</time>
+    </span>
+
+  
+    <span id="/nirvana/uncategorized/react-native/react-native%E5%B8%83%E5%B1%80/" class="post-meta-item leancloud_visitors" data-flag-title="" title="阅读次数">
+      <span class="post-meta-item-icon">
+        <i class="far fa-eye"></i>
+      </span>
+      <span class="post-meta-item-text">阅读次数：</span>
+      <span class="leancloud-visitors-count"></span>
+    </span>
+      </div>
+      <div class="post-meta">
+    <span class="post-meta-item" title="本文字数">
+      <span class="post-meta-item-icon">
+        <i class="far fa-file-word"></i>
+      </span>
+      <span class="post-meta-item-text">本文字数：</span>
+      <span>18k</span>
+    </span>
+    <span class="post-meta-item" title="阅读时长">
+      <span class="post-meta-item-icon">
+        <i class="far fa-clock"></i>
+      </span>
+      <span class="post-meta-item-text">阅读时长 &asymp;</span>
+      <span>16 分钟</span>
+    </span>
+</div>
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+          <hr>
+<p>title: react-native布局<br>date: 2021-03-11 21:12:40<br>category: reactnative—</p>
+<h2 id="宽度单位和像素密度"><a href="#宽度单位和像素密度" class="headerlink" title="宽度单位和像素密度"></a>宽度单位和像素密度</h2><p>react 的宽度不支持百分比，设置宽度时不需要带单位 <code>&#123;width: 10&#125;</code>， 那么 10 代表的具体宽度是多少呢？</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">var Dimensions &#x3D; require(&#39;Dimensions&#39;);</span><br><span class="line">    &lt;Text style&#x3D;&#123;styles.welcome&#125;&gt;</span><br><span class="line">          window.width&#x3D;&#123;Dimensions.get(&#39;window&#39;).width + &#39;\n&#39;&#125; </span><br><span class="line">          window.height&#x3D;&#123;Dimensions.get(&#39;window&#39;).height + &#39;\n&#39;&#125; </span><br><span class="line">          pxielRatio&#x3D;&#123;PixelRatio.get()&#125;</span><br><span class="line">    &lt;&#x2F;Text&gt; </span><br></pre></td></tr></table></figure>
+
+<p>默认用的是 iphone6 的模拟器结果是：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">window.width&#x3D;375</span><br><span class="line">    window.height&#x3D;667</span><br><span class="line">    pxielRatio&#x3D;2</span><br></pre></td></tr></table></figure>
+
+<p>我们知道 iphone 系列的尺寸如下图：</p>
+<p><img src="http://upload-images.jianshu.io/upload_images/10024246-0bc6c802496c032e.jpg?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240"></p>
+<p><img src="https://upload-images.jianshu.io/upload_images/10024246-e64ac35f00c55099.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240"></p>
+<p>可以看到 iphone 6 的宽度为 375pt，对应了上边的 375，由此可见 react 的单位为 pt。 那如何获取实际的像素尺寸呢？ 这对图片的高清化很重要，如果我的图片大小为 100*100 px. 设置宽度为 100 * 100. 那在 iphone 上的尺寸就是模糊的。 这个时候需要的图像大小应该是 100 * pixelRatio 的大小 。</p>
+<p>react 提供了 PixelRatio 的获取方式<a target="_blank" rel="noopener" href="https://facebook.github.io/react-native/docs/pixelratio.html">https://facebook.github.io/react-native/docs/pixelratio.html</a></p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">var image &#x3D; getImage(&#123;</span><br><span class="line">  width: 200 * PixelRatio.get(),</span><br><span class="line">  height: 100 * PixelRatio.get()</span><br><span class="line">&#125;);</span><br><span class="line">&lt;Image source&#x3D;&#123;image&#125; style&#x3D;&#123;&#123;width: 200, height: 100&#125;&#125; &#x2F;&gt;</span><br></pre></td></tr></table></figure>
+
+<h2 id="flex-的布局"><a href="#flex-的布局" class="headerlink" title="flex 的布局"></a>flex 的布局</h2><h3 id="默认宽度"><a href="#默认宽度" class="headerlink" title="默认宽度"></a>默认宽度</h3><p>我们知道一个 div 如果不设置宽度，默认的会占用 100% 的宽度， 为了验证 100% 这个问题， 做三个实验</p>
+<ol>
+<li> 根节点上方一个 View， 不设置宽度</li>
+<li> 固定宽度的元素上设置一个 View， 不设置宽度</li>
+<li> flex 的元素上放一个 View 宽度， 不设置宽度</li>
+</ol>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br></pre></td><td class="code"><pre><span class="line">&lt;Text style&#x3D;&#123;[styles.text, styles.header]&#125;&gt;</span><br><span class="line">     根节点上放一个元素，不设置宽度 </span><br><span class="line"> &lt;&#x2F;Text&gt;        </span><br><span class="line"></span><br><span class="line"> &lt;View style&#x3D;&#123;&#123;height: 20, backgroundColor: &#39;#333333&#39;&#125;&#125; &#x2F;&gt;</span><br><span class="line"></span><br><span class="line"> &lt;Text style&#x3D;&#123;[styles.text, styles.header]&#125;&gt;</span><br><span class="line">     固定宽度的元素上放一个 View，不设置宽度 </span><br><span class="line"> &lt;&#x2F;Text&gt; </span><br><span class="line"></span><br><span class="line"> &lt;View style&#x3D;&#123;&#123;width: 100&#125;&#125;&gt;</span><br><span class="line">   &lt;View style&#x3D;&#123;&#123;height: 20, backgroundColor: &#39;#333333&#39;&#125;&#125; &#x2F;&gt;</span><br><span class="line"> &lt;&#x2F;View&gt;</span><br><span class="line"></span><br><span class="line"> &lt;Text style&#x3D;&#123;[styles.text, styles.header]&#125;&gt;</span><br><span class="line">     flex 的元素上放一个 View，不设置宽度 </span><br><span class="line"> &lt;&#x2F;Text&gt; </span><br><span class="line"></span><br><span class="line"> &lt;View style&#x3D;&#123;&#123;flexDirection: &#39;row&#39;&#125;&#125;&gt;</span><br><span class="line">   &lt;View style&#x3D;&#123;&#123;flex: 1&#125;&#125;&gt;</span><br><span class="line">     &lt;View style&#x3D;&#123;&#123;height: 20, backgroundColor: &#39;#333333&#39;&#125;&#125; &#x2F;&gt;</span><br><span class="line">   &lt;&#x2F;View&gt;</span><br><span class="line">   &lt;View style&#x3D;&#123;&#123;flex: 1&#125;&#125;&#x2F;&gt;</span><br><span class="line"> &lt;&#x2F;View&gt;</span><br></pre></td></tr></table></figure>
+
+<p><img src="http://upload-images.jianshu.io/upload_images/10024246-e57320a321d1c847.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="image"></p>
+<p>结果可以看到 flex 的元素如果不设置宽度， 都会百分之百的占满父容器。</p>
+<h3 id="水平垂直居中"><a href="#水平垂直居中" class="headerlink" title="水平垂直居中"></a>水平垂直居中</h3><p>css 里边经常会做的事情是去讲一个文本或者图片水平垂直居中，如果使用过 css 的 flexbox 当然知道使用<code>alignItems</code> 和 <code>justifyContent</code> . 那用 react-native 也来做一下实验</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br></pre></td><td class="code"><pre><span class="line">&lt;Text style&#x3D;&#123;[styles.text, styles.header]&#125;&gt;</span><br><span class="line">        水平居中 </span><br><span class="line">    &lt;&#x2F;Text&gt;</span><br><span class="line"></span><br><span class="line">    &lt;View style&#x3D;&#123;&#123;height: 100, backgroundColor: &#39;#333333&#39;, alignItems: &#39;center&#39;&#125;&#125;&gt;</span><br><span class="line">      &lt;View style&#x3D;&#123;&#123;backgroundColor: &#39;#fefefe&#39;, width: 30, height: 30, borderRadius: 15&#125;&#125;&#x2F;&gt;</span><br><span class="line">    &lt;&#x2F;View&gt;</span><br><span class="line"></span><br><span class="line">     &lt;Text style&#x3D;&#123;[styles.text, styles.header]&#125;&gt;</span><br><span class="line">        垂直居中 </span><br><span class="line">    &lt;&#x2F;Text&gt;</span><br><span class="line">    &lt;View style&#x3D;&#123;&#123;height: 100, backgroundColor: &#39;#333333&#39;, justifyContent: &#39;center&#39;&#125;&#125;&gt;</span><br><span class="line">      &lt;View style&#x3D;&#123;&#123;backgroundColor: &#39;#fefefe&#39;, width: 30, height: 30, borderRadius: 15&#125;&#125;&#x2F;&gt;</span><br><span class="line">    &lt;&#x2F;View&gt;</span><br><span class="line"></span><br><span class="line">    &lt;Text style&#x3D;&#123;[styles.text, styles.header]&#125;&gt;</span><br><span class="line">        水平垂直居中 </span><br><span class="line">    &lt;&#x2F;Text&gt;</span><br><span class="line">    &lt;View style&#x3D;&#123;&#123;height: 100, backgroundColor: &#39;#333333&#39;, alignItems: &#39;center&#39;, justifyContent: &#39;center&#39;&#125;&#125;&gt;</span><br><span class="line">      &lt;View style&#x3D;&#123;&#123;backgroundColor: &#39;#fefefe&#39;, width: 30, height: 30, borderRadius: 15&#125;&#125;&#x2F;&gt;</span><br><span class="line">    &lt;&#x2F;View&gt;</span><br></pre></td></tr></table></figure>
+<p><img src="http://upload-images.jianshu.io/upload_images/10024246-00bf883c328c1218.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240"></p>
+<h3 id="网格布局"><a href="#网格布局" class="headerlink" title="网格布局"></a>网格布局</h3><p>网格布局实验， 网格布局能够满足绝大多数的日常开发需求，所以只要满足网格布局的 spec，那么就可以证明 react 的 flex 布局能够满足正常开发需求</p>
+<h4 id="等分的网格"><a href="#等分的网格" class="headerlink" title="等分的网格"></a>等分的网格</h4><p><img src="http://upload-images.jianshu.io/upload_images/10024246-615c67dbad91c938.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240"></p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br></pre></td><td class="code"><pre><span class="line">&lt;View style&#x3D;&#123;styles.flexContainer&#125;&gt;</span><br><span class="line">      &lt;View style&#x3D;&#123;styles.cell&#125;&gt;</span><br><span class="line">        &lt;Text style&#x3D;&#123;styles.welcome&#125;&gt;</span><br><span class="line">          cell1</span><br><span class="line">        &lt;&#x2F;Text&gt;</span><br><span class="line">      &lt;&#x2F;View&gt;</span><br><span class="line">      &lt;View style&#x3D;&#123;styles.cell&#125;&gt;</span><br><span class="line">        &lt;Text style&#x3D;&#123;styles.welcome&#125;&gt;</span><br><span class="line">          cell2</span><br><span class="line">        &lt;&#x2F;Text&gt;</span><br><span class="line">      &lt;&#x2F;View&gt;</span><br><span class="line">      &lt;View style&#x3D;&#123;styles.cell&#125;&gt;</span><br><span class="line">        &lt;Text style&#x3D;&#123;styles.welcome&#125;&gt;</span><br><span class="line">          cell3</span><br><span class="line">        &lt;&#x2F;Text&gt;</span><br><span class="line">      &lt;&#x2F;View&gt;</span><br><span class="line">    &lt;&#x2F;View&gt;</span><br><span class="line"></span><br><span class="line">    styles &#x3D; &#123;</span><br><span class="line">        flexContainer: &#123;</span><br><span class="line">            &#x2F;&#x2F; 容器需要添加 direction 才能变成让子元素 flex</span><br><span class="line">            flexDirection: &#39;row&#39;</span><br><span class="line">        &#125;,</span><br><span class="line">        cell: &#123;</span><br><span class="line">            flex: 1,</span><br><span class="line">            height: 50,</span><br><span class="line">            backgroundColor: &#39;#aaaaaa&#39;</span><br><span class="line">        &#125;,</span><br><span class="line">        welcome: &#123;</span><br><span class="line">            fontSize: 20,</span><br><span class="line">            textAlign: &#39;center&#39;,</span><br><span class="line">            margin: 10</span><br><span class="line">        &#125;,</span><br><span class="line">    &#125;</span><br></pre></td></tr></table></figure>
+
+<h4 id="左边固定，-右边固定，中间-flex-的布局"><a href="#左边固定，-右边固定，中间-flex-的布局" class="headerlink" title="左边固定， 右边固定，中间 flex 的布局"></a>左边固定， 右边固定，中间 flex 的布局</h4><p><img src="http://upload-images.jianshu.io/upload_images/10024246-6dace85f7236a105.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240"></p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br></pre></td><td class="code"><pre><span class="line">&lt;View style&#x3D;&#123;styles.flexContainer&#125;&gt;</span><br><span class="line">     &lt;View style&#x3D;&#123;styles.cellfixed&#125;&gt;</span><br><span class="line">       &lt;Text style&#x3D;&#123;styles.welcome&#125;&gt;</span><br><span class="line">         fixed</span><br><span class="line">       &lt;&#x2F;Text&gt;</span><br><span class="line">     &lt;&#x2F;View&gt;</span><br><span class="line">     &lt;View style&#x3D;&#123;styles.cell&#125;&gt;</span><br><span class="line">       &lt;Text style&#x3D;&#123;styles.welcome&#125;&gt;</span><br><span class="line">         flex</span><br><span class="line">       &lt;&#x2F;Text&gt;</span><br><span class="line">     &lt;&#x2F;View&gt;</span><br><span class="line">     &lt;View style&#x3D;&#123;styles.cellfixed&#125;&gt;</span><br><span class="line">       &lt;Text style&#x3D;&#123;styles.welcome&#125;&gt;</span><br><span class="line">         fixed</span><br><span class="line">       &lt;&#x2F;Text&gt;</span><br><span class="line">     &lt;&#x2F;View&gt;</span><br><span class="line">   &lt;&#x2F;View&gt;</span><br><span class="line"></span><br><span class="line">   styles &#x3D; &#123;</span><br><span class="line">       flexContainer: &#123;</span><br><span class="line">           &#x2F;&#x2F; 容器需要添加 direction 才能变成让子元素 flex</span><br><span class="line">           flexDirection: &#39;row&#39;</span><br><span class="line">       &#125;,</span><br><span class="line">       cell: &#123;</span><br><span class="line">           flex: 1,</span><br><span class="line">           height: 50,</span><br><span class="line">           backgroundColor: &#39;#aaaaaa&#39;</span><br><span class="line">       &#125;,</span><br><span class="line">       welcome: &#123;</span><br><span class="line">           fontSize: 20,</span><br><span class="line">           textAlign: &#39;center&#39;,</span><br><span class="line">           margin: 10</span><br><span class="line">       &#125;,</span><br><span class="line">       cellfixed: &#123;</span><br><span class="line">           height: 50,</span><br><span class="line">           width: 80,</span><br><span class="line">           backgroundColor: &#39;#fefefe&#39;</span><br><span class="line">       &#125; </span><br><span class="line">   &#125;</span><br></pre></td></tr></table></figure>
+
+<h4 id="嵌套的网格"><a href="#嵌套的网格" class="headerlink" title="嵌套的网格"></a>嵌套的网格</h4><p>通常网格不是一层的，布局容器都是一层套一层的， 所以必须验证在<code>real world</code>下面的网格布局</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br></pre></td><td class="code"><pre><span class="line">&lt;Text style&#x3D;&#123;[styles.text, styles.header]&#125;&gt;</span><br><span class="line">   嵌套的网格 </span><br><span class="line"> &lt;&#x2F;Text&gt;</span><br><span class="line"> &lt;View style&#x3D;&#123;&#123;flexDirection: &#39;row&#39;, height: 200, backgroundColor:&quot;#fefefe&quot;, padding: 20&#125;&#125;&gt;</span><br><span class="line">   &lt;View style&#x3D;&#123;&#123;flex: 1, flexDirection:&#39;column&#39;, padding: 15, backgroundColor:&quot;#eeeeee&quot;&#125;&#125;&gt;  </span><br><span class="line">       &lt;View style&#x3D;&#123;&#123;flex: 1, backgroundColor:&quot;#bbaaaa&quot;&#125;&#125;&gt;  </span><br><span class="line">       &lt;&#x2F;View&gt;</span><br><span class="line">       &lt;View style&#x3D;&#123;&#123;flex: 1, backgroundColor:&quot;#aabbaa&quot;&#125;&#125;&gt;</span><br><span class="line">       &lt;&#x2F;View&gt;</span><br><span class="line">   &lt;&#x2F;View&gt;</span><br><span class="line">   &lt;View style&#x3D;&#123;&#123;flex: 1, padding: 15, flexDirection:&#39;row&#39;, backgroundColor:&quot;#eeeeee&quot;&#125;&#125;&gt;</span><br><span class="line">       &lt;View style&#x3D;&#123;&#123;flex: 1, backgroundColor:&quot;#aaaabb&quot;&#125;&#125;&gt;  </span><br><span class="line">           &lt;View style&#x3D;&#123;&#123;flex: 1, flexDirection:&#39;row&#39;, backgroundColor:&quot;#eeaaaa&quot;&#125;&#125;&gt; </span><br><span class="line">              &lt;View style&#x3D;&#123;&#123;flex: 1, backgroundColor:&quot;#eebbaa&quot;&#125;&#125;&gt;  </span><br><span class="line">             &lt;&#x2F;View&gt;</span><br><span class="line">             &lt;View style&#x3D;&#123;&#123;flex: 1, backgroundColor:&quot;#bbccee&quot;&#125;&#125;&gt;</span><br><span class="line">             &lt;&#x2F;View&gt; </span><br><span class="line">           &lt;&#x2F;View&gt;</span><br><span class="line">           &lt;View style&#x3D;&#123;&#123;flex: 1, backgroundColor:&quot;#eebbdd&quot;&#125;&#125;&gt;</span><br><span class="line">           &lt;&#x2F;View&gt;</span><br><span class="line">       &lt;&#x2F;View&gt;</span><br><span class="line">       &lt;View style&#x3D;&#123;&#123;flex: 1, backgroundColor:&quot;#aaccaa&quot;&#125;&#125;&gt;</span><br><span class="line">         &lt;ScrollView style&#x3D;&#123;&#123;flex: 1, backgroundColor:&quot;#bbccdd&quot;, padding: 5&#125;&#125;&gt;</span><br><span class="line">               &lt;View style&#x3D;&#123;&#123;flexDirection: &#39;row&#39;, height: 50, backgroundColor:&quot;#fefefe&quot;&#125;&#125;&gt;</span><br><span class="line">                 &lt;View style&#x3D;&#123;&#123;flex: 1, flexDirection:&#39;column&#39;, backgroundColor:&quot;#eeeeee&quot;&#125;&#125;&gt;  </span><br><span class="line">                     &lt;View style&#x3D;&#123;&#123;flex: 1, backgroundColor:&quot;#bbaaaa&quot;&#125;&#125;&gt;  </span><br><span class="line">                     &lt;&#x2F;View&gt;</span><br><span class="line">                     &lt;View style&#x3D;&#123;&#123;flex: 1, backgroundColor:&quot;#aabbaa&quot;&#125;&#125;&gt;</span><br><span class="line">                     &lt;&#x2F;View&gt;</span><br><span class="line">                 &lt;&#x2F;View&gt;</span><br><span class="line">                 &lt;View style&#x3D;&#123;&#123;flex: 1, flexDirection:&#39;row&#39;, backgroundColor:&quot;#eeeeee&quot;&#125;&#125;&gt;</span><br><span class="line">                     &lt;View style&#x3D;&#123;&#123;flex: 1, backgroundColor:&quot;#aaaabb&quot;&#125;&#125;&gt;  </span><br><span class="line">                         &lt;View style&#x3D;&#123;&#123;flex: 1, flexDirection:&#39;row&#39;, backgroundColor:&quot;#eeaaaa&quot;&#125;&#125;&gt; </span><br><span class="line">                            &lt;View style&#x3D;&#123;&#123;flex: 1, backgroundColor:&quot;#eebbaa&quot;&#125;&#125;&gt;  </span><br><span class="line">                           &lt;&#x2F;View&gt;</span><br><span class="line">                           &lt;View style&#x3D;&#123;&#123;flex: 1, backgroundColor:&quot;#bbccee&quot;&#125;&#125;&gt;</span><br><span class="line">                           &lt;&#x2F;View&gt; </span><br><span class="line">                         &lt;&#x2F;View&gt;</span><br><span class="line">                         &lt;View style&#x3D;&#123;&#123;flex: 1, backgroundColor:&quot;#eebbdd&quot;&#125;&#125;&gt;</span><br><span class="line">                         &lt;&#x2F;View&gt;</span><br><span class="line">                     &lt;&#x2F;View&gt;</span><br><span class="line">                     &lt;View style&#x3D;&#123;&#123;flex: 1, backgroundColor:&quot;#aaccaa&quot;&#125;&#125;&gt;</span><br><span class="line">                     &lt;&#x2F;View&gt;</span><br><span class="line">                 &lt;&#x2F;View&gt;</span><br><span class="line">               &lt;&#x2F;View&gt;</span><br><span class="line">               &lt;Text style&#x3D;&#123;[styles.text, styles.header, &#123;color: &#39;#ffffff&#39;, fontSize: 12&#125;]&#125;&gt;</span><br><span class="line">                 &#123;(function()&#123;</span><br><span class="line">                   var str &#x3D; &#39;&#39;;</span><br><span class="line">                   var n &#x3D; 100;</span><br><span class="line">                   while(n--) &#123;</span><br><span class="line">                     str +&#x3D; &#39;嵌套的网格&#39; + &#39;\n&#39;;</span><br><span class="line">                   &#125;</span><br><span class="line">                   return str;</span><br><span class="line">                 &#125;)()&#125;</span><br><span class="line">               &lt;&#x2F;Text&gt;</span><br><span class="line">         &lt;&#x2F;ScrollView&gt; </span><br><span class="line">       &lt;&#x2F;View&gt;</span><br><span class="line">   &lt;&#x2F;View&gt;</span><br><span class="line"> &lt;&#x2F;View&gt;</span><br></pre></td></tr></table></figure>
+
+<p><img src="http://upload-images.jianshu.io/upload_images/10024246-6ae9ca4d667f4279.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240"></p>
+<p>可以看到上图的嵌套关系也是足够的复杂的，嵌套多层的布局是没有问题的。</p>
+<h2 id="图片布局"><a href="#图片布局" class="headerlink" title="图片布局"></a>图片布局</h2><p>resizeMode<br>决定当组件尺寸和图片尺寸不成比例的时候如何调整图片的大小。</p>
+<p>cover: 在保持图片宽高比的前提下缩放图片，直到宽度和高度都大于等于容器视图的尺寸（如果容器有 padding 内衬的话，则相应减去）。译注：这样图片完全覆盖甚至超出容器，容器中不留任何空白。</p>
+<p>contain: 在保持图片宽高比的前提下缩放图片，直到宽度和高度都小于等于容器视图的尺寸（如果容器有 padding 内衬的话，则相应减去）。译注：这样图片完全被包裹在容器中，容器中可能留有空白。</p>
+<p>stretch: 拉伸图片且不维持宽高比，直到宽高都刚好填满容器。</p>
+<p>repeat: 重复平铺图片直到填满容器。图片会维持原始尺寸，但是当尺寸超过容器时会在保持宽高比的前提下缩放到能被容器包裹。</p>
+<p>center: 居中不拉伸。</p>
+<p>类型    必填<br>enum(‘cover’, ‘contain’, ‘stretch’, ‘repeat’, ‘center’)    否</p>
+<h3 id="尝试使用这些-mode"><a href="#尝试使用这些-mode" class="headerlink" title="尝试使用这些 mode"></a>尝试使用这些 mode</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">&lt;Text style&#x3D;&#123;styles.welcome&#125;&gt; 100px height &lt;&#x2F;Text&gt;</span><br><span class="line">  &lt;Image style&#x3D;&#123;&#123;height: 100&#125;&#125; source&#x3D;&#123;&#123;uri: &#39;http:&#x2F;&#x2F;gtms03.alicdn.com&#x2F;tps&#x2F;i3&#x2F;TB1Kcs5GXXXXXbMXVXXutsrNFXX-608-370.png&#39;&#125;&#125; &#x2F;&gt;</span><br></pre></td></tr></table></figure>
+<p><img src="http://upload-images.jianshu.io/upload_images/10024246-362bad2b8b316e9d.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240"></p>
+<p>100px 高度， 可以看到图片适应 100 高度和全屏宽度，背景居中适应未拉伸但是被截断也就是 cover。</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">&lt;Text style&#x3D;&#123;styles.welcome&#125;&gt; 100px height with resizeMode contain &lt;&#x2F;Text&gt;</span><br><span class="line">  &lt;View style&#x3D;&#123;[&#123;flex: 1, backgroundColor: &#39;#fe0000&#39;&#125;]&#125;&gt;</span><br><span class="line">      &lt;Image style&#x3D;&#123;&#123;flex: 1, height: 100, resizeMode: Image.resizeMode.contain&#125;&#125; source&#x3D;&#123;&#123;uri: &#39;http:&#x2F;&#x2F;gtms03.alicdn.com&#x2F;tps&#x2F;i3&#x2F;TB1Kcs5GXXXXXbMXVXXutsrNFXX-608-370.png&#39;&#125;&#125; &#x2F;&gt;</span><br><span class="line">  &lt;&#x2F;View&gt;</span><br></pre></td></tr></table></figure>
+<p><img src="http://upload-images.jianshu.io/upload_images/10024246-8fb3d970224a8826.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240"></p>
+<p>contain 模式容器完全容纳图片，图片自适应宽高</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">&lt;Text style&#x3D;&#123;styles.welcome&#125;&gt; 100px height with resizeMode cover &lt;&#x2F;Text&gt;</span><br><span class="line">&lt;View style&#x3D;&#123;[&#123;flex: 1, backgroundColor: &#39;#fe0000&#39;&#125;]&#125;&gt;</span><br><span class="line">    &lt;Image style&#x3D;&#123;&#123;flex: 1, height: 100, resizeMode: Image.resizeMode.cover&#125;&#125; source&#x3D;&#123;&#123;uri: &#39;http:&#x2F;&#x2F;gtms03.alicdn.com&#x2F;tps&#x2F;i3&#x2F;TB1Kcs5GXXXXXbMXVXXutsrNFXX-608-370.png&#39;&#125;&#125; &#x2F;&gt;</span><br><span class="line">&lt;&#x2F;View&gt;</span><br></pre></td></tr></table></figure>
+<p><img src="http://upload-images.jianshu.io/upload_images/10024246-838cfa2b87968c89.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240"></p>
+<p>cover 模式同 100px 高度模式</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">&lt;Text style&#x3D;&#123;styles.welcome&#125;&gt; 100px height with resizeMode stretch &lt;&#x2F;Text&gt;</span><br><span class="line">&lt;View style&#x3D;&#123;[&#123;flex: 1, backgroundColor: &#39;#fe0000&#39;&#125;]&#125;&gt;</span><br><span class="line">    &lt;Image style&#x3D;&#123;&#123;flex: 1, height: 100, resizeMode: Image.resizeMode.stretch&#125;&#125; source&#x3D;&#123;&#123;uri: &#39;http:&#x2F;&#x2F;gtms03.alicdn.com&#x2F;tps&#x2F;i3&#x2F;TB1Kcs5GXXXXXbMXVXXutsrNFXX-608-370.png&#39;&#125;&#125; &#x2F;&gt;</span><br><span class="line">&lt;&#x2F;View&gt;</span><br></pre></td></tr></table></figure>
+
+<p><img src="http://upload-images.jianshu.io/upload_images/10024246-79585ac3ee389124.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240"></p>
+<p>stretch 模式图片被拉伸适应屏幕</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">&lt;Text style&#x3D;&#123;styles.welcome&#125;&gt; set height to image container &lt;&#x2F;Text&gt;</span><br><span class="line"> &lt;View style&#x3D;&#123;[&#123;flex: 1, backgroundColor: &#39;#fe0000&#39;, height: 100&#125;]&#125;&gt;</span><br><span class="line">     &lt;Image style&#x3D;&#123;&#123;flex: 1&#125;&#125; source&#x3D;&#123;&#123;uri: &#39;http:&#x2F;&#x2F;gtms03.alicdn.com&#x2F;tps&#x2F;i3&#x2F;TB1Kcs5GXXXXXbMXVXXutsrNFXX-608-370.png&#39;&#125;&#125; &#x2F;&gt;</span><br><span class="line"> &lt;&#x2F;View&gt;</span><br></pre></td></tr></table></figure>
+
+<p><img src="http://upload-images.jianshu.io/upload_images/10024246-93bc6559fbb2dfbf.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240"></p>
+<p>随便试验了一下， 发现高度设置到父容器，图片 flex 的时候也会等同于 cover 模式</p>
+<h2 id="绝对定位和相对定位"><a href="#绝对定位和相对定位" class="headerlink" title="绝对定位和相对定位"></a>绝对定位和相对定位</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line">&lt;View style&#x3D;&#123;&#123;flex: 1, height: 100, backgroundColor: &#39;#333333&#39;&#125;&#125;&gt;</span><br><span class="line">   &lt;View style&#x3D;&#123;[styles.circle, &#123;position: &#39;absolute&#39;, top: 50, left: 180&#125;]&#125;&gt;</span><br><span class="line">   &lt;&#x2F;View&gt;</span><br><span class="line"> &lt;&#x2F;View&gt;</span><br><span class="line"> styles &#x3D; &#123;</span><br><span class="line">   circle: &#123;</span><br><span class="line">   backgroundColor: &#39;#fe0000&#39;,</span><br><span class="line">   borderRadius: 10,</span><br><span class="line">   width: 20,</span><br><span class="line">   height: 20</span><br><span class="line">   &#125;</span><br><span class="line"> &#125;</span><br></pre></td></tr></table></figure>
+
+<p><img src="http://upload-images.jianshu.io/upload_images/10024246-cc5a8655322a7a0e.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240"></p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">&lt;View style&#x3D;&#123;&#123;flex: 1, height: 100, backgroundColor: &#39;#333333&#39;&#125;&#125;&gt;</span><br><span class="line">   &lt;View style&#x3D;&#123;[styles.circle, &#123;position: &#39;relative&#39;, top: 50, left: 50, marginLeft: 50&#125;]&#125;&gt;</span><br><span class="line">   &lt;&#x2F;View&gt;</span><br><span class="line"> &lt;&#x2F;View&gt;</span><br></pre></td></tr></table></figure>
+
+<p><img src="http://upload-images.jianshu.io/upload_images/10024246-f54b7a67e3698522.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240"></p>
+<p>相对定位的可以看到很容易的配合 margin 做到了。 </p>
+<h2 id="padding-和-margin"><a href="#padding-和-margin" class="headerlink" title="padding 和 margin"></a>padding 和 margin</h2><p>我们知道在 css 中区分 inline 元素和 block 元素，既然 react-native 实现了一个超级小的 css subset。那我们就来实验一下 padding 和 margin 在 inline 和非 inline 元素上的 padding 和 margin 的使用情况。</p>
+<p>**padding **</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br></pre></td><td class="code"><pre><span class="line">&lt;Text style&#x3D;&#123;[styles.text, styles.header]&#125;&gt;</span><br><span class="line">   在正常的 View 上设置 padding </span><br><span class="line"> &lt;&#x2F;Text&gt;</span><br><span class="line"></span><br><span class="line"> &lt;View style&#x3D;&#123;&#123;padding: 30, backgroundColor: &#39;#333333&#39;&#125;&#125;&gt;</span><br><span class="line">   &lt;Text style&#x3D;&#123;[styles.text, &#123;color: &#39;#fefefe&#39;&#125;]&#125;&gt; Text Element&lt;&#x2F;Text&gt;</span><br><span class="line"> &lt;&#x2F;View&gt;</span><br><span class="line"></span><br><span class="line"> &lt;Text style&#x3D;&#123;[styles.text, styles.header]&#125;&gt;</span><br><span class="line">   在文本元素上设置 padding</span><br><span class="line"> &lt;&#x2F;Text&gt;</span><br><span class="line"> &lt;View style&#x3D;&#123;&#123;padding: 0, backgroundColor: &#39;#333333&#39;&#125;&#125;&gt;</span><br><span class="line">   &lt;Text style&#x3D;&#123;[styles.text, &#123;backgroundColor: &#39;#fe0000&#39;, padding: 30&#125;]&#125;&gt;</span><br><span class="line">     text 元素上设置 paddinga</span><br><span class="line">   &lt;&#x2F;Text&gt;</span><br><span class="line"> &lt;&#x2F;View&gt;</span><br></pre></td></tr></table></figure>
+
+<p><img src="http://upload-images.jianshu.io/upload_images/10024246-bcb5e4613d125463.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240"></p>
+<p>在 View 上设置 padding 很顺利，没有任何问题， 但是如果在 inline 元素上设置 padding， 发现会出现上面的错误， paddingTop 和 paddingBottom 都被挤成 marginBottom 了。 按理说，不应该对 Text 做 padding 处理， 但是确实有这样的问题存在，所以可以将这个问题 mark 一下。</p>
+<p><strong>margin</strong></p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br></pre></td><td class="code"><pre><span class="line">&lt;Text style&#x3D;&#123;[styles.text, styles.header]&#125;&gt;</span><br><span class="line">   在正常的 View 上设置 margin </span><br><span class="line"> &lt;&#x2F;Text&gt;</span><br><span class="line"></span><br><span class="line"> &lt;View style&#x3D;&#123;&#123;backgroundColor: &#39;#333333&#39;&#125;&#125;&gt;</span><br><span class="line">   &lt;View style&#x3D;&#123;&#123;backgroundColor: &#39;#fefefe&#39;, width: 30, height: 30, margin: 30&#125;&#125;&#x2F;&gt;</span><br><span class="line"> &lt;&#x2F;View&gt;</span><br><span class="line"></span><br><span class="line"> &lt;Text style&#x3D;&#123;[styles.text, styles.header]&#125;&gt;</span><br><span class="line">   在文本元素上设置 margin</span><br><span class="line"> &lt;&#x2F;Text&gt;</span><br><span class="line"> &lt;View style&#x3D;&#123;&#123;backgroundColor: &#39;#333333&#39;&#125;&#125;&gt;</span><br><span class="line">   &lt;Text style&#x3D;&#123;[styles.text, &#123;backgroundColor: &#39;#fe0000&#39;, margin: 30&#125;]&#125;&gt;</span><br><span class="line">     text 元素上设置 margin</span><br><span class="line">   &lt;&#x2F;Text&gt;</span><br><span class="line">   &lt;Text style&#x3D;&#123;[styles.text, &#123;backgroundColor: &#39;#fe0000&#39;, margin: 30&#125;]&#125;&gt;</span><br><span class="line">     text 元素上设置 margin</span><br><span class="line">   &lt;&#x2F;Text&gt;</span><br><span class="line"> &lt;&#x2F;View&gt;</span><br></pre></td></tr></table></figure>
+
+<p><img src="http://upload-images.jianshu.io/upload_images/10024246-92749d24ac214bed.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240"></p>
+<p>我们知道，对于 inline 元素，设置 margin-left 和 margin-right 有效，top 和 bottom 按理是不会生效的， 但是上图的结果可以看到，实际是生效了的。所以现在给我的感觉是 Text 元素更应该理解为一个不能设置 padding 的 block。</p>
+<p>算了不要猜了， 我们看看官方文档怎么说 Text，<a target="_blank" rel="noopener" href="https://facebook.github.io/react-native/docs/text.html">https://facebook.github.io/react-native/docs/text.html</a></p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br></pre></td><td class="code"><pre><span class="line">&lt;Text&gt;</span><br><span class="line">   &lt;Text&gt;First part and &lt;&#x2F;Text&gt;</span><br><span class="line">   &lt;Text&gt;second part&lt;&#x2F;Text&gt;</span><br><span class="line"> &lt;&#x2F;Text&gt;</span><br><span class="line"> &#x2F;&#x2F; Text container: all the text flows as if it was one</span><br><span class="line"> &#x2F;&#x2F; |First part |</span><br><span class="line"> &#x2F;&#x2F; |and second |</span><br><span class="line"> &#x2F;&#x2F; |part       |</span><br><span class="line"></span><br><span class="line"> &lt;View&gt;</span><br><span class="line">   &lt;Text&gt;First part and &lt;&#x2F;Text&gt;</span><br><span class="line">   &lt;Text&gt;second part&lt;&#x2F;Text&gt;</span><br><span class="line"> &lt;&#x2F;View&gt;</span><br><span class="line"> &#x2F;&#x2F; View container: each text is its own block</span><br><span class="line"> &#x2F;&#x2F; |First part |</span><br><span class="line"> &#x2F;&#x2F; |and        |</span><br><span class="line"> &#x2F;&#x2F; |second part|</span><br></pre></td></tr></table></figure>
+
+<p>也就是如果 Text 元素在 Text 里边，可以考虑为 inline， 如果单独在 View 里边，那就是 Block。</p>
+<p>下面会专门研究一下文本相关的布局</p>
+<h2 id="文本元素"><a href="#文本元素" class="headerlink" title="文本元素"></a>文本元素</h2><p>首先我们得考虑对于 Text 元素我们希望有哪些功能或者想验证哪些功能：</p>
+<ol>
+<li> 文字是否能自动换行？</li>
+<li> overflow ellipse？</li>
+<li> 是否能对部分文字设置样式 ，类似 span 等标签</li>
+</ol>
+<h3 id="先看看文字有哪些支持的-style-属性"><a href="#先看看文字有哪些支持的-style-属性" class="headerlink" title="先看看文字有哪些支持的 style 属性"></a>先看看文字有哪些支持的 style 属性</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line">&#x2F;*&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;TEXT&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;*&#x2F;</span><br><span class="line">  Attributes.style &#x3D; &#123;</span><br><span class="line">    color string</span><br><span class="line">    containerBackgroundColor string</span><br><span class="line">    fontFamily string</span><br><span class="line">    fontSize number</span><br><span class="line">    fontStyle enum(&#39;normal&#39;, &#39;italic&#39;)</span><br><span class="line">    fontWeight enum(&quot;normal&quot;, &#39;bold&#39;, &#39;100&#39;, &#39;200&#39;, &#39;300&#39;, &#39;400&#39;, &#39;500&#39;, &#39;600&#39;, &#39;700&#39;, &#39;800&#39;, &#39;900&#39;)</span><br><span class="line">    lineHeight number</span><br><span class="line">    textAlign enum(&quot;auto&quot;, &#39;left&#39;, &#39;right&#39;, &#39;center&#39;)</span><br><span class="line">    writingDirection enum(&quot;auto&quot;, &#39;ltr&#39;, &#39;rtl&#39;)</span><br><span class="line">  &#125;</span><br></pre></td></tr></table></figure>
+
+<h3 id="实验-1，-2，-3"><a href="#实验-1，-2，-3" class="headerlink" title="实验 1， 2， 3"></a>实验 1， 2， 3</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br></pre></td><td class="code"><pre><span class="line">&lt;Text style&#x3D;&#123;[styles.text, styles.header]&#125;&gt;</span><br><span class="line">     文本元素 </span><br><span class="line"> &lt;&#x2F;Text&gt;</span><br><span class="line"></span><br><span class="line"> &lt;View style&#x3D;&#123;&#123;backgroundColor: &#39;#333333&#39;, padding: 10&#125;&#125;&gt;</span><br><span class="line">   &lt;Text style&#x3D;&#123;styles.baseText&#125; numberOfLines&#x3D;&#123;5&#125;&gt;</span><br><span class="line">     &lt;Text style&#x3D;&#123;styles.titleText&#125; onPress&#x3D;&#123;this.onPressTitle&#125;&gt;</span><br><span class="line">       文本元素&#123;&#39;\n&#39;&#125;</span><br><span class="line">     &lt;&#x2F;Text&gt;</span><br><span class="line">     &lt;Text&gt;</span><br><span class="line">       &#123;&#39;\n&#39;&#125;In this example, the nested title and body text will inherit the fontFamily from styles.baseText, but the title provides its own additional styles. The title and body will stack on top of each other on account of the literal newlines, numberOfLines is Used to truncate the text with an elipsis after computing the text layout, including line wrapping, such that the total number of lines does not exceed this number.</span><br><span class="line">     &lt;&#x2F;Text&gt;</span><br><span class="line">   &lt;&#x2F;Text&gt;</span><br><span class="line"> &lt;&#x2F;View&gt;</span><br><span class="line"> styles &#x3D; &#123;</span><br><span class="line">   baseText: &#123;</span><br><span class="line">     fontFamily: &#39;Cochin&#39;,</span><br><span class="line">     color: &#39;white&#39;</span><br><span class="line">   &#125;,</span><br><span class="line">   titleText: &#123;</span><br><span class="line">     fontSize: 20,</span><br><span class="line">     fontWeight: &#39;bold&#39;,</span><br><span class="line">   &#125;</span><br><span class="line"> &#125;</span><br></pre></td></tr></table></figure>
+
+<p><img src="http://upload-images.jianshu.io/upload_images/10024246-f4f3db377d37595b.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240"></p>
+<p>从结果来看 1，2，3 得到验证。 但是不知道各位有没有发现问题， 为什么底部空出了这么多空间， 没有设置高度啊。 我去除<code>numberOfLines=&#123;5&#125;</code> 这行代码，效果如下：</p>
+<p><img src="http://upload-images.jianshu.io/upload_images/10024246-25ea32e747982ffb.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240"></p>
+<p>所以实际上， 那段空间是文本撑开的， 但是文本被<code>numberOfLines=&#123;5&#125;</code> 截取了，但是剩余的空间还在。 我猜这应该是个 bug。</p>
+<p>其实官方文档里边把<code>numberOfLines=&#123;5&#125;</code>这句放到的是长文本的 Text 元素上的，也就是子 Text 上的。 实际结果是不生效。 这应该又是一个 bug。</p>
+<p>Text 元素的子 Text 元素的具体实现是怎样的， 感觉这货会有很多 bug， 看官文</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">&lt;Text style&#x3D;&#123;&#123;fontWeight: &#39;bold&#39;&#125;&#125;&gt;</span><br><span class="line">  I am bold</span><br><span class="line">  &lt;Text style&#x3D;&#123;&#123;color: &#39;red&#39;&#125;&#125;&gt;</span><br><span class="line">    and red</span><br><span class="line">  &lt;&#x2F;Text&gt;</span><br><span class="line"> &lt;&#x2F;Text&gt;</span><br></pre></td></tr></table></figure>
+
+<blockquote>
+<p>Behind the scenes, this is going to be converted to a flat</p>
+<p>NSAttributedString that contains the following information</p>
+</blockquote>
+<p>好吧， 那对于<code>numberOfLines=&#123;5&#125;</code> 放在子 Text 元素上的那种 bug 倒是可以解释了。</p>
+<h3 id="Text-的样式继承"><a href="#Text-的样式继承" class="headerlink" title="Text 的样式继承"></a>Text 的样式继承</h3><p>实际上 React-native 里边是没有样式继承这种说法的， 但是对于 Text 元素里边的 Text 元素，上面的例子可以看出存在继承。 那既然有继承，问题就来了！</p>
+<p>到底是继承的最外层的 Text 的值呢，还是继承父亲 Text 的值呢？</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line">&lt;Text style&#x3D;&#123;[styles.text, styles.header]&#125;&gt;</span><br><span class="line">      文本样式继承 </span><br><span class="line">  &lt;&#x2F;Text&gt;</span><br><span class="line"></span><br><span class="line">  &lt;View style&#x3D;&#123;&#123;backgroundColor: &#39;#333333&#39;, padding: 10&#125;&#125;&gt;</span><br><span class="line">    &lt;Text style&#x3D;&#123;&#123;color: &#39;white&#39;&#125;&#125;&gt;</span><br><span class="line">      &lt;Text style&#x3D;&#123;&#123;color: &#39;red&#39;&#125;&#125; onPress&#x3D;&#123;this.onPressTitle&#125;&gt;</span><br><span class="line">         文本元素&#123;&#39;\n&#39;&#125;</span><br><span class="line">        &lt;Text&gt; 我是 white 还是 red 呢？&#123;&#39;\n&#39;&#125; &lt;&#x2F;Text&gt;</span><br><span class="line">      &lt;&#x2F;Text&gt;</span><br><span class="line">      &lt;Text&gt; 我应该是 white 的 &lt;&#x2F;Text&gt;</span><br><span class="line">    &lt;&#x2F;Text&gt;</span><br><span class="line">  &lt;&#x2F;View&gt;</span><br></pre></td></tr></table></figure>
+
+<p><img src="http://upload-images.jianshu.io/upload_images/10024246-b9f60cacd4e50154.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="image"></p>
+<p>结果可见是直接继承父亲 Text 的。</p>
+<h2 id="总结"><a href="#总结" class="headerlink" title="总结"></a>总结</h2><ol>
+<li> react 宽度基于<code>pt</code>为单位， 可以通过<code>Dimensions</code> 来获取宽高，<code>PixelRatio</code> 获取密度，如果想使用百分比，可以通过获取屏幕宽度手动计算。</li>
+<li>基于 flex 的布局<ol>
+<li> view 默认宽度为 100%</li>
+<li> 水平居中用<code>alignItems</code>, 垂直居中用<code>justifyContent</code></li>
+<li> 基于 flex 能够实现现有的网格系统需求，且网格能够各种嵌套无 bug</li>
+</ol>
+</li>
+<li>图片布局<ol>
+<li> 通过<code>Image.resizeMode</code>来适配图片布局，包括<code>contain</code>, <code>cover</code>, <code>stretch</code></li>
+<li> 默认不设置模式等于 cover 模式</li>
+<li> contain 模式自适应宽高，给出高度值即可</li>
+<li> cover 铺满容器，但是会做截取</li>
+<li> stretch 铺满容器，拉伸</li>
+</ol>
+</li>
+<li>定位<ol>
+<li> 定位相对于父元素，父元素不用设置 position 也行</li>
+<li> padding 设置在 Text 元素上的时候会存在 bug。所有 padding 变成了 marginBottom</li>
+</ol>
+</li>
+<li>文本元素<ol>
+<li> 文字必须放在 Text 元素里边</li>
+<li> Text 元素可以相互嵌套，且存在样式继承关系</li>
+<li> <code>numberOfLines</code> 需要放在最外层的 Text 元素上，且虽然截取了文字但是还是会占用空间<br>xi</li>
+</ol>
+</li>
+</ol>
+
+      
+    </div>
+
+    
+    
+    
+
+    <footer class="post-footer">
+        <div class="post-eof"></div>
+      
+    </footer>
+  </article>
+</div>
+
+
+
+
+    
+
+
+<div class="post-block">
+  
+  
+
+  <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="">
+    <link itemprop="mainEntityOfPage" href="https://lzhwweb.github.io/nirvana/uncategorized/mac/%E5%9C%A8-Mac-%E4%B8%8A%E5%AE%89%E8%A3%9D-Windows%E8%BD%AF%E4%BB%B6/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/nirvana/images/headphoto.jpeg">
+      <meta itemprop="name" content="nirvana">
+      <meta itemprop="description" content="个人学习笔记">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="涅槃快乐是金">
+    </span>
+      <header class="post-header">
+        <h2 class="post-title" itemprop="name headline">
+          <a href="/nirvana/uncategorized/mac/%E5%9C%A8-Mac-%E4%B8%8A%E5%AE%89%E8%A3%9D-Windows%E8%BD%AF%E4%BB%B6/" class="post-title-link" itemprop="url">未命名</a>
+        </h2>
+
+        <div class="post-meta-container">
+          <div class="post-meta">
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-calendar"></i>
+      </span>
+      <span class="post-meta-item-text">发表于</span>
+
+      <time title="创建时间：2021-03-10 13:43:55" itemprop="dateCreated datePublished" datetime="2021-03-10T13:43:55+08:00">2021-03-10</time>
+    </span>
+
+  
+    <span id="/nirvana/uncategorized/mac/%E5%9C%A8-Mac-%E4%B8%8A%E5%AE%89%E8%A3%9D-Windows%E8%BD%AF%E4%BB%B6/" class="post-meta-item leancloud_visitors" data-flag-title="" title="阅读次数">
+      <span class="post-meta-item-icon">
+        <i class="far fa-eye"></i>
+      </span>
+      <span class="post-meta-item-text">阅读次数：</span>
+      <span class="leancloud-visitors-count"></span>
+    </span>
+      </div>
+      <div class="post-meta">
+    <span class="post-meta-item" title="本文字数">
+      <span class="post-meta-item-icon">
+        <i class="far fa-file-word"></i>
+      </span>
+      <span class="post-meta-item-text">本文字数：</span>
+      <span>0</span>
+    </span>
+    <span class="post-meta-item" title="阅读时长">
+      <span class="post-meta-item-icon">
+        <i class="far fa-clock"></i>
+      </span>
+      <span class="post-meta-item-text">阅读时长 &asymp;</span>
+      <span>1 分钟</span>
+    </span>
+</div>
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+          
+      
+    </div>
+
+    
+    
+    
+
+    <footer class="post-footer">
+        <div class="post-eof"></div>
+      
+    </footer>
+  </article>
+</div>
+
+
+
+
+  <nav class="pagination">
+    <a class="extend prev" rel="prev" href="/nirvana/page/15/"><i class="fa fa-angle-left" aria-label="上一页"></i></a><a class="page-number" href="/nirvana/">1</a><span class="space">&hellip;</span><a class="page-number" href="/nirvana/page/15/">15</a><span class="page-number current">16</span><a class="page-number" href="/nirvana/page/17/">17</a><span class="space">&hellip;</span><a class="page-number" href="/nirvana/page/19/">19</a><a class="extend next" rel="next" href="/nirvana/page/17/"><i class="fa fa-angle-right" aria-label="下一页"></i></a>
+  </nav>
+
+
+<script>
+  window.addEventListener('tabs:register', () => {
+    let { activeClass } = CONFIG.comments;
+    if (CONFIG.comments.storage) {
+      activeClass = localStorage.getItem('comments_active') || activeClass;
+    }
+    if (activeClass) {
+      const activeTab = document.querySelector(`a[href="#comment-${activeClass}"]`);
+      if (activeTab) {
+        activeTab.click();
+      }
+    }
+  });
+  if (CONFIG.comments.storage) {
+    window.addEventListener('tabs:click', event => {
+      if (!event.target.matches('.tabs-comment .tab-content .tab-pane')) return;
+      const commentClass = event.target.classList[1];
+      localStorage.setItem('comments_active', commentClass);
+    });
+  }
+</script>
+</div>
+  </main>
+
+  <footer class="footer">
+    <div class="footer-inner">
+
+
+<div class="copyright">
+  &copy; 
+  <span itemprop="copyrightYear">2021</span>
+  <span class="with-love">
+    <i class="fa fa-heart"></i>
+  </span>
+  <span class="author" itemprop="copyrightHolder">nirvana</span>
+</div>
+<div class="wordcount">
+  <span class="post-meta-item">
+    <span class="post-meta-item-icon">
+      <i class="fa fa-chart-line"></i>
+    </span>
+      <span>站点总字数：</span>
+    <span title="站点总字数">532k</span>
+  </span>
+  <span class="post-meta-item">
+    <span class="post-meta-item-icon">
+      <i class="fa fa-coffee"></i>
+    </span>
+      <span>站点阅读时长 &asymp;</span>
+    <span title="站点阅读时长">8:04</span>
+  </span>
+</div>
+  <div class="powered-by">由 <a href="https://hexo.io/" class="theme-link" rel="noopener" target="_blank">Hexo</a> & <a href="https://theme-next.js.org/" class="theme-link" rel="noopener" target="_blank">NexT.Gemini</a> 强力驱动
+  </div>
+
+    </div>
+  </footer>
+
+  
+  <script src="https://cdn.jsdelivr.net/npm/animejs@3.2.1/lib/anime.min.js"></script>
+<script src="/nirvana/js/utils.js"></script><script src="/nirvana/js/motion.js"></script><script src="/nirvana/js/next-boot.js"></script>
+
+  
+<script src="/nirvana/js/local-search.js"></script>
+
+
+
+
+
+
+  
+
+
+<script>
+  (function() {
+    function leancloudSelector(url) {
+      url = encodeURI(url);
+      return document.getElementById(url).querySelector('.leancloud-visitors-count');
+    }
+
+    function addCount(Counter) {
+      const visitors = document.querySelector('.leancloud_visitors');
+      const url = decodeURI(visitors.id);
+      const title = visitors.dataset.flagTitle;
+
+      Counter('get', '/classes/Counter?where=' + encodeURIComponent(JSON.stringify({ url })))
+        .then(response => response.json())
+        .then(({ results }) => {
+          if (results.length > 0) {
+            const counter = results[0];
+            leancloudSelector(url).innerText = counter.time + 1;
+            Counter('put', '/classes/Counter/' + counter.objectId, { time: { '__op': 'Increment', 'amount': 1 } })
+              .catch(error => {
+                console.error('Failed to save visitor count', error);
+              });
+          } else {
+              leancloudSelector(url).innerText = 'Counter not initialized! More info at console err msg.';
+              console.error('ATTENTION! LeanCloud counter has security bug, see how to solve it here: https://github.com/theme-next/hexo-leancloud-counter-security. \n However, you can still use LeanCloud without security, by setting `security` option to `false`.');
+            
+          }
+        })
+        .catch(error => {
+          console.error('LeanCloud Counter Error', error);
+        });
+    }
+
+    function showTime(Counter) {
+      const visitors = document.querySelectorAll('.leancloud_visitors');
+      const entries = [...visitors].map(element => {
+        return decodeURI(element.id);
+      });
+
+      Counter('get', '/classes/Counter?where=' + encodeURIComponent(JSON.stringify({ url: { '$in': entries } })))
+        .then(response => response.json())
+        .then(({ results }) => {
+          for (let url of entries) {
+            const target = results.find(item => item.url === url);
+            leancloudSelector(url).innerText = target ? target.time : 0;
+          }
+        })
+        .catch(error => {
+          console.error('LeanCloud Counter Error', error);
+        });
+    }
+
+    const { app_id, app_key, server_url } = {"enable":true,"app_id":"SPsNUvBhME7XmrjzCfHkUu3e-gzGzoHsz","app_key":"4TONafemiIzvJUwqLa7WveoL","server_url":"https://leancloud.cn","security":true,"betterPerformance":false};
+    function fetchData(api_server) {
+      const Counter = (method, url, data) => {
+        return fetch(`${api_server}/1.1${url}`, {
+          method,
+          headers: {
+            'X-LC-Id'     : app_id,
+            'X-LC-Key'    : app_key,
+            'Content-Type': 'application/json',
+          },
+          body: JSON.stringify(data)
+        });
+      };
+      if (CONFIG.page.isPost) {
+        if (CONFIG.hostname !== location.hostname) return;
+        addCount(Counter);
+      } else if (document.querySelectorAll('.post-title-link').length >= 1) {
+        showTime(Counter);
+      }
+    }
+
+    const api_server = app_id.slice(-9) === '-MdYXbMMI' ? `https://${app_id.slice(0, 8).toLowerCase()}.api.lncldglobal.com` : server_url;
+
+    if (api_server) {
+      fetchData(api_server);
+    } else {
+      fetch('https://app-router.leancloud.cn/2/route?appId=' + app_id)
+        .then(response => response.json())
+        .then(({ api_server }) => {
+          fetchData('https://' + api_server);
+        });
+    }
+  })();
+</script>
+
+
+
+</body>
+</html>
