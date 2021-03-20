@@ -254,709 +254,6 @@
   
 
   <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="">
-    <link itemprop="mainEntityOfPage" href="https://lzhwweb.github.io/nirvana/mac/mac/Mac-%E5%9B%9B%E7%A7%8D%E4%BF%AE%E6%94%B9Hosts%E7%9A%84%E6%96%B9%E6%B3%95/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="image" content="/nirvana/images/headphoto.jpeg">
-      <meta itemprop="name" content="nirvana">
-      <meta itemprop="description" content="个人学习笔记">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="涅槃快乐是金">
-    </span>
-      <header class="post-header">
-        <h2 class="post-title" itemprop="name headline">
-          <a href="/nirvana/mac/mac/Mac-%E5%9B%9B%E7%A7%8D%E4%BF%AE%E6%94%B9Hosts%E7%9A%84%E6%96%B9%E6%B3%95/" class="post-title-link" itemprop="url">Mac-四种修改Hosts的方法</a>
-        </h2>
-
-        <div class="post-meta-container">
-          <div class="post-meta">
-    <span class="post-meta-item">
-      <span class="post-meta-item-icon">
-        <i class="far fa-calendar"></i>
-      </span>
-      <span class="post-meta-item-text">发表于</span>
-      
-
-      <time title="创建时间：2021-03-10 21:12:40 / 修改时间：13:43:55" itemprop="dateCreated datePublished" datetime="2021-03-10T21:12:40+08:00">2021-03-10</time>
-    </span>
-    <span class="post-meta-item">
-      <span class="post-meta-item-icon">
-        <i class="far fa-folder"></i>
-      </span>
-      <span class="post-meta-item-text">分类于</span>
-        <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-          <a href="/nirvana/categories/mac/" itemprop="url" rel="index"><span itemprop="name">mac</span></a>
-        </span>
-    </span>
-
-  
-    <span id="/nirvana/mac/mac/Mac-%E5%9B%9B%E7%A7%8D%E4%BF%AE%E6%94%B9Hosts%E7%9A%84%E6%96%B9%E6%B3%95/" class="post-meta-item leancloud_visitors" data-flag-title="Mac-四种修改Hosts的方法" title="阅读次数">
-      <span class="post-meta-item-icon">
-        <i class="far fa-eye"></i>
-      </span>
-      <span class="post-meta-item-text">阅读次数：</span>
-      <span class="leancloud-visitors-count"></span>
-    </span>
-      </div>
-      <div class="post-meta">
-    <span class="post-meta-item" title="本文字数">
-      <span class="post-meta-item-icon">
-        <i class="far fa-file-word"></i>
-      </span>
-      <span class="post-meta-item-text">本文字数：</span>
-      <span>1.3k</span>
-    </span>
-    <span class="post-meta-item" title="阅读时长">
-      <span class="post-meta-item-icon">
-        <i class="far fa-clock"></i>
-      </span>
-      <span class="post-meta-item-text">阅读时长 &asymp;</span>
-      <span>1 分钟</span>
-    </span>
-</div>
-
-        </div>
-      </header>
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-          <p>　　1、通过 VI 编辑器修改</p>
-<p>　　打开终端（应用程序——实用工具），运行：</p>
-<p>　　sudo vi /etc/hosts</p>
-<p><img src="https://upload-images.jianshu.io/upload_images/10024246-67eb013c22cf36b0.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="image"></p>
-<p>　　屏幕上会提示你输入密码（输入密码的时候不会有任何字符显示，甚至*都不会显示，输完之后按回车就是了），打开 hosts 文件之后按 i 键进入插入模式（可理解为编辑模式，如下图所示，会有「INSERT 」提示，即可插入编辑的意思），然后按照你的需要对该文件进行编辑，编辑完成之后按 ESC 键退出插入模式，之后按「 :wq+回车」保存退出，记得英文的冒号也是要输入的哦。</p>
-<p><img src="https://upload-images.jianshu.io/upload_images/10024246-3e19c469c281313b.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="image"></p>
-<p>　　VI 编辑器对于经常使用 Linux 的用户应该不会陌生，而且该编辑器是默认内置在 Mac 系统中的。但是，对于没有使用过 VI 的用户，还真得花一会儿功夫来学习其基本使用方法。另外VI编辑器是一个很好很强大的工具，想要玩好 Mac 的话，最好掌握这个工具的使用。</p>
-<p>　　2、直接在 Mac 系统下找到 Hosts 文件修改</p>
-<p>　　这应该算是最简单以及最直观的一个修改方法了。</p>
-<p>　　第一步、打开你的文件管理器也就是Finder ，Hosts自然也是在这个里面。</p>
-<p><img src="https://upload-images.jianshu.io/upload_images/10024246-7bf8749a01353aac.jpg?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="image"></p>
-<p>　　第二步、接下来请按快捷键组合 Shift+Command+G 三个组合按键查找文件，并输入 Hosts 文件的所在路径：/etc/hosts ，如图所示：</p>
-<p><img src="https://upload-images.jianshu.io/upload_images/10024246-8af91772eae318b4.jpg?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="image"></p>
-<p>　　第三步、在打开的文件夹当中找到「Hosts」文件夹。</p>
-<p><img src="https://upload-images.jianshu.io/upload_images/10024246-d249d67354796e5f.jpg?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="image"></p>
-<p>　　第四步、复制这个「hosts」文件到桌面上，鼠标右键点击/右击它，选择「打开方式」—「文本编辑」，打开这个「hosts」文件，然后将你要修改的内容直接在里面修改就好了。</p>
-<p><img src="https://upload-images.jianshu.io/upload_images/10024246-a60eca4f5ebbdbe7.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="image"></p>
-<p>　　第五步、将你修改好的 hosts 文件在复制回 Hosts 文件的所在（文件夹下）路径：/etc/hosts 之下替换原始的 hosts 文件就好了，这样你 Mac 系统下的 hosts 文件就被成功修改了。</p>
-<p><img src="https://upload-images.jianshu.io/upload_images/10024246-7f4fe79c935b1b22.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="image"></p>
-<p>　　3、使用 cat 命令合并文件</p>
-<p>　　这个方法比较适合当你想往 Hosts 文件中添加一些内容的情况，首先你需要把需要添加到 Hosts 文件中的内容保存为一个TXT文本文件（建议直接保存在你的用户目录），我这里拿保存在用户目录中的123.txt为例说明。</p>
-<p>　　同样是启动终端，然后运行下面两条命令：</p>
-<p>　　sudo -s</p>
-<p>　　cat ~/123.txt/etc/hosts</p>
-<p>　　~ 符号在 Mac 甚至所有基于 Unix 和 Linux 的系统中都是代表当前用户的用户目录，.代表当前目录，这回你就应该明白上面的命令中为什么是 ~/123.txt 了吧。</p>
-<p>　　4、直接在图形界面中修改</p>
-<p>　　打开 Finder，然后点击菜单栏中的 前往——前往文件夹（或者快捷键 Shift+Command+G），在路径中输入 /private，进入之后在 etc 文件夹上点击右键——显示简介，在文件夹简介窗口的最下面找到“共享与权限”，将 everyone 的权限修改为“读与写”，如果你发现不能修改的话，将右下角的那把小锁解开就可以修改了。</p>
-<p><img src="https://upload-images.jianshu.io/upload_images/10024246-0847ef6d184c1f5d.jpg?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="image"></p>
-<p>　　修改 etc 文件夹的权限之后，再进入 etc 文件夹下面，修改名为 hosts 文件的权限（同样是everyone读与写），修改完成之后，你就可以直接在 hosts 文件上点右键，通过“文本编辑”打开并编辑该文件了，不会出现没有权限的提示。修改并保存完成之后，记得将该文件和 etc 文件夹的权限还原。</p>
-
-      
-    </div>
-
-    
-    
-    
-
-    <footer class="post-footer">
-        <div class="post-eof"></div>
-      
-    </footer>
-  </article>
-</div>
-
-
-
-
-    
-
-
-<div class="post-block">
-  
-  
-
-  <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="">
-    <link itemprop="mainEntityOfPage" href="https://lzhwweb.github.io/nirvana/mac/mac/Mac-%E6%95%88%E7%8E%87%E5%B7%A5%E5%85%B7%E8%BD%AF%E4%BB%B6-OpenInTerminal/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="image" content="/nirvana/images/headphoto.jpeg">
-      <meta itemprop="name" content="nirvana">
-      <meta itemprop="description" content="个人学习笔记">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="涅槃快乐是金">
-    </span>
-      <header class="post-header">
-        <h2 class="post-title" itemprop="name headline">
-          <a href="/nirvana/mac/mac/Mac-%E6%95%88%E7%8E%87%E5%B7%A5%E5%85%B7%E8%BD%AF%E4%BB%B6-OpenInTerminal/" class="post-title-link" itemprop="url">Mac-效率工具软件-OpenInTerminal</a>
-        </h2>
-
-        <div class="post-meta-container">
-          <div class="post-meta">
-    <span class="post-meta-item">
-      <span class="post-meta-item-icon">
-        <i class="far fa-calendar"></i>
-      </span>
-      <span class="post-meta-item-text">发表于</span>
-      
-
-      <time title="创建时间：2021-03-10 21:12:40 / 修改时间：13:43:55" itemprop="dateCreated datePublished" datetime="2021-03-10T21:12:40+08:00">2021-03-10</time>
-    </span>
-    <span class="post-meta-item">
-      <span class="post-meta-item-icon">
-        <i class="far fa-folder"></i>
-      </span>
-      <span class="post-meta-item-text">分类于</span>
-        <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-          <a href="/nirvana/categories/mac/" itemprop="url" rel="index"><span itemprop="name">mac</span></a>
-        </span>
-    </span>
-
-  
-    <span id="/nirvana/mac/mac/Mac-%E6%95%88%E7%8E%87%E5%B7%A5%E5%85%B7%E8%BD%AF%E4%BB%B6-OpenInTerminal/" class="post-meta-item leancloud_visitors" data-flag-title="Mac-效率工具软件-OpenInTerminal" title="阅读次数">
-      <span class="post-meta-item-icon">
-        <i class="far fa-eye"></i>
-      </span>
-      <span class="post-meta-item-text">阅读次数：</span>
-      <span class="leancloud-visitors-count"></span>
-    </span>
-      </div>
-      <div class="post-meta">
-    <span class="post-meta-item" title="本文字数">
-      <span class="post-meta-item-icon">
-        <i class="far fa-file-word"></i>
-      </span>
-      <span class="post-meta-item-text">本文字数：</span>
-      <span>313</span>
-    </span>
-    <span class="post-meta-item" title="阅读时长">
-      <span class="post-meta-item-icon">
-        <i class="far fa-clock"></i>
-      </span>
-      <span class="post-meta-item-text">阅读时长 &asymp;</span>
-      <span>1 分钟</span>
-    </span>
-</div>
-
-        </div>
-      </header>
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-          <p>软件是以 Finder 的扩展形式存在的，安装后你并不会在 Applications 文件夹中看到它。</p>
-<h4 id="总结来说有三点"><a href="#总结来说有三点" class="headerlink" title="总结来说有三点"></a>总结来说有三点</h4><ul>
-<li>可以快速从终端（Terminal）中打开某个目录</li>
-<li>可以快速用编辑器打开某个目录或者文件</li>
-<li>可以复制某个文件或者目录的路径<br><img src="https://upload-images.jianshu.io/upload_images/10024246-4dcfaae0ade1f4a7.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240"><br><img src="https://upload-images.jianshu.io/upload_images/10024246-ce3c7903db535631.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240"><h2 id="如何安装🖥"><a href="#如何安装🖥" class="headerlink" title="如何安装🖥"></a>如何安装🖥</h2></li>
-</ul>
-<h3 id="1-下载"><a href="#1-下载" class="headerlink" title="1. 下载"></a>1. 下载</h3><h4 id="a-Homebrew"><a href="#a-Homebrew" class="headerlink" title="a) Homebrew"></a>a) Homebrew</h4><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">brew install --cask openinterminal</span><br></pre></td></tr></table></figure>
-
-<h4 id="b-手动"><a href="#b-手动" class="headerlink" title="b) 手动"></a>b) 手动</h4><ol>
-<li> 从 <a target="_blank" rel="noopener" href="https://github.com/Ji4n1ng/OpenInTerminal/releases">release</a> 中下载。</li>
-<li> 将应用移动到 <code>应用程序</code> 文件夹。</li>
-</ol>
-<blockquote>
-<p>⚠️当您第一次运行应用程序时，macOS 将要求访问 <code>访达</code> 和 <code>终端</code>（或 <code>iTerm</code>）的权限。请给予应用程序权限。</p>
-</blockquote>
-<h3 id="2-打开-Finder-扩展权限"><a href="#2-打开-Finder-扩展权限" class="headerlink" title="2. 打开 Finder 扩展权限"></a><a target="_blank" rel="noopener" href="https://github.com/Ji4n1ng/OpenInTerminal/blob/master/Resources/README-zh.md#2-%E6%89%93%E5%BC%80-finder-%E6%89%A9%E5%B1%95%E6%9D%83%E9%99%90"></a>2. 打开 Finder 扩展权限</h3><p>打开 OpenInTerminal 应用。去 <code>系统偏好设置</code> -&gt; <code>扩展</code> -&gt; <code>访达扩展</code>，打开下图中的权限按钮。</p>
-<p><img src="https://upload-images.jianshu.io/upload_images/10024246-1f143a78e0bf16ca.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240"></p>
-
-      
-    </div>
-
-    
-    
-    
-
-    <footer class="post-footer">
-        <div class="post-eof"></div>
-      
-    </footer>
-  </article>
-</div>
-
-
-
-
-    
-
-
-<div class="post-block">
-  
-  
-
-  <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="">
-    <link itemprop="mainEntityOfPage" href="https://lzhwweb.github.io/nirvana/mac/mac/Mac-%EF%BC%9A%E4%BF%AE%E6%94%B9-DNS-%E5%8F%8A%E6%B8%85%E9%99%A4-DNS-%E7%BC%93%E5%AD%98/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="image" content="/nirvana/images/headphoto.jpeg">
-      <meta itemprop="name" content="nirvana">
-      <meta itemprop="description" content="个人学习笔记">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="涅槃快乐是金">
-    </span>
-      <header class="post-header">
-        <h2 class="post-title" itemprop="name headline">
-          <a href="/nirvana/mac/mac/Mac-%EF%BC%9A%E4%BF%AE%E6%94%B9-DNS-%E5%8F%8A%E6%B8%85%E9%99%A4-DNS-%E7%BC%93%E5%AD%98/" class="post-title-link" itemprop="url">Mac-：修改-DNS-及清除-DNS-缓存</a>
-        </h2>
-
-        <div class="post-meta-container">
-          <div class="post-meta">
-    <span class="post-meta-item">
-      <span class="post-meta-item-icon">
-        <i class="far fa-calendar"></i>
-      </span>
-      <span class="post-meta-item-text">发表于</span>
-      
-
-      <time title="创建时间：2021-03-10 21:12:40 / 修改时间：13:43:55" itemprop="dateCreated datePublished" datetime="2021-03-10T21:12:40+08:00">2021-03-10</time>
-    </span>
-    <span class="post-meta-item">
-      <span class="post-meta-item-icon">
-        <i class="far fa-folder"></i>
-      </span>
-      <span class="post-meta-item-text">分类于</span>
-        <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-          <a href="/nirvana/categories/mac/" itemprop="url" rel="index"><span itemprop="name">mac</span></a>
-        </span>
-    </span>
-
-  
-    <span id="/nirvana/mac/mac/Mac-%EF%BC%9A%E4%BF%AE%E6%94%B9-DNS-%E5%8F%8A%E6%B8%85%E9%99%A4-DNS-%E7%BC%93%E5%AD%98/" class="post-meta-item leancloud_visitors" data-flag-title="Mac-：修改-DNS-及清除-DNS-缓存" title="阅读次数">
-      <span class="post-meta-item-icon">
-        <i class="far fa-eye"></i>
-      </span>
-      <span class="post-meta-item-text">阅读次数：</span>
-      <span class="leancloud-visitors-count"></span>
-    </span>
-      </div>
-      <div class="post-meta">
-    <span class="post-meta-item" title="本文字数">
-      <span class="post-meta-item-icon">
-        <i class="far fa-file-word"></i>
-      </span>
-      <span class="post-meta-item-text">本文字数：</span>
-      <span>795</span>
-    </span>
-    <span class="post-meta-item" title="阅读时长">
-      <span class="post-meta-item-icon">
-        <i class="far fa-clock"></i>
-      </span>
-      <span class="post-meta-item-text">阅读时长 &asymp;</span>
-      <span>1 分钟</span>
-    </span>
-</div>
-
-        </div>
-      </header>
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-          <ul>
-<li><ol>
-<li><p>在苹果菜单选择 “系统偏好设置”。</p>
-<p>   <img src="https://upload-images.jianshu.io/upload_images/10024246-134910c4b8f7de46.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240"></p>
-</li>
-</ol>
-</li>
-<li><ol>
-<li> 单击 “网络” 图标。</li>
-</ol>
-</li>
-</ul>
-<p><img src="https://upload-images.jianshu.io/upload_images/10024246-edd411652e2d5024.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240"></p>
-<ul>
-<li><ol>
-<li> 从列表中选择想要修改或当前正在使用的网络连接服务（例如 WI-FI 或以太网），然后点击 “高级”。</li>
-</ol>
-</li>
-</ul>
-<p><img src="https://upload-images.jianshu.io/upload_images/10024246-33b002edbd8a3a66.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240"></p>
-<ul>
-<li><ol>
-<li> 选择 DNS 标签，单击 “DNS 服务器” 左下角的 “+”，添加 119.29.29.29 和 114.114.114.114，然后单击右下角的 “好”。<br><img src="https://upload-images.jianshu.io/upload_images/10024246-f1ecd48ae2e2e8c1.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240"></li>
-</ol>
-</li>
-</ul>
-<h2 id="还原-OS-X-中的-DNS-缓存设置"><a href="#还原-OS-X-中的-DNS-缓存设置" class="headerlink" title="还原 OS X 中的 DNS 缓存设置"></a>还原 OS X 中的 DNS 缓存设置</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">了解如何还原（清空）DNS 缓存设置。</span><br><span class="line"></span><br></pre></td></tr></table></figure>
-
-<blockquote>
-<p>关于 DNS 缓存</p>
-</blockquote>
-<p>OS X 会将已解析的 DNS 查询的本地缓存保留一段时间，保留时间由 DNS 服务器定义。</p>
-<p>有时可能需要立即还原缓存设置并重新查询 DNS 服务器。</p>
-<p>例如，如果您是网络或服务器管理员且您的 DNS 服务器上的条目最近有更改，您可能需要执行此操作。</p>
-<p>如果您的 Mac 使用的不是您服务器上的最新 DNS 条目，您可重新启动 Mac 以更新其缓存的信息。</p>
-<p>如果您需要更新使用 OS X 的服务器上的 DNS 条目但又不能重新启动服务器，请使用以下适用于您所使用的 OS X 版本的命令。</p>
-<blockquote>
-<p>［应用程序］-［实用工具］-［终端］</p>
-</blockquote>
-<h2 id="OS-X-Yosemite-及更新机型"><a href="#OS-X-Yosemite-及更新机型" class="headerlink" title="OS X Yosemite 及更新机型"></a>OS X Yosemite 及更新机型</h2><blockquote>
-<p>在 OS X v10.10.4 或更高版本中，请使用以下 “终端” 命令来还原 DNS 缓存设置：</p>
-</blockquote>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">sudo killall -HUP mDNSResponder</span><br><span class="line"></span><br></pre></td></tr></table></figure>
-
-<blockquote>
-<p>在 OS X v10.10 至 v10.10.3 中，请使用以下 “终端” 命令来还原 DNS 缓存设置：</p>
-</blockquote>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">sudo discoveryutil mdnsflushcache</span><br><span class="line"></span><br></pre></td></tr></table></figure>
-
-<h2 id="OS-X-Mavericks、Mountain-Lion-和-Lion"><a href="#OS-X-Mavericks、Mountain-Lion-和-Lion" class="headerlink" title="OS X Mavericks、Mountain Lion 和 Lion"></a>OS X Mavericks、Mountain Lion 和 Lion</h2><p>在 OS X v10.9.5 及更低版本中，请使用以下 “终端” 命令来还原 DNS 缓存设置：</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">sudo killall -HUP mDNSResponder</span><br><span class="line"></span><br></pre></td></tr></table></figure>
-
-<blockquote>
-<p>Mac OS X Snow Leopard</p>
-</blockquote>
-<p>在 OS X v10.6 至 v10.6.8 中，请使用以下 “终端” 命令来还原 DNS 缓存设置：</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">sudo dscacheutil -flushcache</span><br><span class="line"></span><br></pre></td></tr></table></figure>
-
-<ul>
-<li>  DNS 清除缓存方法来自：<a target="_blank" rel="noopener" href="https://support.apple.com/zh-cn/HT202516">苹果官网</a></li>
-<li>  DNS 修改图片来自：<a target="_blank" rel="noopener" href="https://support.dnspod.cn/Kb/showarticle/tsid/240/#link1">DNSPOD</a></li>
-</ul>
-
-      
-    </div>
-
-    
-    
-    
-
-    <footer class="post-footer">
-        <div class="post-eof"></div>
-      
-    </footer>
-  </article>
-</div>
-
-
-
-
-    
-
-
-<div class="post-block">
-  
-  
-
-  <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="">
-    <link itemprop="mainEntityOfPage" href="https://lzhwweb.github.io/nirvana/mac/mac/Mac%E6%95%99%E7%A8%8B%EF%BC%9A%E5%A6%82%E4%BD%95%E5%88%A0%E9%99%A4-DS_Store%E6%96%87%E4%BB%B6%E4%B8%94%E4%B8%8D%E5%86%8D%E7%94%9F/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="image" content="/nirvana/images/headphoto.jpeg">
-      <meta itemprop="name" content="nirvana">
-      <meta itemprop="description" content="个人学习笔记">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="涅槃快乐是金">
-    </span>
-      <header class="post-header">
-        <h2 class="post-title" itemprop="name headline">
-          <a href="/nirvana/mac/mac/Mac%E6%95%99%E7%A8%8B%EF%BC%9A%E5%A6%82%E4%BD%95%E5%88%A0%E9%99%A4-DS_Store%E6%96%87%E4%BB%B6%E4%B8%94%E4%B8%8D%E5%86%8D%E7%94%9F/" class="post-title-link" itemprop="url">Mac教程：如何删除-DS_Store文件且不再生</a>
-        </h2>
-
-        <div class="post-meta-container">
-          <div class="post-meta">
-    <span class="post-meta-item">
-      <span class="post-meta-item-icon">
-        <i class="far fa-calendar"></i>
-      </span>
-      <span class="post-meta-item-text">发表于</span>
-      
-
-      <time title="创建时间：2021-03-10 21:12:40 / 修改时间：13:43:55" itemprop="dateCreated datePublished" datetime="2021-03-10T21:12:40+08:00">2021-03-10</time>
-    </span>
-    <span class="post-meta-item">
-      <span class="post-meta-item-icon">
-        <i class="far fa-folder"></i>
-      </span>
-      <span class="post-meta-item-text">分类于</span>
-        <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-          <a href="/nirvana/categories/mac/" itemprop="url" rel="index"><span itemprop="name">mac</span></a>
-        </span>
-    </span>
-
-  
-    <span id="/nirvana/mac/mac/Mac%E6%95%99%E7%A8%8B%EF%BC%9A%E5%A6%82%E4%BD%95%E5%88%A0%E9%99%A4-DS_Store%E6%96%87%E4%BB%B6%E4%B8%94%E4%B8%8D%E5%86%8D%E7%94%9F/" class="post-meta-item leancloud_visitors" data-flag-title="Mac教程：如何删除-DS_Store文件且不再生" title="阅读次数">
-      <span class="post-meta-item-icon">
-        <i class="far fa-eye"></i>
-      </span>
-      <span class="post-meta-item-text">阅读次数：</span>
-      <span class="leancloud-visitors-count"></span>
-    </span>
-      </div>
-      <div class="post-meta">
-    <span class="post-meta-item" title="本文字数">
-      <span class="post-meta-item-icon">
-        <i class="far fa-file-word"></i>
-      </span>
-      <span class="post-meta-item-text">本文字数：</span>
-      <span>497</span>
-    </span>
-    <span class="post-meta-item" title="阅读时长">
-      <span class="post-meta-item-icon">
-        <i class="far fa-clock"></i>
-      </span>
-      <span class="post-meta-item-text">阅读时长 &asymp;</span>
-      <span>1 分钟</span>
-    </span>
-</div>
-
-        </div>
-      </header>
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-          <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">.DS_Store文件重新生成非常令人困扰，我们可以用终端命令简单的处理掉。</span><br></pre></td></tr></table></figure>
-<p>　　在 Mac OS X 系统下，几乎绝大部分文件夹中都包含 .DS_Store 隐藏文件，这里保存着针对这个目录的特殊信息和设置配置，例如查看方式、图标大小以及这个目录的一些附属元数据。<br>       而在 OS X 系统中，这些文件是默认隐藏起来的，但是当我们将这些文件转移共享到 Windows 系统的时候，它们就会变成可见状态，并且看起来非常像是一些垃圾文件。<br>　　许多用户会选择在 Windows 系统中将这些 .DS_Store 文件删除，但是它们会重新生成，这一点非常令人困扰。对于这个问题，我们可以用终端命令简单的处理掉，并且防止 DS_Store 文件的再生。</p>
-<p>　　我们需要打开终端窗口，并输入删除命令：sudo find / -name “.DS_Store” -depth -exec rm {} ;</p>
-<p>　　按下回车键盘之后，终端会提示用户名和密码，直接输入密码再按回车即可。</p>
-<p>　　删除后继续在终端输入：defaults write com.apple.desktopservices DSDontWriteNetworkStores true</p>
-<p>　　然后按下回车，就可以防止 .DS_Store 文件的再生了。</p>
-
-      
-    </div>
-
-    
-    
-    
-
-    <footer class="post-footer">
-        <div class="post-eof"></div>
-      
-    </footer>
-  </article>
-</div>
-
-
-
-
-    
-
-
-<div class="post-block">
-  
-  
-
-  <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="">
-    <link itemprop="mainEntityOfPage" href="https://lzhwweb.github.io/nirvana/mac/mac/McAfee-Agent-%E5%8D%A0%E7%94%A88081-%E7%AB%AF%E5%8F%A3%E5%8F%B7/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="image" content="/nirvana/images/headphoto.jpeg">
-      <meta itemprop="name" content="nirvana">
-      <meta itemprop="description" content="个人学习笔记">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="涅槃快乐是金">
-    </span>
-      <header class="post-header">
-        <h2 class="post-title" itemprop="name headline">
-          <a href="/nirvana/mac/mac/McAfee-Agent-%E5%8D%A0%E7%94%A88081-%E7%AB%AF%E5%8F%A3%E5%8F%B7/" class="post-title-link" itemprop="url">McAfee-Agent-占用8081-端口号</a>
-        </h2>
-
-        <div class="post-meta-container">
-          <div class="post-meta">
-    <span class="post-meta-item">
-      <span class="post-meta-item-icon">
-        <i class="far fa-calendar"></i>
-      </span>
-      <span class="post-meta-item-text">发表于</span>
-      
-
-      <time title="创建时间：2021-03-10 21:12:40 / 修改时间：13:43:55" itemprop="dateCreated datePublished" datetime="2021-03-10T21:12:40+08:00">2021-03-10</time>
-    </span>
-    <span class="post-meta-item">
-      <span class="post-meta-item-icon">
-        <i class="far fa-folder"></i>
-      </span>
-      <span class="post-meta-item-text">分类于</span>
-        <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-          <a href="/nirvana/categories/mac/" itemprop="url" rel="index"><span itemprop="name">mac</span></a>
-        </span>
-    </span>
-
-  
-    <span id="/nirvana/mac/mac/McAfee-Agent-%E5%8D%A0%E7%94%A88081-%E7%AB%AF%E5%8F%A3%E5%8F%B7/" class="post-meta-item leancloud_visitors" data-flag-title="McAfee-Agent-占用8081-端口号" title="阅读次数">
-      <span class="post-meta-item-icon">
-        <i class="far fa-eye"></i>
-      </span>
-      <span class="post-meta-item-text">阅读次数：</span>
-      <span class="leancloud-visitors-count"></span>
-    </span>
-      </div>
-      <div class="post-meta">
-    <span class="post-meta-item" title="本文字数">
-      <span class="post-meta-item-icon">
-        <i class="far fa-file-word"></i>
-      </span>
-      <span class="post-meta-item-text">本文字数：</span>
-      <span>239</span>
-    </span>
-    <span class="post-meta-item" title="阅读时长">
-      <span class="post-meta-item-icon">
-        <i class="far fa-clock"></i>
-      </span>
-      <span class="post-meta-item-text">阅读时长 &asymp;</span>
-      <span>1 分钟</span>
-    </span>
-</div>
-
-        </div>
-      </header>
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-          <p>公司电脑被标装，McAfee Agent关不掉</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">sudo lsof -n -i4TCP:8081</span><br><span class="line">sudo launchctl list | grep 5693</span><br><span class="line">sudo launchctl remove com.mcafee.agent.macmn</span><br></pre></td></tr></table></figure>
-
-<p>如果需要暂时禁用mac上装的mcafee，可以在命令行里先su到之前有管理员权限的账户，然后跑命令：</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">sudo &#x2F;usr&#x2F;local&#x2F;McAfee&#x2F;AntiMalware&#x2F;VSControl stopoas</span><br></pre></td></tr></table></figure>
-
-      
-    </div>
-
-    
-    
-    
-
-    <footer class="post-footer">
-        <div class="post-eof"></div>
-      
-    </footer>
-  </article>
-</div>
-
-
-
-
-    
-
-
-<div class="post-block">
-  
-  
-
-  <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="">
-    <link itemprop="mainEntityOfPage" href="https://lzhwweb.github.io/nirvana/mac/mac/OSX---%E9%99%8D%E7%BA%A7Safari-12%E5%88%B011-1-2/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="image" content="/nirvana/images/headphoto.jpeg">
-      <meta itemprop="name" content="nirvana">
-      <meta itemprop="description" content="个人学习笔记">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="涅槃快乐是金">
-    </span>
-      <header class="post-header">
-        <h2 class="post-title" itemprop="name headline">
-          <a href="/nirvana/mac/mac/OSX---%E9%99%8D%E7%BA%A7Safari-12%E5%88%B011-1-2/" class="post-title-link" itemprop="url">OSX---降级Safari-12到11-1-2</a>
-        </h2>
-
-        <div class="post-meta-container">
-          <div class="post-meta">
-    <span class="post-meta-item">
-      <span class="post-meta-item-icon">
-        <i class="far fa-calendar"></i>
-      </span>
-      <span class="post-meta-item-text">发表于</span>
-      
-
-      <time title="创建时间：2021-03-10 21:12:40 / 修改时间：13:43:55" itemprop="dateCreated datePublished" datetime="2021-03-10T21:12:40+08:00">2021-03-10</time>
-    </span>
-    <span class="post-meta-item">
-      <span class="post-meta-item-icon">
-        <i class="far fa-folder"></i>
-      </span>
-      <span class="post-meta-item-text">分类于</span>
-        <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-          <a href="/nirvana/categories/mac/" itemprop="url" rel="index"><span itemprop="name">mac</span></a>
-        </span>
-    </span>
-
-  
-    <span id="/nirvana/mac/mac/OSX---%E9%99%8D%E7%BA%A7Safari-12%E5%88%B011-1-2/" class="post-meta-item leancloud_visitors" data-flag-title="OSX---降级Safari-12到11-1-2" title="阅读次数">
-      <span class="post-meta-item-icon">
-        <i class="far fa-eye"></i>
-      </span>
-      <span class="post-meta-item-text">阅读次数：</span>
-      <span class="leancloud-visitors-count"></span>
-    </span>
-      </div>
-      <div class="post-meta">
-    <span class="post-meta-item" title="本文字数">
-      <span class="post-meta-item-icon">
-        <i class="far fa-file-word"></i>
-      </span>
-      <span class="post-meta-item-text">本文字数：</span>
-      <span>528</span>
-    </span>
-    <span class="post-meta-item" title="阅读时长">
-      <span class="post-meta-item-icon">
-        <i class="far fa-clock"></i>
-      </span>
-      <span class="post-meta-item-text">阅读时长 &asymp;</span>
-      <span>1 分钟</span>
-    </span>
-</div>
-
-        </div>
-      </header>
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-          <h3 id="操作"><a href="#操作" class="headerlink" title="操作"></a>操作</h3><h4 id="工具"><a href="#工具" class="headerlink" title="工具"></a>工具</h4><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">Pacifist : https:&#x2F;&#x2F;www.charlessoft.com&#x2F;cgi-bin&#x2F;pacifist_download.cgi?type&#x3D;zip</span><br></pre></td></tr></table></figure>
-
-<h4 id="Safari-11"><a href="#Safari-11" class="headerlink" title="Safari 11"></a>Safari 11</h4><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">https:&#x2F;&#x2F;www.newasp.net&#x2F;soft&#x2F;109641.html</span><br></pre></td></tr></table></figure>
-
-<h4 id="步骤"><a href="#步骤" class="headerlink" title="步骤"></a>步骤</h4><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">1 . 重启系统, 按住⌘-R不松手</span><br><span class="line">2 . 在实用工具(Utilities)下打开终端,输入csrutil disable, 然后回车; 你就看到提示系统完整性保护(SIP: System Integrity Protection)已禁用</span><br><span class="line">3 . 输入reboot回车重启电脑</span><br><span class="line">4 . 打开Pacifist, 点击 打开Safari 11.1.软件包, 选择Safari 11.1.2包的内容,点击安装按钮;</span><br><span class="line">5 . 给予管理员权限, 并一路替换,就可以了</span><br><span class="line">6 . 如果你想启用SIP, 那么重启启动系统,按住⌘-R不松手; 输入csrutil enable回车.开启SIP</span><br></pre></td></tr></table></figure>
-
-<h4 id="使用pacifist安装safari"><a href="#使用pacifist安装safari" class="headerlink" title="使用pacifist安装safari"></a>使用pacifist安装safari</h4><p><img src="http://upload-images.jianshu.io/upload_images/10024246-137076307d06f5c0.jpg?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240"></p>
-<h3 id="后记"><a href="#后记" class="headerlink" title="后记"></a>后记</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">1 . 一旦升级到 mojave 版本,是不能降级到 safari11.1.2版本的.</span><br><span class="line">2 . 如果这么操作怎么都不成功, 完全卸载 safari 再直接安装吧.</span><br></pre></td></tr></table></figure>
-
-      
-    </div>
-
-    
-    
-    
-
-    <footer class="post-footer">
-        <div class="post-eof"></div>
-      
-    </footer>
-  </article>
-</div>
-
-
-
-
-    
-
-
-<div class="post-block">
-  
-  
-
-  <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="">
     <link itemprop="mainEntityOfPage" href="https://lzhwweb.github.io/nirvana/mac/mac/mac-brew%E5%AE%89%E8%A3%85node-%E7%AE%A1%E7%90%86%E5%B7%A5%E5%85%B7n/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
@@ -1282,6 +579,165 @@
   
 
   <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="">
+    <link itemprop="mainEntityOfPage" href="https://lzhwweb.github.io/nirvana/mac/mac/mac%E4%B8%8B%E5%AE%89%E8%A3%85nginx/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/nirvana/images/headphoto.jpeg">
+      <meta itemprop="name" content="nirvana">
+      <meta itemprop="description" content="个人学习笔记">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="涅槃快乐是金">
+    </span>
+      <header class="post-header">
+        <h2 class="post-title" itemprop="name headline">
+          <a href="/nirvana/mac/mac/mac%E4%B8%8B%E5%AE%89%E8%A3%85nginx/" class="post-title-link" itemprop="url">mac下安装nginx</a>
+        </h2>
+
+        <div class="post-meta-container">
+          <div class="post-meta">
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-calendar"></i>
+      </span>
+      <span class="post-meta-item-text">发表于</span>
+      
+
+      <time title="创建时间：2021-03-10 21:12:40 / 修改时间：13:43:55" itemprop="dateCreated datePublished" datetime="2021-03-10T21:12:40+08:00">2021-03-10</time>
+    </span>
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-folder"></i>
+      </span>
+      <span class="post-meta-item-text">分类于</span>
+        <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+          <a href="/nirvana/categories/mac/" itemprop="url" rel="index"><span itemprop="name">mac</span></a>
+        </span>
+    </span>
+
+  
+    <span id="/nirvana/mac/mac/mac%E4%B8%8B%E5%AE%89%E8%A3%85nginx/" class="post-meta-item leancloud_visitors" data-flag-title="mac下安装nginx" title="阅读次数">
+      <span class="post-meta-item-icon">
+        <i class="far fa-eye"></i>
+      </span>
+      <span class="post-meta-item-text">阅读次数：</span>
+      <span class="leancloud-visitors-count"></span>
+    </span>
+      </div>
+      <div class="post-meta">
+    <span class="post-meta-item" title="本文字数">
+      <span class="post-meta-item-icon">
+        <i class="far fa-file-word"></i>
+      </span>
+      <span class="post-meta-item-text">本文字数：</span>
+      <span>2.6k</span>
+    </span>
+    <span class="post-meta-item" title="阅读时长">
+      <span class="post-meta-item-icon">
+        <i class="far fa-clock"></i>
+      </span>
+      <span class="post-meta-item-text">阅读时长 &asymp;</span>
+      <span>2 分钟</span>
+    </span>
+</div>
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+          <p>安装工具：</p>
+<p><a target="_blank" rel="noopener" href="https://brew.sh/index_zh-cn.html">homebrew</a>（还没用过的小伙伴可以点链接进行了解或者自行百度）</p>
+<p>步骤：</p>
+<p>　　1、打开终端，习惯性命令：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">brew update</span><br></pre></td></tr></table></figure>
+<p>//结果：Already up-to-date.</pre></p>
+<p>　　2、终端继续执行命令：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">brew search nginx   &#x2F;&#x2F;查询要安装的软件是否存在</span><br></pre></td></tr></table></figure>
+
+<p>　　3、这里我们多执行一步“废”命令，不过有利于我们后面的配置：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">brew info nginx</span><br></pre></td></tr></table></figure>
+
+<p>　　运行结果：</p>
+<p>　　<img src="https://upload-images.jianshu.io/upload_images/10024246-4c9ce6a852151bf0.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240"></p>
+<p>　　我们可以看到，nginx在本地还未安装（Not installed），nginx的来源（From），Docroot默认为/usr/local/var/www，在/usr/local/etc/nginx/nginx.conf配置文件中默认端口被配置为8080从而使nginx运行时不需要加sudo，nginx将在/usr/local/etc/nginx/servers/目录中加载所有文件，以及我们可以通过最简单的命令 ‘nginx’ 来启动nginx。</p>
+<p>　　4、正式开始安装：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">brew install nginx</span><br></pre></td></tr></table></figure>
+
+<p><img src="https://upload-images.jianshu.io/upload_images/10024246-de5daa8180b3f4c3.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240"></p>
+<p>　　5、查看nginx安装目录（是否如info所说）：　</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">open &#x2F;usr&#x2F;local&#x2F;etc&#x2F;nginx&#x2F;</span><br></pre></td></tr></table></figure>
+
+<p>　　　　<img src="https://upload-images.jianshu.io/upload_images/10024246-90142c4098d678f3.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240"></p>
+<p>　　成功打开nginx目录，也可以看到如info所说servers目录以及nginx.conf的配置文件（后面会用到这个配置文件）。但我们并没有找到nginx被安装到了哪里。</p>
+<p>　　终端继续执行：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">open &#x2F;usr&#x2F;local&#x2F;Cellar&#x2F;nginx  &#x2F;&#x2F;其实这个才是nginx被安装到的目录</span><br></pre></td></tr></table></figure>
+
+<p>　　<img src="https://upload-images.jianshu.io/upload_images/10024246-4a716a1bef024b54.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240"></p>
+<p>　　会看到一个以当前安装的nginx的版本号为名称的文件夹，这个就是我们安装的nginx根目录啦。进入1.12.2_1/bin 目录，会看到nginx的可执行启动文件。</p>
+<p>　　同样的，我们在1.12.2_1/目录下还可以看到一个名字为html的快捷方式文件夹（暂且就这么叫吧），进入该目录我们会发现其实它指向的就是/usr/local/var/www目录，这个在上面我们查看的info信息中有提到（Dcroot）</p>
+<p> 　　6、启动nginx，终端输入如下命令：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">nginx</span><br></pre></td></tr></table></figure>
+
+<p>　　没有报错即为启动成功。<br>　　7、访问验证：</p>
+<p>　　　　打开浏览器访问localhost:8080,这里跟网上的一些教程会有些不一样，正常情况下到这一步就会能看到nginx的欢迎界面啦，然而博主却遇到了坑爹的情况（如果你能正常看到nginx欢迎界面，可以直接跳过这一步了）</p>
+<p><img src="https://upload-images.jianshu.io/upload_images/10024246-c85425af5395d326.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240"></p>
+<p> 　　想必这个错误大家都很熟悉了，我就不再多做解释，接下来直接说原因（该原因仅为猜测，因为无从验证）：安装的nginx会默认在html（也就是/usr/local/var/www）目录下生成一个欢迎页面文件，而出现上面这种情况就是欢迎页面文件没有生成（至于为什么没有生成就不得而知了，一切都是猜测）。</p>
+<p>　　那在解决这个问题之前，我们先来了解一下nginx的配置文件吧（nginx.conf）:</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">cat &#x2F;usr&#x2F;local&#x2F;etc&#x2F;nginx&#x2F;nginx.conf</span><br></pre></td></tr></table></figure>
+
+<p>　　显示配置文件的代码为：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br></pre></td><td class="code"><pre><span class="line">#user  nobody;</span><br><span class="line">worker_processes 1;</span><br><span class="line"></span><br><span class="line">#error_log  logs&#x2F;error.log;</span><br><span class="line">#error_log  logs&#x2F;error.log  notice;</span><br><span class="line">#error_log  logs&#x2F;error.log  info;</span><br><span class="line"></span><br><span class="line">#pid        logs&#x2F;nginx.pid;</span><br><span class="line"></span><br><span class="line">events &#123;</span><br><span class="line">    worker_connections 1024;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">http &#123;</span><br><span class="line">    include       mime.types;</span><br><span class="line">    default_type  application&#x2F;octet-stream;</span><br><span class="line"></span><br><span class="line">    #log_format  main &#39;$remote_addr - $remote_user [$time_local] &quot;$request&quot; &#39; # &#39;$status $body_bytes_sent &quot;$http_referer&quot; &#39; # &#39;&quot;$http_user_agent&quot; &quot;$http_x_forwarded_for&quot;&#39;;</span><br><span class="line"></span><br><span class="line">    #access_log  logs&#x2F;access.log  main;</span><br><span class="line"></span><br><span class="line">    sendfile        on;</span><br><span class="line">    #tcp_nopush     on;</span><br><span class="line"></span><br><span class="line">    #keepalive_timeout 0;</span><br><span class="line">    keepalive_timeout 65;</span><br><span class="line"></span><br><span class="line">    #gzip  on;</span><br><span class="line"></span><br><span class="line">    server &#123;</span><br><span class="line">　　　　 #侦听8080端口</span><br><span class="line">        listen 8080;</span><br><span class="line">　　　　 #定义使用 localhost访问</span><br><span class="line">        server_name  localhost;</span><br><span class="line"></span><br><span class="line">        #charset koi8-r;</span><br><span class="line"></span><br><span class="line">        #access_log  logs&#x2F;host.access.log  main;</span><br><span class="line"></span><br><span class="line">        location &#x2F; &#123;</span><br><span class="line">　　　　　　　#定义服务器的默认网站根目录位置</span><br><span class="line">            root   html;</span><br><span class="line">　　　　　　  #定义首页索引文件的名称</span><br><span class="line">            index  index.html index.htm;</span><br><span class="line">        &#125;</span><br><span class="line">　　　　　...</span><br><span class="line">　　　　　...</span><br><span class="line">　　　　　... (注释代码太多，就不全部贴出来了)  include servers&#x2F;*;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p>　　通过配置文件我们可以看到其默认的网站根目录为html（即/usr/local/var/www），而默认的索引文件为index.html 和 index.htm，这下就找到原因了，原来我们的根目录少了首页索引文件，那就来手动创建一个吧：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">cd &#x2F;usr&#x2F;local&#x2F;var&#x2F;www&#x2F;                      &#x2F;&#x2F;进入到www目录下</span><br><span class="line">touch index.html                            &#x2F;&#x2F;创建一个新的index.html文件</span><br><span class="line">vim index.html                              &#x2F;&#x2F;编辑该文件 &lt;&#x2F;pre&gt;</span><br><span class="line">&#96;&#96;&#96;&#96;</span><br><span class="line">　　将如下代码写入index.html文件中：</span><br></pre></td></tr></table></figure>
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>title</title>
+</head>
+<body>
+    <div>
+        <h1>我的nginx欢迎页面</h1>
+    </div>
+</body>
+</html>
+```
+
+
+<p>　　回到浏览器（localhost:8080）刷新：</p>
+<p><img src="https://upload-images.jianshu.io/upload_images/10024246-669dfb5bb1851e49.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240"></p>
+<p>　　OK，大功告成啦！</p>
+
+      
+    </div>
+
+    
+    
+    
+
+    <footer class="post-footer">
+        <div class="post-eof"></div>
+      
+    </footer>
+  </article>
+</div>
+
+
+
+
+    
+
+
+<div class="post-block">
+  
+  
+
+  <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="">
     <link itemprop="mainEntityOfPage" href="https://lzhwweb.github.io/nirvana/mac/mac/macOS%E7%B3%BB%E7%BB%9F%E4%B8%8B%E5%AE%89%E8%A3%85Homebrew%E6%85%A2/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
@@ -1372,6 +828,524 @@
 
 <p><strong>最后:</strong></p>
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">echo &#39;export HOMEBREW_BOTTLE_DOMAIN&#x3D;https:&#x2F;&#x2F;mirrors.ustc.edu.cn&#x2F;homebrew-bottles&#39; &gt;&gt; ~&#x2F;.bash_profile</span><br><span class="line">source ~&#x2F;.bash_profile</span><br></pre></td></tr></table></figure>
+
+      
+    </div>
+
+    
+    
+    
+
+    <footer class="post-footer">
+        <div class="post-eof"></div>
+      
+    </footer>
+  </article>
+</div>
+
+
+
+
+    
+
+
+<div class="post-block">
+  
+  
+
+  <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="">
+    <link itemprop="mainEntityOfPage" href="https://lzhwweb.github.io/nirvana/mac/mac/mac%E7%BB%88%E7%AB%AF%E5%88%87%E6%8D%A2%E7%94%A8%E6%88%B7/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/nirvana/images/headphoto.jpeg">
+      <meta itemprop="name" content="nirvana">
+      <meta itemprop="description" content="个人学习笔记">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="涅槃快乐是金">
+    </span>
+      <header class="post-header">
+        <h2 class="post-title" itemprop="name headline">
+          <a href="/nirvana/mac/mac/mac%E7%BB%88%E7%AB%AF%E5%88%87%E6%8D%A2%E7%94%A8%E6%88%B7/" class="post-title-link" itemprop="url">mac终端切换用户</a>
+        </h2>
+
+        <div class="post-meta-container">
+          <div class="post-meta">
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-calendar"></i>
+      </span>
+      <span class="post-meta-item-text">发表于</span>
+      
+
+      <time title="创建时间：2021-03-10 21:12:40 / 修改时间：13:43:55" itemprop="dateCreated datePublished" datetime="2021-03-10T21:12:40+08:00">2021-03-10</time>
+    </span>
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-folder"></i>
+      </span>
+      <span class="post-meta-item-text">分类于</span>
+        <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+          <a href="/nirvana/categories/mac/" itemprop="url" rel="index"><span itemprop="name">mac</span></a>
+        </span>
+    </span>
+
+  
+    <span id="/nirvana/mac/mac/mac%E7%BB%88%E7%AB%AF%E5%88%87%E6%8D%A2%E7%94%A8%E6%88%B7/" class="post-meta-item leancloud_visitors" data-flag-title="mac终端切换用户" title="阅读次数">
+      <span class="post-meta-item-icon">
+        <i class="far fa-eye"></i>
+      </span>
+      <span class="post-meta-item-text">阅读次数：</span>
+      <span class="leancloud-visitors-count"></span>
+    </span>
+      </div>
+      <div class="post-meta">
+    <span class="post-meta-item" title="本文字数">
+      <span class="post-meta-item-icon">
+        <i class="far fa-file-word"></i>
+      </span>
+      <span class="post-meta-item-text">本文字数：</span>
+      <span>359</span>
+    </span>
+    <span class="post-meta-item" title="阅读时长">
+      <span class="post-meta-item-icon">
+        <i class="far fa-clock"></i>
+      </span>
+      <span class="post-meta-item-text">阅读时长 &asymp;</span>
+      <span>1 分钟</span>
+    </span>
+</div>
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+          <p>1、mac终端切换用户到root<br>sudo -i即可</p>
+<p>2、mac终端切换成普通用户<br>su - test（test为用户名）即可</p>
+<p>3、mac可以设置命令别名<br>如ll，正常情况下，mac终端不识别ll命令，但是alias 命令设置别名后，终端即可以设别ll命令：alias ll=’ls -la’；但是没有修改系统文件，则该命令只能临时生效，下次再打开终端，还是不能识别ll命令，永久生效办法，请修改系统文件，方法有多种，请自行百度（如果不是ll命令，其他命令同理）<br>————————————————<br>版权声明：本文为CSDN博主「CoberOJ_」的原创文章，遵循 CC 4.0 BY-SA 版权协议，转载请附上原文出处链接及本声明。<br>原文链接：<a target="_blank" rel="noopener" href="https://blog.csdn.net/huodoubi/article/details/69948483">https://blog.csdn.net/huodoubi/article/details/69948483</a></p>
+
+      
+    </div>
+
+    
+    
+    
+
+    <footer class="post-footer">
+        <div class="post-eof"></div>
+      
+    </footer>
+  </article>
+</div>
+
+
+
+
+    
+
+
+<div class="post-block">
+  
+  
+
+  <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="">
+    <link itemprop="mainEntityOfPage" href="https://lzhwweb.github.io/nirvana/mac/mac/%E5%88%A9%E7%94%A8proxychains%E5%9C%A8%E7%BB%88%E7%AB%AF%E4%BD%BF%E7%94%A8socks5%E4%BB%A3%E7%90%86/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/nirvana/images/headphoto.jpeg">
+      <meta itemprop="name" content="nirvana">
+      <meta itemprop="description" content="个人学习笔记">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="涅槃快乐是金">
+    </span>
+      <header class="post-header">
+        <h2 class="post-title" itemprop="name headline">
+          <a href="/nirvana/mac/mac/%E5%88%A9%E7%94%A8proxychains%E5%9C%A8%E7%BB%88%E7%AB%AF%E4%BD%BF%E7%94%A8socks5%E4%BB%A3%E7%90%86/" class="post-title-link" itemprop="url">利用proxychains在终端使用socks5代理</a>
+        </h2>
+
+        <div class="post-meta-container">
+          <div class="post-meta">
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-calendar"></i>
+      </span>
+      <span class="post-meta-item-text">发表于</span>
+      
+
+      <time title="创建时间：2021-03-10 21:12:40 / 修改时间：13:43:55" itemprop="dateCreated datePublished" datetime="2021-03-10T21:12:40+08:00">2021-03-10</time>
+    </span>
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-folder"></i>
+      </span>
+      <span class="post-meta-item-text">分类于</span>
+        <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+          <a href="/nirvana/categories/mac/" itemprop="url" rel="index"><span itemprop="name">mac</span></a>
+        </span>
+    </span>
+
+  
+    <span id="/nirvana/mac/mac/%E5%88%A9%E7%94%A8proxychains%E5%9C%A8%E7%BB%88%E7%AB%AF%E4%BD%BF%E7%94%A8socks5%E4%BB%A3%E7%90%86/" class="post-meta-item leancloud_visitors" data-flag-title="利用proxychains在终端使用socks5代理" title="阅读次数">
+      <span class="post-meta-item-icon">
+        <i class="far fa-eye"></i>
+      </span>
+      <span class="post-meta-item-text">阅读次数：</span>
+      <span class="leancloud-visitors-count"></span>
+    </span>
+      </div>
+      <div class="post-meta">
+    <span class="post-meta-item" title="本文字数">
+      <span class="post-meta-item-icon">
+        <i class="far fa-file-word"></i>
+      </span>
+      <span class="post-meta-item-text">本文字数：</span>
+      <span>879</span>
+    </span>
+    <span class="post-meta-item" title="阅读时长">
+      <span class="post-meta-item-icon">
+        <i class="far fa-clock"></i>
+      </span>
+      <span class="post-meta-item-text">阅读时长 &asymp;</span>
+      <span>1 分钟</span>
+    </span>
+</div>
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+          <h3 id="1-proxychains安装"><a href="#1-proxychains安装" class="headerlink" title="1.proxychains安装"></a>1.proxychains安装</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">git clone https:&#x2F;&#x2F;github.com&#x2F;rofl0r&#x2F;proxychains-ng.git</span><br><span class="line">cd proxychains-ng</span><br><span class="line">.&#x2F;configure</span><br><span class="line">make &amp;&amp; make install</span><br><span class="line">cp .&#x2F;src&#x2F;proxychains.conf &#x2F;etc&#x2F;proxychains.conf</span><br><span class="line">cd .. &amp;&amp; rm -rf proxychains-ng (先修改再cp)</span><br></pre></td></tr></table></figure>
+<p>也可以用<code>brew install proxychains-ng</code>安装。<br>2.编辑proxychains配置</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">vim &#x2F;etc&#x2F;proxychains.conf</span><br></pre></td></tr></table></figure>
+<p>3.将socks4 127.0.0.1 9095改为</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">socks5 127.0.0.1 1080</span><br></pre></td></tr></table></figure>
+<p><em><strong>ps: 默认的socks4 127.0.0.1 9095是tor代理，而socks5 127.0.0.1 1080是shadowsocks的代理。</strong></em></p>
+<p>proxychains.conf文件说明了代理配置格式,如下,这里根据自己使用的代理来配置就行了。</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line">ProxyList format</span><br><span class="line"> 94 #       type  ip  port  [user pass]</span><br><span class="line"> 95 #       (values separated by &#39;tab&#39; or &#39;blank&#39;)</span><br><span class="line"> 96 #</span><br><span class="line"> 97 #       only numeric ipv4 addresses are valid</span><br><span class="line"> 98 #</span><br><span class="line"> 99 #</span><br><span class="line">100 #        Examples:</span><br><span class="line">101 #</span><br><span class="line">102 #       socks5  192.168.67.78   1080    lamer   secret</span><br><span class="line">103 #       http    192.168.89.3    8080    justu   hidden</span><br><span class="line">104 #       socks4  192.168.1.49    1080</span><br><span class="line">105 #       http    192.168.39.93   8080</span><br></pre></td></tr></table></figure>
+<p>4.使用方法<br>在需要代理的命令前加上 proxychains4 ，如：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">proxychains4 wget http:&#x2F;&#x2F;xxx.com&#x2F;xxx.zip</span><br></pre></td></tr></table></figure>
+
+      
+    </div>
+
+    
+    
+    
+
+    <footer class="post-footer">
+        <div class="post-eof"></div>
+      
+    </footer>
+  </article>
+</div>
+
+
+
+
+    
+
+
+<div class="post-block">
+  
+  
+
+  <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="">
+    <link itemprop="mainEntityOfPage" href="https://lzhwweb.github.io/nirvana/mac/mac/%E8%8B%B9%E6%9E%9CMac%E6%93%8D%E4%BD%9C%E7%B3%BB%E7%BB%9F%E4%B8%8B%E6%80%8E%E4%B9%88%E6%98%BE%E7%A4%BA%E9%9A%90%E8%97%8F%E6%96%87%E4%BB%B6/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/nirvana/images/headphoto.jpeg">
+      <meta itemprop="name" content="nirvana">
+      <meta itemprop="description" content="个人学习笔记">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="涅槃快乐是金">
+    </span>
+      <header class="post-header">
+        <h2 class="post-title" itemprop="name headline">
+          <a href="/nirvana/mac/mac/%E8%8B%B9%E6%9E%9CMac%E6%93%8D%E4%BD%9C%E7%B3%BB%E7%BB%9F%E4%B8%8B%E6%80%8E%E4%B9%88%E6%98%BE%E7%A4%BA%E9%9A%90%E8%97%8F%E6%96%87%E4%BB%B6/" class="post-title-link" itemprop="url">苹果Mac操作系统下怎么显示隐藏文件</a>
+        </h2>
+
+        <div class="post-meta-container">
+          <div class="post-meta">
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-calendar"></i>
+      </span>
+      <span class="post-meta-item-text">发表于</span>
+      
+
+      <time title="创建时间：2021-03-10 21:12:40 / 修改时间：13:43:55" itemprop="dateCreated datePublished" datetime="2021-03-10T21:12:40+08:00">2021-03-10</time>
+    </span>
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-folder"></i>
+      </span>
+      <span class="post-meta-item-text">分类于</span>
+        <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+          <a href="/nirvana/categories/mac/" itemprop="url" rel="index"><span itemprop="name">mac</span></a>
+        </span>
+    </span>
+
+  
+    <span id="/nirvana/mac/mac/%E8%8B%B9%E6%9E%9CMac%E6%93%8D%E4%BD%9C%E7%B3%BB%E7%BB%9F%E4%B8%8B%E6%80%8E%E4%B9%88%E6%98%BE%E7%A4%BA%E9%9A%90%E8%97%8F%E6%96%87%E4%BB%B6/" class="post-meta-item leancloud_visitors" data-flag-title="苹果Mac操作系统下怎么显示隐藏文件" title="阅读次数">
+      <span class="post-meta-item-icon">
+        <i class="far fa-eye"></i>
+      </span>
+      <span class="post-meta-item-text">阅读次数：</span>
+      <span class="leancloud-visitors-count"></span>
+    </span>
+      </div>
+      <div class="post-meta">
+    <span class="post-meta-item" title="本文字数">
+      <span class="post-meta-item-icon">
+        <i class="far fa-file-word"></i>
+      </span>
+      <span class="post-meta-item-text">本文字数：</span>
+      <span>451</span>
+    </span>
+    <span class="post-meta-item" title="阅读时长">
+      <span class="post-meta-item-icon">
+        <i class="far fa-clock"></i>
+      </span>
+      <span class="post-meta-item-text">阅读时长 &asymp;</span>
+      <span>1 分钟</span>
+    </span>
+</div>
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+          <p>方法一：<br>第一步：打开「终端」应用程序。<br>第二步：输入如下命令：<br><code>defaults write com.apple.finder AppleShowAllFiles -boolean true ; killall Finder</code><br>第三步：按下「Return」键确认。<br>现在你将会在 Finder 窗口中看到那些隐藏的文件和文件夹了。<br>如果你想再次隐藏原本的隐藏文件和文件夹的话，将上述命令替换成<br><code>defaults write com.apple.finder AppleShowAllFiles -boolean false ; killall Finder</code><br>即可。<br>方法二：<br>Finder界面是，最上方，通过“前往”进入“电脑”或文件夹，先进入到需要显示隐藏文件的文件夹下<br>接着按<code>Command+F</code>,在窗格上会显示搜索栏<br>然后将第一个下列选择项“种类kind”选择为“其它Other”，当选择“其它”时，弹出新的搜索窗口，找到下面的“文件不可见File invisible”项，勾上后面的对勾，再单击“好OK”即可，返回文件夹，就可以看到，隐藏的文件已经显示出来了</p>
+
+      
+    </div>
+
+    
+    
+    
+
+    <footer class="post-footer">
+        <div class="post-eof"></div>
+      
+    </footer>
+  </article>
+</div>
+
+
+
+
+    
+
+
+<div class="post-block">
+  
+  
+
+  <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="">
+    <link itemprop="mainEntityOfPage" href="https://lzhwweb.github.io/nirvana/mac/mac/%E8%A7%A3%E5%86%B3-mac-%EF%BC%88windows%EF%BC%89%E7%BB%88%E7%AB%AF%E4%B8%8A%E4%BB%A3%E7%90%86%E7%9A%84%E9%9A%BE%E9%A2%98/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/nirvana/images/headphoto.jpeg">
+      <meta itemprop="name" content="nirvana">
+      <meta itemprop="description" content="个人学习笔记">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="涅槃快乐是金">
+    </span>
+      <header class="post-header">
+        <h2 class="post-title" itemprop="name headline">
+          <a href="/nirvana/mac/mac/%E8%A7%A3%E5%86%B3-mac-%EF%BC%88windows%EF%BC%89%E7%BB%88%E7%AB%AF%E4%B8%8A%E4%BB%A3%E7%90%86%E7%9A%84%E9%9A%BE%E9%A2%98/" class="post-title-link" itemprop="url">解决-mac-（windows）终端上代理的难题</a>
+        </h2>
+
+        <div class="post-meta-container">
+          <div class="post-meta">
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-calendar"></i>
+      </span>
+      <span class="post-meta-item-text">发表于</span>
+      
+
+      <time title="创建时间：2021-03-10 21:12:40 / 修改时间：13:43:55" itemprop="dateCreated datePublished" datetime="2021-03-10T21:12:40+08:00">2021-03-10</time>
+    </span>
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-folder"></i>
+      </span>
+      <span class="post-meta-item-text">分类于</span>
+        <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+          <a href="/nirvana/categories/mac/" itemprop="url" rel="index"><span itemprop="name">mac</span></a>
+        </span>
+    </span>
+
+  
+    <span id="/nirvana/mac/mac/%E8%A7%A3%E5%86%B3-mac-%EF%BC%88windows%EF%BC%89%E7%BB%88%E7%AB%AF%E4%B8%8A%E4%BB%A3%E7%90%86%E7%9A%84%E9%9A%BE%E9%A2%98/" class="post-meta-item leancloud_visitors" data-flag-title="解决-mac-（windows）终端上代理的难题" title="阅读次数">
+      <span class="post-meta-item-icon">
+        <i class="far fa-eye"></i>
+      </span>
+      <span class="post-meta-item-text">阅读次数：</span>
+      <span class="leancloud-visitors-count"></span>
+    </span>
+      </div>
+      <div class="post-meta">
+    <span class="post-meta-item" title="本文字数">
+      <span class="post-meta-item-icon">
+        <i class="far fa-file-word"></i>
+      </span>
+      <span class="post-meta-item-text">本文字数：</span>
+      <span>1.6k</span>
+    </span>
+    <span class="post-meta-item" title="阅读时长">
+      <span class="post-meta-item-icon">
+        <i class="far fa-clock"></i>
+      </span>
+      <span class="post-meta-item-text">阅读时长 &asymp;</span>
+      <span>1 分钟</span>
+    </span>
+</div>
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+          <p>买了 ss （shadowsocks）帐号，装了 ss 代理的软件，浏览器上也装了代理的插件，一直用的都挺好的，但是最近遇到了一些情况</p>
+<p>情况1：最近网络抽风，网页上访问 github 还好，但是在终端里，git clone 一个 repository，或者在 webstorm 中检出一个 github 上的repository，那是相当的痛苦</p>
+<p>情况2：同事在安装 brew 的过程中，需要下载 github 上的repository，于是遭受了和上面一样的痛苦</p>
+<p>不仅仅如此，为了解决类似的麻烦，很多人使用了 cnpm（淘宝出的代替 npm 的工具），或者更换各种包仓库的地址为国内镜像的地址，归根到底为一个原因，终端里的命令：诸如 wget，curl，git ，npm 等等，不好设置代理翻墙。</p>
+<p>经过本人的探索，找出了一条解决之道，先不说麻不麻烦，总归是解决了长久以来困扰自己的问题</p>
+<p>你所需要的，要有一个 ss 帐号，mac 上安装 shadowsocksX，已设置本地代理：socks5：127.0.0.1：1080</p>
+<p>还需要另外一个神器：proxifier</p>
+<p>举个例子，在终端里 git clone 一个repository，究竟是什么程序发起了网络请求，我现在可以直接告诉你答案，是 git-remote-https，请求 github.com:443，使用proxifier，就可以做到这一点，定位到是什么程序，请求的 host 以及 port，并且给它设置代理</p>
+<p>下面这张图就是proxifier的庐山真面目了<br><img src="http://upload-images.jianshu.io/upload_images/10024246-fd097bed09c20d84.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="1515804585324.jpg"><br>上面的日志给出了详细的解释<br>当我在终端里敲下 npm install xxx，对应的就是 node 请求 registry.npmjs.org:443<br>当我在webstorm中设置 github 帐户的时候，对应的是 webstorm，请求 api.github.com:443<br>当我在 git clone repository的时候，对应的是git-remote-https 请求 github.com:443</p>
+<p>第一步：你得在shadowsocksX中开启 socks5 的本地代理，这是最重要的前提<br>第二步：在proxifier使用第一步设置的代理，如下图所示<br><img src="http://upload-images.jianshu.io/upload_images/10024246-92b4c7cb079bde84.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="1515804585324.jpg"><br>第三步：设置代理规则<br>image_1b4og01u91alg1ggk1mh51omdurr1g.png-479.7kB</p>
+<p>解释一下我所设置的规则：<br>image_1b4og4c2k2i6j8b1jdjd03has1t.png-185.6kB<br>规则匹配的顺序是从上往下的 </p>
+<ol>
+<li>生效的第一条规则是shadowsocksX，因为我们的代理就是靠这个程序的，所以不能让它自己代理自己，否则proxifier 会报无限循环，动作选 direct </li>
+<li>规则 github，这里也并没有指定程序git-remote-https，因为 像 webstorm等 GUI 之流，也会访问 github：443的请求，所以不指定程序，只限制 主机和端口，应用范围就不限于终端了 </li>
+<li>规则 node，解决 npm install 的代理，可以不用 cnpm 了 </li>
+<li>规则 brew，解决终端下使用 brew 安装 package 的代理 </li>
+<li>规则 google-analytics，，解决终端下使用 brew 安装 package 的代理 </li>
+<li>规则 default，不能删除，当匹配不到任何规则的时候，使用该规则</li>
+</ol>
+<p>任何一个连接请求，从上往下匹配，匹配到了，就会停止<br>以上就是我摸索出来的方法，如果 ss 速度快的话，相信我，你会开心死的</p>
+<p>一言以蔽之，如果你在终端中发起了网络请求速度很慢的话，可以先把 default 规则，设置为socks5代理（只有设置为代理，日志才会记录），然后分析一下请求的 host：port，然后就可以添加规则了，这样的话，就做到只给部分请求走代理，如果你觉得这样很麻烦，<br>也可以简单粗暴的，将 default 规则设置为 socks5代理，其余的规则全部禁用，那就是全部的请求走代理</p>
+<p><a target="_blank" rel="noopener" href="https://pan.baidu.com/s/1qYdGRBA">Mac 版 shadowsocksX 和 proxifier 下载</a></p>
+
+      
+    </div>
+
+    
+    
+    
+
+    <footer class="post-footer">
+        <div class="post-eof"></div>
+      
+    </footer>
+  </article>
+</div>
+
+
+
+
+    
+
+
+<div class="post-block">
+  
+  
+
+  <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="">
+    <link itemprop="mainEntityOfPage" href="https://lzhwweb.github.io/nirvana/reactnative/react-native/React-Native-1px%E5%A4%84%E7%90%86/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/nirvana/images/headphoto.jpeg">
+      <meta itemprop="name" content="nirvana">
+      <meta itemprop="description" content="个人学习笔记">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="涅槃快乐是金">
+    </span>
+      <header class="post-header">
+        <h2 class="post-title" itemprop="name headline">
+          <a href="/nirvana/reactnative/react-native/React-Native-1px%E5%A4%84%E7%90%86/" class="post-title-link" itemprop="url">React-Native-1px处理</a>
+        </h2>
+
+        <div class="post-meta-container">
+          <div class="post-meta">
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-calendar"></i>
+      </span>
+      <span class="post-meta-item-text">发表于</span>
+      
+
+      <time title="创建时间：2021-03-10 21:12:40 / 修改时间：13:43:55" itemprop="dateCreated datePublished" datetime="2021-03-10T21:12:40+08:00">2021-03-10</time>
+    </span>
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-folder"></i>
+      </span>
+      <span class="post-meta-item-text">分类于</span>
+        <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+          <a href="/nirvana/categories/reactnative/" itemprop="url" rel="index"><span itemprop="name">reactnative</span></a>
+        </span>
+    </span>
+
+  
+    <span id="/nirvana/reactnative/react-native/React-Native-1px%E5%A4%84%E7%90%86/" class="post-meta-item leancloud_visitors" data-flag-title="React-Native-1px处理" title="阅读次数">
+      <span class="post-meta-item-icon">
+        <i class="far fa-eye"></i>
+      </span>
+      <span class="post-meta-item-text">阅读次数：</span>
+      <span class="leancloud-visitors-count"></span>
+    </span>
+      </div>
+      <div class="post-meta">
+    <span class="post-meta-item" title="本文字数">
+      <span class="post-meta-item-icon">
+        <i class="far fa-file-word"></i>
+      </span>
+      <span class="post-meta-item-text">本文字数：</span>
+      <span>220</span>
+    </span>
+    <span class="post-meta-item" title="阅读时长">
+      <span class="post-meta-item-icon">
+        <i class="far fa-clock"></i>
+      </span>
+      <span class="post-meta-item-text">阅读时长 &asymp;</span>
+      <span>1 分钟</span>
+    </span>
+</div>
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+          <p>当UI设计图上标注某间距为1px时，只需在间距设置的地方填如下值：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line">import &#123;</span><br><span class="line">  View,</span><br><span class="line">  StyleSheet,</span><br><span class="line">  PixelRatio, </span><br><span class="line">&#125; from &#39;react-native&#39;</span><br><span class="line">&#x2F;&#x2F;要用到 PixelRatio.get() 则需从react-native组件中引用 PixelRatio</span><br><span class="line">1px:&#123;</span><br><span class="line">        height:1 &#x2F; PixelRatio.get()</span><br><span class="line">    &#125;</span><br></pre></td></tr></table></figure>
 
       
     </div>

@@ -254,7 +254,7 @@
   
 
   <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="">
-    <link itemprop="mainEntityOfPage" href="https://lzhwweb.github.io/nirvana/mac/mac/mac%E4%B8%8B%E5%AE%89%E8%A3%85nginx/">
+    <link itemprop="mainEntityOfPage" href="https://lzhwweb.github.io/nirvana/reactnative/react-native/React-Native-%E5%9F%BA%E6%9C%AC%E5%91%BD%E4%BB%A4%E6%B1%87%E6%80%BB/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="image" content="/nirvana/images/headphoto.jpeg">
@@ -267,7 +267,7 @@
     </span>
       <header class="post-header">
         <h2 class="post-title" itemprop="name headline">
-          <a href="/nirvana/mac/mac/mac%E4%B8%8B%E5%AE%89%E8%A3%85nginx/" class="post-title-link" itemprop="url">mac下安装nginx</a>
+          <a href="/nirvana/reactnative/react-native/React-Native-%E5%9F%BA%E6%9C%AC%E5%91%BD%E4%BB%A4%E6%B1%87%E6%80%BB/" class="post-title-link" itemprop="url">React-Native-基本命令汇总</a>
         </h2>
 
         <div class="post-meta-container">
@@ -287,12 +287,12 @@
       </span>
       <span class="post-meta-item-text">分类于</span>
         <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-          <a href="/nirvana/categories/mac/" itemprop="url" rel="index"><span itemprop="name">mac</span></a>
+          <a href="/nirvana/categories/reactnative/" itemprop="url" rel="index"><span itemprop="name">reactnative</span></a>
         </span>
     </span>
 
   
-    <span id="/nirvana/mac/mac/mac%E4%B8%8B%E5%AE%89%E8%A3%85nginx/" class="post-meta-item leancloud_visitors" data-flag-title="mac下安装nginx" title="阅读次数">
+    <span id="/nirvana/reactnative/react-native/React-Native-%E5%9F%BA%E6%9C%AC%E5%91%BD%E4%BB%A4%E6%B1%87%E6%80%BB/" class="post-meta-item leancloud_visitors" data-flag-title="React-Native-基本命令汇总" title="阅读次数">
       <span class="post-meta-item-icon">
         <i class="far fa-eye"></i>
       </span>
@@ -306,14 +306,14 @@
         <i class="far fa-file-word"></i>
       </span>
       <span class="post-meta-item-text">本文字数：</span>
-      <span>2.6k</span>
+      <span>8k</span>
     </span>
     <span class="post-meta-item" title="阅读时长">
       <span class="post-meta-item-icon">
         <i class="far fa-clock"></i>
       </span>
       <span class="post-meta-item-text">阅读时长 &asymp;</span>
-      <span>2 分钟</span>
+      <span>7 分钟</span>
     </span>
 </div>
 
@@ -324,69 +324,18 @@
     
     
     <div class="post-body" itemprop="articleBody">
-          <p>安装工具：</p>
-<p><a target="_blank" rel="noopener" href="https://brew.sh/index_zh-cn.html">homebrew</a>（还没用过的小伙伴可以点链接进行了解或者自行百度）</p>
-<p>步骤：</p>
-<p>　　1、打开终端，习惯性命令：</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">brew update</span><br></pre></td></tr></table></figure>
-<p>//结果：Already up-to-date.</pre></p>
-<p>　　2、终端继续执行命令：</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">brew search nginx   &#x2F;&#x2F;查询要安装的软件是否存在</span><br></pre></td></tr></table></figure>
+          <p>最近进行React Native的一些优化工作，发现React Native提供了很多简单方便的配置，但是自己一直没有使用过，而且React Native提供了非常好的help功能，会列出对应的说明和example，这边简单整理下一些常用的命令。</p>
+<h2 id="1-查看所有命令-react-native-–help"><a href="#1-查看所有命令-react-native-–help" class="headerlink" title="1. 查看所有命令 react-native –help"></a>1. 查看所有命令 <em><strong>react-native –help</strong></em></h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br></pre></td><td class="code"><pre><span class="line">mac:react-native --help</span><br><span class="line"></span><br><span class="line">  Usage: react-native [options] [command]</span><br><span class="line"></span><br><span class="line">  Options:</span><br><span class="line"></span><br><span class="line">    -V, --version                      output the version number</span><br><span class="line">    -h, --help                         output usage information</span><br><span class="line"></span><br><span class="line">  Commands:</span><br><span class="line"></span><br><span class="line">    start [options]                    starts the webserver</span><br><span class="line">    run-ios [options]                  builds your app and starts it on iOS simulator</span><br><span class="line">    run-android [options]              builds your app and starts it on a connected Android emulator or device</span><br><span class="line">    new-library [options]              generates a native library bridge</span><br><span class="line">    bundle [options]                   builds the javascript bundle for offline use</span><br><span class="line">    unbundle [options]                 builds javascript as &quot;unbundle&quot; for offline use</span><br><span class="line">    eject [options]                    Re-create the iOS and Android folders and native code</span><br><span class="line">    link [options] [packageName]       links all native dependencies (updates native build files)</span><br><span class="line">    unlink [options] &lt;packageName&gt;     unlink native dependency</span><br><span class="line">    install [options] &lt;packageName&gt;    install and link native dependencies</span><br><span class="line">    uninstall [options] &lt;packageName&gt;  uninstall and unlink native dependencies</span><br><span class="line">    upgrade [options]                  upgrade your app&#39;s template files to the latest version; run this after updating the react-native version in your package.json and running npm install</span><br><span class="line">    log-android [options]              starts adb logcat</span><br><span class="line">    log-ios [options]                  starts iOS device syslog tail</span><br><span class="line">    info [options]                     Get relevant version info about OS, toolchain and libraries</span><br></pre></td></tr></table></figure>
 
-<p>　　3、这里我们多执行一步“废”命令，不过有利于我们后面的配置：</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">brew info nginx</span><br></pre></td></tr></table></figure>
+<h2 id="2-最常用的启动命令react-native-start"><a href="#2-最常用的启动命令react-native-start" class="headerlink" title="2. 最常用的启动命令react-native start"></a>2. 最常用的启动命令<em><strong>react-native start</strong></em></h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br></pre></td><td class="code"><pre><span class="line">mac:react-native start --help</span><br><span class="line">react-native start [options]</span><br><span class="line">  starts the webserver</span><br><span class="line"></span><br><span class="line">  Options:</span><br><span class="line"></span><br><span class="line">    --port [number]                                                (default: 8081)</span><br><span class="line">    --host [string]                                                (default: )</span><br><span class="line">    --root [list]                                                 add another root(s) to be used by the packager in this project (default: )</span><br><span class="line">    --projectRoots [list]                                         override the root(s) to be used by the packager (default: &#x2F;Users&#x2F;mac&#x2F;mallCategory)</span><br><span class="line">    --assetExts [list]                                            Specify any additional asset extensions to be used by the packager (default: )</span><br><span class="line">    --sourceExts [list]                                           Specify any additional source extensions to be used by the packager (default: )</span><br><span class="line">    --platforms [list]                                            Specify any additional platforms to be used by the packager (default: )</span><br><span class="line">    --providesModuleNodeModules [list]                            Specify any npm packages that import dependencies with providesModule (default: react-native,react-native-windows)</span><br><span class="line">    --max-workers [number]                                        Specifies the maximum number of workers the worker-pool will spawn for transforming files. This defaults to the number of the cores available on your machine.</span><br><span class="line">    --skipflow                                                    Disable flow checks</span><br><span class="line">    --nonPersistent                                               Disable file watcher</span><br><span class="line">    --transformer [string]                                        Specify a custom transformer to be used</span><br><span class="line">    --reset-cache, --resetCache                                   Removes cached files</span><br><span class="line">    --custom-log-reporter-path, --customLogReporterPath [string]  Path to a JavaScript file that exports a log reporter as a replacement for TerminalReporter</span><br><span class="line">    --verbose                                                     Enables logging</span><br><span class="line">    --https                                                       Enables https connections to the server</span><br><span class="line">    --key [path]                                                  Path to custom SSL key</span><br><span class="line">    --cert [path]                                                 Path to custom SSL cert</span><br><span class="line">    --config [string]                                             Path to the CLI configuration file</span><br><span class="line">    -h, --help                                                    output usage information</span><br></pre></td></tr></table></figure>
 
-<p>　　运行结果：</p>
-<p>　　<img src="https://upload-images.jianshu.io/upload_images/10024246-4c9ce6a852151bf0.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240"></p>
-<p>　　我们可以看到，nginx在本地还未安装（Not installed），nginx的来源（From），Docroot默认为/usr/local/var/www，在/usr/local/etc/nginx/nginx.conf配置文件中默认端口被配置为8080从而使nginx运行时不需要加sudo，nginx将在/usr/local/etc/nginx/servers/目录中加载所有文件，以及我们可以通过最简单的命令 ‘nginx’ 来启动nginx。</p>
-<p>　　4、正式开始安装：</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">brew install nginx</span><br></pre></td></tr></table></figure>
+<h2 id="3-iOS启动命令-react-native-–run-ios"><a href="#3-iOS启动命令-react-native-–run-ios" class="headerlink" title="3. iOS启动命令 react-native –run-ios"></a>3. iOS启动命令 <em><strong>react-native –run-ios</strong></em></h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br></pre></td><td class="code"><pre><span class="line">mac: react-native run-ios --help</span><br><span class="line"></span><br><span class="line">  react-native run-ios [options]</span><br><span class="line">  builds your app and starts it on iOS simulator</span><br><span class="line"></span><br><span class="line">  Options:</span><br><span class="line"></span><br><span class="line">    --simulator [string]      Explicitly set simulator to use (default: iPhone 6)</span><br><span class="line">    --configuration [string]  Explicitly set the scheme configuration to use</span><br><span class="line">    --scheme [string]         Explicitly set Xcode scheme to use</span><br><span class="line">    --project-path [string]   Path relative to project root where the Xcode project (.xcodeproj) lives. The default is &#39;ios&#39;. (default: ios)</span><br><span class="line">    --device [string]         Explicitly set device to use by name.  The value is not required if you have a single device connected.</span><br><span class="line">    --udid [string]           Explicitly set device to use by udid</span><br><span class="line">    --no-packager             Do not launch packager while building</span><br><span class="line">    --verbose                 Do not use xcpretty even if installed</span><br><span class="line">    --config [string]         Path to the CLI configuration file</span><br><span class="line">    -h, --help                output usage information</span><br><span class="line"></span><br><span class="line">  Example usage:</span><br><span class="line"></span><br><span class="line">    Run on a different simulator, e.g. iPhone 5:</span><br><span class="line">    react-native run-ios --simulator &quot;iPhone 5&quot;</span><br><span class="line"></span><br><span class="line">    Pass a non-standard location of iOS directory:</span><br><span class="line">    react-native run-ios --project-path &quot;.&#x2F;app&#x2F;ios&quot;</span><br><span class="line"></span><br><span class="line">    Run on a connected device, e.g. Max&#39;s iPhone:</span><br><span class="line">    react-native run-ios --device &quot;Max&#39;s iPhone&quot;</span><br></pre></td></tr></table></figure>
+<h2 id="4-Android-启动命令-react-native-run-android"><a href="#4-Android-启动命令-react-native-run-android" class="headerlink" title="4. Android 启动命令 react-native run-android"></a>4. Android 启动命令 <em><strong>react-native run-android</strong></em></h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br></pre></td><td class="code"><pre><span class="line">mac: react-native run-android --help</span><br><span class="line"></span><br><span class="line">  react-native run-android [options]</span><br><span class="line">  builds your app and starts it on a connected Android emulator or device</span><br><span class="line"></span><br><span class="line">  Options:</span><br><span class="line"></span><br><span class="line">    --install-debug</span><br><span class="line">    --root [string]           Override the root directory for the android build (which contains the android directory) (default: )</span><br><span class="line">    --flavor [string]         --flavor has been deprecated. Use --variant instead</span><br><span class="line">    --variant [string]</span><br><span class="line">    --appFolder [string]      Specify a different application folder name for the android source. (default: app)</span><br><span class="line">    --appId [string]          Specify an applicationId to launch after build. (default: )</span><br><span class="line">    --appIdSuffix [string]    Specify an applicationIdSuffix to launch after build. (default: )</span><br><span class="line">    --main-activity [string]  Name of the activity to start (default: MainActivity)</span><br><span class="line">    --deviceId [string]       builds your app and starts it on a specific device&#x2F;simulator with the given device id (listed by running &quot;adb devices&quot; on the command line).</span><br><span class="line">    --no-packager             Do not launch packager while building</span><br><span class="line">    --port [number]            (default: 8081)</span><br><span class="line">    --config [string]         Path to the CLI configuration file</span><br><span class="line">    -h, --help                output usage information</span><br></pre></td></tr></table></figure>
 
-<p><img src="https://upload-images.jianshu.io/upload_images/10024246-de5daa8180b3f4c3.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240"></p>
-<p>　　5、查看nginx安装目录（是否如info所说）：　</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">open &#x2F;usr&#x2F;local&#x2F;etc&#x2F;nginx&#x2F;</span><br></pre></td></tr></table></figure>
+<h2 id="5-生成bundle文件-react-native-bundle"><a href="#5-生成bundle文件-react-native-bundle" class="headerlink" title="5. 生成bundle文件 react-native bundle"></a>5. 生成bundle文件 <em><strong>react-native bundle</strong></em></h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br></pre></td><td class="code"><pre><span class="line">mac: react-native bundle --help</span><br><span class="line"></span><br><span class="line">  react-native bundle [options]</span><br><span class="line">  builds the javascript bundle for offline use</span><br><span class="line"></span><br><span class="line">  Options:</span><br><span class="line"></span><br><span class="line">    --entry-file &lt;path&gt;                Path to the root JS file, either absolute or relative to JS root</span><br><span class="line">    --platform [string]                Either &quot;ios&quot; or &quot;android&quot; (default: ios)</span><br><span class="line">    --transformer [string]             Specify a custom transformer to be used</span><br><span class="line">    --dev [boolean]                    If false, warnings are disabled and the bundle is minified (default: true)</span><br><span class="line">    --bundle-output &lt;string&gt;           File name where to store the resulting bundle, ex. &#x2F;tmp&#x2F;groups.bundle</span><br><span class="line">    --bundle-encoding [string]         Encoding the bundle should be written in (https:&#x2F;&#x2F;nodejs.org&#x2F;api&#x2F;buffer.html#buffer_buffer). (default: utf8)</span><br><span class="line">    --max-workers [number]             Specifies the maximum number of workers the worker-pool will spawn for transforming files.This defaults to the number of the cores available on your machine.</span><br><span class="line">    --sourcemap-output [string]        File name where to store the sourcemap file for resulting bundle, ex. &#x2F;tmp&#x2F;groups.map</span><br><span class="line">    --sourcemap-sources-root [string]  Path to make sourcemap&#39;s sources entries relative to, ex. &#x2F;root&#x2F;dir</span><br><span class="line">    --sourcemap-use-absolute-path      Report SourceMapURL using its full path</span><br><span class="line">    --assets-dest [string]             Directory name where to store assets referenced in the bundle</span><br><span class="line">    --verbose                          Enables logging</span><br><span class="line">    --reset-cache                      Removes cached files</span><br><span class="line">    --read-global-cache                Try to fetch transformed JS code from the global cache, if configured.</span><br><span class="line">    --config [string]                  Path to the CLI configuration file</span><br><span class="line">    -h, --help                         output usage information</span><br></pre></td></tr></table></figure>
+<h2 id="5-生成unbundle文件-react-native-unbundle"><a href="#5-生成unbundle文件-react-native-unbundle" class="headerlink" title="5. 生成unbundle文件 react-native unbundle"></a>5. 生成unbundle文件 <em><strong>react-native unbundle</strong></em></h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br></pre></td><td class="code"><pre><span class="line">mac: react-native unbundle --help</span><br><span class="line"></span><br><span class="line">  react-native unbundle [options]</span><br><span class="line">  builds javascript as &quot;unbundle&quot; for offline use</span><br><span class="line"></span><br><span class="line">  Options:</span><br><span class="line"></span><br><span class="line">    --entry-file &lt;path&gt;                Path to the root JS file, either absolute or relative to JS root</span><br><span class="line">    --platform [string]                Either &quot;ios&quot; or &quot;android&quot; (default: ios)</span><br><span class="line">    --transformer [string]             Specify a custom transformer to be used</span><br><span class="line">    --dev [boolean]                    If false, warnings are disabled and the bundle is minified (default: true)</span><br><span class="line">    --bundle-output &lt;string&gt;           File name where to store the resulting bundle, ex. &#x2F;tmp&#x2F;groups.bundle</span><br><span class="line">    --bundle-encoding [string]         Encoding the bundle should be written in (https:&#x2F;&#x2F;nodejs.org&#x2F;api&#x2F;buffer.html#buffer_buffer). (default: utf8)</span><br><span class="line">    --max-workers [number]             Specifies the maximum number of workers the worker-pool will spawn for transforming files.This defaults to the number of the cores available on your machine.</span><br><span class="line">    --sourcemap-output [string]        File name where to store the sourcemap file for resulting bundle, ex. &#x2F;tmp&#x2F;groups.map</span><br><span class="line">    --sourcemap-sources-root [string]  Path to make sourcemap&#39;s sources entries relative to, ex. &#x2F;root&#x2F;dir</span><br><span class="line">    --sourcemap-use-absolute-path      Report SourceMapURL using its full path</span><br><span class="line">    --assets-dest [string]             Directory name where to store assets referenced in the bundle</span><br><span class="line">    --verbose                          Enables logging</span><br><span class="line">    --reset-cache                      Removes cached files</span><br><span class="line">    --read-global-cache                Try to fetch transformed JS code from the global cache, if configured.</span><br><span class="line">    --indexed-unbundle                 Force indexed unbundle file format, even when building for android</span><br><span class="line">    --config [string]                  Path to the CLI configuration file</span><br><span class="line">    -h, --help                         output usage information</span><br></pre></td></tr></table></figure>
 
-<p>　　　　<img src="https://upload-images.jianshu.io/upload_images/10024246-90142c4098d678f3.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240"></p>
-<p>　　成功打开nginx目录，也可以看到如info所说servers目录以及nginx.conf的配置文件（后面会用到这个配置文件）。但我们并没有找到nginx被安装到了哪里。</p>
-<p>　　终端继续执行：</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">open &#x2F;usr&#x2F;local&#x2F;Cellar&#x2F;nginx  &#x2F;&#x2F;其实这个才是nginx被安装到的目录</span><br></pre></td></tr></table></figure>
-
-<p>　　<img src="https://upload-images.jianshu.io/upload_images/10024246-4a716a1bef024b54.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240"></p>
-<p>　　会看到一个以当前安装的nginx的版本号为名称的文件夹，这个就是我们安装的nginx根目录啦。进入1.12.2_1/bin 目录，会看到nginx的可执行启动文件。</p>
-<p>　　同样的，我们在1.12.2_1/目录下还可以看到一个名字为html的快捷方式文件夹（暂且就这么叫吧），进入该目录我们会发现其实它指向的就是/usr/local/var/www目录，这个在上面我们查看的info信息中有提到（Dcroot）</p>
-<p> 　　6、启动nginx，终端输入如下命令：</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">nginx</span><br></pre></td></tr></table></figure>
-
-<p>　　没有报错即为启动成功。<br>　　7、访问验证：</p>
-<p>　　　　打开浏览器访问localhost:8080,这里跟网上的一些教程会有些不一样，正常情况下到这一步就会能看到nginx的欢迎界面啦，然而博主却遇到了坑爹的情况（如果你能正常看到nginx欢迎界面，可以直接跳过这一步了）</p>
-<p><img src="https://upload-images.jianshu.io/upload_images/10024246-c85425af5395d326.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240"></p>
-<p> 　　想必这个错误大家都很熟悉了，我就不再多做解释，接下来直接说原因（该原因仅为猜测，因为无从验证）：安装的nginx会默认在html（也就是/usr/local/var/www）目录下生成一个欢迎页面文件，而出现上面这种情况就是欢迎页面文件没有生成（至于为什么没有生成就不得而知了，一切都是猜测）。</p>
-<p>　　那在解决这个问题之前，我们先来了解一下nginx的配置文件吧（nginx.conf）:</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">cat &#x2F;usr&#x2F;local&#x2F;etc&#x2F;nginx&#x2F;nginx.conf</span><br></pre></td></tr></table></figure>
-
-<p>　　显示配置文件的代码为：</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br></pre></td><td class="code"><pre><span class="line">#user  nobody;</span><br><span class="line">worker_processes 1;</span><br><span class="line"></span><br><span class="line">#error_log  logs&#x2F;error.log;</span><br><span class="line">#error_log  logs&#x2F;error.log  notice;</span><br><span class="line">#error_log  logs&#x2F;error.log  info;</span><br><span class="line"></span><br><span class="line">#pid        logs&#x2F;nginx.pid;</span><br><span class="line"></span><br><span class="line">events &#123;</span><br><span class="line">    worker_connections 1024;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">http &#123;</span><br><span class="line">    include       mime.types;</span><br><span class="line">    default_type  application&#x2F;octet-stream;</span><br><span class="line"></span><br><span class="line">    #log_format  main &#39;$remote_addr - $remote_user [$time_local] &quot;$request&quot; &#39; # &#39;$status $body_bytes_sent &quot;$http_referer&quot; &#39; # &#39;&quot;$http_user_agent&quot; &quot;$http_x_forwarded_for&quot;&#39;;</span><br><span class="line"></span><br><span class="line">    #access_log  logs&#x2F;access.log  main;</span><br><span class="line"></span><br><span class="line">    sendfile        on;</span><br><span class="line">    #tcp_nopush     on;</span><br><span class="line"></span><br><span class="line">    #keepalive_timeout 0;</span><br><span class="line">    keepalive_timeout 65;</span><br><span class="line"></span><br><span class="line">    #gzip  on;</span><br><span class="line"></span><br><span class="line">    server &#123;</span><br><span class="line">　　　　 #侦听8080端口</span><br><span class="line">        listen 8080;</span><br><span class="line">　　　　 #定义使用 localhost访问</span><br><span class="line">        server_name  localhost;</span><br><span class="line"></span><br><span class="line">        #charset koi8-r;</span><br><span class="line"></span><br><span class="line">        #access_log  logs&#x2F;host.access.log  main;</span><br><span class="line"></span><br><span class="line">        location &#x2F; &#123;</span><br><span class="line">　　　　　　　#定义服务器的默认网站根目录位置</span><br><span class="line">            root   html;</span><br><span class="line">　　　　　　  #定义首页索引文件的名称</span><br><span class="line">            index  index.html index.htm;</span><br><span class="line">        &#125;</span><br><span class="line">　　　　　...</span><br><span class="line">　　　　　...</span><br><span class="line">　　　　　... (注释代码太多，就不全部贴出来了)  include servers&#x2F;*;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-<p>　　通过配置文件我们可以看到其默认的网站根目录为html（即/usr/local/var/www），而默认的索引文件为index.html 和 index.htm，这下就找到原因了，原来我们的根目录少了首页索引文件，那就来手动创建一个吧：</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">cd &#x2F;usr&#x2F;local&#x2F;var&#x2F;www&#x2F;                      &#x2F;&#x2F;进入到www目录下</span><br><span class="line">touch index.html                            &#x2F;&#x2F;创建一个新的index.html文件</span><br><span class="line">vim index.html                              &#x2F;&#x2F;编辑该文件 &lt;&#x2F;pre&gt;</span><br><span class="line">&#96;&#96;&#96;&#96;</span><br><span class="line">　　将如下代码写入index.html文件中：</span><br></pre></td></tr></table></figure>
-
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <title>title</title>
-</head>
-<body>
-    <div>
-        <h1>我的nginx欢迎页面</h1>
-    </div>
-</body>
-</html>
-```
-
-
-<p>　　回到浏览器（localhost:8080）刷新：</p>
-<p><img src="https://upload-images.jianshu.io/upload_images/10024246-669dfb5bb1851e49.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240"></p>
-<p>　　OK，大功告成啦！</p>
+<h2 id="6-查看React-Native相关的信息-react-native-info"><a href="#6-查看React-Native相关的信息-react-native-info" class="headerlink" title="6. 查看React Native相关的信息 react-native info"></a>6. 查看React Native相关的信息 <em><strong>react-native info</strong></em></h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><span class="line">mac: react-native info</span><br><span class="line"></span><br><span class="line">Environment:</span><br><span class="line">  OS: macOS High Sierra 10.13.6</span><br><span class="line">  Node: 10.0.0</span><br><span class="line">  Yarn: 1.9.4</span><br><span class="line">  npm: 5.6.0</span><br><span class="line">  Watchman: 4.7.0</span><br><span class="line">  Xcode: Xcode 10.1 Build version 10B61</span><br><span class="line">  Android Studio: 1.4 AI-141.2343393</span><br><span class="line"></span><br><span class="line">Packages: (wanted &#x3D;&gt; installed)</span><br><span class="line">  react: 16.2.0</span><br><span class="line">  react-native: 0.52.0</span><br></pre></td></tr></table></figure>
 
       
     </div>
@@ -413,7 +362,7 @@
   
 
   <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="">
-    <link itemprop="mainEntityOfPage" href="https://lzhwweb.github.io/nirvana/mac/mac/mac%E7%BB%88%E7%AB%AF%E5%88%87%E6%8D%A2%E7%94%A8%E6%88%B7/">
+    <link itemprop="mainEntityOfPage" href="https://lzhwweb.github.io/nirvana/reactnative/react-native/React-native-%E6%8A%80%E6%9C%AF%E5%9C%A8%E5%A3%B9%E9%92%B1%E5%8C%85%E4%B8%AD%E7%9A%84%E5%AE%9E%E8%B7%B5%E5%8F%8A%E4%BC%98%E5%8C%96/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="image" content="/nirvana/images/headphoto.jpeg">
@@ -426,7 +375,7 @@
     </span>
       <header class="post-header">
         <h2 class="post-title" itemprop="name headline">
-          <a href="/nirvana/mac/mac/mac%E7%BB%88%E7%AB%AF%E5%88%87%E6%8D%A2%E7%94%A8%E6%88%B7/" class="post-title-link" itemprop="url">mac终端切换用户</a>
+          <a href="/nirvana/reactnative/react-native/React-native-%E6%8A%80%E6%9C%AF%E5%9C%A8%E5%A3%B9%E9%92%B1%E5%8C%85%E4%B8%AD%E7%9A%84%E5%AE%9E%E8%B7%B5%E5%8F%8A%E4%BC%98%E5%8C%96/" class="post-title-link" itemprop="url">React-native-技术在壹钱包中的实践及优化</a>
         </h2>
 
         <div class="post-meta-container">
@@ -446,12 +395,12 @@
       </span>
       <span class="post-meta-item-text">分类于</span>
         <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-          <a href="/nirvana/categories/mac/" itemprop="url" rel="index"><span itemprop="name">mac</span></a>
+          <a href="/nirvana/categories/reactnative/" itemprop="url" rel="index"><span itemprop="name">reactnative</span></a>
         </span>
     </span>
 
   
-    <span id="/nirvana/mac/mac/mac%E7%BB%88%E7%AB%AF%E5%88%87%E6%8D%A2%E7%94%A8%E6%88%B7/" class="post-meta-item leancloud_visitors" data-flag-title="mac终端切换用户" title="阅读次数">
+    <span id="/nirvana/reactnative/react-native/React-native-%E6%8A%80%E6%9C%AF%E5%9C%A8%E5%A3%B9%E9%92%B1%E5%8C%85%E4%B8%AD%E7%9A%84%E5%AE%9E%E8%B7%B5%E5%8F%8A%E4%BC%98%E5%8C%96/" class="post-meta-item leancloud_visitors" data-flag-title="React-native-技术在壹钱包中的实践及优化" title="阅读次数">
       <span class="post-meta-item-icon">
         <i class="far fa-eye"></i>
       </span>
@@ -465,14 +414,14 @@
         <i class="far fa-file-word"></i>
       </span>
       <span class="post-meta-item-text">本文字数：</span>
-      <span>359</span>
+      <span>4k</span>
     </span>
     <span class="post-meta-item" title="阅读时长">
       <span class="post-meta-item-icon">
         <i class="far fa-clock"></i>
       </span>
       <span class="post-meta-item-text">阅读时长 &asymp;</span>
-      <span>1 分钟</span>
+      <span>4 分钟</span>
     </span>
 </div>
 
@@ -483,9 +432,53 @@
     
     
     <div class="post-body" itemprop="articleBody">
-          <p>1、mac终端切换用户到root<br>sudo -i即可</p>
-<p>2、mac终端切换成普通用户<br>su - test（test为用户名）即可</p>
-<p>3、mac可以设置命令别名<br>如ll，正常情况下，mac终端不识别ll命令，但是alias 命令设置别名后，终端即可以设别ll命令：alias ll=’ls -la’；但是没有修改系统文件，则该命令只能临时生效，下次再打开终端，还是不能识别ll命令，永久生效办法，请修改系统文件，方法有多种，请自行百度（如果不是ll命令，其他命令同理）<br>————————————————<br>版权声明：本文为CSDN博主「CoberOJ_」的原创文章，遵循 CC 4.0 BY-SA 版权协议，转载请附上原文出处链接及本声明。<br>原文链接：<a target="_blank" rel="noopener" href="https://blog.csdn.net/huodoubi/article/details/69948483">https://blog.csdn.net/huodoubi/article/details/69948483</a></p>
+          <p><img src="https://upload-images.jianshu.io/upload_images/10024246-5cee99438e7340ea.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240"></p>
+<p><img src="https://upload-images.jianshu.io/upload_images/10024246-cb00304de33dc6a7.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240"></p>
+<p><img src="https://upload-images.jianshu.io/upload_images/10024246-0be45ffec5a24d23.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240"></p>
+<p><img src="https://upload-images.jianshu.io/upload_images/10024246-438492d08e3f2b1b.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240"></p>
+<p>REACT-NATIVE作为前端框架，到现在大概有三年的时间。我这边先分享一下为什么使用REACT-NATIVE。</p>
+<p>首先REACT-NATIVE的开发效率，使用javaScript开发原生应用，提出Learn Once, Write Anywhere<br>的开发思想。兼容前端的最大优势灵活发布，可以支持线上业务功快速迭代和随时更新发布。又保证了用户体验，整体体验接近原生，远优于Hybrld和Web APP。同时整个框架保持很高的社区热度，自身框架不断的升级优化，有丰富的第三方组件。</p>
+<p><img src="https://upload-images.jianshu.io/upload_images/10024246-9e2b86157dc6a78a.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240"></p>
+<p>我们一开始接触RN是2015年，当时RN刚刚发布，在2015年12月基于0.17版本开发了同时兼容iOS和Android的Demo，整体体验还可以；同时我们一直在关注RN的发展，在2016年9月使用RN0.38版本开发收银台业务，12月份正式上线运行，同时实现了包括bundle拆分，热更新的技术。整体运行了3个月的事件，产品和运营对该技术的体验比较满意和认可，就在公司推进该框架的接入；2017年3月，商城业务接入，5月正式支撑公司大型活动，技术上实现了RN单实例，单文件diff；在2017年我们整个商城业务的主流程全部接入了RN，2018年又接入了理财商城业务。</p>
+<p><img src="https://upload-images.jianshu.io/upload_images/10024246-9beeb7a89b7a3c43.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240"></p>
+<p>壹钱包的应用场景，我们有搜索分类，还有详情、会场、收银台、理财，后面就是我们正在做的5.20的活动，页面活动有很多的，商城里面很多应用，当时统计了一下，一个商品会场里面图片大概600多张，如果是RN原生的技术不优化的话，是无法支持这么大的应用场景，对于REACT-NATIVE我们做了性能优化。</p>
+<p><img src="https://upload-images.jianshu.io/upload_images/10024246-8973f3d7940d9de9.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240"></p>
+<p><img src="https://upload-images.jianshu.io/upload_images/10024246-40029c5e215d9329.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240"></p>
+<p><img src="https://upload-images.jianshu.io/upload_images/10024246-c3cdf376c6f745a6.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240"></p>
+<p>关注过RN的人知道，其实REACT-NATIVE对于安卓的支持较晚，安卓的性能不是很好，所以我们在安卓上进行较深入的优化。<br>RN是通过reactprop和react method两个注解声明暴露给js的属性和方法的，通过react-native init 的工程中rn框架并未进行优化，所有注解的处理是在运行时进行，这是一个非常耗时的过程。此外，通过反射的形式修改属性和调用方法也是不高效的。我们基于rn开源项目，编译出自己的rn库，完成了对注解的编译时优化。rn开源代码中有react prop注解的处理器，只需要开启就行。右边这幅图就是编译过程中生成的优化代码。针对react method注解的优化思路也是类似，我们自己开发出一套注解处理器，并修改rn源码，使优化生效。右边这幅图展示的就是编译阶段生成的优化代码。通过注解的编译时优化，rn框架初始化过程中的关键方法处理速度提升了60倍。</p>
+<p><img src="https://upload-images.jianshu.io/upload_images/10024246-9f76b114a1aeeabc.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240"></p>
+<p>除了注解优化，我们还对rn框架进行了诸多优化。<br>这些措施包括了比如我们在iOS方面的RCTImage改造，支持共享客户端缓存，支持动态注册RN模块，清除日志相关影响，无操作时，尽量不去执行刷新操作。</p>
+<p><img src="https://upload-images.jianshu.io/upload_images/10024246-6437a0f4b2e9fed1.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240"></p>
+<p>RN主要性能瓶颈在Javascript的执行 ，JS也是非常耗时的。RN框架代码是整体比较大，压缩之后大概500多K，如果多个业务接入RN的话，每个业务都打包框架代码时，造成很多资源浪费。业务开发并不关心当前框架是什么版本，只负责业务开发的，我们把框架代码独立更加方便于其他业务进行接入，方便业务进行开发。<br>我们做了JS bundle拆分，分为是框架JS和业务JS，框架JS通过global.react=require（react）,global.reactNative=require（react-native）把react和react-native对象定义为全局变量;业务JS通过webpack替换代码中的react和react-native对象为全局对象，实现RN框架的引入。<br>Bundle拆分后，在执行时还是要合并加载的，单我们不是简单的把框架JS和业务JS直接合并，那样拆分就没有太多意义。我们这边提出了一个新的方案，只加载一个框架JS，因为所有的业务JS执行都是基于框架执行的，加载一个RN框架就可以支撑所有的业务，你不需要再去对每个业务执行框架；对于单独加载框架JS，我们做过统计，哪怕只加载RN框架的话，其实耗时也是很严重的；所以我们加载业务JS都是基于当前的框架去执行的。通过这样的方式我们实现了RN的单实例共享。</p>
+<p><img src="https://upload-images.jianshu.io/upload_images/10024246-276644512e726e96.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240"></p>
+<p>其他方面，我们去JS加载做了一些其他的优化，比如JS moudle加载之后，我们会把它放到这里面，不会重复加载，当有相同业务打开的时候，我们去执行缓存中的JS代码。APP启动的时候，我们预加载RN实例，我们在打开APP的时候，我们先把框架执行，当打开RN业务时，我们这个时候不需要再去执行整个框架，我们直接执行业务代码，这样就会大大提升业务整体的性能，我们对于业务JS进行智能预加载。</p>
+<p><img src="https://upload-images.jianshu.io/upload_images/10024246-6514e5443290fb01.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240"></p>
+<p>我们在商品详情页启动耗时，有一半的业务场景在400毫秒到300毫秒打开，这个能够保证我们的页面完成最基本的要求就是秒开的场景。</p>
+<p><img src="https://upload-images.jianshu.io/upload_images/10024246-2c81b8e6aa60111a.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240"></p>
+<p><img src="https://upload-images.jianshu.io/upload_images/10024246-5e86df631134e037.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240"></p>
+<p>RN一个优势就是支持灵活发布，我们能对业务进行热更新，我们有一个专门管理和发布的平台。我们RN开发统一在git上开发，所有业务放在Git仓库；为了RN打包，我们基于Node开发了自动化打包平台，当需要发布业务的时候，我们通过自动化打包平台，自动化去打包生成业务和框架的zip包，上传到我们的发布系统，发布系统根据新的zip包，进行BSDIFF算法生成增量更新，这样用户更新不需要现在这个新业务zip包，只需要下载diff增量内容，<br>最大限度的降低用户流量，统计下来增量升级流量降低90%以上。这个时候如果我们对应的业务需要打开对应的RN的业务的时候，我们先去读取配置，这个决定你当前的版本是否支持RN，然后打开业务。</p>
+<p><img src="https://upload-images.jianshu.io/upload_images/10024246-0088928e23b9583f.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240"></p>
+<p><img src="https://upload-images.jianshu.io/upload_images/10024246-97cb7ac0864cb890.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240"></p>
+<p>RN支持使用Native组件，但是我们在开发中并不是全部依赖于native组件，自定义组件开发有对应的原则，优先使用Native已有的UI组件，如自定义键盘、密码。减少Native与JS间的交互，如倒计时。JS实现效果不佳或者实现困难，如滚轮选择器（picker）。现有组件无法支持当前业务需求，如列表组件（TableView）。</p>
+<p><img src="https://upload-images.jianshu.io/upload_images/10024246-f1249558ac8b1088.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240"></p>
+<p>RN提供的listview几乎无复用和flatview是基于原生组件的滚动事件进行复用，这样会有一定的延时，原生列表组件在复用上更加高效，所以基于原生组件上，开发了自己的RN列表组件；如图是我们在优化TableView的修改思路。优化过后有非常大的提升。</p>
+<p><img src="https://upload-images.jianshu.io/upload_images/10024246-ba16b2305c7a8815.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240"></p>
+<p>大家看一下这是我们现在REACT-NATIVE实现的业务场景。绿色的就是我们经常看到的所谓的60帧的刷新频率线，现在的页面基本上正常滚动的话，都是在60帧，整体体验是非常接近原生的。</p>
+<p><img src="https://upload-images.jianshu.io/upload_images/10024246-b5cefe1b5284ec2b.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240"></p>
+<p><img src="https://upload-images.jianshu.io/upload_images/10024246-a82a765cd5d68a45.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240"></p>
+<p>RN包括JS，包括Native都需要对异常进行捕获，因为RN异常会造成App的crush，这样对于整体业务体验非常不理想，我们做了对应的捕获方案。</p>
+<p>我们分为两块，一个就是JS异常，还有就是Native异常。JS异常我们使用RN提供的使用ErrorUtils全局捕获异常。Native异常，Android通过SetNativeModuleCallEXceptionHandler捕获；iOS通过捕获RCTCurrentFatalHandler的红屏错误，并监听RCTJavaScriptDidFailToLoadNotification 的异常通知，另外在打开业务时会检测RCTRootView，如果5秒内未加载ContentView也会认为异常。 捕获到异常我们会记录异常灰度，并对业务进行降级跳转到H5页面</p>
+<p><img src="https://upload-images.jianshu.io/upload_images/10024246-da7b7fd0ff3d3957.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240"></p>
+<p>RN框架版本升级，RN开发是2017年开始进行，版本为0382，RN框架升级迭代是非常快的，现在已经到54了；RN的框架升级过程中，框架自己也在解决自己的Bug，性能也是提高很多，稳定性也提升了。Native端框架整体性能、稳定性提升，其中Android布局方式发生了很大的变化<br>；React.js版本由15升级到16，在异常处理，服务端渲染和核心架构方面（引入 Fiber）都有了重大更新。基于此我们要升级我们对应的RN框架，跟上RN整体框架的版本步伐。</p>
+<p><img src="https://upload-images.jianshu.io/upload_images/10024246-9a4ecffbaf5d6cd6.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240"></p>
+<p>下面是RN的框架，上面是我们对应的业务，当我们选择去升级RN的时候，这个时候出现了比较严重的问题，由于它的版本差别太大了，整体业务出现很大问题，38版本下的业务代码无法在52版本运行，52版本的业务代码也无法在38版本上运行；开发那边讨论的时候，同时开展两条业务也不太现实，产品也不同意放弃旧的框架业务，基于此，我们做了一个框架兼容层，去屏蔽掉38和52的框架差异，实现基于一套业务代码能够同时在38和52上面同时运行，对于业务来讲，不需要关注框架的一些差异，只是按照对应的业务开发业务代码。</p>
+<p><img src="https://upload-images.jianshu.io/upload_images/10024246-663c02b507ddb0ef.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240"></p>
+<p>在升级的时候我们查看了了React和React-native的变动日志。React升级变动，废弃React createClass，使用独立包，create-react-class代替。独立React.PropTypes，使用新包prop-types，React-native中使用ViewPropTypes替换View.propTypes 。iOS修改了Native的事件发送机制，由EventDispatcher改为 EventBlock。</p>
+<p><img src="https://upload-images.jianshu.io/upload_images/10024246-2ea6778d0374176f.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240"></p>
+<p>大家可以看到RN框架升级之后，52相对38整体业务有很大的提升，我们现在刚才看到的一个图表，50%的业务我们能够在200毫秒内打开，70%的业务能够在300-400毫秒内，整体业务提升相对以前的38框架大概提升了50%的效果。</p>
+<p><img src="https://upload-images.jianshu.io/upload_images/10024246-9717988db8365892.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240"></p>
+<p><img src="https://upload-images.jianshu.io/upload_images/10024246-c5cb55c11a3e0fbb.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240"></p>
+<p>RN未来的展望，在APP内部业务RN的逐步替换；JS异常定位；RN单页化，现有业务都是通过native打开，造成数据无法共享，通过单页化，业务通过前端自己打开业务；现在RN是Learn once，Write anywhere，现有业务要求我们即存在RN又有对应的H5场景，同一个需求需要开发2遍，开发压力较大，下期目标实现Write once，run anywhere，完成同一套代码支持Web和RN；最后就是我们的对外输出RN的自定义组件和解决方案。</p>
 
       
     </div>
@@ -512,7 +505,7 @@
   
 
   <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="">
-    <link itemprop="mainEntityOfPage" href="https://lzhwweb.github.io/nirvana/mac/mac/%E5%88%A9%E7%94%A8proxychains%E5%9C%A8%E7%BB%88%E7%AB%AF%E4%BD%BF%E7%94%A8socks5%E4%BB%A3%E7%90%86/">
+    <link itemprop="mainEntityOfPage" href="https://lzhwweb.github.io/nirvana/reactnative/react-native/Text%E7%BB%84%E4%BB%B6/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="image" content="/nirvana/images/headphoto.jpeg">
@@ -525,7 +518,7 @@
     </span>
       <header class="post-header">
         <h2 class="post-title" itemprop="name headline">
-          <a href="/nirvana/mac/mac/%E5%88%A9%E7%94%A8proxychains%E5%9C%A8%E7%BB%88%E7%AB%AF%E4%BD%BF%E7%94%A8socks5%E4%BB%A3%E7%90%86/" class="post-title-link" itemprop="url">利用proxychains在终端使用socks5代理</a>
+          <a href="/nirvana/reactnative/react-native/Text%E7%BB%84%E4%BB%B6/" class="post-title-link" itemprop="url">Text组件</a>
         </h2>
 
         <div class="post-meta-container">
@@ -545,12 +538,12 @@
       </span>
       <span class="post-meta-item-text">分类于</span>
         <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-          <a href="/nirvana/categories/mac/" itemprop="url" rel="index"><span itemprop="name">mac</span></a>
+          <a href="/nirvana/categories/reactnative/" itemprop="url" rel="index"><span itemprop="name">reactnative</span></a>
         </span>
     </span>
 
   
-    <span id="/nirvana/mac/mac/%E5%88%A9%E7%94%A8proxychains%E5%9C%A8%E7%BB%88%E7%AB%AF%E4%BD%BF%E7%94%A8socks5%E4%BB%A3%E7%90%86/" class="post-meta-item leancloud_visitors" data-flag-title="利用proxychains在终端使用socks5代理" title="阅读次数">
+    <span id="/nirvana/reactnative/react-native/Text%E7%BB%84%E4%BB%B6/" class="post-meta-item leancloud_visitors" data-flag-title="Text组件" title="阅读次数">
       <span class="post-meta-item-icon">
         <i class="far fa-eye"></i>
       </span>
@@ -564,14 +557,14 @@
         <i class="far fa-file-word"></i>
       </span>
       <span class="post-meta-item-text">本文字数：</span>
-      <span>879</span>
+      <span>5k</span>
     </span>
     <span class="post-meta-item" title="阅读时长">
       <span class="post-meta-item-icon">
         <i class="far fa-clock"></i>
       </span>
       <span class="post-meta-item-text">阅读时长 &asymp;</span>
-      <span>1 分钟</span>
+      <span>5 分钟</span>
     </span>
 </div>
 
@@ -582,16 +575,49 @@
     
     
     <div class="post-body" itemprop="articleBody">
-          <h3 id="1-proxychains安装"><a href="#1-proxychains安装" class="headerlink" title="1.proxychains安装"></a>1.proxychains安装</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">git clone https:&#x2F;&#x2F;github.com&#x2F;rofl0r&#x2F;proxychains-ng.git</span><br><span class="line">cd proxychains-ng</span><br><span class="line">.&#x2F;configure</span><br><span class="line">make &amp;&amp; make install</span><br><span class="line">cp .&#x2F;src&#x2F;proxychains.conf &#x2F;etc&#x2F;proxychains.conf</span><br><span class="line">cd .. &amp;&amp; rm -rf proxychains-ng (先修改再cp)</span><br></pre></td></tr></table></figure>
-<p>也可以用<code>brew install proxychains-ng</code>安装。<br>2.编辑proxychains配置</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">vim &#x2F;etc&#x2F;proxychains.conf</span><br></pre></td></tr></table></figure>
-<p>3.将socks4 127.0.0.1 9095改为</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">socks5 127.0.0.1 1080</span><br></pre></td></tr></table></figure>
-<p><em><strong>ps: 默认的socks4 127.0.0.1 9095是tor代理，而socks5 127.0.0.1 1080是shadowsocks的代理。</strong></em></p>
-<p>proxychains.conf文件说明了代理配置格式,如下,这里根据自己使用的代理来配置就行了。</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line">ProxyList format</span><br><span class="line"> 94 #       type  ip  port  [user pass]</span><br><span class="line"> 95 #       (values separated by &#39;tab&#39; or &#39;blank&#39;)</span><br><span class="line"> 96 #</span><br><span class="line"> 97 #       only numeric ipv4 addresses are valid</span><br><span class="line"> 98 #</span><br><span class="line"> 99 #</span><br><span class="line">100 #        Examples:</span><br><span class="line">101 #</span><br><span class="line">102 #       socks5  192.168.67.78   1080    lamer   secret</span><br><span class="line">103 #       http    192.168.89.3    8080    justu   hidden</span><br><span class="line">104 #       socks4  192.168.1.49    1080</span><br><span class="line">105 #       http    192.168.39.93   8080</span><br></pre></td></tr></table></figure>
-<p>4.使用方法<br>在需要代理的命令前加上 proxychains4 ，如：</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">proxychains4 wget http:&#x2F;&#x2F;xxx.com&#x2F;xxx.zip</span><br></pre></td></tr></table></figure>
+          <h2 id="介绍"><a href="#介绍" class="headerlink" title="介绍"></a>介绍</h2><p>该Text组件为React中一个基本组件，该和Android中的TextView组件相类似用来显示基本的文本信息，该控件除了基本的显示布局之外，可以进行嵌套显示，设置样式，以及可以做事件(例如:点击)处理。下面我们来一个实例：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br></pre></td><td class="code"><pre><span class="line">&#x2F;**</span><br><span class="line"> * 进行简单Text组件使用实例</span><br><span class="line"> * Sample React Native App  test.android.js</span><br><span class="line"> * https:&#x2F;&#x2F;github.com&#x2F;facebook&#x2F;react-native</span><br><span class="line"> *&#x2F;</span><br><span class="line">&#39;use strict&#39;;</span><br><span class="line">import React, &#123; Component &#125; from &#39;react&#39;;</span><br><span class="line">import &#123;</span><br><span class="line">  AppRegistry,</span><br><span class="line">  Text,</span><br><span class="line">  View,</span><br><span class="line">  StyleSheet,</span><br><span class="line">&#125; from &#39;react-native&#39;;</span><br><span class="line">var styles &#x3D; StyleSheet.create(&#123;</span><br><span class="line">     titleBase:&#123;</span><br><span class="line">        margin:10,</span><br><span class="line">        textAlign:&#39;center&#39;,</span><br><span class="line">        color:&#39;red&#39;,</span><br><span class="line">        fontSize:28,</span><br><span class="line">        fontFamily:&#39;Cochin&#39;,</span><br><span class="line">     &#125;,</span><br><span class="line">     title:&#123;</span><br><span class="line">        color:&#39;green&#39;,</span><br><span class="line">        fontWeight:&#39;bold&#39;,</span><br><span class="line">     &#125;,</span><br><span class="line">&#125;);</span><br><span class="line">var TestText &#x3D; React.createClass(&#123;</span><br><span class="line">  render: function() &#123;</span><br><span class="line">    return (</span><br><span class="line">      &lt;Text style&#x3D;&#123;styles.titleBase&#125;&gt;</span><br><span class="line">         I am root text!</span><br><span class="line">         &lt;Text style&#x3D;&#123;styles.title&#125;&gt;</span><br><span class="line">              I am chid text!</span><br><span class="line">          &lt;&#x2F;Text&gt;</span><br><span class="line">      &lt;&#x2F;Text&gt;</span><br><span class="line">    );</span><br><span class="line">  &#125;</span><br><span class="line">&#125;);</span><br><span class="line">AppRegistry.registerComponent(&#39;TestText&#39;, () &#x3D;&gt; TestText);</span><br><span class="line"></span><br></pre></td></tr></table></figure>
+
+<p>上述实例采用TextView的嵌套方式，最外层的Text的Style titleBase定义相关风格，内层的风格style定义相关风格，我们可以看到运行效果，如果内层没有重写外层定义的样式，那么内层会进行继承。如果重写了样式，那么内层会根据自己定义的样式进行渲染，该和CSS样式表差不多。</p>
+<h2 id="属性方法-主要一些可用的属性"><a href="#属性方法-主要一些可用的属性" class="headerlink" title="属性方法(主要一些可用的属性)"></a>属性方法(主要一些可用的属性)</h2><ul>
+<li>  ①.allowFontScaling (bool):控制字体是否根据iOS的设置进行自动缩放-iOS平台,Android平台不适用</li>
+<li>  ②.numberOfLines (number):进行设置Text显示文本的行数，如果显示的内容超过了行数，默认其他多余的信息就不会显示了。</li>
+<li>  ③.onLayout (function) 当布局位置发生变动的时候自动进行触发该方法, 其中该function的参数如下: [code lang=”” start=”” highlight=””]{nativeEvent: {layout: {x, y, width, height}}}[/code]</li>
+<li>  ④.onPress (fcuntion) 该方法当文本发生点击的时候调用该方法.</li>
+</ul>
+<h2 id="风格样式"><a href="#风格样式" class="headerlink" title="风格样式"></a>风格样式</h2><ul>
+<li>  1.继承可以使用View组件的所有Style(具体查看<a target="_blank" rel="noopener" href="http://facebook.github.io/react-native/docs/view.html#style">http://facebook.github.io/react-native/docs/view.html#style</a>)</li>
+<li>  2.color:字体颜色</li>
+<li>  3.fontFamily 字体名称</li>
+<li>  4.fontSize 字体大小</li>
+<li>  5.fontStyle 字体风格(normal,italic)</li>
+<li>  6.fontWeight 字体粗细权重(“normal”, ‘bold’, ‘100’, ‘200’, ‘300’, ‘400’, ‘500’, ‘600’, ‘700’, ‘800’, ‘900’)</li>
+<li>  7.textShadowOffset 设置阴影效果{width: number, height: number}</li>
+<li>  8.textShadowRadius 阴影效果圆角</li>
+<li>  9..textShadowColor 阴影效果的颜色</li>
+<li>  10.letterSpacing 字符间距</li>
+<li>  11.lineHeight 行高</li>
+<li>  12.textAlign 文本对其方式(“auto”, ‘left’, ‘right’, ‘center’, ‘justify’)</li>
+<li>  13.textDecorationLine 横线位置 (“none”, ‘underline’, ‘line-through’, ‘underline line-through’)</li>
+<li>  14.textDecorationStyle 线的风格(“solid”, ‘double’, ‘dotted’, ‘dashed’)</li>
+<li>  15.textDecorationColor 线的颜色</li>
+<li>  16.writingDirection 文本方向(“auto”, ‘ltr’, ‘rtl’)</li>
+</ul>
+<h2 id="特别注意点"><a href="#特别注意点" class="headerlink" title="特别注意点"></a>特别注意点</h2><h3 id="嵌套特点"><a href="#嵌套特点" class="headerlink" title="嵌套特点"></a>嵌套特点</h3><p>和Web上面一直的设计方案，我们通过嵌套包裹的方案，相同的属性的文本可以用父标签进行包裹，然后内部特殊的文本采用子标签方案，具体例子如下:</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">&lt;Text style&#x3D;&#123;&#123;fontWeight: &#39;bold&#39;,fontSize:28&#125;&#125;&gt;</span><br><span class="line">      I am bold</span><br><span class="line">      &lt;Text style&#x3D;&#123;&#123;color: &#39;red&#39;&#125;&#125;&gt;</span><br><span class="line">        and red</span><br><span class="line">    &lt;&#x2F;Text&gt;</span><br><span class="line">&lt;&#x2F;Text&gt;</span><br><span class="line"></span><br></pre></td></tr></table></figure>
+
+<p>整体字体格式为bold以及字体大小为28，不过后边的’and red’的字体颜色为红色。</p>
+<h3 id="容器布局规则"><a href="#容器布局规则" class="headerlink" title="容器布局规则"></a>容器布局规则</h3><p>FlexBox(弹性布局),</p>
+<h3 id="样式继承规格"><a href="#样式继承规格" class="headerlink" title="样式继承规格"></a>样式继承规格</h3><p>组件可以嵌套，而且样式还支持继承，也就说父组件定义了相关样式，如果子组件没有重写样式的话，那么该子组件会继承父组件定义的样式。</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br></pre></td><td class="code"><pre><span class="line">&#x2F;**</span><br><span class="line"> *  Text组件实例演示</span><br><span class="line"> * Sample React Native App</span><br><span class="line"> * https:&#x2F;&#x2F;github.com&#x2F;facebook&#x2F;react-native</span><br><span class="line"> *&#x2F;</span><br><span class="line">&#39;use strict&#39;;</span><br><span class="line"></span><br><span class="line">import React, &#123; Component &#125; from &#39;react&#39;;</span><br><span class="line">import &#123;</span><br><span class="line">  AppRegistry,</span><br><span class="line">  Text,</span><br><span class="line">  View,</span><br><span class="line">  StyleSheet,</span><br><span class="line">&#125; from &#39;react-native&#39;;</span><br><span class="line">var TestText &#x3D; React.createClass(&#123;</span><br><span class="line">  render: function() &#123;</span><br><span class="line">    return (</span><br><span class="line">      &lt;View&gt;</span><br><span class="line">       &lt;Text style&#x3D;&#123;&#123;color:&#39;red&#39;&#125;&#125;&gt;</span><br><span class="line">          My Text One  红色。</span><br><span class="line">       &lt;&#x2F;Text&gt;</span><br><span class="line">       &lt;Text style&#x3D;&#123;&#123;color:&#39;green&#39;,fontSize:20&#125;&#125;&gt; My Text Two 绿色和字体大小。&lt;&#x2F;Text&gt;</span><br><span class="line">       &lt;Text style&#x3D;&#123;&#123;color:&#39;green&#39;,fontFamily:&#39;Cochin&#39;&#125;&#125;&gt; My Text Three 绿色和字体名称。&lt;&#x2F;Text&gt;</span><br><span class="line">       &lt;Text style&#x3D;&#123;&#123;color:&#39;pink&#39;,fontWeight:&#39;bold&#39;&#125;&#125;&gt; My Text Four 粉色和加粗。&lt;&#x2F;Text&gt;</span><br><span class="line">       &lt;Text style&#x3D;&#123;&#123;color:&#39;gray&#39;,fontStyle:&#39;italic&#39;&#125;&#125;&gt; My Text Five 灰色和斜体。&lt;&#x2F;Text&gt;</span><br><span class="line">       &lt;Text style&#x3D;&#123;&#123;textAlign:&#39;center&#39;,fontStyle:&#39;italic&#39;&#125;&#125;&gt; My Text Six 居中和斜体。&lt;&#x2F;Text&gt;</span><br><span class="line">       &lt;Text numberOfLines&#x3D;&#123;1&#125; style&#x3D;&#123;&#123;textAlign:&#39;center&#39;,fontStyle:&#39;italic&#39;&#125;&#125;&gt;测试行数My Text Six 居中和斜体。My Text Six 居中和斜体。 My Text Six 居中和斜体。&lt;&#x2F;Text&gt;</span><br><span class="line">       &lt;Text style&#x3D;&#123;&#123;marginLeft:50,marginTop:50,textAlign:&#39;center&#39;,fontStyle:&#39;italic&#39;&#125;&#125;&gt;设置文本的间距,居左，居顶部50&lt;&#x2F;Text&gt;</span><br><span class="line">       &lt;Text numberOfLines&#x3D;&#123;2&#125; style&#x3D;&#123;&#123;lineHeight:50,textAlign:&#39;center&#39;,fontStyle:&#39;italic&#39;&#125;&#125;&gt;</span><br><span class="line">          测试行高 测试行高 测试行高 测试行高 测试行高 测试行高 测试行高 测试行高 测试行高 测试行高 测试行高 </span><br><span class="line">          测试行高 测试行高 测试行高 测试行高 测试行高 测试行高</span><br><span class="line">       &lt;&#x2F;Text&gt;</span><br><span class="line">      &lt;&#x2F;View&gt;</span><br><span class="line">    );</span><br><span class="line">  &#125;</span><br><span class="line">&#125;);</span><br><span class="line">AppRegistry.registerComponent(&#39;TestText&#39;, () &#x3D;&gt; TestText);</span><br><span class="line"></span><br></pre></td></tr></table></figure>
+
+<h2 id="注"><a href="#注" class="headerlink" title="注"></a>注</h2><p>1、在使用Text的过程中，实现文本垂直居中、水平居中的效果（iOS和Android通用）</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br></pre></td><td class="code"><pre><span class="line">&lt;View  style&#x3D;&#123;styles.textView&#125;&gt;</span><br><span class="line">    &lt;Text style&#x3D;&#123;styles.text&#125;&gt; 水平垂直居中&lt;&#x2F;Text&gt;</span><br><span class="line">&lt;&#x2F;View&gt;</span><br><span class="line"></span><br><span class="line">textView:&#123;</span><br><span class="line">  flexDirection:&#39;column&#39;,</span><br><span class="line">  justifyContent:&#39;center&#39;,</span><br><span class="line">  alignItems:&#39;center&#39;,</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">text:&#123;</span><br><span class="line">    fontSize:12,</span><br><span class="line">    color:&#39;#f2f2f2&#39;,</span><br><span class="line">&#125;</span><br><span class="line"></span><br></pre></td></tr></table></figure>
+
+<p>尽量用view去包裹一层Text组件，text组件只负责基础的文字样式，View组件负责对齐方式等。</p>
+<p>2、在Android平台上，Text组件里使用paddingLeft 属性，不好使，直接顶着View了。</p>
+<p>解决方式：1）将paddingLeft放在View属性上;2）将paddingLeft修改为marginLeft</p>
+<p>建议使用第一种方案修改，把对齐方式交给view去处理，Text只负责文本属性的显示。</p>
 
       
     </div>
@@ -618,7 +644,7 @@
   
 
   <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="">
-    <link itemprop="mainEntityOfPage" href="https://lzhwweb.github.io/nirvana/mac/mac/%E8%8B%B9%E6%9E%9CMac%E6%93%8D%E4%BD%9C%E7%B3%BB%E7%BB%9F%E4%B8%8B%E6%80%8E%E4%B9%88%E6%98%BE%E7%A4%BA%E9%9A%90%E8%97%8F%E6%96%87%E4%BB%B6/">
+    <link itemprop="mainEntityOfPage" href="https://lzhwweb.github.io/nirvana/reactnative/react-native/iOS-RN-0-45%E4%BB%A5%E4%B8%8A%E7%89%88%E6%9C%AC%E7%BD%91%E7%BB%9C%E9%97%AE%E9%A2%98%E6%97%A0%E6%B3%95%E5%90%AF%E5%8A%A8/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="image" content="/nirvana/images/headphoto.jpeg">
@@ -631,7 +657,7 @@
     </span>
       <header class="post-header">
         <h2 class="post-title" itemprop="name headline">
-          <a href="/nirvana/mac/mac/%E8%8B%B9%E6%9E%9CMac%E6%93%8D%E4%BD%9C%E7%B3%BB%E7%BB%9F%E4%B8%8B%E6%80%8E%E4%B9%88%E6%98%BE%E7%A4%BA%E9%9A%90%E8%97%8F%E6%96%87%E4%BB%B6/" class="post-title-link" itemprop="url">苹果Mac操作系统下怎么显示隐藏文件</a>
+          <a href="/nirvana/reactnative/react-native/iOS-RN-0-45%E4%BB%A5%E4%B8%8A%E7%89%88%E6%9C%AC%E7%BD%91%E7%BB%9C%E9%97%AE%E9%A2%98%E6%97%A0%E6%B3%95%E5%90%AF%E5%8A%A8/" class="post-title-link" itemprop="url">iOS-RN-0-45以上版本网络问题无法启动</a>
         </h2>
 
         <div class="post-meta-container">
@@ -651,12 +677,12 @@
       </span>
       <span class="post-meta-item-text">分类于</span>
         <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-          <a href="/nirvana/categories/mac/" itemprop="url" rel="index"><span itemprop="name">mac</span></a>
+          <a href="/nirvana/categories/reactnative/" itemprop="url" rel="index"><span itemprop="name">reactnative</span></a>
         </span>
     </span>
 
   
-    <span id="/nirvana/mac/mac/%E8%8B%B9%E6%9E%9CMac%E6%93%8D%E4%BD%9C%E7%B3%BB%E7%BB%9F%E4%B8%8B%E6%80%8E%E4%B9%88%E6%98%BE%E7%A4%BA%E9%9A%90%E8%97%8F%E6%96%87%E4%BB%B6/" class="post-meta-item leancloud_visitors" data-flag-title="苹果Mac操作系统下怎么显示隐藏文件" title="阅读次数">
+    <span id="/nirvana/reactnative/react-native/iOS-RN-0-45%E4%BB%A5%E4%B8%8A%E7%89%88%E6%9C%AC%E7%BD%91%E7%BB%9C%E9%97%AE%E9%A2%98%E6%97%A0%E6%B3%95%E5%90%AF%E5%8A%A8/" class="post-meta-item leancloud_visitors" data-flag-title="iOS-RN-0-45以上版本网络问题无法启动" title="阅读次数">
       <span class="post-meta-item-icon">
         <i class="far fa-eye"></i>
       </span>
@@ -670,7 +696,7 @@
         <i class="far fa-file-word"></i>
       </span>
       <span class="post-meta-item-text">本文字数：</span>
-      <span>451</span>
+      <span>1k</span>
     </span>
     <span class="post-meta-item" title="阅读时长">
       <span class="post-meta-item-icon">
@@ -688,7 +714,14 @@
     
     
     <div class="post-body" itemprop="articleBody">
-          <p>方法一：<br>第一步：打开「终端」应用程序。<br>第二步：输入如下命令：<br><code>defaults write com.apple.finder AppleShowAllFiles -boolean true ; killall Finder</code><br>第三步：按下「Return」键确认。<br>现在你将会在 Finder 窗口中看到那些隐藏的文件和文件夹了。<br>如果你想再次隐藏原本的隐藏文件和文件夹的话，将上述命令替换成<br><code>defaults write com.apple.finder AppleShowAllFiles -boolean false ; killall Finder</code><br>即可。<br>方法二：<br>Finder界面是，最上方，通过“前往”进入“电脑”或文件夹，先进入到需要显示隐藏文件的文件夹下<br>接着按<code>Command+F</code>,在窗格上会显示搜索栏<br>然后将第一个下列选择项“种类kind”选择为“其它Other”，当选择“其它”时，弹出新的搜索窗口，找到下面的“文件不可见File invisible”项，勾上后面的对勾，再单击“好OK”即可，返回文件夹，就可以看到，隐藏的文件已经显示出来了</p>
+          <p>RN iOS 0.45以上版本开始需要依赖一些第三方编译库，但这些库在国内下载都非常困难（一般的翻墙工具都很难下载）<br>未来RN不同版本可能依赖不同版本的第三方编译库，具体所需库和版本请查看<a target="_blank" rel="noopener" href="https://github.com/facebook/react-native/blob/master/scripts/ios-install-third-party.sh">ios-install-third-party.sh</a>文件，注意先把左上角的branch切换到对应的版本.</p>
+<p><img src="http://upload-images.jianshu.io/upload_images/10024246-4967270af295b740.jpg?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="1515804427550.jpg"></p>
+<p>在文件最下面找到需要第三方编译库</p>
+<p><img src="http://upload-images.jianshu.io/upload_images/10024246-182697a23377bd82.jpg?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="1515804585324.jpg"></p>
+<p>我现在使用的52版本的内容为</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">fetch_and_unpack glog-0.3.4.tar.gz https:&#x2F;&#x2F;github.com&#x2F;google&#x2F;glog&#x2F;archive&#x2F;v0.3.4.tar.gz 69f91cd5a1de35ead0bc4103ea87294b0206a456 &quot;\&quot;$SCRIPTDIR&#x2F;ios-configure-glog.sh\&quot;&quot;</span><br><span class="line">fetch_and_unpack double-conversion-1.1.5.tar.gz https:&#x2F;&#x2F;github.com&#x2F;google&#x2F;double-conversion&#x2F;archive&#x2F;v1.1.5.tar.gz 96a8aba1b4ce7d4a7a3c123be26c379c2fed1def</span><br><span class="line">fetch_and_unpack boost_1_63_0.tar.gz https:&#x2F;&#x2F;github.com&#x2F;react-native-community&#x2F;boost-for-react-native&#x2F;releases&#x2F;download&#x2F;v1.63.0-0&#x2F;boost_1_63_0.tar.gz c3f57e1d22a995e608983effbb752b54b6eab741</span><br><span class="line">fetch_and_unpack folly-2016.09.26.00.tar.gz https:&#x2F;&#x2F;github.com&#x2F;facebook&#x2F;folly&#x2F;archive&#x2F;v2016.09.26.00.tar.gz f3b928b5039235bad6cece638c597c6684d1e4e6</span><br></pre></td></tr></table></figure>
+
+<p>下载完后需要把文件copy到***~/.rncache***下，然后就可以运行RN程序了</p>
 
       
     </div>
@@ -715,7 +748,7 @@
   
 
   <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="">
-    <link itemprop="mainEntityOfPage" href="https://lzhwweb.github.io/nirvana/mac/mac/%E8%A7%A3%E5%86%B3-mac-%EF%BC%88windows%EF%BC%89%E7%BB%88%E7%AB%AF%E4%B8%8A%E4%BB%A3%E7%90%86%E7%9A%84%E9%9A%BE%E9%A2%98/">
+    <link itemprop="mainEntityOfPage" href="https://lzhwweb.github.io/nirvana/reactnative/react-native/react-native-0-63%E5%90%AF%E5%8A%A8%E9%97%AE%E9%A2%98/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="image" content="/nirvana/images/headphoto.jpeg">
@@ -728,7 +761,7 @@
     </span>
       <header class="post-header">
         <h2 class="post-title" itemprop="name headline">
-          <a href="/nirvana/mac/mac/%E8%A7%A3%E5%86%B3-mac-%EF%BC%88windows%EF%BC%89%E7%BB%88%E7%AB%AF%E4%B8%8A%E4%BB%A3%E7%90%86%E7%9A%84%E9%9A%BE%E9%A2%98/" class="post-title-link" itemprop="url">解决-mac-（windows）终端上代理的难题</a>
+          <a href="/nirvana/reactnative/react-native/react-native-0-63%E5%90%AF%E5%8A%A8%E9%97%AE%E9%A2%98/" class="post-title-link" itemprop="url">react-native-0-63启动问题</a>
         </h2>
 
         <div class="post-meta-container">
@@ -748,12 +781,12 @@
       </span>
       <span class="post-meta-item-text">分类于</span>
         <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-          <a href="/nirvana/categories/mac/" itemprop="url" rel="index"><span itemprop="name">mac</span></a>
+          <a href="/nirvana/categories/reactnative/" itemprop="url" rel="index"><span itemprop="name">reactnative</span></a>
         </span>
     </span>
 
   
-    <span id="/nirvana/mac/mac/%E8%A7%A3%E5%86%B3-mac-%EF%BC%88windows%EF%BC%89%E7%BB%88%E7%AB%AF%E4%B8%8A%E4%BB%A3%E7%90%86%E7%9A%84%E9%9A%BE%E9%A2%98/" class="post-meta-item leancloud_visitors" data-flag-title="解决-mac-（windows）终端上代理的难题" title="阅读次数">
+    <span id="/nirvana/reactnative/react-native/react-native-0-63%E5%90%AF%E5%8A%A8%E9%97%AE%E9%A2%98/" class="post-meta-item leancloud_visitors" data-flag-title="react-native-0-63启动问题" title="阅读次数">
       <span class="post-meta-item-icon">
         <i class="far fa-eye"></i>
       </span>
@@ -767,7 +800,7 @@
         <i class="far fa-file-word"></i>
       </span>
       <span class="post-meta-item-text">本文字数：</span>
-      <span>1.6k</span>
+      <span>520</span>
     </span>
     <span class="post-meta-item" title="阅读时长">
       <span class="post-meta-item-icon">
@@ -785,28 +818,7 @@
     
     
     <div class="post-body" itemprop="articleBody">
-          <p>买了 ss （shadowsocks）帐号，装了 ss 代理的软件，浏览器上也装了代理的插件，一直用的都挺好的，但是最近遇到了一些情况</p>
-<p>情况1：最近网络抽风，网页上访问 github 还好，但是在终端里，git clone 一个 repository，或者在 webstorm 中检出一个 github 上的repository，那是相当的痛苦</p>
-<p>情况2：同事在安装 brew 的过程中，需要下载 github 上的repository，于是遭受了和上面一样的痛苦</p>
-<p>不仅仅如此，为了解决类似的麻烦，很多人使用了 cnpm（淘宝出的代替 npm 的工具），或者更换各种包仓库的地址为国内镜像的地址，归根到底为一个原因，终端里的命令：诸如 wget，curl，git ，npm 等等，不好设置代理翻墙。</p>
-<p>经过本人的探索，找出了一条解决之道，先不说麻不麻烦，总归是解决了长久以来困扰自己的问题</p>
-<p>你所需要的，要有一个 ss 帐号，mac 上安装 shadowsocksX，已设置本地代理：socks5：127.0.0.1：1080</p>
-<p>还需要另外一个神器：proxifier</p>
-<p>举个例子，在终端里 git clone 一个repository，究竟是什么程序发起了网络请求，我现在可以直接告诉你答案，是 git-remote-https，请求 github.com:443，使用proxifier，就可以做到这一点，定位到是什么程序，请求的 host 以及 port，并且给它设置代理</p>
-<p>下面这张图就是proxifier的庐山真面目了<br><img src="http://upload-images.jianshu.io/upload_images/10024246-fd097bed09c20d84.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="1515804585324.jpg"><br>上面的日志给出了详细的解释<br>当我在终端里敲下 npm install xxx，对应的就是 node 请求 registry.npmjs.org:443<br>当我在webstorm中设置 github 帐户的时候，对应的是 webstorm，请求 api.github.com:443<br>当我在 git clone repository的时候，对应的是git-remote-https 请求 github.com:443</p>
-<p>第一步：你得在shadowsocksX中开启 socks5 的本地代理，这是最重要的前提<br>第二步：在proxifier使用第一步设置的代理，如下图所示<br><img src="http://upload-images.jianshu.io/upload_images/10024246-92b4c7cb079bde84.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="1515804585324.jpg"><br>第三步：设置代理规则<br>image_1b4og01u91alg1ggk1mh51omdurr1g.png-479.7kB</p>
-<p>解释一下我所设置的规则：<br>image_1b4og4c2k2i6j8b1jdjd03has1t.png-185.6kB<br>规则匹配的顺序是从上往下的 </p>
-<ol>
-<li>生效的第一条规则是shadowsocksX，因为我们的代理就是靠这个程序的，所以不能让它自己代理自己，否则proxifier 会报无限循环，动作选 direct </li>
-<li>规则 github，这里也并没有指定程序git-remote-https，因为 像 webstorm等 GUI 之流，也会访问 github：443的请求，所以不指定程序，只限制 主机和端口，应用范围就不限于终端了 </li>
-<li>规则 node，解决 npm install 的代理，可以不用 cnpm 了 </li>
-<li>规则 brew，解决终端下使用 brew 安装 package 的代理 </li>
-<li>规则 google-analytics，，解决终端下使用 brew 安装 package 的代理 </li>
-<li>规则 default，不能删除，当匹配不到任何规则的时候，使用该规则</li>
-</ol>
-<p>任何一个连接请求，从上往下匹配，匹配到了，就会停止<br>以上就是我摸索出来的方法，如果 ss 速度快的话，相信我，你会开心死的</p>
-<p>一言以蔽之，如果你在终端中发起了网络请求速度很慢的话，可以先把 default 规则，设置为socks5代理（只有设置为代理，日志才会记录），然后分析一下请求的 host：port，然后就可以添加规则了，这样的话，就做到只给部分请求走代理，如果你觉得这样很麻烦，<br>也可以简单粗暴的，将 default 规则设置为 socks5代理，其余的规则全部禁用，那就是全部的请求走代理</p>
-<p><a target="_blank" rel="noopener" href="https://pan.baidu.com/s/1qYdGRBA">Mac 版 shadowsocksX 和 proxifier 下载</a></p>
+          <p>1、<code>OpenSSL-Universal</code> requires CocoaPods version <code>&gt;= &quot;1.9</code>“<br>podinstall时提示需要把CocoaPods升级到1.9，但是通过brew install CocoaPods，发现安装的版本是1.6.1，brew upgrade CocoaPods 发现版本无法升级，后来查到1.9的版本需要通过<code>gem install -n /usr/local/bin cocoapods --pre</code>才能安装最新的版本<br>2、Typedef redefinition with different types (‘uint8_t’ (aka ‘unsigned char’) vs ‘enum clockid_t’)<br>changing <code>iOS Deployment Target</code> of <code>Flipper-Folly Pods</code> to “iOS 9.0”, this error disappeared.<br><a target="_blank" rel="noopener" href="https://user-images.githubusercontent.com/3139234/78309578-52984600-7586-11ea-9d27-cefdc6e7ca0f.png"><img src="https://upload-images.jianshu.io/upload_images/10024246-e337b36acb480adc.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240"></a><br>3、 ‘event2/event-config.h’ file not found<br> Flipper-Folly的版本有问题，需要指定版本<br>use_flipper!修改为use_flipper!({ ‘Flipper-Folly’ =&gt; ‘2.3.0’ })<br>重新pod install即可</p>
 
       
     </div>

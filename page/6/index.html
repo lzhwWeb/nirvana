@@ -832,6 +832,119 @@
   
 
   <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="">
+    <link itemprop="mainEntityOfPage" href="https://lzhwweb.github.io/nirvana/javascript/%E5%89%8D%E7%AB%AF/Javascript%E8%87%AA%E8%BA%AB%E6%89%A7%E8%A1%8C%E6%95%88%E7%8E%87/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/nirvana/images/headphoto.jpeg">
+      <meta itemprop="name" content="nirvana">
+      <meta itemprop="description" content="个人学习笔记">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="涅槃快乐是金">
+    </span>
+      <header class="post-header">
+        <h2 class="post-title" itemprop="name headline">
+          <a href="/nirvana/javascript/%E5%89%8D%E7%AB%AF/Javascript%E8%87%AA%E8%BA%AB%E6%89%A7%E8%A1%8C%E6%95%88%E7%8E%87/" class="post-title-link" itemprop="url">Javascript自身执行效率</a>
+        </h2>
+
+        <div class="post-meta-container">
+          <div class="post-meta">
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-calendar"></i>
+      </span>
+      <span class="post-meta-item-text">发表于</span>
+
+      <time title="创建时间：2021-03-11 21:12:40" itemprop="dateCreated datePublished" datetime="2021-03-11T21:12:40+08:00">2021-03-11</time>
+    </span>
+      <span class="post-meta-item">
+        <span class="post-meta-item-icon">
+          <i class="far fa-calendar-check"></i>
+        </span>
+        <span class="post-meta-item-text">更新于</span>
+        <time title="修改时间：2021-03-10 13:43:55" itemprop="dateModified" datetime="2021-03-10T13:43:55+08:00">2021-03-10</time>
+      </span>
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-folder"></i>
+      </span>
+      <span class="post-meta-item-text">分类于</span>
+        <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+          <a href="/nirvana/categories/javascript/" itemprop="url" rel="index"><span itemprop="name">javascript</span></a>
+        </span>
+    </span>
+
+  
+    <span id="/nirvana/javascript/%E5%89%8D%E7%AB%AF/Javascript%E8%87%AA%E8%BA%AB%E6%89%A7%E8%A1%8C%E6%95%88%E7%8E%87/" class="post-meta-item leancloud_visitors" data-flag-title="Javascript自身执行效率" title="阅读次数">
+      <span class="post-meta-item-icon">
+        <i class="far fa-eye"></i>
+      </span>
+      <span class="post-meta-item-text">阅读次数：</span>
+      <span class="leancloud-visitors-count"></span>
+    </span>
+      </div>
+      <div class="post-meta">
+    <span class="post-meta-item" title="本文字数">
+      <span class="post-meta-item-icon">
+        <i class="far fa-file-word"></i>
+      </span>
+      <span class="post-meta-item-text">本文字数：</span>
+      <span>1.9k</span>
+    </span>
+    <span class="post-meta-item" title="阅读时长">
+      <span class="post-meta-item-icon">
+        <i class="far fa-clock"></i>
+      </span>
+      <span class="post-meta-item-text">阅读时长 &asymp;</span>
+      <span>2 分钟</span>
+    </span>
+</div>
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+          <p>Javascript中的作用域链、闭包、原型继承、eval等特性，在提供各种神奇功能的同时也带来了各种效率问题，用之不慎就会导致执行效率低下。</p>
+<h2 id="1、全局导入"><a href="#1、全局导入" class="headerlink" title="1、全局导入"></a>1、全局导入</h2><p>我们在编码过程中多多少少会使用到一些全局变量（window,document,自定义全局变量等等），了解javascript作用域链的人都知道，在局部作用域中访问全局变量需要一层一层遍历整个作用域链直至顶级作用域，而局部变量的访问效率则会更快更高，因此在局部作用域中高频率使用一些全局对象时可以将其导入到局部作用域中，例如：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line"> &#x2F;&#x2F;1、作为参数传入模块</span><br><span class="line">  (function(window,$)&#123;</span><br><span class="line">      var xxx &#x3D; window.xxx;</span><br><span class="line">      $(&quot;#xxx1&quot;).xxx();</span><br><span class="line">      $(&quot;#xxx2&quot;).xxx();</span><br><span class="line">  &#125;)(window,jQuery);</span><br><span class="line">  </span><br><span class="line">  &#x2F;&#x2F;2、暂存到局部变量</span><br><span class="line">  function()&#123;</span><br><span class="line">     var doc &#x3D; document;</span><br><span class="line">     var global &#x3D; window.global;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<h2 id="2、eval以及类eval问题"><a href="#2、eval以及类eval问题" class="headerlink" title="2、eval以及类eval问题"></a>2、eval以及类eval问题</h2><p>我们都知道eval可以将一段字符串当做js代码来执行处理，据说使用eval执行的代码比不使用eval的代码慢100倍以上（具体效率我没有测试，有兴趣同学可以测试一下）</p>
+<p>JavaScript 代码在执行前会进行类似“预编译”的操作：首先会创建一个当前执行环境下的活动对象，并将那些用 var 申明的变量设置为活动对象的属性，但是此时这些变量的赋值都是 undefined，并将那些以 function 定义的函数也添加为活动对象的属性，而且它们的值正是函数的定义。但是，如果你使用了“eval”，则“eval”中的代码（实际上为字符串）无法预先识别其上下文，无法被提前解析和优化，即无法进行预编译的操作。所以，其性能也会大幅度降低</p>
+<p>其实现在大家一般都很少会用eval了，这里我想说的是两个类eval的场景</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">(new Function&#123;&#125;,setTimeout,setInterver)</span><br><span class="line"></span><br><span class="line">setTimtout(&quot;alert(1)&quot;,1000);</span><br><span class="line"></span><br><span class="line">setInterver(&quot;alert(1)&quot;,1000);</span><br><span class="line"></span><br><span class="line">(new Function(&quot;alert(1)&quot;))();</span><br></pre></td></tr></table></figure>
+<p>上述几种类型代码执行效率都会比较低，因此建议直接传入匿名方法、或者方法的引用给setTimeout方法</p>
+<h2 id="3、闭包结束后释放掉不再被引用的变量"><a href="#3、闭包结束后释放掉不再被引用的变量" class="headerlink" title="3、闭包结束后释放掉不再被引用的变量"></a>3、闭包结束后释放掉不再被引用的变量</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line">var f &#x3D; (function()&#123;</span><br><span class="line">    var a &#x3D; &#123;name:&quot;var3&quot;&#125;;</span><br><span class="line">    var b &#x3D; [&quot;var1&quot;,&quot;var2&quot;];</span><br><span class="line">    var c &#x3D; document.getElementByTagName(&quot;li&quot;);</span><br><span class="line">    &#x2F;&#x2F;****其它变量</span><br><span class="line">    &#x2F;&#x2F;***一些运算</span><br><span class="line">    var res &#x3D; function()&#123;</span><br><span class="line">        alert(a.name);</span><br><span class="line">    &#125;</span><br><span class="line">    return res;</span><br><span class="line">&#125;)()</span><br></pre></td></tr></table></figure>
+<p>上述代码中变量f的返回值是由一个立即执行函数构成的闭包中返回的方法res，该变量保留了对于这个闭包中所有变量（a,b,c等）的引用，因此这两个变量会一直驻留在内存空间中,尤其是对于dom元素的引用对内存的消耗会很大，而我们在res中只使用到了a变量的值，因此，在闭包返回前我们可以将其它变量释放</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line">var f &#x3D; (function()&#123;</span><br><span class="line">    var a &#x3D; &#123;name:&quot;var3&quot;&#125;;</span><br><span class="line">    var b &#x3D; [&quot;var1&quot;,&quot;var2&quot;];</span><br><span class="line">    var c &#x3D; document.getElementByTagName(&quot;li&quot;);</span><br><span class="line">    &#x2F;&#x2F;****其它变量</span><br><span class="line">    &#x2F;&#x2F;***一些运算</span><br><span class="line">    &#x2F;&#x2F;闭包返回前释放掉不再使用的变量</span><br><span class="line">    b &#x3D; c &#x3D; null;</span><br><span class="line">    var res &#x3D; function()&#123;</span><br><span class="line">        alert(a.name);</span><br><span class="line">        &#125;</span><br><span class="line">    return res;</span><br><span class="line">&#125;)()</span><br></pre></td></tr></table></figure>
+
+      
+    </div>
+
+    
+    
+    
+
+    <footer class="post-footer">
+        <div class="post-eof"></div>
+      
+    </footer>
+  </article>
+</div>
+
+
+
+
+    
+
+
+<div class="post-block">
+  
+  
+
+  <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="">
     <link itemprop="mainEntityOfPage" href="https://lzhwweb.github.io/nirvana/javascript/%E5%89%8D%E7%AB%AF/Js%E6%93%8D%E4%BD%9Cdom%E7%9A%84%E6%95%88%E7%8E%87/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
@@ -956,119 +1069,6 @@
 <p>暂时先总结到这。</p>
 <hr>
 <p>原文来自：<a target="_blank" rel="noopener" href="http://www.cnblogs.com/gewei/archive/2013/03/29/2988180.html">www.cnblogs.com/gewei/archive/2013/03/29/2988180.html</a></p>
-
-      
-    </div>
-
-    
-    
-    
-
-    <footer class="post-footer">
-        <div class="post-eof"></div>
-      
-    </footer>
-  </article>
-</div>
-
-
-
-
-    
-
-
-<div class="post-block">
-  
-  
-
-  <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="">
-    <link itemprop="mainEntityOfPage" href="https://lzhwweb.github.io/nirvana/javascript/%E5%89%8D%E7%AB%AF/Javascript%E8%87%AA%E8%BA%AB%E6%89%A7%E8%A1%8C%E6%95%88%E7%8E%87/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="image" content="/nirvana/images/headphoto.jpeg">
-      <meta itemprop="name" content="nirvana">
-      <meta itemprop="description" content="个人学习笔记">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="涅槃快乐是金">
-    </span>
-      <header class="post-header">
-        <h2 class="post-title" itemprop="name headline">
-          <a href="/nirvana/javascript/%E5%89%8D%E7%AB%AF/Javascript%E8%87%AA%E8%BA%AB%E6%89%A7%E8%A1%8C%E6%95%88%E7%8E%87/" class="post-title-link" itemprop="url">Javascript自身执行效率</a>
-        </h2>
-
-        <div class="post-meta-container">
-          <div class="post-meta">
-    <span class="post-meta-item">
-      <span class="post-meta-item-icon">
-        <i class="far fa-calendar"></i>
-      </span>
-      <span class="post-meta-item-text">发表于</span>
-
-      <time title="创建时间：2021-03-11 21:12:40" itemprop="dateCreated datePublished" datetime="2021-03-11T21:12:40+08:00">2021-03-11</time>
-    </span>
-      <span class="post-meta-item">
-        <span class="post-meta-item-icon">
-          <i class="far fa-calendar-check"></i>
-        </span>
-        <span class="post-meta-item-text">更新于</span>
-        <time title="修改时间：2021-03-10 13:43:55" itemprop="dateModified" datetime="2021-03-10T13:43:55+08:00">2021-03-10</time>
-      </span>
-    <span class="post-meta-item">
-      <span class="post-meta-item-icon">
-        <i class="far fa-folder"></i>
-      </span>
-      <span class="post-meta-item-text">分类于</span>
-        <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-          <a href="/nirvana/categories/javascript/" itemprop="url" rel="index"><span itemprop="name">javascript</span></a>
-        </span>
-    </span>
-
-  
-    <span id="/nirvana/javascript/%E5%89%8D%E7%AB%AF/Javascript%E8%87%AA%E8%BA%AB%E6%89%A7%E8%A1%8C%E6%95%88%E7%8E%87/" class="post-meta-item leancloud_visitors" data-flag-title="Javascript自身执行效率" title="阅读次数">
-      <span class="post-meta-item-icon">
-        <i class="far fa-eye"></i>
-      </span>
-      <span class="post-meta-item-text">阅读次数：</span>
-      <span class="leancloud-visitors-count"></span>
-    </span>
-      </div>
-      <div class="post-meta">
-    <span class="post-meta-item" title="本文字数">
-      <span class="post-meta-item-icon">
-        <i class="far fa-file-word"></i>
-      </span>
-      <span class="post-meta-item-text">本文字数：</span>
-      <span>1.9k</span>
-    </span>
-    <span class="post-meta-item" title="阅读时长">
-      <span class="post-meta-item-icon">
-        <i class="far fa-clock"></i>
-      </span>
-      <span class="post-meta-item-text">阅读时长 &asymp;</span>
-      <span>2 分钟</span>
-    </span>
-</div>
-
-        </div>
-      </header>
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-          <p>Javascript中的作用域链、闭包、原型继承、eval等特性，在提供各种神奇功能的同时也带来了各种效率问题，用之不慎就会导致执行效率低下。</p>
-<h2 id="1、全局导入"><a href="#1、全局导入" class="headerlink" title="1、全局导入"></a>1、全局导入</h2><p>我们在编码过程中多多少少会使用到一些全局变量（window,document,自定义全局变量等等），了解javascript作用域链的人都知道，在局部作用域中访问全局变量需要一层一层遍历整个作用域链直至顶级作用域，而局部变量的访问效率则会更快更高，因此在局部作用域中高频率使用一些全局对象时可以将其导入到局部作用域中，例如：</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line"> &#x2F;&#x2F;1、作为参数传入模块</span><br><span class="line">  (function(window,$)&#123;</span><br><span class="line">      var xxx &#x3D; window.xxx;</span><br><span class="line">      $(&quot;#xxx1&quot;).xxx();</span><br><span class="line">      $(&quot;#xxx2&quot;).xxx();</span><br><span class="line">  &#125;)(window,jQuery);</span><br><span class="line">  </span><br><span class="line">  &#x2F;&#x2F;2、暂存到局部变量</span><br><span class="line">  function()&#123;</span><br><span class="line">     var doc &#x3D; document;</span><br><span class="line">     var global &#x3D; window.global;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-<h2 id="2、eval以及类eval问题"><a href="#2、eval以及类eval问题" class="headerlink" title="2、eval以及类eval问题"></a>2、eval以及类eval问题</h2><p>我们都知道eval可以将一段字符串当做js代码来执行处理，据说使用eval执行的代码比不使用eval的代码慢100倍以上（具体效率我没有测试，有兴趣同学可以测试一下）</p>
-<p>JavaScript 代码在执行前会进行类似“预编译”的操作：首先会创建一个当前执行环境下的活动对象，并将那些用 var 申明的变量设置为活动对象的属性，但是此时这些变量的赋值都是 undefined，并将那些以 function 定义的函数也添加为活动对象的属性，而且它们的值正是函数的定义。但是，如果你使用了“eval”，则“eval”中的代码（实际上为字符串）无法预先识别其上下文，无法被提前解析和优化，即无法进行预编译的操作。所以，其性能也会大幅度降低</p>
-<p>其实现在大家一般都很少会用eval了，这里我想说的是两个类eval的场景</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">(new Function&#123;&#125;,setTimeout,setInterver)</span><br><span class="line"></span><br><span class="line">setTimtout(&quot;alert(1)&quot;,1000);</span><br><span class="line"></span><br><span class="line">setInterver(&quot;alert(1)&quot;,1000);</span><br><span class="line"></span><br><span class="line">(new Function(&quot;alert(1)&quot;))();</span><br></pre></td></tr></table></figure>
-<p>上述几种类型代码执行效率都会比较低，因此建议直接传入匿名方法、或者方法的引用给setTimeout方法</p>
-<h2 id="3、闭包结束后释放掉不再被引用的变量"><a href="#3、闭包结束后释放掉不再被引用的变量" class="headerlink" title="3、闭包结束后释放掉不再被引用的变量"></a>3、闭包结束后释放掉不再被引用的变量</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line">var f &#x3D; (function()&#123;</span><br><span class="line">    var a &#x3D; &#123;name:&quot;var3&quot;&#125;;</span><br><span class="line">    var b &#x3D; [&quot;var1&quot;,&quot;var2&quot;];</span><br><span class="line">    var c &#x3D; document.getElementByTagName(&quot;li&quot;);</span><br><span class="line">    &#x2F;&#x2F;****其它变量</span><br><span class="line">    &#x2F;&#x2F;***一些运算</span><br><span class="line">    var res &#x3D; function()&#123;</span><br><span class="line">        alert(a.name);</span><br><span class="line">    &#125;</span><br><span class="line">    return res;</span><br><span class="line">&#125;)()</span><br></pre></td></tr></table></figure>
-<p>上述代码中变量f的返回值是由一个立即执行函数构成的闭包中返回的方法res，该变量保留了对于这个闭包中所有变量（a,b,c等）的引用，因此这两个变量会一直驻留在内存空间中,尤其是对于dom元素的引用对内存的消耗会很大，而我们在res中只使用到了a变量的值，因此，在闭包返回前我们可以将其它变量释放</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line">var f &#x3D; (function()&#123;</span><br><span class="line">    var a &#x3D; &#123;name:&quot;var3&quot;&#125;;</span><br><span class="line">    var b &#x3D; [&quot;var1&quot;,&quot;var2&quot;];</span><br><span class="line">    var c &#x3D; document.getElementByTagName(&quot;li&quot;);</span><br><span class="line">    &#x2F;&#x2F;****其它变量</span><br><span class="line">    &#x2F;&#x2F;***一些运算</span><br><span class="line">    &#x2F;&#x2F;闭包返回前释放掉不再使用的变量</span><br><span class="line">    b &#x3D; c &#x3D; null;</span><br><span class="line">    var res &#x3D; function()&#123;</span><br><span class="line">        alert(a.name);</span><br><span class="line">        &#125;</span><br><span class="line">    return res;</span><br><span class="line">&#125;)()</span><br></pre></td></tr></table></figure>
 
       
     </div>
