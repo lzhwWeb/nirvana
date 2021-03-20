@@ -206,7 +206,7 @@
   <nav class="site-state">
       <div class="site-state-item site-state-posts">
           <a href="/nirvana/archives">
-          <span class="site-state-item-count">183</span>
+          <span class="site-state-item-count">184</span>
           <span class="site-state-item-name">日志</span>
         </a>
       </div>
@@ -245,6 +245,110 @@
 
 
     <div class="main-inner index posts-expand">
+
+    
+
+
+<div class="post-block">
+  
+  
+
+  <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="">
+    <link itemprop="mainEntityOfPage" href="https://lzhwweb.github.io/nirvana/javascript/%E5%89%8D%E7%AB%AF/JavaScript%E5%B8%B8%E7%94%A8%E5%B7%A5%E5%85%B7%E6%96%B9%E6%B3%95-%EF%BC%883%EF%BC%89Array/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/nirvana/images/headphoto.jpeg">
+      <meta itemprop="name" content="nirvana">
+      <meta itemprop="description" content="个人学习笔记">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="涅槃快乐是金">
+    </span>
+      <header class="post-header">
+        <h2 class="post-title" itemprop="name headline">
+          <a href="/nirvana/javascript/%E5%89%8D%E7%AB%AF/JavaScript%E5%B8%B8%E7%94%A8%E5%B7%A5%E5%85%B7%E6%96%B9%E6%B3%95-%EF%BC%883%EF%BC%89Array/" class="post-title-link" itemprop="url">JavaScript常用工具方法（3）Array</a>
+        </h2>
+
+        <div class="post-meta-container">
+          <div class="post-meta">
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-calendar"></i>
+      </span>
+      <span class="post-meta-item-text">发表于</span>
+
+      <time title="创建时间：2021-03-11 21:12:40" itemprop="dateCreated datePublished" datetime="2021-03-11T21:12:40+08:00">2021-03-11</time>
+    </span>
+      <span class="post-meta-item">
+        <span class="post-meta-item-icon">
+          <i class="far fa-calendar-check"></i>
+        </span>
+        <span class="post-meta-item-text">更新于</span>
+        <time title="修改时间：2021-03-10 22:08:38" itemprop="dateModified" datetime="2021-03-10T22:08:38+08:00">2021-03-10</time>
+      </span>
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-folder"></i>
+      </span>
+      <span class="post-meta-item-text">分类于</span>
+        <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+          <a href="/nirvana/categories/javascript/" itemprop="url" rel="index"><span itemprop="name">javascript</span></a>
+        </span>
+    </span>
+
+  
+    <span id="/nirvana/javascript/%E5%89%8D%E7%AB%AF/JavaScript%E5%B8%B8%E7%94%A8%E5%B7%A5%E5%85%B7%E6%96%B9%E6%B3%95-%EF%BC%883%EF%BC%89Array/" class="post-meta-item leancloud_visitors" data-flag-title="JavaScript常用工具方法（3）Array" title="阅读次数">
+      <span class="post-meta-item-icon">
+        <i class="far fa-eye"></i>
+      </span>
+      <span class="post-meta-item-text">阅读次数：</span>
+      <span class="leancloud-visitors-count"></span>
+    </span>
+      </div>
+      <div class="post-meta">
+    <span class="post-meta-item" title="本文字数">
+      <span class="post-meta-item-icon">
+        <i class="far fa-file-word"></i>
+      </span>
+      <span class="post-meta-item-text">本文字数：</span>
+      <span>3.1k</span>
+    </span>
+    <span class="post-meta-item" title="阅读时长">
+      <span class="post-meta-item-icon">
+        <i class="far fa-clock"></i>
+      </span>
+      <span class="post-meta-item-text">阅读时长 &asymp;</span>
+      <span>3 分钟</span>
+    </span>
+</div>
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+          <p>##3. Array</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br><span class="line">63</span><br><span class="line">64</span><br><span class="line">65</span><br><span class="line">66</span><br><span class="line">67</span><br><span class="line">68</span><br><span class="line">69</span><br><span class="line">70</span><br><span class="line">71</span><br><span class="line">72</span><br><span class="line">73</span><br><span class="line">74</span><br><span class="line">75</span><br><span class="line">76</span><br><span class="line">77</span><br><span class="line">78</span><br><span class="line">79</span><br><span class="line">80</span><br><span class="line">81</span><br><span class="line">82</span><br><span class="line">83</span><br><span class="line">84</span><br><span class="line">85</span><br><span class="line">86</span><br><span class="line">87</span><br><span class="line">88</span><br><span class="line">89</span><br><span class="line">90</span><br><span class="line">91</span><br><span class="line">92</span><br><span class="line">93</span><br><span class="line">94</span><br><span class="line">95</span><br><span class="line">96</span><br><span class="line">97</span><br><span class="line">98</span><br><span class="line">99</span><br><span class="line">100</span><br><span class="line">101</span><br><span class="line">102</span><br><span class="line">103</span><br><span class="line">104</span><br><span class="line">105</span><br><span class="line">106</span><br><span class="line">107</span><br><span class="line">108</span><br><span class="line">109</span><br><span class="line">110</span><br><span class="line">111</span><br><span class="line">112</span><br><span class="line">113</span><br><span class="line">114</span><br><span class="line">115</span><br><span class="line">116</span><br><span class="line">117</span><br><span class="line">118</span><br><span class="line">119</span><br><span class="line">120</span><br><span class="line">121</span><br><span class="line">122</span><br><span class="line">123</span><br><span class="line">124</span><br><span class="line">125</span><br><span class="line">126</span><br><span class="line">127</span><br><span class="line">128</span><br><span class="line">129</span><br><span class="line">130</span><br><span class="line">131</span><br><span class="line">132</span><br><span class="line">133</span><br><span class="line">134</span><br><span class="line">135</span><br><span class="line">136</span><br><span class="line">137</span><br><span class="line">138</span><br><span class="line">139</span><br><span class="line">140</span><br><span class="line">141</span><br><span class="line">142</span><br><span class="line">143</span><br><span class="line">144</span><br><span class="line">145</span><br><span class="line">146</span><br><span class="line">147</span><br><span class="line">148</span><br></pre></td><td class="code"><pre><span class="line">&#x2F;*判断一个元素是否在数组中*&#x2F;</span><br><span class="line">contains (arr, val) &#123;</span><br><span class="line">    return arr.indexOf(val) !&#x3D; -1 ? true : false;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">&#x2F;**</span><br><span class="line"> * @param  &#123;arr&#125; 数组</span><br><span class="line"> * @param  &#123;fn&#125; 回调函数</span><br><span class="line"> * @return &#123;undefined&#125;</span><br><span class="line"> *&#x2F;</span><br><span class="line">each (arr, fn) &#123;</span><br><span class="line">    fn &#x3D; fn || Function;</span><br><span class="line">    var a &#x3D; [];</span><br><span class="line">    var args &#x3D; Array.prototype.slice.call(arguments, 1);</span><br><span class="line">    for(var i &#x3D; 0; i &lt; arr.length; i++) &#123;</span><br><span class="line">        var res &#x3D; fn.apply(arr, [arr[i], i].concat(args));</span><br><span class="line">        if(res !&#x3D; null) a.push(res);</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">&#x2F;**</span><br><span class="line"> * @param  &#123;arr&#125; 数组</span><br><span class="line"> * @param  &#123;fn&#125; 回调函数</span><br><span class="line"> * @param  &#123;thisObj&#125; this指向</span><br><span class="line"> * @return &#123;Array&#125; </span><br><span class="line"> *&#x2F;</span><br><span class="line">map (arr, fn, thisObj) &#123;</span><br><span class="line">    var scope &#x3D; thisObj || window;</span><br><span class="line">    var a &#x3D; [];</span><br><span class="line">    for(var i &#x3D; 0, j &#x3D; arr.length; i &lt; j; ++i) &#123;</span><br><span class="line">        var res &#x3D; fn.call(scope, arr[i], i, this);</span><br><span class="line">        if(res !&#x3D; null) a.push(res);</span><br><span class="line">    &#125;</span><br><span class="line">    return a;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">&#x2F;**</span><br><span class="line"> * @param  &#123;arr&#125; 数组</span><br><span class="line"> * @param  &#123;type&#125; 1：从小到大   2：从大到小   3：随机</span><br><span class="line"> * @return &#123;Array&#125;</span><br><span class="line"> *&#x2F;</span><br><span class="line">sort (arr, type &#x3D; 1) &#123;</span><br><span class="line">    return arr.sort( (a, b) &#x3D;&gt; &#123;</span><br><span class="line">        switch(type) &#123;</span><br><span class="line">            case 1:</span><br><span class="line">                return a - b;</span><br><span class="line">            case 2:</span><br><span class="line">                return b - a;</span><br><span class="line">            case 3:</span><br><span class="line">                return Math.random() - 0.5;</span><br><span class="line">            default:</span><br><span class="line">                return arr;</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;)</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">&#x2F;*去重*&#x2F;</span><br><span class="line">unique (arr) &#123;</span><br><span class="line">    if ( Array.hasOwnProperty(&#39;from&#39;) ) &#123;</span><br><span class="line">        return Array.from(new Set(arr));</span><br><span class="line">    &#125;else&#123;</span><br><span class="line">        var n &#x3D; &#123;&#125;,r&#x3D;[]; </span><br><span class="line">        for(var i &#x3D; 0; i &lt; arr.length; i++)&#123;</span><br><span class="line">            if (!n[arr[i]])&#123;</span><br><span class="line">                n[arr[i]] &#x3D; true; </span><br><span class="line">                r.push(arr[i]);</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;</span><br><span class="line">        return r;</span><br><span class="line">    &#125;</span><br><span class="line">    &#x2F;&#x2F; 注：上面 else 里面的排重并不能区分 2 和 &#39;2&#39;，但能减少用indexOf带来的性能,暂时没找到替代的方法。。。</span><br><span class="line">    &#x2F;* 正确排重</span><br><span class="line">    if ( Array.hasOwnProperty(&#39;from&#39;) ) &#123;</span><br><span class="line">        return Array.from(new Set(arr))</span><br><span class="line">    &#125;else&#123;</span><br><span class="line">        var r &#x3D; [], NaNBol &#x3D; true</span><br><span class="line">        for(var i&#x3D;0; i &lt; arr.length; i++) &#123;</span><br><span class="line">            if (arr[i] !&#x3D;&#x3D; arr[i]) &#123;</span><br><span class="line">                if (NaNBol &amp;&amp; r.indexOf(arr[i]) &#x3D;&#x3D;&#x3D; -1) &#123;</span><br><span class="line">                    r.push(arr[i])</span><br><span class="line">                    NaNBol &#x3D; false</span><br><span class="line">                &#125;</span><br><span class="line">            &#125;else&#123;</span><br><span class="line">                if(r.indexOf(arr[i]) &#x3D;&#x3D;&#x3D; -1) r.push(arr[i])</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;</span><br><span class="line">        return r</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">     *&#x2F;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">&#x2F;*求两个集合的并集*&#x2F;</span><br><span class="line">union (a, b) &#123;</span><br><span class="line">    var newArr &#x3D; a.concat(b);</span><br><span class="line">    return this.unique(newArr);</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">&#x2F;*求两个集合的交集*&#x2F;</span><br><span class="line">intersect (a, b) &#123;</span><br><span class="line">    var _this &#x3D; this;</span><br><span class="line">    a &#x3D; this.unique(a);</span><br><span class="line">    return this.map(a, function(o) &#123;</span><br><span class="line">        return _this.contains(b, o) ? o : null;</span><br><span class="line">    &#125;);</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">&#x2F;*删除其中一个元素*&#x2F;</span><br><span class="line">remove (arr, ele) &#123;</span><br><span class="line">    var index &#x3D; arr.indexOf(ele);</span><br><span class="line">    if(index &gt; -1) &#123;</span><br><span class="line">        arr.splice(index, 1);</span><br><span class="line">    &#125;</span><br><span class="line">    return arr;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">&#x2F;*将类数组转换为数组的方法*&#x2F;</span><br><span class="line">formArray (ary) &#123;</span><br><span class="line">    var arr &#x3D; [];</span><br><span class="line">    if(Array.isArray(ary)) &#123;</span><br><span class="line">        arr &#x3D; ary;</span><br><span class="line">    &#125; else &#123;</span><br><span class="line">        arr &#x3D; Array.prototype.slice.call(ary);</span><br><span class="line">    &#125;;</span><br><span class="line">    return arr;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">&#x2F;*最大值*&#x2F;</span><br><span class="line">max (arr) &#123;</span><br><span class="line">    return Math.max.apply(null, arr);</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">&#x2F;*最小值*&#x2F;</span><br><span class="line">min (arr) &#123;</span><br><span class="line">    return Math.min.apply(null, arr);</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">&#x2F;*求和*&#x2F;</span><br><span class="line">sum (arr) &#123;</span><br><span class="line">    return arr.reduce( (pre, cur) &#x3D;&gt; &#123;</span><br><span class="line">        return pre + cur</span><br><span class="line">    &#125;)</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">&#x2F;*平均值*&#x2F;</span><br><span class="line">average (arr) &#123;</span><br><span class="line">    return this.sum(arr)&#x2F;arr.length</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+      
+    </div>
+
+    
+    
+    
+
+    <footer class="post-footer">
+        <div class="post-eof"></div>
+      
+    </footer>
+  </article>
+</div>
+
+
+
 
     
 
@@ -1489,138 +1593,6 @@
 
 
 
-    
-
-
-<div class="post-block">
-  
-  
-
-  <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="">
-    <link itemprop="mainEntityOfPage" href="https://lzhwweb.github.io/nirvana/javascript/%E5%89%8D%E7%AB%AF/TypeScript%E6%B3%9B%E5%9E%8B%E7%9A%84%E5%9F%BA%E6%9C%AC%E4%BD%BF%E7%94%A8%E5%92%8C%E7%90%86%E8%A7%A3/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="image" content="/nirvana/images/headphoto.jpeg">
-      <meta itemprop="name" content="nirvana">
-      <meta itemprop="description" content="个人学习笔记">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="涅槃快乐是金">
-    </span>
-      <header class="post-header">
-        <h2 class="post-title" itemprop="name headline">
-          <a href="/nirvana/javascript/%E5%89%8D%E7%AB%AF/TypeScript%E6%B3%9B%E5%9E%8B%E7%9A%84%E5%9F%BA%E6%9C%AC%E4%BD%BF%E7%94%A8%E5%92%8C%E7%90%86%E8%A7%A3/" class="post-title-link" itemprop="url">TypeScript泛型的基本使用和理解</a>
-        </h2>
-
-        <div class="post-meta-container">
-          <div class="post-meta">
-    <span class="post-meta-item">
-      <span class="post-meta-item-icon">
-        <i class="far fa-calendar"></i>
-      </span>
-      <span class="post-meta-item-text">发表于</span>
-
-      <time title="创建时间：2021-03-11 21:12:40" itemprop="dateCreated datePublished" datetime="2021-03-11T21:12:40+08:00">2021-03-11</time>
-    </span>
-      <span class="post-meta-item">
-        <span class="post-meta-item-icon">
-          <i class="far fa-calendar-check"></i>
-        </span>
-        <span class="post-meta-item-text">更新于</span>
-        <time title="修改时间：2021-03-10 13:43:55" itemprop="dateModified" datetime="2021-03-10T13:43:55+08:00">2021-03-10</time>
-      </span>
-    <span class="post-meta-item">
-      <span class="post-meta-item-icon">
-        <i class="far fa-folder"></i>
-      </span>
-      <span class="post-meta-item-text">分类于</span>
-        <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-          <a href="/nirvana/categories/javascript/" itemprop="url" rel="index"><span itemprop="name">javascript</span></a>
-        </span>
-    </span>
-
-  
-    <span id="/nirvana/javascript/%E5%89%8D%E7%AB%AF/TypeScript%E6%B3%9B%E5%9E%8B%E7%9A%84%E5%9F%BA%E6%9C%AC%E4%BD%BF%E7%94%A8%E5%92%8C%E7%90%86%E8%A7%A3/" class="post-meta-item leancloud_visitors" data-flag-title="TypeScript泛型的基本使用和理解" title="阅读次数">
-      <span class="post-meta-item-icon">
-        <i class="far fa-eye"></i>
-      </span>
-      <span class="post-meta-item-text">阅读次数：</span>
-      <span class="leancloud-visitors-count"></span>
-    </span>
-      </div>
-      <div class="post-meta">
-    <span class="post-meta-item" title="本文字数">
-      <span class="post-meta-item-icon">
-        <i class="far fa-file-word"></i>
-      </span>
-      <span class="post-meta-item-text">本文字数：</span>
-      <span>2.5k</span>
-    </span>
-    <span class="post-meta-item" title="阅读时长">
-      <span class="post-meta-item-icon">
-        <i class="far fa-clock"></i>
-      </span>
-      <span class="post-meta-item-text">阅读时长 &asymp;</span>
-      <span>2 分钟</span>
-    </span>
-</div>
-
-        </div>
-      </header>
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-          <h2 id="泛型"><a href="#泛型" class="headerlink" title="泛型"></a>泛型</h2><p>许多时候，标注的具体类型并不能确定，比如一个函数的参数类型</p>
-<p>在像C#和Java这样的语言中，可以使用<code>泛型</code>来创建可重用的组件，一个组件可以支持多种类型的数据。 这样用户就可以以自己的数据类型来使用组件。</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">function getVal(obj, k) &#123;    return obj[k];&#125;</span><br></pre></td></tr></table></figure>
-
-<p>上面的函数，我们想实现的是获取一个对象指定的 k 所对应的值</p>
-<p>那么实际使用的时候，obj 的类型是 不确定的 自然 k 的取值范围也是不确定的</p>
-<p>它需要我们在具体调用的时候才能确定</p>
-<p>这个时候这种定义过程不确定类型的需求就可以通过泛型来解决</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">function getVal&lt;T&gt;(obj: T, k: keyof T) &#123;    return obj[k];&#125;</span><br></pre></td></tr></table></figure>
-<p>所谓的泛型，就是给可变(不定)的类型定义变量(参数)， &lt;&gt; 类似 ()</p>
-<h3 id="泛型类"><a href="#泛型类" class="headerlink" title="泛型类"></a>泛型类</h3><p>在面向对象章节中，我们曾经给大家讲过一个基于泛型使用的例子:模拟组件</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br></pre></td><td class="code"><pre><span class="line">abstract class Component&lt;T1, T2&gt; &#123;</span><br><span class="line">    props: T1;</span><br><span class="line">		state: T2;</span><br><span class="line">    constructor(props: T1) &#123; </span><br><span class="line">        this.props &#x3D; props;</span><br><span class="line">    &#125;</span><br><span class="line">   	abstract render(): string;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">interface IMyComponentProps &#123;</span><br><span class="line">    val: number;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">interface IMyComponentState &#123;</span><br><span class="line">		x: number; </span><br><span class="line">&#125;</span><br><span class="line">class MyComponent extends Component&lt;IMyComponentProps, IMyComponentState&gt; &#123;</span><br><span class="line">    constructor(props: IMyComponentProps) &#123;</span><br><span class="line">        super(props);</span><br><span class="line">				this.state &#x3D; &#123; </span><br><span class="line">						x: 1</span><br><span class="line">				&#125; </span><br><span class="line">		&#125;</span><br><span class="line"></span><br><span class="line">    render() &#123; </span><br><span class="line">        this.props.val;</span><br><span class="line">        this.state.x;</span><br><span class="line">        return &#39;&lt;myComponent &#x2F;&gt;&#39;;</span><br><span class="line">     &#125;</span><br><span class="line">&#125;</span><br><span class="line">let myComponent &#x3D; new MyComponent(&#123;val: 1&#125;); </span><br><span class="line">myComponent.render();</span><br></pre></td></tr></table></figure>
-
-<h3 id="泛型接口"><a href="#泛型接口" class="headerlink" title="泛型接口"></a>泛型接口</h3><p>我们还可以在接口中使用泛型 后端提供了一些接口 用以返回一些数据</p>
-<p>依据返回的数据格式定义如下接口:</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">interface IResponseData &#123;</span><br><span class="line">    code: number;</span><br><span class="line">    message?: string;</span><br><span class="line">		data: any; </span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-
-<p>根据接口，我们封装对应的一些方法</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">function getData(url: string) &#123; </span><br><span class="line">	return fetch(url).then(res &#x3D;&gt; &#123;</span><br><span class="line">		return res.json();</span><br><span class="line">	&#125;).then( (data: IResponseData) &#x3D;&gt; &#123;</span><br><span class="line">        return data;</span><br><span class="line">  &#125;);</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-<p>但是，我们会发现该接口的 data 项的具体格式不确定，不同的接口会返回的数据是不一样的，当我们 想根据具体当前请求的接口返回具体 data 格式的时候，就比较麻烦了，因为 getData 并不清楚你调 用的具体接口是什么，对应的数据又会是什么样的</p>
-<p>这个时候我们可以对 IResponseData 使用泛型</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">interface IResponseData&lt;T&gt; &#123;</span><br><span class="line">    code: number;</span><br><span class="line">    message?: string;</span><br><span class="line">		data: T; </span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">function getData&lt;U&gt;(url: string) &#123; </span><br><span class="line">	return fetch(url).then(res &#x3D;&gt; &#123;</span><br><span class="line">  			return res.json();</span><br><span class="line">  &#125;).then( (data: IResponseData&lt;U&gt;) &#x3D;&gt; &#123;</span><br><span class="line">       return data;</span><br><span class="line">  &#125;);</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-
-<p>定义不同的数据接口</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line">&#x2F;&#x2F; 用户接口</span><br><span class="line">interface IResponseUserData &#123;</span><br><span class="line">    id: number;</span><br><span class="line">    username: string;</span><br><span class="line">    email: string;</span><br><span class="line">&#125;</span><br><span class="line">&#x2F;&#x2F; 文章接口</span><br><span class="line">interface IResponseArticleData &#123;</span><br><span class="line">    id: number;</span><br><span class="line">    title: string;</span><br><span class="line">    author: IResponseUserData;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-
-<p>调用具体代码</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br></pre></td><td class="code"><pre><span class="line">~(async function()&#123;</span><br><span class="line">    let user &#x3D; await getData&lt;IResponseUserData&gt;(&#39;&#39;); </span><br><span class="line">    if (user.code &#x3D;&#x3D;&#x3D; 1) &#123;</span><br><span class="line">    		console.log(user.message); </span><br><span class="line">    &#125; else &#123;</span><br><span class="line">    		console.log(user.data.username); </span><br><span class="line">    &#125;</span><br><span class="line">    let articles &#x3D; await getData&lt;IResponseArticleData&gt;(&#39;&#39;); </span><br><span class="line">    if (articles.code &#x3D;&#x3D;&#x3D; 1) &#123;</span><br><span class="line">        console.log(articles.message); </span><br><span class="line">    &#125; else &#123;</span><br><span class="line">        console.log(articles.data.id);</span><br><span class="line">        console.log(articles.data.author.username); </span><br><span class="line">    &#125;</span><br><span class="line">&#125;);</span><br></pre></td></tr></table></figure>
-
-      
-    </div>
-
-    
-    
-    
-
-    <footer class="post-footer">
-        <div class="post-eof"></div>
-      
-    </footer>
-  </article>
-</div>
-
-
-
-
   <nav class="pagination">
     <a class="extend prev" rel="prev" href="/nirvana/page/5/"><i class="fa fa-angle-left" aria-label="上一页"></i></a><a class="page-number" href="/nirvana/">1</a><span class="space">&hellip;</span><a class="page-number" href="/nirvana/page/5/">5</a><span class="page-number current">6</span><a class="page-number" href="/nirvana/page/7/">7</a><span class="space">&hellip;</span><a class="page-number" href="/nirvana/page/19/">19</a><a class="extend next" rel="next" href="/nirvana/page/7/"><i class="fa fa-angle-right" aria-label="下一页"></i></a>
   </nav>
@@ -1668,14 +1640,14 @@
       <i class="fa fa-chart-line"></i>
     </span>
       <span>站点总字数：</span>
-    <span title="站点总字数">534k</span>
+    <span title="站点总字数">538k</span>
   </span>
   <span class="post-meta-item">
     <span class="post-meta-item-icon">
       <i class="fa fa-coffee"></i>
     </span>
       <span>站点阅读时长 &asymp;</span>
-    <span title="站点阅读时长">8:06</span>
+    <span title="站点阅读时长">8:09</span>
   </span>
 </div>
   <div class="powered-by">由 <a href="https://hexo.io/" class="theme-link" rel="noopener" target="_blank">Hexo</a> & <a href="https://theme-next.js.org/" class="theme-link" rel="noopener" target="_blank">NexT.Gemini</a> 强力驱动

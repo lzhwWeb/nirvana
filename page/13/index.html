@@ -206,7 +206,7 @@
   <nav class="site-state">
       <div class="site-state-item site-state-posts">
           <a href="/nirvana/archives">
-          <span class="site-state-item-count">183</span>
+          <span class="site-state-item-count">184</span>
           <span class="site-state-item-name">日志</span>
         </a>
       </div>
@@ -245,6 +245,145 @@
 
 
     <div class="main-inner index posts-expand">
+
+    
+
+
+<div class="post-block">
+  
+  
+
+  <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="">
+    <link itemprop="mainEntityOfPage" href="https://lzhwweb.github.io/nirvana/reactnative/react-native/Text%E7%BB%84%E4%BB%B6/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/nirvana/images/headphoto.jpeg">
+      <meta itemprop="name" content="nirvana">
+      <meta itemprop="description" content="个人学习笔记">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="涅槃快乐是金">
+    </span>
+      <header class="post-header">
+        <h2 class="post-title" itemprop="name headline">
+          <a href="/nirvana/reactnative/react-native/Text%E7%BB%84%E4%BB%B6/" class="post-title-link" itemprop="url">Text组件</a>
+        </h2>
+
+        <div class="post-meta-container">
+          <div class="post-meta">
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-calendar"></i>
+      </span>
+      <span class="post-meta-item-text">发表于</span>
+      
+
+      <time title="创建时间：2021-03-10 21:12:40 / 修改时间：13:43:55" itemprop="dateCreated datePublished" datetime="2021-03-10T21:12:40+08:00">2021-03-10</time>
+    </span>
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-folder"></i>
+      </span>
+      <span class="post-meta-item-text">分类于</span>
+        <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+          <a href="/nirvana/categories/reactnative/" itemprop="url" rel="index"><span itemprop="name">reactnative</span></a>
+        </span>
+    </span>
+
+  
+    <span id="/nirvana/reactnative/react-native/Text%E7%BB%84%E4%BB%B6/" class="post-meta-item leancloud_visitors" data-flag-title="Text组件" title="阅读次数">
+      <span class="post-meta-item-icon">
+        <i class="far fa-eye"></i>
+      </span>
+      <span class="post-meta-item-text">阅读次数：</span>
+      <span class="leancloud-visitors-count"></span>
+    </span>
+      </div>
+      <div class="post-meta">
+    <span class="post-meta-item" title="本文字数">
+      <span class="post-meta-item-icon">
+        <i class="far fa-file-word"></i>
+      </span>
+      <span class="post-meta-item-text">本文字数：</span>
+      <span>5k</span>
+    </span>
+    <span class="post-meta-item" title="阅读时长">
+      <span class="post-meta-item-icon">
+        <i class="far fa-clock"></i>
+      </span>
+      <span class="post-meta-item-text">阅读时长 &asymp;</span>
+      <span>5 分钟</span>
+    </span>
+</div>
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+          <h2 id="介绍"><a href="#介绍" class="headerlink" title="介绍"></a>介绍</h2><p>该Text组件为React中一个基本组件，该和Android中的TextView组件相类似用来显示基本的文本信息，该控件除了基本的显示布局之外，可以进行嵌套显示，设置样式，以及可以做事件(例如:点击)处理。下面我们来一个实例：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br></pre></td><td class="code"><pre><span class="line">&#x2F;**</span><br><span class="line"> * 进行简单Text组件使用实例</span><br><span class="line"> * Sample React Native App  test.android.js</span><br><span class="line"> * https:&#x2F;&#x2F;github.com&#x2F;facebook&#x2F;react-native</span><br><span class="line"> *&#x2F;</span><br><span class="line">&#39;use strict&#39;;</span><br><span class="line">import React, &#123; Component &#125; from &#39;react&#39;;</span><br><span class="line">import &#123;</span><br><span class="line">  AppRegistry,</span><br><span class="line">  Text,</span><br><span class="line">  View,</span><br><span class="line">  StyleSheet,</span><br><span class="line">&#125; from &#39;react-native&#39;;</span><br><span class="line">var styles &#x3D; StyleSheet.create(&#123;</span><br><span class="line">     titleBase:&#123;</span><br><span class="line">        margin:10,</span><br><span class="line">        textAlign:&#39;center&#39;,</span><br><span class="line">        color:&#39;red&#39;,</span><br><span class="line">        fontSize:28,</span><br><span class="line">        fontFamily:&#39;Cochin&#39;,</span><br><span class="line">     &#125;,</span><br><span class="line">     title:&#123;</span><br><span class="line">        color:&#39;green&#39;,</span><br><span class="line">        fontWeight:&#39;bold&#39;,</span><br><span class="line">     &#125;,</span><br><span class="line">&#125;);</span><br><span class="line">var TestText &#x3D; React.createClass(&#123;</span><br><span class="line">  render: function() &#123;</span><br><span class="line">    return (</span><br><span class="line">      &lt;Text style&#x3D;&#123;styles.titleBase&#125;&gt;</span><br><span class="line">         I am root text!</span><br><span class="line">         &lt;Text style&#x3D;&#123;styles.title&#125;&gt;</span><br><span class="line">              I am chid text!</span><br><span class="line">          &lt;&#x2F;Text&gt;</span><br><span class="line">      &lt;&#x2F;Text&gt;</span><br><span class="line">    );</span><br><span class="line">  &#125;</span><br><span class="line">&#125;);</span><br><span class="line">AppRegistry.registerComponent(&#39;TestText&#39;, () &#x3D;&gt; TestText);</span><br><span class="line"></span><br></pre></td></tr></table></figure>
+
+<p>上述实例采用TextView的嵌套方式，最外层的Text的Style titleBase定义相关风格，内层的风格style定义相关风格，我们可以看到运行效果，如果内层没有重写外层定义的样式，那么内层会进行继承。如果重写了样式，那么内层会根据自己定义的样式进行渲染，该和CSS样式表差不多。</p>
+<h2 id="属性方法-主要一些可用的属性"><a href="#属性方法-主要一些可用的属性" class="headerlink" title="属性方法(主要一些可用的属性)"></a>属性方法(主要一些可用的属性)</h2><ul>
+<li>  ①.allowFontScaling (bool):控制字体是否根据iOS的设置进行自动缩放-iOS平台,Android平台不适用</li>
+<li>  ②.numberOfLines (number):进行设置Text显示文本的行数，如果显示的内容超过了行数，默认其他多余的信息就不会显示了。</li>
+<li>  ③.onLayout (function) 当布局位置发生变动的时候自动进行触发该方法, 其中该function的参数如下: [code lang=”” start=”” highlight=””]{nativeEvent: {layout: {x, y, width, height}}}[/code]</li>
+<li>  ④.onPress (fcuntion) 该方法当文本发生点击的时候调用该方法.</li>
+</ul>
+<h2 id="风格样式"><a href="#风格样式" class="headerlink" title="风格样式"></a>风格样式</h2><ul>
+<li>  1.继承可以使用View组件的所有Style(具体查看<a target="_blank" rel="noopener" href="http://facebook.github.io/react-native/docs/view.html#style">http://facebook.github.io/react-native/docs/view.html#style</a>)</li>
+<li>  2.color:字体颜色</li>
+<li>  3.fontFamily 字体名称</li>
+<li>  4.fontSize 字体大小</li>
+<li>  5.fontStyle 字体风格(normal,italic)</li>
+<li>  6.fontWeight 字体粗细权重(“normal”, ‘bold’, ‘100’, ‘200’, ‘300’, ‘400’, ‘500’, ‘600’, ‘700’, ‘800’, ‘900’)</li>
+<li>  7.textShadowOffset 设置阴影效果{width: number, height: number}</li>
+<li>  8.textShadowRadius 阴影效果圆角</li>
+<li>  9..textShadowColor 阴影效果的颜色</li>
+<li>  10.letterSpacing 字符间距</li>
+<li>  11.lineHeight 行高</li>
+<li>  12.textAlign 文本对其方式(“auto”, ‘left’, ‘right’, ‘center’, ‘justify’)</li>
+<li>  13.textDecorationLine 横线位置 (“none”, ‘underline’, ‘line-through’, ‘underline line-through’)</li>
+<li>  14.textDecorationStyle 线的风格(“solid”, ‘double’, ‘dotted’, ‘dashed’)</li>
+<li>  15.textDecorationColor 线的颜色</li>
+<li>  16.writingDirection 文本方向(“auto”, ‘ltr’, ‘rtl’)</li>
+</ul>
+<h2 id="特别注意点"><a href="#特别注意点" class="headerlink" title="特别注意点"></a>特别注意点</h2><h3 id="嵌套特点"><a href="#嵌套特点" class="headerlink" title="嵌套特点"></a>嵌套特点</h3><p>和Web上面一直的设计方案，我们通过嵌套包裹的方案，相同的属性的文本可以用父标签进行包裹，然后内部特殊的文本采用子标签方案，具体例子如下:</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">&lt;Text style&#x3D;&#123;&#123;fontWeight: &#39;bold&#39;,fontSize:28&#125;&#125;&gt;</span><br><span class="line">      I am bold</span><br><span class="line">      &lt;Text style&#x3D;&#123;&#123;color: &#39;red&#39;&#125;&#125;&gt;</span><br><span class="line">        and red</span><br><span class="line">    &lt;&#x2F;Text&gt;</span><br><span class="line">&lt;&#x2F;Text&gt;</span><br><span class="line"></span><br></pre></td></tr></table></figure>
+
+<p>整体字体格式为bold以及字体大小为28，不过后边的’and red’的字体颜色为红色。</p>
+<h3 id="容器布局规则"><a href="#容器布局规则" class="headerlink" title="容器布局规则"></a>容器布局规则</h3><p>FlexBox(弹性布局),</p>
+<h3 id="样式继承规格"><a href="#样式继承规格" class="headerlink" title="样式继承规格"></a>样式继承规格</h3><p>组件可以嵌套，而且样式还支持继承，也就说父组件定义了相关样式，如果子组件没有重写样式的话，那么该子组件会继承父组件定义的样式。</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br></pre></td><td class="code"><pre><span class="line">&#x2F;**</span><br><span class="line"> *  Text组件实例演示</span><br><span class="line"> * Sample React Native App</span><br><span class="line"> * https:&#x2F;&#x2F;github.com&#x2F;facebook&#x2F;react-native</span><br><span class="line"> *&#x2F;</span><br><span class="line">&#39;use strict&#39;;</span><br><span class="line"></span><br><span class="line">import React, &#123; Component &#125; from &#39;react&#39;;</span><br><span class="line">import &#123;</span><br><span class="line">  AppRegistry,</span><br><span class="line">  Text,</span><br><span class="line">  View,</span><br><span class="line">  StyleSheet,</span><br><span class="line">&#125; from &#39;react-native&#39;;</span><br><span class="line">var TestText &#x3D; React.createClass(&#123;</span><br><span class="line">  render: function() &#123;</span><br><span class="line">    return (</span><br><span class="line">      &lt;View&gt;</span><br><span class="line">       &lt;Text style&#x3D;&#123;&#123;color:&#39;red&#39;&#125;&#125;&gt;</span><br><span class="line">          My Text One  红色。</span><br><span class="line">       &lt;&#x2F;Text&gt;</span><br><span class="line">       &lt;Text style&#x3D;&#123;&#123;color:&#39;green&#39;,fontSize:20&#125;&#125;&gt; My Text Two 绿色和字体大小。&lt;&#x2F;Text&gt;</span><br><span class="line">       &lt;Text style&#x3D;&#123;&#123;color:&#39;green&#39;,fontFamily:&#39;Cochin&#39;&#125;&#125;&gt; My Text Three 绿色和字体名称。&lt;&#x2F;Text&gt;</span><br><span class="line">       &lt;Text style&#x3D;&#123;&#123;color:&#39;pink&#39;,fontWeight:&#39;bold&#39;&#125;&#125;&gt; My Text Four 粉色和加粗。&lt;&#x2F;Text&gt;</span><br><span class="line">       &lt;Text style&#x3D;&#123;&#123;color:&#39;gray&#39;,fontStyle:&#39;italic&#39;&#125;&#125;&gt; My Text Five 灰色和斜体。&lt;&#x2F;Text&gt;</span><br><span class="line">       &lt;Text style&#x3D;&#123;&#123;textAlign:&#39;center&#39;,fontStyle:&#39;italic&#39;&#125;&#125;&gt; My Text Six 居中和斜体。&lt;&#x2F;Text&gt;</span><br><span class="line">       &lt;Text numberOfLines&#x3D;&#123;1&#125; style&#x3D;&#123;&#123;textAlign:&#39;center&#39;,fontStyle:&#39;italic&#39;&#125;&#125;&gt;测试行数My Text Six 居中和斜体。My Text Six 居中和斜体。 My Text Six 居中和斜体。&lt;&#x2F;Text&gt;</span><br><span class="line">       &lt;Text style&#x3D;&#123;&#123;marginLeft:50,marginTop:50,textAlign:&#39;center&#39;,fontStyle:&#39;italic&#39;&#125;&#125;&gt;设置文本的间距,居左，居顶部50&lt;&#x2F;Text&gt;</span><br><span class="line">       &lt;Text numberOfLines&#x3D;&#123;2&#125; style&#x3D;&#123;&#123;lineHeight:50,textAlign:&#39;center&#39;,fontStyle:&#39;italic&#39;&#125;&#125;&gt;</span><br><span class="line">          测试行高 测试行高 测试行高 测试行高 测试行高 测试行高 测试行高 测试行高 测试行高 测试行高 测试行高 </span><br><span class="line">          测试行高 测试行高 测试行高 测试行高 测试行高 测试行高</span><br><span class="line">       &lt;&#x2F;Text&gt;</span><br><span class="line">      &lt;&#x2F;View&gt;</span><br><span class="line">    );</span><br><span class="line">  &#125;</span><br><span class="line">&#125;);</span><br><span class="line">AppRegistry.registerComponent(&#39;TestText&#39;, () &#x3D;&gt; TestText);</span><br><span class="line"></span><br></pre></td></tr></table></figure>
+
+<h2 id="注"><a href="#注" class="headerlink" title="注"></a>注</h2><p>1、在使用Text的过程中，实现文本垂直居中、水平居中的效果（iOS和Android通用）</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br></pre></td><td class="code"><pre><span class="line">&lt;View  style&#x3D;&#123;styles.textView&#125;&gt;</span><br><span class="line">    &lt;Text style&#x3D;&#123;styles.text&#125;&gt; 水平垂直居中&lt;&#x2F;Text&gt;</span><br><span class="line">&lt;&#x2F;View&gt;</span><br><span class="line"></span><br><span class="line">textView:&#123;</span><br><span class="line">  flexDirection:&#39;column&#39;,</span><br><span class="line">  justifyContent:&#39;center&#39;,</span><br><span class="line">  alignItems:&#39;center&#39;,</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">text:&#123;</span><br><span class="line">    fontSize:12,</span><br><span class="line">    color:&#39;#f2f2f2&#39;,</span><br><span class="line">&#125;</span><br><span class="line"></span><br></pre></td></tr></table></figure>
+
+<p>尽量用view去包裹一层Text组件，text组件只负责基础的文字样式，View组件负责对齐方式等。</p>
+<p>2、在Android平台上，Text组件里使用paddingLeft 属性，不好使，直接顶着View了。</p>
+<p>解决方式：1）将paddingLeft放在View属性上;2）将paddingLeft修改为marginLeft</p>
+<p>建议使用第一种方案修改，把对齐方式交给view去处理，Text只负责文本属性的显示。</p>
+
+      
+    </div>
+
+    
+    
+    
+
+    <footer class="post-footer">
+        <div class="post-eof"></div>
+      
+    </footer>
+  </article>
+</div>
+
+
+
 
     
 
@@ -1256,110 +1395,6 @@
 
 
 
-    
-
-
-<div class="post-block">
-  
-  
-
-  <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="">
-    <link itemprop="mainEntityOfPage" href="https://lzhwweb.github.io/nirvana/mac/mac/OSX---%E9%99%8D%E7%BA%A7Safari-12%E5%88%B011-1-2/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="image" content="/nirvana/images/headphoto.jpeg">
-      <meta itemprop="name" content="nirvana">
-      <meta itemprop="description" content="个人学习笔记">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="涅槃快乐是金">
-    </span>
-      <header class="post-header">
-        <h2 class="post-title" itemprop="name headline">
-          <a href="/nirvana/mac/mac/OSX---%E9%99%8D%E7%BA%A7Safari-12%E5%88%B011-1-2/" class="post-title-link" itemprop="url">OSX---降级Safari-12到11-1-2</a>
-        </h2>
-
-        <div class="post-meta-container">
-          <div class="post-meta">
-    <span class="post-meta-item">
-      <span class="post-meta-item-icon">
-        <i class="far fa-calendar"></i>
-      </span>
-      <span class="post-meta-item-text">发表于</span>
-      
-
-      <time title="创建时间：2021-03-10 21:12:40 / 修改时间：13:43:55" itemprop="dateCreated datePublished" datetime="2021-03-10T21:12:40+08:00">2021-03-10</time>
-    </span>
-    <span class="post-meta-item">
-      <span class="post-meta-item-icon">
-        <i class="far fa-folder"></i>
-      </span>
-      <span class="post-meta-item-text">分类于</span>
-        <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-          <a href="/nirvana/categories/mac/" itemprop="url" rel="index"><span itemprop="name">mac</span></a>
-        </span>
-    </span>
-
-  
-    <span id="/nirvana/mac/mac/OSX---%E9%99%8D%E7%BA%A7Safari-12%E5%88%B011-1-2/" class="post-meta-item leancloud_visitors" data-flag-title="OSX---降级Safari-12到11-1-2" title="阅读次数">
-      <span class="post-meta-item-icon">
-        <i class="far fa-eye"></i>
-      </span>
-      <span class="post-meta-item-text">阅读次数：</span>
-      <span class="leancloud-visitors-count"></span>
-    </span>
-      </div>
-      <div class="post-meta">
-    <span class="post-meta-item" title="本文字数">
-      <span class="post-meta-item-icon">
-        <i class="far fa-file-word"></i>
-      </span>
-      <span class="post-meta-item-text">本文字数：</span>
-      <span>528</span>
-    </span>
-    <span class="post-meta-item" title="阅读时长">
-      <span class="post-meta-item-icon">
-        <i class="far fa-clock"></i>
-      </span>
-      <span class="post-meta-item-text">阅读时长 &asymp;</span>
-      <span>1 分钟</span>
-    </span>
-</div>
-
-        </div>
-      </header>
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-          <h3 id="操作"><a href="#操作" class="headerlink" title="操作"></a>操作</h3><h4 id="工具"><a href="#工具" class="headerlink" title="工具"></a>工具</h4><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">Pacifist : https:&#x2F;&#x2F;www.charlessoft.com&#x2F;cgi-bin&#x2F;pacifist_download.cgi?type&#x3D;zip</span><br></pre></td></tr></table></figure>
-
-<h4 id="Safari-11"><a href="#Safari-11" class="headerlink" title="Safari 11"></a>Safari 11</h4><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">https:&#x2F;&#x2F;www.newasp.net&#x2F;soft&#x2F;109641.html</span><br></pre></td></tr></table></figure>
-
-<h4 id="步骤"><a href="#步骤" class="headerlink" title="步骤"></a>步骤</h4><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">1 . 重启系统, 按住⌘-R不松手</span><br><span class="line">2 . 在实用工具(Utilities)下打开终端,输入csrutil disable, 然后回车; 你就看到提示系统完整性保护(SIP: System Integrity Protection)已禁用</span><br><span class="line">3 . 输入reboot回车重启电脑</span><br><span class="line">4 . 打开Pacifist, 点击 打开Safari 11.1.软件包, 选择Safari 11.1.2包的内容,点击安装按钮;</span><br><span class="line">5 . 给予管理员权限, 并一路替换,就可以了</span><br><span class="line">6 . 如果你想启用SIP, 那么重启启动系统,按住⌘-R不松手; 输入csrutil enable回车.开启SIP</span><br></pre></td></tr></table></figure>
-
-<h4 id="使用pacifist安装safari"><a href="#使用pacifist安装safari" class="headerlink" title="使用pacifist安装safari"></a>使用pacifist安装safari</h4><p><img src="http://upload-images.jianshu.io/upload_images/10024246-137076307d06f5c0.jpg?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240"></p>
-<h3 id="后记"><a href="#后记" class="headerlink" title="后记"></a>后记</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">1 . 一旦升级到 mojave 版本,是不能降级到 safari11.1.2版本的.</span><br><span class="line">2 . 如果这么操作怎么都不成功, 完全卸载 safari 再直接安装吧.</span><br></pre></td></tr></table></figure>
-
-      
-    </div>
-
-    
-    
-    
-
-    <footer class="post-footer">
-        <div class="post-eof"></div>
-      
-    </footer>
-  </article>
-</div>
-
-
-
-
   <nav class="pagination">
     <a class="extend prev" rel="prev" href="/nirvana/page/12/"><i class="fa fa-angle-left" aria-label="上一页"></i></a><a class="page-number" href="/nirvana/">1</a><span class="space">&hellip;</span><a class="page-number" href="/nirvana/page/12/">12</a><span class="page-number current">13</span><a class="page-number" href="/nirvana/page/14/">14</a><span class="space">&hellip;</span><a class="page-number" href="/nirvana/page/19/">19</a><a class="extend next" rel="next" href="/nirvana/page/14/"><i class="fa fa-angle-right" aria-label="下一页"></i></a>
   </nav>
@@ -1407,14 +1442,14 @@
       <i class="fa fa-chart-line"></i>
     </span>
       <span>站点总字数：</span>
-    <span title="站点总字数">534k</span>
+    <span title="站点总字数">538k</span>
   </span>
   <span class="post-meta-item">
     <span class="post-meta-item-icon">
       <i class="fa fa-coffee"></i>
     </span>
       <span>站点阅读时长 &asymp;</span>
-    <span title="站点阅读时长">8:06</span>
+    <span title="站点阅读时长">8:09</span>
   </span>
 </div>
   <div class="powered-by">由 <a href="https://hexo.io/" class="theme-link" rel="noopener" target="_blank">Hexo</a> & <a href="https://theme-next.js.org/" class="theme-link" rel="noopener" target="_blank">NexT.Gemini</a> 强力驱动

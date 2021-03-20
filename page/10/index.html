@@ -206,7 +206,7 @@
   <nav class="site-state">
       <div class="site-state-item site-state-posts">
           <a href="/nirvana/archives">
-          <span class="site-state-item-count">183</span>
+          <span class="site-state-item-count">184</span>
           <span class="site-state-item-name">日志</span>
         </a>
       </div>
@@ -245,6 +245,129 @@
 
 
     <div class="main-inner index posts-expand">
+
+    
+
+
+<div class="post-block">
+  
+  
+
+  <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="">
+    <link itemprop="mainEntityOfPage" href="https://lzhwweb.github.io/nirvana/javascript/%E5%89%8D%E7%AB%AF/unhandled-promise-rejection/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/nirvana/images/headphoto.jpeg">
+      <meta itemprop="name" content="nirvana">
+      <meta itemprop="description" content="个人学习笔记">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="涅槃快乐是金">
+    </span>
+      <header class="post-header">
+        <h2 class="post-title" itemprop="name headline">
+          <a href="/nirvana/javascript/%E5%89%8D%E7%AB%AF/unhandled-promise-rejection/" class="post-title-link" itemprop="url">unhandled promise rejection</a>
+        </h2>
+
+        <div class="post-meta-container">
+          <div class="post-meta">
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-calendar"></i>
+      </span>
+      <span class="post-meta-item-text">发表于</span>
+
+      <time title="创建时间：2021-03-11 21:12:40" itemprop="dateCreated datePublished" datetime="2021-03-11T21:12:40+08:00">2021-03-11</time>
+    </span>
+      <span class="post-meta-item">
+        <span class="post-meta-item-icon">
+          <i class="far fa-calendar-check"></i>
+        </span>
+        <span class="post-meta-item-text">更新于</span>
+        <time title="修改时间：2021-03-10 22:12:28" itemprop="dateModified" datetime="2021-03-10T22:12:28+08:00">2021-03-10</time>
+      </span>
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-folder"></i>
+      </span>
+      <span class="post-meta-item-text">分类于</span>
+        <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+          <a href="/nirvana/categories/javascript/" itemprop="url" rel="index"><span itemprop="name">javascript</span></a>
+        </span>
+    </span>
+
+  
+    <span id="/nirvana/javascript/%E5%89%8D%E7%AB%AF/unhandled-promise-rejection/" class="post-meta-item leancloud_visitors" data-flag-title="unhandled promise rejection" title="阅读次数">
+      <span class="post-meta-item-icon">
+        <i class="far fa-eye"></i>
+      </span>
+      <span class="post-meta-item-text">阅读次数：</span>
+      <span class="leancloud-visitors-count"></span>
+    </span>
+      </div>
+      <div class="post-meta">
+    <span class="post-meta-item" title="本文字数">
+      <span class="post-meta-item-icon">
+        <i class="far fa-file-word"></i>
+      </span>
+      <span class="post-meta-item-text">本文字数：</span>
+      <span>3k</span>
+    </span>
+    <span class="post-meta-item" title="阅读时长">
+      <span class="post-meta-item-icon">
+        <i class="far fa-clock"></i>
+      </span>
+      <span class="post-meta-item-text">阅读时长 &asymp;</span>
+      <span>3 分钟</span>
+    </span>
+</div>
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+          <p>  Node 如下的报错：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">(node:17928) UnhandledPromiseRejectionWarning: Unhandled promise rejection (rejection id: 2): Error</span><br><span class="line">(node:17928) [DEP0018] DeprecationWarning: Unhandled promise rejections are deprecated. In the future, promise rejections that are not handled will terminate the Node.js process with a non-zero exit code.</span><br></pre></td></tr></table></figure>
+<p>先来看一下 unhandled promise rejection。</p>
+<h3 id="在什么情况下会出现：UnhandledPromiseRejectionWarning"><a href="#在什么情况下会出现：UnhandledPromiseRejectionWarning" class="headerlink" title="在什么情况下会出现：UnhandledPromiseRejectionWarning"></a>在什么情况下会出现：UnhandledPromiseRejectionWarning</h3><blockquote>
+<p>或者说：什么是 unhandled promise rejection</p>
+</blockquote>
+<p>当 Promise 的状态变为 rejection 时，我们没有正确处理，让其一直冒泡（propagation），直至被进程捕获。这个 Promise 就被称为 unhandled promise rejection。</p>
+<p>Promise 的异常，有两种触发方式：</p>
+<ul>
+<li>主动调用 reject 方法</li>
+<li>抛出异常（exception）<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line">&#x2F;&#x2F; reject</span><br><span class="line">new Promise((resolve, reject) &#x3D;&gt; &#123;</span><br><span class="line">  reject(&#39;timeout&#39;);</span><br><span class="line">&#125;);</span><br><span class="line"></span><br><span class="line">&#x2F;&#x2F; exception</span><br><span class="line">new Promise((resolve, reject) &#x3D;&gt; &#123;</span><br><span class="line">  undefinedVariable();</span><br><span class="line">&#125;);</span><br></pre></td></tr></table></figure>
+我们有两种方式去处理 rejection，方式二 是 方式一 的语法糖。<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br></pre></td><td class="code"><pre><span class="line">&#x2F;&#x2F; 方式一 .then(undefined, () &#x3D;&gt; &#123;&#125;)</span><br><span class="line">new Promise((resolve, reject) &#x3D;&gt; &#123;</span><br><span class="line">  &#x2F;&#x2F; ...</span><br><span class="line">  reject(&#39;timeout&#39;);</span><br><span class="line">&#125;).then(undefined, (error) &#x3D;&gt; &#123;</span><br><span class="line">  console.error(error);</span><br><span class="line">&#125;);</span><br><span class="line"></span><br><span class="line">&#x2F;&#x2F; 方式二 .catch(() &#x3D;&gt; &#123;&#125;)</span><br><span class="line">new Promise((resolve, reject) &#x3D;&gt; &#123;</span><br><span class="line">  &#x2F;&#x2F; ...</span><br><span class="line">  reject(&#39;timeout&#39;)</span><br><span class="line">&#125;).catch((error) &#x3D;&gt; &#123;</span><br><span class="line">  console.error(error);</span><br><span class="line">&#125;)</span><br></pre></td></tr></table></figure>
+关键点是：不能在让异常继续往上抛（propagation）了，否则还是会触发 unhandled promise rejection。如下代码所示：<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br></pre></td><td class="code"><pre><span class="line">&#x2F;&#x2F; 方式一</span><br><span class="line">new Promise((resolve, reject) &#x3D;&gt; &#123;</span><br><span class="line">  &#x2F;&#x2F; ...</span><br><span class="line">  reject(&#39;timeout&#39;);</span><br><span class="line">&#125;).then(undefined, (error) &#x3D;&gt; &#123;</span><br><span class="line">  throw new Error(error);</span><br><span class="line">&#125;);</span><br><span class="line"></span><br><span class="line">&#x2F;&#x2F; 方式二</span><br><span class="line">new Promise((resolve, reject) &#x3D;&gt; &#123;</span><br><span class="line">  &#x2F;&#x2F; ...</span><br><span class="line">  reject(&#39;timeout&#39;);</span><br><span class="line">&#125;).catch((error) &#x3D;&gt; &#123;</span><br><span class="line">  throw new Error(error);</span><br><span class="line">&#125;);</span><br></pre></td></tr></table></figure>
+原因在于：不论 .then(onFulfilled, onRejection) 中的 onFulfilled 还是 onRejection 返回的都是 Promise，如果在他们内部抛出了异常，那么意味着接下来的 then chains 还是 rejection 的。<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">const promise2 &#x3D; (new Promise((resolve, reject) &#x3D;&gt; &#123;</span><br><span class="line">  &#x2F;&#x2F; ...</span><br><span class="line">  reject(&#39;timeout&#39;);</span><br><span class="line">&#125;).catch((error) &#x3D;&gt; &#123;</span><br><span class="line">  throw new Error(error);</span><br><span class="line">&#125;));</span><br></pre></td></tr></table></figure>
+在这里，对于 promise2 来讲，它的 rejectiton 还没有被 handle。所以，还需要做如下处理：<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line">const promise2 &#x3D; (new Promise((resolve, reject) &#x3D;&gt; &#123;</span><br><span class="line">  &#x2F;&#x2F; ...</span><br><span class="line">  reject(&#39;timeout&#39;);</span><br><span class="line">&#125;).catch((error) &#x3D;&gt; &#123;</span><br><span class="line">  throw new Error(error);</span><br><span class="line">&#125;));</span><br><span class="line"></span><br><span class="line">promise2.catch((error) &#x3D;&gt; &#123;</span><br><span class="line">  console.error(error);</span><br><span class="line">&#125;);</span><br></pre></td></tr></table></figure>
+<h3 id="Async-Await-中"><a href="#Async-Await-中" class="headerlink" title="Async/Await 中"></a>Async/Await 中</h3>在 Async/Await 中，unhandled promise rejection 是这样触发：<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br></pre></td><td class="code"><pre><span class="line">&#x2F;&#x2F; Promise 未能阻止异常抛出</span><br><span class="line">;(async () &#x3D;&gt; &#123;</span><br><span class="line">  await (new Promise((resolve, reject) &#x3D;&gt; &#123;</span><br><span class="line">    reject(&#39;timeout&#39;);</span><br><span class="line">  &#125;));</span><br><span class="line">&#125;)();</span><br><span class="line"></span><br><span class="line">&#x2F;&#x2F; async 没有妥善处理异常</span><br><span class="line">;(async () &#x3D;&gt; &#123;</span><br><span class="line">  try &#123;</span><br><span class="line">    await (new Promise((resolve, reject) &#x3D;&gt; &#123;</span><br><span class="line">      reject(&#39;timeout&#39;);</span><br><span class="line">    &#125;));</span><br><span class="line">  &#125; catch(e) &#123;</span><br><span class="line">    throw new Error(e);</span><br><span class="line">  &#125;</span><br><span class="line">&#125;)();</span><br></pre></td></tr></table></figure>
+<h3 id="怎么得到-错误堆栈"><a href="#怎么得到-错误堆栈" class="headerlink" title="怎么得到 错误堆栈"></a>怎么得到 错误堆栈</h3><blockquote>
+<p>Node.js v8.1.2 Documentation: <a target="_blank" rel="noopener" href="https://nodejs.org/api/process.html#process_event_unhandledrejection">https://nodejs.org/api/process.html#process_event_unhandledrejection</a></p>
+</blockquote>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">process.on(&#39;unhandledRejection&#39;, (reason, p) &#x3D;&gt; &#123;</span><br><span class="line">  console.log(&#39;Unhandled Rejection at:&#39;, p, &#39;reason:&#39;, reason);</span><br><span class="line">  &#x2F;&#x2F; application specific logging, throwing an error, or other logic here</span><br><span class="line">&#125;);</span><br></pre></td></tr></table></figure></li>
+</ul>
+
+      
+    </div>
+
+    
+    
+    
+
+    <footer class="post-footer">
+        <div class="post-eof"></div>
+      
+    </footer>
+  </article>
+</div>
+
+
+
 
     
 
@@ -1509,178 +1632,6 @@
 
 
 
-    
-
-
-<div class="post-block">
-  
-  
-
-  <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="">
-    <link itemprop="mainEntityOfPage" href="https://lzhwweb.github.io/nirvana/javascript/%E5%89%8D%E7%AB%AF/%E5%A6%82%E4%BD%95%E5%9C%A8%E7%BA%AF-JavaScript-%E4%B8%AD%E4%BD%BF%E7%94%A8-GraphQL/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="image" content="/nirvana/images/headphoto.jpeg">
-      <meta itemprop="name" content="nirvana">
-      <meta itemprop="description" content="个人学习笔记">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="涅槃快乐是金">
-    </span>
-      <header class="post-header">
-        <h2 class="post-title" itemprop="name headline">
-          <a href="/nirvana/javascript/%E5%89%8D%E7%AB%AF/%E5%A6%82%E4%BD%95%E5%9C%A8%E7%BA%AF-JavaScript-%E4%B8%AD%E4%BD%BF%E7%94%A8-GraphQL/" class="post-title-link" itemprop="url">如何在纯 JavaScript 中使用GraphQL</a>
-        </h2>
-
-        <div class="post-meta-container">
-          <div class="post-meta">
-    <span class="post-meta-item">
-      <span class="post-meta-item-icon">
-        <i class="far fa-calendar"></i>
-      </span>
-      <span class="post-meta-item-text">发表于</span>
-
-      <time title="创建时间：2021-03-11 21:12:40" itemprop="dateCreated datePublished" datetime="2021-03-11T21:12:40+08:00">2021-03-11</time>
-    </span>
-      <span class="post-meta-item">
-        <span class="post-meta-item-icon">
-          <i class="far fa-calendar-check"></i>
-        </span>
-        <span class="post-meta-item-text">更新于</span>
-        <time title="修改时间：2021-03-10 22:06:18" itemprop="dateModified" datetime="2021-03-10T22:06:18+08:00">2021-03-10</time>
-      </span>
-    <span class="post-meta-item">
-      <span class="post-meta-item-icon">
-        <i class="far fa-folder"></i>
-      </span>
-      <span class="post-meta-item-text">分类于</span>
-        <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-          <a href="/nirvana/categories/javascript/" itemprop="url" rel="index"><span itemprop="name">javascript</span></a>
-        </span>
-    </span>
-
-  
-    <span id="/nirvana/javascript/%E5%89%8D%E7%AB%AF/%E5%A6%82%E4%BD%95%E5%9C%A8%E7%BA%AF-JavaScript-%E4%B8%AD%E4%BD%BF%E7%94%A8-GraphQL/" class="post-meta-item leancloud_visitors" data-flag-title="如何在纯 JavaScript 中使用GraphQL" title="阅读次数">
-      <span class="post-meta-item-icon">
-        <i class="far fa-eye"></i>
-      </span>
-      <span class="post-meta-item-text">阅读次数：</span>
-      <span class="leancloud-visitors-count"></span>
-    </span>
-      </div>
-      <div class="post-meta">
-    <span class="post-meta-item" title="本文字数">
-      <span class="post-meta-item-icon">
-        <i class="far fa-file-word"></i>
-      </span>
-      <span class="post-meta-item-text">本文字数：</span>
-      <span>8.3k</span>
-    </span>
-    <span class="post-meta-item" title="阅读时长">
-      <span class="post-meta-item-icon">
-        <i class="far fa-clock"></i>
-      </span>
-      <span class="post-meta-item-text">阅读时长 &asymp;</span>
-      <span>8 分钟</span>
-    </span>
-</div>
-
-        </div>
-      </header>
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-          <p>作者 | Brian Rinaldi译者 | 王强策划 | 李俊辰</p>
-<p>除了 REST 以外，很多 API 都开始支持 GraphQL，甚至完全支持它了。但是，如果你需要使用一个 GraphQL API，你很自然就会想到自己需要使用 React 和 / 或其他一些库才能让它跑起来。这是因为许多教程和示例代码似乎都基于这样一个假设，也就是说如果你在使用 GraphQL，就需要使用这些库。</p>
-<p>但是，一个对 GraphQL API 的查询只不过是一个定制格式的 HTTP 请求而已。一个 GraphQL 响应也不过是 JSON 罢了。你不需要动用什么精美的库也可以处理它们。在这篇教程中，我想采用一种不一样的方法，并向你展示从 Node 和客户端 JavaScript（不带库）调用 GraphQL API 实际上有多么容易。</p>
-<p>GraphQL 请求的基础知识</p>
-<p>与 RESTful API 不同，GraphQL 具有单个端点。尽管 GraphQL 可以响应 GET 请求，但是一个典型的 GraphQL HTTP 请求是作为一个 POST 请求发送的。</p>
-<p>你的 GraphQL 请求可以发送三段数据：query、operationName 和 variables。</p>
-<p>query 是必需的，并且包含了（你猜对了）GraphQL 查询。由于 GraphQL 是通过单个端点运行的，因此端点响应的数据完全取决于你的查询。这个查询需要正确格式化 GraphQL。想知道如何构建查询吗？请查阅关于如何编写 GraphQL 查询的教程。</p>
-<p><a target="_blank" rel="noopener" href="https://stepzen.com/blog/how-to-write-graphql-queries">https://stepzen.com/blog/how-to-write-graphql-queries</a></p>
-<p>variables 是可选的，并且是一个 JSON 对象，其中包含要传递给查询的所有变量的值。例如，如果你的查询需要一个变量 id（将在查询中显示为 $id），则需要按以下方式发送变量：</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">&#123;&quot;id&quot;:1&#125;</span><br></pre></td></tr></table></figure>
-
-<p>operationName 也是可选的。当查询包含多个命名操作的查询时，它用于指定要运行的操作。</p>
-<p>如果你将一个 GraphQL 作为一个 GET 请求发送，则需要将以上内容作为查询参数传递。鉴于 GraphQL 查询可能会变得很长，这实际上不是最佳选择，因此我们还是考虑 POST 请求。在本教程中，我们将介绍我在 StepZen 上创建的一个简单的 Scooby DooAPI，它用来连接到一个 MySQL 数据源（StepZen 现在处于私有 alpha 状态，但是你可以在此处请求访问：</p>
-<p><a target="_blank" rel="noopener" href="https://stepzen.com/request-invite">https://stepzen.com/request-invite</a></p>
-<p>在 Node.js 中发送查询我们可以通过不带任何特殊库的 Node.js 发送查询，利用标准的 Node https 库格式化一个 POST 请求。我们来看一个不使用特殊库的简单示例（请注意，我确实使用了 dotenv 来获取用于访问我 StepZen 后端的 API 密钥）。在这个示例中，我仅传递了一个 query，该查询在发送前需要字符串化。除此之外，这是一个相当标准的 HTTPPOST。</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br></pre></td><td class="code"><pre><span class="line">const https &#x3D; require(&#39;https&#39;);</span><br><span class="line">require(&#39;dotenv&#39;).config();</span><br><span class="line">const data &#x3D; JSON.stringify(&#123;</span><br><span class="line">  query: &#96;&#123;</span><br><span class="line">    characters(isMonster:true) &#123;</span><br><span class="line">      name</span><br><span class="line">      episode &#123;</span><br><span class="line">        name</span><br><span class="line">      &#125;</span><br><span class="line">    &#125;</span><br><span class="line">  &#125;&#96;,</span><br><span class="line">&#125;);</span><br><span class="line">const options &#x3D; &#123;</span><br><span class="line">  hostname: &#39;biggs.stepzen.net&#39;,</span><br><span class="line">  path: &#39;&#x2F;scoobydoo&#x2F;scoobydoo&#x2F;__graphql&#39;,</span><br><span class="line">  port: 443,</span><br><span class="line">  method: &#39;POST&#39;,</span><br><span class="line">  headers: &#123;</span><br><span class="line">    &#39;Content-Type&#39;: &#39;application&#x2F;json&#39;,</span><br><span class="line">    &#39;Content-Length&#39;: data.length,</span><br><span class="line">    Authorization: &#39;Apikey &#39; + process.env.STEPZEN_API_KEY,</span><br><span class="line">    &#39;User-Agent&#39;: &#39;Node&#39;,</span><br><span class="line">  &#125;,</span><br><span class="line">&#125;;</span><br><span class="line">const req &#x3D; https.request(options, (res) &#x3D;&gt; &#123;</span><br><span class="line">  let data &#x3D; &#39;&#39;;</span><br><span class="line">  console.log(&#96;statusCode: $&#123;res.statusCode&#125;&#96;);</span><br><span class="line">  res.on(&#39;data&#39;, (d) &#x3D;&gt; &#123;</span><br><span class="line">    data +&#x3D; d;</span><br><span class="line">  &#125;);</span><br><span class="line">  res.on(&#39;end&#39;, () &#x3D;&gt; &#123;</span><br><span class="line">    console.log(JSON.parse(data).data);</span><br><span class="line">  &#125;);</span><br><span class="line">&#125;);</span><br><span class="line">req.on(&#39;error&#39;, (error) &#x3D;&gt; &#123;</span><br><span class="line">  console.error(error);</span><br><span class="line">&#125;);</span><br><span class="line">req.write(data);</span><br><span class="line">req.end();</span><br></pre></td></tr></table></figure>
-
-<p>同样，返回的数据只是 JSON 而已，因此如果我们要运行它，则控制台中的输出将是：</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">&#123;</span><br><span class="line">  characters: [</span><br><span class="line">    &#123; episode: [Object], name: &#39;Black Knight&#39; &#125;,</span><br><span class="line">    &#123; episode: [Object], name: &#39;Ghost of Captain Cutler&#39; &#125;,</span><br><span class="line">    &#123; episode: [Object], name: &#39;Phantom&#39; &#125;,</span><br><span class="line">    &#123; episode: [Object], name: &#39;Miner Forty-Niner&#39; &#125;</span><br><span class="line">  ]</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-
-<p>简化请求<br>我们来使用 node-fetch 之类的东西来简化这一过程，以减少发出 HTTP 请求所需的样板代码量。node-fetch 库从 Node 中的浏览器实现 JavaScript fetch API。这样我们就可以丢弃大约 11 行代码（减少了 25％），同时还让代码更容易阅读了。</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br></pre></td><td class="code"><pre><span class="line">const fetch &#x3D; require(&#39;node-fetch&#39;);</span><br><span class="line">require(&#39;dotenv&#39;).config();</span><br><span class="line">async function getData() &#123;</span><br><span class="line">  const data &#x3D; JSON.stringify(&#123;</span><br><span class="line">    query: &#96;&#123;</span><br><span class="line">        characters(isMonster:true) &#123;</span><br><span class="line">          name</span><br><span class="line">          episode &#123;</span><br><span class="line">            name</span><br><span class="line">          &#125;</span><br><span class="line">        &#125;</span><br><span class="line">      &#125;&#96;,</span><br><span class="line">  &#125;);</span><br><span class="line">  const response &#x3D; await fetch(</span><br><span class="line">    &#39;https:&#x2F;&#x2F;biggs.stepzen.net&#x2F;scoobydoo&#x2F;scoobydoo&#x2F;__graphql&#39;,</span><br><span class="line">    &#123;</span><br><span class="line">      method: &#39;post&#39;,</span><br><span class="line">      body: data,</span><br><span class="line">      headers: &#123;</span><br><span class="line">        &#39;Content-Type&#39;: &#39;application&#x2F;json&#39;,</span><br><span class="line">        &#39;Content-Length&#39;: data.length,</span><br><span class="line">        Authorization: &#39;Apikey &#39; + process.env.STEPZEN_API_KEY,</span><br><span class="line">        &#39;User-Agent&#39;: &#39;Node&#39;,</span><br><span class="line">      &#125;,</span><br><span class="line">    &#125;</span><br><span class="line">  );</span><br><span class="line">  const json &#x3D; await response.json();</span><br><span class="line">  console.log(json.data);</span><br><span class="line">&#125;</span><br><span class="line">getData();</span><br></pre></td></tr></table></figure>
-
-<p>运行上面代码的结果与我们之前的示例相同。</p>
-<p>传递变量在此示例中，我们的查询具有一个需要传递的变量（$id）。为了传递这个变量，我们需要将变量值添加到请求正文中包含的数据里。这应该是一个 JSON 格式的列表，其中查询所需的每个变量在 JSON 中都有一个对应的值。</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br></pre></td><td class="code"><pre><span class="line">const fetch &#x3D; require(&#39;node-fetch&#39;);</span><br><span class="line">require(&#39;dotenv&#39;).config();</span><br><span class="line">async function getData(id) &#123;</span><br><span class="line">  const data &#x3D; JSON.stringify(&#123;</span><br><span class="line">    query: &#96;query ScoobyDooWhereAreYou($id: ID!) &#123;</span><br><span class="line">        character(id:$id) &#123;</span><br><span class="line">          name</span><br><span class="line">          isMonster</span><br><span class="line">        &#125;</span><br><span class="line">      &#125;&#96;,</span><br><span class="line">    variables: &#96;&#123;</span><br><span class="line">        &quot;id&quot;: &quot;$&#123;id&#125;&quot;</span><br><span class="line">      &#125;&#96;,</span><br><span class="line">  &#125;);</span><br><span class="line">  const response &#x3D; await fetch(</span><br><span class="line">    &#39;https:&#x2F;&#x2F;biggs.stepzen.net&#x2F;scoobydoo&#x2F;scoobydoo&#x2F;__graphql&#39;,</span><br><span class="line">    &#123;</span><br><span class="line">      method: &#39;post&#39;,</span><br><span class="line">      body: data,</span><br><span class="line">      headers: &#123;</span><br><span class="line">        &#39;Content-Type&#39;: &#39;application&#x2F;json&#39;,</span><br><span class="line">        &#39;Content-Length&#39;: data.length,</span><br><span class="line">        Authorization: &#39;Apikey &#39; + process.env.STEPZEN_API_KEY,</span><br><span class="line">        &#39;User-Agent&#39;: &#39;Node&#39;,</span><br><span class="line">      &#125;,</span><br><span class="line">    &#125;</span><br><span class="line">  );</span><br><span class="line">  const json &#x3D; await response.json();</span><br><span class="line">  console.log(json.data);</span><br><span class="line">&#125;</span><br><span class="line">getData(1);</span><br></pre></td></tr></table></figure>
-
-<p>在本例中，我传递的 ID 值为 1，它返回的是 Scooby Doo，这不是什么巧合：</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">&#123; character: &#123; isMonster: false, name: &#39;Scooby Doo&#39; &#125; &#125;</span><br></pre></td></tr></table></figure>
-
-<p>现在我们知道 Scooby Doo 在哪里了。</p>
-<p>使用客户端 JavaScript 发送查询</p>
-<p>通过客户端 JavaScript 调用 GraphQL 查询的操作与上面的 fetch 示例几乎是一样的，只有一些很小的区别。首先，我显然不需要导入一个库来支持 fetch。其次，更重要的是我无法访问环境变量。需要强调的是，如果你的 API 需要传递某种 API 密钥或凭据，那么你不会希望在客户端执行这一操作，因为你的凭据将被公开。更好的解决方案是调用一个可访问这些凭据的无服务器函数，然后为你调用 API 并返回结果。如果你的无服务器函数是用 JavaScript 编写的，则前面示例中的 Node 代码就会起作用。不过在 API 完全开放的情况下，我们先来看一下它是如何完成的（请注意，我的示例确实有一个 API 密钥，但请按照我说的那样做，不要像在演示中那样对付一下……）。</p>
-<p>以下示例调用了我的 Scooby API 来获取一个 monster 列表和它们所出现的剧集列表（抱歉，Scooby 粉丝们，我现在只统计了第 1 季中的少数 monster）。然后它会获取结果并将其显示在浏览器中。尽管这对 GraphQL 调用来说并不重要，但我使用 js-beautify 正确格式化了要显示的 JSON 结果，然后使用 Prism 给它上了色。</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br></pre></td><td class="code"><pre><span class="line">&lt;html&gt;</span><br><span class="line">  &lt;head&gt;</span><br><span class="line">    &lt;title&gt;GraphQL Query Example&lt;&#x2F;title&gt;</span><br><span class="line">    &lt;link href&#x3D;&quot;css&#x2F;prism.css&quot; rel&#x3D;&quot;stylesheet&quot; &#x2F;&gt;</span><br><span class="line">  &lt;&#x2F;head&gt;</span><br><span class="line">  &lt;body&gt;</span><br><span class="line">    &lt;pre&gt;&lt;code class&#x3D;&quot;language-json&quot; id&#x3D;&quot;code&quot;&gt;&lt;&#x2F;code&gt;&lt;&#x2F;pre&gt;</span><br><span class="line">    &lt;script src&#x3D;&quot;js&#x2F;prism.js&quot;&gt;&lt;&#x2F;script&gt;</span><br><span class="line">    &lt;script src&#x3D;&quot;https:&#x2F;&#x2F;cdnjs.cloudflare.com&#x2F;ajax&#x2F;libs&#x2F;js-beautify&#x2F;1.13.0&#x2F;beautify.js&quot;&gt;&lt;&#x2F;script&gt;</span><br><span class="line">    &lt;script&gt;</span><br><span class="line">      (async function () &#123;</span><br><span class="line">        const data &#x3D; JSON.stringify(&#123;</span><br><span class="line">          query: &#96;&#123;</span><br><span class="line">    characters(isMonster:true) &#123;</span><br><span class="line">      name</span><br><span class="line">      episode &#123;</span><br><span class="line">        name</span><br><span class="line">      &#125;</span><br><span class="line">    &#125;</span><br><span class="line">  &#125;&#96;,</span><br><span class="line">        &#125;);</span><br><span class="line">        const response &#x3D; await fetch(</span><br><span class="line">          &#39;https:&#x2F;&#x2F;biggs.stepzen.net&#x2F;scoobydoo&#x2F;scoobydoo&#x2F;__graphql&#39;,</span><br><span class="line">          &#123;</span><br><span class="line">            method: &#39;post&#39;,</span><br><span class="line">            body: data,</span><br><span class="line">            headers: &#123;</span><br><span class="line">              &#39;Content-Type&#39;: &#39;application&#x2F;json&#39;,</span><br><span class="line">              &#39;Content-Length&#39;: data.length,</span><br><span class="line">              Authorization:</span><br><span class="line">                &#39;Apikey DONOTSENDAPIKEYS&#39;,</span><br><span class="line">            &#125;,</span><br><span class="line">          &#125;</span><br><span class="line">        );</span><br><span class="line">        const json &#x3D; await response.json();</span><br><span class="line">        document.getElementById(&#39;code&#39;).innerHTML &#x3D; js_beautify(</span><br><span class="line">          JSON.stringify(json.data)</span><br><span class="line">        );</span><br><span class="line">        Prism.highlightAll();</span><br><span class="line">      &#125;)();</span><br><span class="line">    &lt;&#x2F;script&gt;</span><br><span class="line">  &lt;&#x2F;body&gt;</span><br><span class="line">&lt;&#x2F;html&gt;</span><br></pre></td></tr></table></figure>
-
-<p>运行以上代码的结果是 JSON 响应，其中包含浏览器中显示的角色和剧集数据。</p>
-<p><img src="https://upload-images.jianshu.io/upload_images/10024246-df2d216399539c3c?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="图片"></p>
-<p>显然，一般来说你不会想要简单地向用户显示查询结果，因此让我们看一下如何使用返回的数据。</p>
-<p>使用 GraphQL 查询响应</p>
-<p>GraphQL 的一大优点是，它的响应只是纯 JSON，因此数据使用起来很容易。这里更好的是响应对应了查询，这意味着你无需花费大量时间来分析关于响应的文档。因此我们可以快速采用上面的示例并利用返回的数据，而不是简单地把它摆出来。</p>
-<p>下面的代码会获取 JSON 响应，然后将其转换为 HTML（使用模板字面量），以将各项附加到一个 HTML 列表上。</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br></pre></td><td class="code"><pre><span class="line">&lt;ul id&#x3D;&quot;monsterList&quot;&gt;&lt;&#x2F;ul&gt;</span><br><span class="line">&lt;script&gt;</span><br><span class="line">  (async function () &#123;</span><br><span class="line">    const data &#x3D; JSON.stringify(&#123;</span><br><span class="line">      query: &#96;&#123;</span><br><span class="line">    characters(isMonster:true) &#123;</span><br><span class="line">      name</span><br><span class="line">      episode &#123;</span><br><span class="line">        name</span><br><span class="line">      &#125;</span><br><span class="line">    &#125;</span><br><span class="line">  &#125;&#96;,</span><br><span class="line">    &#125;);</span><br><span class="line">    const response &#x3D; await fetch(</span><br><span class="line">      &#39;https:&#x2F;&#x2F;biggs.stepzen.net&#x2F;scoobydoo&#x2F;scoobydoo&#x2F;__graphql&#39;,</span><br><span class="line">      &#123;</span><br><span class="line">        method: &#39;post&#39;,</span><br><span class="line">        body: data,</span><br><span class="line">        headers: &#123;</span><br><span class="line">          &#39;Content-Type&#39;: &#39;application&#x2F;json&#39;,</span><br><span class="line">          &#39;Content-Length&#39;: data.length,</span><br><span class="line">          Authorization:</span><br><span class="line">            &#39;Apikey DONOTSENDAPIKEYS&#39;,</span><br><span class="line">        &#125;,</span><br><span class="line">      &#125;</span><br><span class="line">    );</span><br><span class="line">    const characterData &#x3D; await response.json();</span><br><span class="line">    const templateFn &#x3D; (name, episode) &#x3D;&gt; &#96;&lt;li&gt;$&#123;name&#125; ($&#123;episode&#125;)&lt;&#x2F;li&gt;&#96;;</span><br><span class="line">    const monsterList &#x3D; document.getElementById(&#39;monsterList&#39;);</span><br><span class="line">    characterData.data.characters.map((character) &#x3D;&gt; &#123;</span><br><span class="line">      monsterList.insertAdjacentHTML(</span><br><span class="line">        &#39;beforeend&#39;,</span><br><span class="line">        templateFn(character.name, character.episode.name)</span><br><span class="line">      );</span><br><span class="line">    &#125;);</span><br><span class="line">  &#125;)();</span><br><span class="line">&lt;&#x2F;script&gt;</span><br></pre></td></tr></table></figure>
-
-<p>运行这个简单示例的输出是一个角色及其出现剧集的无序列表。</p>
-<p><img src="https://upload-images.jianshu.io/upload_images/10024246-79bde22afcf3e136?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="图片"></p>
-<p>接下来可以做什么</p>
-<p>这里的目标不是让大家不要使用 GraphQL 客户端库来执行 GraphQL 查询。那些库提供的能力远远超过了我在这里讨论的简单功能。此外，许多工具具备很容易和前端框架（例如 React、Vue、Angular）集成的能力。但是，对于研究 GraphQL 的人们来说（尤其是将其与 REST 对比时），很重要的一点是使用 GraphQL 显然不需要任何外部依赖项。如果你有兴趣探索一些 JavaScript 库，请参考下面的这些流行选项：</p>
-<ul>
-<li><p>  Apollo Client</p>
-</li>
-<li><p>  <a target="_blank" rel="noopener" href="https://github.com/apollographql/apollo-client">https://github.com/apollographql/apollo-client</a></p>
-</li>
-<li><p>  urql</p>
-</li>
-<li><p>  <a target="_blank" rel="noopener" href="https://formidable.com/open-source/urql/">https://formidable.com/open-source/urql/</a></p>
-</li>
-<li><p>  Relay</p>
-</li>
-<li><p>  <a target="_blank" rel="noopener" href="https://relay.dev/">https://relay.dev/</a></p>
-</li>
-<li><p>  GraphQL Request</p>
-</li>
-<li><p>  <a target="_blank" rel="noopener" href="https://github.com/prisma-labs/graphql-request">https://github.com/prisma-labs/graphql-request</a></p>
-</li>
-</ul>
-<p> 作者介绍</p>
-<p>Brian Rinaldi 是 StepZen 的一位开发倡导者。Brian 在 Progress Software 和 Adobe 等公司已有 10 多年的经验，一直致力于开发者社区和开发者关系工作。Brian 加入软件开发行业已超过 20 年，主要研究 Web 前端和后端技术。</p>
-<p> 延伸阅读</p>
-<p><a target="_blank" rel="noopener" href="https://stepzen.com/blog/consume-graphql-in-javascript">https://stepzen.com/blog/consume-graphql-in-javascript</a></p>
-
-      
-    </div>
-
-    
-    
-    
-
-    <footer class="post-footer">
-        <div class="post-eof"></div>
-      
-    </footer>
-  </article>
-</div>
-
-
-
-
   <nav class="pagination">
     <a class="extend prev" rel="prev" href="/nirvana/page/9/"><i class="fa fa-angle-left" aria-label="上一页"></i></a><a class="page-number" href="/nirvana/">1</a><span class="space">&hellip;</span><a class="page-number" href="/nirvana/page/9/">9</a><span class="page-number current">10</span><a class="page-number" href="/nirvana/page/11/">11</a><span class="space">&hellip;</span><a class="page-number" href="/nirvana/page/19/">19</a><a class="extend next" rel="next" href="/nirvana/page/11/"><i class="fa fa-angle-right" aria-label="下一页"></i></a>
   </nav>
@@ -1728,14 +1679,14 @@
       <i class="fa fa-chart-line"></i>
     </span>
       <span>站点总字数：</span>
-    <span title="站点总字数">534k</span>
+    <span title="站点总字数">538k</span>
   </span>
   <span class="post-meta-item">
     <span class="post-meta-item-icon">
       <i class="fa fa-coffee"></i>
     </span>
       <span>站点阅读时长 &asymp;</span>
-    <span title="站点阅读时长">8:06</span>
+    <span title="站点阅读时长">8:09</span>
   </span>
 </div>
   <div class="powered-by">由 <a href="https://hexo.io/" class="theme-link" rel="noopener" target="_blank">Hexo</a> & <a href="https://theme-next.js.org/" class="theme-link" rel="noopener" target="_blank">NexT.Gemini</a> 强力驱动

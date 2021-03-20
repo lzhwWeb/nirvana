@@ -206,7 +206,7 @@
   <nav class="site-state">
       <div class="site-state-item site-state-posts">
           <a href="/nirvana/archives">
-          <span class="site-state-item-count">183</span>
+          <span class="site-state-item-count">184</span>
           <span class="site-state-item-name">日志</span>
         </a>
       </div>
@@ -245,6 +245,134 @@
 
 
     <div class="main-inner index posts-expand">
+
+    
+
+
+<div class="post-block">
+  
+  
+
+  <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="">
+    <link itemprop="mainEntityOfPage" href="https://lzhwweb.github.io/nirvana/javascript/%E5%89%8D%E7%AB%AF/html5%E7%9A%84%E7%A6%BB%E7%BA%BF%E5%AD%98%E5%82%A8%E9%97%AE%E9%A2%98/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/nirvana/images/headphoto.jpeg">
+      <meta itemprop="name" content="nirvana">
+      <meta itemprop="description" content="个人学习笔记">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="涅槃快乐是金">
+    </span>
+      <header class="post-header">
+        <h2 class="post-title" itemprop="name headline">
+          <a href="/nirvana/javascript/%E5%89%8D%E7%AB%AF/html5%E7%9A%84%E7%A6%BB%E7%BA%BF%E5%AD%98%E5%82%A8%E9%97%AE%E9%A2%98/" class="post-title-link" itemprop="url">html5的离线存储问题</a>
+        </h2>
+
+        <div class="post-meta-container">
+          <div class="post-meta">
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-calendar"></i>
+      </span>
+      <span class="post-meta-item-text">发表于</span>
+
+      <time title="创建时间：2021-03-11 21:12:40" itemprop="dateCreated datePublished" datetime="2021-03-11T21:12:40+08:00">2021-03-11</time>
+    </span>
+      <span class="post-meta-item">
+        <span class="post-meta-item-icon">
+          <i class="far fa-calendar-check"></i>
+        </span>
+        <span class="post-meta-item-text">更新于</span>
+        <time title="修改时间：2021-03-10 13:43:55" itemprop="dateModified" datetime="2021-03-10T13:43:55+08:00">2021-03-10</time>
+      </span>
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-folder"></i>
+      </span>
+      <span class="post-meta-item-text">分类于</span>
+        <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+          <a href="/nirvana/categories/javascript/" itemprop="url" rel="index"><span itemprop="name">javascript</span></a>
+        </span>
+    </span>
+
+  
+    <span id="/nirvana/javascript/%E5%89%8D%E7%AB%AF/html5%E7%9A%84%E7%A6%BB%E7%BA%BF%E5%AD%98%E5%82%A8%E9%97%AE%E9%A2%98/" class="post-meta-item leancloud_visitors" data-flag-title="html5的离线存储问题" title="阅读次数">
+      <span class="post-meta-item-icon">
+        <i class="far fa-eye"></i>
+      </span>
+      <span class="post-meta-item-text">阅读次数：</span>
+      <span class="leancloud-visitors-count"></span>
+    </span>
+      </div>
+      <div class="post-meta">
+    <span class="post-meta-item" title="本文字数">
+      <span class="post-meta-item-icon">
+        <i class="far fa-file-word"></i>
+      </span>
+      <span class="post-meta-item-text">本文字数：</span>
+      <span>2.4k</span>
+    </span>
+    <span class="post-meta-item" title="阅读时长">
+      <span class="post-meta-item-icon">
+        <i class="far fa-clock"></i>
+      </span>
+      <span class="post-meta-item-text">阅读时长 &asymp;</span>
+      <span>2 分钟</span>
+    </span>
+</div>
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+          <p>HTML5的一个重要特性就是离线存储，所谓的离线存储就是将一些资源文件保存在本地，这样后续的页面重新加载将使用本地资源文件，在离线情况下可以继续访问web应用，同时通过一定的手法（更新相关文件或者使用相关API），可以更新、删除离线存储等操作；</p>
+<p>HTML5的离线存储使用一个manifest文件来标明哪些文件是需要被存储的，使用如 <html manifest="offline.manifest"> 来引入一个manifest文件，这个文件的路径可以是相对的，也可以是绝对的，如果你的web应用很多，而且希望能集中管理manifest文件，那么静态文件服务器是个不错的选择。</p>
+<p>对于manifest文件，要求：文件的mime-type必须是 text/cache-manifest类型。如果你是JAVA工程，在你的web.xml中配置请求后缀为manifest的格式：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">&lt;mime-mapping&gt;</span><br><span class="line">&lt;extension&gt;manifest&lt;&#x2F;extension&gt;</span><br><span class="line">&lt;mime-type&gt;text&#x2F;cache-manifest&lt;&#x2F;mime-type&gt;</span><br><span class="line">&lt;&#x2F;mime-mapping&gt;  </span><br></pre></td></tr></table></figure>
+
+<p>这样可以控制请求到的manifest文件格式为text/cache-manifest的。</p>
+<h3 id="manifest文件的格式："><a href="#manifest文件的格式：" class="headerlink" title="manifest文件的格式："></a>manifest文件的格式：</h3><blockquote>
+<p>CACHE MANIFEST# 这一句必须存在，而且必须放在头部# 指明缓存入口CACHE:index.htmlstyle.cssimages/logo.pngscripts/main.js# 以下资源必须在线访问NETWORK:login.php# 如果index.php无法访问则用404.html代替FALLBACK:/index.php /404.html</p>
+</blockquote>
+<p>其中 CACHE 不是必须存在的，可以直接在 CACHE MANIFEST 行之下直接写需要缓存的文件，在这里指明的文件将被缓存到浏览器本地。在NETWORK之下指明的文件，是强制必须通过网络资源获取的，在FALLBACK下指明的是一种失败的回调方案，比如上述index.php无法访问，那么就发出404.htm请求</p>
+<p>这样几步就可以完成对离线存储的支持。接下来要思考的，是如何更新离线存储？</p>
+<p>当用户本地再次联网的时候，本地的离线存储资源需要检查是否需要更新，这个更新过程，也是通过manifest的更新来控制的，更新了manifest文件，浏览器会自动的重新下载新的manifest文件并在下一次刷新页面的时候进行资源文件的重新请求（第三次刷新替换本地缓存为最新缓存），而且这个请求是全局性的，也就是所有在manifest缓存列表中的文件都会被请求一次，而不是单独请求某个特定修改过的资源文件，因为manifest是不知道哪个文件被修改过了的。</p>
+<p>对于全局更新的担心是不必要的，因为对于没有更新过的资源文件，请求依旧是304响应，只有真正更新过的资源文件才是200.</p>
+<p>所以控制离线存储的更新，需要2个步骤，一是更新资源文件，二是更新manifest文件，特别的，更新manifest文件是不需要修改什么特定内容的，只要是这个文件随意一处被修改，那么浏览器就会感知，对于我们的资源文件通常名称是固定的，比如**.css，更新内容不会带有文件名更新的情况下，需要更新manifest文件怎么操作呢？一个比较好的方式是更新任意一处# 开头的注释即可，其目的只是告诉浏览器这个manifest文件被更新过。</p>
+<p>以上的这些内容，其更新操作都是浏览器自动完成的。同样的，W3C定义了<a target="_blank" rel="noopener" href="http://www.whatwg.org/specs/web-apps/current-work/#applicationcache">离线存储的API规范</a></p>
+<h3 id="API："><a href="#API：" class="headerlink" title="API："></a>API：</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line"> &#x2F;&#x2F; 更新，一般来说更新下载是通过用户**（如浏览器）自动完成的，但是这个方法适用于一些长期打开的页面，比如邮件系统，可能这个页面是长期打开的，而不会有刷新动作，所以这个就比较适合做自动更新下</span><br><span class="line">void update();</span><br><span class="line"></span><br><span class="line"> &#x2F;&#x2F; 取消</span><br><span class="line"> void abort();</span><br><span class="line"></span><br><span class="line"> &#x2F;&#x2F; 替换缓存内容 ，对于manifest文件的改变，通常是下一次的刷新才会触发下载更新，第三次刷新才会切换使用新的缓存文件，通过这个方法，可以强制将缓存替换</span><br><span class="line"> void swapCache();</span><br><span class="line"></span><br></pre></td></tr></table></figure>
+
+<p>提供了如下的事件：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line">Event handler             Event handler event type</span><br><span class="line">onchecking             checking</span><br><span class="line">onerror                     error</span><br><span class="line">onnoupdate             noupdate</span><br><span class="line">ondownloading             downloading</span><br><span class="line">onprogress             progress</span><br><span class="line">onupdateready             updateready</span><br><span class="line">oncached                     cached</span><br><span class="line">onobsolete             obsolete</span><br></pre></td></tr></table></figure>
+
+<p>最后说一个对于manifest比较特别的地方：对于某个文件a.htm，其中有 <html manifest='a.manifest'> ，那么离线存储中，会自动将a.htm加入到列表中，这意味着a.htm的再次刷新将从本地缓存中获取，这样的机制从官方得到的答复是“特别的设计”，而对我们来说，这种强加的特性在后续的开发过程中会有不少问题。</p>
+<p>比如：</p>
+<p>       1、如何计算PV UV，由于当前页面被强制加入manifest，那么PV 和UV的统计，成了一个难题，因为请求不再是发送到服务器；</p>
+<p>       2、对于某个使用manifest的文件，其带有的参数可能是随机性的统计参数，如sid=123sss, sid=234fff ，尤其是比如商品详情的id字段等，这样每个页面都自动加入到manifest中，将会带来很大的存储开销，而且是毫无意义的；</p>
+<p>       所以伴随而来的，是如何在现有的体系架构下进行数据统计的难题，一个常规的方案是进入离线存储页面后自动发出ajax请求，以告知服务器统计PV UV；</p>
+<p>       对于第二个问题，可能就比较棘手，但是将GET请求的方式改成POST的方式确实是个解决问题的方案。</p>
+
+      
+    </div>
+
+    
+    
+    
+
+    <footer class="post-footer">
+        <div class="post-eof"></div>
+      
+    </footer>
+  </article>
+</div>
+
+
+
 
     
 
@@ -1516,116 +1644,6 @@
 
 
 
-    
-
-
-<div class="post-block">
-  
-  
-
-  <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="">
-    <link itemprop="mainEntityOfPage" href="https://lzhwweb.github.io/nirvana/javascript/%E5%89%8D%E7%AB%AF/npm%E5%91%BD%E4%BB%A4%E8%AE%B0%E5%BD%95/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="image" content="/nirvana/images/headphoto.jpeg">
-      <meta itemprop="name" content="nirvana">
-      <meta itemprop="description" content="个人学习笔记">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="涅槃快乐是金">
-    </span>
-      <header class="post-header">
-        <h2 class="post-title" itemprop="name headline">
-          <a href="/nirvana/javascript/%E5%89%8D%E7%AB%AF/npm%E5%91%BD%E4%BB%A4%E8%AE%B0%E5%BD%95/" class="post-title-link" itemprop="url">npm命令记录</a>
-        </h2>
-
-        <div class="post-meta-container">
-          <div class="post-meta">
-    <span class="post-meta-item">
-      <span class="post-meta-item-icon">
-        <i class="far fa-calendar"></i>
-      </span>
-      <span class="post-meta-item-text">发表于</span>
-
-      <time title="创建时间：2021-03-11 21:12:40" itemprop="dateCreated datePublished" datetime="2021-03-11T21:12:40+08:00">2021-03-11</time>
-    </span>
-      <span class="post-meta-item">
-        <span class="post-meta-item-icon">
-          <i class="far fa-calendar-check"></i>
-        </span>
-        <span class="post-meta-item-text">更新于</span>
-        <time title="修改时间：2021-03-10 13:43:55" itemprop="dateModified" datetime="2021-03-10T13:43:55+08:00">2021-03-10</time>
-      </span>
-    <span class="post-meta-item">
-      <span class="post-meta-item-icon">
-        <i class="far fa-folder"></i>
-      </span>
-      <span class="post-meta-item-text">分类于</span>
-        <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-          <a href="/nirvana/categories/javascript/" itemprop="url" rel="index"><span itemprop="name">javascript</span></a>
-        </span>
-    </span>
-
-  
-    <span id="/nirvana/javascript/%E5%89%8D%E7%AB%AF/npm%E5%91%BD%E4%BB%A4%E8%AE%B0%E5%BD%95/" class="post-meta-item leancloud_visitors" data-flag-title="npm命令记录" title="阅读次数">
-      <span class="post-meta-item-icon">
-        <i class="far fa-eye"></i>
-      </span>
-      <span class="post-meta-item-text">阅读次数：</span>
-      <span class="leancloud-visitors-count"></span>
-    </span>
-      </div>
-      <div class="post-meta">
-    <span class="post-meta-item" title="本文字数">
-      <span class="post-meta-item-icon">
-        <i class="far fa-file-word"></i>
-      </span>
-      <span class="post-meta-item-text">本文字数：</span>
-      <span>355</span>
-    </span>
-    <span class="post-meta-item" title="阅读时长">
-      <span class="post-meta-item-icon">
-        <i class="far fa-clock"></i>
-      </span>
-      <span class="post-meta-item-text">阅读时长 &asymp;</span>
-      <span>1 分钟</span>
-    </span>
-</div>
-
-        </div>
-      </header>
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-          <h2 id="强制清除npm指令"><a href="#强制清除npm指令" class="headerlink" title="强制清除npm指令"></a>强制清除npm指令</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">npm cache clean -f</span><br></pre></td></tr></table></figure>
-
-<h2 id="设置下载源"><a href="#设置下载源" class="headerlink" title="设置下载源"></a>设置下载源</h2><blockquote>
-<p>镜像使用方法（三种办法任意一种都能解决问题，建议使用第三种，将配&gt;置写死，下次用的时候配置还在）:</p>
-<h4 id="1-通过config命令"><a href="#1-通过config命令" class="headerlink" title="1. 通过config命令"></a>1. 通过config命令</h4><p>npm config set registry [<a href="https://registry.npm.taobao.org]&gt;(https://registry.npm.taobao.org/)">https://registry.npm.taobao.org]&gt;(https://registry.npm.taobao.org/)</a> npm info underscore （如果上面配置正确&gt;这个命令会有字符串response）</p>
-<h4 id="2-命令行指定"><a href="#2-命令行指定" class="headerlink" title="2. 命令行指定"></a>2. 命令行指定</h4><p>npm –registry <a target="_blank" rel="noopener" href="https://registry.npm.taobao.org/">https://registry.npm.taobao.org</a> info underscore</p>
-<h4 id="3-编辑-npmrc-加入下面内容"><a href="#3-编辑-npmrc-加入下面内容" class="headerlink" title="3. 编辑 ~/.npmrc 加入下面内容"></a>3. 编辑 ~/.npmrc 加入下面内容</h4><p>registry = <a target="_blank" rel="noopener" href="https://registry.npm.taobao.org/">https://registry.npm.taobao.org</a></p>
-</blockquote>
-
-      
-    </div>
-
-    
-    
-    
-
-    <footer class="post-footer">
-        <div class="post-eof"></div>
-      
-    </footer>
-  </article>
-</div>
-
-
-
-
   <nav class="pagination">
     <a class="extend prev" rel="prev" href="/nirvana/page/7/"><i class="fa fa-angle-left" aria-label="上一页"></i></a><a class="page-number" href="/nirvana/">1</a><span class="space">&hellip;</span><a class="page-number" href="/nirvana/page/7/">7</a><span class="page-number current">8</span><a class="page-number" href="/nirvana/page/9/">9</a><span class="space">&hellip;</span><a class="page-number" href="/nirvana/page/19/">19</a><a class="extend next" rel="next" href="/nirvana/page/9/"><i class="fa fa-angle-right" aria-label="下一页"></i></a>
   </nav>
@@ -1673,14 +1691,14 @@
       <i class="fa fa-chart-line"></i>
     </span>
       <span>站点总字数：</span>
-    <span title="站点总字数">534k</span>
+    <span title="站点总字数">538k</span>
   </span>
   <span class="post-meta-item">
     <span class="post-meta-item-icon">
       <i class="fa fa-coffee"></i>
     </span>
       <span>站点阅读时长 &asymp;</span>
-    <span title="站点阅读时长">8:06</span>
+    <span title="站点阅读时长">8:09</span>
   </span>
 </div>
   <div class="powered-by">由 <a href="https://hexo.io/" class="theme-link" rel="noopener" target="_blank">Hexo</a> & <a href="https://theme-next.js.org/" class="theme-link" rel="noopener" target="_blank">NexT.Gemini</a> 强力驱动

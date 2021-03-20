@@ -206,7 +206,7 @@
   <nav class="site-state">
       <div class="site-state-item site-state-posts">
           <a href="/nirvana/archives">
-          <span class="site-state-item-count">183</span>
+          <span class="site-state-item-count">184</span>
           <span class="site-state-item-name">日志</span>
         </a>
       </div>
@@ -245,6 +245,236 @@
 
 
     <div class="main-inner index posts-expand">
+
+    
+
+
+<div class="post-block">
+  
+  
+
+  <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="">
+    <link itemprop="mainEntityOfPage" href="https://lzhwweb.github.io/nirvana/uncategorized/react-native/react-native%E5%B8%83%E5%B1%80/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/nirvana/images/headphoto.jpeg">
+      <meta itemprop="name" content="nirvana">
+      <meta itemprop="description" content="个人学习笔记">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="涅槃快乐是金">
+    </span>
+      <header class="post-header">
+        <h2 class="post-title" itemprop="name headline">
+          <a href="/nirvana/uncategorized/react-native/react-native%E5%B8%83%E5%B1%80/" class="post-title-link" itemprop="url">未命名</a>
+        </h2>
+
+        <div class="post-meta-container">
+          <div class="post-meta">
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-calendar"></i>
+      </span>
+      <span class="post-meta-item-text">发表于</span>
+
+      <time title="创建时间：2021-03-10 13:43:55" itemprop="dateCreated datePublished" datetime="2021-03-10T13:43:55+08:00">2021-03-10</time>
+    </span>
+
+  
+    <span id="/nirvana/uncategorized/react-native/react-native%E5%B8%83%E5%B1%80/" class="post-meta-item leancloud_visitors" data-flag-title="" title="阅读次数">
+      <span class="post-meta-item-icon">
+        <i class="far fa-eye"></i>
+      </span>
+      <span class="post-meta-item-text">阅读次数：</span>
+      <span class="leancloud-visitors-count"></span>
+    </span>
+      </div>
+      <div class="post-meta">
+    <span class="post-meta-item" title="本文字数">
+      <span class="post-meta-item-icon">
+        <i class="far fa-file-word"></i>
+      </span>
+      <span class="post-meta-item-text">本文字数：</span>
+      <span>18k</span>
+    </span>
+    <span class="post-meta-item" title="阅读时长">
+      <span class="post-meta-item-icon">
+        <i class="far fa-clock"></i>
+      </span>
+      <span class="post-meta-item-text">阅读时长 &asymp;</span>
+      <span>16 分钟</span>
+    </span>
+</div>
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+          <hr>
+<p>title: react-native布局<br>date: 2021-03-11 21:12:40<br>category: reactnative—</p>
+<h2 id="宽度单位和像素密度"><a href="#宽度单位和像素密度" class="headerlink" title="宽度单位和像素密度"></a>宽度单位和像素密度</h2><p>react 的宽度不支持百分比，设置宽度时不需要带单位 <code>&#123;width: 10&#125;</code>， 那么 10 代表的具体宽度是多少呢？</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">var Dimensions &#x3D; require(&#39;Dimensions&#39;);</span><br><span class="line">    &lt;Text style&#x3D;&#123;styles.welcome&#125;&gt;</span><br><span class="line">          window.width&#x3D;&#123;Dimensions.get(&#39;window&#39;).width + &#39;\n&#39;&#125; </span><br><span class="line">          window.height&#x3D;&#123;Dimensions.get(&#39;window&#39;).height + &#39;\n&#39;&#125; </span><br><span class="line">          pxielRatio&#x3D;&#123;PixelRatio.get()&#125;</span><br><span class="line">    &lt;&#x2F;Text&gt; </span><br></pre></td></tr></table></figure>
+
+<p>默认用的是 iphone6 的模拟器结果是：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">window.width&#x3D;375</span><br><span class="line">    window.height&#x3D;667</span><br><span class="line">    pxielRatio&#x3D;2</span><br></pre></td></tr></table></figure>
+
+<p>我们知道 iphone 系列的尺寸如下图：</p>
+<p><img src="http://upload-images.jianshu.io/upload_images/10024246-0bc6c802496c032e.jpg?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240"></p>
+<p><img src="https://upload-images.jianshu.io/upload_images/10024246-e64ac35f00c55099.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240"></p>
+<p>可以看到 iphone 6 的宽度为 375pt，对应了上边的 375，由此可见 react 的单位为 pt。 那如何获取实际的像素尺寸呢？ 这对图片的高清化很重要，如果我的图片大小为 100*100 px. 设置宽度为 100 * 100. 那在 iphone 上的尺寸就是模糊的。 这个时候需要的图像大小应该是 100 * pixelRatio 的大小 。</p>
+<p>react 提供了 PixelRatio 的获取方式<a target="_blank" rel="noopener" href="https://facebook.github.io/react-native/docs/pixelratio.html">https://facebook.github.io/react-native/docs/pixelratio.html</a></p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">var image &#x3D; getImage(&#123;</span><br><span class="line">  width: 200 * PixelRatio.get(),</span><br><span class="line">  height: 100 * PixelRatio.get()</span><br><span class="line">&#125;);</span><br><span class="line">&lt;Image source&#x3D;&#123;image&#125; style&#x3D;&#123;&#123;width: 200, height: 100&#125;&#125; &#x2F;&gt;</span><br></pre></td></tr></table></figure>
+
+<h2 id="flex-的布局"><a href="#flex-的布局" class="headerlink" title="flex 的布局"></a>flex 的布局</h2><h3 id="默认宽度"><a href="#默认宽度" class="headerlink" title="默认宽度"></a>默认宽度</h3><p>我们知道一个 div 如果不设置宽度，默认的会占用 100% 的宽度， 为了验证 100% 这个问题， 做三个实验</p>
+<ol>
+<li> 根节点上方一个 View， 不设置宽度</li>
+<li> 固定宽度的元素上设置一个 View， 不设置宽度</li>
+<li> flex 的元素上放一个 View 宽度， 不设置宽度</li>
+</ol>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br></pre></td><td class="code"><pre><span class="line">&lt;Text style&#x3D;&#123;[styles.text, styles.header]&#125;&gt;</span><br><span class="line">     根节点上放一个元素，不设置宽度 </span><br><span class="line"> &lt;&#x2F;Text&gt;        </span><br><span class="line"></span><br><span class="line"> &lt;View style&#x3D;&#123;&#123;height: 20, backgroundColor: &#39;#333333&#39;&#125;&#125; &#x2F;&gt;</span><br><span class="line"></span><br><span class="line"> &lt;Text style&#x3D;&#123;[styles.text, styles.header]&#125;&gt;</span><br><span class="line">     固定宽度的元素上放一个 View，不设置宽度 </span><br><span class="line"> &lt;&#x2F;Text&gt; </span><br><span class="line"></span><br><span class="line"> &lt;View style&#x3D;&#123;&#123;width: 100&#125;&#125;&gt;</span><br><span class="line">   &lt;View style&#x3D;&#123;&#123;height: 20, backgroundColor: &#39;#333333&#39;&#125;&#125; &#x2F;&gt;</span><br><span class="line"> &lt;&#x2F;View&gt;</span><br><span class="line"></span><br><span class="line"> &lt;Text style&#x3D;&#123;[styles.text, styles.header]&#125;&gt;</span><br><span class="line">     flex 的元素上放一个 View，不设置宽度 </span><br><span class="line"> &lt;&#x2F;Text&gt; </span><br><span class="line"></span><br><span class="line"> &lt;View style&#x3D;&#123;&#123;flexDirection: &#39;row&#39;&#125;&#125;&gt;</span><br><span class="line">   &lt;View style&#x3D;&#123;&#123;flex: 1&#125;&#125;&gt;</span><br><span class="line">     &lt;View style&#x3D;&#123;&#123;height: 20, backgroundColor: &#39;#333333&#39;&#125;&#125; &#x2F;&gt;</span><br><span class="line">   &lt;&#x2F;View&gt;</span><br><span class="line">   &lt;View style&#x3D;&#123;&#123;flex: 1&#125;&#125;&#x2F;&gt;</span><br><span class="line"> &lt;&#x2F;View&gt;</span><br></pre></td></tr></table></figure>
+
+<p><img src="http://upload-images.jianshu.io/upload_images/10024246-e57320a321d1c847.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="image"></p>
+<p>结果可以看到 flex 的元素如果不设置宽度， 都会百分之百的占满父容器。</p>
+<h3 id="水平垂直居中"><a href="#水平垂直居中" class="headerlink" title="水平垂直居中"></a>水平垂直居中</h3><p>css 里边经常会做的事情是去讲一个文本或者图片水平垂直居中，如果使用过 css 的 flexbox 当然知道使用<code>alignItems</code> 和 <code>justifyContent</code> . 那用 react-native 也来做一下实验</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br></pre></td><td class="code"><pre><span class="line">&lt;Text style&#x3D;&#123;[styles.text, styles.header]&#125;&gt;</span><br><span class="line">        水平居中 </span><br><span class="line">    &lt;&#x2F;Text&gt;</span><br><span class="line"></span><br><span class="line">    &lt;View style&#x3D;&#123;&#123;height: 100, backgroundColor: &#39;#333333&#39;, alignItems: &#39;center&#39;&#125;&#125;&gt;</span><br><span class="line">      &lt;View style&#x3D;&#123;&#123;backgroundColor: &#39;#fefefe&#39;, width: 30, height: 30, borderRadius: 15&#125;&#125;&#x2F;&gt;</span><br><span class="line">    &lt;&#x2F;View&gt;</span><br><span class="line"></span><br><span class="line">     &lt;Text style&#x3D;&#123;[styles.text, styles.header]&#125;&gt;</span><br><span class="line">        垂直居中 </span><br><span class="line">    &lt;&#x2F;Text&gt;</span><br><span class="line">    &lt;View style&#x3D;&#123;&#123;height: 100, backgroundColor: &#39;#333333&#39;, justifyContent: &#39;center&#39;&#125;&#125;&gt;</span><br><span class="line">      &lt;View style&#x3D;&#123;&#123;backgroundColor: &#39;#fefefe&#39;, width: 30, height: 30, borderRadius: 15&#125;&#125;&#x2F;&gt;</span><br><span class="line">    &lt;&#x2F;View&gt;</span><br><span class="line"></span><br><span class="line">    &lt;Text style&#x3D;&#123;[styles.text, styles.header]&#125;&gt;</span><br><span class="line">        水平垂直居中 </span><br><span class="line">    &lt;&#x2F;Text&gt;</span><br><span class="line">    &lt;View style&#x3D;&#123;&#123;height: 100, backgroundColor: &#39;#333333&#39;, alignItems: &#39;center&#39;, justifyContent: &#39;center&#39;&#125;&#125;&gt;</span><br><span class="line">      &lt;View style&#x3D;&#123;&#123;backgroundColor: &#39;#fefefe&#39;, width: 30, height: 30, borderRadius: 15&#125;&#125;&#x2F;&gt;</span><br><span class="line">    &lt;&#x2F;View&gt;</span><br></pre></td></tr></table></figure>
+<p><img src="http://upload-images.jianshu.io/upload_images/10024246-00bf883c328c1218.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240"></p>
+<h3 id="网格布局"><a href="#网格布局" class="headerlink" title="网格布局"></a>网格布局</h3><p>网格布局实验， 网格布局能够满足绝大多数的日常开发需求，所以只要满足网格布局的 spec，那么就可以证明 react 的 flex 布局能够满足正常开发需求</p>
+<h4 id="等分的网格"><a href="#等分的网格" class="headerlink" title="等分的网格"></a>等分的网格</h4><p><img src="http://upload-images.jianshu.io/upload_images/10024246-615c67dbad91c938.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240"></p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br></pre></td><td class="code"><pre><span class="line">&lt;View style&#x3D;&#123;styles.flexContainer&#125;&gt;</span><br><span class="line">      &lt;View style&#x3D;&#123;styles.cell&#125;&gt;</span><br><span class="line">        &lt;Text style&#x3D;&#123;styles.welcome&#125;&gt;</span><br><span class="line">          cell1</span><br><span class="line">        &lt;&#x2F;Text&gt;</span><br><span class="line">      &lt;&#x2F;View&gt;</span><br><span class="line">      &lt;View style&#x3D;&#123;styles.cell&#125;&gt;</span><br><span class="line">        &lt;Text style&#x3D;&#123;styles.welcome&#125;&gt;</span><br><span class="line">          cell2</span><br><span class="line">        &lt;&#x2F;Text&gt;</span><br><span class="line">      &lt;&#x2F;View&gt;</span><br><span class="line">      &lt;View style&#x3D;&#123;styles.cell&#125;&gt;</span><br><span class="line">        &lt;Text style&#x3D;&#123;styles.welcome&#125;&gt;</span><br><span class="line">          cell3</span><br><span class="line">        &lt;&#x2F;Text&gt;</span><br><span class="line">      &lt;&#x2F;View&gt;</span><br><span class="line">    &lt;&#x2F;View&gt;</span><br><span class="line"></span><br><span class="line">    styles &#x3D; &#123;</span><br><span class="line">        flexContainer: &#123;</span><br><span class="line">            &#x2F;&#x2F; 容器需要添加 direction 才能变成让子元素 flex</span><br><span class="line">            flexDirection: &#39;row&#39;</span><br><span class="line">        &#125;,</span><br><span class="line">        cell: &#123;</span><br><span class="line">            flex: 1,</span><br><span class="line">            height: 50,</span><br><span class="line">            backgroundColor: &#39;#aaaaaa&#39;</span><br><span class="line">        &#125;,</span><br><span class="line">        welcome: &#123;</span><br><span class="line">            fontSize: 20,</span><br><span class="line">            textAlign: &#39;center&#39;,</span><br><span class="line">            margin: 10</span><br><span class="line">        &#125;,</span><br><span class="line">    &#125;</span><br></pre></td></tr></table></figure>
+
+<h4 id="左边固定，-右边固定，中间-flex-的布局"><a href="#左边固定，-右边固定，中间-flex-的布局" class="headerlink" title="左边固定， 右边固定，中间 flex 的布局"></a>左边固定， 右边固定，中间 flex 的布局</h4><p><img src="http://upload-images.jianshu.io/upload_images/10024246-6dace85f7236a105.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240"></p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br></pre></td><td class="code"><pre><span class="line">&lt;View style&#x3D;&#123;styles.flexContainer&#125;&gt;</span><br><span class="line">     &lt;View style&#x3D;&#123;styles.cellfixed&#125;&gt;</span><br><span class="line">       &lt;Text style&#x3D;&#123;styles.welcome&#125;&gt;</span><br><span class="line">         fixed</span><br><span class="line">       &lt;&#x2F;Text&gt;</span><br><span class="line">     &lt;&#x2F;View&gt;</span><br><span class="line">     &lt;View style&#x3D;&#123;styles.cell&#125;&gt;</span><br><span class="line">       &lt;Text style&#x3D;&#123;styles.welcome&#125;&gt;</span><br><span class="line">         flex</span><br><span class="line">       &lt;&#x2F;Text&gt;</span><br><span class="line">     &lt;&#x2F;View&gt;</span><br><span class="line">     &lt;View style&#x3D;&#123;styles.cellfixed&#125;&gt;</span><br><span class="line">       &lt;Text style&#x3D;&#123;styles.welcome&#125;&gt;</span><br><span class="line">         fixed</span><br><span class="line">       &lt;&#x2F;Text&gt;</span><br><span class="line">     &lt;&#x2F;View&gt;</span><br><span class="line">   &lt;&#x2F;View&gt;</span><br><span class="line"></span><br><span class="line">   styles &#x3D; &#123;</span><br><span class="line">       flexContainer: &#123;</span><br><span class="line">           &#x2F;&#x2F; 容器需要添加 direction 才能变成让子元素 flex</span><br><span class="line">           flexDirection: &#39;row&#39;</span><br><span class="line">       &#125;,</span><br><span class="line">       cell: &#123;</span><br><span class="line">           flex: 1,</span><br><span class="line">           height: 50,</span><br><span class="line">           backgroundColor: &#39;#aaaaaa&#39;</span><br><span class="line">       &#125;,</span><br><span class="line">       welcome: &#123;</span><br><span class="line">           fontSize: 20,</span><br><span class="line">           textAlign: &#39;center&#39;,</span><br><span class="line">           margin: 10</span><br><span class="line">       &#125;,</span><br><span class="line">       cellfixed: &#123;</span><br><span class="line">           height: 50,</span><br><span class="line">           width: 80,</span><br><span class="line">           backgroundColor: &#39;#fefefe&#39;</span><br><span class="line">       &#125; </span><br><span class="line">   &#125;</span><br></pre></td></tr></table></figure>
+
+<h4 id="嵌套的网格"><a href="#嵌套的网格" class="headerlink" title="嵌套的网格"></a>嵌套的网格</h4><p>通常网格不是一层的，布局容器都是一层套一层的， 所以必须验证在<code>real world</code>下面的网格布局</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br></pre></td><td class="code"><pre><span class="line">&lt;Text style&#x3D;&#123;[styles.text, styles.header]&#125;&gt;</span><br><span class="line">   嵌套的网格 </span><br><span class="line"> &lt;&#x2F;Text&gt;</span><br><span class="line"> &lt;View style&#x3D;&#123;&#123;flexDirection: &#39;row&#39;, height: 200, backgroundColor:&quot;#fefefe&quot;, padding: 20&#125;&#125;&gt;</span><br><span class="line">   &lt;View style&#x3D;&#123;&#123;flex: 1, flexDirection:&#39;column&#39;, padding: 15, backgroundColor:&quot;#eeeeee&quot;&#125;&#125;&gt;  </span><br><span class="line">       &lt;View style&#x3D;&#123;&#123;flex: 1, backgroundColor:&quot;#bbaaaa&quot;&#125;&#125;&gt;  </span><br><span class="line">       &lt;&#x2F;View&gt;</span><br><span class="line">       &lt;View style&#x3D;&#123;&#123;flex: 1, backgroundColor:&quot;#aabbaa&quot;&#125;&#125;&gt;</span><br><span class="line">       &lt;&#x2F;View&gt;</span><br><span class="line">   &lt;&#x2F;View&gt;</span><br><span class="line">   &lt;View style&#x3D;&#123;&#123;flex: 1, padding: 15, flexDirection:&#39;row&#39;, backgroundColor:&quot;#eeeeee&quot;&#125;&#125;&gt;</span><br><span class="line">       &lt;View style&#x3D;&#123;&#123;flex: 1, backgroundColor:&quot;#aaaabb&quot;&#125;&#125;&gt;  </span><br><span class="line">           &lt;View style&#x3D;&#123;&#123;flex: 1, flexDirection:&#39;row&#39;, backgroundColor:&quot;#eeaaaa&quot;&#125;&#125;&gt; </span><br><span class="line">              &lt;View style&#x3D;&#123;&#123;flex: 1, backgroundColor:&quot;#eebbaa&quot;&#125;&#125;&gt;  </span><br><span class="line">             &lt;&#x2F;View&gt;</span><br><span class="line">             &lt;View style&#x3D;&#123;&#123;flex: 1, backgroundColor:&quot;#bbccee&quot;&#125;&#125;&gt;</span><br><span class="line">             &lt;&#x2F;View&gt; </span><br><span class="line">           &lt;&#x2F;View&gt;</span><br><span class="line">           &lt;View style&#x3D;&#123;&#123;flex: 1, backgroundColor:&quot;#eebbdd&quot;&#125;&#125;&gt;</span><br><span class="line">           &lt;&#x2F;View&gt;</span><br><span class="line">       &lt;&#x2F;View&gt;</span><br><span class="line">       &lt;View style&#x3D;&#123;&#123;flex: 1, backgroundColor:&quot;#aaccaa&quot;&#125;&#125;&gt;</span><br><span class="line">         &lt;ScrollView style&#x3D;&#123;&#123;flex: 1, backgroundColor:&quot;#bbccdd&quot;, padding: 5&#125;&#125;&gt;</span><br><span class="line">               &lt;View style&#x3D;&#123;&#123;flexDirection: &#39;row&#39;, height: 50, backgroundColor:&quot;#fefefe&quot;&#125;&#125;&gt;</span><br><span class="line">                 &lt;View style&#x3D;&#123;&#123;flex: 1, flexDirection:&#39;column&#39;, backgroundColor:&quot;#eeeeee&quot;&#125;&#125;&gt;  </span><br><span class="line">                     &lt;View style&#x3D;&#123;&#123;flex: 1, backgroundColor:&quot;#bbaaaa&quot;&#125;&#125;&gt;  </span><br><span class="line">                     &lt;&#x2F;View&gt;</span><br><span class="line">                     &lt;View style&#x3D;&#123;&#123;flex: 1, backgroundColor:&quot;#aabbaa&quot;&#125;&#125;&gt;</span><br><span class="line">                     &lt;&#x2F;View&gt;</span><br><span class="line">                 &lt;&#x2F;View&gt;</span><br><span class="line">                 &lt;View style&#x3D;&#123;&#123;flex: 1, flexDirection:&#39;row&#39;, backgroundColor:&quot;#eeeeee&quot;&#125;&#125;&gt;</span><br><span class="line">                     &lt;View style&#x3D;&#123;&#123;flex: 1, backgroundColor:&quot;#aaaabb&quot;&#125;&#125;&gt;  </span><br><span class="line">                         &lt;View style&#x3D;&#123;&#123;flex: 1, flexDirection:&#39;row&#39;, backgroundColor:&quot;#eeaaaa&quot;&#125;&#125;&gt; </span><br><span class="line">                            &lt;View style&#x3D;&#123;&#123;flex: 1, backgroundColor:&quot;#eebbaa&quot;&#125;&#125;&gt;  </span><br><span class="line">                           &lt;&#x2F;View&gt;</span><br><span class="line">                           &lt;View style&#x3D;&#123;&#123;flex: 1, backgroundColor:&quot;#bbccee&quot;&#125;&#125;&gt;</span><br><span class="line">                           &lt;&#x2F;View&gt; </span><br><span class="line">                         &lt;&#x2F;View&gt;</span><br><span class="line">                         &lt;View style&#x3D;&#123;&#123;flex: 1, backgroundColor:&quot;#eebbdd&quot;&#125;&#125;&gt;</span><br><span class="line">                         &lt;&#x2F;View&gt;</span><br><span class="line">                     &lt;&#x2F;View&gt;</span><br><span class="line">                     &lt;View style&#x3D;&#123;&#123;flex: 1, backgroundColor:&quot;#aaccaa&quot;&#125;&#125;&gt;</span><br><span class="line">                     &lt;&#x2F;View&gt;</span><br><span class="line">                 &lt;&#x2F;View&gt;</span><br><span class="line">               &lt;&#x2F;View&gt;</span><br><span class="line">               &lt;Text style&#x3D;&#123;[styles.text, styles.header, &#123;color: &#39;#ffffff&#39;, fontSize: 12&#125;]&#125;&gt;</span><br><span class="line">                 &#123;(function()&#123;</span><br><span class="line">                   var str &#x3D; &#39;&#39;;</span><br><span class="line">                   var n &#x3D; 100;</span><br><span class="line">                   while(n--) &#123;</span><br><span class="line">                     str +&#x3D; &#39;嵌套的网格&#39; + &#39;\n&#39;;</span><br><span class="line">                   &#125;</span><br><span class="line">                   return str;</span><br><span class="line">                 &#125;)()&#125;</span><br><span class="line">               &lt;&#x2F;Text&gt;</span><br><span class="line">         &lt;&#x2F;ScrollView&gt; </span><br><span class="line">       &lt;&#x2F;View&gt;</span><br><span class="line">   &lt;&#x2F;View&gt;</span><br><span class="line"> &lt;&#x2F;View&gt;</span><br></pre></td></tr></table></figure>
+
+<p><img src="http://upload-images.jianshu.io/upload_images/10024246-6ae9ca4d667f4279.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240"></p>
+<p>可以看到上图的嵌套关系也是足够的复杂的，嵌套多层的布局是没有问题的。</p>
+<h2 id="图片布局"><a href="#图片布局" class="headerlink" title="图片布局"></a>图片布局</h2><p>resizeMode<br>决定当组件尺寸和图片尺寸不成比例的时候如何调整图片的大小。</p>
+<p>cover: 在保持图片宽高比的前提下缩放图片，直到宽度和高度都大于等于容器视图的尺寸（如果容器有 padding 内衬的话，则相应减去）。译注：这样图片完全覆盖甚至超出容器，容器中不留任何空白。</p>
+<p>contain: 在保持图片宽高比的前提下缩放图片，直到宽度和高度都小于等于容器视图的尺寸（如果容器有 padding 内衬的话，则相应减去）。译注：这样图片完全被包裹在容器中，容器中可能留有空白。</p>
+<p>stretch: 拉伸图片且不维持宽高比，直到宽高都刚好填满容器。</p>
+<p>repeat: 重复平铺图片直到填满容器。图片会维持原始尺寸，但是当尺寸超过容器时会在保持宽高比的前提下缩放到能被容器包裹。</p>
+<p>center: 居中不拉伸。</p>
+<p>类型    必填<br>enum(‘cover’, ‘contain’, ‘stretch’, ‘repeat’, ‘center’)    否</p>
+<h3 id="尝试使用这些-mode"><a href="#尝试使用这些-mode" class="headerlink" title="尝试使用这些 mode"></a>尝试使用这些 mode</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">&lt;Text style&#x3D;&#123;styles.welcome&#125;&gt; 100px height &lt;&#x2F;Text&gt;</span><br><span class="line">  &lt;Image style&#x3D;&#123;&#123;height: 100&#125;&#125; source&#x3D;&#123;&#123;uri: &#39;http:&#x2F;&#x2F;gtms03.alicdn.com&#x2F;tps&#x2F;i3&#x2F;TB1Kcs5GXXXXXbMXVXXutsrNFXX-608-370.png&#39;&#125;&#125; &#x2F;&gt;</span><br></pre></td></tr></table></figure>
+<p><img src="http://upload-images.jianshu.io/upload_images/10024246-362bad2b8b316e9d.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240"></p>
+<p>100px 高度， 可以看到图片适应 100 高度和全屏宽度，背景居中适应未拉伸但是被截断也就是 cover。</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">&lt;Text style&#x3D;&#123;styles.welcome&#125;&gt; 100px height with resizeMode contain &lt;&#x2F;Text&gt;</span><br><span class="line">  &lt;View style&#x3D;&#123;[&#123;flex: 1, backgroundColor: &#39;#fe0000&#39;&#125;]&#125;&gt;</span><br><span class="line">      &lt;Image style&#x3D;&#123;&#123;flex: 1, height: 100, resizeMode: Image.resizeMode.contain&#125;&#125; source&#x3D;&#123;&#123;uri: &#39;http:&#x2F;&#x2F;gtms03.alicdn.com&#x2F;tps&#x2F;i3&#x2F;TB1Kcs5GXXXXXbMXVXXutsrNFXX-608-370.png&#39;&#125;&#125; &#x2F;&gt;</span><br><span class="line">  &lt;&#x2F;View&gt;</span><br></pre></td></tr></table></figure>
+<p><img src="http://upload-images.jianshu.io/upload_images/10024246-8fb3d970224a8826.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240"></p>
+<p>contain 模式容器完全容纳图片，图片自适应宽高</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">&lt;Text style&#x3D;&#123;styles.welcome&#125;&gt; 100px height with resizeMode cover &lt;&#x2F;Text&gt;</span><br><span class="line">&lt;View style&#x3D;&#123;[&#123;flex: 1, backgroundColor: &#39;#fe0000&#39;&#125;]&#125;&gt;</span><br><span class="line">    &lt;Image style&#x3D;&#123;&#123;flex: 1, height: 100, resizeMode: Image.resizeMode.cover&#125;&#125; source&#x3D;&#123;&#123;uri: &#39;http:&#x2F;&#x2F;gtms03.alicdn.com&#x2F;tps&#x2F;i3&#x2F;TB1Kcs5GXXXXXbMXVXXutsrNFXX-608-370.png&#39;&#125;&#125; &#x2F;&gt;</span><br><span class="line">&lt;&#x2F;View&gt;</span><br></pre></td></tr></table></figure>
+<p><img src="http://upload-images.jianshu.io/upload_images/10024246-838cfa2b87968c89.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240"></p>
+<p>cover 模式同 100px 高度模式</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">&lt;Text style&#x3D;&#123;styles.welcome&#125;&gt; 100px height with resizeMode stretch &lt;&#x2F;Text&gt;</span><br><span class="line">&lt;View style&#x3D;&#123;[&#123;flex: 1, backgroundColor: &#39;#fe0000&#39;&#125;]&#125;&gt;</span><br><span class="line">    &lt;Image style&#x3D;&#123;&#123;flex: 1, height: 100, resizeMode: Image.resizeMode.stretch&#125;&#125; source&#x3D;&#123;&#123;uri: &#39;http:&#x2F;&#x2F;gtms03.alicdn.com&#x2F;tps&#x2F;i3&#x2F;TB1Kcs5GXXXXXbMXVXXutsrNFXX-608-370.png&#39;&#125;&#125; &#x2F;&gt;</span><br><span class="line">&lt;&#x2F;View&gt;</span><br></pre></td></tr></table></figure>
+
+<p><img src="http://upload-images.jianshu.io/upload_images/10024246-79585ac3ee389124.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240"></p>
+<p>stretch 模式图片被拉伸适应屏幕</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">&lt;Text style&#x3D;&#123;styles.welcome&#125;&gt; set height to image container &lt;&#x2F;Text&gt;</span><br><span class="line"> &lt;View style&#x3D;&#123;[&#123;flex: 1, backgroundColor: &#39;#fe0000&#39;, height: 100&#125;]&#125;&gt;</span><br><span class="line">     &lt;Image style&#x3D;&#123;&#123;flex: 1&#125;&#125; source&#x3D;&#123;&#123;uri: &#39;http:&#x2F;&#x2F;gtms03.alicdn.com&#x2F;tps&#x2F;i3&#x2F;TB1Kcs5GXXXXXbMXVXXutsrNFXX-608-370.png&#39;&#125;&#125; &#x2F;&gt;</span><br><span class="line"> &lt;&#x2F;View&gt;</span><br></pre></td></tr></table></figure>
+
+<p><img src="http://upload-images.jianshu.io/upload_images/10024246-93bc6559fbb2dfbf.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240"></p>
+<p>随便试验了一下， 发现高度设置到父容器，图片 flex 的时候也会等同于 cover 模式</p>
+<h2 id="绝对定位和相对定位"><a href="#绝对定位和相对定位" class="headerlink" title="绝对定位和相对定位"></a>绝对定位和相对定位</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line">&lt;View style&#x3D;&#123;&#123;flex: 1, height: 100, backgroundColor: &#39;#333333&#39;&#125;&#125;&gt;</span><br><span class="line">   &lt;View style&#x3D;&#123;[styles.circle, &#123;position: &#39;absolute&#39;, top: 50, left: 180&#125;]&#125;&gt;</span><br><span class="line">   &lt;&#x2F;View&gt;</span><br><span class="line"> &lt;&#x2F;View&gt;</span><br><span class="line"> styles &#x3D; &#123;</span><br><span class="line">   circle: &#123;</span><br><span class="line">   backgroundColor: &#39;#fe0000&#39;,</span><br><span class="line">   borderRadius: 10,</span><br><span class="line">   width: 20,</span><br><span class="line">   height: 20</span><br><span class="line">   &#125;</span><br><span class="line"> &#125;</span><br></pre></td></tr></table></figure>
+
+<p><img src="http://upload-images.jianshu.io/upload_images/10024246-cc5a8655322a7a0e.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240"></p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">&lt;View style&#x3D;&#123;&#123;flex: 1, height: 100, backgroundColor: &#39;#333333&#39;&#125;&#125;&gt;</span><br><span class="line">   &lt;View style&#x3D;&#123;[styles.circle, &#123;position: &#39;relative&#39;, top: 50, left: 50, marginLeft: 50&#125;]&#125;&gt;</span><br><span class="line">   &lt;&#x2F;View&gt;</span><br><span class="line"> &lt;&#x2F;View&gt;</span><br></pre></td></tr></table></figure>
+
+<p><img src="http://upload-images.jianshu.io/upload_images/10024246-f54b7a67e3698522.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240"></p>
+<p>相对定位的可以看到很容易的配合 margin 做到了。 </p>
+<h2 id="padding-和-margin"><a href="#padding-和-margin" class="headerlink" title="padding 和 margin"></a>padding 和 margin</h2><p>我们知道在 css 中区分 inline 元素和 block 元素，既然 react-native 实现了一个超级小的 css subset。那我们就来实验一下 padding 和 margin 在 inline 和非 inline 元素上的 padding 和 margin 的使用情况。</p>
+<p>**padding **</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br></pre></td><td class="code"><pre><span class="line">&lt;Text style&#x3D;&#123;[styles.text, styles.header]&#125;&gt;</span><br><span class="line">   在正常的 View 上设置 padding </span><br><span class="line"> &lt;&#x2F;Text&gt;</span><br><span class="line"></span><br><span class="line"> &lt;View style&#x3D;&#123;&#123;padding: 30, backgroundColor: &#39;#333333&#39;&#125;&#125;&gt;</span><br><span class="line">   &lt;Text style&#x3D;&#123;[styles.text, &#123;color: &#39;#fefefe&#39;&#125;]&#125;&gt; Text Element&lt;&#x2F;Text&gt;</span><br><span class="line"> &lt;&#x2F;View&gt;</span><br><span class="line"></span><br><span class="line"> &lt;Text style&#x3D;&#123;[styles.text, styles.header]&#125;&gt;</span><br><span class="line">   在文本元素上设置 padding</span><br><span class="line"> &lt;&#x2F;Text&gt;</span><br><span class="line"> &lt;View style&#x3D;&#123;&#123;padding: 0, backgroundColor: &#39;#333333&#39;&#125;&#125;&gt;</span><br><span class="line">   &lt;Text style&#x3D;&#123;[styles.text, &#123;backgroundColor: &#39;#fe0000&#39;, padding: 30&#125;]&#125;&gt;</span><br><span class="line">     text 元素上设置 paddinga</span><br><span class="line">   &lt;&#x2F;Text&gt;</span><br><span class="line"> &lt;&#x2F;View&gt;</span><br></pre></td></tr></table></figure>
+
+<p><img src="http://upload-images.jianshu.io/upload_images/10024246-bcb5e4613d125463.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240"></p>
+<p>在 View 上设置 padding 很顺利，没有任何问题， 但是如果在 inline 元素上设置 padding， 发现会出现上面的错误， paddingTop 和 paddingBottom 都被挤成 marginBottom 了。 按理说，不应该对 Text 做 padding 处理， 但是确实有这样的问题存在，所以可以将这个问题 mark 一下。</p>
+<p><strong>margin</strong></p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br></pre></td><td class="code"><pre><span class="line">&lt;Text style&#x3D;&#123;[styles.text, styles.header]&#125;&gt;</span><br><span class="line">   在正常的 View 上设置 margin </span><br><span class="line"> &lt;&#x2F;Text&gt;</span><br><span class="line"></span><br><span class="line"> &lt;View style&#x3D;&#123;&#123;backgroundColor: &#39;#333333&#39;&#125;&#125;&gt;</span><br><span class="line">   &lt;View style&#x3D;&#123;&#123;backgroundColor: &#39;#fefefe&#39;, width: 30, height: 30, margin: 30&#125;&#125;&#x2F;&gt;</span><br><span class="line"> &lt;&#x2F;View&gt;</span><br><span class="line"></span><br><span class="line"> &lt;Text style&#x3D;&#123;[styles.text, styles.header]&#125;&gt;</span><br><span class="line">   在文本元素上设置 margin</span><br><span class="line"> &lt;&#x2F;Text&gt;</span><br><span class="line"> &lt;View style&#x3D;&#123;&#123;backgroundColor: &#39;#333333&#39;&#125;&#125;&gt;</span><br><span class="line">   &lt;Text style&#x3D;&#123;[styles.text, &#123;backgroundColor: &#39;#fe0000&#39;, margin: 30&#125;]&#125;&gt;</span><br><span class="line">     text 元素上设置 margin</span><br><span class="line">   &lt;&#x2F;Text&gt;</span><br><span class="line">   &lt;Text style&#x3D;&#123;[styles.text, &#123;backgroundColor: &#39;#fe0000&#39;, margin: 30&#125;]&#125;&gt;</span><br><span class="line">     text 元素上设置 margin</span><br><span class="line">   &lt;&#x2F;Text&gt;</span><br><span class="line"> &lt;&#x2F;View&gt;</span><br></pre></td></tr></table></figure>
+
+<p><img src="http://upload-images.jianshu.io/upload_images/10024246-92749d24ac214bed.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240"></p>
+<p>我们知道，对于 inline 元素，设置 margin-left 和 margin-right 有效，top 和 bottom 按理是不会生效的， 但是上图的结果可以看到，实际是生效了的。所以现在给我的感觉是 Text 元素更应该理解为一个不能设置 padding 的 block。</p>
+<p>算了不要猜了， 我们看看官方文档怎么说 Text，<a target="_blank" rel="noopener" href="https://facebook.github.io/react-native/docs/text.html">https://facebook.github.io/react-native/docs/text.html</a></p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br></pre></td><td class="code"><pre><span class="line">&lt;Text&gt;</span><br><span class="line">   &lt;Text&gt;First part and &lt;&#x2F;Text&gt;</span><br><span class="line">   &lt;Text&gt;second part&lt;&#x2F;Text&gt;</span><br><span class="line"> &lt;&#x2F;Text&gt;</span><br><span class="line"> &#x2F;&#x2F; Text container: all the text flows as if it was one</span><br><span class="line"> &#x2F;&#x2F; |First part |</span><br><span class="line"> &#x2F;&#x2F; |and second |</span><br><span class="line"> &#x2F;&#x2F; |part       |</span><br><span class="line"></span><br><span class="line"> &lt;View&gt;</span><br><span class="line">   &lt;Text&gt;First part and &lt;&#x2F;Text&gt;</span><br><span class="line">   &lt;Text&gt;second part&lt;&#x2F;Text&gt;</span><br><span class="line"> &lt;&#x2F;View&gt;</span><br><span class="line"> &#x2F;&#x2F; View container: each text is its own block</span><br><span class="line"> &#x2F;&#x2F; |First part |</span><br><span class="line"> &#x2F;&#x2F; |and        |</span><br><span class="line"> &#x2F;&#x2F; |second part|</span><br></pre></td></tr></table></figure>
+
+<p>也就是如果 Text 元素在 Text 里边，可以考虑为 inline， 如果单独在 View 里边，那就是 Block。</p>
+<p>下面会专门研究一下文本相关的布局</p>
+<h2 id="文本元素"><a href="#文本元素" class="headerlink" title="文本元素"></a>文本元素</h2><p>首先我们得考虑对于 Text 元素我们希望有哪些功能或者想验证哪些功能：</p>
+<ol>
+<li> 文字是否能自动换行？</li>
+<li> overflow ellipse？</li>
+<li> 是否能对部分文字设置样式 ，类似 span 等标签</li>
+</ol>
+<h3 id="先看看文字有哪些支持的-style-属性"><a href="#先看看文字有哪些支持的-style-属性" class="headerlink" title="先看看文字有哪些支持的 style 属性"></a>先看看文字有哪些支持的 style 属性</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line">&#x2F;*&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;TEXT&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;*&#x2F;</span><br><span class="line">  Attributes.style &#x3D; &#123;</span><br><span class="line">    color string</span><br><span class="line">    containerBackgroundColor string</span><br><span class="line">    fontFamily string</span><br><span class="line">    fontSize number</span><br><span class="line">    fontStyle enum(&#39;normal&#39;, &#39;italic&#39;)</span><br><span class="line">    fontWeight enum(&quot;normal&quot;, &#39;bold&#39;, &#39;100&#39;, &#39;200&#39;, &#39;300&#39;, &#39;400&#39;, &#39;500&#39;, &#39;600&#39;, &#39;700&#39;, &#39;800&#39;, &#39;900&#39;)</span><br><span class="line">    lineHeight number</span><br><span class="line">    textAlign enum(&quot;auto&quot;, &#39;left&#39;, &#39;right&#39;, &#39;center&#39;)</span><br><span class="line">    writingDirection enum(&quot;auto&quot;, &#39;ltr&#39;, &#39;rtl&#39;)</span><br><span class="line">  &#125;</span><br></pre></td></tr></table></figure>
+
+<h3 id="实验-1，-2，-3"><a href="#实验-1，-2，-3" class="headerlink" title="实验 1， 2， 3"></a>实验 1， 2， 3</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br></pre></td><td class="code"><pre><span class="line">&lt;Text style&#x3D;&#123;[styles.text, styles.header]&#125;&gt;</span><br><span class="line">     文本元素 </span><br><span class="line"> &lt;&#x2F;Text&gt;</span><br><span class="line"></span><br><span class="line"> &lt;View style&#x3D;&#123;&#123;backgroundColor: &#39;#333333&#39;, padding: 10&#125;&#125;&gt;</span><br><span class="line">   &lt;Text style&#x3D;&#123;styles.baseText&#125; numberOfLines&#x3D;&#123;5&#125;&gt;</span><br><span class="line">     &lt;Text style&#x3D;&#123;styles.titleText&#125; onPress&#x3D;&#123;this.onPressTitle&#125;&gt;</span><br><span class="line">       文本元素&#123;&#39;\n&#39;&#125;</span><br><span class="line">     &lt;&#x2F;Text&gt;</span><br><span class="line">     &lt;Text&gt;</span><br><span class="line">       &#123;&#39;\n&#39;&#125;In this example, the nested title and body text will inherit the fontFamily from styles.baseText, but the title provides its own additional styles. The title and body will stack on top of each other on account of the literal newlines, numberOfLines is Used to truncate the text with an elipsis after computing the text layout, including line wrapping, such that the total number of lines does not exceed this number.</span><br><span class="line">     &lt;&#x2F;Text&gt;</span><br><span class="line">   &lt;&#x2F;Text&gt;</span><br><span class="line"> &lt;&#x2F;View&gt;</span><br><span class="line"> styles &#x3D; &#123;</span><br><span class="line">   baseText: &#123;</span><br><span class="line">     fontFamily: &#39;Cochin&#39;,</span><br><span class="line">     color: &#39;white&#39;</span><br><span class="line">   &#125;,</span><br><span class="line">   titleText: &#123;</span><br><span class="line">     fontSize: 20,</span><br><span class="line">     fontWeight: &#39;bold&#39;,</span><br><span class="line">   &#125;</span><br><span class="line"> &#125;</span><br></pre></td></tr></table></figure>
+
+<p><img src="http://upload-images.jianshu.io/upload_images/10024246-f4f3db377d37595b.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240"></p>
+<p>从结果来看 1，2，3 得到验证。 但是不知道各位有没有发现问题， 为什么底部空出了这么多空间， 没有设置高度啊。 我去除<code>numberOfLines=&#123;5&#125;</code> 这行代码，效果如下：</p>
+<p><img src="http://upload-images.jianshu.io/upload_images/10024246-25ea32e747982ffb.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240"></p>
+<p>所以实际上， 那段空间是文本撑开的， 但是文本被<code>numberOfLines=&#123;5&#125;</code> 截取了，但是剩余的空间还在。 我猜这应该是个 bug。</p>
+<p>其实官方文档里边把<code>numberOfLines=&#123;5&#125;</code>这句放到的是长文本的 Text 元素上的，也就是子 Text 上的。 实际结果是不生效。 这应该又是一个 bug。</p>
+<p>Text 元素的子 Text 元素的具体实现是怎样的， 感觉这货会有很多 bug， 看官文</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">&lt;Text style&#x3D;&#123;&#123;fontWeight: &#39;bold&#39;&#125;&#125;&gt;</span><br><span class="line">  I am bold</span><br><span class="line">  &lt;Text style&#x3D;&#123;&#123;color: &#39;red&#39;&#125;&#125;&gt;</span><br><span class="line">    and red</span><br><span class="line">  &lt;&#x2F;Text&gt;</span><br><span class="line"> &lt;&#x2F;Text&gt;</span><br></pre></td></tr></table></figure>
+
+<blockquote>
+<p>Behind the scenes, this is going to be converted to a flat</p>
+<p>NSAttributedString that contains the following information</p>
+</blockquote>
+<p>好吧， 那对于<code>numberOfLines=&#123;5&#125;</code> 放在子 Text 元素上的那种 bug 倒是可以解释了。</p>
+<h3 id="Text-的样式继承"><a href="#Text-的样式继承" class="headerlink" title="Text 的样式继承"></a>Text 的样式继承</h3><p>实际上 React-native 里边是没有样式继承这种说法的， 但是对于 Text 元素里边的 Text 元素，上面的例子可以看出存在继承。 那既然有继承，问题就来了！</p>
+<p>到底是继承的最外层的 Text 的值呢，还是继承父亲 Text 的值呢？</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line">&lt;Text style&#x3D;&#123;[styles.text, styles.header]&#125;&gt;</span><br><span class="line">      文本样式继承 </span><br><span class="line">  &lt;&#x2F;Text&gt;</span><br><span class="line"></span><br><span class="line">  &lt;View style&#x3D;&#123;&#123;backgroundColor: &#39;#333333&#39;, padding: 10&#125;&#125;&gt;</span><br><span class="line">    &lt;Text style&#x3D;&#123;&#123;color: &#39;white&#39;&#125;&#125;&gt;</span><br><span class="line">      &lt;Text style&#x3D;&#123;&#123;color: &#39;red&#39;&#125;&#125; onPress&#x3D;&#123;this.onPressTitle&#125;&gt;</span><br><span class="line">         文本元素&#123;&#39;\n&#39;&#125;</span><br><span class="line">        &lt;Text&gt; 我是 white 还是 red 呢？&#123;&#39;\n&#39;&#125; &lt;&#x2F;Text&gt;</span><br><span class="line">      &lt;&#x2F;Text&gt;</span><br><span class="line">      &lt;Text&gt; 我应该是 white 的 &lt;&#x2F;Text&gt;</span><br><span class="line">    &lt;&#x2F;Text&gt;</span><br><span class="line">  &lt;&#x2F;View&gt;</span><br></pre></td></tr></table></figure>
+
+<p><img src="http://upload-images.jianshu.io/upload_images/10024246-b9f60cacd4e50154.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="image"></p>
+<p>结果可见是直接继承父亲 Text 的。</p>
+<h2 id="总结"><a href="#总结" class="headerlink" title="总结"></a>总结</h2><ol>
+<li> react 宽度基于<code>pt</code>为单位， 可以通过<code>Dimensions</code> 来获取宽高，<code>PixelRatio</code> 获取密度，如果想使用百分比，可以通过获取屏幕宽度手动计算。</li>
+<li>基于 flex 的布局<ol>
+<li> view 默认宽度为 100%</li>
+<li> 水平居中用<code>alignItems</code>, 垂直居中用<code>justifyContent</code></li>
+<li> 基于 flex 能够实现现有的网格系统需求，且网格能够各种嵌套无 bug</li>
+</ol>
+</li>
+<li>图片布局<ol>
+<li> 通过<code>Image.resizeMode</code>来适配图片布局，包括<code>contain</code>, <code>cover</code>, <code>stretch</code></li>
+<li> 默认不设置模式等于 cover 模式</li>
+<li> contain 模式自适应宽高，给出高度值即可</li>
+<li> cover 铺满容器，但是会做截取</li>
+<li> stretch 铺满容器，拉伸</li>
+</ol>
+</li>
+<li>定位<ol>
+<li> 定位相对于父元素，父元素不用设置 position 也行</li>
+<li> padding 设置在 Text 元素上的时候会存在 bug。所有 padding 变成了 marginBottom</li>
+</ol>
+</li>
+<li>文本元素<ol>
+<li> 文字必须放在 Text 元素里边</li>
+<li> Text 元素可以相互嵌套，且存在样式继承关系</li>
+<li> <code>numberOfLines</code> 需要放在最外层的 Text 元素上，且虽然截取了文字但是还是会占用空间<br>xi</li>
+</ol>
+</li>
+</ol>
+
+      
+    </div>
+
+    
+    
+    
+
+    <footer class="post-footer">
+        <div class="post-eof"></div>
+      
+    </footer>
+  </article>
+</div>
+
+
+
 
     
 
@@ -1604,123 +1834,6 @@ iptables服务命令</li>
 
 
 
-    
-
-
-<div class="post-block">
-  
-  
-
-  <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="">
-    <link itemprop="mainEntityOfPage" href="https://lzhwweb.github.io/nirvana/linux/linux/linux%E4%B8%8Byum%E5%AE%89%E8%A3%85%E6%9C%80%E6%96%B0%E7%A8%B3%E5%AE%9A%E7%89%88nginx/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="image" content="/nirvana/images/headphoto.jpeg">
-      <meta itemprop="name" content="nirvana">
-      <meta itemprop="description" content="个人学习笔记">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="涅槃快乐是金">
-    </span>
-      <header class="post-header">
-        <h2 class="post-title" itemprop="name headline">
-          <a href="/nirvana/linux/linux/linux%E4%B8%8Byum%E5%AE%89%E8%A3%85%E6%9C%80%E6%96%B0%E7%A8%B3%E5%AE%9A%E7%89%88nginx/" class="post-title-link" itemprop="url">linux下yum安装最新稳定版nginx</a>
-        </h2>
-
-        <div class="post-meta-container">
-          <div class="post-meta">
-    <span class="post-meta-item">
-      <span class="post-meta-item-icon">
-        <i class="far fa-calendar"></i>
-      </span>
-      <span class="post-meta-item-text">发表于</span>
-
-      <time title="创建时间：2021-03-09 21:12:40" itemprop="dateCreated datePublished" datetime="2021-03-09T21:12:40+08:00">2021-03-09</time>
-    </span>
-      <span class="post-meta-item">
-        <span class="post-meta-item-icon">
-          <i class="far fa-calendar-check"></i>
-        </span>
-        <span class="post-meta-item-text">更新于</span>
-        <time title="修改时间：2021-03-10 13:43:55" itemprop="dateModified" datetime="2021-03-10T13:43:55+08:00">2021-03-10</time>
-      </span>
-    <span class="post-meta-item">
-      <span class="post-meta-item-icon">
-        <i class="far fa-folder"></i>
-      </span>
-      <span class="post-meta-item-text">分类于</span>
-        <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-          <a href="/nirvana/categories/linux/" itemprop="url" rel="index"><span itemprop="name">linux</span></a>
-        </span>
-    </span>
-
-  
-    <span id="/nirvana/linux/linux/linux%E4%B8%8Byum%E5%AE%89%E8%A3%85%E6%9C%80%E6%96%B0%E7%A8%B3%E5%AE%9A%E7%89%88nginx/" class="post-meta-item leancloud_visitors" data-flag-title="linux下yum安装最新稳定版nginx" title="阅读次数">
-      <span class="post-meta-item-icon">
-        <i class="far fa-eye"></i>
-      </span>
-      <span class="post-meta-item-text">阅读次数：</span>
-      <span class="leancloud-visitors-count"></span>
-    </span>
-      </div>
-      <div class="post-meta">
-    <span class="post-meta-item" title="本文字数">
-      <span class="post-meta-item-icon">
-        <i class="far fa-file-word"></i>
-      </span>
-      <span class="post-meta-item-text">本文字数：</span>
-      <span>611</span>
-    </span>
-    <span class="post-meta-item" title="阅读时长">
-      <span class="post-meta-item-icon">
-        <i class="far fa-clock"></i>
-      </span>
-      <span class="post-meta-item-text">阅读时长 &asymp;</span>
-      <span>1 分钟</span>
-    </span>
-</div>
-
-        </div>
-      </header>
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-          <h2 id="摘抄nginx官网文档"><a href="#摘抄nginx官网文档" class="headerlink" title="摘抄nginx官网文档"></a>摘抄nginx官网文档</h2><p>URL：<a target="_blank" rel="noopener" href="http://nginx.org/en/linux_packages.html#stable" title="http://nginx.org/en/linux_packages.html#stable">http://nginx.org/en/linux_packages.html#stable</a></p>
-<p>To set up the yum repository for RHEL/CentOS, create the file named <code>/etc/yum.repos.d/nginx.repo</code> with the following contents:</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">[nginx]</span><br><span class="line">name&#x3D;nginx repo</span><br><span class="line">baseurl&#x3D;http:&#x2F;&#x2F;nginx.org&#x2F;packages&#x2F;centos&#x2F;7&#x2F;$basearch&#x2F;</span><br><span class="line">gpgcheck&#x3D;0 </span><br><span class="line">enabled&#x3D;1</span><br></pre></td></tr></table></figure>
-
-<p>Replace “<code>OS</code>” with “<code>rhel</code>” or “<code>centos</code>”, depending on the distribution used, and “<code>OSRELEASE</code>” with “<code>6</code>” or “<code>7</code>”, for 6.x or 7.x versions, respectively.</p>
-<p>执行如下命令进行yum安装nginx</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">yum install nginx</span><br></pre></td></tr></table></figure>
-
-<p>查看nginx版本</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"># 查看nginx版本</span><br><span class="line">nginx -v</span><br><span class="line"></span><br><span class="line"># 查看编译参数</span><br><span class="line">nginx -V&lt;&#x2F;pre&gt;</span><br></pre></td></tr></table></figure>
-<p> 查看安装目录</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">rpm -ql nginx</span><br></pre></td></tr></table></figure>
-
-<p>查看配置文件</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"># 用于日志切割</span><br><span class="line"> &#x2F;etc&#x2F;logrotate.d&#x2F;nginx</span><br></pre></td></tr></table></figure>
-
-      
-    </div>
-
-    
-    
-    
-
-    <footer class="post-footer">
-        <div class="post-eof"></div>
-      
-    </footer>
-  </article>
-</div>
-
-
-
-
   <nav class="pagination">
     <a class="extend prev" rel="prev" href="/nirvana/page/16/"><i class="fa fa-angle-left" aria-label="上一页"></i></a><a class="page-number" href="/nirvana/">1</a><span class="space">&hellip;</span><a class="page-number" href="/nirvana/page/16/">16</a><span class="page-number current">17</span><a class="page-number" href="/nirvana/page/18/">18</a><a class="page-number" href="/nirvana/page/19/">19</a><a class="extend next" rel="next" href="/nirvana/page/18/"><i class="fa fa-angle-right" aria-label="下一页"></i></a>
   </nav>
@@ -1768,14 +1881,14 @@ iptables服务命令</li>
       <i class="fa fa-chart-line"></i>
     </span>
       <span>站点总字数：</span>
-    <span title="站点总字数">534k</span>
+    <span title="站点总字数">538k</span>
   </span>
   <span class="post-meta-item">
     <span class="post-meta-item-icon">
       <i class="fa fa-coffee"></i>
     </span>
       <span>站点阅读时长 &asymp;</span>
-    <span title="站点阅读时长">8:06</span>
+    <span title="站点阅读时长">8:09</span>
   </span>
 </div>
   <div class="powered-by">由 <a href="https://hexo.io/" class="theme-link" rel="noopener" target="_blank">Hexo</a> & <a href="https://theme-next.js.org/" class="theme-link" rel="noopener" target="_blank">NexT.Gemini</a> 强力驱动

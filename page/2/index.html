@@ -206,7 +206,7 @@
   <nav class="site-state">
       <div class="site-state-item site-state-posts">
           <a href="/nirvana/archives">
-          <span class="site-state-item-count">183</span>
+          <span class="site-state-item-count">184</span>
           <span class="site-state-item-name">日志</span>
         </a>
       </div>
@@ -245,6 +245,136 @@
 
 
     <div class="main-inner index posts-expand">
+
+    
+
+
+<div class="post-block">
+  
+  
+
+  <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="">
+    <link itemprop="mainEntityOfPage" href="https://lzhwweb.github.io/nirvana/DesignPattern/%E8%AE%BE%E8%AE%A1%E6%A8%A1%E5%BC%8F%EF%BC%88TypeScript%EF%BC%89/Bridge-Pattern%EF%BC%88%E6%A1%A5%E6%8E%A5%E6%A8%A1%E5%BC%8F%EF%BC%89/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/nirvana/images/headphoto.jpeg">
+      <meta itemprop="name" content="nirvana">
+      <meta itemprop="description" content="个人学习笔记">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="涅槃快乐是金">
+    </span>
+      <header class="post-header">
+        <h2 class="post-title" itemprop="name headline">
+          <a href="/nirvana/DesignPattern/%E8%AE%BE%E8%AE%A1%E6%A8%A1%E5%BC%8F%EF%BC%88TypeScript%EF%BC%89/Bridge-Pattern%EF%BC%88%E6%A1%A5%E6%8E%A5%E6%A8%A1%E5%BC%8F%EF%BC%89/" class="post-title-link" itemprop="url">Bridge-Pattern（桥接模式）</a>
+        </h2>
+
+        <div class="post-meta-container">
+          <div class="post-meta">
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-calendar"></i>
+      </span>
+      <span class="post-meta-item-text">发表于</span>
+
+      <time title="创建时间：2021-03-11 21:12:40" itemprop="dateCreated datePublished" datetime="2021-03-11T21:12:40+08:00">2021-03-11</time>
+    </span>
+      <span class="post-meta-item">
+        <span class="post-meta-item-icon">
+          <i class="far fa-calendar-check"></i>
+        </span>
+        <span class="post-meta-item-text">更新于</span>
+        <time title="修改时间：2021-03-10 13:43:55" itemprop="dateModified" datetime="2021-03-10T13:43:55+08:00">2021-03-10</time>
+      </span>
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-folder"></i>
+      </span>
+      <span class="post-meta-item-text">分类于</span>
+        <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+          <a href="/nirvana/categories/DesignPattern/" itemprop="url" rel="index"><span itemprop="name">DesignPattern</span></a>
+        </span>
+    </span>
+
+  
+    <span id="/nirvana/DesignPattern/%E8%AE%BE%E8%AE%A1%E6%A8%A1%E5%BC%8F%EF%BC%88TypeScript%EF%BC%89/Bridge-Pattern%EF%BC%88%E6%A1%A5%E6%8E%A5%E6%A8%A1%E5%BC%8F%EF%BC%89/" class="post-meta-item leancloud_visitors" data-flag-title="Bridge-Pattern（桥接模式）" title="阅读次数">
+      <span class="post-meta-item-icon">
+        <i class="far fa-eye"></i>
+      </span>
+      <span class="post-meta-item-text">阅读次数：</span>
+      <span class="leancloud-visitors-count"></span>
+    </span>
+      </div>
+      <div class="post-meta">
+    <span class="post-meta-item" title="本文字数">
+      <span class="post-meta-item-icon">
+        <i class="far fa-file-word"></i>
+      </span>
+      <span class="post-meta-item-text">本文字数：</span>
+      <span>3.5k</span>
+    </span>
+    <span class="post-meta-item" title="阅读时长">
+      <span class="post-meta-item-icon">
+        <i class="far fa-clock"></i>
+      </span>
+      <span class="post-meta-item-text">阅读时长 &asymp;</span>
+      <span>3 分钟</span>
+    </span>
+</div>
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+          <p><strong>桥接模式（Bridge Patten）：</strong>：桥接模式是在类的抽象化和实现化之间搭建桥梁，来实现二者的解耦。。这种类型的设计模式属于结构型模式。</p>
+<h2 id="介绍"><a href="#介绍" class="headerlink" title="介绍"></a>介绍</h2><ul>
+<li><strong>意图：</strong>将抽象部分与实现部分分离，使它们都可以独立的变化。</li>
+<li><strong>主要解决：</strong>在有多种可能会变化的情况下，用继承会造成类爆炸问题，扩展起来不灵活。</li>
+<li><strong>何时使用：</strong>实现系统可能有多个角度分类，每一种角度都可能变化。</li>
+<li><strong>如何解决：</strong>把这种多角度分类分离出来，让它们独立变化，减少它们之间耦合。</li>
+<li><strong>关键代码：</strong>抽象类依赖实现类。</li>
+<li><strong>应用实例：</strong>墙上的开关，可以看到的开关是抽象的，不用管里面具体怎么实现的。</li>
+<li><strong>优点：</strong><br>1、抽象和实现的分离。<br>2、优秀的扩展能力。<br>3、实现细节对客户透明。</li>
+<li><strong>缺点：</strong>桥接模式的引入会增加系统的理解与设计难度，由于聚合关联关系建立在抽象层，要求开发者针对抽象进行设计与编程。</li>
+<li><strong>使用场景：</strong><br>1、对于那些不希望使用继承或因为多层次继承导致系统类的个数急剧增加的系统，桥接模式尤为适用。<br>2、一个类存在两个独立变化的维度，且这两个维度都需要进行扩展。</li>
+</ul>
+<blockquote>
+<p>注意事项：对于两个独立变化的维度，使用桥接模式再适合不过了。</p>
+</blockquote>
+<h2 id="示例"><a href="#示例" class="headerlink" title="示例"></a>示例</h2><h5 id="Display-ts-负责“显示”的类"><a href="#Display-ts-负责“显示”的类" class="headerlink" title="Display.ts 负责“显示”的类"></a>Display.ts 负责“显示”的类</h5><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br></pre></td><td class="code"><pre><span class="line">import DisplayImpl from &quot;.&#x2F;DisplayImpl&quot;;</span><br><span class="line"></span><br><span class="line">export default class Display &#123;</span><br><span class="line">    private impl: DisplayImpl;</span><br><span class="line">    constructor(impl: DisplayImpl) &#123;</span><br><span class="line">        this.impl &#x3D; impl;</span><br><span class="line">    &#125;</span><br><span class="line">    public open(): void &#123;</span><br><span class="line">        this.impl.rawOpen();</span><br><span class="line">    &#125;</span><br><span class="line">    public print(): void &#123;</span><br><span class="line">        this.impl.rawPrint();</span><br><span class="line">    &#125;</span><br><span class="line">    public close(): void &#123;</span><br><span class="line">        this.impl.rawClose();</span><br><span class="line">    &#125;</span><br><span class="line">    public display(): void &#123;</span><br><span class="line">        this.open();</span><br><span class="line">        this.print();</span><br><span class="line">        this.close();</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<h5 id="CountDisplay-ts-增加了“只显示规定次数”这一功能的类"><a href="#CountDisplay-ts-增加了“只显示规定次数”这一功能的类" class="headerlink" title="CountDisplay.ts 增加了“只显示规定次数”这一功能的类"></a>CountDisplay.ts 增加了“只显示规定次数”这一功能的类</h5><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br></pre></td><td class="code"><pre><span class="line">import Display from &quot;.&#x2F;Display&quot;;</span><br><span class="line">import DisplayImpl from &quot;.&#x2F;DisplayImpl&quot;;</span><br><span class="line"></span><br><span class="line">export default class CountDisplay extends Display &#123;</span><br><span class="line">    constructor(impl: DisplayImpl) &#123;</span><br><span class="line">        super(impl);</span><br><span class="line">    &#125;</span><br><span class="line">    public multiDisplay(times: number) &#123;</span><br><span class="line">        this.open();</span><br><span class="line">        for (let i &#x3D; 0; i &lt; times; i++) &#123;</span><br><span class="line">            this.print();</span><br><span class="line">        &#125;</span><br><span class="line">        this.close();</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<h5 id="DisplayImpl-ts-负责“显示”的类"><a href="#DisplayImpl-ts-负责“显示”的类" class="headerlink" title="DisplayImpl.ts 负责“显示”的类"></a>DisplayImpl.ts 负责“显示”的类</h5><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">export default abstract class DisplayImpl &#123;</span><br><span class="line">    abstract rawOpen(): void;</span><br><span class="line">    abstract rawPrint(): void;</span><br><span class="line">    abstract rawClose(): void;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<h5 id="StringDisplayImpl-ts-“用字符串显示”的类"><a href="#StringDisplayImpl-ts-“用字符串显示”的类" class="headerlink" title="StringDisplayImpl.ts “用字符串显示”的类"></a>StringDisplayImpl.ts “用字符串显示”的类</h5><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br></pre></td><td class="code"><pre><span class="line">import DisplayImpl from &quot;.&#x2F;DisplayImpl&quot;;</span><br><span class="line"></span><br><span class="line">export default class StringDisplayImpl extends DisplayImpl &#123;</span><br><span class="line">    private str: string;</span><br><span class="line">    private width: number;</span><br><span class="line">    constructor(str: string) &#123;</span><br><span class="line">        super();</span><br><span class="line">        this.str &#x3D; str;</span><br><span class="line">        this.width &#x3D; str.length;</span><br><span class="line">    &#125;</span><br><span class="line">    public rawOpen(): void &#123;</span><br><span class="line">        this.printLine();</span><br><span class="line">    &#125;</span><br><span class="line">    public rawPrint(): void &#123;</span><br><span class="line">        console.log(&#96;|$&#123;this.str&#125;|&#96;);</span><br><span class="line">    &#125;</span><br><span class="line">    public rawClose(): void &#123;</span><br><span class="line">        this.printLine();</span><br><span class="line">    &#125;</span><br><span class="line">    private printLine(): void &#123;</span><br><span class="line">        let str &#x3D; &#39;+&#39;;</span><br><span class="line">        for (let i &#x3D; 0; i &lt; this.width; i++) &#123;</span><br><span class="line">            str &#x3D; str + &#39;-&#39;;</span><br><span class="line">        &#125;</span><br><span class="line">        console.log(&#96;$&#123;str&#125;+&#96;);</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<h5 id="index-ts"><a href="#index-ts" class="headerlink" title="index.ts"></a>index.ts</h5><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br></pre></td><td class="code"><pre><span class="line">import Display from &quot;.&#x2F;Display&quot;;</span><br><span class="line">import StringDisplayImpl from &quot;.&#x2F;StringDisplayImpl&quot;;</span><br><span class="line">import CountDisplay from &quot;.&#x2F;CountDisplay&quot;;</span><br><span class="line"></span><br><span class="line">const d1 &#x3D; new Display(new StringDisplayImpl(&quot;Hello,China.&quot;));</span><br><span class="line">const d2 &#x3D; new CountDisplay(new StringDisplayImpl(&quot;Hello,World.&quot;));</span><br><span class="line">const d3 &#x3D; new CountDisplay(new StringDisplayImpl(&quot;Hello,Universe.&quot;));</span><br><span class="line">console.log(&quot;-------d1.display()--------&quot;)</span><br><span class="line">d1.display();</span><br><span class="line">console.log(&quot;-------d2.display()--------&quot;)</span><br><span class="line">d2.display();</span><br><span class="line">console.log(&quot;-------d3.display()--------&quot;)</span><br><span class="line">d3.display();</span><br><span class="line">console.log(&quot;-------d4.display()--------&quot;)</span><br><span class="line">d3.multiDisplay(5);</span><br></pre></td></tr></table></figure>
+<h5 id="result"><a href="#result" class="headerlink" title="result"></a>result</h5><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br></pre></td><td class="code"><pre><span class="line">-------d1.display()--------</span><br><span class="line">+------------+</span><br><span class="line">|Hello,China.|</span><br><span class="line">+------------+</span><br><span class="line">-------d2.display()--------</span><br><span class="line">+------------+</span><br><span class="line">|Hello,World.|</span><br><span class="line">+------------+</span><br><span class="line">-------d3.display()--------</span><br><span class="line">+---------------+</span><br><span class="line">|Hello,Universe.|</span><br><span class="line">+---------------+</span><br><span class="line">-------d3.multiDisplay()--------</span><br><span class="line">+---------------+</span><br><span class="line">|Hello,Universe.|</span><br><span class="line">|Hello,Universe.|</span><br><span class="line">|Hello,Universe.|</span><br><span class="line">|Hello,Universe.|</span><br><span class="line">|Hello,Universe.|</span><br><span class="line">+---------------+</span><br></pre></td></tr></table></figure>
+<h2 id="类图"><a href="#类图" class="headerlink" title="类图"></a>类图</h2><p><img src="https://upload-images.jianshu.io/upload_images/10024246-9af2691e6e770c44.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240"></p>
+<h2 id="角色"><a href="#角色" class="headerlink" title="角色"></a>角色</h2><ul>
+<li>Abstraction（抽象化）<br>该角色位于“类的功能层次结构”的最上层，它使用Implement角色的方法定义了基本功能。该角色中保存了Implement角色的示例。在示例中，由Display类扮演该角色</li>
+<li>RefinedAbstract（改善后的抽象化）<br>在Abstraction角色的基础上增加了新的角色。在示例中，由CountDisplay类扮演该角色</li>
+<li>Implementor（实现者）<br>该角色位于“类的实现层次结构”的最上层。它定义了用于实现Abstraction角色的接口方法。在示例中，由DisplayImpl类扮演此角色</li>
+<li>ConcreteImplementor（具体实现者）<br>该角色负责实现在Implement角色中定义的接口。在示例中，由StringDisplayImpl类扮演该角色</li>
+</ul>
+
+      
+    </div>
+
+    
+    
+    
+
+    <footer class="post-footer">
+        <div class="post-eof"></div>
+      
+    </footer>
+  </article>
+</div>
+
+
+
 
     
 
@@ -1420,118 +1550,6 @@
 
 
 
-    
-
-
-<div class="post-block">
-  
-  
-
-  <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="">
-    <link itemprop="mainEntityOfPage" href="https://lzhwweb.github.io/nirvana/DesignPattern/%E8%AE%BE%E8%AE%A1%E6%A8%A1%E5%BC%8F%EF%BC%88TypeScript%EF%BC%89/Iterator%E6%A8%A1%E5%BC%8F/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="image" content="/nirvana/images/headphoto.jpeg">
-      <meta itemprop="name" content="nirvana">
-      <meta itemprop="description" content="个人学习笔记">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="涅槃快乐是金">
-    </span>
-      <header class="post-header">
-        <h2 class="post-title" itemprop="name headline">
-          <a href="/nirvana/DesignPattern/%E8%AE%BE%E8%AE%A1%E6%A8%A1%E5%BC%8F%EF%BC%88TypeScript%EF%BC%89/Iterator%E6%A8%A1%E5%BC%8F/" class="post-title-link" itemprop="url">Iterator模式</a>
-        </h2>
-
-        <div class="post-meta-container">
-          <div class="post-meta">
-    <span class="post-meta-item">
-      <span class="post-meta-item-icon">
-        <i class="far fa-calendar"></i>
-      </span>
-      <span class="post-meta-item-text">发表于</span>
-
-      <time title="创建时间：2021-03-11 21:12:40" itemprop="dateCreated datePublished" datetime="2021-03-11T21:12:40+08:00">2021-03-11</time>
-    </span>
-      <span class="post-meta-item">
-        <span class="post-meta-item-icon">
-          <i class="far fa-calendar-check"></i>
-        </span>
-        <span class="post-meta-item-text">更新于</span>
-        <time title="修改时间：2021-03-10 13:43:55" itemprop="dateModified" datetime="2021-03-10T13:43:55+08:00">2021-03-10</time>
-      </span>
-    <span class="post-meta-item">
-      <span class="post-meta-item-icon">
-        <i class="far fa-folder"></i>
-      </span>
-      <span class="post-meta-item-text">分类于</span>
-        <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-          <a href="/nirvana/categories/DesignPattern/" itemprop="url" rel="index"><span itemprop="name">DesignPattern</span></a>
-        </span>
-    </span>
-
-  
-    <span id="/nirvana/DesignPattern/%E8%AE%BE%E8%AE%A1%E6%A8%A1%E5%BC%8F%EF%BC%88TypeScript%EF%BC%89/Iterator%E6%A8%A1%E5%BC%8F/" class="post-meta-item leancloud_visitors" data-flag-title="Iterator模式" title="阅读次数">
-      <span class="post-meta-item-icon">
-        <i class="far fa-eye"></i>
-      </span>
-      <span class="post-meta-item-text">阅读次数：</span>
-      <span class="leancloud-visitors-count"></span>
-    </span>
-      </div>
-      <div class="post-meta">
-    <span class="post-meta-item" title="本文字数">
-      <span class="post-meta-item-icon">
-        <i class="far fa-file-word"></i>
-      </span>
-      <span class="post-meta-item-text">本文字数：</span>
-      <span>2.5k</span>
-    </span>
-    <span class="post-meta-item" title="阅读时长">
-      <span class="post-meta-item-icon">
-        <i class="far fa-clock"></i>
-      </span>
-      <span class="post-meta-item-text">阅读时长 &asymp;</span>
-      <span>2 分钟</span>
-    </span>
-</div>
-
-        </div>
-      </header>
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-          <p>将（Book）放置到书架（BookShelf）中，并将书名按顺序显示</p>
-<h2 id="接口："><a href="#接口：" class="headerlink" title="接口："></a>接口：</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line">import Book from &quot;.&#x2F;Book&quot;;</span><br><span class="line">&#x2F;&#x2F;Aggregate接口是所要遍历的集合的接口</span><br><span class="line">export interface Aggregate &#123;</span><br><span class="line">    bookIterator: BookIterator;</span><br><span class="line">&#125;</span><br><span class="line">&#x2F;&#x2F;Iterator接口，用于遍历集合中的元素</span><br><span class="line">export interface BookIterator &#123;</span><br><span class="line">    hasNext(): boolean;&#x2F;&#x2F;是否有下一个</span><br><span class="line">    next(): Book;&#x2F;&#x2F;获取下一个元素</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-<p>#Book类：</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br></pre></td><td class="code"><pre><span class="line">&#x2F;**</span><br><span class="line"> * class Book</span><br><span class="line"> *&#x2F;</span><br><span class="line">export default class Book &#123;</span><br><span class="line">    private name: string;</span><br><span class="line">    &#x2F;**</span><br><span class="line">     * Book</span><br><span class="line">     *&#x2F;</span><br><span class="line">    constructor(name: string) &#123;</span><br><span class="line">        this.name &#x3D; name;</span><br><span class="line">    &#125;</span><br><span class="line">    public getName(): string &#123;</span><br><span class="line">        return this.name</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-<p>#BookShelf类：</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br></pre></td><td class="code"><pre><span class="line">import Book from &quot;.&#x2F;Book&quot;;</span><br><span class="line">import &#123; BookIterator &#125; from &quot;.&#x2F;Aggregate&quot;;</span><br><span class="line">import BookShelfIterator from &quot;.&#x2F;BookShelfIterator&quot;;</span><br><span class="line">export default class BookShelf &#123;</span><br><span class="line">    private books: Array&lt;Book&gt;;</span><br><span class="line">    private last: number &#x3D; 0;</span><br><span class="line">    constructor(maxsize: number) &#123;</span><br><span class="line">        this.books &#x3D; new Array&lt;Book&gt;(maxsize);</span><br><span class="line">    &#125;</span><br><span class="line">    &#x2F;**</span><br><span class="line">     * appendBook</span><br><span class="line">     *&#x2F;</span><br><span class="line">    public appendBook(book: Book): void &#123;</span><br><span class="line">        this.books[this.last] &#x3D; book;</span><br><span class="line">        this.last++;</span><br><span class="line">    &#125;</span><br><span class="line">    &#x2F;**</span><br><span class="line">     * getBookAt</span><br><span class="line">     *&#x2F;</span><br><span class="line">    public getBookAt(index: number): Book &#123;</span><br><span class="line">        return this.books[index]</span><br><span class="line">    &#125;</span><br><span class="line">    &#x2F;**</span><br><span class="line">     * getLength</span><br><span class="line">     *&#x2F;</span><br><span class="line">    public getLength(): number &#123;</span><br><span class="line">        return this.last;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    &#x2F;**</span><br><span class="line">     * name</span><br><span class="line">     *&#x2F;</span><br><span class="line">    public bookIterator(): BookIterator &#123;</span><br><span class="line">        return new BookShelfIterator(this);</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-<p>#BookShelfIterator类</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br></pre></td><td class="code"><pre><span class="line"> import BookShelf from &quot;.&#x2F;BookShelf&quot;;</span><br><span class="line">import Book from &quot;.&#x2F;Book&quot;;</span><br><span class="line">import &#123; BookIterator &#125; from &quot;.&#x2F;Aggregate&quot;;</span><br><span class="line">export default class BookShelfIterator implements BookIterator &#123;</span><br><span class="line">    private bookShelf: BookShelf;</span><br><span class="line">    private index: number;</span><br><span class="line">    constructor(bookShelf: BookShelf) &#123;</span><br><span class="line">        this.bookShelf &#x3D; bookShelf;</span><br><span class="line">        this.index &#x3D; 0;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    &#x2F;**</span><br><span class="line">     * hasNext</span><br><span class="line">     *&#x2F;</span><br><span class="line">    public hasNext(): boolean &#123;</span><br><span class="line">        if (this.index &lt; this.bookShelf.getLength()) &#123;</span><br><span class="line">            return true;</span><br><span class="line">        &#125; else &#123;</span><br><span class="line">            return false;</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">    &#x2F;**</span><br><span class="line">     * next</span><br><span class="line">     *&#x2F;</span><br><span class="line">    public next(): Book &#123;</span><br><span class="line">        const book &#x3D; this.bookShelf.getBookAt(this.index);</span><br><span class="line">        this.index++;</span><br><span class="line">        return book;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-<p>#index入口</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line">import BookShelf from &quot;.&#x2F;BookShelf&quot;;</span><br><span class="line">import Book from &quot;.&#x2F;Book&quot;;</span><br><span class="line"></span><br><span class="line">let bookShelf &#x3D; new BookShelf(4);</span><br><span class="line">bookShelf.appendBook(new Book(&quot;test1&quot;));</span><br><span class="line">bookShelf.appendBook(new Book(&quot;test2&quot;));</span><br><span class="line">bookShelf.appendBook(new Book(&quot;test3&quot;));</span><br><span class="line">bookShelf.appendBook(new Book(&quot;test4&quot;));</span><br><span class="line">const it &#x3D; bookShelf.bookIterator();</span><br><span class="line">while (it.hasNext()) &#123;</span><br><span class="line">    const book &#x3D; it.next();</span><br><span class="line">    console.log(book.getName());</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-
-      
-    </div>
-
-    
-    
-    
-
-    <footer class="post-footer">
-        <div class="post-eof"></div>
-      
-    </footer>
-  </article>
-</div>
-
-
-
-
   <nav class="pagination">
     <a class="extend prev" rel="prev" href="/nirvana/"><i class="fa fa-angle-left" aria-label="上一页"></i></a><a class="page-number" href="/nirvana/">1</a><span class="page-number current">2</span><a class="page-number" href="/nirvana/page/3/">3</a><span class="space">&hellip;</span><a class="page-number" href="/nirvana/page/19/">19</a><a class="extend next" rel="next" href="/nirvana/page/3/"><i class="fa fa-angle-right" aria-label="下一页"></i></a>
   </nav>
@@ -1579,14 +1597,14 @@
       <i class="fa fa-chart-line"></i>
     </span>
       <span>站点总字数：</span>
-    <span title="站点总字数">534k</span>
+    <span title="站点总字数">538k</span>
   </span>
   <span class="post-meta-item">
     <span class="post-meta-item-icon">
       <i class="fa fa-coffee"></i>
     </span>
       <span>站点阅读时长 &asymp;</span>
-    <span title="站点阅读时长">8:06</span>
+    <span title="站点阅读时长">8:09</span>
   </span>
 </div>
   <div class="powered-by">由 <a href="https://hexo.io/" class="theme-link" rel="noopener" target="_blank">Hexo</a> & <a href="https://theme-next.js.org/" class="theme-link" rel="noopener" target="_blank">NexT.Gemini</a> 强力驱动
