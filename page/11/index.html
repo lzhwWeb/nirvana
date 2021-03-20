@@ -206,7 +206,7 @@
   <nav class="site-state">
       <div class="site-state-item site-state-posts">
           <a href="/nirvana/archives">
-          <span class="site-state-item-count">179</span>
+          <span class="site-state-item-count">183</span>
           <span class="site-state-item-name">日志</span>
         </a>
       </div>
@@ -249,7 +249,7 @@
   
 
   <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="">
-    <link itemprop="mainEntityOfPage" href="https://lzhwweb.github.io/nirvana/DesignPattern/%E8%AE%BE%E8%AE%A1%E6%A8%A1%E5%BC%8F%EF%BC%88TypeScript%EF%BC%89/%E8%AE%BE%E8%AE%A1%E6%A8%A1%E5%BC%8F%E5%88%86%E7%B1%BB/">
+    <link itemprop="mainEntityOfPage" href="https://lzhwweb.github.io/nirvana/javascript/%E5%89%8D%E7%AB%AF/%E5%A6%82%E4%BD%95%E5%BD%BB%E5%BA%95%E9%81%BF%E5%85%8D%E6%AD%A3%E5%88%99%E8%A1%A8%E8%BE%BE%E5%BC%8F%E7%9A%84%E7%81%BE%E9%9A%BE%E6%80%A7%E5%9B%9E%E6%BA%AF%EF%BC%9F/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="image" content="/nirvana/images/headphoto.jpeg">
@@ -262,7 +262,7 @@
     </span>
       <header class="post-header">
         <h2 class="post-title" itemprop="name headline">
-          <a href="/nirvana/DesignPattern/%E8%AE%BE%E8%AE%A1%E6%A8%A1%E5%BC%8F%EF%BC%88TypeScript%EF%BC%89/%E8%AE%BE%E8%AE%A1%E6%A8%A1%E5%BC%8F%E5%88%86%E7%B1%BB/" class="post-title-link" itemprop="url">设计模式分类</a>
+          <a href="/nirvana/javascript/%E5%89%8D%E7%AB%AF/%E5%A6%82%E4%BD%95%E5%BD%BB%E5%BA%95%E9%81%BF%E5%85%8D%E6%AD%A3%E5%88%99%E8%A1%A8%E8%BE%BE%E5%BC%8F%E7%9A%84%E7%81%BE%E9%9A%BE%E6%80%A7%E5%9B%9E%E6%BA%AF%EF%BC%9F/" class="post-title-link" itemprop="url">如何彻底避免正则表达式的灾难性回溯？</a>
         </h2>
 
         <div class="post-meta-container">
@@ -288,7 +288,7 @@
       </span>
       <span class="post-meta-item-text">分类于</span>
         <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-          <a href="/nirvana/categories/DesignPattern/" itemprop="url" rel="index"><span itemprop="name">DesignPattern</span></a>
+          <a href="/nirvana/categories/javascript/" itemprop="url" rel="index"><span itemprop="name">javascript</span></a>
         </span>
     </span>
 
@@ -300,7 +300,178 @@
         <i class="far fa-file-word"></i>
       </span>
       <span class="post-meta-item-text">本文字数：</span>
-      <span>275</span>
+      <span>3.2k</span>
+    </span>
+    <span class="post-meta-item" title="阅读时长">
+      <span class="post-meta-item-icon">
+        <i class="far fa-clock"></i>
+      </span>
+      <span class="post-meta-item-text">阅读时长 &asymp;</span>
+      <span>3 分钟</span>
+    </span>
+</div>
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+          <p>正则表达式的灾难性回溯（Catastrophic Backtracking）是指，正则在匹配的时候回溯过多，造成 CPU 100%，正常服务被阻塞。</p>
+<h2 id="背景"><a href="#背景" class="headerlink" title="背景"></a>背景</h2><p>这里有一篇<a target="_blank" rel="noopener" href="https://zhuanlan.zhihu.com/p/38229530">文章</a>详细的描述了一次正则回溯导致 CPU 100% 的发现和解决过程，原文比较长，我之前也在 OpenResty 的开发中遇到过两次类似的问题。</p>
+<p>这里简单归纳下，你就可以不用花费时间去了解背景了：</p>
+<ol>
+<li> 大部分开发语言的正则引擎是用基于回溯的 NFA 来实现（而不是基于 Thompson’s NFA）；</li>
+<li> 如果回溯次数过多，就会导致灾难性回溯，CPU 100%；</li>
+<li> 需要用 gdb 分析 dump，或者 systemtap 分析线上环境来定位；</li>
+<li> 这种问题很难在代码上线前发现，需要逐个 review 正则表达式；</li>
+</ol>
+<p>站在开发的角度，修复完有问题的正则表达式，就告一段落了。最多再加上一个保险机制，限制下回溯的次数，比如在 OpenResty 中这样设置：</p>
+<p><code>lua_regex_match_limit 100000;</code></p>
+<p>这样即使出现灾难性回溯，也会被限制住，不会跑满 CPU。</p>
+<p>嗯，看上去已经很完美了吗？让我们来跳出开发的层面，用不同的维度来看待这个问题。</p>
+<h2 id="攻击者"><a href="#攻击者" class="headerlink" title="攻击者"></a>攻击者</h2><p>只用一台机器，发送一个请求，就可以打跨对方的服务器，这简直就是黑客梦寐以求的核武器。与之相比，什么 DDoS 弱爆了，动静大还花钱多。</p>
+<p>这种攻击也有自己的名字：**ReDoS (RegEx Denial of Service)**。</p>
+<p>由于正则表达式应用非常广泛，几乎存在于后端服务的各个部分，所以只要找到其中一个漏洞，就有机可趁。</p>
+<p>试想一个场景，黑客发现了 WAF 中存在 ReDoS 漏洞，发送一个请求打垮了 WAF；你无法在短时间内定位这个问题，<em>甚至意识不到这是一次攻击</em>；为了保证业务的正常，你选择重启或者暂时关闭 WAF；在 WAF 失效期间，黑客利用 SQL 注入，拖走了你的数据库。而你，可能还完全蒙在鼓里。</p>
+<p><em>由于开源软件和云服务的广泛使用，只保证自己写的正则表达式没有漏洞，也是不够的</em>。这是另外一个话题了，我们这里先只讨论自己可控范围内的正则。</p>
+<h2 id="如何发现这类正则表达式？"><a href="#如何发现这类正则表达式？" class="headerlink" title="如何发现这类正则表达式？"></a>如何发现这类正则表达式？</h2><p><strong>解决问题的第一步，就是发现问题，而且要尽量发现所有问题</strong>，也就是所谓安全的发现能力。</p>
+<p>指望人工 code review 来发现有问题的正则，自然是靠不住的。大部分开发者是没有这方面安全意识的，就算有意去找，人也不可能从复杂的正则表达式中找到问题所在。</p>
+<p>这正是自动化工具大显身手的时候。</p>
+<p>我们有以下两种自动化的方法来解决：</p>
+<ul>
+<li>  静态检测</li>
+</ul>
+<p>这类工具可以扫描代码中正则表达式，根据一定的算法，从中找出有灾难性回溯的正则。</p>
+<p>比如<em>RXXR2</em>（<a href="https://link.zhihu.com/?target=http://www.cs.bham.ac.uk/%257Ehxt/research/rxxr2/">http://www.cs.bham.ac.uk/%7Ehxt/research/rxxr2/</a>），它是基于一篇 paper 中的算法来实现，把正则转换为ε-NFA，然后再进行搜索，但并不支持正则表达式的扩展语法，所以会有漏报。</p>
+<ul>
+<li>  动态 fuzzing</li>
+</ul>
+<p>fuzz 测试是一种通用的软件测试方法，通过长时间输入大量随机的数据，来检测软件是否有崩溃、内存泄漏等问题。</p>
+<p>同样的，在正则的测试中我们也可以用到这种方法。我们可以根据已有的正则表达式来生成测试数据，也可以完全随机生成。</p>
+<p><em>SlowFuzz</em> 是其中一个开源的工具，也是基于一篇 paper 的算法实现，本文最后会列出 paper，它是一个通用的工具，并没有针对正则的结构做处理，所以会有漏报。</p>
+<p><em>SDLFuzzer</em> 是几年前微软开发的一个专门的 ReDoS 检测工具，但已经不再维护了。</p>
+<p>这方面的工具可选择的不多，而且关注度不高。不过让我兴奋的是，在搜索资料的过程中，发现了南京大学几位老师和博士关于 ReDoS 的一篇paper，并且和 paper 一起开源了 <strong>ReScue</strong>这个工具： <a href="https://link.zhihu.com/?target=https://2bdenny.github.io/ReScue/">https://2bdenny.github.io/ReScue/</a>。这个工具已经找出了几个开源项目中的 ReDoS 漏洞。</p>
+<p>下面是 paper 中对比测试的结果：</p>
+<p><img src="https://upload-images.jianshu.io/upload_images/10024246-f0fcc9c46059705d.jpg?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="image"></p>
+<p><img src="https://upload-images.jianshu.io/upload_images/10024246-32003a30f700d785.jpg?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="image"></p>
+<h2 id="可否一劳永逸？"><a href="#可否一劳永逸？" class="headerlink" title="可否一劳永逸？"></a>可否一劳永逸？</h2><p>即使我们用了这类工具，有难免会有误报和漏报，那么有没有一劳永逸的方式来解决 ReDoS 呢？</p>
+<p>那么我们就要回到<strong>问题产生的根源</strong>去寻找答案：<strong>正则引擎使用了回溯的方式来匹配。</strong></p>
+<p>如果我们弃用这种方法，是不是就可以了呢？没错，已经有不少其他的正则引擎的实现，都可以一劳永逸的来解决。他们都<strong>放弃了回溯，用 NFA/DFA 自动机的方法来实现</strong>，优点是适合流式匹配，也更加安全，缺点不支持很多正则的扩展语法，比如 backreferences，好在这些一般也用不到。</p>
+<ul>
+<li>  Google RE2</li>
+</ul>
+<p>谷歌的 RE2 是其中完成度比较高开源项目。它支持 PCRE 的大部分语法，而且有 Go、Python、Perl、Node.js 等多种开发语言的库实现，上手和替换成本很低。</p>
+<p>我们以 Perl 为例，看下 RE2 是否可以避免灾难性回溯问题。</p>
+<p>我们先来看下这个结果对比图：</p>
+<p><img src="https://upload-images.jianshu.io/upload_images/10024246-15ea93dc35cd94c5.jpg?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="image"></p>
+<p>代码如下，感兴趣的可以自己试试看：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">time perl -e &#39;if (&quot;aaaaaaaaaaaaaaaaaaaaaaaaaaaaaa&quot; &#x3D;~ &#x2F;a?a?a?a?a?a?a?a?a?a?a?a?a?a?a?a?a?a?a?a?a?a?a?a?a?a?a?a?a?a?aaaaaaaaaaaaaaaaaaaaaaaaaaaaaa&#x2F;) &#123;print(&quot;hit&quot;);&#125;&#39;</span><br></pre></td></tr></table></figure>
+
+<p><code>40.80s user 0.00s system 99% cpu 40.800 total</code></p>
+<p>需要 40.8 秒才能跑完这个正则，期间 CPU 99%。</p>
+<p>采用 RE2 之后，对比非常明显：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">time perl -e &#39;use re::engine::RE2; if (&quot;aaaaaaaaaaaaaaaaaaaaaaaaaaaaaa&quot; &#x3D;~ &#x2F;a?a?a?a?a?a?a?a?a?a?a?a?a?a?a?a?a?a?a?a?a?a?a?a?a?a?a?a?a?a?aaaaaaaaaaaaaaaaaaaaaaaaaaaaaa&#x2F;) &#123;print(&quot; hit&quot;);&#125;&#39;</span><br></pre></td></tr></table></figure>
+
+<p><code>perl -e 0.00s user 0.00s system 34% cpu 0.011 total</code></p>
+<ul>
+<li>  Intel Hyperscan</li>
+</ul>
+<p>Intel Hyperscan 也是类似 RE2 的正则引擎，也有Perl、Python 等语言的库，上手难度不大。</p>
+<p>只不过按照 Intel 的惯例，多了平台的绑定，只能跑在 x86 中。</p>
+<p>如果非要说有什么独特的好处，可能是能够和 Intel 的指令集还有硬件更好的配合，有性能的提升，比如结合下自家的 DPDK。</p>
+<p>开源的网络入侵检测工具 Snort，也用 Hyperscan 替换了之前的正则引擎，熟悉 Snort 的同学可以试试看。</p>
+<h2 id="扩展"><a href="#扩展" class="headerlink" title="扩展"></a>扩展</h2><blockquote>
+<p>这里有几篇正则表达式方面的 paper，感兴趣的可以作为扩展阅读。</p>
+<ol>
+<li> SlowFuzz: Automated Domain-Independent Detection of Algorithmic Complexity Vulnerabilities： <a href="https://link.zhihu.com/?target=https://arxiv.org/pdf/1708.08437.pdf">https://arxiv.org/pdf/1708.08437.pdf</a></li>
+<li> Static Analysis for Regular Expression Exponential Runtime via Substructural Logics：<a href="https://link.zhihu.com/?target=http://www.cs.bham.ac.uk/%257Ehxt/research/redos_full.pdf">http://www.cs.bham.ac.uk/%7Ehxt/research/redos_full.pdf</a></li>
+<li> ReScue: Crafting Regular Expression DoS Attacks：<a href="https://link.zhihu.com/?target=https://cs.nju.edu.cn/changxu/1_publications/ASE18.pdf">https://cs.nju.edu.cn/changxu/1_publications/ASE18.pdf</a></li>
+<li> Regular Expression Matching Can Be Simple And Fast： <a href="https://link.zhihu.com/?target=https://swtch.com/~rsc/regexp/regexp1.html">https://swtch.com/~rsc/regexp/regexp1.html</a></li>
+</ol>
+</blockquote>
+<blockquote>
+<p>转载 ：<a target="_blank" rel="noopener" href="https://zhuanlan.zhihu.com/p/44425997">https://zhuanlan.zhihu.com/p/44425997</a></p>
+</blockquote>
+
+      
+    </div>
+
+    
+    
+    
+
+    <footer class="post-footer">
+        <div class="post-eof"></div>
+      
+    </footer>
+  </article>
+</div>
+
+
+
+
+    
+
+
+<div class="post-block">
+  
+  
+
+  <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="">
+    <link itemprop="mainEntityOfPage" href="https://lzhwweb.github.io/nirvana/javascript/%E5%89%8D%E7%AB%AF/%E5%BC%80%E5%8F%91%E4%BA%BA%E5%91%98%E5%9C%A8%E7%BA%BF%E9%80%9F%E6%9F%A5%E6%89%8B%E5%86%8C/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/nirvana/images/headphoto.jpeg">
+      <meta itemprop="name" content="nirvana">
+      <meta itemprop="description" content="个人学习笔记">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="涅槃快乐是金">
+    </span>
+      <header class="post-header">
+        <h2 class="post-title" itemprop="name headline">
+          <a href="/nirvana/javascript/%E5%89%8D%E7%AB%AF/%E5%BC%80%E5%8F%91%E4%BA%BA%E5%91%98%E5%9C%A8%E7%BA%BF%E9%80%9F%E6%9F%A5%E6%89%8B%E5%86%8C/" class="post-title-link" itemprop="url">开发人员在线速查手册</a>
+        </h2>
+
+        <div class="post-meta-container">
+          <div class="post-meta">
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-calendar"></i>
+      </span>
+      <span class="post-meta-item-text">发表于</span>
+
+      <time title="创建时间：2021-03-11 21:12:40" itemprop="dateCreated datePublished" datetime="2021-03-11T21:12:40+08:00">2021-03-11</time>
+    </span>
+      <span class="post-meta-item">
+        <span class="post-meta-item-icon">
+          <i class="far fa-calendar-check"></i>
+        </span>
+        <span class="post-meta-item-text">更新于</span>
+        <time title="修改时间：2021-03-10 13:43:55" itemprop="dateModified" datetime="2021-03-10T13:43:55+08:00">2021-03-10</time>
+      </span>
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-folder"></i>
+      </span>
+      <span class="post-meta-item-text">分类于</span>
+        <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+          <a href="/nirvana/categories/javascript/" itemprop="url" rel="index"><span itemprop="name">javascript</span></a>
+        </span>
+    </span>
+
+  
+      </div>
+      <div class="post-meta">
+    <span class="post-meta-item" title="本文字数">
+      <span class="post-meta-item-icon">
+        <i class="far fa-file-word"></i>
+      </span>
+      <span class="post-meta-item-text">本文字数：</span>
+      <span>135</span>
     </span>
     <span class="post-meta-item" title="阅读时长">
       <span class="post-meta-item-icon">
@@ -318,31 +489,684 @@
     
     
     <div class="post-body" itemprop="articleBody">
-          <h2 id="创建型设计模式"><a href="#创建型设计模式" class="headerlink" title="创建型设计模式"></a>创建型设计模式</h2><ul>
-<li><a href="/nirvana/DesignPattern/%E8%AE%BE%E8%AE%A1%E6%A8%A1%E5%BC%8F%EF%BC%88TypeScript%EF%BC%89/Abstract-Factory-Pattern%EF%BC%88%E6%8A%BD%E8%B1%A1%E5%B7%A5%E5%8E%82%E6%A8%A1%E5%BC%8F%EF%BC%89">Abstract Factory模式</a></li>
-<li><a href="/nirvana/DesignPattern/%E8%AE%BE%E8%AE%A1%E6%A8%A1%E5%BC%8F%EF%BC%88TypeScript%EF%BC%89/Builder-Pattern%EF%BC%88%E5%BB%BA%E9%80%A0%E8%80%85%E6%A8%A1%E5%BC%8F%EF%BC%89">Builder模式</a></li>
-<li><a href="/nirvana/DesignPattern/%E8%AE%BE%E8%AE%A1%E6%A8%A1%E5%BC%8F%EF%BC%88TypeScript%EF%BC%89/Factory-Method(%E5%B7%A5%E5%8E%82%E6%A8%A1%E5%BC%8F)">Factory Method模式</a></li>
-<li><a href="/nirvana/DesignPattern/%E8%AE%BE%E8%AE%A1%E6%A8%A1%E5%BC%8F%EF%BC%88TypeScript%EF%BC%89/Prototype-Pattern(%E5%8E%9F%E5%9E%8B%E6%A8%A1%E5%BC%8F%EF%BC%89">Prototype模式</a></li>
-<li><a href="/nirvana/DesignPattern/%E8%AE%BE%E8%AE%A1%E6%A8%A1%E5%BC%8F%EF%BC%88TypeScript%EF%BC%89/Singleton%E6%A8%A1%E5%BC%8F">Singleton模式</a><h2 id="结构型设计模式"><a href="#结构型设计模式" class="headerlink" title="结构型设计模式"></a>结构型设计模式</h2></li>
-<li><a href="/nirvana/DesignPattern/%E8%AE%BE%E8%AE%A1%E6%A8%A1%E5%BC%8F%EF%BC%88TypeScript%EF%BC%89/Adapter%E6%A8%A1%E5%BC%8F%EF%BC%88%E9%80%82%E9%85%8D%E5%99%A8%EF%BC%89">Adapter模式</a></li>
-<li><a href="/nirvana/DesignPattern/%E8%AE%BE%E8%AE%A1%E6%A8%A1%E5%BC%8F%EF%BC%88TypeScript%EF%BC%89/Bridge-Pattern%EF%BC%88%E6%A1%A5%E6%8E%A5%E6%A8%A1%E5%BC%8F%EF%BC%89">Bridge模式</a></li>
-<li><a href="/nirvana/DesignPattern/%E8%AE%BE%E8%AE%A1%E6%A8%A1%E5%BC%8F%EF%BC%88TypeScript%EF%BC%89/Composite%E6%A8%A1%E5%BC%8F%EF%BC%88%E7%BB%84%E5%90%88%E5%AE%9E%E4%BD%93%E6%A8%A1%E5%BC%8F%EF%BC%89">Composite模式</a></li>
-<li><a href="/nirvana/DesignPattern/%E8%AE%BE%E8%AE%A1%E6%A8%A1%E5%BC%8F%EF%BC%88TypeScript%EF%BC%89/Decorator%E6%A8%A1%E5%BC%8F%EF%BC%88%E8%A3%85%E9%A5%B0%E5%99%A8%E6%A8%A1%E5%BC%8F%EF%BC%89">Decorator模式</a></li>
-<li><a href="/nirvana/DesignPattern/%E8%AE%BE%E8%AE%A1%E6%A8%A1%E5%BC%8F%EF%BC%88TypeScript%EF%BC%89/Facade%E6%A8%A1%E5%BC%8F%EF%BC%88%E9%97%A8%E9%9D%A2%E6%A8%A1%E5%BC%8F%EF%BC%89">Facade模式</a></li>
-<li><a href="/nirvana/DesignPattern/%E8%AE%BE%E8%AE%A1%E6%A8%A1%E5%BC%8F%EF%BC%88TypeScript%EF%BC%89/Flyweight-Pattern(%E4%BA%AB%E5%85%83%E6%A8%A1%E5%BC%8F)">Flyweight模式</a></li>
-<li><a href="/nirvana/DesignPattern/%E8%AE%BE%E8%AE%A1%E6%A8%A1%E5%BC%8F%EF%BC%88TypeScript%EF%BC%89/Proxy-Pattern(%E4%BB%A3%E7%90%86%E6%A8%A1%E5%BC%8F)">Proxy模式</a><h2 id="行为性设计模式"><a href="#行为性设计模式" class="headerlink" title="行为性设计模式"></a>行为性设计模式</h2></li>
-<li><a href="/nirvana/DesignPattern/%E8%AE%BE%E8%AE%A1%E6%A8%A1%E5%BC%8F%EF%BC%88TypeScript%EF%BC%89/Chain-of-Responsibility%E6%A8%A1%E5%BC%8F%EF%BC%88%E8%B4%A3%E4%BB%BB%E9%93%BE%E6%A8%A1%E5%BC%8F%EF%BC%89">Chain of Responsibility模式</a></li>
-<li><a href="/nirvana/DesignPattern/%E8%AE%BE%E8%AE%A1%E6%A8%A1%E5%BC%8F%EF%BC%88TypeScript%EF%BC%89/Command%E6%A8%A1%E5%BC%8F%EF%BC%88%E5%91%BD%E4%BB%A4%E6%A8%A1%E5%BC%8F%EF%BC%89">Command模式</a></li>
-<li><a href="/nirvana/DesignPattern/%E8%AE%BE%E8%AE%A1%E6%A8%A1%E5%BC%8F%EF%BC%88TypeScript%EF%BC%89/Interpreter-Pattern(%E8%A7%A3%E9%87%8A%E5%99%A8%E6%A8%A1%E5%BC%8F%EF%BC%89">Interpreter模式</a></li>
-<li><a href="/nirvana/DesignPattern/%E8%AE%BE%E8%AE%A1%E6%A8%A1%E5%BC%8F%EF%BC%88TypeScript%EF%BC%89/Iterator%E6%A8%A1%E5%BC%8F">Iterator模式</a></li>
-<li><a href="/nirvana/DesignPattern/%E8%AE%BE%E8%AE%A1%E6%A8%A1%E5%BC%8F%EF%BC%88TypeScript%EF%BC%89/Mediator%E6%A8%A1%E5%BC%8F%EF%BC%88%E4%B8%AD%E4%BB%8B%E8%80%85%E6%A8%A1%E5%BC%8F%EF%BC%89">Mediator模式</a></li>
-<li><a href="/nirvana/DesignPattern/%E8%AE%BE%E8%AE%A1%E6%A8%A1%E5%BC%8F%EF%BC%88TypeScript%EF%BC%89/Memento-Pattern%EF%BC%88%E5%A4%87%E5%BF%98%E5%BD%95%E6%A8%A1%E5%BC%8F%EF%BC%89">Memento模式</a></li>
-<li><a href="/nirvana/DesignPattern/%E8%AE%BE%E8%AE%A1%E6%A8%A1%E5%BC%8F%EF%BC%88TypeScript%EF%BC%89/Observer%E6%A8%A1%E5%BC%8F%EF%BC%88%E8%A7%82%E5%AF%9F%E8%80%85%E6%A8%A1%E5%BC%8F%EF%BC%89">Observer模式</a></li>
-<li><a href="/nirvana/DesignPattern/%E8%AE%BE%E8%AE%A1%E6%A8%A1%E5%BC%8F%EF%BC%88TypeScript%EF%BC%89/State-Pattern%E6%A8%A1%E5%BC%8F%EF%BC%88%E7%8A%B6%E6%80%81%E6%A8%A1%E5%BC%8F%EF%BC%89">State模式</a></li>
-<li><a href="/nirvana/DesignPattern/%E8%AE%BE%E8%AE%A1%E6%A8%A1%E5%BC%8F%EF%BC%88TypeScript%EF%BC%89/Strategy-Pattern%E6%A8%A1%E5%BC%8F%EF%BC%88%E7%AD%96%E7%95%A5%E6%A8%A1%E5%BC%8F%EF%BC%89">Strategy模式</a></li>
-<li><a href="/nirvana/DesignPattern/%E8%AE%BE%E8%AE%A1%E6%A8%A1%E5%BC%8F%EF%BC%88TypeScript%EF%BC%89/Template-Method%EF%BC%88%E6%A8%A1%E6%9D%BF%E6%96%B9%E6%B3%95%E8%AE%BE%E8%AE%A1%E6%A8%A1%E5%BC%8F%EF%BC%89">Template Method模式</a></li>
-<li><a href="/nirvana/DesignPattern/%E8%AE%BE%E8%AE%A1%E6%A8%A1%E5%BC%8F%EF%BC%88TypeScript%EF%BC%89/Visitor-Pattern(%E8%AE%BF%E9%97%AE%E8%80%85%E6%A8%A1%E5%BC%8F)">Visitor模式</a></li>
+          <p>不管你是多么优秀的程序员，你都不可能记住一切。在你编写程序的过程中碰到问题需要查阅手册的时候，若有现成的在线手册可参考则可以为你节省很多时间。为了方便各位朋友，向大家推荐一个非常棒的在线手册索引网站——<a target="_blank" rel="noopener" href="http://overapi.com/">overapi.com</a>，这个网站收集了众多对开发人员非常有用的手册。<br><img src="https://upload-images.jianshu.io/upload_images/10024246-bd3e11eb7a95a19d.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240"></p>
+
+      
+    </div>
+
+    
+    
+    
+
+    <footer class="post-footer">
+        <div class="post-eof"></div>
+      
+    </footer>
+  </article>
+</div>
+
+
+
+
+    
+
+
+<div class="post-block">
+  
+  
+
+  <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="">
+    <link itemprop="mainEntityOfPage" href="https://lzhwweb.github.io/nirvana/javascript/%E5%89%8D%E7%AB%AF/%E6%8E%A2%E7%B4%A2HTTP%E4%BC%A0%E8%BE%93%E4%B8%ADgzip%E5%8E%8B%E7%BC%A9/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/nirvana/images/headphoto.jpeg">
+      <meta itemprop="name" content="nirvana">
+      <meta itemprop="description" content="个人学习笔记">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="涅槃快乐是金">
+    </span>
+      <header class="post-header">
+        <h2 class="post-title" itemprop="name headline">
+          <a href="/nirvana/javascript/%E5%89%8D%E7%AB%AF/%E6%8E%A2%E7%B4%A2HTTP%E4%BC%A0%E8%BE%93%E4%B8%ADgzip%E5%8E%8B%E7%BC%A9/" class="post-title-link" itemprop="url">探索HTTP传输中gzip压缩</a>
+        </h2>
+
+        <div class="post-meta-container">
+          <div class="post-meta">
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-calendar"></i>
+      </span>
+      <span class="post-meta-item-text">发表于</span>
+
+      <time title="创建时间：2021-03-11 21:12:40" itemprop="dateCreated datePublished" datetime="2021-03-11T21:12:40+08:00">2021-03-11</time>
+    </span>
+      <span class="post-meta-item">
+        <span class="post-meta-item-icon">
+          <i class="far fa-calendar-check"></i>
+        </span>
+        <span class="post-meta-item-text">更新于</span>
+        <time title="修改时间：2021-03-10 13:43:55" itemprop="dateModified" datetime="2021-03-10T13:43:55+08:00">2021-03-10</time>
+      </span>
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-folder"></i>
+      </span>
+      <span class="post-meta-item-text">分类于</span>
+        <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+          <a href="/nirvana/categories/javascript/" itemprop="url" rel="index"><span itemprop="name">javascript</span></a>
+        </span>
+    </span>
+
+  
+      </div>
+      <div class="post-meta">
+    <span class="post-meta-item" title="本文字数">
+      <span class="post-meta-item-icon">
+        <i class="far fa-file-word"></i>
+      </span>
+      <span class="post-meta-item-text">本文字数：</span>
+      <span>3.8k</span>
+    </span>
+    <span class="post-meta-item" title="阅读时长">
+      <span class="post-meta-item-icon">
+        <i class="far fa-clock"></i>
+      </span>
+      <span class="post-meta-item-text">阅读时长 &asymp;</span>
+      <span>3 分钟</span>
+    </span>
+</div>
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+          <h3 id="为什么要开启gZip"><a href="#为什么要开启gZip" class="headerlink" title="为什么要开启gZip"></a>为什么要开启gZip</h3><p>我们给某人发送邮件时，我们在传输之前把自己的文件压缩一下，接收方收到文件后再去解压获取文件。这中操作对于我们来说都已经司空见惯。我们压缩文件的目的就是为了把传输文件的体积减小，加快传输速度。我们在 <code>http</code> 传输中开启 <code>gZip</code> 的目的也是如此，但是一般文章介绍 <code>gZip</code> 时候总是结合一些服务端配置(<code>nginx</code>)或者构建工具插件(<code>webpack</code>)来说，列出一大堆配置让人看的云里雾里，以至于到最后还没搞懂 <code>为什么用</code>，<code>怎么用</code> 这些问题。</p>
+<h3 id="http-与-gZip"><a href="#http-与-gZip" class="headerlink" title="http 与 gZip"></a>http 与 gZip</h3><p>我们下面去探讨一下这些问题</p>
+<h4 id="gZip-文件怎么通讯"><a href="#gZip-文件怎么通讯" class="headerlink" title="gZip 文件怎么通讯"></a><code>gZip</code> 文件怎么通讯</h4><p>我们传输压缩文件给别人时候一般都带着后缀名 <code>.rar</code>, <code>.zip</code>之类，对方在拿到文件后根据相应的后缀名选择不同的解压方式然后去解压文件。我们在 <code>http</code> 传输时候解压文件的这个角色的扮演者就是我们使用的浏览器，但是浏览器怎么分辨这个文件是什么格式，应该用什么格式去解压呢？</p>
+<p>在 <code>http／1.0</code> 协议中关于服务端发送的数据可以配置一个 <code>Content-Encoding</code> 字段，这个字段用于说明数据的压缩方法</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">Content-Encoding: gzip</span><br><span class="line">Content-Encoding: compress</span><br><span class="line">Content-Encoding: deflate</span><br></pre></td></tr></table></figure>
+
+<p>客户端在接受到返回的数据后去检查对应字段的信息，然后根据对应的格式去做相应的解码。客户端在请求时，可以用 <code>Accept-Encoding</code> 字段说明自己接受哪些压缩方法。</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">Accept-Encoding: gzip, deflate</span><br></pre></td></tr></table></figure>
+
+<p>我们在浏览器的控制台中可以看到请求的相关信息</p>
+<p><img src="https://upload-images.jianshu.io/upload_images/10024246-e5ec64cbfb3c270e.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240"></p>
+<h5 id="兼容性"><a href="#兼容性" class="headerlink" title="兼容性"></a>兼容性</h5><p>提到浏览器作为一个前端就不由自主的会想一个问题，会不会有浏览器不支持呢。<code>HTTP/1.0</code> 是1996年5月发布的。好消息是基本不用考虑兼容性的问题，几乎所有浏览器都支持它。值得一提的是 <code>ie6</code>的早起版本中存在一个会破坏 <code>gZip</code>的错误，后面 <code>ie6</code>本身在 <code>WinXP SP2</code> 中修复了这个问题，而且用这个版本的用户数量也很少。</p>
+<h4 id="谁去压缩文件"><a href="#谁去压缩文件" class="headerlink" title="谁去压缩文件"></a>谁去压缩文件</h4><p>这件事看起来貌似只能服务端来做，我们在网上看到最多的也是诸如 <code>nginx</code> 开启 <code>gZip</code> 配置之类的文章，但是现在前端流行 <code>spa</code> 应用, 用 <code>react</code>, <code>vue</code> 之类的框架时候总伴随这一套自己的脚手架,一般用 <code>webpack</code> 作为打包工具，其中可以配置插件 如<a target="_blank" rel="noopener" href="https://github.com/webpack-contrib/compression-webpack-plugin">compression-webpack-plugin</a> 可以让我们把生成文件进行 <code>gZip</code> 等压缩并生成对应的压缩文件，而我们应用在构架时候有可能也会在服务区和前端文件中放置一层 <code>node</code> 应用来进行接口鉴权和文件转发。<code>nodejs</code>中我们熟悉的<code>express</code> 框架中也有一个<a target="_blank" rel="noopener" href="https://github.com/expressjs/compression">compression</a> 中间件，可以开启<code>gZip</code>,一时间看的人眼花缭乱，到底应该用谁怎么用呢？</p>
+<h5 id="服务端响应请求时候压缩"><a href="#服务端响应请求时候压缩" class="headerlink" title="服务端响应请求时候压缩"></a>服务端响应请求时候压缩</h5><p>其实 <code>nginx</code> 压缩和 <code>node</code> 框架中用中间件去压缩都是一样的，当我们点击网页发送一个请求时候，我们的服务端会找到对应的文件，然后对文件进行压缩返回压缩后的内容【<em>当然可以利用缓存减少压缩次数</em>】，并配置好我们上面提到的 <code>Content-Encoding</code> 信息。对于一些应用在构架时候并没有上游代理层，比如服务端就一层 <code>node</code> 就可以直接用自己本身的压缩插件对文件进行压缩，如果上游配有有 <code>nginx</code> 转发处理层，最好交给 <code>nginx</code> 来处理这些，因为它们有专门为此构建的内容，可以更好的利用缓存并减小开销（很多使用c语言编写的）。</p>
+<p>我们看一些 <code>nginx</code> 中开启 <code>gZip</code> 压缩的一部分配置</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line"># 开启gzip</span><br><span class="line">gzip on;</span><br><span class="line"># 启用gzip压缩的最小文件，小于设置值的文件将不会压缩</span><br><span class="line">gzip_min_length 1k;</span><br><span class="line"># gzip 压缩级别，1-10，数字越大压缩的越好，也越占用CPU时间，后面会有详细说明</span><br><span class="line">gzip_comp_level 2;</span><br><span class="line"># 进行压缩的文件类型。javascript有多种形式。其中的值可以在 mime.types 文件中找到。</span><br><span class="line">gzip_types text&#x2F;plain application&#x2F;javascript application&#x2F;x-javascript text&#x2F;css application&#x2F;xml text&#x2F;javascript;</span><br><span class="line"></span><br></pre></td></tr></table></figure>
+
+<h5 id="应用构建时候压缩"><a href="#应用构建时候压缩" class="headerlink" title="应用构建时候压缩"></a>应用构建时候压缩</h5><p>既然服务端都可以做了为什么 <code>webpack</code> 在打包前端应用时候还有这样一个压缩插件呢，我们可以在上面 <code>nginx</code> 配置中看到 <code>gzip_comp_level 2</code> 这个配置项，上面也有注释写道 <code>1-10</code> 数字越大压缩效果越好，但是会耗费更多的CPU和时间，我们压缩文件除了减少文件体积大小外，也是为了减少传输时间，如果我们把压缩等级配置的很高，每次请求服务端都要压缩很久才回返回信息回来，不仅服务器开销会增大很多，请求方也会等的不耐烦。但是现在的 <code>spa</code> 应用既然文件都是打包生成的，那如果我们在打包时候就直接生成高压缩等级的文件，作为静态资源放在服务器上，接收到请求后直接把压缩的文件内容返回回去会怎么样呢？</p>
+<p><code>webpack</code> 的 <code>compression-webpack-plugin</code> 就是做这个事情的，配置起来也很简单只需要在装置中加入对应插件,简单配置如下</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line">const CompressionWebpackPlugin &#x3D; require(&#39;compression-webpack-plugin&#39;);</span><br><span class="line"></span><br><span class="line">webpackConfig.plugins.push(</span><br><span class="line">    new CompressionWebpackPlugin(&#123;</span><br><span class="line">      asset: &#39;[path].gz[query]&#39;,</span><br><span class="line">      algorithm: &#39;gzip&#39;,</span><br><span class="line">      test: new RegExp(&#39;\\.(js|css)&#x2F;article&gt;),</span><br><span class="line">      threshold: 10240,</span><br><span class="line">      minRatio: 0.8</span><br><span class="line">    &#125;)</span><br><span class="line">)</span><br></pre></td></tr></table></figure>
+
+<p><code>webpack</code> 打包完成后生成打包文件外还会额外生成 <code>.gz</code> 后缀的压缩文件</p>
+<p>[图片上传失败…(image-b14f20-1614231793629)] </p>
+<p>那么这个插件的压缩等级是多少呢，我们可以在<a target="_blank" rel="noopener" href="https://github.com/webpack-contrib/compression-webpack-plugin/blob/master/src/index.js">源码</a>中看到默认的 <code>level</code> 是 <strong>9</strong></p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line">...</span><br><span class="line">const zlib &#x3D; require(&#39;zlib&#39;);</span><br><span class="line">this.options.algorithm &#x3D; zlib[this.options.algorithm];</span><br><span class="line">...</span><br><span class="line">this.options.compressionOptions &#x3D; &#123;</span><br><span class="line">    level: options.level || 9,</span><br><span class="line">    flush: options.flush</span><br><span class="line">    ...</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<p>可以看到压缩使用的是 <code>zlib</code> 库，而 <code>zlib</code> 分级来说，默认是 6 ，最高的级别就是<code>9 Best compression (also zlib.Z_BEST_COMPRESSION)</code>,因为我们只有在上线项目时候才回去打包构建一次，所以我们在构建时候使用最高级的压缩方式压缩多耗费一些时间对我们来说根本没任何损耗，而我们在服务器上也不用再去压缩文件，只需要找到相应已经压缩过的文件直接返回就可以了。</p>
+<h6 id="服务端怎么找到这些文件"><a href="#服务端怎么找到这些文件" class="headerlink" title="服务端怎么找到这些文件"></a>服务端怎么找到这些文件</h6><p>在应用层面解决这个问题还是比较简单的，比如上述压缩文件会产生<code>index.css</code>, <code>index.js</code>的压缩文件，在服务端简单处理可以判断这两个请求然后给予相对应的压缩文件。以 <code>node</code> 的 <code>express</code> 为例</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">...</span><br><span class="line">app.get([&#39;&#x2F;index.js&#39;,&#39;&#x2F;index.css&#39;], function (req, res, next) &#123;</span><br><span class="line">  req.url &#x3D; req.url + &#39;.gz&#39;</span><br><span class="line">  res.set(&#39;Content-Encoding&#39;, &#39;gzip&#39;)</span><br><span class="line">  res.setHeader(&quot;Content-Type&quot;, generateType(req.path)) &#x2F;&#x2F; 这里要根据请求文件设置content-type</span><br><span class="line">  next()</span><br><span class="line">&#125;)</span><br></pre></td></tr></table></figure>
+
+<p>上面我们可以给请求返回 <code>gZip</code> 压缩后的数据了，当然上面的局限性太强也不可取，但是对于处理这个方面需求也已经有很多库存在,<code>express</code> 有 <a target="_blank" rel="noopener" href="https://github.com/tkoenig89/express-static-gzip">express-static-gzip</a> 插件 <code>koa</code> 的 <code>koa-static</code> 则默认自带对 <code>gZip</code> 文件的检测，基本原理就是对请求先检测 <code>.gz</code>后缀的文件是否存在，再去根据结果返回不同的内容。</p>
+<h4 id="哪些文件可以被-gZip-压缩"><a href="#哪些文件可以被-gZip-压缩" class="headerlink" title="哪些文件可以被 gZip 压缩"></a>哪些文件可以被 gZip 压缩</h4><p><code>gZip</code> 可以压缩所有的文件，但是这不代表我们要对所有文件进行压缩，我们写的代码（<code>css,js</code>）之类的文件会有很好的压缩效果，但是图片之类文件则不会被 <code>gzip</code> 压缩太多，因为它们已经内置了一些压缩，一些文件（比如一些已经被压缩的像.zip文件那种）再去压缩可能会让生成的文件体积更大一些。当然已经很小的文件也没有去压缩的必要了。</p>
+<h3 id="实践"><a href="#实践" class="headerlink" title="实践"></a>实践</h3><p>能开启 <code>gZip</code> 肯定是要开启的，具体使用在请求时候实时压缩还是在构建时候去生成压缩文件，就要看自己具体业务情况。</p>
+<h3 id="参考资料"><a href="#参考资料" class="headerlink" title="参考资料"></a>参考资料</h3><ul>
+<li>  <a target="_blank" rel="noopener" href="https://stackoverflow.com/questions/20762094/how-are-zlib-gzip-and-zip-related-what-do-they-have-in-common-and-how-are-they/20765054#20765054">How are zlib, gzip and zip related? What do they have in common and how are they different?</a></li>
+<li>  <a target="_blank" rel="noopener" href="https://stackoverflow.com/questions/38587698/webpack-gzip-vs-express-gzip?s=1%7C140.9128">webpack gzip vs express gzip</a></li>
+<li>  <a target="_blank" rel="noopener" href="https://stackoverflow.com/questions/16691506/what-is-gzip-compression">What is gZip compression?</a></li>
+<li>  <a target="_blank" rel="noopener" href="http://www.ruanyifeng.com/blog/2016/08/http.html">HTTP 协议</a></li>
 </ul>
+
+      
+    </div>
+
+    
+    
+    
+
+    <footer class="post-footer">
+        <div class="post-eof"></div>
+      
+    </footer>
+  </article>
+</div>
+
+
+
+
+    
+
+
+<div class="post-block">
+  
+  
+
+  <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="">
+    <link itemprop="mainEntityOfPage" href="https://lzhwweb.github.io/nirvana/javascript/%E5%89%8D%E7%AB%AF/%E6%A0%87%E5%87%86%E7%9B%92%E6%A8%A1%E5%9E%8B/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/nirvana/images/headphoto.jpeg">
+      <meta itemprop="name" content="nirvana">
+      <meta itemprop="description" content="个人学习笔记">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="涅槃快乐是金">
+    </span>
+      <header class="post-header">
+        <h2 class="post-title" itemprop="name headline">
+          <a href="/nirvana/javascript/%E5%89%8D%E7%AB%AF/%E6%A0%87%E5%87%86%E7%9B%92%E6%A8%A1%E5%9E%8B/" class="post-title-link" itemprop="url">标准盒模型</a>
+        </h2>
+
+        <div class="post-meta-container">
+          <div class="post-meta">
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-calendar"></i>
+      </span>
+      <span class="post-meta-item-text">发表于</span>
+
+      <time title="创建时间：2021-03-11 21:12:40" itemprop="dateCreated datePublished" datetime="2021-03-11T21:12:40+08:00">2021-03-11</time>
+    </span>
+      <span class="post-meta-item">
+        <span class="post-meta-item-icon">
+          <i class="far fa-calendar-check"></i>
+        </span>
+        <span class="post-meta-item-text">更新于</span>
+        <time title="修改时间：2021-03-10 13:43:55" itemprop="dateModified" datetime="2021-03-10T13:43:55+08:00">2021-03-10</time>
+      </span>
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-folder"></i>
+      </span>
+      <span class="post-meta-item-text">分类于</span>
+        <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+          <a href="/nirvana/categories/javascript/" itemprop="url" rel="index"><span itemprop="name">javascript</span></a>
+        </span>
+    </span>
+
+  
+      </div>
+      <div class="post-meta">
+    <span class="post-meta-item" title="本文字数">
+      <span class="post-meta-item-icon">
+        <i class="far fa-file-word"></i>
+      </span>
+      <span class="post-meta-item-text">本文字数：</span>
+      <span>2.4k</span>
+    </span>
+    <span class="post-meta-item" title="阅读时长">
+      <span class="post-meta-item-icon">
+        <i class="far fa-clock"></i>
+      </span>
+      <span class="post-meta-item-text">阅读时长 &asymp;</span>
+      <span>2 分钟</span>
+    </span>
+</div>
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+          <h5 id="1、一个盒子的构成："><a href="#1、一个盒子的构成：" class="headerlink" title="1、一个盒子的构成："></a>1、一个盒子的构成：</h5><ul>
+<li><p>盒子中的内容：content 宽=width 高=height</p>
+</li>
+<li><p>盒子的边框：border</p>
+</li>
+<li><p>盒子边框与内容之间的距离：称为填充—padding 内边距（内补丁）</p>
+</li>
+<li><p>如果有多个盒子存在，盒子与盒子之间的距离：称为边界—margin，外边距（外补丁）</p>
+</li>
+<li><p>整个盒子模型在网页中所占的宽度：左边界+左边框+左填充+内容+右填充+右边框+右边<br>界<br><img src="https://upload-images.jianshu.io/upload_images/10024246-50fe38676d0998e4.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240"></p>
+</li>
+<li><p>关于如何切图：</p>
+<blockquote>
+<p>PC：先看全图分块切，<br>移动端：看所有图片找出共同模块，分组切</p>
+</blockquote>
+</li>
+<li><p>关于适配问题：<br><img src="https://upload-images.jianshu.io/upload_images/10024246-eded6984b876f273.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240"></p>
+</li>
+</ul>
+<h5 id="2、弹性布局"><a href="#2、弹性布局" class="headerlink" title="2、弹性布局"></a>2、弹性布局</h5><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">display: flex | inline-flex; (适用于父类容器元素上)</span><br></pre></td></tr></table></figure>
+<p>定义一个 flex 容器，内联或者根据指定的值，来作用于下面的子类容器。</p>
+<ul>
+<li> box：将对象作为弹性伸缩盒显示。（伸缩盒最老版本）</li>
+<li>  inline-box：将对象作为内联块级弹性伸缩盒显示。（伸缩盒最老版本）</li>
+<li> flexbox：将对象作为弹性伸缩盒显示。（伸缩盒过渡版本）</li>
+<li> inline-flexbox：将对象作为内联块级弹性伸缩盒显示。（伸缩盒过渡版本）</li>
+<li> flex：将对象作为弹性伸缩盒显示。（伸缩盒最新版本）</li>
+<li> inline-flex：将对象作为内联块级弹性伸缩盒显示。（伸缩盒最新版本）<h5 id="2-1-H5-用的老版本伸缩盒模型-display-box"><a href="#2-1-H5-用的老版本伸缩盒模型-display-box" class="headerlink" title="2.1 H5 用的老版本伸缩盒模型 display: box;"></a>2.1 H5 用的老版本伸缩盒模型 display: box;</h5>常用属性：</li>
+<li> <strong>box-flex:子元素的之间的比例。</strong><br>可以定义把父元素分成几份，如一个父 div 的 width：400px；里面有三<br>个子 div，分别定义-webkit-box-flex：2; -webkit-box-flex：1; -webkitbox-flex：1;那么三个子<br>div 的宽度会自动充满整个父盒子，宽度分别是<br>400*(2/2+1+1)=200px; 400*(1/2+1+1)=100px; 400*(1/2+1+1)=100p<br>x;</li>
+<li> <strong>box-orient: 用来确定子元素的方向，是横着排还是竖着走。</strong><br>可选的值有：<strong>horizontal、vertical、inline-axis、block-axis、inherit</strong><br>Horizontal 与 inline-axis 的表现是一致的，让子元素横排。<br>Vertical 与 block-axis 的表现是一致的，让子元素纵列。<br>l box-direction：是用来确定子元素的排列顺序。<br>可选的值有：<strong>normal、reverse、inherit</strong><br>Normal 是默认值，表示按照正常顺序排列，从上到下，从左到右。<br>Reverse 表示与正常顺序相反。</li>
+<li> <strong>box-align：与 box-pack 都是决定盒子内部剩余空间怎么使用的，</strong><br>决定了父容器里子容器的垂直对齐方式。<br>可选的值有：<strong>start、end、center、baseline、stretch</strong><br>Start 表示居顶对齐。<br>End 表示居底对齐。<br>Center：表示居中对齐。<br>Baseline：表示与基线对齐。<br>Stretch 为默认值，表示拉伸，拉伸到与父容器等高。</li>
+<li> <strong>box-pack：决定了父标签水平遗留空间的使用。即父容器里子容器</strong><br>的水平对齐方式。<br>可选的值有：start、end、center、justify<br>Start 为默认值，表示水平居左对齐。<br>End 表示水平居右对齐。<br>Center：表示水平居中对齐。<br>Justify 表示水平两端对齐。<br><img src="https://upload-images.jianshu.io/upload_images/10024246-182dfad14cfa9932.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240"></li>
+</ul>
+<h5 id="2-2-新版本-display-flex"><a href="#2-2-新版本-display-flex" class="headerlink" title="2.2 新版本 display:flex;"></a>2.2 新版本 display:flex;</h5><p>常用属性：</p>
+<ul>
+<li><strong>flex-direction: row | column | row-reverse | column-reverse</strong><br>决定主轴的方向（即项目的排列方向）。<br><img src="https://upload-images.jianshu.io/upload_images/10024246-bec5ad15cd8fdedb.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240"></li>
+</ul>
+<p>flex-warp: nowrap | wrap | wrap-reverse;<br>定义是否要换行，如何换行。<br><img src="https://upload-images.jianshu.io/upload_images/10024246-f05c3c69d62c43a1.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240"></p>
+<ul>
+<li><p><strong>justify-content:flex-start|flex-end|center|space-between|space-around</strong><br>定义项目在主轴上的对齐方式<br><img src="https://upload-images.jianshu.io/upload_images/10024246-c9b49800aa86f342.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240"></p>
+</li>
+<li><p><strong>align-items: flex-start |flex-end |center |baseline |stretch;</strong><br>定义项目在交叉轴上如何对齐<br><img src="https://upload-images.jianshu.io/upload_images/10024246-0ecf0d58bb9d8ff1.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240"></p>
+</li>
+<li><p><strong>flex-flow: flex-direction flex-warp;</strong><br>以上属性均加在父盒子上生效。下边两个是加在子元素上生效的属性：</p>
+</li>
+<li><p> <strong>flex: 是 flex-grow，flex-shrink，flex-basis 三个属性的简写。</strong><br>默认值：0 1 auto；<br>设置或检索伸缩盒对象的子元素如何分配空间。后两个属性可省。<br>如果缩写 flex:1, 则其计算值为：1 1 0</p>
+<blockquote>
+<p>flex-grow 属性定义项目的放大比例，默认为 0，即如果存在剩余空间，也不放大。<br>flex-shrink 属性定义了项目的缩小比例，默认为 1，即如果空间不足，该项目将缩小。<br>flex-basis 属性定义了在分配多余空间之前，项目占据的主轴空间（main size）。浏览<br>器根据这个属性，计算主轴是否有多余空间。它的默认值为 auto，即项目的本来大小。</p>
+</blockquote>
+</li>
+<li><p><strong>align-self: auto |flex-start |flex-end |center |baseline |stretch;</strong><br>允许单个项目有与其他项目不一样的对齐方式，可覆盖 align-items 属性。默认<br>值为auto，表示继承父元素的align-items属性。除auto外，其余同align-items。<br><img src="https://upload-images.jianshu.io/upload_images/10024246-ac538224c8c5f08f.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240"></p>
+</li>
+</ul>
+<p>总结：<br>伸缩盒模型<br>父元素 子元素<br>方向 主轴对齐(x) 交叉轴对齐(y) 分配空间<br>box<br>box-orient<br>box-pack box-align box-flex<br>box-direction<br>flex flex-direction Justify-content align-items flex</p>
+<blockquote>
+<p><code>注：flex 新增属性——flex-wrap(是否换行),align-self（子元素自己的对齐方式）</code></p>
+</blockquote>
+<p>参考网址：</p>
+<blockquote>
+<p><a target="_blank" rel="noopener" href="http://caibaojian.com/flexbox-guide.html">http://caibaojian.com/flexbox-guide.html</a><br><a target="_blank" rel="noopener" href="http://www.ruanyifeng.com/blog/2015/07/flex-grammar.html">http://www.ruanyifeng.com/blog/2015/07/flex-grammar.html</a><br><a target="_blank" rel="noopener" href="http://www.w3cplus.com/css3/css3-flexbox-layout.html">http://www.w3cplus.com/css3/css3-flexbox-layout.html</a></p>
+</blockquote>
+
+      
+    </div>
+
+    
+    
+    
+
+    <footer class="post-footer">
+        <div class="post-eof"></div>
+      
+    </footer>
+  </article>
+</div>
+
+
+
+
+    
+
+
+<div class="post-block">
+  
+  
+
+  <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="">
+    <link itemprop="mainEntityOfPage" href="https://lzhwweb.github.io/nirvana/javascript/%E5%89%8D%E7%AB%AF/%E7%A7%BB%E5%8A%A8%E5%BA%94%E7%94%A8%E7%95%8C%E9%9D%A2%E8%AE%BE%E8%AE%A1%E7%9A%84%E5%B0%BA%E5%AF%B8%E8%AE%BE%E7%BD%AE%E5%8F%8A%E8%A7%84%E8%8C%83/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/nirvana/images/headphoto.jpeg">
+      <meta itemprop="name" content="nirvana">
+      <meta itemprop="description" content="个人学习笔记">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="涅槃快乐是金">
+    </span>
+      <header class="post-header">
+        <h2 class="post-title" itemprop="name headline">
+          <a href="/nirvana/javascript/%E5%89%8D%E7%AB%AF/%E7%A7%BB%E5%8A%A8%E5%BA%94%E7%94%A8%E7%95%8C%E9%9D%A2%E8%AE%BE%E8%AE%A1%E7%9A%84%E5%B0%BA%E5%AF%B8%E8%AE%BE%E7%BD%AE%E5%8F%8A%E8%A7%84%E8%8C%83/" class="post-title-link" itemprop="url">移动应用界面设计的尺寸设置及规范</a>
+        </h2>
+
+        <div class="post-meta-container">
+          <div class="post-meta">
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-calendar"></i>
+      </span>
+      <span class="post-meta-item-text">发表于</span>
+
+      <time title="创建时间：2021-03-11 21:12:40" itemprop="dateCreated datePublished" datetime="2021-03-11T21:12:40+08:00">2021-03-11</time>
+    </span>
+      <span class="post-meta-item">
+        <span class="post-meta-item-icon">
+          <i class="far fa-calendar-check"></i>
+        </span>
+        <span class="post-meta-item-text">更新于</span>
+        <time title="修改时间：2021-03-10 13:43:55" itemprop="dateModified" datetime="2021-03-10T13:43:55+08:00">2021-03-10</time>
+      </span>
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-folder"></i>
+      </span>
+      <span class="post-meta-item-text">分类于</span>
+        <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+          <a href="/nirvana/categories/javascript/" itemprop="url" rel="index"><span itemprop="name">javascript</span></a>
+        </span>
+    </span>
+
+  
+      </div>
+      <div class="post-meta">
+    <span class="post-meta-item" title="本文字数">
+      <span class="post-meta-item-icon">
+        <i class="far fa-file-word"></i>
+      </span>
+      <span class="post-meta-item-text">本文字数：</span>
+      <span>6.2k</span>
+    </span>
+    <span class="post-meta-item" title="阅读时长">
+      <span class="post-meta-item-icon">
+        <i class="far fa-clock"></i>
+      </span>
+      <span class="post-meta-item-text">阅读时长 &asymp;</span>
+      <span>6 分钟</span>
+    </span>
+</div>
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+          <p><strong>一、android篇</strong></p>
+<p><strong>1、android分辨率</strong></p>
+<p>Android的多分辨率，一向是设计师和开发者非常头疼的事儿。尽管如此，对于多分辨造成的复杂问题，也是大家要优先解决的。Android支持多种不同的dpi模式：ldpi 、mdpi 、hdpi 、xhdpi 、xxhdpi 、xxxhdpi<br><img src="https://upload-images.jianshu.io/upload_images/10024246-b58e0e6c4419b53b.jpg?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" title="移动应用界面设计的尺寸设置及规范_"></p>
+<p>注意，ppi、dpi 是密度单位，不是度量单位 ：</p>
+<ul>
+<li><p>  ppi (pixels per inch)：图像分辨率 （在图像中，每英寸所包含的像素数目）</p>
+</li>
+<li><p>  dpi (dots per inch)： 打印分辨率 （每英寸所能打印的点数，即打印精度）</p>
+</li>
+</ul>
+<p>dpi主要应用于输出，重点是打印设备上；ppi对于设计师应该比较熟悉，photoshop画布的分辨率常设置为72像素/英寸，这个单位其实就是ppi 。尽管概念不同，但是对于移动设备的显示屏，可以看作ppi=dpi 。</p>
+<p>ppi的运算方式是：PPI = √（长度像素数² + 宽度像素数²） / 屏幕对角线英寸数。即：长、宽各自平方之和的开方，再除以屏幕对角线的英寸数。</p>
+<p>以iphone5为例，其ppi=√（1136px² + 640px²）/4 in=326ppi（视网膜Retina屏）</p>
+<p>对于android手机，一个不确切的分法是，720 x 1280 的手机很可能接近 320 dpi （xhdpi模式），480 x 800 的手机很可能接近 240 dpi （hdpi模式），而320 x 480 的手机则很接近 160 dpi（mdpi模式）。</p>
+<p><strong>2、单位换算方法</strong></p>
+<p>android开发中，文字大小的单位是sp，非文字的尺寸单位用dp，但是我们在设计稿用的单位是px。这些单位如何换算，是设计师、开发者需要了解的关键。</p>
+<ul>
+<li><p>  dp：Density-independent pixels，以160PPI屏幕为标准，则1dp=1px。dp和px的换算公式 ：dp*ppi/160 = px。对于320ppi的屏幕，1dp x 320ppi/160 = 2px。</p>
+</li>
+<li><p>  sp：Scale-independent pixels，它是安卓的字体单位，以160PPI屏幕为标准，当字体大小为 100%时， 1sp=1px。sp 与 px 的换算公式：sp*ppi/160 = px。对于320ppi的屏幕，1sp x 320ppi/160 = 2px。</p>
+</li>
+</ul>
+<p>简单理解的话，px（像素）是我们UI设计师在PS里使用的，同时也是手机屏幕上所显示的，dp是开发写layout的时候使用的尺寸单位。</p>
+<p><strong>为什么要把sp和dp代替px？</strong>原因是他们不会因为ppi的变化而变化，在相同物理尺寸和不同ppi下，他们呈现的高度大小是相同。也就是说更接近物理呈现，而px则不行。</p>
+<p><strong>根据单位换算方法，可总结出：</strong></p>
+<p>当运行在mdpi下时，1dp=1px ：也就是说设计师在PS里定义一个item高48px，开发就会定义该item高48dp ；</p>
+<p>当运行在hdpi模式下时，1dp=1.5px ：也就是说设计师在PS里定义一个item高72px，开发就会定义该item高48dp ；</p>
+<p>当运行在xhdpi模式下时，1dp=2px ：也就是说设计师在PS里定义一个item高96px，开发就会定义该item高48dp ；</p>
+<p>当你的app需要适配多个dpi模式的时候，请参考图1的比例进行换算 。</p>
+<p><strong>3、设计稿基本元素的尺寸设置</strong></p>
+<p>为了适应多分辨率的手机，理想的方式是为每种分辨率做一套设计稿，包括所用到的icon、设计稿标注等。但在实际开发中，这种方法耗时耗力。所以通常会选择折中的方法。</p>
+<p><strong>方法一</strong>：在标准基础上（比如xhdpi）开始，然后放大或缩小，以适应到其他尺寸。不足之处是，对于更高分辨率的手机，图标被放大后会导致质量不高。</p>
+<p><strong>方法二：</strong>以最高分辨率为基准设计，然后缩小适应到所需的小分辨率上。缺点是，图标等若都最大尺寸，加载时速度慢且耗费流量较多，对于小分辨率的用户也不够好。</p>
+<p>结合友盟的分辨率占比数据、也为了方便换算到android开发中的尺寸单位，<strong>推荐设计稿的画布尺寸选用 720X1280 ，分辨率仍旧为72ppi（像素/英寸）。</strong></p>
+<p>在android规范中对于导航栏、工具栏等的尺寸没有明确的规定。但根据48dp原则，以及一些主流的android应用的截图分析，总结一下尺寸要求：</p>
+<p><strong>状态栏高度</strong>：50 px</p>
+<p><strong>导航栏、操作栏高度</strong>：96 px=48dp x 2</p>
+<p><strong>主菜单栏高度</strong>：96 px</p>
+<p><strong>内容区域高度</strong>：1038 px （1280-50-96-96=1038）</p>
+<p>Android最近出的手机都几乎去掉了实体键，把功能键移到了屏幕中，高度也和菜单栏一样为：96 px</p>
+<p><strong>4、图标和字体大小（来自官方规范文档）</strong></p>
+<p>a、启动图标（home页或app列表页）</p>
+<p>整体大小为48 x 48 dp<br><img src="https://upload-images.jianshu.io/upload_images/10024246-a69bccead1f7a395.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" title="移动应用界面设计的尺寸设置及规范_"></p>
+<p>b、操作栏图标，代表用户在app中可以使用到的最重要的图标</p>
+<p>整体大小为32 x 32 dp ，图形实际区域为 24 x 24 dp</p>
+<p><img src="https://upload-images.jianshu.io/upload_images/10024246-60ade459f9c5e979.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" title="移动应用界面设计的尺寸设置及规范_"></p>
+<p>c、小图标/场景图标，提供操作或特定项目的状态。</p>
+<p>比如gmail app的星型标记、一些内容展开收起用到的向下向上的图标等。整体大小为16 x 16 dp ，图形实际区域为 12 x 12 dp 。</p>
+<p><img src="https://upload-images.jianshu.io/upload_images/10024246-34aefc77df01265b.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" title="移动应用界面设计的尺寸设置及规范_"></p>
+<p>d、通知图标</p>
+<p>如果app有通知，要提供一个有新通知时显示在状态栏的通知图标。整体大小为24 x 24 dp ，图形实际区域为 22 x 22 dp 。<br><img src="https://upload-images.jianshu.io/upload_images/10024246-13dccc1657345b7a.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" title="移动应用界面设计的尺寸设置及规范_"></p>
+<p>注：android规范提供的尺寸单位是dp，若设计稿尺寸设为720 x 1280 ，图标大小需在规范要求的尺寸数字上乘以2。比如操作栏图标32 x 32 dp ，则设计稿上应该是64 x 64 px 。</p>
+<p>e、字体大小</p>
+<p>Android规范中的要求如下：</p>
+<p><img src="https://upload-images.jianshu.io/upload_images/10024246-37292659f59b5e75.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" title="移动应用界面设计的尺寸设置及规范_"></p>
+<p>前面提到Android开发中的字号单位是sp，而换算关系是 sp*ppi/160 = px 。所以720 x 1280尺寸的设计稿上，字体大小可选择为 24px 、28px 、32px 、36px ，主要根据文字的重要程度来选择，特殊情况下也可能选择更大或更小的字体。</p>
+<p>f、其他尺寸要求</p>
+<p>通常把48dp作为可触摸的UI元件的标准。<br><img src="https://upload-images.jianshu.io/upload_images/10024246-41912e664c23c31c.jpg?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" title="移动应用界面设计的尺寸设置及规范_"></p>
+<p><strong>为什么要用48dp呢？一般来说，48dp转化为一个物理尺寸约9毫米。通常建议目标大小为7-10毫米，以方便用户手指能准确并且舒适触摸目标区域</strong>。</p>
+<p>如果你设计的元素高和宽至少48dp，你就可以保证：</p>
+<p>（1）触摸目标绝不会比建议的最低目标（7mm）小，无论在什么屏幕上显示。</p>
+<p>（2）在整体信息密度和触摸目标大小之间取得了一个很好的平衡。</p>
+<p>另外，每个UI元素之间的空白通常是8dp 。</p>
+<p><strong>二、iOS篇</strong></p>
+<p><strong>1、分辨率</strong></p>
+<p>iPhone 界面尺寸：</p>
+<table>
+<thead>
+<tr>
+<th align="center">设备</th>
+<th align="center">屏幕尺寸（英寸）</th>
+<th align="center">逻辑分辨率（Point）</th>
+<th align="center">缩放倍率（Scale Factor）</th>
+<th align="center">像素分辨率（Pixel）</th>
+<th align="center">屏幕像素密度（PPI）</th>
+</tr>
+</thead>
+<tbody><tr>
+<td align="center">iPhone 3GS</td>
+<td align="center">3.5</td>
+<td align="center">320*480</td>
+<td align="center"><a href="mailto:&#x75;&#x73;&#x65;&#x72;&#64;&#49;&#x78;&#x2e;&#112;&#110;&#103;">&#x75;&#x73;&#x65;&#x72;&#64;&#49;&#x78;&#x2e;&#112;&#110;&#103;</a></td>
+<td align="center">320*480</td>
+<td align="center">163</td>
+</tr>
+<tr>
+<td align="center">iPhone 4/4s</td>
+<td align="center">3.5</td>
+<td align="center">320*480</td>
+<td align="center"><a href="mailto:&#117;&#x73;&#101;&#x72;&#64;&#x32;&#x78;&#46;&#112;&#x6e;&#x67;">&#117;&#x73;&#101;&#x72;&#64;&#x32;&#x78;&#46;&#112;&#x6e;&#x67;</a></td>
+<td align="center">640*960</td>
+<td align="center">330</td>
+</tr>
+<tr>
+<td align="center">iPhone 5/5s/5c</td>
+<td align="center">4.0</td>
+<td align="center">320*568</td>
+<td align="center"><a href="mailto:&#x75;&#x73;&#x65;&#x72;&#64;&#50;&#120;&#x2e;&#112;&#x6e;&#x67;">&#x75;&#x73;&#x65;&#x72;&#64;&#50;&#120;&#x2e;&#112;&#x6e;&#x67;</a></td>
+<td align="center">640*1136</td>
+<td align="center">326</td>
+</tr>
+<tr>
+<td align="center">iPhone SE</td>
+<td align="center">4.0</td>
+<td align="center">320*568</td>
+<td align="center"><a href="mailto:&#117;&#x73;&#x65;&#x72;&#x40;&#50;&#x78;&#46;&#x70;&#x6e;&#x67;">&#117;&#x73;&#x65;&#x72;&#x40;&#50;&#x78;&#46;&#x70;&#x6e;&#x67;</a></td>
+<td align="center">640*1136</td>
+<td align="center">326</td>
+</tr>
+<tr>
+<td align="center">iPhone 6</td>
+<td align="center">4.7</td>
+<td align="center">375*667</td>
+<td align="center"><a href="mailto:&#117;&#x73;&#x65;&#x72;&#64;&#x32;&#120;&#46;&#x70;&#110;&#x67;">&#117;&#x73;&#x65;&#x72;&#64;&#x32;&#120;&#46;&#x70;&#110;&#x67;</a></td>
+<td align="center">640*1136</td>
+<td align="center">326</td>
+</tr>
+<tr>
+<td align="center">iPhone 6s</td>
+<td align="center">4.7</td>
+<td align="center">375*667</td>
+<td align="center"><a href="mailto:&#117;&#x73;&#101;&#114;&#64;&#50;&#x78;&#46;&#112;&#x6e;&#103;">&#117;&#x73;&#101;&#114;&#64;&#50;&#x78;&#46;&#112;&#x6e;&#103;</a></td>
+<td align="center">750*1334</td>
+<td align="center">326</td>
+</tr>
+<tr>
+<td align="center">iPhone 7</td>
+<td align="center">4.7</td>
+<td align="center">375*667</td>
+<td align="center"><a href="mailto:&#117;&#x73;&#101;&#x72;&#64;&#x32;&#x78;&#x2e;&#112;&#x6e;&#x67;">&#117;&#x73;&#101;&#x72;&#64;&#x32;&#x78;&#x2e;&#112;&#x6e;&#x67;</a></td>
+<td align="center">750*1334</td>
+<td align="center">326</td>
+</tr>
+<tr>
+<td align="center">iPhone 8</td>
+<td align="center">4.7</td>
+<td align="center">375*667</td>
+<td align="center"><a href="mailto:&#117;&#x73;&#x65;&#114;&#64;&#x32;&#120;&#x2e;&#x70;&#x6e;&#103;">&#117;&#x73;&#x65;&#114;&#64;&#x32;&#120;&#x2e;&#x70;&#x6e;&#103;</a></td>
+<td align="center">750*1334</td>
+<td align="center">401</td>
+</tr>
+<tr>
+<td align="center">iPhone 6 Plus</td>
+<td align="center">5.5</td>
+<td align="center">414*736</td>
+<td align="center"><a href="mailto:&#x75;&#115;&#101;&#114;&#x40;&#51;&#x78;&#x2e;&#x70;&#110;&#103;">&#x75;&#115;&#101;&#114;&#x40;&#51;&#x78;&#x2e;&#x70;&#110;&#103;</a></td>
+<td align="center">1242*2208</td>
+<td align="center">401</td>
+</tr>
+<tr>
+<td align="center">iPhone 6s Plus</td>
+<td align="center">5.5</td>
+<td align="center">414*736</td>
+<td align="center"><a href="mailto:&#x75;&#x73;&#x65;&#114;&#64;&#x33;&#x78;&#x2e;&#x70;&#110;&#103;">&#x75;&#x73;&#x65;&#114;&#64;&#x33;&#x78;&#x2e;&#x70;&#110;&#103;</a></td>
+<td align="center">1242*2208</td>
+<td align="center">401</td>
+</tr>
+<tr>
+<td align="center">iPhone 7 Plus</td>
+<td align="center">5.5</td>
+<td align="center">414*736</td>
+<td align="center"><a href="mailto:&#x75;&#115;&#x65;&#114;&#64;&#x33;&#x78;&#x2e;&#x70;&#x6e;&#x67;">&#x75;&#115;&#x65;&#114;&#64;&#x33;&#x78;&#x2e;&#x70;&#x6e;&#x67;</a></td>
+<td align="center">1242*2208</td>
+<td align="center">401</td>
+</tr>
+<tr>
+<td align="center">iPhone 8 Plus</td>
+<td align="center">5.5</td>
+<td align="center">414*736</td>
+<td align="center"><a href="mailto:&#117;&#115;&#x65;&#114;&#x40;&#51;&#120;&#x2e;&#x70;&#x6e;&#103;">&#117;&#115;&#x65;&#114;&#x40;&#51;&#120;&#x2e;&#x70;&#x6e;&#103;</a></td>
+<td align="center">1242*2208</td>
+<td align="center">401</td>
+</tr>
+<tr>
+<td align="center">iPhone X</td>
+<td align="center">5.8</td>
+<td align="center">375*812</td>
+<td align="center"><a href="mailto:&#117;&#115;&#x65;&#x72;&#x40;&#x33;&#120;&#x2e;&#x70;&#x6e;&#x67;">&#117;&#115;&#x65;&#x72;&#x40;&#x33;&#120;&#x2e;&#x70;&#x6e;&#x67;</a></td>
+<td align="center">1125*2436</td>
+<td align="center">458</td>
+</tr>
+<tr>
+<td align="center">iPhone XS</td>
+<td align="center">5.8</td>
+<td align="center">375*812</td>
+<td align="center"><a href="mailto:&#117;&#115;&#101;&#x72;&#x40;&#x33;&#x78;&#x2e;&#112;&#x6e;&#103;">&#117;&#115;&#101;&#x72;&#x40;&#x33;&#x78;&#x2e;&#112;&#x6e;&#103;</a></td>
+<td align="center">1125*2436</td>
+<td align="center">458</td>
+</tr>
+<tr>
+<td align="center">iPhone XR</td>
+<td align="center">6.1</td>
+<td align="center">414*896</td>
+<td align="center"><a href="mailto:&#x75;&#x73;&#x65;&#114;&#64;&#x32;&#120;&#46;&#112;&#x6e;&#103;">&#x75;&#x73;&#x65;&#114;&#64;&#x32;&#120;&#46;&#112;&#x6e;&#103;</a></td>
+<td align="center">828*1792</td>
+<td align="center">326</td>
+</tr>
+<tr>
+<td align="center">iPhone XS Max</td>
+<td align="center">6.5</td>
+<td align="center">736*1344</td>
+<td align="center"><a href="mailto:&#x75;&#x73;&#101;&#x72;&#x40;&#x33;&#x78;&#46;&#x70;&#x6e;&#x67;">&#x75;&#x73;&#101;&#x72;&#x40;&#x33;&#x78;&#46;&#x70;&#x6e;&#x67;</a></td>
+<td align="center">1242*2688</td>
+<td align="center">458</td>
+</tr>
+<tr>
+<td align="center">iPhone 11</td>
+<td align="center">6.1</td>
+<td align="center">414*896</td>
+<td align="center"><a href="mailto:&#x75;&#115;&#101;&#x72;&#64;&#x32;&#120;&#x2e;&#x70;&#110;&#x67;">&#x75;&#115;&#101;&#x72;&#64;&#x32;&#120;&#x2e;&#x70;&#110;&#x67;</a></td>
+<td align="center">828*1792</td>
+<td align="center">326</td>
+</tr>
+<tr>
+<td align="center">iPhone 11 Pro</td>
+<td align="center">5.8</td>
+<td align="center">375*812</td>
+<td align="center"><a href="mailto:&#117;&#115;&#x65;&#114;&#x40;&#x33;&#120;&#x2e;&#x70;&#x6e;&#103;">&#117;&#115;&#x65;&#114;&#x40;&#x33;&#120;&#x2e;&#x70;&#x6e;&#103;</a></td>
+<td align="center">1125*2436</td>
+<td align="center">458</td>
+</tr>
+<tr>
+<td align="center">iPhone 11 Pro Max</td>
+<td align="center">6.5</td>
+<td align="center">414*896</td>
+<td align="center"><a href="mailto:&#117;&#115;&#x65;&#x72;&#x40;&#x33;&#x78;&#46;&#x70;&#x6e;&#x67;">&#117;&#115;&#x65;&#x72;&#x40;&#x33;&#x78;&#46;&#x70;&#x6e;&#x67;</a></td>
+<td align="center">1242*2688</td>
+<td align="center">458</td>
+</tr>
+<tr>
+<td align="center">iPhone 12</td>
+<td align="center">6.1</td>
+<td align="center">390*844</td>
+<td align="center"><a href="mailto:&#x75;&#115;&#x65;&#x72;&#64;&#51;&#x78;&#x2e;&#x70;&#x6e;&#103;">&#x75;&#115;&#x65;&#x72;&#64;&#51;&#x78;&#x2e;&#x70;&#x6e;&#103;</a></td>
+<td align="center">1170*2532</td>
+<td align="center">460</td>
+</tr>
+<tr>
+<td align="center">iPhone 12 mini</td>
+<td align="center">5.4</td>
+<td align="center">375*812</td>
+<td align="center"><a href="mailto:&#x75;&#x73;&#101;&#114;&#x40;&#x33;&#120;&#46;&#112;&#x6e;&#103;">&#x75;&#x73;&#101;&#114;&#x40;&#x33;&#120;&#46;&#112;&#x6e;&#103;</a></td>
+<td align="center">1080*2340</td>
+<td align="center">476</td>
+</tr>
+<tr>
+<td align="center">iPhone 12 Pro</td>
+<td align="center">6.1</td>
+<td align="center">414*896</td>
+<td align="center"><a href="mailto:&#x75;&#115;&#x65;&#x72;&#x40;&#51;&#x78;&#46;&#x70;&#x6e;&#x67;">&#x75;&#115;&#x65;&#x72;&#x40;&#51;&#x78;&#46;&#x70;&#x6e;&#x67;</a></td>
+<td align="center">1170*2532</td>
+<td align="center">460</td>
+</tr>
+<tr>
+<td align="center">iPhone 12 Pro Max</td>
+<td align="center">6.7</td>
+<td align="center">428*926</td>
+<td align="center"><a href="mailto:&#117;&#x73;&#x65;&#x72;&#x40;&#x33;&#120;&#46;&#112;&#x6e;&#103;">&#117;&#x73;&#x65;&#x72;&#x40;&#x33;&#120;&#46;&#112;&#x6e;&#103;</a></td>
+<td align="center">1284*2778</td>
+<td align="center">458</td>
+</tr>
+</tbody></table>
+<p>iPad 界面尺寸：1024×768、2048×1536</p>
+<p>（以上单位都是像素，至于分辨率一般网页UI和移动UI基本上都只要 72 ppi）</p>
+<p><strong>2、单位换算px、pt</strong></p>
+<p>这里需要先区分pt、px，pt(磅值)是物理长度单位，指的是72分之一英寸。手机上看来同一大小的字磅值是一样的，但是换算成不同分辨率手机的字号px值不一样。（px=pt*ppi/72）</p>
+<p>iPhone在出retina屏(也就是4S)之前的屏幕像素是320x480px，屏幕密度是163ppi，4S的屏幕像素是640x960px，屏幕密度是326ppi，翻了一倍。iPhone5的ppi没有变化，兼容性方面要增加类似首屏画面等程序上的判断。</p>
+<p>在iPhone界面上元素的定位、尺寸是通过一个单位point，而非px，屏幕上固定有320x480pt，retina屏两倍的分辨率改变的只是pt和px之间的比例而已，这样就能实现不改变程序，只上传两套图片就兼容两个分辨率。</p>
+<p><strong><strong>在设计的时候并不是每个尺寸都要做一套，尺寸按自己的手机尺寸来设计，比较方便预览效果，一般用 640×960 或者 640×1136 的尺寸设计。其中设计稿的画布分辨率设为默认的72ppi（此时1px=1pt ），所以设计师可以统一采用px为单位。<br>开发拿到设计稿时，将上面标注的以px为单位的字号大小、图像尺寸除以2，就是非retina屏上的pt值，这样在retina屏上也可以根据此pt值换算对应的px大小，以确保不同的分辨率下有合适的效果。</strong></strong></p>
+<p><strong>3、基本元素的尺寸设置</strong></p>
+<p>iPhone的APP界面一般由四个元素组成，分别是：状态栏、导航栏、主菜单栏以及中间的内容区域。</p>
+<p>这里取用 640×960 的尺寸设计，那我们就说说在这个尺寸下这些元素的尺寸：</p>
+<p>状态栏：就是我们经常说的信号、运营商、电量等显示手机状态的区域，其高度为：40 px</p>
+<p>导航栏：显示当前界面的名称，包含相应的功能或者页面间跳转的按钮，其高度为：88 px</p>
+<p>主菜单栏：类似于页面的主菜单，提供整个应用的分类内容的快速跳转，其高度为：98 px</p>
+<p>内容区域：展示应用提供的相应内容，整个应用中布局变更最为频繁的，其高度为：734 px=960-40-88-98</p>
+<p>以上尺寸适用于 iPhone 4、4S，iPhone5/5s 的 640×11136 的尺寸，其实就是中间的内容区域高度增加到：910 px，其他尺寸也同上。</p>
+<p><strong>4、常用图像、图标大小（来自官方规范文档）</strong></p>
+<p>单位：像素</p>
+<p><img src="https://upload-images.jianshu.io/upload_images/10024246-1b7ce723077960fd.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="图片描述" title="移动应用界面设计的尺寸设置及规范_"></p>
+<p><strong>5、字体大小</strong></p>
+<p>iOS交互设计规范文档上，对字体大小没有做严格的数值规定，只提供了一些指导原则：</p>
+<p>单位：点pt</p>
+<p>– 即便用户选择了最小文字大小，文字也不应小于 22 点。作为对照，正文样式在大字号下使用 34 点字体大小作为默认文字大小设置。</p>
+<p>– 通常来说，每一档文字大小设置的字体大小和行间距的差异是 2 点。例外情况是两个标题样式，在最小、小和中等设置时都使用相同字体大小、行间距和字间距。</p>
+<p>– 在最小的三种文字大小中，字间距相对宽阔；在最大的三种文字大小中，字间距相对紧密。</p>
+<p>– 标题和正文样式使用一样的字体大小。为了将其和正文样式区分，标题样式使用加粗效果。</p>
+<p>– 导航控制器中的文字使用和大号的正文样式文字大小（明确来说，是 34 点）。</p>
+<p>– 文本通常使用常规体和中等大小，而不是用细体和粗体。</p>
+<p>百度用户体验做过的一个小调查：</p>
+<p>单位：像素px<br><img src="https://upload-images.jianshu.io/upload_images/10024246-53edeaa9f75645e5.gif?imageMogr2/auto-orient/strip" alt="图片描述" title="移动应用界面设计的尺寸设置及规范_"></p>
+<p>还有个方法就是找你觉得好的APP应用，手机截图后放进PS自己对比调节字体大小。</p>
 
       
     </div>
@@ -1526,446 +2350,8 @@ res.end();
 
 
 
-    
-
-
-<div class="post-block">
-  
-  
-
-  <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="">
-    <link itemprop="mainEntityOfPage" href="https://lzhwweb.github.io/nirvana/javascript/%E5%89%8D%E7%AB%AF/%E7%A8%8B%E5%BA%8F%E7%8C%BF-%E7%A5%9E%E6%B3%A8%E9%87%8A%EF%BC%81%E6%81%B6%E6%90%9E%E6%B3%A8%E9%87%8A%EF%BC%81/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="image" content="/nirvana/images/headphoto.jpeg">
-      <meta itemprop="name" content="nirvana">
-      <meta itemprop="description" content="个人学习笔记">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="涅槃快乐是金">
-    </span>
-      <header class="post-header">
-        <h2 class="post-title" itemprop="name headline">
-          <a href="/nirvana/javascript/%E5%89%8D%E7%AB%AF/%E7%A8%8B%E5%BA%8F%E7%8C%BF-%E7%A5%9E%E6%B3%A8%E9%87%8A%EF%BC%81%E6%81%B6%E6%90%9E%E6%B3%A8%E9%87%8A%EF%BC%81/" class="post-title-link" itemprop="url">程序猿 神注释！恶搞注释！</a>
-        </h2>
-
-        <div class="post-meta-container">
-          <div class="post-meta">
-    <span class="post-meta-item">
-      <span class="post-meta-item-icon">
-        <i class="far fa-calendar"></i>
-      </span>
-      <span class="post-meta-item-text">发表于</span>
-
-      <time title="创建时间：2021-03-11 21:12:40" itemprop="dateCreated datePublished" datetime="2021-03-11T21:12:40+08:00">2021-03-11</time>
-    </span>
-      <span class="post-meta-item">
-        <span class="post-meta-item-icon">
-          <i class="far fa-calendar-check"></i>
-        </span>
-        <span class="post-meta-item-text">更新于</span>
-        <time title="修改时间：2021-03-10 22:05:39" itemprop="dateModified" datetime="2021-03-10T22:05:39+08:00">2021-03-10</time>
-      </span>
-    <span class="post-meta-item">
-      <span class="post-meta-item-icon">
-        <i class="far fa-folder"></i>
-      </span>
-      <span class="post-meta-item-text">分类于</span>
-        <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-          <a href="/nirvana/categories/javascript/" itemprop="url" rel="index"><span itemprop="name">javascript</span></a>
-        </span>
-    </span>
-
-  
-      </div>
-      <div class="post-meta">
-    <span class="post-meta-item" title="本文字数">
-      <span class="post-meta-item-icon">
-        <i class="far fa-file-word"></i>
-      </span>
-      <span class="post-meta-item-text">本文字数：</span>
-      <span>12k</span>
-    </span>
-    <span class="post-meta-item" title="阅读时长">
-      <span class="post-meta-item-icon">
-        <i class="far fa-clock"></i>
-      </span>
-      <span class="post-meta-item-text">阅读时长 &asymp;</span>
-      <span>11 分钟</span>
-    </span>
-</div>
-
-        </div>
-      </header>
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-          <p>几个 比较优秀的注释！最后面会插播制作方法！！</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br></pre></td><td class="code"><pre><span class="line">&#x2F;***                                                                          </span><br><span class="line"> *          .,:,,,                                        .::,,,::.          </span><br><span class="line"> *        .::::,,;;,                                  .,;;:,,....:i:         </span><br><span class="line"> *        :i,.::::,;i:.      ....,,:::::::::,....   .;i:,.  ......;i.        </span><br><span class="line"> *        :;..:::;::::i;,,:::;:,,,,,,,,,,..,.,,:::iri:. .,:irsr:,.;i.        </span><br><span class="line"> *        ;;..,::::;;;;ri,,,.                    ..,,:;s1s1ssrr;,.;r,        </span><br><span class="line"> *        :;. ,::;ii;:,     . ...................     .;iirri;;;,,;i,        </span><br><span class="line"> *        ,i. .;ri:.   ... ............................  .,,:;:,,,;i:        </span><br><span class="line"> *        :s,.;r:... ....................................... .::;::s;        </span><br><span class="line"> *        ,1r::. .............,,,.,,:,,........................,;iir;        </span><br><span class="line"> *        ,s;...........     ..::.,;:,,.          ...............,;1s        </span><br><span class="line"> *       :i,..,.              .,:,,::,.          .......... .......;1,       </span><br><span class="line"> *      ir,....:rrssr;:,       ,,.,::.     .r5S9989398G95hr;. ....,.:s,      </span><br><span class="line"> *     ;r,..,s9855513XHAG3i   .,,,,,,,.  ,S931,.,,.;s;s&amp;BHHA8s.,..,..:r:     </span><br><span class="line"> *    :r;..rGGh,  :SAG;;G@BS:.,,,,,,,,,.r83:      hHH1sXMBHHHM3..,,,,.ir.    </span><br><span class="line"> *   ,si,.1GS,   sBMAAX&amp;MBMB5,,,,,,:,,.:&amp;8       3@HXHBMBHBBH#X,.,,,,,,rr    </span><br><span class="line"> *   ;1:,,SH:   .A@&amp;&amp;B#&amp;8H#BS,,,,,,,,,.,5XS,     3@MHABM&amp;59M#As..,,,,:,is,   </span><br><span class="line"> *  .rr,,,;9&amp;1   hBHHBB&amp;8AMGr,,,,,,,,,,,:h&amp;&amp;9s;   r9&amp;BMHBHMB9:  . .,,,,;ri.  </span><br><span class="line"> *  :1:....:5&amp;XSi;r8BMBHHA9r:,......,,,,:ii19GG88899XHHH&amp;GSr.      ...,:rs.  </span><br><span class="line"> *  ;s.     .:sS8G8GG889hi.        ....,,:;:,.:irssrriii:,.        ...,,i1,  </span><br><span class="line"> *  ;1,         ..,....,,isssi;,        .,,.                      ....,.i1,  </span><br><span class="line"> *  ;h:               i9HHBMBBHAX9:         .                     ...,,,rs,  </span><br><span class="line"> *  ,1i..            :A#MBBBBMHB##s                             ....,,,;si.  </span><br><span class="line"> *  .r1,..        ,..;3BMBBBHBB#Bh.     ..                    ....,,,,,i1;   </span><br><span class="line"> *   :h;..       .,..;,1XBMMMMBXs,.,, .. :: ,.               ....,,,,,,ss.   </span><br><span class="line"> *    ih: ..    .;;;, ;;:s58A3i,..    ,. ,.:,,.             ...,,,,,:,s1,    </span><br><span class="line"> *    .s1,....   .,;sh,  ,iSAXs;.    ,.  ,,.i85            ...,,,,,,:i1;     </span><br><span class="line"> *     .rh: ...     rXG9XBBM#M#MHAX3hss13&amp;&amp;HHXr         .....,,,,,,,ih;      </span><br><span class="line"> *      .s5: .....    i598X&amp;&amp;A&amp;AAAAAA&amp;XG851r:       ........,,,,:,,sh;       </span><br><span class="line"> *      . ihr, ...  .         ..                    ........,,,,,;11:.       </span><br><span class="line"> *         ,s1i. ...  ..,,,..,,,.,,.,,.,..       ........,,.,,.;s5i.         </span><br><span class="line"> *          .:s1r,......................       ..............;shs,           </span><br><span class="line"> *          . .:shr:.  ....                 ..............,ishs.             </span><br><span class="line"> *              .,issr;,... ...........................,is1s;.               </span><br><span class="line"> *                 .,is1si;:,....................,:;ir1sr;,                  </span><br><span class="line"> *                    ..:isssssrrii;::::::;;iirsssssr;:..                    </span><br><span class="line"> *                         .,::iiirsssssssssrri;;:.                      </span><br><span class="line"> *&#x2F;						 </span><br></pre></td></tr></table></figure>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br></pre></td><td class="code"><pre><span class="line">&#x2F;***</span><br><span class="line"> *                    _ooOoo_</span><br><span class="line"> *                   o8888888o</span><br><span class="line"> *                   88&quot; . &quot;88</span><br><span class="line"> *                   (| -_- |)</span><br><span class="line"> *                    O\ &#x3D; &#x2F;O</span><br><span class="line"> *                ____&#x2F;&#96;---&#39;\____</span><br><span class="line"> *              .   &#39; \\| |&#x2F;&#x2F; &#96;.</span><br><span class="line"> *               &#x2F; \\||| : |||&#x2F;&#x2F; \</span><br><span class="line"> *             &#x2F; _||||| -:- |||||- \</span><br><span class="line"> *               | | \\\ - &#x2F;&#x2F;&#x2F; | |</span><br><span class="line"> *             | \_| &#39;&#39;\---&#x2F;&#39;&#39; | |</span><br><span class="line"> *              \ .-\__ &#96;-&#96; ___&#x2F;-. &#x2F;</span><br><span class="line"> *           ___&#96;. .&#39; &#x2F;--.--\ &#96;. . __</span><br><span class="line"> *        .&quot;&quot; &#39;&lt; &#96;.___\_&lt;|&gt;_&#x2F;___.&#39; &gt;&#39;&quot;&quot;.</span><br><span class="line"> *       | | : &#96;- \&#96;.;&#96;\ _ &#x2F;&#96;;.&#96;&#x2F; - &#96; : | |</span><br><span class="line"> *         \ \ &#96;-. \_ __\ &#x2F;__ _&#x2F; .-&#96; &#x2F; &#x2F;</span><br><span class="line"> * &#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#96;-.____&#96;-.___\_____&#x2F;___.-&#96;____.-&#39;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;</span><br><span class="line"> *                    &#96;&#x3D;---&#x3D;&#39;</span><br><span class="line"> *</span><br><span class="line"> * .............................................</span><br><span class="line"> *          佛祖保佑             永无BUG</span><br><span class="line"> *&#x2F;</span><br></pre></td></tr></table></figure>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br></pre></td><td class="code"><pre><span class="line">&#x2F;***</span><br><span class="line"> * _ooOoo_</span><br><span class="line"> * o8888888o</span><br><span class="line"> * 88&quot; . &quot;88</span><br><span class="line"> * (| -_- |)</span><br><span class="line"> *  O\ &#x3D; &#x2F;O</span><br><span class="line"> * ___&#x2F;&#96;---&#39;\____</span><br><span class="line"> * .   &#39; \\| |&#x2F;&#x2F; &#96;.</span><br><span class="line"> * &#x2F; \\||| : |||&#x2F;&#x2F; \</span><br><span class="line"> * &#x2F; _||||| -:- |||||- \</span><br><span class="line"> * | | \\\ - &#x2F;&#x2F;&#x2F; | |</span><br><span class="line"> * | \_| &#39;&#39;\---&#x2F;&#39;&#39; | |</span><br><span class="line"> * \ .-\__ &#96;-&#96; ___&#x2F;-. &#x2F;</span><br><span class="line"> * ___&#96;. .&#39; &#x2F;--.--\ &#96;. . __</span><br><span class="line"> * .&quot;&quot; &#39;&lt; &#96;.___\_&lt;|&gt;_&#x2F;___.&#39; &gt;&#39;&quot;&quot;.</span><br><span class="line"> * | | : &#96;- \&#96;.;&#96;\ _ &#x2F;&#96;;.&#96;&#x2F; - &#96; : | |</span><br><span class="line"> * \ \ &#96;-. \_ __\ &#x2F;__ _&#x2F; .-&#96; &#x2F; &#x2F;</span><br><span class="line"> * &#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#96;-.____&#96;-.___\_____&#x2F;___.-&#96;____.-&#39;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;</span><br><span class="line"> * &#96;&#x3D;---&#x3D;&#39;</span><br><span class="line"> *          .............................................</span><br><span class="line"> *           佛曰：bug泛滥，我已瘫痪！</span><br><span class="line"> *&#x2F;</span><br></pre></td></tr></table></figure>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line">&#x2F;***</span><br><span class="line"> *</span><br><span class="line"> *   █████▒█    ██  ▄████▄   ██ ▄█▀       ██████╗ ██╗   ██╗ ██████╗</span><br><span class="line"> * ▓██   ▒ ██  ▓██▒▒██▀ ▀█   ██▄█▒        ██╔══██╗██║   ██║██╔════╝</span><br><span class="line"> * ▒████ ░▓██  ▒██░▒▓█    ▄ ▓███▄░        ██████╔╝██║   ██║██║  ███╗</span><br><span class="line"> * ░▓█▒  ░▓▓█  ░██░▒▓▓▄ ▄██▒▓██ █▄        ██╔══██╗██║   ██║██║   ██║</span><br><span class="line"> * ░▒█░   ▒▒█████▓ ▒ ▓███▀ ░▒██▒ █▄       ██████╔╝╚██████╔╝╚██████╔╝</span><br><span class="line"> *  ▒ ░   ░▒▓▒ ▒ ▒ ░ ░▒ ▒  ░▒ ▒▒ ▓▒       ╚═════╝  ╚═════╝  ╚═════╝</span><br><span class="line"> *  ░     ░░▒░ ░ ░   ░  ▒   ░ ░▒ ▒░</span><br><span class="line"> *  ░ ░    ░░░ ░ ░ ░        ░ ░░ ░</span><br><span class="line"> *           ░     ░ ░      ░  ░</span><br><span class="line"> *&#x2F;</span><br></pre></td></tr></table></figure>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br></pre></td><td class="code"><pre><span class="line">&#x2F;***</span><br><span class="line"> *                    .::::.</span><br><span class="line"> *                  .::::::::.</span><br><span class="line"> *                 :::::::::::  FUCK YOU</span><br><span class="line"> *             ..:::::::::::&#39;</span><br><span class="line"> *           &#39;::::::::::::&#39;</span><br><span class="line"> *             .::::::::::</span><br><span class="line"> *        &#39;::::::::::::::..</span><br><span class="line"> *             ..::::::::::::.</span><br><span class="line"> *           &#96;&#96;::::::::::::::::</span><br><span class="line"> *            ::::&#96;&#96;:::::::::&#39;        .:::.</span><br><span class="line"> *           ::::&#39;   &#39;:::::&#39;       .::::::::.</span><br><span class="line"> *         .::::&#39;      ::::     .:::::::&#39;::::.</span><br><span class="line"> *        .:::&#39;       :::::  .:::::::::&#39; &#39;:::::.</span><br><span class="line"> *       .::&#39;        :::::.:::::::::&#39;      &#39;:::::.</span><br><span class="line"> *      .::&#39;         ::::::::::::::&#39;         &#96;&#96;::::.</span><br><span class="line"> *  ...:::           ::::::::::::&#39;              &#96;&#96;::.</span><br><span class="line"> * &#96;&#96;&#96;&#96; &#39;:.          &#39;:::::::::&#39;                  ::::..</span><br><span class="line"> *                    &#39;.:::::&#39;                    &#39;:&#39;&#96;&#96;&#96;&#96;..</span><br><span class="line"> *&#x2F;</span><br></pre></td></tr></table></figure>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line">&#x2F;***</span><br><span class="line"> *  佛曰:</span><br><span class="line"> *          写字楼里写字间，写字间里程序员；</span><br><span class="line"> *          程序人员写程序，又拿程序换酒钱。</span><br><span class="line"> *          酒醒只在网上坐，酒醉还来网下眠；</span><br><span class="line"> *          酒醉酒醒日复日，网上网下年复年。</span><br><span class="line"> *          但愿老死电脑间，不愿鞠躬老板前；</span><br><span class="line"> *          奔驰宝马贵者趣，公交自行程序员。</span><br><span class="line"> *          别人笑我忒疯癫，我笑自己命太贱；</span><br><span class="line"> *          不见满街漂亮妹，哪个归得程序员？</span><br><span class="line"> *&#x2F;</span><br></pre></td></tr></table></figure>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br></pre></td><td class="code"><pre><span class="line">&#x2F;***</span><br><span class="line"> *      ┌─┐       ┌─┐</span><br><span class="line"> *   ┌──┘ ┴───────┘ ┴──┐</span><br><span class="line"> *   │                 │</span><br><span class="line"> *   │       ───       │</span><br><span class="line"> *   │  ─┬┘       └┬─  │</span><br><span class="line"> *   │                 │</span><br><span class="line"> *   │       ─┴─       │</span><br><span class="line"> *   │                 │</span><br><span class="line"> *   └───┐         ┌───┘</span><br><span class="line"> *       │         │</span><br><span class="line"> *       │         │</span><br><span class="line"> *       │         │</span><br><span class="line"> *       │         └──────────────┐</span><br><span class="line"> *       │                        │</span><br><span class="line"> *       │                        ├─┐</span><br><span class="line"> *       │                        ┌─┘</span><br><span class="line"> *       │                        │</span><br><span class="line"> *       └─┐  ┐  ┌───────┬──┐  ┌──┘</span><br><span class="line"> *         │ ─┤ ─┤       │ ─┤ ─┤</span><br><span class="line"> *         └──┴──┘       └──┴──┘</span><br><span class="line"> *                神兽保佑</span><br><span class="line"> *               代码无BUG!</span><br><span class="line"> *&#x2F;</span><br></pre></td></tr></table></figure>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br></pre></td><td class="code"><pre><span class="line">&#x2F;***</span><br><span class="line"> *                  ___&#x3D;&#x3D;&#x3D;&#x3D;-_  _-&#x3D;&#x3D;&#x3D;&#x3D;___</span><br><span class="line"> *            _--^^^#####&#x2F;&#x2F;      \\#####^^^--_</span><br><span class="line"> *         _-^##########&#x2F;&#x2F; (    ) \\##########^-_</span><br><span class="line"> *        -############&#x2F;&#x2F;  |\^^&#x2F;|  \\############-</span><br><span class="line"> *      _&#x2F;############&#x2F;&#x2F;   (@::@)   \\############\_</span><br><span class="line"> *     &#x2F;#############((     \\&#x2F;&#x2F;     ))#############\</span><br><span class="line"> *    -###############\\    (oo)    &#x2F;&#x2F;###############-</span><br><span class="line"> *   -#################\\  &#x2F; VV \  &#x2F;&#x2F;#################-</span><br><span class="line"> *  -###################\\&#x2F;      \&#x2F;&#x2F;###################-</span><br><span class="line"> * _#&#x2F;|##########&#x2F;\######(   &#x2F;\   )######&#x2F;\##########|\#_</span><br><span class="line"> * |&#x2F; |#&#x2F;\#&#x2F;\#&#x2F;\&#x2F;  \#&#x2F;\##\  |  |  &#x2F;##&#x2F;\#&#x2F;  \&#x2F;\#&#x2F;\#&#x2F;\#| \|</span><br><span class="line"> * &#96;  |&#x2F;  V  V  &#96;   V  \#\| |  | |&#x2F;#&#x2F;  V   &#39;  V  V  \|  &#39;</span><br><span class="line"> *    &#96;   &#96;  &#96;      &#96;   &#x2F; | |  | | \   &#39;      &#39;  &#39;   &#39;</span><br><span class="line"> *                     (  | |  | |  )</span><br><span class="line"> *                    __\ | |  | | &#x2F;__</span><br><span class="line"> *                   (vvv(VVV)(VVV)vvv)                </span><br><span class="line"> *                        神兽保佑</span><br><span class="line"> *                       代码无BUG!</span><br><span class="line"> *&#x2F;</span><br></pre></td></tr></table></figure>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br></pre></td><td class="code"><pre><span class="line">&#x2F;***</span><br><span class="line"> *</span><br><span class="line"> *</span><br><span class="line"> *                                                    __----~~~~~~~~~~~------___</span><br><span class="line"> *                                   .  .   ~~&#x2F;&#x2F;&#x3D;&#x3D;&#x3D;&#x3D;......          __--~ ~~</span><br><span class="line"> *                   -.            \_|&#x2F;&#x2F;     |||\\  ~~~~~~::::... &#x2F;~</span><br><span class="line"> *                ___-&#x3D;&#x3D;_       _-~o~  \&#x2F;    |||  \\            _&#x2F;~~-</span><br><span class="line"> *        __---~~~.&#x3D;&#x3D;~||\&#x3D;_    -_--~&#x2F;_-~|-   |\\   \\        _&#x2F;~</span><br><span class="line"> *    _-~~     .&#x3D;~    |  \\-_    &#39;-~7  &#x2F;-   &#x2F;  ||    \      &#x2F;</span><br><span class="line"> *  .~       .~       |   \\ -_    &#x2F;  &#x2F;-   &#x2F;   ||      \   &#x2F;</span><br><span class="line"> * &#x2F;  ____  &#x2F;         |     \\ ~-_&#x2F;  &#x2F;|- _&#x2F;   .||       \ &#x2F;</span><br><span class="line"> * |~~    ~~|--~~~~--_ \     ~&#x3D;&#x3D;-&#x2F;   | \~--&#x3D;&#x3D;&#x3D;~~        .\</span><br><span class="line"> *          &#39;         ~-|      &#x2F;|    |-~\~~       __--~~</span><br><span class="line"> *                      |-~~-_&#x2F; |    |   ~\_   _-~            &#x2F;\</span><br><span class="line"> *                           &#x2F;  \     \__   \&#x2F;~                \__</span><br><span class="line"> *                       _--~ _&#x2F; | .-~~____--~-&#x2F;                  ~~&#x3D;&#x3D;.</span><br><span class="line"> *                      ((-&gt;&#x2F;~   &#39;.|||&#39; -_|    ~~-&#x2F; ,              . _||</span><br><span class="line"> *                                 -_     ~\      ~~---l__i__i__i--~~_&#x2F;</span><br><span class="line"> *                                 _-~-__   ~)  \--______________--~~</span><br><span class="line"> *                               &#x2F;&#x2F;.-~~~-~_--~- |-------~~~~~~~~</span><br><span class="line"> *                                      &#x2F;&#x2F;.-~~~--\</span><br><span class="line"> *                               神兽保佑</span><br><span class="line"> *                              代码无BUG!</span><br><span class="line"> *&#x2F;</span><br></pre></td></tr></table></figure>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br></pre></td><td class="code"><pre><span class="line">&#x2F;***                              _</span><br><span class="line"> *  _._ _..._ .-&#39;,     _.._(&#96;))</span><br><span class="line"> * &#39;-. &#96;     &#39;  &#x2F;-._.-&#39;    &#39;,&#x2F;</span><br><span class="line"> *    )         \            &#39;.</span><br><span class="line"> *   &#x2F; _    _    |             \</span><br><span class="line"> *  |  a    a    &#x2F;              |</span><br><span class="line"> *  \   .-.                     ;</span><br><span class="line"> *   &#39;-(&#39;&#39; ).-&#39;       ,&#39;       ;</span><br><span class="line"> *      &#39;-;           |      .&#39;</span><br><span class="line"> *         \           \    &#x2F;</span><br><span class="line"> *         | 7  .__  _.-\   \</span><br><span class="line"> *         | |  |  &#96;&#96;&#x2F;  &#x2F;&#96;  &#x2F;</span><br><span class="line"> *        &#x2F;,_|  |   &#x2F;,_&#x2F;   &#x2F;</span><br><span class="line"> *           &#x2F;,_&#x2F;      &#39;&#96;-&#39;</span><br><span class="line"> *&#x2F;</span><br></pre></td></tr></table></figure>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br></pre></td><td class="code"><pre><span class="line">&#x2F;***</span><br><span class="line"> **************************************************************</span><br><span class="line"> *                                                            *</span><br><span class="line"> *   .&#x3D;-&#x3D;-&#x3D;-&#x3D;-&#x3D;-&#x3D;-&#x3D;-&#x3D;-&#x3D;-&#x3D;-&#x3D;-&#x3D;-&#x3D;-&#x3D;-&#x3D;-&#x3D;-&#x3D;-&#x3D;-&#x3D;-&#x3D;-&#x3D;-&#x3D;-&#x3D;-&#x3D;-.       *</span><br><span class="line"> *    |                     ______                     |      *</span><br><span class="line"> *    |                  .-&quot;      &quot;-.                  |      *</span><br><span class="line"> *    |                 &#x2F;            \                 |      *</span><br><span class="line"> *    |     _          |              |          _     |      *</span><br><span class="line"> *    |    ( \         |,  .-.  .-.  ,|         &#x2F; )    |      *</span><br><span class="line"> *    |     &gt; &quot;&#x3D;._     | )(__&#x2F;  \__)( |     _.&#x3D;&quot; &lt;     |      *</span><br><span class="line"> *    |    (_&#x2F;&quot;&#x3D;._&quot;&#x3D;._ |&#x2F;     &#x2F;\     \| _.&#x3D;&quot;_.&#x3D;&quot;\_)    |      *</span><br><span class="line"> *    |           &quot;&#x3D;._&quot;(_     ^^     _)&quot;_.&#x3D;&quot;           |      *</span><br><span class="line"> *    |               &quot;&#x3D;\__|IIIIII|__&#x2F;&#x3D;&quot;               |      *</span><br><span class="line"> *    |              _.&#x3D;&quot;| \IIIIII&#x2F; |&quot;&#x3D;._              |      *</span><br><span class="line"> *    |    _     _.&#x3D;&quot;_.&#x3D;&quot;\          &#x2F;&quot;&#x3D;._&quot;&#x3D;._     _    |      *</span><br><span class="line"> *    |   ( \_.&#x3D;&quot;_.&#x3D;&quot;     &#96;--------&#96;     &quot;&#x3D;._&quot;&#x3D;._&#x2F; )   |      *</span><br><span class="line"> *    |    &gt; _.&#x3D;&quot;                            &quot;&#x3D;._ &lt;    |      *</span><br><span class="line"> *    |   (_&#x2F;                                    \_)   |      *</span><br><span class="line"> *    |                                                |      *</span><br><span class="line"> *    &#39;-&#x3D;-&#x3D;-&#x3D;-&#x3D;-&#x3D;-&#x3D;-&#x3D;-&#x3D;-&#x3D;-&#x3D;-&#x3D;-&#x3D;-&#x3D;-&#x3D;-&#x3D;-&#x3D;-&#x3D;-&#x3D;-&#x3D;-&#x3D;-&#x3D;-&#x3D;-&#x3D;-&#x3D;&#39;      *</span><br><span class="line"> *                                                            *</span><br><span class="line"> *           LASCIATE OGNI SPERANZA, VOI CH&#39;ENTRATE           *</span><br><span class="line"> **************************************************************</span><br><span class="line"> *&#x2F;</span><br></pre></td></tr></table></figure>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br></pre></td><td class="code"><pre><span class="line">&#x2F;***</span><br><span class="line"> *                                         ,s555SB@@&amp;                          </span><br><span class="line"> *                                      :9H####@@@@@Xi                        </span><br><span class="line"> *                                     1@@@@@@@@@@@@@@8                       </span><br><span class="line"> *                                   ,8@@@@@@@@@B@@@@@@8                      </span><br><span class="line"> *                                  :B@@@@X3hi8Bs;B@@@@@Ah,                   </span><br><span class="line"> *             ,8i                  r@@@B:     1S ,M@@@@@@#8;                 </span><br><span class="line"> *            1AB35.i:               X@@8 .   SGhr ,A@@@@@@@@S                </span><br><span class="line"> *            1@h31MX8                18Hhh3i .i3r ,A@@@@@@@@@5               </span><br><span class="line"> *            ;@&amp;i,58r5                 rGSS:     :B@@@@@@@@@@A               </span><br><span class="line"> *             1#i  . 9i                 hX.  .: .5@@@@@@@@@@@1               </span><br><span class="line"> *              sG1,  ,G53s.              9#Xi;hS5 3B@@@@@@@B1                </span><br><span class="line"> *               .h8h.,A@@@MXSs,           #@H1:    3ssSSX@1                  </span><br><span class="line"> *               s ,@@@@@@@@@@@@Xhi,       r#@@X1s9M8    .GA981               </span><br><span class="line"> *               ,. rS8H#@@@@@@@@@@#HG51;.  .h31i;9@r    .8@@@@BS;i;          </span><br><span class="line"> *                .19AXXXAB@@@@@@@@@@@@@@#MHXG893hrX#XGGXM@@@@@@@@@@MS        </span><br><span class="line"> *                s@@MM@@@hsX#@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@&amp;,      </span><br><span class="line"> *              :GB@#3G@@Brs ,1GM@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@B,     </span><br><span class="line"> *            .hM@@@#@@#MX 51  r;iSGAM@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@8     </span><br><span class="line"> *          :3B@@@@@@@@@@@&amp;9@h :Gs   .;sSXH@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@:    </span><br><span class="line"> *      s&amp;HA#@@@@@@@@@@@@@@M89A;.8S.       ,r3@@@@@@@@@@@@@@@@@@@@@@@@@@@r    </span><br><span class="line"> *   ,13B@@@@@@@@@@@@@@@@@@@5 5B3 ;.         ;@@@@@@@@@@@@@@@@@@@@@@@@@@@i    </span><br><span class="line"> *  5#@@#&amp;@@@@@@@@@@@@@@@@@@9  .39:          ;@@@@@@@@@@@@@@@@@@@@@@@@@@@;    </span><br><span class="line"> *  9@@@X:MM@@@@@@@@@@@@@@@#;    ;31.         H@@@@@@@@@@@@@@@@@@@@@@@@@@:    </span><br><span class="line"> *   SH#@B9.rM@@@@@@@@@@@@@B       :.         3@@@@@@@@@@@@@@@@@@@@@@@@@@5    </span><br><span class="line"> *     ,:.   9@@@@@@@@@@@#HB5                 .M@@@@@@@@@@@@@@@@@@@@@@@@@B    </span><br><span class="line"> *           ,ssirhSM@&amp;1;i19911i,.             s@@@@@@@@@@@@@@@@@@@@@@@@@@S   </span><br><span class="line"> *              ,,,rHAri1h1rh&amp;@#353Sh:          8@@@@@@@@@@@@@@@@@@@@@@@@@#:  </span><br><span class="line"> *            .A3hH@#5S553&amp;@@#h   i:i9S          #@@@@@@@@@@@@@@@@@@@@@@@@@A.</span><br><span class="line"> *</span><br><span class="line"> *</span><br><span class="line"> *    又看源码，看你妹妹呀！</span><br><span class="line"> *&#x2F;</span><br></pre></td></tr></table></figure>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br></pre></td><td class="code"><pre><span class="line">&#x2F;***</span><br><span class="line"> *             ,%%%%%%%%,</span><br><span class="line"> *           ,%%&#x2F;\%%%%&#x2F;\%%</span><br><span class="line"> *          ,%%%\c &quot;&quot; J&#x2F;%%%</span><br><span class="line"> * %.       %%%%&#x2F; o  o \%%%</span><br><span class="line"> * &#96;%%.     %%%%    _  |%%%</span><br><span class="line"> *  &#96;%%     &#96;%%%%(__Y__)%%&#39;</span><br><span class="line"> *  &#x2F;&#x2F;       ;%%%%&#96;\-&#x2F;%%%&#39;</span><br><span class="line"> * ((       &#x2F;  &#96;%%%%%%%&#39;</span><br><span class="line"> *  \\    .&#39;          |</span><br><span class="line"> *   \\  &#x2F;       \  | |</span><br><span class="line"> *    \\&#x2F;         ) | |</span><br><span class="line"> *     \         &#x2F;_ | |__</span><br><span class="line"> *     (___________))))))) 攻城湿</span><br><span class="line"> *</span><br><span class="line"> *        _       _</span><br><span class="line"> * __   _(_)_   _(_) __ _ _ __</span><br><span class="line"> * \ \ &#x2F; &#x2F; \ \ &#x2F; &#x2F; |&#x2F; _&#96; |&#39;_ \</span><br><span class="line"> *  \ V &#x2F;| |\ V &#x2F;| | (_| | | | |</span><br><span class="line"> *   \_&#x2F; |_| \_&#x2F; |_|\__,_|_| |_|</span><br><span class="line"> *&#x2F;</span><br></pre></td></tr></table></figure>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br></pre></td><td class="code"><pre><span class="line">&#x2F;***</span><br><span class="line"> * </span><br><span class="line"> *  .--,       .--,</span><br><span class="line"> * ( (  \.---.&#x2F;  ) )</span><br><span class="line"> *  &#39;.__&#x2F;o   o\__.&#39;</span><br><span class="line"> *     &#123;&#x3D;  ^  &#x3D;&#125;</span><br><span class="line"> *      &gt;  -  &lt;</span><br><span class="line"> *     &#x2F;       \</span><br><span class="line"> *    &#x2F;&#x2F;       \\</span><br><span class="line"> *   &#x2F;&#x2F;|   .   |\\</span><br><span class="line"> *   &quot;&#39;\       &#x2F;&#39;&quot;_.-~^&#96;&#39;-.</span><br><span class="line"> *      \  _  &#x2F;--&#39;         &#96;</span><br><span class="line"> *    ___)( )(___</span><br><span class="line"> *   (((__) (__)))    高山仰止,景行行止.虽不能至,心向往之。</span><br><span class="line"> *&#x2F;</span><br></pre></td></tr></table></figure>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br></pre></td><td class="code"><pre><span class="line">&#x2F;***</span><br><span class="line"> * 頂頂頂頂頂頂頂頂頂 頂頂頂頂頂頂頂頂頂</span><br><span class="line"> * 頂頂頂頂頂頂頂     頂頂     </span><br><span class="line"> *    頂頂   頂頂頂頂頂頂頂頂頂頂頂</span><br><span class="line"> *    頂頂   頂頂頂頂頂頂頂頂頂頂頂</span><br><span class="line"> *    頂頂   頂頂       頂頂</span><br><span class="line"> *    頂頂   頂頂  頂頂頂  頂頂</span><br><span class="line"> *    頂頂   頂頂  頂頂頂  頂頂</span><br><span class="line"> *    頂頂   頂頂  頂頂頂  頂頂</span><br><span class="line"> *    頂頂   頂頂  頂頂頂  頂頂</span><br><span class="line"> *    頂頂       頂頂頂 </span><br><span class="line"> *    頂頂      頂頂 頂頂 頂頂</span><br><span class="line"> *  頂頂頂頂   頂頂頂頂頂 頂頂頂頂頂</span><br><span class="line"> *  頂頂頂頂   頂頂頂頂   頂頂頂頂</span><br><span class="line"> *&#x2F;</span><br></pre></td></tr></table></figure>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br></pre></td><td class="code"><pre><span class="line">&#x2F;***</span><br><span class="line"> *                        d*##$.</span><br><span class="line"> *  zP&quot;&quot;&quot;&quot;&quot;$e.           $&quot;    $o</span><br><span class="line"> * 4$       &#39;$          $&quot;      $</span><br><span class="line"> * &#39;$        &#39;$        J$       $F</span><br><span class="line"> *  &#39;b        $k       $&gt;       $</span><br><span class="line"> *   $k        $r     J$       d$</span><br><span class="line"> *   &#39;$         $     $&quot;       $~</span><br><span class="line"> *    &#39;$        &quot;$   &#39;$E       $</span><br><span class="line"> *     $         $L   $&quot;      $F ...</span><br><span class="line"> *      $.       4B   $      $$$*&quot;&quot;&quot;*b</span><br><span class="line"> *      &#39;$        $.  $$     $$      $F</span><br><span class="line"> *       &quot;$       R$  $F     $&quot;      $</span><br><span class="line"> *        $k      ?$ u*     dF      .$</span><br><span class="line"> *        ^$.      $$&quot;     z$      u$$$$e</span><br><span class="line"> *         #$b             $E.dW@e$&quot;    ?$</span><br><span class="line"> *          #$           .o$$# d$$$$c    ?F</span><br><span class="line"> *           $      .d$$#&quot; . zo$&gt;   #$r .uF</span><br><span class="line"> *           $L .u$*&quot;      $&amp;$$$k   .$$d$$F</span><br><span class="line"> *            $$&quot;            &quot;&quot;^&quot;$$$P&quot;$P9$</span><br><span class="line"> *           JP              .o$$$$u:$P $$</span><br><span class="line"> *           $          ..ue$&quot;      &quot;&quot;  $&quot;</span><br><span class="line"> *          d$          $F              $</span><br><span class="line"> *          $$     ....udE             4B</span><br><span class="line"> *           #$    &quot;&quot;&quot;&quot;&#96; $r            @$</span><br><span class="line"> *            ^$L        &#39;$            $F</span><br><span class="line"> *              RN        4N           $</span><br><span class="line"> *               *$b                  d$</span><br><span class="line"> *                $$k                 $F</span><br><span class="line"> *                 $$b                $F</span><br><span class="line"> *                  $&quot;&quot;               $F</span><br><span class="line"> *                  &#39;$                $</span><br><span class="line"> *                   $L               $</span><br><span class="line"> *                   &#39;$               $</span><br><span class="line"> *                    $               $</span><br><span class="line"> *&#x2F;</span><br></pre></td></tr></table></figure>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br></pre></td><td class="code"><pre><span class="line">&#x2F;***</span><br><span class="line"> *              ,----------------,              ,---------,</span><br><span class="line"> *         ,-----------------------,          ,&quot;        ,&quot;|</span><br><span class="line"> *       ,&quot;                      ,&quot;|        ,&quot;        ,&quot;  |</span><br><span class="line"> *      +-----------------------+  |      ,&quot;        ,&quot;    |</span><br><span class="line"> *      |  .-----------------.  |  |     +---------+      |</span><br><span class="line"> *      |  |                 |  |  |     | -&#x3D;&#x3D;----&#39;|      |</span><br><span class="line"> *      |  |  I LOVE DOS!    |  |  |     |         |      |</span><br><span class="line"> *      |  |  Bad command or |  |  |&#x2F;----|&#96;---&#x3D;    |      |</span><br><span class="line"> *      |  |  C:\&gt;_          |  |  |   ,&#x2F;|&#x3D;&#x3D;&#x3D;&#x3D; ooo |      ;</span><br><span class="line"> *      |  |                 |  |  |  &#x2F;&#x2F; |(((( [33]|    ,&quot;</span><br><span class="line"> *      |  &#96;-----------------&#39;  |,&quot; .;&#39;| |((((     |  ,&quot;</span><br><span class="line"> *      +-----------------------+  ;;  | |         |,&quot;</span><br><span class="line"> *         &#x2F;_)______________(_&#x2F;  &#x2F;&#x2F;&#39;   | +---------+</span><br><span class="line"> *    ___________________________&#x2F;___  &#96;,</span><br><span class="line"> *   &#x2F;  oooooooooooooooo  .o.  oooo &#x2F;,   \,&quot;-----------</span><br><span class="line"> *  &#x2F; &#x3D;&#x3D;ooooooooooooooo&#x3D;&#x3D;.o.  ooo&#x3D; &#x2F;&#x2F;   ,&#96;\--&#123;)B     ,&quot;</span><br><span class="line"> * &#x2F;_&#x3D;&#x3D;__&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;__&#x3D;&#x3D;_ooo__ooo&#x3D;_&#x2F;&#39;   &#x2F;___________,&quot;</span><br><span class="line"> *</span><br><span class="line"> *&#x2F;</span><br></pre></td></tr></table></figure>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line">&#x2F;***</span><br><span class="line"> *                 .-~~~~~~~~~-._       _.-~~~~~~~~~-.</span><br><span class="line"> *             __.&#39;              ~.   .~              &#96;.__</span><br><span class="line"> *           .&#39;&#x2F;&#x2F;                  \.&#x2F;                  \\&#96;.</span><br><span class="line"> *         .&#39;&#x2F;&#x2F;                     |                     \\&#96;.</span><br><span class="line"> *       .&#39;&#x2F;&#x2F; .-~&quot;&quot;&quot;&quot;&quot;&quot;&quot;~~~~-._     |     _,-~~~~&quot;&quot;&quot;&quot;&quot;&quot;&quot;~-. \\&#96;.</span><br><span class="line"> *     .&#39;&#x2F;&#x2F;.-&quot;                 &#96;-.  |  .-&#39;                 &quot;-.\\&#96;.</span><br><span class="line"> *   .&#39;&#x2F;&#x2F;______.&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;-..   \ | &#x2F;   ..-&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;.______\\&#96;.</span><br><span class="line"> * .&#39;______________________________\|&#x2F;______________________________&#96;.</span><br><span class="line"> *</span><br><span class="line"> *&#x2F;</span><br></pre></td></tr></table></figure>
-<p>方法主要是图片转字符,在线版的地址！<br>工具：<a target="_blank" rel="noopener" href="http://www.makepic.net/Tool/Image2ascii.html">http://www.makepic.net/Tool/Image2ascii.html</a></p>
-
-      
-    </div>
-
-    
-    
-    
-
-    <footer class="post-footer">
-        <div class="post-eof"></div>
-      
-    </footer>
-  </article>
-</div>
-
-
-
-
-    
-
-
-<div class="post-block">
-  
-  
-
-  <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="">
-    <link itemprop="mainEntityOfPage" href="https://lzhwweb.github.io/nirvana/javascript/%E5%89%8D%E7%AB%AF/cross-env/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="image" content="/nirvana/images/headphoto.jpeg">
-      <meta itemprop="name" content="nirvana">
-      <meta itemprop="description" content="个人学习笔记">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="涅槃快乐是金">
-    </span>
-      <header class="post-header">
-        <h2 class="post-title" itemprop="name headline">
-          <a href="/nirvana/javascript/%E5%89%8D%E7%AB%AF/cross-env/" class="post-title-link" itemprop="url">npm常用模块之cross-env使用</a>
-        </h2>
-
-        <div class="post-meta-container">
-          <div class="post-meta">
-    <span class="post-meta-item">
-      <span class="post-meta-item-icon">
-        <i class="far fa-calendar"></i>
-      </span>
-      <span class="post-meta-item-text">发表于</span>
-      
-
-      <time title="创建时间：2021-03-10 22:18:53 / 修改时间：22:22:45" itemprop="dateCreated datePublished" datetime="2021-03-10T22:18:53+08:00">2021-03-10</time>
-    </span>
-    <span class="post-meta-item">
-      <span class="post-meta-item-icon">
-        <i class="far fa-folder"></i>
-      </span>
-      <span class="post-meta-item-text">分类于</span>
-        <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-          <a href="/nirvana/categories/javascript/" itemprop="url" rel="index"><span itemprop="name">javascript</span></a>
-        </span>
-    </span>
-
-  
-      </div>
-      <div class="post-meta">
-    <span class="post-meta-item" title="本文字数">
-      <span class="post-meta-item-icon">
-        <i class="far fa-file-word"></i>
-      </span>
-      <span class="post-meta-item-text">本文字数：</span>
-      <span>2.6k</span>
-    </span>
-    <span class="post-meta-item" title="阅读时长">
-      <span class="post-meta-item-icon">
-        <i class="far fa-clock"></i>
-      </span>
-      <span class="post-meta-item-text">阅读时长 &asymp;</span>
-      <span>2 分钟</span>
-    </span>
-</div>
-
-        </div>
-      </header>
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-          <p><strong>cross-env</strong>这是一款运行跨平台设置和使用环境变量的脚本。</p>
-<p><strong>为什么需要cross-env?</strong></p>
-<p><code>NODE_ENV=production</code>像这样设置环境变量时，大多数Windows命令提示符都会阻塞 。（<code>Windows</code>上的<code>Bash</code>是例外，它使用本机Bash。）同样，Windows和POSIX命令使用环境变量的方式也有所不同。对于POSIX，您可以使用：<code>$ENV_VAR</code> 和在Windows上可以使用<code>%ENV_VAR%</code>。<br><code>cross-env</code>这样，您就可以使用单个命令，而不必担心为平台正确设置或使用环境变量。就像在POSIX系统上运行时一样，只需对其进行设置即可，并且<code>cross-env</code>会妥善设置。</p>
-<p>在window下配置</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line">#node中常用的到的环境变量是NODE_ENV，首先查看是否存在 </span><br><span class="line">set NODE_ENV </span><br><span class="line"></span><br><span class="line">#如果不存在则添加环境变量 </span><br><span class="line">set NODE_ENV&#x3D;production </span><br><span class="line"></span><br><span class="line">#环境变量追加值 set 变量名&#x3D;%变量名%;变量内容 </span><br><span class="line">set path&#x3D;%path%;C:\web;C:\Tools </span><br><span class="line"></span><br><span class="line">#某些时候需要删除环境变量 </span><br><span class="line">set NODE_ENV&#x3D;</span><br><span class="line"></span><br></pre></td></tr></table></figure>
-
-<p>在linux下配置</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br></pre></td><td class="code"><pre><span class="line">#node中常用的到的环境变量是NODE_ENV，首先查看是否存在</span><br><span class="line">echo $NODE_ENV</span><br><span class="line"></span><br><span class="line">#如果不存在则添加环境变量</span><br><span class="line">export NODE_ENV&#x3D;production</span><br><span class="line"></span><br><span class="line">#环境变量追加值</span><br><span class="line">export path&#x3D;$path:&#x2F;home&#x2F;download:&#x2F;usr&#x2F;local&#x2F;</span><br><span class="line"></span><br><span class="line">#某些时候需要删除环境变量</span><br><span class="line">unset NODE_ENV</span><br><span class="line"></span><br><span class="line">#某些时候需要显示所有的环境变量</span><br><span class="line">env</span><br><span class="line"></span><br></pre></td></tr></table></figure>
-
-<p><a target="_blank" rel="noopener" href="https://www.npmjs.com/package/cross-env">更多使用文档请点击访问cross-env工具官网</a>。</p>
-<h2 id="安装"><a href="#安装" class="headerlink" title="安装"></a>安装</h2><p>一键安装不多解释</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">npm install --save-dev cross-env</span><br><span class="line"></span><br></pre></td></tr></table></figure>
-
-<blockquote>
-<p>警告！确保在安装软件包时可以正确拼写，以免错误安装恶意软件</p>
-</blockquote>
-<blockquote>
-<p>注意：cross-env的版本6仅支持Node.js 8和更高版本，才能在Node.js 7或更低版​​本的安装版本5上使用<code>npm install --save-dev cross-env@5</code></p>
-</blockquote>
-<h2 id="使用"><a href="#使用" class="headerlink" title="使用"></a>使用</h2><p>我在npm脚本中使用了它：</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">&#123;</span><br><span class="line">  &quot;scripts&quot;: &#123;</span><br><span class="line">    &quot;build&quot;: &quot;cross-env NODE_ENV&#x3D;production webpack --config build&#x2F;webpack.config.js&quot;</span><br><span class="line">  &#125;</span><br><span class="line">&#125;</span><br><span class="line"></span><br></pre></td></tr></table></figure>
-
-<p>最终，执行的命令（使用<a target="_blank" rel="noopener" href="https://www.npmjs.com/package/cross-spawn">cross-spawn</a>）为：</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">webpack --config build&#x2F;webpack.config.js</span><br><span class="line"></span><br></pre></td></tr></table></figure>
-
-<p>该<code>NODE_ENV</code>环境变量将被设置<code>cross-env</code></p>
-<p>您也可以将命令拆分为多个命令，或者将环境变量声明与实际命令执行分开。您可以这样操作：</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">&#123;</span><br><span class="line">  &quot;scripts&quot;: &#123;</span><br><span class="line">    &quot;parentScript&quot;: &quot;cross-env GREET&#x3D;\&quot;Joe\&quot; npm run childScript&quot;,</span><br><span class="line">    &quot;childScript&quot;: &quot;cross-env-shell \&quot;echo Hello $GREET\&quot;&quot;</span><br><span class="line">  &#125;</span><br><span class="line">&#125;</span><br><span class="line"></span><br></pre></td></tr></table></figure>
-
-<p>其中<code>childScript</code>包含要执行的实际命令并<code>parentScript</code>设置要使用的环境变量。然后，而不是运行<code>childScript</code>，而是运行父项。这对于使用不同的env变量启动同一命令或当环境变量太长而无法将所有内容放在一行中时非常有用。这也意味着<code>$GREET</code>即使在通常要求使用Windows的Windows上，也可以使用<code>env var</code>语法<code>%GREET%</code>。</p>
-<p>如果您在美元符号前加上奇数个反斜杠，则不会替换表达式语句。请注意，这意味着在转义JSON字符串后使用了反斜杠。<code>&quot;FOO=\\$BAR&quot;</code>将不会被替换。 <code>&quot;FOO=\\\\$BAR&quot;</code>虽然会被替换。</p>
-<p>最后，如果要传递JSON字符串（例如，使用<code>ts-loader</code>时），则可以执行以下操作：</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">&#123;</span><br><span class="line">  &quot;scripts&quot;: &#123;</span><br><span class="line">    &quot;test&quot;: &quot;cross-env TS_NODE_COMPILER_OPTIONS&#x3D;&#123;\\\&quot;module\\\&quot;:\\\&quot;commonjs\\\&quot;&#125; node some_file.test.ts&quot;</span><br><span class="line">  &#125;</span><br><span class="line">&#125;</span><br><span class="line"></span><br></pre></td></tr></table></figure>
-
-<p>要特别注意三倍反斜线<code>(\\\)</code>之前的 双引号<code>(&quot;)</code>和缺少的单引号<code>(&#39;)</code>。为了同时在Windows和UNIX上运行，必须同时满足这两个条件。</p>
-<p><code>cross-env</code> 与 <code>cross-env-shell</code><br>该<code>cross-env</code>模块公开了两个容器：<code>cross-env</code>和<code>cross-env-shell</code>。第一个使用来执行命令<a target="_blank" rel="noopener" href="https://www.npmjs.com/package/cross-spawn">cross-spawn</a>，第二个使用<code>shellNode</code>的选项<code>spawn</code>。</p>
-<p>主要用例<code>cross-env-shell</code>是当您需要在整个嵌入式命令行脚本中而不是仅在一个命令中设置环境变量时。</p>
-<p>例如，如果您希望将环境变量应用于一系列串联的命令，则需要将其用引号引起来并使用 <code>cross-env-shell</code>代替<code>cross-env</code>。</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">&#123;</span><br><span class="line">  &quot;scripts&quot;: &#123;</span><br><span class="line">    &quot;greet&quot;: &quot;cross-env-shell GREETING&#x3D;Hi NAME&#x3D;Joe \&quot;echo $GREETING &amp;&amp; echo $NAME\&quot;&quot;</span><br><span class="line">  &#125;</span><br><span class="line">&#125;</span><br><span class="line"></span><br></pre></td></tr></table></figure>
-
-<p>经验法则是：如果要传递给<code>cross-env</code>包含要解释的特殊<code>Shell</code>字符的命令，请使用 <code>cross-env-shell</code>。否则请坚持<code>cross-env</code>。</p>
-<p>在Windows上<code>cross-env-shell</code>，如果要 在程序内部处理<a target="_blank" rel="noopener" href="https://nodejs.org/api/process.html#process_signal_events">信号事件</a>，则 需要使用。常见的情况是当您想要捕获<code>SIGINT</code>通过<code>Ctrl + C</code>在命令行界面上按调用的 事件时。</p>
-
-      
-    </div>
-
-    
-    
-    
-
-    <footer class="post-footer">
-        <div class="post-eof"></div>
-      
-    </footer>
-  </article>
-</div>
-
-
-
-
-    
-
-
-<div class="post-block">
-  
-  
-
-  <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="">
-    <link itemprop="mainEntityOfPage" href="https://lzhwweb.github.io/nirvana/reactnative/react-native/React-Native-1px%E5%A4%84%E7%90%86/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="image" content="/nirvana/images/headphoto.jpeg">
-      <meta itemprop="name" content="nirvana">
-      <meta itemprop="description" content="个人学习笔记">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="涅槃快乐是金">
-    </span>
-      <header class="post-header">
-        <h2 class="post-title" itemprop="name headline">
-          <a href="/nirvana/reactnative/react-native/React-Native-1px%E5%A4%84%E7%90%86/" class="post-title-link" itemprop="url">React-Native-1px处理</a>
-        </h2>
-
-        <div class="post-meta-container">
-          <div class="post-meta">
-    <span class="post-meta-item">
-      <span class="post-meta-item-icon">
-        <i class="far fa-calendar"></i>
-      </span>
-      <span class="post-meta-item-text">发表于</span>
-      
-
-      <time title="创建时间：2021-03-10 21:12:40 / 修改时间：13:43:55" itemprop="dateCreated datePublished" datetime="2021-03-10T21:12:40+08:00">2021-03-10</time>
-    </span>
-    <span class="post-meta-item">
-      <span class="post-meta-item-icon">
-        <i class="far fa-folder"></i>
-      </span>
-      <span class="post-meta-item-text">分类于</span>
-        <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-          <a href="/nirvana/categories/reactnative/" itemprop="url" rel="index"><span itemprop="name">reactnative</span></a>
-        </span>
-    </span>
-
-  
-      </div>
-      <div class="post-meta">
-    <span class="post-meta-item" title="本文字数">
-      <span class="post-meta-item-icon">
-        <i class="far fa-file-word"></i>
-      </span>
-      <span class="post-meta-item-text">本文字数：</span>
-      <span>220</span>
-    </span>
-    <span class="post-meta-item" title="阅读时长">
-      <span class="post-meta-item-icon">
-        <i class="far fa-clock"></i>
-      </span>
-      <span class="post-meta-item-text">阅读时长 &asymp;</span>
-      <span>1 分钟</span>
-    </span>
-</div>
-
-        </div>
-      </header>
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-          <p>当UI设计图上标注某间距为1px时，只需在间距设置的地方填如下值：</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line">import &#123;</span><br><span class="line">  View,</span><br><span class="line">  StyleSheet,</span><br><span class="line">  PixelRatio, </span><br><span class="line">&#125; from &#39;react-native&#39;</span><br><span class="line">&#x2F;&#x2F;要用到 PixelRatio.get() 则需从react-native组件中引用 PixelRatio</span><br><span class="line">1px:&#123;</span><br><span class="line">        height:1 &#x2F; PixelRatio.get()</span><br><span class="line">    &#125;</span><br></pre></td></tr></table></figure>
-
-      
-    </div>
-
-    
-    
-    
-
-    <footer class="post-footer">
-        <div class="post-eof"></div>
-      
-    </footer>
-  </article>
-</div>
-
-
-
-
-    
-
-
-<div class="post-block">
-  
-  
-
-  <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="">
-    <link itemprop="mainEntityOfPage" href="https://lzhwweb.github.io/nirvana/reactnative/react-native/React-Native-%E5%9F%BA%E6%9C%AC%E5%91%BD%E4%BB%A4%E6%B1%87%E6%80%BB/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="image" content="/nirvana/images/headphoto.jpeg">
-      <meta itemprop="name" content="nirvana">
-      <meta itemprop="description" content="个人学习笔记">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="涅槃快乐是金">
-    </span>
-      <header class="post-header">
-        <h2 class="post-title" itemprop="name headline">
-          <a href="/nirvana/reactnative/react-native/React-Native-%E5%9F%BA%E6%9C%AC%E5%91%BD%E4%BB%A4%E6%B1%87%E6%80%BB/" class="post-title-link" itemprop="url">React-Native-基本命令汇总</a>
-        </h2>
-
-        <div class="post-meta-container">
-          <div class="post-meta">
-    <span class="post-meta-item">
-      <span class="post-meta-item-icon">
-        <i class="far fa-calendar"></i>
-      </span>
-      <span class="post-meta-item-text">发表于</span>
-      
-
-      <time title="创建时间：2021-03-10 21:12:40 / 修改时间：13:43:55" itemprop="dateCreated datePublished" datetime="2021-03-10T21:12:40+08:00">2021-03-10</time>
-    </span>
-    <span class="post-meta-item">
-      <span class="post-meta-item-icon">
-        <i class="far fa-folder"></i>
-      </span>
-      <span class="post-meta-item-text">分类于</span>
-        <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-          <a href="/nirvana/categories/reactnative/" itemprop="url" rel="index"><span itemprop="name">reactnative</span></a>
-        </span>
-    </span>
-
-  
-      </div>
-      <div class="post-meta">
-    <span class="post-meta-item" title="本文字数">
-      <span class="post-meta-item-icon">
-        <i class="far fa-file-word"></i>
-      </span>
-      <span class="post-meta-item-text">本文字数：</span>
-      <span>8k</span>
-    </span>
-    <span class="post-meta-item" title="阅读时长">
-      <span class="post-meta-item-icon">
-        <i class="far fa-clock"></i>
-      </span>
-      <span class="post-meta-item-text">阅读时长 &asymp;</span>
-      <span>7 分钟</span>
-    </span>
-</div>
-
-        </div>
-      </header>
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-          <p>最近进行React Native的一些优化工作，发现React Native提供了很多简单方便的配置，但是自己一直没有使用过，而且React Native提供了非常好的help功能，会列出对应的说明和example，这边简单整理下一些常用的命令。</p>
-<h2 id="1-查看所有命令-react-native-–help"><a href="#1-查看所有命令-react-native-–help" class="headerlink" title="1. 查看所有命令 react-native –help"></a>1. 查看所有命令 <em><strong>react-native –help</strong></em></h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br></pre></td><td class="code"><pre><span class="line">mac:react-native --help</span><br><span class="line"></span><br><span class="line">  Usage: react-native [options] [command]</span><br><span class="line"></span><br><span class="line">  Options:</span><br><span class="line"></span><br><span class="line">    -V, --version                      output the version number</span><br><span class="line">    -h, --help                         output usage information</span><br><span class="line"></span><br><span class="line">  Commands:</span><br><span class="line"></span><br><span class="line">    start [options]                    starts the webserver</span><br><span class="line">    run-ios [options]                  builds your app and starts it on iOS simulator</span><br><span class="line">    run-android [options]              builds your app and starts it on a connected Android emulator or device</span><br><span class="line">    new-library [options]              generates a native library bridge</span><br><span class="line">    bundle [options]                   builds the javascript bundle for offline use</span><br><span class="line">    unbundle [options]                 builds javascript as &quot;unbundle&quot; for offline use</span><br><span class="line">    eject [options]                    Re-create the iOS and Android folders and native code</span><br><span class="line">    link [options] [packageName]       links all native dependencies (updates native build files)</span><br><span class="line">    unlink [options] &lt;packageName&gt;     unlink native dependency</span><br><span class="line">    install [options] &lt;packageName&gt;    install and link native dependencies</span><br><span class="line">    uninstall [options] &lt;packageName&gt;  uninstall and unlink native dependencies</span><br><span class="line">    upgrade [options]                  upgrade your app&#39;s template files to the latest version; run this after updating the react-native version in your package.json and running npm install</span><br><span class="line">    log-android [options]              starts adb logcat</span><br><span class="line">    log-ios [options]                  starts iOS device syslog tail</span><br><span class="line">    info [options]                     Get relevant version info about OS, toolchain and libraries</span><br></pre></td></tr></table></figure>
-
-<h2 id="2-最常用的启动命令react-native-start"><a href="#2-最常用的启动命令react-native-start" class="headerlink" title="2. 最常用的启动命令react-native start"></a>2. 最常用的启动命令<em><strong>react-native start</strong></em></h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br></pre></td><td class="code"><pre><span class="line">mac:react-native start --help</span><br><span class="line">react-native start [options]</span><br><span class="line">  starts the webserver</span><br><span class="line"></span><br><span class="line">  Options:</span><br><span class="line"></span><br><span class="line">    --port [number]                                                (default: 8081)</span><br><span class="line">    --host [string]                                                (default: )</span><br><span class="line">    --root [list]                                                 add another root(s) to be used by the packager in this project (default: )</span><br><span class="line">    --projectRoots [list]                                         override the root(s) to be used by the packager (default: &#x2F;Users&#x2F;mac&#x2F;mallCategory)</span><br><span class="line">    --assetExts [list]                                            Specify any additional asset extensions to be used by the packager (default: )</span><br><span class="line">    --sourceExts [list]                                           Specify any additional source extensions to be used by the packager (default: )</span><br><span class="line">    --platforms [list]                                            Specify any additional platforms to be used by the packager (default: )</span><br><span class="line">    --providesModuleNodeModules [list]                            Specify any npm packages that import dependencies with providesModule (default: react-native,react-native-windows)</span><br><span class="line">    --max-workers [number]                                        Specifies the maximum number of workers the worker-pool will spawn for transforming files. This defaults to the number of the cores available on your machine.</span><br><span class="line">    --skipflow                                                    Disable flow checks</span><br><span class="line">    --nonPersistent                                               Disable file watcher</span><br><span class="line">    --transformer [string]                                        Specify a custom transformer to be used</span><br><span class="line">    --reset-cache, --resetCache                                   Removes cached files</span><br><span class="line">    --custom-log-reporter-path, --customLogReporterPath [string]  Path to a JavaScript file that exports a log reporter as a replacement for TerminalReporter</span><br><span class="line">    --verbose                                                     Enables logging</span><br><span class="line">    --https                                                       Enables https connections to the server</span><br><span class="line">    --key [path]                                                  Path to custom SSL key</span><br><span class="line">    --cert [path]                                                 Path to custom SSL cert</span><br><span class="line">    --config [string]                                             Path to the CLI configuration file</span><br><span class="line">    -h, --help                                                    output usage information</span><br></pre></td></tr></table></figure>
-
-<h2 id="3-iOS启动命令-react-native-–run-ios"><a href="#3-iOS启动命令-react-native-–run-ios" class="headerlink" title="3. iOS启动命令 react-native –run-ios"></a>3. iOS启动命令 <em><strong>react-native –run-ios</strong></em></h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br></pre></td><td class="code"><pre><span class="line">mac: react-native run-ios --help</span><br><span class="line"></span><br><span class="line">  react-native run-ios [options]</span><br><span class="line">  builds your app and starts it on iOS simulator</span><br><span class="line"></span><br><span class="line">  Options:</span><br><span class="line"></span><br><span class="line">    --simulator [string]      Explicitly set simulator to use (default: iPhone 6)</span><br><span class="line">    --configuration [string]  Explicitly set the scheme configuration to use</span><br><span class="line">    --scheme [string]         Explicitly set Xcode scheme to use</span><br><span class="line">    --project-path [string]   Path relative to project root where the Xcode project (.xcodeproj) lives. The default is &#39;ios&#39;. (default: ios)</span><br><span class="line">    --device [string]         Explicitly set device to use by name.  The value is not required if you have a single device connected.</span><br><span class="line">    --udid [string]           Explicitly set device to use by udid</span><br><span class="line">    --no-packager             Do not launch packager while building</span><br><span class="line">    --verbose                 Do not use xcpretty even if installed</span><br><span class="line">    --config [string]         Path to the CLI configuration file</span><br><span class="line">    -h, --help                output usage information</span><br><span class="line"></span><br><span class="line">  Example usage:</span><br><span class="line"></span><br><span class="line">    Run on a different simulator, e.g. iPhone 5:</span><br><span class="line">    react-native run-ios --simulator &quot;iPhone 5&quot;</span><br><span class="line"></span><br><span class="line">    Pass a non-standard location of iOS directory:</span><br><span class="line">    react-native run-ios --project-path &quot;.&#x2F;app&#x2F;ios&quot;</span><br><span class="line"></span><br><span class="line">    Run on a connected device, e.g. Max&#39;s iPhone:</span><br><span class="line">    react-native run-ios --device &quot;Max&#39;s iPhone&quot;</span><br></pre></td></tr></table></figure>
-<h2 id="4-Android-启动命令-react-native-run-android"><a href="#4-Android-启动命令-react-native-run-android" class="headerlink" title="4. Android 启动命令 react-native run-android"></a>4. Android 启动命令 <em><strong>react-native run-android</strong></em></h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br></pre></td><td class="code"><pre><span class="line">mac: react-native run-android --help</span><br><span class="line"></span><br><span class="line">  react-native run-android [options]</span><br><span class="line">  builds your app and starts it on a connected Android emulator or device</span><br><span class="line"></span><br><span class="line">  Options:</span><br><span class="line"></span><br><span class="line">    --install-debug</span><br><span class="line">    --root [string]           Override the root directory for the android build (which contains the android directory) (default: )</span><br><span class="line">    --flavor [string]         --flavor has been deprecated. Use --variant instead</span><br><span class="line">    --variant [string]</span><br><span class="line">    --appFolder [string]      Specify a different application folder name for the android source. (default: app)</span><br><span class="line">    --appId [string]          Specify an applicationId to launch after build. (default: )</span><br><span class="line">    --appIdSuffix [string]    Specify an applicationIdSuffix to launch after build. (default: )</span><br><span class="line">    --main-activity [string]  Name of the activity to start (default: MainActivity)</span><br><span class="line">    --deviceId [string]       builds your app and starts it on a specific device&#x2F;simulator with the given device id (listed by running &quot;adb devices&quot; on the command line).</span><br><span class="line">    --no-packager             Do not launch packager while building</span><br><span class="line">    --port [number]            (default: 8081)</span><br><span class="line">    --config [string]         Path to the CLI configuration file</span><br><span class="line">    -h, --help                output usage information</span><br></pre></td></tr></table></figure>
-
-<h2 id="5-生成bundle文件-react-native-bundle"><a href="#5-生成bundle文件-react-native-bundle" class="headerlink" title="5. 生成bundle文件 react-native bundle"></a>5. 生成bundle文件 <em><strong>react-native bundle</strong></em></h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br></pre></td><td class="code"><pre><span class="line">mac: react-native bundle --help</span><br><span class="line"></span><br><span class="line">  react-native bundle [options]</span><br><span class="line">  builds the javascript bundle for offline use</span><br><span class="line"></span><br><span class="line">  Options:</span><br><span class="line"></span><br><span class="line">    --entry-file &lt;path&gt;                Path to the root JS file, either absolute or relative to JS root</span><br><span class="line">    --platform [string]                Either &quot;ios&quot; or &quot;android&quot; (default: ios)</span><br><span class="line">    --transformer [string]             Specify a custom transformer to be used</span><br><span class="line">    --dev [boolean]                    If false, warnings are disabled and the bundle is minified (default: true)</span><br><span class="line">    --bundle-output &lt;string&gt;           File name where to store the resulting bundle, ex. &#x2F;tmp&#x2F;groups.bundle</span><br><span class="line">    --bundle-encoding [string]         Encoding the bundle should be written in (https:&#x2F;&#x2F;nodejs.org&#x2F;api&#x2F;buffer.html#buffer_buffer). (default: utf8)</span><br><span class="line">    --max-workers [number]             Specifies the maximum number of workers the worker-pool will spawn for transforming files.This defaults to the number of the cores available on your machine.</span><br><span class="line">    --sourcemap-output [string]        File name where to store the sourcemap file for resulting bundle, ex. &#x2F;tmp&#x2F;groups.map</span><br><span class="line">    --sourcemap-sources-root [string]  Path to make sourcemap&#39;s sources entries relative to, ex. &#x2F;root&#x2F;dir</span><br><span class="line">    --sourcemap-use-absolute-path      Report SourceMapURL using its full path</span><br><span class="line">    --assets-dest [string]             Directory name where to store assets referenced in the bundle</span><br><span class="line">    --verbose                          Enables logging</span><br><span class="line">    --reset-cache                      Removes cached files</span><br><span class="line">    --read-global-cache                Try to fetch transformed JS code from the global cache, if configured.</span><br><span class="line">    --config [string]                  Path to the CLI configuration file</span><br><span class="line">    -h, --help                         output usage information</span><br></pre></td></tr></table></figure>
-<h2 id="5-生成unbundle文件-react-native-unbundle"><a href="#5-生成unbundle文件-react-native-unbundle" class="headerlink" title="5. 生成unbundle文件 react-native unbundle"></a>5. 生成unbundle文件 <em><strong>react-native unbundle</strong></em></h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br></pre></td><td class="code"><pre><span class="line">mac: react-native unbundle --help</span><br><span class="line"></span><br><span class="line">  react-native unbundle [options]</span><br><span class="line">  builds javascript as &quot;unbundle&quot; for offline use</span><br><span class="line"></span><br><span class="line">  Options:</span><br><span class="line"></span><br><span class="line">    --entry-file &lt;path&gt;                Path to the root JS file, either absolute or relative to JS root</span><br><span class="line">    --platform [string]                Either &quot;ios&quot; or &quot;android&quot; (default: ios)</span><br><span class="line">    --transformer [string]             Specify a custom transformer to be used</span><br><span class="line">    --dev [boolean]                    If false, warnings are disabled and the bundle is minified (default: true)</span><br><span class="line">    --bundle-output &lt;string&gt;           File name where to store the resulting bundle, ex. &#x2F;tmp&#x2F;groups.bundle</span><br><span class="line">    --bundle-encoding [string]         Encoding the bundle should be written in (https:&#x2F;&#x2F;nodejs.org&#x2F;api&#x2F;buffer.html#buffer_buffer). (default: utf8)</span><br><span class="line">    --max-workers [number]             Specifies the maximum number of workers the worker-pool will spawn for transforming files.This defaults to the number of the cores available on your machine.</span><br><span class="line">    --sourcemap-output [string]        File name where to store the sourcemap file for resulting bundle, ex. &#x2F;tmp&#x2F;groups.map</span><br><span class="line">    --sourcemap-sources-root [string]  Path to make sourcemap&#39;s sources entries relative to, ex. &#x2F;root&#x2F;dir</span><br><span class="line">    --sourcemap-use-absolute-path      Report SourceMapURL using its full path</span><br><span class="line">    --assets-dest [string]             Directory name where to store assets referenced in the bundle</span><br><span class="line">    --verbose                          Enables logging</span><br><span class="line">    --reset-cache                      Removes cached files</span><br><span class="line">    --read-global-cache                Try to fetch transformed JS code from the global cache, if configured.</span><br><span class="line">    --indexed-unbundle                 Force indexed unbundle file format, even when building for android</span><br><span class="line">    --config [string]                  Path to the CLI configuration file</span><br><span class="line">    -h, --help                         output usage information</span><br></pre></td></tr></table></figure>
-
-<h2 id="6-查看React-Native相关的信息-react-native-info"><a href="#6-查看React-Native相关的信息-react-native-info" class="headerlink" title="6. 查看React Native相关的信息 react-native info"></a>6. 查看React Native相关的信息 <em><strong>react-native info</strong></em></h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><span class="line">mac: react-native info</span><br><span class="line"></span><br><span class="line">Environment:</span><br><span class="line">  OS: macOS High Sierra 10.13.6</span><br><span class="line">  Node: 10.0.0</span><br><span class="line">  Yarn: 1.9.4</span><br><span class="line">  npm: 5.6.0</span><br><span class="line">  Watchman: 4.7.0</span><br><span class="line">  Xcode: Xcode 10.1 Build version 10B61</span><br><span class="line">  Android Studio: 1.4 AI-141.2343393</span><br><span class="line"></span><br><span class="line">Packages: (wanted &#x3D;&gt; installed)</span><br><span class="line">  react: 16.2.0</span><br><span class="line">  react-native: 0.52.0</span><br></pre></td></tr></table></figure>
-
-      
-    </div>
-
-    
-    
-    
-
-    <footer class="post-footer">
-        <div class="post-eof"></div>
-      
-    </footer>
-  </article>
-</div>
-
-
-
-
   <nav class="pagination">
-    <a class="extend prev" rel="prev" href="/nirvana/page/10/"><i class="fa fa-angle-left" aria-label="上一页"></i></a><a class="page-number" href="/nirvana/">1</a><span class="space">&hellip;</span><a class="page-number" href="/nirvana/page/10/">10</a><span class="page-number current">11</span><a class="page-number" href="/nirvana/page/12/">12</a><span class="space">&hellip;</span><a class="page-number" href="/nirvana/page/18/">18</a><a class="extend next" rel="next" href="/nirvana/page/12/"><i class="fa fa-angle-right" aria-label="下一页"></i></a>
+    <a class="extend prev" rel="prev" href="/nirvana/page/10/"><i class="fa fa-angle-left" aria-label="上一页"></i></a><a class="page-number" href="/nirvana/">1</a><span class="space">&hellip;</span><a class="page-number" href="/nirvana/page/10/">10</a><span class="page-number current">11</span><a class="page-number" href="/nirvana/page/12/">12</a><span class="space">&hellip;</span><a class="page-number" href="/nirvana/page/19/">19</a><a class="extend next" rel="next" href="/nirvana/page/12/"><i class="fa fa-angle-right" aria-label="下一页"></i></a>
   </nav>
 
 
@@ -2011,14 +2397,14 @@ res.end();
       <i class="fa fa-chart-line"></i>
     </span>
       <span>站点总字数：</span>
-    <span title="站点总字数">528k</span>
+    <span title="站点总字数">532k</span>
   </span>
   <span class="post-meta-item">
     <span class="post-meta-item-icon">
       <i class="fa fa-coffee"></i>
     </span>
       <span>站点阅读时长 &asymp;</span>
-    <span title="站点阅读时长">8:01</span>
+    <span title="站点阅读时长">8:04</span>
   </span>
 </div>
   <div class="powered-by">由 <a href="https://hexo.io/" class="theme-link" rel="noopener" target="_blank">Hexo</a> & <a href="https://theme-next.js.org/" class="theme-link" rel="noopener" target="_blank">NexT.Gemini</a> 强力驱动
