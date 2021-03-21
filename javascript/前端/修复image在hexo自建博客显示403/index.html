@@ -21,7 +21,7 @@
 
 <script class="hexo-configurations">
     var NexT = window.NexT || {};
-    var CONFIG = {"hostname":"lzhwweb.github.io","root":"/nirvana/","images":"/nirvana/images","scheme":"Gemini","version":"8.2.2","exturl":false,"sidebar":{"position":"left","display":"post","padding":18,"offset":12},"copycode":false,"bookmark":{"enable":false,"color":"#222","save":"auto"},"fancybox":false,"mediumzoom":false,"lazyload":false,"pangu":false,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},"motion":{"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"fadeInDown","post_body":"fadeInDown","coll_header":"fadeInLeft","sidebar":"fadeInUp"}},"prism":false,"i18n":{"placeholder":"搜索...","empty":"没有找到任何搜索结果：${query}","hits_time":"找到 ${hits} 个搜索结果（用时 ${time} 毫秒）","hits":"找到 ${hits} 个搜索结果"},"path":"/nirvana/search.xml","localsearch":{"enable":true,"trigger":"auto","top_n_per_article":1,"unescape":false,"preload":false}};
+    var CONFIG = {"hostname":"lzhwweb.github.io","root":"/nirvana/","images":"/nirvana/images","scheme":"Gemini","version":"8.2.2","exturl":false,"sidebar":{"position":"left","display":"post","padding":18,"offset":12},"copycode":false,"bookmark":{"enable":true,"color":"#222","save":"auto"},"fancybox":false,"mediumzoom":false,"lazyload":false,"pangu":false,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},"motion":{"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"fadeInDown","post_body":"fadeInDown","coll_header":"fadeInLeft","sidebar":"fadeInUp"}},"prism":false,"i18n":{"placeholder":"搜索...","empty":"没有找到任何搜索结果：${query}","hits_time":"找到 ${hits} 个搜索结果（用时 ${time} 毫秒）","hits":"找到 ${hits} 个搜索结果"},"path":"/nirvana/search.xml","localsearch":{"enable":true,"trigger":"auto","top_n_per_article":1,"unescape":false,"preload":false}};
   </script>
 <meta name="description" content="使用hexo自建个人博客，本地localhost Debug的时候完全可以显示，但是将网站部署到服务器后就会图片全部无法显示，遇到这样的错误打开google开发者工具可以看到，加载图片时显示403 解决方案：利用html中的meta标签关闭浏览器的UrlReferer访问 1themes&#x2F;next(主题)&#x2F;layout&#x2F;_partials&#x2F;head&amp;#x2F">
 <meta property="og:type" content="article">
@@ -242,6 +242,8 @@
     </header>
 
     
+  <div class="reading-progress-bar"></div>
+  <a role="button" class="book-mark-link book-mark-link-fixed"></a>
 
 <noscript>
   <div class="noscript-warning">Theme NexT works best with JavaScript enabled</div>
@@ -353,13 +355,13 @@
 
           <div class="post-nav">
             <div class="post-nav-item">
-                <a href="/nirvana/javascript/%E5%89%8D%E7%AB%AF/%E5%89%8D%E7%AB%AF%E5%AE%9E%E7%94%A8%E7%9A%84%E8%B0%83%E8%AF%95%E5%91%BD%E4%BB%A4console%E4%BD%BF%E7%94%A8/" rel="prev" title="前端实用的调试命令console使用">
-                  <i class="fa fa-chevron-left"></i> 前端实用的调试命令console使用
+                <a href="/nirvana/javascript/%E5%89%8D%E7%AB%AF/inquirer-js-%E2%80%94%E2%80%94-%E7%94%A8%E6%88%B7%E4%B8%8E%E5%91%BD%E4%BB%A4%E8%A1%8C%E4%BA%A4%E4%BA%92%E7%9A%84%E5%B7%A5%E5%85%B7/" rel="prev" title="inquirer.js-——-用户与命令行交互的工具">
+                  <i class="fa fa-chevron-left"></i> inquirer.js-——-用户与命令行交互的工具
                 </a>
             </div>
             <div class="post-nav-item">
-                <a href="/nirvana/javascript/%E5%89%8D%E7%AB%AF/webstorm-2018-%E6%BF%80%E6%B4%BB%E7%A0%B4%E8%A7%A3%E6%96%B9%E6%B3%95%E5%A4%A7%E5%85%A8/" rel="next" title="webstorm 2018 激活破解方法大全">
-                  webstorm 2018 激活破解方法大全 <i class="fa fa-chevron-right"></i>
+                <a href="/nirvana/javascript/%E5%89%8D%E7%AB%AF/Javascript%E5%87%BD%E6%95%B0%E5%BC%8F%E7%BC%96%E7%A8%8B%E8%A6%81%E6%8E%8C%E6%8F%A1%E7%9A%84%E7%9F%A5%E8%AF%86%E7%82%B9%E8%AE%B2%E8%A7%A3/" rel="next" title="Javascript函数式编程要掌握的知识点讲解">
+                  Javascript函数式编程要掌握的知识点讲解 <i class="fa fa-chevron-right"></i>
                 </a>
             </div>
           </div>
@@ -433,7 +435,7 @@
 
   
   <script src="https://cdn.jsdelivr.net/npm/animejs@3.2.1/lib/anime.min.js"></script>
-<script src="/nirvana/js/utils.js"></script><script src="/nirvana/js/motion.js"></script><script src="/nirvana/js/next-boot.js"></script>
+<script src="/nirvana/js/utils.js"></script><script src="/nirvana/js/motion.js"></script><script src="/nirvana/js/next-boot.js"></script><script src="/nirvana/js/bookmark.js"></script>
 
   
 <script src="/nirvana/js/local-search.js"></script>

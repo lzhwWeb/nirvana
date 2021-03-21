@@ -21,7 +21,7 @@
 
 <script class="hexo-configurations">
     var NexT = window.NexT || {};
-    var CONFIG = {"hostname":"lzhwweb.github.io","root":"/nirvana/","images":"/nirvana/images","scheme":"Gemini","version":"8.2.2","exturl":false,"sidebar":{"position":"left","display":"post","padding":18,"offset":12},"copycode":false,"bookmark":{"enable":false,"color":"#222","save":"auto"},"fancybox":false,"mediumzoom":false,"lazyload":false,"pangu":false,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},"motion":{"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"fadeInDown","post_body":"fadeInDown","coll_header":"fadeInLeft","sidebar":"fadeInUp"}},"prism":false,"i18n":{"placeholder":"搜索...","empty":"没有找到任何搜索结果：${query}","hits_time":"找到 ${hits} 个搜索结果（用时 ${time} 毫秒）","hits":"找到 ${hits} 个搜索结果"},"path":"/nirvana/search.xml","localsearch":{"enable":true,"trigger":"auto","top_n_per_article":1,"unescape":false,"preload":false}};
+    var CONFIG = {"hostname":"lzhwweb.github.io","root":"/nirvana/","images":"/nirvana/images","scheme":"Gemini","version":"8.2.2","exturl":false,"sidebar":{"position":"left","display":"post","padding":18,"offset":12},"copycode":false,"bookmark":{"enable":true,"color":"#222","save":"auto"},"fancybox":false,"mediumzoom":false,"lazyload":false,"pangu":false,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},"motion":{"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"fadeInDown","post_body":"fadeInDown","coll_header":"fadeInLeft","sidebar":"fadeInUp"}},"prism":false,"i18n":{"placeholder":"搜索...","empty":"没有找到任何搜索结果：${query}","hits_time":"找到 ${hits} 个搜索结果（用时 ${time} 毫秒）","hits":"找到 ${hits} 个搜索结果"},"path":"/nirvana/search.xml","localsearch":{"enable":true,"trigger":"auto","top_n_per_article":1,"unescape":false,"preload":false}};
   </script>
 <meta name="description" content="个人学习笔记">
 <meta property="og:type" content="website">
@@ -238,6 +238,8 @@
     </header>
 
     
+  <div class="reading-progress-bar"></div>
+  <a role="button" class="book-mark-link book-mark-link-fixed"></a>
 
 <noscript>
   <div class="noscript-warning">Theme NexT works best with JavaScript enabled</div>
@@ -245,145 +247,6 @@
 
 
     <div class="main-inner index posts-expand">
-
-    
-
-
-<div class="post-block">
-  
-  
-
-  <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="">
-    <link itemprop="mainEntityOfPage" href="https://lzhwweb.github.io/nirvana/reactnative/react-native/Text%E7%BB%84%E4%BB%B6/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="image" content="/nirvana/images/headphoto.jpeg">
-      <meta itemprop="name" content="nirvana">
-      <meta itemprop="description" content="个人学习笔记">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="涅槃快乐是金">
-    </span>
-      <header class="post-header">
-        <h2 class="post-title" itemprop="name headline">
-          <a href="/nirvana/reactnative/react-native/Text%E7%BB%84%E4%BB%B6/" class="post-title-link" itemprop="url">Text组件</a>
-        </h2>
-
-        <div class="post-meta-container">
-          <div class="post-meta">
-    <span class="post-meta-item">
-      <span class="post-meta-item-icon">
-        <i class="far fa-calendar"></i>
-      </span>
-      <span class="post-meta-item-text">发表于</span>
-      
-
-      <time title="创建时间：2021-03-10 21:12:40 / 修改时间：13:43:55" itemprop="dateCreated datePublished" datetime="2021-03-10T21:12:40+08:00">2021-03-10</time>
-    </span>
-    <span class="post-meta-item">
-      <span class="post-meta-item-icon">
-        <i class="far fa-folder"></i>
-      </span>
-      <span class="post-meta-item-text">分类于</span>
-        <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-          <a href="/nirvana/categories/reactnative/" itemprop="url" rel="index"><span itemprop="name">reactnative</span></a>
-        </span>
-    </span>
-
-  
-    <span id="/nirvana/reactnative/react-native/Text%E7%BB%84%E4%BB%B6/" class="post-meta-item leancloud_visitors" data-flag-title="Text组件" title="阅读次数">
-      <span class="post-meta-item-icon">
-        <i class="far fa-eye"></i>
-      </span>
-      <span class="post-meta-item-text">阅读次数：</span>
-      <span class="leancloud-visitors-count"></span>
-    </span>
-      </div>
-      <div class="post-meta">
-    <span class="post-meta-item" title="本文字数">
-      <span class="post-meta-item-icon">
-        <i class="far fa-file-word"></i>
-      </span>
-      <span class="post-meta-item-text">本文字数：</span>
-      <span>5k</span>
-    </span>
-    <span class="post-meta-item" title="阅读时长">
-      <span class="post-meta-item-icon">
-        <i class="far fa-clock"></i>
-      </span>
-      <span class="post-meta-item-text">阅读时长 &asymp;</span>
-      <span>5 分钟</span>
-    </span>
-</div>
-
-        </div>
-      </header>
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-          <h2 id="介绍"><a href="#介绍" class="headerlink" title="介绍"></a>介绍</h2><p>该Text组件为React中一个基本组件，该和Android中的TextView组件相类似用来显示基本的文本信息，该控件除了基本的显示布局之外，可以进行嵌套显示，设置样式，以及可以做事件(例如:点击)处理。下面我们来一个实例：</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br></pre></td><td class="code"><pre><span class="line">&#x2F;**</span><br><span class="line"> * 进行简单Text组件使用实例</span><br><span class="line"> * Sample React Native App  test.android.js</span><br><span class="line"> * https:&#x2F;&#x2F;github.com&#x2F;facebook&#x2F;react-native</span><br><span class="line"> *&#x2F;</span><br><span class="line">&#39;use strict&#39;;</span><br><span class="line">import React, &#123; Component &#125; from &#39;react&#39;;</span><br><span class="line">import &#123;</span><br><span class="line">  AppRegistry,</span><br><span class="line">  Text,</span><br><span class="line">  View,</span><br><span class="line">  StyleSheet,</span><br><span class="line">&#125; from &#39;react-native&#39;;</span><br><span class="line">var styles &#x3D; StyleSheet.create(&#123;</span><br><span class="line">     titleBase:&#123;</span><br><span class="line">        margin:10,</span><br><span class="line">        textAlign:&#39;center&#39;,</span><br><span class="line">        color:&#39;red&#39;,</span><br><span class="line">        fontSize:28,</span><br><span class="line">        fontFamily:&#39;Cochin&#39;,</span><br><span class="line">     &#125;,</span><br><span class="line">     title:&#123;</span><br><span class="line">        color:&#39;green&#39;,</span><br><span class="line">        fontWeight:&#39;bold&#39;,</span><br><span class="line">     &#125;,</span><br><span class="line">&#125;);</span><br><span class="line">var TestText &#x3D; React.createClass(&#123;</span><br><span class="line">  render: function() &#123;</span><br><span class="line">    return (</span><br><span class="line">      &lt;Text style&#x3D;&#123;styles.titleBase&#125;&gt;</span><br><span class="line">         I am root text!</span><br><span class="line">         &lt;Text style&#x3D;&#123;styles.title&#125;&gt;</span><br><span class="line">              I am chid text!</span><br><span class="line">          &lt;&#x2F;Text&gt;</span><br><span class="line">      &lt;&#x2F;Text&gt;</span><br><span class="line">    );</span><br><span class="line">  &#125;</span><br><span class="line">&#125;);</span><br><span class="line">AppRegistry.registerComponent(&#39;TestText&#39;, () &#x3D;&gt; TestText);</span><br><span class="line"></span><br></pre></td></tr></table></figure>
-
-<p>上述实例采用TextView的嵌套方式，最外层的Text的Style titleBase定义相关风格，内层的风格style定义相关风格，我们可以看到运行效果，如果内层没有重写外层定义的样式，那么内层会进行继承。如果重写了样式，那么内层会根据自己定义的样式进行渲染，该和CSS样式表差不多。</p>
-<h2 id="属性方法-主要一些可用的属性"><a href="#属性方法-主要一些可用的属性" class="headerlink" title="属性方法(主要一些可用的属性)"></a>属性方法(主要一些可用的属性)</h2><ul>
-<li>  ①.allowFontScaling (bool):控制字体是否根据iOS的设置进行自动缩放-iOS平台,Android平台不适用</li>
-<li>  ②.numberOfLines (number):进行设置Text显示文本的行数，如果显示的内容超过了行数，默认其他多余的信息就不会显示了。</li>
-<li>  ③.onLayout (function) 当布局位置发生变动的时候自动进行触发该方法, 其中该function的参数如下: [code lang=”” start=”” highlight=””]{nativeEvent: {layout: {x, y, width, height}}}[/code]</li>
-<li>  ④.onPress (fcuntion) 该方法当文本发生点击的时候调用该方法.</li>
-</ul>
-<h2 id="风格样式"><a href="#风格样式" class="headerlink" title="风格样式"></a>风格样式</h2><ul>
-<li>  1.继承可以使用View组件的所有Style(具体查看<a target="_blank" rel="noopener" href="http://facebook.github.io/react-native/docs/view.html#style">http://facebook.github.io/react-native/docs/view.html#style</a>)</li>
-<li>  2.color:字体颜色</li>
-<li>  3.fontFamily 字体名称</li>
-<li>  4.fontSize 字体大小</li>
-<li>  5.fontStyle 字体风格(normal,italic)</li>
-<li>  6.fontWeight 字体粗细权重(“normal”, ‘bold’, ‘100’, ‘200’, ‘300’, ‘400’, ‘500’, ‘600’, ‘700’, ‘800’, ‘900’)</li>
-<li>  7.textShadowOffset 设置阴影效果{width: number, height: number}</li>
-<li>  8.textShadowRadius 阴影效果圆角</li>
-<li>  9..textShadowColor 阴影效果的颜色</li>
-<li>  10.letterSpacing 字符间距</li>
-<li>  11.lineHeight 行高</li>
-<li>  12.textAlign 文本对其方式(“auto”, ‘left’, ‘right’, ‘center’, ‘justify’)</li>
-<li>  13.textDecorationLine 横线位置 (“none”, ‘underline’, ‘line-through’, ‘underline line-through’)</li>
-<li>  14.textDecorationStyle 线的风格(“solid”, ‘double’, ‘dotted’, ‘dashed’)</li>
-<li>  15.textDecorationColor 线的颜色</li>
-<li>  16.writingDirection 文本方向(“auto”, ‘ltr’, ‘rtl’)</li>
-</ul>
-<h2 id="特别注意点"><a href="#特别注意点" class="headerlink" title="特别注意点"></a>特别注意点</h2><h3 id="嵌套特点"><a href="#嵌套特点" class="headerlink" title="嵌套特点"></a>嵌套特点</h3><p>和Web上面一直的设计方案，我们通过嵌套包裹的方案，相同的属性的文本可以用父标签进行包裹，然后内部特殊的文本采用子标签方案，具体例子如下:</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">&lt;Text style&#x3D;&#123;&#123;fontWeight: &#39;bold&#39;,fontSize:28&#125;&#125;&gt;</span><br><span class="line">      I am bold</span><br><span class="line">      &lt;Text style&#x3D;&#123;&#123;color: &#39;red&#39;&#125;&#125;&gt;</span><br><span class="line">        and red</span><br><span class="line">    &lt;&#x2F;Text&gt;</span><br><span class="line">&lt;&#x2F;Text&gt;</span><br><span class="line"></span><br></pre></td></tr></table></figure>
-
-<p>整体字体格式为bold以及字体大小为28，不过后边的’and red’的字体颜色为红色。</p>
-<h3 id="容器布局规则"><a href="#容器布局规则" class="headerlink" title="容器布局规则"></a>容器布局规则</h3><p>FlexBox(弹性布局),</p>
-<h3 id="样式继承规格"><a href="#样式继承规格" class="headerlink" title="样式继承规格"></a>样式继承规格</h3><p>组件可以嵌套，而且样式还支持继承，也就说父组件定义了相关样式，如果子组件没有重写样式的话，那么该子组件会继承父组件定义的样式。</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br></pre></td><td class="code"><pre><span class="line">&#x2F;**</span><br><span class="line"> *  Text组件实例演示</span><br><span class="line"> * Sample React Native App</span><br><span class="line"> * https:&#x2F;&#x2F;github.com&#x2F;facebook&#x2F;react-native</span><br><span class="line"> *&#x2F;</span><br><span class="line">&#39;use strict&#39;;</span><br><span class="line"></span><br><span class="line">import React, &#123; Component &#125; from &#39;react&#39;;</span><br><span class="line">import &#123;</span><br><span class="line">  AppRegistry,</span><br><span class="line">  Text,</span><br><span class="line">  View,</span><br><span class="line">  StyleSheet,</span><br><span class="line">&#125; from &#39;react-native&#39;;</span><br><span class="line">var TestText &#x3D; React.createClass(&#123;</span><br><span class="line">  render: function() &#123;</span><br><span class="line">    return (</span><br><span class="line">      &lt;View&gt;</span><br><span class="line">       &lt;Text style&#x3D;&#123;&#123;color:&#39;red&#39;&#125;&#125;&gt;</span><br><span class="line">          My Text One  红色。</span><br><span class="line">       &lt;&#x2F;Text&gt;</span><br><span class="line">       &lt;Text style&#x3D;&#123;&#123;color:&#39;green&#39;,fontSize:20&#125;&#125;&gt; My Text Two 绿色和字体大小。&lt;&#x2F;Text&gt;</span><br><span class="line">       &lt;Text style&#x3D;&#123;&#123;color:&#39;green&#39;,fontFamily:&#39;Cochin&#39;&#125;&#125;&gt; My Text Three 绿色和字体名称。&lt;&#x2F;Text&gt;</span><br><span class="line">       &lt;Text style&#x3D;&#123;&#123;color:&#39;pink&#39;,fontWeight:&#39;bold&#39;&#125;&#125;&gt; My Text Four 粉色和加粗。&lt;&#x2F;Text&gt;</span><br><span class="line">       &lt;Text style&#x3D;&#123;&#123;color:&#39;gray&#39;,fontStyle:&#39;italic&#39;&#125;&#125;&gt; My Text Five 灰色和斜体。&lt;&#x2F;Text&gt;</span><br><span class="line">       &lt;Text style&#x3D;&#123;&#123;textAlign:&#39;center&#39;,fontStyle:&#39;italic&#39;&#125;&#125;&gt; My Text Six 居中和斜体。&lt;&#x2F;Text&gt;</span><br><span class="line">       &lt;Text numberOfLines&#x3D;&#123;1&#125; style&#x3D;&#123;&#123;textAlign:&#39;center&#39;,fontStyle:&#39;italic&#39;&#125;&#125;&gt;测试行数My Text Six 居中和斜体。My Text Six 居中和斜体。 My Text Six 居中和斜体。&lt;&#x2F;Text&gt;</span><br><span class="line">       &lt;Text style&#x3D;&#123;&#123;marginLeft:50,marginTop:50,textAlign:&#39;center&#39;,fontStyle:&#39;italic&#39;&#125;&#125;&gt;设置文本的间距,居左，居顶部50&lt;&#x2F;Text&gt;</span><br><span class="line">       &lt;Text numberOfLines&#x3D;&#123;2&#125; style&#x3D;&#123;&#123;lineHeight:50,textAlign:&#39;center&#39;,fontStyle:&#39;italic&#39;&#125;&#125;&gt;</span><br><span class="line">          测试行高 测试行高 测试行高 测试行高 测试行高 测试行高 测试行高 测试行高 测试行高 测试行高 测试行高 </span><br><span class="line">          测试行高 测试行高 测试行高 测试行高 测试行高 测试行高</span><br><span class="line">       &lt;&#x2F;Text&gt;</span><br><span class="line">      &lt;&#x2F;View&gt;</span><br><span class="line">    );</span><br><span class="line">  &#125;</span><br><span class="line">&#125;);</span><br><span class="line">AppRegistry.registerComponent(&#39;TestText&#39;, () &#x3D;&gt; TestText);</span><br><span class="line"></span><br></pre></td></tr></table></figure>
-
-<h2 id="注"><a href="#注" class="headerlink" title="注"></a>注</h2><p>1、在使用Text的过程中，实现文本垂直居中、水平居中的效果（iOS和Android通用）</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br></pre></td><td class="code"><pre><span class="line">&lt;View  style&#x3D;&#123;styles.textView&#125;&gt;</span><br><span class="line">    &lt;Text style&#x3D;&#123;styles.text&#125;&gt; 水平垂直居中&lt;&#x2F;Text&gt;</span><br><span class="line">&lt;&#x2F;View&gt;</span><br><span class="line"></span><br><span class="line">textView:&#123;</span><br><span class="line">  flexDirection:&#39;column&#39;,</span><br><span class="line">  justifyContent:&#39;center&#39;,</span><br><span class="line">  alignItems:&#39;center&#39;,</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">text:&#123;</span><br><span class="line">    fontSize:12,</span><br><span class="line">    color:&#39;#f2f2f2&#39;,</span><br><span class="line">&#125;</span><br><span class="line"></span><br></pre></td></tr></table></figure>
-
-<p>尽量用view去包裹一层Text组件，text组件只负责基础的文字样式，View组件负责对齐方式等。</p>
-<p>2、在Android平台上，Text组件里使用paddingLeft 属性，不好使，直接顶着View了。</p>
-<p>解决方式：1）将paddingLeft放在View属性上;2）将paddingLeft修改为marginLeft</p>
-<p>建议使用第一种方案修改，把对齐方式交给view去处理，Text只负责文本属性的显示。</p>
-
-      
-    </div>
-
-    
-    
-    
-
-    <footer class="post-footer">
-        <div class="post-eof"></div>
-      
-    </footer>
-  </article>
-</div>
-
-
-
 
     
 
@@ -594,7 +457,7 @@
   
 
   <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="">
-    <link itemprop="mainEntityOfPage" href="https://lzhwweb.github.io/nirvana/mac/mac/Mac-OS-%E5%AE%89%E8%A3%85-Telnet/">
+    <link itemprop="mainEntityOfPage" href="https://lzhwweb.github.io/nirvana/reactnative/react-native/React-native-%E6%8A%80%E6%9C%AF%E5%9C%A8%E5%A3%B9%E9%92%B1%E5%8C%85%E4%B8%AD%E7%9A%84%E5%AE%9E%E8%B7%B5%E5%8F%8A%E4%BC%98%E5%8C%96/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="image" content="/nirvana/images/headphoto.jpeg">
@@ -607,7 +470,7 @@
     </span>
       <header class="post-header">
         <h2 class="post-title" itemprop="name headline">
-          <a href="/nirvana/mac/mac/Mac-OS-%E5%AE%89%E8%A3%85-Telnet/" class="post-title-link" itemprop="url">Mac-OS-安装-Telnet</a>
+          <a href="/nirvana/reactnative/react-native/React-native-%E6%8A%80%E6%9C%AF%E5%9C%A8%E5%A3%B9%E9%92%B1%E5%8C%85%E4%B8%AD%E7%9A%84%E5%AE%9E%E8%B7%B5%E5%8F%8A%E4%BC%98%E5%8C%96/" class="post-title-link" itemprop="url">React-native-技术在壹钱包中的实践及优化</a>
         </h2>
 
         <div class="post-meta-container">
@@ -627,12 +490,12 @@
       </span>
       <span class="post-meta-item-text">分类于</span>
         <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-          <a href="/nirvana/categories/mac/" itemprop="url" rel="index"><span itemprop="name">mac</span></a>
+          <a href="/nirvana/categories/reactnative/" itemprop="url" rel="index"><span itemprop="name">reactnative</span></a>
         </span>
     </span>
 
   
-    <span id="/nirvana/mac/mac/Mac-OS-%E5%AE%89%E8%A3%85-Telnet/" class="post-meta-item leancloud_visitors" data-flag-title="Mac-OS-安装-Telnet" title="阅读次数">
+    <span id="/nirvana/reactnative/react-native/React-native-%E6%8A%80%E6%9C%AF%E5%9C%A8%E5%A3%B9%E9%92%B1%E5%8C%85%E4%B8%AD%E7%9A%84%E5%AE%9E%E8%B7%B5%E5%8F%8A%E4%BC%98%E5%8C%96/" class="post-meta-item leancloud_visitors" data-flag-title="React-native-技术在壹钱包中的实践及优化" title="阅读次数">
       <span class="post-meta-item-icon">
         <i class="far fa-eye"></i>
       </span>
@@ -646,14 +509,14 @@
         <i class="far fa-file-word"></i>
       </span>
       <span class="post-meta-item-text">本文字数：</span>
-      <span>3.2k</span>
+      <span>4k</span>
     </span>
     <span class="post-meta-item" title="阅读时长">
       <span class="post-meta-item-icon">
         <i class="far fa-clock"></i>
       </span>
       <span class="post-meta-item-text">阅读时长 &asymp;</span>
-      <span>3 分钟</span>
+      <span>4 分钟</span>
     </span>
 </div>
 
@@ -664,16 +527,53 @@
     
     
     <div class="post-body" itemprop="articleBody">
-          <p>使用 homebrew 安装telnet：</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">brew install telnet</span><br></pre></td></tr></table></figure>
-<p>安装报错</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br></pre></td><td class="code"><pre><span class="line">$ brew install telnet</span><br><span class="line">Error: &#x2F;usr&#x2F;local&#x2F;Cellar is not writable. You should change the</span><br><span class="line">ownership and permissions of &#x2F;usr&#x2F;local&#x2F;Cellar back to your</span><br><span class="line">user account:</span><br><span class="line">  sudo chown -R $(whoami) &#x2F;usr&#x2F;local&#x2F;Cellar</span><br><span class="line">Warning: You are using macOS 10.15.</span><br><span class="line">We do not provide support for this pre-release version.</span><br><span class="line">You will encounter build failures with some formulae.</span><br><span class="line">Please create pull requests instead of asking for help on Homebrew&#39;s GitHub,</span><br><span class="line">Discourse, Twitter or IRC. You are responsible for resolving any issues you</span><br><span class="line">experience, as you are running this pre-release version.</span><br><span class="line"></span><br><span class="line">Error: The following directories are not writable by your user:</span><br><span class="line">&#x2F;usr&#x2F;local&#x2F;Cellar</span><br><span class="line">&#x2F;usr&#x2F;local&#x2F;Homebrew</span><br><span class="line">&#x2F;usr&#x2F;local&#x2F;etc</span><br><span class="line">&#x2F;usr&#x2F;local&#x2F;etc&#x2F;bash_completion.d</span><br><span class="line">&#x2F;usr&#x2F;local&#x2F;opt</span><br><span class="line">&#x2F;usr&#x2F;local&#x2F;var&#x2F;homebrew&#x2F;linked</span><br><span class="line">&#x2F;usr&#x2F;local&#x2F;var&#x2F;homebrew&#x2F;locks</span><br><span class="line"></span><br><span class="line">You should change the ownership of these directories to your user.</span><br><span class="line">  sudo chown -R $(whoami) &#x2F;usr&#x2F;local&#x2F;Cellar &#x2F;usr&#x2F;local&#x2F;Homebrew &#x2F;usr&#x2F;local&#x2F;etc &#x2F;usr&#x2F;local&#x2F;etc&#x2F;bash_completion.d &#x2F;usr&#x2F;local&#x2F;opt &#x2F;usr&#x2F;local&#x2F;var&#x2F;homebrew&#x2F;linked &#x2F;usr&#x2F;local&#x2F;var&#x2F;homebrew&#x2F;locks</span><br></pre></td></tr></table></figure>
-<p>说明你当前用户权限不对，需要sudo权限执行命令，增加用户权限</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">sudo chown -R $(whoami) &#x2F;usr&#x2F;local&#x2F;Cellar &#x2F;usr&#x2F;local&#x2F;Homebrew &#x2F;usr&#x2F;local&#x2F;etc </span><br></pre></td></tr></table></figure>
-<p>重新安装</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br></pre></td><td class="code"><pre><span class="line">$ brew install telnet</span><br><span class="line">Warning: You are using macOS 10.15.</span><br><span class="line">We do not provide support for this pre-release version.</span><br><span class="line">You will encounter build failures with some formulae.</span><br><span class="line">Please create pull requests instead of asking for help on Homebrew&#39;s GitHub,</span><br><span class="line">Discourse, Twitter or IRC. You are responsible for resolving any issues you</span><br><span class="line">experience, as you are running this pre-release version.</span><br><span class="line"></span><br><span class="line">&#x3D;&#x3D;&gt; Downloading https:&#x2F;&#x2F;opensource.apple.com&#x2F;tarballs&#x2F;remote_cmds&#x2F;remote_cmds-60</span><br><span class="line">######################################################################## 100.0%</span><br><span class="line">&#x3D;&#x3D;&gt; Downloading https:&#x2F;&#x2F;opensource.apple.com&#x2F;tarballs&#x2F;libtelnet&#x2F;libtelnet-13.tar</span><br><span class="line">######################################################################## 100.0%</span><br><span class="line">&#x3D;&#x3D;&gt; xcodebuild SYMROOT&#x3D;build -arch x86_64</span><br><span class="line">&#x3D;&#x3D;&gt; make -C telnet.tproj OBJROOT&#x3D;build&#x2F;Intermediates SYMROOT&#x3D;build&#x2F;Products DSTR</span><br><span class="line">🍺  &#x2F;usr&#x2F;local&#x2F;Cellar&#x2F;telnet&#x2F;60: 4 files, 142.3KB, built in 21 seconds</span><br><span class="line">&#x3D;&#x3D;&gt; &#96;brew cleanup&#96; has not been run in 30 days, running now...</span><br></pre></td></tr></table></figure>
-<p>执行telnet ip port命令</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br></pre></td><td class="code"><pre><span class="line">$ telnet baidu.com 443</span><br><span class="line">Trying 220.181.38.148...</span><br><span class="line">Connected to baidu.com.</span><br><span class="line">Escape character is &#39;^]&#39;.</span><br><span class="line">^</span><br><span class="line">HTTP&#x2F;1.1 302 Moved Temporarily</span><br><span class="line">Server: bfe&#x2F;1.0.8.18</span><br><span class="line">Date: Mon, 08 Feb 2021 02:31:59 GMT</span><br><span class="line">Content-Type: text&#x2F;html</span><br><span class="line">Content-Length: 161</span><br><span class="line">Connection: close</span><br><span class="line">Location: http:&#x2F;&#x2F;www.baidu.com&#x2F;error.html</span><br><span class="line"></span><br><span class="line">&lt;html&gt;</span><br><span class="line">&lt;head&gt;&lt;title&gt;302 Found&lt;&#x2F;title&gt;&lt;&#x2F;head&gt;</span><br><span class="line">&lt;body bgcolor&#x3D;&quot;white&quot;&gt;</span><br><span class="line">&lt;center&gt;&lt;h1&gt;302 Found&lt;&#x2F;h1&gt;&lt;&#x2F;center&gt;</span><br><span class="line">&lt;hr&gt;&lt;center&gt;bfe&#x2F;1.0.8.18&lt;&#x2F;center&gt;</span><br><span class="line">&lt;&#x2F;body&gt;</span><br><span class="line">&lt;&#x2F;html&gt;</span><br><span class="line">Connection closed by foreign host.</span><br></pre></td></tr></table></figure>
+          <p><img src="https://upload-images.jianshu.io/upload_images/10024246-5cee99438e7340ea.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240"></p>
+<p><img src="https://upload-images.jianshu.io/upload_images/10024246-cb00304de33dc6a7.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240"></p>
+<p><img src="https://upload-images.jianshu.io/upload_images/10024246-0be45ffec5a24d23.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240"></p>
+<p><img src="https://upload-images.jianshu.io/upload_images/10024246-438492d08e3f2b1b.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240"></p>
+<p>REACT-NATIVE作为前端框架，到现在大概有三年的时间。我这边先分享一下为什么使用REACT-NATIVE。</p>
+<p>首先REACT-NATIVE的开发效率，使用javaScript开发原生应用，提出Learn Once, Write Anywhere<br>的开发思想。兼容前端的最大优势灵活发布，可以支持线上业务功快速迭代和随时更新发布。又保证了用户体验，整体体验接近原生，远优于Hybrld和Web APP。同时整个框架保持很高的社区热度，自身框架不断的升级优化，有丰富的第三方组件。</p>
+<p><img src="https://upload-images.jianshu.io/upload_images/10024246-9e2b86157dc6a78a.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240"></p>
+<p>我们一开始接触RN是2015年，当时RN刚刚发布，在2015年12月基于0.17版本开发了同时兼容iOS和Android的Demo，整体体验还可以；同时我们一直在关注RN的发展，在2016年9月使用RN0.38版本开发收银台业务，12月份正式上线运行，同时实现了包括bundle拆分，热更新的技术。整体运行了3个月的事件，产品和运营对该技术的体验比较满意和认可，就在公司推进该框架的接入；2017年3月，商城业务接入，5月正式支撑公司大型活动，技术上实现了RN单实例，单文件diff；在2017年我们整个商城业务的主流程全部接入了RN，2018年又接入了理财商城业务。</p>
+<p><img src="https://upload-images.jianshu.io/upload_images/10024246-9beeb7a89b7a3c43.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240"></p>
+<p>壹钱包的应用场景，我们有搜索分类，还有详情、会场、收银台、理财，后面就是我们正在做的5.20的活动，页面活动有很多的，商城里面很多应用，当时统计了一下，一个商品会场里面图片大概600多张，如果是RN原生的技术不优化的话，是无法支持这么大的应用场景，对于REACT-NATIVE我们做了性能优化。</p>
+<p><img src="https://upload-images.jianshu.io/upload_images/10024246-8973f3d7940d9de9.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240"></p>
+<p><img src="https://upload-images.jianshu.io/upload_images/10024246-40029c5e215d9329.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240"></p>
+<p><img src="https://upload-images.jianshu.io/upload_images/10024246-c3cdf376c6f745a6.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240"></p>
+<p>关注过RN的人知道，其实REACT-NATIVE对于安卓的支持较晚，安卓的性能不是很好，所以我们在安卓上进行较深入的优化。<br>RN是通过reactprop和react method两个注解声明暴露给js的属性和方法的，通过react-native init 的工程中rn框架并未进行优化，所有注解的处理是在运行时进行，这是一个非常耗时的过程。此外，通过反射的形式修改属性和调用方法也是不高效的。我们基于rn开源项目，编译出自己的rn库，完成了对注解的编译时优化。rn开源代码中有react prop注解的处理器，只需要开启就行。右边这幅图就是编译过程中生成的优化代码。针对react method注解的优化思路也是类似，我们自己开发出一套注解处理器，并修改rn源码，使优化生效。右边这幅图展示的就是编译阶段生成的优化代码。通过注解的编译时优化，rn框架初始化过程中的关键方法处理速度提升了60倍。</p>
+<p><img src="https://upload-images.jianshu.io/upload_images/10024246-9f76b114a1aeeabc.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240"></p>
+<p>除了注解优化，我们还对rn框架进行了诸多优化。<br>这些措施包括了比如我们在iOS方面的RCTImage改造，支持共享客户端缓存，支持动态注册RN模块，清除日志相关影响，无操作时，尽量不去执行刷新操作。</p>
+<p><img src="https://upload-images.jianshu.io/upload_images/10024246-6437a0f4b2e9fed1.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240"></p>
+<p>RN主要性能瓶颈在Javascript的执行 ，JS也是非常耗时的。RN框架代码是整体比较大，压缩之后大概500多K，如果多个业务接入RN的话，每个业务都打包框架代码时，造成很多资源浪费。业务开发并不关心当前框架是什么版本，只负责业务开发的，我们把框架代码独立更加方便于其他业务进行接入，方便业务进行开发。<br>我们做了JS bundle拆分，分为是框架JS和业务JS，框架JS通过global.react=require（react）,global.reactNative=require（react-native）把react和react-native对象定义为全局变量;业务JS通过webpack替换代码中的react和react-native对象为全局对象，实现RN框架的引入。<br>Bundle拆分后，在执行时还是要合并加载的，单我们不是简单的把框架JS和业务JS直接合并，那样拆分就没有太多意义。我们这边提出了一个新的方案，只加载一个框架JS，因为所有的业务JS执行都是基于框架执行的，加载一个RN框架就可以支撑所有的业务，你不需要再去对每个业务执行框架；对于单独加载框架JS，我们做过统计，哪怕只加载RN框架的话，其实耗时也是很严重的；所以我们加载业务JS都是基于当前的框架去执行的。通过这样的方式我们实现了RN的单实例共享。</p>
+<p><img src="https://upload-images.jianshu.io/upload_images/10024246-276644512e726e96.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240"></p>
+<p>其他方面，我们去JS加载做了一些其他的优化，比如JS moudle加载之后，我们会把它放到这里面，不会重复加载，当有相同业务打开的时候，我们去执行缓存中的JS代码。APP启动的时候，我们预加载RN实例，我们在打开APP的时候，我们先把框架执行，当打开RN业务时，我们这个时候不需要再去执行整个框架，我们直接执行业务代码，这样就会大大提升业务整体的性能，我们对于业务JS进行智能预加载。</p>
+<p><img src="https://upload-images.jianshu.io/upload_images/10024246-6514e5443290fb01.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240"></p>
+<p>我们在商品详情页启动耗时，有一半的业务场景在400毫秒到300毫秒打开，这个能够保证我们的页面完成最基本的要求就是秒开的场景。</p>
+<p><img src="https://upload-images.jianshu.io/upload_images/10024246-2c81b8e6aa60111a.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240"></p>
+<p><img src="https://upload-images.jianshu.io/upload_images/10024246-5e86df631134e037.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240"></p>
+<p>RN一个优势就是支持灵活发布，我们能对业务进行热更新，我们有一个专门管理和发布的平台。我们RN开发统一在git上开发，所有业务放在Git仓库；为了RN打包，我们基于Node开发了自动化打包平台，当需要发布业务的时候，我们通过自动化打包平台，自动化去打包生成业务和框架的zip包，上传到我们的发布系统，发布系统根据新的zip包，进行BSDIFF算法生成增量更新，这样用户更新不需要现在这个新业务zip包，只需要下载diff增量内容，<br>最大限度的降低用户流量，统计下来增量升级流量降低90%以上。这个时候如果我们对应的业务需要打开对应的RN的业务的时候，我们先去读取配置，这个决定你当前的版本是否支持RN，然后打开业务。</p>
+<p><img src="https://upload-images.jianshu.io/upload_images/10024246-0088928e23b9583f.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240"></p>
+<p><img src="https://upload-images.jianshu.io/upload_images/10024246-97cb7ac0864cb890.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240"></p>
+<p>RN支持使用Native组件，但是我们在开发中并不是全部依赖于native组件，自定义组件开发有对应的原则，优先使用Native已有的UI组件，如自定义键盘、密码。减少Native与JS间的交互，如倒计时。JS实现效果不佳或者实现困难，如滚轮选择器（picker）。现有组件无法支持当前业务需求，如列表组件（TableView）。</p>
+<p><img src="https://upload-images.jianshu.io/upload_images/10024246-f1249558ac8b1088.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240"></p>
+<p>RN提供的listview几乎无复用和flatview是基于原生组件的滚动事件进行复用，这样会有一定的延时，原生列表组件在复用上更加高效，所以基于原生组件上，开发了自己的RN列表组件；如图是我们在优化TableView的修改思路。优化过后有非常大的提升。</p>
+<p><img src="https://upload-images.jianshu.io/upload_images/10024246-ba16b2305c7a8815.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240"></p>
+<p>大家看一下这是我们现在REACT-NATIVE实现的业务场景。绿色的就是我们经常看到的所谓的60帧的刷新频率线，现在的页面基本上正常滚动的话，都是在60帧，整体体验是非常接近原生的。</p>
+<p><img src="https://upload-images.jianshu.io/upload_images/10024246-b5cefe1b5284ec2b.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240"></p>
+<p><img src="https://upload-images.jianshu.io/upload_images/10024246-a82a765cd5d68a45.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240"></p>
+<p>RN包括JS，包括Native都需要对异常进行捕获，因为RN异常会造成App的crush，这样对于整体业务体验非常不理想，我们做了对应的捕获方案。</p>
+<p>我们分为两块，一个就是JS异常，还有就是Native异常。JS异常我们使用RN提供的使用ErrorUtils全局捕获异常。Native异常，Android通过SetNativeModuleCallEXceptionHandler捕获；iOS通过捕获RCTCurrentFatalHandler的红屏错误，并监听RCTJavaScriptDidFailToLoadNotification 的异常通知，另外在打开业务时会检测RCTRootView，如果5秒内未加载ContentView也会认为异常。 捕获到异常我们会记录异常灰度，并对业务进行降级跳转到H5页面</p>
+<p><img src="https://upload-images.jianshu.io/upload_images/10024246-da7b7fd0ff3d3957.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240"></p>
+<p>RN框架版本升级，RN开发是2017年开始进行，版本为0382，RN框架升级迭代是非常快的，现在已经到54了；RN的框架升级过程中，框架自己也在解决自己的Bug，性能也是提高很多，稳定性也提升了。Native端框架整体性能、稳定性提升，其中Android布局方式发生了很大的变化<br>；React.js版本由15升级到16，在异常处理，服务端渲染和核心架构方面（引入 Fiber）都有了重大更新。基于此我们要升级我们对应的RN框架，跟上RN整体框架的版本步伐。</p>
+<p><img src="https://upload-images.jianshu.io/upload_images/10024246-9a4ecffbaf5d6cd6.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240"></p>
+<p>下面是RN的框架，上面是我们对应的业务，当我们选择去升级RN的时候，这个时候出现了比较严重的问题，由于它的版本差别太大了，整体业务出现很大问题，38版本下的业务代码无法在52版本运行，52版本的业务代码也无法在38版本上运行；开发那边讨论的时候，同时开展两条业务也不太现实，产品也不同意放弃旧的框架业务，基于此，我们做了一个框架兼容层，去屏蔽掉38和52的框架差异，实现基于一套业务代码能够同时在38和52上面同时运行，对于业务来讲，不需要关注框架的一些差异，只是按照对应的业务开发业务代码。</p>
+<p><img src="https://upload-images.jianshu.io/upload_images/10024246-663c02b507ddb0ef.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240"></p>
+<p>在升级的时候我们查看了了React和React-native的变动日志。React升级变动，废弃React createClass，使用独立包，create-react-class代替。独立React.PropTypes，使用新包prop-types，React-native中使用ViewPropTypes替换View.propTypes 。iOS修改了Native的事件发送机制，由EventDispatcher改为 EventBlock。</p>
+<p><img src="https://upload-images.jianshu.io/upload_images/10024246-2ea6778d0374176f.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240"></p>
+<p>大家可以看到RN框架升级之后，52相对38整体业务有很大的提升，我们现在刚才看到的一个图表，50%的业务我们能够在200毫秒内打开，70%的业务能够在300-400毫秒内，整体业务提升相对以前的38框架大概提升了50%的效果。</p>
+<p><img src="https://upload-images.jianshu.io/upload_images/10024246-9717988db8365892.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240"></p>
+<p><img src="https://upload-images.jianshu.io/upload_images/10024246-c5cb55c11a3e0fbb.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240"></p>
+<p>RN未来的展望，在APP内部业务RN的逐步替换；JS异常定位；RN单页化，现有业务都是通过native打开，造成数据无法共享，通过单页化，业务通过前端自己打开业务；现在RN是Learn once，Write anywhere，现有业务要求我们即存在RN又有对应的H5场景，同一个需求需要开发2遍，开发压力较大，下期目标实现Write once，run anywhere，完成同一套代码支持Web和RN；最后就是我们的对外输出RN的自定义组件和解决方案。</p>
 
       
     </div>
@@ -700,7 +600,7 @@
   
 
   <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="">
-    <link itemprop="mainEntityOfPage" href="https://lzhwweb.github.io/nirvana/mac/mac/MAC-%E8%93%9D%E7%89%99%E9%97%AE%E9%A2%98%E8%A7%A3%E5%86%B3%E5%8A%A0%E5%BC%BA%E7%89%88(-Airdrop-%E6%89%BE%E4%B8%8D%E5%88%B0,-%E8%93%9D%E7%89%99%E6%89%BE%E4%B8%8D%E5%88%B0%E7%AD%89-)/">
+    <link itemprop="mainEntityOfPage" href="https://lzhwweb.github.io/nirvana/tool/%E5%BC%80%E5%8F%91%E5%B7%A5%E5%85%B7/%E5%B8%B8%E7%94%A8%E7%9A%84VS-Code%E6%8F%92%E4%BB%B6/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="image" content="/nirvana/images/headphoto.jpeg">
@@ -713,7 +613,7 @@
     </span>
       <header class="post-header">
         <h2 class="post-title" itemprop="name headline">
-          <a href="/nirvana/mac/mac/MAC-%E8%93%9D%E7%89%99%E9%97%AE%E9%A2%98%E8%A7%A3%E5%86%B3%E5%8A%A0%E5%BC%BA%E7%89%88(-Airdrop-%E6%89%BE%E4%B8%8D%E5%88%B0,-%E8%93%9D%E7%89%99%E6%89%BE%E4%B8%8D%E5%88%B0%E7%AD%89-)/" class="post-title-link" itemprop="url">MAC-蓝牙问题解决加强版(-Airdrop-找不到,-蓝牙找不到等-)</a>
+          <a href="/nirvana/tool/%E5%BC%80%E5%8F%91%E5%B7%A5%E5%85%B7/%E5%B8%B8%E7%94%A8%E7%9A%84VS-Code%E6%8F%92%E4%BB%B6/" class="post-title-link" itemprop="url">常用的VS-Code插件</a>
         </h2>
 
         <div class="post-meta-container">
@@ -733,12 +633,12 @@
       </span>
       <span class="post-meta-item-text">分类于</span>
         <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-          <a href="/nirvana/categories/mac/" itemprop="url" rel="index"><span itemprop="name">mac</span></a>
+          <a href="/nirvana/categories/tool/" itemprop="url" rel="index"><span itemprop="name">tool</span></a>
         </span>
     </span>
 
   
-    <span id="/nirvana/mac/mac/MAC-%E8%93%9D%E7%89%99%E9%97%AE%E9%A2%98%E8%A7%A3%E5%86%B3%E5%8A%A0%E5%BC%BA%E7%89%88(-Airdrop-%E6%89%BE%E4%B8%8D%E5%88%B0,-%E8%93%9D%E7%89%99%E6%89%BE%E4%B8%8D%E5%88%B0%E7%AD%89-)/" class="post-meta-item leancloud_visitors" data-flag-title="MAC-蓝牙问题解决加强版(-Airdrop-找不到,-蓝牙找不到等-)" title="阅读次数">
+    <span id="/nirvana/tool/%E5%BC%80%E5%8F%91%E5%B7%A5%E5%85%B7/%E5%B8%B8%E7%94%A8%E7%9A%84VS-Code%E6%8F%92%E4%BB%B6/" class="post-meta-item leancloud_visitors" data-flag-title="常用的VS-Code插件" title="阅读次数">
       <span class="post-meta-item-icon">
         <i class="far fa-eye"></i>
       </span>
@@ -752,14 +652,14 @@
         <i class="far fa-file-word"></i>
       </span>
       <span class="post-meta-item-text">本文字数：</span>
-      <span>232</span>
+      <span>2.1k</span>
     </span>
     <span class="post-meta-item" title="阅读时长">
       <span class="post-meta-item-icon">
         <i class="far fa-clock"></i>
       </span>
       <span class="post-meta-item-text">阅读时长 &asymp;</span>
-      <span>1 分钟</span>
+      <span>2 分钟</span>
     </span>
 </div>
 
@@ -770,14 +670,17 @@
     
     
     <div class="post-body" itemprop="articleBody">
-          <p>如果你电脑出现了比如经常丢链接, 或者Hand off 不工作, Airdrop 找不到的话, 先升级到10.11.2 系统, 应该能解决很多已存的Bug.</p>
-<p>如果依然没有解决的话, 首先你可以先去删除bluetooth的配置文件. <br>在</p>
-<p>/Library/Preferences/</p>
-<p>目录里. </p>
-<p><img src="http://upload-images.jianshu.io/upload_images/10024246-5917f0bfaef81518.jpg?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" title="正在搜索“Preferences”.jpg"></p>
-<p>按 Command-shift-G , 找到后搜索 blue 就行了. </p>
-<p>删除后重启, 蓝牙配置就会重置了.  也可以尝试重启的时候按住 Command-Option-p-r 三声后松手, 也就是俗称的PR大法. 清理PR缓存. </p>
-<p>–</p>
+          <h2 id="Bracket-Pair-Colorizer-2"><a href="#Bracket-Pair-Colorizer-2" class="headerlink" title="Bracket Pair Colorizer 2"></a>Bracket Pair Colorizer 2</h2><p><img src="https://upload-images.jianshu.io/upload_images/10024246-4e1925a599eb769a?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240"></p>
+<p>帮助我搞清楚 JavaScript 中复杂的嵌套 promise。顾名思义，它可以让方括号对变色，帮我弄清楚是否在某个地方搞糊涂了（例如缺少方括号）。它默认匹配 ()、[] 和{}等普通括号，但如果需要你也可以定义自定义括号。<br>它还有其他许多很酷的功能，例如定义颜色或为活动括号显示装订线之类。值得尝试一波。<br><strong>项目地址</strong><br><a target="_blank" rel="noopener" href="https://github.com/CoenraadS/Bracket-Pair-Colorizer-2">https://github.com/CoenraadS/Bracket-Pair-Colorizer-2</a><br> <strong>Marketplace</strong><br><a target="_blank" rel="noopener" href="https://marketplace.visualstudio.com/items?itemName=CoenraadS.bracket-pair-colorizer-2">https://marketplace.visualstudio.com/items?itemName=CoenraadS.bracket-pair-colorizer-2</a></p>
+<h2 id="NPM-Intellisense"><a href="#NPM-Intellisense" class="headerlink" title="NPM Intellisense"></a>NPM Intellisense</h2><p><img src="https://upload-images.jianshu.io/upload_images/10024246-db143f4cae36955c?imageMogr2/auto-orient/strip"></p>
+<p>如动图所示，它能自动完成以 NPM 包为目标的 require import 语句。这可以提供很多帮助，尤其是当你的项目变得很大，并且在 package.json 中包含很多依赖项时。<br> <strong>项目地址</strong><br><a target="_blank" rel="noopener" href="https://github.com/ChristianKohler/NpmIntellisense">https://github.com/ChristianKohler/NpmIntellisense</a><br><strong>Marketplace</strong><br><a target="_blank" rel="noopener" href="https://marketplace.visualstudio.com/items?itemName=christian-kohler.npm-intellisense">https://marketplace.visualstudio.com/items?itemName=christian-kohler.npm-intellisense</a></p>
+<h2 id="Path-Intellisense"><a href="#Path-Intellisense" class="headerlink" title="Path Intellisense"></a>Path Intellisense</h2><p><img src="https://upload-images.jianshu.io/upload_images/10024246-afb2416b7e73f8e8.gif?imageMogr2/auto-orient/strip"></p>
+<p>这是 NPM Intellisense 的姐妹插件。它会执行相同的自动补全，不过针对的是你的文件系统。<br><strong>项目地址</strong><br><a target="_blank" rel="noopener" href="https://github.com/ChristianKohler/PathIntellisense">https://github.com/ChristianKohler/PathIntellisense</a><br><strong>Marketplace</strong><br><a target="_blank" rel="noopener" href="https://marketplace.visualstudio.com/items?itemName=christian-kohler.path-intellisense">https://marketplace.visualstudio.com/items?itemName=christian-kohler.path-intellisense</a></p>
+<h2 id="Quokka-js"><a href="#Quokka-js" class="headerlink" title="Quokka.js"></a>Quokka.js</h2><p><img src="https://upload-images.jianshu.io/upload_images/10024246-ccab0e9d884fce5f.gif?imageMogr2/auto-orient/strip"><br>如果你只是想尝试一些东西，不想费劲先设置项目，那么这款工具就是一个很好的辅助。通过实时检查输出，它会立即将输出显示在 JavaScript/TypeScript 代码旁边，如动图所示。这是一个很好的扩展，特别适合调试目的。<br><strong>项目地址</strong><br><a target="_blank" rel="noopener" href="https://quokkajs.com/">https://quokkajs.com/</a><br><strong>Marketplace</strong><br><a target="_blank" rel="noopener" href="https://marketplace.visualstudio.com/items?itemName=WallabyJs.quokka-vscode">https://marketplace.visualstudio.com/items?itemName=WallabyJs.quokka-vscode</a></p>
+<h2 id="Docker"><a href="#Docker" class="headerlink" title="Docker"></a>Docker</h2><p>这个扩展是处理多个 Docker 映像和容器的必备，因为你可以用它快速浏览正在运行哪些容器、构建哪些映像以及创建哪些网络。<br><strong>项目地址</strong><br><a target="_blank" rel="noopener" href="https://github.com/microsoft/vscode-docker">https://github.com/microsoft/vscode-docker</a><br><strong>Marketplace</strong><br><a target="_blank" rel="noopener" href="https://marketplace.visualstudio.com/items?itemName=ms-azuretools.vscode-docker">https://marketplace.visualstudio.com/items?itemName=ms-azuretools.vscode-docker</a></p>
+<h2 id="Live-Server"><a href="#Live-Server" class="headerlink" title="Live Server"></a>Live Server</h2><p><img src="https://upload-images.jianshu.io/upload_images/10024246-6aae06bf0f4fff6b.gif?imageMogr2/auto-orient/strip"><br>这个扩展为本地开发服务器提供了热重载功能，也就是说它会在保存对文件所做的任何更改后立即刷新页面。它在状态栏中有一个漂亮的“Go Live”按钮，你只需单击一下即可启动服务器。<br><strong>项目地址</strong><br><a target="_blank" rel="noopener" href="https://github.com/ritwickdey/vscode-live-server">https://github.com/ritwickdey/vscode-live-server</a><br><strong>Marketplace</strong><br><a target="_blank" rel="noopener" href="https://marketplace.visualstudio.com/items?itemName=ritwickdey.LiveServer">https://marketplace.visualstudio.com/items?itemName=ritwickdey.LiveServer</a></p>
+<h2 id="Auto-Close-Tag-和-Auto-Rename-Tag"><a href="#Auto-Close-Tag-和-Auto-Rename-Tag" class="headerlink" title="Auto Close Tag 和 Auto Rename Tag"></a>Auto Close Tag 和 Auto Rename Tag</h2><p><img src="https://upload-images.jianshu.io/upload_images/10024246-879775d67e33686b.gif?imageMogr2/auto-orient/strip"><br>它们是 VS Code 的两个小插件，可通过自动重命名和关闭标签来帮助你维护 HTML 文件。这也适用于 React 自己的 JSX 语法。<br><strong>Auto Close Tag</strong><br><a target="_blank" rel="noopener" href="https://github.com/formulahendry/vscode-auto-close-tag/https://marketplace.visualstudio.com/items?itemName=formulahendry.auto-close-tag">https://github.com/formulahendry/vscode-auto-close-tag/https://marketplace.visualstudio.com/items?itemName=formulahendry.auto-close-tag</a><br> <strong>Auto Rename Tag</strong><br><a target="_blank" rel="noopener" href="https://github.com/formulahendry/vscode-auto-rename-tag/https://marketplace.visualstudio.com/items?itemName=formulahendry.auto-rename-tag">https://github.com/formulahendry/vscode-auto-rename-tag/https://marketplace.visualstudio.com/items?itemName=formulahendry.auto-rename-tag</a></p>
+<h2 id="Markdown-Preview-Enhanced"><a href="#Markdown-Preview-Enhanced" class="headerlink" title="Markdown Preview Enhanced"></a>Markdown Preview Enhanced</h2><p><img src="https://upload-images.jianshu.io/upload_images/10024246-fe3e4c69847e2ade.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240"><br> Markdown 预览工具。它不仅为你提供预览，而且还有同步滚动、PDF 导出和 PlantUML 的功能。<br><strong>项目地址</strong><br><a target="_blank" rel="noopener" href="https://github.com/shd101wyy/vscode-markdown-preview-enhanced">https://github.com/shd101wyy/vscode-markdown-preview-enhanced</a><br><strong>Marketplace</strong><br><a target="_blank" rel="noopener" href="https://marketplace.visualstudio.com/items?itemName=shd101wyy.markdown-preview-enhanced">https://marketplace.visualstudio.com/items?itemName=shd101wyy.markdown-preview-enhanced</a></p>
 
       
     </div>
@@ -804,7 +707,7 @@
   
 
   <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="">
-    <link itemprop="mainEntityOfPage" href="https://lzhwweb.github.io/nirvana/mac/mac/Mac-%E5%9B%9B%E7%A7%8D%E4%BF%AE%E6%94%B9Hosts%E7%9A%84%E6%96%B9%E6%B3%95/">
+    <link itemprop="mainEntityOfPage" href="https://lzhwweb.github.io/nirvana/tool/%E5%BC%80%E5%8F%91%E5%B7%A5%E5%85%B7/VSCode%E8%AE%BE%E7%BD%AE%E5%A4%A7%E5%B0%8F%E5%86%99%E8%BD%AC%E6%8D%A2%E7%9A%84%E5%BF%AB%E6%8D%B7%E9%94%AE/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="image" content="/nirvana/images/headphoto.jpeg">
@@ -817,7 +720,7 @@
     </span>
       <header class="post-header">
         <h2 class="post-title" itemprop="name headline">
-          <a href="/nirvana/mac/mac/Mac-%E5%9B%9B%E7%A7%8D%E4%BF%AE%E6%94%B9Hosts%E7%9A%84%E6%96%B9%E6%B3%95/" class="post-title-link" itemprop="url">Mac-四种修改Hosts的方法</a>
+          <a href="/nirvana/tool/%E5%BC%80%E5%8F%91%E5%B7%A5%E5%85%B7/VSCode%E8%AE%BE%E7%BD%AE%E5%A4%A7%E5%B0%8F%E5%86%99%E8%BD%AC%E6%8D%A2%E7%9A%84%E5%BF%AB%E6%8D%B7%E9%94%AE/" class="post-title-link" itemprop="url">VSCode设置大小写转换的快捷键</a>
         </h2>
 
         <div class="post-meta-container">
@@ -837,12 +740,12 @@
       </span>
       <span class="post-meta-item-text">分类于</span>
         <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-          <a href="/nirvana/categories/mac/" itemprop="url" rel="index"><span itemprop="name">mac</span></a>
+          <a href="/nirvana/categories/tool/" itemprop="url" rel="index"><span itemprop="name">tool</span></a>
         </span>
     </span>
 
   
-    <span id="/nirvana/mac/mac/Mac-%E5%9B%9B%E7%A7%8D%E4%BF%AE%E6%94%B9Hosts%E7%9A%84%E6%96%B9%E6%B3%95/" class="post-meta-item leancloud_visitors" data-flag-title="Mac-四种修改Hosts的方法" title="阅读次数">
+    <span id="/nirvana/tool/%E5%BC%80%E5%8F%91%E5%B7%A5%E5%85%B7/VSCode%E8%AE%BE%E7%BD%AE%E5%A4%A7%E5%B0%8F%E5%86%99%E8%BD%AC%E6%8D%A2%E7%9A%84%E5%BF%AB%E6%8D%B7%E9%94%AE/" class="post-meta-item leancloud_visitors" data-flag-title="VSCode设置大小写转换的快捷键" title="阅读次数">
       <span class="post-meta-item-icon">
         <i class="far fa-eye"></i>
       </span>
@@ -856,7 +759,7 @@
         <i class="far fa-file-word"></i>
       </span>
       <span class="post-meta-item-text">本文字数：</span>
-      <span>1.3k</span>
+      <span>776</span>
     </span>
     <span class="post-meta-item" title="阅读时长">
       <span class="post-meta-item-icon">
@@ -874,35 +777,38 @@
     
     
     <div class="post-body" itemprop="articleBody">
-          <p>　　1、通过 VI 编辑器修改</p>
-<p>　　打开终端（应用程序——实用工具），运行：</p>
-<p>　　sudo vi /etc/hosts</p>
-<p><img src="https://upload-images.jianshu.io/upload_images/10024246-67eb013c22cf36b0.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="image"></p>
-<p>　　屏幕上会提示你输入密码（输入密码的时候不会有任何字符显示，甚至*都不会显示，输完之后按回车就是了），打开 hosts 文件之后按 i 键进入插入模式（可理解为编辑模式，如下图所示，会有「INSERT 」提示，即可插入编辑的意思），然后按照你的需要对该文件进行编辑，编辑完成之后按 ESC 键退出插入模式，之后按「 :wq+回车」保存退出，记得英文的冒号也是要输入的哦。</p>
-<p><img src="https://upload-images.jianshu.io/upload_images/10024246-3e19c469c281313b.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="image"></p>
-<p>　　VI 编辑器对于经常使用 Linux 的用户应该不会陌生，而且该编辑器是默认内置在 Mac 系统中的。但是，对于没有使用过 VI 的用户，还真得花一会儿功夫来学习其基本使用方法。另外VI编辑器是一个很好很强大的工具，想要玩好 Mac 的话，最好掌握这个工具的使用。</p>
-<p>　　2、直接在 Mac 系统下找到 Hosts 文件修改</p>
-<p>　　这应该算是最简单以及最直观的一个修改方法了。</p>
-<p>　　第一步、打开你的文件管理器也就是Finder ，Hosts自然也是在这个里面。</p>
-<p><img src="https://upload-images.jianshu.io/upload_images/10024246-7bf8749a01353aac.jpg?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="image"></p>
-<p>　　第二步、接下来请按快捷键组合 Shift+Command+G 三个组合按键查找文件，并输入 Hosts 文件的所在路径：/etc/hosts ，如图所示：</p>
-<p><img src="https://upload-images.jianshu.io/upload_images/10024246-8af91772eae318b4.jpg?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="image"></p>
-<p>　　第三步、在打开的文件夹当中找到「Hosts」文件夹。</p>
-<p><img src="https://upload-images.jianshu.io/upload_images/10024246-d249d67354796e5f.jpg?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="image"></p>
-<p>　　第四步、复制这个「hosts」文件到桌面上，鼠标右键点击/右击它，选择「打开方式」—「文本编辑」，打开这个「hosts」文件，然后将你要修改的内容直接在里面修改就好了。</p>
-<p><img src="https://upload-images.jianshu.io/upload_images/10024246-a60eca4f5ebbdbe7.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="image"></p>
-<p>　　第五步、将你修改好的 hosts 文件在复制回 Hosts 文件的所在（文件夹下）路径：/etc/hosts 之下替换原始的 hosts 文件就好了，这样你 Mac 系统下的 hosts 文件就被成功修改了。</p>
-<p><img src="https://upload-images.jianshu.io/upload_images/10024246-7f4fe79c935b1b22.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="image"></p>
-<p>　　3、使用 cat 命令合并文件</p>
-<p>　　这个方法比较适合当你想往 Hosts 文件中添加一些内容的情况，首先你需要把需要添加到 Hosts 文件中的内容保存为一个TXT文本文件（建议直接保存在你的用户目录），我这里拿保存在用户目录中的123.txt为例说明。</p>
-<p>　　同样是启动终端，然后运行下面两条命令：</p>
-<p>　　sudo -s</p>
-<p>　　cat ~/123.txt/etc/hosts</p>
-<p>　　~ 符号在 Mac 甚至所有基于 Unix 和 Linux 的系统中都是代表当前用户的用户目录，.代表当前目录，这回你就应该明白上面的命令中为什么是 ~/123.txt 了吧。</p>
-<p>　　4、直接在图形界面中修改</p>
-<p>　　打开 Finder，然后点击菜单栏中的 前往——前往文件夹（或者快捷键 Shift+Command+G），在路径中输入 /private，进入之后在 etc 文件夹上点击右键——显示简介，在文件夹简介窗口的最下面找到“共享与权限”，将 everyone 的权限修改为“读与写”，如果你发现不能修改的话，将右下角的那把小锁解开就可以修改了。</p>
-<p><img src="https://upload-images.jianshu.io/upload_images/10024246-0847ef6d184c1f5d.jpg?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="image"></p>
-<p>　　修改 etc 文件夹的权限之后，再进入 etc 文件夹下面，修改名为 hosts 文件的权限（同样是everyone读与写），修改完成之后，你就可以直接在 hosts 文件上点右键，通过“文本编辑”打开并编辑该文件了，不会出现没有权限的提示。修改并保存完成之后，记得将该文件和 etc 文件夹的权限还原。</p>
+          <p>一 、默认情况下VS Code的编辑菜单或快捷键中没有 转换为大写，转换为小写的功能</p>
+<p>解决方案1：使用键盘配置，开启转换为小写，转换为大写的快捷键 </p>
+<p>以VS中的 快捷键为例：</p>
+<p>小写 -》Ctrl+Shift+l</p>
+<p>大写=》Ctrl+Shift+U</p>
+<p>自定义大小写转换的快捷键步骤如下:</p>
+<p> 1.点击【文件】-【首选项】-【键盘快捷方式】菜单。</p>
+<p><img src="https://upload-images.jianshu.io/upload_images/10024246-d5ee5749c318312e.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240"> </p>
+<p><img src="https://upload-images.jianshu.io/upload_images/10024246-423b8ab14aade804.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240"></p>
+<p>2.输入 “转换为大写”, 会出现搜索结果【转换为大写】,鼠标悬停在该结果上, 点击前面的”加号” 或 双击, 会弹出输入自定义快捷键的弹窗。</p>
+<p><img src="https://upload-images.jianshu.io/upload_images/10024246-60e4e6fcbe5fa6b2.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240"> </p>
+<p><img src="https://upload-images.jianshu.io/upload_images/10024246-3f1c888971fb2a73.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240"> </p>
+<p>3.在键盘上面按下Ctrl、Shift和u, 然后按Enter键, 即可成功绑定转换为大写快捷键。</p>
+<p><img src="https://upload-images.jianshu.io/upload_images/10024246-65a4b55675f8717b.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240"> </p>
+<p><img src="https://upload-images.jianshu.io/upload_images/10024246-9ecd4ce60718de32.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240"></p>
+<p>4.同理，搜索”转换为小写”, 鼠标悬停在结果上, 点击前面的”加号” 或 双击, 弹出设置快捷键的弹窗，在键盘上面按下Ctrl、Shift和l, 然后按Enter键, 即可成功绑定转换为小写快捷键。</p>
+<p><img src="https://upload-images.jianshu.io/upload_images/10024246-7f3e695948c286af.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240"></p>
+<hr>
+<p>##解决方案2，直接修改keybings.json 添加配置</p>
+<pre><code>&#123;
+    &quot;key&quot;: &quot;ctrl+shift+u&quot;,
+    &quot;command&quot;: &quot;editor.action.transformToUppercase&quot;,
+    &quot;when&quot;: &quot;editorTextFocus&quot;
+&#125;,
+&#123;
+    &quot;key&quot;: &quot;ctrl+shift+l&quot;,
+    &quot;command&quot;: &quot;editor.action.transformToLowercase&quot;,
+    &quot;when&quot;: &quot;editorTextFocus&quot;
+&#125;
+</code></pre>
+<p>最终设置的自定义的大小写转换快捷键如下: </p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">转换为大写: Ctrl+Shift+u</span><br><span class="line">转换为小写: Ctrl+Shift+l</span><br></pre></td></tr></table></figure>
 
       
     </div>
@@ -929,7 +835,7 @@
   
 
   <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="">
-    <link itemprop="mainEntityOfPage" href="https://lzhwweb.github.io/nirvana/mac/mac/Mac-%E6%95%88%E7%8E%87%E5%B7%A5%E5%85%B7%E8%BD%AF%E4%BB%B6-OpenInTerminal/">
+    <link itemprop="mainEntityOfPage" href="https://lzhwweb.github.io/nirvana/tool/%E5%BC%80%E5%8F%91%E5%B7%A5%E5%85%B7/chrome-%E8%B4%A6%E5%8F%B7%E6%89%8B%E5%8A%A8%E5%90%8C%E6%AD%A5/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="image" content="/nirvana/images/headphoto.jpeg">
@@ -942,7 +848,108 @@
     </span>
       <header class="post-header">
         <h2 class="post-title" itemprop="name headline">
-          <a href="/nirvana/mac/mac/Mac-%E6%95%88%E7%8E%87%E5%B7%A5%E5%85%B7%E8%BD%AF%E4%BB%B6-OpenInTerminal/" class="post-title-link" itemprop="url">Mac-效率工具软件-OpenInTerminal</a>
+          <a href="/nirvana/tool/%E5%BC%80%E5%8F%91%E5%B7%A5%E5%85%B7/chrome-%E8%B4%A6%E5%8F%B7%E6%89%8B%E5%8A%A8%E5%90%8C%E6%AD%A5/" class="post-title-link" itemprop="url">chrome 账号手动同步</a>
+        </h2>
+
+        <div class="post-meta-container">
+          <div class="post-meta">
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-calendar"></i>
+      </span>
+      <span class="post-meta-item-text">发表于</span>
+      
+
+      <time title="创建时间：2021-03-10 21:12:40 / 修改时间：22:05:29" itemprop="dateCreated datePublished" datetime="2021-03-10T21:12:40+08:00">2021-03-10</time>
+    </span>
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-folder"></i>
+      </span>
+      <span class="post-meta-item-text">分类于</span>
+        <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+          <a href="/nirvana/categories/tool/" itemprop="url" rel="index"><span itemprop="name">tool</span></a>
+        </span>
+    </span>
+
+  
+    <span id="/nirvana/tool/%E5%BC%80%E5%8F%91%E5%B7%A5%E5%85%B7/chrome-%E8%B4%A6%E5%8F%B7%E6%89%8B%E5%8A%A8%E5%90%8C%E6%AD%A5/" class="post-meta-item leancloud_visitors" data-flag-title="chrome 账号手动同步" title="阅读次数">
+      <span class="post-meta-item-icon">
+        <i class="far fa-eye"></i>
+      </span>
+      <span class="post-meta-item-text">阅读次数：</span>
+      <span class="leancloud-visitors-count"></span>
+    </span>
+      </div>
+      <div class="post-meta">
+    <span class="post-meta-item" title="本文字数">
+      <span class="post-meta-item-icon">
+        <i class="far fa-file-word"></i>
+      </span>
+      <span class="post-meta-item-text">本文字数：</span>
+      <span>166</span>
+    </span>
+    <span class="post-meta-item" title="阅读时长">
+      <span class="post-meta-item-icon">
+        <i class="far fa-clock"></i>
+      </span>
+      <span class="post-meta-item-text">阅读时长 &asymp;</span>
+      <span>1 分钟</span>
+    </span>
+</div>
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+          <p>解决chrome不能自动同步问题，可以进行手动同步。</p>
+<p>不需要删除数据，不需要关闭账户！</p>
+<p>首先你懂得</p>
+<p>chrome地址栏中输入： chrome://sync-internals/<br>进行如图操作</p>
+<p>注意：目前这种方式是完全可行的，如果点击disable sync 再次点击 request 等待一会还是没有反应，且网络正常，请尝试关闭并打开一次浏览器再操作。<br><img src="https://upload-images.jianshu.io/upload_images/10024246-d2dfb140d7189280?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="image"><br><img src="https://upload-images.jianshu.io/upload_images/10024246-f0837051d08d3136?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="image"><br><img src="https://upload-images.jianshu.io/upload_images/10024246-c83c5ed3762650d6?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="image"></p>
+
+      
+    </div>
+
+    
+    
+    
+
+    <footer class="post-footer">
+        <div class="post-eof"></div>
+      
+    </footer>
+  </article>
+</div>
+
+
+
+
+    
+
+
+<div class="post-block">
+  
+  
+
+  <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="">
+    <link itemprop="mainEntityOfPage" href="https://lzhwweb.github.io/nirvana/tool/%E5%BC%80%E5%8F%91%E5%B7%A5%E5%85%B7/%E8%B0%B7%E6%AD%8C%E6%B5%8F%E8%A7%88%E5%99%A8SwitchyOmega%E6%8F%92%E4%BB%B6%E5%AE%89%E8%A3%85%E4%BD%BF%E7%94%A8%E6%95%99%E7%A8%8B/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/nirvana/images/headphoto.jpeg">
+      <meta itemprop="name" content="nirvana">
+      <meta itemprop="description" content="个人学习笔记">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="涅槃快乐是金">
+    </span>
+      <header class="post-header">
+        <h2 class="post-title" itemprop="name headline">
+          <a href="/nirvana/tool/%E5%BC%80%E5%8F%91%E5%B7%A5%E5%85%B7/%E8%B0%B7%E6%AD%8C%E6%B5%8F%E8%A7%88%E5%99%A8SwitchyOmega%E6%8F%92%E4%BB%B6%E5%AE%89%E8%A3%85%E4%BD%BF%E7%94%A8%E6%95%99%E7%A8%8B/" class="post-title-link" itemprop="url">谷歌浏览器SwitchyOmega插件安装使用教程</a>
         </h2>
 
         <div class="post-meta-container">
@@ -962,12 +969,12 @@
       </span>
       <span class="post-meta-item-text">分类于</span>
         <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-          <a href="/nirvana/categories/mac/" itemprop="url" rel="index"><span itemprop="name">mac</span></a>
+          <a href="/nirvana/categories/tool/" itemprop="url" rel="index"><span itemprop="name">tool</span></a>
         </span>
     </span>
 
   
-    <span id="/nirvana/mac/mac/Mac-%E6%95%88%E7%8E%87%E5%B7%A5%E5%85%B7%E8%BD%AF%E4%BB%B6-OpenInTerminal/" class="post-meta-item leancloud_visitors" data-flag-title="Mac-效率工具软件-OpenInTerminal" title="阅读次数">
+    <span id="/nirvana/tool/%E5%BC%80%E5%8F%91%E5%B7%A5%E5%85%B7/%E8%B0%B7%E6%AD%8C%E6%B5%8F%E8%A7%88%E5%99%A8SwitchyOmega%E6%8F%92%E4%BB%B6%E5%AE%89%E8%A3%85%E4%BD%BF%E7%94%A8%E6%95%99%E7%A8%8B/" class="post-meta-item leancloud_visitors" data-flag-title="谷歌浏览器SwitchyOmega插件安装使用教程" title="阅读次数">
       <span class="post-meta-item-icon">
         <i class="far fa-eye"></i>
       </span>
@@ -981,7 +988,7 @@
         <i class="far fa-file-word"></i>
       </span>
       <span class="post-meta-item-text">本文字数：</span>
-      <span>313</span>
+      <span>563</span>
     </span>
     <span class="post-meta-item" title="阅读时长">
       <span class="post-meta-item-icon">
@@ -999,23 +1006,27 @@
     
     
     <div class="post-body" itemprop="articleBody">
-          <p>软件是以 Finder 的扩展形式存在的，安装后你并不会在 Applications 文件夹中看到它。</p>
-<h4 id="总结来说有三点"><a href="#总结来说有三点" class="headerlink" title="总结来说有三点"></a>总结来说有三点</h4><ul>
-<li>可以快速从终端（Terminal）中打开某个目录</li>
-<li>可以快速用编辑器打开某个目录或者文件</li>
-<li>可以复制某个文件或者目录的路径<br><img src="https://upload-images.jianshu.io/upload_images/10024246-4dcfaae0ade1f4a7.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240"><br><img src="https://upload-images.jianshu.io/upload_images/10024246-ce3c7903db535631.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240"><h2 id="如何安装🖥"><a href="#如何安装🖥" class="headerlink" title="如何安装🖥"></a>如何安装🖥</h2></li>
-</ul>
-<h3 id="1-下载"><a href="#1-下载" class="headerlink" title="1. 下载"></a>1. 下载</h3><h4 id="a-Homebrew"><a href="#a-Homebrew" class="headerlink" title="a) Homebrew"></a>a) Homebrew</h4><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">brew install --cask openinterminal</span><br></pre></td></tr></table></figure>
-
-<h4 id="b-手动"><a href="#b-手动" class="headerlink" title="b) 手动"></a>b) 手动</h4><ol>
-<li> 从 <a target="_blank" rel="noopener" href="https://github.com/Ji4n1ng/OpenInTerminal/releases">release</a> 中下载。</li>
-<li> 将应用移动到 <code>应用程序</code> 文件夹。</li>
-</ol>
+          <p>SwitchyOmega是Chrome浏览器上的代理扩展程序,可以轻松快捷的管理和切换多个代理设置。接管浏览器代理方式，可瞬间切换代理和本地连接方式，配合socks5（等其他代理工具）可实现只代理部分国内无法访问的网站。</p>
+<p><img src="https://upload-images.jianshu.io/upload_images/10024246-61233ce7d20819e9.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240"></p>
 <blockquote>
-<p>⚠️当您第一次运行应用程序时，macOS 将要求访问 <code>访达</code> 和 <code>终端</code>（或 <code>iTerm</code>）的权限。请给予应用程序权限。</p>
+<p>安装方法</p>
 </blockquote>
-<h3 id="2-打开-Finder-扩展权限"><a href="#2-打开-Finder-扩展权限" class="headerlink" title="2. 打开 Finder 扩展权限"></a><a target="_blank" rel="noopener" href="https://github.com/Ji4n1ng/OpenInTerminal/blob/master/Resources/README-zh.md#2-%E6%89%93%E5%BC%80-finder-%E6%89%A9%E5%B1%95%E6%9D%83%E9%99%90"></a>2. 打开 Finder 扩展权限</h3><p>打开 OpenInTerminal 应用。去 <code>系统偏好设置</code> -&gt; <code>扩展</code> -&gt; <code>访达扩展</code>，打开下图中的权限按钮。</p>
-<p><img src="https://upload-images.jianshu.io/upload_images/10024246-1f143a78e0bf16ca.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240"></p>
+<p>1、在线安装</p>
+<p>在可以访问外网的环境下，从Chrome应用商店来安装：<a target="_blank" rel="noopener" href="https://chrome.google.com/webstore/detail/padekgcemlokbadohgkifijomclgjgif">https://chrome.google.com/webstore/detail/padekgcemlokbadohgkifijomclgjgif</a></p>
+<p>2、离线安装</p>
+<p>去github下载最新版安装包：<a target="_blank" rel="noopener" href="https://github.com/FelisCatus/SwitchyOmega/releases">https://github.com/FelisCatus/SwitchyOmega/releases</a></p>
+<blockquote>
+<p>使用方式</p>
+</blockquote>
+<p>1、新建一个情景模式</p>
+<p><img src="https://upload-images.jianshu.io/upload_images/10024246-3937342562f3571e.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="谷歌浏览器SwitchyOmega插件安装使用教程"></p>
+<p>上图中，前两种是最常用的，如果是第一次使用，那就记住前两种即可，第一种是指定代理的方式，每次访问一定会从设置的代理中走，第二种是动态切换的方式，比如说你想让百度走国内的网络，而让谷歌走国外的网络。</p>
+<p>2、配置情景模式</p>
+<p><img src="https://upload-images.jianshu.io/upload_images/10024246-27088b3d66156959.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="谷歌浏览器SwitchyOmega插件安装使用教程"></p>
+<p>我这里使用的是SSR的默认代理端口1080做演示，大家根据自己的代理工具来配置即可，注意“代理协议”别选错了。</p>
+<p>3、配置自动切换</p>
+<p><img src="https://upload-images.jianshu.io/upload_images/10024246-312d117ca68260d4.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="谷歌浏览器SwitchyOmega插件安装使用教程"></p>
+<p>前两步完成之后，就已经可以了，但是每次使用的时候，需要在浏览器上手动点一下来切换（不是之前提到的浏览器代理设置），而这一步配置了自动切换以后，会自动根据域名来匹配情景模式。</p>
 
       
     </div>
@@ -1042,7 +1053,7 @@
   
 
   <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="">
-    <link itemprop="mainEntityOfPage" href="https://lzhwweb.github.io/nirvana/mac/mac/Mac-%EF%BC%9A%E4%BF%AE%E6%94%B9-DNS-%E5%8F%8A%E6%B8%85%E9%99%A4-DNS-%E7%BC%93%E5%AD%98/">
+    <link itemprop="mainEntityOfPage" href="https://lzhwweb.github.io/nirvana/algorithm/%E7%AE%97%E6%B3%95%E5%AD%A6%E4%B9%A0/%E5%86%92%E6%B3%A1%E6%8E%92%E5%BA%8F/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="image" content="/nirvana/images/headphoto.jpeg">
@@ -1055,7 +1066,7 @@
     </span>
       <header class="post-header">
         <h2 class="post-title" itemprop="name headline">
-          <a href="/nirvana/mac/mac/Mac-%EF%BC%9A%E4%BF%AE%E6%94%B9-DNS-%E5%8F%8A%E6%B8%85%E9%99%A4-DNS-%E7%BC%93%E5%AD%98/" class="post-title-link" itemprop="url">Mac-：修改-DNS-及清除-DNS-缓存</a>
+          <a href="/nirvana/algorithm/%E7%AE%97%E6%B3%95%E5%AD%A6%E4%B9%A0/%E5%86%92%E6%B3%A1%E6%8E%92%E5%BA%8F/" class="post-title-link" itemprop="url">冒泡排序</a>
         </h2>
 
         <div class="post-meta-container">
@@ -1075,12 +1086,12 @@
       </span>
       <span class="post-meta-item-text">分类于</span>
         <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-          <a href="/nirvana/categories/mac/" itemprop="url" rel="index"><span itemprop="name">mac</span></a>
+          <a href="/nirvana/categories/algorithm/" itemprop="url" rel="index"><span itemprop="name">algorithm</span></a>
         </span>
     </span>
 
   
-    <span id="/nirvana/mac/mac/Mac-%EF%BC%9A%E4%BF%AE%E6%94%B9-DNS-%E5%8F%8A%E6%B8%85%E9%99%A4-DNS-%E7%BC%93%E5%AD%98/" class="post-meta-item leancloud_visitors" data-flag-title="Mac-：修改-DNS-及清除-DNS-缓存" title="阅读次数">
+    <span id="/nirvana/algorithm/%E7%AE%97%E6%B3%95%E5%AD%A6%E4%B9%A0/%E5%86%92%E6%B3%A1%E6%8E%92%E5%BA%8F/" class="post-meta-item leancloud_visitors" data-flag-title="冒泡排序" title="阅读次数">
       <span class="post-meta-item-icon">
         <i class="far fa-eye"></i>
       </span>
@@ -1094,7 +1105,7 @@
         <i class="far fa-file-word"></i>
       </span>
       <span class="post-meta-item-text">本文字数：</span>
-      <span>795</span>
+      <span>547</span>
     </span>
     <span class="post-meta-item" title="阅读时长">
       <span class="post-meta-item-icon">
@@ -1112,68 +1123,8 @@
     
     
     <div class="post-body" itemprop="articleBody">
-          <ul>
-<li><ol>
-<li><p>在苹果菜单选择 “系统偏好设置”。</p>
-<p>   <img src="https://upload-images.jianshu.io/upload_images/10024246-134910c4b8f7de46.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240"></p>
-</li>
-</ol>
-</li>
-<li><ol>
-<li> 单击 “网络” 图标。</li>
-</ol>
-</li>
-</ul>
-<p><img src="https://upload-images.jianshu.io/upload_images/10024246-edd411652e2d5024.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240"></p>
-<ul>
-<li><ol>
-<li> 从列表中选择想要修改或当前正在使用的网络连接服务（例如 WI-FI 或以太网），然后点击 “高级”。</li>
-</ol>
-</li>
-</ul>
-<p><img src="https://upload-images.jianshu.io/upload_images/10024246-33b002edbd8a3a66.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240"></p>
-<ul>
-<li><ol>
-<li> 选择 DNS 标签，单击 “DNS 服务器” 左下角的 “+”，添加 119.29.29.29 和 114.114.114.114，然后单击右下角的 “好”。<br><img src="https://upload-images.jianshu.io/upload_images/10024246-f1ecd48ae2e2e8c1.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240"></li>
-</ol>
-</li>
-</ul>
-<h2 id="还原-OS-X-中的-DNS-缓存设置"><a href="#还原-OS-X-中的-DNS-缓存设置" class="headerlink" title="还原 OS X 中的 DNS 缓存设置"></a>还原 OS X 中的 DNS 缓存设置</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">了解如何还原（清空）DNS 缓存设置。</span><br><span class="line"></span><br></pre></td></tr></table></figure>
-
-<blockquote>
-<p>关于 DNS 缓存</p>
-</blockquote>
-<p>OS X 会将已解析的 DNS 查询的本地缓存保留一段时间，保留时间由 DNS 服务器定义。</p>
-<p>有时可能需要立即还原缓存设置并重新查询 DNS 服务器。</p>
-<p>例如，如果您是网络或服务器管理员且您的 DNS 服务器上的条目最近有更改，您可能需要执行此操作。</p>
-<p>如果您的 Mac 使用的不是您服务器上的最新 DNS 条目，您可重新启动 Mac 以更新其缓存的信息。</p>
-<p>如果您需要更新使用 OS X 的服务器上的 DNS 条目但又不能重新启动服务器，请使用以下适用于您所使用的 OS X 版本的命令。</p>
-<blockquote>
-<p>［应用程序］-［实用工具］-［终端］</p>
-</blockquote>
-<h2 id="OS-X-Yosemite-及更新机型"><a href="#OS-X-Yosemite-及更新机型" class="headerlink" title="OS X Yosemite 及更新机型"></a>OS X Yosemite 及更新机型</h2><blockquote>
-<p>在 OS X v10.10.4 或更高版本中，请使用以下 “终端” 命令来还原 DNS 缓存设置：</p>
-</blockquote>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">sudo killall -HUP mDNSResponder</span><br><span class="line"></span><br></pre></td></tr></table></figure>
-
-<blockquote>
-<p>在 OS X v10.10 至 v10.10.3 中，请使用以下 “终端” 命令来还原 DNS 缓存设置：</p>
-</blockquote>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">sudo discoveryutil mdnsflushcache</span><br><span class="line"></span><br></pre></td></tr></table></figure>
-
-<h2 id="OS-X-Mavericks、Mountain-Lion-和-Lion"><a href="#OS-X-Mavericks、Mountain-Lion-和-Lion" class="headerlink" title="OS X Mavericks、Mountain Lion 和 Lion"></a>OS X Mavericks、Mountain Lion 和 Lion</h2><p>在 OS X v10.9.5 及更低版本中，请使用以下 “终端” 命令来还原 DNS 缓存设置：</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">sudo killall -HUP mDNSResponder</span><br><span class="line"></span><br></pre></td></tr></table></figure>
-
-<blockquote>
-<p>Mac OS X Snow Leopard</p>
-</blockquote>
-<p>在 OS X v10.6 至 v10.6.8 中，请使用以下 “终端” 命令来还原 DNS 缓存设置：</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">sudo dscacheutil -flushcache</span><br><span class="line"></span><br></pre></td></tr></table></figure>
-
-<ul>
-<li>  DNS 清除缓存方法来自：<a target="_blank" rel="noopener" href="https://support.apple.com/zh-cn/HT202516">苹果官网</a></li>
-<li>  DNS 修改图片来自：<a target="_blank" rel="noopener" href="https://support.dnspod.cn/Kb/showarticle/tsid/240/#link1">DNSPOD</a></li>
-</ul>
+          <hr>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br></pre></td><td class="code"><pre><span class="line">&#x2F;**</span><br><span class="line"> * 冒泡排序基础</span><br><span class="line"> * arry:数组，必传</span><br><span class="line"> * type:排序方式，默认值1，1：升序，0：降序</span><br><span class="line"> **&#x2F;</span><br><span class="line">function bubbleSort(arry,type &#x3D; 1)&#123;</span><br><span class="line">    if(Object.prototype.toString.call(arry) !&#x3D;&#x3D; &#39;[object Array]&#39;)&#123;&#x2F;&#x2F;判断是否数组</span><br><span class="line">        return false;</span><br><span class="line">    &#125;</span><br><span class="line">    for (let i&#x3D;0;i&lt;arry.length;i++)&#123;</span><br><span class="line">        for(let j&#x3D;0;j&lt;arry.length-i;j++)&#123;</span><br><span class="line">            if((type &#x3D;&#x3D; 1 &amp;&amp; arry[j]&gt;arry[j+1])||(type &#x3D;&#x3D; 0 &amp;&amp; arry[j]&lt;arry[j+1]))&#123;</span><br><span class="line">                let temp &#x3D; arry[j];</span><br><span class="line">                arry[j] &#x3D; arry[j+1];</span><br><span class="line">                arry[j+1] &#x3D; temp;</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">    return arry;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 
       
     </div>
@@ -1200,7 +1151,7 @@
   
 
   <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="">
-    <link itemprop="mainEntityOfPage" href="https://lzhwweb.github.io/nirvana/mac/mac/Mac%E6%95%99%E7%A8%8B%EF%BC%9A%E5%A6%82%E4%BD%95%E5%88%A0%E9%99%A4-DS_Store%E6%96%87%E4%BB%B6%E4%B8%94%E4%B8%8D%E5%86%8D%E7%94%9F/">
+    <link itemprop="mainEntityOfPage" href="https://lzhwweb.github.io/nirvana/algorithm/%E7%AE%97%E6%B3%95%E5%AD%A6%E4%B9%A0/%E5%88%A4%E6%96%AD%E6%98%AF%E5%90%A6%E5%9B%9E%E6%96%87/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="image" content="/nirvana/images/headphoto.jpeg">
@@ -1213,7 +1164,7 @@
     </span>
       <header class="post-header">
         <h2 class="post-title" itemprop="name headline">
-          <a href="/nirvana/mac/mac/Mac%E6%95%99%E7%A8%8B%EF%BC%9A%E5%A6%82%E4%BD%95%E5%88%A0%E9%99%A4-DS_Store%E6%96%87%E4%BB%B6%E4%B8%94%E4%B8%8D%E5%86%8D%E7%94%9F/" class="post-title-link" itemprop="url">Mac教程：如何删除-DS_Store文件且不再生</a>
+          <a href="/nirvana/algorithm/%E7%AE%97%E6%B3%95%E5%AD%A6%E4%B9%A0/%E5%88%A4%E6%96%AD%E6%98%AF%E5%90%A6%E5%9B%9E%E6%96%87/" class="post-title-link" itemprop="url">判断是否回文</a>
         </h2>
 
         <div class="post-meta-container">
@@ -1233,12 +1184,12 @@
       </span>
       <span class="post-meta-item-text">分类于</span>
         <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-          <a href="/nirvana/categories/mac/" itemprop="url" rel="index"><span itemprop="name">mac</span></a>
+          <a href="/nirvana/categories/algorithm/" itemprop="url" rel="index"><span itemprop="name">algorithm</span></a>
         </span>
     </span>
 
   
-    <span id="/nirvana/mac/mac/Mac%E6%95%99%E7%A8%8B%EF%BC%9A%E5%A6%82%E4%BD%95%E5%88%A0%E9%99%A4-DS_Store%E6%96%87%E4%BB%B6%E4%B8%94%E4%B8%8D%E5%86%8D%E7%94%9F/" class="post-meta-item leancloud_visitors" data-flag-title="Mac教程：如何删除-DS_Store文件且不再生" title="阅读次数">
+    <span id="/nirvana/algorithm/%E7%AE%97%E6%B3%95%E5%AD%A6%E4%B9%A0/%E5%88%A4%E6%96%AD%E6%98%AF%E5%90%A6%E5%9B%9E%E6%96%87/" class="post-meta-item leancloud_visitors" data-flag-title="判断是否回文" title="阅读次数">
       <span class="post-meta-item-icon">
         <i class="far fa-eye"></i>
       </span>
@@ -1252,7 +1203,7 @@
         <i class="far fa-file-word"></i>
       </span>
       <span class="post-meta-item-text">本文字数：</span>
-      <span>497</span>
+      <span>450</span>
     </span>
     <span class="post-meta-item" title="阅读时长">
       <span class="post-meta-item-icon">
@@ -1270,12 +1221,8 @@
     
     
     <div class="post-body" itemprop="articleBody">
-          <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">.DS_Store文件重新生成非常令人困扰，我们可以用终端命令简单的处理掉。</span><br></pre></td></tr></table></figure>
-<p>　　在 Mac OS X 系统下，几乎绝大部分文件夹中都包含 .DS_Store 隐藏文件，这里保存着针对这个目录的特殊信息和设置配置，例如查看方式、图标大小以及这个目录的一些附属元数据。<br>       而在 OS X 系统中，这些文件是默认隐藏起来的，但是当我们将这些文件转移共享到 Windows 系统的时候，它们就会变成可见状态，并且看起来非常像是一些垃圾文件。<br>　　许多用户会选择在 Windows 系统中将这些 .DS_Store 文件删除，但是它们会重新生成，这一点非常令人困扰。对于这个问题，我们可以用终端命令简单的处理掉，并且防止 DS_Store 文件的再生。</p>
-<p>　　我们需要打开终端窗口，并输入删除命令：sudo find / -name “.DS_Store” -depth -exec rm {} ;</p>
-<p>　　按下回车键盘之后，终端会提示用户名和密码，直接输入密码再按回车即可。</p>
-<p>　　删除后继续在终端输入：defaults write com.apple.desktopservices DSDontWriteNetworkStores true</p>
-<p>　　然后按下回车，就可以防止 .DS_Store 文件的再生了。</p>
+          <hr>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br></pre></td><td class="code"><pre><span class="line">&#x2F;**</span><br><span class="line"> * 判断是否回文</span><br><span class="line">**&#x2F;</span><br><span class="line">function checkPlalindrome(str)&#123;</span><br><span class="line">  if(!str)&#123;&#x2F;&#x2F;为空，或者长度能整除2</span><br><span class="line">    return false</span><br><span class="line">  &#125;</span><br><span class="line">  </span><br><span class="line">  let isOdd &#x3D; str.length % 2;</span><br><span class="line">  let mid &#x3D; Math.floor(str.length&#x2F;2);&#x2F;&#x2F;中间数</span><br><span class="line">  let flag &#x3D; true;</span><br><span class="line">  for (let i &#x3D; 0;i&lt;mid;i++)&#123;</span><br><span class="line">    console.log(str.substr(i,1),str.substr(i+mid+isOdd,1))</span><br><span class="line">    if(!(str.substr(i,1) &#x3D;&#x3D; str.substr(i+mid+isOdd,1)))&#123;</span><br><span class="line">      flag &#x3D; false;</span><br><span class="line">      break;</span><br><span class="line">    &#125;</span><br><span class="line">  &#125;</span><br><span class="line">  return flag;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 
       
     </div>
@@ -1302,7 +1249,7 @@
   
 
   <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="">
-    <link itemprop="mainEntityOfPage" href="https://lzhwweb.github.io/nirvana/mac/mac/McAfee-Agent-%E5%8D%A0%E7%94%A88081-%E7%AB%AF%E5%8F%A3%E5%8F%B7/">
+    <link itemprop="mainEntityOfPage" href="https://lzhwweb.github.io/nirvana/algorithm/%E7%AE%97%E6%B3%95%E5%AD%A6%E4%B9%A0/%E5%9F%BA%E6%95%B0%E6%8E%92%E5%BA%8F/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="image" content="/nirvana/images/headphoto.jpeg">
@@ -1315,7 +1262,7 @@
     </span>
       <header class="post-header">
         <h2 class="post-title" itemprop="name headline">
-          <a href="/nirvana/mac/mac/McAfee-Agent-%E5%8D%A0%E7%94%A88081-%E7%AB%AF%E5%8F%A3%E5%8F%B7/" class="post-title-link" itemprop="url">McAfee-Agent-占用8081-端口号</a>
+          <a href="/nirvana/algorithm/%E7%AE%97%E6%B3%95%E5%AD%A6%E4%B9%A0/%E5%9F%BA%E6%95%B0%E6%8E%92%E5%BA%8F/" class="post-title-link" itemprop="url">基数排序</a>
         </h2>
 
         <div class="post-meta-container">
@@ -1335,12 +1282,12 @@
       </span>
       <span class="post-meta-item-text">分类于</span>
         <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-          <a href="/nirvana/categories/mac/" itemprop="url" rel="index"><span itemprop="name">mac</span></a>
+          <a href="/nirvana/categories/algorithm/" itemprop="url" rel="index"><span itemprop="name">algorithm</span></a>
         </span>
     </span>
 
   
-    <span id="/nirvana/mac/mac/McAfee-Agent-%E5%8D%A0%E7%94%A88081-%E7%AB%AF%E5%8F%A3%E5%8F%B7/" class="post-meta-item leancloud_visitors" data-flag-title="McAfee-Agent-占用8081-端口号" title="阅读次数">
+    <span id="/nirvana/algorithm/%E7%AE%97%E6%B3%95%E5%AD%A6%E4%B9%A0/%E5%9F%BA%E6%95%B0%E6%8E%92%E5%BA%8F/" class="post-meta-item leancloud_visitors" data-flag-title="基数排序" title="阅读次数">
       <span class="post-meta-item-icon">
         <i class="far fa-eye"></i>
       </span>
@@ -1354,14 +1301,14 @@
         <i class="far fa-file-word"></i>
       </span>
       <span class="post-meta-item-text">本文字数：</span>
-      <span>239</span>
+      <span>1.9k</span>
     </span>
     <span class="post-meta-item" title="阅读时长">
       <span class="post-meta-item-icon">
         <i class="far fa-clock"></i>
       </span>
       <span class="post-meta-item-text">阅读时长 &asymp;</span>
-      <span>1 分钟</span>
+      <span>2 分钟</span>
     </span>
 </div>
 
@@ -1372,11 +1319,12 @@
     
     
     <div class="post-body" itemprop="articleBody">
-          <p>公司电脑被标装，McAfee Agent关不掉</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">sudo lsof -n -i4TCP:8081</span><br><span class="line">sudo launchctl list | grep 5693</span><br><span class="line">sudo launchctl remove com.mcafee.agent.macmn</span><br></pre></td></tr></table></figure>
-
-<p>如果需要暂时禁用mac上装的mcafee，可以在命令行里先su到之前有管理员权限的账户，然后跑命令：</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">sudo &#x2F;usr&#x2F;local&#x2F;McAfee&#x2F;AntiMalware&#x2F;VSControl stopoas</span><br></pre></td></tr></table></figure>
+          <p>基数排序是一种借助多关键字排序思想对单逻辑关键字进行排序的方法。</p>
+<p>所谓的多关键字排序就是有多个优先级不同的关键字。比如说成绩的排序，如果两个人总分相同，则语文高的排在前面，语文成绩也相同则数学高的排在前面。。。如果对数字进行排序，那么个位、十位、百位就是不同优先级的关键字，如果要进行升序排序，那么个位、十位、百位优先级一次增加。<br>基数排序是通过多次的收分配和收集来实现的，关键字优先级低的先进行分配和收集。<br>基数排序是一种非比较型整数排序算法，其原理是将整数按位数切割成不同的数字，然后按每个位数分别比较。由于整数也可以表达字符串（比如名字或日期）和特定格式的浮点数，所以基数排序也不是只能使用于整数。<br><img src="https://upload-images.jianshu.io/upload_images/10024246-9e0f7e92428e6637.gif?imageMogr2/auto-orient/strip"></p>
+<p>实现代码：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br></pre></td><td class="code"><pre><span class="line">&#x2F;**</span><br><span class="line"> * 基数排序</span><br><span class="line"> * @param &#123;Array&lt;Number&gt;&#125; arry 要排序的数组</span><br><span class="line"> *&#x2F;</span><br><span class="line">function RadixSort(arry) &#123;</span><br><span class="line">    if (arry.length &#x3D;&#x3D; 0) &#123;&#x2F;&#x2F;判断数组不为空</span><br><span class="line">        return [];</span><br><span class="line">    &#125;</span><br><span class="line">    const maxDigit &#x3D; getMaxDigit(getMaxValue(arry));&#x2F;&#x2F;最大数位数</span><br><span class="line">    for (let i &#x3D; 0; i &lt; maxDigit; i++) &#123;</span><br><span class="line">        let count &#x3D; [];</span><br><span class="line">        for (let j &#x3D; 0; j &lt; arry.length; j++) &#123;</span><br><span class="line">            const length &#x3D; &#96;$&#123;arry[j]&#125;&#96;.length;&#x2F;&#x2F;当前数位数</span><br><span class="line">            let bucket &#x3D; 0;</span><br><span class="line">            if (length &gt; i) &#123;&#x2F;&#x2F;当前位数不为空</span><br><span class="line">                bucket &#x3D; parseInt(&#96;$&#123;arry[j]&#125;&#96;.substr(length - i - 1, 1));</span><br><span class="line">            &#125;</span><br><span class="line">            if (!count[bucket]) &#123;</span><br><span class="line">                count[bucket] &#x3D; [];</span><br><span class="line">            &#125;</span><br><span class="line">            count[bucket].push(arry[j]);&#x2F;&#x2F;位数数组填充</span><br><span class="line">        &#125;</span><br><span class="line">        for (let t &#x3D; 0, pos &#x3D; 0; t &lt; count.length; t++) &#123;&#x2F;&#x2F;根据新数组重新排序</span><br><span class="line">            let value &#x3D; null;</span><br><span class="line">            if (count[t]) &#123;</span><br><span class="line">                while ((value &#x3D; count[t].shift()) !&#x3D; null) &#123;</span><br><span class="line">                    arry[pos++] &#x3D; value;</span><br><span class="line">                &#125;</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;</span><br><span class="line">        console.log(arry)</span><br><span class="line">    &#125;</span><br><span class="line">    return arry;</span><br><span class="line">&#125;</span><br><span class="line">&#x2F;**</span><br><span class="line"> * 获取数组中最大数</span><br><span class="line"> * @param arry 排序数组</span><br><span class="line"> *&#x2F;</span><br><span class="line">function getMaxValue(arry) &#123;</span><br><span class="line">    let maxValue &#x3D; arry[0];</span><br><span class="line">    for (let i &#x3D; 1; i &lt; arry.length; i++) &#123;</span><br><span class="line">        if (arry[i] &gt; maxValue) &#123;</span><br><span class="line">            maxValue &#x3D; arry[i]</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">    return maxValue;</span><br><span class="line">&#125;</span><br><span class="line">&#x2F;**</span><br><span class="line"> * 整数位数</span><br><span class="line"> * @param value 整数</span><br><span class="line"> *&#x2F;</span><br><span class="line">function getMaxDigit(value) &#123;</span><br><span class="line">    return &#96;$&#123;value&#125;&#96;.length;</span><br><span class="line">&#125;</span><br><span class="line">RadixSort([72, 6, 57, 88, 60, 42, 11183, 73, 1148, 185])</span><br></pre></td></tr></table></figure>
+<p>运行结果：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">[ 60, 72, 42, 11183, 73, 185, 6, 57, 88, 1148 ]&#x2F;&#x2F;个位排序</span><br><span class="line">[ 6, 42, 1148, 57, 60, 72, 73, 11183, 185, 88 ]&#x2F;&#x2F;十位排序</span><br><span class="line">[ 6, 42, 57, 60, 72, 73, 88, 1148, 11183, 185 ]&#x2F;&#x2F;百位排序</span><br><span class="line">[ 6, 42, 57, 60, 72, 73, 88, 185, 1148, 11183 ]&#x2F;&#x2F;千位排序</span><br><span class="line">[ 6, 42, 57, 60, 72, 73, 88, 185, 1148, 11183 ]&#x2F;&#x2F;万位排序</span><br></pre></td></tr></table></figure>
 
       
     </div>
@@ -1460,7 +1408,7 @@
 
   
   <script src="https://cdn.jsdelivr.net/npm/animejs@3.2.1/lib/anime.min.js"></script>
-<script src="/nirvana/js/utils.js"></script><script src="/nirvana/js/motion.js"></script><script src="/nirvana/js/next-boot.js"></script>
+<script src="/nirvana/js/utils.js"></script><script src="/nirvana/js/motion.js"></script><script src="/nirvana/js/next-boot.js"></script><script src="/nirvana/js/bookmark.js"></script>
 
   
 <script src="/nirvana/js/local-search.js"></script>

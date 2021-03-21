@@ -21,7 +21,7 @@
 
 <script class="hexo-configurations">
     var NexT = window.NexT || {};
-    var CONFIG = {"hostname":"lzhwweb.github.io","root":"/nirvana/","images":"/nirvana/images","scheme":"Gemini","version":"8.2.2","exturl":false,"sidebar":{"position":"left","display":"post","padding":18,"offset":12},"copycode":false,"bookmark":{"enable":false,"color":"#222","save":"auto"},"fancybox":false,"mediumzoom":false,"lazyload":false,"pangu":false,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},"motion":{"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"fadeInDown","post_body":"fadeInDown","coll_header":"fadeInLeft","sidebar":"fadeInUp"}},"prism":false,"i18n":{"placeholder":"搜索...","empty":"没有找到任何搜索结果：${query}","hits_time":"找到 ${hits} 个搜索结果（用时 ${time} 毫秒）","hits":"找到 ${hits} 个搜索结果"},"path":"/nirvana/search.xml","localsearch":{"enable":true,"trigger":"auto","top_n_per_article":1,"unescape":false,"preload":false}};
+    var CONFIG = {"hostname":"lzhwweb.github.io","root":"/nirvana/","images":"/nirvana/images","scheme":"Gemini","version":"8.2.2","exturl":false,"sidebar":{"position":"left","display":"post","padding":18,"offset":12},"copycode":false,"bookmark":{"enable":true,"color":"#222","save":"auto"},"fancybox":false,"mediumzoom":false,"lazyload":false,"pangu":false,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},"motion":{"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"fadeInDown","post_body":"fadeInDown","coll_header":"fadeInLeft","sidebar":"fadeInUp"}},"prism":false,"i18n":{"placeholder":"搜索...","empty":"没有找到任何搜索结果：${query}","hits_time":"找到 ${hits} 个搜索结果（用时 ${time} 毫秒）","hits":"找到 ${hits} 个搜索结果"},"path":"/nirvana/search.xml","localsearch":{"enable":true,"trigger":"auto","top_n_per_article":1,"unescape":false,"preload":false}};
   </script>
 <meta name="description" content="为什么要提升Web性能？ Web性能黄金准则：只有10% ~ 20%的最终用户响应时间花在了下载html文档上，其余的80%~90%时间花在了下载页面组件上。 web性能对于用户体验有及其重要的影响，根据著名的2-5-8原则：    当用户在2秒以内得到响应，会感觉系统的响应非常快；   当用户在2-5秒之内得到响应，会感觉系统的响应速度还可以；   当用户在5-8秒之内得到响应，会感觉系统的响应">
 <meta property="og:type" content="article">
@@ -251,6 +251,8 @@
     </header>
 
     
+  <div class="reading-progress-bar"></div>
+  <a role="button" class="book-mark-link book-mark-link-fixed"></a>
 
 <noscript>
   <div class="noscript-warning">Theme NexT works best with JavaScript enabled</div>
@@ -440,13 +442,13 @@
 
           <div class="post-nav">
             <div class="post-nav-item">
-                <a href="/nirvana/javascript/%E5%89%8D%E7%AB%AF/XSS(%E8%B7%A8%E7%AB%99%E8%84%9A%E6%9C%AC)%E6%BC%8F%E6%B4%9E%E5%8F%8A%E8%A7%A3%E5%86%B3/" rel="prev" title="XSS(跨站脚本)漏洞及解决">
-                  <i class="fa fa-chevron-left"></i> XSS(跨站脚本)漏洞及解决
+                <a href="/nirvana/javascript/%E5%89%8D%E7%AB%AF/JavaScript%E5%B8%B8%E7%94%A8%E5%B7%A5%E5%85%B7%E6%96%B9%E6%B3%95-%EF%BC%888%EF%BC%89Other-%E5%85%B6%E5%AE%83%E6%93%8D%E4%BD%9C/" rel="prev" title="JavaScript常用工具方法（8）Other 其它操作">
+                  <i class="fa fa-chevron-left"></i> JavaScript常用工具方法（8）Other 其它操作
                 </a>
             </div>
             <div class="post-nav-item">
-                <a href="/nirvana/javascript/%E5%89%8D%E7%AB%AF/WEB%E5%89%8D%E7%AB%AF%E5%BC%80%E5%8F%91%E8%80%85%E5%B8%B8%E7%94%A8%E7%9A%84%E4%BB%A3%E7%A0%81/" rel="next" title="WEB前端开发者常用的代码">
-                  WEB前端开发者常用的代码 <i class="fa fa-chevron-right"></i>
+                <a href="/nirvana/javascript/%E5%89%8D%E7%AB%AF/Mac%E5%BA%94%E7%94%A8%E7%A8%8B%E5%BA%8F%E6%97%A0%E6%B3%95%E6%89%93%E5%BC%80%E6%88%96%E6%96%87%E4%BB%B6%E6%8D%9F%E5%9D%8F%E7%9A%84%E5%A4%84%E7%90%86%E6%96%B9%E6%B3%95/" rel="next" title="Mac应用程序无法打开或文件损坏的处理方法">
+                  Mac应用程序无法打开或文件损坏的处理方法 <i class="fa fa-chevron-right"></i>
                 </a>
             </div>
           </div>
@@ -520,7 +522,7 @@
 
   
   <script src="https://cdn.jsdelivr.net/npm/animejs@3.2.1/lib/anime.min.js"></script>
-<script src="/nirvana/js/utils.js"></script><script src="/nirvana/js/motion.js"></script><script src="/nirvana/js/next-boot.js"></script>
+<script src="/nirvana/js/utils.js"></script><script src="/nirvana/js/motion.js"></script><script src="/nirvana/js/next-boot.js"></script><script src="/nirvana/js/bookmark.js"></script>
 
   
 <script src="/nirvana/js/local-search.js"></script>
