@@ -257,7 +257,7 @@
   
 
   <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="">
-    <link itemprop="mainEntityOfPage" href="https://lzhwweb.github.io/nirvana/mac/mac/%E8%8B%B9%E6%9E%9CMac%E6%93%8D%E4%BD%9C%E7%B3%BB%E7%BB%9F%E4%B8%8B%E6%80%8E%E4%B9%88%E6%98%BE%E7%A4%BA%E9%9A%90%E8%97%8F%E6%96%87%E4%BB%B6/">
+    <link itemprop="mainEntityOfPage" href="https://lzhwweb.github.io/nirvana/reactnative/react-native/react-native-0-63%E5%90%AF%E5%8A%A8%E9%97%AE%E9%A2%98/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="image" content="/nirvana/images/headphoto.jpeg">
@@ -270,7 +270,7 @@
     </span>
       <header class="post-header">
         <h2 class="post-title" itemprop="name headline">
-          <a href="/nirvana/mac/mac/%E8%8B%B9%E6%9E%9CMac%E6%93%8D%E4%BD%9C%E7%B3%BB%E7%BB%9F%E4%B8%8B%E6%80%8E%E4%B9%88%E6%98%BE%E7%A4%BA%E9%9A%90%E8%97%8F%E6%96%87%E4%BB%B6/" class="post-title-link" itemprop="url">苹果Mac操作系统下怎么显示隐藏文件</a>
+          <a href="/nirvana/reactnative/react-native/react-native-0-63%E5%90%AF%E5%8A%A8%E9%97%AE%E9%A2%98/" class="post-title-link" itemprop="url">react-native-0-63启动问题</a>
         </h2>
 
         <div class="post-meta-container">
@@ -290,12 +290,12 @@
       </span>
       <span class="post-meta-item-text">分类于</span>
         <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-          <a href="/nirvana/categories/mac/" itemprop="url" rel="index"><span itemprop="name">mac</span></a>
+          <a href="/nirvana/categories/reactnative/" itemprop="url" rel="index"><span itemprop="name">reactnative</span></a>
         </span>
     </span>
 
   
-    <span id="/nirvana/mac/mac/%E8%8B%B9%E6%9E%9CMac%E6%93%8D%E4%BD%9C%E7%B3%BB%E7%BB%9F%E4%B8%8B%E6%80%8E%E4%B9%88%E6%98%BE%E7%A4%BA%E9%9A%90%E8%97%8F%E6%96%87%E4%BB%B6/" class="post-meta-item leancloud_visitors" data-flag-title="苹果Mac操作系统下怎么显示隐藏文件" title="阅读次数">
+    <span id="/nirvana/reactnative/react-native/react-native-0-63%E5%90%AF%E5%8A%A8%E9%97%AE%E9%A2%98/" class="post-meta-item leancloud_visitors" data-flag-title="react-native-0-63启动问题" title="阅读次数">
       <span class="post-meta-item-icon">
         <i class="far fa-eye"></i>
       </span>
@@ -309,7 +309,7 @@
         <i class="far fa-file-word"></i>
       </span>
       <span class="post-meta-item-text">本文字数：</span>
-      <span>451</span>
+      <span>520</span>
     </span>
     <span class="post-meta-item" title="阅读时长">
       <span class="post-meta-item-icon">
@@ -327,7 +327,7 @@
     
     
     <div class="post-body" itemprop="articleBody">
-          <p>方法一：<br>第一步：打开「终端」应用程序。<br>第二步：输入如下命令：<br><code>defaults write com.apple.finder AppleShowAllFiles -boolean true ; killall Finder</code><br>第三步：按下「Return」键确认。<br>现在你将会在 Finder 窗口中看到那些隐藏的文件和文件夹了。<br>如果你想再次隐藏原本的隐藏文件和文件夹的话，将上述命令替换成<br><code>defaults write com.apple.finder AppleShowAllFiles -boolean false ; killall Finder</code><br>即可。<br>方法二：<br>Finder界面是，最上方，通过“前往”进入“电脑”或文件夹，先进入到需要显示隐藏文件的文件夹下<br>接着按<code>Command+F</code>,在窗格上会显示搜索栏<br>然后将第一个下列选择项“种类kind”选择为“其它Other”，当选择“其它”时，弹出新的搜索窗口，找到下面的“文件不可见File invisible”项，勾上后面的对勾，再单击“好OK”即可，返回文件夹，就可以看到，隐藏的文件已经显示出来了</p>
+          <p>1、<code>OpenSSL-Universal</code> requires CocoaPods version <code>&gt;= &quot;1.9</code>“<br>podinstall时提示需要把CocoaPods升级到1.9，但是通过brew install CocoaPods，发现安装的版本是1.6.1，brew upgrade CocoaPods 发现版本无法升级，后来查到1.9的版本需要通过<code>gem install -n /usr/local/bin cocoapods --pre</code>才能安装最新的版本<br>2、Typedef redefinition with different types (‘uint8_t’ (aka ‘unsigned char’) vs ‘enum clockid_t’)<br>changing <code>iOS Deployment Target</code> of <code>Flipper-Folly Pods</code> to “iOS 9.0”, this error disappeared.<br><a target="_blank" rel="noopener" href="https://user-images.githubusercontent.com/3139234/78309578-52984600-7586-11ea-9d27-cefdc6e7ca0f.png"><img src="https://upload-images.jianshu.io/upload_images/10024246-e337b36acb480adc.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240"></a><br>3、 ‘event2/event-config.h’ file not found<br> Flipper-Folly的版本有问题，需要指定版本<br>use_flipper!修改为use_flipper!({ ‘Flipper-Folly’ =&gt; ‘2.3.0’ })<br>重新pod install即可</p>
 
       
     </div>
@@ -354,7 +354,7 @@
   
 
   <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="">
-    <link itemprop="mainEntityOfPage" href="https://lzhwweb.github.io/nirvana/mac/mac/%E8%A7%A3%E5%86%B3-mac-%EF%BC%88windows%EF%BC%89%E7%BB%88%E7%AB%AF%E4%B8%8A%E4%BB%A3%E7%90%86%E7%9A%84%E9%9A%BE%E9%A2%98/">
+    <link itemprop="mainEntityOfPage" href="https://lzhwweb.github.io/nirvana/reactnative/react-native/iOS-RN-0-45%E4%BB%A5%E4%B8%8A%E7%89%88%E6%9C%AC%E7%BD%91%E7%BB%9C%E9%97%AE%E9%A2%98%E6%97%A0%E6%B3%95%E5%90%AF%E5%8A%A8/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="image" content="/nirvana/images/headphoto.jpeg">
@@ -367,7 +367,7 @@
     </span>
       <header class="post-header">
         <h2 class="post-title" itemprop="name headline">
-          <a href="/nirvana/mac/mac/%E8%A7%A3%E5%86%B3-mac-%EF%BC%88windows%EF%BC%89%E7%BB%88%E7%AB%AF%E4%B8%8A%E4%BB%A3%E7%90%86%E7%9A%84%E9%9A%BE%E9%A2%98/" class="post-title-link" itemprop="url">解决-mac-（windows）终端上代理的难题</a>
+          <a href="/nirvana/reactnative/react-native/iOS-RN-0-45%E4%BB%A5%E4%B8%8A%E7%89%88%E6%9C%AC%E7%BD%91%E7%BB%9C%E9%97%AE%E9%A2%98%E6%97%A0%E6%B3%95%E5%90%AF%E5%8A%A8/" class="post-title-link" itemprop="url">iOS-RN-0-45以上版本网络问题无法启动</a>
         </h2>
 
         <div class="post-meta-container">
@@ -387,12 +387,12 @@
       </span>
       <span class="post-meta-item-text">分类于</span>
         <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-          <a href="/nirvana/categories/mac/" itemprop="url" rel="index"><span itemprop="name">mac</span></a>
+          <a href="/nirvana/categories/reactnative/" itemprop="url" rel="index"><span itemprop="name">reactnative</span></a>
         </span>
     </span>
 
   
-    <span id="/nirvana/mac/mac/%E8%A7%A3%E5%86%B3-mac-%EF%BC%88windows%EF%BC%89%E7%BB%88%E7%AB%AF%E4%B8%8A%E4%BB%A3%E7%90%86%E7%9A%84%E9%9A%BE%E9%A2%98/" class="post-meta-item leancloud_visitors" data-flag-title="解决-mac-（windows）终端上代理的难题" title="阅读次数">
+    <span id="/nirvana/reactnative/react-native/iOS-RN-0-45%E4%BB%A5%E4%B8%8A%E7%89%88%E6%9C%AC%E7%BD%91%E7%BB%9C%E9%97%AE%E9%A2%98%E6%97%A0%E6%B3%95%E5%90%AF%E5%8A%A8/" class="post-meta-item leancloud_visitors" data-flag-title="iOS-RN-0-45以上版本网络问题无法启动" title="阅读次数">
       <span class="post-meta-item-icon">
         <i class="far fa-eye"></i>
       </span>
@@ -406,7 +406,7 @@
         <i class="far fa-file-word"></i>
       </span>
       <span class="post-meta-item-text">本文字数：</span>
-      <span>1.6k</span>
+      <span>1k</span>
     </span>
     <span class="post-meta-item" title="阅读时长">
       <span class="post-meta-item-icon">
@@ -424,28 +424,14 @@
     
     
     <div class="post-body" itemprop="articleBody">
-          <p>买了 ss （shadowsocks）帐号，装了 ss 代理的软件，浏览器上也装了代理的插件，一直用的都挺好的，但是最近遇到了一些情况</p>
-<p>情况1：最近网络抽风，网页上访问 github 还好，但是在终端里，git clone 一个 repository，或者在 webstorm 中检出一个 github 上的repository，那是相当的痛苦</p>
-<p>情况2：同事在安装 brew 的过程中，需要下载 github 上的repository，于是遭受了和上面一样的痛苦</p>
-<p>不仅仅如此，为了解决类似的麻烦，很多人使用了 cnpm（淘宝出的代替 npm 的工具），或者更换各种包仓库的地址为国内镜像的地址，归根到底为一个原因，终端里的命令：诸如 wget，curl，git ，npm 等等，不好设置代理翻墙。</p>
-<p>经过本人的探索，找出了一条解决之道，先不说麻不麻烦，总归是解决了长久以来困扰自己的问题</p>
-<p>你所需要的，要有一个 ss 帐号，mac 上安装 shadowsocksX，已设置本地代理：socks5：127.0.0.1：1080</p>
-<p>还需要另外一个神器：proxifier</p>
-<p>举个例子，在终端里 git clone 一个repository，究竟是什么程序发起了网络请求，我现在可以直接告诉你答案，是 git-remote-https，请求 github.com:443，使用proxifier，就可以做到这一点，定位到是什么程序，请求的 host 以及 port，并且给它设置代理</p>
-<p>下面这张图就是proxifier的庐山真面目了<br><img src="http://upload-images.jianshu.io/upload_images/10024246-fd097bed09c20d84.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="1515804585324.jpg"><br>上面的日志给出了详细的解释<br>当我在终端里敲下 npm install xxx，对应的就是 node 请求 registry.npmjs.org:443<br>当我在webstorm中设置 github 帐户的时候，对应的是 webstorm，请求 api.github.com:443<br>当我在 git clone repository的时候，对应的是git-remote-https 请求 github.com:443</p>
-<p>第一步：你得在shadowsocksX中开启 socks5 的本地代理，这是最重要的前提<br>第二步：在proxifier使用第一步设置的代理，如下图所示<br><img src="http://upload-images.jianshu.io/upload_images/10024246-92b4c7cb079bde84.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="1515804585324.jpg"><br>第三步：设置代理规则<br>image_1b4og01u91alg1ggk1mh51omdurr1g.png-479.7kB</p>
-<p>解释一下我所设置的规则：<br>image_1b4og4c2k2i6j8b1jdjd03has1t.png-185.6kB<br>规则匹配的顺序是从上往下的 </p>
-<ol>
-<li>生效的第一条规则是shadowsocksX，因为我们的代理就是靠这个程序的，所以不能让它自己代理自己，否则proxifier 会报无限循环，动作选 direct </li>
-<li>规则 github，这里也并没有指定程序git-remote-https，因为 像 webstorm等 GUI 之流，也会访问 github：443的请求，所以不指定程序，只限制 主机和端口，应用范围就不限于终端了 </li>
-<li>规则 node，解决 npm install 的代理，可以不用 cnpm 了 </li>
-<li>规则 brew，解决终端下使用 brew 安装 package 的代理 </li>
-<li>规则 google-analytics，，解决终端下使用 brew 安装 package 的代理 </li>
-<li>规则 default，不能删除，当匹配不到任何规则的时候，使用该规则</li>
-</ol>
-<p>任何一个连接请求，从上往下匹配，匹配到了，就会停止<br>以上就是我摸索出来的方法，如果 ss 速度快的话，相信我，你会开心死的</p>
-<p>一言以蔽之，如果你在终端中发起了网络请求速度很慢的话，可以先把 default 规则，设置为socks5代理（只有设置为代理，日志才会记录），然后分析一下请求的 host：port，然后就可以添加规则了，这样的话，就做到只给部分请求走代理，如果你觉得这样很麻烦，<br>也可以简单粗暴的，将 default 规则设置为 socks5代理，其余的规则全部禁用，那就是全部的请求走代理</p>
-<p><a target="_blank" rel="noopener" href="https://pan.baidu.com/s/1qYdGRBA">Mac 版 shadowsocksX 和 proxifier 下载</a></p>
+          <p>RN iOS 0.45以上版本开始需要依赖一些第三方编译库，但这些库在国内下载都非常困难（一般的翻墙工具都很难下载）<br>未来RN不同版本可能依赖不同版本的第三方编译库，具体所需库和版本请查看<a target="_blank" rel="noopener" href="https://github.com/facebook/react-native/blob/master/scripts/ios-install-third-party.sh">ios-install-third-party.sh</a>文件，注意先把左上角的branch切换到对应的版本.</p>
+<p><img src="http://upload-images.jianshu.io/upload_images/10024246-4967270af295b740.jpg?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="1515804427550.jpg"></p>
+<p>在文件最下面找到需要第三方编译库</p>
+<p><img src="http://upload-images.jianshu.io/upload_images/10024246-182697a23377bd82.jpg?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="1515804585324.jpg"></p>
+<p>我现在使用的52版本的内容为</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">fetch_and_unpack glog-0.3.4.tar.gz https:&#x2F;&#x2F;github.com&#x2F;google&#x2F;glog&#x2F;archive&#x2F;v0.3.4.tar.gz 69f91cd5a1de35ead0bc4103ea87294b0206a456 &quot;\&quot;$SCRIPTDIR&#x2F;ios-configure-glog.sh\&quot;&quot;</span><br><span class="line">fetch_and_unpack double-conversion-1.1.5.tar.gz https:&#x2F;&#x2F;github.com&#x2F;google&#x2F;double-conversion&#x2F;archive&#x2F;v1.1.5.tar.gz 96a8aba1b4ce7d4a7a3c123be26c379c2fed1def</span><br><span class="line">fetch_and_unpack boost_1_63_0.tar.gz https:&#x2F;&#x2F;github.com&#x2F;react-native-community&#x2F;boost-for-react-native&#x2F;releases&#x2F;download&#x2F;v1.63.0-0&#x2F;boost_1_63_0.tar.gz c3f57e1d22a995e608983effbb752b54b6eab741</span><br><span class="line">fetch_and_unpack folly-2016.09.26.00.tar.gz https:&#x2F;&#x2F;github.com&#x2F;facebook&#x2F;folly&#x2F;archive&#x2F;v2016.09.26.00.tar.gz f3b928b5039235bad6cece638c597c6684d1e4e6</span><br></pre></td></tr></table></figure>
+
+<p>下载完后需要把文件copy到***~/.rncache***下，然后就可以运行RN程序了</p>
 
       
     </div>
@@ -925,328 +911,6 @@
   
 
   <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="">
-    <link itemprop="mainEntityOfPage" href="https://lzhwweb.github.io/nirvana/note/%E8%AF%BB%E4%B9%A6%E7%AC%94%E8%AE%B0/%E4%BC%AA%E9%9A%8F%E6%9C%BA%E5%92%8C%E7%9C%9F%E9%9A%8F%E6%9C%BA/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="image" content="/nirvana/images/headphoto.jpeg">
-      <meta itemprop="name" content="nirvana">
-      <meta itemprop="description" content="个人学习笔记">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="涅槃快乐是金">
-    </span>
-      <header class="post-header">
-        <h2 class="post-title" itemprop="name headline">
-          <a href="/nirvana/note/%E8%AF%BB%E4%B9%A6%E7%AC%94%E8%AE%B0/%E4%BC%AA%E9%9A%8F%E6%9C%BA%E5%92%8C%E7%9C%9F%E9%9A%8F%E6%9C%BA/" class="post-title-link" itemprop="url">伪随机和真随机</a>
-        </h2>
-
-        <div class="post-meta-container">
-          <div class="post-meta">
-    <span class="post-meta-item">
-      <span class="post-meta-item-icon">
-        <i class="far fa-calendar"></i>
-      </span>
-      <span class="post-meta-item-text">发表于</span>
-      
-
-      <time title="创建时间：2021-03-10 21:12:40 / 修改时间：13:43:55" itemprop="dateCreated datePublished" datetime="2021-03-10T21:12:40+08:00">2021-03-10</time>
-    </span>
-    <span class="post-meta-item">
-      <span class="post-meta-item-icon">
-        <i class="far fa-folder"></i>
-      </span>
-      <span class="post-meta-item-text">分类于</span>
-        <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-          <a href="/nirvana/categories/note/" itemprop="url" rel="index"><span itemprop="name">note</span></a>
-        </span>
-    </span>
-
-  
-    <span id="/nirvana/note/%E8%AF%BB%E4%B9%A6%E7%AC%94%E8%AE%B0/%E4%BC%AA%E9%9A%8F%E6%9C%BA%E5%92%8C%E7%9C%9F%E9%9A%8F%E6%9C%BA/" class="post-meta-item leancloud_visitors" data-flag-title="伪随机和真随机" title="阅读次数">
-      <span class="post-meta-item-icon">
-        <i class="far fa-eye"></i>
-      </span>
-      <span class="post-meta-item-text">阅读次数：</span>
-      <span class="leancloud-visitors-count"></span>
-    </span>
-      </div>
-      <div class="post-meta">
-    <span class="post-meta-item" title="本文字数">
-      <span class="post-meta-item-icon">
-        <i class="far fa-file-word"></i>
-      </span>
-      <span class="post-meta-item-text">本文字数：</span>
-      <span>2k</span>
-    </span>
-    <span class="post-meta-item" title="阅读时长">
-      <span class="post-meta-item-icon">
-        <i class="far fa-clock"></i>
-      </span>
-      <span class="post-meta-item-text">阅读时长 &asymp;</span>
-      <span>2 分钟</span>
-    </span>
-</div>
-
-        </div>
-      </header>
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-          <p><em>真伪随机其实分别指的是几率和概率</em></p>
-<p>很久以前流传着这样一则笑话：一个身患重病的人决定去动手术。在手术之前，他问医生：“这起手术的成功率是多少？”医生回答他：“只有1%。”他很惊慌，但是医生说：“没事的，在你之前我已经治死过99个人了。”</p>
-<p>这是一则嘲笑那些不懂“概率”的人的笑话，却讲出了“真随机”和“伪随机”之间的区别。</p>
-<h2 id="随机数的三个特征"><a href="#随机数的三个特征" class="headerlink" title="随机数的三个特征"></a>随机数的三个特征</h2><p>1.随机性：完全紊乱；<br>2.不可预测性：从现有号码，无法推断下一个数字；<br>3.不可重复性：随机数之间没有重复。</p>
-<p>真随机数是伴随物理实验，例如：掷硬币、掷骰子、电子元件噪声、核裂变等，其结果符合三个特点。</p>
-<h2 id="伪随机数"><a href="#伪随机数" class="headerlink" title="伪随机数"></a>伪随机数</h2><p>伪随机数是通过某种算法，获取随机值，不是真的很随机。<br>伪随机数分为强伪随机数和弱伪随机数。<br>1.强伪随机数：接近真实随机数，令人满意的特性。随机性与不可预测性，不可预知的。<br>2.弱伪随机数：满足随机性，可预测的。</p>
-<p>在游戏当中我们一直提到的“真随机”和“伪随机”，到底是什么意思？</p>
-<p>我们通常说的真随机又名“纯随机”（True Random Distribution），就是我们平常一直说的那种、一般意义上的“随机”。</p>
-<p>在真随机中，每一个事件都是相互独立、服从真随机分布的，不受其他事件的发生而改变。比方说某款游戏为了吸引用户，拥有这么一个随机抽卡系统：每次抽卡时，都有1%的几率抽出SSR卡片，这个概率服从真随机分布。</p>
-<p>回到我们最开始说的那个“治死99个”的笑话：我们一眼就能看出这个笑话的不合理性。但在抽卡游戏中，我们的大脑瞬间失去理智。有相当一部分玩家认为：我连抽100次，总能抽到这张卡吧！</p>
-<p>实际上，连抽100次却抽不出1%的SSR卡的几率是为(1-0.01)^100=36.6%，甚至还稍稍超过了1/3。将连抽数字上升至300，也仍有4.9%的几率。</p>
-<p>换句话说，假设有10000个玩家连抽100次，就有约3660个玩家抽不出这张SSR；10000个玩家连抽300次，也仍有约490个玩家抽不出这张SSR——这对玩家的游戏体验来说可以说是毁灭性的打击。</p>
-<p>设计者们提出了“伪随机”的概念：在不确定性的随机事件当中，通过一系列算法使随机事件均匀分布在多次事件当中，尽可能减少或消除极端情况的发生，以提高玩家的游戏体验。</p>
-<p>制造“伪随机”的方法有很多，</p>
-<ul>
-<li>1.“伪随机分布”（Pseudo Random Distribution，简称PRD）<br>PRD算法的表示非常简单：<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">P(N) &#x3D; C * N</span><br></pre></td></tr></table></figure>
-N表示当前攻击的次数，P(N)表示当前攻击的暴击率，C为概率增量。如果我们这次攻击产生了暴击，则需要将 N 重置为 1，如果这次攻击没有产生暴击，则 N + 1。</li>
-</ul>
-<p>为了便于理解，这里直接给出一个具体例子：</p>
-<p>设我们当前玩家角色暴击率还是0.5，那么对于 PRD算法，此时的 C = 0.3</p>
-<blockquote>
-<p>此时第一次攻击时的实际暴击几率，即 P(1) = 0.3 * 1 = 0.3，若没有暴击，则 N + 1，N = 2<br>此时第二次攻击时的实际暴击几率，即P(2) = 0.3 * 2 = 0.6，若没有暴击，则 N + 1，N = 3<br>此时第三次攻击时的实际暴击几率，即P(3) = 0.3 * 3 = 0.9，此时对于大部分玩家而言这一次攻击就会产生暴击了，而如果玩家是个非酋，这次仍没有暴击，没关系，N + 1，N = 4<br>第四次攻击，P(4) = 0.3 * 4 = 1.2 &gt;= 1，这一次是一定会暴击的。</p>
-</blockquote>
-<p>可以看到，使用 PRD 算法，对于攻击是否会暴击这一问题，仍然是存在着随机性即玩家的运气因素的，但即使是运气最差的玩家，仍然也会在第四次攻击时产生暴击，因此PRD算法可以在保存随机性的同时，减少玩家运气因素对游戏结果的影响。</p>
-<ul>
-<li><p>2.洗牌算法<br>洗牌算法最常见的用法，是在各大音乐播放器中的“随机播放”之中。在随机播放时，如果采用真随机，会导致一首歌无论如何都播放不出，或是同一首歌连续播放数次（有兴趣的读者可以计算一下这些概率）。为了解决这个问题，播放器采用的解决方案即是洗牌算法：将一个包含所有歌曲的数组像洗牌一样打乱，然后依次播放这个乱序数组。</p>
-</li>
-<li><p>3.组合随机。<br>这是一种广泛应用于各个游戏的做法：在抽奖的时候进行两次、或是更多次的判断，一次不随机，而剩下的判断则是真随机。比如说，你会在第X次抽卡时抽到SSR是确定的，但抽中的SSR具体是哪张卡，则是随机的——这就是广大手游中的“低保”系统了。</p>
-</li>
-</ul>
-<h2 id="举例"><a href="#举例" class="headerlink" title="举例"></a>举例</h2><p><strong>真随机：</strong>有一天，小明在的班级上举办了一次抽奖活动。这个班级有40个学生，所以为了公平起见，保证每个学生都有1/40的几率中奖，老师准备了40个相同的纸盒，每个纸盒中都有40张纸条，有1张纸条是中奖纸条。这样一来，每个学生都有1/40的几率中奖，但每个学生是否中奖并不受其他学生的影响。在极端情况下，这个班上可能40个学生都能中奖。这就是真随机。</p>
-<p><strong>伪随机：</strong>小明班上举办了抽奖活动。为了公平起见，老师准备了1个纸盒，纸盒中有40张纸条，只有1张纸条是中奖纸条。这样一来，每个学生都有1/40的几率中奖——但是显而易见，这个班上有且仅有一名学生能够中奖。一名学生在中奖后，余下的所有学生中奖几率都会减少至0。这就是伪随机。</p>
-
-      
-    </div>
-
-    
-    
-    
-
-    <footer class="post-footer">
-        <div class="post-eof"></div>
-      
-    </footer>
-  </article>
-</div>
-
-
-
-
-    
-
-
-<div class="post-block">
-  
-  
-
-  <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="">
-    <link itemprop="mainEntityOfPage" href="https://lzhwweb.github.io/nirvana/note/%E8%AF%BB%E4%B9%A6%E7%AC%94%E8%AE%B0/%E5%9B%A2%E9%98%9F%E6%96%87%E5%8C%96/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="image" content="/nirvana/images/headphoto.jpeg">
-      <meta itemprop="name" content="nirvana">
-      <meta itemprop="description" content="个人学习笔记">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="涅槃快乐是金">
-    </span>
-      <header class="post-header">
-        <h2 class="post-title" itemprop="name headline">
-          <a href="/nirvana/note/%E8%AF%BB%E4%B9%A6%E7%AC%94%E8%AE%B0/%E5%9B%A2%E9%98%9F%E6%96%87%E5%8C%96/" class="post-title-link" itemprop="url">团队文化</a>
-        </h2>
-
-        <div class="post-meta-container">
-          <div class="post-meta">
-    <span class="post-meta-item">
-      <span class="post-meta-item-icon">
-        <i class="far fa-calendar"></i>
-      </span>
-      <span class="post-meta-item-text">发表于</span>
-      
-
-      <time title="创建时间：2021-03-10 21:12:40 / 修改时间：13:43:55" itemprop="dateCreated datePublished" datetime="2021-03-10T21:12:40+08:00">2021-03-10</time>
-    </span>
-    <span class="post-meta-item">
-      <span class="post-meta-item-icon">
-        <i class="far fa-folder"></i>
-      </span>
-      <span class="post-meta-item-text">分类于</span>
-        <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-          <a href="/nirvana/categories/note/" itemprop="url" rel="index"><span itemprop="name">note</span></a>
-        </span>
-    </span>
-
-  
-    <span id="/nirvana/note/%E8%AF%BB%E4%B9%A6%E7%AC%94%E8%AE%B0/%E5%9B%A2%E9%98%9F%E6%96%87%E5%8C%96/" class="post-meta-item leancloud_visitors" data-flag-title="团队文化" title="阅读次数">
-      <span class="post-meta-item-icon">
-        <i class="far fa-eye"></i>
-      </span>
-      <span class="post-meta-item-text">阅读次数：</span>
-      <span class="leancloud-visitors-count"></span>
-    </span>
-      </div>
-      <div class="post-meta">
-    <span class="post-meta-item" title="本文字数">
-      <span class="post-meta-item-icon">
-        <i class="far fa-file-word"></i>
-      </span>
-      <span class="post-meta-item-text">本文字数：</span>
-      <span>133</span>
-    </span>
-    <span class="post-meta-item" title="阅读时长">
-      <span class="post-meta-item-icon">
-        <i class="far fa-clock"></i>
-      </span>
-      <span class="post-meta-item-text">阅读时长 &asymp;</span>
-      <span>1 分钟</span>
-    </span>
-</div>
-
-        </div>
-      </header>
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-          <p>但在文化价值观主导行为的层次上，经理阶层则必须负责发展出一套组织内共享的价值观、目标以及行事准则，以建立个体对组织的信赖。经理人可通过训话等方式来传达信息，但言传不如身教，最好的方法还是以身作则。如果经理人日常行事都依照组织的价值观及目标，公司里的人自然会上行下效。</p>
-
-      
-    </div>
-
-    
-    
-    
-
-    <footer class="post-footer">
-        <div class="post-eof"></div>
-      
-    </footer>
-  </article>
-</div>
-
-
-
-
-    
-
-
-<div class="post-block">
-  
-  
-
-  <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="">
-    <link itemprop="mainEntityOfPage" href="https://lzhwweb.github.io/nirvana/note/%E8%AF%BB%E4%B9%A6%E7%AC%94%E8%AE%B0/%E6%8B%9B%E8%81%98/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="image" content="/nirvana/images/headphoto.jpeg">
-      <meta itemprop="name" content="nirvana">
-      <meta itemprop="description" content="个人学习笔记">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="涅槃快乐是金">
-    </span>
-      <header class="post-header">
-        <h2 class="post-title" itemprop="name headline">
-          <a href="/nirvana/note/%E8%AF%BB%E4%B9%A6%E7%AC%94%E8%AE%B0/%E6%8B%9B%E8%81%98/" class="post-title-link" itemprop="url">招聘</a>
-        </h2>
-
-        <div class="post-meta-container">
-          <div class="post-meta">
-    <span class="post-meta-item">
-      <span class="post-meta-item-icon">
-        <i class="far fa-calendar"></i>
-      </span>
-      <span class="post-meta-item-text">发表于</span>
-      
-
-      <time title="创建时间：2021-03-10 21:12:40 / 修改时间：13:43:55" itemprop="dateCreated datePublished" datetime="2021-03-10T21:12:40+08:00">2021-03-10</time>
-    </span>
-    <span class="post-meta-item">
-      <span class="post-meta-item-icon">
-        <i class="far fa-folder"></i>
-      </span>
-      <span class="post-meta-item-text">分类于</span>
-        <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-          <a href="/nirvana/categories/note/" itemprop="url" rel="index"><span itemprop="name">note</span></a>
-        </span>
-    </span>
-
-  
-    <span id="/nirvana/note/%E8%AF%BB%E4%B9%A6%E7%AC%94%E8%AE%B0/%E6%8B%9B%E8%81%98/" class="post-meta-item leancloud_visitors" data-flag-title="招聘" title="阅读次数">
-      <span class="post-meta-item-icon">
-        <i class="far fa-eye"></i>
-      </span>
-      <span class="post-meta-item-text">阅读次数：</span>
-      <span class="leancloud-visitors-count"></span>
-    </span>
-      </div>
-      <div class="post-meta">
-    <span class="post-meta-item" title="本文字数">
-      <span class="post-meta-item-icon">
-        <i class="far fa-file-word"></i>
-      </span>
-      <span class="post-meta-item-text">本文字数：</span>
-      <span>122</span>
-    </span>
-    <span class="post-meta-item" title="阅读时长">
-      <span class="post-meta-item-icon">
-        <i class="far fa-clock"></i>
-      </span>
-      <span class="post-meta-item-text">阅读时长 &asymp;</span>
-      <span>1 分钟</span>
-    </span>
-</div>
-
-        </div>
-      </header>
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-          <p>每一个经理人迟早都会碰到两个任务面试新员工，以及设法让一个萌生去意的优秀下属继续待在公司效命。<br>面试的目的可归为以下4类<br>1.找到一个具备能力及潜力的人。<br>2.让他认识你并且了解这个公司。<br>3.确定此人的能力和这份工作是否相符。<br>4.想办法把他招进公司。</p>
-
-      
-    </div>
-
-    
-    
-    
-
-    <footer class="post-footer">
-        <div class="post-eof"></div>
-      
-    </footer>
-  </article>
-</div>
-
-
-
-
-    
-
-
-<div class="post-block">
-  
-  
-
-  <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="">
     <link itemprop="mainEntityOfPage" href="https://lzhwweb.github.io/nirvana/algorithm/%E7%AE%97%E6%B3%95%E5%AD%A6%E4%B9%A0/%E5%86%92%E6%B3%A1%E6%8E%92%E5%BA%8F/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
@@ -1319,6 +983,316 @@ N表示当前攻击的次数，P(N)表示当前攻击的暴击率，C为概率�
     <div class="post-body" itemprop="articleBody">
           <hr>
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br></pre></td><td class="code"><pre><span class="line">&#x2F;**</span><br><span class="line"> * 冒泡排序基础</span><br><span class="line"> * arry:数组，必传</span><br><span class="line"> * type:排序方式，默认值1，1：升序，0：降序</span><br><span class="line"> **&#x2F;</span><br><span class="line">function bubbleSort(arry,type &#x3D; 1)&#123;</span><br><span class="line">    if(Object.prototype.toString.call(arry) !&#x3D;&#x3D; &#39;[object Array]&#39;)&#123;&#x2F;&#x2F;判断是否数组</span><br><span class="line">        return false;</span><br><span class="line">    &#125;</span><br><span class="line">    for (let i&#x3D;0;i&lt;arry.length;i++)&#123;</span><br><span class="line">        for(let j&#x3D;0;j&lt;arry.length-i;j++)&#123;</span><br><span class="line">            if((type &#x3D;&#x3D; 1 &amp;&amp; arry[j]&gt;arry[j+1])||(type &#x3D;&#x3D; 0 &amp;&amp; arry[j]&lt;arry[j+1]))&#123;</span><br><span class="line">                let temp &#x3D; arry[j];</span><br><span class="line">                arry[j] &#x3D; arry[j+1];</span><br><span class="line">                arry[j+1] &#x3D; temp;</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">    return arry;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+      
+    </div>
+
+    
+    
+    
+
+    <footer class="post-footer">
+        <div class="post-eof"></div>
+      
+    </footer>
+  </article>
+</div>
+
+
+
+
+    
+
+
+<div class="post-block">
+  
+  
+
+  <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="">
+    <link itemprop="mainEntityOfPage" href="https://lzhwweb.github.io/nirvana/algorithm/%E7%AE%97%E6%B3%95%E5%AD%A6%E4%B9%A0/%E5%88%A4%E6%96%AD%E6%98%AF%E5%90%A6%E5%9B%9E%E6%96%87/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/nirvana/images/headphoto.jpeg">
+      <meta itemprop="name" content="nirvana">
+      <meta itemprop="description" content="个人学习笔记">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="涅槃快乐是金">
+    </span>
+      <header class="post-header">
+        <h2 class="post-title" itemprop="name headline">
+          <a href="/nirvana/algorithm/%E7%AE%97%E6%B3%95%E5%AD%A6%E4%B9%A0/%E5%88%A4%E6%96%AD%E6%98%AF%E5%90%A6%E5%9B%9E%E6%96%87/" class="post-title-link" itemprop="url">判断是否回文</a>
+        </h2>
+
+        <div class="post-meta-container">
+          <div class="post-meta">
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-calendar"></i>
+      </span>
+      <span class="post-meta-item-text">发表于</span>
+      
+
+      <time title="创建时间：2021-03-10 21:12:40 / 修改时间：13:43:55" itemprop="dateCreated datePublished" datetime="2021-03-10T21:12:40+08:00">2021-03-10</time>
+    </span>
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-folder"></i>
+      </span>
+      <span class="post-meta-item-text">分类于</span>
+        <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+          <a href="/nirvana/categories/algorithm/" itemprop="url" rel="index"><span itemprop="name">algorithm</span></a>
+        </span>
+    </span>
+
+  
+    <span id="/nirvana/algorithm/%E7%AE%97%E6%B3%95%E5%AD%A6%E4%B9%A0/%E5%88%A4%E6%96%AD%E6%98%AF%E5%90%A6%E5%9B%9E%E6%96%87/" class="post-meta-item leancloud_visitors" data-flag-title="判断是否回文" title="阅读次数">
+      <span class="post-meta-item-icon">
+        <i class="far fa-eye"></i>
+      </span>
+      <span class="post-meta-item-text">阅读次数：</span>
+      <span class="leancloud-visitors-count"></span>
+    </span>
+      </div>
+      <div class="post-meta">
+    <span class="post-meta-item" title="本文字数">
+      <span class="post-meta-item-icon">
+        <i class="far fa-file-word"></i>
+      </span>
+      <span class="post-meta-item-text">本文字数：</span>
+      <span>450</span>
+    </span>
+    <span class="post-meta-item" title="阅读时长">
+      <span class="post-meta-item-icon">
+        <i class="far fa-clock"></i>
+      </span>
+      <span class="post-meta-item-text">阅读时长 &asymp;</span>
+      <span>1 分钟</span>
+    </span>
+</div>
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+          <hr>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br></pre></td><td class="code"><pre><span class="line">&#x2F;**</span><br><span class="line"> * 判断是否回文</span><br><span class="line">**&#x2F;</span><br><span class="line">function checkPlalindrome(str)&#123;</span><br><span class="line">  if(!str)&#123;&#x2F;&#x2F;为空，或者长度能整除2</span><br><span class="line">    return false</span><br><span class="line">  &#125;</span><br><span class="line">  </span><br><span class="line">  let isOdd &#x3D; str.length % 2;</span><br><span class="line">  let mid &#x3D; Math.floor(str.length&#x2F;2);&#x2F;&#x2F;中间数</span><br><span class="line">  let flag &#x3D; true;</span><br><span class="line">  for (let i &#x3D; 0;i&lt;mid;i++)&#123;</span><br><span class="line">    console.log(str.substr(i,1),str.substr(i+mid+isOdd,1))</span><br><span class="line">    if(!(str.substr(i,1) &#x3D;&#x3D; str.substr(i+mid+isOdd,1)))&#123;</span><br><span class="line">      flag &#x3D; false;</span><br><span class="line">      break;</span><br><span class="line">    &#125;</span><br><span class="line">  &#125;</span><br><span class="line">  return flag;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+      
+    </div>
+
+    
+    
+    
+
+    <footer class="post-footer">
+        <div class="post-eof"></div>
+      
+    </footer>
+  </article>
+</div>
+
+
+
+
+    
+
+
+<div class="post-block">
+  
+  
+
+  <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="">
+    <link itemprop="mainEntityOfPage" href="https://lzhwweb.github.io/nirvana/algorithm/%E7%AE%97%E6%B3%95%E5%AD%A6%E4%B9%A0/%E5%9F%BA%E6%95%B0%E6%8E%92%E5%BA%8F/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/nirvana/images/headphoto.jpeg">
+      <meta itemprop="name" content="nirvana">
+      <meta itemprop="description" content="个人学习笔记">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="涅槃快乐是金">
+    </span>
+      <header class="post-header">
+        <h2 class="post-title" itemprop="name headline">
+          <a href="/nirvana/algorithm/%E7%AE%97%E6%B3%95%E5%AD%A6%E4%B9%A0/%E5%9F%BA%E6%95%B0%E6%8E%92%E5%BA%8F/" class="post-title-link" itemprop="url">基数排序</a>
+        </h2>
+
+        <div class="post-meta-container">
+          <div class="post-meta">
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-calendar"></i>
+      </span>
+      <span class="post-meta-item-text">发表于</span>
+      
+
+      <time title="创建时间：2021-03-10 21:12:40 / 修改时间：13:43:55" itemprop="dateCreated datePublished" datetime="2021-03-10T21:12:40+08:00">2021-03-10</time>
+    </span>
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-folder"></i>
+      </span>
+      <span class="post-meta-item-text">分类于</span>
+        <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+          <a href="/nirvana/categories/algorithm/" itemprop="url" rel="index"><span itemprop="name">algorithm</span></a>
+        </span>
+    </span>
+
+  
+    <span id="/nirvana/algorithm/%E7%AE%97%E6%B3%95%E5%AD%A6%E4%B9%A0/%E5%9F%BA%E6%95%B0%E6%8E%92%E5%BA%8F/" class="post-meta-item leancloud_visitors" data-flag-title="基数排序" title="阅读次数">
+      <span class="post-meta-item-icon">
+        <i class="far fa-eye"></i>
+      </span>
+      <span class="post-meta-item-text">阅读次数：</span>
+      <span class="leancloud-visitors-count"></span>
+    </span>
+      </div>
+      <div class="post-meta">
+    <span class="post-meta-item" title="本文字数">
+      <span class="post-meta-item-icon">
+        <i class="far fa-file-word"></i>
+      </span>
+      <span class="post-meta-item-text">本文字数：</span>
+      <span>1.9k</span>
+    </span>
+    <span class="post-meta-item" title="阅读时长">
+      <span class="post-meta-item-icon">
+        <i class="far fa-clock"></i>
+      </span>
+      <span class="post-meta-item-text">阅读时长 &asymp;</span>
+      <span>2 分钟</span>
+    </span>
+</div>
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+          <p>基数排序是一种借助多关键字排序思想对单逻辑关键字进行排序的方法。</p>
+<p>所谓的多关键字排序就是有多个优先级不同的关键字。比如说成绩的排序，如果两个人总分相同，则语文高的排在前面，语文成绩也相同则数学高的排在前面。。。如果对数字进行排序，那么个位、十位、百位就是不同优先级的关键字，如果要进行升序排序，那么个位、十位、百位优先级一次增加。<br>基数排序是通过多次的收分配和收集来实现的，关键字优先级低的先进行分配和收集。<br>基数排序是一种非比较型整数排序算法，其原理是将整数按位数切割成不同的数字，然后按每个位数分别比较。由于整数也可以表达字符串（比如名字或日期）和特定格式的浮点数，所以基数排序也不是只能使用于整数。<br><img src="https://upload-images.jianshu.io/upload_images/10024246-9e0f7e92428e6637.gif?imageMogr2/auto-orient/strip"></p>
+<p>实现代码：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br></pre></td><td class="code"><pre><span class="line">&#x2F;**</span><br><span class="line"> * 基数排序</span><br><span class="line"> * @param &#123;Array&lt;Number&gt;&#125; arry 要排序的数组</span><br><span class="line"> *&#x2F;</span><br><span class="line">function RadixSort(arry) &#123;</span><br><span class="line">    if (arry.length &#x3D;&#x3D; 0) &#123;&#x2F;&#x2F;判断数组不为空</span><br><span class="line">        return [];</span><br><span class="line">    &#125;</span><br><span class="line">    const maxDigit &#x3D; getMaxDigit(getMaxValue(arry));&#x2F;&#x2F;最大数位数</span><br><span class="line">    for (let i &#x3D; 0; i &lt; maxDigit; i++) &#123;</span><br><span class="line">        let count &#x3D; [];</span><br><span class="line">        for (let j &#x3D; 0; j &lt; arry.length; j++) &#123;</span><br><span class="line">            const length &#x3D; &#96;$&#123;arry[j]&#125;&#96;.length;&#x2F;&#x2F;当前数位数</span><br><span class="line">            let bucket &#x3D; 0;</span><br><span class="line">            if (length &gt; i) &#123;&#x2F;&#x2F;当前位数不为空</span><br><span class="line">                bucket &#x3D; parseInt(&#96;$&#123;arry[j]&#125;&#96;.substr(length - i - 1, 1));</span><br><span class="line">            &#125;</span><br><span class="line">            if (!count[bucket]) &#123;</span><br><span class="line">                count[bucket] &#x3D; [];</span><br><span class="line">            &#125;</span><br><span class="line">            count[bucket].push(arry[j]);&#x2F;&#x2F;位数数组填充</span><br><span class="line">        &#125;</span><br><span class="line">        for (let t &#x3D; 0, pos &#x3D; 0; t &lt; count.length; t++) &#123;&#x2F;&#x2F;根据新数组重新排序</span><br><span class="line">            let value &#x3D; null;</span><br><span class="line">            if (count[t]) &#123;</span><br><span class="line">                while ((value &#x3D; count[t].shift()) !&#x3D; null) &#123;</span><br><span class="line">                    arry[pos++] &#x3D; value;</span><br><span class="line">                &#125;</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;</span><br><span class="line">        console.log(arry)</span><br><span class="line">    &#125;</span><br><span class="line">    return arry;</span><br><span class="line">&#125;</span><br><span class="line">&#x2F;**</span><br><span class="line"> * 获取数组中最大数</span><br><span class="line"> * @param arry 排序数组</span><br><span class="line"> *&#x2F;</span><br><span class="line">function getMaxValue(arry) &#123;</span><br><span class="line">    let maxValue &#x3D; arry[0];</span><br><span class="line">    for (let i &#x3D; 1; i &lt; arry.length; i++) &#123;</span><br><span class="line">        if (arry[i] &gt; maxValue) &#123;</span><br><span class="line">            maxValue &#x3D; arry[i]</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">    return maxValue;</span><br><span class="line">&#125;</span><br><span class="line">&#x2F;**</span><br><span class="line"> * 整数位数</span><br><span class="line"> * @param value 整数</span><br><span class="line"> *&#x2F;</span><br><span class="line">function getMaxDigit(value) &#123;</span><br><span class="line">    return &#96;$&#123;value&#125;&#96;.length;</span><br><span class="line">&#125;</span><br><span class="line">RadixSort([72, 6, 57, 88, 60, 42, 11183, 73, 1148, 185])</span><br></pre></td></tr></table></figure>
+<p>运行结果：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">[ 60, 72, 42, 11183, 73, 185, 6, 57, 88, 1148 ]&#x2F;&#x2F;个位排序</span><br><span class="line">[ 6, 42, 1148, 57, 60, 72, 73, 11183, 185, 88 ]&#x2F;&#x2F;十位排序</span><br><span class="line">[ 6, 42, 57, 60, 72, 73, 88, 1148, 11183, 185 ]&#x2F;&#x2F;百位排序</span><br><span class="line">[ 6, 42, 57, 60, 72, 73, 88, 185, 1148, 11183 ]&#x2F;&#x2F;千位排序</span><br><span class="line">[ 6, 42, 57, 60, 72, 73, 88, 185, 1148, 11183 ]&#x2F;&#x2F;万位排序</span><br></pre></td></tr></table></figure>
+
+      
+    </div>
+
+    
+    
+    
+
+    <footer class="post-footer">
+        <div class="post-eof"></div>
+      
+    </footer>
+  </article>
+</div>
+
+
+
+
+    
+
+
+<div class="post-block">
+  
+  
+
+  <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="">
+    <link itemprop="mainEntityOfPage" href="https://lzhwweb.github.io/nirvana/algorithm/%E7%AE%97%E6%B3%95%E5%AD%A6%E4%B9%A0/%E5%BF%AB%E9%80%9F%E6%8E%92%E5%BA%8F/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/nirvana/images/headphoto.jpeg">
+      <meta itemprop="name" content="nirvana">
+      <meta itemprop="description" content="个人学习笔记">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="涅槃快乐是金">
+    </span>
+      <header class="post-header">
+        <h2 class="post-title" itemprop="name headline">
+          <a href="/nirvana/algorithm/%E7%AE%97%E6%B3%95%E5%AD%A6%E4%B9%A0/%E5%BF%AB%E9%80%9F%E6%8E%92%E5%BA%8F/" class="post-title-link" itemprop="url">快速排序</a>
+        </h2>
+
+        <div class="post-meta-container">
+          <div class="post-meta">
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-calendar"></i>
+      </span>
+      <span class="post-meta-item-text">发表于</span>
+      
+
+      <time title="创建时间：2021-03-10 21:12:40 / 修改时间：13:43:55" itemprop="dateCreated datePublished" datetime="2021-03-10T21:12:40+08:00">2021-03-10</time>
+    </span>
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-folder"></i>
+      </span>
+      <span class="post-meta-item-text">分类于</span>
+        <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+          <a href="/nirvana/categories/algorithm/" itemprop="url" rel="index"><span itemprop="name">algorithm</span></a>
+        </span>
+    </span>
+
+  
+    <span id="/nirvana/algorithm/%E7%AE%97%E6%B3%95%E5%AD%A6%E4%B9%A0/%E5%BF%AB%E9%80%9F%E6%8E%92%E5%BA%8F/" class="post-meta-item leancloud_visitors" data-flag-title="快速排序" title="阅读次数">
+      <span class="post-meta-item-icon">
+        <i class="far fa-eye"></i>
+      </span>
+      <span class="post-meta-item-text">阅读次数：</span>
+      <span class="leancloud-visitors-count"></span>
+    </span>
+      </div>
+      <div class="post-meta">
+    <span class="post-meta-item" title="本文字数">
+      <span class="post-meta-item-icon">
+        <i class="far fa-file-word"></i>
+      </span>
+      <span class="post-meta-item-text">本文字数：</span>
+      <span>2.4k</span>
+    </span>
+    <span class="post-meta-item" title="阅读时长">
+      <span class="post-meta-item-icon">
+        <i class="far fa-clock"></i>
+      </span>
+      <span class="post-meta-item-text">阅读时长 &asymp;</span>
+      <span>2 分钟</span>
+    </span>
+</div>
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+          <p>快速排序由于排序效率在同为O(N*logN)的几种排序方法中效率较高，因此经常被采用，再加上快速排序思想—-分治法也确实实用，因此很多软件公司的笔试面试，包括像腾讯，微软等知名IT公司都喜欢考这个。</p>
+<p>快速排序是C.R.A.Hoare于1962年提出的一种划分交换排序。它采用了一种分治的策略，通常称其为分治法(Divide-and-ConquerMethod)。</p>
+<p>该方法的基本思想是：</p>
+<p>1．先从数列中取出一个数作为基准数。<br>2．分区过程，将比这个数大的数全放到它的右边，小于或等于它的数全放到它的左边。<br>3．再对左右区间重复第二步，直到各区间只有一个数。<br><img src="https://upload-images.jianshu.io/upload_images/10024246-3f6f3e05a50e33ae.gif?imageMogr2/auto-orient/strip" alt="一次快排过程"><br>以一个数组作为示例，取区间第一个数为基准数。<br>|0|1|2|3|4|<br>|  —-  | —-  |—-|  —-  | —-  |<br>|<em><strong>6</strong></em>|3|7|4|1|<br>初始时，i = 0;  j = 5;   X = a[i] = 6</p>
+<p>由于已经将 a[0] 中的数保存到 X 中，可以理解成在数组 a[0] 上挖了个坑，可以将其它数据填充到这来。</p>
+<p>1、从j开始向前找一个比X小或等于X的数。<br>2、当j=4，符合条件，将a[4]挖出再填到上一个坑a[0]中。a[0]=a[4]; i++;  这样一个坑a[0]就被搞定了，但又形成了一个新坑a[4]，这怎么办了？简单，再找数字来填a[4]这个坑。<br>3、这次从i开始向后找一个大于X的数，当i=2，符合条件，将a[2]挖出再填到上一个坑中a[4]=a[2]; j–;<br>数组变为<br>|0|1|2|3|4|<br>|  —-  | —-  |—-|  —-  | —-  |<br>|<strong>1</strong>|3|<strong>7</strong>|4|<strong>7</strong>|<br>i = 2;   j = 4;   X=6<br>4、再重复上面的步骤，先从后向前找，再从前向后找。<br>5、从j开始向前找，当j=3，符合条件，将a[3]挖出填到上一个坑中，a[2] = a[3]; i++;</p>
+<p>从i开始向后找，当i=3时，由于i==j退出。</p>
+<p>此时，i = j = 3，而a[3]刚好又是上次挖的坑，因此将X填入a[3]。</p>
+<p>数组变为：<br>|0|1|2|3|4|<br>|  —-  | —-  |—-|  —-  | —-  |<br>|1|3|4|6|7|</p>
+<p>再重复上面的步骤，先从后向前找，再从前向后找。</p>
+<h3 id="代码实现"><a href="#代码实现" class="headerlink" title="代码实现"></a>代码实现</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br></pre></td><td class="code"><pre><span class="line">&#x2F;**</span><br><span class="line"> * 快速排序</span><br><span class="line"> * @param &#123;Array&lt;Number&gt;&#125; arry 要排序的数组</span><br><span class="line"> *&#x2F;</span><br><span class="line">function quickSort(arry, left, right) &#123;</span><br><span class="line">    if (arry.length &#x3D;&#x3D; 0) &#123;&#x2F;&#x2F;判断数组不为空</span><br><span class="line">        return [];</span><br><span class="line">    &#125;</span><br><span class="line">    let [l, r] &#x3D; [left, right];</span><br><span class="line">    if (l &lt; r) &#123;</span><br><span class="line">        let temp &#x3D; arry[l];&#x2F;&#x2F;即arry[l]就是第一个坑</span><br><span class="line">        while (l &lt; r) &#123;</span><br><span class="line">            &#x2F;&#x2F; 从右向左找小于temp的数来填arry[l]</span><br><span class="line">            while (l &lt; r &amp;&amp; arry[r] &gt; temp) &#123;</span><br><span class="line">                r--;</span><br><span class="line">            &#125;</span><br><span class="line">            if (l &lt; r) &#123;</span><br><span class="line">                arry[l] &#x3D; arry[r]; &#x2F;&#x2F;将arry[r]填到arry[l]中，arry[r]就形成了一个新的坑</span><br><span class="line">                l++;</span><br><span class="line">            &#125;</span><br><span class="line">            &#x2F;&#x2F; 从左向右找大于temp的数来填arry[r]</span><br><span class="line">            while (l &lt; r &amp;&amp; arry[l] &lt; temp) &#123;</span><br><span class="line">                l++;</span><br><span class="line">            &#125;</span><br><span class="line">            if (l &lt; r) &#123;</span><br><span class="line">                arry[r] &#x3D; arry[l]; &#x2F;&#x2F;将arry[l]填到arry[r]中，arry[l]就形成了一个新的坑</span><br><span class="line">                r--;</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;</span><br><span class="line">        arry[l] &#x3D; temp;&#x2F;&#x2F;将temp填入arry[l]的坑</span><br><span class="line">        console.log(arry, l);</span><br><span class="line">        &#x2F;&#x2F; 递归调用 </span><br><span class="line">        quickSort(arry, left, l - 1);</span><br><span class="line">        quickSort(arry, l + 1, right);</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p>运行结果：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><span class="line">quickSort([72, 6, 57, 88, 60, 42, 83, 73, 48, 85], 0, 9);</span><br><span class="line">[ 48, 6, 57, 42, 60, 72, 83, 73, 88, 85 ] 5</span><br><span class="line">&#x2F;&#x2F;第一次排序72为观察数，分界为5；左边都是小于，右边都是大于</span><br><span class="line">[ 42, 6, 48, 57, 60, 72, 83, 73, 88, 85 ] 2</span><br><span class="line">&#x2F;&#x2F;数组左边0-5继续续排序，48为观察数，分界为2</span><br><span class="line">[ 6, 42, 48, 57, 60, 72, 83, 73, 88, 85 ] 1</span><br><span class="line">&#x2F;&#x2F;数组左边0-2继续排序，42为观察数，分界结果为1，</span><br><span class="line">&#x2F;&#x2F;这时再递归发现1&lt;1-1;结束递归，开始右边排序</span><br><span class="line">[ 6, 42, 48, 57, 60, 72, 83, 73, 88, 85 ] 3</span><br><span class="line">&#x2F;&#x2F;右边排序其实是开始于[ 42, 6, 48 , 57, 60, 72, 83, 73, 88, 85 ] 这个数组，57为观察数，排序区间为3-5，发现已经是正序，继续递归上次的右边排序</span><br><span class="line">[ 6, 42, 48, 57, 60, 72, 73, 83, 88, 85 ] 7</span><br><span class="line">&#x2F;&#x2F;右边排序其实是开始于[ 48, 6, 57, 42, 60, 72, 83, 73, 88, 85 ]这个数组基于分界点5的右边数组，83为观察数，排序区间为6-9，排序分界结果为7</span><br><span class="line">[ 6, 42, 48, 57, 60, 72, 73, 83, 85, 88 ] 9</span><br><span class="line">&#x2F;&#x2F;再次递归，右边已正序</span><br></pre></td></tr></table></figure>
+<h3 id="复杂度"><a href="#复杂度" class="headerlink" title="复杂度"></a>复杂度</h3><p>时间复杂度：O(nlogn)<br>空间复杂度：快速排序使用递归，递归使用栈，因此它的空间复杂度为O(logn)<br>稳定性：快速排序无法保证相等的元素的相对位置不变，因此它是不稳定的排序算法</p>
 
       
     </div>

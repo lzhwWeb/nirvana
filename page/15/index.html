@@ -257,656 +257,6 @@
   
 
   <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="">
-    <link itemprop="mainEntityOfPage" href="https://lzhwweb.github.io/nirvana/reactnative/react-native/React-Native-%E5%9F%BA%E6%9C%AC%E5%91%BD%E4%BB%A4%E6%B1%87%E6%80%BB/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="image" content="/nirvana/images/headphoto.jpeg">
-      <meta itemprop="name" content="nirvana">
-      <meta itemprop="description" content="个人学习笔记">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="涅槃快乐是金">
-    </span>
-      <header class="post-header">
-        <h2 class="post-title" itemprop="name headline">
-          <a href="/nirvana/reactnative/react-native/React-Native-%E5%9F%BA%E6%9C%AC%E5%91%BD%E4%BB%A4%E6%B1%87%E6%80%BB/" class="post-title-link" itemprop="url">React-Native-基本命令汇总</a>
-        </h2>
-
-        <div class="post-meta-container">
-          <div class="post-meta">
-    <span class="post-meta-item">
-      <span class="post-meta-item-icon">
-        <i class="far fa-calendar"></i>
-      </span>
-      <span class="post-meta-item-text">发表于</span>
-      
-
-      <time title="创建时间：2021-03-10 21:12:40 / 修改时间：13:43:55" itemprop="dateCreated datePublished" datetime="2021-03-10T21:12:40+08:00">2021-03-10</time>
-    </span>
-    <span class="post-meta-item">
-      <span class="post-meta-item-icon">
-        <i class="far fa-folder"></i>
-      </span>
-      <span class="post-meta-item-text">分类于</span>
-        <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-          <a href="/nirvana/categories/reactnative/" itemprop="url" rel="index"><span itemprop="name">reactnative</span></a>
-        </span>
-    </span>
-
-  
-    <span id="/nirvana/reactnative/react-native/React-Native-%E5%9F%BA%E6%9C%AC%E5%91%BD%E4%BB%A4%E6%B1%87%E6%80%BB/" class="post-meta-item leancloud_visitors" data-flag-title="React-Native-基本命令汇总" title="阅读次数">
-      <span class="post-meta-item-icon">
-        <i class="far fa-eye"></i>
-      </span>
-      <span class="post-meta-item-text">阅读次数：</span>
-      <span class="leancloud-visitors-count"></span>
-    </span>
-      </div>
-      <div class="post-meta">
-    <span class="post-meta-item" title="本文字数">
-      <span class="post-meta-item-icon">
-        <i class="far fa-file-word"></i>
-      </span>
-      <span class="post-meta-item-text">本文字数：</span>
-      <span>8k</span>
-    </span>
-    <span class="post-meta-item" title="阅读时长">
-      <span class="post-meta-item-icon">
-        <i class="far fa-clock"></i>
-      </span>
-      <span class="post-meta-item-text">阅读时长 &asymp;</span>
-      <span>7 分钟</span>
-    </span>
-</div>
-
-        </div>
-      </header>
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-          <p>最近进行React Native的一些优化工作，发现React Native提供了很多简单方便的配置，但是自己一直没有使用过，而且React Native提供了非常好的help功能，会列出对应的说明和example，这边简单整理下一些常用的命令。</p>
-<h2 id="1-查看所有命令-react-native-–help"><a href="#1-查看所有命令-react-native-–help" class="headerlink" title="1. 查看所有命令 react-native –help"></a>1. 查看所有命令 <em><strong>react-native –help</strong></em></h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br></pre></td><td class="code"><pre><span class="line">mac:react-native --help</span><br><span class="line"></span><br><span class="line">  Usage: react-native [options] [command]</span><br><span class="line"></span><br><span class="line">  Options:</span><br><span class="line"></span><br><span class="line">    -V, --version                      output the version number</span><br><span class="line">    -h, --help                         output usage information</span><br><span class="line"></span><br><span class="line">  Commands:</span><br><span class="line"></span><br><span class="line">    start [options]                    starts the webserver</span><br><span class="line">    run-ios [options]                  builds your app and starts it on iOS simulator</span><br><span class="line">    run-android [options]              builds your app and starts it on a connected Android emulator or device</span><br><span class="line">    new-library [options]              generates a native library bridge</span><br><span class="line">    bundle [options]                   builds the javascript bundle for offline use</span><br><span class="line">    unbundle [options]                 builds javascript as &quot;unbundle&quot; for offline use</span><br><span class="line">    eject [options]                    Re-create the iOS and Android folders and native code</span><br><span class="line">    link [options] [packageName]       links all native dependencies (updates native build files)</span><br><span class="line">    unlink [options] &lt;packageName&gt;     unlink native dependency</span><br><span class="line">    install [options] &lt;packageName&gt;    install and link native dependencies</span><br><span class="line">    uninstall [options] &lt;packageName&gt;  uninstall and unlink native dependencies</span><br><span class="line">    upgrade [options]                  upgrade your app&#39;s template files to the latest version; run this after updating the react-native version in your package.json and running npm install</span><br><span class="line">    log-android [options]              starts adb logcat</span><br><span class="line">    log-ios [options]                  starts iOS device syslog tail</span><br><span class="line">    info [options]                     Get relevant version info about OS, toolchain and libraries</span><br></pre></td></tr></table></figure>
-
-<h2 id="2-最常用的启动命令react-native-start"><a href="#2-最常用的启动命令react-native-start" class="headerlink" title="2. 最常用的启动命令react-native start"></a>2. 最常用的启动命令<em><strong>react-native start</strong></em></h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br></pre></td><td class="code"><pre><span class="line">mac:react-native start --help</span><br><span class="line">react-native start [options]</span><br><span class="line">  starts the webserver</span><br><span class="line"></span><br><span class="line">  Options:</span><br><span class="line"></span><br><span class="line">    --port [number]                                                (default: 8081)</span><br><span class="line">    --host [string]                                                (default: )</span><br><span class="line">    --root [list]                                                 add another root(s) to be used by the packager in this project (default: )</span><br><span class="line">    --projectRoots [list]                                         override the root(s) to be used by the packager (default: &#x2F;Users&#x2F;mac&#x2F;mallCategory)</span><br><span class="line">    --assetExts [list]                                            Specify any additional asset extensions to be used by the packager (default: )</span><br><span class="line">    --sourceExts [list]                                           Specify any additional source extensions to be used by the packager (default: )</span><br><span class="line">    --platforms [list]                                            Specify any additional platforms to be used by the packager (default: )</span><br><span class="line">    --providesModuleNodeModules [list]                            Specify any npm packages that import dependencies with providesModule (default: react-native,react-native-windows)</span><br><span class="line">    --max-workers [number]                                        Specifies the maximum number of workers the worker-pool will spawn for transforming files. This defaults to the number of the cores available on your machine.</span><br><span class="line">    --skipflow                                                    Disable flow checks</span><br><span class="line">    --nonPersistent                                               Disable file watcher</span><br><span class="line">    --transformer [string]                                        Specify a custom transformer to be used</span><br><span class="line">    --reset-cache, --resetCache                                   Removes cached files</span><br><span class="line">    --custom-log-reporter-path, --customLogReporterPath [string]  Path to a JavaScript file that exports a log reporter as a replacement for TerminalReporter</span><br><span class="line">    --verbose                                                     Enables logging</span><br><span class="line">    --https                                                       Enables https connections to the server</span><br><span class="line">    --key [path]                                                  Path to custom SSL key</span><br><span class="line">    --cert [path]                                                 Path to custom SSL cert</span><br><span class="line">    --config [string]                                             Path to the CLI configuration file</span><br><span class="line">    -h, --help                                                    output usage information</span><br></pre></td></tr></table></figure>
-
-<h2 id="3-iOS启动命令-react-native-–run-ios"><a href="#3-iOS启动命令-react-native-–run-ios" class="headerlink" title="3. iOS启动命令 react-native –run-ios"></a>3. iOS启动命令 <em><strong>react-native –run-ios</strong></em></h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br></pre></td><td class="code"><pre><span class="line">mac: react-native run-ios --help</span><br><span class="line"></span><br><span class="line">  react-native run-ios [options]</span><br><span class="line">  builds your app and starts it on iOS simulator</span><br><span class="line"></span><br><span class="line">  Options:</span><br><span class="line"></span><br><span class="line">    --simulator [string]      Explicitly set simulator to use (default: iPhone 6)</span><br><span class="line">    --configuration [string]  Explicitly set the scheme configuration to use</span><br><span class="line">    --scheme [string]         Explicitly set Xcode scheme to use</span><br><span class="line">    --project-path [string]   Path relative to project root where the Xcode project (.xcodeproj) lives. The default is &#39;ios&#39;. (default: ios)</span><br><span class="line">    --device [string]         Explicitly set device to use by name.  The value is not required if you have a single device connected.</span><br><span class="line">    --udid [string]           Explicitly set device to use by udid</span><br><span class="line">    --no-packager             Do not launch packager while building</span><br><span class="line">    --verbose                 Do not use xcpretty even if installed</span><br><span class="line">    --config [string]         Path to the CLI configuration file</span><br><span class="line">    -h, --help                output usage information</span><br><span class="line"></span><br><span class="line">  Example usage:</span><br><span class="line"></span><br><span class="line">    Run on a different simulator, e.g. iPhone 5:</span><br><span class="line">    react-native run-ios --simulator &quot;iPhone 5&quot;</span><br><span class="line"></span><br><span class="line">    Pass a non-standard location of iOS directory:</span><br><span class="line">    react-native run-ios --project-path &quot;.&#x2F;app&#x2F;ios&quot;</span><br><span class="line"></span><br><span class="line">    Run on a connected device, e.g. Max&#39;s iPhone:</span><br><span class="line">    react-native run-ios --device &quot;Max&#39;s iPhone&quot;</span><br></pre></td></tr></table></figure>
-<h2 id="4-Android-启动命令-react-native-run-android"><a href="#4-Android-启动命令-react-native-run-android" class="headerlink" title="4. Android 启动命令 react-native run-android"></a>4. Android 启动命令 <em><strong>react-native run-android</strong></em></h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br></pre></td><td class="code"><pre><span class="line">mac: react-native run-android --help</span><br><span class="line"></span><br><span class="line">  react-native run-android [options]</span><br><span class="line">  builds your app and starts it on a connected Android emulator or device</span><br><span class="line"></span><br><span class="line">  Options:</span><br><span class="line"></span><br><span class="line">    --install-debug</span><br><span class="line">    --root [string]           Override the root directory for the android build (which contains the android directory) (default: )</span><br><span class="line">    --flavor [string]         --flavor has been deprecated. Use --variant instead</span><br><span class="line">    --variant [string]</span><br><span class="line">    --appFolder [string]      Specify a different application folder name for the android source. (default: app)</span><br><span class="line">    --appId [string]          Specify an applicationId to launch after build. (default: )</span><br><span class="line">    --appIdSuffix [string]    Specify an applicationIdSuffix to launch after build. (default: )</span><br><span class="line">    --main-activity [string]  Name of the activity to start (default: MainActivity)</span><br><span class="line">    --deviceId [string]       builds your app and starts it on a specific device&#x2F;simulator with the given device id (listed by running &quot;adb devices&quot; on the command line).</span><br><span class="line">    --no-packager             Do not launch packager while building</span><br><span class="line">    --port [number]            (default: 8081)</span><br><span class="line">    --config [string]         Path to the CLI configuration file</span><br><span class="line">    -h, --help                output usage information</span><br></pre></td></tr></table></figure>
-
-<h2 id="5-生成bundle文件-react-native-bundle"><a href="#5-生成bundle文件-react-native-bundle" class="headerlink" title="5. 生成bundle文件 react-native bundle"></a>5. 生成bundle文件 <em><strong>react-native bundle</strong></em></h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br></pre></td><td class="code"><pre><span class="line">mac: react-native bundle --help</span><br><span class="line"></span><br><span class="line">  react-native bundle [options]</span><br><span class="line">  builds the javascript bundle for offline use</span><br><span class="line"></span><br><span class="line">  Options:</span><br><span class="line"></span><br><span class="line">    --entry-file &lt;path&gt;                Path to the root JS file, either absolute or relative to JS root</span><br><span class="line">    --platform [string]                Either &quot;ios&quot; or &quot;android&quot; (default: ios)</span><br><span class="line">    --transformer [string]             Specify a custom transformer to be used</span><br><span class="line">    --dev [boolean]                    If false, warnings are disabled and the bundle is minified (default: true)</span><br><span class="line">    --bundle-output &lt;string&gt;           File name where to store the resulting bundle, ex. &#x2F;tmp&#x2F;groups.bundle</span><br><span class="line">    --bundle-encoding [string]         Encoding the bundle should be written in (https:&#x2F;&#x2F;nodejs.org&#x2F;api&#x2F;buffer.html#buffer_buffer). (default: utf8)</span><br><span class="line">    --max-workers [number]             Specifies the maximum number of workers the worker-pool will spawn for transforming files.This defaults to the number of the cores available on your machine.</span><br><span class="line">    --sourcemap-output [string]        File name where to store the sourcemap file for resulting bundle, ex. &#x2F;tmp&#x2F;groups.map</span><br><span class="line">    --sourcemap-sources-root [string]  Path to make sourcemap&#39;s sources entries relative to, ex. &#x2F;root&#x2F;dir</span><br><span class="line">    --sourcemap-use-absolute-path      Report SourceMapURL using its full path</span><br><span class="line">    --assets-dest [string]             Directory name where to store assets referenced in the bundle</span><br><span class="line">    --verbose                          Enables logging</span><br><span class="line">    --reset-cache                      Removes cached files</span><br><span class="line">    --read-global-cache                Try to fetch transformed JS code from the global cache, if configured.</span><br><span class="line">    --config [string]                  Path to the CLI configuration file</span><br><span class="line">    -h, --help                         output usage information</span><br></pre></td></tr></table></figure>
-<h2 id="5-生成unbundle文件-react-native-unbundle"><a href="#5-生成unbundle文件-react-native-unbundle" class="headerlink" title="5. 生成unbundle文件 react-native unbundle"></a>5. 生成unbundle文件 <em><strong>react-native unbundle</strong></em></h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br></pre></td><td class="code"><pre><span class="line">mac: react-native unbundle --help</span><br><span class="line"></span><br><span class="line">  react-native unbundle [options]</span><br><span class="line">  builds javascript as &quot;unbundle&quot; for offline use</span><br><span class="line"></span><br><span class="line">  Options:</span><br><span class="line"></span><br><span class="line">    --entry-file &lt;path&gt;                Path to the root JS file, either absolute or relative to JS root</span><br><span class="line">    --platform [string]                Either &quot;ios&quot; or &quot;android&quot; (default: ios)</span><br><span class="line">    --transformer [string]             Specify a custom transformer to be used</span><br><span class="line">    --dev [boolean]                    If false, warnings are disabled and the bundle is minified (default: true)</span><br><span class="line">    --bundle-output &lt;string&gt;           File name where to store the resulting bundle, ex. &#x2F;tmp&#x2F;groups.bundle</span><br><span class="line">    --bundle-encoding [string]         Encoding the bundle should be written in (https:&#x2F;&#x2F;nodejs.org&#x2F;api&#x2F;buffer.html#buffer_buffer). (default: utf8)</span><br><span class="line">    --max-workers [number]             Specifies the maximum number of workers the worker-pool will spawn for transforming files.This defaults to the number of the cores available on your machine.</span><br><span class="line">    --sourcemap-output [string]        File name where to store the sourcemap file for resulting bundle, ex. &#x2F;tmp&#x2F;groups.map</span><br><span class="line">    --sourcemap-sources-root [string]  Path to make sourcemap&#39;s sources entries relative to, ex. &#x2F;root&#x2F;dir</span><br><span class="line">    --sourcemap-use-absolute-path      Report SourceMapURL using its full path</span><br><span class="line">    --assets-dest [string]             Directory name where to store assets referenced in the bundle</span><br><span class="line">    --verbose                          Enables logging</span><br><span class="line">    --reset-cache                      Removes cached files</span><br><span class="line">    --read-global-cache                Try to fetch transformed JS code from the global cache, if configured.</span><br><span class="line">    --indexed-unbundle                 Force indexed unbundle file format, even when building for android</span><br><span class="line">    --config [string]                  Path to the CLI configuration file</span><br><span class="line">    -h, --help                         output usage information</span><br></pre></td></tr></table></figure>
-
-<h2 id="6-查看React-Native相关的信息-react-native-info"><a href="#6-查看React-Native相关的信息-react-native-info" class="headerlink" title="6. 查看React Native相关的信息 react-native info"></a>6. 查看React Native相关的信息 <em><strong>react-native info</strong></em></h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><span class="line">mac: react-native info</span><br><span class="line"></span><br><span class="line">Environment:</span><br><span class="line">  OS: macOS High Sierra 10.13.6</span><br><span class="line">  Node: 10.0.0</span><br><span class="line">  Yarn: 1.9.4</span><br><span class="line">  npm: 5.6.0</span><br><span class="line">  Watchman: 4.7.0</span><br><span class="line">  Xcode: Xcode 10.1 Build version 10B61</span><br><span class="line">  Android Studio: 1.4 AI-141.2343393</span><br><span class="line"></span><br><span class="line">Packages: (wanted &#x3D;&gt; installed)</span><br><span class="line">  react: 16.2.0</span><br><span class="line">  react-native: 0.52.0</span><br></pre></td></tr></table></figure>
-
-      
-    </div>
-
-    
-    
-    
-
-    <footer class="post-footer">
-        <div class="post-eof"></div>
-      
-    </footer>
-  </article>
-</div>
-
-
-
-
-    
-
-
-<div class="post-block">
-  
-  
-
-  <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="">
-    <link itemprop="mainEntityOfPage" href="https://lzhwweb.github.io/nirvana/reactnative/react-native/Text%E7%BB%84%E4%BB%B6/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="image" content="/nirvana/images/headphoto.jpeg">
-      <meta itemprop="name" content="nirvana">
-      <meta itemprop="description" content="个人学习笔记">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="涅槃快乐是金">
-    </span>
-      <header class="post-header">
-        <h2 class="post-title" itemprop="name headline">
-          <a href="/nirvana/reactnative/react-native/Text%E7%BB%84%E4%BB%B6/" class="post-title-link" itemprop="url">Text组件</a>
-        </h2>
-
-        <div class="post-meta-container">
-          <div class="post-meta">
-    <span class="post-meta-item">
-      <span class="post-meta-item-icon">
-        <i class="far fa-calendar"></i>
-      </span>
-      <span class="post-meta-item-text">发表于</span>
-      
-
-      <time title="创建时间：2021-03-10 21:12:40 / 修改时间：13:43:55" itemprop="dateCreated datePublished" datetime="2021-03-10T21:12:40+08:00">2021-03-10</time>
-    </span>
-    <span class="post-meta-item">
-      <span class="post-meta-item-icon">
-        <i class="far fa-folder"></i>
-      </span>
-      <span class="post-meta-item-text">分类于</span>
-        <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-          <a href="/nirvana/categories/reactnative/" itemprop="url" rel="index"><span itemprop="name">reactnative</span></a>
-        </span>
-    </span>
-
-  
-    <span id="/nirvana/reactnative/react-native/Text%E7%BB%84%E4%BB%B6/" class="post-meta-item leancloud_visitors" data-flag-title="Text组件" title="阅读次数">
-      <span class="post-meta-item-icon">
-        <i class="far fa-eye"></i>
-      </span>
-      <span class="post-meta-item-text">阅读次数：</span>
-      <span class="leancloud-visitors-count"></span>
-    </span>
-      </div>
-      <div class="post-meta">
-    <span class="post-meta-item" title="本文字数">
-      <span class="post-meta-item-icon">
-        <i class="far fa-file-word"></i>
-      </span>
-      <span class="post-meta-item-text">本文字数：</span>
-      <span>5k</span>
-    </span>
-    <span class="post-meta-item" title="阅读时长">
-      <span class="post-meta-item-icon">
-        <i class="far fa-clock"></i>
-      </span>
-      <span class="post-meta-item-text">阅读时长 &asymp;</span>
-      <span>5 分钟</span>
-    </span>
-</div>
-
-        </div>
-      </header>
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-          <h2 id="介绍"><a href="#介绍" class="headerlink" title="介绍"></a>介绍</h2><p>该Text组件为React中一个基本组件，该和Android中的TextView组件相类似用来显示基本的文本信息，该控件除了基本的显示布局之外，可以进行嵌套显示，设置样式，以及可以做事件(例如:点击)处理。下面我们来一个实例：</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br></pre></td><td class="code"><pre><span class="line">&#x2F;**</span><br><span class="line"> * 进行简单Text组件使用实例</span><br><span class="line"> * Sample React Native App  test.android.js</span><br><span class="line"> * https:&#x2F;&#x2F;github.com&#x2F;facebook&#x2F;react-native</span><br><span class="line"> *&#x2F;</span><br><span class="line">&#39;use strict&#39;;</span><br><span class="line">import React, &#123; Component &#125; from &#39;react&#39;;</span><br><span class="line">import &#123;</span><br><span class="line">  AppRegistry,</span><br><span class="line">  Text,</span><br><span class="line">  View,</span><br><span class="line">  StyleSheet,</span><br><span class="line">&#125; from &#39;react-native&#39;;</span><br><span class="line">var styles &#x3D; StyleSheet.create(&#123;</span><br><span class="line">     titleBase:&#123;</span><br><span class="line">        margin:10,</span><br><span class="line">        textAlign:&#39;center&#39;,</span><br><span class="line">        color:&#39;red&#39;,</span><br><span class="line">        fontSize:28,</span><br><span class="line">        fontFamily:&#39;Cochin&#39;,</span><br><span class="line">     &#125;,</span><br><span class="line">     title:&#123;</span><br><span class="line">        color:&#39;green&#39;,</span><br><span class="line">        fontWeight:&#39;bold&#39;,</span><br><span class="line">     &#125;,</span><br><span class="line">&#125;);</span><br><span class="line">var TestText &#x3D; React.createClass(&#123;</span><br><span class="line">  render: function() &#123;</span><br><span class="line">    return (</span><br><span class="line">      &lt;Text style&#x3D;&#123;styles.titleBase&#125;&gt;</span><br><span class="line">         I am root text!</span><br><span class="line">         &lt;Text style&#x3D;&#123;styles.title&#125;&gt;</span><br><span class="line">              I am chid text!</span><br><span class="line">          &lt;&#x2F;Text&gt;</span><br><span class="line">      &lt;&#x2F;Text&gt;</span><br><span class="line">    );</span><br><span class="line">  &#125;</span><br><span class="line">&#125;);</span><br><span class="line">AppRegistry.registerComponent(&#39;TestText&#39;, () &#x3D;&gt; TestText);</span><br><span class="line"></span><br></pre></td></tr></table></figure>
-
-<p>上述实例采用TextView的嵌套方式，最外层的Text的Style titleBase定义相关风格，内层的风格style定义相关风格，我们可以看到运行效果，如果内层没有重写外层定义的样式，那么内层会进行继承。如果重写了样式，那么内层会根据自己定义的样式进行渲染，该和CSS样式表差不多。</p>
-<h2 id="属性方法-主要一些可用的属性"><a href="#属性方法-主要一些可用的属性" class="headerlink" title="属性方法(主要一些可用的属性)"></a>属性方法(主要一些可用的属性)</h2><ul>
-<li>  ①.allowFontScaling (bool):控制字体是否根据iOS的设置进行自动缩放-iOS平台,Android平台不适用</li>
-<li>  ②.numberOfLines (number):进行设置Text显示文本的行数，如果显示的内容超过了行数，默认其他多余的信息就不会显示了。</li>
-<li>  ③.onLayout (function) 当布局位置发生变动的时候自动进行触发该方法, 其中该function的参数如下: [code lang=”” start=”” highlight=””]{nativeEvent: {layout: {x, y, width, height}}}[/code]</li>
-<li>  ④.onPress (fcuntion) 该方法当文本发生点击的时候调用该方法.</li>
-</ul>
-<h2 id="风格样式"><a href="#风格样式" class="headerlink" title="风格样式"></a>风格样式</h2><ul>
-<li>  1.继承可以使用View组件的所有Style(具体查看<a target="_blank" rel="noopener" href="http://facebook.github.io/react-native/docs/view.html#style">http://facebook.github.io/react-native/docs/view.html#style</a>)</li>
-<li>  2.color:字体颜色</li>
-<li>  3.fontFamily 字体名称</li>
-<li>  4.fontSize 字体大小</li>
-<li>  5.fontStyle 字体风格(normal,italic)</li>
-<li>  6.fontWeight 字体粗细权重(“normal”, ‘bold’, ‘100’, ‘200’, ‘300’, ‘400’, ‘500’, ‘600’, ‘700’, ‘800’, ‘900’)</li>
-<li>  7.textShadowOffset 设置阴影效果{width: number, height: number}</li>
-<li>  8.textShadowRadius 阴影效果圆角</li>
-<li>  9..textShadowColor 阴影效果的颜色</li>
-<li>  10.letterSpacing 字符间距</li>
-<li>  11.lineHeight 行高</li>
-<li>  12.textAlign 文本对其方式(“auto”, ‘left’, ‘right’, ‘center’, ‘justify’)</li>
-<li>  13.textDecorationLine 横线位置 (“none”, ‘underline’, ‘line-through’, ‘underline line-through’)</li>
-<li>  14.textDecorationStyle 线的风格(“solid”, ‘double’, ‘dotted’, ‘dashed’)</li>
-<li>  15.textDecorationColor 线的颜色</li>
-<li>  16.writingDirection 文本方向(“auto”, ‘ltr’, ‘rtl’)</li>
-</ul>
-<h2 id="特别注意点"><a href="#特别注意点" class="headerlink" title="特别注意点"></a>特别注意点</h2><h3 id="嵌套特点"><a href="#嵌套特点" class="headerlink" title="嵌套特点"></a>嵌套特点</h3><p>和Web上面一直的设计方案，我们通过嵌套包裹的方案，相同的属性的文本可以用父标签进行包裹，然后内部特殊的文本采用子标签方案，具体例子如下:</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">&lt;Text style&#x3D;&#123;&#123;fontWeight: &#39;bold&#39;,fontSize:28&#125;&#125;&gt;</span><br><span class="line">      I am bold</span><br><span class="line">      &lt;Text style&#x3D;&#123;&#123;color: &#39;red&#39;&#125;&#125;&gt;</span><br><span class="line">        and red</span><br><span class="line">    &lt;&#x2F;Text&gt;</span><br><span class="line">&lt;&#x2F;Text&gt;</span><br><span class="line"></span><br></pre></td></tr></table></figure>
-
-<p>整体字体格式为bold以及字体大小为28，不过后边的’and red’的字体颜色为红色。</p>
-<h3 id="容器布局规则"><a href="#容器布局规则" class="headerlink" title="容器布局规则"></a>容器布局规则</h3><p>FlexBox(弹性布局),</p>
-<h3 id="样式继承规格"><a href="#样式继承规格" class="headerlink" title="样式继承规格"></a>样式继承规格</h3><p>组件可以嵌套，而且样式还支持继承，也就说父组件定义了相关样式，如果子组件没有重写样式的话，那么该子组件会继承父组件定义的样式。</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br></pre></td><td class="code"><pre><span class="line">&#x2F;**</span><br><span class="line"> *  Text组件实例演示</span><br><span class="line"> * Sample React Native App</span><br><span class="line"> * https:&#x2F;&#x2F;github.com&#x2F;facebook&#x2F;react-native</span><br><span class="line"> *&#x2F;</span><br><span class="line">&#39;use strict&#39;;</span><br><span class="line"></span><br><span class="line">import React, &#123; Component &#125; from &#39;react&#39;;</span><br><span class="line">import &#123;</span><br><span class="line">  AppRegistry,</span><br><span class="line">  Text,</span><br><span class="line">  View,</span><br><span class="line">  StyleSheet,</span><br><span class="line">&#125; from &#39;react-native&#39;;</span><br><span class="line">var TestText &#x3D; React.createClass(&#123;</span><br><span class="line">  render: function() &#123;</span><br><span class="line">    return (</span><br><span class="line">      &lt;View&gt;</span><br><span class="line">       &lt;Text style&#x3D;&#123;&#123;color:&#39;red&#39;&#125;&#125;&gt;</span><br><span class="line">          My Text One  红色。</span><br><span class="line">       &lt;&#x2F;Text&gt;</span><br><span class="line">       &lt;Text style&#x3D;&#123;&#123;color:&#39;green&#39;,fontSize:20&#125;&#125;&gt; My Text Two 绿色和字体大小。&lt;&#x2F;Text&gt;</span><br><span class="line">       &lt;Text style&#x3D;&#123;&#123;color:&#39;green&#39;,fontFamily:&#39;Cochin&#39;&#125;&#125;&gt; My Text Three 绿色和字体名称。&lt;&#x2F;Text&gt;</span><br><span class="line">       &lt;Text style&#x3D;&#123;&#123;color:&#39;pink&#39;,fontWeight:&#39;bold&#39;&#125;&#125;&gt; My Text Four 粉色和加粗。&lt;&#x2F;Text&gt;</span><br><span class="line">       &lt;Text style&#x3D;&#123;&#123;color:&#39;gray&#39;,fontStyle:&#39;italic&#39;&#125;&#125;&gt; My Text Five 灰色和斜体。&lt;&#x2F;Text&gt;</span><br><span class="line">       &lt;Text style&#x3D;&#123;&#123;textAlign:&#39;center&#39;,fontStyle:&#39;italic&#39;&#125;&#125;&gt; My Text Six 居中和斜体。&lt;&#x2F;Text&gt;</span><br><span class="line">       &lt;Text numberOfLines&#x3D;&#123;1&#125; style&#x3D;&#123;&#123;textAlign:&#39;center&#39;,fontStyle:&#39;italic&#39;&#125;&#125;&gt;测试行数My Text Six 居中和斜体。My Text Six 居中和斜体。 My Text Six 居中和斜体。&lt;&#x2F;Text&gt;</span><br><span class="line">       &lt;Text style&#x3D;&#123;&#123;marginLeft:50,marginTop:50,textAlign:&#39;center&#39;,fontStyle:&#39;italic&#39;&#125;&#125;&gt;设置文本的间距,居左，居顶部50&lt;&#x2F;Text&gt;</span><br><span class="line">       &lt;Text numberOfLines&#x3D;&#123;2&#125; style&#x3D;&#123;&#123;lineHeight:50,textAlign:&#39;center&#39;,fontStyle:&#39;italic&#39;&#125;&#125;&gt;</span><br><span class="line">          测试行高 测试行高 测试行高 测试行高 测试行高 测试行高 测试行高 测试行高 测试行高 测试行高 测试行高 </span><br><span class="line">          测试行高 测试行高 测试行高 测试行高 测试行高 测试行高</span><br><span class="line">       &lt;&#x2F;Text&gt;</span><br><span class="line">      &lt;&#x2F;View&gt;</span><br><span class="line">    );</span><br><span class="line">  &#125;</span><br><span class="line">&#125;);</span><br><span class="line">AppRegistry.registerComponent(&#39;TestText&#39;, () &#x3D;&gt; TestText);</span><br><span class="line"></span><br></pre></td></tr></table></figure>
-
-<h2 id="注"><a href="#注" class="headerlink" title="注"></a>注</h2><p>1、在使用Text的过程中，实现文本垂直居中、水平居中的效果（iOS和Android通用）</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br></pre></td><td class="code"><pre><span class="line">&lt;View  style&#x3D;&#123;styles.textView&#125;&gt;</span><br><span class="line">    &lt;Text style&#x3D;&#123;styles.text&#125;&gt; 水平垂直居中&lt;&#x2F;Text&gt;</span><br><span class="line">&lt;&#x2F;View&gt;</span><br><span class="line"></span><br><span class="line">textView:&#123;</span><br><span class="line">  flexDirection:&#39;column&#39;,</span><br><span class="line">  justifyContent:&#39;center&#39;,</span><br><span class="line">  alignItems:&#39;center&#39;,</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">text:&#123;</span><br><span class="line">    fontSize:12,</span><br><span class="line">    color:&#39;#f2f2f2&#39;,</span><br><span class="line">&#125;</span><br><span class="line"></span><br></pre></td></tr></table></figure>
-
-<p>尽量用view去包裹一层Text组件，text组件只负责基础的文字样式，View组件负责对齐方式等。</p>
-<p>2、在Android平台上，Text组件里使用paddingLeft 属性，不好使，直接顶着View了。</p>
-<p>解决方式：1）将paddingLeft放在View属性上;2）将paddingLeft修改为marginLeft</p>
-<p>建议使用第一种方案修改，把对齐方式交给view去处理，Text只负责文本属性的显示。</p>
-
-      
-    </div>
-
-    
-    
-    
-
-    <footer class="post-footer">
-        <div class="post-eof"></div>
-      
-    </footer>
-  </article>
-</div>
-
-
-
-
-    
-
-
-<div class="post-block">
-  
-  
-
-  <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="">
-    <link itemprop="mainEntityOfPage" href="https://lzhwweb.github.io/nirvana/reactnative/react-native/React-Native-1px%E5%A4%84%E7%90%86/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="image" content="/nirvana/images/headphoto.jpeg">
-      <meta itemprop="name" content="nirvana">
-      <meta itemprop="description" content="个人学习笔记">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="涅槃快乐是金">
-    </span>
-      <header class="post-header">
-        <h2 class="post-title" itemprop="name headline">
-          <a href="/nirvana/reactnative/react-native/React-Native-1px%E5%A4%84%E7%90%86/" class="post-title-link" itemprop="url">React-Native-1px处理</a>
-        </h2>
-
-        <div class="post-meta-container">
-          <div class="post-meta">
-    <span class="post-meta-item">
-      <span class="post-meta-item-icon">
-        <i class="far fa-calendar"></i>
-      </span>
-      <span class="post-meta-item-text">发表于</span>
-      
-
-      <time title="创建时间：2021-03-10 21:12:40 / 修改时间：13:43:55" itemprop="dateCreated datePublished" datetime="2021-03-10T21:12:40+08:00">2021-03-10</time>
-    </span>
-    <span class="post-meta-item">
-      <span class="post-meta-item-icon">
-        <i class="far fa-folder"></i>
-      </span>
-      <span class="post-meta-item-text">分类于</span>
-        <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-          <a href="/nirvana/categories/reactnative/" itemprop="url" rel="index"><span itemprop="name">reactnative</span></a>
-        </span>
-    </span>
-
-  
-    <span id="/nirvana/reactnative/react-native/React-Native-1px%E5%A4%84%E7%90%86/" class="post-meta-item leancloud_visitors" data-flag-title="React-Native-1px处理" title="阅读次数">
-      <span class="post-meta-item-icon">
-        <i class="far fa-eye"></i>
-      </span>
-      <span class="post-meta-item-text">阅读次数：</span>
-      <span class="leancloud-visitors-count"></span>
-    </span>
-      </div>
-      <div class="post-meta">
-    <span class="post-meta-item" title="本文字数">
-      <span class="post-meta-item-icon">
-        <i class="far fa-file-word"></i>
-      </span>
-      <span class="post-meta-item-text">本文字数：</span>
-      <span>220</span>
-    </span>
-    <span class="post-meta-item" title="阅读时长">
-      <span class="post-meta-item-icon">
-        <i class="far fa-clock"></i>
-      </span>
-      <span class="post-meta-item-text">阅读时长 &asymp;</span>
-      <span>1 分钟</span>
-    </span>
-</div>
-
-        </div>
-      </header>
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-          <p>当UI设计图上标注某间距为1px时，只需在间距设置的地方填如下值：</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line">import &#123;</span><br><span class="line">  View,</span><br><span class="line">  StyleSheet,</span><br><span class="line">  PixelRatio, </span><br><span class="line">&#125; from &#39;react-native&#39;</span><br><span class="line">&#x2F;&#x2F;要用到 PixelRatio.get() 则需从react-native组件中引用 PixelRatio</span><br><span class="line">1px:&#123;</span><br><span class="line">        height:1 &#x2F; PixelRatio.get()</span><br><span class="line">    &#125;</span><br></pre></td></tr></table></figure>
-
-      
-    </div>
-
-    
-    
-    
-
-    <footer class="post-footer">
-        <div class="post-eof"></div>
-      
-    </footer>
-  </article>
-</div>
-
-
-
-
-    
-
-
-<div class="post-block">
-  
-  
-
-  <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="">
-    <link itemprop="mainEntityOfPage" href="https://lzhwweb.github.io/nirvana/reactnative/react-native/iOS-RN-0-45%E4%BB%A5%E4%B8%8A%E7%89%88%E6%9C%AC%E7%BD%91%E7%BB%9C%E9%97%AE%E9%A2%98%E6%97%A0%E6%B3%95%E5%90%AF%E5%8A%A8/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="image" content="/nirvana/images/headphoto.jpeg">
-      <meta itemprop="name" content="nirvana">
-      <meta itemprop="description" content="个人学习笔记">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="涅槃快乐是金">
-    </span>
-      <header class="post-header">
-        <h2 class="post-title" itemprop="name headline">
-          <a href="/nirvana/reactnative/react-native/iOS-RN-0-45%E4%BB%A5%E4%B8%8A%E7%89%88%E6%9C%AC%E7%BD%91%E7%BB%9C%E9%97%AE%E9%A2%98%E6%97%A0%E6%B3%95%E5%90%AF%E5%8A%A8/" class="post-title-link" itemprop="url">iOS-RN-0-45以上版本网络问题无法启动</a>
-        </h2>
-
-        <div class="post-meta-container">
-          <div class="post-meta">
-    <span class="post-meta-item">
-      <span class="post-meta-item-icon">
-        <i class="far fa-calendar"></i>
-      </span>
-      <span class="post-meta-item-text">发表于</span>
-      
-
-      <time title="创建时间：2021-03-10 21:12:40 / 修改时间：13:43:55" itemprop="dateCreated datePublished" datetime="2021-03-10T21:12:40+08:00">2021-03-10</time>
-    </span>
-    <span class="post-meta-item">
-      <span class="post-meta-item-icon">
-        <i class="far fa-folder"></i>
-      </span>
-      <span class="post-meta-item-text">分类于</span>
-        <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-          <a href="/nirvana/categories/reactnative/" itemprop="url" rel="index"><span itemprop="name">reactnative</span></a>
-        </span>
-    </span>
-
-  
-    <span id="/nirvana/reactnative/react-native/iOS-RN-0-45%E4%BB%A5%E4%B8%8A%E7%89%88%E6%9C%AC%E7%BD%91%E7%BB%9C%E9%97%AE%E9%A2%98%E6%97%A0%E6%B3%95%E5%90%AF%E5%8A%A8/" class="post-meta-item leancloud_visitors" data-flag-title="iOS-RN-0-45以上版本网络问题无法启动" title="阅读次数">
-      <span class="post-meta-item-icon">
-        <i class="far fa-eye"></i>
-      </span>
-      <span class="post-meta-item-text">阅读次数：</span>
-      <span class="leancloud-visitors-count"></span>
-    </span>
-      </div>
-      <div class="post-meta">
-    <span class="post-meta-item" title="本文字数">
-      <span class="post-meta-item-icon">
-        <i class="far fa-file-word"></i>
-      </span>
-      <span class="post-meta-item-text">本文字数：</span>
-      <span>1k</span>
-    </span>
-    <span class="post-meta-item" title="阅读时长">
-      <span class="post-meta-item-icon">
-        <i class="far fa-clock"></i>
-      </span>
-      <span class="post-meta-item-text">阅读时长 &asymp;</span>
-      <span>1 分钟</span>
-    </span>
-</div>
-
-        </div>
-      </header>
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-          <p>RN iOS 0.45以上版本开始需要依赖一些第三方编译库，但这些库在国内下载都非常困难（一般的翻墙工具都很难下载）<br>未来RN不同版本可能依赖不同版本的第三方编译库，具体所需库和版本请查看<a target="_blank" rel="noopener" href="https://github.com/facebook/react-native/blob/master/scripts/ios-install-third-party.sh">ios-install-third-party.sh</a>文件，注意先把左上角的branch切换到对应的版本.</p>
-<p><img src="http://upload-images.jianshu.io/upload_images/10024246-4967270af295b740.jpg?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="1515804427550.jpg"></p>
-<p>在文件最下面找到需要第三方编译库</p>
-<p><img src="http://upload-images.jianshu.io/upload_images/10024246-182697a23377bd82.jpg?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="1515804585324.jpg"></p>
-<p>我现在使用的52版本的内容为</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">fetch_and_unpack glog-0.3.4.tar.gz https:&#x2F;&#x2F;github.com&#x2F;google&#x2F;glog&#x2F;archive&#x2F;v0.3.4.tar.gz 69f91cd5a1de35ead0bc4103ea87294b0206a456 &quot;\&quot;$SCRIPTDIR&#x2F;ios-configure-glog.sh\&quot;&quot;</span><br><span class="line">fetch_and_unpack double-conversion-1.1.5.tar.gz https:&#x2F;&#x2F;github.com&#x2F;google&#x2F;double-conversion&#x2F;archive&#x2F;v1.1.5.tar.gz 96a8aba1b4ce7d4a7a3c123be26c379c2fed1def</span><br><span class="line">fetch_and_unpack boost_1_63_0.tar.gz https:&#x2F;&#x2F;github.com&#x2F;react-native-community&#x2F;boost-for-react-native&#x2F;releases&#x2F;download&#x2F;v1.63.0-0&#x2F;boost_1_63_0.tar.gz c3f57e1d22a995e608983effbb752b54b6eab741</span><br><span class="line">fetch_and_unpack folly-2016.09.26.00.tar.gz https:&#x2F;&#x2F;github.com&#x2F;facebook&#x2F;folly&#x2F;archive&#x2F;v2016.09.26.00.tar.gz f3b928b5039235bad6cece638c597c6684d1e4e6</span><br></pre></td></tr></table></figure>
-
-<p>下载完后需要把文件copy到***~/.rncache***下，然后就可以运行RN程序了</p>
-
-      
-    </div>
-
-    
-    
-    
-
-    <footer class="post-footer">
-        <div class="post-eof"></div>
-      
-    </footer>
-  </article>
-</div>
-
-
-
-
-    
-
-
-<div class="post-block">
-  
-  
-
-  <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="">
-    <link itemprop="mainEntityOfPage" href="https://lzhwweb.github.io/nirvana/reactnative/react-native/react-native-0-63%E5%90%AF%E5%8A%A8%E9%97%AE%E9%A2%98/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="image" content="/nirvana/images/headphoto.jpeg">
-      <meta itemprop="name" content="nirvana">
-      <meta itemprop="description" content="个人学习笔记">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="涅槃快乐是金">
-    </span>
-      <header class="post-header">
-        <h2 class="post-title" itemprop="name headline">
-          <a href="/nirvana/reactnative/react-native/react-native-0-63%E5%90%AF%E5%8A%A8%E9%97%AE%E9%A2%98/" class="post-title-link" itemprop="url">react-native-0-63启动问题</a>
-        </h2>
-
-        <div class="post-meta-container">
-          <div class="post-meta">
-    <span class="post-meta-item">
-      <span class="post-meta-item-icon">
-        <i class="far fa-calendar"></i>
-      </span>
-      <span class="post-meta-item-text">发表于</span>
-      
-
-      <time title="创建时间：2021-03-10 21:12:40 / 修改时间：13:43:55" itemprop="dateCreated datePublished" datetime="2021-03-10T21:12:40+08:00">2021-03-10</time>
-    </span>
-    <span class="post-meta-item">
-      <span class="post-meta-item-icon">
-        <i class="far fa-folder"></i>
-      </span>
-      <span class="post-meta-item-text">分类于</span>
-        <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-          <a href="/nirvana/categories/reactnative/" itemprop="url" rel="index"><span itemprop="name">reactnative</span></a>
-        </span>
-    </span>
-
-  
-    <span id="/nirvana/reactnative/react-native/react-native-0-63%E5%90%AF%E5%8A%A8%E9%97%AE%E9%A2%98/" class="post-meta-item leancloud_visitors" data-flag-title="react-native-0-63启动问题" title="阅读次数">
-      <span class="post-meta-item-icon">
-        <i class="far fa-eye"></i>
-      </span>
-      <span class="post-meta-item-text">阅读次数：</span>
-      <span class="leancloud-visitors-count"></span>
-    </span>
-      </div>
-      <div class="post-meta">
-    <span class="post-meta-item" title="本文字数">
-      <span class="post-meta-item-icon">
-        <i class="far fa-file-word"></i>
-      </span>
-      <span class="post-meta-item-text">本文字数：</span>
-      <span>520</span>
-    </span>
-    <span class="post-meta-item" title="阅读时长">
-      <span class="post-meta-item-icon">
-        <i class="far fa-clock"></i>
-      </span>
-      <span class="post-meta-item-text">阅读时长 &asymp;</span>
-      <span>1 分钟</span>
-    </span>
-</div>
-
-        </div>
-      </header>
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-          <p>1、<code>OpenSSL-Universal</code> requires CocoaPods version <code>&gt;= &quot;1.9</code>“<br>podinstall时提示需要把CocoaPods升级到1.9，但是通过brew install CocoaPods，发现安装的版本是1.6.1，brew upgrade CocoaPods 发现版本无法升级，后来查到1.9的版本需要通过<code>gem install -n /usr/local/bin cocoapods --pre</code>才能安装最新的版本<br>2、Typedef redefinition with different types (‘uint8_t’ (aka ‘unsigned char’) vs ‘enum clockid_t’)<br>changing <code>iOS Deployment Target</code> of <code>Flipper-Folly Pods</code> to “iOS 9.0”, this error disappeared.<br><a target="_blank" rel="noopener" href="https://user-images.githubusercontent.com/3139234/78309578-52984600-7586-11ea-9d27-cefdc6e7ca0f.png"><img src="https://upload-images.jianshu.io/upload_images/10024246-e337b36acb480adc.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240"></a><br>3、 ‘event2/event-config.h’ file not found<br> Flipper-Folly的版本有问题，需要指定版本<br>use_flipper!修改为use_flipper!({ ‘Flipper-Folly’ =&gt; ‘2.3.0’ })<br>重新pod install即可</p>
-
-      
-    </div>
-
-    
-    
-    
-
-    <footer class="post-footer">
-        <div class="post-eof"></div>
-      
-    </footer>
-  </article>
-</div>
-
-
-
-
-    
-
-
-<div class="post-block">
-  
-  
-
-  <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="">
-    <link itemprop="mainEntityOfPage" href="https://lzhwweb.github.io/nirvana/mac/mac/MAC-%E8%93%9D%E7%89%99%E9%97%AE%E9%A2%98%E8%A7%A3%E5%86%B3%E5%8A%A0%E5%BC%BA%E7%89%88(-Airdrop-%E6%89%BE%E4%B8%8D%E5%88%B0,-%E8%93%9D%E7%89%99%E6%89%BE%E4%B8%8D%E5%88%B0%E7%AD%89-)/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="image" content="/nirvana/images/headphoto.jpeg">
-      <meta itemprop="name" content="nirvana">
-      <meta itemprop="description" content="个人学习笔记">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="涅槃快乐是金">
-    </span>
-      <header class="post-header">
-        <h2 class="post-title" itemprop="name headline">
-          <a href="/nirvana/mac/mac/MAC-%E8%93%9D%E7%89%99%E9%97%AE%E9%A2%98%E8%A7%A3%E5%86%B3%E5%8A%A0%E5%BC%BA%E7%89%88(-Airdrop-%E6%89%BE%E4%B8%8D%E5%88%B0,-%E8%93%9D%E7%89%99%E6%89%BE%E4%B8%8D%E5%88%B0%E7%AD%89-)/" class="post-title-link" itemprop="url">MAC-蓝牙问题解决加强版(-Airdrop-找不到,-蓝牙找不到等-)</a>
-        </h2>
-
-        <div class="post-meta-container">
-          <div class="post-meta">
-    <span class="post-meta-item">
-      <span class="post-meta-item-icon">
-        <i class="far fa-calendar"></i>
-      </span>
-      <span class="post-meta-item-text">发表于</span>
-      
-
-      <time title="创建时间：2021-03-10 21:12:40 / 修改时间：13:43:55" itemprop="dateCreated datePublished" datetime="2021-03-10T21:12:40+08:00">2021-03-10</time>
-    </span>
-    <span class="post-meta-item">
-      <span class="post-meta-item-icon">
-        <i class="far fa-folder"></i>
-      </span>
-      <span class="post-meta-item-text">分类于</span>
-        <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-          <a href="/nirvana/categories/mac/" itemprop="url" rel="index"><span itemprop="name">mac</span></a>
-        </span>
-    </span>
-
-  
-    <span id="/nirvana/mac/mac/MAC-%E8%93%9D%E7%89%99%E9%97%AE%E9%A2%98%E8%A7%A3%E5%86%B3%E5%8A%A0%E5%BC%BA%E7%89%88(-Airdrop-%E6%89%BE%E4%B8%8D%E5%88%B0,-%E8%93%9D%E7%89%99%E6%89%BE%E4%B8%8D%E5%88%B0%E7%AD%89-)/" class="post-meta-item leancloud_visitors" data-flag-title="MAC-蓝牙问题解决加强版(-Airdrop-找不到,-蓝牙找不到等-)" title="阅读次数">
-      <span class="post-meta-item-icon">
-        <i class="far fa-eye"></i>
-      </span>
-      <span class="post-meta-item-text">阅读次数：</span>
-      <span class="leancloud-visitors-count"></span>
-    </span>
-      </div>
-      <div class="post-meta">
-    <span class="post-meta-item" title="本文字数">
-      <span class="post-meta-item-icon">
-        <i class="far fa-file-word"></i>
-      </span>
-      <span class="post-meta-item-text">本文字数：</span>
-      <span>232</span>
-    </span>
-    <span class="post-meta-item" title="阅读时长">
-      <span class="post-meta-item-icon">
-        <i class="far fa-clock"></i>
-      </span>
-      <span class="post-meta-item-text">阅读时长 &asymp;</span>
-      <span>1 分钟</span>
-    </span>
-</div>
-
-        </div>
-      </header>
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-          <p>如果你电脑出现了比如经常丢链接, 或者Hand off 不工作, Airdrop 找不到的话, 先升级到10.11.2 系统, 应该能解决很多已存的Bug.</p>
-<p>如果依然没有解决的话, 首先你可以先去删除bluetooth的配置文件. <br>在</p>
-<p>/Library/Preferences/</p>
-<p>目录里. </p>
-<p><img src="http://upload-images.jianshu.io/upload_images/10024246-5917f0bfaef81518.jpg?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" title="正在搜索“Preferences”.jpg"></p>
-<p>按 Command-shift-G , 找到后搜索 blue 就行了. </p>
-<p>删除后重启, 蓝牙配置就会重置了.  也可以尝试重启的时候按住 Command-Option-p-r 三声后松手, 也就是俗称的PR大法. 清理PR缓存. </p>
-<p>–</p>
-
-      
-    </div>
-
-    
-    
-    
-
-    <footer class="post-footer">
-        <div class="post-eof"></div>
-      
-    </footer>
-  </article>
-</div>
-
-
-
-
-    
-
-
-<div class="post-block">
-  
-  
-
-  <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="">
     <link itemprop="mainEntityOfPage" href="https://lzhwweb.github.io/nirvana/mac/mac/Mac-OS-%E5%AE%89%E8%A3%85-Telnet/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
@@ -1138,119 +488,6 @@
   
 
   <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="">
-    <link itemprop="mainEntityOfPage" href="https://lzhwweb.github.io/nirvana/mac/mac/Mac-%E6%95%88%E7%8E%87%E5%B7%A5%E5%85%B7%E8%BD%AF%E4%BB%B6-OpenInTerminal/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="image" content="/nirvana/images/headphoto.jpeg">
-      <meta itemprop="name" content="nirvana">
-      <meta itemprop="description" content="个人学习笔记">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="涅槃快乐是金">
-    </span>
-      <header class="post-header">
-        <h2 class="post-title" itemprop="name headline">
-          <a href="/nirvana/mac/mac/Mac-%E6%95%88%E7%8E%87%E5%B7%A5%E5%85%B7%E8%BD%AF%E4%BB%B6-OpenInTerminal/" class="post-title-link" itemprop="url">Mac-效率工具软件-OpenInTerminal</a>
-        </h2>
-
-        <div class="post-meta-container">
-          <div class="post-meta">
-    <span class="post-meta-item">
-      <span class="post-meta-item-icon">
-        <i class="far fa-calendar"></i>
-      </span>
-      <span class="post-meta-item-text">发表于</span>
-      
-
-      <time title="创建时间：2021-03-10 21:12:40 / 修改时间：13:43:55" itemprop="dateCreated datePublished" datetime="2021-03-10T21:12:40+08:00">2021-03-10</time>
-    </span>
-    <span class="post-meta-item">
-      <span class="post-meta-item-icon">
-        <i class="far fa-folder"></i>
-      </span>
-      <span class="post-meta-item-text">分类于</span>
-        <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-          <a href="/nirvana/categories/mac/" itemprop="url" rel="index"><span itemprop="name">mac</span></a>
-        </span>
-    </span>
-
-  
-    <span id="/nirvana/mac/mac/Mac-%E6%95%88%E7%8E%87%E5%B7%A5%E5%85%B7%E8%BD%AF%E4%BB%B6-OpenInTerminal/" class="post-meta-item leancloud_visitors" data-flag-title="Mac-效率工具软件-OpenInTerminal" title="阅读次数">
-      <span class="post-meta-item-icon">
-        <i class="far fa-eye"></i>
-      </span>
-      <span class="post-meta-item-text">阅读次数：</span>
-      <span class="leancloud-visitors-count"></span>
-    </span>
-      </div>
-      <div class="post-meta">
-    <span class="post-meta-item" title="本文字数">
-      <span class="post-meta-item-icon">
-        <i class="far fa-file-word"></i>
-      </span>
-      <span class="post-meta-item-text">本文字数：</span>
-      <span>313</span>
-    </span>
-    <span class="post-meta-item" title="阅读时长">
-      <span class="post-meta-item-icon">
-        <i class="far fa-clock"></i>
-      </span>
-      <span class="post-meta-item-text">阅读时长 &asymp;</span>
-      <span>1 分钟</span>
-    </span>
-</div>
-
-        </div>
-      </header>
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-          <p>软件是以 Finder 的扩展形式存在的，安装后你并不会在 Applications 文件夹中看到它。</p>
-<h4 id="总结来说有三点"><a href="#总结来说有三点" class="headerlink" title="总结来说有三点"></a>总结来说有三点</h4><ul>
-<li>可以快速从终端（Terminal）中打开某个目录</li>
-<li>可以快速用编辑器打开某个目录或者文件</li>
-<li>可以复制某个文件或者目录的路径<br><img src="https://upload-images.jianshu.io/upload_images/10024246-4dcfaae0ade1f4a7.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240"><br><img src="https://upload-images.jianshu.io/upload_images/10024246-ce3c7903db535631.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240"><h2 id="如何安装🖥"><a href="#如何安装🖥" class="headerlink" title="如何安装🖥"></a>如何安装🖥</h2></li>
-</ul>
-<h3 id="1-下载"><a href="#1-下载" class="headerlink" title="1. 下载"></a>1. 下载</h3><h4 id="a-Homebrew"><a href="#a-Homebrew" class="headerlink" title="a) Homebrew"></a>a) Homebrew</h4><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">brew install --cask openinterminal</span><br></pre></td></tr></table></figure>
-
-<h4 id="b-手动"><a href="#b-手动" class="headerlink" title="b) 手动"></a>b) 手动</h4><ol>
-<li> 从 <a target="_blank" rel="noopener" href="https://github.com/Ji4n1ng/OpenInTerminal/releases">release</a> 中下载。</li>
-<li> 将应用移动到 <code>应用程序</code> 文件夹。</li>
-</ol>
-<blockquote>
-<p>⚠️当您第一次运行应用程序时，macOS 将要求访问 <code>访达</code> 和 <code>终端</code>（或 <code>iTerm</code>）的权限。请给予应用程序权限。</p>
-</blockquote>
-<h3 id="2-打开-Finder-扩展权限"><a href="#2-打开-Finder-扩展权限" class="headerlink" title="2. 打开 Finder 扩展权限"></a><a target="_blank" rel="noopener" href="https://github.com/Ji4n1ng/OpenInTerminal/blob/master/Resources/README-zh.md#2-%E6%89%93%E5%BC%80-finder-%E6%89%A9%E5%B1%95%E6%9D%83%E9%99%90"></a>2. 打开 Finder 扩展权限</h3><p>打开 OpenInTerminal 应用。去 <code>系统偏好设置</code> -&gt; <code>扩展</code> -&gt; <code>访达扩展</code>，打开下图中的权限按钮。</p>
-<p><img src="https://upload-images.jianshu.io/upload_images/10024246-1f143a78e0bf16ca.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240"></p>
-
-      
-    </div>
-
-    
-    
-    
-
-    <footer class="post-footer">
-        <div class="post-eof"></div>
-      
-    </footer>
-  </article>
-</div>
-
-
-
-
-    
-
-
-<div class="post-block">
-  
-  
-
-  <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="">
     <link itemprop="mainEntityOfPage" href="https://lzhwweb.github.io/nirvana/mac/mac/Mac-%EF%BC%9A%E4%BF%AE%E6%94%B9-DNS-%E5%8F%8A%E6%B8%85%E9%99%A4-DNS-%E7%BC%93%E5%AD%98/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
@@ -1382,6 +619,751 @@
 <ul>
 <li>  DNS 清除缓存方法来自：<a target="_blank" rel="noopener" href="https://support.apple.com/zh-cn/HT202516">苹果官网</a></li>
 <li>  DNS 修改图片来自：<a target="_blank" rel="noopener" href="https://support.dnspod.cn/Kb/showarticle/tsid/240/#link1">DNSPOD</a></li>
+</ul>
+
+      
+    </div>
+
+    
+    
+    
+
+    <footer class="post-footer">
+        <div class="post-eof"></div>
+      
+    </footer>
+  </article>
+</div>
+
+
+
+
+    
+
+
+<div class="post-block">
+  
+  
+
+  <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="">
+    <link itemprop="mainEntityOfPage" href="https://lzhwweb.github.io/nirvana/mac/mac/Mac-%E6%95%88%E7%8E%87%E5%B7%A5%E5%85%B7%E8%BD%AF%E4%BB%B6-OpenInTerminal/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/nirvana/images/headphoto.jpeg">
+      <meta itemprop="name" content="nirvana">
+      <meta itemprop="description" content="个人学习笔记">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="涅槃快乐是金">
+    </span>
+      <header class="post-header">
+        <h2 class="post-title" itemprop="name headline">
+          <a href="/nirvana/mac/mac/Mac-%E6%95%88%E7%8E%87%E5%B7%A5%E5%85%B7%E8%BD%AF%E4%BB%B6-OpenInTerminal/" class="post-title-link" itemprop="url">Mac-效率工具软件-OpenInTerminal</a>
+        </h2>
+
+        <div class="post-meta-container">
+          <div class="post-meta">
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-calendar"></i>
+      </span>
+      <span class="post-meta-item-text">发表于</span>
+      
+
+      <time title="创建时间：2021-03-10 21:12:40 / 修改时间：13:43:55" itemprop="dateCreated datePublished" datetime="2021-03-10T21:12:40+08:00">2021-03-10</time>
+    </span>
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-folder"></i>
+      </span>
+      <span class="post-meta-item-text">分类于</span>
+        <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+          <a href="/nirvana/categories/mac/" itemprop="url" rel="index"><span itemprop="name">mac</span></a>
+        </span>
+    </span>
+
+  
+    <span id="/nirvana/mac/mac/Mac-%E6%95%88%E7%8E%87%E5%B7%A5%E5%85%B7%E8%BD%AF%E4%BB%B6-OpenInTerminal/" class="post-meta-item leancloud_visitors" data-flag-title="Mac-效率工具软件-OpenInTerminal" title="阅读次数">
+      <span class="post-meta-item-icon">
+        <i class="far fa-eye"></i>
+      </span>
+      <span class="post-meta-item-text">阅读次数：</span>
+      <span class="leancloud-visitors-count"></span>
+    </span>
+      </div>
+      <div class="post-meta">
+    <span class="post-meta-item" title="本文字数">
+      <span class="post-meta-item-icon">
+        <i class="far fa-file-word"></i>
+      </span>
+      <span class="post-meta-item-text">本文字数：</span>
+      <span>313</span>
+    </span>
+    <span class="post-meta-item" title="阅读时长">
+      <span class="post-meta-item-icon">
+        <i class="far fa-clock"></i>
+      </span>
+      <span class="post-meta-item-text">阅读时长 &asymp;</span>
+      <span>1 分钟</span>
+    </span>
+</div>
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+          <p>软件是以 Finder 的扩展形式存在的，安装后你并不会在 Applications 文件夹中看到它。</p>
+<h4 id="总结来说有三点"><a href="#总结来说有三点" class="headerlink" title="总结来说有三点"></a>总结来说有三点</h4><ul>
+<li>可以快速从终端（Terminal）中打开某个目录</li>
+<li>可以快速用编辑器打开某个目录或者文件</li>
+<li>可以复制某个文件或者目录的路径<br><img src="https://upload-images.jianshu.io/upload_images/10024246-4dcfaae0ade1f4a7.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240"><br><img src="https://upload-images.jianshu.io/upload_images/10024246-ce3c7903db535631.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240"><h2 id="如何安装🖥"><a href="#如何安装🖥" class="headerlink" title="如何安装🖥"></a>如何安装🖥</h2></li>
+</ul>
+<h3 id="1-下载"><a href="#1-下载" class="headerlink" title="1. 下载"></a>1. 下载</h3><h4 id="a-Homebrew"><a href="#a-Homebrew" class="headerlink" title="a) Homebrew"></a>a) Homebrew</h4><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">brew install --cask openinterminal</span><br></pre></td></tr></table></figure>
+
+<h4 id="b-手动"><a href="#b-手动" class="headerlink" title="b) 手动"></a>b) 手动</h4><ol>
+<li> 从 <a target="_blank" rel="noopener" href="https://github.com/Ji4n1ng/OpenInTerminal/releases">release</a> 中下载。</li>
+<li> 将应用移动到 <code>应用程序</code> 文件夹。</li>
+</ol>
+<blockquote>
+<p>⚠️当您第一次运行应用程序时，macOS 将要求访问 <code>访达</code> 和 <code>终端</code>（或 <code>iTerm</code>）的权限。请给予应用程序权限。</p>
+</blockquote>
+<h3 id="2-打开-Finder-扩展权限"><a href="#2-打开-Finder-扩展权限" class="headerlink" title="2. 打开 Finder 扩展权限"></a><a target="_blank" rel="noopener" href="https://github.com/Ji4n1ng/OpenInTerminal/blob/master/Resources/README-zh.md#2-%E6%89%93%E5%BC%80-finder-%E6%89%A9%E5%B1%95%E6%9D%83%E9%99%90"></a>2. 打开 Finder 扩展权限</h3><p>打开 OpenInTerminal 应用。去 <code>系统偏好设置</code> -&gt; <code>扩展</code> -&gt; <code>访达扩展</code>，打开下图中的权限按钮。</p>
+<p><img src="https://upload-images.jianshu.io/upload_images/10024246-1f143a78e0bf16ca.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240"></p>
+
+      
+    </div>
+
+    
+    
+    
+
+    <footer class="post-footer">
+        <div class="post-eof"></div>
+      
+    </footer>
+  </article>
+</div>
+
+
+
+
+    
+
+
+<div class="post-block">
+  
+  
+
+  <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="">
+    <link itemprop="mainEntityOfPage" href="https://lzhwweb.github.io/nirvana/mac/mac/Mac%E6%95%99%E7%A8%8B%EF%BC%9A%E5%A6%82%E4%BD%95%E5%88%A0%E9%99%A4-DS_Store%E6%96%87%E4%BB%B6%E4%B8%94%E4%B8%8D%E5%86%8D%E7%94%9F/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/nirvana/images/headphoto.jpeg">
+      <meta itemprop="name" content="nirvana">
+      <meta itemprop="description" content="个人学习笔记">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="涅槃快乐是金">
+    </span>
+      <header class="post-header">
+        <h2 class="post-title" itemprop="name headline">
+          <a href="/nirvana/mac/mac/Mac%E6%95%99%E7%A8%8B%EF%BC%9A%E5%A6%82%E4%BD%95%E5%88%A0%E9%99%A4-DS_Store%E6%96%87%E4%BB%B6%E4%B8%94%E4%B8%8D%E5%86%8D%E7%94%9F/" class="post-title-link" itemprop="url">Mac教程：如何删除-DS_Store文件且不再生</a>
+        </h2>
+
+        <div class="post-meta-container">
+          <div class="post-meta">
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-calendar"></i>
+      </span>
+      <span class="post-meta-item-text">发表于</span>
+      
+
+      <time title="创建时间：2021-03-10 21:12:40 / 修改时间：13:43:55" itemprop="dateCreated datePublished" datetime="2021-03-10T21:12:40+08:00">2021-03-10</time>
+    </span>
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-folder"></i>
+      </span>
+      <span class="post-meta-item-text">分类于</span>
+        <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+          <a href="/nirvana/categories/mac/" itemprop="url" rel="index"><span itemprop="name">mac</span></a>
+        </span>
+    </span>
+
+  
+    <span id="/nirvana/mac/mac/Mac%E6%95%99%E7%A8%8B%EF%BC%9A%E5%A6%82%E4%BD%95%E5%88%A0%E9%99%A4-DS_Store%E6%96%87%E4%BB%B6%E4%B8%94%E4%B8%8D%E5%86%8D%E7%94%9F/" class="post-meta-item leancloud_visitors" data-flag-title="Mac教程：如何删除-DS_Store文件且不再生" title="阅读次数">
+      <span class="post-meta-item-icon">
+        <i class="far fa-eye"></i>
+      </span>
+      <span class="post-meta-item-text">阅读次数：</span>
+      <span class="leancloud-visitors-count"></span>
+    </span>
+      </div>
+      <div class="post-meta">
+    <span class="post-meta-item" title="本文字数">
+      <span class="post-meta-item-icon">
+        <i class="far fa-file-word"></i>
+      </span>
+      <span class="post-meta-item-text">本文字数：</span>
+      <span>497</span>
+    </span>
+    <span class="post-meta-item" title="阅读时长">
+      <span class="post-meta-item-icon">
+        <i class="far fa-clock"></i>
+      </span>
+      <span class="post-meta-item-text">阅读时长 &asymp;</span>
+      <span>1 分钟</span>
+    </span>
+</div>
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+          <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">.DS_Store文件重新生成非常令人困扰，我们可以用终端命令简单的处理掉。</span><br></pre></td></tr></table></figure>
+<p>　　在 Mac OS X 系统下，几乎绝大部分文件夹中都包含 .DS_Store 隐藏文件，这里保存着针对这个目录的特殊信息和设置配置，例如查看方式、图标大小以及这个目录的一些附属元数据。<br>       而在 OS X 系统中，这些文件是默认隐藏起来的，但是当我们将这些文件转移共享到 Windows 系统的时候，它们就会变成可见状态，并且看起来非常像是一些垃圾文件。<br>　　许多用户会选择在 Windows 系统中将这些 .DS_Store 文件删除，但是它们会重新生成，这一点非常令人困扰。对于这个问题，我们可以用终端命令简单的处理掉，并且防止 DS_Store 文件的再生。</p>
+<p>　　我们需要打开终端窗口，并输入删除命令：sudo find / -name “.DS_Store” -depth -exec rm {} ;</p>
+<p>　　按下回车键盘之后，终端会提示用户名和密码，直接输入密码再按回车即可。</p>
+<p>　　删除后继续在终端输入：defaults write com.apple.desktopservices DSDontWriteNetworkStores true</p>
+<p>　　然后按下回车，就可以防止 .DS_Store 文件的再生了。</p>
+
+      
+    </div>
+
+    
+    
+    
+
+    <footer class="post-footer">
+        <div class="post-eof"></div>
+      
+    </footer>
+  </article>
+</div>
+
+
+
+
+    
+
+
+<div class="post-block">
+  
+  
+
+  <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="">
+    <link itemprop="mainEntityOfPage" href="https://lzhwweb.github.io/nirvana/mac/mac/McAfee-Agent-%E5%8D%A0%E7%94%A88081-%E7%AB%AF%E5%8F%A3%E5%8F%B7/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/nirvana/images/headphoto.jpeg">
+      <meta itemprop="name" content="nirvana">
+      <meta itemprop="description" content="个人学习笔记">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="涅槃快乐是金">
+    </span>
+      <header class="post-header">
+        <h2 class="post-title" itemprop="name headline">
+          <a href="/nirvana/mac/mac/McAfee-Agent-%E5%8D%A0%E7%94%A88081-%E7%AB%AF%E5%8F%A3%E5%8F%B7/" class="post-title-link" itemprop="url">McAfee-Agent-占用8081-端口号</a>
+        </h2>
+
+        <div class="post-meta-container">
+          <div class="post-meta">
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-calendar"></i>
+      </span>
+      <span class="post-meta-item-text">发表于</span>
+      
+
+      <time title="创建时间：2021-03-10 21:12:40 / 修改时间：13:43:55" itemprop="dateCreated datePublished" datetime="2021-03-10T21:12:40+08:00">2021-03-10</time>
+    </span>
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-folder"></i>
+      </span>
+      <span class="post-meta-item-text">分类于</span>
+        <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+          <a href="/nirvana/categories/mac/" itemprop="url" rel="index"><span itemprop="name">mac</span></a>
+        </span>
+    </span>
+
+  
+    <span id="/nirvana/mac/mac/McAfee-Agent-%E5%8D%A0%E7%94%A88081-%E7%AB%AF%E5%8F%A3%E5%8F%B7/" class="post-meta-item leancloud_visitors" data-flag-title="McAfee-Agent-占用8081-端口号" title="阅读次数">
+      <span class="post-meta-item-icon">
+        <i class="far fa-eye"></i>
+      </span>
+      <span class="post-meta-item-text">阅读次数：</span>
+      <span class="leancloud-visitors-count"></span>
+    </span>
+      </div>
+      <div class="post-meta">
+    <span class="post-meta-item" title="本文字数">
+      <span class="post-meta-item-icon">
+        <i class="far fa-file-word"></i>
+      </span>
+      <span class="post-meta-item-text">本文字数：</span>
+      <span>239</span>
+    </span>
+    <span class="post-meta-item" title="阅读时长">
+      <span class="post-meta-item-icon">
+        <i class="far fa-clock"></i>
+      </span>
+      <span class="post-meta-item-text">阅读时长 &asymp;</span>
+      <span>1 分钟</span>
+    </span>
+</div>
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+          <p>公司电脑被标装，McAfee Agent关不掉</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">sudo lsof -n -i4TCP:8081</span><br><span class="line">sudo launchctl list | grep 5693</span><br><span class="line">sudo launchctl remove com.mcafee.agent.macmn</span><br></pre></td></tr></table></figure>
+
+<p>如果需要暂时禁用mac上装的mcafee，可以在命令行里先su到之前有管理员权限的账户，然后跑命令：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">sudo &#x2F;usr&#x2F;local&#x2F;McAfee&#x2F;AntiMalware&#x2F;VSControl stopoas</span><br></pre></td></tr></table></figure>
+
+      
+    </div>
+
+    
+    
+    
+
+    <footer class="post-footer">
+        <div class="post-eof"></div>
+      
+    </footer>
+  </article>
+</div>
+
+
+
+
+    
+
+
+<div class="post-block">
+  
+  
+
+  <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="">
+    <link itemprop="mainEntityOfPage" href="https://lzhwweb.github.io/nirvana/mac/mac/OSX---%E9%99%8D%E7%BA%A7Safari-12%E5%88%B011-1-2/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/nirvana/images/headphoto.jpeg">
+      <meta itemprop="name" content="nirvana">
+      <meta itemprop="description" content="个人学习笔记">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="涅槃快乐是金">
+    </span>
+      <header class="post-header">
+        <h2 class="post-title" itemprop="name headline">
+          <a href="/nirvana/mac/mac/OSX---%E9%99%8D%E7%BA%A7Safari-12%E5%88%B011-1-2/" class="post-title-link" itemprop="url">OSX---降级Safari-12到11-1-2</a>
+        </h2>
+
+        <div class="post-meta-container">
+          <div class="post-meta">
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-calendar"></i>
+      </span>
+      <span class="post-meta-item-text">发表于</span>
+      
+
+      <time title="创建时间：2021-03-10 21:12:40 / 修改时间：13:43:55" itemprop="dateCreated datePublished" datetime="2021-03-10T21:12:40+08:00">2021-03-10</time>
+    </span>
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-folder"></i>
+      </span>
+      <span class="post-meta-item-text">分类于</span>
+        <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+          <a href="/nirvana/categories/mac/" itemprop="url" rel="index"><span itemprop="name">mac</span></a>
+        </span>
+    </span>
+
+  
+    <span id="/nirvana/mac/mac/OSX---%E9%99%8D%E7%BA%A7Safari-12%E5%88%B011-1-2/" class="post-meta-item leancloud_visitors" data-flag-title="OSX---降级Safari-12到11-1-2" title="阅读次数">
+      <span class="post-meta-item-icon">
+        <i class="far fa-eye"></i>
+      </span>
+      <span class="post-meta-item-text">阅读次数：</span>
+      <span class="leancloud-visitors-count"></span>
+    </span>
+      </div>
+      <div class="post-meta">
+    <span class="post-meta-item" title="本文字数">
+      <span class="post-meta-item-icon">
+        <i class="far fa-file-word"></i>
+      </span>
+      <span class="post-meta-item-text">本文字数：</span>
+      <span>528</span>
+    </span>
+    <span class="post-meta-item" title="阅读时长">
+      <span class="post-meta-item-icon">
+        <i class="far fa-clock"></i>
+      </span>
+      <span class="post-meta-item-text">阅读时长 &asymp;</span>
+      <span>1 分钟</span>
+    </span>
+</div>
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+          <h3 id="操作"><a href="#操作" class="headerlink" title="操作"></a>操作</h3><h4 id="工具"><a href="#工具" class="headerlink" title="工具"></a>工具</h4><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">Pacifist : https:&#x2F;&#x2F;www.charlessoft.com&#x2F;cgi-bin&#x2F;pacifist_download.cgi?type&#x3D;zip</span><br></pre></td></tr></table></figure>
+
+<h4 id="Safari-11"><a href="#Safari-11" class="headerlink" title="Safari 11"></a>Safari 11</h4><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">https:&#x2F;&#x2F;www.newasp.net&#x2F;soft&#x2F;109641.html</span><br></pre></td></tr></table></figure>
+
+<h4 id="步骤"><a href="#步骤" class="headerlink" title="步骤"></a>步骤</h4><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">1 . 重启系统, 按住⌘-R不松手</span><br><span class="line">2 . 在实用工具(Utilities)下打开终端,输入csrutil disable, 然后回车; 你就看到提示系统完整性保护(SIP: System Integrity Protection)已禁用</span><br><span class="line">3 . 输入reboot回车重启电脑</span><br><span class="line">4 . 打开Pacifist, 点击 打开Safari 11.1.软件包, 选择Safari 11.1.2包的内容,点击安装按钮;</span><br><span class="line">5 . 给予管理员权限, 并一路替换,就可以了</span><br><span class="line">6 . 如果你想启用SIP, 那么重启启动系统,按住⌘-R不松手; 输入csrutil enable回车.开启SIP</span><br></pre></td></tr></table></figure>
+
+<h4 id="使用pacifist安装safari"><a href="#使用pacifist安装safari" class="headerlink" title="使用pacifist安装safari"></a>使用pacifist安装safari</h4><p><img src="http://upload-images.jianshu.io/upload_images/10024246-137076307d06f5c0.jpg?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240"></p>
+<h3 id="后记"><a href="#后记" class="headerlink" title="后记"></a>后记</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">1 . 一旦升级到 mojave 版本,是不能降级到 safari11.1.2版本的.</span><br><span class="line">2 . 如果这么操作怎么都不成功, 完全卸载 safari 再直接安装吧.</span><br></pre></td></tr></table></figure>
+
+      
+    </div>
+
+    
+    
+    
+
+    <footer class="post-footer">
+        <div class="post-eof"></div>
+      
+    </footer>
+  </article>
+</div>
+
+
+
+
+    
+
+
+<div class="post-block">
+  
+  
+
+  <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="">
+    <link itemprop="mainEntityOfPage" href="https://lzhwweb.github.io/nirvana/mac/mac/macOS-High-Sierra-%E4%BF%AE%E5%A4%8D%E9%83%A8%E5%88%86Wineskin%E6%B8%B8%E6%88%8F%E6%97%A0%E6%B3%95%E6%AD%A3%E5%B8%B8%E8%BF%90%E8%A1%8C%E7%9A%84%E9%97%AE%E9%A2%98/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/nirvana/images/headphoto.jpeg">
+      <meta itemprop="name" content="nirvana">
+      <meta itemprop="description" content="个人学习笔记">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="涅槃快乐是金">
+    </span>
+      <header class="post-header">
+        <h2 class="post-title" itemprop="name headline">
+          <a href="/nirvana/mac/mac/macOS-High-Sierra-%E4%BF%AE%E5%A4%8D%E9%83%A8%E5%88%86Wineskin%E6%B8%B8%E6%88%8F%E6%97%A0%E6%B3%95%E6%AD%A3%E5%B8%B8%E8%BF%90%E8%A1%8C%E7%9A%84%E9%97%AE%E9%A2%98/" class="post-title-link" itemprop="url">macOS-High-Sierra-修复部分Wineskin游戏无法正常运行的问题</a>
+        </h2>
+
+        <div class="post-meta-container">
+          <div class="post-meta">
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-calendar"></i>
+      </span>
+      <span class="post-meta-item-text">发表于</span>
+      
+
+      <time title="创建时间：2021-03-10 21:12:40 / 修改时间：13:43:55" itemprop="dateCreated datePublished" datetime="2021-03-10T21:12:40+08:00">2021-03-10</time>
+    </span>
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-folder"></i>
+      </span>
+      <span class="post-meta-item-text">分类于</span>
+        <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+          <a href="/nirvana/categories/mac/" itemprop="url" rel="index"><span itemprop="name">mac</span></a>
+        </span>
+    </span>
+
+  
+    <span id="/nirvana/mac/mac/macOS-High-Sierra-%E4%BF%AE%E5%A4%8D%E9%83%A8%E5%88%86Wineskin%E6%B8%B8%E6%88%8F%E6%97%A0%E6%B3%95%E6%AD%A3%E5%B8%B8%E8%BF%90%E8%A1%8C%E7%9A%84%E9%97%AE%E9%A2%98/" class="post-meta-item leancloud_visitors" data-flag-title="macOS-High-Sierra-修复部分Wineskin游戏无法正常运行的问题" title="阅读次数">
+      <span class="post-meta-item-icon">
+        <i class="far fa-eye"></i>
+      </span>
+      <span class="post-meta-item-text">阅读次数：</span>
+      <span class="leancloud-visitors-count"></span>
+    </span>
+      </div>
+      <div class="post-meta">
+    <span class="post-meta-item" title="本文字数">
+      <span class="post-meta-item-icon">
+        <i class="far fa-file-word"></i>
+      </span>
+      <span class="post-meta-item-text">本文字数：</span>
+      <span>500</span>
+    </span>
+    <span class="post-meta-item" title="阅读时长">
+      <span class="post-meta-item-icon">
+        <i class="far fa-clock"></i>
+      </span>
+      <span class="post-meta-item-text">阅读时长 &asymp;</span>
+      <span>1 分钟</span>
+    </span>
+</div>
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+          <p>之前，有很多朋友留言小子因为系统升级到了最新macOS High Sierra而无法打开博客下载的Wineskin移植游戏了。<br>相信所有升级到macOS High Sierra的朋友运行wineskin wrapper移植的游戏都会遇到这个问题。不过，小子经过一番搜索，终于找到了解决办法，测试有效，现在分享给大家。<br><img src="https://upload-images.jianshu.io/upload_images/10024246-d046d690278a285e.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240"><br>小子简单说明下具体步骤（这里以“太阁立志传 V”为例）：<br>1.右键“太阁立志传 V.app”显示包内容，双击打开“Wineskin.app”，点击Advanced—Tools；<br>2.先点击“kill Wineskin Processes”, 关闭所有进程；<br><img src="https://upload-images.jianshu.io/upload_images/10024246-1e2e98550a078858.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240"></p>
+<p>3.点击最下方中间的“Set Screen Options”,将“Use Mac Driver instead of X11”勾上 将“Auto Detect GPU infor for Direct3D”的勾选去掉，点击“done”；<br><img src="https://upload-images.jianshu.io/upload_images/10024246-1c32a5f16dd885e3.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240"></p>
+<p>4.回到tools菜单，点击“Winetricks”，搜索关键字“video”，展开“settings”，勾选第二个“videomemorysize=2048”，点击“Run”确认wrapper已经更改设置，关闭Wine；<br><img src="https://upload-images.jianshu.io/upload_images/10024246-c0701d46eaa676bb.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240"><br>5.Have done！</p>
+
+      
+    </div>
+
+    
+    
+    
+
+    <footer class="post-footer">
+        <div class="post-eof"></div>
+      
+    </footer>
+  </article>
+</div>
+
+
+
+
+    
+
+
+<div class="post-block">
+  
+  
+
+  <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="">
+    <link itemprop="mainEntityOfPage" href="https://lzhwweb.github.io/nirvana/mac/mac/mac-brew%E5%AE%89%E8%A3%85node-%E7%AE%A1%E7%90%86%E5%B7%A5%E5%85%B7n/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/nirvana/images/headphoto.jpeg">
+      <meta itemprop="name" content="nirvana">
+      <meta itemprop="description" content="个人学习笔记">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="涅槃快乐是金">
+    </span>
+      <header class="post-header">
+        <h2 class="post-title" itemprop="name headline">
+          <a href="/nirvana/mac/mac/mac-brew%E5%AE%89%E8%A3%85node-%E7%AE%A1%E7%90%86%E5%B7%A5%E5%85%B7n/" class="post-title-link" itemprop="url">mac-brew安装node-管理工具n</a>
+        </h2>
+
+        <div class="post-meta-container">
+          <div class="post-meta">
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-calendar"></i>
+      </span>
+      <span class="post-meta-item-text">发表于</span>
+      
+
+      <time title="创建时间：2021-03-10 21:12:40 / 修改时间：13:43:55" itemprop="dateCreated datePublished" datetime="2021-03-10T21:12:40+08:00">2021-03-10</time>
+    </span>
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-folder"></i>
+      </span>
+      <span class="post-meta-item-text">分类于</span>
+        <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+          <a href="/nirvana/categories/mac/" itemprop="url" rel="index"><span itemprop="name">mac</span></a>
+        </span>
+    </span>
+
+  
+    <span id="/nirvana/mac/mac/mac-brew%E5%AE%89%E8%A3%85node-%E7%AE%A1%E7%90%86%E5%B7%A5%E5%85%B7n/" class="post-meta-item leancloud_visitors" data-flag-title="mac-brew安装node-管理工具n" title="阅读次数">
+      <span class="post-meta-item-icon">
+        <i class="far fa-eye"></i>
+      </span>
+      <span class="post-meta-item-text">阅读次数：</span>
+      <span class="leancloud-visitors-count"></span>
+    </span>
+      </div>
+      <div class="post-meta">
+    <span class="post-meta-item" title="本文字数">
+      <span class="post-meta-item-icon">
+        <i class="far fa-file-word"></i>
+      </span>
+      <span class="post-meta-item-text">本文字数：</span>
+      <span>167</span>
+    </span>
+    <span class="post-meta-item" title="阅读时长">
+      <span class="post-meta-item-icon">
+        <i class="far fa-clock"></i>
+      </span>
+      <span class="post-meta-item-text">阅读时长 &asymp;</span>
+      <span>1 分钟</span>
+    </span>
+</div>
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+          <h2 id="安装"><a href="#安装" class="headerlink" title="安装"></a>安装</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">brew install n</span><br></pre></td></tr></table></figure>
+<h2 id="安装-激活版本"><a href="#安装-激活版本" class="headerlink" title="安装/激活版本"></a>安装/激活版本</h2><p>只需执行n <version>即可安装node。如果<version>已经安装（通过n），n将激活该版本。<br>例如：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">$ n 10.0.1</span><br><span class="line">$ n 16.9.1</span><br></pre></td></tr></table></figure>
+<p>n单独执行是查看当前安装的版本，使用向上和向下箭头键导航并按enter或右箭头键进行选择，使用^ C（控制+ C）退出选择屏幕。</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">$ n</span><br><span class="line"> </span><br><span class="line">  10.8.14</span><br><span class="line">ο 10.8.17</span><br><span class="line">  10.9.6</span><br></pre></td></tr></table></figure>
+
+      
+    </div>
+
+    
+    
+    
+
+    <footer class="post-footer">
+        <div class="post-eof"></div>
+      
+    </footer>
+  </article>
+</div>
+
+
+
+
+    
+
+
+<div class="post-block">
+  
+  
+
+  <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="">
+    <link itemprop="mainEntityOfPage" href="https://lzhwweb.github.io/nirvana/mac/mac/macOS-%E5%AE%89%E8%A3%85-Docker/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/nirvana/images/headphoto.jpeg">
+      <meta itemprop="name" content="nirvana">
+      <meta itemprop="description" content="个人学习笔记">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="涅槃快乐是金">
+    </span>
+      <header class="post-header">
+        <h2 class="post-title" itemprop="name headline">
+          <a href="/nirvana/mac/mac/macOS-%E5%AE%89%E8%A3%85-Docker/" class="post-title-link" itemprop="url">macOS-安装-Docker</a>
+        </h2>
+
+        <div class="post-meta-container">
+          <div class="post-meta">
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-calendar"></i>
+      </span>
+      <span class="post-meta-item-text">发表于</span>
+      
+
+      <time title="创建时间：2021-03-10 21:12:40 / 修改时间：13:43:55" itemprop="dateCreated datePublished" datetime="2021-03-10T21:12:40+08:00">2021-03-10</time>
+    </span>
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-folder"></i>
+      </span>
+      <span class="post-meta-item-text">分类于</span>
+        <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+          <a href="/nirvana/categories/mac/" itemprop="url" rel="index"><span itemprop="name">mac</span></a>
+        </span>
+    </span>
+
+  
+    <span id="/nirvana/mac/mac/macOS-%E5%AE%89%E8%A3%85-Docker/" class="post-meta-item leancloud_visitors" data-flag-title="macOS-安装-Docker" title="阅读次数">
+      <span class="post-meta-item-icon">
+        <i class="far fa-eye"></i>
+      </span>
+      <span class="post-meta-item-text">阅读次数：</span>
+      <span class="leancloud-visitors-count"></span>
+    </span>
+      </div>
+      <div class="post-meta">
+    <span class="post-meta-item" title="本文字数">
+      <span class="post-meta-item-icon">
+        <i class="far fa-file-word"></i>
+      </span>
+      <span class="post-meta-item-text">本文字数：</span>
+      <span>808</span>
+    </span>
+    <span class="post-meta-item" title="阅读时长">
+      <span class="post-meta-item-icon">
+        <i class="far fa-clock"></i>
+      </span>
+      <span class="post-meta-item-text">阅读时长 &asymp;</span>
+      <span>1 分钟</span>
+    </span>
+</div>
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+          <h1 id="macOS"><a href="#macOS" class="headerlink" title="macOS"></a>macOS</h1><h1 id=""><a href="#" class="headerlink" title=""></a></h1><p>系统要求<a target="_blank" rel="noopener" href="https://yeasy.gitbook.io/docker_practice/install/mac#xi-tong-yao-qiu"></a></p>
+<p><a target="_blank" rel="noopener" href="https://docs.docker.com/docker-for-mac/">Docker Desktop for Mac</a> 要求系统最低为 macOS Mojave 10.14。</p>
+<h1 id="-1"><a href="#-1" class="headerlink" title=""></a></h1><p>安装<a target="_blank" rel="noopener" href="https://yeasy.gitbook.io/docker_practice/install/mac#an-zhuang"></a></p>
+<h2 id="-2"><a href="#-2" class="headerlink" title=""></a></h2><p>使用 Homebrew 安装<a target="_blank" rel="noopener" href="https://yeasy.gitbook.io/docker_practice/install/mac#shi-yong-homebrew-an-zhuang"></a></p>
+<p><a target="_blank" rel="noopener" href="https://brew.sh/">Homebrew</a> 的 <a target="_blank" rel="noopener" href="https://github.com/Homebrew/homebrew-cask">Cask</a> 已经支持 Docker Desktop for Mac，因此可以很方便的使用 Homebrew Cask 来进行安装：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ brew cask install docker</span><br></pre></td></tr></table></figure>
+<h2 id="手动下载安装"><a href="#手动下载安装" class="headerlink" title="手动下载安装"></a>手动下载安装</h2><p>如果需要手动下载，请点击以下链接下载 <a target="_blank" rel="noopener" href="https://download.docker.com/mac/stable/Docker.dmg">Stable</a> 或 <a target="_blank" rel="noopener" href="https://download.docker.com/mac/edge/Docker.dmg">Edge</a> 版本的 Docker Desktop for Mac。</p>
+<p>如同 macOS 其它软件一样，安装也非常简单，双击下载的 <code>.dmg</code> 文件，然后将那只叫 <a target="_blank" rel="noopener" href="https://www.docker.com/blog/call-me-moby-dock/">Moby</a> 的鲸鱼图标拖拽到 <code>Application</code> 文件夹即可（其间需要输入用户密码）。<br><img src="https://upload-images.jianshu.io/upload_images/10024246-ed67d3f5d80f1b0a.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240"></p>
+<h1 id="运行"><a href="#运行" class="headerlink" title="运行"></a>运行</h1><p>从应用中找到 Docker 图标并点击运行。</p>
+<p><img src="https://upload-images.jianshu.io/upload_images/10024246-53121fff4bb2948c.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240"></p>
+<p>运行之后，会在右上角菜单栏看到多了一个鲸鱼图标，这个图标表明了 Docker 的运行状态。</p>
+<p><img src="https://upload-images.jianshu.io/upload_images/10024246-23ece114e822f25d.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240"></p>
+<p>每次点击鲸鱼图标会弹出操作菜单。</p>
+<p><img src="https://upload-images.jianshu.io/upload_images/10024246-b9ea98917ad76fe3.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240"></p>
+<p>之后，你可以在终端通过命令检查安装后的 Docker 版本。</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">$ docker --version</span><br><span class="line"></span><br><span class="line">Docker version 19.03.8, build afacb8b</span><br><span class="line"></span><br><span class="line">$ docker-compose --version</span><br><span class="line"></span><br><span class="line">docker-compose version 1.25.5, build 8a1c60f6</span><br></pre></td></tr></table></figure>
+
+<p>如果 <code>docker version</code>、<code>docker info</code> 都正常的话，可以尝试运行一个 <a target="_blank" rel="noopener" href="https://hub.docker.com/_/nginx/">Nginx 服务器</a>：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ docker run -d -p 80:80 --name webserver nginx</span><br></pre></td></tr></table></figure>
+
+<p>服务运行后，可以访问 <a target="_blank" rel="noopener" href="http://localhost/">http://localhost</a>，如果看到了 “Welcome to nginx!”，就说明 Docker Desktop for Mac 安装成功了。<br><img src="https://upload-images.jianshu.io/upload_images/10024246-0e37b4c4c52d946a.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="image.png"></p>
+<p>要停止 Nginx 服务器并删除执行下面的命令：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">$ docker stop webserver</span><br><span class="line"></span><br><span class="line">$ docker rm webserver</span><br><span class="line"></span><br></pre></td></tr></table></figure>
+
+<h1 id="镜像加速"><a href="#镜像加速" class="headerlink" title="镜像加速"></a>镜像加速</h1><p>如果在使用过程中发现拉取 Docker 镜像十分缓慢，可以配置 Docker <a target="_blank" rel="noopener" href="https://yeasy.gitbook.io/docker_practice/install/mirror">国内镜像加速</a>。</p>
+<h1 id="-3"><a href="#-3" class="headerlink" title=""></a></h1><p>参考链接<a target="_blank" rel="noopener" href="https://yeasy.gitbook.io/docker_practice/install/mac#can-kao-lian-jie"></a></p>
+<ul>
+<li>  <a target="_blank" rel="noopener" href="https://docs.docker.com/docker-for-mac/install/">官方文档</a></li>
 </ul>
 
       
