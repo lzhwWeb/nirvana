@@ -207,7 +207,7 @@
   <nav class="site-state">
       <div class="site-state-item site-state-posts">
           <a href="/nirvana/archives">
-          <span class="site-state-item-count">213</span>
+          <span class="site-state-item-count">209</span>
           <span class="site-state-item-name">日志</span>
         </a>
       </div>
@@ -248,295 +248,6 @@
 
 
     <div class="main-inner index posts-expand">
-
-    
-
-
-<div class="post-block">
-  
-  
-
-  <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="">
-    <link itemprop="mainEntityOfPage" href="https://lzhwweb.github.io/nirvana/javascript/%E5%89%8D%E7%AB%AF/Hexo-Next-leancloud/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="image" content="/nirvana/images/headphoto.jpeg">
-      <meta itemprop="name" content="nirvana">
-      <meta itemprop="description" content="个人学习笔记">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="涅槃快乐是金">
-    </span>
-      <header class="post-header">
-        <h2 class="post-title" itemprop="name headline">
-          <a href="/nirvana/javascript/%E5%89%8D%E7%AB%AF/Hexo-Next-leancloud/" class="post-title-link" itemprop="url">Hexo Next leancloud文章阅读次数配置</a>
-        </h2>
-
-        <div class="post-meta-container">
-          <div class="post-meta">
-    <span class="post-meta-item">
-      <span class="post-meta-item-icon">
-        <i class="far fa-calendar"></i>
-      </span>
-      <span class="post-meta-item-text">发表于</span>
-      
-
-      <time title="创建时间：2021-03-20 23:39:18 / 修改时间：23:40:57" itemprop="dateCreated datePublished" datetime="2021-03-20T23:39:18+08:00">2021-03-20</time>
-    </span>
-    <span class="post-meta-item">
-      <span class="post-meta-item-icon">
-        <i class="far fa-folder"></i>
-      </span>
-      <span class="post-meta-item-text">分类于</span>
-        <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-          <a href="/nirvana/categories/javascript/" itemprop="url" rel="index"><span itemprop="name">javascript</span></a>
-        </span>
-    </span>
-
-  
-    <span id="/nirvana/javascript/%E5%89%8D%E7%AB%AF/Hexo-Next-leancloud/" class="post-meta-item leancloud_visitors" data-flag-title="Hexo Next leancloud文章阅读次数配置" title="阅读次数">
-      <span class="post-meta-item-icon">
-        <i class="far fa-eye"></i>
-      </span>
-      <span class="post-meta-item-text">阅读次数：</span>
-      <span class="leancloud-visitors-count"></span>
-    </span>
-      </div>
-      <div class="post-meta">
-    <span class="post-meta-item" title="本文字数">
-      <span class="post-meta-item-icon">
-        <i class="far fa-file-word"></i>
-      </span>
-      <span class="post-meta-item-text">本文字数：</span>
-      <span>2.4k</span>
-    </span>
-    <span class="post-meta-item" title="阅读时长">
-      <span class="post-meta-item-icon">
-        <i class="far fa-clock"></i>
-      </span>
-      <span class="post-meta-item-text">阅读时长 &asymp;</span>
-      <span>2 分钟</span>
-    </span>
-</div>
-
-        </div>
-      </header>
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-          <h1 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h1><p>由于<code>Next</code>主题修复了<code>leancloud</code>的安全问题, 导致以前<code>leancloud</code>失效, 所以重新介绍如何配置<code>leancloud</code></p>
-<blockquote>
-<p>所有使用该插件而未经修复的NexT站点或使用类似方法集成Leancloud访客统计功能的站点都被认为是不安全的，请尽快修复</p>
-</blockquote>
-<p>效果如图<br><img src="https://upload-images.jianshu.io/upload_images/10024246-4c34cbaf05fa0929.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240"></p>
-<h1 id="注册Leancloud并创建应用"><a href="#注册Leancloud并创建应用" class="headerlink" title="注册Leancloud并创建应用"></a>注册Leancloud并创建应用</h1><ol>
-<li><p> 首先，前往Leancloud官网<a target="_blank" rel="noopener" href="https://leancloud.cn/dashboard/login.html#/signup">leancloud.cn</a>进行注册，并登陆。</p>
-</li>
-<li><p>点击<strong>创建应用</strong><br> <img src="https://upload-images.jianshu.io/upload_images/10024246-89aca6e79e05f569.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240"></p>
-</li>
-<li><p>输入应用的名称(随便起都行), 选择<strong>开发版</strong>, 点击<strong>创建</strong><br> <img src="https://upload-images.jianshu.io/upload_images/10024246-097016813d541b77.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240"></p>
-</li>
-<li><p>创建成功后点击右上角的设置<strong>小齿轮</strong><br> <img src="https://upload-images.jianshu.io/upload_images/10024246-3db198f1151cdcbf.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240"></p>
-</li>
-<li><p>点击<strong>存储</strong>-<strong>创建Class</strong>-<strong>Class名称</strong>设置为<code>Counter</code>(必须为<code>Counter</code>)-选择<strong>无限制</strong>-点击<strong>创建</strong><br> <img src="https://upload-images.jianshu.io/upload_images/10024246-432bb8b837df5c25.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240"></p>
-</li>
-<li><p>创建后点击<strong>设置</strong>-点击<strong>应用Key</strong>-获取<strong>App ID</strong>和<strong>App Key</strong><br> <img src="https://upload-images.jianshu.io/upload_images/10024246-9535fa3e0ed7959c.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240"></p>
-</li>
-<li><p>将获取到的<strong>App ID</strong>和<strong>App Key</strong>设置到<code>Next</code>主题配置文件<code>_config.yml</code><br> <em>配置文件已存在这个配置, 只要把id和key加上去就好了</em></p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">leancloud_visitors:</span><br><span class="line"> enable: true</span><br><span class="line"> app_id: &lt;&lt;your app id&gt;&gt;</span><br><span class="line"> app_key: &lt;&lt;your app key&gt;&gt;</span><br></pre></td></tr></table></figure></li>
-<li><p>点击<strong>安全中心</strong>, 填写自己博客对应的域名（注意协议、域名和端口号需严格一致）<br> <img src="https://upload-images.jianshu.io/upload_images/10024246-0a2fe8df57f0f3c6.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240"></p>
-</li>
-<li><p>点击<strong>云引擎</strong>-点击<strong>部署</strong>-点击<strong>在线编辑</strong><br> <img src="https://upload-images.jianshu.io/upload_images/10024246-e403d7af8cb3c367.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240"></p>
-</li>
-<li><p> 点击<strong>创建函数</strong>-选择<strong>Hook</strong>-AV.Cloud.选择<strong>beforeSave</strong>-类选择<strong>Counter</strong>-<strong>添加代码</strong>-点击<strong>保存</strong></p>
-</li>
-</ol>
-<p><img src="https://upload-images.jianshu.io/upload_images/10024246-fd6294350d1575b8.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240"></p>
-<p><img src="https://upload-images.jianshu.io/upload_images/10024246-e68e0a9d45123d5a.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240"></p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">var query &#x3D; new AV.Query(&quot;Counter&quot;);</span><br><span class="line">if (request.object.updatedKeys.indexOf(&#39;time&#39;) !&#x3D;&#x3D; -1) &#123;</span><br><span class="line">     return query.get(request.object.id).then(function (obj) &#123;</span><br><span class="line">     if (obj.get(&quot;time&quot;) + 1 !&#x3D;&#x3D; request.object.get(&quot;time&quot;)) &#123;</span><br><span class="line">     throw new AV.Cloud.Error(&#39;Invalid update!&#39;);</span><br><span class="line">   &#125;</span><br><span class="line"> &#125;)</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-<ol start="11">
-<li>点击<strong>部署</strong><br><img src="https://upload-images.jianshu.io/upload_images/10024246-6f2cb6e065606ee4.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240"></li>
-</ol>
-<pre><code>![](https://upload-images.jianshu.io/upload_images/10024246-7f0f70d529036253.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240)
-</code></pre>
-<ol start="12">
-<li>待出现红框处的成功部署信息后，点击<strong>关闭</strong><br><img src="https://upload-images.jianshu.io/upload_images/10024246-74bb624ee196b414.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240"></li>
-</ol>
-<h1 id="设置权限"><a href="#设置权限" class="headerlink" title="设置权限"></a>设置权限</h1><ol>
-<li> 打开<code>Next</code>主题配置文件<code>_config.yml</code>, 将leancloud_visitors下的security设置为true（如没有则新增）</li>
-</ol>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line">leancloud_visitors:</span><br><span class="line"> enable: true</span><br><span class="line"> app_id: &lt;&lt;your app id&gt;&gt; # 同前文的id</span><br><span class="line"> app_key: &lt;&lt;your app key&gt;&gt; # 同前文的key</span><br><span class="line"> # Dependencies: https:&#x2F;&#x2F;github.com&#x2F;theme-next&#x2F;hexo-leancloud-counter-security</span><br><span class="line"> security: true</span><br><span class="line"> # 由于Leancloud免费版的云引擎存在请求线程数和运行时间限制以及休眠机制，</span><br><span class="line"> # 很多时候访客数量加载会很慢。</span><br><span class="line"> # 如果设置betterPerformance为true，</span><br><span class="line"> # 则网页则会在提交请求之前直接显示访客人数为查询到的人数+1，以增加用户体验。</span><br><span class="line"> betterPerformance: false</span><br></pre></td></tr></table></figure>
-
-<ol start="2">
-<li><p> 打开站点配置文件<code>_config.yml</code></p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">leancloud_counter_security:</span><br><span class="line"> enable_sync: true</span><br><span class="line"> app_id: &lt;&lt;your app id&gt;&gt;   # 同前文的id</span><br><span class="line"> app_key: &lt;&lt;your app key&gt;&gt; # 同前文的key</span><br><span class="line"> username: </span><br><span class="line"> password:</span><br></pre></td></tr></table></figure></li>
-<li><p> 打开命令行<code>cmd</code>并进入站点文件夹，键入以下命令以安装<code>hexo-leancloud-counter-security</code>插件</p>
-</li>
-</ol>
-<p>复制 </p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">npm install hexo-leancloud-counter-security --save</span><br></pre></td></tr></table></figure>
-
-<ol start="4">
-<li> 接着键入命令<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">hexo lc-counter register &lt;&lt;username&gt;&gt; &lt;&lt;password&gt;&gt;</span><br></pre></td></tr></table></figure></li>
-</ol>
-<p><strong>PS:</strong> 将<code>&lt;&lt;username&gt;&gt;</code>和<code>&lt;&lt;password&gt;&gt;</code>替换为你自己的用户名和密码（不必与leancloud的账号）相同。<strong>此用户名和密码将在hexo部署时使用。</strong></p>
-<ol start="5">
-<li> 打开站点配置文件<code>_config.yml</code>, 将<code>&lt;&lt;username&gt;&gt;</code>和<code>&lt;&lt;password&gt;&gt;</code>替换为你刚刚设置的用户名和密码</li>
-</ol>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">leancloud_counter_security:</span><br><span class="line"> enable_sync: true</span><br><span class="line"> app_id: &lt;&lt;your app id&gt;&gt;   # 同前文的id</span><br><span class="line"> app_key: &lt;&lt;your app key&gt;&gt; # 同前文的key</span><br><span class="line"> username: &lt;&lt;username&gt;&gt;    #如留空则将在部署时询问</span><br><span class="line"> password: &lt;&lt;password&gt;&gt;    #建议留空以保证安全性，如留空则将在部署时询问</span><br></pre></td></tr></table></figure>
-
-<ol start="6">
-<li><p>返回Leancloud控制台的应用内, 检查_User表中是否出现一条记录（图示以用户名为admin为例）<br> <img src="https://upload-images.jianshu.io/upload_images/10024246-999c5edc89f7b563.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240"></p>
-</li>
-<li><p>进入<strong>Counter</strong>表, 打开<strong>权限设置</strong><br> <img src="https://upload-images.jianshu.io/upload_images/10024246-787b5c61ae91e7f2.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240"></p>
-<p> <img src="https://upload-images.jianshu.io/upload_images/10024246-37f02ef456350fe9.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240"></p>
-<p> <img src="https://upload-images.jianshu.io/upload_images/10024246-65c41acaf06d5c02.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240"></p>
-<p> <img src="https://upload-images.jianshu.io/upload_images/10024246-7f8593a5f8c45141.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240"></p>
-</li>
-</ol>
-<p><strong>至此配置完成</strong></p>
-
-      
-    </div>
-
-    
-    
-    
-
-    <footer class="post-footer">
-        <div class="post-eof"></div>
-      
-    </footer>
-  </article>
-</div>
-
-
-
-
-    
-
-
-<div class="post-block">
-  
-  
-
-  <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="">
-    <link itemprop="mainEntityOfPage" href="https://lzhwweb.github.io/nirvana/javascript/%E5%89%8D%E7%AB%AF/path-to-regexp/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="image" content="/nirvana/images/headphoto.jpeg">
-      <meta itemprop="name" content="nirvana">
-      <meta itemprop="description" content="个人学习笔记">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="涅槃快乐是金">
-    </span>
-      <header class="post-header">
-        <h2 class="post-title" itemprop="name headline">
-          <a href="/nirvana/javascript/%E5%89%8D%E7%AB%AF/path-to-regexp/" class="post-title-link" itemprop="url">url 的正则表达式：path-to-regexp</a>
-        </h2>
-
-        <div class="post-meta-container">
-          <div class="post-meta">
-    <span class="post-meta-item">
-      <span class="post-meta-item-icon">
-        <i class="far fa-calendar"></i>
-      </span>
-      <span class="post-meta-item-text">发表于</span>
-      
-
-      <time title="创建时间：2021-03-20 17:46:44 / 修改时间：17:47:06" itemprop="dateCreated datePublished" datetime="2021-03-20T17:46:44+08:00">2021-03-20</time>
-    </span>
-    <span class="post-meta-item">
-      <span class="post-meta-item-icon">
-        <i class="far fa-folder"></i>
-      </span>
-      <span class="post-meta-item-text">分类于</span>
-        <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-          <a href="/nirvana/categories/javascript/" itemprop="url" rel="index"><span itemprop="name">javascript</span></a>
-        </span>
-    </span>
-
-  
-    <span id="/nirvana/javascript/%E5%89%8D%E7%AB%AF/path-to-regexp/" class="post-meta-item leancloud_visitors" data-flag-title="url 的正则表达式：path-to-regexp" title="阅读次数">
-      <span class="post-meta-item-icon">
-        <i class="far fa-eye"></i>
-      </span>
-      <span class="post-meta-item-text">阅读次数：</span>
-      <span class="leancloud-visitors-count"></span>
-    </span>
-      </div>
-      <div class="post-meta">
-    <span class="post-meta-item" title="本文字数">
-      <span class="post-meta-item-icon">
-        <i class="far fa-file-word"></i>
-      </span>
-      <span class="post-meta-item-text">本文字数：</span>
-      <span>1.7k</span>
-    </span>
-    <span class="post-meta-item" title="阅读时长">
-      <span class="post-meta-item-icon">
-        <i class="far fa-clock"></i>
-      </span>
-      <span class="post-meta-item-text">阅读时长 &asymp;</span>
-      <span>2 分钟</span>
-    </span>
-</div>
-
-        </div>
-      </header>
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-          <h2 id="概述"><a href="#概述" class="headerlink" title="概述"></a>概述</h2><p>该工具库用来处理 url 中地址与参数，能够很方便得到我们想要的数据。</p>
-<p>js 中有 RegExp 方法做正则表达式校验，而 path-to-regexp 可以看成是 url 字符串的正则表达式。</p>
-<h2 id="使用"><a href="#使用" class="headerlink" title="使用"></a>使用</h2><p>第三方库，使用前先进行安装：</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ npm install path-to-regexp</span><br></pre></td></tr></table></figure>
-<p>在 js 中使用：</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">const pathToRegexp &#x3D; require(&#39;path-to-regexp&#39;);</span><br></pre></td></tr></table></figure>
-<h2 id="API-介绍"><a href="#API-介绍" class="headerlink" title="API 介绍"></a>API 介绍</h2><h5 id="1-pathToRegexp"><a href="#1-pathToRegexp" class="headerlink" title="1. pathToRegexp()"></a>1. pathToRegexp()</h5><p>作用：这里这个方法可以类比于 js 中 new ExpReg(‘xxx’)。</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">var pathToRegexp &#x3D; require(&#39;path-to-regexp&#39;)</span><br><span class="line"></span><br><span class="line">var re &#x3D; pathToRegexp(&#39;&#x2F;foo&#x2F;:bar&#39;)</span><br><span class="line">console.log(re);	</span><br></pre></td></tr></table></figure>
-<p>打印结果如下:</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">&#x2F;^\&#x2F;foo\&#x2F;((?:[^\&#x2F;]+?))(?:\&#x2F;(?&#x3D;$))?$&#x2F;i</span><br></pre></td></tr></table></figure>
-<p>要注意两点，一点是我们自己的 url 地址，一条是匹配规则。</p>
-<h5 id="2-exec"><a href="#2-exec" class="headerlink" title="2. exec()"></a>2. exec()</h5><p>作用：匹配 url 地址与规则是否相符。</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">var pathToRegexp &#x3D; require(&#39;path-to-regexp&#39;)</span><br><span class="line"></span><br><span class="line">var re &#x3D; pathToRegexp(&#39;&#x2F;foo&#x2F;:bar&#39;);     &#x2F;&#x2F; 匹配规则</span><br><span class="line">var match1 &#x3D; re.exec(&#39;&#x2F;test&#x2F;route&#39;);    &#x2F;&#x2F; url 路径</span><br><span class="line">var match2 &#x3D; re.exec(&#39;&#x2F;foo&#x2F;route&#39;);     &#x2F;&#x2F; url 路径</span><br><span class="line"></span><br><span class="line">console.log(match1);</span><br><span class="line">console.log(match2);</span><br></pre></td></tr></table></figure>
-<p>打印结果如下：</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">null</span><br><span class="line">[ &#39;&#x2F;foo&#x2F;route&#39;, &#39;route&#39;, index: 0, input: &#39;&#x2F;foo&#x2F;route&#39; ]</span><br></pre></td></tr></table></figure>
-<p>说明：</p>
-<p>上述代码中，第一个 url 路径与匹配规则不相符返回 null，第二个 url 路径与匹配规则相符，返回一个数组。</p>
-<h5 id="3-parse"><a href="#3-parse" class="headerlink" title="3. parse()"></a>3. parse()</h5><p>作用：解析 url 字符串中的参数部分（:id）。</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">var pathToRegexp &#x3D; require(&#39;path-to-regexp&#39;);</span><br><span class="line"></span><br><span class="line">var url &#x3D; &#39;&#x2F;user&#x2F;:id&#39;;</span><br><span class="line">console.log(pathToRegexp.parse(url));</span><br></pre></td></tr></table></figure>
-<p>打印结果如下：</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">[ &#39;&#x2F;user&#39;,</span><br><span class="line">  &#123; name: &#39;id&#39;,</span><br><span class="line">    prefix: &#39;&#x2F;&#39;,</span><br><span class="line">    delimiter: &#39;&#x2F;&#39;,</span><br><span class="line">    optional: false,</span><br><span class="line">    repeat: false,</span><br><span class="line">    partial: false,</span><br><span class="line">    pattern: &#39;[^\\&#x2F;]+?&#39; &#125; ]</span><br></pre></td></tr></table></figure>
-<p>说明：返回一个数组，从第二个数据可以就可以得到 url 地址携带参数的属性名称（item.name）。</p>
-<p>当然，url 中携带参数出了 :id 这种形式，还有 /user?id=11 这种，使用 parse() 方法解析自行查看结果。</p>
-<h5 id="4-compile"><a href="#4-compile" class="headerlink" title="4. compile()"></a>4. compile()</h5><p>作用：快速填充 url 字符串的参数值。</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">var pathToRegexp &#x3D; require(&#39;path-to-regexp&#39;)</span><br><span class="line"></span><br><span class="line">var url &#x3D; &#39;&#x2F;user&#x2F;:id&#x2F;:name&#39;</span><br><span class="line">var data &#x3D; &#123;id: 10001, name: &#39;bob&#39;&#125;</span><br><span class="line">console.log(pathToRegexp.compile(url)(data))</span><br></pre></td></tr></table></figure>
-<p>打印结果：</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">&#x2F;user&#x2F;10001&#x2F;bob</span><br></pre></td></tr></table></figure>
-      
-    </div>
-
-    
-    
-    
-
-    <footer class="post-footer">
-        <div class="post-eof"></div>
-      
-    </footer>
-  </article>
-</div>
-
-
-
 
     
 
@@ -624,210 +335,6 @@
 <p>webpack4.X版本中，webpack -p命令，是可以默认压缩js文件的
   </p>
 </blockquote>
-
-      
-    </div>
-
-    
-    
-    
-
-    <footer class="post-footer">
-        <div class="post-eof"></div>
-      
-    </footer>
-  </article>
-</div>
-
-
-
-
-    
-
-
-<div class="post-block">
-  
-  
-
-  <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="">
-    <link itemprop="mainEntityOfPage" href="https://lzhwweb.github.io/nirvana/javascript/%E5%89%8D%E7%AB%AF/dotenv/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="image" content="/nirvana/images/headphoto.jpeg">
-      <meta itemprop="name" content="nirvana">
-      <meta itemprop="description" content="个人学习笔记">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="涅槃快乐是金">
-    </span>
-      <header class="post-header">
-        <h2 class="post-title" itemprop="name headline">
-          <a href="/nirvana/javascript/%E5%89%8D%E7%AB%AF/dotenv/" class="post-title-link" itemprop="url">dotenv，从文件加载环境变量</a>
-        </h2>
-
-        <div class="post-meta-container">
-          <div class="post-meta">
-    <span class="post-meta-item">
-      <span class="post-meta-item-icon">
-        <i class="far fa-calendar"></i>
-      </span>
-      <span class="post-meta-item-text">发表于</span>
-      
-
-      <time title="创建时间：2021-03-20 17:42:53 / 修改时间：17:43:10" itemprop="dateCreated datePublished" datetime="2021-03-20T17:42:53+08:00">2021-03-20</time>
-    </span>
-    <span class="post-meta-item">
-      <span class="post-meta-item-icon">
-        <i class="far fa-folder"></i>
-      </span>
-      <span class="post-meta-item-text">分类于</span>
-        <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-          <a href="/nirvana/categories/javascript/" itemprop="url" rel="index"><span itemprop="name">javascript</span></a>
-        </span>
-    </span>
-
-  
-    <span id="/nirvana/javascript/%E5%89%8D%E7%AB%AF/dotenv/" class="post-meta-item leancloud_visitors" data-flag-title="dotenv，从文件加载环境变量" title="阅读次数">
-      <span class="post-meta-item-icon">
-        <i class="far fa-eye"></i>
-      </span>
-      <span class="post-meta-item-text">阅读次数：</span>
-      <span class="leancloud-visitors-count"></span>
-    </span>
-      </div>
-      <div class="post-meta">
-    <span class="post-meta-item" title="本文字数">
-      <span class="post-meta-item-icon">
-        <i class="far fa-file-word"></i>
-      </span>
-      <span class="post-meta-item-text">本文字数：</span>
-      <span>520</span>
-    </span>
-    <span class="post-meta-item" title="阅读时长">
-      <span class="post-meta-item-icon">
-        <i class="far fa-clock"></i>
-      </span>
-      <span class="post-meta-item-text">阅读时长 &asymp;</span>
-      <span>1 分钟</span>
-    </span>
-</div>
-
-        </div>
-      </header>
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-          <p>Node.js程序运行时加载不同的配置，比如开发环境和生产环境的数据数据库配置就可能不一样，使用 process.env.DB_HOST 环境变量，可以在Node.js程序内部方便获取参数信息。</p>
-<p>但是，程序启动时，怎样将环境变量传递给程序，这可能会是一个相对麻烦的事情，因为这关系到操作系统层的配置问题。</p>
-<h2 id="dotenv"><a href="#dotenv" class="headerlink" title="dotenv"></a>dotenv</h2><p>dotenv是一个可以使得Node.js从文件中加载环境变量的库，使用dotenv，我们只需要将程序的环境变量配置写在.env文件中。</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"># .env file</span><br><span class="line">DB_HOST&#x3D;localhost</span><br><span class="line">DB_USER&#x3D;root</span><br><span class="line">DB_PASS&#x3D;s1mpl3</span><br></pre></td></tr></table></figure>
-<p>然后，在Node.js程序启动时运行：</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">require(&#39;dotenv&#39;).config()</span><br></pre></td></tr></table></figure>
-<p>接着，我们就可以在接下来的程序中方便地使用环境变量了：</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">const db &#x3D; require(&#39;db&#39;)</span><br><span class="line">db.connect(&#123;</span><br><span class="line">  host: process.env.DB_HOST,</span><br><span class="line">  username: process.env.DB_USER,</span><br><span class="line">  password: process.env.DB_PASS</span><br><span class="line">&#125;)</span><br></pre></td></tr></table></figure>
-      
-    </div>
-
-    
-    
-    
-
-    <footer class="post-footer">
-        <div class="post-eof"></div>
-      
-    </footer>
-  </article>
-</div>
-
-
-
-
-    
-
-
-<div class="post-block">
-  
-  
-
-  <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="">
-    <link itemprop="mainEntityOfPage" href="https://lzhwweb.github.io/nirvana/javascript/%E5%89%8D%E7%AB%AF/node-rw-file/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="image" content="/nirvana/images/headphoto.jpeg">
-      <meta itemprop="name" content="nirvana">
-      <meta itemprop="description" content="个人学习笔记">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="涅槃快乐是金">
-    </span>
-      <header class="post-header">
-        <h2 class="post-title" itemprop="name headline">
-          <a href="/nirvana/javascript/%E5%89%8D%E7%AB%AF/node-rw-file/" class="post-title-link" itemprop="url">Nodejs读取目录下的文件并编辑</a>
-        </h2>
-
-        <div class="post-meta-container">
-          <div class="post-meta">
-    <span class="post-meta-item">
-      <span class="post-meta-item-icon">
-        <i class="far fa-calendar"></i>
-      </span>
-      <span class="post-meta-item-text">发表于</span>
-      
-
-      <time title="创建时间：2021-03-20 17:41:26 / 修改时间：17:41:48" itemprop="dateCreated datePublished" datetime="2021-03-20T17:41:26+08:00">2021-03-20</time>
-    </span>
-    <span class="post-meta-item">
-      <span class="post-meta-item-icon">
-        <i class="far fa-folder"></i>
-      </span>
-      <span class="post-meta-item-text">分类于</span>
-        <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-          <a href="/nirvana/categories/javascript/" itemprop="url" rel="index"><span itemprop="name">javascript</span></a>
-        </span>
-    </span>
-
-  
-    <span id="/nirvana/javascript/%E5%89%8D%E7%AB%AF/node-rw-file/" class="post-meta-item leancloud_visitors" data-flag-title="Nodejs读取目录下的文件并编辑" title="阅读次数">
-      <span class="post-meta-item-icon">
-        <i class="far fa-eye"></i>
-      </span>
-      <span class="post-meta-item-text">阅读次数：</span>
-      <span class="leancloud-visitors-count"></span>
-    </span>
-      </div>
-      <div class="post-meta">
-    <span class="post-meta-item" title="本文字数">
-      <span class="post-meta-item-icon">
-        <i class="far fa-file-word"></i>
-      </span>
-      <span class="post-meta-item-text">本文字数：</span>
-      <span>1k</span>
-    </span>
-    <span class="post-meta-item" title="阅读时长">
-      <span class="post-meta-item-icon">
-        <i class="far fa-clock"></i>
-      </span>
-      <span class="post-meta-item-text">阅读时长 &asymp;</span>
-      <span>1 分钟</span>
-    </span>
-</div>
-
-        </div>
-      </header>
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-          <p>node下读取和编辑文件都是使用<code>fs</code>组件</p>
-<h2 id="引用模块"><a href="#引用模块" class="headerlink" title="引用模块"></a>引用模块</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">const fs &#x3D; require(&#39;fs&#39;);</span><br></pre></td></tr></table></figure>
-<h2 id="读取文件夹"><a href="#读取文件夹" class="headerlink" title="读取文件夹"></a>读取文件夹</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br></pre></td><td class="code"><pre><span class="line">&#x2F;**</span><br><span class="line">* path - 文件路径。</span><br><span class="line">* callback - 回调函数，回调函数带有两个参数err, files，err 为错误信息，files 为 目录下的文件数组列表。</span><br><span class="line">**&#x2F;</span><br><span class="line"></span><br><span class="line">fs.readdir(path, callback)</span><br><span class="line">#异步 readdir(3). 读取目录的内容。</span><br><span class="line">fs.readdirSync(path)</span><br><span class="line">#同步 readdir().返回文件数组列表。</span><br><span class="line"></span><br><span class="line">&#x2F;&#x2F;demo</span><br><span class="line">const fs &#x3D; require(&#39;fs&#39;);</span><br><span class="line">const path &#x3D; require(&#39;path&#39;);</span><br><span class="line">fs.readdir(pathName, function(err, files)&#123;</span><br><span class="line">    var dirs &#x3D; [];</span><br><span class="line">    (function iterator(i)&#123;</span><br><span class="line">      if(i &#x3D;&#x3D; files.length) &#123;</span><br><span class="line">        console.log(dirs);</span><br><span class="line">      &#125;</span><br><span class="line">      fs.stat(path.join(pathName, files[i]), function(err, data)&#123;     </span><br><span class="line">        if(data.isFile())&#123;               </span><br><span class="line">            dirs.push(files[i]);</span><br><span class="line">            iterator(i+1);</span><br><span class="line">       &#125;);   </span><br><span class="line">    &#125;)(0);</span><br><span class="line">&#125;);</span><br></pre></td></tr></table></figure>
-
-<h2 id="编辑文件"><a href="#编辑文件" class="headerlink" title="编辑文件"></a>编辑文件</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br></pre></td><td class="code"><pre><span class="line">var fs &#x3D; require(&quot;fs&quot;);</span><br><span class="line"></span><br><span class="line">&#x2F;&#x2F; 异步读取</span><br><span class="line">fs.readFile(&#39;input.txt&#39;, function (err, data) &#123;</span><br><span class="line">   if (err) &#123;</span><br><span class="line">       return console.error(err);</span><br><span class="line">   &#125;</span><br><span class="line">   console.log(&quot;异步读取: &quot; + data.toString());</span><br><span class="line">&#125;);</span><br><span class="line"></span><br><span class="line">&#x2F;&#x2F; 同步读取</span><br><span class="line">var data &#x3D; fs.readFileSync(&#39;input.txt&#39;);</span><br><span class="line">console.log(&quot;同步读取: &quot; + data.toString());</span><br><span class="line"></span><br><span class="line">console.log(&quot;程序执行完毕。&quot;);</span><br></pre></td></tr></table></figure>
 
       
     </div>
@@ -1163,7 +670,7 @@
   
 
   <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="">
-    <link itemprop="mainEntityOfPage" href="https://lzhwweb.github.io/nirvana/javascript/%E5%89%8D%E7%AB%AF/CodeReview%E6%80%BB%E7%BB%93/">
+    <link itemprop="mainEntityOfPage" href="https://lzhwweb.github.io/nirvana/DesignPattern/%E8%AE%BE%E8%AE%A1%E6%A8%A1%E5%BC%8F%EF%BC%88TypeScript%EF%BC%89/Abstract-Factory-Pattern%EF%BC%88%E6%8A%BD%E8%B1%A1%E5%B7%A5%E5%8E%82%E6%A8%A1%E5%BC%8F%EF%BC%89/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="image" content="/nirvana/images/headphoto.jpeg">
@@ -1176,7 +683,158 @@
     </span>
       <header class="post-header">
         <h2 class="post-title" itemprop="name headline">
-          <a href="/nirvana/javascript/%E5%89%8D%E7%AB%AF/CodeReview%E6%80%BB%E7%BB%93/" class="post-title-link" itemprop="url">CodeReview总结</a>
+          <a href="/nirvana/DesignPattern/%E8%AE%BE%E8%AE%A1%E6%A8%A1%E5%BC%8F%EF%BC%88TypeScript%EF%BC%89/Abstract-Factory-Pattern%EF%BC%88%E6%8A%BD%E8%B1%A1%E5%B7%A5%E5%8E%82%E6%A8%A1%E5%BC%8F%EF%BC%89/" class="post-title-link" itemprop="url">Abstract-Factory-Pattern（抽象工厂模式）</a>
+        </h2>
+
+        <div class="post-meta-container">
+          <div class="post-meta">
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-calendar"></i>
+      </span>
+      <span class="post-meta-item-text">发表于</span>
+
+      <time title="创建时间：2021-03-11 21:12:40" itemprop="dateCreated datePublished" datetime="2021-03-11T21:12:40+08:00">2021-03-11</time>
+    </span>
+      <span class="post-meta-item">
+        <span class="post-meta-item-icon">
+          <i class="far fa-calendar-check"></i>
+        </span>
+        <span class="post-meta-item-text">更新于</span>
+        <time title="修改时间：2021-03-10 22:13:48" itemprop="dateModified" datetime="2021-03-10T22:13:48+08:00">2021-03-10</time>
+      </span>
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-folder"></i>
+      </span>
+      <span class="post-meta-item-text">分类于</span>
+        <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+          <a href="/nirvana/categories/DesignPattern/" itemprop="url" rel="index"><span itemprop="name">DesignPattern</span></a>
+        </span>
+    </span>
+
+  
+    <span id="/nirvana/DesignPattern/%E8%AE%BE%E8%AE%A1%E6%A8%A1%E5%BC%8F%EF%BC%88TypeScript%EF%BC%89/Abstract-Factory-Pattern%EF%BC%88%E6%8A%BD%E8%B1%A1%E5%B7%A5%E5%8E%82%E6%A8%A1%E5%BC%8F%EF%BC%89/" class="post-meta-item leancloud_visitors" data-flag-title="Abstract-Factory-Pattern（抽象工厂模式）" title="阅读次数">
+      <span class="post-meta-item-icon">
+        <i class="far fa-eye"></i>
+      </span>
+      <span class="post-meta-item-text">阅读次数：</span>
+      <span class="leancloud-visitors-count"></span>
+    </span>
+      </div>
+      <div class="post-meta">
+    <span class="post-meta-item" title="本文字数">
+      <span class="post-meta-item-icon">
+        <i class="far fa-file-word"></i>
+      </span>
+      <span class="post-meta-item-text">本文字数：</span>
+      <span>6k</span>
+    </span>
+    <span class="post-meta-item" title="阅读时长">
+      <span class="post-meta-item-icon">
+        <i class="far fa-clock"></i>
+      </span>
+      <span class="post-meta-item-text">阅读时长 &asymp;</span>
+      <span>5 分钟</span>
+    </span>
+</div>
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+          <p><strong>抽象工厂模式（Abstract Factory Pattern）</strong>：抽象工厂的工作是将“抽象零件”组装成“抽象产品”。不关心零件的具体实现，而是值关心接口。我们使用该接口将零件组装成产品<br>在抽象工厂模式中，接口是负责创建一个相关对象的工厂，不需要显式指定它们的类。每个生成的工厂都能按照工厂模式提供对象。</p>
+<h2 id="介绍"><a href="#介绍" class="headerlink" title="介绍"></a>介绍</h2><ul>
+<li><strong>意图：</strong>提供一个创建一系列相关或相互依赖对象的接口，而无需指定它们具体的类。</li>
+<li><strong>主要解决：</strong>主要解决接口选择的问题。</li>
+<li><strong>何时使用：</strong>系统的产品有多于一个的产品族，而系统只消费其中某一族的产品。</li>
+<li><strong>如何解决：</strong>在一个产品族里面，定义多个产品。</li>
+<li><strong>关键代码：</strong>在一个工厂里聚合多个同类产品。</li>
+<li><strong>优点：</strong>当一个产品族中的多个对象被设计成一起工作时，它能保证客户端始终只使用同一个产品族中的对象。</li>
+<li><strong>缺点：</strong>产品族扩展非常困难，要增加一个系列的某一产品，既要在抽象的 Creator 里加代码，又要在具体的里面加代码。</li>
+<li><strong>使用场景：</strong><br>1、QQ 换皮肤，一整套一起换。<br>2、生成不同操作系统的程序。<blockquote>
+<p>注意事项：产品族难扩展，产品等级易扩展。</p>
+</blockquote>
+</li>
+</ul>
+<h2 id="示例"><a href="#示例" class="headerlink" title="示例"></a>示例</h2><p>Shape.ts 创建一个形状接口</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">export interface Shape &#123;</span><br><span class="line">    draw(): void;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p>Square.ts 正方形类实现形状接口</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">import &#123; Shape &#125; from &quot;.&#x2F;Shape&quot;;</span><br><span class="line"></span><br><span class="line">export default class Square implements Shape &#123;</span><br><span class="line">    public draw(): void &#123;</span><br><span class="line">        console.log(&quot;Inside Square::draw() method.&quot;);</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p>Rectangle.ts 长方形类实现形状接口</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">import &#123; Shape &#125; from &quot;.&#x2F;Shape&quot;;</span><br><span class="line"></span><br><span class="line">export default class Rectangle implements Shape &#123;</span><br><span class="line"></span><br><span class="line">    public draw(): void &#123;</span><br><span class="line">        console.log(&quot;Inside Rectangle::draw() method.&quot;);</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p>Circle.ts 圆形类实现形状接口</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">import &#123; Shape &#125; from &quot;.&#x2F;Shape&quot;;</span><br><span class="line"></span><br><span class="line">export default class Circle implements Shape &#123;</span><br><span class="line">    public draw(): void &#123;</span><br><span class="line">        console.log(&quot;Inside Circle::draw() method.&quot;);</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p>Color.ts 创建一个颜色接口。</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">export interface Color &#123;</span><br><span class="line">    fill(): void;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p>Red.ts 红色类实现颜色接口</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">import &#123; Color &#125; from &quot;.&#x2F;Color&quot;;</span><br><span class="line"></span><br><span class="line">export default class Red implements Color &#123;</span><br><span class="line"></span><br><span class="line">    public fill(): void &#123;</span><br><span class="line">        console.log(&quot;Inside Red::fill() method.&quot;);</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p>Blue.ts 蓝色类实现颜色接口</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">import &#123; Color &#125; from &quot;.&#x2F;Color&quot;;</span><br><span class="line"></span><br><span class="line">export default class Blue implements Color &#123;</span><br><span class="line"></span><br><span class="line">    public fill(): void &#123;</span><br><span class="line">        console.log(&quot;Inside Blue::fill() method.&quot;);</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p>Green.ts 绿色类实现颜色接口</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">import &#123; Color &#125; from &quot;.&#x2F;Color&quot;;</span><br><span class="line"></span><br><span class="line">export default class Green implements Color &#123;</span><br><span class="line"></span><br><span class="line">    public fill(): void &#123;</span><br><span class="line">        console.log(&quot;Inside Green::fill() method.&quot;);</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p>AbstractFactory.ts 抽象工厂，为Color、Shape创建抽象对象</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">import &#123; Color &#125; from &quot;.&#x2F;Color&quot;;</span><br><span class="line">import &#123; Shape &#125; from &quot;.&#x2F;Shape&quot;;</span><br><span class="line"></span><br><span class="line">export default abstract class AbstractFactory &#123;</span><br><span class="line">    public abstract getColor(color: string): Color;</span><br><span class="line">    public abstract getShape(shape: string): Shape;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p>ColorFactory.ts 创建扩展了 AbstractFactory 的工厂类，基于给定的信息生成实体类的对象</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br></pre></td><td class="code"><pre><span class="line">import AbstractFactory from &quot;.&#x2F;AbstractFactory&quot;;</span><br><span class="line">import &#123; Shape &#125; from &quot;.&#x2F;Shape&quot;;</span><br><span class="line">import &#123; Color &#125; from &quot;.&#x2F;Color&quot;;</span><br><span class="line">import Red from &quot;.&#x2F;Red&quot;;</span><br><span class="line">import Green from &quot;.&#x2F;Green&quot;;</span><br><span class="line">import Blue from &quot;.&#x2F;Blue&quot;;</span><br><span class="line"></span><br><span class="line">export default class ColorFactory extends AbstractFactory &#123;</span><br><span class="line">    public getShape(shapeType: string): Shape &#123;</span><br><span class="line">        return null;</span><br><span class="line">    &#125;</span><br><span class="line">    public getColor(color: string): Color &#123;</span><br><span class="line">        if (color &#x3D;&#x3D; null) &#123;</span><br><span class="line">            return null;</span><br><span class="line">        &#125;</span><br><span class="line">        if (color.toUpperCase() &#x3D;&#x3D;&#x3D; &quot;RED&quot;) &#123;</span><br><span class="line">            return new Red();</span><br><span class="line">        &#125; else if (color.toUpperCase() &#x3D;&#x3D;&#x3D; &quot;GREEN&quot;) &#123;</span><br><span class="line">            return new Green();</span><br><span class="line">        &#125; else if (color.toUpperCase() &#x3D;&#x3D;&#x3D; &quot;BLUE&quot;) &#123;</span><br><span class="line">            return new Blue();</span><br><span class="line">        &#125;</span><br><span class="line">        return null;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p>ShapeFactory.ts 创建扩展了 AbstractFactory 的工厂类，基于给定的信息生成实体类的对象</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br></pre></td><td class="code"><pre><span class="line">import AbstractFactory from &quot;.&#x2F;AbstractFactory&quot;;</span><br><span class="line">import &#123; Shape &#125; from &quot;.&#x2F;Shape&quot;;</span><br><span class="line">import Circle from &quot;.&#x2F;Circle&quot;;</span><br><span class="line">import Rectangle from &quot;.&#x2F;Rectangle&quot;;</span><br><span class="line">import Square from &quot;.&#x2F;Square&quot;;</span><br><span class="line">import &#123; Color &#125; from &quot;.&#x2F;Color&quot;;</span><br><span class="line"></span><br><span class="line">export default class ShapeFactory extends AbstractFactory &#123;</span><br><span class="line"></span><br><span class="line">    public getShape(shapeType: string): Shape &#123;</span><br><span class="line">        if (shapeType &#x3D;&#x3D; null) &#123;</span><br><span class="line">            return null;</span><br><span class="line">        &#125;</span><br><span class="line">        if (shapeType.toUpperCase() &#x3D;&#x3D;&#x3D; &quot;CIRCLE&quot;) &#123;</span><br><span class="line">            return new Circle();</span><br><span class="line">        &#125; else if (shapeType.toUpperCase() &#x3D;&#x3D;&#x3D; &quot;RECTANGLE&quot;) &#123;</span><br><span class="line">            return new Rectangle();</span><br><span class="line">        &#125; else if (shapeType.toUpperCase() &#x3D;&#x3D;&#x3D; &quot;SQUARE&quot;) &#123;</span><br><span class="line">            return new Square();</span><br><span class="line">        &#125;</span><br><span class="line">        return null;</span><br><span class="line">    &#125;</span><br><span class="line">    public getColor(color: string): Color &#123;</span><br><span class="line">        return null;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p>FactoryProducer.ts 创建一个工厂创造器/生成器类，通过传递形状或颜色信息来获取工厂</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><span class="line">import AbstractFactory from &quot;.&#x2F;AbstractFactory&quot;;</span><br><span class="line">import ShapeFactory from &quot;.&#x2F;ShapeFactory&quot;;</span><br><span class="line">import ColorFactory from &quot;.&#x2F;ColorFactory&quot;;</span><br><span class="line"></span><br><span class="line">export default class FactoryProducer &#123;</span><br><span class="line">    public static getFactory(choice: string): AbstractFactory &#123;</span><br><span class="line">        if (choice.toUpperCase() &#x3D;&#x3D;&#x3D; &quot;SHAPE&quot;) &#123;</span><br><span class="line">            return new ShapeFactory();</span><br><span class="line">        &#125; else if (choice.toUpperCase() &#x3D;&#x3D;&#x3D; &quot;COLOR&quot;) &#123;</span><br><span class="line">            return new ColorFactory();</span><br><span class="line">        &#125;</span><br><span class="line">        return null;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p>index.ts </p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br></pre></td><td class="code"><pre><span class="line">import FactoryProducer from &quot;.&#x2F;FactoryProducer&quot;;</span><br><span class="line">&#x2F;&#x2F;获取形状工厂</span><br><span class="line">const shapeFactory &#x3D; FactoryProducer.getFactory(&quot;SHAPE&quot;);</span><br><span class="line"></span><br><span class="line">&#x2F;&#x2F;获取形状为 Circle 的对象</span><br><span class="line">const shape1 &#x3D; shapeFactory.getShape(&quot;CIRCLE&quot;);</span><br><span class="line"></span><br><span class="line">&#x2F;&#x2F;调用 Circle 的 draw 方法</span><br><span class="line">shape1.draw();</span><br><span class="line"></span><br><span class="line">&#x2F;&#x2F;获取形状为 Rectangle 的对象</span><br><span class="line">const shape2 &#x3D; shapeFactory.getShape(&quot;RECTANGLE&quot;);</span><br><span class="line"></span><br><span class="line">&#x2F;&#x2F;调用 Rectangle 的 draw 方法</span><br><span class="line">shape2.draw();</span><br><span class="line"></span><br><span class="line">&#x2F;&#x2F;获取形状为 Square 的对象</span><br><span class="line">const shape3 &#x3D; shapeFactory.getShape(&quot;SQUARE&quot;);</span><br><span class="line"></span><br><span class="line">&#x2F;&#x2F;调用 Square 的 draw 方法</span><br><span class="line">shape3.draw();</span><br><span class="line">&#x2F;&#x2F;获取颜色工厂</span><br><span class="line">const colorFactory &#x3D; FactoryProducer.getFactory(&quot;COLOR&quot;);</span><br><span class="line"></span><br><span class="line">&#x2F;&#x2F;获取颜色为 Red 的对象</span><br><span class="line">const color1 &#x3D; colorFactory.getColor(&quot;RED&quot;);</span><br><span class="line"></span><br><span class="line">&#x2F;&#x2F;调用 Red 的 fill 方法</span><br><span class="line">color1.fill();</span><br><span class="line"></span><br><span class="line">&#x2F;&#x2F;获取颜色为 Green 的对象</span><br><span class="line">const color2 &#x3D; colorFactory.getColor(&quot;Green&quot;);</span><br><span class="line"></span><br><span class="line">&#x2F;&#x2F;调用 Green 的 fill 方法</span><br><span class="line">color2.fill();</span><br><span class="line"></span><br><span class="line">&#x2F;&#x2F;获取颜色为 Blue 的对象</span><br><span class="line">const color3 &#x3D; colorFactory.getColor(&quot;BLUE&quot;);</span><br><span class="line"></span><br><span class="line">&#x2F;&#x2F;调用 Blue 的 fill 方法</span><br><span class="line">color3.fill();</span><br><span class="line"></span><br></pre></td></tr></table></figure>
+<h2 id="result"><a href="#result" class="headerlink" title="result"></a>result</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">Inside Circle::draw() method.</span><br><span class="line">Inside Rectangle::draw() method.</span><br><span class="line">Inside Square::draw() method.</span><br><span class="line">Inside Red::fill() method.</span><br><span class="line">Inside Green::fill() method.</span><br><span class="line">Inside Blue::fill() method.</span><br></pre></td></tr></table></figure>
+<h2 id="类图"><a href="#类图" class="headerlink" title="类图"></a>类图</h2><p><img src="https://upload-images.jianshu.io/upload_images/10024246-77c13ebb515b20a4.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240"></p>
+<h2 id="角色"><a href="#角色" class="headerlink" title="角色"></a>角色</h2><ul>
+<li><strong>AbstractProduct（抽象产品）</strong><br>AbstractProduct角色负责定义AbstractFactory角色所生产的抽象零件和产品的接口</li>
+<li><strong>AbstractFactory（抽象工厂）</strong><br>AbstractFactory角色负责定义用于生产抽象产品的接口</li>
+<li><strong>Client（委托者）</strong><br>Client角色仅会调用AbstractFactory角色和AbstractProduct角色的接口进行工作，对于具体的零件、产品和工厂一无所知。</li>
+<li><strong>ConcreteProduct（具体产品）</strong><br>ConcreteProduct角色负责实现AbstractProduct角色定义的接口</li>
+<li><strong>ConcreteFactory（具体工厂）</strong><br>ConcreteFactory角色负责实现AbstractFactory角色的接口。</li>
+</ul>
+
+      
+    </div>
+
+    
+    
+    
+
+    <footer class="post-footer">
+        <div class="post-eof"></div>
+      
+    </footer>
+  </article>
+</div>
+
+
+
+
+    
+
+
+<div class="post-block">
+  
+  
+
+  <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="">
+    <link itemprop="mainEntityOfPage" href="https://lzhwweb.github.io/nirvana/DesignPattern/%E8%AE%BE%E8%AE%A1%E6%A8%A1%E5%BC%8F%EF%BC%88TypeScript%EF%BC%89/Adapter%E6%A8%A1%E5%BC%8F%EF%BC%88%E9%80%82%E9%85%8D%E5%99%A8%EF%BC%89/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/nirvana/images/headphoto.jpeg">
+      <meta itemprop="name" content="nirvana">
+      <meta itemprop="description" content="个人学习笔记">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="涅槃快乐是金">
+    </span>
+      <header class="post-header">
+        <h2 class="post-title" itemprop="name headline">
+          <a href="/nirvana/DesignPattern/%E8%AE%BE%E8%AE%A1%E6%A8%A1%E5%BC%8F%EF%BC%88TypeScript%EF%BC%89/Adapter%E6%A8%A1%E5%BC%8F%EF%BC%88%E9%80%82%E9%85%8D%E5%99%A8%EF%BC%89/" class="post-title-link" itemprop="url">Adapter模式（适配器）</a>
         </h2>
 
         <div class="post-meta-container">
@@ -1202,12 +860,12 @@
       </span>
       <span class="post-meta-item-text">分类于</span>
         <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-          <a href="/nirvana/categories/javascript/" itemprop="url" rel="index"><span itemprop="name">javascript</span></a>
+          <a href="/nirvana/categories/DesignPattern/" itemprop="url" rel="index"><span itemprop="name">DesignPattern</span></a>
         </span>
     </span>
 
   
-    <span id="/nirvana/javascript/%E5%89%8D%E7%AB%AF/CodeReview%E6%80%BB%E7%BB%93/" class="post-meta-item leancloud_visitors" data-flag-title="CodeReview总结" title="阅读次数">
+    <span id="/nirvana/DesignPattern/%E8%AE%BE%E8%AE%A1%E6%A8%A1%E5%BC%8F%EF%BC%88TypeScript%EF%BC%89/Adapter%E6%A8%A1%E5%BC%8F%EF%BC%88%E9%80%82%E9%85%8D%E5%99%A8%EF%BC%89/" class="post-meta-item leancloud_visitors" data-flag-title="Adapter模式（适配器）" title="阅读次数">
       <span class="post-meta-item-icon">
         <i class="far fa-eye"></i>
       </span>
@@ -1221,7 +879,7 @@
         <i class="far fa-file-word"></i>
       </span>
       <span class="post-meta-item-text">本文字数：</span>
-      <span>2.2k</span>
+      <span>2.5k</span>
     </span>
     <span class="post-meta-item" title="阅读时长">
       <span class="post-meta-item-icon">
@@ -1239,47 +897,25 @@
     
     
     <div class="post-body" itemprop="articleBody">
-          <p>我们时常会听到团队成员说：</p>
-<ul>
-<li>“这个项目搞代码审查简直是在浪费时间。”</li>
-<li>“我没时间做代码审查。”</li>
-<li>“发布会延迟，是因为我那个卑鄙的同事还没有审查过我的代码。”</li>
-<li>“你能相信我的同事居然要求我改我的代码吗？我这么优雅完美的代码哪里还需要改呢。”</li>
+          <blockquote>
+<p>适配器主要用于接口的转换或者将接口不兼容的类对象组合在一起形成对外统一接口，是一种结构性模式</p>
+</blockquote>
+<h3 id="Adapter模式有以下两种："><a href="#Adapter模式有以下两种：" class="headerlink" title="Adapter模式有以下两种："></a>Adapter模式有以下两种：</h3><ul>
+<li>类适配器模式（使用继承实现）</li>
+<li>对象适配器（使用委托的适配器）<h3 id="1、使用继承的适配器"><a href="#1、使用继承的适配器" class="headerlink" title="1、使用继承的适配器"></a>1、使用继承的适配器</h3>Banner类<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br></pre></td><td class="code"><pre><span class="line">export default class Banner &#123;</span><br><span class="line">    private info: string;</span><br><span class="line">    constructor(info: string) &#123;</span><br><span class="line">        this.info &#x3D; info;</span><br><span class="line">    &#125;</span><br><span class="line">    &#x2F;**</span><br><span class="line">     * ShowWithParen</span><br><span class="line">    *&#x2F;</span><br><span class="line">    public ShowWithParen(): void &#123;</span><br><span class="line">        console.log(&#96;($&#123;this.info&#125;)&#96;);</span><br><span class="line">    &#125;</span><br><span class="line">    &#x2F;**</span><br><span class="line">     * ShowWithAster</span><br><span class="line">     *&#x2F;</span><br><span class="line">    public ShowWithAster(): void &#123;</span><br><span class="line">        console.log(&#96;*$&#123;this.info&#125;*&#96;);</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+Print接口：声明2个方法<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">export interface Print &#123;</span><br><span class="line">    printWeak: () &#x3D;&gt; void;</span><br><span class="line">    printStrong: () &#x3D;&gt; void;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+PrintBanner类：扮演适配器的角色，继承Banner类，实现Print接口<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br></pre></td><td class="code"><pre><span class="line">import Banner from &quot;.&#x2F;Banner&quot;;</span><br><span class="line">import &#123; Print &#125; from &quot;.&#x2F;Print&quot;;</span><br><span class="line">export default class PrintBanner extends Banner implements Print &#123;</span><br><span class="line"></span><br><span class="line">    constructor(info: string) &#123;</span><br><span class="line">        super(info);</span><br><span class="line">    &#125;</span><br><span class="line">    &#x2F;**</span><br><span class="line">     * printWeak</span><br><span class="line">     *&#x2F;</span><br><span class="line">    public printWeak(): void &#123;</span><br><span class="line">        this.ShowWithParen();</span><br><span class="line">    &#125;</span><br><span class="line">    &#x2F;**</span><br><span class="line">     * printStrong</span><br><span class="line">     *&#x2F;</span><br><span class="line">    public printStrong(): void &#123;</span><br><span class="line">        this.ShowWithAster();</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<img src="https://upload-images.jianshu.io/upload_images/10024246-144b9455b75871d9.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="使用继承的适配器类图"></li>
 </ul>
-<h2 id="我们为什么要做代码审查？"><a href="#我们为什么要做代码审查？" class="headerlink" title="我们为什么要做代码审查？"></a><strong>我们为什么要做代码审查？</strong></h2><p>任何专业的软件开发人员其最重要的目标之一就是要不断提高自己的工作质量。但是只有团队协作才能力往一处使，劲往一处用，提高软件质量。代码审查是实现这一目标最重要的途径之一。特别是，代码审查可以：</p>
-<ul>
-<li>  从另一个角度发现缺陷和更好的解决办法。</li>
-<li>  确保至少另外还有一人熟悉你的代码。</li>
-<li>  通过翻阅资深开发人员的代码，帮助培训新员工。</li>
-<li>  促进知识共享。</li>
-<li>  激励开发人员更好地写代码、解决代码中的问题，以免在审查时被别人揪出来。</li>
-</ul>
-<h2 id="代码审查要彻底"><a href="#代码审查要彻底" class="headerlink" title="代码审查要彻底"></a><strong>代码审查要彻底</strong></h2><p>然而，除非能实实在在彻彻底底地在代码审查上花时间和精力，否则上述目标是很难实现的。</p>
-<p>我的看法是大概25％的原始开发时间应该花在代码审查上。举个例子，如果一个开发人员需要用两天时间来实现某个程式，那么就应该花大约4小时进行审查。</p>
-<p>当然时间并不是最重要的，关键是要看你能否正确审查代码。你必须了解你正在审查的代码。这意味着你不仅仅要知道它的的语法，还必须理解代码是如何融入应用程序这个大环境下，成为组件或库的一部分。如果你不能把握每一行代码的含义，那么你的审查就不到位，也不会非常有价值。这也是为什么良好执行的代码审查，大多不可能迅速被完成：因为我们需要时间来研究各种代码，如能触发给定功能以确保第三方API正确使用的代码。</p>
-<p>在审查时，除了要寻找代码缺陷和其他问题，你还应该确保：</p>
-<ul>
-<li>  囊括所有必要的测试。</li>
-<li>  已经写入了恰当的设计文档。</li>
-</ul>
-<p>即使是那些擅于写测试和文档的开发人员，也会在改变代码的时候忘记更新。代码评审时就应该确保这些资料不会随着时间而变得毫无用处。</p>
-<h2 id="避免过度的代码审查"><a href="#避免过度的代码审查" class="headerlink" title="避免过度的代码审查"></a><strong>避免过度的代码审查</strong></h2><p>开发人员应该努力清空积压的审查任务。有一种方法是在早上代码审查，在开始自己的开发工作之前先搞定审查任务。当然你也可以午饭前后或者是一天结束之时审查代码。总而言之，你应该将代码当作是日常工作的一部分，而不是工作的负累，所以你应该避免：</p>
-<ul>
-<li>  没有时间处理积压的审查任务。</li>
-<li>  由于审查的没有完成而导致了延迟发布。</li>
-<li>  傻乎乎地再去审查已经不相干的代码，在交给你之后已经被改的面目全非。</li>
-<li>  因为时间紧迫急急忙忙地走个过场。</li>
-</ul>
-<h2 id="编写可审查的代码"><a href="#编写可审查的代码" class="headerlink" title="编写可审查的代码"></a><strong>编写可审查的代码</strong></h2><p>出现代码积压而失控的问题，审查人员并不是唯一一个需要负责的人。举个例子，如果你的同事花了一周时间为一个大型程序添加了乱七八糟的代码，那么发布的补丁就会变得很难审查，有太多的内容需要理解和钻研。甚至于连代码目的和基本架构都看得云里雾里。这是写代码的不是。</p>
-<p>在编写可审查的代码之前，还需要做一些准备。如果需要做一些棘手的架构决策，那么最好和审查人员先讨论一番。这将能让你的代码更容易审阅和理解，因为他们提前已经知道你想实现什么以及计划如何实现。这也可以避免，要是审查人员之后提出一个截然不同又更好的方法，而导致你不得不重写一大片代码的情况。</p>
-<p>项目架构应该在设计文档中详细描述。这很重要，因为它能让新的项目人员更快地理解现有的代码库，还能有助于审查人员更好地完成他们的工作。此外，单元测试能让审查人员更好地理解各个组件的使用。</p>
-<p>如果在你的补丁中还包含了第三方代码，那么单独提交。试想一下，要是代码中间插进去9000行jQuery，是不是大大增加了审查的难度！</p>
-<p>创建可审查代码最重要的步骤之一就是给你的代码审查做注释。这需要你自己预先审查过，然后在你认为有助于审查人员理解的地方添加注释。我发现，注释后的代码审查所需的时间相对较短（通常只需几分钟）。当然，代码注释还是应该酌情使用。此外，有研究表明，开发人员自己在给代码注释的时候也会发现许多存在的缺陷。</p>
-<h2 id="代码重构"><a href="#代码重构" class="headerlink" title="代码重构"></a><strong>代码重构</strong></h2><p>有时候，我们必须重构代码库。如果恰巧碰到的是一个大型的应用程序，那可能就会需要几天的时间（甚至更多），同时会产生大量的补丁。在这种情况下，想要做到标准流程的代码评审可能是不切实际的。</p>
-<p>最好的解决办法是逐步重构代码。先给定一个合理范围，确定相应的代码库，然后朝着目标方向做整改和重构。第一部分完成之后，审查并发布，然后进行第二部分的重构……，直到全部完成。这种阶段式的方法可能并不总是可行的，但是如果我们在思考和规划时使用这样的方法，可以避免重构时大规模的单片补丁。当然这种方式可能需要的重构时间更多，但是也会产出更高质量的代码，以及更加轻松的审查过程。</p>
-<h2 id="解决争端"><a href="#解决争端" class="headerlink" title="解决争端"></a><strong>解决争端</strong></h2><p>毫无疑问，团队中的每个成员都是人才，但是这也很容易导致在面对特定的编码问题时，会出现意见分歧的情况。作为开发人员，我们应该保持开放的态度，并且也要能虚心接受审查人员给出的不同意见。</p>
-<p>而作为审查人员，说话要委婉。在提建议之前，先考虑一下你的意见是否真的更好或者仅仅只是因为品味不同而已。如果你选择的代码区域确实需要改进的，那么整个说服过程就会简单得多。并且话要这样讲，“这里还值得考虑一下……”，“有人建议说……”，而不是“我闭着眼睛写的算法也能比你的高效。”</p>
-<p>当然如果你们双方都不肯妥协的话，可以要求你们都尊重的开发人员来看一看，给出他的意见。<br>译文链接：<a target="_blank" rel="noopener" href="http://www.codeceo.com/article/code-review-5-tips.html">http://www.codeceo.com/article/code-review-5-tips.html</a><br>英文原文：<a target="_blank" rel="noopener" href="https://medium.com/@salsita/practical-lessons-in-peer-code-review-b4dbc84e88d3">Practical Lessons in Peer Code Review</a></p>
+<h3 id="2、使用委托的适配器"><a href="#2、使用委托的适配器" class="headerlink" title="2、使用委托的适配器"></a>2、使用委托的适配器</h3><p>PrintAbstractClass类</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">export default abstract class PrintAbstractClass &#123;</span><br><span class="line">    public abstract printWeak(): void;</span><br><span class="line">    public abstract printStrong(): void;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p>PrintBannerClass类：由于无法同时继承2个类，PrintBannerClass定义为Banner和PrintAbstractClass的子类</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br></pre></td><td class="code"><pre><span class="line">import PrintAbstractClass from &quot;.&#x2F;PrintAbstractClass&quot;;</span><br><span class="line">import Banner from &quot;.&#x2F;Banner&quot;;</span><br><span class="line"></span><br><span class="line">export default class PrintBannerClass extends PrintAbstractClass &#123;</span><br><span class="line">    private banner: Banner;</span><br><span class="line">    constructor(info: string) &#123;</span><br><span class="line">        super();</span><br><span class="line">        this.banner &#x3D; new Banner(info);</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    public printWeak(): void &#123;</span><br><span class="line">        this.banner.ShowWithParen();</span><br><span class="line">    &#125;</span><br><span class="line">    public printStrong(): void &#123;</span><br><span class="line">        this.banner.ShowWithAster();</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p><img src="https://upload-images.jianshu.io/upload_images/10024246-3da680b5999179cc.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="对象适配器模式的类图（使用委托）"></p>
+<h3 id="main函数"><a href="#main函数" class="headerlink" title="main函数"></a>main函数</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br></pre></td><td class="code"><pre><span class="line">import PrintBanner from &quot;.&#x2F;PrintBanner&quot;</span><br><span class="line">import &#123; Print &#125; from &quot;.&#x2F;Print&quot;;</span><br><span class="line">import PrintBannerClass from &quot;.&#x2F;PrintBannerClass&quot;;</span><br><span class="line">&#x2F;&#x2F;只暴露到外面Print接口，可以多个类实现相关接口，使用时，只要new不同的类，然后调用方法使用统一</span><br><span class="line">const p: Print &#x3D; new PrintBanner(&quot;Hellp&quot;);</span><br><span class="line">console.log(&quot;---------p-----------------&quot;)</span><br><span class="line">p.printWeak();</span><br><span class="line">p.printStrong();</span><br><span class="line">&#x2F;&#x2F;p2会显示多个方法</span><br><span class="line">const p2: PrintBanner &#x3D; new PrintBanner(&quot;hell2&quot;);</span><br><span class="line">console.log(&quot;---------p2-----------------&quot;)</span><br><span class="line">p2.ShowWithAster();</span><br><span class="line">p2.ShowWithParen();</span><br><span class="line">p2.printStrong();</span><br><span class="line">p2.printWeak();</span><br><span class="line">console.log(&quot;---------p3-----------------&quot;)</span><br><span class="line">const P3 &#x3D; new PrintBannerClass(&quot;test&quot;);</span><br><span class="line">P3.printStrong();</span><br><span class="line">P3.printWeak();</span><br></pre></td></tr></table></figure>
+<blockquote>
+<p>———p—————–<br>(Hellp)<br>*Hellp*<br>———p2—————–<br>*hell2*<br>(hell2)<br>*hell2*<br>(hell2)<br>———p3—————–<br>*test*<br>(test)</p>
+</blockquote>
 
       
     </div>
@@ -1306,7 +942,7 @@
   
 
   <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="">
-    <link itemprop="mainEntityOfPage" href="https://lzhwweb.github.io/nirvana/javascript/%E5%89%8D%E7%AB%AF/JS-Array%E5%B8%B8%E7%94%A8%E6%96%B9%E6%B3%95%E8%AF%A6%E8%A7%A3%E5%8F%8A%E5%85%BC%E5%AE%B9%E6%80%A7%E4%BB%A3%E7%A0%81%EF%BC%88%E4%B8%80%EF%BC%89/">
+    <link itemprop="mainEntityOfPage" href="https://lzhwweb.github.io/nirvana/DesignPattern/%E8%AE%BE%E8%AE%A1%E6%A8%A1%E5%BC%8F%EF%BC%88TypeScript%EF%BC%89/Bridge-Pattern%EF%BC%88%E6%A1%A5%E6%8E%A5%E6%A8%A1%E5%BC%8F%EF%BC%89/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="image" content="/nirvana/images/headphoto.jpeg">
@@ -1319,161 +955,7 @@
     </span>
       <header class="post-header">
         <h2 class="post-title" itemprop="name headline">
-          <a href="/nirvana/javascript/%E5%89%8D%E7%AB%AF/JS-Array%E5%B8%B8%E7%94%A8%E6%96%B9%E6%B3%95%E8%AF%A6%E8%A7%A3%E5%8F%8A%E5%85%BC%E5%AE%B9%E6%80%A7%E4%BB%A3%E7%A0%81%EF%BC%88%E4%B8%80%EF%BC%89/" class="post-title-link" itemprop="url">JS Array常用方法详解及兼容性代码（一）</a>
-        </h2>
-
-        <div class="post-meta-container">
-          <div class="post-meta">
-    <span class="post-meta-item">
-      <span class="post-meta-item-icon">
-        <i class="far fa-calendar"></i>
-      </span>
-      <span class="post-meta-item-text">发表于</span>
-
-      <time title="创建时间：2021-03-11 21:12:40" itemprop="dateCreated datePublished" datetime="2021-03-11T21:12:40+08:00">2021-03-11</time>
-    </span>
-      <span class="post-meta-item">
-        <span class="post-meta-item-icon">
-          <i class="far fa-calendar-check"></i>
-        </span>
-        <span class="post-meta-item-text">更新于</span>
-        <time title="修改时间：2021-03-10 22:09:59" itemprop="dateModified" datetime="2021-03-10T22:09:59+08:00">2021-03-10</time>
-      </span>
-    <span class="post-meta-item">
-      <span class="post-meta-item-icon">
-        <i class="far fa-folder"></i>
-      </span>
-      <span class="post-meta-item-text">分类于</span>
-        <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-          <a href="/nirvana/categories/javascript/" itemprop="url" rel="index"><span itemprop="name">javascript</span></a>
-        </span>
-    </span>
-
-  
-    <span id="/nirvana/javascript/%E5%89%8D%E7%AB%AF/JS-Array%E5%B8%B8%E7%94%A8%E6%96%B9%E6%B3%95%E8%AF%A6%E8%A7%A3%E5%8F%8A%E5%85%BC%E5%AE%B9%E6%80%A7%E4%BB%A3%E7%A0%81%EF%BC%88%E4%B8%80%EF%BC%89/" class="post-meta-item leancloud_visitors" data-flag-title="JS Array常用方法详解及兼容性代码（一）" title="阅读次数">
-      <span class="post-meta-item-icon">
-        <i class="far fa-eye"></i>
-      </span>
-      <span class="post-meta-item-text">阅读次数：</span>
-      <span class="leancloud-visitors-count"></span>
-    </span>
-      </div>
-      <div class="post-meta">
-    <span class="post-meta-item" title="本文字数">
-      <span class="post-meta-item-icon">
-        <i class="far fa-file-word"></i>
-      </span>
-      <span class="post-meta-item-text">本文字数：</span>
-      <span>7k</span>
-    </span>
-    <span class="post-meta-item" title="阅读时长">
-      <span class="post-meta-item-icon">
-        <i class="far fa-clock"></i>
-      </span>
-      <span class="post-meta-item-text">阅读时长 &asymp;</span>
-      <span>6 分钟</span>
-    </span>
-</div>
-
-        </div>
-      </header>
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-          <p>[ES5中，Array新增API之forEach、filter、map、reduce]</p>
-<h2 id="一：-forEach"><a href="#一：-forEach" class="headerlink" title="一： forEach"></a>一： forEach</h2><p>forEach() 方法对数组的每个元素执行一次提供的函数。<br><strong>注意:</strong> <code>没有返回一个新数组! &amp; 没有返回值!</code><br><strong>应用场景：</strong>为一些相同的元素，绑定事件处理器！</p>
-<p><strong>语法:</strong></p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">array.forEach(callback(currentValue, index, array)&#123;</span><br><span class="line">    &#x2F;&#x2F;do something</span><br><span class="line">&#125;, this)</span><br><span class="line"></span><br><span class="line">array.forEach(callback[, thisArg])</span><br></pre></td></tr></table></figure>
-
-<p><strong>参数：</strong><br><code>callback</code>:<br>为数组中每个元素执行的函数，该函数接收三个参数：</p>
-<blockquote>
-<p><code>currentValue(当前值)</code><br>数组中正在处理的当前元素。<br><code>index(索引)</code><br>数组中正在处理的当前元素的索引。<br><code>array</code><br>forEach()方法正在操作的数组。</p>
-</blockquote>
-<p><code>thisArg</code>可选<br>可选参数。当执行回调 函数时用作this的值(参考对象)。</p>
-<p><strong>返回值</strong><br>undefined</p>
-<p><strong>注意：</strong><code>没有办法中止或者跳出 forEach 循环，除了抛出一个异常。如果你需要这样，使用forEach()方法是错误的，你可以用一个简单的循环作为替代。如果您正在测试一个数组里的元素是否符合某条件，且需要返回一个布尔值，那么可使用 Array.every或 Array.some。如果可用，新方法 find()或者findIndex 也可被用于真值测试的提早终止。</code></p>
-<p><strong>兼容旧环境</strong></p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br></pre></td><td class="code"><pre><span class="line">if (!Array.prototype.forEach) &#123;</span><br><span class="line"></span><br><span class="line">  Array.prototype.forEach &#x3D; function(callback, thisArg) &#123;</span><br><span class="line"></span><br><span class="line">    var T, k;</span><br><span class="line"></span><br><span class="line">    if (this &#x3D;&#x3D; null) &#123;</span><br><span class="line">      throw new TypeError(&#39; this is null or not defined&#39;);</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    &#x2F;&#x2F; 1. Let O be the result of calling toObject() passing the</span><br><span class="line">    &#x2F;&#x2F; |this| value as the argument.</span><br><span class="line">    var O &#x3D; Object(this);</span><br><span class="line"></span><br><span class="line">    &#x2F;&#x2F; 2. Let lenValue be the result of calling the Get() internal</span><br><span class="line">    &#x2F;&#x2F; method of O with the argument &quot;length&quot;.</span><br><span class="line">    &#x2F;&#x2F; 3. Let len be toUint32(lenValue).</span><br><span class="line">    var len &#x3D; O.length &gt;&gt;&gt; 0;</span><br><span class="line"></span><br><span class="line">    &#x2F;&#x2F; 4. If isCallable(callback) is false, throw a TypeError exception. </span><br><span class="line">    &#x2F;&#x2F; See: http:&#x2F;&#x2F;es5.github.com&#x2F;#x9.11</span><br><span class="line">    if (typeof callback !&#x3D;&#x3D; &quot;function&quot;) &#123;</span><br><span class="line">      throw new TypeError(callback + &#39; is not a function&#39;);</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    &#x2F;&#x2F; 5. If thisArg was supplied, let T be thisArg; else let</span><br><span class="line">    &#x2F;&#x2F; T be undefined.</span><br><span class="line">    if (arguments.length &gt; 1) &#123;</span><br><span class="line">      T &#x3D; thisArg;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    &#x2F;&#x2F; 6. Let k be 0</span><br><span class="line">    k &#x3D; 0;</span><br><span class="line"></span><br><span class="line">    &#x2F;&#x2F; 7. Repeat, while k &lt; len</span><br><span class="line">    while (k &lt; len) &#123;</span><br><span class="line"></span><br><span class="line">      var kValue;</span><br><span class="line"></span><br><span class="line">      &#x2F;&#x2F; a. Let Pk be ToString(k).</span><br><span class="line">      &#x2F;&#x2F;    This is implicit for LHS operands of the in operator</span><br><span class="line">      &#x2F;&#x2F; b. Let kPresent be the result of calling the HasProperty</span><br><span class="line">      &#x2F;&#x2F;    internal method of O with argument Pk.</span><br><span class="line">      &#x2F;&#x2F;    This step can be combined with c</span><br><span class="line">      &#x2F;&#x2F; c. If kPresent is true, then</span><br><span class="line">      if (k in O) &#123;</span><br><span class="line"></span><br><span class="line">        &#x2F;&#x2F; i. Let kValue be the result of calling the Get internal</span><br><span class="line">        &#x2F;&#x2F; method of O with argument Pk.</span><br><span class="line">        kValue &#x3D; O[k];</span><br><span class="line"></span><br><span class="line">        &#x2F;&#x2F; ii. Call the Call internal method of callback with T as</span><br><span class="line">        &#x2F;&#x2F; the this value and argument list containing kValue, k, and O.</span><br><span class="line">        callback.call(T, kValue, k, O);</span><br><span class="line">      &#125;</span><br><span class="line">      &#x2F;&#x2F; d. Increase k by 1.</span><br><span class="line">      k++;</span><br><span class="line">    &#125;</span><br><span class="line">    &#x2F;&#x2F; 8. return undefined</span><br><span class="line">  &#125;;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-
-<h2 id="二：filter"><a href="#二：filter" class="headerlink" title="二：filter"></a>二：filter</h2><p>filter() 方法创建一个新数组, 其包含通过所提供函数实现的测试的所有元素。 </p>
-<p><strong>语法:</strong></p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">var new_array &#x3D; arr.filter(callback[, thisArg])</span><br></pre></td></tr></table></figure>
-
-<p><strong>参数：</strong><br><code>callback</code>:<br>用来测试数组的每个元素的函数。调用时使用参数 (element, index, array)。<br>返回true表示保留该元素（通过测试），false则不保留<br><code>thisArg</code>可选<br>可选参数。当执行回调 函数时用作this的值(参考对象)。</p>
-<p><strong>返回值</strong><br>一个新的通过测试的元素的集合的数组</p>
-<p><strong>注意：</strong><code>filter 不会改变原数组，它返回过滤后的新数组。</code></p>
-<p><strong>兼容旧环境</strong></p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br></pre></td><td class="code"><pre><span class="line">if (!Array.prototype.filter)</span><br><span class="line">&#123;</span><br><span class="line">  Array.prototype.filter &#x3D; function(fun &#x2F;* , thisArg*&#x2F;)</span><br><span class="line">  &#123;</span><br><span class="line">    &quot;use strict&quot;;</span><br><span class="line"></span><br><span class="line">    if (this &#x3D;&#x3D;&#x3D; void 0 || this &#x3D;&#x3D;&#x3D; null)</span><br><span class="line">      throw new TypeError();</span><br><span class="line"></span><br><span class="line">    var t &#x3D; Object(this);</span><br><span class="line">    var len &#x3D; t.length &gt;&gt;&gt; 0;</span><br><span class="line">    if (typeof fun !&#x3D;&#x3D; &quot;function&quot;)</span><br><span class="line">      throw new TypeError();</span><br><span class="line"></span><br><span class="line">    var res &#x3D; [];</span><br><span class="line">    var thisArg &#x3D; arguments.length &gt;&#x3D; 2 ? arguments[1] : void 0;</span><br><span class="line">    for (var i &#x3D; 0; i &lt; len; i++)</span><br><span class="line">    &#123;</span><br><span class="line">      if (i in t)</span><br><span class="line">      &#123;</span><br><span class="line">        var val &#x3D; t[i];</span><br><span class="line"></span><br><span class="line">        &#x2F;&#x2F; NOTE: Technically this should Object.defineProperty at</span><br><span class="line">        &#x2F;&#x2F;       the next index, as push can be affected by</span><br><span class="line">        &#x2F;&#x2F;       properties on Object.prototype and Array.prototype.</span><br><span class="line">        &#x2F;&#x2F;       But that method&#39;s new, and collisions should be</span><br><span class="line">        &#x2F;&#x2F;       rare, so use the more-compatible alternative.</span><br><span class="line">        if (fun.call(thisArg, val, i, t))</span><br><span class="line">          res.push(val);</span><br><span class="line">      &#125;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    return res;</span><br><span class="line">  &#125;;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-<h2 id="三：map"><a href="#三：map" class="headerlink" title="三：map"></a>三：map</h2><p>map() 方法创建一个新数组，其结果是该数组中的每个元素都调用一个提供的函数后返回的结果。<br><strong>语法:</strong></p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">let new_array &#x3D; arr.map(function callback(currentValue, index, array) &#123; </span><br><span class="line">    &#x2F;&#x2F; Return element for new_array </span><br><span class="line">&#125;[, thisArg])</span><br></pre></td></tr></table></figure>
-
-<p><strong>参数：</strong><br><code>callback</code>:<br>生成新数组元素的函数，使用三个参数：</p>
-<blockquote>
-<p><code>currentValue</code><br>callback 的第一个参数，数组中正在处理的当前元素。<br><code>index</code><br>callback 的第二个参数，数组中正在处理的当前元素的索引。<br><code>array</code><br>callback 的第三个参数，map 方法被调用的数组。</p>
-</blockquote>
-<p><code>thisArg</code>可选<br>可选参数。当执行回调 函数时用作this的值(参考对象)。</p>
-<p><strong>返回值</strong><br>一个新数组，每个元素都是回调函数的结果。</p>
-<p><strong>注意：</strong><code>不修改调用它的原数组本身（当然可以在 callback 执行时改变原数组）。</code></p>
-<p><strong>兼容旧环境</strong></p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br></pre></td><td class="code"><pre><span class="line">if (!Array.prototype.map) &#123;</span><br><span class="line">  Array.prototype.map &#x3D; function(callback, thisArg) &#123;</span><br><span class="line"></span><br><span class="line">    var T, A, k;</span><br><span class="line"></span><br><span class="line">    if (this &#x3D;&#x3D; null) &#123;</span><br><span class="line">      throw new TypeError(&quot; this is null or not defined&quot;);</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    &#x2F;&#x2F; 1. 将O赋值为调用map方法的数组.</span><br><span class="line">    var O &#x3D; Object(this);</span><br><span class="line"></span><br><span class="line">    &#x2F;&#x2F; 2.将len赋值为数组O的长度.</span><br><span class="line">    var len &#x3D; O.length &gt;&gt;&gt; 0;</span><br><span class="line"></span><br><span class="line">    &#x2F;&#x2F; 3.如果callback不是函数,则抛出TypeError异常.</span><br><span class="line">    if (Object.prototype.toString.call(callback) !&#x3D; &quot;[object Function]&quot;) &#123;</span><br><span class="line">      throw new TypeError(callback + &quot; is not a function&quot;);</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    &#x2F;&#x2F; 4. 如果参数thisArg有值,则将T赋值为thisArg;否则T为undefined.</span><br><span class="line">    if (thisArg) &#123;</span><br><span class="line">      T &#x3D; thisArg;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    &#x2F;&#x2F; 5. 创建新数组A,长度为原数组O长度len</span><br><span class="line">    A &#x3D; new Array(len);</span><br><span class="line"></span><br><span class="line">    &#x2F;&#x2F; 6. 将k赋值为0</span><br><span class="line">    k &#x3D; 0;</span><br><span class="line"></span><br><span class="line">    &#x2F;&#x2F; 7. 当 k &lt; len 时,执行循环.</span><br><span class="line">    while(k &lt; len) &#123;</span><br><span class="line"></span><br><span class="line">      var kValue, mappedValue;</span><br><span class="line"></span><br><span class="line">      &#x2F;&#x2F;遍历O,k为原数组索引</span><br><span class="line">      if (k in O) &#123;</span><br><span class="line"></span><br><span class="line">        &#x2F;&#x2F;kValue为索引k对应的值.</span><br><span class="line">        kValue &#x3D; O[ k ];</span><br><span class="line"></span><br><span class="line">        &#x2F;&#x2F; 执行callback,this指向T,参数有三个.分别是kValue:值,k:索引,O:原数组.</span><br><span class="line">        mappedValue &#x3D; callback.call(T, kValue, k, O);</span><br><span class="line"></span><br><span class="line">        &#x2F;&#x2F; 返回值添加到新数组A中.</span><br><span class="line">        A[ k ] &#x3D; mappedValue;</span><br><span class="line">      &#125;</span><br><span class="line">      &#x2F;&#x2F; k自增1</span><br><span class="line">      k++;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    &#x2F;&#x2F; 8. 返回新数组A</span><br><span class="line">    return A;</span><br><span class="line">  &#125;;      </span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-<h2 id="四：reduce"><a href="#四：reduce" class="headerlink" title="四：reduce"></a>四：reduce</h2><p>reduce() 方法对累加器和数组中的每个元素（从左到右）应用一个函数，将其减少为单个值。<br><strong>语法:</strong></p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">arr.reduce(callback[, initialValue])</span><br></pre></td></tr></table></figure>
-
-<p><strong>参数：</strong><br><code>callback</code>:<br>执行数组中每个值的函数，包含四个参数：</p>
-<blockquote>
-<p><code>accumulator</code><br>累加器累加回调的返回值; 它是上一次调用回调时返回的累积值，或initialValue（如下所示）。<br><code>currentValue</code><br>数组中正在处理的元素。<br><code>currentIndex</code>可选<br>数组中正在处理的当前元素的索引。 如果提供了initialValue，则索引号为0，否则为索引为1。<br><code>array</code>可选<br>调用reduce的数组</p>
-</blockquote>
-<p><code>initialValue</code>可选<br>用作第一个调用 callback的第一个参数的值。 如果没有提供初始值，则将使用数组中的第一个元素。 在没有初始值的空数组上调用 reduce 将报错。</p>
-<p><strong>返回值</strong><br>函数累计处理的结果</p>
-<p><strong>注意：</strong><code>如果没有提供initialValue，reduce 会从索引1的地方开始执行 callback 方法，跳过第一个索引。如果提供initialValue，从索引0开始。</code></p>
-<p><strong>兼容旧环境</strong></p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br></pre></td><td class="code"><pre><span class="line">if (!Array.prototype.reduce) &#123;</span><br><span class="line">  Object.defineProperty(Array.prototype, &#39;reduce&#39;, &#123;</span><br><span class="line">    value: function(callback &#x2F;*, initialValue*&#x2F;) &#123;</span><br><span class="line">      if (this &#x3D;&#x3D;&#x3D; null) &#123;</span><br><span class="line">        throw new TypeError( &#39;Array.prototype.reduce &#39; + </span><br><span class="line">          &#39;called on null or undefined&#39; );</span><br><span class="line">      &#125;</span><br><span class="line">      if (typeof callback !&#x3D;&#x3D; &#39;function&#39;) &#123;</span><br><span class="line">        throw new TypeError( callback +</span><br><span class="line">          &#39; is not a function&#39;);</span><br><span class="line">      &#125;</span><br><span class="line"></span><br><span class="line">      &#x2F;&#x2F; 1. Let O be ? ToObject(this value).</span><br><span class="line">      var o &#x3D; Object(this);</span><br><span class="line"></span><br><span class="line">      &#x2F;&#x2F; 2. Let len be ? ToLength(? Get(O, &quot;length&quot;)).</span><br><span class="line">      var len &#x3D; o.length &gt;&gt;&gt; 0; </span><br><span class="line"></span><br><span class="line">      &#x2F;&#x2F; Steps 3, 4, 5, 6, 7      </span><br><span class="line">      var k &#x3D; 0; </span><br><span class="line">      var value;</span><br><span class="line"></span><br><span class="line">      if (arguments.length &gt;&#x3D; 2) &#123;</span><br><span class="line">        value &#x3D; arguments[1];</span><br><span class="line">      &#125; else &#123;</span><br><span class="line">        while (k &lt; len &amp;&amp; !(k in o)) &#123;</span><br><span class="line">          k++; </span><br><span class="line">        &#125;</span><br><span class="line"></span><br><span class="line">        &#x2F;&#x2F; 3. If len is 0 and initialValue is not present,</span><br><span class="line">        &#x2F;&#x2F;    throw a TypeError exception.</span><br><span class="line">        if (k &gt;&#x3D; len) &#123;</span><br><span class="line">          throw new TypeError( &#39;Reduce of empty array &#39; +</span><br><span class="line">            &#39;with no initial value&#39; );</span><br><span class="line">        &#125;</span><br><span class="line">        value &#x3D; o[k++];</span><br><span class="line">      &#125;</span><br><span class="line"></span><br><span class="line">      &#x2F;&#x2F; 8. Repeat, while k &lt; len</span><br><span class="line">      while (k &lt; len) &#123;</span><br><span class="line">        &#x2F;&#x2F; a. Let Pk be ! ToString(k).</span><br><span class="line">        &#x2F;&#x2F; b. Let kPresent be ? HasProperty(O, Pk).</span><br><span class="line">        &#x2F;&#x2F; c. If kPresent is true, then</span><br><span class="line">        &#x2F;&#x2F;    i.  Let kValue be ? Get(O, Pk).</span><br><span class="line">        &#x2F;&#x2F;    ii. Let accumulator be ? Call(</span><br><span class="line">        &#x2F;&#x2F;          callbackfn, undefined,</span><br><span class="line">        &#x2F;&#x2F;          « accumulator, kValue, k, O »).</span><br><span class="line">        if (k in o) &#123;</span><br><span class="line">          value &#x3D; callback(value, o[k], k, o);</span><br><span class="line">        &#125;</span><br><span class="line"></span><br><span class="line">        &#x2F;&#x2F; d. Increase k by 1.      </span><br><span class="line">        k++;</span><br><span class="line">      &#125;</span><br><span class="line"></span><br><span class="line">      &#x2F;&#x2F; 9. Return accumulator.</span><br><span class="line">      return value;</span><br><span class="line">    &#125;</span><br><span class="line">  &#125;);</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-
-
-
-
-
-      
-    </div>
-
-    
-    
-    
-
-    <footer class="post-footer">
-        <div class="post-eof"></div>
-      
-    </footer>
-  </article>
-</div>
-
-
-
-
-    
-
-
-<div class="post-block">
-  
-  
-
-  <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="">
-    <link itemprop="mainEntityOfPage" href="https://lzhwweb.github.io/nirvana/javascript/%E5%89%8D%E7%AB%AF/HTTPS-%E4%B8%BA%E4%BB%80%E4%B9%88%E5%AE%89%E5%85%A8--%E7%9C%9F%E7%9A%84%E5%AE%89%E5%85%A8%E5%90%97-/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="image" content="/nirvana/images/headphoto.jpeg">
-      <meta itemprop="name" content="nirvana">
-      <meta itemprop="description" content="个人学习笔记">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="涅槃快乐是金">
-    </span>
-      <header class="post-header">
-        <h2 class="post-title" itemprop="name headline">
-          <a href="/nirvana/javascript/%E5%89%8D%E7%AB%AF/HTTPS-%E4%B8%BA%E4%BB%80%E4%B9%88%E5%AE%89%E5%85%A8--%E7%9C%9F%E7%9A%84%E5%AE%89%E5%85%A8%E5%90%97-/" class="post-title-link" itemprop="url">HTTPS-为什么安全--真的安全吗-</a>
+          <a href="/nirvana/DesignPattern/%E8%AE%BE%E8%AE%A1%E6%A8%A1%E5%BC%8F%EF%BC%88TypeScript%EF%BC%89/Bridge-Pattern%EF%BC%88%E6%A1%A5%E6%8E%A5%E6%A8%A1%E5%BC%8F%EF%BC%89/" class="post-title-link" itemprop="url">Bridge-Pattern（桥接模式）</a>
         </h2>
 
         <div class="post-meta-container">
@@ -1499,12 +981,548 @@
       </span>
       <span class="post-meta-item-text">分类于</span>
         <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-          <a href="/nirvana/categories/javascript/" itemprop="url" rel="index"><span itemprop="name">javascript</span></a>
+          <a href="/nirvana/categories/DesignPattern/" itemprop="url" rel="index"><span itemprop="name">DesignPattern</span></a>
         </span>
     </span>
 
   
-    <span id="/nirvana/javascript/%E5%89%8D%E7%AB%AF/HTTPS-%E4%B8%BA%E4%BB%80%E4%B9%88%E5%AE%89%E5%85%A8--%E7%9C%9F%E7%9A%84%E5%AE%89%E5%85%A8%E5%90%97-/" class="post-meta-item leancloud_visitors" data-flag-title="HTTPS-为什么安全--真的安全吗-" title="阅读次数">
+    <span id="/nirvana/DesignPattern/%E8%AE%BE%E8%AE%A1%E6%A8%A1%E5%BC%8F%EF%BC%88TypeScript%EF%BC%89/Bridge-Pattern%EF%BC%88%E6%A1%A5%E6%8E%A5%E6%A8%A1%E5%BC%8F%EF%BC%89/" class="post-meta-item leancloud_visitors" data-flag-title="Bridge-Pattern（桥接模式）" title="阅读次数">
+      <span class="post-meta-item-icon">
+        <i class="far fa-eye"></i>
+      </span>
+      <span class="post-meta-item-text">阅读次数：</span>
+      <span class="leancloud-visitors-count"></span>
+    </span>
+      </div>
+      <div class="post-meta">
+    <span class="post-meta-item" title="本文字数">
+      <span class="post-meta-item-icon">
+        <i class="far fa-file-word"></i>
+      </span>
+      <span class="post-meta-item-text">本文字数：</span>
+      <span>3.5k</span>
+    </span>
+    <span class="post-meta-item" title="阅读时长">
+      <span class="post-meta-item-icon">
+        <i class="far fa-clock"></i>
+      </span>
+      <span class="post-meta-item-text">阅读时长 &asymp;</span>
+      <span>3 分钟</span>
+    </span>
+</div>
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+          <p><strong>桥接模式（Bridge Patten）：</strong>：桥接模式是在类的抽象化和实现化之间搭建桥梁，来实现二者的解耦。。这种类型的设计模式属于结构型模式。</p>
+<h2 id="介绍"><a href="#介绍" class="headerlink" title="介绍"></a>介绍</h2><ul>
+<li><strong>意图：</strong>将抽象部分与实现部分分离，使它们都可以独立的变化。</li>
+<li><strong>主要解决：</strong>在有多种可能会变化的情况下，用继承会造成类爆炸问题，扩展起来不灵活。</li>
+<li><strong>何时使用：</strong>实现系统可能有多个角度分类，每一种角度都可能变化。</li>
+<li><strong>如何解决：</strong>把这种多角度分类分离出来，让它们独立变化，减少它们之间耦合。</li>
+<li><strong>关键代码：</strong>抽象类依赖实现类。</li>
+<li><strong>应用实例：</strong>墙上的开关，可以看到的开关是抽象的，不用管里面具体怎么实现的。</li>
+<li><strong>优点：</strong><br>1、抽象和实现的分离。<br>2、优秀的扩展能力。<br>3、实现细节对客户透明。</li>
+<li><strong>缺点：</strong>桥接模式的引入会增加系统的理解与设计难度，由于聚合关联关系建立在抽象层，要求开发者针对抽象进行设计与编程。</li>
+<li><strong>使用场景：</strong><br>1、对于那些不希望使用继承或因为多层次继承导致系统类的个数急剧增加的系统，桥接模式尤为适用。<br>2、一个类存在两个独立变化的维度，且这两个维度都需要进行扩展。</li>
+</ul>
+<blockquote>
+<p>注意事项：对于两个独立变化的维度，使用桥接模式再适合不过了。</p>
+</blockquote>
+<h2 id="示例"><a href="#示例" class="headerlink" title="示例"></a>示例</h2><h5 id="Display-ts-负责“显示”的类"><a href="#Display-ts-负责“显示”的类" class="headerlink" title="Display.ts 负责“显示”的类"></a>Display.ts 负责“显示”的类</h5><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br></pre></td><td class="code"><pre><span class="line">import DisplayImpl from &quot;.&#x2F;DisplayImpl&quot;;</span><br><span class="line"></span><br><span class="line">export default class Display &#123;</span><br><span class="line">    private impl: DisplayImpl;</span><br><span class="line">    constructor(impl: DisplayImpl) &#123;</span><br><span class="line">        this.impl &#x3D; impl;</span><br><span class="line">    &#125;</span><br><span class="line">    public open(): void &#123;</span><br><span class="line">        this.impl.rawOpen();</span><br><span class="line">    &#125;</span><br><span class="line">    public print(): void &#123;</span><br><span class="line">        this.impl.rawPrint();</span><br><span class="line">    &#125;</span><br><span class="line">    public close(): void &#123;</span><br><span class="line">        this.impl.rawClose();</span><br><span class="line">    &#125;</span><br><span class="line">    public display(): void &#123;</span><br><span class="line">        this.open();</span><br><span class="line">        this.print();</span><br><span class="line">        this.close();</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<h5 id="CountDisplay-ts-增加了“只显示规定次数”这一功能的类"><a href="#CountDisplay-ts-增加了“只显示规定次数”这一功能的类" class="headerlink" title="CountDisplay.ts 增加了“只显示规定次数”这一功能的类"></a>CountDisplay.ts 增加了“只显示规定次数”这一功能的类</h5><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br></pre></td><td class="code"><pre><span class="line">import Display from &quot;.&#x2F;Display&quot;;</span><br><span class="line">import DisplayImpl from &quot;.&#x2F;DisplayImpl&quot;;</span><br><span class="line"></span><br><span class="line">export default class CountDisplay extends Display &#123;</span><br><span class="line">    constructor(impl: DisplayImpl) &#123;</span><br><span class="line">        super(impl);</span><br><span class="line">    &#125;</span><br><span class="line">    public multiDisplay(times: number) &#123;</span><br><span class="line">        this.open();</span><br><span class="line">        for (let i &#x3D; 0; i &lt; times; i++) &#123;</span><br><span class="line">            this.print();</span><br><span class="line">        &#125;</span><br><span class="line">        this.close();</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<h5 id="DisplayImpl-ts-负责“显示”的类"><a href="#DisplayImpl-ts-负责“显示”的类" class="headerlink" title="DisplayImpl.ts 负责“显示”的类"></a>DisplayImpl.ts 负责“显示”的类</h5><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">export default abstract class DisplayImpl &#123;</span><br><span class="line">    abstract rawOpen(): void;</span><br><span class="line">    abstract rawPrint(): void;</span><br><span class="line">    abstract rawClose(): void;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<h5 id="StringDisplayImpl-ts-“用字符串显示”的类"><a href="#StringDisplayImpl-ts-“用字符串显示”的类" class="headerlink" title="StringDisplayImpl.ts “用字符串显示”的类"></a>StringDisplayImpl.ts “用字符串显示”的类</h5><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br></pre></td><td class="code"><pre><span class="line">import DisplayImpl from &quot;.&#x2F;DisplayImpl&quot;;</span><br><span class="line"></span><br><span class="line">export default class StringDisplayImpl extends DisplayImpl &#123;</span><br><span class="line">    private str: string;</span><br><span class="line">    private width: number;</span><br><span class="line">    constructor(str: string) &#123;</span><br><span class="line">        super();</span><br><span class="line">        this.str &#x3D; str;</span><br><span class="line">        this.width &#x3D; str.length;</span><br><span class="line">    &#125;</span><br><span class="line">    public rawOpen(): void &#123;</span><br><span class="line">        this.printLine();</span><br><span class="line">    &#125;</span><br><span class="line">    public rawPrint(): void &#123;</span><br><span class="line">        console.log(&#96;|$&#123;this.str&#125;|&#96;);</span><br><span class="line">    &#125;</span><br><span class="line">    public rawClose(): void &#123;</span><br><span class="line">        this.printLine();</span><br><span class="line">    &#125;</span><br><span class="line">    private printLine(): void &#123;</span><br><span class="line">        let str &#x3D; &#39;+&#39;;</span><br><span class="line">        for (let i &#x3D; 0; i &lt; this.width; i++) &#123;</span><br><span class="line">            str &#x3D; str + &#39;-&#39;;</span><br><span class="line">        &#125;</span><br><span class="line">        console.log(&#96;$&#123;str&#125;+&#96;);</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<h5 id="index-ts"><a href="#index-ts" class="headerlink" title="index.ts"></a>index.ts</h5><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br></pre></td><td class="code"><pre><span class="line">import Display from &quot;.&#x2F;Display&quot;;</span><br><span class="line">import StringDisplayImpl from &quot;.&#x2F;StringDisplayImpl&quot;;</span><br><span class="line">import CountDisplay from &quot;.&#x2F;CountDisplay&quot;;</span><br><span class="line"></span><br><span class="line">const d1 &#x3D; new Display(new StringDisplayImpl(&quot;Hello,China.&quot;));</span><br><span class="line">const d2 &#x3D; new CountDisplay(new StringDisplayImpl(&quot;Hello,World.&quot;));</span><br><span class="line">const d3 &#x3D; new CountDisplay(new StringDisplayImpl(&quot;Hello,Universe.&quot;));</span><br><span class="line">console.log(&quot;-------d1.display()--------&quot;)</span><br><span class="line">d1.display();</span><br><span class="line">console.log(&quot;-------d2.display()--------&quot;)</span><br><span class="line">d2.display();</span><br><span class="line">console.log(&quot;-------d3.display()--------&quot;)</span><br><span class="line">d3.display();</span><br><span class="line">console.log(&quot;-------d4.display()--------&quot;)</span><br><span class="line">d3.multiDisplay(5);</span><br></pre></td></tr></table></figure>
+<h5 id="result"><a href="#result" class="headerlink" title="result"></a>result</h5><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br></pre></td><td class="code"><pre><span class="line">-------d1.display()--------</span><br><span class="line">+------------+</span><br><span class="line">|Hello,China.|</span><br><span class="line">+------------+</span><br><span class="line">-------d2.display()--------</span><br><span class="line">+------------+</span><br><span class="line">|Hello,World.|</span><br><span class="line">+------------+</span><br><span class="line">-------d3.display()--------</span><br><span class="line">+---------------+</span><br><span class="line">|Hello,Universe.|</span><br><span class="line">+---------------+</span><br><span class="line">-------d3.multiDisplay()--------</span><br><span class="line">+---------------+</span><br><span class="line">|Hello,Universe.|</span><br><span class="line">|Hello,Universe.|</span><br><span class="line">|Hello,Universe.|</span><br><span class="line">|Hello,Universe.|</span><br><span class="line">|Hello,Universe.|</span><br><span class="line">+---------------+</span><br></pre></td></tr></table></figure>
+<h2 id="类图"><a href="#类图" class="headerlink" title="类图"></a>类图</h2><p><img src="https://upload-images.jianshu.io/upload_images/10024246-9af2691e6e770c44.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240"></p>
+<h2 id="角色"><a href="#角色" class="headerlink" title="角色"></a>角色</h2><ul>
+<li>Abstraction（抽象化）<br>该角色位于“类的功能层次结构”的最上层，它使用Implement角色的方法定义了基本功能。该角色中保存了Implement角色的示例。在示例中，由Display类扮演该角色</li>
+<li>RefinedAbstract（改善后的抽象化）<br>在Abstraction角色的基础上增加了新的角色。在示例中，由CountDisplay类扮演该角色</li>
+<li>Implementor（实现者）<br>该角色位于“类的实现层次结构”的最上层。它定义了用于实现Abstraction角色的接口方法。在示例中，由DisplayImpl类扮演此角色</li>
+<li>ConcreteImplementor（具体实现者）<br>该角色负责实现在Implement角色中定义的接口。在示例中，由StringDisplayImpl类扮演该角色</li>
+</ul>
+
+      
+    </div>
+
+    
+    
+    
+
+    <footer class="post-footer">
+        <div class="post-eof"></div>
+      
+    </footer>
+  </article>
+</div>
+
+
+
+
+    
+
+
+<div class="post-block">
+  
+  
+
+  <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="">
+    <link itemprop="mainEntityOfPage" href="https://lzhwweb.github.io/nirvana/DesignPattern/%E8%AE%BE%E8%AE%A1%E6%A8%A1%E5%BC%8F%EF%BC%88TypeScript%EF%BC%89/Builder-Pattern%EF%BC%88%E5%BB%BA%E9%80%A0%E8%80%85%E6%A8%A1%E5%BC%8F%EF%BC%89/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/nirvana/images/headphoto.jpeg">
+      <meta itemprop="name" content="nirvana">
+      <meta itemprop="description" content="个人学习笔记">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="涅槃快乐是金">
+    </span>
+      <header class="post-header">
+        <h2 class="post-title" itemprop="name headline">
+          <a href="/nirvana/DesignPattern/%E8%AE%BE%E8%AE%A1%E6%A8%A1%E5%BC%8F%EF%BC%88TypeScript%EF%BC%89/Builder-Pattern%EF%BC%88%E5%BB%BA%E9%80%A0%E8%80%85%E6%A8%A1%E5%BC%8F%EF%BC%89/" class="post-title-link" itemprop="url">Builder-Pattern（建造者模式）</a>
+        </h2>
+
+        <div class="post-meta-container">
+          <div class="post-meta">
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-calendar"></i>
+      </span>
+      <span class="post-meta-item-text">发表于</span>
+
+      <time title="创建时间：2021-03-11 21:12:40" itemprop="dateCreated datePublished" datetime="2021-03-11T21:12:40+08:00">2021-03-11</time>
+    </span>
+      <span class="post-meta-item">
+        <span class="post-meta-item-icon">
+          <i class="far fa-calendar-check"></i>
+        </span>
+        <span class="post-meta-item-text">更新于</span>
+        <time title="修改时间：2021-03-10 13:43:55" itemprop="dateModified" datetime="2021-03-10T13:43:55+08:00">2021-03-10</time>
+      </span>
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-folder"></i>
+      </span>
+      <span class="post-meta-item-text">分类于</span>
+        <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+          <a href="/nirvana/categories/DesignPattern/" itemprop="url" rel="index"><span itemprop="name">DesignPattern</span></a>
+        </span>
+    </span>
+
+  
+    <span id="/nirvana/DesignPattern/%E8%AE%BE%E8%AE%A1%E6%A8%A1%E5%BC%8F%EF%BC%88TypeScript%EF%BC%89/Builder-Pattern%EF%BC%88%E5%BB%BA%E9%80%A0%E8%80%85%E6%A8%A1%E5%BC%8F%EF%BC%89/" class="post-meta-item leancloud_visitors" data-flag-title="Builder-Pattern（建造者模式）" title="阅读次数">
+      <span class="post-meta-item-icon">
+        <i class="far fa-eye"></i>
+      </span>
+      <span class="post-meta-item-text">阅读次数：</span>
+      <span class="leancloud-visitors-count"></span>
+    </span>
+      </div>
+      <div class="post-meta">
+    <span class="post-meta-item" title="本文字数">
+      <span class="post-meta-item-icon">
+        <i class="far fa-file-word"></i>
+      </span>
+      <span class="post-meta-item-text">本文字数：</span>
+      <span>4.7k</span>
+    </span>
+    <span class="post-meta-item" title="阅读时长">
+      <span class="post-meta-item-icon">
+        <i class="far fa-clock"></i>
+      </span>
+      <span class="post-meta-item-text">阅读时长 &asymp;</span>
+      <span>4 分钟</span>
+    </span>
+</div>
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+          <p><strong>建造者模式（Builder Pattern）：</strong>组装具有复杂结构的实例。这种类型的设计模式属于创建型模式。</p>
+<h2 id="介绍"><a href="#介绍" class="headerlink" title="介绍"></a>介绍</h2><ul>
+<li><strong>意图：</strong>将一个复杂的构建与其表示相分离，使得同样的构建过程可以创建不同的表示。</li>
+<li><strong>主要解决：</strong>主要解决在软件系统中，有时候面临着”一个复杂对象”的创建工作，其通常由各个部分的子对象用一定的算法构成；由于需求的变化，这个复杂对象的各个部分经常面临着剧烈的变化，但是将它们组合在一起的算法却相对稳定。</li>
+<li><strong>何时使用：</strong>一些基本部件不会变，而其组合经常变化的时候。</li>
+<li><strong>应用实例：</strong> 去肯德基，汉堡、可乐、薯条、炸鸡翅等是不变的，而其组合是经常变化的，生成出所谓的”套餐”。</li>
+<li><strong>优点：</strong><br>1、建造者独立，易扩展。<br>2、便于控制细节风险。</li>
+<li><strong>缺点：</strong><br>1、产品必须有共同点，范围有限制。<br>2、如内部变化复杂，会有很多的建造类。</li>
+<li><strong>使用场景：</strong><br>1、需要生成的对象具有复杂的内部结构。<br>2、需要生成的对象内部属性本身相互依赖。</li>
+</ul>
+<blockquote>
+<p>注意事项：与工厂模式的区别是：建造者模式更加关注与零件装配的顺序。</p>
+</blockquote>
+<h2 id="示例"><a href="#示例" class="headerlink" title="示例"></a>示例</h2><p>type.ts 定义食物接口和包装接口</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><span class="line">&#x2F;**</span><br><span class="line"> * 食物接口</span><br><span class="line"> *&#x2F;</span><br><span class="line">export interface Food &#123;</span><br><span class="line">    name(): string;</span><br><span class="line">    packing(): Packing;</span><br><span class="line">    price(): number;</span><br><span class="line">&#125;</span><br><span class="line">&#x2F;**</span><br><span class="line"> * 包装接口</span><br><span class="line"> *&#x2F;</span><br><span class="line">export interface Packing &#123;</span><br><span class="line">    pack(): string</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p>Wrapper.ts 纸质包装类</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">import &#123; Packing &#125; from &quot;.&#x2F;type&quot;;</span><br><span class="line"></span><br><span class="line">export default class Wrapper implements Packing &#123;</span><br><span class="line">    public pack(): string &#123;</span><br><span class="line">        return &quot;Wrapper&quot;;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p>Bottle.ts 定义瓶装类</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">import &#123; Packing &#125; from &quot;.&#x2F;type&quot;;</span><br><span class="line"></span><br><span class="line">export default class Bottle implements Packing &#123;</span><br><span class="line">    public pack(): string &#123;</span><br><span class="line">        return &quot;Bottle&quot;;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p>Burger.ts 实现食物接口没定义包装为纸质</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line">import &#123; Food, Packing &#125; from &quot;.&#x2F;type&quot;;</span><br><span class="line">import Wrapper from &quot;.&#x2F;Wrapper&quot;;</span><br><span class="line"></span><br><span class="line">export default abstract class Burger implements Food &#123;</span><br><span class="line">    public abstract name(): string;</span><br><span class="line">    public packing(): Packing &#123;</span><br><span class="line">        return new Wrapper();</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    public abstract price(): number;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p>ColdDrink.ts 冷饮类实现食物接口，并指定包装为瓶装</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line">import &#123; Food, Packing &#125; from &quot;.&#x2F;type&quot;;</span><br><span class="line">import Bottle from &quot;.&#x2F;Bottle&quot;;</span><br><span class="line"></span><br><span class="line">export default abstract class ColdDrink implements Food &#123;</span><br><span class="line">    public abstract name(): string;</span><br><span class="line">    public packing(): Packing &#123;</span><br><span class="line">        return new Bottle();</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    public abstract price(): number;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p>VegBurger.ts 蔬菜汉堡类</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line">import Burger from &quot;.&#x2F;Burger&quot;;</span><br><span class="line"></span><br><span class="line">export default class VegBurger extends Burger &#123;</span><br><span class="line">    public price(): number &#123;</span><br><span class="line">        return 25;</span><br><span class="line">    &#125;</span><br><span class="line">    public name(): string &#123;</span><br><span class="line">        return &quot;Veg Burger&quot;;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p>ChickenBurger.ts 鸡肉堡类</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line">import Burger from &quot;.&#x2F;Burger&quot;;</span><br><span class="line"></span><br><span class="line">export default class ChickenBurger extends Burger &#123;</span><br><span class="line"></span><br><span class="line">    public price(): number &#123;</span><br><span class="line">        return 50.5;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    public name(): string &#123;</span><br><span class="line">        return &quot;Chicken Burger&quot;;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p>Pepsi.ts 百事饮料类</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line">import ColdDrink from &quot;.&#x2F;ColdDrink&quot;;</span><br><span class="line"></span><br><span class="line">export default class Pepsi extends ColdDrink &#123;</span><br><span class="line"></span><br><span class="line">    public price(): number &#123;</span><br><span class="line">        return 35.0;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    public name(): string &#123;</span><br><span class="line">        return &quot;Pepsi&quot;;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p>Coke.ts 可口可乐类继承自冷饮</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line">import ColdDrink from &quot;.&#x2F;ColdDrink&quot;;</span><br><span class="line"></span><br><span class="line">export default class Coke extends ColdDrink &#123;</span><br><span class="line"></span><br><span class="line">    public price(): number &#123;</span><br><span class="line">        return 30.0;</span><br><span class="line">    &#125;</span><br><span class="line">    public name(): string &#123;</span><br><span class="line">        return &quot;Coke&quot;;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p>Meal.ts 套餐类，里面有食物和总价</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br></pre></td><td class="code"><pre><span class="line">import &#123; Food &#125; from &quot;.&#x2F;type&quot;;</span><br><span class="line"></span><br><span class="line">export default class Meal &#123;</span><br><span class="line">    private items &#x3D; new Array&lt;Food&gt;();</span><br><span class="line"></span><br><span class="line">    public addItem(item: Food): void &#123;</span><br><span class="line">        this.items.push(item);</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    public getCost(): number &#123;</span><br><span class="line">        let cost &#x3D; 0;</span><br><span class="line">        for (const item of this.items) &#123;</span><br><span class="line">            cost +&#x3D; item.price();</span><br><span class="line">        &#125;</span><br><span class="line">        return cost;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    public showItems(): void &#123;</span><br><span class="line">        for (const item of this.items) &#123;</span><br><span class="line">            console.log(&#96;Food : $&#123;item.name()&#125;, Packing : $&#123;item.packing().pack()&#125;, Price : $&#123;item.price()&#125;&#96;);</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p>MealBuilder.ts 创建套餐，有蔬菜和没蔬菜的套餐</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br></pre></td><td class="code"><pre><span class="line">import Meal from &quot;.&#x2F;Meal&quot;;</span><br><span class="line">import VegBurger from &quot;.&#x2F;VegBurger&quot;;</span><br><span class="line">import Coke from &quot;.&#x2F;Coke&quot;;</span><br><span class="line">import ChickenBurger from &quot;.&#x2F;ChickenBurger&quot;;</span><br><span class="line">import Pepsi from &quot;.&#x2F;Pepsi&quot;;</span><br><span class="line"></span><br><span class="line">export default class MealBuilder &#123;</span><br><span class="line"></span><br><span class="line">    public prepareVegMeal(): Meal &#123;</span><br><span class="line">        const meal &#x3D; new Meal();</span><br><span class="line">        meal.addItem(new VegBurger());</span><br><span class="line">        meal.addItem(new Coke());</span><br><span class="line">        return meal;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    public prepareNonVegMeal(): Meal &#123;</span><br><span class="line">        const meal &#x3D; new Meal();</span><br><span class="line">        meal.addItem(new ChickenBurger());</span><br><span class="line">        meal.addItem(new Pepsi());</span><br><span class="line">        return meal;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p>index.ts </p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line">import MealBuilder from &quot;.&#x2F;MealBuilder&quot;;</span><br><span class="line"></span><br><span class="line">const mealBuilder &#x3D; new MealBuilder();</span><br><span class="line"></span><br><span class="line">const vegMeal &#x3D; mealBuilder.prepareVegMeal();</span><br><span class="line">console.log(&quot;-----Veg Meal-------&quot;);</span><br><span class="line">vegMeal.showItems();</span><br><span class="line">console.log(&quot;Total Cost: &quot; + vegMeal.getCost());</span><br><span class="line"></span><br><span class="line">const nonVegMeal &#x3D; mealBuilder.prepareNonVegMeal();</span><br><span class="line">console.log(&quot;-----Non-Veg Meal-----&quot;);</span><br><span class="line">nonVegMeal.showItems();</span><br><span class="line">console.log(&quot;Total Cost: &quot; + nonVegMeal.getCost());</span><br></pre></td></tr></table></figure>
+<p>result</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">-----Veg Meal-------</span><br><span class="line">Food : Veg Burger, Packing : Wrapper, Price : 25</span><br><span class="line">Food : Coke, Packing : Bottle, Price : 30</span><br><span class="line">Total Cost: 55</span><br><span class="line">-----Non-Veg Meal-----</span><br><span class="line">Food : Chicken Burger, Packing : Wrapper, Price : 50.5</span><br><span class="line">Food : Pepsi, Packing : Bottle, Price : 35</span><br><span class="line">Total Cost: 85.5</span><br></pre></td></tr></table></figure>
+<h2 id="类图"><a href="#类图" class="headerlink" title="类图"></a>类图</h2><p><img src="https://upload-images.jianshu.io/upload_images/10024246-b5a8ab23b145195d.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240"></p>
+<h2 id="角色"><a href="#角色" class="headerlink" title="角色"></a>角色</h2><ul>
+<li>Builder（建造者）<br>Builder角色负责定义用于生产实例的接口，Builder角色中有用于生产实例的方法</li>
+<li>ConcreteBuilder(具体的建造者)<br>ConcreteBuilder角色时负责实现Builder角色的接口的类，定义了在生产实例时实际被调用的犯法，此外，在ConcreteBuilder中还定义了获取最终生产结果的方法</li>
+<li>Director（监工）<br>Director角色负责使用Builder角色的接口来生产实例，不依赖于ConcreteBuilder角色。它只调用在Builder角色中被定义的方法</li>
+<li>Client（使用者）<br>该角色使用了Builder模式。</li>
+</ul>
+
+      
+    </div>
+
+    
+    
+    
+
+    <footer class="post-footer">
+        <div class="post-eof"></div>
+      
+    </footer>
+  </article>
+</div>
+
+
+
+
+    
+
+
+<div class="post-block">
+  
+  
+
+  <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="">
+    <link itemprop="mainEntityOfPage" href="https://lzhwweb.github.io/nirvana/DesignPattern/%E8%AE%BE%E8%AE%A1%E6%A8%A1%E5%BC%8F%EF%BC%88TypeScript%EF%BC%89/Chain-of-Responsibility%E6%A8%A1%E5%BC%8F%EF%BC%88%E8%B4%A3%E4%BB%BB%E9%93%BE%E6%A8%A1%E5%BC%8F%EF%BC%89/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/nirvana/images/headphoto.jpeg">
+      <meta itemprop="name" content="nirvana">
+      <meta itemprop="description" content="个人学习笔记">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="涅槃快乐是金">
+    </span>
+      <header class="post-header">
+        <h2 class="post-title" itemprop="name headline">
+          <a href="/nirvana/DesignPattern/%E8%AE%BE%E8%AE%A1%E6%A8%A1%E5%BC%8F%EF%BC%88TypeScript%EF%BC%89/Chain-of-Responsibility%E6%A8%A1%E5%BC%8F%EF%BC%88%E8%B4%A3%E4%BB%BB%E9%93%BE%E6%A8%A1%E5%BC%8F%EF%BC%89/" class="post-title-link" itemprop="url">Chain-of-Responsibility模式（责任链模式）</a>
+        </h2>
+
+        <div class="post-meta-container">
+          <div class="post-meta">
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-calendar"></i>
+      </span>
+      <span class="post-meta-item-text">发表于</span>
+
+      <time title="创建时间：2021-03-11 21:12:40" itemprop="dateCreated datePublished" datetime="2021-03-11T21:12:40+08:00">2021-03-11</time>
+    </span>
+      <span class="post-meta-item">
+        <span class="post-meta-item-icon">
+          <i class="far fa-calendar-check"></i>
+        </span>
+        <span class="post-meta-item-text">更新于</span>
+        <time title="修改时间：2021-03-10 13:43:55" itemprop="dateModified" datetime="2021-03-10T13:43:55+08:00">2021-03-10</time>
+      </span>
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-folder"></i>
+      </span>
+      <span class="post-meta-item-text">分类于</span>
+        <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+          <a href="/nirvana/categories/DesignPattern/" itemprop="url" rel="index"><span itemprop="name">DesignPattern</span></a>
+        </span>
+    </span>
+
+  
+    <span id="/nirvana/DesignPattern/%E8%AE%BE%E8%AE%A1%E6%A8%A1%E5%BC%8F%EF%BC%88TypeScript%EF%BC%89/Chain-of-Responsibility%E6%A8%A1%E5%BC%8F%EF%BC%88%E8%B4%A3%E4%BB%BB%E9%93%BE%E6%A8%A1%E5%BC%8F%EF%BC%89/" class="post-meta-item leancloud_visitors" data-flag-title="Chain-of-Responsibility模式（责任链模式）" title="阅读次数">
+      <span class="post-meta-item-icon">
+        <i class="far fa-eye"></i>
+      </span>
+      <span class="post-meta-item-text">阅读次数：</span>
+      <span class="leancloud-visitors-count"></span>
+    </span>
+      </div>
+      <div class="post-meta">
+    <span class="post-meta-item" title="本文字数">
+      <span class="post-meta-item-icon">
+        <i class="far fa-file-word"></i>
+      </span>
+      <span class="post-meta-item-text">本文字数：</span>
+      <span>5.1k</span>
+    </span>
+    <span class="post-meta-item" title="阅读时长">
+      <span class="post-meta-item-icon">
+        <i class="far fa-clock"></i>
+      </span>
+      <span class="post-meta-item-text">阅读时长 &asymp;</span>
+      <span>5 分钟</span>
+    </span>
+</div>
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+          <p><strong>责任链模式（Chain of Responsibility Pattern）</strong>：多个对象组成一条职责链，然后按照它们在职责链上的顺序处理请求。这种模式给予请求的类型，对请求的发送者和接收者进行解耦。这种类型的设计模式属于行为型模式。<br>在这种模式中，通常每个接收者都包含对另一个接收者的引用。如果一个对象不能处理该请求，那么它会把相同的请求传给下一个接收者，依此类推。</p>
+<h2 id="介绍"><a href="#介绍" class="headerlink" title="介绍"></a>介绍</h2><ul>
+<li><strong>意图：</strong>发送者与接收者解耦，让多个对象都有可能接收请求，将这些对象连接成一条链，并且沿着这条链传递请求，直到有对象处理它为止。</li>
+<li><strong>主要解决：</strong>职责链上的处理者负责处理请求，发送者无须关心请求的处理细节和请求的传递。</li>
+<li><strong>何时使用：</strong>在处理消息的时候以过滤很多道。</li>
+<li><strong>如何解决：</strong>拦截的类都实现统一接口。</li>
+<li><strong>应用实例：</strong>JS 中的事件冒泡</li>
+<li>**优点： **<br>1、降低耦合度<br>2、简化了对象。使得对象不需要知道链的结构。<br>3、增强给对象指派职责的灵活性。通过改变链内的成员或者调动它们的次序，允许动态地新增或者删除责任。<br>4、增加新的请求处理类很方便。</li>
+<li><strong>缺点：</strong><br>1、不能保证请求一定被接收。<br>2、系统性能将受到一定影响，而且在进行代码调试时不太方便，可能会造成循环调用。<br>3、可能不容易观察运行时的特征，有碍于除错。</li>
+</ul>
+<h2 id="示例"><a href="#示例" class="headerlink" title="示例"></a>示例</h2><h5 id="Trouble-ts-表示发生问题的类，带有事件编号"><a href="#Trouble-ts-表示发生问题的类，带有事件编号" class="headerlink" title="Trouble.ts 表示发生问题的类，带有事件编号"></a>Trouble.ts 表示发生问题的类，带有事件编号</h5><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line">export default class Trouble &#123;</span><br><span class="line">    private num: number;&#x2F;&#x2F;问题编号</span><br><span class="line">    constructor(num: number) &#123;&#x2F;&#x2F;生产问题</span><br><span class="line">        this.num &#x3D; num;</span><br><span class="line">    &#125;</span><br><span class="line">    public toString(): string &#123;</span><br><span class="line">        return &#96;[Trouble $&#123;this.num&#125;]&#96;</span><br><span class="line">    &#125;</span><br><span class="line">    public getNum(): number &#123;</span><br><span class="line">        return this.num;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<h5 id="Support-ts-解决问题的抽象类"><a href="#Support-ts-解决问题的抽象类" class="headerlink" title="Support.ts 解决问题的抽象类"></a>Support.ts 解决问题的抽象类</h5><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br></pre></td><td class="code"><pre><span class="line">import Trouble from &quot;.&#x2F;Trouble&quot;;</span><br><span class="line"></span><br><span class="line">export default abstract class Support &#123;</span><br><span class="line">    private name: string;</span><br><span class="line">    private next: Support;</span><br><span class="line">    constructor(name: string) &#123;</span><br><span class="line">        this.name &#x3D; name;</span><br><span class="line">    &#125;</span><br><span class="line">    public setNext(next: Support): Support &#123;</span><br><span class="line">        this.next &#x3D; next;</span><br><span class="line">        return next;</span><br><span class="line">    &#125;</span><br><span class="line">    public support(trouble: Trouble): void &#123;</span><br><span class="line">        if (this.resolve(trouble)) &#123;</span><br><span class="line">            this.done(trouble);</span><br><span class="line">        &#125; else if (this.next !&#x3D; null) &#123;</span><br><span class="line">            this.next.support(trouble);</span><br><span class="line">        &#125; else &#123;</span><br><span class="line">            this.fail(trouble);</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">    public toString(): string &#123;</span><br><span class="line">        return &#96;[$&#123;this.name&#125;]&#96;;</span><br><span class="line">    &#125;</span><br><span class="line">    protected abstract resolve(trouble: Trouble): boolean;</span><br><span class="line">    protected done(trouble: Trouble): void &#123;&#x2F;&#x2F;解决</span><br><span class="line">        console.log(&#96;$&#123;trouble.toString()&#125; is resolved by $&#123;this.toString()&#125;&#96;);</span><br><span class="line">    &#125;</span><br><span class="line">    protected fail(trouble: Trouble): void &#123;&#x2F;&#x2F;未解决</span><br><span class="line">        console.log(&#96;$&#123;trouble.toString()&#125; canot be resolved&#96;);</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<h5 id="NoSpport-ts-用于解决问题的类（永不解决）"><a href="#NoSpport-ts-用于解决问题的类（永不解决）" class="headerlink" title="NoSpport.ts 用于解决问题的类（永不解决）"></a>NoSpport.ts 用于解决问题的类（永不解决）</h5><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line">import Support from &quot;.&#x2F;Support&quot;;</span><br><span class="line">import Trouble from &quot;.&#x2F;Trouble&quot;;</span><br><span class="line"></span><br><span class="line">export default class NoSupport extends Support &#123;</span><br><span class="line">    constructor(name: string) &#123;</span><br><span class="line">        super(name);</span><br><span class="line">    &#125;</span><br><span class="line">    protected resolve(trouble: Trouble): boolean &#123;&#x2F;&#x2F;解决问题的方法</span><br><span class="line">        return false;                             &#x2F;&#x2F;自己不处理</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<h5 id="LimitSupport-ts-用于解决问题的类（仅解决编号小于指定值的问题）"><a href="#LimitSupport-ts-用于解决问题的类（仅解决编号小于指定值的问题）" class="headerlink" title="LimitSupport.ts 用于解决问题的类（仅解决编号小于指定值的问题）"></a>LimitSupport.ts 用于解决问题的类（仅解决编号小于指定值的问题）</h5><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br></pre></td><td class="code"><pre><span class="line">import Support from &quot;.&#x2F;Support&quot;;</span><br><span class="line">import Trouble from &quot;.&#x2F;Trouble&quot;;</span><br><span class="line"></span><br><span class="line">export default class LimitSupport extends Support &#123;</span><br><span class="line">    private limit: number;</span><br><span class="line">    constructor(name: string, limit: number) &#123;</span><br><span class="line">        super(name);</span><br><span class="line">        this.limit &#x3D; limit;</span><br><span class="line">    &#125;</span><br><span class="line">    protected resolve(trouble: Trouble): boolean &#123;&#x2F;&#x2F;解决问题的方法</span><br><span class="line">        if (trouble.getNum() &lt; this.limit) &#123;</span><br><span class="line">            return true;&#x2F;&#x2F;正常应该为解决问题的方法</span><br><span class="line">        &#125; else &#123;</span><br><span class="line">            return false;                             &#x2F;&#x2F;自己不处理</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<h5 id="OddSupport-ts-用于解决问题的类（仅解决奇数编号的问题）"><a href="#OddSupport-ts-用于解决问题的类（仅解决奇数编号的问题）" class="headerlink" title="OddSupport.ts 用于解决问题的类（仅解决奇数编号的问题）"></a>OddSupport.ts 用于解决问题的类（仅解决奇数编号的问题）</h5><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br></pre></td><td class="code"><pre><span class="line">import Support from &quot;.&#x2F;Support&quot;;</span><br><span class="line">import Trouble from &quot;.&#x2F;Trouble&quot;;</span><br><span class="line">&#x2F;**</span><br><span class="line"> * 解决奇数问题</span><br><span class="line"> *&#x2F;</span><br><span class="line">export default class OddSupport extends Support &#123;</span><br><span class="line">    constructor(name: string) &#123;</span><br><span class="line">        super(name);</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    protected resolve(trouble: Trouble): boolean &#123;&#x2F;&#x2F;解决问题的方法</span><br><span class="line">        if (trouble.getNum() % 2 &#x3D;&#x3D; 1) &#123;</span><br><span class="line">            return true;&#x2F;&#x2F;正常应该为解决问题的方法</span><br><span class="line">        &#125; else &#123;</span><br><span class="line">            return false;                             &#x2F;&#x2F;自己不处理</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<h5 id="SpecialSupport-ts-用于解决问题的类（仅解决指定编号的问题）"><a href="#SpecialSupport-ts-用于解决问题的类（仅解决指定编号的问题）" class="headerlink" title="SpecialSupport.ts 用于解决问题的类（仅解决指定编号的问题）"></a>SpecialSupport.ts 用于解决问题的类（仅解决指定编号的问题）</h5><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br></pre></td><td class="code"><pre><span class="line">import Support from &quot;.&#x2F;Support&quot;;</span><br><span class="line">import Trouble from &quot;.&#x2F;Trouble&quot;;</span><br><span class="line"></span><br><span class="line">export default class SpecialSupport extends Support &#123;</span><br><span class="line">    private num: number;</span><br><span class="line">    constructor(name: string, num: number) &#123;</span><br><span class="line">        super(name);</span><br><span class="line">        this.num &#x3D; num;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    protected resolve(trouble: Trouble): boolean &#123;&#x2F;&#x2F;解决问题的方法</span><br><span class="line">        if (trouble.getNum() &#x3D;&#x3D; this.num) &#123;</span><br><span class="line">            return true;&#x2F;&#x2F;正常应该为解决问题的方法</span><br><span class="line">        &#125; else &#123;</span><br><span class="line">            return false;                             &#x2F;&#x2F;自己不处理</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<h5 id="index-ts"><a href="#index-ts" class="headerlink" title="index.ts"></a>index.ts</h5><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br></pre></td><td class="code"><pre><span class="line">import NoSupport from &quot;.&#x2F;NoSupport&quot;;</span><br><span class="line">import Support from &quot;.&#x2F;Support&quot;;</span><br><span class="line">import LimitSupport from &quot;.&#x2F;LimitSupport&quot;;</span><br><span class="line">import SpecialSupport from &quot;.&#x2F;SpecialSupport&quot;;</span><br><span class="line">import OddSupport from &quot;.&#x2F;OddSupport&quot;;</span><br><span class="line">import Trouble from &quot;.&#x2F;Trouble&quot;;</span><br><span class="line"></span><br><span class="line">const alice: Support &#x3D; new NoSupport(&quot;Alice&quot;);</span><br><span class="line">const bob: Support &#x3D; new LimitSupport(&quot;Bob&quot;, 100);</span><br><span class="line">const charlie: Support &#x3D; new SpecialSupport(&quot;Charlie&quot;, 429);</span><br><span class="line">const diana: Support &#x3D; new LimitSupport(&quot;Diana&quot;, 200);</span><br><span class="line">const elmo: Support &#x3D; new OddSupport(&quot;Elmo&quot;);</span><br><span class="line">const fred: Support &#x3D; new LimitSupport(&quot;Fred&quot;, 300);</span><br><span class="line"></span><br><span class="line">alice.setNext(bob).setNext(charlie).setNext(diana).setNext(elmo).setNext(fred);</span><br><span class="line">for (let i &#x3D; 0; i &lt; 500; i +&#x3D; 33) &#123;</span><br><span class="line">    alice.support(new Trouble(i));</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<h5 id="result"><a href="#result" class="headerlink" title="result"></a>result</h5><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br></pre></td><td class="code"><pre><span class="line">[Trouble 0] is resolved by [Bob]</span><br><span class="line">[Trouble 33] is resolved by [Bob]</span><br><span class="line">[Trouble 66] is resolved by [Bob]</span><br><span class="line">[Trouble 99] is resolved by [Bob]</span><br><span class="line">[Trouble 132] is resolved by [Diana]</span><br><span class="line">[Trouble 165] is resolved by [Diana]</span><br><span class="line">[Trouble 198] is resolved by [Diana]</span><br><span class="line">[Trouble 231] is resolved by [Elmo]</span><br><span class="line">[Trouble 264] is resolved by [Fred]</span><br><span class="line">[Trouble 297] is resolved by [Elmo]</span><br><span class="line">[Trouble 330] canot be resolved</span><br><span class="line">[Trouble 363] is resolved by [Elmo]</span><br><span class="line">[Trouble 396] canot be resolved</span><br><span class="line">[Trouble 429] is resolved by [Charlie]</span><br><span class="line">[Trouble 462] canot be resolved</span><br><span class="line">[Trouble 495] is resolved by [Elmo]</span><br></pre></td></tr></table></figure>
+<h2 id="类图"><a href="#类图" class="headerlink" title="类图"></a>类图</h2><p><img src="https://upload-images.jianshu.io/upload_images/10024246-173035b742289356.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="类图"></p>
+<h2 id="角色"><a href="#角色" class="headerlink" title="角色"></a>角色</h2><ul>
+<li>Handler（处理者）<br>Handler定义了处理请求的具体接口，Handler知道下一个处理者是谁，当无法处理时会把事件转给下一个处理者，当然先一个处理者也是Handler角色</li>
+<li>ConcreteHandler（具体的处理者）<br>ConcreteHandler是处理请求的具体角色</li>
+<li>Client（请求者）<br>事件发起者</li>
+</ul>
+
+      
+    </div>
+
+    
+    
+    
+
+    <footer class="post-footer">
+        <div class="post-eof"></div>
+      
+    </footer>
+  </article>
+</div>
+
+
+
+
+    
+
+
+<div class="post-block">
+  
+  
+
+  <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="">
+    <link itemprop="mainEntityOfPage" href="https://lzhwweb.github.io/nirvana/DesignPattern/%E8%AE%BE%E8%AE%A1%E6%A8%A1%E5%BC%8F%EF%BC%88TypeScript%EF%BC%89/Command%E6%A8%A1%E5%BC%8F%EF%BC%88%E5%91%BD%E4%BB%A4%E6%A8%A1%E5%BC%8F%EF%BC%89/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/nirvana/images/headphoto.jpeg">
+      <meta itemprop="name" content="nirvana">
+      <meta itemprop="description" content="个人学习笔记">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="涅槃快乐是金">
+    </span>
+      <header class="post-header">
+        <h2 class="post-title" itemprop="name headline">
+          <a href="/nirvana/DesignPattern/%E8%AE%BE%E8%AE%A1%E6%A8%A1%E5%BC%8F%EF%BC%88TypeScript%EF%BC%89/Command%E6%A8%A1%E5%BC%8F%EF%BC%88%E5%91%BD%E4%BB%A4%E6%A8%A1%E5%BC%8F%EF%BC%89/" class="post-title-link" itemprop="url">Command模式（命令模式）</a>
+        </h2>
+
+        <div class="post-meta-container">
+          <div class="post-meta">
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-calendar"></i>
+      </span>
+      <span class="post-meta-item-text">发表于</span>
+
+      <time title="创建时间：2021-03-11 21:12:40" itemprop="dateCreated datePublished" datetime="2021-03-11T21:12:40+08:00">2021-03-11</time>
+    </span>
+      <span class="post-meta-item">
+        <span class="post-meta-item-icon">
+          <i class="far fa-calendar-check"></i>
+        </span>
+        <span class="post-meta-item-text">更新于</span>
+        <time title="修改时间：2021-03-10 13:43:55" itemprop="dateModified" datetime="2021-03-10T13:43:55+08:00">2021-03-10</time>
+      </span>
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-folder"></i>
+      </span>
+      <span class="post-meta-item-text">分类于</span>
+        <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+          <a href="/nirvana/categories/DesignPattern/" itemprop="url" rel="index"><span itemprop="name">DesignPattern</span></a>
+        </span>
+    </span>
+
+  
+    <span id="/nirvana/DesignPattern/%E8%AE%BE%E8%AE%A1%E6%A8%A1%E5%BC%8F%EF%BC%88TypeScript%EF%BC%89/Command%E6%A8%A1%E5%BC%8F%EF%BC%88%E5%91%BD%E4%BB%A4%E6%A8%A1%E5%BC%8F%EF%BC%89/" class="post-meta-item leancloud_visitors" data-flag-title="Command模式（命令模式）" title="阅读次数">
+      <span class="post-meta-item-icon">
+        <i class="far fa-eye"></i>
+      </span>
+      <span class="post-meta-item-text">阅读次数：</span>
+      <span class="leancloud-visitors-count"></span>
+    </span>
+      </div>
+      <div class="post-meta">
+    <span class="post-meta-item" title="本文字数">
+      <span class="post-meta-item-icon">
+        <i class="far fa-file-word"></i>
+      </span>
+      <span class="post-meta-item-text">本文字数：</span>
+      <span>2.9k</span>
+    </span>
+    <span class="post-meta-item" title="阅读时长">
+      <span class="post-meta-item-icon">
+        <i class="far fa-clock"></i>
+      </span>
+      <span class="post-meta-item-text">阅读时长 &asymp;</span>
+      <span>3 分钟</span>
+    </span>
+</div>
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+          <p>命令模式（Command Pattern）是一种数据驱动的设计模式。Command有时也被成为事件（event）。它与“事件驱动编程”中的事件是一样的意思。</p>
+<h2 id="介绍"><a href="#介绍" class="headerlink" title="介绍"></a>介绍</h2><ul>
+<li>意图：将一个请求封装成一个对象，从而使您可以用不同的请求对客户进行参数化。</li>
+<li>主要解决：在软件系统中，行为请求者与行为实现者通常是一种紧耦合的关系，但某些场合，比如需要对行为进行记录、撤销或重做、事务等处理时，这种无法抵御变化的紧耦合的设计就不太合适。</li>
+<li>何时使用：在某些场合，比如要对行为进行”记录、撤销/重做、事务”等处理，这种无法抵御变化的紧耦合是不合适的。在这种情况下，如何将”行为请求者”与”行为实现者”解耦？将一组行为抽象为对象，可以实现二者之间的松耦合。</li>
+<li>如何解决：通过调用者调用接受者执行命令，顺序：调用者→命令→接受者。</li>
+<li>关键代码：定义三个角色：<br>1、received 真正的命令执行对象<br>2、Command<br>3、invoker 使用命令对象的入口</li>
+<li>优点： 1、降低了系统耦合度。 2、新的命令可以很容易添加到系统中去。</li>
+<li>缺点：使用命令模式可能会导致某些系统有过多的具体命令类。</li>
+<li>注意事项：系统需要支持命令的撤销(Undo)操作和恢复(Redo)操作，也可以考虑使用命令模式，见命令模式的扩展。</li>
+<li>命令模式结构示意图:</li>
+</ul>
+<p><img src="https://upload-images.jianshu.io/upload_images/10024246-ba053c9ac15c7266.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="类图"></p>
+<h2 id="示例"><a href="#示例" class="headerlink" title="示例"></a>示例</h2><h5 id="order-ts-command接口"><a href="#order-ts-command接口" class="headerlink" title="order.ts command接口"></a>order.ts command接口</h5><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">export interface Order &#123;</span><br><span class="line">    execute(): void;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<h5 id="Stock-ts-请求类"><a href="#Stock-ts-请求类" class="headerlink" title="Stock.ts 请求类"></a>Stock.ts 请求类</h5><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line">export default class Stock &#123;</span><br><span class="line">    private name: string &#x3D; &quot;ABC&quot;;</span><br><span class="line">    private quantity: number &#x3D; 10;</span><br><span class="line">    public buy(): void &#123;</span><br><span class="line">        console.log(&#96;Stock [ Name: $&#123;this.name&#125; Quantity: $&#123;this.quantity&#125; ] bought&#96;);</span><br><span class="line">    &#125;</span><br><span class="line">    public sell(): void &#123;</span><br><span class="line">        console.log(&#96;Stock [ Name: $&#123;this.name&#125; Quantity: $&#123;this.quantity&#125; ] sold&#96;);</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<h5 id="买卖股票实现了-Order-接口"><a href="#买卖股票实现了-Order-接口" class="headerlink" title="买卖股票实现了 Order 接口"></a>买卖股票实现了 Order 接口</h5><ul>
+<li>BuyStock.ts 买股票*<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br></pre></td><td class="code"><pre><span class="line">&#x2F;&#x2F;Order.ts 买股票</span><br><span class="line">import &#123; Order &#125; from &quot;.&#x2F;Order&quot;;</span><br><span class="line">import Stock from &quot;.&#x2F;Stock&quot;;</span><br><span class="line"></span><br><span class="line">export default class BuyStock implements Order &#123;</span><br><span class="line">    private abcStock: Stock;</span><br><span class="line"></span><br><span class="line">    constructor(abcStock: Stock) &#123;</span><br><span class="line">        this.abcStock &#x3D; abcStock;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    public execute(): void &#123;</span><br><span class="line">        this.abcStock.buy();</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></li>
+<li>SellStock.ts卖股票*<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br></pre></td><td class="code"><pre><span class="line">&#x2F;&#x2F;SellStock.ts卖股票</span><br><span class="line">import &#123; Order &#125; from &quot;.&#x2F;Order&quot;;</span><br><span class="line">import Stock from &quot;.&#x2F;Stock&quot;;</span><br><span class="line"></span><br><span class="line">export default class SellStock implements Order &#123;</span><br><span class="line">    private abcStock: Stock;</span><br><span class="line"></span><br><span class="line">    constructor(abcStock: Stock) &#123;</span><br><span class="line">        this.abcStock &#x3D; abcStock;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    public execute(): void &#123;</span><br><span class="line">        this.abcStock.sell();</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<h5 id="Broker-ts-经纪人创建命令"><a href="#Broker-ts-经纪人创建命令" class="headerlink" title="Broker.ts 经纪人创建命令"></a>Broker.ts 经纪人创建命令</h5><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br></pre></td><td class="code"><pre><span class="line">import &#123; Order &#125; from &quot;.&#x2F;Order&quot;;</span><br><span class="line"></span><br><span class="line">export default class Broker &#123;</span><br><span class="line">    private orderList: Array&lt;Order&gt; &#x3D; new Array&lt;Order&gt;();</span><br><span class="line"></span><br><span class="line">    public takeOrder(order: Order): void &#123;</span><br><span class="line">        this.orderList.push(order);</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    public placeOrders(): void &#123;</span><br><span class="line">        this.orderList.forEach((order: Order) &#x3D;&gt; &#123;</span><br><span class="line">            order.execute();</span><br><span class="line">        &#125;)</span><br><span class="line">        this.orderList &#x3D; [];</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<h5 id="index-ts"><a href="#index-ts" class="headerlink" title="index.ts"></a>index.ts</h5><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br></pre></td><td class="code"><pre><span class="line">import Broker from &quot;.&#x2F;Broker&quot;;</span><br><span class="line">import Stock from &quot;.&#x2F;Stock&quot;;</span><br><span class="line">import BuyStock from &quot;.&#x2F;BuyStock&quot;;</span><br><span class="line">import SellStock from &quot;.&#x2F;SellStock&quot;;</span><br><span class="line"></span><br><span class="line">const abcStock: Stock &#x3D; new Stock();</span><br><span class="line"></span><br><span class="line">const buyStockOrder: BuyStock &#x3D; new BuyStock(abcStock);</span><br><span class="line">const sellStockOrder: SellStock &#x3D; new SellStock(abcStock);</span><br><span class="line"></span><br><span class="line">const broker: Broker &#x3D; new Broker();</span><br><span class="line">broker.takeOrder(buyStockOrder);</span><br><span class="line">broker.takeOrder(sellStockOrder);</span><br><span class="line"></span><br><span class="line">broker.placeOrders();</span><br></pre></td></tr></table></figure>
+<h5 id="result"><a href="#result" class="headerlink" title="result"></a>result</h5><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">Stock [ Name: ABC Quantity: 10 ] bought</span><br><span class="line">Stock [ Name: ABC Quantity: 10 ] sold</span><br></pre></td></tr></table></figure>
+<h2 id="Command模式中的角色"><a href="#Command模式中的角色" class="headerlink" title="Command模式中的角色"></a>Command模式中的角色</h2></li>
+</ul>
+<ul>
+<li>Command(命令)<br>Command角色负责定义命令的接口，对应Order接口</li>
+<li>ConcreteCommand （具体的命令）<br>ConcreteCommand角色负责试下在Command角色中定义的接口。对应BuyStock和SellStock</li>
+<li>Receiver（接收者）<br>Receiver角色时Command角色执行命令接受者</li>
+<li>Client（请求者）<br>Client角色负责生产ConcreteCommand角色并分配Receiver角色</li>
+<li>Invoke（发动者）<br>Invoke角色时开始执行命令的角色，它会调用Command角色中定义的接口</li>
+</ul>
+
+      
+    </div>
+
+    
+    
+    
+
+    <footer class="post-footer">
+        <div class="post-eof"></div>
+      
+    </footer>
+  </article>
+</div>
+
+
+
+
+    
+
+
+<div class="post-block">
+  
+  
+
+  <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="">
+    <link itemprop="mainEntityOfPage" href="https://lzhwweb.github.io/nirvana/DesignPattern/%E8%AE%BE%E8%AE%A1%E6%A8%A1%E5%BC%8F%EF%BC%88TypeScript%EF%BC%89/Composite%E6%A8%A1%E5%BC%8F%EF%BC%88%E7%BB%84%E5%90%88%E5%AE%9E%E4%BD%93%E6%A8%A1%E5%BC%8F%EF%BC%89/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/nirvana/images/headphoto.jpeg">
+      <meta itemprop="name" content="nirvana">
+      <meta itemprop="description" content="个人学习笔记">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="涅槃快乐是金">
+    </span>
+      <header class="post-header">
+        <h2 class="post-title" itemprop="name headline">
+          <a href="/nirvana/DesignPattern/%E8%AE%BE%E8%AE%A1%E6%A8%A1%E5%BC%8F%EF%BC%88TypeScript%EF%BC%89/Composite%E6%A8%A1%E5%BC%8F%EF%BC%88%E7%BB%84%E5%90%88%E5%AE%9E%E4%BD%93%E6%A8%A1%E5%BC%8F%EF%BC%89/" class="post-title-link" itemprop="url">Composite模式（组合实体模式）</a>
+        </h2>
+
+        <div class="post-meta-container">
+          <div class="post-meta">
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-calendar"></i>
+      </span>
+      <span class="post-meta-item-text">发表于</span>
+
+      <time title="创建时间：2021-03-11 21:12:40" itemprop="dateCreated datePublished" datetime="2021-03-11T21:12:40+08:00">2021-03-11</time>
+    </span>
+      <span class="post-meta-item">
+        <span class="post-meta-item-icon">
+          <i class="far fa-calendar-check"></i>
+        </span>
+        <span class="post-meta-item-text">更新于</span>
+        <time title="修改时间：2021-03-10 13:43:55" itemprop="dateModified" datetime="2021-03-10T13:43:55+08:00">2021-03-10</time>
+      </span>
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-folder"></i>
+      </span>
+      <span class="post-meta-item-text">分类于</span>
+        <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+          <a href="/nirvana/categories/DesignPattern/" itemprop="url" rel="index"><span itemprop="name">DesignPattern</span></a>
+        </span>
+    </span>
+
+  
+    <span id="/nirvana/DesignPattern/%E8%AE%BE%E8%AE%A1%E6%A8%A1%E5%BC%8F%EF%BC%88TypeScript%EF%BC%89/Composite%E6%A8%A1%E5%BC%8F%EF%BC%88%E7%BB%84%E5%90%88%E5%AE%9E%E4%BD%93%E6%A8%A1%E5%BC%8F%EF%BC%89/" class="post-meta-item leancloud_visitors" data-flag-title="Composite模式（组合实体模式）" title="阅读次数">
       <span class="post-meta-item-icon">
         <i class="far fa-eye"></i>
       </span>
@@ -1536,79 +1554,19 @@
     
     
     <div class="post-body" itemprop="articleBody">
-          <p><strong>一、HTTPS 为什么安全</strong></p>
-<p>HTTPS，也称作 HTTP over TLS，TLS 前身是 SSL，会有各个版本。</p>
-<p><img src="https://upload-images.jianshu.io/upload_images/10024246-fd6d4d24b72aadc1.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240"></p>
-<p>TLS协议在TCP/IP协议栈中的关系</p>
-<p>上图描述了在TCP/IP协议栈中TLS(各子协议）和 HTTP 的关系。HTTP+TLS 也就是 HTTPS，和 HTTP 相比，<strong>HTTPS的优势：</strong></p>
+          <h2 id="组合实体模式"><a href="#组合实体模式" class="headerlink" title="组合实体模式"></a>组合实体模式</h2><p>组合实体模式（Composite Entity Pattern）能够是容器和内容具有一致性，创造出递归结构的模式。<br>常见使用场景：如树形菜单、文件夹菜单、部门组织架构图等。</p>
+<h2 id="示例："><a href="#示例：" class="headerlink" title="示例："></a>示例：</h2><h3 id="Component-抽象类"><a href="#Component-抽象类" class="headerlink" title="Component:抽象类"></a>Component:抽象类</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">export default abstract class Component &#123;</span><br><span class="line">    public abstract Opertion(): void; &#x2F;&#x2F;操作</span><br><span class="line">    public abstract Add(Child: Component): void;&#x2F;&#x2F;添加子节点</span><br><span class="line">    public abstract Remove(index: number): void;&#x2F;&#x2F;删除节点</span><br><span class="line">    public abstract getChild(index: number): Array&lt;Component&gt;;&#x2F;&#x2F;获取子节点</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<h3 id="Leaf-叶子类"><a href="#Leaf-叶子类" class="headerlink" title="Leaf:叶子类"></a>Leaf:叶子类</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br></pre></td><td class="code"><pre><span class="line">import Component from &quot;.&#x2F;Component&quot;;</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">export default class Leaf extends Component &#123;</span><br><span class="line"></span><br><span class="line">    private leafName: string;</span><br><span class="line"></span><br><span class="line">    constructor(leafName: string) &#123;</span><br><span class="line">        super();</span><br><span class="line">        this.leafName &#x3D; leafName;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    public Opertion(): void &#123;</span><br><span class="line">        console.log(this.leafName + &quot;正在迎风摇摆&quot;);</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    public Add(Child: Component): void &#123;</span><br><span class="line"></span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    public Remove(index: number): void &#123;</span><br><span class="line"></span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    public getChild(index: number): Array&lt;Component&gt; &#123;</span><br><span class="line">        return null;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<h3 id="Trunk-树干类"><a href="#Trunk-树干类" class="headerlink" title="Trunk:树干类"></a>Trunk:树干类</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br></pre></td><td class="code"><pre><span class="line">import Component from &quot;.&#x2F;Component&quot;;</span><br><span class="line"></span><br><span class="line">export default class Trunk extends Component &#123;</span><br><span class="line"></span><br><span class="line">    private TrunkName: string;</span><br><span class="line"></span><br><span class="line">    private components: Array&lt;Component&gt; &#x3D; []; &#x2F;&#x2F;多个子节点</span><br><span class="line"></span><br><span class="line">    constructor(TrunkName: string) &#123;</span><br><span class="line">        super();</span><br><span class="line">        this.TrunkName &#x3D; TrunkName;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    public Opertion(): void &#123;</span><br><span class="line">        console.log(this.TrunkName + &quot;树干正在抵御秋风&quot;);</span><br><span class="line">        this.components.forEach((item, index) &#x3D;&gt; &#123;</span><br><span class="line">            item.Opertion();</span><br><span class="line">        &#125;)</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    public Add(Child: Component): void &#123;</span><br><span class="line">        this.components.push(Child);</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    public Remove(index: number): void &#123;</span><br><span class="line">        this.components.splice(index, 1);</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    public getChild(index: number): Array&lt;Component&gt; &#123;</span><br><span class="line">        return this.components;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<h3 id="index-ts"><a href="#index-ts" class="headerlink" title="index.ts"></a>index.ts</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br></pre></td><td class="code"><pre><span class="line">import Trunk from &quot;.&#x2F;Trunk&quot;;</span><br><span class="line">import Leaf from &quot;.&#x2F;Leaf&quot;;</span><br><span class="line"></span><br><span class="line">const root: Trunk &#x3D; new Trunk(&quot;树根&quot;);</span><br><span class="line"></span><br><span class="line">const trunk: Trunk &#x3D; new Trunk(&quot;主干&quot;);</span><br><span class="line"></span><br><span class="line">const t1: Trunk &#x3D; new Trunk(&quot;主分支&quot;);</span><br><span class="line">const t2: Trunk &#x3D; new Trunk(&quot;第一分支&quot;);</span><br><span class="line">const t3: Trunk &#x3D; new Trunk(&quot;第二分支&quot;);</span><br><span class="line"></span><br><span class="line">const l1: Leaf &#x3D; new Leaf(&quot;分叶1&quot;);</span><br><span class="line">const l2: Leaf &#x3D; new Leaf(&quot;分叶2&quot;);</span><br><span class="line">const l3: Leaf &#x3D; new Leaf(&quot;分叶3&quot;);</span><br><span class="line">const l4: Leaf &#x3D; new Leaf(&quot;分叶4&quot;);</span><br><span class="line">const l5: Leaf &#x3D; new Leaf(&quot;分叶5&quot;);</span><br><span class="line"></span><br><span class="line">root.Add(trunk);</span><br><span class="line">trunk.Add(t1);</span><br><span class="line"></span><br><span class="line">t1.Add(t2);</span><br><span class="line">t1.Add(t3);</span><br><span class="line"></span><br><span class="line">t2.Add(l1);</span><br><span class="line">t2.Add(l3);</span><br><span class="line">t2.Add(l5);</span><br><span class="line"></span><br><span class="line">t3.Add(l2);</span><br><span class="line">t3.Add(l4);</span><br><span class="line"></span><br><span class="line">root.Opertion();</span><br></pre></td></tr></table></figure>
+<h3 id="result"><a href="#result" class="headerlink" title="result"></a>result</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line">树根树干正在抵御秋风</span><br><span class="line">主干树干正在抵御秋风</span><br><span class="line">主分支树干正在抵御秋风</span><br><span class="line">第一分支树干正在抵御秋风</span><br><span class="line">分叶1正在迎风摇摆</span><br><span class="line">分叶3正在迎风摇摆</span><br><span class="line">分叶5正在迎风摇摆</span><br><span class="line">第二分支树干正在抵御秋风</span><br><span class="line">分叶2正在迎风摇摆</span><br><span class="line">分叶4正在迎风摇摆</span><br></pre></td></tr></table></figure>
+<h3 id="类图"><a href="#类图" class="headerlink" title="类图"></a>类图</h3><p><img src="https://upload-images.jianshu.io/upload_images/10024246-d9e5cb13d2a82048.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="类图"></p>
+<h3 id="composite模式"><a href="#composite模式" class="headerlink" title="composite模式"></a>composite模式</h3><p>composite模式主要有一下几类角色</p>
 <ul>
-<li><p>  <strong>数据完整性：内容传输经过完整性校验</strong></p>
-</li>
-<li><p>  <strong>数据隐私性：内容经过对称加密，每个连接生成一个唯一的加密密钥</strong></p>
-</li>
-<li><p>  <strong>身份认证：第三方无法伪造服务端（客户端）身份</strong></p>
-</li>
+<li>leaf 树叶<br>表示内容的角色，该角色中不能放入其他对象，对应我们实例程序中的leaf</li>
+<li>Composite 复合物<br>表示容器的角色，可以放入小容器和内容，也就是leaf和composite，此实例中，由Trunk类代表composite</li>
+<li>component<br>是leaf和composite角色具有一致性的角色，一般作为leaf和composite的父类，定义一些共有的行为和属性，此例中的component类代表</li>
 </ul>
-<p>上面内容参考了HTTPS工作原理。（石头在N 久前用印象笔记收藏的，现在好多原文访问不了了）</p>
-<p><img src="https://upload-images.jianshu.io/upload_images/10024246-5719d83a695f5af8.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240"></p>
-<p>HTTPS 原理</p>
-<p>上图就是大致介绍了 HTTPS 的握手流程，感兴趣的同学可以用 WireShark 抓包详细看看其中的每一个步骤，有助于理解 HTTPS 的完整流程。这里，我就不详述了。</p>
-<p><strong>大致就是客户端和服务端通过“握手会谈”商量出一个双方支持的加密算法和相应随机参数，得到一对密钥，后续的传输的内容都通过这对密钥进行加解密。</strong></p>
-<p>这对密钥很牛皮，比如要加密传输消息『tangleithu』，客户端通过公钥加密得到的密文『xyyaabbccdd』进行传输，服务端用自己的私钥对密文解密，恰好能得到『tangleithu』。中间错一位都不行，这样就保证了数据完整和隐私性。</p>
-<p><strong>因此，你在通过 HTTPS 访问网站的时候，就算流量被截取监听，获取到的信息也是加密的，啥实质性的内容也看不到。</strong></p>
-<p>例如，如下图所示，当我访问某个网站，此时通过 wireshark 抓包得到的信息，能获得仅仅是一些通信的IP地址而已。<br><img src="https://upload-images.jianshu.io/upload_images/10024246-ce31fa33f0af5bd4.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240"></p>
-<p><code>HTTPS加密传输</code></p>
-<p>这下放心了吗？</p>
-<p>摸鱼的过程中，就算访问的 IP 地址被知道了，好像也无关紧要？</p>
-<p>其实，有了 IP 地址也能获取不少信息了。<br><img src="https://upload-images.jianshu.io/upload_images/10024246-948f6a8849792d67.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240"></p>
-<p>还好这个 IP 搜出来是 github，而不是……</p>
-<p>你或许会高兴，连个网站域名都看不到，可以放心摸鱼了。不过，这是真的吗？</p>
-<p><strong>二、HTTPS 真的安全吗？</strong></p>
-<p><strong>HTTPS 真的完全安全吗？连访问的域名都获取不到？答案是否定的。</strong></p>
-<p><strong>上述 HTTPS 在握手阶段有一个很重要的东西 —— 证书。</strong></p>
-<p><strong>1.SNI —— 域名裸奔</strong></p>
-<p>当访问 HTTPS 站点时，会首先与服务器建立 SSL 连接，第一步就是请求服务器的证书。</p>
-<p>当一个 Server IP 只对应一个域名（站点）时，很方便，任意客户端请求过来，无脑返回该域名（服务）对应的证书即可。但 IP 地址（IPv4）是有限的呀，多个域名复用同一个 IP 地址的时候怎么办？</p>
-<p>服务器在发送证书时，不知道浏览器访问的是哪个域名，所以不能根据不同域名发送不同的证书。</p>
-<p>因此 TLS 协议升级了，多了 SNI 这个东西，SNI 即 Server Name Indication，是为了解决一个服务器使用多个域名和证书的 SSL/TLS 扩展。</p>
-<p>现在主流客户端都支持这个协议的。别问我怎么知道这个点的，之前工作上因为这个事情还费了老大劲儿……</p>
-<p>它的原理是：在与服务器建立 SSL 连接之前，先发送要访问站点的域名（Hostname），这样服务器会根据这个域名返回一个合适的证书。此时还没有办法进行加解密，因此至少这个域名是裸奔的。</p>
-<p>如下图所示，上面的截图其实是访问网站的抓包情况，客户端发送握手请求时，很自觉带上了自己的域名。</p>
-<p><img src="https://upload-images.jianshu.io/upload_images/10024246-0a184ff9bbd874b4.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240"></p>
-<p>HTTPS SNI</p>
-<p>因此，即便是 HTTPS，访问的域名信息也是裸奔状态。你上班期间访问小电影网站，都留下了痕迹，若接入了公司网络，就自然而然被抓个正着。</p>
-<p>除了域名是裸奔外，其实还有更严重的风险，那就是中间人攻击。</p>
-<p><strong>2.中间人攻击</strong></p>
-<p>前面也提到 HTTPS 中的关键其实在于这个证书。从名字可以看出来，中间人攻击就是在客户端、服务器之间多了个『中介』，『中介』在客户端、服务器双方中伪装对方，如下图所示，这个『MitmProxy』充当了中间人，互相欺骗：</p>
-<p><img src="https://upload-images.jianshu.io/upload_images/10024246-4d75f48b1a4baae1.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240"></p>
-<p>中间人攻击，来源 evil0x</p>
-<p>可以安装 MitmProxy 或者 Fiddler 之类的抓包软件尝试一把，然后开启代理。</p>
-<p>此时用手机访问百度，得到的信息如下：</p>
-<p><img src="https://upload-images.jianshu.io/upload_images/10024246-61b38a14afc3cfbf.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240"></p>
-<p>证书信任前</p>
-<p>提示，连接不是私密连接，其实就是浏览器识别了证书不太对劲，没有信任。而如果此时手机安装了 Fiddler 的证书，就会正常访问。</p>
-<p><img src="https://upload-images.jianshu.io/upload_images/10024246-c8a43fe23891db6c.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240"></p>
-<p>证书信任后可正常访问</p>
-<p>因此，当你信任证书后，在中间人面前，又是一览无余了。</p>
-<p>而如果你用了公司电脑，估计你有相应的操作让信任证书吧，或者手机上是否有安装类似的客户端软件吧？</p>
-<p>抓紧时间看看手机的证书安装明细</p>
-<p><strong>三、如何防止信息安全，反爬</strong></p>
-<p>前面提到，要实施中间人攻击，关键在于证书是否得到信任。浏览器的行为是证书可以让用户授权是否信任，而 APP 就可以开发者自己控制。</p>
-<p>比如我尝试通过类似的方式对某匿名社区进行抓包解密 HTTPS，但最终失败了，为什么呢？</p>
-<p><img src="https://upload-images.jianshu.io/upload_images/10024246-890b702b230b7c79.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240"></p>
-<p>这就要谈到『SSL Pinning』技术。</p>
-<p>App 可以自己检验 SSL 握手时服务端返回的证书是否合法，“SSL pinning” 技术说的就是在 App 中只信任固定的证书或者公钥。</p>
-<p>因为在握手阶段服务端的证书必须返回给客户端，如果客户端在打包的时候，就把服务端证书放到本地，在握手校验证书的环节进行比较，服务端返回的证书和本地内置的证书一模一样，才发起网络请求。否则，直接断开连接，不可用。</p>
-<p>当然，一般情况下，用这种技术也就能防止 HTTPS 信息被解密了。</p>
-<p>不过，也还有其他的技术能够破解这种方法，比如 Android 下的一些 Hook 技术，具体而言就是绕过本地证书强校验的逻辑。感兴趣的同学可以抱着学习目的研究一下。不过据说这种方式需要对系统进行 Root、越狱等，需要一些更高权限的设置。</p>
-<p>因此，也告诫我们，一定不要乱安装一些软件，稍不注意可能就中招，让自己在互联网上进行裸奔。一方面个人隐私信息等泄露，另外一个方面可能一些非常重要的如账户密码等也可能被窃取。</p>
-<p><strong>四、可能的监控手段有哪些？</strong></p>
-<p>办公电脑当然要接入公司网络，通过上面介绍的内容，你也应该知道，你在什么时候浏览了哪些网站，公司其实都是一清二楚的。</p>
-<p>若自己的手机如果接入了公司网络也是一模一样（连 Agent 软件都不需要装）。这就提醒我们，私人上网尽量用自己的移动网络呀。</p>
-<p>上面提到，如一些涉及隐私的敏感信息，如一些 PC 软件、手机 App 自己内部加密传输的话，内容加密（包括但不限于 HTTPS）不被破解也问题不大。</p>
-<p>不过，这当然依赖这些软件设计者的水平了。比如同一个匿名用户对外展示的 ID 不能相同，如果是同一个的话也恰好暴露了逻辑漏洞。</p>
-<p>当然，我们还是不要抱有侥幸心理，在监管的要求下，如果确实有一些违法等不恰当的言论等，始终还是有门路找到你的。</p>
-<p>更何况，一般办公电脑都会预安装一些公司安全软件，至于这些软件究竟都干了些什么，有没有进行传说中悄悄截图什么的，这就因人（公司）而异了。（不讨论类似行为是否涉及到侵犯了员工隐私等问题）</p>
 
       
     </div>
@@ -1628,7 +1586,7 @@
 
 
   <nav class="pagination">
-    <a class="extend prev" rel="prev" href="/nirvana/page/3/"><i class="fa fa-angle-left" aria-label="上一页"></i></a><a class="page-number" href="/nirvana/">1</a><span class="space">&hellip;</span><a class="page-number" href="/nirvana/page/3/">3</a><span class="page-number current">4</span><a class="page-number" href="/nirvana/page/5/">5</a><span class="space">&hellip;</span><a class="page-number" href="/nirvana/page/22/">22</a><a class="extend next" rel="next" href="/nirvana/page/5/"><i class="fa fa-angle-right" aria-label="下一页"></i></a>
+    <a class="extend prev" rel="prev" href="/nirvana/page/3/"><i class="fa fa-angle-left" aria-label="上一页"></i></a><a class="page-number" href="/nirvana/">1</a><span class="space">&hellip;</span><a class="page-number" href="/nirvana/page/3/">3</a><span class="page-number current">4</span><a class="page-number" href="/nirvana/page/5/">5</a><span class="space">&hellip;</span><a class="page-number" href="/nirvana/page/21/">21</a><a class="extend next" rel="next" href="/nirvana/page/5/"><i class="fa fa-angle-right" aria-label="下一页"></i></a>
   </nav>
 
 
@@ -1674,14 +1632,14 @@
       <i class="fa fa-chart-line"></i>
     </span>
       <span>站点总字数：</span>
-    <span title="站点总字数">603k</span>
+    <span title="站点总字数">595k</span>
   </span>
   <span class="post-meta-item">
     <span class="post-meta-item-icon">
       <i class="fa fa-coffee"></i>
     </span>
       <span>站点阅读时长 &asymp;</span>
-    <span title="站点阅读时长">9:08</span>
+    <span title="站点阅读时长">9:01</span>
   </span>
 </div>
   <div class="powered-by">由 <a href="https://hexo.io/" class="theme-link" rel="noopener" target="_blank">Hexo</a> & <a href="https://theme-next.js.org/" class="theme-link" rel="noopener" target="_blank">NexT.Gemini</a> 强力驱动

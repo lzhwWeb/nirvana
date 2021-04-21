@@ -207,7 +207,7 @@
   <nav class="site-state">
       <div class="site-state-item site-state-posts">
           <a href="/nirvana/archives">
-          <span class="site-state-item-count">213</span>
+          <span class="site-state-item-count">209</span>
           <span class="site-state-item-name">日志</span>
         </a>
       </div>
@@ -257,7 +257,7 @@
   
 
   <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="">
-    <link itemprop="mainEntityOfPage" href="https://lzhwweb.github.io/nirvana/algorithm/%E7%AE%97%E6%B3%95%E5%AD%A6%E4%B9%A0/%E5%BF%AB%E9%80%9F%E6%8E%92%E5%BA%8F/">
+    <link itemprop="mainEntityOfPage" href="https://lzhwweb.github.io/nirvana/mac/mac/%E8%8B%B9%E6%9E%9CMac%E6%93%8D%E4%BD%9C%E7%B3%BB%E7%BB%9F%E4%B8%8B%E6%80%8E%E4%B9%88%E6%98%BE%E7%A4%BA%E9%9A%90%E8%97%8F%E6%96%87%E4%BB%B6/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="image" content="/nirvana/images/headphoto.jpeg">
@@ -270,7 +270,7 @@
     </span>
       <header class="post-header">
         <h2 class="post-title" itemprop="name headline">
-          <a href="/nirvana/algorithm/%E7%AE%97%E6%B3%95%E5%AD%A6%E4%B9%A0/%E5%BF%AB%E9%80%9F%E6%8E%92%E5%BA%8F/" class="post-title-link" itemprop="url">快速排序</a>
+          <a href="/nirvana/mac/mac/%E8%8B%B9%E6%9E%9CMac%E6%93%8D%E4%BD%9C%E7%B3%BB%E7%BB%9F%E4%B8%8B%E6%80%8E%E4%B9%88%E6%98%BE%E7%A4%BA%E9%9A%90%E8%97%8F%E6%96%87%E4%BB%B6/" class="post-title-link" itemprop="url">苹果Mac操作系统下怎么显示隐藏文件</a>
         </h2>
 
         <div class="post-meta-container">
@@ -290,12 +290,12 @@
       </span>
       <span class="post-meta-item-text">分类于</span>
         <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-          <a href="/nirvana/categories/algorithm/" itemprop="url" rel="index"><span itemprop="name">algorithm</span></a>
+          <a href="/nirvana/categories/mac/" itemprop="url" rel="index"><span itemprop="name">mac</span></a>
         </span>
     </span>
 
   
-    <span id="/nirvana/algorithm/%E7%AE%97%E6%B3%95%E5%AD%A6%E4%B9%A0/%E5%BF%AB%E9%80%9F%E6%8E%92%E5%BA%8F/" class="post-meta-item leancloud_visitors" data-flag-title="快速排序" title="阅读次数">
+    <span id="/nirvana/mac/mac/%E8%8B%B9%E6%9E%9CMac%E6%93%8D%E4%BD%9C%E7%B3%BB%E7%BB%9F%E4%B8%8B%E6%80%8E%E4%B9%88%E6%98%BE%E7%A4%BA%E9%9A%90%E8%97%8F%E6%96%87%E4%BB%B6/" class="post-meta-item leancloud_visitors" data-flag-title="苹果Mac操作系统下怎么显示隐藏文件" title="阅读次数">
       <span class="post-meta-item-icon">
         <i class="far fa-eye"></i>
       </span>
@@ -309,117 +309,7 @@
         <i class="far fa-file-word"></i>
       </span>
       <span class="post-meta-item-text">本文字数：</span>
-      <span>2.4k</span>
-    </span>
-    <span class="post-meta-item" title="阅读时长">
-      <span class="post-meta-item-icon">
-        <i class="far fa-clock"></i>
-      </span>
-      <span class="post-meta-item-text">阅读时长 &asymp;</span>
-      <span>2 分钟</span>
-    </span>
-</div>
-
-        </div>
-      </header>
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-          <p>快速排序由于排序效率在同为O(N*logN)的几种排序方法中效率较高，因此经常被采用，再加上快速排序思想—-分治法也确实实用，因此很多软件公司的笔试面试，包括像腾讯，微软等知名IT公司都喜欢考这个。</p>
-<p>快速排序是C.R.A.Hoare于1962年提出的一种划分交换排序。它采用了一种分治的策略，通常称其为分治法(Divide-and-ConquerMethod)。</p>
-<p>该方法的基本思想是：</p>
-<p>1．先从数列中取出一个数作为基准数。<br>2．分区过程，将比这个数大的数全放到它的右边，小于或等于它的数全放到它的左边。<br>3．再对左右区间重复第二步，直到各区间只有一个数。<br><img src="https://upload-images.jianshu.io/upload_images/10024246-3f6f3e05a50e33ae.gif?imageMogr2/auto-orient/strip" alt="一次快排过程"><br>以一个数组作为示例，取区间第一个数为基准数。<br>|0|1|2|3|4|<br>|  —-  | —-  |—-|  —-  | —-  |<br>|<em><strong>6</strong></em>|3|7|4|1|<br>初始时，i = 0;  j = 5;   X = a[i] = 6</p>
-<p>由于已经将 a[0] 中的数保存到 X 中，可以理解成在数组 a[0] 上挖了个坑，可以将其它数据填充到这来。</p>
-<p>1、从j开始向前找一个比X小或等于X的数。<br>2、当j=4，符合条件，将a[4]挖出再填到上一个坑a[0]中。a[0]=a[4]; i++;  这样一个坑a[0]就被搞定了，但又形成了一个新坑a[4]，这怎么办了？简单，再找数字来填a[4]这个坑。<br>3、这次从i开始向后找一个大于X的数，当i=2，符合条件，将a[2]挖出再填到上一个坑中a[4]=a[2]; j–;<br>数组变为<br>|0|1|2|3|4|<br>|  —-  | —-  |—-|  —-  | —-  |<br>|<strong>1</strong>|3|<strong>7</strong>|4|<strong>7</strong>|<br>i = 2;   j = 4;   X=6<br>4、再重复上面的步骤，先从后向前找，再从前向后找。<br>5、从j开始向前找，当j=3，符合条件，将a[3]挖出填到上一个坑中，a[2] = a[3]; i++;</p>
-<p>从i开始向后找，当i=3时，由于i==j退出。</p>
-<p>此时，i = j = 3，而a[3]刚好又是上次挖的坑，因此将X填入a[3]。</p>
-<p>数组变为：<br>|0|1|2|3|4|<br>|  —-  | —-  |—-|  —-  | —-  |<br>|1|3|4|6|7|</p>
-<p>再重复上面的步骤，先从后向前找，再从前向后找。</p>
-<h3 id="代码实现"><a href="#代码实现" class="headerlink" title="代码实现"></a>代码实现</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br></pre></td><td class="code"><pre><span class="line">&#x2F;**</span><br><span class="line"> * 快速排序</span><br><span class="line"> * @param &#123;Array&lt;Number&gt;&#125; arry 要排序的数组</span><br><span class="line"> *&#x2F;</span><br><span class="line">function quickSort(arry, left, right) &#123;</span><br><span class="line">    if (arry.length &#x3D;&#x3D; 0) &#123;&#x2F;&#x2F;判断数组不为空</span><br><span class="line">        return [];</span><br><span class="line">    &#125;</span><br><span class="line">    let [l, r] &#x3D; [left, right];</span><br><span class="line">    if (l &lt; r) &#123;</span><br><span class="line">        let temp &#x3D; arry[l];&#x2F;&#x2F;即arry[l]就是第一个坑</span><br><span class="line">        while (l &lt; r) &#123;</span><br><span class="line">            &#x2F;&#x2F; 从右向左找小于temp的数来填arry[l]</span><br><span class="line">            while (l &lt; r &amp;&amp; arry[r] &gt; temp) &#123;</span><br><span class="line">                r--;</span><br><span class="line">            &#125;</span><br><span class="line">            if (l &lt; r) &#123;</span><br><span class="line">                arry[l] &#x3D; arry[r]; &#x2F;&#x2F;将arry[r]填到arry[l]中，arry[r]就形成了一个新的坑</span><br><span class="line">                l++;</span><br><span class="line">            &#125;</span><br><span class="line">            &#x2F;&#x2F; 从左向右找大于temp的数来填arry[r]</span><br><span class="line">            while (l &lt; r &amp;&amp; arry[l] &lt; temp) &#123;</span><br><span class="line">                l++;</span><br><span class="line">            &#125;</span><br><span class="line">            if (l &lt; r) &#123;</span><br><span class="line">                arry[r] &#x3D; arry[l]; &#x2F;&#x2F;将arry[l]填到arry[r]中，arry[l]就形成了一个新的坑</span><br><span class="line">                r--;</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;</span><br><span class="line">        arry[l] &#x3D; temp;&#x2F;&#x2F;将temp填入arry[l]的坑</span><br><span class="line">        console.log(arry, l);</span><br><span class="line">        &#x2F;&#x2F; 递归调用 </span><br><span class="line">        quickSort(arry, left, l - 1);</span><br><span class="line">        quickSort(arry, l + 1, right);</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-<p>运行结果：</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><span class="line">quickSort([72, 6, 57, 88, 60, 42, 83, 73, 48, 85], 0, 9);</span><br><span class="line">[ 48, 6, 57, 42, 60, 72, 83, 73, 88, 85 ] 5</span><br><span class="line">&#x2F;&#x2F;第一次排序72为观察数，分界为5；左边都是小于，右边都是大于</span><br><span class="line">[ 42, 6, 48, 57, 60, 72, 83, 73, 88, 85 ] 2</span><br><span class="line">&#x2F;&#x2F;数组左边0-5继续续排序，48为观察数，分界为2</span><br><span class="line">[ 6, 42, 48, 57, 60, 72, 83, 73, 88, 85 ] 1</span><br><span class="line">&#x2F;&#x2F;数组左边0-2继续排序，42为观察数，分界结果为1，</span><br><span class="line">&#x2F;&#x2F;这时再递归发现1&lt;1-1;结束递归，开始右边排序</span><br><span class="line">[ 6, 42, 48, 57, 60, 72, 83, 73, 88, 85 ] 3</span><br><span class="line">&#x2F;&#x2F;右边排序其实是开始于[ 42, 6, 48 , 57, 60, 72, 83, 73, 88, 85 ] 这个数组，57为观察数，排序区间为3-5，发现已经是正序，继续递归上次的右边排序</span><br><span class="line">[ 6, 42, 48, 57, 60, 72, 73, 83, 88, 85 ] 7</span><br><span class="line">&#x2F;&#x2F;右边排序其实是开始于[ 48, 6, 57, 42, 60, 72, 83, 73, 88, 85 ]这个数组基于分界点5的右边数组，83为观察数，排序区间为6-9，排序分界结果为7</span><br><span class="line">[ 6, 42, 48, 57, 60, 72, 73, 83, 85, 88 ] 9</span><br><span class="line">&#x2F;&#x2F;再次递归，右边已正序</span><br></pre></td></tr></table></figure>
-<h3 id="复杂度"><a href="#复杂度" class="headerlink" title="复杂度"></a>复杂度</h3><p>时间复杂度：O(nlogn)<br>空间复杂度：快速排序使用递归，递归使用栈，因此它的空间复杂度为O(logn)<br>稳定性：快速排序无法保证相等的元素的相对位置不变，因此它是不稳定的排序算法</p>
-
-      
-    </div>
-
-    
-    
-    
-
-    <footer class="post-footer">
-        <div class="post-eof"></div>
-      
-    </footer>
-  </article>
-</div>
-
-
-
-
-    
-
-
-<div class="post-block">
-  
-  
-
-  <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="">
-    <link itemprop="mainEntityOfPage" href="https://lzhwweb.github.io/nirvana/algorithm/%E7%AE%97%E6%B3%95%E5%AD%A6%E4%B9%A0/%E6%A1%B6%E6%8E%92%E5%BA%8F/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="image" content="/nirvana/images/headphoto.jpeg">
-      <meta itemprop="name" content="nirvana">
-      <meta itemprop="description" content="个人学习笔记">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="涅槃快乐是金">
-    </span>
-      <header class="post-header">
-        <h2 class="post-title" itemprop="name headline">
-          <a href="/nirvana/algorithm/%E7%AE%97%E6%B3%95%E5%AD%A6%E4%B9%A0/%E6%A1%B6%E6%8E%92%E5%BA%8F/" class="post-title-link" itemprop="url">桶排序</a>
-        </h2>
-
-        <div class="post-meta-container">
-          <div class="post-meta">
-    <span class="post-meta-item">
-      <span class="post-meta-item-icon">
-        <i class="far fa-calendar"></i>
-      </span>
-      <span class="post-meta-item-text">发表于</span>
-      
-
-      <time title="创建时间：2021-03-10 21:12:40 / 修改时间：13:43:55" itemprop="dateCreated datePublished" datetime="2021-03-10T21:12:40+08:00">2021-03-10</time>
-    </span>
-    <span class="post-meta-item">
-      <span class="post-meta-item-icon">
-        <i class="far fa-folder"></i>
-      </span>
-      <span class="post-meta-item-text">分类于</span>
-        <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-          <a href="/nirvana/categories/algorithm/" itemprop="url" rel="index"><span itemprop="name">algorithm</span></a>
-        </span>
-    </span>
-
-  
-    <span id="/nirvana/algorithm/%E7%AE%97%E6%B3%95%E5%AD%A6%E4%B9%A0/%E6%A1%B6%E6%8E%92%E5%BA%8F/" class="post-meta-item leancloud_visitors" data-flag-title="桶排序" title="阅读次数">
-      <span class="post-meta-item-icon">
-        <i class="far fa-eye"></i>
-      </span>
-      <span class="post-meta-item-text">阅读次数：</span>
-      <span class="leancloud-visitors-count"></span>
-    </span>
-      </div>
-      <div class="post-meta">
-    <span class="post-meta-item" title="本文字数">
-      <span class="post-meta-item-icon">
-        <i class="far fa-file-word"></i>
-      </span>
-      <span class="post-meta-item-text">本文字数：</span>
-      <span>738</span>
+      <span>451</span>
     </span>
     <span class="post-meta-item" title="阅读时长">
       <span class="post-meta-item-icon">
@@ -437,8 +327,7 @@
     
     
     <div class="post-body" itemprop="articleBody">
-          <hr>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br></pre></td><td class="code"><pre><span class="line">&#x2F;**</span><br><span class="line"> * 桶排序（只支持整数）</span><br><span class="line"> * max：数组的最大数值,必须大于0， 整数</span><br><span class="line"> * sortArry：排序数组    数组</span><br><span class="line"> * type：排序方式，默认1：从小到大，0：从大到小</span><br><span class="line"> * 返回排序后数组，异常情况返回false</span><br><span class="line"> **&#x2F;</span><br><span class="line">function bucketsort(max,sortArray,type &#x3D; 1)&#123;</span><br><span class="line">    if(max &lt;&#x3D;0 || !sortArray)&#123;</span><br><span class="line">        return false;</span><br><span class="line">    &#125;else&#123;</span><br><span class="line">        let bucketArray &#x3D; new Array(max);</span><br><span class="line">        let tempArray &#x3D; [];</span><br><span class="line">        sortArray.forEach((item,index)&#x3D;&gt;&#123;</span><br><span class="line">            bucketArray[item] &#x3D; (bucketArray[item]?bucketArray[item]:0)+1;</span><br><span class="line">        &#125;)</span><br><span class="line">        bucketArray.forEach((item,index)&#x3D;&gt;&#123;</span><br><span class="line">            if(item &amp;&amp; item &gt;0)&#123;</span><br><span class="line">                for(let i&#x3D;0;i&lt;item;i++)&#123;</span><br><span class="line">                    if(type &#x3D;&#x3D; 1)&#123;&#x2F;&#x2F;从小到大</span><br><span class="line">                        tempArray.push(index)</span><br><span class="line">                    &#125;else&#123;&#x2F;&#x2F;从大到小</span><br><span class="line">                        tempArray.unshift(index)</span><br><span class="line">                    &#125;</span><br><span class="line">                &#125;</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;)</span><br><span class="line">        return tempArray</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+          <p>方法一：<br>第一步：打开「终端」应用程序。<br>第二步：输入如下命令：<br><code>defaults write com.apple.finder AppleShowAllFiles -boolean true ; killall Finder</code><br>第三步：按下「Return」键确认。<br>现在你将会在 Finder 窗口中看到那些隐藏的文件和文件夹了。<br>如果你想再次隐藏原本的隐藏文件和文件夹的话，将上述命令替换成<br><code>defaults write com.apple.finder AppleShowAllFiles -boolean false ; killall Finder</code><br>即可。<br>方法二：<br>Finder界面是，最上方，通过“前往”进入“电脑”或文件夹，先进入到需要显示隐藏文件的文件夹下<br>接着按<code>Command+F</code>,在窗格上会显示搜索栏<br>然后将第一个下列选择项“种类kind”选择为“其它Other”，当选择“其它”时，弹出新的搜索窗口，找到下面的“文件不可见File invisible”项，勾上后面的对勾，再单击“好OK”即可，返回文件夹，就可以看到，隐藏的文件已经显示出来了</p>
 
       
     </div>
@@ -465,7 +354,7 @@
   
 
   <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="">
-    <link itemprop="mainEntityOfPage" href="https://lzhwweb.github.io/nirvana/algorithm/%E7%AE%97%E6%B3%95%E5%AD%A6%E4%B9%A0/%E6%B1%89%E8%AF%BA%E5%A1%94%E5%AD%A6%E4%B9%A0%E9%80%92%E5%BD%92/">
+    <link itemprop="mainEntityOfPage" href="https://lzhwweb.github.io/nirvana/mac/mac/%E8%A7%A3%E5%86%B3-mac-%EF%BC%88windows%EF%BC%89%E7%BB%88%E7%AB%AF%E4%B8%8A%E4%BB%A3%E7%90%86%E7%9A%84%E9%9A%BE%E9%A2%98/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="image" content="/nirvana/images/headphoto.jpeg">
@@ -478,7 +367,7 @@
     </span>
       <header class="post-header">
         <h2 class="post-title" itemprop="name headline">
-          <a href="/nirvana/algorithm/%E7%AE%97%E6%B3%95%E5%AD%A6%E4%B9%A0/%E6%B1%89%E8%AF%BA%E5%A1%94%E5%AD%A6%E4%B9%A0%E9%80%92%E5%BD%92/" class="post-title-link" itemprop="url">汉诺塔学习递归</a>
+          <a href="/nirvana/mac/mac/%E8%A7%A3%E5%86%B3-mac-%EF%BC%88windows%EF%BC%89%E7%BB%88%E7%AB%AF%E4%B8%8A%E4%BB%A3%E7%90%86%E7%9A%84%E9%9A%BE%E9%A2%98/" class="post-title-link" itemprop="url">解决-mac-（windows）终端上代理的难题</a>
         </h2>
 
         <div class="post-meta-container">
@@ -498,12 +387,12 @@
       </span>
       <span class="post-meta-item-text">分类于</span>
         <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-          <a href="/nirvana/categories/algorithm/" itemprop="url" rel="index"><span itemprop="name">algorithm</span></a>
+          <a href="/nirvana/categories/mac/" itemprop="url" rel="index"><span itemprop="name">mac</span></a>
         </span>
     </span>
 
   
-    <span id="/nirvana/algorithm/%E7%AE%97%E6%B3%95%E5%AD%A6%E4%B9%A0/%E6%B1%89%E8%AF%BA%E5%A1%94%E5%AD%A6%E4%B9%A0%E9%80%92%E5%BD%92/" class="post-meta-item leancloud_visitors" data-flag-title="汉诺塔学习递归" title="阅读次数">
+    <span id="/nirvana/mac/mac/%E8%A7%A3%E5%86%B3-mac-%EF%BC%88windows%EF%BC%89%E7%BB%88%E7%AB%AF%E4%B8%8A%E4%BB%A3%E7%90%86%E7%9A%84%E9%9A%BE%E9%A2%98/" class="post-meta-item leancloud_visitors" data-flag-title="解决-mac-（windows）终端上代理的难题" title="阅读次数">
       <span class="post-meta-item-icon">
         <i class="far fa-eye"></i>
       </span>
@@ -535,19 +424,156 @@
     
     
     <div class="post-body" itemprop="articleBody">
-          <h2 id="一．起源："><a href="#一．起源：" class="headerlink" title="一．起源："></a>一．起源：</h2><p>　　汉诺塔（又称河内塔）问题是源于印度一个古老传说的益智玩具。大梵天创造世界的时候做了三根金刚石柱子，在一根柱子上从下往上按照大小顺序摞着64片黄金圆盘。大梵天命令婆罗门把圆盘从下面开始按大小顺序重新摆放在另一根柱子上。并且规定，在小圆盘上不能放大圆盘，在三根柱子之间一次只能移动一个圆盘。</p>
-<h2 id="二．抽象为数学问题："><a href="#二．抽象为数学问题：" class="headerlink" title="二．抽象为数学问题："></a>二．抽象为数学问题：</h2><p>　　如下图所示，从左到右有A、B、C三根柱子，其中A柱子上面有从小叠到大的n个圆盘，现要求将A柱子上的圆盘移到C柱子上去，期间只有一个原则：一次只能移到一个盘子且大盘子不能在小盘子上面，求移动的步骤和移动的次数</p>
-<p><img src="https://upload-images.jianshu.io/upload_images/10024246-7ffe40e3934c27e1.jpg?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240"><br>解：</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br></pre></td><td class="code"><pre><span class="line">（1）n &#x3D;&#x3D; 1</span><br><span class="line"></span><br><span class="line">       　　　　　　第1次  1号盘  A----&gt;C       sum &#x3D; 1 次</span><br><span class="line"></span><br><span class="line"> (2)  n &#x3D;&#x3D; 2</span><br><span class="line"></span><br><span class="line">       　　　　　　第1次  1号盘  A----&gt;B</span><br><span class="line"></span><br><span class="line">      　　　　　　 第2次  2号盘  A----&gt;C</span><br><span class="line"></span><br><span class="line">       　　　　　　第3次  1号盘  B----&gt;C        sum &#x3D; 3 次</span><br><span class="line"></span><br><span class="line"> （3）n &#x3D;&#x3D; 3</span><br><span class="line"></span><br><span class="line">　　　　　　　　    第1次  1号盘  A----&gt;C</span><br><span class="line"></span><br><span class="line">　　　　　　　　    第2次  2号盘  A----&gt;B</span><br><span class="line"></span><br><span class="line">　　　　　　　　    第3次  1号盘  C----&gt;B</span><br><span class="line">  </span><br><span class="line">　　　　　　　　    第4次  3号盘  A----&gt;C</span><br><span class="line"></span><br><span class="line">　　　　　　　　    第5次  1号盘  B----&gt;A</span><br><span class="line"></span><br><span class="line">　　　　　　　　    第6次  2号盘  B----&gt;C</span><br><span class="line"></span><br><span class="line">　　　　　　　　    第7次  1号盘  A----&gt;C        sum &#x3D; 7 次</span><br></pre></td></tr></table></figure>
-<h2 id="三．算法分析（递归算法）"><a href="#三．算法分析（递归算法）" class="headerlink" title="三．算法分析（递归算法）"></a>三．算法分析（递归算法）</h2><pre><code>   求解汉诺塔问题最简单的算法还是通过递归算法，递归就是自己是一个方法或者说是函数，但是在自己这个函数里有调用自己这个函数的语句，而这个调用怎么才能调用结束呢？，这里还必须有一个结束点，或者具体的说是在调用到某一次后函数能返回一个确定的值，接着倒数第二个就能返回一个确定的值，一直到第一次调用的这个函数能返回一个确定的值。
-  实现这个算法可以简单分为三个步骤：
+          <p>买了 ss （shadowsocks）帐号，装了 ss 代理的软件，浏览器上也装了代理的插件，一直用的都挺好的，但是最近遇到了一些情况</p>
+<p>情况1：最近网络抽风，网页上访问 github 还好，但是在终端里，git clone 一个 repository，或者在 webstorm 中检出一个 github 上的repository，那是相当的痛苦</p>
+<p>情况2：同事在安装 brew 的过程中，需要下载 github 上的repository，于是遭受了和上面一样的痛苦</p>
+<p>不仅仅如此，为了解决类似的麻烦，很多人使用了 cnpm（淘宝出的代替 npm 的工具），或者更换各种包仓库的地址为国内镜像的地址，归根到底为一个原因，终端里的命令：诸如 wget，curl，git ，npm 等等，不好设置代理翻墙。</p>
+<p>经过本人的探索，找出了一条解决之道，先不说麻不麻烦，总归是解决了长久以来困扰自己的问题</p>
+<p>你所需要的，要有一个 ss 帐号，mac 上安装 shadowsocksX，已设置本地代理：socks5：127.0.0.1：1080</p>
+<p>还需要另外一个神器：proxifier</p>
+<p>举个例子，在终端里 git clone 一个repository，究竟是什么程序发起了网络请求，我现在可以直接告诉你答案，是 git-remote-https，请求 github.com:443，使用proxifier，就可以做到这一点，定位到是什么程序，请求的 host 以及 port，并且给它设置代理</p>
+<p>下面这张图就是proxifier的庐山真面目了<br><img src="http://upload-images.jianshu.io/upload_images/10024246-fd097bed09c20d84.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="1515804585324.jpg"><br>上面的日志给出了详细的解释<br>当我在终端里敲下 npm install xxx，对应的就是 node 请求 registry.npmjs.org:443<br>当我在webstorm中设置 github 帐户的时候，对应的是 webstorm，请求 api.github.com:443<br>当我在 git clone repository的时候，对应的是git-remote-https 请求 github.com:443</p>
+<p>第一步：你得在shadowsocksX中开启 socks5 的本地代理，这是最重要的前提<br>第二步：在proxifier使用第一步设置的代理，如下图所示<br><img src="http://upload-images.jianshu.io/upload_images/10024246-92b4c7cb079bde84.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="1515804585324.jpg"><br>第三步：设置代理规则<br>image_1b4og01u91alg1ggk1mh51omdurr1g.png-479.7kB</p>
+<p>解释一下我所设置的规则：<br>image_1b4og4c2k2i6j8b1jdjd03has1t.png-185.6kB<br>规则匹配的顺序是从上往下的 </p>
+<ol>
+<li>生效的第一条规则是shadowsocksX，因为我们的代理就是靠这个程序的，所以不能让它自己代理自己，否则proxifier 会报无限循环，动作选 direct </li>
+<li>规则 github，这里也并没有指定程序git-remote-https，因为 像 webstorm等 GUI 之流，也会访问 github：443的请求，所以不指定程序，只限制 主机和端口，应用范围就不限于终端了 </li>
+<li>规则 node，解决 npm install 的代理，可以不用 cnpm 了 </li>
+<li>规则 brew，解决终端下使用 brew 安装 package 的代理 </li>
+<li>规则 google-analytics，，解决终端下使用 brew 安装 package 的代理 </li>
+<li>规则 default，不能删除，当匹配不到任何规则的时候，使用该规则</li>
+</ol>
+<p>任何一个连接请求，从上往下匹配，匹配到了，就会停止<br>以上就是我摸索出来的方法，如果 ss 速度快的话，相信我，你会开心死的</p>
+<p>一言以蔽之，如果你在终端中发起了网络请求速度很慢的话，可以先把 default 规则，设置为socks5代理（只有设置为代理，日志才会记录），然后分析一下请求的 host：port，然后就可以添加规则了，这样的话，就做到只给部分请求走代理，如果你觉得这样很麻烦，<br>也可以简单粗暴的，将 default 规则设置为 socks5代理，其余的规则全部禁用，那就是全部的请求走代理</p>
+<p><a target="_blank" rel="noopener" href="https://pan.baidu.com/s/1qYdGRBA">Mac 版 shadowsocksX 和 proxifier 下载</a></p>
+
+      
+    </div>
+
+    
+    
+    
+
+    <footer class="post-footer">
+        <div class="post-eof"></div>
+      
+    </footer>
+  </article>
+</div>
+
+
+
+
+    
+
+
+<div class="post-block">
+  
+  
+
+  <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="">
+    <link itemprop="mainEntityOfPage" href="https://lzhwweb.github.io/nirvana/tool/%E5%BC%80%E5%8F%91%E5%B7%A5%E5%85%B7/VSCode%E8%AE%BE%E7%BD%AE%E5%A4%A7%E5%B0%8F%E5%86%99%E8%BD%AC%E6%8D%A2%E7%9A%84%E5%BF%AB%E6%8D%B7%E9%94%AE/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/nirvana/images/headphoto.jpeg">
+      <meta itemprop="name" content="nirvana">
+      <meta itemprop="description" content="个人学习笔记">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="涅槃快乐是金">
+    </span>
+      <header class="post-header">
+        <h2 class="post-title" itemprop="name headline">
+          <a href="/nirvana/tool/%E5%BC%80%E5%8F%91%E5%B7%A5%E5%85%B7/VSCode%E8%AE%BE%E7%BD%AE%E5%A4%A7%E5%B0%8F%E5%86%99%E8%BD%AC%E6%8D%A2%E7%9A%84%E5%BF%AB%E6%8D%B7%E9%94%AE/" class="post-title-link" itemprop="url">VSCode设置大小写转换的快捷键</a>
+        </h2>
+
+        <div class="post-meta-container">
+          <div class="post-meta">
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-calendar"></i>
+      </span>
+      <span class="post-meta-item-text">发表于</span>
+      
+
+      <time title="创建时间：2021-03-10 21:12:40 / 修改时间：13:43:55" itemprop="dateCreated datePublished" datetime="2021-03-10T21:12:40+08:00">2021-03-10</time>
+    </span>
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-folder"></i>
+      </span>
+      <span class="post-meta-item-text">分类于</span>
+        <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+          <a href="/nirvana/categories/tool/" itemprop="url" rel="index"><span itemprop="name">tool</span></a>
+        </span>
+    </span>
+
+  
+    <span id="/nirvana/tool/%E5%BC%80%E5%8F%91%E5%B7%A5%E5%85%B7/VSCode%E8%AE%BE%E7%BD%AE%E5%A4%A7%E5%B0%8F%E5%86%99%E8%BD%AC%E6%8D%A2%E7%9A%84%E5%BF%AB%E6%8D%B7%E9%94%AE/" class="post-meta-item leancloud_visitors" data-flag-title="VSCode设置大小写转换的快捷键" title="阅读次数">
+      <span class="post-meta-item-icon">
+        <i class="far fa-eye"></i>
+      </span>
+      <span class="post-meta-item-text">阅读次数：</span>
+      <span class="leancloud-visitors-count"></span>
+    </span>
+      </div>
+      <div class="post-meta">
+    <span class="post-meta-item" title="本文字数">
+      <span class="post-meta-item-icon">
+        <i class="far fa-file-word"></i>
+      </span>
+      <span class="post-meta-item-text">本文字数：</span>
+      <span>776</span>
+    </span>
+    <span class="post-meta-item" title="阅读时长">
+      <span class="post-meta-item-icon">
+        <i class="far fa-clock"></i>
+      </span>
+      <span class="post-meta-item-text">阅读时长 &asymp;</span>
+      <span>1 分钟</span>
+    </span>
+</div>
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+          <p>一 、默认情况下VS Code的编辑菜单或快捷键中没有 转换为大写，转换为小写的功能</p>
+<p>解决方案1：使用键盘配置，开启转换为小写，转换为大写的快捷键 </p>
+<p>以VS中的 快捷键为例：</p>
+<p>小写 -》Ctrl+Shift+l</p>
+<p>大写=》Ctrl+Shift+U</p>
+<p>自定义大小写转换的快捷键步骤如下:</p>
+<p> 1.点击【文件】-【首选项】-【键盘快捷方式】菜单。</p>
+<p><img src="https://upload-images.jianshu.io/upload_images/10024246-d5ee5749c318312e.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240"> </p>
+<p><img src="https://upload-images.jianshu.io/upload_images/10024246-423b8ab14aade804.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240"></p>
+<p>2.输入 “转换为大写”, 会出现搜索结果【转换为大写】,鼠标悬停在该结果上, 点击前面的”加号” 或 双击, 会弹出输入自定义快捷键的弹窗。</p>
+<p><img src="https://upload-images.jianshu.io/upload_images/10024246-60e4e6fcbe5fa6b2.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240"> </p>
+<p><img src="https://upload-images.jianshu.io/upload_images/10024246-3f1c888971fb2a73.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240"> </p>
+<p>3.在键盘上面按下Ctrl、Shift和u, 然后按Enter键, 即可成功绑定转换为大写快捷键。</p>
+<p><img src="https://upload-images.jianshu.io/upload_images/10024246-65a4b55675f8717b.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240"> </p>
+<p><img src="https://upload-images.jianshu.io/upload_images/10024246-9ecd4ce60718de32.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240"></p>
+<p>4.同理，搜索”转换为小写”, 鼠标悬停在结果上, 点击前面的”加号” 或 双击, 弹出设置快捷键的弹窗，在键盘上面按下Ctrl、Shift和l, 然后按Enter键, 即可成功绑定转换为小写快捷键。</p>
+<p><img src="https://upload-images.jianshu.io/upload_images/10024246-7f3e695948c286af.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240"></p>
+<hr>
+<p>##解决方案2，直接修改keybings.json 添加配置</p>
+<pre><code>&#123;
+    &quot;key&quot;: &quot;ctrl+shift+u&quot;,
+    &quot;command&quot;: &quot;editor.action.transformToUppercase&quot;,
+    &quot;when&quot;: &quot;editorTextFocus&quot;
+&#125;,
+&#123;
+    &quot;key&quot;: &quot;ctrl+shift+l&quot;,
+    &quot;command&quot;: &quot;editor.action.transformToLowercase&quot;,
+    &quot;when&quot;: &quot;editorTextFocus&quot;
+&#125;
 </code></pre>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">　　　　（1）     把n-1个盘子由A 移到 B；</span><br><span class="line"></span><br><span class="line">　　　　（2）     把第n个盘子由 A移到 C；</span><br><span class="line"></span><br><span class="line">　　　　（3）     把n-1个盘子由B 移到 C；</span><br></pre></td></tr></table></figure>
-
-<h2 id="算法实现："><a href="#算法实现：" class="headerlink" title="算法实现："></a>算法实现：</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br></pre></td><td class="code"><pre><span class="line">&#x2F;**</span><br><span class="line">* 汉诺塔递归程序</span><br><span class="line">* level:当前移动的层数</span><br><span class="line">* from:移动开始点</span><br><span class="line">* pass:中间辅助点</span><br><span class="line">* to:移动目标位置</span><br><span class="line">**&#x2F;</span><br><span class="line">function hanoi(level,from,pass,to)&#123;</span><br><span class="line">  &#x2F;**</span><br><span class="line">  *  移动递归主函数</span><br><span class="line">  * level:当前移动的层数</span><br><span class="line">  * from:移动开始点</span><br><span class="line">  * pass:中间辅助点</span><br><span class="line">  * to:移动目标位置</span><br><span class="line">  **&#x2F;</span><br><span class="line">  function move(level,from,pass,to)&#123;</span><br><span class="line">    if(level &#x3D;&#x3D;&#x3D; 1)&#123;</span><br><span class="line">      moveConsole(1,from,to);</span><br><span class="line">    &#125;else&#123;</span><br><span class="line">      move(level-1,from,to,pass);</span><br><span class="line">      moveConsole(level,from,to);</span><br><span class="line">      move(level-1,pass,from,to);</span><br><span class="line">    &#125;</span><br><span class="line">  &#125;</span><br><span class="line">  &#x2F;**</span><br><span class="line">  *  移动打印</span><br><span class="line">  * id:当前移动的盘子</span><br><span class="line">  * from:移动开始点</span><br><span class="line">  * to:移动目标位置</span><br><span class="line">  **&#x2F;</span><br><span class="line">  function moveConsole(id,from,to)&#123;</span><br><span class="line">    console.log(&#96;第$&#123;++num&#125;次移动，将$&#123;id&#125;号盘$&#123;from&#125;-&gt;$&#123;to&#125;&#96;);</span><br><span class="line">  &#125;</span><br><span class="line"></span><br><span class="line">  let num &#x3D; 0;&#x2F;&#x2F;移动次数</span><br><span class="line">  move(level,from,pass,to);&#x2F;&#x2F;开始移动</span><br><span class="line">  console.log(&#96;$&#123;level&#125;层汉诺塔共移动$&#123;num&#125;次&#96;);</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-<blockquote>
-<p><img src="https://upload-images.jianshu.io/upload_images/10024246-33e0da531f98e2e5.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240"></p>
-</blockquote>
+<p>最终设置的自定义的大小写转换快捷键如下: </p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">转换为大写: Ctrl+Shift+u</span><br><span class="line">转换为小写: Ctrl+Shift+l</span><br></pre></td></tr></table></figure>
 
       
     </div>
@@ -574,7 +600,7 @@
   
 
   <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="">
-    <link itemprop="mainEntityOfPage" href="https://lzhwweb.github.io/nirvana/algorithm/%E7%AE%97%E6%B3%95%E5%AD%A6%E4%B9%A0/%E7%AE%97%E6%B3%95-%E5%90%88%E5%B9%B6%E6%8E%92%E5%BA%8F/">
+    <link itemprop="mainEntityOfPage" href="https://lzhwweb.github.io/nirvana/tool/%E5%BC%80%E5%8F%91%E5%B7%A5%E5%85%B7/chrome-%E8%B4%A6%E5%8F%B7%E6%89%8B%E5%8A%A8%E5%90%8C%E6%AD%A5/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="image" content="/nirvana/images/headphoto.jpeg">
@@ -587,7 +613,654 @@
     </span>
       <header class="post-header">
         <h2 class="post-title" itemprop="name headline">
-          <a href="/nirvana/algorithm/%E7%AE%97%E6%B3%95%E5%AD%A6%E4%B9%A0/%E7%AE%97%E6%B3%95-%E5%90%88%E5%B9%B6%E6%8E%92%E5%BA%8F/" class="post-title-link" itemprop="url">算法-合并排序</a>
+          <a href="/nirvana/tool/%E5%BC%80%E5%8F%91%E5%B7%A5%E5%85%B7/chrome-%E8%B4%A6%E5%8F%B7%E6%89%8B%E5%8A%A8%E5%90%8C%E6%AD%A5/" class="post-title-link" itemprop="url">chrome 账号手动同步</a>
+        </h2>
+
+        <div class="post-meta-container">
+          <div class="post-meta">
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-calendar"></i>
+      </span>
+      <span class="post-meta-item-text">发表于</span>
+      
+
+      <time title="创建时间：2021-03-10 21:12:40 / 修改时间：22:05:29" itemprop="dateCreated datePublished" datetime="2021-03-10T21:12:40+08:00">2021-03-10</time>
+    </span>
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-folder"></i>
+      </span>
+      <span class="post-meta-item-text">分类于</span>
+        <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+          <a href="/nirvana/categories/tool/" itemprop="url" rel="index"><span itemprop="name">tool</span></a>
+        </span>
+    </span>
+
+  
+    <span id="/nirvana/tool/%E5%BC%80%E5%8F%91%E5%B7%A5%E5%85%B7/chrome-%E8%B4%A6%E5%8F%B7%E6%89%8B%E5%8A%A8%E5%90%8C%E6%AD%A5/" class="post-meta-item leancloud_visitors" data-flag-title="chrome 账号手动同步" title="阅读次数">
+      <span class="post-meta-item-icon">
+        <i class="far fa-eye"></i>
+      </span>
+      <span class="post-meta-item-text">阅读次数：</span>
+      <span class="leancloud-visitors-count"></span>
+    </span>
+      </div>
+      <div class="post-meta">
+    <span class="post-meta-item" title="本文字数">
+      <span class="post-meta-item-icon">
+        <i class="far fa-file-word"></i>
+      </span>
+      <span class="post-meta-item-text">本文字数：</span>
+      <span>166</span>
+    </span>
+    <span class="post-meta-item" title="阅读时长">
+      <span class="post-meta-item-icon">
+        <i class="far fa-clock"></i>
+      </span>
+      <span class="post-meta-item-text">阅读时长 &asymp;</span>
+      <span>1 分钟</span>
+    </span>
+</div>
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+          <p>解决chrome不能自动同步问题，可以进行手动同步。</p>
+<p>不需要删除数据，不需要关闭账户！</p>
+<p>首先你懂得</p>
+<p>chrome地址栏中输入： chrome://sync-internals/<br>进行如图操作</p>
+<p>注意：目前这种方式是完全可行的，如果点击disable sync 再次点击 request 等待一会还是没有反应，且网络正常，请尝试关闭并打开一次浏览器再操作。<br><img src="https://upload-images.jianshu.io/upload_images/10024246-d2dfb140d7189280?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="image"><br><img src="https://upload-images.jianshu.io/upload_images/10024246-f0837051d08d3136?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="image"><br><img src="https://upload-images.jianshu.io/upload_images/10024246-c83c5ed3762650d6?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="image"></p>
+
+      
+    </div>
+
+    
+    
+    
+
+    <footer class="post-footer">
+        <div class="post-eof"></div>
+      
+    </footer>
+  </article>
+</div>
+
+
+
+
+    
+
+
+<div class="post-block">
+  
+  
+
+  <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="">
+    <link itemprop="mainEntityOfPage" href="https://lzhwweb.github.io/nirvana/tool/%E5%BC%80%E5%8F%91%E5%B7%A5%E5%85%B7/%E5%B8%B8%E7%94%A8%E7%9A%84VS-Code%E6%8F%92%E4%BB%B6/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/nirvana/images/headphoto.jpeg">
+      <meta itemprop="name" content="nirvana">
+      <meta itemprop="description" content="个人学习笔记">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="涅槃快乐是金">
+    </span>
+      <header class="post-header">
+        <h2 class="post-title" itemprop="name headline">
+          <a href="/nirvana/tool/%E5%BC%80%E5%8F%91%E5%B7%A5%E5%85%B7/%E5%B8%B8%E7%94%A8%E7%9A%84VS-Code%E6%8F%92%E4%BB%B6/" class="post-title-link" itemprop="url">常用的VS-Code插件</a>
+        </h2>
+
+        <div class="post-meta-container">
+          <div class="post-meta">
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-calendar"></i>
+      </span>
+      <span class="post-meta-item-text">发表于</span>
+      
+
+      <time title="创建时间：2021-03-10 21:12:40 / 修改时间：13:43:55" itemprop="dateCreated datePublished" datetime="2021-03-10T21:12:40+08:00">2021-03-10</time>
+    </span>
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-folder"></i>
+      </span>
+      <span class="post-meta-item-text">分类于</span>
+        <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+          <a href="/nirvana/categories/tool/" itemprop="url" rel="index"><span itemprop="name">tool</span></a>
+        </span>
+    </span>
+
+  
+    <span id="/nirvana/tool/%E5%BC%80%E5%8F%91%E5%B7%A5%E5%85%B7/%E5%B8%B8%E7%94%A8%E7%9A%84VS-Code%E6%8F%92%E4%BB%B6/" class="post-meta-item leancloud_visitors" data-flag-title="常用的VS-Code插件" title="阅读次数">
+      <span class="post-meta-item-icon">
+        <i class="far fa-eye"></i>
+      </span>
+      <span class="post-meta-item-text">阅读次数：</span>
+      <span class="leancloud-visitors-count"></span>
+    </span>
+      </div>
+      <div class="post-meta">
+    <span class="post-meta-item" title="本文字数">
+      <span class="post-meta-item-icon">
+        <i class="far fa-file-word"></i>
+      </span>
+      <span class="post-meta-item-text">本文字数：</span>
+      <span>2.1k</span>
+    </span>
+    <span class="post-meta-item" title="阅读时长">
+      <span class="post-meta-item-icon">
+        <i class="far fa-clock"></i>
+      </span>
+      <span class="post-meta-item-text">阅读时长 &asymp;</span>
+      <span>2 分钟</span>
+    </span>
+</div>
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+          <h2 id="Bracket-Pair-Colorizer-2"><a href="#Bracket-Pair-Colorizer-2" class="headerlink" title="Bracket Pair Colorizer 2"></a>Bracket Pair Colorizer 2</h2><p><img src="https://upload-images.jianshu.io/upload_images/10024246-4e1925a599eb769a?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240"></p>
+<p>帮助我搞清楚 JavaScript 中复杂的嵌套 promise。顾名思义，它可以让方括号对变色，帮我弄清楚是否在某个地方搞糊涂了（例如缺少方括号）。它默认匹配 ()、[] 和{}等普通括号，但如果需要你也可以定义自定义括号。<br>它还有其他许多很酷的功能，例如定义颜色或为活动括号显示装订线之类。值得尝试一波。<br><strong>项目地址</strong><br><a target="_blank" rel="noopener" href="https://github.com/CoenraadS/Bracket-Pair-Colorizer-2">https://github.com/CoenraadS/Bracket-Pair-Colorizer-2</a><br> <strong>Marketplace</strong><br><a target="_blank" rel="noopener" href="https://marketplace.visualstudio.com/items?itemName=CoenraadS.bracket-pair-colorizer-2">https://marketplace.visualstudio.com/items?itemName=CoenraadS.bracket-pair-colorizer-2</a></p>
+<h2 id="NPM-Intellisense"><a href="#NPM-Intellisense" class="headerlink" title="NPM Intellisense"></a>NPM Intellisense</h2><p><img src="https://upload-images.jianshu.io/upload_images/10024246-db143f4cae36955c?imageMogr2/auto-orient/strip"></p>
+<p>如动图所示，它能自动完成以 NPM 包为目标的 require import 语句。这可以提供很多帮助，尤其是当你的项目变得很大，并且在 package.json 中包含很多依赖项时。<br> <strong>项目地址</strong><br><a target="_blank" rel="noopener" href="https://github.com/ChristianKohler/NpmIntellisense">https://github.com/ChristianKohler/NpmIntellisense</a><br><strong>Marketplace</strong><br><a target="_blank" rel="noopener" href="https://marketplace.visualstudio.com/items?itemName=christian-kohler.npm-intellisense">https://marketplace.visualstudio.com/items?itemName=christian-kohler.npm-intellisense</a></p>
+<h2 id="Path-Intellisense"><a href="#Path-Intellisense" class="headerlink" title="Path Intellisense"></a>Path Intellisense</h2><p><img src="https://upload-images.jianshu.io/upload_images/10024246-afb2416b7e73f8e8.gif?imageMogr2/auto-orient/strip"></p>
+<p>这是 NPM Intellisense 的姐妹插件。它会执行相同的自动补全，不过针对的是你的文件系统。<br><strong>项目地址</strong><br><a target="_blank" rel="noopener" href="https://github.com/ChristianKohler/PathIntellisense">https://github.com/ChristianKohler/PathIntellisense</a><br><strong>Marketplace</strong><br><a target="_blank" rel="noopener" href="https://marketplace.visualstudio.com/items?itemName=christian-kohler.path-intellisense">https://marketplace.visualstudio.com/items?itemName=christian-kohler.path-intellisense</a></p>
+<h2 id="Quokka-js"><a href="#Quokka-js" class="headerlink" title="Quokka.js"></a>Quokka.js</h2><p><img src="https://upload-images.jianshu.io/upload_images/10024246-ccab0e9d884fce5f.gif?imageMogr2/auto-orient/strip"><br>如果你只是想尝试一些东西，不想费劲先设置项目，那么这款工具就是一个很好的辅助。通过实时检查输出，它会立即将输出显示在 JavaScript/TypeScript 代码旁边，如动图所示。这是一个很好的扩展，特别适合调试目的。<br><strong>项目地址</strong><br><a target="_blank" rel="noopener" href="https://quokkajs.com/">https://quokkajs.com/</a><br><strong>Marketplace</strong><br><a target="_blank" rel="noopener" href="https://marketplace.visualstudio.com/items?itemName=WallabyJs.quokka-vscode">https://marketplace.visualstudio.com/items?itemName=WallabyJs.quokka-vscode</a></p>
+<h2 id="Docker"><a href="#Docker" class="headerlink" title="Docker"></a>Docker</h2><p>这个扩展是处理多个 Docker 映像和容器的必备，因为你可以用它快速浏览正在运行哪些容器、构建哪些映像以及创建哪些网络。<br><strong>项目地址</strong><br><a target="_blank" rel="noopener" href="https://github.com/microsoft/vscode-docker">https://github.com/microsoft/vscode-docker</a><br><strong>Marketplace</strong><br><a target="_blank" rel="noopener" href="https://marketplace.visualstudio.com/items?itemName=ms-azuretools.vscode-docker">https://marketplace.visualstudio.com/items?itemName=ms-azuretools.vscode-docker</a></p>
+<h2 id="Live-Server"><a href="#Live-Server" class="headerlink" title="Live Server"></a>Live Server</h2><p><img src="https://upload-images.jianshu.io/upload_images/10024246-6aae06bf0f4fff6b.gif?imageMogr2/auto-orient/strip"><br>这个扩展为本地开发服务器提供了热重载功能，也就是说它会在保存对文件所做的任何更改后立即刷新页面。它在状态栏中有一个漂亮的“Go Live”按钮，你只需单击一下即可启动服务器。<br><strong>项目地址</strong><br><a target="_blank" rel="noopener" href="https://github.com/ritwickdey/vscode-live-server">https://github.com/ritwickdey/vscode-live-server</a><br><strong>Marketplace</strong><br><a target="_blank" rel="noopener" href="https://marketplace.visualstudio.com/items?itemName=ritwickdey.LiveServer">https://marketplace.visualstudio.com/items?itemName=ritwickdey.LiveServer</a></p>
+<h2 id="Auto-Close-Tag-和-Auto-Rename-Tag"><a href="#Auto-Close-Tag-和-Auto-Rename-Tag" class="headerlink" title="Auto Close Tag 和 Auto Rename Tag"></a>Auto Close Tag 和 Auto Rename Tag</h2><p><img src="https://upload-images.jianshu.io/upload_images/10024246-879775d67e33686b.gif?imageMogr2/auto-orient/strip"><br>它们是 VS Code 的两个小插件，可通过自动重命名和关闭标签来帮助你维护 HTML 文件。这也适用于 React 自己的 JSX 语法。<br><strong>Auto Close Tag</strong><br><a target="_blank" rel="noopener" href="https://github.com/formulahendry/vscode-auto-close-tag/https://marketplace.visualstudio.com/items?itemName=formulahendry.auto-close-tag">https://github.com/formulahendry/vscode-auto-close-tag/https://marketplace.visualstudio.com/items?itemName=formulahendry.auto-close-tag</a><br> <strong>Auto Rename Tag</strong><br><a target="_blank" rel="noopener" href="https://github.com/formulahendry/vscode-auto-rename-tag/https://marketplace.visualstudio.com/items?itemName=formulahendry.auto-rename-tag">https://github.com/formulahendry/vscode-auto-rename-tag/https://marketplace.visualstudio.com/items?itemName=formulahendry.auto-rename-tag</a></p>
+<h2 id="Markdown-Preview-Enhanced"><a href="#Markdown-Preview-Enhanced" class="headerlink" title="Markdown Preview Enhanced"></a>Markdown Preview Enhanced</h2><p><img src="https://upload-images.jianshu.io/upload_images/10024246-fe3e4c69847e2ade.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240"><br> Markdown 预览工具。它不仅为你提供预览，而且还有同步滚动、PDF 导出和 PlantUML 的功能。<br><strong>项目地址</strong><br><a target="_blank" rel="noopener" href="https://github.com/shd101wyy/vscode-markdown-preview-enhanced">https://github.com/shd101wyy/vscode-markdown-preview-enhanced</a><br><strong>Marketplace</strong><br><a target="_blank" rel="noopener" href="https://marketplace.visualstudio.com/items?itemName=shd101wyy.markdown-preview-enhanced">https://marketplace.visualstudio.com/items?itemName=shd101wyy.markdown-preview-enhanced</a></p>
+
+      
+    </div>
+
+    
+    
+    
+
+    <footer class="post-footer">
+        <div class="post-eof"></div>
+      
+    </footer>
+  </article>
+</div>
+
+
+
+
+    
+
+
+<div class="post-block">
+  
+  
+
+  <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="">
+    <link itemprop="mainEntityOfPage" href="https://lzhwweb.github.io/nirvana/tool/%E5%BC%80%E5%8F%91%E5%B7%A5%E5%85%B7/%E8%B0%B7%E6%AD%8C%E6%B5%8F%E8%A7%88%E5%99%A8SwitchyOmega%E6%8F%92%E4%BB%B6%E5%AE%89%E8%A3%85%E4%BD%BF%E7%94%A8%E6%95%99%E7%A8%8B/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/nirvana/images/headphoto.jpeg">
+      <meta itemprop="name" content="nirvana">
+      <meta itemprop="description" content="个人学习笔记">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="涅槃快乐是金">
+    </span>
+      <header class="post-header">
+        <h2 class="post-title" itemprop="name headline">
+          <a href="/nirvana/tool/%E5%BC%80%E5%8F%91%E5%B7%A5%E5%85%B7/%E8%B0%B7%E6%AD%8C%E6%B5%8F%E8%A7%88%E5%99%A8SwitchyOmega%E6%8F%92%E4%BB%B6%E5%AE%89%E8%A3%85%E4%BD%BF%E7%94%A8%E6%95%99%E7%A8%8B/" class="post-title-link" itemprop="url">谷歌浏览器SwitchyOmega插件安装使用教程</a>
+        </h2>
+
+        <div class="post-meta-container">
+          <div class="post-meta">
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-calendar"></i>
+      </span>
+      <span class="post-meta-item-text">发表于</span>
+      
+
+      <time title="创建时间：2021-03-10 21:12:40 / 修改时间：13:43:55" itemprop="dateCreated datePublished" datetime="2021-03-10T21:12:40+08:00">2021-03-10</time>
+    </span>
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-folder"></i>
+      </span>
+      <span class="post-meta-item-text">分类于</span>
+        <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+          <a href="/nirvana/categories/tool/" itemprop="url" rel="index"><span itemprop="name">tool</span></a>
+        </span>
+    </span>
+
+  
+    <span id="/nirvana/tool/%E5%BC%80%E5%8F%91%E5%B7%A5%E5%85%B7/%E8%B0%B7%E6%AD%8C%E6%B5%8F%E8%A7%88%E5%99%A8SwitchyOmega%E6%8F%92%E4%BB%B6%E5%AE%89%E8%A3%85%E4%BD%BF%E7%94%A8%E6%95%99%E7%A8%8B/" class="post-meta-item leancloud_visitors" data-flag-title="谷歌浏览器SwitchyOmega插件安装使用教程" title="阅读次数">
+      <span class="post-meta-item-icon">
+        <i class="far fa-eye"></i>
+      </span>
+      <span class="post-meta-item-text">阅读次数：</span>
+      <span class="leancloud-visitors-count"></span>
+    </span>
+      </div>
+      <div class="post-meta">
+    <span class="post-meta-item" title="本文字数">
+      <span class="post-meta-item-icon">
+        <i class="far fa-file-word"></i>
+      </span>
+      <span class="post-meta-item-text">本文字数：</span>
+      <span>563</span>
+    </span>
+    <span class="post-meta-item" title="阅读时长">
+      <span class="post-meta-item-icon">
+        <i class="far fa-clock"></i>
+      </span>
+      <span class="post-meta-item-text">阅读时长 &asymp;</span>
+      <span>1 分钟</span>
+    </span>
+</div>
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+          <p>SwitchyOmega是Chrome浏览器上的代理扩展程序,可以轻松快捷的管理和切换多个代理设置。接管浏览器代理方式，可瞬间切换代理和本地连接方式，配合socks5（等其他代理工具）可实现只代理部分国内无法访问的网站。</p>
+<p><img src="https://upload-images.jianshu.io/upload_images/10024246-61233ce7d20819e9.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240"></p>
+<blockquote>
+<p>安装方法</p>
+</blockquote>
+<p>1、在线安装</p>
+<p>在可以访问外网的环境下，从Chrome应用商店来安装：<a target="_blank" rel="noopener" href="https://chrome.google.com/webstore/detail/padekgcemlokbadohgkifijomclgjgif">https://chrome.google.com/webstore/detail/padekgcemlokbadohgkifijomclgjgif</a></p>
+<p>2、离线安装</p>
+<p>去github下载最新版安装包：<a target="_blank" rel="noopener" href="https://github.com/FelisCatus/SwitchyOmega/releases">https://github.com/FelisCatus/SwitchyOmega/releases</a></p>
+<blockquote>
+<p>使用方式</p>
+</blockquote>
+<p>1、新建一个情景模式</p>
+<p><img src="https://upload-images.jianshu.io/upload_images/10024246-3937342562f3571e.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="谷歌浏览器SwitchyOmega插件安装使用教程"></p>
+<p>上图中，前两种是最常用的，如果是第一次使用，那就记住前两种即可，第一种是指定代理的方式，每次访问一定会从设置的代理中走，第二种是动态切换的方式，比如说你想让百度走国内的网络，而让谷歌走国外的网络。</p>
+<p>2、配置情景模式</p>
+<p><img src="https://upload-images.jianshu.io/upload_images/10024246-27088b3d66156959.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="谷歌浏览器SwitchyOmega插件安装使用教程"></p>
+<p>我这里使用的是SSR的默认代理端口1080做演示，大家根据自己的代理工具来配置即可，注意“代理协议”别选错了。</p>
+<p>3、配置自动切换</p>
+<p><img src="https://upload-images.jianshu.io/upload_images/10024246-312d117ca68260d4.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="谷歌浏览器SwitchyOmega插件安装使用教程"></p>
+<p>前两步完成之后，就已经可以了，但是每次使用的时候，需要在浏览器上手动点一下来切换（不是之前提到的浏览器代理设置），而这一步配置了自动切换以后，会自动根据域名来匹配情景模式。</p>
+
+      
+    </div>
+
+    
+    
+    
+
+    <footer class="post-footer">
+        <div class="post-eof"></div>
+      
+    </footer>
+  </article>
+</div>
+
+
+
+
+    
+
+
+<div class="post-block">
+  
+  
+
+  <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="">
+    <link itemprop="mainEntityOfPage" href="https://lzhwweb.github.io/nirvana/note/%E8%AF%BB%E4%B9%A6%E7%AC%94%E8%AE%B0/%E4%BC%AA%E9%9A%8F%E6%9C%BA%E5%92%8C%E7%9C%9F%E9%9A%8F%E6%9C%BA/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/nirvana/images/headphoto.jpeg">
+      <meta itemprop="name" content="nirvana">
+      <meta itemprop="description" content="个人学习笔记">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="涅槃快乐是金">
+    </span>
+      <header class="post-header">
+        <h2 class="post-title" itemprop="name headline">
+          <a href="/nirvana/note/%E8%AF%BB%E4%B9%A6%E7%AC%94%E8%AE%B0/%E4%BC%AA%E9%9A%8F%E6%9C%BA%E5%92%8C%E7%9C%9F%E9%9A%8F%E6%9C%BA/" class="post-title-link" itemprop="url">伪随机和真随机</a>
+        </h2>
+
+        <div class="post-meta-container">
+          <div class="post-meta">
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-calendar"></i>
+      </span>
+      <span class="post-meta-item-text">发表于</span>
+      
+
+      <time title="创建时间：2021-03-10 21:12:40 / 修改时间：13:43:55" itemprop="dateCreated datePublished" datetime="2021-03-10T21:12:40+08:00">2021-03-10</time>
+    </span>
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-folder"></i>
+      </span>
+      <span class="post-meta-item-text">分类于</span>
+        <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+          <a href="/nirvana/categories/note/" itemprop="url" rel="index"><span itemprop="name">note</span></a>
+        </span>
+    </span>
+
+  
+    <span id="/nirvana/note/%E8%AF%BB%E4%B9%A6%E7%AC%94%E8%AE%B0/%E4%BC%AA%E9%9A%8F%E6%9C%BA%E5%92%8C%E7%9C%9F%E9%9A%8F%E6%9C%BA/" class="post-meta-item leancloud_visitors" data-flag-title="伪随机和真随机" title="阅读次数">
+      <span class="post-meta-item-icon">
+        <i class="far fa-eye"></i>
+      </span>
+      <span class="post-meta-item-text">阅读次数：</span>
+      <span class="leancloud-visitors-count"></span>
+    </span>
+      </div>
+      <div class="post-meta">
+    <span class="post-meta-item" title="本文字数">
+      <span class="post-meta-item-icon">
+        <i class="far fa-file-word"></i>
+      </span>
+      <span class="post-meta-item-text">本文字数：</span>
+      <span>2k</span>
+    </span>
+    <span class="post-meta-item" title="阅读时长">
+      <span class="post-meta-item-icon">
+        <i class="far fa-clock"></i>
+      </span>
+      <span class="post-meta-item-text">阅读时长 &asymp;</span>
+      <span>2 分钟</span>
+    </span>
+</div>
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+          <p><em>真伪随机其实分别指的是几率和概率</em></p>
+<p>很久以前流传着这样一则笑话：一个身患重病的人决定去动手术。在手术之前，他问医生：“这起手术的成功率是多少？”医生回答他：“只有1%。”他很惊慌，但是医生说：“没事的，在你之前我已经治死过99个人了。”</p>
+<p>这是一则嘲笑那些不懂“概率”的人的笑话，却讲出了“真随机”和“伪随机”之间的区别。</p>
+<h2 id="随机数的三个特征"><a href="#随机数的三个特征" class="headerlink" title="随机数的三个特征"></a>随机数的三个特征</h2><p>1.随机性：完全紊乱；<br>2.不可预测性：从现有号码，无法推断下一个数字；<br>3.不可重复性：随机数之间没有重复。</p>
+<p>真随机数是伴随物理实验，例如：掷硬币、掷骰子、电子元件噪声、核裂变等，其结果符合三个特点。</p>
+<h2 id="伪随机数"><a href="#伪随机数" class="headerlink" title="伪随机数"></a>伪随机数</h2><p>伪随机数是通过某种算法，获取随机值，不是真的很随机。<br>伪随机数分为强伪随机数和弱伪随机数。<br>1.强伪随机数：接近真实随机数，令人满意的特性。随机性与不可预测性，不可预知的。<br>2.弱伪随机数：满足随机性，可预测的。</p>
+<p>在游戏当中我们一直提到的“真随机”和“伪随机”，到底是什么意思？</p>
+<p>我们通常说的真随机又名“纯随机”（True Random Distribution），就是我们平常一直说的那种、一般意义上的“随机”。</p>
+<p>在真随机中，每一个事件都是相互独立、服从真随机分布的，不受其他事件的发生而改变。比方说某款游戏为了吸引用户，拥有这么一个随机抽卡系统：每次抽卡时，都有1%的几率抽出SSR卡片，这个概率服从真随机分布。</p>
+<p>回到我们最开始说的那个“治死99个”的笑话：我们一眼就能看出这个笑话的不合理性。但在抽卡游戏中，我们的大脑瞬间失去理智。有相当一部分玩家认为：我连抽100次，总能抽到这张卡吧！</p>
+<p>实际上，连抽100次却抽不出1%的SSR卡的几率是为(1-0.01)^100=36.6%，甚至还稍稍超过了1/3。将连抽数字上升至300，也仍有4.9%的几率。</p>
+<p>换句话说，假设有10000个玩家连抽100次，就有约3660个玩家抽不出这张SSR；10000个玩家连抽300次，也仍有约490个玩家抽不出这张SSR——这对玩家的游戏体验来说可以说是毁灭性的打击。</p>
+<p>设计者们提出了“伪随机”的概念：在不确定性的随机事件当中，通过一系列算法使随机事件均匀分布在多次事件当中，尽可能减少或消除极端情况的发生，以提高玩家的游戏体验。</p>
+<p>制造“伪随机”的方法有很多，</p>
+<ul>
+<li>1.“伪随机分布”（Pseudo Random Distribution，简称PRD）<br>PRD算法的表示非常简单：<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">P(N) &#x3D; C * N</span><br></pre></td></tr></table></figure>
+N表示当前攻击的次数，P(N)表示当前攻击的暴击率，C为概率增量。如果我们这次攻击产生了暴击，则需要将 N 重置为 1，如果这次攻击没有产生暴击，则 N + 1。</li>
+</ul>
+<p>为了便于理解，这里直接给出一个具体例子：</p>
+<p>设我们当前玩家角色暴击率还是0.5，那么对于 PRD算法，此时的 C = 0.3</p>
+<blockquote>
+<p>此时第一次攻击时的实际暴击几率，即 P(1) = 0.3 * 1 = 0.3，若没有暴击，则 N + 1，N = 2<br>此时第二次攻击时的实际暴击几率，即P(2) = 0.3 * 2 = 0.6，若没有暴击，则 N + 1，N = 3<br>此时第三次攻击时的实际暴击几率，即P(3) = 0.3 * 3 = 0.9，此时对于大部分玩家而言这一次攻击就会产生暴击了，而如果玩家是个非酋，这次仍没有暴击，没关系，N + 1，N = 4<br>第四次攻击，P(4) = 0.3 * 4 = 1.2 &gt;= 1，这一次是一定会暴击的。</p>
+</blockquote>
+<p>可以看到，使用 PRD 算法，对于攻击是否会暴击这一问题，仍然是存在着随机性即玩家的运气因素的，但即使是运气最差的玩家，仍然也会在第四次攻击时产生暴击，因此PRD算法可以在保存随机性的同时，减少玩家运气因素对游戏结果的影响。</p>
+<ul>
+<li><p>2.洗牌算法<br>洗牌算法最常见的用法，是在各大音乐播放器中的“随机播放”之中。在随机播放时，如果采用真随机，会导致一首歌无论如何都播放不出，或是同一首歌连续播放数次（有兴趣的读者可以计算一下这些概率）。为了解决这个问题，播放器采用的解决方案即是洗牌算法：将一个包含所有歌曲的数组像洗牌一样打乱，然后依次播放这个乱序数组。</p>
+</li>
+<li><p>3.组合随机。<br>这是一种广泛应用于各个游戏的做法：在抽奖的时候进行两次、或是更多次的判断，一次不随机，而剩下的判断则是真随机。比如说，你会在第X次抽卡时抽到SSR是确定的，但抽中的SSR具体是哪张卡，则是随机的——这就是广大手游中的“低保”系统了。</p>
+</li>
+</ul>
+<h2 id="举例"><a href="#举例" class="headerlink" title="举例"></a>举例</h2><p><strong>真随机：</strong>有一天，小明在的班级上举办了一次抽奖活动。这个班级有40个学生，所以为了公平起见，保证每个学生都有1/40的几率中奖，老师准备了40个相同的纸盒，每个纸盒中都有40张纸条，有1张纸条是中奖纸条。这样一来，每个学生都有1/40的几率中奖，但每个学生是否中奖并不受其他学生的影响。在极端情况下，这个班上可能40个学生都能中奖。这就是真随机。</p>
+<p><strong>伪随机：</strong>小明班上举办了抽奖活动。为了公平起见，老师准备了1个纸盒，纸盒中有40张纸条，只有1张纸条是中奖纸条。这样一来，每个学生都有1/40的几率中奖——但是显而易见，这个班上有且仅有一名学生能够中奖。一名学生在中奖后，余下的所有学生中奖几率都会减少至0。这就是伪随机。</p>
+
+      
+    </div>
+
+    
+    
+    
+
+    <footer class="post-footer">
+        <div class="post-eof"></div>
+      
+    </footer>
+  </article>
+</div>
+
+
+
+
+    
+
+
+<div class="post-block">
+  
+  
+
+  <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="">
+    <link itemprop="mainEntityOfPage" href="https://lzhwweb.github.io/nirvana/note/%E8%AF%BB%E4%B9%A6%E7%AC%94%E8%AE%B0/%E5%9B%A2%E9%98%9F%E6%96%87%E5%8C%96/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/nirvana/images/headphoto.jpeg">
+      <meta itemprop="name" content="nirvana">
+      <meta itemprop="description" content="个人学习笔记">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="涅槃快乐是金">
+    </span>
+      <header class="post-header">
+        <h2 class="post-title" itemprop="name headline">
+          <a href="/nirvana/note/%E8%AF%BB%E4%B9%A6%E7%AC%94%E8%AE%B0/%E5%9B%A2%E9%98%9F%E6%96%87%E5%8C%96/" class="post-title-link" itemprop="url">团队文化</a>
+        </h2>
+
+        <div class="post-meta-container">
+          <div class="post-meta">
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-calendar"></i>
+      </span>
+      <span class="post-meta-item-text">发表于</span>
+      
+
+      <time title="创建时间：2021-03-10 21:12:40 / 修改时间：13:43:55" itemprop="dateCreated datePublished" datetime="2021-03-10T21:12:40+08:00">2021-03-10</time>
+    </span>
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-folder"></i>
+      </span>
+      <span class="post-meta-item-text">分类于</span>
+        <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+          <a href="/nirvana/categories/note/" itemprop="url" rel="index"><span itemprop="name">note</span></a>
+        </span>
+    </span>
+
+  
+    <span id="/nirvana/note/%E8%AF%BB%E4%B9%A6%E7%AC%94%E8%AE%B0/%E5%9B%A2%E9%98%9F%E6%96%87%E5%8C%96/" class="post-meta-item leancloud_visitors" data-flag-title="团队文化" title="阅读次数">
+      <span class="post-meta-item-icon">
+        <i class="far fa-eye"></i>
+      </span>
+      <span class="post-meta-item-text">阅读次数：</span>
+      <span class="leancloud-visitors-count"></span>
+    </span>
+      </div>
+      <div class="post-meta">
+    <span class="post-meta-item" title="本文字数">
+      <span class="post-meta-item-icon">
+        <i class="far fa-file-word"></i>
+      </span>
+      <span class="post-meta-item-text">本文字数：</span>
+      <span>133</span>
+    </span>
+    <span class="post-meta-item" title="阅读时长">
+      <span class="post-meta-item-icon">
+        <i class="far fa-clock"></i>
+      </span>
+      <span class="post-meta-item-text">阅读时长 &asymp;</span>
+      <span>1 分钟</span>
+    </span>
+</div>
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+          <p>但在文化价值观主导行为的层次上，经理阶层则必须负责发展出一套组织内共享的价值观、目标以及行事准则，以建立个体对组织的信赖。经理人可通过训话等方式来传达信息，但言传不如身教，最好的方法还是以身作则。如果经理人日常行事都依照组织的价值观及目标，公司里的人自然会上行下效。</p>
+
+      
+    </div>
+
+    
+    
+    
+
+    <footer class="post-footer">
+        <div class="post-eof"></div>
+      
+    </footer>
+  </article>
+</div>
+
+
+
+
+    
+
+
+<div class="post-block">
+  
+  
+
+  <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="">
+    <link itemprop="mainEntityOfPage" href="https://lzhwweb.github.io/nirvana/note/%E8%AF%BB%E4%B9%A6%E7%AC%94%E8%AE%B0/%E6%8B%9B%E8%81%98/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/nirvana/images/headphoto.jpeg">
+      <meta itemprop="name" content="nirvana">
+      <meta itemprop="description" content="个人学习笔记">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="涅槃快乐是金">
+    </span>
+      <header class="post-header">
+        <h2 class="post-title" itemprop="name headline">
+          <a href="/nirvana/note/%E8%AF%BB%E4%B9%A6%E7%AC%94%E8%AE%B0/%E6%8B%9B%E8%81%98/" class="post-title-link" itemprop="url">招聘</a>
+        </h2>
+
+        <div class="post-meta-container">
+          <div class="post-meta">
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-calendar"></i>
+      </span>
+      <span class="post-meta-item-text">发表于</span>
+      
+
+      <time title="创建时间：2021-03-10 21:12:40 / 修改时间：13:43:55" itemprop="dateCreated datePublished" datetime="2021-03-10T21:12:40+08:00">2021-03-10</time>
+    </span>
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-folder"></i>
+      </span>
+      <span class="post-meta-item-text">分类于</span>
+        <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+          <a href="/nirvana/categories/note/" itemprop="url" rel="index"><span itemprop="name">note</span></a>
+        </span>
+    </span>
+
+  
+    <span id="/nirvana/note/%E8%AF%BB%E4%B9%A6%E7%AC%94%E8%AE%B0/%E6%8B%9B%E8%81%98/" class="post-meta-item leancloud_visitors" data-flag-title="招聘" title="阅读次数">
+      <span class="post-meta-item-icon">
+        <i class="far fa-eye"></i>
+      </span>
+      <span class="post-meta-item-text">阅读次数：</span>
+      <span class="leancloud-visitors-count"></span>
+    </span>
+      </div>
+      <div class="post-meta">
+    <span class="post-meta-item" title="本文字数">
+      <span class="post-meta-item-icon">
+        <i class="far fa-file-word"></i>
+      </span>
+      <span class="post-meta-item-text">本文字数：</span>
+      <span>122</span>
+    </span>
+    <span class="post-meta-item" title="阅读时长">
+      <span class="post-meta-item-icon">
+        <i class="far fa-clock"></i>
+      </span>
+      <span class="post-meta-item-text">阅读时长 &asymp;</span>
+      <span>1 分钟</span>
+    </span>
+</div>
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+          <p>每一个经理人迟早都会碰到两个任务面试新员工，以及设法让一个萌生去意的优秀下属继续待在公司效命。<br>面试的目的可归为以下4类<br>1.找到一个具备能力及潜力的人。<br>2.让他认识你并且了解这个公司。<br>3.确定此人的能力和这份工作是否相符。<br>4.想办法把他招进公司。</p>
+
+      
+    </div>
+
+    
+    
+    
+
+    <footer class="post-footer">
+        <div class="post-eof"></div>
+      
+    </footer>
+  </article>
+</div>
+
+
+
+
+    
+
+
+<div class="post-block">
+  
+  
+
+  <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="">
+    <link itemprop="mainEntityOfPage" href="https://lzhwweb.github.io/nirvana/algorithm/%E7%AE%97%E6%B3%95%E5%AD%A6%E4%B9%A0/%E5%86%92%E6%B3%A1%E6%8E%92%E5%BA%8F/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/nirvana/images/headphoto.jpeg">
+      <meta itemprop="name" content="nirvana">
+      <meta itemprop="description" content="个人学习笔记">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="涅槃快乐是金">
+    </span>
+      <header class="post-header">
+        <h2 class="post-title" itemprop="name headline">
+          <a href="/nirvana/algorithm/%E7%AE%97%E6%B3%95%E5%AD%A6%E4%B9%A0/%E5%86%92%E6%B3%A1%E6%8E%92%E5%BA%8F/" class="post-title-link" itemprop="url">冒泡排序</a>
         </h2>
 
         <div class="post-meta-container">
@@ -612,7 +1285,7 @@
     </span>
 
   
-    <span id="/nirvana/algorithm/%E7%AE%97%E6%B3%95%E5%AD%A6%E4%B9%A0/%E7%AE%97%E6%B3%95-%E5%90%88%E5%B9%B6%E6%8E%92%E5%BA%8F/" class="post-meta-item leancloud_visitors" data-flag-title="算法-合并排序" title="阅读次数">
+    <span id="/nirvana/algorithm/%E7%AE%97%E6%B3%95%E5%AD%A6%E4%B9%A0/%E5%86%92%E6%B3%A1%E6%8E%92%E5%BA%8F/" class="post-meta-item leancloud_visitors" data-flag-title="冒泡排序" title="阅读次数">
       <span class="post-meta-item-icon">
         <i class="far fa-eye"></i>
       </span>
@@ -626,7 +1299,7 @@
         <i class="far fa-file-word"></i>
       </span>
       <span class="post-meta-item-text">本文字数：</span>
-      <span>1.3k</span>
+      <span>547</span>
     </span>
     <span class="post-meta-item" title="阅读时长">
       <span class="post-meta-item-icon">
@@ -644,774 +1317,8 @@
     
     
     <div class="post-body" itemprop="articleBody">
-          <p><strong>合并排序（MERGE-SORT）</strong>是利用归并的思想实现的排序方法，该算法采用经典的分治（divide-and-conquer）策略</p>
-<ul>
-<li>其基本模式如下：<br>分解：把一个问题分解成与原问题相似的子问题<br>解决：递归的解各个子问题<br>合并：合并子问题的结果得到了原问题的解。</li>
-</ul>
-<p>动态效果示意图：<br><img src="https://upload-images.jianshu.io/upload_images/10024246-aaded18e961d5438.gif?imageMogr2/auto-orient/strip"></p>
-<p><strong>分阶段：</strong>递归拆分子序列的过程。<br><strong>治阶段：</strong>将两个已经有序的子序列合并成一个有序序列<br><img src="https://upload-images.jianshu.io/upload_images/10024246-eb3bca3454827d7d.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240"></p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br></pre></td><td class="code"><pre><span class="line">&#x2F;**</span><br><span class="line"> * 合并排序算法</span><br><span class="line"> * @param &#123;Arry[number]&#125; arr 待排序数组</span><br><span class="line"> *&#x2F;</span><br><span class="line">function mergeSort(arr) &#123;</span><br><span class="line">    &#x2F;&#x2F; 采用自上而下的递归方法</span><br><span class="line">    var len &#x3D; arr.length;</span><br><span class="line">    if (len &lt; 2) &#123;&#x2F;&#x2F;只有1个数就返回</span><br><span class="line">        return arr;</span><br><span class="line">    &#125;</span><br><span class="line">    var middle &#x3D; Math.floor(len &#x2F; 2),&#x2F;&#x2F;中间值</span><br><span class="line">        left &#x3D; arr.slice(0, middle),&#x2F;&#x2F;左边数组</span><br><span class="line">        right &#x3D; arr.slice(middle);&#x2F;&#x2F;右边数组</span><br><span class="line">    return merge(mergeSort(left), mergeSort(right));</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">&#x2F;**</span><br><span class="line"> * 把两个数组合并排序</span><br><span class="line"> * @param &#123;Arry[number]&#125;&#125; left 待合并数组</span><br><span class="line"> * @param &#123;Arry[number]&#125; right 待合并数组</span><br><span class="line"> *&#x2F;</span><br><span class="line">function merge(left, right) &#123;</span><br><span class="line">  var result &#x3D; [];</span><br><span class="line"></span><br><span class="line">  while (left.length &amp;&amp; right.length) &#123;&#x2F;&#x2F;两个数组中都有值</span><br><span class="line">    &#x2F;&#x2F;左边小于右边则把左边数组第一个放入结果中，否则把右边数组第一个放入结果</span><br><span class="line">    &#x2F;&#x2F;同时删除该数组</span><br><span class="line">    if (left[0] &lt;&#x3D; right[0]) &#123;</span><br><span class="line">      result.push(left.shift());</span><br><span class="line">    &#125; else &#123;</span><br><span class="line">      result.push(right.shift());</span><br><span class="line">    &#125;</span><br><span class="line">  &#125;</span><br><span class="line"></span><br><span class="line">  &#x2F;&#x2F;只有左边数组</span><br><span class="line">  while (left.length) result.push(left.shift());</span><br><span class="line"></span><br><span class="line">  &#x2F;&#x2F;只有右边数组</span><br><span class="line">  while (right.length) result.push(right.shift());</span><br><span class="line"></span><br><span class="line">  return result;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-<p>归并排序是稳定排序，它也是一种十分高效的排序，能利用完全二叉树特性的排序。每次合并操作的平均时间复杂度为<code>O(n)</code>，总的平均时间复杂度为<code>O(nlogn)</code>。而且，归并排序的最好，最坏，平均时间复杂度均为<code>O(nlogn)</code>。</p>
-
-      
-    </div>
-
-    
-    
-    
-
-    <footer class="post-footer">
-        <div class="post-eof"></div>
-      
-    </footer>
-  </article>
-</div>
-
-
-
-
-    
-
-
-<div class="post-block">
-  
-  
-
-  <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="">
-    <link itemprop="mainEntityOfPage" href="https://lzhwweb.github.io/nirvana/algorithm/%E7%AE%97%E6%B3%95%E5%AD%A6%E4%B9%A0/%E7%AE%97%E6%B3%95%E2%80%94%E2%80%94%E4%BA%8C%E5%88%86%E6%B3%95%E6%9F%A5%E6%89%BE%EF%BC%88binarySearch%EF%BC%89/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="image" content="/nirvana/images/headphoto.jpeg">
-      <meta itemprop="name" content="nirvana">
-      <meta itemprop="description" content="个人学习笔记">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="涅槃快乐是金">
-    </span>
-      <header class="post-header">
-        <h2 class="post-title" itemprop="name headline">
-          <a href="/nirvana/algorithm/%E7%AE%97%E6%B3%95%E5%AD%A6%E4%B9%A0/%E7%AE%97%E6%B3%95%E2%80%94%E2%80%94%E4%BA%8C%E5%88%86%E6%B3%95%E6%9F%A5%E6%89%BE%EF%BC%88binarySearch%EF%BC%89/" class="post-title-link" itemprop="url">算法——二分法查找（binarySearch）</a>
-        </h2>
-
-        <div class="post-meta-container">
-          <div class="post-meta">
-    <span class="post-meta-item">
-      <span class="post-meta-item-icon">
-        <i class="far fa-calendar"></i>
-      </span>
-      <span class="post-meta-item-text">发表于</span>
-      
-
-      <time title="创建时间：2021-03-10 21:12:40 / 修改时间：13:43:55" itemprop="dateCreated datePublished" datetime="2021-03-10T21:12:40+08:00">2021-03-10</time>
-    </span>
-    <span class="post-meta-item">
-      <span class="post-meta-item-icon">
-        <i class="far fa-folder"></i>
-      </span>
-      <span class="post-meta-item-text">分类于</span>
-        <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-          <a href="/nirvana/categories/algorithm/" itemprop="url" rel="index"><span itemprop="name">algorithm</span></a>
-        </span>
-    </span>
-
-  
-    <span id="/nirvana/algorithm/%E7%AE%97%E6%B3%95%E5%AD%A6%E4%B9%A0/%E7%AE%97%E6%B3%95%E2%80%94%E2%80%94%E4%BA%8C%E5%88%86%E6%B3%95%E6%9F%A5%E6%89%BE%EF%BC%88binarySearch%EF%BC%89/" class="post-meta-item leancloud_visitors" data-flag-title="算法——二分法查找（binarySearch）" title="阅读次数">
-      <span class="post-meta-item-icon">
-        <i class="far fa-eye"></i>
-      </span>
-      <span class="post-meta-item-text">阅读次数：</span>
-      <span class="leancloud-visitors-count"></span>
-    </span>
-      </div>
-      <div class="post-meta">
-    <span class="post-meta-item" title="本文字数">
-      <span class="post-meta-item-icon">
-        <i class="far fa-file-word"></i>
-      </span>
-      <span class="post-meta-item-text">本文字数：</span>
-      <span>1.3k</span>
-    </span>
-    <span class="post-meta-item" title="阅读时长">
-      <span class="post-meta-item-icon">
-        <i class="far fa-clock"></i>
-      </span>
-      <span class="post-meta-item-text">阅读时长 &asymp;</span>
-      <span>1 分钟</span>
-    </span>
-</div>
-
-        </div>
-      </header>
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-          <p>二分法查找，也称为折半法，是一种在有序数组中查找特定元素的搜索算法。</p>
-<p>二分法查找的思路如下：<br>（1）首先，从数组的中间元素开始搜索，如果该元素正好是目标元素，则搜索过程结束，否则执行下一步。<br>（2）如果目标元素大于/小于中间元素，则在数组大于/小于中间元素的那一半区域查找，然后重复步骤（1）的操作。<br>（3）如果某一步数组为空，则表示找不到目标元素。<br>这种搜索算法每一次比较都使搜索范围缩小一半。时间复杂度<code>O(logn)</code>。</p>
-<h5 id="非递归写法"><a href="#非递归写法" class="headerlink" title="非递归写法"></a>非递归写法</h5><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br></pre></td><td class="code"><pre><span class="line">&#x2F;**</span><br><span class="line"> * 二分法查找</span><br><span class="line"> * @param &#123;array[T]&#125; arr 查询数组</span><br><span class="line"> * @param &#123;T&#125; key 查找对象</span><br><span class="line"> *&#x2F;</span><br><span class="line">function binarySearch(arr, key) &#123;</span><br><span class="line">  var start &#x3D; 0; &#x2F;&#x2F;数组最小索引值</span><br><span class="line">  var end &#x3D; arr.length - 1; &#x2F;&#x2F;数组最大索引值</span><br><span class="line">  while (start &lt;&#x3D; end) &#123;</span><br><span class="line">    var mid &#x3D; Math.floor((start + end) &#x2F; 2);</span><br><span class="line">    if (key &#x3D;&#x3D; arr[mid]) &#123;</span><br><span class="line">      return mid;</span><br><span class="line">    &#125; else if (key &gt; arr[mid]) &#123;</span><br><span class="line">      start &#x3D; mid + 1;</span><br><span class="line">    &#125; else &#123;</span><br><span class="line">      end &#x3D; mid - 1;</span><br><span class="line">    &#125;</span><br><span class="line">  &#125;</span><br><span class="line">  return null; &#x2F;&#x2F;start&gt;end的情况，这种情况下key的值大于arr中最大的元素值或者key的值小于arr中最小的元素值</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-<h5 id="递归写法"><a href="#递归写法" class="headerlink" title="递归写法"></a>递归写法</h5><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br></pre></td><td class="code"><pre><span class="line">&#x2F;**</span><br><span class="line"> * 递归方式二分法查询</span><br><span class="line"> * @param &#123;array[T]&#125; arr 查询数组</span><br><span class="line"> * @param &#123;number&#125; start 开始位置</span><br><span class="line"> * @param &#123;number&#125; end 结束位置</span><br><span class="line"> * @param &#123;T&#125; key 查找对象</span><br><span class="line"> *&#x2F;</span><br><span class="line">function binarySearch(arr, start, end, key) &#123;</span><br><span class="line">  if (start &gt; end) &#123;</span><br><span class="line">    return null;</span><br><span class="line">  &#125;</span><br><span class="line">  var mid &#x3D; Math.floor((start + end) &#x2F; 2);</span><br><span class="line">  if (key &#x3D;&#x3D; arr[mid]) &#123;</span><br><span class="line">    return mid;</span><br><span class="line">  &#125; else if (key &lt; arr[mid]) &#123;</span><br><span class="line">    end &#x3D; mid - 1;</span><br><span class="line">    return binarySearch(arr, start, end, key);</span><br><span class="line">  &#125; else &#123;</span><br><span class="line">    start &#x3D; mid + 1;</span><br><span class="line">    return binarySearch(arr, start, end, key);</span><br><span class="line">  &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-
-      
-    </div>
-
-    
-    
-    
-
-    <footer class="post-footer">
-        <div class="post-eof"></div>
-      
-    </footer>
-  </article>
-</div>
-
-
-
-
-    
-
-
-<div class="post-block">
-  
-  
-
-  <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="">
-    <link itemprop="mainEntityOfPage" href="https://lzhwweb.github.io/nirvana/algorithm/%E7%AE%97%E6%B3%95%E5%AD%A6%E4%B9%A0/%E7%BA%BF%E6%80%A7%E6%9F%A5%E6%89%BE/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="image" content="/nirvana/images/headphoto.jpeg">
-      <meta itemprop="name" content="nirvana">
-      <meta itemprop="description" content="个人学习笔记">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="涅槃快乐是金">
-    </span>
-      <header class="post-header">
-        <h2 class="post-title" itemprop="name headline">
-          <a href="/nirvana/algorithm/%E7%AE%97%E6%B3%95%E5%AD%A6%E4%B9%A0/%E7%BA%BF%E6%80%A7%E6%9F%A5%E6%89%BE/" class="post-title-link" itemprop="url">线性查找</a>
-        </h2>
-
-        <div class="post-meta-container">
-          <div class="post-meta">
-    <span class="post-meta-item">
-      <span class="post-meta-item-icon">
-        <i class="far fa-calendar"></i>
-      </span>
-      <span class="post-meta-item-text">发表于</span>
-      
-
-      <time title="创建时间：2021-03-10 21:12:40 / 修改时间：13:43:55" itemprop="dateCreated datePublished" datetime="2021-03-10T21:12:40+08:00">2021-03-10</time>
-    </span>
-    <span class="post-meta-item">
-      <span class="post-meta-item-icon">
-        <i class="far fa-folder"></i>
-      </span>
-      <span class="post-meta-item-text">分类于</span>
-        <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-          <a href="/nirvana/categories/algorithm/" itemprop="url" rel="index"><span itemprop="name">algorithm</span></a>
-        </span>
-    </span>
-
-  
-    <span id="/nirvana/algorithm/%E7%AE%97%E6%B3%95%E5%AD%A6%E4%B9%A0/%E7%BA%BF%E6%80%A7%E6%9F%A5%E6%89%BE/" class="post-meta-item leancloud_visitors" data-flag-title="线性查找" title="阅读次数">
-      <span class="post-meta-item-icon">
-        <i class="far fa-eye"></i>
-      </span>
-      <span class="post-meta-item-text">阅读次数：</span>
-      <span class="leancloud-visitors-count"></span>
-    </span>
-      </div>
-      <div class="post-meta">
-    <span class="post-meta-item" title="本文字数">
-      <span class="post-meta-item-icon">
-        <i class="far fa-file-word"></i>
-      </span>
-      <span class="post-meta-item-text">本文字数：</span>
-      <span>388</span>
-    </span>
-    <span class="post-meta-item" title="阅读时长">
-      <span class="post-meta-item-icon">
-        <i class="far fa-clock"></i>
-      </span>
-      <span class="post-meta-item-text">阅读时长 &asymp;</span>
-      <span>1 分钟</span>
-    </span>
-</div>
-
-        </div>
-      </header>
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-          <p><strong>线性查找</strong>又称顺序查找，是一种最简单的查找方法，它的基本思想是从第一个记录开始，逐个比较记录的关键字，直到和给定的K值相等，则查找成功；若比较结果与文件中n个记录的关键字都不等，则查找失败。<br><strong>算法思想：</strong>目标元素值挨个与数组元素比较，直达找到目标元素为止。<br><strong>算法优点：</strong>实现简单，应用范围广。<br><strong>算法缺点：</strong>效率极低，需要一个元素一个元素的比较，最坏情况下需要把数组中的元素都比较一遍。时间复杂度<code>O(n)</code></p>
-<h5 id="示例"><a href="#示例" class="headerlink" title="示例"></a>示例</h5><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line">function seqSearch(arr, value) &#123;</span><br><span class="line">    &#x2F;&#x2F;线性查找是逐一比对，发现有相同值，就返回下标</span><br><span class="line">    for (let i &#x3D; 0; i &lt; arr.length; i++) &#123;</span><br><span class="line">        if (arr[i] &#x3D;&#x3D;&#x3D; value) &#123;</span><br><span class="line">            return i</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">    return -1;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-
-      
-    </div>
-
-    
-    
-    
-
-    <footer class="post-footer">
-        <div class="post-eof"></div>
-      
-    </footer>
-  </article>
-</div>
-
-
-
-
-    
-
-
-<div class="post-block">
-  
-  
-
-  <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="">
-    <link itemprop="mainEntityOfPage" href="https://lzhwweb.github.io/nirvana/algorithm/%E7%AE%97%E6%B3%95%E5%AD%A6%E4%B9%A0/%E9%80%89%E6%8B%A9%E6%8E%92%E5%BA%8F/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="image" content="/nirvana/images/headphoto.jpeg">
-      <meta itemprop="name" content="nirvana">
-      <meta itemprop="description" content="个人学习笔记">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="涅槃快乐是金">
-    </span>
-      <header class="post-header">
-        <h2 class="post-title" itemprop="name headline">
-          <a href="/nirvana/algorithm/%E7%AE%97%E6%B3%95%E5%AD%A6%E4%B9%A0/%E9%80%89%E6%8B%A9%E6%8E%92%E5%BA%8F/" class="post-title-link" itemprop="url">选择排序</a>
-        </h2>
-
-        <div class="post-meta-container">
-          <div class="post-meta">
-    <span class="post-meta-item">
-      <span class="post-meta-item-icon">
-        <i class="far fa-calendar"></i>
-      </span>
-      <span class="post-meta-item-text">发表于</span>
-      
-
-      <time title="创建时间：2021-03-10 21:12:40 / 修改时间：13:43:55" itemprop="dateCreated datePublished" datetime="2021-03-10T21:12:40+08:00">2021-03-10</time>
-    </span>
-    <span class="post-meta-item">
-      <span class="post-meta-item-icon">
-        <i class="far fa-folder"></i>
-      </span>
-      <span class="post-meta-item-text">分类于</span>
-        <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-          <a href="/nirvana/categories/algorithm/" itemprop="url" rel="index"><span itemprop="name">algorithm</span></a>
-        </span>
-    </span>
-
-  
-    <span id="/nirvana/algorithm/%E7%AE%97%E6%B3%95%E5%AD%A6%E4%B9%A0/%E9%80%89%E6%8B%A9%E6%8E%92%E5%BA%8F/" class="post-meta-item leancloud_visitors" data-flag-title="选择排序" title="阅读次数">
-      <span class="post-meta-item-icon">
-        <i class="far fa-eye"></i>
-      </span>
-      <span class="post-meta-item-text">阅读次数：</span>
-      <span class="leancloud-visitors-count"></span>
-    </span>
-      </div>
-      <div class="post-meta">
-    <span class="post-meta-item" title="本文字数">
-      <span class="post-meta-item-icon">
-        <i class="far fa-file-word"></i>
-      </span>
-      <span class="post-meta-item-text">本文字数：</span>
-      <span>901</span>
-    </span>
-    <span class="post-meta-item" title="阅读时长">
-      <span class="post-meta-item-icon">
-        <i class="far fa-clock"></i>
-      </span>
-      <span class="post-meta-item-text">阅读时长 &asymp;</span>
-      <span>1 分钟</span>
-    </span>
-</div>
-
-        </div>
-      </header>
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-          <p>选择排序的思想其实和冒泡排序有点类似，都是在一次排序后把最小的元素放到最前面。但是过程不同，冒泡排序是通过相邻的比较和交换。而选择排序是通过对整体的选择。<br>举个栗子，对5,3,8,6,4这个无序序列进行简单选择排序，首先要选择5以外的最小数来和5交换，也就是选择3和5交换，一次排序后就变成了3,5,8,6,4.对剩下的序列一次进行选择和交换，最终就会得到一个有序序列。<br>其实选择排序可以看成冒泡排序的优化，因为其目的相同，只是选择排序只有在确定了最小数的前提下才进行交换，大大减少了交换的次数。选择排序的时间复杂度为O(n^2)。</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br></pre></td><td class="code"><pre><span class="line">&#x2F;**</span><br><span class="line"> * 选择排序，每次先选择一个最小的，放到前面</span><br><span class="line"> * @param &#123;Array&lt;Number&gt;&#125; arry 要排序的数组</span><br><span class="line"> *&#x2F;</span><br><span class="line">function SelectSort(arry: Array&lt;Number&gt;): Array&lt;Number&gt; &#123;</span><br><span class="line">    if (arry.length &#x3D;&#x3D; 0) &#123;&#x2F;&#x2F;判断数组不为空</span><br><span class="line">        return [];</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    for (let i &#x3D; 0; i &lt; arry.length - 1; i++) &#123;&#x2F;&#x2F;从0开始,只需要比较n-1次</span><br><span class="line">        for (let j &#x3D; i + 1; j &lt; arry.length; j++) &#123;&#x2F;&#x2F;比较从i+1开始</span><br><span class="line">            if (arry[i] &gt; arry[j]) &#123;&#x2F;&#x2F;交换</span><br><span class="line">                let temp &#x3D; arry[i];</span><br><span class="line">                arry[i] &#x3D; arry[j];</span><br><span class="line">                arry[j] &#x3D; temp;</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;</span><br><span class="line">        console.log(JSON.stringify(arry))</span><br><span class="line">    &#125;</span><br><span class="line">    return arry;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-<p>结果：</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">SelectSort([8,7,6,5,4]);</span><br><span class="line"> [4,8,7,6,5]</span><br><span class="line"> [4,5,8,7,6]</span><br><span class="line"> [4,5,6,8,7]</span><br><span class="line"> [4,5,6,7,8]</span><br></pre></td></tr></table></figure>
-
-      
-    </div>
-
-    
-    
-    
-
-    <footer class="post-footer">
-        <div class="post-eof"></div>
-      
-    </footer>
-  </article>
-</div>
-
-
-
-
-    
-
-
-<div class="post-block">
-  
-  
-
-  <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="">
-    <link itemprop="mainEntityOfPage" href="https://lzhwweb.github.io/nirvana/informal/%E9%9A%8F%E7%AC%94/%E6%A0%A1%E9%95%BF-%E6%8A%80%E6%9C%AF%E6%88%90%E9%95%BF%E5%9B%9B%E4%B8%AA%E9%98%B6%E6%AE%B5%E9%9C%80%E8%A6%81%E7%9A%84%E6%9E%B6%E6%9E%84%E7%9F%A5%E8%AF%86/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="image" content="/nirvana/images/headphoto.jpeg">
-      <meta itemprop="name" content="nirvana">
-      <meta itemprop="description" content="个人学习笔记">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="涅槃快乐是金">
-    </span>
-      <header class="post-header">
-        <h2 class="post-title" itemprop="name headline">
-          <a href="/nirvana/informal/%E9%9A%8F%E7%AC%94/%E6%A0%A1%E9%95%BF-%E6%8A%80%E6%9C%AF%E6%88%90%E9%95%BF%E5%9B%9B%E4%B8%AA%E9%98%B6%E6%AE%B5%E9%9C%80%E8%A6%81%E7%9A%84%E6%9E%B6%E6%9E%84%E7%9F%A5%E8%AF%86/" class="post-title-link" itemprop="url">校长-技术成长四个阶段需要的架构知识</a>
-        </h2>
-
-        <div class="post-meta-container">
-          <div class="post-meta">
-    <span class="post-meta-item">
-      <span class="post-meta-item-icon">
-        <i class="far fa-calendar"></i>
-      </span>
-      <span class="post-meta-item-text">发表于</span>
-      
-
-      <time title="创建时间：2021-03-10 21:12:40 / 修改时间：13:43:55" itemprop="dateCreated datePublished" datetime="2021-03-10T21:12:40+08:00">2021-03-10</time>
-    </span>
-    <span class="post-meta-item">
-      <span class="post-meta-item-icon">
-        <i class="far fa-folder"></i>
-      </span>
-      <span class="post-meta-item-text">分类于</span>
-        <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-          <a href="/nirvana/categories/informal/" itemprop="url" rel="index"><span itemprop="name">informal</span></a>
-        </span>
-    </span>
-
-  
-    <span id="/nirvana/informal/%E9%9A%8F%E7%AC%94/%E6%A0%A1%E9%95%BF-%E6%8A%80%E6%9C%AF%E6%88%90%E9%95%BF%E5%9B%9B%E4%B8%AA%E9%98%B6%E6%AE%B5%E9%9C%80%E8%A6%81%E7%9A%84%E6%9E%B6%E6%9E%84%E7%9F%A5%E8%AF%86/" class="post-meta-item leancloud_visitors" data-flag-title="校长-技术成长四个阶段需要的架构知识" title="阅读次数">
-      <span class="post-meta-item-icon">
-        <i class="far fa-eye"></i>
-      </span>
-      <span class="post-meta-item-text">阅读次数：</span>
-      <span class="leancloud-visitors-count"></span>
-    </span>
-      </div>
-      <div class="post-meta">
-    <span class="post-meta-item" title="本文字数">
-      <span class="post-meta-item-icon">
-        <i class="far fa-file-word"></i>
-      </span>
-      <span class="post-meta-item-text">本文字数：</span>
-      <span>5.2k</span>
-    </span>
-    <span class="post-meta-item" title="阅读时长">
-      <span class="post-meta-item-icon">
-        <i class="far fa-clock"></i>
-      </span>
-      <span class="post-meta-item-text">阅读时长 &asymp;</span>
-      <span>5 分钟</span>
-    </span>
-</div>
-
-        </div>
-      </header>
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-          <p> <br>转载：<a target="_blank" rel="noopener" href="https://weibo.com/ttarticle/p/show?id=2309403963470512042120">https://weibo.com/ttarticle/p/show?id=2309403963470512042120</a><br>编者按：本文是李庆丰在高可用架构后花园群 3.19 北京光华路安妮意大利餐厅下午茶活动的演讲。转载请注明来自@高可用架构。</p>
-<blockquote>
-<p>李庆丰（校长），微博研发中心高级技术经理，当前负责微博消息箱及开放平台的技术研发工作，曾主导微博平台服务稳定性保障及 SLA 体系建设，推进微博平台化、微博多机房部署、微博容器化及混合云等项目。十年互联网架构研发及技术管理经验，专注高性能高可用架构。 <br>（小编注：庆丰由于主导了微博平台 2011 - 2015 年毕业生新兵训练营工作，随着这些新人的成长以及在关键岗位发挥作用，庆丰已经是桃李满天下，所以也被尊称为校长）</p>
-</blockquote>
-<p><img src="https://upload-images.jianshu.io/upload_images/10024246-ebea276f4117cbc2.jpg?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240"></p>
-<p>(图： 3.19 高可用架构后花园聚会现场)</p>
-<p>今天的下午茶活动，与很多技术圈的老朋友详谈甚欢，听到了几位老朋友的分享颇为受益，我也给小伙伴分享我的一点心得。</p>
-<p><strong>技术成长需要什么架构知识？</strong></p>
-<p>初入工程师这行时我有一个梦想，希望具备强大技术架构能力，让服务于亿级用户的产品稳定运行于其上，今天我看到身边很多架构师都走到这一步。</p>
-<p>但对于当年刚入行的我来讲，要达到这一点还只是个梦想，因为那时我并不知道应该怎样构建这样的架构，甚至连需要学习哪些知识都不知道。</p>
-<p>我相信很多工程师在成长的路程上也跟我一样，会被一个大大的问号困扰很久：如果要成为一个大牛，应该<strong>需要什么样的技术路线****？</strong></p>
-<p>今天跟大家分享下通过观察身边的案例，我总结的一些在技术成长方面的心得体会。</p>
-<p><strong>架构师是怎样炼成的？</strong>让我们从圣斗士说起。</p>
-<p><img src="https://upload-images.jianshu.io/upload_images/10024246-586efacfc3841b3b.jpg?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="image"></p>
-<p><strong>技术人成长之路四阶段</strong></p>
-<p>小时候有一部我特别喜爱的动画片——圣斗士星矢，现在来看，这俨然就是一个技术大牛的成长之路。（小编：校长果然是老司机了：）</p>
-<p><strong>1. 从接受训练成为圣斗士，</strong>就像刚刚入门的初级工程师</p>
-<p>大多数的应届毕业生，虽然之前学习了编程语言及算法基础，能用代码解决一些简单的业务问题，但编码规范与真正的业务开发实践的要求还是有些距离。</p>
-<p>个别彪悍的同学，毕业时能力已经达到中高级工程师的水平了，就可以略过这个阶段。</p>
-<p>这一阶段最重要的是<strong>夯实编程基础，养成好的开发习惯</strong>。比如：基础库API的使用、并发线程机制、基础算法、优雅的单元测试等。</p>
-<p><strong>这个阶段与其挑选薪资，不如挑选合适的锻炼环境</strong>，比如寻找有良好的技术氛围、有合适的导师，有挑战的项目的团队。</p>
-<p><strong>2. 到获得青铜圣衣打败暗黑圣斗士，</strong>就像中/高级工程师</p>
-<p>工作 1 - 3 年的工程师，在实战中积累了一些开发经验，了解常用技术框架原理并可以在实际工作中快速搭建服务；了解常用的设计模式，让程序的扩展性变得更好，也可以开始胜任解决相对复杂的一些问题，负责中等规模的服务开发和维护；</p>
-<p><strong>这一阶段最重要的是寻找可能的机会进行架构实践</strong>，学习别人的架构经验，最终总结吸收为自己的经验或理论。多研究下典型场景的架构设计很重要，比如：典型社交场景的微博架构，典型电商场景的京东淘宝架构等。</p>
-<p>如果公司有合适的历练项目，则多向项目中的前辈学习。但<strong>更多的人遭遇的可能是不那么理想的环境</strong>，参与的项目不需要太高技术含量，身边也没有资深的前辈学习。</p>
-<p>这种情况下，<strong>在满足项目交付时间的前提下</strong>，可以更主动去积极寻找项目中可以值得优化的点，通过网上阅读的案例，引入更合适的技术来解决，给自己创造使用一流技术的实践机会。</p>
-<p><strong>3. 到击败白银圣斗士，</strong>就像架构师</p>
-<p>此阶段，部分 3 - 5 年或经验更久的工程师，随着在工作中不断遇到复杂问题和技术挑战，工程师对原有的技术框架和设计模式有了更深的理解，再根据实际场景的应变，开始能够独立设计和维护大型服务功能。他们具备针对特定场景完成合适的架构设计的能力，在团队中承担高级工程师或架构师角色；</p>
-<p>上文之所以说部分工程师，是因为并不是所有人都能跨过中高级工程师这个槛，成为一名合格架构师。</p>
-<p>这一阶段是架构知识由泛到专的过程。在特定业务场景下，能够对架构有清晰的目标，并利用已有架构技巧实现目标与成本的平衡，最终满足业务要求。比如作为一个合格的互联网架构师，需要理解常用缓存、存储资源的特性及优缺点，具备架构选型和实现的能力。</p>
-<p>另外，我觉得在大多数人看来，中、高级工程师差异还是很大的；而高级工程师和架构师反而过渡不是那么明显。</p>
-<p><strong>4. 再到战胜十二黄金圣斗士救出自由女神雅典娜</strong></p>
-<p>工程师到这个阶段，已经不能用时间年限来衡量了，<strong>更多的是需要对这个行业的热爱和合适的成长平台</strong>。</p>
-<p>随着具体场景下架构设计实践经验的增多，一小部分架构师能够把这些经验抽象为一种通用的理论，形成架构设计的理念，并能够用这种理念指导影响团队中的其他人，加上对于技术如何应用到行业的深刻理解，成为一个公司的首席架构师；</p>
-<p><strong>成长为首席架构师，除了个人的努力和不断学习总结积累外，一个好的实践锻炼平台至关重要。</strong></p>
-<p>就像高可用架构方向，如果没有亲身经历过高并发、海量数据的服务架构设计和开发的过程，很难凭空想象可能的场景问题和技术挑战，实践经验的总结抽象也就无从谈起；</p>
-<p>在这个成长的过程中，圣斗士们通过不断的磨难激发出了第六感、小宇宙，从而使他们变得越来越强大；而工程师也是在解决服务性能瓶颈、服务器宕机、异常峰值应对、分布式数据一致性、海量数据存储等问题中，不断的总结出经验和教训，从而变得越来越有经验。最终，极个别的一些首席架构师脱颖而出，成为了大师。</p>
-<p>吴军博士在《硅谷之谜》中也提到，这类工程师通过对行业及技术的理解，<strong>具备做出行业最好产品的能力</strong>，并进一步可以做出给世界带来惊喜的产品，比如 iPhone 及 Google Glass 的总设计师。</p>
-<p>高可用架构群就有很多首席架构师级别的前辈，他们在技术架构、技术管理等方面传到解惑，成为技术人员成长的引路人。</p>
-<p><img src="https://upload-images.jianshu.io/upload_images/10024246-acc7f195ab0187e1.jpg?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240"></p>
-<p>在技术人员成长的各个阶段，需要具备的知识和技能不同，从最初的语法规范的学习，到后来设计模式的灵活运用，再到对架构的理解和抽象，对技术人的素质要求越来越高。特别是架构知识，这是技术人成长中非常具有挑战的那部分，涉及了方方面面的问题，看似杂乱无章，实际还是有迹可循的。</p>
-<p><strong>架构知识拓扑</strong></p>
-<p><strong>所谓架构，在互联网的场景，就是保障服务高性能、高可用、可扩展的一系列技术措施。架构的维护成本是评价其好坏的重要因素。</strong></p>
-<p><strong>1. 互联网架构的要求</strong></p>
-<p>具体来看就是通过一系列的技术手段达到以下要求：</p>
-<ul>
-<li><p>  性能要足够快以能够满足业务需求；</p>
-</li>
-<li><p>  业务流量峰值能够扛得住；</p>
-</li>
-<li><p>  突发异常流量能够应对的来；</p>
-</li>
-<li><p>  部分服务器宕机不影响整理服务；</p>
-</li>
-<li><p>  能够随着业务的增长保持有节奏的容量扩容；</p>
-</li>
-<li><p>  再高级点就是，资源成本要足够低，研发效率要足够高，支持异地容灾，资源弹性伸缩提高资源利用率等。</p>
-</li>
-</ul>
-<p>然而，所有这些针对架构的要求和保证，都需要建立在一定标准之上，如果没有标准，服务的好坏，性能的高低就没法界定，所以，为服务制定 <strong>SLA（Service-Level Agreement）</strong>就变得非常重要。</p>
-<p><strong>2. SLA 设置</strong></p>
-<p>SLA 从<strong>性能、容量、程度</strong>三个方面对服务好坏做了约定，比如一个服务的 SLA 可以简单的描述为：</p>
-<p><strong>99.9% 请求响应时间 &lt; 100ms；最大 QPS 2W；</strong></p>
-<p>这里就规定了最大容量 2W QPS，性能上99.9% 的请求小于 100ms 响应，其中 99.9% 就是程度，这 3 个指标会让我们很好的了解服务的状况。</p>
-<p>SLA 体系是架构的基础，即作为对外部的保证，也是对内部的约束。</p>
-<p><strong>3. 监控的要求</strong></p>
-<p>另一方面，好的架构应该时刻了解服务所处的状态，以保证能适时作出合适的应对策略，这让<strong>监控体系</strong>变得非常重要。就像打红警游戏，有个间谍卫星和电力仪表盘是多么重要！</p>
-<p>所以，你需要知道如何能让你的监控系统实时准确的反馈相关数据信息，<strong>实时、方便、直观</strong>是衡量一个监控系统好坏的重要指标。</p>
-<p><strong>总结：拓扑结构</strong></p>
-<p>有了以上两个重要基础，架构设计变得不再那么困难，通过 SLA，你已经知道目标是什么、通过监控体系，你已经知道问题在哪里，剩下的就是通过一系列措施去解决它们。比如，选择合适的存储资源，适当的容错和降级策略，为了架构解耦而做的服务治理和隔离，高可用的异地容灾，为了极致性能而做的网络拓扑调整，以及为了运维效率和资源利用率做的弹性伸缩。这些知识相互关联，互为制约，是设计一个好的架构的重要知识基础。</p>
-<p>下图是我在负责微博多个项目的 SLA 时候提出的架构要点。</p>
-<p><img src="https://upload-images.jianshu.io/upload_images/10024246-b3e715dd68d5dfe5.jpg?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="image"></p>
-<p>架构知识都掌握了也不一定就能设计出好的架构，还需要针对具体业务场景灵活的变通。一般分为 2 个层次：术与道。</p>
-<p><strong>架构上的术与道</strong></p>
-<p>在前面提到，架构师与首席架构师都具备架构设计的能力和经验，但他们却有着术与道的区别。架构上的术，就是针对特定场景的解决方案；架构上的道，是一种思想和理论，能够指导很多通用问题的解决，它更有整理性、全局观。</p>
-<p>由术向道的转变，是一个大量亲身架构实践和总结的过程。一方面这取决于你是否有一个好的发挥平台，如果没有这种锻炼平台，大量的亲身架构实践将无从谈起，这种转变几乎不可能实现；另一方面，经验的总结和抽象也不是闭门造车，和业界的高手共同交流探讨是避免走进误区及快速拓展思路的好方法，所以经常的技术分享，适当的技术社群互动就显得非常必要。</p>
-<p>通过不断的学习和努力，很多人可以成为架构师，但只有很少的人能成为首席，一个很重要的原因是，除了出色的学习、抽象、总结能力外，大量复杂问题的架构实践至关重要；而这一点一般只有在较大的平台才能遇到。</p>
-<p>架构知识说了不少，我们如何高效的获得这些知识呢？</p>
-<p><strong>技术阅读</strong></p>
-<p>对于工程师来讲，我一直认为我们生活在最好的时代。互联网的蓬勃发展给了我们很多的历练和成长机会，技术社区的繁荣让我们自我学习和提高成为可能。在这个年代，<strong>技术人员的成长在一定程度取决于知识获取及消化能力。</strong></p>
-<p>技术博客，技术丛书，技术文章，技术公众号，让技术知识和思想在工程师群体中自由传播，形成技术成长的肥沃土壤，比如从类似「ArchNotes」高可用架构这样的公众号就可以学到大量一线架构师分享的知识与经验。</p>
-<p>然而，伴随着技术社区的繁荣，技术知识变得越来越丰富，甚至太丰富了，以至于我们几乎无法全部消化这些信息，我们需要有选择、有甄别的来看；有些需要泛读，有些则需要精读甚至去实践。 </p>
-<p>初级工程师在夯实基础阶段需要系统的学习基础知识，这个阶段看书会让你的知识吸收更系统，博客和技术文章作为辅助知识扩展就好了。其他阶段则需要逐渐养成良好的知识获取习惯，比如：每个月看一本专业方向的书，每天定时浏览固定方向的博客或公众号文章，确保系统知识和架构经验都能够不断的获取和吸收。</p>
-<p>一般来讲，技术博客或者公众号，是扩展技术视野，吸收他人实践经验的好的方式和渠道；技术丛书则是系统学习某一方面知识的最有效途径。</p>
-<p>这么丰富的知识内容，这么多样的展现方式，是技术人共同分享贡献的成果；每个身临其中的技术人既是贡献者，也是受益者，他们学习别人的经验，分享自己的思想，在相互影响中共同进步。</p>
-<p><strong>学习与分享</strong></p>
-<p>关于学习与分享，让我想起了 Tim 在高可用架构群第一次分享时候引用的那段话：</p>
-<blockquote>
-<p>你有一个苹果，我有一个苹果，交换后每人还是一个苹果；你有一种思想，我有一种思想，交换后每个人会有两种思想</p>
-</blockquote>
-<p>这句话完美诠释了分享与交流的价值。</p>
-<p>要成长就必须去不断倾听别人的分享，学习别人的经验。分享知识的人多了，大家的学习成本就会降低，成长速度就会变快，大家就会相互促进更快的成长。</p>
-<p>根据我自己的体会，<strong>对外分享还是一个自我总结、积累以及进一步提高的过程</strong>。为了避免分享给大家错误的知识，我一般会对分享内容进行多次 review，把之前模糊的、不十分确定的问题搞清楚（分享后被人问住或质疑总是分享者不想碰到的），这个过程往往让我对问题的本质有新的认识。</p>
-<p>好的分享还会带来很多讨论和咨询，<strong>促进对问题的更全面认识和思考</strong>。比如 2015 年我在 ArchSummit 大会分享了《新浪微博高可用服务保障体系演进》，现场和会后有很多小伙伴专门来找我一起探讨相关问题，其中有不少场景是我没有遇到的，也给了我很多新的启发。</p>
-<p>所以，学习与分享是一个互相促进的过程，学习别人的经验，把自己的实践总结分享出来，技术慢慢的积累，再分享，不断成长，不断学习。。。</p>
-<p><img src="https://upload-images.jianshu.io/upload_images/10024246-07ad0f510206994e.jpg?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="image"></p>
-<p>所以，我今年除了写些技术文章，我还计划给自己一个新的挑战，写一本关于架构的书：《大型网站高可用服务架构实践》。</p>
-<p>写到这的时候，其实我犹豫了很久，想做为啥非要说出来？我之前写过一些技术文章，感觉还不错，所以，就有过写一本书的想法，但真准备去做的时候，发现写书和写一篇技术文章差别非常大。技术文章一般阐述解决一个问题，但书是让人系统学习某一领域的方式，需要有条理的阐述解决一系列问题，并且还需要让大家有兴趣坚持读下去，想想都很有挑战。</p>
-<p><img src="https://upload-images.jianshu.io/upload_images/10024246-b53f7b14f39ac0af.jpg?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240"></p>
-<p>今天前面同学分享时提到，如果实在感觉困难就倒逼一下自己，所以为了让自己能坚持下来，我就尝试下这种方式，让“太忙了、没时间”等借口少一些机会，说不定还能吸引一些感兴趣的小伙伴一起参与。</p>
-<p>2016 年，大家一起加油！</p>
-<p><em>转载请注明来自@高可用架构</em></p>
-
-      
-    </div>
-
-    
-    
-    
-
-    <footer class="post-footer">
-        <div class="post-eof"></div>
-      
-    </footer>
-  </article>
-</div>
-
-
-
-
-    
-
-
-<div class="post-block">
-  
-  
-
-  <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="">
-    <link itemprop="mainEntityOfPage" href="https://lzhwweb.github.io/nirvana/mac/mac/Mac-OS-%E5%AE%89%E8%A3%85-Telnet/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="image" content="/nirvana/images/headphoto.jpeg">
-      <meta itemprop="name" content="nirvana">
-      <meta itemprop="description" content="个人学习笔记">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="涅槃快乐是金">
-    </span>
-      <header class="post-header">
-        <h2 class="post-title" itemprop="name headline">
-          <a href="/nirvana/mac/mac/Mac-OS-%E5%AE%89%E8%A3%85-Telnet/" class="post-title-link" itemprop="url">Mac-OS-安装-Telnet</a>
-        </h2>
-
-        <div class="post-meta-container">
-          <div class="post-meta">
-    <span class="post-meta-item">
-      <span class="post-meta-item-icon">
-        <i class="far fa-calendar"></i>
-      </span>
-      <span class="post-meta-item-text">发表于</span>
-      
-
-      <time title="创建时间：2021-03-10 21:12:40 / 修改时间：13:43:55" itemprop="dateCreated datePublished" datetime="2021-03-10T21:12:40+08:00">2021-03-10</time>
-    </span>
-    <span class="post-meta-item">
-      <span class="post-meta-item-icon">
-        <i class="far fa-folder"></i>
-      </span>
-      <span class="post-meta-item-text">分类于</span>
-        <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-          <a href="/nirvana/categories/mac/" itemprop="url" rel="index"><span itemprop="name">mac</span></a>
-        </span>
-    </span>
-
-  
-    <span id="/nirvana/mac/mac/Mac-OS-%E5%AE%89%E8%A3%85-Telnet/" class="post-meta-item leancloud_visitors" data-flag-title="Mac-OS-安装-Telnet" title="阅读次数">
-      <span class="post-meta-item-icon">
-        <i class="far fa-eye"></i>
-      </span>
-      <span class="post-meta-item-text">阅读次数：</span>
-      <span class="leancloud-visitors-count"></span>
-    </span>
-      </div>
-      <div class="post-meta">
-    <span class="post-meta-item" title="本文字数">
-      <span class="post-meta-item-icon">
-        <i class="far fa-file-word"></i>
-      </span>
-      <span class="post-meta-item-text">本文字数：</span>
-      <span>3.2k</span>
-    </span>
-    <span class="post-meta-item" title="阅读时长">
-      <span class="post-meta-item-icon">
-        <i class="far fa-clock"></i>
-      </span>
-      <span class="post-meta-item-text">阅读时长 &asymp;</span>
-      <span>3 分钟</span>
-    </span>
-</div>
-
-        </div>
-      </header>
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-          <p>使用 homebrew 安装telnet：</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">brew install telnet</span><br></pre></td></tr></table></figure>
-<p>安装报错</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br></pre></td><td class="code"><pre><span class="line">$ brew install telnet</span><br><span class="line">Error: &#x2F;usr&#x2F;local&#x2F;Cellar is not writable. You should change the</span><br><span class="line">ownership and permissions of &#x2F;usr&#x2F;local&#x2F;Cellar back to your</span><br><span class="line">user account:</span><br><span class="line">  sudo chown -R $(whoami) &#x2F;usr&#x2F;local&#x2F;Cellar</span><br><span class="line">Warning: You are using macOS 10.15.</span><br><span class="line">We do not provide support for this pre-release version.</span><br><span class="line">You will encounter build failures with some formulae.</span><br><span class="line">Please create pull requests instead of asking for help on Homebrew&#39;s GitHub,</span><br><span class="line">Discourse, Twitter or IRC. You are responsible for resolving any issues you</span><br><span class="line">experience, as you are running this pre-release version.</span><br><span class="line"></span><br><span class="line">Error: The following directories are not writable by your user:</span><br><span class="line">&#x2F;usr&#x2F;local&#x2F;Cellar</span><br><span class="line">&#x2F;usr&#x2F;local&#x2F;Homebrew</span><br><span class="line">&#x2F;usr&#x2F;local&#x2F;etc</span><br><span class="line">&#x2F;usr&#x2F;local&#x2F;etc&#x2F;bash_completion.d</span><br><span class="line">&#x2F;usr&#x2F;local&#x2F;opt</span><br><span class="line">&#x2F;usr&#x2F;local&#x2F;var&#x2F;homebrew&#x2F;linked</span><br><span class="line">&#x2F;usr&#x2F;local&#x2F;var&#x2F;homebrew&#x2F;locks</span><br><span class="line"></span><br><span class="line">You should change the ownership of these directories to your user.</span><br><span class="line">  sudo chown -R $(whoami) &#x2F;usr&#x2F;local&#x2F;Cellar &#x2F;usr&#x2F;local&#x2F;Homebrew &#x2F;usr&#x2F;local&#x2F;etc &#x2F;usr&#x2F;local&#x2F;etc&#x2F;bash_completion.d &#x2F;usr&#x2F;local&#x2F;opt &#x2F;usr&#x2F;local&#x2F;var&#x2F;homebrew&#x2F;linked &#x2F;usr&#x2F;local&#x2F;var&#x2F;homebrew&#x2F;locks</span><br></pre></td></tr></table></figure>
-<p>说明你当前用户权限不对，需要sudo权限执行命令，增加用户权限</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">sudo chown -R $(whoami) &#x2F;usr&#x2F;local&#x2F;Cellar &#x2F;usr&#x2F;local&#x2F;Homebrew &#x2F;usr&#x2F;local&#x2F;etc </span><br></pre></td></tr></table></figure>
-<p>重新安装</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br></pre></td><td class="code"><pre><span class="line">$ brew install telnet</span><br><span class="line">Warning: You are using macOS 10.15.</span><br><span class="line">We do not provide support for this pre-release version.</span><br><span class="line">You will encounter build failures with some formulae.</span><br><span class="line">Please create pull requests instead of asking for help on Homebrew&#39;s GitHub,</span><br><span class="line">Discourse, Twitter or IRC. You are responsible for resolving any issues you</span><br><span class="line">experience, as you are running this pre-release version.</span><br><span class="line"></span><br><span class="line">&#x3D;&#x3D;&gt; Downloading https:&#x2F;&#x2F;opensource.apple.com&#x2F;tarballs&#x2F;remote_cmds&#x2F;remote_cmds-60</span><br><span class="line">######################################################################## 100.0%</span><br><span class="line">&#x3D;&#x3D;&gt; Downloading https:&#x2F;&#x2F;opensource.apple.com&#x2F;tarballs&#x2F;libtelnet&#x2F;libtelnet-13.tar</span><br><span class="line">######################################################################## 100.0%</span><br><span class="line">&#x3D;&#x3D;&gt; xcodebuild SYMROOT&#x3D;build -arch x86_64</span><br><span class="line">&#x3D;&#x3D;&gt; make -C telnet.tproj OBJROOT&#x3D;build&#x2F;Intermediates SYMROOT&#x3D;build&#x2F;Products DSTR</span><br><span class="line">🍺  &#x2F;usr&#x2F;local&#x2F;Cellar&#x2F;telnet&#x2F;60: 4 files, 142.3KB, built in 21 seconds</span><br><span class="line">&#x3D;&#x3D;&gt; &#96;brew cleanup&#96; has not been run in 30 days, running now...</span><br></pre></td></tr></table></figure>
-<p>执行telnet ip port命令</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br></pre></td><td class="code"><pre><span class="line">$ telnet baidu.com 443</span><br><span class="line">Trying 220.181.38.148...</span><br><span class="line">Connected to baidu.com.</span><br><span class="line">Escape character is &#39;^]&#39;.</span><br><span class="line">^</span><br><span class="line">HTTP&#x2F;1.1 302 Moved Temporarily</span><br><span class="line">Server: bfe&#x2F;1.0.8.18</span><br><span class="line">Date: Mon, 08 Feb 2021 02:31:59 GMT</span><br><span class="line">Content-Type: text&#x2F;html</span><br><span class="line">Content-Length: 161</span><br><span class="line">Connection: close</span><br><span class="line">Location: http:&#x2F;&#x2F;www.baidu.com&#x2F;error.html</span><br><span class="line"></span><br><span class="line">&lt;html&gt;</span><br><span class="line">&lt;head&gt;&lt;title&gt;302 Found&lt;&#x2F;title&gt;&lt;&#x2F;head&gt;</span><br><span class="line">&lt;body bgcolor&#x3D;&quot;white&quot;&gt;</span><br><span class="line">&lt;center&gt;&lt;h1&gt;302 Found&lt;&#x2F;h1&gt;&lt;&#x2F;center&gt;</span><br><span class="line">&lt;hr&gt;&lt;center&gt;bfe&#x2F;1.0.8.18&lt;&#x2F;center&gt;</span><br><span class="line">&lt;&#x2F;body&gt;</span><br><span class="line">&lt;&#x2F;html&gt;</span><br><span class="line">Connection closed by foreign host.</span><br></pre></td></tr></table></figure>
-
-      
-    </div>
-
-    
-    
-    
-
-    <footer class="post-footer">
-        <div class="post-eof"></div>
-      
-    </footer>
-  </article>
-</div>
-
-
-
-
-    
-
-
-<div class="post-block">
-  
-  
-
-  <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="">
-    <link itemprop="mainEntityOfPage" href="https://lzhwweb.github.io/nirvana/mac/mac/Mac-%EF%BC%9A%E4%BF%AE%E6%94%B9-DNS-%E5%8F%8A%E6%B8%85%E9%99%A4-DNS-%E7%BC%93%E5%AD%98/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="image" content="/nirvana/images/headphoto.jpeg">
-      <meta itemprop="name" content="nirvana">
-      <meta itemprop="description" content="个人学习笔记">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="涅槃快乐是金">
-    </span>
-      <header class="post-header">
-        <h2 class="post-title" itemprop="name headline">
-          <a href="/nirvana/mac/mac/Mac-%EF%BC%9A%E4%BF%AE%E6%94%B9-DNS-%E5%8F%8A%E6%B8%85%E9%99%A4-DNS-%E7%BC%93%E5%AD%98/" class="post-title-link" itemprop="url">Mac-：修改-DNS-及清除-DNS-缓存</a>
-        </h2>
-
-        <div class="post-meta-container">
-          <div class="post-meta">
-    <span class="post-meta-item">
-      <span class="post-meta-item-icon">
-        <i class="far fa-calendar"></i>
-      </span>
-      <span class="post-meta-item-text">发表于</span>
-      
-
-      <time title="创建时间：2021-03-10 21:12:40 / 修改时间：13:43:55" itemprop="dateCreated datePublished" datetime="2021-03-10T21:12:40+08:00">2021-03-10</time>
-    </span>
-    <span class="post-meta-item">
-      <span class="post-meta-item-icon">
-        <i class="far fa-folder"></i>
-      </span>
-      <span class="post-meta-item-text">分类于</span>
-        <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-          <a href="/nirvana/categories/mac/" itemprop="url" rel="index"><span itemprop="name">mac</span></a>
-        </span>
-    </span>
-
-  
-    <span id="/nirvana/mac/mac/Mac-%EF%BC%9A%E4%BF%AE%E6%94%B9-DNS-%E5%8F%8A%E6%B8%85%E9%99%A4-DNS-%E7%BC%93%E5%AD%98/" class="post-meta-item leancloud_visitors" data-flag-title="Mac-：修改-DNS-及清除-DNS-缓存" title="阅读次数">
-      <span class="post-meta-item-icon">
-        <i class="far fa-eye"></i>
-      </span>
-      <span class="post-meta-item-text">阅读次数：</span>
-      <span class="leancloud-visitors-count"></span>
-    </span>
-      </div>
-      <div class="post-meta">
-    <span class="post-meta-item" title="本文字数">
-      <span class="post-meta-item-icon">
-        <i class="far fa-file-word"></i>
-      </span>
-      <span class="post-meta-item-text">本文字数：</span>
-      <span>795</span>
-    </span>
-    <span class="post-meta-item" title="阅读时长">
-      <span class="post-meta-item-icon">
-        <i class="far fa-clock"></i>
-      </span>
-      <span class="post-meta-item-text">阅读时长 &asymp;</span>
-      <span>1 分钟</span>
-    </span>
-</div>
-
-        </div>
-      </header>
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-          <ul>
-<li><ol>
-<li><p>在苹果菜单选择 “系统偏好设置”。</p>
-<p>   <img src="https://upload-images.jianshu.io/upload_images/10024246-134910c4b8f7de46.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240"></p>
-</li>
-</ol>
-</li>
-<li><ol>
-<li> 单击 “网络” 图标。</li>
-</ol>
-</li>
-</ul>
-<p><img src="https://upload-images.jianshu.io/upload_images/10024246-edd411652e2d5024.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240"></p>
-<ul>
-<li><ol>
-<li> 从列表中选择想要修改或当前正在使用的网络连接服务（例如 WI-FI 或以太网），然后点击 “高级”。</li>
-</ol>
-</li>
-</ul>
-<p><img src="https://upload-images.jianshu.io/upload_images/10024246-33b002edbd8a3a66.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240"></p>
-<ul>
-<li><ol>
-<li> 选择 DNS 标签，单击 “DNS 服务器” 左下角的 “+”，添加 119.29.29.29 和 114.114.114.114，然后单击右下角的 “好”。<br><img src="https://upload-images.jianshu.io/upload_images/10024246-f1ecd48ae2e2e8c1.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240"></li>
-</ol>
-</li>
-</ul>
-<h2 id="还原-OS-X-中的-DNS-缓存设置"><a href="#还原-OS-X-中的-DNS-缓存设置" class="headerlink" title="还原 OS X 中的 DNS 缓存设置"></a>还原 OS X 中的 DNS 缓存设置</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">了解如何还原（清空）DNS 缓存设置。</span><br><span class="line"></span><br></pre></td></tr></table></figure>
-
-<blockquote>
-<p>关于 DNS 缓存</p>
-</blockquote>
-<p>OS X 会将已解析的 DNS 查询的本地缓存保留一段时间，保留时间由 DNS 服务器定义。</p>
-<p>有时可能需要立即还原缓存设置并重新查询 DNS 服务器。</p>
-<p>例如，如果您是网络或服务器管理员且您的 DNS 服务器上的条目最近有更改，您可能需要执行此操作。</p>
-<p>如果您的 Mac 使用的不是您服务器上的最新 DNS 条目，您可重新启动 Mac 以更新其缓存的信息。</p>
-<p>如果您需要更新使用 OS X 的服务器上的 DNS 条目但又不能重新启动服务器，请使用以下适用于您所使用的 OS X 版本的命令。</p>
-<blockquote>
-<p>［应用程序］-［实用工具］-［终端］</p>
-</blockquote>
-<h2 id="OS-X-Yosemite-及更新机型"><a href="#OS-X-Yosemite-及更新机型" class="headerlink" title="OS X Yosemite 及更新机型"></a>OS X Yosemite 及更新机型</h2><blockquote>
-<p>在 OS X v10.10.4 或更高版本中，请使用以下 “终端” 命令来还原 DNS 缓存设置：</p>
-</blockquote>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">sudo killall -HUP mDNSResponder</span><br><span class="line"></span><br></pre></td></tr></table></figure>
-
-<blockquote>
-<p>在 OS X v10.10 至 v10.10.3 中，请使用以下 “终端” 命令来还原 DNS 缓存设置：</p>
-</blockquote>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">sudo discoveryutil mdnsflushcache</span><br><span class="line"></span><br></pre></td></tr></table></figure>
-
-<h2 id="OS-X-Mavericks、Mountain-Lion-和-Lion"><a href="#OS-X-Mavericks、Mountain-Lion-和-Lion" class="headerlink" title="OS X Mavericks、Mountain Lion 和 Lion"></a>OS X Mavericks、Mountain Lion 和 Lion</h2><p>在 OS X v10.9.5 及更低版本中，请使用以下 “终端” 命令来还原 DNS 缓存设置：</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">sudo killall -HUP mDNSResponder</span><br><span class="line"></span><br></pre></td></tr></table></figure>
-
-<blockquote>
-<p>Mac OS X Snow Leopard</p>
-</blockquote>
-<p>在 OS X v10.6 至 v10.6.8 中，请使用以下 “终端” 命令来还原 DNS 缓存设置：</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">sudo dscacheutil -flushcache</span><br><span class="line"></span><br></pre></td></tr></table></figure>
-
-<ul>
-<li>  DNS 清除缓存方法来自：<a target="_blank" rel="noopener" href="https://support.apple.com/zh-cn/HT202516">苹果官网</a></li>
-<li>  DNS 修改图片来自：<a target="_blank" rel="noopener" href="https://support.dnspod.cn/Kb/showarticle/tsid/240/#link1">DNSPOD</a></li>
-</ul>
+          <hr>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br></pre></td><td class="code"><pre><span class="line">&#x2F;**</span><br><span class="line"> * 冒泡排序基础</span><br><span class="line"> * arry:数组，必传</span><br><span class="line"> * type:排序方式，默认值1，1：升序，0：降序</span><br><span class="line"> **&#x2F;</span><br><span class="line">function bubbleSort(arry,type &#x3D; 1)&#123;</span><br><span class="line">    if(Object.prototype.toString.call(arry) !&#x3D;&#x3D; &#39;[object Array]&#39;)&#123;&#x2F;&#x2F;判断是否数组</span><br><span class="line">        return false;</span><br><span class="line">    &#125;</span><br><span class="line">    for (let i&#x3D;0;i&lt;arry.length;i++)&#123;</span><br><span class="line">        for(let j&#x3D;0;j&lt;arry.length-i;j++)&#123;</span><br><span class="line">            if((type &#x3D;&#x3D; 1 &amp;&amp; arry[j]&gt;arry[j+1])||(type &#x3D;&#x3D; 0 &amp;&amp; arry[j]&lt;arry[j+1]))&#123;</span><br><span class="line">                let temp &#x3D; arry[j];</span><br><span class="line">                arry[j] &#x3D; arry[j+1];</span><br><span class="line">                arry[j+1] &#x3D; temp;</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">    return arry;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 
       
     </div>
@@ -1431,7 +1338,7 @@
 
 
   <nav class="pagination">
-    <a class="extend prev" rel="prev" href="/nirvana/page/16/"><i class="fa fa-angle-left" aria-label="上一页"></i></a><a class="page-number" href="/nirvana/">1</a><span class="space">&hellip;</span><a class="page-number" href="/nirvana/page/16/">16</a><span class="page-number current">17</span><a class="page-number" href="/nirvana/page/18/">18</a><span class="space">&hellip;</span><a class="page-number" href="/nirvana/page/22/">22</a><a class="extend next" rel="next" href="/nirvana/page/18/"><i class="fa fa-angle-right" aria-label="下一页"></i></a>
+    <a class="extend prev" rel="prev" href="/nirvana/page/16/"><i class="fa fa-angle-left" aria-label="上一页"></i></a><a class="page-number" href="/nirvana/">1</a><span class="space">&hellip;</span><a class="page-number" href="/nirvana/page/16/">16</a><span class="page-number current">17</span><a class="page-number" href="/nirvana/page/18/">18</a><span class="space">&hellip;</span><a class="page-number" href="/nirvana/page/21/">21</a><a class="extend next" rel="next" href="/nirvana/page/18/"><i class="fa fa-angle-right" aria-label="下一页"></i></a>
   </nav>
 
 
@@ -1477,14 +1384,14 @@
       <i class="fa fa-chart-line"></i>
     </span>
       <span>站点总字数：</span>
-    <span title="站点总字数">603k</span>
+    <span title="站点总字数">595k</span>
   </span>
   <span class="post-meta-item">
     <span class="post-meta-item-icon">
       <i class="fa fa-coffee"></i>
     </span>
       <span>站点阅读时长 &asymp;</span>
-    <span title="站点阅读时长">9:08</span>
+    <span title="站点阅读时长">9:01</span>
   </span>
 </div>
   <div class="powered-by">由 <a href="https://hexo.io/" class="theme-link" rel="noopener" target="_blank">Hexo</a> & <a href="https://theme-next.js.org/" class="theme-link" rel="noopener" target="_blank">NexT.Gemini</a> 强力驱动

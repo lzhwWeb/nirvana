@@ -207,7 +207,7 @@
   <nav class="site-state">
       <div class="site-state-item site-state-posts">
           <a href="/nirvana/archives">
-          <span class="site-state-item-count">213</span>
+          <span class="site-state-item-count">209</span>
           <span class="site-state-item-name">日志</span>
         </a>
       </div>
@@ -248,112 +248,6 @@
 
 
     <div class="main-inner index posts-expand">
-
-    
-
-
-<div class="post-block">
-  
-  
-
-  <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="">
-    <link itemprop="mainEntityOfPage" href="https://lzhwweb.github.io/nirvana/javascript/%E5%89%8D%E7%AB%AF/IOSInvalidregularexpression/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="image" content="/nirvana/images/headphoto.jpeg">
-      <meta itemprop="name" content="nirvana">
-      <meta itemprop="description" content="个人学习笔记">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="涅槃快乐是金">
-    </span>
-      <header class="post-header">
-        <h2 class="post-title" itemprop="name headline">
-          <a href="/nirvana/javascript/%E5%89%8D%E7%AB%AF/IOSInvalidregularexpression/" class="post-title-link" itemprop="url">IOS Invalid regular expression： invalid group specifier name</a>
-        </h2>
-
-        <div class="post-meta-container">
-          <div class="post-meta">
-    <span class="post-meta-item">
-      <span class="post-meta-item-icon">
-        <i class="far fa-calendar"></i>
-      </span>
-      <span class="post-meta-item-text">发表于</span>
-
-      <time title="创建时间：2021-03-11 21:12:40" itemprop="dateCreated datePublished" datetime="2021-03-11T21:12:40+08:00">2021-03-11</time>
-    </span>
-      <span class="post-meta-item">
-        <span class="post-meta-item-icon">
-          <i class="far fa-calendar-check"></i>
-        </span>
-        <span class="post-meta-item-text">更新于</span>
-        <time title="修改时间：2021-03-10 22:20:38" itemprop="dateModified" datetime="2021-03-10T22:20:38+08:00">2021-03-10</time>
-      </span>
-    <span class="post-meta-item">
-      <span class="post-meta-item-icon">
-        <i class="far fa-folder"></i>
-      </span>
-      <span class="post-meta-item-text">分类于</span>
-        <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-          <a href="/nirvana/categories/javascript/" itemprop="url" rel="index"><span itemprop="name">javascript</span></a>
-        </span>
-    </span>
-
-  
-    <span id="/nirvana/javascript/%E5%89%8D%E7%AB%AF/IOSInvalidregularexpression/" class="post-meta-item leancloud_visitors" data-flag-title="IOS Invalid regular expression： invalid group specifier name" title="阅读次数">
-      <span class="post-meta-item-icon">
-        <i class="far fa-eye"></i>
-      </span>
-      <span class="post-meta-item-text">阅读次数：</span>
-      <span class="leancloud-visitors-count"></span>
-    </span>
-      </div>
-      <div class="post-meta">
-    <span class="post-meta-item" title="本文字数">
-      <span class="post-meta-item-icon">
-        <i class="far fa-file-word"></i>
-      </span>
-      <span class="post-meta-item-text">本文字数：</span>
-      <span>560</span>
-    </span>
-    <span class="post-meta-item" title="阅读时长">
-      <span class="post-meta-item-icon">
-        <i class="far fa-clock"></i>
-      </span>
-      <span class="post-meta-item-text">阅读时长 &asymp;</span>
-      <span>1 分钟</span>
-    </span>
-</div>
-
-        </div>
-      </header>
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-          <p>如果正则表达式中包含零宽断言的话 , 在安卓手机上正常 , 但是在ios上会报以下错误</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">Info Warn Error SyntaxError: Invalid regular expression: invalid group specifier name</span><br></pre></td></tr></table></figure>
-<p><code>常用零宽断言：?&lt;=、?&lt;!、?!、?=</code>;<br> <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">let reg &#x3D; new RegExp(&#96;(?&lt;&#x3D;\\b$&#123;key&#125;&#x3D;)[^&amp;]*&#96;) , str &#x3D; this.params || &#39;&#39;, target &#x3D; str.match(reg); if(target) &#123;  return target[0] &#125;</span><br></pre></td></tr></table></figure><br>这种写法在安卓是正常的，IOS就不行，因为该正则包含了零宽断言，会导致页面空白，打不开，需要相对应的转换才能使用</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">let reg &#x3D; new RegExp(&#96;(^|&amp;)$&#123;key&#125;&#x3D;([^&amp;]*)(&amp;|$)&#96;),str &#x3D; this.params || &#39;&#39;, target &#x3D; str.match(reg);if(target) &#123; return target[2]&#125;</span><br></pre></td></tr></table></figure>
-
-      
-    </div>
-
-    
-    
-    
-
-    <footer class="post-footer">
-        <div class="post-eof"></div>
-      
-    </footer>
-  </article>
-</div>
-
-
-
 
     
 
@@ -578,6 +472,109 @@
     
     <div class="post-body" itemprop="articleBody">
           <h2 id="5-Number"><a href="#5-Number" class="headerlink" title="5. Number"></a>5. Number</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br><span class="line">63</span><br><span class="line">64</span><br><span class="line">65</span><br><span class="line">66</span><br><span class="line">67</span><br><span class="line">68</span><br><span class="line">69</span><br><span class="line">70</span><br><span class="line">71</span><br><span class="line">72</span><br><span class="line">73</span><br><span class="line">74</span><br><span class="line">75</span><br><span class="line">76</span><br><span class="line">77</span><br><span class="line">78</span><br><span class="line">79</span><br><span class="line">80</span><br><span class="line">81</span><br><span class="line">82</span><br><span class="line">83</span><br><span class="line">84</span><br><span class="line">85</span><br><span class="line">86</span><br><span class="line">87</span><br><span class="line">88</span><br><span class="line">89</span><br><span class="line">90</span><br><span class="line">91</span><br><span class="line">92</span><br><span class="line">93</span><br><span class="line">94</span><br><span class="line">95</span><br><span class="line">96</span><br><span class="line">97</span><br><span class="line">98</span><br><span class="line">99</span><br><span class="line">100</span><br><span class="line">101</span><br><span class="line">102</span><br><span class="line">103</span><br><span class="line">104</span><br><span class="line">105</span><br><span class="line">106</span><br><span class="line">107</span><br><span class="line">108</span><br><span class="line">109</span><br><span class="line">110</span><br><span class="line">111</span><br><span class="line">112</span><br><span class="line">113</span><br><span class="line">114</span><br><span class="line">115</span><br><span class="line">116</span><br><span class="line">117</span><br><span class="line">118</span><br><span class="line">119</span><br><span class="line">120</span><br><span class="line">121</span><br><span class="line">122</span><br><span class="line">123</span><br><span class="line">124</span><br><span class="line">125</span><br><span class="line">126</span><br><span class="line">127</span><br><span class="line">128</span><br><span class="line">129</span><br><span class="line">130</span><br><span class="line">131</span><br><span class="line">132</span><br><span class="line">133</span><br><span class="line">134</span><br><span class="line">135</span><br><span class="line">136</span><br><span class="line">137</span><br><span class="line">138</span><br><span class="line">139</span><br><span class="line">140</span><br><span class="line">141</span><br><span class="line">142</span><br><span class="line">143</span><br><span class="line">144</span><br><span class="line">145</span><br><span class="line">146</span><br><span class="line">147</span><br><span class="line">148</span><br><span class="line">149</span><br><span class="line">150</span><br><span class="line">151</span><br><span class="line">152</span><br><span class="line">153</span><br><span class="line">154</span><br><span class="line">155</span><br><span class="line">156</span><br><span class="line">157</span><br><span class="line">158</span><br><span class="line">159</span><br><span class="line">160</span><br><span class="line">161</span><br><span class="line">162</span><br><span class="line">163</span><br><span class="line">164</span><br><span class="line">165</span><br><span class="line">166</span><br><span class="line">167</span><br><span class="line">168</span><br><span class="line">169</span><br><span class="line">170</span><br><span class="line">171</span><br><span class="line">172</span><br><span class="line">173</span><br><span class="line">174</span><br><span class="line">175</span><br><span class="line">176</span><br><span class="line">177</span><br><span class="line">178</span><br><span class="line">179</span><br><span class="line">180</span><br><span class="line">181</span><br><span class="line">182</span><br><span class="line">183</span><br><span class="line">184</span><br><span class="line">185</span><br><span class="line">186</span><br><span class="line">187</span><br><span class="line">188</span><br><span class="line">189</span><br><span class="line">190</span><br><span class="line">191</span><br><span class="line">192</span><br><span class="line">193</span><br><span class="line">194</span><br><span class="line">195</span><br><span class="line">196</span><br><span class="line">197</span><br><span class="line">198</span><br><span class="line">199</span><br><span class="line">200</span><br><span class="line">201</span><br><span class="line">202</span><br><span class="line">203</span><br></pre></td><td class="code"><pre><span class="line">&#x2F;*随机数范围*&#x2F;</span><br><span class="line">random (min, max) &#123;</span><br><span class="line">    if (arguments.length &#x3D;&#x3D;&#x3D; 2) &#123;</span><br><span class="line">        return Math.floor(min + Math.random() * ( (max+1) - min ))</span><br><span class="line">    &#125;else&#123;</span><br><span class="line">        return null;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">&#x2F;*将阿拉伯数字翻译成中文的大写数字*&#x2F;</span><br><span class="line">numberToChinese (num) &#123;</span><br><span class="line">    var AA &#x3D; new Array(&quot;零&quot;, &quot;一&quot;, &quot;二&quot;, &quot;三&quot;, &quot;四&quot;, &quot;五&quot;, &quot;六&quot;, &quot;七&quot;, &quot;八&quot;, &quot;九&quot;, &quot;十&quot;);</span><br><span class="line">    var BB &#x3D; new Array(&quot;&quot;, &quot;十&quot;, &quot;百&quot;, &quot;仟&quot;, &quot;萬&quot;, &quot;億&quot;, &quot;点&quot;, &quot;&quot;);</span><br><span class="line">    var a &#x3D; (&quot;&quot; + num).replace(&#x2F;(^0*)&#x2F;g, &quot;&quot;).split(&quot;.&quot;),</span><br><span class="line">        k &#x3D; 0,</span><br><span class="line">        re &#x3D; &quot;&quot;;</span><br><span class="line">    for(var i &#x3D; a[0].length - 1; i &gt;&#x3D; 0; i--) &#123;</span><br><span class="line">        switch(k) &#123;</span><br><span class="line">            case 0:</span><br><span class="line">                re &#x3D; BB[7] + re;</span><br><span class="line">                break;</span><br><span class="line">            case 4:</span><br><span class="line">                if(!new RegExp(&quot;0&#123;4&#125;&#x2F;&#x2F;d&#123;&quot; + (a[0].length - i - 1) + &quot;&#125;$&quot;)</span><br><span class="line">                    .test(a[0]))</span><br><span class="line">                    re &#x3D; BB[4] + re;</span><br><span class="line">                break;</span><br><span class="line">            case 8:</span><br><span class="line">                re &#x3D; BB[5] + re;</span><br><span class="line">                BB[7] &#x3D; BB[5];</span><br><span class="line">                k &#x3D; 0;</span><br><span class="line">                break;</span><br><span class="line">        &#125;</span><br><span class="line">        if(k % 4 &#x3D;&#x3D; 2 &amp;&amp; a[0].charAt(i + 2) !&#x3D; 0 &amp;&amp; a[0].charAt(i + 1) &#x3D;&#x3D; 0)</span><br><span class="line">            re &#x3D; AA[0] + re;</span><br><span class="line">        if(a[0].charAt(i) !&#x3D; 0)</span><br><span class="line">            re &#x3D; AA[a[0].charAt(i)] + BB[k % 4] + re;</span><br><span class="line">        k++;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    if(a.length &gt; 1) &#x2F;&#x2F; 加上小数部分(如果有小数部分)</span><br><span class="line">    &#123;</span><br><span class="line">        re +&#x3D; BB[6];</span><br><span class="line">        for(var i &#x3D; 0; i &lt; a[1].length; i++)</span><br><span class="line">            re +&#x3D; AA[a[1].charAt(i)];</span><br><span class="line">    &#125;</span><br><span class="line">    if(re &#x3D;&#x3D; &#39;一十&#39;)</span><br><span class="line">        re &#x3D; &quot;十&quot;;</span><br><span class="line">    if(re.match(&#x2F;^一&#x2F;) &amp;&amp; re.length &#x3D;&#x3D; 3)</span><br><span class="line">        re &#x3D; re.replace(&quot;一&quot;, &quot;&quot;);</span><br><span class="line">    return re;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">&#x2F;*将数字转换为大写金额*&#x2F;</span><br><span class="line">changeToChinese (Num) &#123;</span><br><span class="line">        &#x2F;&#x2F;判断如果传递进来的不是字符的话转换为字符</span><br><span class="line">        if(typeof Num &#x3D;&#x3D; &quot;number&quot;) &#123;</span><br><span class="line">            Num &#x3D; new String(Num);</span><br><span class="line">        &#125;;</span><br><span class="line">        Num &#x3D; Num.replace(&#x2F;,&#x2F;g, &quot;&quot;) &#x2F;&#x2F;替换tomoney()中的“,”</span><br><span class="line">        Num &#x3D; Num.replace(&#x2F; &#x2F;g, &quot;&quot;) &#x2F;&#x2F;替换tomoney()中的空格</span><br><span class="line">        Num &#x3D; Num.replace(&#x2F;￥&#x2F;g, &quot;&quot;) &#x2F;&#x2F;替换掉可能出现的￥字符</span><br><span class="line">        if(isNaN(Num)) &#123; &#x2F;&#x2F;验证输入的字符是否为数字</span><br><span class="line">            &#x2F;&#x2F;alert(&quot;请检查小写金额是否正确&quot;);</span><br><span class="line">            return &quot;&quot;;</span><br><span class="line">        &#125;;</span><br><span class="line">        &#x2F;&#x2F;字符处理完毕后开始转换，采用前后两部分分别转换</span><br><span class="line">        var part &#x3D; String(Num).split(&quot;.&quot;);</span><br><span class="line">        var newchar &#x3D; &quot;&quot;;</span><br><span class="line">        &#x2F;&#x2F;小数点前进行转化</span><br><span class="line">        for(var i &#x3D; part[0].length - 1; i &gt;&#x3D; 0; i--) &#123;</span><br><span class="line">            if(part[0].length &gt; 10) &#123;</span><br><span class="line">                return &quot;&quot;;</span><br><span class="line">                &#x2F;&#x2F;若数量超过拾亿单位，提示</span><br><span class="line">            &#125;</span><br><span class="line">            var tmpnewchar &#x3D; &quot;&quot;</span><br><span class="line">            var perchar &#x3D; part[0].charAt(i);</span><br><span class="line">            switch(perchar) &#123;</span><br><span class="line">                case &quot;0&quot;:</span><br><span class="line">                    tmpnewchar &#x3D; &quot;零&quot; + tmpnewchar;</span><br><span class="line">                    break;</span><br><span class="line">                case &quot;1&quot;:</span><br><span class="line">                    tmpnewchar &#x3D; &quot;壹&quot; + tmpnewchar;</span><br><span class="line">                    break;</span><br><span class="line">                case &quot;2&quot;:</span><br><span class="line">                    tmpnewchar &#x3D; &quot;贰&quot; + tmpnewchar;</span><br><span class="line">                    break;</span><br><span class="line">                case &quot;3&quot;:</span><br><span class="line">                    tmpnewchar &#x3D; &quot;叁&quot; + tmpnewchar;</span><br><span class="line">                    break;</span><br><span class="line">                case &quot;4&quot;:</span><br><span class="line">                    tmpnewchar &#x3D; &quot;肆&quot; + tmpnewchar;</span><br><span class="line">                    break;</span><br><span class="line">                case &quot;5&quot;:</span><br><span class="line">                    tmpnewchar &#x3D; &quot;伍&quot; + tmpnewchar;</span><br><span class="line">                    break;</span><br><span class="line">                case &quot;6&quot;:</span><br><span class="line">                    tmpnewchar &#x3D; &quot;陆&quot; + tmpnewchar;</span><br><span class="line">                    break;</span><br><span class="line">                case &quot;7&quot;:</span><br><span class="line">                    tmpnewchar &#x3D; &quot;柒&quot; + tmpnewchar;</span><br><span class="line">                    break;</span><br><span class="line">                case &quot;8&quot;:</span><br><span class="line">                    tmpnewchar &#x3D; &quot;捌&quot; + tmpnewchar;</span><br><span class="line">                    break;</span><br><span class="line">                case &quot;9&quot;:</span><br><span class="line">                    tmpnewchar &#x3D; &quot;玖&quot; + tmpnewchar;</span><br><span class="line">                    break;</span><br><span class="line">            &#125;</span><br><span class="line">            switch(part[0].length - i - 1) &#123;</span><br><span class="line">                case 0:</span><br><span class="line">                    tmpnewchar &#x3D; tmpnewchar + &quot;元&quot;;</span><br><span class="line">                    break;</span><br><span class="line">                case 1:</span><br><span class="line">                    if(perchar !&#x3D; 0) tmpnewchar &#x3D; tmpnewchar + &quot;拾&quot;;</span><br><span class="line">                    break;</span><br><span class="line">                case 2:</span><br><span class="line">                    if(perchar !&#x3D; 0) tmpnewchar &#x3D; tmpnewchar + &quot;佰&quot;;</span><br><span class="line">                    break;</span><br><span class="line">                case 3:</span><br><span class="line">                    if(perchar !&#x3D; 0) tmpnewchar &#x3D; tmpnewchar + &quot;仟&quot;;</span><br><span class="line">                    break;</span><br><span class="line">                case 4:</span><br><span class="line">                    tmpnewchar &#x3D; tmpnewchar + &quot;万&quot;;</span><br><span class="line">                    break;</span><br><span class="line">                case 5:</span><br><span class="line">                    if(perchar !&#x3D; 0) tmpnewchar &#x3D; tmpnewchar + &quot;拾&quot;;</span><br><span class="line">                    break;</span><br><span class="line">                case 6:</span><br><span class="line">                    if(perchar !&#x3D; 0) tmpnewchar &#x3D; tmpnewchar + &quot;佰&quot;;</span><br><span class="line">                    break;</span><br><span class="line">                case 7:</span><br><span class="line">                    if(perchar !&#x3D; 0) tmpnewchar &#x3D; tmpnewchar + &quot;仟&quot;;</span><br><span class="line">                    break;</span><br><span class="line">                case 8:</span><br><span class="line">                    tmpnewchar &#x3D; tmpnewchar + &quot;亿&quot;;</span><br><span class="line">                    break;</span><br><span class="line">                case 9:</span><br><span class="line">                    tmpnewchar &#x3D; tmpnewchar + &quot;拾&quot;;</span><br><span class="line">                    break;</span><br><span class="line">            &#125;</span><br><span class="line">            var newchar &#x3D; tmpnewchar + newchar;</span><br><span class="line">        &#125;</span><br><span class="line">        &#x2F;&#x2F;小数点之后进行转化</span><br><span class="line">        if(Num.indexOf(&quot;.&quot;) !&#x3D; -1) &#123;</span><br><span class="line">            if(part[1].length &gt; 2) &#123;</span><br><span class="line">                &#x2F;&#x2F; alert(&quot;小数点之后只能保留两位,系统将自动截断&quot;);</span><br><span class="line">                part[1] &#x3D; part[1].substr(0, 2)</span><br><span class="line">            &#125;</span><br><span class="line">            for(i &#x3D; 0; i &lt; part[1].length; i++) &#123;</span><br><span class="line">                tmpnewchar &#x3D; &quot;&quot;</span><br><span class="line">                perchar &#x3D; part[1].charAt(i)</span><br><span class="line">                switch(perchar) &#123;</span><br><span class="line">                    case &quot;0&quot;:</span><br><span class="line">                        tmpnewchar &#x3D; &quot;零&quot; + tmpnewchar;</span><br><span class="line">                        break;</span><br><span class="line">                    case &quot;1&quot;:</span><br><span class="line">                        tmpnewchar &#x3D; &quot;壹&quot; + tmpnewchar;</span><br><span class="line">                        break;</span><br><span class="line">                    case &quot;2&quot;:</span><br><span class="line">                        tmpnewchar &#x3D; &quot;贰&quot; + tmpnewchar;</span><br><span class="line">                        break;</span><br><span class="line">                    case &quot;3&quot;:</span><br><span class="line">                        tmpnewchar &#x3D; &quot;叁&quot; + tmpnewchar;</span><br><span class="line">                        break;</span><br><span class="line">                    case &quot;4&quot;:</span><br><span class="line">                        tmpnewchar &#x3D; &quot;肆&quot; + tmpnewchar;</span><br><span class="line">                        break;</span><br><span class="line">                    case &quot;5&quot;:</span><br><span class="line">                        tmpnewchar &#x3D; &quot;伍&quot; + tmpnewchar;</span><br><span class="line">                        break;</span><br><span class="line">                    case &quot;6&quot;:</span><br><span class="line">                        tmpnewchar &#x3D; &quot;陆&quot; + tmpnewchar;</span><br><span class="line">                        break;</span><br><span class="line">                    case &quot;7&quot;:</span><br><span class="line">                        tmpnewchar &#x3D; &quot;柒&quot; + tmpnewchar;</span><br><span class="line">                        break;</span><br><span class="line">                    case &quot;8&quot;:</span><br><span class="line">                        tmpnewchar &#x3D; &quot;捌&quot; + tmpnewchar;</span><br><span class="line">                        break;</span><br><span class="line">                    case &quot;9&quot;:</span><br><span class="line">                        tmpnewchar &#x3D; &quot;玖&quot; + tmpnewchar;</span><br><span class="line">                        break;</span><br><span class="line">                &#125;</span><br><span class="line">                if(i &#x3D;&#x3D; 0) tmpnewchar &#x3D; tmpnewchar + &quot;角&quot;;</span><br><span class="line">                if(i &#x3D;&#x3D; 1) tmpnewchar &#x3D; tmpnewchar + &quot;分&quot;;</span><br><span class="line">                newchar &#x3D; newchar + tmpnewchar;</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;</span><br><span class="line">        &#x2F;&#x2F;替换所有无用汉字</span><br><span class="line">        while(newchar.search(&quot;零零&quot;) !&#x3D; -1)</span><br><span class="line">            newchar &#x3D; newchar.replace(&quot;零零&quot;, &quot;零&quot;);</span><br><span class="line">        newchar &#x3D; newchar.replace(&quot;零亿&quot;, &quot;亿&quot;);</span><br><span class="line">        newchar &#x3D; newchar.replace(&quot;亿万&quot;, &quot;亿&quot;);</span><br><span class="line">        newchar &#x3D; newchar.replace(&quot;零万&quot;, &quot;万&quot;);</span><br><span class="line">        newchar &#x3D; newchar.replace(&quot;零元&quot;, &quot;元&quot;);</span><br><span class="line">        newchar &#x3D; newchar.replace(&quot;零角&quot;, &quot;&quot;);</span><br><span class="line">        newchar &#x3D; newchar.replace(&quot;零分&quot;, &quot;&quot;);</span><br><span class="line">        if(newchar.charAt(newchar.length - 1) &#x3D;&#x3D; &quot;元&quot;) &#123;</span><br><span class="line">            newchar &#x3D; newchar + &quot;整&quot;</span><br><span class="line">        &#125;</span><br><span class="line">        return newchar;</span><br><span class="line">    &#125;</span><br></pre></td></tr></table></figure>
+
+      
+    </div>
+
+    
+    
+    
+
+    <footer class="post-footer">
+        <div class="post-eof"></div>
+      
+    </footer>
+  </article>
+</div>
+
+
+
+
+    
+
+
+<div class="post-block">
+  
+  
+
+  <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="">
+    <link itemprop="mainEntityOfPage" href="https://lzhwweb.github.io/nirvana/javascript/%E5%89%8D%E7%AB%AF/JavaScript%E5%B8%B8%E7%94%A8%E5%B7%A5%E5%85%B7%E6%96%B9%E6%B3%95-6--Http/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/nirvana/images/headphoto.jpeg">
+      <meta itemprop="name" content="nirvana">
+      <meta itemprop="description" content="个人学习笔记">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="涅槃快乐是金">
+    </span>
+      <header class="post-header">
+        <h2 class="post-title" itemprop="name headline">
+          <a href="/nirvana/javascript/%E5%89%8D%E7%AB%AF/JavaScript%E5%B8%B8%E7%94%A8%E5%B7%A5%E5%85%B7%E6%96%B9%E6%B3%95-6--Http/" class="post-title-link" itemprop="url">JavaScript常用工具方法6--Http</a>
+        </h2>
+
+        <div class="post-meta-container">
+          <div class="post-meta">
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-calendar"></i>
+      </span>
+      <span class="post-meta-item-text">发表于</span>
+
+      <time title="创建时间：2021-03-11 21:12:40" itemprop="dateCreated datePublished" datetime="2021-03-11T21:12:40+08:00">2021-03-11</time>
+    </span>
+      <span class="post-meta-item">
+        <span class="post-meta-item-icon">
+          <i class="far fa-calendar-check"></i>
+        </span>
+        <span class="post-meta-item-text">更新于</span>
+        <time title="修改时间：2021-03-10 22:09:10" itemprop="dateModified" datetime="2021-03-10T22:09:10+08:00">2021-03-10</time>
+      </span>
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-folder"></i>
+      </span>
+      <span class="post-meta-item-text">分类于</span>
+        <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+          <a href="/nirvana/categories/javascript/" itemprop="url" rel="index"><span itemprop="name">javascript</span></a>
+        </span>
+    </span>
+
+  
+    <span id="/nirvana/javascript/%E5%89%8D%E7%AB%AF/JavaScript%E5%B8%B8%E7%94%A8%E5%B7%A5%E5%85%B7%E6%96%B9%E6%B3%95-6--Http/" class="post-meta-item leancloud_visitors" data-flag-title="JavaScript常用工具方法6--Http" title="阅读次数">
+      <span class="post-meta-item-icon">
+        <i class="far fa-eye"></i>
+      </span>
+      <span class="post-meta-item-text">阅读次数：</span>
+      <span class="leancloud-visitors-count"></span>
+    </span>
+      </div>
+      <div class="post-meta">
+    <span class="post-meta-item" title="本文字数">
+      <span class="post-meta-item-icon">
+        <i class="far fa-file-word"></i>
+      </span>
+      <span class="post-meta-item-text">本文字数：</span>
+      <span>3.4k</span>
+    </span>
+    <span class="post-meta-item" title="阅读时长">
+      <span class="post-meta-item-icon">
+        <i class="far fa-clock"></i>
+      </span>
+      <span class="post-meta-item-text">阅读时长 &asymp;</span>
+      <span>3 分钟</span>
+    </span>
+</div>
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+          <h2 id="6-Http"><a href="#6-Http" class="headerlink" title="6. Http"></a>6. Http</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br><span class="line">63</span><br><span class="line">64</span><br><span class="line">65</span><br><span class="line">66</span><br><span class="line">67</span><br><span class="line">68</span><br><span class="line">69</span><br><span class="line">70</span><br><span class="line">71</span><br><span class="line">72</span><br><span class="line">73</span><br><span class="line">74</span><br><span class="line">75</span><br><span class="line">76</span><br><span class="line">77</span><br><span class="line">78</span><br><span class="line">79</span><br><span class="line">80</span><br><span class="line">81</span><br><span class="line">82</span><br><span class="line">83</span><br><span class="line">84</span><br><span class="line">85</span><br><span class="line">86</span><br><span class="line">87</span><br><span class="line">88</span><br><span class="line">89</span><br><span class="line">90</span><br><span class="line">91</span><br><span class="line">92</span><br><span class="line">93</span><br><span class="line">94</span><br><span class="line">95</span><br><span class="line">96</span><br><span class="line">97</span><br><span class="line">98</span><br><span class="line">99</span><br><span class="line">100</span><br><span class="line">101</span><br><span class="line">102</span><br><span class="line">103</span><br><span class="line">104</span><br><span class="line">105</span><br><span class="line">106</span><br><span class="line">107</span><br><span class="line">108</span><br><span class="line">109</span><br><span class="line">110</span><br><span class="line">111</span><br><span class="line">112</span><br><span class="line">113</span><br></pre></td><td class="code"><pre><span class="line">&#x2F;**</span><br><span class="line"> * @param  &#123;setting&#125;</span><br><span class="line"> *&#x2F;</span><br><span class="line">ajax(setting)&#123;</span><br><span class="line">    &#x2F;&#x2F;设置参数的初始值</span><br><span class="line">    var opts&#x3D;&#123;</span><br><span class="line">        method: (setting.method || &quot;GET&quot;).toUpperCase(), &#x2F;&#x2F;请求方式</span><br><span class="line">        url: setting.url || &quot;&quot;, &#x2F;&#x2F; 请求地址</span><br><span class="line">        async: setting.async || true, &#x2F;&#x2F; 是否异步</span><br><span class="line">        dataType: setting.dataType || &quot;json&quot;, &#x2F;&#x2F; 解析方式</span><br><span class="line">        data: setting.data || &quot;&quot;, &#x2F;&#x2F; 参数</span><br><span class="line">        success: setting.success || function()&#123;&#125;, &#x2F;&#x2F; 请求成功回调</span><br><span class="line">        error: setting.error || function()&#123;&#125; &#x2F;&#x2F; 请求失败回调</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    &#x2F;&#x2F; 参数格式化</span><br><span class="line">    function params_format (obj) &#123;</span><br><span class="line">        var str &#x3D; &#39;&#39;</span><br><span class="line">        for (var i in obj) &#123;</span><br><span class="line">            str +&#x3D; i + &#39;&#x3D;&#39; + obj[i] + &#39;&amp;&#39;</span><br><span class="line">        &#125;</span><br><span class="line">        return str.split(&#39;&#39;).slice(0, -1).join(&#39;&#39;)</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    &#x2F;&#x2F; 创建ajax对象</span><br><span class="line">    var xhr&#x3D;new XMLHttpRequest();</span><br><span class="line"></span><br><span class="line">    &#x2F;&#x2F; 连接服务器open(方法GET&#x2F;POST，请求地址， 异步传输)</span><br><span class="line">    if(opts.method &#x3D;&#x3D; &#39;GET&#39;)&#123;</span><br><span class="line">        xhr.open(opts.method, opts.url + &quot;?&quot; + params_format(opts.data), opts.async);</span><br><span class="line">        xhr.send();</span><br><span class="line">    &#125;else&#123;</span><br><span class="line">        xhr.open(opts.method, opts.url, opts.async);</span><br><span class="line">        xhr.setRequestHeader(&quot;Content-Type&quot;,&quot;application&#x2F;x-www-form-urlencoded&quot;);</span><br><span class="line">        xhr.send(opts.data);</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    &#x2F;*</span><br><span class="line">    ** 每当readyState改变时，就会触发onreadystatechange事件</span><br><span class="line">    ** readyState属性存储有XMLHttpRequest的状态信息</span><br><span class="line">    ** 0 ：请求未初始化</span><br><span class="line">    ** 1 ：服务器连接已建立</span><br><span class="line">    ** 2 ：请求已接受</span><br><span class="line">    ** 3 : 请求处理中</span><br><span class="line">    ** 4 ：请求已完成，且相应就绪</span><br><span class="line">    *&#x2F;</span><br><span class="line">    xhr.onreadystatechange &#x3D; function() &#123;</span><br><span class="line">        if (xhr.readyState &#x3D;&#x3D;&#x3D; 4 &amp;&amp; (xhr.status &#x3D;&#x3D;&#x3D; 200 || xhr.status &#x3D;&#x3D;&#x3D; 304)) &#123;</span><br><span class="line">            switch(opts.dataType)&#123;</span><br><span class="line">                case &quot;json&quot;:</span><br><span class="line">                    var json &#x3D; JSON.parse(xhr.responseText);</span><br><span class="line">                    opts.success(json);</span><br><span class="line">                    break;</span><br><span class="line">                case &quot;xml&quot;:</span><br><span class="line">                    opts.success(xhr.responseXML);</span><br><span class="line">                    break;</span><br><span class="line">                default:</span><br><span class="line">                    opts.success(xhr.responseText);</span><br><span class="line">                    break;</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    xhr.onerror &#x3D; function(err) &#123;</span><br><span class="line">        opts.error(err);</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">&#x2F;**</span><br><span class="line"> * @param  &#123;url&#125;</span><br><span class="line"> * @param  &#123;setting&#125;</span><br><span class="line"> * @return &#123;Promise&#125;</span><br><span class="line"> *&#x2F;</span><br><span class="line">fetch(url, setting) &#123;</span><br><span class="line">    &#x2F;&#x2F;设置参数的初始值</span><br><span class="line">    let opts&#x3D;&#123;</span><br><span class="line">        method: (setting.method || &#39;GET&#39;).toUpperCase(), &#x2F;&#x2F;请求方式</span><br><span class="line">        headers : setting.headers  || &#123;&#125;, &#x2F;&#x2F; 请求头设置</span><br><span class="line">        credentials : setting.credentials  || true, &#x2F;&#x2F; 设置cookie是否一起发送</span><br><span class="line">        body: setting.body || &#123;&#125;,</span><br><span class="line">        mode : setting.mode  || &#39;no-cors&#39;, &#x2F;&#x2F; 可以设置 cors, no-cors, same-origin</span><br><span class="line">        redirect : setting.redirect  || &#39;follow&#39;, &#x2F;&#x2F; follow, error, manual</span><br><span class="line">        cache : setting.cache  || &#39;default&#39; &#x2F;&#x2F; 设置 cache 模式 (default, reload, no-cache)</span><br><span class="line">    &#125;</span><br><span class="line">    let dataType &#x3D; setting.dataType || &quot;json&quot;, &#x2F;&#x2F; 解析方式  </span><br><span class="line">        data &#x3D; setting.data || &quot;&quot; &#x2F;&#x2F; 参数</span><br><span class="line"></span><br><span class="line">    &#x2F;&#x2F; 参数格式化</span><br><span class="line">    function params_format (obj) &#123;</span><br><span class="line">        var str &#x3D; &#39;&#39;</span><br><span class="line">        for (var i in obj) &#123;</span><br><span class="line">            str +&#x3D; &#96;$&#123;i&#125;&#x3D;$&#123;obj[i]&#125;&amp;&#96;</span><br><span class="line">        &#125;</span><br><span class="line">        return str.split(&#39;&#39;).slice(0, -1).join(&#39;&#39;)</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    if (opts.method &#x3D;&#x3D;&#x3D; &#39;GET&#39;) &#123;</span><br><span class="line">        url &#x3D; url + (data?&#96;?$&#123;params_format(data)&#125;&#96;:&#39;&#39;)</span><br><span class="line">    &#125;else&#123;</span><br><span class="line">        setting.body &#x3D; data || &#123;&#125;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    return new Promise( (resolve, reject) &#x3D;&gt; &#123;</span><br><span class="line">        fetch(url, opts).then( async res &#x3D;&gt; &#123;</span><br><span class="line">            let data &#x3D; dataType &#x3D;&#x3D;&#x3D; &#39;text&#39; ? await res.text() :</span><br><span class="line">                dataType &#x3D;&#x3D;&#x3D; &#39;blob&#39; ? await res.blob() : await res.json() </span><br><span class="line">            resolve(data)</span><br><span class="line">        &#125;).catch( e &#x3D;&gt; &#123;</span><br><span class="line">            reject(e)</span><br><span class="line">        &#125;)</span><br><span class="line">    &#125;)</span><br><span class="line"></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 
       
     </div>
@@ -1023,7 +1020,7 @@
   
 
   <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="">
-    <link itemprop="mainEntityOfPage" href="https://lzhwweb.github.io/nirvana/javascript/%E5%89%8D%E7%AB%AF/JavaScript%E9%9D%A2%E8%AF%95%E9%A2%98/">
+    <link itemprop="mainEntityOfPage" href="https://lzhwweb.github.io/nirvana/javascript/%E5%89%8D%E7%AB%AF/JavaScript%E5%B8%B8%E7%94%A8%E5%B7%A5%E5%85%B7%E6%96%B9%E6%B3%95-%EF%BC%887%EF%BC%89-Storage-%E5%82%A8%E5%AD%98%E6%93%8D%E4%BD%9C/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="image" content="/nirvana/images/headphoto.jpeg">
@@ -1036,7 +1033,7 @@
     </span>
       <header class="post-header">
         <h2 class="post-title" itemprop="name headline">
-          <a href="/nirvana/javascript/%E5%89%8D%E7%AB%AF/JavaScript%E9%9D%A2%E8%AF%95%E9%A2%98/" class="post-title-link" itemprop="url">JavaScript面试题</a>
+          <a href="/nirvana/javascript/%E5%89%8D%E7%AB%AF/JavaScript%E5%B8%B8%E7%94%A8%E5%B7%A5%E5%85%B7%E6%96%B9%E6%B3%95-%EF%BC%887%EF%BC%89-Storage-%E5%82%A8%E5%AD%98%E6%93%8D%E4%BD%9C/" class="post-title-link" itemprop="url">JavaScript常用工具方法（7）Storage 储存操作</a>
         </h2>
 
         <div class="post-meta-container">
@@ -1054,7 +1051,7 @@
           <i class="far fa-calendar-check"></i>
         </span>
         <span class="post-meta-item-text">更新于</span>
-        <time title="修改时间：2021-03-10 13:43:55" itemprop="dateModified" datetime="2021-03-10T13:43:55+08:00">2021-03-10</time>
+        <time title="修改时间：2021-03-10 22:08:57" itemprop="dateModified" datetime="2021-03-10T22:08:57+08:00">2021-03-10</time>
       </span>
     <span class="post-meta-item">
       <span class="post-meta-item-icon">
@@ -1067,7 +1064,7 @@
     </span>
 
   
-    <span id="/nirvana/javascript/%E5%89%8D%E7%AB%AF/JavaScript%E9%9D%A2%E8%AF%95%E9%A2%98/" class="post-meta-item leancloud_visitors" data-flag-title="JavaScript面试题" title="阅读次数">
+    <span id="/nirvana/javascript/%E5%89%8D%E7%AB%AF/JavaScript%E5%B8%B8%E7%94%A8%E5%B7%A5%E5%85%B7%E6%96%B9%E6%B3%95-%EF%BC%887%EF%BC%89-Storage-%E5%82%A8%E5%AD%98%E6%93%8D%E4%BD%9C/" class="post-meta-item leancloud_visitors" data-flag-title="JavaScript常用工具方法（7）Storage 储存操作" title="阅读次数">
       <span class="post-meta-item-icon">
         <i class="far fa-eye"></i>
       </span>
@@ -1081,14 +1078,14 @@
         <i class="far fa-file-word"></i>
       </span>
       <span class="post-meta-item-text">本文字数：</span>
-      <span>1.4k</span>
+      <span>2.5k</span>
     </span>
     <span class="post-meta-item" title="阅读时长">
       <span class="post-meta-item-icon">
         <i class="far fa-clock"></i>
       </span>
       <span class="post-meta-item-text">阅读时长 &asymp;</span>
-      <span>1 分钟</span>
+      <span>2 分钟</span>
     </span>
 </div>
 
@@ -1099,33 +1096,7 @@
     
     
     <div class="post-body" itemprop="articleBody">
-          <h2 id="作用域"><a href="#作用域" class="headerlink" title="作用域"></a>作用域</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"> (function()&#123; </span><br><span class="line">        var a &#x3D; b &#x3D;5;</span><br><span class="line">    &#125;)();</span><br><span class="line">console.log(b);</span><br></pre></td></tr></table></figure>
-
-<p><strong>答案：</strong><code>5</code></p>
-<blockquote>
-<p>这个问题考查的要点是两个不同的作用域，’a’被var声明成了一个局部变量，但是’b’实际上没有被定义，所以它是一个全局变量。<br>这个问题还牵扯到另个一个比较重要的问题，就是strict mode，如果你选择了strict mode，上面的代码就会报Uncaught ReferenceError，因为b没有被定义，它可以帮你检查出代码的一些问题：</p>
-</blockquote>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"> (function()&#123; </span><br><span class="line">      &#39;use strict&#39;; </span><br><span class="line">      var a &#x3D; window.b &#x3D;5;</span><br><span class="line">    &#125;)();</span><br><span class="line">console.log(b);</span><br></pre></td></tr></table></figure>
-<h2 id="创建“native”方法"><a href="#创建“native”方法" class="headerlink" title="创建“native”方法"></a>创建“native”方法</h2><p>写一个重复打印字符串对象的方法，输入一个整数，这个整数代表重复打印的字数，比如：</p>
-<p> console.log(‘hello’.repeatify(3));</p>
-<p>这样会打印出hellohellohello。</p>
-<h3 id="答案："><a href="#答案：" class="headerlink" title="答案："></a>答案：</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">String.prototype.repeatify &#x3D;String.prototype.repeatify ||function(times)&#123;</span><br><span class="line">    var str &#x3D;&#39;&#39;;</span><br><span class="line">    for(var i &#x3D;0; i &lt; times; i++)&#123;</span><br><span class="line">    str +&#x3D;this;</span><br><span class="line">    &#125;</span><br><span class="line">    return str;</span><br><span class="line">    &#125;;</span><br></pre></td></tr></table></figure>
-<p>这个问题考查的是开发者对JavaScript继承和prototype属性的了解程度。</p>
-<h2 id="Hoisting"><a href="#Hoisting" class="headerlink" title="Hoisting"></a>Hoisting</h2><p>下面这段代码的输出结果是什么？</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">function test()&#123;</span><br><span class="line">   console.log(a);</span><br><span class="line">   console.log(foo()); var a &#x3D;1; function foo()&#123;</span><br><span class="line">   return2;</span><br><span class="line">   &#125;</span><br><span class="line">   &#125;</span><br><span class="line"></span><br><span class="line">   test();</span><br></pre></td></tr></table></figure>
-<p><strong>答案:</strong><code>undefined和2</code></p>
-<p>上面的代码和下面这段是等效的：</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">function test()&#123; var a; function foo()&#123;</span><br><span class="line">    return2;</span><br><span class="line">    &#125;</span><br><span class="line">    console.log(a);</span><br><span class="line">    console.log(foo());</span><br><span class="line">    a &#x3D;1;</span><br><span class="line">    &#125;</span><br><span class="line">    test();</span><br></pre></td></tr></table></figure>
-<h2 id="在JavaScript中如何执行"><a href="#在JavaScript中如何执行" class="headerlink" title="在JavaScript中如何执行"></a>在JavaScript中如何执行</h2><p>通过下面的代码给出结果，解释一下你的答案：</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line">var obj &#x3D;&#123;</span><br><span class="line">    fullname:&#39;Colin Ihrig&#39;,</span><br><span class="line">    prop:&#123;</span><br><span class="line">          fullname:&#39;Aurelio De Rosa&#39;,</span><br><span class="line">          getFullname:function()&#123;</span><br><span class="line">                  return this.fullname;</span><br><span class="line">           &#125;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;;</span><br><span class="line">console.log(obj.prop.getFullname()); var test &#x3D; obj.prop.getFullname;</span><br><span class="line">console.log(test());</span><br></pre></td></tr></table></figure>
-
-<p><strong>答案：</strong><code>Aurelio De Rosa 和John Doe</code></p>
-<h2 id="call-和-apply"><a href="#call-和-apply" class="headerlink" title="call() 和 apply()"></a>call() 和 apply()</h2><p>解决前面的问题之后让最后一个console.log()输出Aurelio De Rosa.</p>
-<p><strong>答案：</strong></p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">console.log(test.call(obj.prop));</span><br></pre></td></tr></table></figure>
-<blockquote>
-<p>这个问题在于call()还是apply()。 </p>
-</blockquote>
+          <h2 id="7-Storage-储存操作"><a href="#7-Storage-储存操作" class="headerlink" title="7. Storage 储存操作"></a>7. Storage 储存操作</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br><span class="line">63</span><br><span class="line">64</span><br><span class="line">65</span><br><span class="line">66</span><br><span class="line">67</span><br><span class="line">68</span><br><span class="line">69</span><br><span class="line">70</span><br><span class="line">71</span><br><span class="line">72</span><br><span class="line">73</span><br><span class="line">74</span><br><span class="line">75</span><br><span class="line">76</span><br><span class="line">77</span><br><span class="line">78</span><br><span class="line">79</span><br><span class="line">80</span><br><span class="line">81</span><br><span class="line">82</span><br><span class="line">83</span><br><span class="line">84</span><br><span class="line">85</span><br><span class="line">86</span><br><span class="line">87</span><br><span class="line">88</span><br><span class="line">89</span><br><span class="line">90</span><br><span class="line">91</span><br><span class="line">92</span><br><span class="line">93</span><br><span class="line">94</span><br><span class="line">95</span><br><span class="line">96</span><br><span class="line">97</span><br><span class="line">98</span><br><span class="line">99</span><br><span class="line">100</span><br><span class="line">101</span><br><span class="line">102</span><br><span class="line">103</span><br><span class="line">104</span><br></pre></td><td class="code"><pre><span class="line">class StorageFn &#123;</span><br><span class="line">    constructor () &#123;</span><br><span class="line">        this.ls &#x3D; window.localStorage;</span><br><span class="line">        this.ss &#x3D; window.sessionStorage;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    &#x2F;*-----------------cookie---------------------*&#x2F;</span><br><span class="line">    &#x2F;*设置cookie*&#x2F;</span><br><span class="line">    setCookie (name, value, day) &#123;</span><br><span class="line">        var setting &#x3D; arguments[0];</span><br><span class="line">        if (Object.prototype.toString.call(setting).slice(8, -1) &#x3D;&#x3D;&#x3D; &#39;Object&#39;)&#123;</span><br><span class="line">            for (var i in setting) &#123;</span><br><span class="line">                var oDate &#x3D; new Date();</span><br><span class="line">                oDate.setDate(oDate.getDate() + day);</span><br><span class="line">                document.cookie &#x3D; i + &#39;&#x3D;&#39; + setting[i] + &#39;;expires&#x3D;&#39; + oDate;</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;else&#123;</span><br><span class="line">            var oDate &#x3D; new Date();</span><br><span class="line">            oDate.setDate(oDate.getDate() + day);</span><br><span class="line">            document.cookie &#x3D; name + &#39;&#x3D;&#39; + value + &#39;;expires&#x3D;&#39; + oDate;</span><br><span class="line">        &#125;</span><br><span class="line"></span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    &#x2F;*获取cookie*&#x2F;</span><br><span class="line">    getCookie (name) &#123;</span><br><span class="line">        var arr &#x3D; document.cookie.split(&#39;; &#39;);</span><br><span class="line">        for (var i &#x3D; 0; i &lt; arr.length; i++) &#123;</span><br><span class="line">            var arr2 &#x3D; arr[i].split(&#39;&#x3D;&#39;);</span><br><span class="line">            if (arr2[0] &#x3D;&#x3D; name) &#123;</span><br><span class="line">                return arr2[1];</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;</span><br><span class="line">        return &#39;&#39;;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    &#x2F;*删除cookie*&#x2F;</span><br><span class="line">    removeCookie (name) &#123;</span><br><span class="line">        this.setCookie(name, 1, -1);</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    &#x2F;*-----------------localStorage---------------------*&#x2F;</span><br><span class="line">    &#x2F;*设置localStorage*&#x2F;</span><br><span class="line">    setLocal(key, val) &#123;</span><br><span class="line">        var setting &#x3D; arguments[0];</span><br><span class="line">        if (Object.prototype.toString.call(setting).slice(8, -1) &#x3D;&#x3D;&#x3D; &#39;Object&#39;)&#123;</span><br><span class="line">            for(var i in setting)&#123;</span><br><span class="line">                this.ls.setItem(i, JSON.stringify(setting[i]))</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;else&#123;</span><br><span class="line">            this.ls.setItem(key, JSON.stringify(val))</span><br><span class="line">        &#125;</span><br><span class="line"></span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    &#x2F;*获取localStorage*&#x2F;</span><br><span class="line">    getLocal(key) &#123;</span><br><span class="line">        if (key) return JSON.parse(this.ls.getItem(key))</span><br><span class="line">        return null;</span><br><span class="line"></span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    &#x2F;*移除localStorage*&#x2F;</span><br><span class="line">    removeLocal(key) &#123;</span><br><span class="line">        this.ls.removeItem(key)</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    &#x2F;*移除所有localStorage*&#x2F;</span><br><span class="line">    clearLocal() &#123;</span><br><span class="line">        this.ls.clear()</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    &#x2F;*-----------------sessionStorage---------------------*&#x2F;</span><br><span class="line">    &#x2F;*设置sessionStorage*&#x2F;</span><br><span class="line">    setSession(key, val) &#123;</span><br><span class="line">        var setting &#x3D; arguments[0];</span><br><span class="line">        if (Object.prototype.toString.call(setting).slice(8, -1) &#x3D;&#x3D;&#x3D; &#39;Object&#39;)&#123;</span><br><span class="line">            for(var i in setting)&#123;</span><br><span class="line">                this.ss.setItem(i, JSON.stringify(setting[i]))</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;else&#123;</span><br><span class="line">            this.ss.setItem(key, JSON.stringify(val))</span><br><span class="line">        &#125;</span><br><span class="line"></span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    &#x2F;*获取sessionStorage*&#x2F;</span><br><span class="line">    getSession(key) &#123;</span><br><span class="line">        if (key) return JSON.parse(this.ss.getItem(key))</span><br><span class="line">        return null;</span><br><span class="line"></span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    &#x2F;*移除sessionStorage*&#x2F;</span><br><span class="line">    removeSession(key) &#123;</span><br><span class="line">        this.ss.removeItem(key)</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    &#x2F;*移除所有sessionStorage*&#x2F;</span><br><span class="line">    clearSession() &#123;</span><br><span class="line">        this.ss.clear()</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 
       
     </div>
@@ -1152,7 +1123,7 @@
   
 
   <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="">
-    <link itemprop="mainEntityOfPage" href="https://lzhwweb.github.io/nirvana/javascript/%E5%89%8D%E7%AB%AF/Javascript%E8%87%AA%E8%BA%AB%E6%89%A7%E8%A1%8C%E6%95%88%E7%8E%87/">
+    <link itemprop="mainEntityOfPage" href="https://lzhwweb.github.io/nirvana/javascript/%E5%89%8D%E7%AB%AF/JavaScript%E5%B8%B8%E7%94%A8%E5%B7%A5%E5%85%B7%E6%96%B9%E6%B3%95-%EF%BC%888%EF%BC%89Other-%E5%85%B6%E5%AE%83%E6%93%8D%E4%BD%9C/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="image" content="/nirvana/images/headphoto.jpeg">
@@ -1165,7 +1136,7 @@
     </span>
       <header class="post-header">
         <h2 class="post-title" itemprop="name headline">
-          <a href="/nirvana/javascript/%E5%89%8D%E7%AB%AF/Javascript%E8%87%AA%E8%BA%AB%E6%89%A7%E8%A1%8C%E6%95%88%E7%8E%87/" class="post-title-link" itemprop="url">Javascript自身执行效率</a>
+          <a href="/nirvana/javascript/%E5%89%8D%E7%AB%AF/JavaScript%E5%B8%B8%E7%94%A8%E5%B7%A5%E5%85%B7%E6%96%B9%E6%B3%95-%EF%BC%888%EF%BC%89Other-%E5%85%B6%E5%AE%83%E6%93%8D%E4%BD%9C/" class="post-title-link" itemprop="url">JavaScript常用工具方法（8）Other 其它操作</a>
         </h2>
 
         <div class="post-meta-container">
@@ -1183,7 +1154,7 @@
           <i class="far fa-calendar-check"></i>
         </span>
         <span class="post-meta-item-text">更新于</span>
-        <time title="修改时间：2021-03-10 13:43:55" itemprop="dateModified" datetime="2021-03-10T13:43:55+08:00">2021-03-10</time>
+        <time title="修改时间：2021-03-10 22:09:04" itemprop="dateModified" datetime="2021-03-10T22:09:04+08:00">2021-03-10</time>
       </span>
     <span class="post-meta-item">
       <span class="post-meta-item-icon">
@@ -1196,7 +1167,7 @@
     </span>
 
   
-    <span id="/nirvana/javascript/%E5%89%8D%E7%AB%AF/Javascript%E8%87%AA%E8%BA%AB%E6%89%A7%E8%A1%8C%E6%95%88%E7%8E%87/" class="post-meta-item leancloud_visitors" data-flag-title="Javascript自身执行效率" title="阅读次数">
+    <span id="/nirvana/javascript/%E5%89%8D%E7%AB%AF/JavaScript%E5%B8%B8%E7%94%A8%E5%B7%A5%E5%85%B7%E6%96%B9%E6%B3%95-%EF%BC%888%EF%BC%89Other-%E5%85%B6%E5%AE%83%E6%93%8D%E4%BD%9C/" class="post-meta-item leancloud_visitors" data-flag-title="JavaScript常用工具方法（8）Other 其它操作" title="阅读次数">
       <span class="post-meta-item-icon">
         <i class="far fa-eye"></i>
       </span>
@@ -1210,14 +1181,14 @@
         <i class="far fa-file-word"></i>
       </span>
       <span class="post-meta-item-text">本文字数：</span>
-      <span>1.9k</span>
+      <span>3.7k</span>
     </span>
     <span class="post-meta-item" title="阅读时长">
       <span class="post-meta-item-icon">
         <i class="far fa-clock"></i>
       </span>
       <span class="post-meta-item-text">阅读时长 &asymp;</span>
-      <span>2 分钟</span>
+      <span>3 分钟</span>
     </span>
 </div>
 
@@ -1228,17 +1199,7 @@
     
     
     <div class="post-body" itemprop="articleBody">
-          <p>Javascript中的作用域链、闭包、原型继承、eval等特性，在提供各种神奇功能的同时也带来了各种效率问题，用之不慎就会导致执行效率低下。</p>
-<h2 id="1、全局导入"><a href="#1、全局导入" class="headerlink" title="1、全局导入"></a>1、全局导入</h2><p>我们在编码过程中多多少少会使用到一些全局变量（window,document,自定义全局变量等等），了解javascript作用域链的人都知道，在局部作用域中访问全局变量需要一层一层遍历整个作用域链直至顶级作用域，而局部变量的访问效率则会更快更高，因此在局部作用域中高频率使用一些全局对象时可以将其导入到局部作用域中，例如：</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line"> &#x2F;&#x2F;1、作为参数传入模块</span><br><span class="line">  (function(window,$)&#123;</span><br><span class="line">      var xxx &#x3D; window.xxx;</span><br><span class="line">      $(&quot;#xxx1&quot;).xxx();</span><br><span class="line">      $(&quot;#xxx2&quot;).xxx();</span><br><span class="line">  &#125;)(window,jQuery);</span><br><span class="line">  </span><br><span class="line">  &#x2F;&#x2F;2、暂存到局部变量</span><br><span class="line">  function()&#123;</span><br><span class="line">     var doc &#x3D; document;</span><br><span class="line">     var global &#x3D; window.global;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-<h2 id="2、eval以及类eval问题"><a href="#2、eval以及类eval问题" class="headerlink" title="2、eval以及类eval问题"></a>2、eval以及类eval问题</h2><p>我们都知道eval可以将一段字符串当做js代码来执行处理，据说使用eval执行的代码比不使用eval的代码慢100倍以上（具体效率我没有测试，有兴趣同学可以测试一下）</p>
-<p>JavaScript 代码在执行前会进行类似“预编译”的操作：首先会创建一个当前执行环境下的活动对象，并将那些用 var 申明的变量设置为活动对象的属性，但是此时这些变量的赋值都是 undefined，并将那些以 function 定义的函数也添加为活动对象的属性，而且它们的值正是函数的定义。但是，如果你使用了“eval”，则“eval”中的代码（实际上为字符串）无法预先识别其上下文，无法被提前解析和优化，即无法进行预编译的操作。所以，其性能也会大幅度降低</p>
-<p>其实现在大家一般都很少会用eval了，这里我想说的是两个类eval的场景</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">(new Function&#123;&#125;,setTimeout,setInterver)</span><br><span class="line"></span><br><span class="line">setTimtout(&quot;alert(1)&quot;,1000);</span><br><span class="line"></span><br><span class="line">setInterver(&quot;alert(1)&quot;,1000);</span><br><span class="line"></span><br><span class="line">(new Function(&quot;alert(1)&quot;))();</span><br></pre></td></tr></table></figure>
-<p>上述几种类型代码执行效率都会比较低，因此建议直接传入匿名方法、或者方法的引用给setTimeout方法</p>
-<h2 id="3、闭包结束后释放掉不再被引用的变量"><a href="#3、闭包结束后释放掉不再被引用的变量" class="headerlink" title="3、闭包结束后释放掉不再被引用的变量"></a>3、闭包结束后释放掉不再被引用的变量</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line">var f &#x3D; (function()&#123;</span><br><span class="line">    var a &#x3D; &#123;name:&quot;var3&quot;&#125;;</span><br><span class="line">    var b &#x3D; [&quot;var1&quot;,&quot;var2&quot;];</span><br><span class="line">    var c &#x3D; document.getElementByTagName(&quot;li&quot;);</span><br><span class="line">    &#x2F;&#x2F;****其它变量</span><br><span class="line">    &#x2F;&#x2F;***一些运算</span><br><span class="line">    var res &#x3D; function()&#123;</span><br><span class="line">        alert(a.name);</span><br><span class="line">    &#125;</span><br><span class="line">    return res;</span><br><span class="line">&#125;)()</span><br></pre></td></tr></table></figure>
-<p>上述代码中变量f的返回值是由一个立即执行函数构成的闭包中返回的方法res，该变量保留了对于这个闭包中所有变量（a,b,c等）的引用，因此这两个变量会一直驻留在内存空间中,尤其是对于dom元素的引用对内存的消耗会很大，而我们在res中只使用到了a变量的值，因此，在闭包返回前我们可以将其它变量释放</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line">var f &#x3D; (function()&#123;</span><br><span class="line">    var a &#x3D; &#123;name:&quot;var3&quot;&#125;;</span><br><span class="line">    var b &#x3D; [&quot;var1&quot;,&quot;var2&quot;];</span><br><span class="line">    var c &#x3D; document.getElementByTagName(&quot;li&quot;);</span><br><span class="line">    &#x2F;&#x2F;****其它变量</span><br><span class="line">    &#x2F;&#x2F;***一些运算</span><br><span class="line">    &#x2F;&#x2F;闭包返回前释放掉不再使用的变量</span><br><span class="line">    b &#x3D; c &#x3D; null;</span><br><span class="line">    var res &#x3D; function()&#123;</span><br><span class="line">        alert(a.name);</span><br><span class="line">        &#125;</span><br><span class="line">    return res;</span><br><span class="line">&#125;)()</span><br></pre></td></tr></table></figure>
+          <h2 id="8-Other-其它操作"><a href="#8-Other-其它操作" class="headerlink" title="8. Other 其它操作"></a>8. Other 其它操作</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br><span class="line">63</span><br><span class="line">64</span><br><span class="line">65</span><br><span class="line">66</span><br><span class="line">67</span><br><span class="line">68</span><br><span class="line">69</span><br><span class="line">70</span><br><span class="line">71</span><br><span class="line">72</span><br><span class="line">73</span><br><span class="line">74</span><br><span class="line">75</span><br><span class="line">76</span><br><span class="line">77</span><br><span class="line">78</span><br><span class="line">79</span><br><span class="line">80</span><br><span class="line">81</span><br><span class="line">82</span><br><span class="line">83</span><br><span class="line">84</span><br><span class="line">85</span><br><span class="line">86</span><br><span class="line">87</span><br><span class="line">88</span><br><span class="line">89</span><br><span class="line">90</span><br><span class="line">91</span><br><span class="line">92</span><br><span class="line">93</span><br><span class="line">94</span><br><span class="line">95</span><br><span class="line">96</span><br><span class="line">97</span><br><span class="line">98</span><br><span class="line">99</span><br><span class="line">100</span><br><span class="line">101</span><br><span class="line">102</span><br><span class="line">103</span><br><span class="line">104</span><br><span class="line">105</span><br><span class="line">106</span><br><span class="line">107</span><br><span class="line">108</span><br><span class="line">109</span><br><span class="line">110</span><br><span class="line">111</span><br><span class="line">112</span><br><span class="line">113</span><br><span class="line">114</span><br><span class="line">115</span><br><span class="line">116</span><br><span class="line">117</span><br><span class="line">118</span><br><span class="line">119</span><br><span class="line">120</span><br><span class="line">121</span><br><span class="line">122</span><br><span class="line">123</span><br><span class="line">124</span><br><span class="line">125</span><br><span class="line">126</span><br><span class="line">127</span><br><span class="line">128</span><br></pre></td><td class="code"><pre><span class="line">&#x2F;*获取网址参数*&#x2F;</span><br><span class="line">getURL(name)&#123;</span><br><span class="line">    var reg &#x3D; new RegExp(&quot;(^|&amp;)&quot;+ name +&quot;&#x3D;([^&amp;]*)(&amp;|$)&quot;);</span><br><span class="line">    var r &#x3D; decodeURI(window.location.search).substr(1).match(reg);</span><br><span class="line">    if(r!&#x3D;null) return  r[2]; return null;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">&#x2F;*获取全部url参数,并转换成json对象*&#x2F;</span><br><span class="line">getUrlAllParams (url) &#123;</span><br><span class="line">    var url &#x3D; url ? url : window.location.href;</span><br><span class="line">    var _pa &#x3D; url.substring(url.indexOf(&#39;?&#39;) + 1),</span><br><span class="line">        _arrS &#x3D; _pa.split(&#39;&amp;&#39;),</span><br><span class="line">        _rs &#x3D; &#123;&#125;;</span><br><span class="line">    for (var i &#x3D; 0, _len &#x3D; _arrS.length; i &lt; _len; i++) &#123;</span><br><span class="line">        var pos &#x3D; _arrS[i].indexOf(&#39;&#x3D;&#39;);</span><br><span class="line">        if (pos &#x3D;&#x3D; -1) &#123;</span><br><span class="line">            continue;</span><br><span class="line">        &#125;</span><br><span class="line">        var name &#x3D; _arrS[i].substring(0, pos),</span><br><span class="line">            value &#x3D; window.decodeURIComponent(_arrS[i].substring(pos + 1));</span><br><span class="line">        _rs[name] &#x3D; value;</span><br><span class="line">    &#125;</span><br><span class="line">    return _rs;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">&#x2F;*删除url指定参数，返回url*&#x2F;</span><br><span class="line">delParamsUrl(url, name)&#123;</span><br><span class="line">    var baseUrl &#x3D; url.split(&#39;?&#39;)[0] + &#39;?&#39;;</span><br><span class="line">    var query &#x3D; url.split(&#39;?&#39;)[1];</span><br><span class="line">    if (query.indexOf(name)&gt;-1) &#123;</span><br><span class="line">        var obj &#x3D; &#123;&#125;</span><br><span class="line">        var arr &#x3D; query.split(&quot;&amp;&quot;);</span><br><span class="line">        for (var i &#x3D; 0; i &lt; arr.length; i++) &#123;</span><br><span class="line">            arr[i] &#x3D; arr[i].split(&quot;&#x3D;&quot;);</span><br><span class="line">            obj[arr[i][0]] &#x3D; arr[i][1];</span><br><span class="line">        &#125;;</span><br><span class="line">        delete obj[name];</span><br><span class="line">        var url &#x3D; baseUrl + JSON.stringify(obj).replace(&#x2F;[\&quot;\&#123;\&#125;]&#x2F;g,&quot;&quot;).replace(&#x2F;\:&#x2F;g,&quot;&#x3D;&quot;).replace(&#x2F;\,&#x2F;g,&quot;&amp;&quot;);</span><br><span class="line">        return url</span><br><span class="line">    &#125;else&#123;</span><br><span class="line">        return url;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">&#x2F;*获取十六进制随机颜色*&#x2F;</span><br><span class="line">getRandomColor () &#123;</span><br><span class="line">    return &#39;#&#39; + (function(h) &#123;</span><br><span class="line">        return new Array(7 - h.length).join(&quot;0&quot;) + h;</span><br><span class="line">    &#125;)((Math.random() * 0x1000000 &lt;&lt; 0).toString(16));</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">&#x2F;*图片加载*&#x2F;</span><br><span class="line">imgLoadAll(arr,callback)&#123;</span><br><span class="line">    var arrImg &#x3D; []; </span><br><span class="line">    for (var i &#x3D; 0; i &lt; arr.length; i++) &#123;</span><br><span class="line">        var img &#x3D; new Image();</span><br><span class="line">        img.src &#x3D; arr[i];</span><br><span class="line">        img.onload &#x3D; function()&#123;</span><br><span class="line">            arrImg.push(this);</span><br><span class="line">            if (arrImg.length &#x3D;&#x3D; arr.length) &#123;</span><br><span class="line">                callback &amp;&amp; callback();</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">&#x2F;*音频加载*&#x2F;</span><br><span class="line">loadAudio(src, callback) &#123;</span><br><span class="line">    var audio &#x3D; new Audio(src);</span><br><span class="line">    audio.onloadedmetadata &#x3D; callback;</span><br><span class="line">    audio.src &#x3D; src;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">&#x2F;*DOM转字符串*&#x2F;</span><br><span class="line">domToStirng(htmlDOM)&#123;</span><br><span class="line">    var div&#x3D; document.createElement(&quot;div&quot;);</span><br><span class="line">    div.appendChild(htmlDOM);</span><br><span class="line">    return div.innerHTML</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">&#x2F;*字符串转DOM*&#x2F;</span><br><span class="line">stringToDom(htmlString)&#123;</span><br><span class="line">    var div&#x3D; document.createElement(&quot;div&quot;);</span><br><span class="line">    div.innerHTML&#x3D;htmlString;</span><br><span class="line">    return div.children[0];</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">&#x2F;**</span><br><span class="line"> * 光标所在位置插入字符，并设置光标位置</span><br><span class="line"> * </span><br><span class="line"> * @param &#123;dom&#125; 输入框</span><br><span class="line"> * @param &#123;val&#125; 插入的值</span><br><span class="line"> * @param &#123;posLen&#125; 光标位置处在 插入的值的哪个位置</span><br><span class="line"> *&#x2F;</span><br><span class="line">setCursorPosition (dom,val,posLen) &#123;</span><br><span class="line">    var cursorPosition &#x3D; 0;</span><br><span class="line">    if(dom.selectionStart)&#123;</span><br><span class="line">        cursorPosition &#x3D; dom.selectionStart;</span><br><span class="line">    &#125;</span><br><span class="line">    this.insertAtCursor(dom,val);</span><br><span class="line">    dom.focus();</span><br><span class="line">    console.log(posLen)</span><br><span class="line">    dom.setSelectionRange(dom.value.length,cursorPosition + (posLen || val.length));</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">&#x2F;*光标所在位置插入字符*&#x2F;</span><br><span class="line">insertAtCursor(dom, val) &#123;</span><br><span class="line">    if (document.selection)&#123;</span><br><span class="line">        dom.focus();</span><br><span class="line">        sel &#x3D; document.selection.createRange();</span><br><span class="line">        sel.text &#x3D; val;</span><br><span class="line">        sel.select();</span><br><span class="line">    &#125;else if (dom.selectionStart || dom.selectionStart &#x3D;&#x3D; &#39;0&#39;)&#123;</span><br><span class="line">        let startPos &#x3D; dom.selectionStart;</span><br><span class="line">        let endPos &#x3D; dom.selectionEnd;</span><br><span class="line">        let restoreTop &#x3D; dom.scrollTop;</span><br><span class="line">        dom.value &#x3D; dom.value.substring(0, startPos) + val + dom.value.substring(endPos, dom.value.length);</span><br><span class="line">        if (restoreTop &gt; 0)&#123;</span><br><span class="line">            dom.scrollTop &#x3D; restoreTop;</span><br><span class="line">        &#125;</span><br><span class="line">        dom.focus();</span><br><span class="line">        dom.selectionStart &#x3D; startPos + val.length;</span><br><span class="line">        dom.selectionEnd &#x3D; startPos + val.length;</span><br><span class="line">    &#125; else &#123;</span><br><span class="line">        dom.value +&#x3D; val;</span><br><span class="line">        dom.focus();</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 
       
     </div>
@@ -1265,7 +1226,7 @@
   
 
   <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="">
-    <link itemprop="mainEntityOfPage" href="https://lzhwweb.github.io/nirvana/javascript/%E5%89%8D%E7%AB%AF/Js%E6%93%8D%E4%BD%9Cdom%E7%9A%84%E6%95%88%E7%8E%87/">
+    <link itemprop="mainEntityOfPage" href="https://lzhwweb.github.io/nirvana/javascript/%E5%89%8D%E7%AB%AF/JavaScript%E7%9A%84%E5%80%BC%E4%BC%A0%E9%80%92%E5%92%8C%E5%BC%95%E7%94%A8%E4%BC%A0%E9%80%92/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="image" content="/nirvana/images/headphoto.jpeg">
@@ -1278,7 +1239,7 @@
     </span>
       <header class="post-header">
         <h2 class="post-title" itemprop="name headline">
-          <a href="/nirvana/javascript/%E5%89%8D%E7%AB%AF/Js%E6%93%8D%E4%BD%9Cdom%E7%9A%84%E6%95%88%E7%8E%87/" class="post-title-link" itemprop="url">Js操作dom的效率</a>
+          <a href="/nirvana/javascript/%E5%89%8D%E7%AB%AF/JavaScript%E7%9A%84%E5%80%BC%E4%BC%A0%E9%80%92%E5%92%8C%E5%BC%95%E7%94%A8%E4%BC%A0%E9%80%92/" class="post-title-link" itemprop="url">JavaScript的值传递和引用传递</a>
         </h2>
 
         <div class="post-meta-container">
@@ -1309,7 +1270,7 @@
     </span>
 
   
-    <span id="/nirvana/javascript/%E5%89%8D%E7%AB%AF/Js%E6%93%8D%E4%BD%9Cdom%E7%9A%84%E6%95%88%E7%8E%87/" class="post-meta-item leancloud_visitors" data-flag-title="Js操作dom的效率" title="阅读次数">
+    <span id="/nirvana/javascript/%E5%89%8D%E7%AB%AF/JavaScript%E7%9A%84%E5%80%BC%E4%BC%A0%E9%80%92%E5%92%8C%E5%BC%95%E7%94%A8%E4%BC%A0%E9%80%92/" class="post-meta-item leancloud_visitors" data-flag-title="JavaScript的值传递和引用传递" title="阅读次数">
       <span class="post-meta-item-icon">
         <i class="far fa-eye"></i>
       </span>
@@ -1323,14 +1284,14 @@
         <i class="far fa-file-word"></i>
       </span>
       <span class="post-meta-item-text">本文字数：</span>
-      <span>2.7k</span>
+      <span>4k</span>
     </span>
     <span class="post-meta-item" title="阅读时长">
       <span class="post-meta-item-icon">
         <i class="far fa-clock"></i>
       </span>
       <span class="post-meta-item-text">阅读时长 &asymp;</span>
-      <span>2 分钟</span>
+      <span>4 分钟</span>
     </span>
 </div>
 
@@ -1341,54 +1302,147 @@
     
     
     <div class="post-body" itemprop="articleBody">
-          <p>在web开发过程中，前端执行效率的瓶颈往往都是在dom操作上面，dom操作是一件很耗性能的事情，如何才能在dom操作过程中尽量节约性能呢？</p>
-<p><strong>1、减少reflow</strong></p>
-<p><strong>什么是reflow？</strong></p>
-<p>当 DOM 元素的属性发生变化 (如 color) 时, 浏览器会通知 render 重新描绘相应的元素, 此过程称为 repaint。</p>
-<p>如果该次变化涉及元素布局 (如 width), 浏览器则抛弃原有属性, 重新计算并把结果传递给 render 以重新描绘页面元素, 此过程称为 reflow。</p>
-<p><strong>减少reflow的方法</strong></p>
-<ol>
-<li> 先将元素从document中删除，完成修改后再把元素放回原来的位置（当对某元素及其子元素进行大量reflow操作时，1,2两种方法效果才会比较明显）</li>
-<li> 将元素的display设置为”none”，完成修改后再把display修改为原来的值</li>
-<li> 修改多个样式属性时定义class类代替多次修改style属性（for certain同学推荐）</li>
-<li> 大量添加元素到页面时使用documentFragment</li>
-</ol>
-<p>例如</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">for(var i&#x3D;0;i&lt;100:i++)&#123;</span><br><span class="line">    var child &#x3D; docuemnt.createElement(&quot;li&quot;);</span><br><span class="line">    child.innerHtml &#x3D; &quot;child&quot;;</span><br><span class="line">    document.getElementById(&quot;parent&quot;).appendChild(child);</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-
-<p>上述代码会多次操作dom，效率比较低，可以改为下面的形式 创建documentFragment，将所有元素加入到docuemntFragment不会改变dom结构，最后将其添加到页面，只进行了一次reflow</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">var frag &#x3D; document.createDocumentFragment();</span><br><span class="line">for(var i&#x3D;0;i&lt;100:i++)&#123;</span><br><span class="line">        var child &#x3D; docuemnt.createElement(&quot;li&quot;);</span><br><span class="line">        child.innerHtml &#x3D; &quot;child&quot;;</span><br><span class="line">    frag.appendChild(child);</span><br><span class="line">&#125;</span><br><span class="line">document.getElementById(&quot;parent&quot;).appendChild(frag);</span><br></pre></td></tr></table></figure>
-
-<p><strong>2、暂存dom状态信息</strong></p>
-<p>当代码中需要多次访问元素的状态信息，在状态不变的情况下我们可以将其暂存到变量中，这样可以避免多次访问dom带来内存的开销，典型的例子就是：</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line">ar lis &#x3D; document.getElementByTagName(&quot;li&quot;);</span><br><span class="line">for(var i&#x3D;1;i&lt;lis.length;i++)&#123;</span><br><span class="line">    &#x2F;&#x2F;***</span><br><span class="line">&#125;</span><br><span class="line">上述方式会在每一次循环都去访问dom元素，我们可以简单将代码优化如下</span><br><span class="line">var lis &#x3D; document.getElementByTagName(&quot;li&quot;);</span><br><span class="line">for(var i&#x3D;1,j&#x3D;lis.length ;i&lt;j;i++)&#123;</span><br><span class="line">    &#x2F;&#x2F;***</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-
-<p><strong>3、缩小选择器的查找范围</strong></p>
-<p>查找dom元素时尽量避免大面积遍历页面元素，尽量使用精准选择器，或者指定上下文以缩小查找范围，以jquery为例</p>
-<ul>
-<li>  少用模糊匹配的选择器：例如$(“[name*=’_fix’]”)，多用诸如id以及逐步缩小范围的复合选择器$(“li.active”)等</li>
-<li>  指定上下文：例如$(“#parent .class”)，$(“.class”,$el)等</li>
+          <ul>
+<li>  原文: <a target="_blank" rel="noopener" href="https://codeburst.io/explaining-value-vs-reference-in-javascript-647a975e12a0">Explaining Value vs. Reference in Javascript</a></li>
 </ul>
-<p><strong>4、使用事件委托</strong></p>
-<p><strong>使用场景：</strong>一个有大量记录的列表，每条记录都需要绑定点击事件，在鼠标点击后实现某些功能，我们通常的做法是给每条记录都绑定监听事件，这种做法会导致页面会有大量的事件监听器，效率比较低下。</p>
-<p><strong>基本原理</strong>：我们都知道dom规范中事件是会冒泡的，也就是说在不主动阻止事件冒泡的情况下任何一个元素的事件都会按照dom树的结构逐级冒泡至顶端。而event对象中也提供了event.target（IE下是srcElement）指向事件源，因此我们即使在父级元素上监听该事件也可以找到触发该事件的最原始的元素，这就是委托的基本原理。废话不多说，上示例</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">$(&quot;ul li&quot;).bind(&quot;click&quot;,function()&#123;</span><br><span class="line">    alert($(this).attr(&quot;data&quot;));</span><br><span class="line">&#125;)</span><br></pre></td></tr></table></figure>
+<p><strong>为了保证可读性，本文采用意译而非直译。另外，本文版权归原作者所有，翻译仅用于学习。</strong></p>
+<p>JavaScript有5种基本的数据类型，分别是：布尔、null、undefined、String和Number。这些基本类型在赋值的时候是通过值传递的方式。值得注意的是还有另外三种类型: Array、Function和Object，它们通过引用来传递。从底层技术上看，它们三都是对象。</p>
+<h3 id="基本数据类型"><a href="#基本数据类型" class="headerlink" title="基本数据类型"></a>基本数据类型</h3><p>如果一个基本的数据类型绑定到某个变量，我们可以认为该变量包含这个基本数据类型的值。</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">var x &#x3D; 10;</span><br><span class="line">var y &#x3D; &#39;abc&#39;;</span><br><span class="line">var z &#x3D; null;</span><br></pre></td></tr></table></figure>
+<p>当我们使用<code>=</code>将这些变量赋值到另外的变量，实际上是将对应的值拷贝了一份，然后赋值给新的变量。我们把它称作<code>值传递</code>。</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">var x &#x3D; 10;</span><br><span class="line">var y &#x3D; &#39;abc&#39;;</span><br><span class="line"></span><br><span class="line">var a &#x3D; x;</span><br><span class="line">var b &#x3D; y;</span><br><span class="line"></span><br><span class="line">console.log(x, y, a, b) &#x2F;&#x2F; 10, &#39;abc&#39;, 10, &#39;abc&#39;</span><br></pre></td></tr></table></figure>
+<p><code>a</code>和<code>x</code>都包含10，<code>b</code>和<code>y</code>都包含<code>&#39;abc&#39;</code>，并且它们是完全独立的拷贝，互不干涉。如果我们将<code>a</code>的值改变，<code>x</code>不会受到影响。</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">var x &#x3D; 10;</span><br><span class="line">var y &#x3D; &#39;abc&#39;;</span><br><span class="line">var a &#x3D; x;</span><br><span class="line">var b &#x3D; y;</span><br><span class="line">a &#x3D; 5;</span><br><span class="line">b &#x3D; &#39;def&#39;;</span><br><span class="line">console.log(x, y, a, b); &#x2F;&#x2F; 10, &#39;abc&#39;, 5, &#39;def&#39;</span><br></pre></td></tr></table></figure>
+<p>###对象</p>
+<p>如果一个变量绑定到一个非基本数据类型(Array, Function, Object)，那么它只记录了一个内存地址，该地址存放了具体的数据。注意之前提到指向基本数据类型的变量相当于包含了数据，而现在指向非基本数据类型的变量本身是不包含数据的。</p>
+<p>对象在内存中被创建，当我们声明<code>arr = []</code>，我们在内存中创建了一个数组。<code>arr</code>记录的是该内存的地址。</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">var arr &#x3D; []; &#x2F;&#x2F; (a)</span><br><span class="line">arr.push(1); &#x2F;&#x2F; (b)</span><br></pre></td></tr></table></figure>
 
-<p>上述写法其实是给所有的li元素都绑定了click事件来监听鼠标点击每一个元素的事件，这样页面上会有大量的事件监听器。</p>
-<p>根据上面介绍的监听事件的原理我们来改写一下</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">$(&quot;ul&quot;).bind(&quot;click&quot;,function(e)&#123;</span><br><span class="line">    if(e.target.nodeName.toLowerCase() &#x3D;&#x3D;&#x3D;&quot;li&quot;)&#123;</span><br><span class="line">        alert($(e.target).attr(&quot;data&quot;));</span><br><span class="line">    &#125;</span><br><span class="line">&#125;)</span><br></pre></td></tr></table></figure>
+<p>当执行完(a)之后，内存中创建了一个空的数组对象，其内存地址为<code>#001</code>，<code>arr</code>指向该地址。</p>
+<table>
+<thead>
+<tr>
+<th>变量</th>
+<th>地址</th>
+<th>对象</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>arr</td>
+<td>#001</td>
+<td>[]</td>
+</tr>
+</tbody></table>
+<p>当执行完(b)之后，数组对象中多了一个元素，但是数组的地址依然没有变，<code>arr</code>也没有变。</p>
+<table>
+<thead>
+<tr>
+<th>变量</th>
+<th>地址</th>
+<th>对象</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>arr</td>
+<td>#001</td>
+<td>[1]</td>
+</tr>
+</tbody></table>
+<h3 id="引用传递"><a href="#引用传递" class="headerlink" title="引用传递"></a>引用传递</h3><p>对象是通过引用传递，而不是值传递。也就是说，变量赋值只会将地址传递过去。</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">var reference &#x3D; [1];</span><br><span class="line">var refCopy &#x3D; reference;</span><br></pre></td></tr></table></figure>
 
-<p>这样一来，我们就可以只添加一个事件监听器去捕获所有li上触发的事件，并做出相应的操作。</p>
-<p>当然，我们不必每次都做事件源的判断工作，可以将其抽象一下交给工具类来完成。jquery中的delegate()方法就实现了该功能</p>
-<p>语法是这样的$(selector).delegate(childSelector,event,data,function)，例如：</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">$(&quot;div&quot;).delegate(&quot;button&quot;,&quot;click&quot;,function()&#123;</span><br><span class="line">  $(&quot;p&quot;).slideToggle();</span><br><span class="line">&#125;);</span><br></pre></td></tr></table></figure>
+<table>
+<thead>
+<tr>
+<th>变量</th>
+<th>地址</th>
+<th>对象</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>reference</td>
+<td>#001</td>
+<td>[1]</td>
+</tr>
+<tr>
+<td>refCopy</td>
+<td>#001</td>
+<td></td>
+</tr>
+</tbody></table>
+<p><code>reference</code>和<code>refCopy</code>指向同一个数组。 如果我们更新<code>reference</code>，<code>refCopy</code>也会受到影响。</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">reference.push(2);</span><br><span class="line">console.log(reference, refCopy); &#x2F;&#x2F; [1, 2], [1, 2]</span><br></pre></td></tr></table></figure>
+<table>
+<thead>
+<tr>
+<th>变量</th>
+<th>地址</th>
+<th>对象</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>reference</td>
+<td>#001</td>
+<td>[1, 2]</td>
+</tr>
+<tr>
+<td>refCopy</td>
+<td>#001</td>
+<td></td>
+</tr>
+</tbody></table>
+<p>###引用重新赋值</p>
+<p>如果我们将一个已经赋值的变量重新赋值，那么它将包含新的数据或则引用地址。</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">var obj &#x3D; &#123; first: &#39;fundebug.com&#39;&#125;;</span><br><span class="line">obj &#x3D; &#123; second: &#39;fundebug.cn&#39;&#125;;</span><br></pre></td></tr></table></figure>
 
-<p>参数说明（引自w3school）</p>
-<p><img src="https://upload-images.jianshu.io/upload_images/10024246-d8f6aee706ebe272.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" title="Javascript执行效率小结_"></p>
-<p>**Tips:**事件委托还有一个好处就是，即使在事件绑定之后动态添加的元素上触发的事件同样可以监听到哦，这样就不用在每次动态加入元素到页面后都为其绑定事件了</p>
-<p>暂时先总结到这。</p>
-<hr>
-<p>原文来自：<a target="_blank" rel="noopener" href="http://www.cnblogs.com/gewei/archive/2013/03/29/2988180.html">www.cnblogs.com/gewei/archive/2013/03/29/2988180.html</a></p>
+<p><code>obj</code>从指向第一个对象变为指向第二个对象。</p>
+<table>
+<thead>
+<tr>
+<th>变量</th>
+<th>地址</th>
+<th>对象</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>obj</td>
+<td>#001</td>
+<td>{first: ‘fundebug.com’}</td>
+</tr>
+<tr>
+<td></td>
+<td>#002</td>
+<td>{second: ‘fundebug.cn’}</td>
+</tr>
+</tbody></table>
+<p>如果一个对象没有被任何变量指向，就如第一个对象(地址为<code>#001</code>)，JavaScript引擎的垃圾回收机制会将该对象销毁并释放内存。</p>
+<p>###== 和 ===</p>
+<p>对于引用类型的变量，<code>==</code>和<code>===</code>只会判断引用的地址是否相同，而不会判断对象具体里属性以及值是否相同。因此，如果两个变量指向相同的对象，则返回<code>true</code>。</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">var arrRef &#x3D; [&#39;Hi!&#39;];</span><br><span class="line">var arrRef2 &#x3D; arrRef;</span><br><span class="line"></span><br><span class="line">console.log(arrRef &#x3D;&#x3D;&#x3D; arrRef2); &#x2F;&#x2F; true</span><br></pre></td></tr></table></figure>
+<p>如果是不同的对象，即使包含相同的属性和值，也会返回<code>false</code>。</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">var arr1 &#x3D; [&quot;Hi!&quot;];</span><br><span class="line">var arr2 &#x3D; [&quot;Hi!&quot;];</span><br><span class="line"></span><br><span class="line">console.log(arr1 &#x3D;&#x3D;&#x3D; arr2); &#x2F;&#x2F; false</span><br></pre></td></tr></table></figure>
+<p>如果想判断两个不同的对象是否真的相同，一个简单的方法就是将它们转换为字符串然后判断。</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">var arr1str &#x3D; JSON.stringify(arr1);</span><br><span class="line">var arr2str &#x3D; JSON.stringify(arr2);</span><br><span class="line"></span><br><span class="line">console.log(arr1str &#x3D;&#x3D;&#x3D; arr2str); &#x2F;&#x2F; true</span><br></pre></td></tr></table></figure>
+
+<p>另一个方法就是递归地判断每一个属性的值，直到基本类型位置，然后判断是否相同。</p>
+<p>###函数参数</p>
+<p>当我们将基本类型数据传入函数，函数会将这些数据拷贝赋值给函数的参数变量。</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">var hundred &#x3D; 100;</span><br><span class="line">var two &#x3D; 2;</span><br><span class="line">function multiply(x, y) &#123;</span><br><span class="line"> return x * y;</span><br><span class="line">&#125;</span><br><span class="line">var twoHundred &#x3D; multiply(hundred, two);</span><br></pre></td></tr></table></figure>
+
+<p><code>hundred</code>的值拷贝给变量<code>x</code>，<code>two</code>的值拷贝给变量<code>y</code>。</p>
+<h3 id="纯函数"><a href="#纯函数" class="headerlink" title="纯函数"></a>纯函数</h3><p>对于一个函数，给定一个输入，返回一个唯一的输出。除此之外，不会对外部环境产生任何附带影响。我们机会称该函数为纯函数。所有函数内部定义的变量在函数返回之后都被垃圾回收掉。</p>
+<p>但是，如果函数的输入是对象(Array, Function, Object)，那么传入的是一个引用。对该变量的操作将会影响到原本的对象。这样的编程手法将产生附带影响，是的代码的逻辑复杂和可读性变低。</p>
+<p>因此，很多数组函数，比如<code>Array.map</code>和<code>Array.filter</code>是以纯函数的形式实现。虽然它们的参数是一个数组变量，但是通过深度拷贝并赋值给一个新的变量，然后在新的数组上操作，来防止原始数组被更改。</p>
+<p>我们来看一个例子：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line">function changeAgeImpure(person) &#123;</span><br><span class="line"> person.age &#x3D; 25;</span><br><span class="line"> return person;</span><br><span class="line">&#125;</span><br><span class="line">var alex &#x3D; &#123;</span><br><span class="line"> name: &#39;Alex&#39;,</span><br><span class="line"> age: 30</span><br><span class="line">&#125;;</span><br><span class="line">var changedAlex &#x3D; changeAgeImpure(alex);</span><br><span class="line">console.log(alex); &#x2F;&#x2F; &#123; name: &#39;Alex&#39;, age: 25 &#125;</span><br><span class="line">console.log(changedAlex); &#x2F;&#x2F; &#123; name: &#39;Alex&#39;, age: 25 &#125;</span><br></pre></td></tr></table></figure>
+
+<p>在非纯函数<code>changeAgeImpure</code>中，将对象<code>person</code>的<code>age</code>更新并返回。原始的<code>alex</code>对象也被影响，<code>age</code>更新为25。</p>
+<p>让我们来看如何实现一个纯函数：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line">function changeAgePure(person) &#123;</span><br><span class="line"> var newPersonObj &#x3D; JSON.parse(JSON.stringify(person));</span><br><span class="line"> newPersonObj.age &#x3D; 25;</span><br><span class="line"> return newPersonObj;</span><br><span class="line">&#125;</span><br><span class="line">var alex &#x3D; &#123;</span><br><span class="line"> name: &#39;Alex&#39;,</span><br><span class="line"> age: 30</span><br><span class="line">&#125;;</span><br><span class="line">var alexChanged &#x3D; changeAgePure(alex);</span><br><span class="line">console.log(alex); &#x2F;&#x2F; &#123; name: &#39;Alex&#39;, age: 30 &#125;</span><br><span class="line">console.log(alexChanged); &#x2F;&#x2F; &#123; name: &#39;Alex&#39;, age: 25 &#125;</span><br></pre></td></tr></table></figure>
+<p>我们通过<code>JSON.sringify</code>将对象变为一个字符串，然后再通过<code>JSON.parse</code>将字符串变回对象。通过该操作会生成一个新的对象。</p>
+<p>###一道简单的面试题</p>
+<p>值传递和引用传递经常在面试中被问到，来尝试回答一下如下代码如何输出：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br></pre></td><td class="code"><pre><span class="line">function changeAgeAndReference(person) &#123;</span><br><span class="line"> person.age &#x3D; 25;</span><br><span class="line"> person &#x3D; &#123;</span><br><span class="line"> name: &#39;John&#39;,</span><br><span class="line"> age: 50</span><br><span class="line"> &#125;;</span><br><span class="line"></span><br><span class="line"> return person;</span><br><span class="line">&#125;</span><br><span class="line">var personObj1 &#x3D; &#123;</span><br><span class="line"> name: &#39;Alex&#39;,</span><br><span class="line"> age: 30</span><br><span class="line">&#125;;</span><br><span class="line">var personObj2 &#x3D; changeAgeAndReference(personObj1);</span><br><span class="line">console.log(personObj1); &#x2F;&#x2F; -&gt; ?</span><br><span class="line">console.log(personObj2); &#x2F;&#x2F; -&gt; ?</span><br></pre></td></tr></table></figure>
 
       
     </div>
@@ -1408,7 +1462,7 @@
 
 
   <nav class="pagination">
-    <a class="extend prev" rel="prev" href="/nirvana/page/7/"><i class="fa fa-angle-left" aria-label="上一页"></i></a><a class="page-number" href="/nirvana/">1</a><span class="space">&hellip;</span><a class="page-number" href="/nirvana/page/7/">7</a><span class="page-number current">8</span><a class="page-number" href="/nirvana/page/9/">9</a><span class="space">&hellip;</span><a class="page-number" href="/nirvana/page/22/">22</a><a class="extend next" rel="next" href="/nirvana/page/9/"><i class="fa fa-angle-right" aria-label="下一页"></i></a>
+    <a class="extend prev" rel="prev" href="/nirvana/page/7/"><i class="fa fa-angle-left" aria-label="上一页"></i></a><a class="page-number" href="/nirvana/">1</a><span class="space">&hellip;</span><a class="page-number" href="/nirvana/page/7/">7</a><span class="page-number current">8</span><a class="page-number" href="/nirvana/page/9/">9</a><span class="space">&hellip;</span><a class="page-number" href="/nirvana/page/21/">21</a><a class="extend next" rel="next" href="/nirvana/page/9/"><i class="fa fa-angle-right" aria-label="下一页"></i></a>
   </nav>
 
 
@@ -1454,14 +1508,14 @@
       <i class="fa fa-chart-line"></i>
     </span>
       <span>站点总字数：</span>
-    <span title="站点总字数">603k</span>
+    <span title="站点总字数">595k</span>
   </span>
   <span class="post-meta-item">
     <span class="post-meta-item-icon">
       <i class="fa fa-coffee"></i>
     </span>
       <span>站点阅读时长 &asymp;</span>
-    <span title="站点阅读时长">9:08</span>
+    <span title="站点阅读时长">9:01</span>
   </span>
 </div>
   <div class="powered-by">由 <a href="https://hexo.io/" class="theme-link" rel="noopener" target="_blank">Hexo</a> & <a href="https://theme-next.js.org/" class="theme-link" rel="noopener" target="_blank">NexT.Gemini</a> 强力驱动
