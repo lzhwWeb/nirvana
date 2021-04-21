@@ -100,6 +100,7 @@ menu:
   开发工具: /categories/tool
   设计模式(TS): /categories/DesignPattern
   前端: /categories/javascript
+  webpack: /categories/webpack
 
 # Enable / Disable menu icons / item badges.
 menu_settings:
@@ -391,7 +392,7 @@ back2top:
 
 # Reading progress bar
 reading_progress:
-  enable: false
+  enable: true
   # Available values: top | bottom
   position: top
   color: "#37c6c0"
@@ -399,7 +400,7 @@ reading_progress:
 
 # Bookmark Support
 bookmark:
-  enable: false
+  enable: true
   # Customize the color of the bookmark.
   color: "#222"
   # If auto, save the reading progress when closing the page or clicking the bookmark-icon.
@@ -862,6 +863,12 @@ canvas_ribbon:
 # It's recommended to use the same version as in `_vendors.yml` to avoid potential problems.
 # Remember to use the HTTPS protocol of CDN links when you enable HTTPS on your site.
 vendors:
+  # jquery: //cdn.jsdelivr.net/npm/jquery@2/dist/jquery.min.js
+  # velocity: //cdn.jsdelivr.net/npm/velocity-animate@1/velocity.min.js
+  # velocity_ui: //cdn.jsdelivr.net/npm/velocity-animate@1/velocity.ui.min.js
+  # fontawesome: //cdn.jsdelivr.net/npm/font-awesome@4/css/font-awesome.min.css
+  # bookmark: //cdn.jsdelivr.net/gh/theme-next/theme-next-bookmark@1/bookmark.min.js
+  # reading_progress: //cdn.jsdelivr.net/gh/theme-next/theme-next-reading-progress@1/reading_progress.min.js
   # The CDN provider of NexT internal scripts.
   # Available values: local | jsdelivr | unpkg | cdnjs
   # Warning: If you are using the latest master branch of NexT, please set `internal: local`
@@ -907,7 +914,7 @@ vendors:
   mediumzoom:
 
   # Lazyload
-  lazyload:
+  lazyload: true
 
   # Pangu
   pangu:

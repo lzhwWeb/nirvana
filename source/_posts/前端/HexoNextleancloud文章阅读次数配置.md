@@ -1,7 +1,7 @@
 ---
 title: Hexo Next leancloud文章阅读次数配置
-date: 2021-03-20 23:39:18
-category: javascript
+date: 2021-04-21 14:28:48
+category: javascript javascript
 ---
 # 前言
 
@@ -136,3 +136,4 @@ leancloud_counter_security:
     ![](https://upload-images.jianshu.io/upload_images/10024246-7f8593a5f8c45141.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240)
 
 **至此配置完成**
+
