@@ -212,7 +212,7 @@
         </a>
       </div>
       <div class="site-state-item site-state-categories">
-        <span class="site-state-item-count">12</span>
+        <span class="site-state-item-count">13</span>
         <span class="site-state-item-name">分类</span>
       </div>
   </nav>
@@ -248,268 +248,6 @@
 
 
     <div class="main-inner index posts-expand">
-
-    
-
-
-<div class="post-block">
-  
-  
-
-  <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="">
-    <link itemprop="mainEntityOfPage" href="https://lzhwweb.github.io/nirvana/javascript/%E5%89%8D%E7%AB%AF/mini-css-extract-plugin%E7%AE%80%E4%BB%8B/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="image" content="/nirvana/images/headphoto.jpeg">
-      <meta itemprop="name" content="nirvana">
-      <meta itemprop="description" content="个人学习笔记">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="涅槃快乐是金">
-    </span>
-      <header class="post-header">
-        <h2 class="post-title" itemprop="name headline">
-          <a href="/nirvana/javascript/%E5%89%8D%E7%AB%AF/mini-css-extract-plugin%E7%AE%80%E4%BB%8B/" class="post-title-link" itemprop="url">mini-css-extract-plugin简介</a>
-        </h2>
-
-        <div class="post-meta-container">
-          <div class="post-meta">
-    <span class="post-meta-item">
-      <span class="post-meta-item-icon">
-        <i class="far fa-calendar"></i>
-      </span>
-      <span class="post-meta-item-text">发表于</span>
-
-      <time title="创建时间：2021-03-11 21:12:40" itemprop="dateCreated datePublished" datetime="2021-03-11T21:12:40+08:00">2021-03-11</time>
-    </span>
-      <span class="post-meta-item">
-        <span class="post-meta-item-icon">
-          <i class="far fa-calendar-check"></i>
-        </span>
-        <span class="post-meta-item-text">更新于</span>
-        <time title="修改时间：2021-03-10 13:43:55" itemprop="dateModified" datetime="2021-03-10T13:43:55+08:00">2021-03-10</time>
-      </span>
-    <span class="post-meta-item">
-      <span class="post-meta-item-icon">
-        <i class="far fa-folder"></i>
-      </span>
-      <span class="post-meta-item-text">分类于</span>
-        <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-          <a href="/nirvana/categories/javascript/" itemprop="url" rel="index"><span itemprop="name">javascript</span></a>
-        </span>
-    </span>
-
-  
-    <span id="/nirvana/javascript/%E5%89%8D%E7%AB%AF/mini-css-extract-plugin%E7%AE%80%E4%BB%8B/" class="post-meta-item leancloud_visitors" data-flag-title="mini-css-extract-plugin简介" title="阅读次数">
-      <span class="post-meta-item-icon">
-        <i class="far fa-eye"></i>
-      </span>
-      <span class="post-meta-item-text">阅读次数：</span>
-      <span class="leancloud-visitors-count"></span>
-    </span>
-      </div>
-      <div class="post-meta">
-    <span class="post-meta-item" title="本文字数">
-      <span class="post-meta-item-icon">
-        <i class="far fa-file-word"></i>
-      </span>
-      <span class="post-meta-item-text">本文字数：</span>
-      <span>4.7k</span>
-    </span>
-    <span class="post-meta-item" title="阅读时长">
-      <span class="post-meta-item-icon">
-        <i class="far fa-clock"></i>
-      </span>
-      <span class="post-meta-item-text">阅读时长 &asymp;</span>
-      <span>4 分钟</span>
-    </span>
-</div>
-
-        </div>
-      </header>
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-          <p>将css单独打包成一个文件的插件，它为每个包含css的js文件都创建一个css文件。它支持css和sourceMaps的按需加载。</p>
-<p>目前只有在webpack V4版本才支持使用该插件</p>
-<p>和extract-text-webpack-plugin相比：</p>
-<ul>
-<li>异步加载</li>
-<li>无重复编译，性能有所提升</li>
-<li>用法简单</li>
-<li>支持css分割<br>例子：</li>
-</ul>
-<h5 id="支持HMR"><a href="#支持HMR" class="headerlink" title="支持HMR"></a>支持HMR</h5><ul>
-<li>Install *<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">npm install --save-dev mini-css-extract-plugin</span><br></pre></td></tr></table></figure>
-<h5 id="用法"><a href="#用法" class="headerlink" title="用法"></a>用法</h5></li>
-</ul>
-<ul>
-<li>简单的例子<br>webpack.config.js<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br></pre></td><td class="code"><pre><span class="line">const MiniCssExtractPlugin &#x3D; require(&quot;mini-css-extract-plugin&quot;);</span><br><span class="line"></span><br><span class="line">module.exports&#x3D;&#123;</span><br><span class="line">    plugins:[</span><br><span class="line">        new MiniCssExtractPlugin(&#123;</span><br><span class="line">        &#x2F;&#x2F; Options similar to the same options in webpackOptions.output</span><br><span class="line">        &#x2F;&#x2F; both options are optional</span><br><span class="line">        filename: &quot;[name].css&quot;,</span><br><span class="line">        chunkFilename: &quot;[id].css&quot;</span><br><span class="line">        &#125;)</span><br><span class="line">    ],</span><br><span class="line">     module: &#123;</span><br><span class="line">    rules: [</span><br><span class="line">      &#123;</span><br><span class="line">        test: &#x2F;\.css$&#x2F;,</span><br><span class="line">        use: [</span><br><span class="line">          &#123;</span><br><span class="line">            loader: MiniCssExtractPlugin.loader,</span><br><span class="line">            options: &#123;</span><br><span class="line">              &#x2F;&#x2F; you can specify a publicPath here</span><br><span class="line">              &#x2F;&#x2F; by default it use publicPath in webpackOptions.output</span><br><span class="line">              publicPath: &#39;..&#x2F;&#39;</span><br><span class="line">            &#125;</span><br><span class="line">          &#125;,</span><br><span class="line">          &quot;css-loader&quot;</span><br><span class="line">        ]</span><br><span class="line">      &#125;</span><br><span class="line">    ]</span><br><span class="line">  &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></li>
-<li>高级的配置</li>
-</ul>
-<p>这个插件应该只在生产环境构建中使用，并且在loader链中不应该有style-loader，特别是我们在开发模式中使用HMR时。</p>
-<p>下面是一个在开发模式中使用HMR并在生产环境构建的文件中提出出css样式的示例。</p>
-<p>(各个loader的配置根据你的需求进行自定义修改)</p>
-<p>webpack.config.js</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br></pre></td><td class="code"><pre><span class="line">const MiniCssExtractPlugin &#x3D; require(&quot;mini-css-extract-plugin&quot;);</span><br><span class="line">const devMode &#x3D; process.env.NODE_ENV !&#x3D;&#x3D; &#39;production&#39;</span><br><span class="line"></span><br><span class="line">module.exports &#x3D; &#123;</span><br><span class="line">  plugins: [</span><br><span class="line">    new MiniCssExtractPlugin(&#123;</span><br><span class="line">      &#x2F;&#x2F; Options similar to the same options in webpackOptions.output</span><br><span class="line">      &#x2F;&#x2F; both options are optional</span><br><span class="line">      filename: devMode ? &#39;[name].css&#39; : &#39;[name].[hash].css&#39;,</span><br><span class="line">      chunkFilename: devMode ? &#39;[id].css&#39; : &#39;[id].[hash].css&#39;,</span><br><span class="line">    &#125;)</span><br><span class="line">  ],</span><br><span class="line">  module: &#123;</span><br><span class="line">    rules: [</span><br><span class="line">      &#123;</span><br><span class="line">        test: &#x2F;\.(sa|sc|c)ss$&#x2F;,</span><br><span class="line">        use: [</span><br><span class="line">          devMode ? &#39;style-loader&#39; : MiniCssExtractPlugin.loader,</span><br><span class="line">          &#39;css-loader&#39;,</span><br><span class="line">          &#39;postcss-loader&#39;,</span><br><span class="line">          &#39;sass-loader&#39;,</span><br><span class="line">        ],</span><br><span class="line">      &#125;</span><br><span class="line">    ]</span><br><span class="line">  &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-<p>生产环境最小化<br>等到webpack V5时，有可能会将css压缩功能进行集成，但是在webpack V4，我们还需要手动使用optimize-css-assets-webpack-plugin来进行css的压缩。配置wepack的optimization.minimizer选项来覆盖webpack的默认配置。同时也要指定一个js压缩器。</p>
-<p>wepack.config.js</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br></pre></td><td class="code"><pre><span class="line">const UglifyJsPlugin &#x3D; require(&quot;uglifyjs-webpack-plugin&quot;);</span><br><span class="line">const MiniCssExtractPlugin &#x3D; require(&quot;mini-css-extract-plugin&quot;);</span><br><span class="line">const OptimizeCSSAssetsPlugin &#x3D; require(&quot;optimize-css-assets-webpack-plugin&quot;);</span><br><span class="line"></span><br><span class="line">module.exports&#x3D;&#123;</span><br><span class="line">  optimization: &#123;</span><br><span class="line">    minimizer: [</span><br><span class="line">      new UglifyJsPlugin(&#123;</span><br><span class="line">        cache: true,</span><br><span class="line">        parallel: true,</span><br><span class="line">        sourceMap: true &#x2F;&#x2F; set to true if you want JS source maps</span><br><span class="line">      &#125;),</span><br><span class="line">      new OptimizeCSSAssetsPlugin(&#123;&#125;)</span><br><span class="line">    ]</span><br><span class="line">  &#125;,</span><br><span class="line">  plugins: [</span><br><span class="line">    new MiniCssExtractPlugin(&#123;</span><br><span class="line">      filename: &quot;[name].css&quot;,</span><br><span class="line">      chunkFilename: &quot;[id].css&quot;</span><br><span class="line">    &#125;)</span><br><span class="line">  ],</span><br><span class="line">  module: &#123;</span><br><span class="line">    rules: [</span><br><span class="line">      &#123;</span><br><span class="line">        test: &#x2F;\.css$&#x2F;,</span><br><span class="line">        use: [</span><br><span class="line">          MiniCssExtractPlugin.loader,</span><br><span class="line">          &quot;css-loader&quot;</span><br><span class="line">        ]</span><br><span class="line">      &#125;</span><br><span class="line">    ]</span><br><span class="line">  &#125;</span><br><span class="line">&#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-<ul>
-<li>其他功能</li>
-</ul>
-<p>使用预加载或内联CSS<br>运行时代码通过link 或 style标签检测已经添加的css,当在服务端注入css为了在服务端进行渲染时是非常有用的。link标签的href属性用来匹配被加载的css块的URL，data-href属性也可以在link和style标签上使用，当使用内联样式的时候必须使用href.</p>
-<p>提取所有的css到一个文件中<br>类似于 extract-text-webpack-plugin的作用，可以使用optimization.splitChunks.cacheGroups来将css提取到一个文件中</p>
-<p>webpack.config.js</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br></pre></td><td class="code"><pre><span class="line">const MiniCssExtractPlugin &#x3D; require(&quot;mini-css-extract-plugin&quot;);</span><br><span class="line">module.exports &#x3D; &#123;</span><br><span class="line">  optimization: &#123;</span><br><span class="line">    splitChunks: &#123;</span><br><span class="line">      cacheGroups: &#123;</span><br><span class="line">        styles: &#123;</span><br><span class="line">          name: &#39;styles&#39;,</span><br><span class="line">          test: &#x2F;\.css$&#x2F;,</span><br><span class="line">          chunks: &#39;all&#39;,</span><br><span class="line">          enforce: true</span><br><span class="line">        &#125;</span><br><span class="line">      &#125;</span><br><span class="line">    &#125;</span><br><span class="line">  &#125;,</span><br><span class="line">  plugins: [</span><br><span class="line">    new MiniCssExtractPlugin(&#123;</span><br><span class="line">      filename: &quot;[name].css&quot;,</span><br><span class="line">    &#125;)</span><br><span class="line">  ],</span><br><span class="line">  module: &#123;</span><br><span class="line">    rules: [</span><br><span class="line">      &#123;</span><br><span class="line">        test: &#x2F;\.css$&#x2F;,</span><br><span class="line">        use: [</span><br><span class="line">          MiniCssExtractPlugin.loader,</span><br><span class="line">          &quot;css-loader&quot;</span><br><span class="line">        ]</span><br><span class="line">      &#125;</span><br><span class="line">    ]</span><br><span class="line">  &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-<ul>
-<li>根据webpack 的 entry 提取 css</li>
-</ul>
-<p>还可以根据webpack entry提取CSS。如果动态导入路由，但希望根据条目将CSS绑定在一起，那么这一点尤其有用。这也防止了使用ExtractTextPlugin时出现的CSS复制问题。</p>
-<p>webpack.config.js</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br></pre></td><td class="code"><pre><span class="line">const path &#x3D; require(&#39;path&#39;);</span><br><span class="line">const MiniCssExtractPlugin &#x3D; require(&quot;mini-css-extract-plugin&quot;);</span><br><span class="line"></span><br><span class="line">function recursiveIssuer(m) &#123;</span><br><span class="line">  if (m.issuer) &#123;</span><br><span class="line">    return recursiveIssuer(m.issuer);</span><br><span class="line">  &#125; else if (m.name) &#123;</span><br><span class="line">    return m.name;</span><br><span class="line">  &#125; else &#123;</span><br><span class="line">    return false;</span><br><span class="line">  &#125;</span><br><span class="line">&#125;</span><br><span class="line">module.exports &#x3D; &#123;</span><br><span class="line">  entry: &#123;</span><br><span class="line">    foo: path.resolve(__dirname, &#39;src&#x2F;foo&#39;),</span><br><span class="line">    bar: path.resolve(__dirname, &#39;src&#x2F;bar&#39;)</span><br><span class="line">  &#125;,  </span><br><span class="line">  plugins: [</span><br><span class="line">    new MiniCssExtractPlugin(&#123;</span><br><span class="line">      filename: &quot;[name].css&quot;,</span><br><span class="line">    &#125;)</span><br><span class="line">  ],</span><br><span class="line">  module: &#123;</span><br><span class="line">    rules: [</span><br><span class="line">      &#123;</span><br><span class="line">        test: &#x2F;\.css$&#x2F;,</span><br><span class="line">        use: [</span><br><span class="line">          MiniCssExtractPlugin.loader,</span><br><span class="line">          &quot;css-loader&quot;</span><br><span class="line">        ]</span><br><span class="line">      &#125;</span><br><span class="line">    ]</span><br><span class="line">  &#125;,</span><br><span class="line">  optimization:&#123;</span><br><span class="line">    splitChunks:&#123;</span><br><span class="line">      cacheGroups:&#123;</span><br><span class="line">          fooStyles:&#123;</span><br><span class="line">            fooStyles: &#123;</span><br><span class="line">            name: &#39;foo&#39;,</span><br><span class="line">            test: (m,c,entry &#x3D; &#39;foo&#39;) &#x3D;&gt; m.constructor.name &#x3D;&#x3D;&#x3D; &#39;CssModule&#39; &amp;&amp; recursiveIssuer(m) &#x3D;&#x3D;&#x3D; entry,</span><br><span class="line">            chunks: &#39;all&#39;,</span><br><span class="line">            enforce: true</span><br><span class="line">            &#125;</span><br><span class="line">          &#125;</span><br><span class="line">      &#125;</span><br><span class="line">    &#125;  </span><br><span class="line">  &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-
-      
-    </div>
-
-    
-    
-    
-
-    <footer class="post-footer">
-        <div class="post-eof"></div>
-      
-    </footer>
-  </article>
-</div>
-
-
-
-
-    
-
-
-<div class="post-block">
-  
-  
-
-  <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="">
-    <link itemprop="mainEntityOfPage" href="https://lzhwweb.github.io/nirvana/javascript/%E5%89%8D%E7%AB%AF/node-js%E4%B8%AD%E4%BD%BF%E7%94%A8yargs%E6%9D%A5%E5%A4%84%E7%90%86%E5%91%BD%E4%BB%A4%E8%A1%8C%E5%8F%82%E6%95%B0/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="image" content="/nirvana/images/headphoto.jpeg">
-      <meta itemprop="name" content="nirvana">
-      <meta itemprop="description" content="个人学习笔记">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="涅槃快乐是金">
-    </span>
-      <header class="post-header">
-        <h2 class="post-title" itemprop="name headline">
-          <a href="/nirvana/javascript/%E5%89%8D%E7%AB%AF/node-js%E4%B8%AD%E4%BD%BF%E7%94%A8yargs%E6%9D%A5%E5%A4%84%E7%90%86%E5%91%BD%E4%BB%A4%E8%A1%8C%E5%8F%82%E6%95%B0/" class="post-title-link" itemprop="url">node.js中使用yargs来处理命令行参数</a>
-        </h2>
-
-        <div class="post-meta-container">
-          <div class="post-meta">
-    <span class="post-meta-item">
-      <span class="post-meta-item-icon">
-        <i class="far fa-calendar"></i>
-      </span>
-      <span class="post-meta-item-text">发表于</span>
-
-      <time title="创建时间：2021-03-11 21:12:40" itemprop="dateCreated datePublished" datetime="2021-03-11T21:12:40+08:00">2021-03-11</time>
-    </span>
-      <span class="post-meta-item">
-        <span class="post-meta-item-icon">
-          <i class="far fa-calendar-check"></i>
-        </span>
-        <span class="post-meta-item-text">更新于</span>
-        <time title="修改时间：2021-03-10 22:10:17" itemprop="dateModified" datetime="2021-03-10T22:10:17+08:00">2021-03-10</time>
-      </span>
-    <span class="post-meta-item">
-      <span class="post-meta-item-icon">
-        <i class="far fa-folder"></i>
-      </span>
-      <span class="post-meta-item-text">分类于</span>
-        <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-          <a href="/nirvana/categories/javascript/" itemprop="url" rel="index"><span itemprop="name">javascript</span></a>
-        </span>
-    </span>
-
-  
-    <span id="/nirvana/javascript/%E5%89%8D%E7%AB%AF/node-js%E4%B8%AD%E4%BD%BF%E7%94%A8yargs%E6%9D%A5%E5%A4%84%E7%90%86%E5%91%BD%E4%BB%A4%E8%A1%8C%E5%8F%82%E6%95%B0/" class="post-meta-item leancloud_visitors" data-flag-title="node.js中使用yargs来处理命令行参数" title="阅读次数">
-      <span class="post-meta-item-icon">
-        <i class="far fa-eye"></i>
-      </span>
-      <span class="post-meta-item-text">阅读次数：</span>
-      <span class="leancloud-visitors-count"></span>
-    </span>
-      </div>
-      <div class="post-meta">
-    <span class="post-meta-item" title="本文字数">
-      <span class="post-meta-item-icon">
-        <i class="far fa-file-word"></i>
-      </span>
-      <span class="post-meta-item-text">本文字数：</span>
-      <span>1.9k</span>
-    </span>
-    <span class="post-meta-item" title="阅读时长">
-      <span class="post-meta-item-icon">
-        <i class="far fa-clock"></i>
-      </span>
-      <span class="post-meta-item-text">阅读时长 &asymp;</span>
-      <span>2 分钟</span>
-    </span>
-</div>
-
-        </div>
-      </header>
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-          <p>yargs库能够方便的处理命令行参数。</p>
-<p>一、安装 yargs</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">npm install yargs --save</span><br></pre></td></tr></table></figure>
-
-<p>二、读取命令行参数</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">const yargs &#x3D; require(&#39;yargs&#39;);</span><br><span class="line"> </span><br><span class="line">let argv &#x3D; yargs.argv;</span><br><span class="line">console.log(argv);</span><br></pre></td></tr></table></figure>
-<p>argv 对象用来保存命令行参数，传递参数时，参数名以 – 开头，中间使用 = 或 空格，然后接上值 。</p>
-<p>argv 有一个 下划线 属性，该属性用来获取非连词线开头的参数</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">const yargs &#x3D; require(&#39;yargs&#39;);</span><br><span class="line"> </span><br><span class="line">let argv &#x3D; yargs.argv;</span><br><span class="line">console.log(argv._);</span><br></pre></td></tr></table></figure>
-<p>还可以给参数名取一个别名。</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line">const yargs &#x3D; require(&#39;yargs&#39;);</span><br><span class="line"> </span><br><span class="line">let argv &#x3D; yargs</span><br><span class="line">    .alias(&#39;n&#39;, &#39;name&#39;)</span><br><span class="line">    .alias(&#39;s&#39;, &#39;save&#39;)</span><br><span class="line">    .alias(&#39;w&#39;, &#39;width&#39;)</span><br><span class="line">    .argv;</span><br><span class="line"> </span><br><span class="line">console.log(argv);</span><br></pre></td></tr></table></figure>
-<p>.demandOption(key, msg) 是否必须填写<br>.default(key, value, [description]) 设置默认值<br>.describe(key, desc) 命令描述信息</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line">const yargs &#x3D; require(&#39;yargs&#39;);</span><br><span class="line"> </span><br><span class="line">let argv &#x3D; yargs</span><br><span class="line">    .alias(&#39;s&#39;, &#39;src&#39;)</span><br><span class="line">    .alias(&#39;d&#39;, &#39;dst&#39;)</span><br><span class="line">    .demandOption([&#39;s&#39;, &#39;d&#39;], &#39;s 与 d 必须填写&#39;)</span><br><span class="line">    .default(&#39;s&#39;, &#39;a.txt&#39;)</span><br><span class="line">    .default(&#39;d&#39;, &#39;b.txt&#39;)</span><br><span class="line">    .describe(&#39;s&#39;, &#39;源文件&#39;)</span><br><span class="line">    .describe(&#39;d&#39;, &#39;目标文件&#39;)</span><br><span class="line">    .argv;</span><br><span class="line"> </span><br><span class="line">console.log(argv);</span><br></pre></td></tr></table></figure>
-<p>我们可以通过 .option(key, [opt]) 配置所有设置</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br></pre></td><td class="code"><pre><span class="line">const yargs &#x3D; require(&#39;yargs&#39;);</span><br><span class="line"> </span><br><span class="line">let argv &#x3D; yargs</span><br><span class="line">    .option(&#39;s&#39;, &#123;</span><br><span class="line">        alias: &#39;src&#39;,</span><br><span class="line">        demandOption: true,</span><br><span class="line">        default: &#39;a.txt&#39;,</span><br><span class="line">        describe: &#39;源文件&#39;,</span><br><span class="line">        type: &#39;string&#39;</span><br><span class="line">    &#125;)</span><br><span class="line">    .option(&#39;d&#39;, &#123;</span><br><span class="line">        alias: &#39;dst&#39;,</span><br><span class="line">        demandOption: true,</span><br><span class="line">        default: &#39;b.txt&#39;,</span><br><span class="line">        describe: &#39;目标文件&#39;,</span><br><span class="line">        type: &#39;string&#39;</span><br><span class="line">    &#125;)</span><br><span class="line">    .argv;</span><br><span class="line"> </span><br><span class="line">console.log(argv);</span><br></pre></td></tr></table></figure>
-<p>有些时候我们只想知道某些参数有没有设置，是 true 或是 false。<br>通过 .boolean(key) 解析参数为布尔值。</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">const yargs &#x3D; require(&#39;yargs&#39;);</span><br><span class="line"> </span><br><span class="line">let argv &#x3D; yargs</span><br><span class="line">    .alias(&#39;s&#39;, &#39;save&#39;)</span><br><span class="line">    .boolean([&#39;s&#39;])</span><br><span class="line">    .argv;</span><br><span class="line"> </span><br><span class="line">console.log(argv);</span><br></pre></td></tr></table></figure>
-<p>.usage() 用法格式<br>.example(cmd, desc) 提供例子<br>.help() 帮助信息<br>.epilog(str) 在帮助信息尾部显示</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line">const yargs &#x3D; require(&#39;yargs&#39;);</span><br><span class="line"> </span><br><span class="line">let argv &#x3D; yargs</span><br><span class="line">    .alias(&#39;s&#39;, &#39;save&#39;)</span><br><span class="line">    .usage(&#39;Usage: --s &lt;filename&gt;&#39;)</span><br><span class="line">    .example(&#39;--s a.txt&#39;, &#39;设置源文件&#39;)</span><br><span class="line">    .epilog(&#39;copyright&#39;)</span><br><span class="line">    .help(&#39;info&#39;)</span><br><span class="line">    .argv;</span><br><span class="line"> </span><br><span class="line">console.log(argv);</span><br></pre></td></tr></table></figure>
-
-
-      
-    </div>
-
-    
-    
-    
-
-    <footer class="post-footer">
-        <div class="post-eof"></div>
-      
-    </footer>
-  </article>
-</div>
-
-
-
 
     
 
@@ -1462,7 +1200,7 @@
   
 
   <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="">
-    <link itemprop="mainEntityOfPage" href="https://lzhwweb.github.io/nirvana/javascript/%E5%89%8D%E7%AB%AF/prefetch-%E5%92%8C-preload-%E5%8F%8A-webpack-%E7%9A%84%E7%9B%B8%E5%85%B3%E5%A4%84%E7%90%86/">
+    <link itemprop="mainEntityOfPage" href="https://lzhwweb.github.io/nirvana/javascript/%E5%89%8D%E7%AB%AF/react-loadable%E6%87%92%E5%8A%A0%E8%BD%BD/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="image" content="/nirvana/images/headphoto.jpeg">
@@ -1475,7 +1213,7 @@
     </span>
       <header class="post-header">
         <h2 class="post-title" itemprop="name headline">
-          <a href="/nirvana/javascript/%E5%89%8D%E7%AB%AF/prefetch-%E5%92%8C-preload-%E5%8F%8A-webpack-%E7%9A%84%E7%9B%B8%E5%85%B3%E5%A4%84%E7%90%86/" class="post-title-link" itemprop="url">prefetch 和 preload 及 webpack 的相关处理</a>
+          <a href="/nirvana/javascript/%E5%89%8D%E7%AB%AF/react-loadable%E6%87%92%E5%8A%A0%E8%BD%BD/" class="post-title-link" itemprop="url">react-loadable懒加载</a>
         </h2>
 
         <div class="post-meta-container">
@@ -1493,7 +1231,7 @@
           <i class="far fa-calendar-check"></i>
         </span>
         <span class="post-meta-item-text">更新于</span>
-        <time title="修改时间：2021-03-10 22:11:16" itemprop="dateModified" datetime="2021-03-10T22:11:16+08:00">2021-03-10</time>
+        <time title="修改时间：2021-03-10 13:43:55" itemprop="dateModified" datetime="2021-03-10T13:43:55+08:00">2021-03-10</time>
       </span>
     <span class="post-meta-item">
       <span class="post-meta-item-icon">
@@ -1506,7 +1244,7 @@
     </span>
 
   
-    <span id="/nirvana/javascript/%E5%89%8D%E7%AB%AF/prefetch-%E5%92%8C-preload-%E5%8F%8A-webpack-%E7%9A%84%E7%9B%B8%E5%85%B3%E5%A4%84%E7%90%86/" class="post-meta-item leancloud_visitors" data-flag-title="prefetch 和 preload 及 webpack 的相关处理" title="阅读次数">
+    <span id="/nirvana/javascript/%E5%89%8D%E7%AB%AF/react-loadable%E6%87%92%E5%8A%A0%E8%BD%BD/" class="post-meta-item leancloud_visitors" data-flag-title="react-loadable懒加载" title="阅读次数">
       <span class="post-meta-item-icon">
         <i class="far fa-eye"></i>
       </span>
@@ -1520,14 +1258,14 @@
         <i class="far fa-file-word"></i>
       </span>
       <span class="post-meta-item-text">本文字数：</span>
-      <span>4.6k</span>
+      <span>5k</span>
     </span>
     <span class="post-meta-item" title="阅读时长">
       <span class="post-meta-item-icon">
         <i class="far fa-clock"></i>
       </span>
       <span class="post-meta-item-text">阅读时长 &asymp;</span>
-      <span>4 分钟</span>
+      <span>5 分钟</span>
     </span>
 </div>
 
@@ -1538,100 +1276,300 @@
     
     
     <div class="post-body" itemprop="articleBody">
-          <p>使用预取和预加载是网站性能和用户体验提升的一个很好的途径，本文介绍了使用 prefetch 和 prefetch 进行预取和预加载的方法，并使用 webpack 进行实现</p>
-<h2 id="Link-的链接类型"><a href="#Link-的链接类型" class="headerlink" title="Link 的链接类型"></a>Link 的链接类型</h2><p><a target="_blank" rel="noopener" href="https://developer.mozilla.org/zh-CN/docs/Web/HTML/Element/link"><code>&lt;link&gt;</code></a> 标签的 <code>rel</code> 属性可以定义链接类型，<code>prefetch</code> 是其中的一种，与 <code>href</code> 配合使用可以预取或预加载对应资源</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">&lt;link rel&#x3D;&quot;prefetch&quot; herf&#x3D;&quot;URL&quot;&gt;</span><br><span class="line"></span><br></pre></td></tr></table></figure>
-
-<p><code>preload</code> 是另外一种类型，同样用 href 定义资源地址，但其处理预取外，还会对资源进行解析，所以还要增加属性 as，说明资源的类型</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">&lt;link rel&#x3D;&quot;preload&quot; href&#x3D;&quot;URL&quot; as&#x3D;&quot;MIME_TYPE&quot;&gt;</span><br><span class="line"></span><br></pre></td></tr></table></figure>
-
-<h2 id="预取资源"><a href="#预取资源" class="headerlink" title="预取资源"></a>预取资源</h2><p><code>prefetch</code> 表示用户在接下来的浏览中（例如在下一个页面），有可能用到对应资源，提示浏览器要在闲时获取对应资源</p>
-<p>先新建文件夹 prefetch-preload-demo（本文所有代码将在此创建），安装相关依赖，并新建文件夹 static</p>
+          <h4 id="简介"><a href="#简介" class="headerlink" title="简介"></a>简介</h4><p><strong>react-loadable</strong><br>官网最精简的描述：</p>
 <blockquote>
-<p>mkdir prefetch-preload-demo<br>cd prefetch-preload-demo<br>npm init -y<br>npm i -D http-server<br>mkdir static</p>
+<p>A higher order component for loading components with dynamic imports.<br>用于加载带有动态导入的组件的高阶组件。</p>
 </blockquote>
-<p>在 static 中创建 <code>prefetch.html</code>， <code>main.js</code> 和 <code>script.js</code></p>
-<p><code>prefetch.html</code> 定义了一个 <code>rel</code> 为 <code>prefetch</code> 的链接</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line">&lt;html&gt;</span><br><span class="line">&lt;head&gt;</span><br><span class="line">&lt;title&gt;Prefetch&lt;&#x2F;title&gt;</span><br><span class="line">&lt;meta charset&#x3D;&quot;utf-8&quot;&gt;</span><br><span class="line">&lt;meta name&#x3D;&quot;viewport&quot; content&#x3D;&quot;width&#x3D;device-width, initial-scale&#x3D;1, maximum-scale&#x3D;1&quot;&gt;</span><br><span class="line">&lt;link rel&#x3D;&quot;prefetch&quot; href&#x3D;&quot;script.js&quot;&gt;</span><br><span class="line">&lt;&#x2F;head&gt;</span><br><span class="line">&lt;body&gt;</span><br><span class="line">&lt;script src&#x3D;&quot;main.js&quot;&gt;&lt;&#x2F;script&gt;</span><br><span class="line">&lt;&#x2F;body&gt;</span><br><span class="line">&lt;&#x2F;html&gt;</span><br><span class="line"></span><br></pre></td></tr></table></figure>
+<p>React Loadable是一个小型库，它使以组件为中心的代码分割变得非常容易。</p>
+<h4 id="背景"><a href="#背景" class="headerlink" title="背景"></a>背景</h4><p>当你的React应用，你把它和Webpack捆绑在一起，一切都很顺利。但有一天你会注意到你的应用程序包变得如此之大以至于它会减慢速度。<br>是时候开始分解你的应用程序代码了!</p>
+<p>例如以下情景：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br></pre></td><td class="code"><pre><span class="line">class Root extends React.Component &#123;</span><br><span class="line">    render() &#123;</span><br><span class="line">        return (</span><br><span class="line">            &lt;Router&gt;</span><br><span class="line">                &lt;div&gt;</span><br><span class="line">                    &lt;Route exact path&#x3D;&quot;&#x2F;&quot; component&#x3D;&#123;PCIndex&#125;&gt;&lt;&#x2F;Route&gt;</span><br><span class="line">                    &lt;Route path&#x3D;&quot;&#x2F;details&#x2F;:id&quot; component&#x3D;&#123;PCDetails&#125;&gt;&lt;&#x2F;Route&gt;</span><br><span class="line">                &lt;&#x2F;div&gt;</span><br><span class="line">            &lt;&#x2F;Router&gt;</span><br><span class="line">        );</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">ReactDOM.render(</span><br><span class="line">    &lt;Root &#x2F;&gt;,</span><br><span class="line">    document.getElementById(&#39;app&#39;));</span><br></pre></td></tr></table></figure>
 
-<p><code>main.js</code> 创建了一个按钮，并绑定了点击事件</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line">let button &#x3D; document.createElement(&#39;button&#39;);</span><br><span class="line">button.innerHTML &#x3D; &#39;Add Script&#39;;</span><br><span class="line">button.addEventListener(&#39;click&#39;, e &#x3D;&gt; &#123;</span><br><span class="line">  let script &#x3D; document.createElement(&quot;script&quot;);</span><br><span class="line">  script.src &#x3D; &quot;script.js&quot;;</span><br><span class="line">  document.head.appendChild(script);</span><br><span class="line">&#125;);</span><br><span class="line">document.body.appendChild(button);</span><br><span class="line"></span><br></pre></td></tr></table></figure>
+<p><strong>这种写法缺点：</strong><br>在首页直接加载了组件，如果很多的时候，那么你的应用首屏展现的时候就会变得非常慢了。</p>
+<p><strong>react-loadable的作用</strong><br>由于路由只是组件，我们仍然可以在路由级别轻松地进行代码拆分。<br>在你的应用程序中引入新的代码分割点应该是如此简单，以至于你不会再三考虑。这应该是一个改变几行代码和其他一切都应该自动化的问题。<br>Loadable是一个高阶组件(一个创建组件的函数)，它允许您在将任何模块呈现到应用程序之前动态加载它。</p>
+<h4 id="概念"><a href="#概念" class="headerlink" title="概念"></a>概念</h4><p><strong>import()</strong><br>当您在Webpack 2+中使用import()时，它将自动为您分割代码，而不需要额外的配置。<br>这意味着只需切换到import()并使用React Loadable，就可以轻松地试验新的代码分割点。找出最适合你的应用程序的。</p>
+<p><strong>Loading…</strong><br>呈现静态“Loading…”不能与用户进行足够的通信。您还需要考虑错误状态、超时，并使之成为一种良好的体验。</p>
+<p><strong>Loadable</strong><br>用于在呈现模块之前动态加载模块的高阶组件，在模块不可用时呈现加载组件。</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">const LoadableComponent &#x3D; Loadable(&#123;</span><br><span class="line">  loader: () &#x3D;&gt; import(&#39;.&#x2F;Bar&#39;),</span><br><span class="line">  loading: Loading,</span><br><span class="line">  delay: 200,</span><br><span class="line">  timeout: 10000,</span><br><span class="line">&#125;);</span><br></pre></td></tr></table></figure>
 
-<p><code>script.js</code> 只是简单的打印了一下</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">console.log(&#39;script run&#39;);</span><br><span class="line"></span><br></pre></td></tr></table></figure>
+<p><strong>Loadable.Map</strong><br>允许并行加载多个资源的高阶组件。<br>可加载的。地图的选择。加载器接受函数对象，并需要一个选项。渲染方法。</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line">Loadable.Map(&#123;</span><br><span class="line">  loader: &#123;</span><br><span class="line">    Bar: () &#x3D;&gt; import(&#39;.&#x2F;Bar&#39;),</span><br><span class="line">    i18n: () &#x3D;&gt; fetch(&#39;.&#x2F;i18n&#x2F;bar.json&#39;).then(res &#x3D;&gt; res.json()),</span><br><span class="line">  &#125;,</span><br><span class="line">  render(loaded, props) &#123;</span><br><span class="line">    let Bar &#x3D; loaded.Bar.default;</span><br><span class="line">    let i18n &#x3D; loaded.i18n;</span><br><span class="line">    return &lt;Bar &#123;...props&#125; i18n&#x3D;&#123;i18n&#125;&#x2F;&gt;;</span><br><span class="line">  &#125;</span><br><span class="line">&#125;);</span><br></pre></td></tr></table></figure>
 
-<p>运行服务器（也可在 <code>package.json</code> 中增加 <code>server</code> 脚本）</p>
-<blockquote>
-<p>npx http-server</p>
-</blockquote>
-<p>访问 <a target="_blank" rel="noopener" href="http://localhost:8080/">http://localhost:8080</a> 并导航至 <code>static</code> 中，点击 prefetch.html，或者直接访问线上<a target="_blank" rel="noopener" href="https://chanvinxiao.com/demo/html/prefetch.html">页面</a>，初始状态下，查看控制台的网络选项卡下的内容如下（不要勾选 <code>Disable Cache</code>，点击右侧齿轮，勾选 <code>Use large request rows</code>）</p>
-<p><img src="https://upload-images.jianshu.io/upload_images/10024246-866a5d00121799d6.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240"></p>
-<ul>
-<li>  <code>script.js</code> 被 fetch 下来，size 列的两个数字，275 B 表示下载的字节大小，0 B 表示解析的字节大小（即目前并没有解析）</li>
-<li>  控制台是空的，即脚本没有运行</li>
-</ul>
-<p>点击页面上的 <code>Add Script</code>，会在页面增加地址为 <code>script.js</code> 的 <code>&lt;script&gt;</code> 标签，此时网络选项卡会增加以下内容</p>
-<p><img src="https://upload-images.jianshu.io/upload_images/10024246-b41e6c0e3f87d223.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240"></p>
-<ul>
-<li>  下载字节量为 <code>(prefetch cache)</code> ，即直接从预取缓存获取资源，下面的解析后的字节不再为 0</li>
-<li>  控制台打印出脚本中的调试内容，即这时脚本才被解析并运行</li>
-</ul>
-<h2 id="预加载资源"><a href="#预加载资源" class="headerlink" title="预加载资源"></a>预加载资源</h2><p><code>preload</code> 表示用户在当前的浏览中（往往是在当前页面），极有可以可能用到对应资源，提示浏览器要优先获取对应资源</p>
-<p>将 prefetch.html 的 link 标签的 prefetch 改为 <code>preload</code>，并增加资源类型 <code>as</code> 为 <code>script</code>，即得 preload.html</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">&lt;link rel&#x3D;&quot;preload&quot; href&#x3D;&quot;script.js&quot; as&#x3D;&quot;script&quot;&gt;</span><br><span class="line"></span><br></pre></td></tr></table></figure>
+<h4 id="简单使用"><a href="#简单使用" class="headerlink" title="简单使用"></a>简单使用</h4><p>安装</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">npm i react-loadable</span><br></pre></td></tr></table></figure>
 
-<p>访问本地服务器对应的 <code>prefetch.html</code>，或者直接访问线上<a target="_blank" rel="noopener" href="https://chanvinxiao.com/demo/html/preload.html">页面</a>，初始状态下，查看控制台的网络选项卡下的内容如下</p>
-<p><img src="https://upload-images.jianshu.io/upload_images/10024246-4a5afe30da8888f1.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240"></p>
-<ul>
-<li>  <code>script.js</code> 被优先下载， size 列的解压字节不再为 0，即 <code>preload</code> 除了把脚本下载了下来，还进行了解析</li>
-<li>  控制台目前仍为空，即脚本虽然被解析，但并没有运行</li>
-</ul>
-<p>点击 <code>Add Script</code>，网络选项卡并没有增加任何记录，但是控制台输出了脚本的打印内容</p>
-<ul>
-<li>  因为脚本已经解析完成，所以连从缓存获取都不需要了，直接运行即可</li>
-<li>  如果没有在 3 秒内点击 <code>Add Script</code>，控制台会进行警告，因为没有及时使用应该优先加载的资源</li>
-</ul>
-<blockquote>
-<p>The resource <a target="_blank" rel="noopener" href="https://chanvinxiao.com/demo/html/script.js">https://chanvinxiao.com/demo/html/script.js</a> was preloaded using link preload but not used within a few seconds from the window’s load event. Please make sure it has an appropriate <code>as</code> value and it is preloaded intentionally.</p>
-</blockquote>
-<h2 id="webpack-的相关处理"><a href="#webpack-的相关处理" class="headerlink" title="webpack 的相关处理"></a>webpack 的相关处理</h2><p>运行以下命令安装相关依赖，并新建文件夹 src</p>
-<blockquote>
-<p>npm i -D webpack webpack-cli html-webpack-plugin <a href="mailto:&#x70;&#114;&#x65;&#x6c;&#x6f;&#97;&#x64;&#x2d;&#119;&#x65;&#98;&#x70;&#x61;&#x63;&#107;&#45;&#x70;&#108;&#117;&#103;&#105;&#110;&#x40;&#51;&#x2e;&#48;&#x2e;&#x30;&#x2d;&#98;&#x65;&#116;&#97;&#x2e;&#x34;">&#x70;&#114;&#x65;&#x6c;&#x6f;&#97;&#x64;&#x2d;&#119;&#x65;&#98;&#x70;&#x61;&#x63;&#107;&#45;&#x70;&#108;&#117;&#103;&#105;&#110;&#x40;&#51;&#x2e;&#48;&#x2e;&#x30;&#x2d;&#98;&#x65;&#116;&#97;&#x2e;&#x34;</a><br>mkdir src</p>
-</blockquote>
-<ul>
-<li>  PreloadWebpackPlugin 的当前版本 2.x 与 webpack 当前版本 4.x 不兼容，所以需要指定版本号为最新的 3.x beta</li>
-</ul>
-<p>将 <code>main.js</code> 与 <code>script.js</code> 复制到 src 中，并将 <code>main.js</code> 的点击事件处理更新为</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">button.addEventListener(&#39;click&#39;, e &#x3D;&gt; &#123;</span><br><span class="line">  import(&#x2F;* webpackChunkName: &quot;script&quot; *&#x2F; &#39;.&#x2F;script.js&#39;);</span><br><span class="line">&#125;);</span><br><span class="line"></span><br></pre></td></tr></table></figure>
+<p><strong>懒加载配置/router/index.js</strong></p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br><span class="line">63</span><br><span class="line">64</span><br><span class="line">65</span><br><span class="line">66</span><br><span class="line">67</span><br><span class="line">68</span><br><span class="line">69</span><br><span class="line">70</span><br><span class="line">71</span><br><span class="line">72</span><br><span class="line">73</span><br><span class="line">74</span><br><span class="line">75</span><br><span class="line">76</span><br><span class="line">77</span><br><span class="line">78</span><br><span class="line">79</span><br><span class="line">80</span><br></pre></td><td class="code"><pre><span class="line">import React from &#39;react&#39;</span><br><span class="line">import Loadable from &quot;react-loadable&quot;</span><br><span class="line"></span><br><span class="line">let config &#x3D; [</span><br><span class="line">    &#123;</span><br><span class="line">        name: &#39;&#x2F;&#39;,</span><br><span class="line">        path: &#39;&#x2F;&#39;,</span><br><span class="line">        exact: true,</span><br><span class="line">        component: Loadable(&#123;</span><br><span class="line">            loader: () &#x3D;&gt; import(&#39;..&#x2F;components&#x2F;pc&#x2F;pc_blog_content&#39;),</span><br><span class="line">            loading: () &#x3D;&gt; &lt;div &#x2F;&gt;</span><br><span class="line">        &#125;)</span><br><span class="line">    &#125;,</span><br><span class="line">    &#123;</span><br><span class="line">        name: &#39;home&#39;,</span><br><span class="line">        path: &#39;&#x2F;home&#39;,</span><br><span class="line">        exact: true,</span><br><span class="line">        component: Loadable(&#123;</span><br><span class="line">            loader: () &#x3D;&gt; import(&#39;..&#x2F;components&#x2F;&#x2F;pc&#x2F;pc_blog_content&#39;),</span><br><span class="line">            loading: () &#x3D;&gt; &lt;div &#x2F;&gt;</span><br><span class="line">        &#125;)</span><br><span class="line">    &#125;,</span><br><span class="line">    &#123;</span><br><span class="line">        name: &#39;detail&#39;,</span><br><span class="line">        path: &#39;&#x2F;detail&#x2F;:id&#39;,</span><br><span class="line">        exact: false,</span><br><span class="line">        component: Loadable(&#123;</span><br><span class="line">            loader: () &#x3D;&gt; import(&#39;..&#x2F;components&#x2F;pc&#x2F;pc_article_detail&#39;),</span><br><span class="line">            loading: () &#x3D;&gt; &lt;div &#x2F;&gt;</span><br><span class="line">        &#125;)</span><br><span class="line">    &#125;,</span><br><span class="line">    &#123;</span><br><span class="line">        name: &#39;timeline&#39;,</span><br><span class="line">        path: &#39;&#x2F;timeline&#39;,</span><br><span class="line">        exact: true,</span><br><span class="line">        component: Loadable(&#123;</span><br><span class="line">            loader: () &#x3D;&gt; import(&#39;..&#x2F;components&#x2F;pc&#x2F;pc_timeline_index&#39;),</span><br><span class="line">            loading: () &#x3D;&gt; &lt;div &#x2F;&gt;</span><br><span class="line">        &#125;)</span><br><span class="line">    &#125;,</span><br><span class="line">    &#123;</span><br><span class="line">        name: &#39;album&#39;,</span><br><span class="line">        path: &#39;&#x2F;album&#39;,</span><br><span class="line">        exact: true,</span><br><span class="line">        component: Loadable(&#123;</span><br><span class="line">            loader: () &#x3D;&gt; import(&#39;..&#x2F;components&#x2F;pc&#x2F;pc_album_index&#39;),</span><br><span class="line">            loading: () &#x3D;&gt; &lt;div &#x2F;&gt;</span><br><span class="line">        &#125;)</span><br><span class="line">    &#125;,</span><br><span class="line">    &#123;</span><br><span class="line">        name: &#39;message&#39;,</span><br><span class="line">        path: &#39;&#x2F;message&#39;,</span><br><span class="line">        exact: true,</span><br><span class="line">        component: Loadable(&#123;</span><br><span class="line">            loader: () &#x3D;&gt; import(&#39;..&#x2F;components&#x2F;pc&#x2F;pc_message_index&#39;),</span><br><span class="line">            loading: () &#x3D;&gt; &lt;div &#x2F;&gt;</span><br><span class="line">        &#125;)</span><br><span class="line">    &#125;,</span><br><span class="line">    &#123;</span><br><span class="line">        name: &#39;about&#39;,</span><br><span class="line">        path: &#39;&#x2F;about&#39;,</span><br><span class="line">        exact: true,</span><br><span class="line">        component: Loadable(&#123;</span><br><span class="line">            loader: () &#x3D;&gt; import(&#39;..&#x2F;components&#x2F;pc&#x2F;pc_aboutme_index&#39;),</span><br><span class="line">            loading: () &#x3D;&gt; &lt;div &#x2F;&gt;</span><br><span class="line">        &#125;)</span><br><span class="line">    &#125;,</span><br><span class="line">    &#123;</span><br><span class="line">        name: &#39;albumlList&#39;,</span><br><span class="line">        path: &#39;&#x2F;albumList&#x2F;:id&#39;,</span><br><span class="line">        exact: false,</span><br><span class="line">        component: Loadable(&#123;</span><br><span class="line">            loader: () &#x3D;&gt; import(&#39;..&#x2F;components&#x2F;pc&#x2F;pc_album_list&#39;),</span><br><span class="line">            loading: () &#x3D;&gt; &lt;div &#x2F;&gt;</span><br><span class="line">        &#125;)</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">]</span><br><span class="line"></span><br><span class="line">export default config</span><br></pre></td></tr></table></figure>
 
-<ul>
-<li>  <a target="_blank" rel="noopener" href="https://webpack.js.org/api/module-methods/#import-1">import()</a> 为动态加载脚本，webpack 会生成类似以上动态创建 <code>script</code> 标签的代码</li>
-<li>  import 里的注释为特殊含义的魔法注释，如果不设置 webpackChunkName，加载的脚本将被按数字次序命名</li>
-</ul>
-<p>增加 <code>webpack.config.js</code> 如下</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line">const HtmlWebpackPlugin &#x3D; require(&#39;html-webpack-plugin&#39;);</span><br><span class="line">const PreloadWebpackPlugin &#x3D; require(&#39;preload-webpack-plugin&#39;);</span><br><span class="line"></span><br><span class="line">module.exports &#x3D; &#123;</span><br><span class="line">  entry: &#39;.&#x2F;src&#x2F;main.js&#39;,</span><br><span class="line">  plugins: [</span><br><span class="line">    new HtmlWebpackPlugin(&#123;</span><br><span class="line">      filename: &#39;preload.html&#39;</span><br><span class="line">    &#125;),</span><br><span class="line">    new PreloadWebpackPlugin()</span><br><span class="line">  ]</span><br><span class="line">&#125;</span><br><span class="line"></span><br></pre></td></tr></table></figure>
+<p>结合react-router4<br>官网参考<br><a target="_blank" rel="noopener" href="https://reacttraining.com/react-router/web/guides/code-splitting">https://reacttraining.com/rea…</a></p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br></pre></td><td class="code"><pre><span class="line">import React from &#39;react&#39;;</span><br><span class="line">import ReactDOM from &#39;react-dom&#39;;</span><br><span class="line">import PCBlogIndex from &#39;.&#x2F;components&#x2F;pc&#x2F;pc_blog_index&#39;</span><br><span class="line">&#x2F;&#x2F;这句就是引入react-loadable</span><br><span class="line">import routers from &#39;.&#x2F;router&#x2F;index&#39;;</span><br><span class="line">import &#123; BrowserRouter as Router, Route, Switch &#125; from &quot;react-router-dom&quot;;</span><br><span class="line">import &#123; Provider &#125; from &#39;react-redux&#39;</span><br><span class="line">import configureStore from &#39;.&#x2F;store&#x2F;configureStore&#39;</span><br><span class="line">const store &#x3D; configureStore();</span><br><span class="line"></span><br><span class="line">class Root extends React.Component &#123;</span><br><span class="line"></span><br><span class="line">    render() &#123;</span><br><span class="line">        return (</span><br><span class="line">            &lt;Provider store&#x3D;&#123;store&#125;&gt;</span><br><span class="line">            &lt;Router&gt;</span><br><span class="line">                &lt;Switch&gt;</span><br><span class="line">                    &lt;PCBlogIndex&gt;</span><br><span class="line">                             &#123;&#x2F;* 导入相关路由配置 *&#x2F;&#125;</span><br><span class="line">                        &#123;routers.map((r, key) &#x3D;&gt; &lt;Route component&#x3D;&#123;r.component&#125; exact&#x3D;&#123;!!r.exact&#125; key&#x3D;&#123;key&#125; path&#x3D;&#123;r.path&#125; &#x2F;&gt;)&#125;</span><br><span class="line">                    &lt;&#x2F;PCBlogIndex&gt;</span><br><span class="line">                &lt;&#x2F;Switch&gt;</span><br><span class="line">            &lt;&#x2F;Router&gt;</span><br><span class="line">            &lt;&#x2F;Provider&gt;</span><br><span class="line">        );</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">ReactDOM.render(</span><br><span class="line">    &lt;Root &#x2F;&gt;,</span><br><span class="line">    document.getElementById(&#39;app&#39;));</span><br></pre></td></tr></table></figure>
 
-<ul>
-<li>  <a target="_blank" rel="noopener" href="https://webpack.js.org/plugins/html-webpack-plugin/">HtmlWebpackPlugin</a> 将自动生成相应的 html 文件，默认为 index.html，这里通过设置 <code>filename</code> 选项更改</li>
-<li>  <a target="_blank" rel="noopener" href="https://github.com/GoogleChrome/preload-webpack-plugin">PreloadWebpackPlugin</a> 为 HtmlWebpackPlugin 的插件，默认为其动态加载资源增加链接类型为 <code>preload</code> 的 <code>link</code> 标签，其 <code>as</code> 的值可根据后缀自动判断</li>
-</ul>
-<p>PreloadWebpackPlugin 也支持 prefetch，需要增加 <code>rel</code> 选项为 <code>prefetch</code></p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">new HtmlWebpackPlugin(&#123;</span><br><span class="line">  filename: &#39;prefetch.html&#39;</span><br><span class="line">&#125;),</span><br><span class="line">new PreloadWebpackPlugin(&#123;</span><br><span class="line">  rel: &#39;prefetch&#39;</span><br><span class="line">&#125;)</span><br><span class="line"></span><br></pre></td></tr></table></figure>
+<h4 id="总结"><a href="#总结" class="headerlink" title="总结"></a>总结</h4><p>关于react-loadable服务器渲染等更加高级操作可以参考官网<br><a target="_blank" rel="noopener" href="https://github.com/jamiebuilds/react-loadable">https://github.com/jamiebuild…</a><br>至于普通的操作按上面两步操作，结合官网的相关配置API，估计你能够实现懒加载的功能了。</p>
 
-<p>不过要同时生成 preload.html 和 prefetch.html，需要在对应的 PreloadWebpackPlugin 中设置 <code>excludeHtmlNames</code> 排除对方，否则会同时产生 preload 和 prefetch 的 link 标签</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><span class="line">new HtmlWebpackPlugin(&#123;</span><br><span class="line">  filename: &#39;preload.html&#39;</span><br><span class="line">&#125;),</span><br><span class="line">new HtmlWebpackPlugin(&#123;</span><br><span class="line">  filename: &#39;prefetch.html&#39;</span><br><span class="line">&#125;),</span><br><span class="line">new PreloadWebpackPlugin(&#123;</span><br><span class="line">  excludeHtmlNames: [&#39;prefetch.html&#39;]</span><br><span class="line">&#125;),</span><br><span class="line">new PreloadWebpackPlugin(&#123;</span><br><span class="line">  rel: &#39;prefetch&#39;,</span><br><span class="line">  excludeHtmlNames: [&#39;preload.html&#39;]</span><br><span class="line">&#125;)</span><br><span class="line"></span><br></pre></td></tr></table></figure>
+      
+    </div>
 
-<p>构建文件（也可在 <code>package.json</code> 中增加 <code>build</code> 脚本）</p>
-<blockquote>
-<p>npx webpack</p>
-</blockquote>
-<p><code>dist</code> 文件夹中将生成 prefetch.html 和 preload.html，访问本地服务器对应地址，即可得到与以上静态页面同样的效果</p>
-<h2 id="总结"><a href="#总结" class="headerlink" title="总结"></a>总结</h2><p>此文使用静态页面和 webpack 打包两种方式演示了预取和预加载的实现 <a target="_blank" rel="noopener" href="https://github.com/vinzid/prefetch-preload-demo"></a>，主要技术点如下：</p>
-<ul>
-<li>  ELEMENT.appendChild 动态创建脚本</li>
-<li>  import() 动态加载脚本并设置魔法注释</li>
-<li>  html-webpack-plugin 及其插件的配置</li>
-</ul>
+    
+    
+    
+
+    <footer class="post-footer">
+        <div class="post-eof"></div>
+      
+    </footer>
+  </article>
+</div>
+
+
+
+
+    
+
+
+<div class="post-block">
+  
+  
+
+  <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="">
+    <link itemprop="mainEntityOfPage" href="https://lzhwweb.github.io/nirvana/javascript/%E5%89%8D%E7%AB%AF/require%E5%92%8Cimport/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/nirvana/images/headphoto.jpeg">
+      <meta itemprop="name" content="nirvana">
+      <meta itemprop="description" content="个人学习笔记">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="涅槃快乐是金">
+    </span>
+      <header class="post-header">
+        <h2 class="post-title" itemprop="name headline">
+          <a href="/nirvana/javascript/%E5%89%8D%E7%AB%AF/require%E5%92%8Cimport/" class="post-title-link" itemprop="url">require和import</a>
+        </h2>
+
+        <div class="post-meta-container">
+          <div class="post-meta">
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-calendar"></i>
+      </span>
+      <span class="post-meta-item-text">发表于</span>
+
+      <time title="创建时间：2021-03-11 21:12:40" itemprop="dateCreated datePublished" datetime="2021-03-11T21:12:40+08:00">2021-03-11</time>
+    </span>
+      <span class="post-meta-item">
+        <span class="post-meta-item-icon">
+          <i class="far fa-calendar-check"></i>
+        </span>
+        <span class="post-meta-item-text">更新于</span>
+        <time title="修改时间：2021-03-10 13:43:55" itemprop="dateModified" datetime="2021-03-10T13:43:55+08:00">2021-03-10</time>
+      </span>
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-folder"></i>
+      </span>
+      <span class="post-meta-item-text">分类于</span>
+        <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+          <a href="/nirvana/categories/javascript/" itemprop="url" rel="index"><span itemprop="name">javascript</span></a>
+        </span>
+    </span>
+
+  
+    <span id="/nirvana/javascript/%E5%89%8D%E7%AB%AF/require%E5%92%8Cimport/" class="post-meta-item leancloud_visitors" data-flag-title="require和import" title="阅读次数">
+      <span class="post-meta-item-icon">
+        <i class="far fa-eye"></i>
+      </span>
+      <span class="post-meta-item-text">阅读次数：</span>
+      <span class="leancloud-visitors-count"></span>
+    </span>
+      </div>
+      <div class="post-meta">
+    <span class="post-meta-item" title="本文字数">
+      <span class="post-meta-item-icon">
+        <i class="far fa-file-word"></i>
+      </span>
+      <span class="post-meta-item-text">本文字数：</span>
+      <span>6k</span>
+    </span>
+    <span class="post-meta-item" title="阅读时长">
+      <span class="post-meta-item-icon">
+        <i class="far fa-clock"></i>
+      </span>
+      <span class="post-meta-item-text">阅读时长 &asymp;</span>
+      <span>5 分钟</span>
+    </span>
+</div>
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+          <hr>
+<p>ES6标准发布后，module成为标准，标准的使用是以export指令导出接口，以import引入模块，但是在我们一贯的node模块中，我们采用的是CommonJS规范，使用require引入模块，使用module.exports导出接口。</p>
+<p>#####<a target="_blank" rel="noopener" href="http://wiki.commonjs.org/wiki/Modules/1.1">CommonJS</a><br>CommonJS定义的模块分为:{模块引用(require)} {模块定义(exports)} {模块标识(module)}<br>require()用来引入外部模块；exports对象用于导出当前模块的方法或变量，唯一的导出口；module对象就代表模块本身。<br>require统治了ES6之前的所有模块化编程，即使现在，在ES6 module被完全实现之前，还是这样。</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line">&#x2F;&#x2F; a.js</span><br><span class="line"></span><br><span class="line">&#x2F;&#x2F; -------- node -----------</span><br><span class="line">module.exports &#x3D; &#123;</span><br><span class="line">  a : function() &#123;&#125;,</span><br><span class="line">  b : &#39;xxx&#39;</span><br><span class="line">&#125;;</span><br><span class="line">&#x2F;&#x2F; b.js</span><br><span class="line"></span><br><span class="line">&#x2F;&#x2F; ------------ node ---------</span><br><span class="line">var m &#x3D; require(&#39;.&#x2F;a&#39;);</span><br><span class="line">m.a();</span><br></pre></td></tr></table></figure>
+<p><strong>require()是同步方法</strong><br>ES6发布的module并没有直接采用CommonJS，甚至连require都没有采用，也就是说require仍然只是node的一个私有的全局方法，module.exports也只是node私有的一个全局变量属性</p>
+<p><em><strong>注意：module.exports方法不会多次生效，只执行最后一行语句的导出方法，这个与下面要介绍的export是有区别的，后面会介绍这个</strong></em></p>
+<p>###ES6 模块<br>ES6 模块不是对象，而是通过export命令显式指定输出的代码，再通过import命令输入。<br>模块功能主要由两个命令构成：export和import。export命令用于规定模块的对外接口，import命令用于输入其他模块提供的功能。</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">&#x2F;&#x2F; ES6模块</span><br><span class="line">import &#123; stat, exists, readFile &#125; from &#39;fs&#39;;</span><br></pre></td></tr></table></figure>
+<p>上面代码的实质是从fs模块加载 3 个方法，其他方法不加载。这种加载称为“编译时加载”或者静态加载，即 ES6 可以在编译时就完成模块加载，效率要比 CommonJS 模块的加载方式高。但是这样会造成import时无法动态加载</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">&#x2F;&#x2F;react native根据平台动态加载js，无法使用import方式加载</span><br><span class="line">var NativeAPI &#x3D; require(&#39;.&#x2F;Native_API&#x2F;NativeAPI.&#39; + Platform.OS);</span><br></pre></td></tr></table></figure>
+<p>###<a target="_blank" rel="noopener" href="https://developer.mozilla.org/en-US/docs/web/javascript/reference/statements/export">export</a>导出模块</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">&#x2F;&#x2F; module &quot;my-module.js&quot;</span><br><span class="line">function cube(x) &#123;</span><br><span class="line">  return x * x * x;</span><br><span class="line">&#125;</span><br><span class="line">const foo &#x3D; Math.PI + Math.SQRT2;</span><br><span class="line">export &#123; cube, foo &#125;;</span><br></pre></td></tr></table></figure>
+<p><strong>注意，export命令规定的是对外的接口，必须与模块内部的变量建立一一对应关系。但是module.exports是可以的</strong></p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line">&#x2F;&#x2F; 错误演示</span><br><span class="line">&#x2F;&#x2F; 报错</span><br><span class="line">export 1; &#x2F;&#x2F; 绝对不可以</span><br><span class="line"></span><br><span class="line">&#x2F;&#x2F; 报错</span><br><span class="line">var a &#x3D; 100;</span><br><span class="line">export a;</span><br><span class="line"></span><br><span class="line">&#x2F;&#x2F;module.exports</span><br><span class="line">var a &#x3D; 1;</span><br><span class="line">module.exports &#x3D; a</span><br></pre></td></tr></table></figure>
+<p>export在导出接口的时候，必须与模块内部的变量具有一一对应的关系。直接导出1没有任何意义，也不可能在import的时候有一个变量与之对应。 export a 虽然看上去成立，但是 a 的值是一个数字，根本无法完成解构，因此必须写成 export {a} 的形式。即使a被赋值为一个function，也是不允许的。</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line">&#x2F;&#x2F; 写法一</span><br><span class="line">export var m &#x3D; 1;</span><br><span class="line"></span><br><span class="line">&#x2F;&#x2F; 写法二</span><br><span class="line">var m &#x3D; 1;</span><br><span class="line">export &#123;m&#125;;</span><br><span class="line"></span><br><span class="line">&#x2F;&#x2F; 写法三</span><br><span class="line">var n &#x3D; 1;</span><br><span class="line">export &#123;n as m&#125;;</span><br></pre></td></tr></table></figure>
+
+<p><em><strong>注意：export可以在代码中导出多个</strong></em></p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">var m &#x3D; 1;</span><br><span class="line">export &#123;m&#125;;&#x2F;&#x2F;导出m</span><br><span class="line"></span><br><span class="line">var b &#x3D; 2;</span><br><span class="line">export &#123;b&#125;&#x2F;&#x2F;导出b</span><br></pre></td></tr></table></figure>
+
+<p>###<a target="_blank" rel="noopener" href="https://developer.mozilla.org/en-US/docs/web/javascript/reference/statements/import">import</a>导入模块</p>
+<p>import的语法跟require不同，而且import必须放在文件的最开始，且前面不允许有其他逻辑代码。</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">&#x2F;&#x2F; import &quot;user.js&quot;</span><br><span class="line">import &#123; cube, foo &#125; from &#39;my-module&#39;;</span><br><span class="line">console.log(cube(3)); &#x2F;&#x2F; 27</span><br><span class="line">console.log(foo);    &#x2F;&#x2F; 4.555806215962888</span><br></pre></td></tr></table></figure>
+
+<p>import后面跟上花括号的形式是最基本的用法，花括号里面的变量与export后面的变量一一对应。这里，你必须了解 <a target="_blank" rel="noopener" href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/Destructuring_assignment">对象的解构赋值</a> 的知识，也可参考<a target="_blank" rel="noopener" href="http://es6.ruanyifeng.com/#docs/destructuring">阮一峰的结构赋值</a></p>
+<p>###as关键字<br>简单的说就是取一个别名。export中可以用，import中其实可以用：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">&#x2F;&#x2F; a.js</span><br><span class="line">var a &#x3D; function() &#123;&#125;;</span><br><span class="line">export &#123;a as fun&#125;;</span><br><span class="line"></span><br><span class="line">&#x2F;&#x2F; b.js</span><br><span class="line">import &#123;fun as a&#125; from &#39;.&#x2F;a&#39;;</span><br><span class="line">a();</span><br></pre></td></tr></table></figure>
+<p>export的时候，对外提供的接口是fun，它是a.js内部a这个函数的别名，但是在模块外面，认不到a，只能认到fun。<br>import中的as就很简单，就是你在使用模块里面的方法的时候，给这个方法取一个别名，好在当前的文件里面使用。<strong>两个不同文件可能都export同一个fun的对象</strong><br>###export default 命令<br>export default命令，为模块指定默认输出。</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line">&#x2F;&#x2F; 第一组</span><br><span class="line">export default function crc32() &#123; &#x2F;&#x2F; 输出</span><br><span class="line">  &#x2F;&#x2F; ...</span><br><span class="line">&#125;</span><br><span class="line">import crc32 from &#39;crc32&#39;; &#x2F;&#x2F; 输入</span><br><span class="line"></span><br><span class="line">&#x2F;&#x2F; 第二组</span><br><span class="line">export function crc32() &#123; &#x2F;&#x2F; 输出</span><br><span class="line">  &#x2F;&#x2F; ...</span><br><span class="line">&#125;;</span><br><span class="line">import &#123;crc32&#125; from &#39;crc32&#39;; &#x2F;&#x2F; 输入</span><br></pre></td></tr></table></figure>
+<p>default其实是as的语法糖，这个语法糖的好处就是import的时候，可以省去花括号{}。<br>###*符号<br>*代表所有</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">import * as _ from &#39;xxx.js&#39;;&#x2F;&#x2F;表示把xxx模块中的所有接口挂载到 _ 这个对象上</span><br></pre></td></tr></table></figure>
+<p>通过*号直接继承某一个模块的接口</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">export * from &#39;_&#39;;</span><br><span class="line"></span><br><span class="line">&#x2F;&#x2F; 等效于：</span><br><span class="line">import * as all from &#39;_&#39;;</span><br><span class="line">export all;</span><br></pre></td></tr></table></figure>
+<p>尽量少用，它使用的所有的export的接口，但是你当前模块其实并不一定需要用到所有的接口，还是用{}按照需要去引用</p>
+<p>###Require Or Import<br>require理论上可以运用在代码的任何地方，甚至不需要赋值给某个变量之后再使用；但是import则不同，它是编译时的（require是运行时的），它必须放在文件开头，而且使用格式也是确定的，不容置疑。它不会将整个模块运行后赋值给某个变量，而是只选择import的接口进行编译，这样在性能上比require好很多。</p>
+<p>按照规范<em><strong>module.exports =&gt;require，export=&gt;import</strong></em>，但是现在开发为了兼容低版本的JS引擎会对import进行降级处理，会把import转换成require；这样就造成了各种方法可以混合使用，如</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br><span class="line">63</span><br><span class="line">64</span><br><span class="line">65</span><br><span class="line">66</span><br><span class="line">67</span><br><span class="line">68</span><br><span class="line">69</span><br><span class="line">70</span><br></pre></td><td class="code"><pre><span class="line">&#x2F;&#x2F;import.js:导出模块a和d</span><br><span class="line">export class a &#123;&#x2F;&#x2F;分开导出</span><br><span class="line">    constructor(arg&#x3D;2) &#123;</span><br><span class="line">        this.t &#x3D; 1;</span><br><span class="line">        this.t2 &#x3D; arg;</span><br><span class="line">    &#125;</span><br><span class="line">    b()&#123;</span><br><span class="line">        console.log(&#39;b&#39;);</span><br><span class="line">        console.log(this.t2);</span><br><span class="line">    &#125;</span><br><span class="line">    c()&#123;</span><br><span class="line">        console.log(&#39;c&#39;)</span><br><span class="line">        console.log(this.t);</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br><span class="line">var d &#x3D; function()&#123;</span><br><span class="line">&#125;;</span><br><span class="line">export &#123;d&#125;;</span><br><span class="line"></span><br><span class="line">&#x2F;&#x2F;require.js:导出模块a,d,e</span><br><span class="line">class a &#123;&#x2F;&#x2F;分开导出</span><br><span class="line">    constructor(arg&#x3D;2) &#123;</span><br><span class="line">        this.t &#x3D; 1;</span><br><span class="line">        this.t2 &#x3D; arg;</span><br><span class="line">    &#125;</span><br><span class="line">    b()&#123;</span><br><span class="line">        console.log(&#39;b&#39;);</span><br><span class="line">        console.log(this.t2);</span><br><span class="line">    &#125;</span><br><span class="line">    c()&#123;</span><br><span class="line">        console.log(&#39;c&#39;)</span><br><span class="line">        console.log(this.t);</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br><span class="line">var d &#x3D; function()&#123;</span><br><span class="line">    console.log(d)</span><br><span class="line">&#125;;</span><br><span class="line">var e &#x3D; 1</span><br><span class="line">module.exports &#x3D; &#123;a,d,e&#125;;</span><br><span class="line"></span><br><span class="line">&#x2F;&#x2F;index.js</span><br><span class="line">var require_a &#x3D; require(&#39;.&#x2F;require&#39;)</span><br><span class="line">var import_a &#x3D; require(&#39;.&#x2F;import&#39;)</span><br><span class="line">import &#123;a as test&#125; from &#39;.&#x2F;import&#39;</span><br><span class="line">import a from &#39;.&#x2F;require&#39;</span><br><span class="line">import * as all_require from &#39;.&#x2F;require&#39;</span><br><span class="line">import * as all_import from &#39;.&#x2F;import&#39;</span><br><span class="line"></span><br><span class="line">console.log(require_a);&#x2F;&#x2F;&#123;a: ƒ, d: ƒ, e: 1&#125;</span><br><span class="line">console.log(import_a);&#x2F;&#x2F;&#123;a: ƒ, d: ƒ, __esModule: true&#125;</span><br><span class="line">console.log(test);&#x2F;&#x2F;ƒ a()</span><br><span class="line">console.log(a);&#x2F;&#x2F;&#123;a: ƒ, d: ƒ, e: 1&#125;</span><br><span class="line">console.log(all_require);&#x2F;&#x2F;&#123;a: ƒ, d: ƒ, e: 1, default: &#123;…&#125;&#125;</span><br><span class="line">console.log(all_import);&#x2F;&#x2F;&#123;a: ƒ, d: ƒ, __esModule: true&#125;</span><br><span class="line"></span><br><span class="line">&#x2F;&#x2F;a1,a2数据不影响</span><br><span class="line">&#x2F;&#x2F;constructor可传参数，但参数名不能与变量名相同</span><br><span class="line">var a1 &#x3D; new test();</span><br><span class="line">var a2 &#x3D; new test(4);</span><br><span class="line"></span><br><span class="line">console.log(a1.t,a1.t2);&#x2F;&#x2F;1,2</span><br><span class="line">a1.b();&#x2F;&#x2F;b,2</span><br><span class="line">a1.t&#x3D;3;</span><br><span class="line">a1.c();&#x2F;&#x2F;c,3</span><br><span class="line"></span><br><span class="line">console.log(a2.t,a2.t2);&#x2F;&#x2F;1,4</span><br><span class="line">a2.b();&#x2F;&#x2F;b,4</span><br><span class="line">a2.t&#x3D;5;</span><br><span class="line">a2.c();&#x2F;&#x2F;c,5</span><br><span class="line"></span><br></pre></td></tr></table></figure>
+<p>可以看到在混用时require和import在编码是是都可以使用的，需要注意的是require是把所有模块加载进去，与import * 基本相同，但是import *会增加default属性。import需要指定模块名，如果不存在会返回undefined。</p>
+<p><em><strong>require 取到整个对象</strong></em></p>
+<p><em><strong>import a 取到default的对象，如果无default对象，在编译时会报错</strong></em></p>
+<p><em><strong>import {a} 取到 a对象</strong></em></p>
+<p><em><strong>import * as XX 取到所有对象，并放到XX里面</strong></em></p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">&#x2F;&#x2F;a.js</span><br><span class="line">export default class xxxx &#123;&#125;</span><br><span class="line"></span><br><span class="line">var xxx &#x3D; require(&#39;.&#x2F;a.js&#39;);&#x2F;&#x2F;&#123;default:ƒ xxx()&#125;</span><br><span class="line">import xxx from &#39;.&#x2F;a.js&#39;;&#x2F;&#x2F;ƒ xxx()</span><br></pre></td></tr></table></figure>
+<p>当export有default时,在使用require时，需要从default中才能取到要使用的对象，而import可以直接拿到对应的属性</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">&#x2F;&#x2F;a.js</span><br><span class="line">module.exports &#x3D; class a &#123;&#125;</span><br><span class="line"></span><br><span class="line">var a &#x3D; require(&#39;.&#x2F;a.js&#39;);&#x2F;&#x2F;ƒ xxx()</span><br><span class="line">import a from &#39;.&#x2F;a.js&#39;;&#x2F;&#x2F;ƒ xxx()</span><br></pre></td></tr></table></figure>
+<p>如果module.exports导出的是单一的对象时，使用require和import取到的对象是同样的，都是可以直接使用，和default的效果基本一致。</p>
+<p><em><strong>注意：webpack3在module.exports编译时，在模块前自增加了default属性</strong></em></p>
+
+      
+    </div>
+
+    
+    
+    
+
+    <footer class="post-footer">
+        <div class="post-eof"></div>
+      
+    </footer>
+  </article>
+</div>
+
+
+
+
+    
+
+
+<div class="post-block">
+  
+  
+
+  <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="">
+    <link itemprop="mainEntityOfPage" href="https://lzhwweb.github.io/nirvana/javascript/%E5%89%8D%E7%AB%AF/socke-io-emit-%E6%96%B9%E6%B3%95/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/nirvana/images/headphoto.jpeg">
+      <meta itemprop="name" content="nirvana">
+      <meta itemprop="description" content="个人学习笔记">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="涅槃快乐是金">
+    </span>
+      <header class="post-header">
+        <h2 class="post-title" itemprop="name headline">
+          <a href="/nirvana/javascript/%E5%89%8D%E7%AB%AF/socke-io-emit-%E6%96%B9%E6%B3%95/" class="post-title-link" itemprop="url">socke-io-emit-方法</a>
+        </h2>
+
+        <div class="post-meta-container">
+          <div class="post-meta">
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-calendar"></i>
+      </span>
+      <span class="post-meta-item-text">发表于</span>
+
+      <time title="创建时间：2021-03-11 21:12:40" itemprop="dateCreated datePublished" datetime="2021-03-11T21:12:40+08:00">2021-03-11</time>
+    </span>
+      <span class="post-meta-item">
+        <span class="post-meta-item-icon">
+          <i class="far fa-calendar-check"></i>
+        </span>
+        <span class="post-meta-item-text">更新于</span>
+        <time title="修改时间：2021-03-10 13:43:55" itemprop="dateModified" datetime="2021-03-10T13:43:55+08:00">2021-03-10</time>
+      </span>
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-folder"></i>
+      </span>
+      <span class="post-meta-item-text">分类于</span>
+        <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+          <a href="/nirvana/categories/javascript/" itemprop="url" rel="index"><span itemprop="name">javascript</span></a>
+        </span>
+    </span>
+
+  
+    <span id="/nirvana/javascript/%E5%89%8D%E7%AB%AF/socke-io-emit-%E6%96%B9%E6%B3%95/" class="post-meta-item leancloud_visitors" data-flag-title="socke-io-emit-方法" title="阅读次数">
+      <span class="post-meta-item-icon">
+        <i class="far fa-eye"></i>
+      </span>
+      <span class="post-meta-item-text">阅读次数：</span>
+      <span class="leancloud-visitors-count"></span>
+    </span>
+      </div>
+      <div class="post-meta">
+    <span class="post-meta-item" title="本文字数">
+      <span class="post-meta-item-icon">
+        <i class="far fa-file-word"></i>
+      </span>
+      <span class="post-meta-item-text">本文字数：</span>
+      <span>2.4k</span>
+    </span>
+    <span class="post-meta-item" title="阅读时长">
+      <span class="post-meta-item-icon">
+        <i class="far fa-clock"></i>
+      </span>
+      <span class="post-meta-item-text">阅读时长 &asymp;</span>
+      <span>2 分钟</span>
+    </span>
+</div>
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+          <p>emit可以很方便的发送数据,例如：</p>
+<p>socket.emit(‘action’);表示发送了一个action命令，命令是字符串的，在另一端接收时，可以这么写： socket.on(‘action’,function(){…});</p>
+<p>socket.emit(‘action’,data);表示发送了一个action命令，还有data数据，在另一端接收时，可以这么写： socket.on(‘action’,function(data){…});</p>
+<p>socket.emit(action,arg1,arg2); 表示发送了一个action命令，还有两个数据，在另一端接收时，可以这么写： socket.on(‘action’,function(arg1,arg2){…});</p>
+<p>socket.emit(action,arg1,arg2,arg3,arg4); 如果是多个参数，就也应该知道什么意思了，同上</p>
+<p>在emit方法中包含回调函数，例如：</p>
+<p>socket.emit(‘action’,data, function(arg1,arg2){…} );那么这里面有一个回调函数可以在另一端调用，另一端可以这么写：socket.on(‘action’,function(data,fn){   fn(‘a’,’b’) ;  });</p>
+<p>上面的data数据可以有0个或者多个，相应的在另一端改变function中参数的个数即可，function中的参数个数和顺序应该和发送时一致</p>
+<p>上面的fn表示另一个端传递过来的参数，是个函数，写fn(‘a’,’b’) ;会回调函数执行。一次发送不应该写多个回调，否则只有最后一个起效，回调应作为最后一个参数。</p>
+<p>例子：一个js文件(内容是下面的服务器端)，同一目录下放一个helloworld.html文件(内容是下面的客户端)，启动服务器，访问<a target="_blank" rel="noopener" href="http://127.0.0.1/">http://127.0.0.1/</a></p>
+<p>客户端：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br></pre></td><td class="code"><pre><span class="line">&lt;!DOCTYPE HTML PUBLIC &quot;-&#x2F;&#x2F;W3C&#x2F;&#x2F;DTD HTML 4.01 Transitional&#x2F;&#x2F;EN&quot; &quot;http:&#x2F;&#x2F;www.w3.org&#x2F;TR&#x2F;html4&#x2F;loose.dtd&quot;&gt;</span><br><span class="line">&lt;html&gt;</span><br><span class="line"> &lt;head&gt;</span><br><span class="line">  &lt;title&gt; New Document &lt;&#x2F;title&gt;</span><br><span class="line">  &lt;meta name&#x3D;&quot;Generator&quot; content&#x3D;&quot;EditPlus&quot;&gt;</span><br><span class="line">  &lt;meta name&#x3D;&quot;Author&quot; content&#x3D;&quot;&quot;&gt;</span><br><span class="line">  &lt;meta name&#x3D;&quot;Keywords&quot; content&#x3D;&quot;&quot;&gt;</span><br><span class="line">  &lt;meta name&#x3D;&quot;Description&quot; content&#x3D;&quot;&quot;&gt;</span><br><span class="line"> &lt;&#x2F;head&gt;</span><br><span class="line">	&lt;script src&#x3D;&quot;&#x2F;socket.io&#x2F;socket.io.js&quot;&gt;&lt;&#x2F;script&gt;</span><br><span class="line">&lt;script&gt;</span><br><span class="line">  var socket &#x3D; io.connect(&#39;ws:&#x2F;&#x2F;127.0.0.1&#x2F;&#39;);</span><br><span class="line">  socket.emit(&#39;msg&#39;,&#39;You get my message?&#39;,function(data)&#123;</span><br><span class="line">    alert(data);</span><br><span class="line">   &#125;); </span><br><span class="line">&lt;&#x2F;script&gt;</span><br><span class="line"> &lt;body&gt;</span><br><span class="line"> </span><br><span class="line"> &lt;&#x2F;body&gt;</span><br><span class="line">&lt;&#x2F;html&gt;</span><br></pre></td></tr></table></figure>
+<p>服务器端： </p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br></pre></td><td class="code"><pre><span class="line">var server&#x3D;require(&#39;http&#39;).createServer(handler); </span><br><span class="line">var io &#x3D; require(&#39;socket.io&#39;).listen(server);</span><br><span class="line">var fs&#x3D;require(&#39;fs&#39;);</span><br><span class="line">server.listen(80);</span><br><span class="line">function handler(req,res)&#123;</span><br><span class="line">	fs.readFile(__dirname+&#39;&#x2F;helloworld.html&#39;,</span><br><span class="line">	function(err, data)&#123;</span><br><span class="line">		if(err)&#123;</span><br><span class="line">			res.writeHead(500);</span><br><span class="line">			return res.end(&#39;Error loading index.html&#39;);</span><br><span class="line">		&#125;</span><br><span class="line">		res.writeHead(200);</span><br><span class="line">		res.end(data);</span><br><span class="line">	&#125;);</span><br><span class="line">&#125;</span><br><span class="line">io.sockets.on(&#39;connection&#39;, function (socket) &#123;</span><br><span class="line">	  socket.on(&#39;msg&#39;, function (data,fn) &#123;</span><br><span class="line">		console.log(&#39;received message from client:&#39;+data);</span><br><span class="line">		fn(&#39;The server has been successfully received your message:&#39;+data);</span><br><span class="line">	  &#125;); </span><br><span class="line">&#125;);</span><br></pre></td></tr></table></figure>
 
       
     </div>

@@ -2617,7 +2617,7 @@ N表示当前攻击的次数，P(N)表示当前攻击的暴击率，C为概率�
   </entry>
   <entry>
     <title>CSS在线工具</title>
-    <url>/nirvana/javascript/%E5%89%8D%E7%AB%AF/CSS%E5%9C%A8%E7%BA%BF%E5%B7%A5%E5%85%B7/</url>
+    <url>/nirvana/javascript-javascript/%E5%89%8D%E7%AB%AF/CSS%E5%9C%A8%E7%BA%BF%E5%B7%A5%E5%85%B7/</url>
     <content><![CDATA[<h2 id="CSS-在线工具"><a href="#CSS-在线工具" class="headerlink" title="CSS 在线工具"></a>CSS 在线工具</h2><p><a href="http://apps.eky.hk/css-triangle-generator/zh-hant">CSS 三角形生成器</a></p>
 <p><a href="http://code.ciaoca.com/style/hexcolor/">CSS 半透明背景色转换</a></p>
 <p><a href="http://code.ciaoca.com/style/bubble/">CSS 气泡对话框生成器</a></p>
@@ -2630,7 +2630,7 @@ N表示当前攻击的次数，P(N)表示当前攻击的暴击率，C为概率�
 <p><a href="http://css3generator.com/">CSS3 代码生成器</a></p>
 ]]></content>
       <categories>
-        <category>javascript</category>
+        <category>javascript javascript</category>
       </categories>
   </entry>
   <entry>
@@ -2717,22 +2717,6 @@ N表示当前攻击的次数，P(N)表示当前攻击的暴击率，C为概率�
 <figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">function hi(name) &#123;</span><br><span class="line">    console.count(name);</span><br><span class="line">    return &quot;hi &quot; + name;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">for(var i &#x3D; 0; i &lt; 10; i++) &#123;</span><br><span class="line">    if(i &lt; 4) &#123;</span><br><span class="line">        hi(&quot;person&quot;);</span><br><span class="line">    &#125; else &#123;</span><br><span class="line">        hi(&quot;god&quot;);</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 <p>结果：</p>
 <figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">person: 1</span><br><span class="line">person: 2</span><br><span class="line">person: 3</span><br><span class="line">person: 4</span><br><span class="line">god: 1</span><br><span class="line">god: 2</span><br><span class="line">god: 3</span><br><span class="line">god: 4</span><br><span class="line">god: 5</span><br><span class="line">god: 6</span><br><span class="line"></span><br></pre></td></tr></table></figure>
-]]></content>
-      <categories>
-        <category>javascript</category>
-      </categories>
-  </entry>
-  <entry>
-    <title>Error--Can&#39;t resolve &#39;fs&#39; in （webpack 2配置CSS-loadeers）</title>
-    <url>/nirvana/javascript/%E5%89%8D%E7%AB%AF/Error--Can&#39;t-resolve-&#39;fs&#39;-in-%EF%BC%88webpack-2%E9%85%8D%E7%BD%AECSS-loadeers%EF%BC%89/</url>
-    <content><![CDATA[<h4 id="前言，在之前有配置过webpack-2-中css-loaders，但是怎么也不正确"><a href="#前言，在之前有配置过webpack-2-中css-loaders，但是怎么也不正确" class="headerlink" title="前言，在之前有配置过webpack 2 中css loaders，但是怎么也不正确"></a>前言，在之前有配置过webpack 2 中css loaders，但是怎么也不正确</h4><p>报错：</p>
-<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">ERROR in .&#x2F;~&#x2F;convert-source-map&#x2F;index.js</span><br><span class="line">Module not found: Error: Can&#39;t resolve &#39;fs&#39; in &#39;&#x2F;Users&#x2F;ceshi&#x2F;Desktop&#x2F;webpack&#x2F;node_modules&#x2F;convert-source-map&#39;</span><br><span class="line"> @ .&#x2F;~&#x2F;convert-source-map&#x2F;index.js 2:9-22</span><br><span class="line"> @ .&#x2F;~&#x2F;css-loader&#x2F;lib&#x2F;css-base.js</span><br><span class="line"> @ .&#x2F;~&#x2F;css-loader!.&#x2F;app&#x2F;style.css</span><br><span class="line"> @ .&#x2F;app&#x2F;style.css</span><br><span class="line"> @ .&#x2F;app&#x2F;main.js</span><br></pre></td></tr></table></figure>
-
-<p><img src="https://upload-images.jianshu.io/upload_images/10024246-e3392ce8d53748bc.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240"></p>
-<p>解决方法，修改webpack的配置文件，增加一句代码</p>
-<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">node: &#123;</span><br><span class="line">       fs: &#39;empty&#39;</span><br><span class="line">   &#125;,</span><br></pre></td></tr></table></figure>
-
-<p><img src="https://upload-images.jianshu.io/upload_images/10024246-525a508c7db21758.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240"></p>
 ]]></content>
       <categories>
         <category>javascript</category>
@@ -3347,7 +3331,7 @@ N表示当前攻击的次数，P(N)表示当前攻击的暴击率，C为概率�
   </entry>
   <entry>
     <title>Javascript执行效率小结</title>
-    <url>/nirvana/javascript/%E5%89%8D%E7%AB%AF/Javascript%E6%89%A7%E8%A1%8C%E6%95%88%E7%8E%87%E5%B0%8F%E7%BB%93/</url>
+    <url>/nirvana/javascript-javascript/%E5%89%8D%E7%AB%AF/Javascript%E6%89%A7%E8%A1%8C%E6%95%88%E7%8E%87%E5%B0%8F%E7%BB%93/</url>
     <content><![CDATA[<p><strong>Javascript</strong>是一门非常灵活的语言，我们可以随心所欲的书写各种风格的代码，不同风格的代码也必然也会导致执行效率的差异，开发过程中零零散散地接触到许多提高代码性能的方法，整理一下平时比较常见并且容易规避的问题。</p>
 <hr>
 <h2 id="Javascript自身执行效率"><a href="#Javascript自身执行效率" class="headerlink" title="Javascript自身执行效率**"></a>Javascript自身执行效率**</h2><p>Javascript中的作用域链、闭包、原型继承、eval等特性，在提供各种神奇功能的同时也带来了各种效率问题，用之不慎就会导致执行效率低下。</p>
@@ -3411,7 +3395,7 @@ N表示当前攻击的次数，P(N)表示当前攻击的暴击率，C为概率�
 <p>原文来自：<a href="http://www.cnblogs.com/gewei/archive/2013/03/29/2988180.html">www.cnblogs.com/gewei/archive/2013/03/29/2988180.html</a></p>
 ]]></content>
       <categories>
-        <category>javascript</category>
+        <category>javascript javascript</category>
       </categories>
   </entry>
   <entry>
@@ -4033,7 +4017,7 @@ N表示当前攻击的次数，P(N)表示当前攻击的暴击率，C为概率�
   </entry>
   <entry>
     <title>chrome新增功能：分组和排列</title>
-    <url>/nirvana/javascript/%E5%89%8D%E7%AB%AF/chrome%E6%96%B0%E5%A2%9E%E5%8A%9F%E8%83%BD%EF%BC%9A%E5%88%86%E7%BB%84%E5%92%8C%E6%8E%92%E5%88%97/</url>
+    <url>/nirvana/javascript-javascript/%E5%89%8D%E7%AB%AF/chrome%E6%96%B0%E5%A2%9E%E5%8A%9F%E8%83%BD%EF%BC%9A%E5%88%86%E7%BB%84%E5%92%8C%E6%8E%92%E5%88%97/</url>
     <content><![CDATA[<h2 id="标签页分组"><a href="#标签页分组" class="headerlink" title="标签页分组"></a>标签页分组</h2><hr>
 <p>当打开多个标签页时遇到需要对打开的标签页进行管理， Google 加入了对标签页分组这项新功能，通过将相同类型的标签页放置在同一标签页组内，通过颜色名称等标记标签页栏，从而将不同的标签页明显地区别出来，对比此前都是同一颜色的标签页，显然在使用上要高效得多。<br><img src="https://upload-images.jianshu.io/upload_images/10024246-4ce13c576433f407.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240"></p>
 <h5 id="为标签页分组"><a href="#为标签页分组" class="headerlink" title="为标签页分组"></a>为标签页分组</h5><ol>
@@ -4063,7 +4047,7 @@ N表示当前攻击的次数，P(N)表示当前攻击的暴击率，C为概率�
 </ul>
 ]]></content>
       <categories>
-        <category>javascript</category>
+        <category>javascript javascript</category>
       </categories>
   </entry>
   <entry>
@@ -4111,63 +4095,6 @@ N表示当前攻击的次数，P(N)表示当前攻击的暴击率，C为概率�
 
 <p>经验法则是：如果要传递给<code>cross-env</code>包含要解释的特殊<code>Shell</code>字符的命令，请使用 <code>cross-env-shell</code>。否则请坚持<code>cross-env</code>。</p>
 <p>在Windows上<code>cross-env-shell</code>，如果要 在程序内部处理<a href="https://nodejs.org/api/process.html#process_signal_events">信号事件</a>，则 需要使用。常见的情况是当您想要捕获<code>SIGINT</code>通过<code>Ctrl + C</code>在命令行界面上按调用的 事件时。</p>
-]]></content>
-      <categories>
-        <category>javascript</category>
-      </categories>
-  </entry>
-  <entry>
-    <title>dependencies/devDependencies/peerDependencies/optionalDependencies/bundledDependencies</title>
-    <url>/nirvana/javascript/%E5%89%8D%E7%AB%AF/dependencies-devDependencies-peerDependencies-optionalDependencies-bun/</url>
-    <content><![CDATA[<h2 id="npm-目前支持以下几类依赖包管理："><a href="#npm-目前支持以下几类依赖包管理：" class="headerlink" title="npm 目前支持以下几类依赖包管理："></a><strong>npm</strong> 目前支持以下几类依赖包管理：</h2><ul>
-<li>  dependencies</li>
-<li>  devDependencies</li>
-<li>  peerDependencies</li>
-<li>  optionalDependencies</li>
-<li>  bundledDependencies / bundleDependencies</li>
-</ul>
-<p>如果你想使用哪种依赖管理，那么你可以将它放在package.json中对应的依赖对象中，比如：</p>
-<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">&quot;devDependencies&quot;: &#123;</span><br><span class="line">    &quot;fw2&quot;: &quot;^0.3.2&quot;,</span><br><span class="line">    &quot;grunt&quot;: &quot;^1.0.1&quot;,</span><br><span class="line">    &quot;webpack&quot;: &quot;^3.6.0&quot;</span><br><span class="line">  &#125;,</span><br><span class="line">  &quot;dependencies&quot;: &#123;</span><br><span class="line">    &quot;gulp&quot;: &quot;^3.9.1&quot;,</span><br><span class="line">    &quot;hello-else&quot;: &quot;^1.0.0&quot;</span><br><span class="line">  &#125;,</span><br><span class="line">  &quot;peerDependencies&quot;: &#123; &#125;,</span><br><span class="line">  &quot;optionalDependencies&quot;: &#123; &#125;,</span><br><span class="line">  &quot;bundledDependencies&quot;: [] </span><br></pre></td></tr></table></figure>
-
-<p>下面我们一一来看：</p>
-<h2 id="dependencies"><a href="#dependencies" class="headerlink" title="dependencies"></a>dependencies</h2><p>应用依赖，或者叫做业务依赖，这是我们最常用的依赖包管理对象！它用于指定应用依赖的外部包，这些依赖是应用发布后正常执行时所需要的，但不包含测试时或者本地打包时所使用的包。可使用下面的命令来安装：</p>
-<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">npm install packageName --save</span><br><span class="line"></span><br></pre></td></tr></table></figure>
-
-<p><strong>dependencies</strong>是一个简单的JSON对象，包含<strong>包名</strong>与<strong>包版本</strong>，其中<strong>包版本</strong>可以是版本号或者URL地址。比如：</p>
-<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">&#123; </span><br><span class="line">  &quot;dependencies&quot; :&#123; </span><br><span class="line">    &quot;foo&quot; : &quot;1.0.0 - 2.9999.9999&quot;, &#x2F;&#x2F; 指定版本范围</span><br><span class="line">    &quot;bar&quot; : &quot;&gt;&#x3D;1.0.2 &lt;2.1.2&quot;, </span><br><span class="line">    &quot;baz&quot; : &quot;&gt;1.0.2 &lt;&#x3D;2.3.4&quot;, </span><br><span class="line">    &quot;boo&quot; : &quot;2.0.1&quot;, &#x2F;&#x2F; 指定版本</span><br><span class="line">    &quot;qux&quot; : &quot;&lt;1.0.0 || &gt;&#x3D;2.3.1 &lt;2.4.5 || &gt;&#x3D;2.5.2 &lt;3.0.0&quot;, </span><br><span class="line">    &quot;asd&quot; : &quot;http:&#x2F;&#x2F;asdf.com&#x2F;asdf.tar.gz&quot;, &#x2F;&#x2F; 指定包地址</span><br><span class="line">    &quot;til&quot; : &quot;~1.2&quot;,  &#x2F;&#x2F; 最近可用版本</span><br><span class="line">    &quot;elf&quot; : &quot;~1.2.3&quot;, </span><br><span class="line">    &quot;elf&quot; : &quot;^1.2.3&quot;, &#x2F;&#x2F; 兼容版本</span><br><span class="line">    &quot;two&quot; : &quot;2.x&quot;, &#x2F;&#x2F; 2.1、2.2、...、2.9皆可用</span><br><span class="line">    &quot;thr&quot; : &quot;*&quot;,  &#x2F;&#x2F; 任意版本</span><br><span class="line">    &quot;thr2&quot;: &quot;&quot;, &#x2F;&#x2F; 任意版本</span><br><span class="line">    &quot;lat&quot; : &quot;latest&quot;, &#x2F;&#x2F; 当前最新</span><br><span class="line">    &quot;dyl&quot; : &quot;file:..&#x2F;dyl&quot;, &#x2F;&#x2F; 本地地址</span><br><span class="line">    &quot;xyz&quot; : &quot;git+ssh:&#x2F;&#x2F;git@github.com:npm&#x2F;npm.git#v1.0.27&quot;, &#x2F;&#x2F; git 地址</span><br><span class="line">    &quot;fir&quot; : &quot;git+ssh:&#x2F;&#x2F;git@github.com:npm&#x2F;npm#semver:^5.0&quot;,</span><br><span class="line">    &quot;wdy&quot; : &quot;git+https:&#x2F;&#x2F;isaacs@github.com&#x2F;npm&#x2F;npm.git&quot;,</span><br><span class="line">    &quot;xxy&quot; : &quot;git:&#x2F;&#x2F;github.com&#x2F;npm&#x2F;npm.git#v1.0.27&quot;,</span><br><span class="line">  &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-
-<h2 id="devDependencies"><a href="#devDependencies" class="headerlink" title="devDependencies"></a>devDependencies</h2><p>开发环境依赖，仅次于<strong>dependencies</strong>的使用频率！它的对象定义和<strong>dependencies</strong>一样，只不过它里面的包只用于开发环境，不用于生产环境，这些包通常是单元测试或者打包工具等，例如<strong>gulp, grunt, webpack, moca, coffee</strong>等，可使用以下命令来安装：</p>
-<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">npm install packageName --save-dev</span><br><span class="line"></span><br></pre></td></tr></table></figure>
-
-<p>举个栗子：</p>
-<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">&#123; &quot;name&quot;: &quot;ethopia-waza&quot;,</span><br><span class="line">  &quot;description&quot;: &quot;a delightfully fruity coffee varietal&quot;,</span><br><span class="line">  &quot;version&quot;: &quot;1.2.3&quot;,</span><br><span class="line">  &quot;devDependencies&quot;: &#123;</span><br><span class="line">    &quot;coffee-script&quot;: &quot;~1.6.3&quot;</span><br><span class="line">  &#125;,</span><br><span class="line">  &quot;scripts&quot;: &#123;</span><br><span class="line">    &quot;prepare&quot;: &quot;coffee -o lib&#x2F; -c src&#x2F;waza.coffee&quot;</span><br><span class="line">  &#125;,</span><br><span class="line">  &quot;main&quot;: &quot;lib&#x2F;waza.js&quot;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-
-<p>prepare脚本会在发布前运行，因此使用者在编译项目时不用依赖它。在开发模式下，运行npm install, 同时也会执行prepare脚本，开发时可以很容易的测试。</p>
-<blockquote>
-<p>至此，你理解了 <strong>–save</strong>和 <strong>–save-dev</strong>的区别了吗？</p>
-</blockquote>
-<h2 id="peerDependencies"><a href="#peerDependencies" class="headerlink" title="peerDependencies"></a>peerDependencies</h2><p>同等依赖，或者叫同伴依赖，用于指定当前包（也就是你写的包）兼容的宿主版本。如何理解呢？ 试想一下，我们编写一个gulp的插件，而gulp却有多个主版本，我们只想兼容最新的版本，此时就可以用同等依赖（<strong>peerDependencies</strong>）来指定：</p>
-<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">&#123;</span><br><span class="line">  &quot;name&quot;: &quot;gulp-my-plugin&quot;,</span><br><span class="line">  &quot;version&quot;: &quot;0.0.1&quot;,</span><br><span class="line">  &quot;peerDependencies&quot;: &#123;</span><br><span class="line">    &quot;gulp&quot;: &quot;3.x&quot;</span><br><span class="line">  &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-
-<p>当别人使用我们的插件时，<strong>peerDependencies</strong>就会告诉明确告诉使用方，你需要安装该插件哪个宿主版本。</p>
-<p>通常情况下，我们会在一个项目里使用一个宿主（比如gulp）的很多插件，如果相互之间存在宿主不兼容，在执行<strong>npm install</strong>时，cli会抛出错误信息来告诉我们，比如：</p>
-<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">npm ERR! peerinvalid The package gulp does not satisfy its siblings&#39; peerDependencies requirements!</span><br><span class="line">npm ERR! peerinvalid Peer gulp-cli-config@0.1.3 wants gulp@~3.1.9</span><br><span class="line">npm ERR! peerinvalid Peer gulp-cli-users@0.1.4 wants gulp@~2.3.0</span><br></pre></td></tr></table></figure>
-
-<p>运行命令<strong>npm install gulp-my-plugin –save-dev</strong>来安装我们插件，我们来看下依赖图谱：</p>
-<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">├── gulp-my-plugin@0.0.1</span><br><span class="line">└── gulp@3.9.1</span><br></pre></td></tr></table></figure>
-
-<p>OK, Nice!</p>
-<blockquote>
-<p>注意，npm 1 与 npm 2 会自动安装同等依赖，npm 3 不再自动安装，会产生警告！手动在package.json文件中添加依赖项可以解决。</p>
-</blockquote>
-<h2 id="optionalDependencies"><a href="#optionalDependencies" class="headerlink" title="optionalDependencies"></a>optionalDependencies</h2><p>可选依赖，如果有一些依赖包即使安装失败，项目仍然能够运行或者希望npm继续运行，就可以使用<strong>optionalDependencies</strong>。另外<strong>optionalDependencies</strong>会覆盖<strong>dependencies</strong>中的同名依赖包，所以不要在两个地方都写。</p>
-<p>举个栗子，可选依赖包就像程序的插件一样，如果存在就执行存在的逻辑，不存在就执行另一个逻辑。</p>
-<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">try &#123;</span><br><span class="line">  var foo &#x3D; require(&#39;foo&#39;)</span><br><span class="line">  var fooVersion &#x3D; require(&#39;foo&#x2F;package.json&#39;).version</span><br><span class="line">&#125; catch (er) &#123;</span><br><span class="line">  foo &#x3D; null</span><br><span class="line">&#125;</span><br><span class="line">if ( notGoodFooVersion(fooVersion) ) &#123;</span><br><span class="line">  foo &#x3D; null</span><br><span class="line">&#125;</span><br><span class="line"> </span><br><span class="line">&#x2F;&#x2F; .. then later in your program ..</span><br><span class="line"> </span><br><span class="line">if (foo) &#123;</span><br><span class="line">  foo.doFooThings()</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-
-<h2 id="bundledDependencies-bundleDependencies"><a href="#bundledDependencies-bundleDependencies" class="headerlink" title="bundledDependencies / bundleDependencies"></a>bundledDependencies / bundleDependencies</h2><p>打包依赖，<strong>bundledDependencies</strong>是一个包含依赖包名的数组对象，在发布时会将这个对象中的包打包到最终的发布包里。如：</p>
-<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">&#123;</span><br><span class="line">  &quot;name&quot;: &quot;fe-weekly&quot;,</span><br><span class="line">  &quot;description&quot;: &quot;ELSE 周刊&quot;,</span><br><span class="line">  &quot;version&quot;: &quot;1.0.0&quot;,</span><br><span class="line">  &quot;main&quot;: &quot;index.js&quot;,</span><br><span class="line">  &quot;devDependencies&quot;: &#123;</span><br><span class="line">    &quot;fw2&quot;: &quot;^0.3.2&quot;,</span><br><span class="line">    &quot;grunt&quot;: &quot;^1.0.1&quot;,</span><br><span class="line">    &quot;webpack&quot;: &quot;^3.6.0&quot;</span><br><span class="line">  &#125;,</span><br><span class="line">  &quot;dependencies&quot;: &#123;</span><br><span class="line">    &quot;gulp&quot;: &quot;^3.9.1&quot;,</span><br><span class="line">    &quot;hello-else&quot;: &quot;^1.0.0&quot;</span><br><span class="line">  &#125;,</span><br><span class="line">  &quot;bundledDependencies&quot;: [</span><br><span class="line">    &quot;fw2&quot;,</span><br><span class="line">    &quot;hello-else&quot;</span><br><span class="line">  ]</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-
-<p>执行打包命令<strong>npm pack</strong>, 在生成的<strong>fe-weekly-1.0.0.tgz</strong>包中，将包含<strong>fw2</strong>和<strong>hello-else</strong>。 但是值得注意的是，这两个包必须先在<strong>devDependencies</strong>或<strong>dependencies</strong>声明过，否则打包会报错。</p>
 ]]></content>
       <categories>
         <category>javascript</category>
@@ -4773,22 +4700,6 @@ N表示当前攻击的次数，P(N)表示当前攻击的暴击率，C为概率�
       </categories>
   </entry>
   <entry>
-    <title>webpack之插件optimize css assets webpack plugin</title>
-    <url>/nirvana/javascript/%E5%89%8D%E7%AB%AF/optimize-css-assets-webpack-plugin/</url>
-    <content><![CDATA[<h2 id="1-安装："><a href="#1-安装：" class="headerlink" title="1. 安装："></a>1. 安装：</h2><p>主要是用来压缩css文件</p>
-<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">npm i -D optimize-css-assets-webpack-plugin</span><br><span class="line">&#x2F;&#x2F; webpack 3及以下</span><br><span class="line">npm i -D optimize-css-assets-webpack-plugin@3.2.0 </span><br></pre></td></tr></table></figure>
-<h2 id="2-webpack-config-js配置"><a href="#2-webpack-config-js配置" class="headerlink" title="2. webpack.config.js配置"></a>2. webpack.config.js配置</h2><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">var OptimizeCssAssetsPlugin &#x3D; require(&#39;optimize-css-assets-webpack-plugin&#39;);</span><br><span class="line">const MiniCssExtractPlugin &#x3D; require(&#39;mini-css-extract-plugin&#39;);</span><br><span class="line"></span><br><span class="line">module.exports &#x3D; &#123;</span><br><span class="line">  module: &#123;</span><br><span class="line">    rules: [</span><br><span class="line">      &#123;</span><br><span class="line">        test: &#x2F;\.css$&#x2F;,</span><br><span class="line">        loader: MiniCssExtractPlugin.extract(&#39;style-loader&#39;, &#39;css-loader&#39;)</span><br><span class="line">        loader: MiniCssExtractPlugin.loader,</span><br><span class="line">        options: &#123;publicPath: &#39;&#x2F;public&#x2F;path&#x2F;to&#x2F;&#39; &#125;</span><br><span class="line">      &#125;</span><br><span class="line">    ]</span><br><span class="line">  &#125;,</span><br><span class="line">  plugins: [</span><br><span class="line">    new ExtractTextPlugin(&#39;styles.css&#39;),</span><br><span class="line">    &#x2F;&#x2F;new OptimizeCssAssetsPlugin()</span><br><span class="line">    new OptimizeCSSAssetsPlugin(&#123;</span><br><span class="line">      assetNameRegExp: &#x2F;\.css$&#x2F;g,</span><br><span class="line">      cssProcessor: require(&#39;cssnano&#39;),</span><br><span class="line">      cssProcessorPluginOptions: &#123;</span><br><span class="line">        preset: [&#39;default&#39;, &#123; discardComments: &#123; removeAll: true &#125; &#125;],</span><br><span class="line">      &#125;,</span><br><span class="line">      canPrint: true</span><br><span class="line">    &#125;),</span><br><span class="line">  ]</span><br><span class="line">&#125;;</span><br></pre></td></tr></table></figure>
-<h2 id="3-参数"><a href="#3-参数" class="headerlink" title="3. 参数"></a>3. 参数</h2><p>assetNameRegExp：一个正则表达式，指示应优化\最小化的资产的名称。提供的正则表达式针对配置中<br>ExtractTextPlugin实例导出的文件的文件名运行，而不是源CSS文件的文件名。默认为/.css$/g<br>cssProcessor：用于优化\最小化CSS的CSS处理器，默认为cssnano。这应该是一个跟随<br>cssnano.process接口的函数（接收CSS和选项参数并返回一个Promise）。<br>cssProcessorOptions：传递给cssProcessor的选项，默认为 {}<br>cssProcessorPluginOptions：传递给cssProcessor的插件选项，默认为 {}<br>canPrint：一个布尔值，指示插件是否可以将消息打印到控制台，默认为 true</p>
-<blockquote>
-<p>webpack4.X版本中，webpack -p命令，是可以默认压缩js文件的
-  </p>
-</blockquote>
-]]></content>
-      <categories>
-        <category>javascript</category>
-      </categories>
-  </entry>
-  <entry>
     <title>url 的正则表达式：path-to-regexp</title>
     <url>/nirvana/javascript/%E5%89%8D%E7%AB%AF/path-to-regexp/</url>
     <content><![CDATA[<h2 id="概述"><a href="#概述" class="headerlink" title="概述"></a>概述</h2><p>该工具库用来处理 url 中地址与参数，能够很方便得到我们想要的数据。</p>
@@ -4833,108 +4744,6 @@ N表示当前攻击的次数，P(N)表示当前攻击的暴击率，C为概率�
 <p>红色 = 不支持</p>
 <p>粉色 = 部分支持<br><img src="https://upload-images.jianshu.io/upload_images/10024246-2b69550f256cac89.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240"></p>
 <figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">&lt;!DOCTYPE html&gt;</span><br><span class="line">&lt;html lang&#x3D;&quot;zh-cmn-Hans&quot;&gt;</span><br><span class="line">&lt;head&gt;</span><br><span class="line">&lt;meta charset&#x3D;&quot;utf-8&quot; &#x2F;&gt;</span><br><span class="line">&lt;title&gt;&lt;&#x2F;title&gt;</span><br><span class="line"></span><br><span class="line">&lt;style&gt;</span><br><span class="line">a[href&#x3D;&quot;http:&#x2F;&#x2F;example.com&quot;] &#123;</span><br><span class="line">	pointer-events: none;</span><br><span class="line">&#125;</span><br><span class="line">&lt;&#x2F;style&gt;</span><br><span class="line">&lt;&#x2F;head&gt;</span><br><span class="line">&lt;body&gt;</span><br><span class="line">&lt;ul&gt;</span><br><span class="line">	&lt;li&gt;&lt;a href&#x3D;&quot;https:&#x2F;&#x2F;html.cn&#x2F;&quot;&gt;HTML中文网&lt;&#x2F;a&gt;&lt;&#x2F;li&gt;</span><br><span class="line">	&lt;li&gt;&lt;a href&#x3D;&quot;http:&#x2F;&#x2F;example.com&quot;&gt;一个不能点击的链接&lt;&#x2F;a&gt;&lt;&#x2F;li&gt;</span><br><span class="line">&lt;&#x2F;ul&gt;</span><br><span class="line">&lt;&#x2F;body&gt;</span><br><span class="line">&lt;&#x2F;html&gt;</span><br></pre></td></tr></table></figure>
-]]></content>
-      <categories>
-        <category>javascript</category>
-      </categories>
-  </entry>
-  <entry>
-    <title>prefetch 和 preload 及 webpack 的相关处理</title>
-    <url>/nirvana/javascript/%E5%89%8D%E7%AB%AF/prefetch-%E5%92%8C-preload-%E5%8F%8A-webpack-%E7%9A%84%E7%9B%B8%E5%85%B3%E5%A4%84%E7%90%86/</url>
-    <content><![CDATA[<p>使用预取和预加载是网站性能和用户体验提升的一个很好的途径，本文介绍了使用 prefetch 和 prefetch 进行预取和预加载的方法，并使用 webpack 进行实现</p>
-<h2 id="Link-的链接类型"><a href="#Link-的链接类型" class="headerlink" title="Link 的链接类型"></a>Link 的链接类型</h2><p><a href="https://developer.mozilla.org/zh-CN/docs/Web/HTML/Element/link"><code>&lt;link&gt;</code></a> 标签的 <code>rel</code> 属性可以定义链接类型，<code>prefetch</code> 是其中的一种，与 <code>href</code> 配合使用可以预取或预加载对应资源</p>
-<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">&lt;link rel&#x3D;&quot;prefetch&quot; herf&#x3D;&quot;URL&quot;&gt;</span><br><span class="line"></span><br></pre></td></tr></table></figure>
-
-<p><code>preload</code> 是另外一种类型，同样用 href 定义资源地址，但其处理预取外，还会对资源进行解析，所以还要增加属性 as，说明资源的类型</p>
-<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">&lt;link rel&#x3D;&quot;preload&quot; href&#x3D;&quot;URL&quot; as&#x3D;&quot;MIME_TYPE&quot;&gt;</span><br><span class="line"></span><br></pre></td></tr></table></figure>
-
-<h2 id="预取资源"><a href="#预取资源" class="headerlink" title="预取资源"></a>预取资源</h2><p><code>prefetch</code> 表示用户在接下来的浏览中（例如在下一个页面），有可能用到对应资源，提示浏览器要在闲时获取对应资源</p>
-<p>先新建文件夹 prefetch-preload-demo（本文所有代码将在此创建），安装相关依赖，并新建文件夹 static</p>
-<blockquote>
-<p>mkdir prefetch-preload-demo<br>cd prefetch-preload-demo<br>npm init -y<br>npm i -D http-server<br>mkdir static</p>
-</blockquote>
-<p>在 static 中创建 <code>prefetch.html</code>， <code>main.js</code> 和 <code>script.js</code></p>
-<p><code>prefetch.html</code> 定义了一个 <code>rel</code> 为 <code>prefetch</code> 的链接</p>
-<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">&lt;html&gt;</span><br><span class="line">&lt;head&gt;</span><br><span class="line">&lt;title&gt;Prefetch&lt;&#x2F;title&gt;</span><br><span class="line">&lt;meta charset&#x3D;&quot;utf-8&quot;&gt;</span><br><span class="line">&lt;meta name&#x3D;&quot;viewport&quot; content&#x3D;&quot;width&#x3D;device-width, initial-scale&#x3D;1, maximum-scale&#x3D;1&quot;&gt;</span><br><span class="line">&lt;link rel&#x3D;&quot;prefetch&quot; href&#x3D;&quot;script.js&quot;&gt;</span><br><span class="line">&lt;&#x2F;head&gt;</span><br><span class="line">&lt;body&gt;</span><br><span class="line">&lt;script src&#x3D;&quot;main.js&quot;&gt;&lt;&#x2F;script&gt;</span><br><span class="line">&lt;&#x2F;body&gt;</span><br><span class="line">&lt;&#x2F;html&gt;</span><br><span class="line"></span><br></pre></td></tr></table></figure>
-
-<p><code>main.js</code> 创建了一个按钮，并绑定了点击事件</p>
-<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">let button &#x3D; document.createElement(&#39;button&#39;);</span><br><span class="line">button.innerHTML &#x3D; &#39;Add Script&#39;;</span><br><span class="line">button.addEventListener(&#39;click&#39;, e &#x3D;&gt; &#123;</span><br><span class="line">  let script &#x3D; document.createElement(&quot;script&quot;);</span><br><span class="line">  script.src &#x3D; &quot;script.js&quot;;</span><br><span class="line">  document.head.appendChild(script);</span><br><span class="line">&#125;);</span><br><span class="line">document.body.appendChild(button);</span><br><span class="line"></span><br></pre></td></tr></table></figure>
-
-<p><code>script.js</code> 只是简单的打印了一下</p>
-<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">console.log(&#39;script run&#39;);</span><br><span class="line"></span><br></pre></td></tr></table></figure>
-
-<p>运行服务器（也可在 <code>package.json</code> 中增加 <code>server</code> 脚本）</p>
-<blockquote>
-<p>npx http-server</p>
-</blockquote>
-<p>访问 <a href="http://localhost:8080/">http://localhost:8080</a> 并导航至 <code>static</code> 中，点击 prefetch.html，或者直接访问线上<a href="https://chanvinxiao.com/demo/html/prefetch.html">页面</a>，初始状态下，查看控制台的网络选项卡下的内容如下（不要勾选 <code>Disable Cache</code>，点击右侧齿轮，勾选 <code>Use large request rows</code>）</p>
-<p><img src="https://upload-images.jianshu.io/upload_images/10024246-866a5d00121799d6.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240"></p>
-<ul>
-<li>  <code>script.js</code> 被 fetch 下来，size 列的两个数字，275 B 表示下载的字节大小，0 B 表示解析的字节大小（即目前并没有解析）</li>
-<li>  控制台是空的，即脚本没有运行</li>
-</ul>
-<p>点击页面上的 <code>Add Script</code>，会在页面增加地址为 <code>script.js</code> 的 <code>&lt;script&gt;</code> 标签，此时网络选项卡会增加以下内容</p>
-<p><img src="https://upload-images.jianshu.io/upload_images/10024246-b41e6c0e3f87d223.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240"></p>
-<ul>
-<li>  下载字节量为 <code>(prefetch cache)</code> ，即直接从预取缓存获取资源，下面的解析后的字节不再为 0</li>
-<li>  控制台打印出脚本中的调试内容，即这时脚本才被解析并运行</li>
-</ul>
-<h2 id="预加载资源"><a href="#预加载资源" class="headerlink" title="预加载资源"></a>预加载资源</h2><p><code>preload</code> 表示用户在当前的浏览中（往往是在当前页面），极有可以可能用到对应资源，提示浏览器要优先获取对应资源</p>
-<p>将 prefetch.html 的 link 标签的 prefetch 改为 <code>preload</code>，并增加资源类型 <code>as</code> 为 <code>script</code>，即得 preload.html</p>
-<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">&lt;link rel&#x3D;&quot;preload&quot; href&#x3D;&quot;script.js&quot; as&#x3D;&quot;script&quot;&gt;</span><br><span class="line"></span><br></pre></td></tr></table></figure>
-
-<p>访问本地服务器对应的 <code>prefetch.html</code>，或者直接访问线上<a href="https://chanvinxiao.com/demo/html/preload.html">页面</a>，初始状态下，查看控制台的网络选项卡下的内容如下</p>
-<p><img src="https://upload-images.jianshu.io/upload_images/10024246-4a5afe30da8888f1.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240"></p>
-<ul>
-<li>  <code>script.js</code> 被优先下载， size 列的解压字节不再为 0，即 <code>preload</code> 除了把脚本下载了下来，还进行了解析</li>
-<li>  控制台目前仍为空，即脚本虽然被解析，但并没有运行</li>
-</ul>
-<p>点击 <code>Add Script</code>，网络选项卡并没有增加任何记录，但是控制台输出了脚本的打印内容</p>
-<ul>
-<li>  因为脚本已经解析完成，所以连从缓存获取都不需要了，直接运行即可</li>
-<li>  如果没有在 3 秒内点击 <code>Add Script</code>，控制台会进行警告，因为没有及时使用应该优先加载的资源</li>
-</ul>
-<blockquote>
-<p>The resource <a href="https://chanvinxiao.com/demo/html/script.js">https://chanvinxiao.com/demo/html/script.js</a> was preloaded using link preload but not used within a few seconds from the window’s load event. Please make sure it has an appropriate <code>as</code> value and it is preloaded intentionally.</p>
-</blockquote>
-<h2 id="webpack-的相关处理"><a href="#webpack-的相关处理" class="headerlink" title="webpack 的相关处理"></a>webpack 的相关处理</h2><p>运行以下命令安装相关依赖，并新建文件夹 src</p>
-<blockquote>
-<p>npm i -D webpack webpack-cli html-webpack-plugin <a href="mailto:&#x70;&#114;&#x65;&#x6c;&#x6f;&#97;&#x64;&#x2d;&#119;&#x65;&#98;&#x70;&#x61;&#x63;&#107;&#45;&#x70;&#108;&#117;&#103;&#105;&#110;&#x40;&#51;&#x2e;&#48;&#x2e;&#x30;&#x2d;&#98;&#x65;&#116;&#97;&#x2e;&#x34;">&#x70;&#114;&#x65;&#x6c;&#x6f;&#97;&#x64;&#x2d;&#119;&#x65;&#98;&#x70;&#x61;&#x63;&#107;&#45;&#x70;&#108;&#117;&#103;&#105;&#110;&#x40;&#51;&#x2e;&#48;&#x2e;&#x30;&#x2d;&#98;&#x65;&#116;&#97;&#x2e;&#x34;</a><br>mkdir src</p>
-</blockquote>
-<ul>
-<li>  PreloadWebpackPlugin 的当前版本 2.x 与 webpack 当前版本 4.x 不兼容，所以需要指定版本号为最新的 3.x beta</li>
-</ul>
-<p>将 <code>main.js</code> 与 <code>script.js</code> 复制到 src 中，并将 <code>main.js</code> 的点击事件处理更新为</p>
-<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">button.addEventListener(&#39;click&#39;, e &#x3D;&gt; &#123;</span><br><span class="line">  import(&#x2F;* webpackChunkName: &quot;script&quot; *&#x2F; &#39;.&#x2F;script.js&#39;);</span><br><span class="line">&#125;);</span><br><span class="line"></span><br></pre></td></tr></table></figure>
-
-<ul>
-<li>  <a href="https://webpack.js.org/api/module-methods/#import-1">import()</a> 为动态加载脚本，webpack 会生成类似以上动态创建 <code>script</code> 标签的代码</li>
-<li>  import 里的注释为特殊含义的魔法注释，如果不设置 webpackChunkName，加载的脚本将被按数字次序命名</li>
-</ul>
-<p>增加 <code>webpack.config.js</code> 如下</p>
-<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">const HtmlWebpackPlugin &#x3D; require(&#39;html-webpack-plugin&#39;);</span><br><span class="line">const PreloadWebpackPlugin &#x3D; require(&#39;preload-webpack-plugin&#39;);</span><br><span class="line"></span><br><span class="line">module.exports &#x3D; &#123;</span><br><span class="line">  entry: &#39;.&#x2F;src&#x2F;main.js&#39;,</span><br><span class="line">  plugins: [</span><br><span class="line">    new HtmlWebpackPlugin(&#123;</span><br><span class="line">      filename: &#39;preload.html&#39;</span><br><span class="line">    &#125;),</span><br><span class="line">    new PreloadWebpackPlugin()</span><br><span class="line">  ]</span><br><span class="line">&#125;</span><br><span class="line"></span><br></pre></td></tr></table></figure>
-
-<ul>
-<li>  <a href="https://webpack.js.org/plugins/html-webpack-plugin/">HtmlWebpackPlugin</a> 将自动生成相应的 html 文件，默认为 index.html，这里通过设置 <code>filename</code> 选项更改</li>
-<li>  <a href="https://github.com/GoogleChrome/preload-webpack-plugin">PreloadWebpackPlugin</a> 为 HtmlWebpackPlugin 的插件，默认为其动态加载资源增加链接类型为 <code>preload</code> 的 <code>link</code> 标签，其 <code>as</code> 的值可根据后缀自动判断</li>
-</ul>
-<p>PreloadWebpackPlugin 也支持 prefetch，需要增加 <code>rel</code> 选项为 <code>prefetch</code></p>
-<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">new HtmlWebpackPlugin(&#123;</span><br><span class="line">  filename: &#39;prefetch.html&#39;</span><br><span class="line">&#125;),</span><br><span class="line">new PreloadWebpackPlugin(&#123;</span><br><span class="line">  rel: &#39;prefetch&#39;</span><br><span class="line">&#125;)</span><br><span class="line"></span><br></pre></td></tr></table></figure>
-
-<p>不过要同时生成 preload.html 和 prefetch.html，需要在对应的 PreloadWebpackPlugin 中设置 <code>excludeHtmlNames</code> 排除对方，否则会同时产生 preload 和 prefetch 的 link 标签</p>
-<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">new HtmlWebpackPlugin(&#123;</span><br><span class="line">  filename: &#39;preload.html&#39;</span><br><span class="line">&#125;),</span><br><span class="line">new HtmlWebpackPlugin(&#123;</span><br><span class="line">  filename: &#39;prefetch.html&#39;</span><br><span class="line">&#125;),</span><br><span class="line">new PreloadWebpackPlugin(&#123;</span><br><span class="line">  excludeHtmlNames: [&#39;prefetch.html&#39;]</span><br><span class="line">&#125;),</span><br><span class="line">new PreloadWebpackPlugin(&#123;</span><br><span class="line">  rel: &#39;prefetch&#39;,</span><br><span class="line">  excludeHtmlNames: [&#39;preload.html&#39;]</span><br><span class="line">&#125;)</span><br><span class="line"></span><br></pre></td></tr></table></figure>
-
-<p>构建文件（也可在 <code>package.json</code> 中增加 <code>build</code> 脚本）</p>
-<blockquote>
-<p>npx webpack</p>
-</blockquote>
-<p><code>dist</code> 文件夹中将生成 prefetch.html 和 preload.html，访问本地服务器对应地址，即可得到与以上静态页面同样的效果</p>
-<h2 id="总结"><a href="#总结" class="headerlink" title="总结"></a>总结</h2><p>此文使用静态页面和 webpack 打包两种方式演示了预取和预加载的实现 <a href="https://github.com/vinzid/prefetch-preload-demo"></a>，主要技术点如下：</p>
-<ul>
-<li>  ELEMENT.appendChild 动态创建脚本</li>
-<li>  import() 动态加载脚本并设置魔法注释</li>
-<li>  html-webpack-plugin 及其插件的配置</li>
-</ul>
 ]]></content>
       <categories>
         <category>javascript</category>
@@ -5056,7 +4865,7 @@ N表示当前攻击的次数，P(N)表示当前攻击的暴击率，C为概率�
   </entry>
   <entry>
     <title>socke.io.emit 方法</title>
-    <url>/nirvana/javascript/%E5%89%8D%E7%AB%AF/socke_io_emit/</url>
+    <url>/nirvana/javascript-javascript/%E5%89%8D%E7%AB%AF/socke_io_emit/</url>
     <content><![CDATA[<p>emit可以很方便的发送数据,例如：</p>
 <ul>
 <li><p>socket.emit(‘action’):<br>表示发送了一个action命令，命令是字符串的，在另一端接收时，可以这么写： socket.on(‘action’,function(){…});</p>
@@ -5076,7 +4885,7 @@ N表示当前攻击的次数，P(N)表示当前攻击的暴击率，C为概率�
 
 <h5 id="服务器端："><a href="#服务器端：" class="headerlink" title="服务器端："></a>服务器端：</h5><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">var server&#x3D;require(&#39;http&#39;).createServer(handler); </span><br><span class="line">var io &#x3D; require(&#39;socket.io&#39;).listen(server);</span><br><span class="line">var fs&#x3D;require(&#39;fs&#39;);</span><br><span class="line">server.listen(80);</span><br><span class="line">function handler(req,res)&#123;</span><br><span class="line">	fs.readFile(__dirname+&#39;&#x2F;helloworld.html&#39;,</span><br><span class="line">	function(err, data)&#123;</span><br><span class="line">		if(err)&#123;</span><br><span class="line">			res.writeHead(500);</span><br><span class="line">			return res.end(&#39;Error loading index.html&#39;);</span><br><span class="line">		&#125;</span><br><span class="line">		res.writeHead(200);</span><br><span class="line">		res.end(data);</span><br><span class="line">	&#125;);</span><br><span class="line">&#125;</span><br><span class="line">io.sockets.on(&#39;connection&#39;, function (socket) &#123;</span><br><span class="line">	  socket.on(&#39;msg&#39;, function (data,fn) &#123;</span><br><span class="line">		console.log(&#39;received message from client:&#39;+data);</span><br><span class="line">		fn(&#39;The server has been successfully received your message:&#39;+data);</span><br><span class="line">	  &#125;); </span><br><span class="line">&#125;);</span><br></pre></td></tr></table></figure>]]></content>
       <categories>
-        <category>javascript</category>
+        <category>javascript javascript</category>
       </categories>
   </entry>
   <entry>
@@ -5141,215 +4950,6 @@ N表示当前攻击的次数，P(N)表示当前攻击的暴击率，C为概率�
       </categories>
   </entry>
   <entry>
-    <title>webpack-bundle-analyzer可视化分析包大小</title>
-    <url>/nirvana/javascript/%E5%89%8D%E7%AB%AF/webpack-bundle-analyzer%E5%8F%AF%E8%A7%86%E5%8C%96%E5%88%86%E6%9E%90%E5%8C%85%E5%A4%A7%E5%B0%8F/</url>
-    <content><![CDATA[<p>前端开发现在由于使用node进行开发，会安装很多依赖，但是很多依赖的资源是不透明的，构建完成后，需要分析生产文件到底依赖那些资源，每个资源占据多少空间，这样才能有针对性的优化。所以需要有个方便分析包大小的工具，可以按需优化。<br>先看webpack-bundle-analyzer的效果图（官方效果图）：<br><img src="https://upload-images.jianshu.io/upload_images/10024246-0a46514a70cd94d0.gif?imageMogr2/auto-orient/strip"></p>
-<h2 id="一、安装"><a href="#一、安装" class="headerlink" title="一、安装"></a>一、安装</h2><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">npm install webpack-bundle-analyzer –save-dev</span><br></pre></td></tr></table></figure>
-<h2 id="二、配置"><a href="#二、配置" class="headerlink" title="二、配置"></a>二、配置</h2><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">&#x2F;&#x2F; 分析包内容 </span><br><span class="line">const BundleAnalyzerPlugin &#x3D; require(&#39;webpack-bundle-analyzer&#39;).BundleAnalyzerPlugin; </span><br><span class="line">module.exports &#x3D; &#123; </span><br><span class="line">plugins: [ </span><br><span class="line">&#x2F;&#x2F; 开启 BundleAnalyzerPlugin </span><br><span class="line">new BundleAnalyzerPlugin(), </span><br><span class="line">    ], </span><br><span class="line">&#125;;   </span><br></pre></td></tr></table></figure>
-<p>该插件的默认配置，一般无需修改<br> <figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">new BundleAnalyzerPlugin(&#123;</span><br><span class="line">  &#x2F;&#x2F;  可以是&#96;server&#96;，&#96;static&#96;或&#96;disabled&#96;。</span><br><span class="line">  &#x2F;&#x2F;  在&#96;server&#96;模式下，分析器将启动HTTP服务器来显示软件包报告。</span><br><span class="line">  &#x2F;&#x2F;  在“静态”模式下，会生成带有报告的单个HTML文件。</span><br><span class="line">  &#x2F;&#x2F;  在&#96;disabled&#96;模式下，你可以使用这个插件来将&#96;generateStatsFile&#96;设置为&#96;true&#96;来生成Webpack Stats JSON文件。</span><br><span class="line">  analyzerMode: &#39;server&#39;,</span><br><span class="line">  &#x2F;&#x2F;  将在“服务器”模式下使用的主机启动HTTP服务器。</span><br><span class="line">  analyzerHost: &#39;127.0.0.1&#39;,</span><br><span class="line">  &#x2F;&#x2F;  将在“服务器”模式下使用的端口启动HTTP服务器。</span><br><span class="line">  analyzerPort: 8888, </span><br><span class="line">  &#x2F;&#x2F;  路径捆绑，将在&#96;static&#96;模式下生成的报告文件。</span><br><span class="line">  &#x2F;&#x2F;  相对于捆绑输出目录。</span><br><span class="line">  reportFilename: &#39;report.html&#39;,</span><br><span class="line">  &#x2F;&#x2F;  模块大小默认显示在报告中。</span><br><span class="line">  &#x2F;&#x2F;  应该是&#96;stat&#96;，&#96;parsed&#96;或者&#96;gzip&#96;中的一个。</span><br><span class="line">  &#x2F;&#x2F;  有关更多信息，请参见“定义”一节。</span><br><span class="line">  defaultSizes: &#39;parsed&#39;,</span><br><span class="line">  &#x2F;&#x2F;  在默认浏览器中自动打开报告</span><br><span class="line">  openAnalyzer: true,</span><br><span class="line">  &#x2F;&#x2F;  如果为true，则Webpack Stats JSON文件将在bundle输出目录中生成</span><br><span class="line">  generateStatsFile: false, </span><br><span class="line">  &#x2F;&#x2F;  如果&#96;generateStatsFile&#96;为&#96;true&#96;，将会生成Webpack Stats JSON文件的名字。</span><br><span class="line">  &#x2F;&#x2F;  相对于捆绑输出目录。</span><br><span class="line">  statsFilename: &#39;stats.json&#39;,</span><br><span class="line">  &#x2F;&#x2F;  stats.toJson（）方法的选项。</span><br><span class="line">  &#x2F;&#x2F;  例如，您可以使用&#96;source：false&#96;选项排除统计文件中模块的来源。</span><br><span class="line">  &#x2F;&#x2F;  在这里查看更多选项：https：  &#x2F;&#x2F;github.com&#x2F;webpack&#x2F;webpack&#x2F;blob&#x2F;webpack-1&#x2F;lib&#x2F;Stats.js#L21</span><br><span class="line">  statsOptions: null,</span><br><span class="line">  logLevel: &#39;info&#39; &#x2F;&#x2F; 日志级别。可以是&#39;信息&#39;，&#39;警告&#39;，&#39;错误&#39;或&#39;沉默&#39;。</span><br><span class="line">&#125;)</span><br></pre></td></tr></table></figure></p>
-<h5 id="三、启动"><a href="#三、启动" class="headerlink" title="三、启动"></a>三、启动</h5><p>在package.json的scripts里加入下面这句话，就可以npm run build之后看到webpack-bundle-analyzer的效果：</p>
-<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">&quot;analyz&quot;: &quot;NODE_ENV&#x3D;production npm_config_report&#x3D;true npm run build&quot;</span><br></pre></td></tr></table></figure>
-<p>浏览器打开127.0.0.1:8888地址可以看到效果图。</p>
-<h5 id="四：模块功能："><a href="#四：模块功能：" class="headerlink" title="四：模块功能："></a>四：模块功能：</h5><ul>
-<li>意识到你的文件打包压缩后中真正的内容</li>
-<li>找出哪些模块组成最大的大小</li>
-<li>找到错误的模块</li>
-<li>最好的事情是它支持缩小捆绑！它解析它们以获得实际大小的捆绑模块。它也显示他们的gzipped大小！</li>
-</ul>
-]]></content>
-      <categories>
-        <category>javascript</category>
-      </categories>
-  </entry>
-  <entry>
-    <title>webpack getaddrinfo ENOTFOUND localhost错误</title>
-    <url>/nirvana/javascript/%E5%89%8D%E7%AB%AF/webpack-getaddrinfo-ENOTFOUND-localhost-%E9%94%99%E8%AF%AF/</url>
-    <content><![CDATA[<p>原因 没有指定 localhost<br>在host 文件中添加<br>127.0.0.1 localhost</p>
-<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">events.js:141</span><br><span class="line">      throw er; &#x2F;&#x2F; Unhandled &#39;error&#39; event</span><br><span class="line">      ^</span><br><span class="line"></span><br><span class="line">Error: getaddrinfo ENOTFOUND localhost</span><br><span class="line">    at errnoException (dns.js:27:10)</span><br><span class="line">    at GetAddrInfoReqWrap.onlookup [as oncomplete] (dns.js:78:26)</span><br></pre></td></tr></table></figure>
-]]></content>
-      <categories>
-        <category>javascript</category>
-      </categories>
-  </entry>
-  <entry>
-    <title>关于 webpack-cli4.0 及以上版本 和 webpack-dev-server 之间的依赖报connot find module “webpack-cli/bin/config-yargs”</title>
-    <url>/nirvana/javascript/%E5%89%8D%E7%AB%AF/webpack4error/</url>
-    <content><![CDATA[<p>今天在执行webpack-dev-server命令时，一直报Error: Cannot find module ‘webpack-cli/bin/config-yargs’<br>在执行npm run dev命令时报：</p>
-<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">connot find module “webpack-cli&#x2F;bin&#x2F;config-yargs”</span><br></pre></td></tr></table></figure>
-<p><img src="https://upload-images.jianshu.io/upload_images/10024246-6c0ce76392782d11.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240"></p>
-<h2 id="方案一"><a href="#方案一" class="headerlink" title="方案一"></a>方案一</h2><p>可以通过对webpack-cli进行降级处理，成功解决问题。<br>步骤：<br>一：</p>
-<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">npm uninstall webpack-cli   &#x2F;&#x2F;这是进行局部删除webpack-cli脚手架</span><br></pre></td></tr></table></figure>
-<p>二;</p>
-<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">npm install webpack-cli@3.3.11    &#x2F;&#x2F;@后面的数字指定不同的版本，版本应该低于4.0</span><br></pre></td></tr></table></figure>
-<h2 id="方案二"><a href="#方案二" class="headerlink" title="方案二"></a>方案二</h2><p><img src="https://upload-images.jianshu.io/upload_images/10024246-8e6a60a3309046c2.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240"></p>
-<p>在 webpack 官网上可以看到依赖的下载与设置方法没有改变，启动命令发生了改变。<br>直接 webpack serve –open，就可以了。</p>
-<p>依赖关系</p>
-<table>
-<thead>
-<tr>
-<th>依赖</th>
-<th>版本</th>
-<th>新版本</th>
-</tr>
-</thead>
-<tbody><tr>
-<td>webpack</td>
-<td>4</td>
-<td>5</td>
-</tr>
-<tr>
-<td>webpack-cli</td>
-<td>3</td>
-<td>4</td>
-</tr>
-<tr>
-<td>webpack-dev-server</td>
-<td>3</td>
-<td>3</td>
-</tr>
-</tbody></table>
-<p>之前的依赖关系是 webpack-dev-server 依赖于 webpack-cli 内部的 config-yargs，cli 升级到 4.0 以后，统一了 webpack 命令的入口文件，反过来依赖 webpack-dev-server 来实现 webpack serve –open 的命令。</p>
-<p>原文链接：<a href="https://blog.csdn.net/weixin_40599109/article/details/109582365">https://blog.csdn.net/weixin_40599109/article/details/109582365</a></p>
-]]></content>
-      <categories>
-        <category>javascript</category>
-      </categories>
-  </entry>
-  <entry>
-    <title>webpack配置autoprefixer</title>
-    <url>/nirvana/javascript/%E5%89%8D%E7%AB%AF/webpack%E9%85%8D%E7%BD%AEautoprefixer/</url>
-    <content><![CDATA[<p>Autoprefixer解析CSS文件并且添加浏览器前缀到CSS规则里，使用<a href="http://www.caniuse.com/">Can I Use</a>的数据来决定哪些前缀是需要的。</p>
-<p>1.安装autoprefixer：</p>
-<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">cnpm install autoprefixer --save-dev</span><br></pre></td></tr></table></figure>
-<p>2.webpack.config.js中配置autoprefixer：</p>
-<p>(1).引入autoprefixer：</p>
-<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">const autoprefixer &#x3D; require(&#39;autoprefixer&#39;);</span><br></pre></td></tr></table></figure>
-<p>(2).添加postcss-loader和插件配置：</p>
-<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">&#123;</span><br><span class="line">  loader: &#39;postcss-loader&#39;,</span><br><span class="line">  options: &#123;</span><br><span class="line">    ident: &#39;postcss&#39;,</span><br><span class="line">    plugins: [</span><br><span class="line">      autoprefixer(&#123;</span><br><span class="line">           browsers: [</span><br><span class="line">                &#39;last 10 Chrome versions&#39;,</span><br><span class="line">                &#39;last 5 Firefox versions&#39;,</span><br><span class="line">                &#39;Safari &gt;&#x3D; 6&#39;, </span><br><span class="line">                &#39;ie&gt; 8</span><br><span class="line">           ] </span><br><span class="line">        &#125;),</span><br><span class="line">    ]</span><br><span class="line">  &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-<p>效果</p>
-<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">a&#123;</span><br><span class="line">     transition :transform 1s</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">a&#123;</span><br><span class="line">     -webkit-transition :-webkit-transform 1s;</span><br><span class="line">     transition :-ms-transform 1s;</span><br><span class="line">     transition :transform 1s</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-<blockquote>
-<p>注： 另外webpack还有一个autoprefixer-loader，但npm官网已将其标为【deprecated】，推荐使用通过postcss-loader的方式使用autoprefixer。</p>
-</blockquote>
-]]></content>
-      <categories>
-        <category>javascript</category>
-      </categories>
-  </entry>
-  <entry>
-    <title>webpack配置terser-webpack-plugin 去掉项目中多余的debugger</title>
-    <url>/nirvana/javascript/%E5%89%8D%E7%AB%AF/webpack%E9%85%8D%E7%BD%AEterser-webpack-plugin%20%E5%8E%BB%E6%8E%89%E9%A1%B9%E7%9B%AE%E4%B8%AD%E5%A4%9A%E4%BD%99%E7%9A%84debugger/</url>
-    <content><![CDATA[<h2 id="入门"><a href="#入门" class="headerlink" title="入门"></a>入门</h2><p>如果你使用的是 webpack v5 或以上版本，你不需要安装这个插件。webpack v5 自带最新的 <code>terser-webpack-plugin</code>。如果使用 webpack v4，则必须安装 <code>terser-webpack-plugin</code> v4 的版本。</p>
-<p>首先，你需要安装 <code>terser-webpack-plugin</code>：</p>
-<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">$ npm install terser-webpack-plugin --save-dev</span><br><span class="line"></span><br></pre></td></tr></table></figure>
-
-<p>然后将插件添加到你的 <code>webpack</code> 配置文件中，直接在<code>optimization中</code>配置。例如：</p>
-<p><strong>webpack.config.js</strong></p>
-<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">const TerserPlugin &#x3D; require(&#39;terser-webpack-plugin&#39;);</span><br><span class="line">module.exports &#x3D; &#123;</span><br><span class="line">  	optimization: &#123;</span><br><span class="line">	    minimize: true,</span><br><span class="line">	    minimizer: [new TerserPlugin(&#123;</span><br><span class="line">	    	test: &#x2F;\.js(\?.*)?$&#x2F;i,    &#x2F;&#x2F;匹配参与压缩的文件</span><br><span class="line">	    	parallel: true,    &#x2F;&#x2F;使用多进程并发运行</span><br><span class="line">	    	terserOptions: &#123;    &#x2F;&#x2F;Terser 压缩配置</span><br><span class="line">	    		output:&#123;comments: false&#125;</span><br><span class="line">	    	&#125;,</span><br><span class="line">	    	extractComments: true,    &#x2F;&#x2F;将注释剥离到单独的文件中</span><br><span class="line">                compress: &#123;&#x2F;&#x2F;console删除</span><br><span class="line">                    pure_funcs: [&quot;console.log&quot;]</span><br><span class="line">                &#125;</span><br><span class="line">	    &#125;)],</span><br><span class="line">  	&#125;,</span><br><span class="line">&#125;;</span><br></pre></td></tr></table></figure>
-<h2 id="选项"><a href="#选项" class="headerlink" title="选项 "></a>选项 <a href="https://webpack.docschina.org/plugins/terser-webpack-plugin/#options"></a></h2><h3 id="test"><a href="#test" class="headerlink" title="test "></a><code>test</code> <a href="https://webpack.docschina.org/plugins/terser-webpack-plugin/#test"></a></h3><p>类型： <code>String|RegExp|Array&lt;String|RegExp&gt;</code> 默认值：<code>/\.m?js(\?.*)?$/i</code></p>
-<p>用来匹配需要压缩的文件。</p>
-<p><strong>webpack.config.js</strong></p>
-<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">module.exports &#x3D; &#123;</span><br><span class="line">  optimization: &#123;</span><br><span class="line">    minimize: true,</span><br><span class="line">    minimizer: [</span><br><span class="line">      new TerserPlugin(&#123;</span><br><span class="line">        test: &#x2F;\.js(\?.*)?$&#x2F;i,</span><br><span class="line">      &#125;),</span><br><span class="line">    ],</span><br><span class="line">  &#125;,</span><br><span class="line">&#125;;</span><br></pre></td></tr></table></figure>
-
-<h3 id="include"><a href="#include" class="headerlink" title="include "></a><code>include</code> <a href="https://webpack.docschina.org/plugins/terser-webpack-plugin/#include"></a></h3><p>类型： <code>String|RegExp|Array&lt;String|RegExp&gt;</code> 默认值： <code>undefined</code></p>
-<p>匹配参与压缩的文件。</p>
-<p><strong>webpack.config.js</strong></p>
-<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">module.exports &#x3D; &#123;</span><br><span class="line">  optimization: &#123;</span><br><span class="line">    minimize: true,</span><br><span class="line">    minimizer: [</span><br><span class="line">      new TerserPlugin(&#123;</span><br><span class="line">        include: &#x2F;\&#x2F;includes&#x2F;,</span><br><span class="line">      &#125;),</span><br><span class="line">    ],</span><br><span class="line">  &#125;,</span><br><span class="line">&#125;;</span><br></pre></td></tr></table></figure>
-
-<h3 id="exclude"><a href="#exclude" class="headerlink" title="exclude "></a><code>exclude</code> <a href="https://webpack.docschina.org/plugins/terser-webpack-plugin/#exclude"></a></h3><p>类型： <code>String|RegExp|Array&lt;String|RegExp&gt;</code> 默认值： <code>undefined</code></p>
-<p>匹配不需要压缩的文件。</p>
-<p><strong>webpack.config.js</strong></p>
-<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">module.exports &#x3D; &#123;</span><br><span class="line">  optimization: &#123;</span><br><span class="line">    minimize: true,</span><br><span class="line">    minimizer: [</span><br><span class="line">      new TerserPlugin(&#123;</span><br><span class="line">        exclude: &#x2F;\&#x2F;excludes&#x2F;,</span><br><span class="line">      &#125;),</span><br><span class="line">    ],</span><br><span class="line">  &#125;,</span><br><span class="line">&#125;;</span><br></pre></td></tr></table></figure>
-
-<h3 id="parallel"><a href="#parallel" class="headerlink" title="parallel "></a><code>parallel</code> <a href="https://webpack.docschina.org/plugins/terser-webpack-plugin/#parallel"></a></h3><p>类型： <code>Boolean|Number</code> 默认值： <code>true</code></p>
-<p>使用多进程并发运行以提高构建速度。 并发运行的默认数量： <code>os.cpus().length - 1</code> 。</p>
-<blockquote>
-<p>并发运行可以显著提高构建速度，因此<strong>强烈建议添加此配置</strong> 。</p>
-</blockquote>
-<blockquote>
-<p>如果你使用 <strong>Circle CI</strong> 或任何其他不提供 CPU 实际可用数量的环境，则需要显式设置 CPU 数量，以避免 <code>Error: Call retries were exceeded</code>（请参阅 <a href="https://github.com/webpack-contrib/terser-webpack-plugin/issues/143">#143</a>，<a href="https://github.com/webpack-contrib/terser-webpack-plugin/issues/202">#202</a> ）。</p>
-</blockquote>
-<h4 id="Boolean"><a href="#Boolean" class="headerlink" title="Boolean "></a><code>Boolean</code> <a href="https://webpack.docschina.org/plugins/terser-webpack-plugin/#boolean"></a></h4><p>启用/禁用多进程并发运行功能。</p>
-<p><strong>webpack.config.js</strong></p>
-<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">module.exports &#x3D; &#123;</span><br><span class="line">  optimization: &#123;</span><br><span class="line">    minimize: true,</span><br><span class="line">    minimizer: [</span><br><span class="line">      new TerserPlugin(&#123;</span><br><span class="line">        parallel: true,</span><br><span class="line">      &#125;),</span><br><span class="line">    ],</span><br><span class="line">  &#125;,</span><br><span class="line">&#125;;</span><br></pre></td></tr></table></figure>
-
-<h4 id="Number"><a href="#Number" class="headerlink" title="Number "></a><code>Number</code> <a href="https://webpack.docschina.org/plugins/terser-webpack-plugin/#number"></a></h4><p>启用多进程并发运行并设置并发运行次数。</p>
-<p><strong>webpack.config.js</strong></p>
-<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">module.exports &#x3D; &#123;</span><br><span class="line">  optimization: &#123;</span><br><span class="line">    minimize: true,</span><br><span class="line">    minimizer: [</span><br><span class="line">      new TerserPlugin(&#123;</span><br><span class="line">        parallel: 4,</span><br><span class="line">      &#125;),</span><br><span class="line">    ],</span><br><span class="line">  &#125;,</span><br><span class="line">&#125;;</span><br></pre></td></tr></table></figure>
-
-<h3 id="minify"><a href="#minify" class="headerlink" title="minify "></a><code>minify</code> <a href="https://webpack.docschina.org/plugins/terser-webpack-plugin/#minify"></a></h3><p>类型： <code>Function</code> 默认值： <code>undefined</code></p>
-<p>允许你自定义压缩函数。 默认情况下，插件使用 <a href="https://github.com/terser-js/terser">terser</a> 库。 对于使用和测试未发布的版本或 fork 的代码很帮助。</p>
-<blockquote>
-<p>⚠️ <strong>启用 <code>parallel</code> 选项时，在 <code>minify</code> 函数内部只能使用 <code>require</code></strong> 。</p>
-</blockquote>
-<p><strong>webpack.config.js</strong></p>
-<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">module.exports &#x3D; &#123;</span><br><span class="line">  optimization: &#123;</span><br><span class="line">    minimize: true,</span><br><span class="line">    minimizer: [</span><br><span class="line">      new TerserPlugin(&#123;</span><br><span class="line">        terserOptions: &#123;</span><br><span class="line">          myCustomOption: true,</span><br><span class="line">        &#125;,</span><br><span class="line">        &#x2F;&#x2F; Can be async</span><br><span class="line">        minify: (file, sourceMap, minimizerOptions) &#x3D;&gt; &#123;</span><br><span class="line">          &#x2F;&#x2F; The &#96;minimizerOptions&#96; option contains option from the &#96;terserOptions&#96; option</span><br><span class="line">          &#x2F;&#x2F; You can use &#96;minimizerOptions.myCustomOption&#96;</span><br><span class="line">          const extractedComments &#x3D; [];</span><br><span class="line"></span><br><span class="line">          &#x2F;&#x2F; Custom logic for extract comments</span><br><span class="line"></span><br><span class="line">          const &#123; map, code &#125; &#x3D; require(&quot;uglify-module&quot;) &#x2F;&#x2F; Or require(&#39;.&#x2F;path&#x2F;to&#x2F;uglify-module&#39;)</span><br><span class="line">            .minify(file, &#123;</span><br><span class="line">              &#x2F;* Your options for minification *&#x2F;</span><br><span class="line">            &#125;);</span><br><span class="line"></span><br><span class="line">          return &#123; map, code, extractedComments &#125;;</span><br><span class="line">        &#125;,</span><br><span class="line">      &#125;),</span><br><span class="line">    ],</span><br><span class="line">  &#125;,</span><br><span class="line">&#125;;</span><br></pre></td></tr></table></figure>
-
-<h3 id="terserOptions"><a href="#terserOptions" class="headerlink" title="terserOptions "></a><code>terserOptions</code> <a href="https://webpack.docschina.org/plugins/terser-webpack-plugin/#terseroptions"></a></h3><p>类型： <code>Object</code> 默认值： <a href="https://github.com/terser-js/terser#minify-options">默认</a></p>
-<p>Terser 压缩<a href="https://github.com/terser-js/terser#minify-options">配置</a> 。</p>
-<p><strong>webpack.config.js</strong></p>
-<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">module.exports &#x3D; &#123;</span><br><span class="line">  optimization: &#123;</span><br><span class="line">    minimize: true,</span><br><span class="line">    minimizer: [</span><br><span class="line">      new TerserPlugin(&#123;</span><br><span class="line">        terserOptions: &#123;</span><br><span class="line">          ecma: undefined,</span><br><span class="line">          parse: &#123;&#125;,</span><br><span class="line">          compress: &#123;&#125;,</span><br><span class="line">          mangle: true, &#x2F;&#x2F; Note &#96;mangle.properties&#96; is &#96;false&#96; by default.</span><br><span class="line">          module: false,</span><br><span class="line">          &#x2F;&#x2F; Deprecated</span><br><span class="line">          output: null,</span><br><span class="line">          format: null,</span><br><span class="line">          toplevel: false,</span><br><span class="line">          nameCache: null,</span><br><span class="line">          ie8: false,</span><br><span class="line">          keep_classnames: undefined,</span><br><span class="line">          keep_fnames: false,</span><br><span class="line">          safari10: false,</span><br><span class="line">        &#125;,</span><br><span class="line">      &#125;),</span><br><span class="line">    ],</span><br><span class="line">  &#125;,</span><br><span class="line">&#125;;</span><br></pre></td></tr></table></figure>
-
-<h3 id="extractComments"><a href="#extractComments" class="headerlink" title="extractComments "></a><code>extractComments</code> <a href="https://webpack.docschina.org/plugins/terser-webpack-plugin/#extractcomments"></a></h3><p>类型： <code>Boolean|String|RegExp|Function&lt;(node, comment) -&gt; Boolean|Object&gt;|Object</code> 默认值： <code>true</code></p>
-<p>是否将注释剥离到单独的文件中（请参阅<a href="https://github.com/webpack/webpack/commit/71933e979e51c533b432658d5e37917f9e71595a">详细信息</a>）。 默认情况下，仅剥离 <code>/^\**!|@preserve|@license|@cc_on/i</code> 正则表达式匹配的注释，其余注释会删除。 如果原始文件名为 <code>foo.js</code> ，则注释将存储到 <code>foo.js.LICENSE.txt</code> 。 <code>terserOptions.format.comments</code> 选项指定是否保留注释，即可以在剥离其他注释时保留一些注释，甚至保留已剥离的注释。</p>
-<h4 id="Boolean-1"><a href="#Boolean-1" class="headerlink" title="Boolean "></a><code>Boolean</code> <a href="https://webpack.docschina.org/plugins/terser-webpack-plugin/#boolean"></a></h4><p>启用/禁用剥离注释功能。</p>
-<p><strong>webpack.config.js</strong></p>
-<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">module.exports &#x3D; &#123;</span><br><span class="line">  optimization: &#123;</span><br><span class="line">    minimize: true,</span><br><span class="line">    minimizer: [</span><br><span class="line">      new TerserPlugin(&#123;</span><br><span class="line">        extractComments: true,</span><br><span class="line">      &#125;),</span><br><span class="line">    ],</span><br><span class="line">  &#125;,</span><br><span class="line">&#125;;</span><br></pre></td></tr></table></figure>
-
-<h4 id="String"><a href="#String" class="headerlink" title="String "></a><code>String</code> <a href="https://webpack.docschina.org/plugins/terser-webpack-plugin/#string"></a></h4><p>剥离 <code>all</code> 或 <code>some</code> （使用 <code>/^\**!|@preserve|@license|@cc_on/i</code> 正则表达式进行匹配）注释。</p>
-<p><strong>webpack.config.js</strong></p>
-<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">module.exports &#x3D; &#123;</span><br><span class="line">  optimization: &#123;</span><br><span class="line">    minimize: true,</span><br><span class="line">    minimizer: [</span><br><span class="line">      new TerserPlugin(&#123;</span><br><span class="line">        extractComments: &quot;all&quot;,</span><br><span class="line">      &#125;),</span><br><span class="line">    ],</span><br><span class="line">  &#125;,</span><br><span class="line">&#125;;</span><br></pre></td></tr></table></figure>
-
-<h4 id="RegExp"><a href="#RegExp" class="headerlink" title="RegExp "></a><code>RegExp</code> <a href="https://webpack.docschina.org/plugins/terser-webpack-plugin/#regexp"></a></h4><p>与指定表达式匹配的所有注释将会被剥离到单独的文件中。</p>
-<p><strong>webpack.config.js</strong></p>
-<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">module.exports &#x3D; &#123;</span><br><span class="line">  optimization: &#123;</span><br><span class="line">    minimize: true,</span><br><span class="line">    minimizer: [</span><br><span class="line">      new TerserPlugin(&#123;</span><br><span class="line">        extractComments: &#x2F;@extract&#x2F;i,</span><br><span class="line">      &#125;),</span><br><span class="line">    ],</span><br><span class="line">  &#125;,</span><br><span class="line">&#125;;</span><br></pre></td></tr></table></figure>
-
-<h4 id="Function-lt-node-comment-gt-Boolean-gt"><a href="#Function-lt-node-comment-gt-Boolean-gt" class="headerlink" title="Function&lt;(node, comment) -&gt; Boolean&gt; "></a><code>Function&lt;(node, comment) -&gt; Boolean&gt;</code> <a href="https://webpack.docschina.org/plugins/terser-webpack-plugin/#Functionnode-comment---Boolean-%EF%BC%83functionnode-comment-----boolean-functionnode-comment---boolean-%EF%BC%83functionnode-comment-----boolean"></a></h4><p>与指定表达式匹配的所有注释将会被剥离到单独的文件中。</p>
-<p><strong>webpack.config.js</strong></p>
-<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">module.exports &#x3D; &#123;</span><br><span class="line">  optimization: &#123;</span><br><span class="line">    minimize: true,</span><br><span class="line">    minimizer: [</span><br><span class="line">      new TerserPlugin(&#123;</span><br><span class="line">        extractComments: (astNode, comment) &#x3D;&gt; &#123;</span><br><span class="line">          if (&#x2F;@extract&#x2F;i.test(comment.value)) &#123;</span><br><span class="line">            return true;</span><br><span class="line">          &#125;</span><br><span class="line"></span><br><span class="line">          return false;</span><br><span class="line">        &#125;,</span><br><span class="line">      &#125;),</span><br><span class="line">    ],</span><br><span class="line">  &#125;,</span><br><span class="line">&#125;;</span><br></pre></td></tr></table></figure>
-
-<h4 id="Object"><a href="#Object" class="headerlink" title="Object "></a><code>Object</code> <a href="https://webpack.docschina.org/plugins/terser-webpack-plugin/#object"></a></h4><p>允许自定义剥离注释的条件，指定剥离的文件名和标题。</p>
-<p><strong>webpack.config.js</strong></p>
-<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">module.exports &#x3D; &#123;</span><br><span class="line">  optimization: &#123;</span><br><span class="line">    minimize: true,</span><br><span class="line">    minimizer: [</span><br><span class="line">      new TerserPlugin(&#123;</span><br><span class="line">        extractComments: &#123;</span><br><span class="line">          condition: &#x2F;^\**!|@preserve|@license|@cc_on&#x2F;i,</span><br><span class="line">          filename: (fileData) &#x3D;&gt; &#123;</span><br><span class="line">            &#x2F;&#x2F; The &quot;fileData&quot; argument contains object with &quot;filename&quot;, &quot;basename&quot;, &quot;query&quot; and &quot;hash&quot;</span><br><span class="line">            return &#96;$&#123;fileData.filename&#125;.LICENSE.txt$&#123;fileData.query&#125;&#96;;</span><br><span class="line">          &#125;,</span><br><span class="line">          banner: (licenseFile) &#x3D;&gt; &#123;</span><br><span class="line">            return &#96;License information can be found in $&#123;licenseFile&#125;&#96;;</span><br><span class="line">          &#125;,</span><br><span class="line">        &#125;,</span><br><span class="line">      &#125;),</span><br><span class="line">    ],</span><br><span class="line">  &#125;,</span><br><span class="line">&#125;;</span><br></pre></td></tr></table></figure>
-
-<h5 id="condition"><a href="#condition" class="headerlink" title="condition "></a><code>condition</code> <a href="https://webpack.docschina.org/plugins/terser-webpack-plugin/#condition"></a></h5><p>类型： <code>Boolean|String|RegExp|Function&lt;(node, comment) -&gt; Boolean|Object&gt;</code></p>
-<p>自定义需要剥离的注释。</p>
-<p><strong>webpack.config.js</strong></p>
-<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">module.exports &#x3D; &#123;</span><br><span class="line">  optimization: &#123;</span><br><span class="line">    minimize: true,</span><br><span class="line">    minimizer: [</span><br><span class="line">      new TerserPlugin(&#123;</span><br><span class="line">        extractComments: &#123;</span><br><span class="line">          condition: &quot;some&quot;,</span><br><span class="line">          filename: (fileData) &#x3D;&gt; &#123;</span><br><span class="line">            &#x2F;&#x2F; The &quot;fileData&quot; argument contains object with &quot;filename&quot;, &quot;basename&quot;, &quot;query&quot; and &quot;hash&quot;</span><br><span class="line">            return &#96;$&#123;fileData.filename&#125;.LICENSE.txt$&#123;fileData.query&#125;&#96;;</span><br><span class="line">          &#125;,</span><br><span class="line">          banner: (licenseFile) &#x3D;&gt; &#123;</span><br><span class="line">            return &#96;License information can be found in $&#123;licenseFile&#125;&#96;;</span><br><span class="line">          &#125;,</span><br><span class="line">        &#125;,</span><br><span class="line">      &#125;),</span><br><span class="line">    ],</span><br><span class="line">  &#125;,</span><br><span class="line">&#125;;</span><br></pre></td></tr></table></figure>
-
-<h5 id="filename"><a href="#filename" class="headerlink" title="filename "></a><code>filename</code> <a href="https://webpack.docschina.org/plugins/terser-webpack-plugin/#filename"></a></h5><p>类型： <code>String|Function&lt;(string) -&gt; String&gt;</code> 默认值： <code>[file].LICENSE.txt [query]</code></p>
-<p>可用的占位符： <code>[file]</code> ， <code>[query]</code> 和 <code>[filebase]</code> （webpack 5 使用 <code>[base]</code> ）。</p>
-<p>剥离出来的注释将被存储到的文件的文件名。 默认是将后缀 <code>.LICENSE.txt</code> 附加到原始文件名。</p>
-<blockquote>
-<p>⚠️我们强烈建议使用 <code>txt</code> 扩展名。</p>
-</blockquote>
-<p>使用 <code>js</code> / <code>cjs</code> / <code>mjs</code> 扩展名可能会与现有资源文件冲突，从而导致代码运行出错。</p>
-<p><strong>webpack.config.js</strong></p>
-<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">module.exports &#x3D; &#123;</span><br><span class="line">  optimization: &#123;</span><br><span class="line">    minimize: true,</span><br><span class="line">    minimizer: [</span><br><span class="line">      new TerserPlugin(&#123;</span><br><span class="line">        extractComments: &#123;</span><br><span class="line">          condition: &#x2F;^\**!|@preserve|@license|@cc_on&#x2F;i,</span><br><span class="line">          filename: &quot;extracted-comments.js&quot;,</span><br><span class="line">          banner: (licenseFile) &#x3D;&gt; &#123;</span><br><span class="line">            return &#96;License information can be found in $&#123;licenseFile&#125;&#96;;</span><br><span class="line">          &#125;,</span><br><span class="line">        &#125;,</span><br><span class="line">      &#125;),</span><br><span class="line">    ],</span><br><span class="line">  &#125;,</span><br><span class="line">&#125;;</span><br></pre></td></tr></table></figure>
-
-<h5 id="banner"><a href="#banner" class="headerlink" title="banner "></a><code>banner</code> <a href="https://webpack.docschina.org/plugins/terser-webpack-plugin/#banner"></a></h5><p>类型： <code>Boolean|String|Function&lt;(string) -&gt; String&gt;</code> 默认值： <code>/*! For license information please see $&#123;commentsFile&#125; */</code></p>
-<p>指向剥离文件的标语文本将被添加到原始文件的顶部。 可以为 <code>false</code> （无标题）， <code>String</code> 或一个函数：<code>Function&lt;(string) -&gt; String&gt;</code> ，该函数将被使用存储剥离的注释的文件名来调用。 标语内容将被合并到注释中。</p>
-<p><strong>webpack.config.js</strong></p>
-<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">module.exports &#x3D; &#123;</span><br><span class="line">  optimization: &#123;</span><br><span class="line">    minimize: true,</span><br><span class="line">    minimizer: [</span><br><span class="line">      new TerserPlugin(&#123;</span><br><span class="line">        extractComments: &#123;</span><br><span class="line">          condition: true,</span><br><span class="line">          filename: (fileData) &#x3D;&gt; &#123;</span><br><span class="line">            &#x2F;&#x2F; The &quot;fileData&quot; argument contains object with &quot;filename&quot;, &quot;basename&quot;, &quot;query&quot; and &quot;hash&quot;</span><br><span class="line">            return &#96;$&#123;fileData.filename&#125;.LICENSE.txt$&#123;fileData.query&#125;&#96;;</span><br><span class="line">          &#125;,</span><br><span class="line">          banner: (commentsFile) &#x3D;&gt; &#123;</span><br><span class="line">            return &#96;My custom banner about license information $&#123;commentsFile&#125;&#96;;</span><br><span class="line">          &#125;,</span><br><span class="line">        &#125;,</span><br><span class="line">      &#125;),</span><br><span class="line">    ],</span><br><span class="line">  &#125;,</span><br><span class="line">&#125;;</span><br></pre></td></tr></table></figure>
-
-<h2 id="示例"><a href="#示例" class="headerlink" title="示例 "></a>示例 <a href="https://webpack.docschina.org/plugins/terser-webpack-plugin/#examples"></a></h2><h3 id="保留注释"><a href="#保留注释" class="headerlink" title="保留注释 "></a>保留注释 <a href="https://webpack.docschina.org/plugins/terser-webpack-plugin/#preserve-comments"></a></h3><p>剥离所有有效的注释（即 <code>/^\**!|@preserve|@license|@cc_on/i</code> ）并保留 <code>/@license/i</code> 注释。</p>
-<p><strong>webpack.config.js</strong></p>
-<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">module.exports &#x3D; &#123;</span><br><span class="line">  optimization: &#123;</span><br><span class="line">    minimize: true,</span><br><span class="line">    minimizer: [</span><br><span class="line">      new TerserPlugin(&#123;</span><br><span class="line">        terserOptions: &#123;</span><br><span class="line">          format: &#123;</span><br><span class="line">            comments: &#x2F;@license&#x2F;i,</span><br><span class="line">          &#125;,</span><br><span class="line">        &#125;,</span><br><span class="line">        extractComments: true,</span><br><span class="line">      &#125;),</span><br><span class="line">    ],</span><br><span class="line">  &#125;,</span><br><span class="line">&#125;;</span><br></pre></td></tr></table></figure>
-
-<h3 id="删除注释"><a href="#删除注释" class="headerlink" title="删除注释 "></a>删除注释 <a href="https://webpack.docschina.org/plugins/terser-webpack-plugin/#remove-comments"></a></h3><p>如果要在构建时去除注释，请使用以下配置：</p>
-<p><strong>webpack.config.js</strong></p>
-<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">module.exports &#x3D; &#123;</span><br><span class="line">  optimization: &#123;</span><br><span class="line">    minimize: true,</span><br><span class="line">    minimizer: [</span><br><span class="line">      new TerserPlugin(&#123;</span><br><span class="line">        terserOptions: &#123;</span><br><span class="line">          format: &#123;</span><br><span class="line">            comments: false,</span><br><span class="line">          &#125;,</span><br><span class="line">        &#125;,</span><br><span class="line">        extractComments: false,</span><br><span class="line">      &#125;),</span><br><span class="line">    ],</span><br><span class="line">  &#125;,</span><br><span class="line">&#125;;</span><br></pre></td></tr></table></figure>
-
-<h3 id="自定义压缩函数"><a href="#自定义压缩函数" class="headerlink" title="自定义压缩函数 "></a>自定义压缩函数 <a href="https://webpack.docschina.org/plugins/terser-webpack-plugin/#custom-minify-function"></a></h3><p>覆盖默认的 minify 函数 - 使用 <code>uglify-js</code> 进行压缩。</p>
-<p><strong>webpack.config.js</strong></p>
-<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">module.exports &#x3D; &#123;</span><br><span class="line">  optimization: &#123;</span><br><span class="line">    minimize: true,</span><br><span class="line">    minimizer: [</span><br><span class="line">      new TerserPlugin(&#123;</span><br><span class="line">        minify: (file, sourceMap) &#x3D;&gt; &#123;</span><br><span class="line">          &#x2F;&#x2F; https:&#x2F;&#x2F;github.com&#x2F;mishoo&#x2F;UglifyJS2#minify-options</span><br><span class="line">          const uglifyJsOptions &#x3D; &#123;</span><br><span class="line">            &#x2F;* your &#96;uglify-js&#96; package options *&#x2F;</span><br><span class="line">          &#125;;</span><br><span class="line"></span><br><span class="line">          if (sourceMap) &#123;</span><br><span class="line">            uglifyJsOptions.sourceMap &#x3D; &#123;</span><br><span class="line">              content: sourceMap,</span><br><span class="line">            &#125;;</span><br><span class="line">          &#125;</span><br><span class="line"></span><br><span class="line">          return require(&quot;uglify-js&quot;).minify(file, uglifyJsOptions);</span><br><span class="line">        &#125;,</span><br><span class="line">      &#125;),</span><br><span class="line">    ],</span><br><span class="line">  &#125;,</span><br><span class="line">&#125;;</span><br></pre></td></tr></table></figure>
-]]></content>
-      <categories>
-        <category>javascript</category>
-      </categories>
-  </entry>
-  <entry>
     <title>webstorm 2018 激活破解方法大全</title>
     <url>/nirvana/javascript/%E5%89%8D%E7%AB%AF/webstorm-2018-%E6%BF%80%E6%B4%BB%E7%A0%B4%E8%A7%A3%E6%96%B9%E6%B3%95%E5%A4%A7%E5%85%A8/</url>
     <content><![CDATA[<p><strong>方法一：（更新时间：2018/4/8）v3.3</strong></p>
@@ -5396,97 +4996,8 @@ N表示当前攻击的次数，P(N)表示当前攻击的暴击率，C为概率�
       </categories>
   </entry>
   <entry>
-    <title>为什么是 devDependencies?</title>
-    <url>/nirvana/javascript/%E5%89%8D%E7%AB%AF/why-devdependencies/</url>
-    <content><![CDATA[<p><code>dependencies</code> 和 <code>devDependencies</code> 有什么区别？我使用的包应该放到什么地方？上网找资料，大神群咨询。得到的答案是：</p>
-<ul>
-<li>  生产环境用到的放在 <code>dependencies</code>中;</li>
-<li>  开发环境用到的放在 <code>devDependencies</code>中;</li>
-</ul>
-<p>现实中发现：无论放到<code>dependencies</code>中，还是<code>devDependencies</code>，运行 <code>npm install</code> 时都会安装，没有差别，团队合作也OK，照玩不误啊。把<code>koa</code>放到<code>devDependencies</code>中有没有问题？把<code>webpack</code>放到<code>dependencies</code>又会怎么样？</p>
-<p>直到我要把自己的开源项目发布到 <code>npm</code> 时，才明白了大神的意思。</p>
-<h2 id="生产环境-or-开发环境？"><a href="#生产环境-or-开发环境？" class="headerlink" title="生产环境 or 开发环境？"></a>生产环境 or 开发环境？</h2><p>先来看个问题：<strong>小明</strong>使用 <code>webpack</code> 开发 <code>web项目</code> 的环境，是什么环境？</p>
-<p>答案是<code>开发环境，但同时也是</code>生产环境`。</p>
-<p>相对于 <code>小明的项目</code> 是 <strong>开发环境</strong>，但相对 <code>webpack</code>，就是<strong>生产环境</strong>。</p>
-<h2 id="从实践中理解两者的区别"><a href="#从实践中理解两者的区别" class="headerlink" title="从实践中理解两者的区别"></a>从实践中理解两者的区别</h2><p>用开源项目 <a href="https://github.com/visionmedia/debug">debug</a> 项目举例。它的 <code>package.json</code> 相关内容如下：</p>
-<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">&#123;</span><br><span class="line">  &quot;dependencies&quot;: &#123;</span><br><span class="line">    &quot;ms&quot;: &quot;^2.1.1&quot;</span><br><span class="line">  &#125;,</span><br><span class="line">  &quot;devDependencies&quot;: &#123;</span><br><span class="line">    &quot;brfs&quot;: &quot;^2.0.1&quot;,</span><br><span class="line">    &quot;browserify&quot;: &quot;^16.2.3&quot;,</span><br><span class="line">    &quot;coveralls&quot;: &quot;^3.0.2&quot;,</span><br><span class="line">    &quot;istanbul&quot;: &quot;^0.4.5&quot;,</span><br><span class="line">    &quot;karma&quot;: &quot;^3.1.4&quot;,</span><br><span class="line">    &quot;karma-browserify&quot;: &quot;^6.0.0&quot;,</span><br><span class="line">    &quot;karma-chrome-launcher&quot;: &quot;^2.2.0&quot;,</span><br><span class="line">    &quot;karma-mocha&quot;: &quot;^1.3.0&quot;,</span><br><span class="line">    &quot;mocha&quot;: &quot;^5.2.0&quot;,</span><br><span class="line">    &quot;mocha-lcov-reporter&quot;: &quot;^1.2.0&quot;,</span><br><span class="line">    &quot;xo&quot;: &quot;^0.23.0&quot;</span><br><span class="line">  &#125;</span><br><span class="line">&#125;</span><br><span class="line"></span><br></pre></td></tr></table></figure>
-
-<h3 id="使用debug-npm-install-debug"><a href="#使用debug-npm-install-debug" class="headerlink" title="使用debug (npm install debug)"></a>使用debug (npm install debug)</h3><p>我们在使用<code>debug</code>时，需要这样用（大部分用户的使用方式）</p>
-<p>手动创建一个项目</p>
-<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">npm init</span><br><span class="line">npm install debug --save</span><br><span class="line"></span><br></pre></td></tr></table></figure>
-
-<p>查看 <code>node_modules</code> 目录中的内容</p>
-<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">-- node_modules</span><br><span class="line">  -- debug</span><br><span class="line">  -- ms</span><br><span class="line"></span><br></pre></td></tr></table></figure>
-
-<p>可以看出， <code>npm</code> 只安装了 <code>debug</code> 和 <code>ms(debug的dependencies包含的package)</code>。<br>因为现在的环境相对于 <code>debug</code> 来说，是生产环境，所以 <code>npm</code> 只安装了 <code>debug</code> 的生产依赖。</p>
-<h3 id="开发debug-git-clone-debug"><a href="#开发debug-git-clone-debug" class="headerlink" title="开发debug (git clone debug)"></a>开发debug (git clone debug)</h3><p>作为 <code>debug</code> 项目的 <strong>开发者</strong> 或 <strong>二次开发者</strong> ，才会这样用。</p>
-<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">git clone https:&#x2F;&#x2F;github.com&#x2F;visionmedia&#x2F;debug.git</span><br><span class="line">cd debug</span><br><span class="line">npm install</span><br><span class="line"></span><br></pre></td></tr></table></figure>
-
-<p>查看<code>node_modules</code></p>
-<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">-- node_modules</span><br><span class="line">  -- debug</span><br><span class="line">  -- ms</span><br><span class="line">  -- brfs</span><br><span class="line">  -- xo</span><br><span class="line">  -- connect</span><br><span class="line">  -- date-format</span><br><span class="line">  -- ...... 共653个package</span><br><span class="line"></span><br></pre></td></tr></table></figure>
-
-<p>可以看出， <code>npm</code> 安装了 <code>dependencies</code>、<code>devDependencies</code> 以及 <code>它们的dependencies</code>。<br>因为现在的环境相对于<code>debug</code>来说，是开发环境，所以<code>npm</code>安装了<code>debug</code>的所有依赖，以及它们的生产依赖。</p>
-<p>对比以上结果，可以看出，一般情况下开发环境所需要安装的依赖<strong>远多于</strong>生产环境。</p>
-<h2 id="非常规玩法（挑战规范，知其所以然）"><a href="#非常规玩法（挑战规范，知其所以然）" class="headerlink" title="非常规玩法（挑战规范，知其所以然）"></a>非常规玩法（挑战规范，知其所以然）</h2><p>根据以上的实践分析，总结出一些<strong>玩</strong>法：</p>
-<ol>
-<li><p> 如果所有依赖包<strong>都是开放环境</strong>要用到的包，并且不会发布到<code>npm</code>让别人使用（如<code>webpack</code>打包完成后发布<code>dist</code>的前端项目），因为生产环境不再需要依赖这些包(甚至都不需要<code>nodejs</code>)，这时你把<strong>依赖</strong>放到哪里，完全<strong>随你开心</strong>。但为了避免有人说闲话，应该放到<code>devDependencies</code>中。</p>
-</li>
-<li><p> 如果所有依赖包<strong>都是生产环境</strong>要用到的包，并且不会发布到<code>npm</code>让别人使用。如<strong>web</strong>项目常用的<code>express</code>和<code>koa</code>，是生产环境运行必须的包，你也可以随便放 <strong>（惊不惊喜意不意外）</strong>，在生产环境中，部署生产环境时使用<code>npm install</code>，一样会把所有包安装下来，不影响生产环境的运行。为了避免有人说闲话，还是要放到<code>dependencies</code>中。</p>
-</li>
-<li><p> 如果既有开发依赖又有生产依赖，并且不会发布到<code>npm</code>让别人使用。你还是可以随便放。<code>npm install</code> 会安装所有包。但就会产生问题，<strong>生产环境安装了开发环境的包</strong>，这个问题会死人吗？不太清楚，但项目是可以运行的。要避免这些额外的消耗，就要区分两种包的位置。在生产环境中使用<code>npm install --production</code>，则只会安装<code>dependencies</code>中的依赖。外翻篇：如果你开心，也可以把<strong>开发依赖</strong>包放到<code>devDependencies</code>，<strong>生产依赖</strong>包放到<code>dependencies</code>，生产环境就用<code>npm install --only=dev</code>，这样只会安装<code>devDependencies</code>中的<del>生产</del>依赖。</p>
-</li>
-<li><p> 如果是一个要发布到<code>npm</code>的项目，生产依赖就<strong>一定</strong>要放在<code>dependencies</code>中（缺失会导致运行出错）；开发依赖<strong>应该</strong>放在<code>devDependencies</code>中，这样可以不浪费用户资源，如果放到<code>dependencies</code>中，用户端就会安装很多多余的依赖，浪费大量资源，增加版本冲突概率。</p>
-</li>
-</ol>
-<h2 id="总结"><a href="#总结" class="headerlink" title="总结"></a>总结</h2><p>简单总结，当<strong>生产依赖</strong>和<strong>开发依赖</strong>分别放到不同位置时，会导致的问题：</p>
-<table>
-<thead>
-<tr>
-<th>玩法</th>
-<th>dependencies</th>
-<th>devDependencies</th>
-<th>内部项目</th>
-<th>作为npm包发布</th>
-</tr>
-</thead>
-<tbody><tr>
-<td>规范</td>
-<td>生产依赖</td>
-<td>开发依赖</td>
-<td>-</td>
-<td>-</td>
-</tr>
-<tr>
-<td>开发依赖放在dependencies中</td>
-<td>生产依赖、开发依赖</td>
-<td>-</td>
-<td>浪费生产环境资源</td>
-<td>浪费大量用户资源</td>
-</tr>
-<tr>
-<td>生产依赖放在devDependencies中</td>
-<td>-</td>
-<td>生产依赖、开发依赖</td>
-<td>浪费生产环境资源、部署方式怪异</td>
-<td>用户无法正常运行</td>
-</tr>
-<tr>
-<td>反着放</td>
-<td>开发依赖</td>
-<td>生产依赖</td>
-<td>部署方式怪异</td>
-<td>浪费大量用户资源、用户无法正常运行</td>
-</tr>
-</tbody></table>
-<p>可以看出，在内部项目中，只要团队能玩得转（也不关心生产环境的资源浪费），可以不用太在意规范。但如果是要发布到npm的项目，甚至是开源项目，就要特别注意。<strong>自己可以乱来，但给用户的，应该是最好的</strong>。</p>
-]]></content>
-      <categories>
-        <category>javascript</category>
-      </categories>
-  </entry>
-  <entry>
     <title>什么是全栈开发者？</title>
-    <url>/nirvana/javascript/%E5%89%8D%E7%AB%AF/%E4%BB%80%E4%B9%88%E6%98%AF%E5%85%A8%E6%A0%88%E5%BC%80%E5%8F%91%E8%80%85%EF%BC%9F/</url>
+    <url>/nirvana/javascript-javascript/%E5%89%8D%E7%AB%AF/%E4%BB%80%E4%B9%88%E6%98%AF%E5%85%A8%E6%A0%88%E5%BC%80%E5%8F%91%E8%80%85%EF%BC%9F/</url>
     <content><![CDATA[<p>英文原文：What is a Full Stack developer?<br>翻译者来自<a href="http://www.oschina开源社区./">www.oschina开源社区。</a></p>
 <hr>
 <p>最近很流行全栈开发，那么全栈开发者是什么意思呢？</p>
@@ -5499,12 +5010,12 @@ N表示当前攻击的次数，P(N)表示当前攻击的暴击率，C为概率�
 <p><a href="http://www.oschina.net/translate/what-is-a-full-stack-developer">http://www.oschina.net/translate/what-is-a-full-stack-developer</a></p>
 ]]></content>
       <categories>
-        <category>javascript</category>
+        <category>javascript javascript</category>
       </categories>
   </entry>
   <entry>
     <title>使用keymetrics实时监控Node.js程序</title>
-    <url>/nirvana/javascript/%E5%89%8D%E7%AB%AF/%E4%BD%BF%E7%94%A8keymetrics%E5%AE%9E%E6%97%B6%E7%9B%91%E6%8E%A7Node%E7%A8%8B%E5%BA%8F/</url>
+    <url>/nirvana/javascript-javascript/%E5%89%8D%E7%AB%AF/%E4%BD%BF%E7%94%A8keymetrics%E5%AE%9E%E6%97%B6%E7%9B%91%E6%8E%A7Node%E7%A8%8B%E5%BA%8F/</url>
     <content><![CDATA[<p>通过pm2能守护node.js程序永远在线，在实际应用中是非常有必要的。另外，pm2配合keymetrics能实时监控node.js程序的运行，达到监控node.js程序的目的。</p>
 <blockquote>
 <p>安装pm2</p>
@@ -5532,12 +5043,12 @@ N表示当前攻击的次数，P(N)表示当前攻击的暴击率，C为概率�
 <p><img src="https://upload-images.jianshu.io/upload_images/10024246-cb89932826f59578.jpg?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240"></p>
 ]]></content>
       <categories>
-        <category>javascript</category>
+        <category>javascript javascript</category>
       </categories>
   </entry>
   <entry>
     <title>你必须知道的CSS权重</title>
-    <url>/nirvana/javascript/%E5%89%8D%E7%AB%AF/%E4%BD%A0%E5%BF%85%E9%A1%BB%E7%9F%A5%E9%81%93%E7%9A%84CSS%E6%9D%83%E9%87%8D/</url>
+    <url>/nirvana/javascript-javascript/%E5%89%8D%E7%AB%AF/%E4%BD%A0%E5%BF%85%E9%A1%BB%E7%9F%A5%E9%81%93%E7%9A%84CSS%E6%9D%83%E9%87%8D/</url>
     <content><![CDATA[<h1 id="层叠"><a href="#层叠" class="headerlink" title="层叠"></a>层叠</h1><p>我们都知道CSS的全称是<code>Cascading Style Sheets</code> 也就是<code>层叠样式表</code></p>
 <p>那么当多个选择器同时选中一个元素时 会发生什么呢</p>
 <p>这就是CSS需要解决的问题</p>
@@ -5645,7 +5156,7 @@ N表示当前攻击的次数，P(N)表示当前攻击的暴击率，C为概率�
 </blockquote>
 ]]></content>
       <categories>
-        <category>javascript</category>
+        <category>javascript javascript</category>
       </categories>
   </entry>
   <entry>
@@ -5663,7 +5174,7 @@ N表示当前攻击的次数，P(N)表示当前攻击的暴击率，C为概率�
   </entry>
   <entry>
     <title>关于BABEL</title>
-    <url>/nirvana/javascript/%E5%89%8D%E7%AB%AF/%E5%85%B3%E4%BA%8EBABEL/</url>
+    <url>/nirvana/javascript-javascript/%E5%89%8D%E7%AB%AF/%E5%85%B3%E4%BA%8EBABEL/</url>
     <content><![CDATA[<h2 id="什么是-BABEL"><a href="#什么是-BABEL" class="headerlink" title="什么是 BABEL"></a>什么是 BABEL</h2><blockquote>
 <p>Babel 官方文档: <a href="https://babeljs.io/">https://babeljs.io/</a></p>
 </blockquote>
@@ -5804,12 +5315,12 @@ N表示当前攻击的次数，P(N)表示当前攻击的暴击率，C为概率�
 <p>还有一些包从其他包独立出来的变化等等</p>
 ]]></content>
       <categories>
-        <category>javascript</category>
+        <category>javascript javascript</category>
       </categories>
   </entry>
   <entry>
     <title>写给前端面试者</title>
-    <url>/nirvana/javascript/%E5%89%8D%E7%AB%AF/%E5%86%99%E7%BB%99%E5%89%8D%E7%AB%AF%E9%9D%A2%E8%AF%95%E8%80%85/</url>
+    <url>/nirvana/javascript-javascript/%E5%89%8D%E7%AB%AF/%E5%86%99%E7%BB%99%E5%89%8D%E7%AB%AF%E9%9D%A2%E8%AF%95%E8%80%85/</url>
     <content><![CDATA[<p>不管是刚毕业踏入社会的还是在职场久经奋战的，都经历过被面这一环节。当然也有很多同学开始在面人，为自己的团队选择优秀的血液。而我也是属于这一类，这些年都有在帮公司或朋友的团队物色人才和面试同学。今年在手淘也一样，在给同学面试过程中，让我开始在思考，而且思考了很久，所以这几天静下来写了这篇文章，希望这篇文章对于刚毕业的大学生或者还在继续参加工作面试的同学有所帮助。</p>
 <p>在这篇文章中，将不涉及任何的面试题，我只想和大家聊聊面试者与被面者之间的感受。</p>
 <p><strong>什么是前端</strong></p>
@@ -5913,12 +5424,12 @@ N表示当前攻击的次数，P(N)表示当前攻击的暴击率，C为概率�
 </blockquote>
 ]]></content>
       <categories>
-        <category>javascript</category>
+        <category>javascript javascript</category>
       </categories>
   </entry>
   <entry>
     <title>利用 JSON.stringify 深拷贝的弊端</title>
-    <url>/nirvana/javascript/%E5%89%8D%E7%AB%AF/%E5%88%A9%E7%94%A8%20JSON.stringify%20%E6%B7%B1%E6%8B%B7%E8%B4%9D%E7%9A%84%E5%BC%8A%E7%AB%AF/</url>
+    <url>/nirvana/javascript-javascript/%E5%89%8D%E7%AB%AF/%E5%88%A9%E7%94%A8%20JSON.stringify%20%E6%B7%B1%E6%8B%B7%E8%B4%9D%E7%9A%84%E5%BC%8A%E7%AB%AF/</url>
     <content><![CDATA[<p>深拷贝不仅将原对象的各个属性逐个复制出去，而且将原对象各个属性所包含的对象也依次采用深拷贝的方法递归复制到新对象上。</p>
 <figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">function deepClone(obj)&#123;</span><br><span class="line">    let obj_ &#x3D; JSON.stringify(obj),</span><br><span class="line">    loneObj &#x3D; JSON.parse(obj_);</span><br><span class="line">    return loneObj</span><br><span class="line">&#125;</span><br><span class="line">let a&#x3D;[1,2,3,4,[2,3,4]],</span><br><span class="line">b &#x3D; deepClone(a);</span><br><span class="line">console.log(a,b);</span><br></pre></td></tr></table></figure>
 <p>结果：<br><img src="https://upload-images.jianshu.io/upload_images/10024246-e4e276aba8a446aa.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240"></p>
@@ -5955,18 +5466,18 @@ N表示当前攻击的次数，P(N)表示当前攻击的暴击率，C为概率�
 <p>```<br>let arr = [12,12,12];<br>console.log(JSON.stringify(arr),arr.toString());<br>//[12,12,12] 12,12,12<br> ````</p>
 ]]></content>
       <categories>
-        <category>javascript</category>
+        <category>javascript javascript</category>
       </categories>
   </entry>
   <entry>
     <title>前端学习方向</title>
-    <url>/nirvana/javascript/%E5%89%8D%E7%AB%AF/%E5%89%8D%E7%AB%AF%E5%AD%A6%E4%B9%A0%E6%96%B9%E5%90%91/</url>
+    <url>/nirvana/javascript-javascript/%E5%89%8D%E7%AB%AF/%E5%89%8D%E7%AB%AF%E5%AD%A6%E4%B9%A0%E6%96%B9%E5%90%91/</url>
     <content><![CDATA[<p>最近一直在思考，个人潜在技术方向的下个关注点，看了下网上建议有以下：</p>
 <p>1.数据可视化<br>2.IOT前端架构<br>3.跨平台技术，flutter,weex,rn等<br>4.前端智能组件技术<br>5.WebRTC实时音视频技术<br>6.Serverless技术<br>7.跨端小程序，小游戏<br>8.Css环境感应技术<br>9.javascript面向硬件编程<br>10.同构架构</p>
 <p>结合公司现在的状况和个人兴趣，打算花费一个季度的时间去研究并落地<code>Serverless技术</code>，实现接口的BFF能力。</p>
 ]]></content>
       <categories>
-        <category>javascript</category>
+        <category>javascript javascript</category>
       </categories>
   </entry>
   <entry>
@@ -6572,7 +6083,7 @@ N表示当前攻击的次数，P(N)表示当前攻击的暴击率，C为概率�
   </entry>
   <entry>
     <title>理解JavaScript内联命名函数</title>
-    <url>/nirvana/javascript/%E5%89%8D%E7%AB%AF/%E7%90%86%E8%A7%A3JavaScript%E5%86%85%E8%81%94%E5%91%BD%E5%90%8D%E5%87%BD%E6%95%B0/</url>
+    <url>/nirvana/javascript-javascript/%E5%89%8D%E7%AB%AF/%E7%90%86%E8%A7%A3JavaScript%E5%86%85%E8%81%94%E5%91%BD%E5%90%8D%E5%87%BD%E6%95%B0/</url>
     <content><![CDATA[<p>在使用JavaScript递归调用时，我们往往会在函数内部调用函数自身(通过函数名)，但是当我们改变了定义时所用函数名的指向时，那么这个递归函数指针关联的递归函数也将随之失效。</p>
 <figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">var factorial &#x3D; function (num) &#123;</span><br><span class="line">    if (num &lt;&#x3D; 1) &#123;</span><br><span class="line">        return 1;</span><br><span class="line">    &#125; else &#123;</span><br><span class="line">        return num * factorial(num - 1);</span><br><span class="line">    &#125;</span><br><span class="line">&#125;;</span><br><span class="line">console.log(factorial(5)); &#x2F;&#x2F; 120;</span><br><span class="line">var anothorFactorial &#x3D; factorial;</span><br><span class="line">factorial &#x3D; null;</span><br><span class="line">console.log(anothorFactorial(5)); &#x2F;&#x2F; Uncaught TypeError: factorial is not a function</span><br></pre></td></tr></table></figure>
 <p>在非严格模式下我们可以使用 num * arguments.callee(num - 1)来代替函数名。<br>严格模式下，通常会采用内联命名函数来解决这个问题。</p>
@@ -6587,7 +6098,7 @@ N表示当前攻击的次数，P(N)表示当前攻击的暴击率，C为概率�
 <p>上述代码证明:尽管我们可以给内联函数命名，但是这些名称只能在自身函数内部才是可见的。使用内联方式调用，其本质和函数表达式没有太大不同，唯一的区别就是内联命名函数在函数内部提供了一个仅仅可供自身调用的函数指针，该指针指向函数自身。</p>
 ]]></content>
       <categories>
-        <category>javascript</category>
+        <category>javascript javascript</category>
       </categories>
   </entry>
   <entry>
@@ -6892,7 +6403,7 @@ N表示当前攻击的次数，P(N)表示当前攻击的暴击率，C为概率�
   </entry>
   <entry>
     <title>程序员如何在简历上写“我换了一个灯泡”？</title>
-    <url>/nirvana/javascript/%E5%89%8D%E7%AB%AF/%E7%A8%8B%E5%BA%8F%E5%91%98%E5%A6%82%E4%BD%95%E5%9C%A8%E7%AE%80%E5%8E%86%E4%B8%8A%E5%86%99%E2%80%9C%E6%88%91%E6%8D%A2%E4%BA%86%E4%B8%80%E4%B8%AA%E7%81%AF%E6%B3%A1%E2%80%9D%EF%BC%9F/</url>
+    <url>/nirvana/javascript-javascript/%E5%89%8D%E7%AB%AF/%E7%A8%8B%E5%BA%8F%E5%91%98%E5%A6%82%E4%BD%95%E5%9C%A8%E7%AE%80%E5%8E%86%E4%B8%8A%E5%86%99%E2%80%9C%E6%88%91%E6%8D%A2%E4%BA%86%E4%B8%80%E4%B8%AA%E7%81%AF%E6%B3%A1%E2%80%9D%EF%BC%9F/</url>
     <content><![CDATA[<p>每个人都会有这样的问题：<code>为什么看上去差不多的技术和资历，有人可以一个月收到二三十个offer，有人只有寥寥几个？</code><br>        答案与简历相关。<br>虽然技术有高有低、资历有深有浅，个人客观情况在短时间无法改变（经历造假可鄙），但是，如何将它们呈现在简历中是有技巧的。<br>比如：如果要在简历上写<code>“我换了一个灯泡”,</code>大家会怎么写?<br><strong>@字节跳动员工：</strong>在没有造成任何成本超支以及安全事故的情况下,独立成功管理了环境照明系统的升级与安装<br><strong>@阿里员工：</strong>我联合了硬件排查部门、采购部门、电力工程部门等等,结合这些资源,我顺利的找到了问题所在。最后推动各个部门协同工作,在大家共同努力之下最后成功和囻满的解决了问题。最后,我总结了一套流程,打造了一个x系统,用于自动检测类似问题。 一旦发现问题,系统将自动下发指令给正确的业务部分,自动完成整个工程,解决问题。大大的节省了資源以前需要100个人才能解决的问题,现在只需要10个人即可完成失去光明的时间,由以前的一个月,缩短到了1小时,在线时间达到9999999%。<br>**@网易员工:**我觉得这个难点在于理解整个电力系统架构,准确找到开关,并在尽可能减少业务损失情况下更换受损业务子模块。顺便我觉得可以优化成热更流程,在不关开关情况下换,但要非常小心,操作要干净快速。<br>**@百度员工;**为保障大家工作的顺利进行,我克服艰难亲自为大家换了办公室灯泡<br>**@京东员工:**负责办公室照明系统<br>**@苏宁员工:**重现光明。<br>**@移动员工:**后面紧着造成的后果,业绩、成绩、亮点,以及过程中的困难<br>**@腾讯员工:**我参与了公司的《爱是一道光》项目,前期独立完成整体架构搭建，后期与团队共同分享胜利的喜悦。<br><strong>@后厂村程序员</strong></p>
 <ul>
 <li>1.讲解电灯发明的历史理论基础</li>
@@ -6904,7 +6415,7 @@ N表示当前攻击的次数，P(N)表示当前攻击的暴击率，C为概率�
 </ul>
 ]]></content>
       <categories>
-        <category>javascript</category>
+        <category>javascript javascript</category>
       </categories>
   </entry>
   <entry>
@@ -8614,7 +8125,7 @@ res.end();
   </entry>
   <entry>
     <title>Hexo Next leancloud文章阅读次数配置</title>
-    <url>/nirvana/javascript/%E5%89%8D%E7%AB%AF/HexoNextleancloud%E6%96%87%E7%AB%A0%E9%98%85%E8%AF%BB%E6%AC%A1%E6%95%B0%E9%85%8D%E7%BD%AE/</url>
+    <url>/nirvana/javascript-javascript/%E5%89%8D%E7%AB%AF/HexoNextleancloud%E6%96%87%E7%AB%A0%E9%98%85%E8%AF%BB%E6%AC%A1%E6%95%B0%E9%85%8D%E7%BD%AE/</url>
     <content><![CDATA[<h1 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h1><p>由于<code>Next</code>主题修复了<code>leancloud</code>的安全问题, 导致以前<code>leancloud</code>失效, 所以重新介绍如何配置<code>leancloud</code></p>
 <blockquote>
 <p>所有使用该插件而未经修复的NexT站点或使用类似方法集成Leancloud访客统计功能的站点都被认为是不安全的，请尽快修复</p>
@@ -8688,12 +8199,12 @@ res.end();
 <p><strong>至此配置完成</strong></p>
 ]]></content>
       <categories>
-        <category>javascript</category>
+        <category>javascript javascript</category>
       </categories>
   </entry>
   <entry>
     <title>Nodejs读取目录下的文件并编辑</title>
-    <url>/nirvana/javascript/%E5%89%8D%E7%AB%AF/nodereadfile/</url>
+    <url>/nirvana/javascript-javascript/%E5%89%8D%E7%AB%AF/nodereadfile/</url>
     <content><![CDATA[<p>node下读取和编辑文件都是使用<code>fs</code>组件</p>
 <h2 id="引用模块"><a href="#引用模块" class="headerlink" title="引用模块"></a>引用模块</h2><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">const fs &#x3D; require(&#39;fs&#39;);</span><br></pre></td></tr></table></figure>
 <h2 id="读取文件夹"><a href="#读取文件夹" class="headerlink" title="读取文件夹"></a>读取文件夹</h2><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">&#x2F;**</span><br><span class="line">* path - 文件路径。</span><br><span class="line">* callback - 回调函数，回调函数带有两个参数err, files，err 为错误信息，files 为 目录下的文件数组列表。</span><br><span class="line">**&#x2F;</span><br><span class="line"></span><br><span class="line">fs.readdir(path, callback)</span><br><span class="line">#异步 readdir(3). 读取目录的内容。</span><br><span class="line">fs.readdirSync(path)</span><br><span class="line">#同步 readdir().返回文件数组列表。</span><br><span class="line"></span><br><span class="line">&#x2F;&#x2F;demo</span><br><span class="line">const fs &#x3D; require(&#39;fs&#39;);</span><br><span class="line">const path &#x3D; require(&#39;path&#39;);</span><br><span class="line">fs.readdir(pathName, function(err, files)&#123;</span><br><span class="line">    var dirs &#x3D; [];</span><br><span class="line">    (function iterator(i)&#123;</span><br><span class="line">      if(i &#x3D;&#x3D; files.length) &#123;</span><br><span class="line">        console.log(dirs);</span><br><span class="line">      &#125;</span><br><span class="line">      fs.stat(path.join(pathName, files[i]), function(err, data)&#123;     </span><br><span class="line">        if(data.isFile())&#123;               </span><br><span class="line">            dirs.push(files[i]);</span><br><span class="line">            iterator(i+1);</span><br><span class="line">       &#125;);   </span><br><span class="line">    &#125;)(0);</span><br><span class="line">&#125;);</span><br></pre></td></tr></table></figure>
@@ -8701,7 +8212,7 @@ res.end();
 <h2 id="编辑文件"><a href="#编辑文件" class="headerlink" title="编辑文件"></a>编辑文件</h2><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">var fs &#x3D; require(&quot;fs&quot;);</span><br><span class="line"></span><br><span class="line">&#x2F;&#x2F; 异步读取</span><br><span class="line">fs.readFile(&#39;input.txt&#39;, function (err, data) &#123;</span><br><span class="line">   if (err) &#123;</span><br><span class="line">       return console.error(err);</span><br><span class="line">   &#125;</span><br><span class="line">   console.log(&quot;异步读取: &quot; + data.toString());</span><br><span class="line">&#125;);</span><br><span class="line"></span><br><span class="line">&#x2F;&#x2F; 同步读取</span><br><span class="line">var data &#x3D; fs.readFileSync(&#39;input.txt&#39;);</span><br><span class="line">console.log(&quot;同步读取: &quot; + data.toString());</span><br><span class="line"></span><br><span class="line">console.log(&quot;程序执行完毕。&quot;);</span><br></pre></td></tr></table></figure>
 ]]></content>
       <categories>
-        <category>javascript</category>
+        <category>javascript javascript</category>
       </categories>
   </entry>
   <entry>
@@ -8721,7 +8232,7 @@ res.end();
   </entry>
   <entry>
     <title>【译】生产环境下的Node.js——开源监控工具</title>
-    <url>/nirvana/javascript/%E5%89%8D%E7%AB%AF/%E3%80%90%E8%AF%91%E3%80%91%E7%94%9F%E4%BA%A7%E7%8E%AF%E5%A2%83%E4%B8%8B%E7%9A%84Node%E2%80%94%E2%80%94%E5%BC%80%E6%BA%90%E7%9B%91%E6%8E%A7%E5%B7%A5%E5%85%B7/</url>
+    <url>/nirvana/javascript-javascript/%E5%89%8D%E7%AB%AF/%E3%80%90%E8%AF%91%E3%80%91%E7%94%9F%E4%BA%A7%E7%8E%AF%E5%A2%83%E4%B8%8B%E7%9A%84Node%E2%80%94%E2%80%94%E5%BC%80%E6%BA%90%E7%9B%91%E6%8E%A7%E5%B7%A5%E5%85%B7/</url>
     <content><![CDATA[<p>你认为Node.js应用程序可以拥有的最重要的功能是什么？ 是花哨的全文模糊匹配搜索，还是用socket进行实时聊天呢？ 你能告诉我可以添加到Node.js应用中的最高级，最惊人和最吸引人的功能是什么么？</p>
 <p>想知道我的么？<strong>高性能和不间断服务</strong>。高性能应用程序需要做好以下三点：</p>
 <ol>
@@ -8847,7 +8358,496 @@ res.end();
 <p>作者：Make_a_decision<br>链接：<a href="https://juejin.cn/post/6844903859479904264">https://juejin.cn/post/6844903859479904264</a><br>来源：掘金<br>著作权归作者所有。商业转载请联系作者获得授权，非商业转载请注明出处。</p>
 ]]></content>
       <categories>
-        <category>javascript</category>
+        <category>javascript javascript</category>
+      </categories>
+  </entry>
+  <entry>
+    <title>Error--Can&#39;t resolve &#39;fs&#39; in （webpack 2配置CSS-loadeers）</title>
+    <url>/nirvana/webpack/webpack/Error--Can&#39;t-resolve-&#39;fs&#39;-in-%EF%BC%88webpack-2%E9%85%8D%E7%BD%AECSS-loadeers%EF%BC%89/</url>
+    <content><![CDATA[<h4 id="前言，在之前有配置过webpack-2-中css-loaders，但是怎么也不正确"><a href="#前言，在之前有配置过webpack-2-中css-loaders，但是怎么也不正确" class="headerlink" title="前言，在之前有配置过webpack 2 中css loaders，但是怎么也不正确"></a>前言，在之前有配置过webpack 2 中css loaders，但是怎么也不正确</h4><p>报错：</p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">ERROR in .&#x2F;~&#x2F;convert-source-map&#x2F;index.js</span><br><span class="line">Module not found: Error: Can&#39;t resolve &#39;fs&#39; in &#39;&#x2F;Users&#x2F;ceshi&#x2F;Desktop&#x2F;webpack&#x2F;node_modules&#x2F;convert-source-map&#39;</span><br><span class="line"> @ .&#x2F;~&#x2F;convert-source-map&#x2F;index.js 2:9-22</span><br><span class="line"> @ .&#x2F;~&#x2F;css-loader&#x2F;lib&#x2F;css-base.js</span><br><span class="line"> @ .&#x2F;~&#x2F;css-loader!.&#x2F;app&#x2F;style.css</span><br><span class="line"> @ .&#x2F;app&#x2F;style.css</span><br><span class="line"> @ .&#x2F;app&#x2F;main.js</span><br></pre></td></tr></table></figure>
+
+<p><img src="https://upload-images.jianshu.io/upload_images/10024246-e3392ce8d53748bc.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240"></p>
+<p>解决方法，修改webpack的配置文件，增加一句代码</p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">node: &#123;</span><br><span class="line">       fs: &#39;empty&#39;</span><br><span class="line">   &#125;,</span><br></pre></td></tr></table></figure>
+
+<p><img src="https://upload-images.jianshu.io/upload_images/10024246-525a508c7db21758.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240"></p>
+]]></content>
+      <categories>
+        <category>webpack</category>
+      </categories>
+  </entry>
+  <entry>
+    <title>dependencies/devDependencies/peerDependencies/optionalDependencies/bundledDependencies</title>
+    <url>/nirvana/webpack/webpack/dependencies-devDependencies-peerDependencies-optionalDependencies-bun/</url>
+    <content><![CDATA[<h2 id="npm-目前支持以下几类依赖包管理："><a href="#npm-目前支持以下几类依赖包管理：" class="headerlink" title="npm 目前支持以下几类依赖包管理："></a><strong>npm</strong> 目前支持以下几类依赖包管理：</h2><ul>
+<li>  dependencies</li>
+<li>  devDependencies</li>
+<li>  peerDependencies</li>
+<li>  optionalDependencies</li>
+<li>  bundledDependencies / bundleDependencies</li>
+</ul>
+<p>如果你想使用哪种依赖管理，那么你可以将它放在package.json中对应的依赖对象中，比如：</p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">&quot;devDependencies&quot;: &#123;</span><br><span class="line">    &quot;fw2&quot;: &quot;^0.3.2&quot;,</span><br><span class="line">    &quot;grunt&quot;: &quot;^1.0.1&quot;,</span><br><span class="line">    &quot;webpack&quot;: &quot;^3.6.0&quot;</span><br><span class="line">  &#125;,</span><br><span class="line">  &quot;dependencies&quot;: &#123;</span><br><span class="line">    &quot;gulp&quot;: &quot;^3.9.1&quot;,</span><br><span class="line">    &quot;hello-else&quot;: &quot;^1.0.0&quot;</span><br><span class="line">  &#125;,</span><br><span class="line">  &quot;peerDependencies&quot;: &#123; &#125;,</span><br><span class="line">  &quot;optionalDependencies&quot;: &#123; &#125;,</span><br><span class="line">  &quot;bundledDependencies&quot;: [] </span><br></pre></td></tr></table></figure>
+
+<p>下面我们一一来看：</p>
+<h2 id="dependencies"><a href="#dependencies" class="headerlink" title="dependencies"></a>dependencies</h2><p>应用依赖，或者叫做业务依赖，这是我们最常用的依赖包管理对象！它用于指定应用依赖的外部包，这些依赖是应用发布后正常执行时所需要的，但不包含测试时或者本地打包时所使用的包。可使用下面的命令来安装：</p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">npm install packageName --save</span><br><span class="line"></span><br></pre></td></tr></table></figure>
+
+<p><strong>dependencies</strong>是一个简单的JSON对象，包含<strong>包名</strong>与<strong>包版本</strong>，其中<strong>包版本</strong>可以是版本号或者URL地址。比如：</p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">&#123; </span><br><span class="line">  &quot;dependencies&quot; :&#123; </span><br><span class="line">    &quot;foo&quot; : &quot;1.0.0 - 2.9999.9999&quot;, &#x2F;&#x2F; 指定版本范围</span><br><span class="line">    &quot;bar&quot; : &quot;&gt;&#x3D;1.0.2 &lt;2.1.2&quot;, </span><br><span class="line">    &quot;baz&quot; : &quot;&gt;1.0.2 &lt;&#x3D;2.3.4&quot;, </span><br><span class="line">    &quot;boo&quot; : &quot;2.0.1&quot;, &#x2F;&#x2F; 指定版本</span><br><span class="line">    &quot;qux&quot; : &quot;&lt;1.0.0 || &gt;&#x3D;2.3.1 &lt;2.4.5 || &gt;&#x3D;2.5.2 &lt;3.0.0&quot;, </span><br><span class="line">    &quot;asd&quot; : &quot;http:&#x2F;&#x2F;asdf.com&#x2F;asdf.tar.gz&quot;, &#x2F;&#x2F; 指定包地址</span><br><span class="line">    &quot;til&quot; : &quot;~1.2&quot;,  &#x2F;&#x2F; 最近可用版本</span><br><span class="line">    &quot;elf&quot; : &quot;~1.2.3&quot;, </span><br><span class="line">    &quot;elf&quot; : &quot;^1.2.3&quot;, &#x2F;&#x2F; 兼容版本</span><br><span class="line">    &quot;two&quot; : &quot;2.x&quot;, &#x2F;&#x2F; 2.1、2.2、...、2.9皆可用</span><br><span class="line">    &quot;thr&quot; : &quot;*&quot;,  &#x2F;&#x2F; 任意版本</span><br><span class="line">    &quot;thr2&quot;: &quot;&quot;, &#x2F;&#x2F; 任意版本</span><br><span class="line">    &quot;lat&quot; : &quot;latest&quot;, &#x2F;&#x2F; 当前最新</span><br><span class="line">    &quot;dyl&quot; : &quot;file:..&#x2F;dyl&quot;, &#x2F;&#x2F; 本地地址</span><br><span class="line">    &quot;xyz&quot; : &quot;git+ssh:&#x2F;&#x2F;git@github.com:npm&#x2F;npm.git#v1.0.27&quot;, &#x2F;&#x2F; git 地址</span><br><span class="line">    &quot;fir&quot; : &quot;git+ssh:&#x2F;&#x2F;git@github.com:npm&#x2F;npm#semver:^5.0&quot;,</span><br><span class="line">    &quot;wdy&quot; : &quot;git+https:&#x2F;&#x2F;isaacs@github.com&#x2F;npm&#x2F;npm.git&quot;,</span><br><span class="line">    &quot;xxy&quot; : &quot;git:&#x2F;&#x2F;github.com&#x2F;npm&#x2F;npm.git#v1.0.27&quot;,</span><br><span class="line">  &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<h2 id="devDependencies"><a href="#devDependencies" class="headerlink" title="devDependencies"></a>devDependencies</h2><p>开发环境依赖，仅次于<strong>dependencies</strong>的使用频率！它的对象定义和<strong>dependencies</strong>一样，只不过它里面的包只用于开发环境，不用于生产环境，这些包通常是单元测试或者打包工具等，例如<strong>gulp, grunt, webpack, moca, coffee</strong>等，可使用以下命令来安装：</p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">npm install packageName --save-dev</span><br><span class="line"></span><br></pre></td></tr></table></figure>
+
+<p>举个栗子：</p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">&#123; &quot;name&quot;: &quot;ethopia-waza&quot;,</span><br><span class="line">  &quot;description&quot;: &quot;a delightfully fruity coffee varietal&quot;,</span><br><span class="line">  &quot;version&quot;: &quot;1.2.3&quot;,</span><br><span class="line">  &quot;devDependencies&quot;: &#123;</span><br><span class="line">    &quot;coffee-script&quot;: &quot;~1.6.3&quot;</span><br><span class="line">  &#125;,</span><br><span class="line">  &quot;scripts&quot;: &#123;</span><br><span class="line">    &quot;prepare&quot;: &quot;coffee -o lib&#x2F; -c src&#x2F;waza.coffee&quot;</span><br><span class="line">  &#125;,</span><br><span class="line">  &quot;main&quot;: &quot;lib&#x2F;waza.js&quot;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<p>prepare脚本会在发布前运行，因此使用者在编译项目时不用依赖它。在开发模式下，运行npm install, 同时也会执行prepare脚本，开发时可以很容易的测试。</p>
+<blockquote>
+<p>至此，你理解了 <strong>–save</strong>和 <strong>–save-dev</strong>的区别了吗？</p>
+</blockquote>
+<h2 id="peerDependencies"><a href="#peerDependencies" class="headerlink" title="peerDependencies"></a>peerDependencies</h2><p>同等依赖，或者叫同伴依赖，用于指定当前包（也就是你写的包）兼容的宿主版本。如何理解呢？ 试想一下，我们编写一个gulp的插件，而gulp却有多个主版本，我们只想兼容最新的版本，此时就可以用同等依赖（<strong>peerDependencies</strong>）来指定：</p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">&#123;</span><br><span class="line">  &quot;name&quot;: &quot;gulp-my-plugin&quot;,</span><br><span class="line">  &quot;version&quot;: &quot;0.0.1&quot;,</span><br><span class="line">  &quot;peerDependencies&quot;: &#123;</span><br><span class="line">    &quot;gulp&quot;: &quot;3.x&quot;</span><br><span class="line">  &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<p>当别人使用我们的插件时，<strong>peerDependencies</strong>就会告诉明确告诉使用方，你需要安装该插件哪个宿主版本。</p>
+<p>通常情况下，我们会在一个项目里使用一个宿主（比如gulp）的很多插件，如果相互之间存在宿主不兼容，在执行<strong>npm install</strong>时，cli会抛出错误信息来告诉我们，比如：</p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">npm ERR! peerinvalid The package gulp does not satisfy its siblings&#39; peerDependencies requirements!</span><br><span class="line">npm ERR! peerinvalid Peer gulp-cli-config@0.1.3 wants gulp@~3.1.9</span><br><span class="line">npm ERR! peerinvalid Peer gulp-cli-users@0.1.4 wants gulp@~2.3.0</span><br></pre></td></tr></table></figure>
+
+<p>运行命令<strong>npm install gulp-my-plugin –save-dev</strong>来安装我们插件，我们来看下依赖图谱：</p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">├── gulp-my-plugin@0.0.1</span><br><span class="line">└── gulp@3.9.1</span><br></pre></td></tr></table></figure>
+
+<p>OK, Nice!</p>
+<blockquote>
+<p>注意，npm 1 与 npm 2 会自动安装同等依赖，npm 3 不再自动安装，会产生警告！手动在package.json文件中添加依赖项可以解决。</p>
+</blockquote>
+<h2 id="optionalDependencies"><a href="#optionalDependencies" class="headerlink" title="optionalDependencies"></a>optionalDependencies</h2><p>可选依赖，如果有一些依赖包即使安装失败，项目仍然能够运行或者希望npm继续运行，就可以使用<strong>optionalDependencies</strong>。另外<strong>optionalDependencies</strong>会覆盖<strong>dependencies</strong>中的同名依赖包，所以不要在两个地方都写。</p>
+<p>举个栗子，可选依赖包就像程序的插件一样，如果存在就执行存在的逻辑，不存在就执行另一个逻辑。</p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">try &#123;</span><br><span class="line">  var foo &#x3D; require(&#39;foo&#39;)</span><br><span class="line">  var fooVersion &#x3D; require(&#39;foo&#x2F;package.json&#39;).version</span><br><span class="line">&#125; catch (er) &#123;</span><br><span class="line">  foo &#x3D; null</span><br><span class="line">&#125;</span><br><span class="line">if ( notGoodFooVersion(fooVersion) ) &#123;</span><br><span class="line">  foo &#x3D; null</span><br><span class="line">&#125;</span><br><span class="line"> </span><br><span class="line">&#x2F;&#x2F; .. then later in your program ..</span><br><span class="line"> </span><br><span class="line">if (foo) &#123;</span><br><span class="line">  foo.doFooThings()</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<h2 id="bundledDependencies-bundleDependencies"><a href="#bundledDependencies-bundleDependencies" class="headerlink" title="bundledDependencies / bundleDependencies"></a>bundledDependencies / bundleDependencies</h2><p>打包依赖，<strong>bundledDependencies</strong>是一个包含依赖包名的数组对象，在发布时会将这个对象中的包打包到最终的发布包里。如：</p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">&#123;</span><br><span class="line">  &quot;name&quot;: &quot;fe-weekly&quot;,</span><br><span class="line">  &quot;description&quot;: &quot;ELSE 周刊&quot;,</span><br><span class="line">  &quot;version&quot;: &quot;1.0.0&quot;,</span><br><span class="line">  &quot;main&quot;: &quot;index.js&quot;,</span><br><span class="line">  &quot;devDependencies&quot;: &#123;</span><br><span class="line">    &quot;fw2&quot;: &quot;^0.3.2&quot;,</span><br><span class="line">    &quot;grunt&quot;: &quot;^1.0.1&quot;,</span><br><span class="line">    &quot;webpack&quot;: &quot;^3.6.0&quot;</span><br><span class="line">  &#125;,</span><br><span class="line">  &quot;dependencies&quot;: &#123;</span><br><span class="line">    &quot;gulp&quot;: &quot;^3.9.1&quot;,</span><br><span class="line">    &quot;hello-else&quot;: &quot;^1.0.0&quot;</span><br><span class="line">  &#125;,</span><br><span class="line">  &quot;bundledDependencies&quot;: [</span><br><span class="line">    &quot;fw2&quot;,</span><br><span class="line">    &quot;hello-else&quot;</span><br><span class="line">  ]</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<p>执行打包命令<strong>npm pack</strong>, 在生成的<strong>fe-weekly-1.0.0.tgz</strong>包中，将包含<strong>fw2</strong>和<strong>hello-else</strong>。 但是值得注意的是，这两个包必须先在<strong>devDependencies</strong>或<strong>dependencies</strong>声明过，否则打包会报错。</p>
+]]></content>
+      <categories>
+        <category>webpack</category>
+      </categories>
+  </entry>
+  <entry>
+    <title>webpack之插件optimize css assets webpack plugin</title>
+    <url>/nirvana/webpack/webpack/optimize-css-assets-webpack-plugin/</url>
+    <content><![CDATA[<h2 id="1-安装："><a href="#1-安装：" class="headerlink" title="1. 安装："></a>1. 安装：</h2><p>主要是用来压缩css文件</p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">npm i -D optimize-css-assets-webpack-plugin</span><br><span class="line">&#x2F;&#x2F; webpack 3及以下</span><br><span class="line">npm i -D optimize-css-assets-webpack-plugin@3.2.0 </span><br></pre></td></tr></table></figure>
+<h2 id="2-webpack-config-js配置"><a href="#2-webpack-config-js配置" class="headerlink" title="2. webpack.config.js配置"></a>2. webpack.config.js配置</h2><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">var OptimizeCssAssetsPlugin &#x3D; require(&#39;optimize-css-assets-webpack-plugin&#39;);</span><br><span class="line">const MiniCssExtractPlugin &#x3D; require(&#39;mini-css-extract-plugin&#39;);</span><br><span class="line"></span><br><span class="line">module.exports &#x3D; &#123;</span><br><span class="line">  module: &#123;</span><br><span class="line">    rules: [</span><br><span class="line">      &#123;</span><br><span class="line">        test: &#x2F;\.css$&#x2F;,</span><br><span class="line">        loader: MiniCssExtractPlugin.extract(&#39;style-loader&#39;, &#39;css-loader&#39;)</span><br><span class="line">        loader: MiniCssExtractPlugin.loader,</span><br><span class="line">        options: &#123;publicPath: &#39;&#x2F;public&#x2F;path&#x2F;to&#x2F;&#39; &#125;</span><br><span class="line">      &#125;</span><br><span class="line">    ]</span><br><span class="line">  &#125;,</span><br><span class="line">  plugins: [</span><br><span class="line">    new ExtractTextPlugin(&#39;styles.css&#39;),</span><br><span class="line">    &#x2F;&#x2F;new OptimizeCssAssetsPlugin()</span><br><span class="line">    new OptimizeCSSAssetsPlugin(&#123;</span><br><span class="line">      assetNameRegExp: &#x2F;\.css$&#x2F;g,</span><br><span class="line">      cssProcessor: require(&#39;cssnano&#39;),</span><br><span class="line">      cssProcessorPluginOptions: &#123;</span><br><span class="line">        preset: [&#39;default&#39;, &#123; discardComments: &#123; removeAll: true &#125; &#125;],</span><br><span class="line">      &#125;,</span><br><span class="line">      canPrint: true</span><br><span class="line">    &#125;),</span><br><span class="line">  ]</span><br><span class="line">&#125;;</span><br></pre></td></tr></table></figure>
+<h2 id="3-参数"><a href="#3-参数" class="headerlink" title="3. 参数"></a>3. 参数</h2><p>assetNameRegExp：一个正则表达式，指示应优化\最小化的资产的名称。提供的正则表达式针对配置中<br>ExtractTextPlugin实例导出的文件的文件名运行，而不是源CSS文件的文件名。默认为/.css$/g<br>cssProcessor：用于优化\最小化CSS的CSS处理器，默认为cssnano。这应该是一个跟随<br>cssnano.process接口的函数（接收CSS和选项参数并返回一个Promise）。<br>cssProcessorOptions：传递给cssProcessor的选项，默认为 {}<br>cssProcessorPluginOptions：传递给cssProcessor的插件选项，默认为 {}<br>canPrint：一个布尔值，指示插件是否可以将消息打印到控制台，默认为 true</p>
+<blockquote>
+<p>webpack4.X版本中，webpack -p命令，是可以默认压缩js文件的
+  </p>
+</blockquote>
+]]></content>
+      <categories>
+        <category>webpack</category>
+      </categories>
+  </entry>
+  <entry>
+    <title>prefetch 和 preload 及 webpack 的相关处理</title>
+    <url>/nirvana/webpack/webpack/prefetch-%E5%92%8C-preload-%E5%8F%8A-webpack-%E7%9A%84%E7%9B%B8%E5%85%B3%E5%A4%84%E7%90%86/</url>
+    <content><![CDATA[<p>使用预取和预加载是网站性能和用户体验提升的一个很好的途径，本文介绍了使用 prefetch 和 prefetch 进行预取和预加载的方法，并使用 webpack 进行实现</p>
+<h2 id="Link-的链接类型"><a href="#Link-的链接类型" class="headerlink" title="Link 的链接类型"></a>Link 的链接类型</h2><p><a href="https://developer.mozilla.org/zh-CN/docs/Web/HTML/Element/link"><code>&lt;link&gt;</code></a> 标签的 <code>rel</code> 属性可以定义链接类型，<code>prefetch</code> 是其中的一种，与 <code>href</code> 配合使用可以预取或预加载对应资源</p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">&lt;link rel&#x3D;&quot;prefetch&quot; herf&#x3D;&quot;URL&quot;&gt;</span><br><span class="line"></span><br></pre></td></tr></table></figure>
+
+<p><code>preload</code> 是另外一种类型，同样用 href 定义资源地址，但其处理预取外，还会对资源进行解析，所以还要增加属性 as，说明资源的类型</p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">&lt;link rel&#x3D;&quot;preload&quot; href&#x3D;&quot;URL&quot; as&#x3D;&quot;MIME_TYPE&quot;&gt;</span><br><span class="line"></span><br></pre></td></tr></table></figure>
+
+<h2 id="预取资源"><a href="#预取资源" class="headerlink" title="预取资源"></a>预取资源</h2><p><code>prefetch</code> 表示用户在接下来的浏览中（例如在下一个页面），有可能用到对应资源，提示浏览器要在闲时获取对应资源</p>
+<p>先新建文件夹 prefetch-preload-demo（本文所有代码将在此创建），安装相关依赖，并新建文件夹 static</p>
+<blockquote>
+<p>mkdir prefetch-preload-demo<br>cd prefetch-preload-demo<br>npm init -y<br>npm i -D http-server<br>mkdir static</p>
+</blockquote>
+<p>在 static 中创建 <code>prefetch.html</code>， <code>main.js</code> 和 <code>script.js</code></p>
+<p><code>prefetch.html</code> 定义了一个 <code>rel</code> 为 <code>prefetch</code> 的链接</p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">&lt;html&gt;</span><br><span class="line">&lt;head&gt;</span><br><span class="line">&lt;title&gt;Prefetch&lt;&#x2F;title&gt;</span><br><span class="line">&lt;meta charset&#x3D;&quot;utf-8&quot;&gt;</span><br><span class="line">&lt;meta name&#x3D;&quot;viewport&quot; content&#x3D;&quot;width&#x3D;device-width, initial-scale&#x3D;1, maximum-scale&#x3D;1&quot;&gt;</span><br><span class="line">&lt;link rel&#x3D;&quot;prefetch&quot; href&#x3D;&quot;script.js&quot;&gt;</span><br><span class="line">&lt;&#x2F;head&gt;</span><br><span class="line">&lt;body&gt;</span><br><span class="line">&lt;script src&#x3D;&quot;main.js&quot;&gt;&lt;&#x2F;script&gt;</span><br><span class="line">&lt;&#x2F;body&gt;</span><br><span class="line">&lt;&#x2F;html&gt;</span><br><span class="line"></span><br></pre></td></tr></table></figure>
+
+<p><code>main.js</code> 创建了一个按钮，并绑定了点击事件</p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">let button &#x3D; document.createElement(&#39;button&#39;);</span><br><span class="line">button.innerHTML &#x3D; &#39;Add Script&#39;;</span><br><span class="line">button.addEventListener(&#39;click&#39;, e &#x3D;&gt; &#123;</span><br><span class="line">  let script &#x3D; document.createElement(&quot;script&quot;);</span><br><span class="line">  script.src &#x3D; &quot;script.js&quot;;</span><br><span class="line">  document.head.appendChild(script);</span><br><span class="line">&#125;);</span><br><span class="line">document.body.appendChild(button);</span><br><span class="line"></span><br></pre></td></tr></table></figure>
+
+<p><code>script.js</code> 只是简单的打印了一下</p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">console.log(&#39;script run&#39;);</span><br><span class="line"></span><br></pre></td></tr></table></figure>
+
+<p>运行服务器（也可在 <code>package.json</code> 中增加 <code>server</code> 脚本）</p>
+<blockquote>
+<p>npx http-server</p>
+</blockquote>
+<p>访问 <a href="http://localhost:8080/">http://localhost:8080</a> 并导航至 <code>static</code> 中，点击 prefetch.html，或者直接访问线上<a href="https://chanvinxiao.com/demo/html/prefetch.html">页面</a>，初始状态下，查看控制台的网络选项卡下的内容如下（不要勾选 <code>Disable Cache</code>，点击右侧齿轮，勾选 <code>Use large request rows</code>）</p>
+<p><img src="https://upload-images.jianshu.io/upload_images/10024246-866a5d00121799d6.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240"></p>
+<ul>
+<li>  <code>script.js</code> 被 fetch 下来，size 列的两个数字，275 B 表示下载的字节大小，0 B 表示解析的字节大小（即目前并没有解析）</li>
+<li>  控制台是空的，即脚本没有运行</li>
+</ul>
+<p>点击页面上的 <code>Add Script</code>，会在页面增加地址为 <code>script.js</code> 的 <code>&lt;script&gt;</code> 标签，此时网络选项卡会增加以下内容</p>
+<p><img src="https://upload-images.jianshu.io/upload_images/10024246-b41e6c0e3f87d223.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240"></p>
+<ul>
+<li>  下载字节量为 <code>(prefetch cache)</code> ，即直接从预取缓存获取资源，下面的解析后的字节不再为 0</li>
+<li>  控制台打印出脚本中的调试内容，即这时脚本才被解析并运行</li>
+</ul>
+<h2 id="预加载资源"><a href="#预加载资源" class="headerlink" title="预加载资源"></a>预加载资源</h2><p><code>preload</code> 表示用户在当前的浏览中（往往是在当前页面），极有可以可能用到对应资源，提示浏览器要优先获取对应资源</p>
+<p>将 prefetch.html 的 link 标签的 prefetch 改为 <code>preload</code>，并增加资源类型 <code>as</code> 为 <code>script</code>，即得 preload.html</p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">&lt;link rel&#x3D;&quot;preload&quot; href&#x3D;&quot;script.js&quot; as&#x3D;&quot;script&quot;&gt;</span><br><span class="line"></span><br></pre></td></tr></table></figure>
+
+<p>访问本地服务器对应的 <code>prefetch.html</code>，或者直接访问线上<a href="https://chanvinxiao.com/demo/html/preload.html">页面</a>，初始状态下，查看控制台的网络选项卡下的内容如下</p>
+<p><img src="https://upload-images.jianshu.io/upload_images/10024246-4a5afe30da8888f1.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240"></p>
+<ul>
+<li>  <code>script.js</code> 被优先下载， size 列的解压字节不再为 0，即 <code>preload</code> 除了把脚本下载了下来，还进行了解析</li>
+<li>  控制台目前仍为空，即脚本虽然被解析，但并没有运行</li>
+</ul>
+<p>点击 <code>Add Script</code>，网络选项卡并没有增加任何记录，但是控制台输出了脚本的打印内容</p>
+<ul>
+<li>  因为脚本已经解析完成，所以连从缓存获取都不需要了，直接运行即可</li>
+<li>  如果没有在 3 秒内点击 <code>Add Script</code>，控制台会进行警告，因为没有及时使用应该优先加载的资源</li>
+</ul>
+<blockquote>
+<p>The resource <a href="https://chanvinxiao.com/demo/html/script.js">https://chanvinxiao.com/demo/html/script.js</a> was preloaded using link preload but not used within a few seconds from the window’s load event. Please make sure it has an appropriate <code>as</code> value and it is preloaded intentionally.</p>
+</blockquote>
+<h2 id="webpack-的相关处理"><a href="#webpack-的相关处理" class="headerlink" title="webpack 的相关处理"></a>webpack 的相关处理</h2><p>运行以下命令安装相关依赖，并新建文件夹 src</p>
+<blockquote>
+<p>npm i -D webpack webpack-cli html-webpack-plugin <a href="mailto:&#x70;&#x72;&#101;&#x6c;&#x6f;&#97;&#x64;&#x2d;&#119;&#x65;&#x62;&#x70;&#97;&#x63;&#x6b;&#x2d;&#112;&#108;&#117;&#103;&#x69;&#110;&#64;&#51;&#46;&#48;&#x2e;&#x30;&#45;&#x62;&#101;&#116;&#97;&#x2e;&#x34;">&#x70;&#x72;&#101;&#x6c;&#x6f;&#97;&#x64;&#x2d;&#119;&#x65;&#x62;&#x70;&#97;&#x63;&#x6b;&#x2d;&#112;&#108;&#117;&#103;&#x69;&#110;&#64;&#51;&#46;&#48;&#x2e;&#x30;&#45;&#x62;&#101;&#116;&#97;&#x2e;&#x34;</a><br>mkdir src</p>
+</blockquote>
+<ul>
+<li>  PreloadWebpackPlugin 的当前版本 2.x 与 webpack 当前版本 4.x 不兼容，所以需要指定版本号为最新的 3.x beta</li>
+</ul>
+<p>将 <code>main.js</code> 与 <code>script.js</code> 复制到 src 中，并将 <code>main.js</code> 的点击事件处理更新为</p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">button.addEventListener(&#39;click&#39;, e &#x3D;&gt; &#123;</span><br><span class="line">  import(&#x2F;* webpackChunkName: &quot;script&quot; *&#x2F; &#39;.&#x2F;script.js&#39;);</span><br><span class="line">&#125;);</span><br><span class="line"></span><br></pre></td></tr></table></figure>
+
+<ul>
+<li>  <a href="https://webpack.js.org/api/module-methods/#import-1">import()</a> 为动态加载脚本，webpack 会生成类似以上动态创建 <code>script</code> 标签的代码</li>
+<li>  import 里的注释为特殊含义的魔法注释，如果不设置 webpackChunkName，加载的脚本将被按数字次序命名</li>
+</ul>
+<p>增加 <code>webpack.config.js</code> 如下</p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">const HtmlWebpackPlugin &#x3D; require(&#39;html-webpack-plugin&#39;);</span><br><span class="line">const PreloadWebpackPlugin &#x3D; require(&#39;preload-webpack-plugin&#39;);</span><br><span class="line"></span><br><span class="line">module.exports &#x3D; &#123;</span><br><span class="line">  entry: &#39;.&#x2F;src&#x2F;main.js&#39;,</span><br><span class="line">  plugins: [</span><br><span class="line">    new HtmlWebpackPlugin(&#123;</span><br><span class="line">      filename: &#39;preload.html&#39;</span><br><span class="line">    &#125;),</span><br><span class="line">    new PreloadWebpackPlugin()</span><br><span class="line">  ]</span><br><span class="line">&#125;</span><br><span class="line"></span><br></pre></td></tr></table></figure>
+
+<ul>
+<li>  <a href="https://webpack.js.org/plugins/html-webpack-plugin/">HtmlWebpackPlugin</a> 将自动生成相应的 html 文件，默认为 index.html，这里通过设置 <code>filename</code> 选项更改</li>
+<li>  <a href="https://github.com/GoogleChrome/preload-webpack-plugin">PreloadWebpackPlugin</a> 为 HtmlWebpackPlugin 的插件，默认为其动态加载资源增加链接类型为 <code>preload</code> 的 <code>link</code> 标签，其 <code>as</code> 的值可根据后缀自动判断</li>
+</ul>
+<p>PreloadWebpackPlugin 也支持 prefetch，需要增加 <code>rel</code> 选项为 <code>prefetch</code></p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">new HtmlWebpackPlugin(&#123;</span><br><span class="line">  filename: &#39;prefetch.html&#39;</span><br><span class="line">&#125;),</span><br><span class="line">new PreloadWebpackPlugin(&#123;</span><br><span class="line">  rel: &#39;prefetch&#39;</span><br><span class="line">&#125;)</span><br><span class="line"></span><br></pre></td></tr></table></figure>
+
+<p>不过要同时生成 preload.html 和 prefetch.html，需要在对应的 PreloadWebpackPlugin 中设置 <code>excludeHtmlNames</code> 排除对方，否则会同时产生 preload 和 prefetch 的 link 标签</p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">new HtmlWebpackPlugin(&#123;</span><br><span class="line">  filename: &#39;preload.html&#39;</span><br><span class="line">&#125;),</span><br><span class="line">new HtmlWebpackPlugin(&#123;</span><br><span class="line">  filename: &#39;prefetch.html&#39;</span><br><span class="line">&#125;),</span><br><span class="line">new PreloadWebpackPlugin(&#123;</span><br><span class="line">  excludeHtmlNames: [&#39;prefetch.html&#39;]</span><br><span class="line">&#125;),</span><br><span class="line">new PreloadWebpackPlugin(&#123;</span><br><span class="line">  rel: &#39;prefetch&#39;,</span><br><span class="line">  excludeHtmlNames: [&#39;preload.html&#39;]</span><br><span class="line">&#125;)</span><br><span class="line"></span><br></pre></td></tr></table></figure>
+
+<p>构建文件（也可在 <code>package.json</code> 中增加 <code>build</code> 脚本）</p>
+<blockquote>
+<p>npx webpack</p>
+</blockquote>
+<p><code>dist</code> 文件夹中将生成 prefetch.html 和 preload.html，访问本地服务器对应地址，即可得到与以上静态页面同样的效果</p>
+<h2 id="总结"><a href="#总结" class="headerlink" title="总结"></a>总结</h2><p>此文使用静态页面和 webpack 打包两种方式演示了预取和预加载的实现 <a href="https://github.com/vinzid/prefetch-preload-demo"></a>，主要技术点如下：</p>
+<ul>
+<li>  ELEMENT.appendChild 动态创建脚本</li>
+<li>  import() 动态加载脚本并设置魔法注释</li>
+<li>  html-webpack-plugin 及其插件的配置</li>
+</ul>
+]]></content>
+      <categories>
+        <category>webpack</category>
+      </categories>
+  </entry>
+  <entry>
+    <title>webpack-bundle-analyzer可视化分析包大小</title>
+    <url>/nirvana/webpack/webpack/webpack-bundle-analyzer%E5%8F%AF%E8%A7%86%E5%8C%96%E5%88%86%E6%9E%90%E5%8C%85%E5%A4%A7%E5%B0%8F/</url>
+    <content><![CDATA[<p>前端开发现在由于使用node进行开发，会安装很多依赖，但是很多依赖的资源是不透明的，构建完成后，需要分析生产文件到底依赖那些资源，每个资源占据多少空间，这样才能有针对性的优化。所以需要有个方便分析包大小的工具，可以按需优化。<br>先看webpack-bundle-analyzer的效果图（官方效果图）：<br><img src="https://upload-images.jianshu.io/upload_images/10024246-0a46514a70cd94d0.gif?imageMogr2/auto-orient/strip"></p>
+<h2 id="一、安装"><a href="#一、安装" class="headerlink" title="一、安装"></a>一、安装</h2><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">npm install webpack-bundle-analyzer –save-dev</span><br></pre></td></tr></table></figure>
+<h2 id="二、配置"><a href="#二、配置" class="headerlink" title="二、配置"></a>二、配置</h2><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">&#x2F;&#x2F; 分析包内容 </span><br><span class="line">const BundleAnalyzerPlugin &#x3D; require(&#39;webpack-bundle-analyzer&#39;).BundleAnalyzerPlugin; </span><br><span class="line">module.exports &#x3D; &#123; </span><br><span class="line">plugins: [ </span><br><span class="line">&#x2F;&#x2F; 开启 BundleAnalyzerPlugin </span><br><span class="line">new BundleAnalyzerPlugin(), </span><br><span class="line">    ], </span><br><span class="line">&#125;;   </span><br></pre></td></tr></table></figure>
+<p>该插件的默认配置，一般无需修改<br> <figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">new BundleAnalyzerPlugin(&#123;</span><br><span class="line">  &#x2F;&#x2F;  可以是&#96;server&#96;，&#96;static&#96;或&#96;disabled&#96;。</span><br><span class="line">  &#x2F;&#x2F;  在&#96;server&#96;模式下，分析器将启动HTTP服务器来显示软件包报告。</span><br><span class="line">  &#x2F;&#x2F;  在“静态”模式下，会生成带有报告的单个HTML文件。</span><br><span class="line">  &#x2F;&#x2F;  在&#96;disabled&#96;模式下，你可以使用这个插件来将&#96;generateStatsFile&#96;设置为&#96;true&#96;来生成Webpack Stats JSON文件。</span><br><span class="line">  analyzerMode: &#39;server&#39;,</span><br><span class="line">  &#x2F;&#x2F;  将在“服务器”模式下使用的主机启动HTTP服务器。</span><br><span class="line">  analyzerHost: &#39;127.0.0.1&#39;,</span><br><span class="line">  &#x2F;&#x2F;  将在“服务器”模式下使用的端口启动HTTP服务器。</span><br><span class="line">  analyzerPort: 8888, </span><br><span class="line">  &#x2F;&#x2F;  路径捆绑，将在&#96;static&#96;模式下生成的报告文件。</span><br><span class="line">  &#x2F;&#x2F;  相对于捆绑输出目录。</span><br><span class="line">  reportFilename: &#39;report.html&#39;,</span><br><span class="line">  &#x2F;&#x2F;  模块大小默认显示在报告中。</span><br><span class="line">  &#x2F;&#x2F;  应该是&#96;stat&#96;，&#96;parsed&#96;或者&#96;gzip&#96;中的一个。</span><br><span class="line">  &#x2F;&#x2F;  有关更多信息，请参见“定义”一节。</span><br><span class="line">  defaultSizes: &#39;parsed&#39;,</span><br><span class="line">  &#x2F;&#x2F;  在默认浏览器中自动打开报告</span><br><span class="line">  openAnalyzer: true,</span><br><span class="line">  &#x2F;&#x2F;  如果为true，则Webpack Stats JSON文件将在bundle输出目录中生成</span><br><span class="line">  generateStatsFile: false, </span><br><span class="line">  &#x2F;&#x2F;  如果&#96;generateStatsFile&#96;为&#96;true&#96;，将会生成Webpack Stats JSON文件的名字。</span><br><span class="line">  &#x2F;&#x2F;  相对于捆绑输出目录。</span><br><span class="line">  statsFilename: &#39;stats.json&#39;,</span><br><span class="line">  &#x2F;&#x2F;  stats.toJson（）方法的选项。</span><br><span class="line">  &#x2F;&#x2F;  例如，您可以使用&#96;source：false&#96;选项排除统计文件中模块的来源。</span><br><span class="line">  &#x2F;&#x2F;  在这里查看更多选项：https：  &#x2F;&#x2F;github.com&#x2F;webpack&#x2F;webpack&#x2F;blob&#x2F;webpack-1&#x2F;lib&#x2F;Stats.js#L21</span><br><span class="line">  statsOptions: null,</span><br><span class="line">  logLevel: &#39;info&#39; &#x2F;&#x2F; 日志级别。可以是&#39;信息&#39;，&#39;警告&#39;，&#39;错误&#39;或&#39;沉默&#39;。</span><br><span class="line">&#125;)</span><br></pre></td></tr></table></figure></p>
+<h5 id="三、启动"><a href="#三、启动" class="headerlink" title="三、启动"></a>三、启动</h5><p>在package.json的scripts里加入下面这句话，就可以npm run build之后看到webpack-bundle-analyzer的效果：</p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">&quot;analyz&quot;: &quot;NODE_ENV&#x3D;production npm_config_report&#x3D;true npm run build&quot;</span><br></pre></td></tr></table></figure>
+<p>浏览器打开127.0.0.1:8888地址可以看到效果图。</p>
+<h5 id="四：模块功能："><a href="#四：模块功能：" class="headerlink" title="四：模块功能："></a>四：模块功能：</h5><ul>
+<li>意识到你的文件打包压缩后中真正的内容</li>
+<li>找出哪些模块组成最大的大小</li>
+<li>找到错误的模块</li>
+<li>最好的事情是它支持缩小捆绑！它解析它们以获得实际大小的捆绑模块。它也显示他们的gzipped大小！</li>
+</ul>
+]]></content>
+      <categories>
+        <category>webpack</category>
+      </categories>
+  </entry>
+  <entry>
+    <title>webpack getaddrinfo ENOTFOUND localhost错误</title>
+    <url>/nirvana/webpack/webpack/webpack-getaddrinfo-ENOTFOUND-localhost-%E9%94%99%E8%AF%AF/</url>
+    <content><![CDATA[<p>原因 没有指定 localhost<br>在host 文件中添加<br>127.0.0.1 localhost</p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">events.js:141</span><br><span class="line">      throw er; &#x2F;&#x2F; Unhandled &#39;error&#39; event</span><br><span class="line">      ^</span><br><span class="line"></span><br><span class="line">Error: getaddrinfo ENOTFOUND localhost</span><br><span class="line">    at errnoException (dns.js:27:10)</span><br><span class="line">    at GetAddrInfoReqWrap.onlookup [as oncomplete] (dns.js:78:26)</span><br></pre></td></tr></table></figure>
+]]></content>
+      <categories>
+        <category>webpack</category>
+      </categories>
+  </entry>
+  <entry>
+    <title>关于 webpack-cli4.0 及以上版本 和 webpack-dev-server 之间的依赖报connot find module “webpack-cli/bin/config-yargs”</title>
+    <url>/nirvana/webpack/webpack/webpack4error/</url>
+    <content><![CDATA[<p>今天在执行webpack-dev-server命令时，一直报Error: Cannot find module ‘webpack-cli/bin/config-yargs’<br>在执行npm run dev命令时报：</p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">connot find module “webpack-cli&#x2F;bin&#x2F;config-yargs”</span><br></pre></td></tr></table></figure>
+<p><img src="https://upload-images.jianshu.io/upload_images/10024246-6c0ce76392782d11.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240"></p>
+<h2 id="方案一"><a href="#方案一" class="headerlink" title="方案一"></a>方案一</h2><p>可以通过对webpack-cli进行降级处理，成功解决问题。<br>步骤：<br>一：</p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">npm uninstall webpack-cli   &#x2F;&#x2F;这是进行局部删除webpack-cli脚手架</span><br></pre></td></tr></table></figure>
+<p>二;</p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">npm install webpack-cli@3.3.11    &#x2F;&#x2F;@后面的数字指定不同的版本，版本应该低于4.0</span><br></pre></td></tr></table></figure>
+<h2 id="方案二"><a href="#方案二" class="headerlink" title="方案二"></a>方案二</h2><p><img src="https://upload-images.jianshu.io/upload_images/10024246-8e6a60a3309046c2.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240"></p>
+<p>在 webpack 官网上可以看到依赖的下载与设置方法没有改变，启动命令发生了改变。<br>直接 webpack serve –open，就可以了。</p>
+<p>依赖关系</p>
+<table>
+<thead>
+<tr>
+<th>依赖</th>
+<th>版本</th>
+<th>新版本</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>webpack</td>
+<td>4</td>
+<td>5</td>
+</tr>
+<tr>
+<td>webpack-cli</td>
+<td>3</td>
+<td>4</td>
+</tr>
+<tr>
+<td>webpack-dev-server</td>
+<td>3</td>
+<td>3</td>
+</tr>
+</tbody></table>
+<p>之前的依赖关系是 webpack-dev-server 依赖于 webpack-cli 内部的 config-yargs，cli 升级到 4.0 以后，统一了 webpack 命令的入口文件，反过来依赖 webpack-dev-server 来实现 webpack serve –open 的命令。</p>
+<p>原文链接：<a href="https://blog.csdn.net/weixin_40599109/article/details/109582365">https://blog.csdn.net/weixin_40599109/article/details/109582365</a></p>
+]]></content>
+      <categories>
+        <category>webpack</category>
+      </categories>
+  </entry>
+  <entry>
+    <title>webpack配置autoprefixer</title>
+    <url>/nirvana/webpack/webpack/webpack%E9%85%8D%E7%BD%AEautoprefixer/</url>
+    <content><![CDATA[<p>Autoprefixer解析CSS文件并且添加浏览器前缀到CSS规则里，使用<a href="http://www.caniuse.com/">Can I Use</a>的数据来决定哪些前缀是需要的。</p>
+<p>1.安装autoprefixer：</p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">cnpm install autoprefixer --save-dev</span><br></pre></td></tr></table></figure>
+<p>2.webpack.config.js中配置autoprefixer：</p>
+<p>(1).引入autoprefixer：</p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">const autoprefixer &#x3D; require(&#39;autoprefixer&#39;);</span><br></pre></td></tr></table></figure>
+<p>(2).添加postcss-loader和插件配置：</p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">&#123;</span><br><span class="line">  loader: &#39;postcss-loader&#39;,</span><br><span class="line">  options: &#123;</span><br><span class="line">    ident: &#39;postcss&#39;,</span><br><span class="line">    plugins: [</span><br><span class="line">      autoprefixer(&#123;</span><br><span class="line">           browsers: [</span><br><span class="line">                &#39;last 10 Chrome versions&#39;,</span><br><span class="line">                &#39;last 5 Firefox versions&#39;,</span><br><span class="line">                &#39;Safari &gt;&#x3D; 6&#39;, </span><br><span class="line">                &#39;ie&gt; 8</span><br><span class="line">           ] </span><br><span class="line">        &#125;),</span><br><span class="line">    ]</span><br><span class="line">  &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p>效果</p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">a&#123;</span><br><span class="line">     transition :transform 1s</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">a&#123;</span><br><span class="line">     -webkit-transition :-webkit-transform 1s;</span><br><span class="line">     transition :-ms-transform 1s;</span><br><span class="line">     transition :transform 1s</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<blockquote>
+<p>注： 另外webpack还有一个autoprefixer-loader，但npm官网已将其标为【deprecated】，推荐使用通过postcss-loader的方式使用autoprefixer。</p>
+</blockquote>
+]]></content>
+      <categories>
+        <category>webpack</category>
+      </categories>
+  </entry>
+  <entry>
+    <title>webpack配置terser-webpack-plugin 去掉项目中多余的debugger</title>
+    <url>/nirvana/webpack/webpack/webpack%E9%85%8D%E7%BD%AEterser-webpack-plugin%20%E5%8E%BB%E6%8E%89%E9%A1%B9%E7%9B%AE%E4%B8%AD%E5%A4%9A%E4%BD%99%E7%9A%84debugger/</url>
+    <content><![CDATA[<h2 id="入门"><a href="#入门" class="headerlink" title="入门"></a>入门</h2><p>如果你使用的是 webpack v5 或以上版本，你不需要安装这个插件。webpack v5 自带最新的 <code>terser-webpack-plugin</code>。如果使用 webpack v4，则必须安装 <code>terser-webpack-plugin</code> v4 的版本。</p>
+<p>首先，你需要安装 <code>terser-webpack-plugin</code>：</p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">$ npm install terser-webpack-plugin --save-dev</span><br><span class="line"></span><br></pre></td></tr></table></figure>
+
+<p>然后将插件添加到你的 <code>webpack</code> 配置文件中，直接在<code>optimization中</code>配置。例如：</p>
+<p><strong>webpack.config.js</strong></p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">const TerserPlugin &#x3D; require(&#39;terser-webpack-plugin&#39;);</span><br><span class="line">module.exports &#x3D; &#123;</span><br><span class="line">  	optimization: &#123;</span><br><span class="line">	    minimize: true,</span><br><span class="line">	    minimizer: [new TerserPlugin(&#123;</span><br><span class="line">	    	test: &#x2F;\.js(\?.*)?$&#x2F;i,    &#x2F;&#x2F;匹配参与压缩的文件</span><br><span class="line">	    	parallel: true,    &#x2F;&#x2F;使用多进程并发运行</span><br><span class="line">	    	terserOptions: &#123;    &#x2F;&#x2F;Terser 压缩配置</span><br><span class="line">	    		output:&#123;comments: false&#125;</span><br><span class="line">	    	&#125;,</span><br><span class="line">	    	extractComments: true,    &#x2F;&#x2F;将注释剥离到单独的文件中</span><br><span class="line">                compress: &#123;&#x2F;&#x2F;console删除</span><br><span class="line">                    pure_funcs: [&quot;console.log&quot;]</span><br><span class="line">                &#125;</span><br><span class="line">	    &#125;)],</span><br><span class="line">  	&#125;,</span><br><span class="line">&#125;;</span><br></pre></td></tr></table></figure>
+<h2 id="选项"><a href="#选项" class="headerlink" title="选项 "></a>选项 <a href="https://webpack.docschina.org/plugins/terser-webpack-plugin/#options"></a></h2><h3 id="test"><a href="#test" class="headerlink" title="test "></a><code>test</code> <a href="https://webpack.docschina.org/plugins/terser-webpack-plugin/#test"></a></h3><p>类型： <code>String|RegExp|Array&lt;String|RegExp&gt;</code> 默认值：<code>/\.m?js(\?.*)?$/i</code></p>
+<p>用来匹配需要压缩的文件。</p>
+<p><strong>webpack.config.js</strong></p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">module.exports &#x3D; &#123;</span><br><span class="line">  optimization: &#123;</span><br><span class="line">    minimize: true,</span><br><span class="line">    minimizer: [</span><br><span class="line">      new TerserPlugin(&#123;</span><br><span class="line">        test: &#x2F;\.js(\?.*)?$&#x2F;i,</span><br><span class="line">      &#125;),</span><br><span class="line">    ],</span><br><span class="line">  &#125;,</span><br><span class="line">&#125;;</span><br></pre></td></tr></table></figure>
+
+<h3 id="include"><a href="#include" class="headerlink" title="include "></a><code>include</code> <a href="https://webpack.docschina.org/plugins/terser-webpack-plugin/#include"></a></h3><p>类型： <code>String|RegExp|Array&lt;String|RegExp&gt;</code> 默认值： <code>undefined</code></p>
+<p>匹配参与压缩的文件。</p>
+<p><strong>webpack.config.js</strong></p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">module.exports &#x3D; &#123;</span><br><span class="line">  optimization: &#123;</span><br><span class="line">    minimize: true,</span><br><span class="line">    minimizer: [</span><br><span class="line">      new TerserPlugin(&#123;</span><br><span class="line">        include: &#x2F;\&#x2F;includes&#x2F;,</span><br><span class="line">      &#125;),</span><br><span class="line">    ],</span><br><span class="line">  &#125;,</span><br><span class="line">&#125;;</span><br></pre></td></tr></table></figure>
+
+<h3 id="exclude"><a href="#exclude" class="headerlink" title="exclude "></a><code>exclude</code> <a href="https://webpack.docschina.org/plugins/terser-webpack-plugin/#exclude"></a></h3><p>类型： <code>String|RegExp|Array&lt;String|RegExp&gt;</code> 默认值： <code>undefined</code></p>
+<p>匹配不需要压缩的文件。</p>
+<p><strong>webpack.config.js</strong></p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">module.exports &#x3D; &#123;</span><br><span class="line">  optimization: &#123;</span><br><span class="line">    minimize: true,</span><br><span class="line">    minimizer: [</span><br><span class="line">      new TerserPlugin(&#123;</span><br><span class="line">        exclude: &#x2F;\&#x2F;excludes&#x2F;,</span><br><span class="line">      &#125;),</span><br><span class="line">    ],</span><br><span class="line">  &#125;,</span><br><span class="line">&#125;;</span><br></pre></td></tr></table></figure>
+
+<h3 id="parallel"><a href="#parallel" class="headerlink" title="parallel "></a><code>parallel</code> <a href="https://webpack.docschina.org/plugins/terser-webpack-plugin/#parallel"></a></h3><p>类型： <code>Boolean|Number</code> 默认值： <code>true</code></p>
+<p>使用多进程并发运行以提高构建速度。 并发运行的默认数量： <code>os.cpus().length - 1</code> 。</p>
+<blockquote>
+<p>并发运行可以显著提高构建速度，因此<strong>强烈建议添加此配置</strong> 。</p>
+</blockquote>
+<blockquote>
+<p>如果你使用 <strong>Circle CI</strong> 或任何其他不提供 CPU 实际可用数量的环境，则需要显式设置 CPU 数量，以避免 <code>Error: Call retries were exceeded</code>（请参阅 <a href="https://github.com/webpack-contrib/terser-webpack-plugin/issues/143">#143</a>，<a href="https://github.com/webpack-contrib/terser-webpack-plugin/issues/202">#202</a> ）。</p>
+</blockquote>
+<h4 id="Boolean"><a href="#Boolean" class="headerlink" title="Boolean "></a><code>Boolean</code> <a href="https://webpack.docschina.org/plugins/terser-webpack-plugin/#boolean"></a></h4><p>启用/禁用多进程并发运行功能。</p>
+<p><strong>webpack.config.js</strong></p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">module.exports &#x3D; &#123;</span><br><span class="line">  optimization: &#123;</span><br><span class="line">    minimize: true,</span><br><span class="line">    minimizer: [</span><br><span class="line">      new TerserPlugin(&#123;</span><br><span class="line">        parallel: true,</span><br><span class="line">      &#125;),</span><br><span class="line">    ],</span><br><span class="line">  &#125;,</span><br><span class="line">&#125;;</span><br></pre></td></tr></table></figure>
+
+<h4 id="Number"><a href="#Number" class="headerlink" title="Number "></a><code>Number</code> <a href="https://webpack.docschina.org/plugins/terser-webpack-plugin/#number"></a></h4><p>启用多进程并发运行并设置并发运行次数。</p>
+<p><strong>webpack.config.js</strong></p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">module.exports &#x3D; &#123;</span><br><span class="line">  optimization: &#123;</span><br><span class="line">    minimize: true,</span><br><span class="line">    minimizer: [</span><br><span class="line">      new TerserPlugin(&#123;</span><br><span class="line">        parallel: 4,</span><br><span class="line">      &#125;),</span><br><span class="line">    ],</span><br><span class="line">  &#125;,</span><br><span class="line">&#125;;</span><br></pre></td></tr></table></figure>
+
+<h3 id="minify"><a href="#minify" class="headerlink" title="minify "></a><code>minify</code> <a href="https://webpack.docschina.org/plugins/terser-webpack-plugin/#minify"></a></h3><p>类型： <code>Function</code> 默认值： <code>undefined</code></p>
+<p>允许你自定义压缩函数。 默认情况下，插件使用 <a href="https://github.com/terser-js/terser">terser</a> 库。 对于使用和测试未发布的版本或 fork 的代码很帮助。</p>
+<blockquote>
+<p>⚠️ <strong>启用 <code>parallel</code> 选项时，在 <code>minify</code> 函数内部只能使用 <code>require</code></strong> 。</p>
+</blockquote>
+<p><strong>webpack.config.js</strong></p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">module.exports &#x3D; &#123;</span><br><span class="line">  optimization: &#123;</span><br><span class="line">    minimize: true,</span><br><span class="line">    minimizer: [</span><br><span class="line">      new TerserPlugin(&#123;</span><br><span class="line">        terserOptions: &#123;</span><br><span class="line">          myCustomOption: true,</span><br><span class="line">        &#125;,</span><br><span class="line">        &#x2F;&#x2F; Can be async</span><br><span class="line">        minify: (file, sourceMap, minimizerOptions) &#x3D;&gt; &#123;</span><br><span class="line">          &#x2F;&#x2F; The &#96;minimizerOptions&#96; option contains option from the &#96;terserOptions&#96; option</span><br><span class="line">          &#x2F;&#x2F; You can use &#96;minimizerOptions.myCustomOption&#96;</span><br><span class="line">          const extractedComments &#x3D; [];</span><br><span class="line"></span><br><span class="line">          &#x2F;&#x2F; Custom logic for extract comments</span><br><span class="line"></span><br><span class="line">          const &#123; map, code &#125; &#x3D; require(&quot;uglify-module&quot;) &#x2F;&#x2F; Or require(&#39;.&#x2F;path&#x2F;to&#x2F;uglify-module&#39;)</span><br><span class="line">            .minify(file, &#123;</span><br><span class="line">              &#x2F;* Your options for minification *&#x2F;</span><br><span class="line">            &#125;);</span><br><span class="line"></span><br><span class="line">          return &#123; map, code, extractedComments &#125;;</span><br><span class="line">        &#125;,</span><br><span class="line">      &#125;),</span><br><span class="line">    ],</span><br><span class="line">  &#125;,</span><br><span class="line">&#125;;</span><br></pre></td></tr></table></figure>
+
+<h3 id="terserOptions"><a href="#terserOptions" class="headerlink" title="terserOptions "></a><code>terserOptions</code> <a href="https://webpack.docschina.org/plugins/terser-webpack-plugin/#terseroptions"></a></h3><p>类型： <code>Object</code> 默认值： <a href="https://github.com/terser-js/terser#minify-options">默认</a></p>
+<p>Terser 压缩<a href="https://github.com/terser-js/terser#minify-options">配置</a> 。</p>
+<p><strong>webpack.config.js</strong></p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">module.exports &#x3D; &#123;</span><br><span class="line">  optimization: &#123;</span><br><span class="line">    minimize: true,</span><br><span class="line">    minimizer: [</span><br><span class="line">      new TerserPlugin(&#123;</span><br><span class="line">        terserOptions: &#123;</span><br><span class="line">          ecma: undefined,</span><br><span class="line">          parse: &#123;&#125;,</span><br><span class="line">          compress: &#123;&#125;,</span><br><span class="line">          mangle: true, &#x2F;&#x2F; Note &#96;mangle.properties&#96; is &#96;false&#96; by default.</span><br><span class="line">          module: false,</span><br><span class="line">          &#x2F;&#x2F; Deprecated</span><br><span class="line">          output: null,</span><br><span class="line">          format: null,</span><br><span class="line">          toplevel: false,</span><br><span class="line">          nameCache: null,</span><br><span class="line">          ie8: false,</span><br><span class="line">          keep_classnames: undefined,</span><br><span class="line">          keep_fnames: false,</span><br><span class="line">          safari10: false,</span><br><span class="line">        &#125;,</span><br><span class="line">      &#125;),</span><br><span class="line">    ],</span><br><span class="line">  &#125;,</span><br><span class="line">&#125;;</span><br></pre></td></tr></table></figure>
+
+<h3 id="extractComments"><a href="#extractComments" class="headerlink" title="extractComments "></a><code>extractComments</code> <a href="https://webpack.docschina.org/plugins/terser-webpack-plugin/#extractcomments"></a></h3><p>类型： <code>Boolean|String|RegExp|Function&lt;(node, comment) -&gt; Boolean|Object&gt;|Object</code> 默认值： <code>true</code></p>
+<p>是否将注释剥离到单独的文件中（请参阅<a href="https://github.com/webpack/webpack/commit/71933e979e51c533b432658d5e37917f9e71595a">详细信息</a>）。 默认情况下，仅剥离 <code>/^\**!|@preserve|@license|@cc_on/i</code> 正则表达式匹配的注释，其余注释会删除。 如果原始文件名为 <code>foo.js</code> ，则注释将存储到 <code>foo.js.LICENSE.txt</code> 。 <code>terserOptions.format.comments</code> 选项指定是否保留注释，即可以在剥离其他注释时保留一些注释，甚至保留已剥离的注释。</p>
+<h4 id="Boolean-1"><a href="#Boolean-1" class="headerlink" title="Boolean "></a><code>Boolean</code> <a href="https://webpack.docschina.org/plugins/terser-webpack-plugin/#boolean"></a></h4><p>启用/禁用剥离注释功能。</p>
+<p><strong>webpack.config.js</strong></p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">module.exports &#x3D; &#123;</span><br><span class="line">  optimization: &#123;</span><br><span class="line">    minimize: true,</span><br><span class="line">    minimizer: [</span><br><span class="line">      new TerserPlugin(&#123;</span><br><span class="line">        extractComments: true,</span><br><span class="line">      &#125;),</span><br><span class="line">    ],</span><br><span class="line">  &#125;,</span><br><span class="line">&#125;;</span><br></pre></td></tr></table></figure>
+
+<h4 id="String"><a href="#String" class="headerlink" title="String "></a><code>String</code> <a href="https://webpack.docschina.org/plugins/terser-webpack-plugin/#string"></a></h4><p>剥离 <code>all</code> 或 <code>some</code> （使用 <code>/^\**!|@preserve|@license|@cc_on/i</code> 正则表达式进行匹配）注释。</p>
+<p><strong>webpack.config.js</strong></p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">module.exports &#x3D; &#123;</span><br><span class="line">  optimization: &#123;</span><br><span class="line">    minimize: true,</span><br><span class="line">    minimizer: [</span><br><span class="line">      new TerserPlugin(&#123;</span><br><span class="line">        extractComments: &quot;all&quot;,</span><br><span class="line">      &#125;),</span><br><span class="line">    ],</span><br><span class="line">  &#125;,</span><br><span class="line">&#125;;</span><br></pre></td></tr></table></figure>
+
+<h4 id="RegExp"><a href="#RegExp" class="headerlink" title="RegExp "></a><code>RegExp</code> <a href="https://webpack.docschina.org/plugins/terser-webpack-plugin/#regexp"></a></h4><p>与指定表达式匹配的所有注释将会被剥离到单独的文件中。</p>
+<p><strong>webpack.config.js</strong></p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">module.exports &#x3D; &#123;</span><br><span class="line">  optimization: &#123;</span><br><span class="line">    minimize: true,</span><br><span class="line">    minimizer: [</span><br><span class="line">      new TerserPlugin(&#123;</span><br><span class="line">        extractComments: &#x2F;@extract&#x2F;i,</span><br><span class="line">      &#125;),</span><br><span class="line">    ],</span><br><span class="line">  &#125;,</span><br><span class="line">&#125;;</span><br></pre></td></tr></table></figure>
+
+<h4 id="Function-lt-node-comment-gt-Boolean-gt"><a href="#Function-lt-node-comment-gt-Boolean-gt" class="headerlink" title="Function&lt;(node, comment) -&gt; Boolean&gt; "></a><code>Function&lt;(node, comment) -&gt; Boolean&gt;</code> <a href="https://webpack.docschina.org/plugins/terser-webpack-plugin/#Functionnode-comment---Boolean-%EF%BC%83functionnode-comment-----boolean-functionnode-comment---boolean-%EF%BC%83functionnode-comment-----boolean"></a></h4><p>与指定表达式匹配的所有注释将会被剥离到单独的文件中。</p>
+<p><strong>webpack.config.js</strong></p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">module.exports &#x3D; &#123;</span><br><span class="line">  optimization: &#123;</span><br><span class="line">    minimize: true,</span><br><span class="line">    minimizer: [</span><br><span class="line">      new TerserPlugin(&#123;</span><br><span class="line">        extractComments: (astNode, comment) &#x3D;&gt; &#123;</span><br><span class="line">          if (&#x2F;@extract&#x2F;i.test(comment.value)) &#123;</span><br><span class="line">            return true;</span><br><span class="line">          &#125;</span><br><span class="line"></span><br><span class="line">          return false;</span><br><span class="line">        &#125;,</span><br><span class="line">      &#125;),</span><br><span class="line">    ],</span><br><span class="line">  &#125;,</span><br><span class="line">&#125;;</span><br></pre></td></tr></table></figure>
+
+<h4 id="Object"><a href="#Object" class="headerlink" title="Object "></a><code>Object</code> <a href="https://webpack.docschina.org/plugins/terser-webpack-plugin/#object"></a></h4><p>允许自定义剥离注释的条件，指定剥离的文件名和标题。</p>
+<p><strong>webpack.config.js</strong></p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">module.exports &#x3D; &#123;</span><br><span class="line">  optimization: &#123;</span><br><span class="line">    minimize: true,</span><br><span class="line">    minimizer: [</span><br><span class="line">      new TerserPlugin(&#123;</span><br><span class="line">        extractComments: &#123;</span><br><span class="line">          condition: &#x2F;^\**!|@preserve|@license|@cc_on&#x2F;i,</span><br><span class="line">          filename: (fileData) &#x3D;&gt; &#123;</span><br><span class="line">            &#x2F;&#x2F; The &quot;fileData&quot; argument contains object with &quot;filename&quot;, &quot;basename&quot;, &quot;query&quot; and &quot;hash&quot;</span><br><span class="line">            return &#96;$&#123;fileData.filename&#125;.LICENSE.txt$&#123;fileData.query&#125;&#96;;</span><br><span class="line">          &#125;,</span><br><span class="line">          banner: (licenseFile) &#x3D;&gt; &#123;</span><br><span class="line">            return &#96;License information can be found in $&#123;licenseFile&#125;&#96;;</span><br><span class="line">          &#125;,</span><br><span class="line">        &#125;,</span><br><span class="line">      &#125;),</span><br><span class="line">    ],</span><br><span class="line">  &#125;,</span><br><span class="line">&#125;;</span><br></pre></td></tr></table></figure>
+
+<h5 id="condition"><a href="#condition" class="headerlink" title="condition "></a><code>condition</code> <a href="https://webpack.docschina.org/plugins/terser-webpack-plugin/#condition"></a></h5><p>类型： <code>Boolean|String|RegExp|Function&lt;(node, comment) -&gt; Boolean|Object&gt;</code></p>
+<p>自定义需要剥离的注释。</p>
+<p><strong>webpack.config.js</strong></p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">module.exports &#x3D; &#123;</span><br><span class="line">  optimization: &#123;</span><br><span class="line">    minimize: true,</span><br><span class="line">    minimizer: [</span><br><span class="line">      new TerserPlugin(&#123;</span><br><span class="line">        extractComments: &#123;</span><br><span class="line">          condition: &quot;some&quot;,</span><br><span class="line">          filename: (fileData) &#x3D;&gt; &#123;</span><br><span class="line">            &#x2F;&#x2F; The &quot;fileData&quot; argument contains object with &quot;filename&quot;, &quot;basename&quot;, &quot;query&quot; and &quot;hash&quot;</span><br><span class="line">            return &#96;$&#123;fileData.filename&#125;.LICENSE.txt$&#123;fileData.query&#125;&#96;;</span><br><span class="line">          &#125;,</span><br><span class="line">          banner: (licenseFile) &#x3D;&gt; &#123;</span><br><span class="line">            return &#96;License information can be found in $&#123;licenseFile&#125;&#96;;</span><br><span class="line">          &#125;,</span><br><span class="line">        &#125;,</span><br><span class="line">      &#125;),</span><br><span class="line">    ],</span><br><span class="line">  &#125;,</span><br><span class="line">&#125;;</span><br></pre></td></tr></table></figure>
+
+<h5 id="filename"><a href="#filename" class="headerlink" title="filename "></a><code>filename</code> <a href="https://webpack.docschina.org/plugins/terser-webpack-plugin/#filename"></a></h5><p>类型： <code>String|Function&lt;(string) -&gt; String&gt;</code> 默认值： <code>[file].LICENSE.txt [query]</code></p>
+<p>可用的占位符： <code>[file]</code> ， <code>[query]</code> 和 <code>[filebase]</code> （webpack 5 使用 <code>[base]</code> ）。</p>
+<p>剥离出来的注释将被存储到的文件的文件名。 默认是将后缀 <code>.LICENSE.txt</code> 附加到原始文件名。</p>
+<blockquote>
+<p>⚠️我们强烈建议使用 <code>txt</code> 扩展名。</p>
+</blockquote>
+<p>使用 <code>js</code> / <code>cjs</code> / <code>mjs</code> 扩展名可能会与现有资源文件冲突，从而导致代码运行出错。</p>
+<p><strong>webpack.config.js</strong></p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">module.exports &#x3D; &#123;</span><br><span class="line">  optimization: &#123;</span><br><span class="line">    minimize: true,</span><br><span class="line">    minimizer: [</span><br><span class="line">      new TerserPlugin(&#123;</span><br><span class="line">        extractComments: &#123;</span><br><span class="line">          condition: &#x2F;^\**!|@preserve|@license|@cc_on&#x2F;i,</span><br><span class="line">          filename: &quot;extracted-comments.js&quot;,</span><br><span class="line">          banner: (licenseFile) &#x3D;&gt; &#123;</span><br><span class="line">            return &#96;License information can be found in $&#123;licenseFile&#125;&#96;;</span><br><span class="line">          &#125;,</span><br><span class="line">        &#125;,</span><br><span class="line">      &#125;),</span><br><span class="line">    ],</span><br><span class="line">  &#125;,</span><br><span class="line">&#125;;</span><br></pre></td></tr></table></figure>
+
+<h5 id="banner"><a href="#banner" class="headerlink" title="banner "></a><code>banner</code> <a href="https://webpack.docschina.org/plugins/terser-webpack-plugin/#banner"></a></h5><p>类型： <code>Boolean|String|Function&lt;(string) -&gt; String&gt;</code> 默认值： <code>/*! For license information please see $&#123;commentsFile&#125; */</code></p>
+<p>指向剥离文件的标语文本将被添加到原始文件的顶部。 可以为 <code>false</code> （无标题）， <code>String</code> 或一个函数：<code>Function&lt;(string) -&gt; String&gt;</code> ，该函数将被使用存储剥离的注释的文件名来调用。 标语内容将被合并到注释中。</p>
+<p><strong>webpack.config.js</strong></p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">module.exports &#x3D; &#123;</span><br><span class="line">  optimization: &#123;</span><br><span class="line">    minimize: true,</span><br><span class="line">    minimizer: [</span><br><span class="line">      new TerserPlugin(&#123;</span><br><span class="line">        extractComments: &#123;</span><br><span class="line">          condition: true,</span><br><span class="line">          filename: (fileData) &#x3D;&gt; &#123;</span><br><span class="line">            &#x2F;&#x2F; The &quot;fileData&quot; argument contains object with &quot;filename&quot;, &quot;basename&quot;, &quot;query&quot; and &quot;hash&quot;</span><br><span class="line">            return &#96;$&#123;fileData.filename&#125;.LICENSE.txt$&#123;fileData.query&#125;&#96;;</span><br><span class="line">          &#125;,</span><br><span class="line">          banner: (commentsFile) &#x3D;&gt; &#123;</span><br><span class="line">            return &#96;My custom banner about license information $&#123;commentsFile&#125;&#96;;</span><br><span class="line">          &#125;,</span><br><span class="line">        &#125;,</span><br><span class="line">      &#125;),</span><br><span class="line">    ],</span><br><span class="line">  &#125;,</span><br><span class="line">&#125;;</span><br></pre></td></tr></table></figure>
+
+<h2 id="示例"><a href="#示例" class="headerlink" title="示例 "></a>示例 <a href="https://webpack.docschina.org/plugins/terser-webpack-plugin/#examples"></a></h2><h3 id="保留注释"><a href="#保留注释" class="headerlink" title="保留注释 "></a>保留注释 <a href="https://webpack.docschina.org/plugins/terser-webpack-plugin/#preserve-comments"></a></h3><p>剥离所有有效的注释（即 <code>/^\**!|@preserve|@license|@cc_on/i</code> ）并保留 <code>/@license/i</code> 注释。</p>
+<p><strong>webpack.config.js</strong></p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">module.exports &#x3D; &#123;</span><br><span class="line">  optimization: &#123;</span><br><span class="line">    minimize: true,</span><br><span class="line">    minimizer: [</span><br><span class="line">      new TerserPlugin(&#123;</span><br><span class="line">        terserOptions: &#123;</span><br><span class="line">          format: &#123;</span><br><span class="line">            comments: &#x2F;@license&#x2F;i,</span><br><span class="line">          &#125;,</span><br><span class="line">        &#125;,</span><br><span class="line">        extractComments: true,</span><br><span class="line">      &#125;),</span><br><span class="line">    ],</span><br><span class="line">  &#125;,</span><br><span class="line">&#125;;</span><br></pre></td></tr></table></figure>
+
+<h3 id="删除注释"><a href="#删除注释" class="headerlink" title="删除注释 "></a>删除注释 <a href="https://webpack.docschina.org/plugins/terser-webpack-plugin/#remove-comments"></a></h3><p>如果要在构建时去除注释，请使用以下配置：</p>
+<p><strong>webpack.config.js</strong></p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">module.exports &#x3D; &#123;</span><br><span class="line">  optimization: &#123;</span><br><span class="line">    minimize: true,</span><br><span class="line">    minimizer: [</span><br><span class="line">      new TerserPlugin(&#123;</span><br><span class="line">        terserOptions: &#123;</span><br><span class="line">          format: &#123;</span><br><span class="line">            comments: false,</span><br><span class="line">          &#125;,</span><br><span class="line">        &#125;,</span><br><span class="line">        extractComments: false,</span><br><span class="line">      &#125;),</span><br><span class="line">    ],</span><br><span class="line">  &#125;,</span><br><span class="line">&#125;;</span><br></pre></td></tr></table></figure>
+
+<h3 id="自定义压缩函数"><a href="#自定义压缩函数" class="headerlink" title="自定义压缩函数 "></a>自定义压缩函数 <a href="https://webpack.docschina.org/plugins/terser-webpack-plugin/#custom-minify-function"></a></h3><p>覆盖默认的 minify 函数 - 使用 <code>uglify-js</code> 进行压缩。</p>
+<p><strong>webpack.config.js</strong></p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">module.exports &#x3D; &#123;</span><br><span class="line">  optimization: &#123;</span><br><span class="line">    minimize: true,</span><br><span class="line">    minimizer: [</span><br><span class="line">      new TerserPlugin(&#123;</span><br><span class="line">        minify: (file, sourceMap) &#x3D;&gt; &#123;</span><br><span class="line">          &#x2F;&#x2F; https:&#x2F;&#x2F;github.com&#x2F;mishoo&#x2F;UglifyJS2#minify-options</span><br><span class="line">          const uglifyJsOptions &#x3D; &#123;</span><br><span class="line">            &#x2F;* your &#96;uglify-js&#96; package options *&#x2F;</span><br><span class="line">          &#125;;</span><br><span class="line"></span><br><span class="line">          if (sourceMap) &#123;</span><br><span class="line">            uglifyJsOptions.sourceMap &#x3D; &#123;</span><br><span class="line">              content: sourceMap,</span><br><span class="line">            &#125;;</span><br><span class="line">          &#125;</span><br><span class="line"></span><br><span class="line">          return require(&quot;uglify-js&quot;).minify(file, uglifyJsOptions);</span><br><span class="line">        &#125;,</span><br><span class="line">      &#125;),</span><br><span class="line">    ],</span><br><span class="line">  &#125;,</span><br><span class="line">&#125;;</span><br></pre></td></tr></table></figure>
+]]></content>
+      <categories>
+        <category>webpack</category>
+      </categories>
+  </entry>
+  <entry>
+    <title>为什么是 devDependencies?</title>
+    <url>/nirvana/webpack/webpack/why-devdependencies/</url>
+    <content><![CDATA[<p><code>dependencies</code> 和 <code>devDependencies</code> 有什么区别？我使用的包应该放到什么地方？上网找资料，大神群咨询。得到的答案是：</p>
+<ul>
+<li>  生产环境用到的放在 <code>dependencies</code>中;</li>
+<li>  开发环境用到的放在 <code>devDependencies</code>中;</li>
+</ul>
+<p>现实中发现：无论放到<code>dependencies</code>中，还是<code>devDependencies</code>，运行 <code>npm install</code> 时都会安装，没有差别，团队合作也OK，照玩不误啊。把<code>koa</code>放到<code>devDependencies</code>中有没有问题？把<code>webpack</code>放到<code>dependencies</code>又会怎么样？</p>
+<p>直到我要把自己的开源项目发布到 <code>npm</code> 时，才明白了大神的意思。</p>
+<h2 id="生产环境-or-开发环境？"><a href="#生产环境-or-开发环境？" class="headerlink" title="生产环境 or 开发环境？"></a>生产环境 or 开发环境？</h2><p>先来看个问题：<strong>小明</strong>使用 <code>webpack</code> 开发 <code>web项目</code> 的环境，是什么环境？</p>
+<p>答案是<code>开发环境，但同时也是</code>生产环境`。</p>
+<p>相对于 <code>小明的项目</code> 是 <strong>开发环境</strong>，但相对 <code>webpack</code>，就是<strong>生产环境</strong>。</p>
+<h2 id="从实践中理解两者的区别"><a href="#从实践中理解两者的区别" class="headerlink" title="从实践中理解两者的区别"></a>从实践中理解两者的区别</h2><p>用开源项目 <a href="https://github.com/visionmedia/debug">debug</a> 项目举例。它的 <code>package.json</code> 相关内容如下：</p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">&#123;</span><br><span class="line">  &quot;dependencies&quot;: &#123;</span><br><span class="line">    &quot;ms&quot;: &quot;^2.1.1&quot;</span><br><span class="line">  &#125;,</span><br><span class="line">  &quot;devDependencies&quot;: &#123;</span><br><span class="line">    &quot;brfs&quot;: &quot;^2.0.1&quot;,</span><br><span class="line">    &quot;browserify&quot;: &quot;^16.2.3&quot;,</span><br><span class="line">    &quot;coveralls&quot;: &quot;^3.0.2&quot;,</span><br><span class="line">    &quot;istanbul&quot;: &quot;^0.4.5&quot;,</span><br><span class="line">    &quot;karma&quot;: &quot;^3.1.4&quot;,</span><br><span class="line">    &quot;karma-browserify&quot;: &quot;^6.0.0&quot;,</span><br><span class="line">    &quot;karma-chrome-launcher&quot;: &quot;^2.2.0&quot;,</span><br><span class="line">    &quot;karma-mocha&quot;: &quot;^1.3.0&quot;,</span><br><span class="line">    &quot;mocha&quot;: &quot;^5.2.0&quot;,</span><br><span class="line">    &quot;mocha-lcov-reporter&quot;: &quot;^1.2.0&quot;,</span><br><span class="line">    &quot;xo&quot;: &quot;^0.23.0&quot;</span><br><span class="line">  &#125;</span><br><span class="line">&#125;</span><br><span class="line"></span><br></pre></td></tr></table></figure>
+
+<h3 id="使用debug-npm-install-debug"><a href="#使用debug-npm-install-debug" class="headerlink" title="使用debug (npm install debug)"></a>使用debug (npm install debug)</h3><p>我们在使用<code>debug</code>时，需要这样用（大部分用户的使用方式）</p>
+<p>手动创建一个项目</p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">npm init</span><br><span class="line">npm install debug --save</span><br><span class="line"></span><br></pre></td></tr></table></figure>
+
+<p>查看 <code>node_modules</code> 目录中的内容</p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">-- node_modules</span><br><span class="line">  -- debug</span><br><span class="line">  -- ms</span><br><span class="line"></span><br></pre></td></tr></table></figure>
+
+<p>可以看出， <code>npm</code> 只安装了 <code>debug</code> 和 <code>ms(debug的dependencies包含的package)</code>。<br>因为现在的环境相对于 <code>debug</code> 来说，是生产环境，所以 <code>npm</code> 只安装了 <code>debug</code> 的生产依赖。</p>
+<h3 id="开发debug-git-clone-debug"><a href="#开发debug-git-clone-debug" class="headerlink" title="开发debug (git clone debug)"></a>开发debug (git clone debug)</h3><p>作为 <code>debug</code> 项目的 <strong>开发者</strong> 或 <strong>二次开发者</strong> ，才会这样用。</p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">git clone https:&#x2F;&#x2F;github.com&#x2F;visionmedia&#x2F;debug.git</span><br><span class="line">cd debug</span><br><span class="line">npm install</span><br><span class="line"></span><br></pre></td></tr></table></figure>
+
+<p>查看<code>node_modules</code></p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">-- node_modules</span><br><span class="line">  -- debug</span><br><span class="line">  -- ms</span><br><span class="line">  -- brfs</span><br><span class="line">  -- xo</span><br><span class="line">  -- connect</span><br><span class="line">  -- date-format</span><br><span class="line">  -- ...... 共653个package</span><br><span class="line"></span><br></pre></td></tr></table></figure>
+
+<p>可以看出， <code>npm</code> 安装了 <code>dependencies</code>、<code>devDependencies</code> 以及 <code>它们的dependencies</code>。<br>因为现在的环境相对于<code>debug</code>来说，是开发环境，所以<code>npm</code>安装了<code>debug</code>的所有依赖，以及它们的生产依赖。</p>
+<p>对比以上结果，可以看出，一般情况下开发环境所需要安装的依赖<strong>远多于</strong>生产环境。</p>
+<h2 id="非常规玩法（挑战规范，知其所以然）"><a href="#非常规玩法（挑战规范，知其所以然）" class="headerlink" title="非常规玩法（挑战规范，知其所以然）"></a>非常规玩法（挑战规范，知其所以然）</h2><p>根据以上的实践分析，总结出一些<strong>玩</strong>法：</p>
+<ol>
+<li><p> 如果所有依赖包<strong>都是开放环境</strong>要用到的包，并且不会发布到<code>npm</code>让别人使用（如<code>webpack</code>打包完成后发布<code>dist</code>的前端项目），因为生产环境不再需要依赖这些包(甚至都不需要<code>nodejs</code>)，这时你把<strong>依赖</strong>放到哪里，完全<strong>随你开心</strong>。但为了避免有人说闲话，应该放到<code>devDependencies</code>中。</p>
+</li>
+<li><p> 如果所有依赖包<strong>都是生产环境</strong>要用到的包，并且不会发布到<code>npm</code>让别人使用。如<strong>web</strong>项目常用的<code>express</code>和<code>koa</code>，是生产环境运行必须的包，你也可以随便放 <strong>（惊不惊喜意不意外）</strong>，在生产环境中，部署生产环境时使用<code>npm install</code>，一样会把所有包安装下来，不影响生产环境的运行。为了避免有人说闲话，还是要放到<code>dependencies</code>中。</p>
+</li>
+<li><p> 如果既有开发依赖又有生产依赖，并且不会发布到<code>npm</code>让别人使用。你还是可以随便放。<code>npm install</code> 会安装所有包。但就会产生问题，<strong>生产环境安装了开发环境的包</strong>，这个问题会死人吗？不太清楚，但项目是可以运行的。要避免这些额外的消耗，就要区分两种包的位置。在生产环境中使用<code>npm install --production</code>，则只会安装<code>dependencies</code>中的依赖。外翻篇：如果你开心，也可以把<strong>开发依赖</strong>包放到<code>devDependencies</code>，<strong>生产依赖</strong>包放到<code>dependencies</code>，生产环境就用<code>npm install --only=dev</code>，这样只会安装<code>devDependencies</code>中的<del>生产</del>依赖。</p>
+</li>
+<li><p> 如果是一个要发布到<code>npm</code>的项目，生产依赖就<strong>一定</strong>要放在<code>dependencies</code>中（缺失会导致运行出错）；开发依赖<strong>应该</strong>放在<code>devDependencies</code>中，这样可以不浪费用户资源，如果放到<code>dependencies</code>中，用户端就会安装很多多余的依赖，浪费大量资源，增加版本冲突概率。</p>
+</li>
+</ol>
+<h2 id="总结"><a href="#总结" class="headerlink" title="总结"></a>总结</h2><p>简单总结，当<strong>生产依赖</strong>和<strong>开发依赖</strong>分别放到不同位置时，会导致的问题：</p>
+<table>
+<thead>
+<tr>
+<th>玩法</th>
+<th>dependencies</th>
+<th>devDependencies</th>
+<th>内部项目</th>
+<th>作为npm包发布</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>规范</td>
+<td>生产依赖</td>
+<td>开发依赖</td>
+<td>-</td>
+<td>-</td>
+</tr>
+<tr>
+<td>开发依赖放在dependencies中</td>
+<td>生产依赖、开发依赖</td>
+<td>-</td>
+<td>浪费生产环境资源</td>
+<td>浪费大量用户资源</td>
+</tr>
+<tr>
+<td>生产依赖放在devDependencies中</td>
+<td>-</td>
+<td>生产依赖、开发依赖</td>
+<td>浪费生产环境资源、部署方式怪异</td>
+<td>用户无法正常运行</td>
+</tr>
+<tr>
+<td>反着放</td>
+<td>开发依赖</td>
+<td>生产依赖</td>
+<td>部署方式怪异</td>
+<td>浪费大量用户资源、用户无法正常运行</td>
+</tr>
+</tbody></table>
+<p>可以看出，在内部项目中，只要团队能玩得转（也不关心生产环境的资源浪费），可以不用太在意规范。但如果是要发布到npm的项目，甚至是开源项目，就要特别注意。<strong>自己可以乱来，但给用户的，应该是最好的</strong>。</p>
+]]></content>
+      <categories>
+        <category>webpack</category>
       </categories>
   </entry>
 </search>
