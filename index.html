@@ -31,7 +31,7 @@
 <meta property="og:description" content="个人学习笔记">
 <meta property="og:locale" content="zh_CN">
 <meta property="article:author" content="nirvana">
-<meta property="article:tag" content="前端,javascript,node,git">
+<meta property="article:tag" content="前端,javascript,node,git,webpack,css">
 <meta name="twitter:card" content="summary">
 
 
@@ -136,6 +136,7 @@
         <li class="menu-item menu-item-开发工具"><a href="/nirvana/categories/tool" rel="section">开发工具</a></li>
         <li class="menu-item menu-item-设计模式(ts)"><a href="/nirvana/categories/DesignPattern" rel="section">设计模式(TS)</a></li>
         <li class="menu-item menu-item-前端"><a href="/nirvana/categories/javascript" rel="section">前端</a></li>
+        <li class="menu-item menu-item-webpack"><a href="/nirvana/categories/webpack" rel="section">webpack</a></li>
       <li class="menu-item menu-item-search">
         <a role="button" class="popup-trigger"><i class="fa fa-search fa-fw"></i>搜索
         </a>
@@ -206,12 +207,12 @@
   <nav class="site-state">
       <div class="site-state-item site-state-posts">
           <a href="/nirvana/archives">
-          <span class="site-state-item-count">184</span>
+          <span class="site-state-item-count">213</span>
           <span class="site-state-item-name">日志</span>
         </a>
       </div>
       <div class="site-state-item site-state-categories">
-        <span class="site-state-item-count">11</span>
+        <span class="site-state-item-count">12</span>
         <span class="site-state-item-name">分类</span>
       </div>
   </nav>
@@ -256,7 +257,7 @@
   
 
   <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="">
-    <link itemprop="mainEntityOfPage" href="https://lzhwweb.github.io/nirvana/javascript/%E5%89%8D%E7%AB%AF/webpack-optimize/">
+    <link itemprop="mainEntityOfPage" href="https://lzhwweb.github.io/nirvana/algorithm/%E7%AE%97%E6%B3%95%E5%AD%A6%E4%B9%A0/%E7%AE%97%E6%B3%95-%E6%9C%89%E6%95%88%E7%9A%84%E6%8B%AC%E5%8F%B7/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="image" content="/nirvana/images/headphoto.jpeg">
@@ -269,7 +270,7 @@
     </span>
       <header class="post-header">
         <h2 class="post-title" itemprop="name headline">
-          <a href="/nirvana/javascript/%E5%89%8D%E7%AB%AF/webpack-optimize/" class="post-title-link" itemprop="url">五种可视化方案分析 webpack 打包性能瓶颈</a>
+          <a href="/nirvana/algorithm/%E7%AE%97%E6%B3%95%E5%AD%A6%E4%B9%A0/%E7%AE%97%E6%B3%95-%E6%9C%89%E6%95%88%E7%9A%84%E6%8B%AC%E5%8F%B7/" class="post-title-link" itemprop="url">算法-有效的括号</a>
         </h2>
 
         <div class="post-meta-container">
@@ -281,7 +282,7 @@
       <span class="post-meta-item-text">发表于</span>
       
 
-      <time title="创建时间：2021-03-21 00:15:25 / 修改时间：00:16:16" itemprop="dateCreated datePublished" datetime="2021-03-21T00:15:25+08:00">2021-03-21</time>
+      <time title="创建时间：2021-04-21 14:58:12 / 修改时间：15:01:14" itemprop="dateCreated datePublished" datetime="2021-04-21T14:58:12+08:00">2021-04-21</time>
     </span>
     <span class="post-meta-item">
       <span class="post-meta-item-icon">
@@ -289,12 +290,12 @@
       </span>
       <span class="post-meta-item-text">分类于</span>
         <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-          <a href="/nirvana/categories/javascript/" itemprop="url" rel="index"><span itemprop="name">javascript</span></a>
+          <a href="/nirvana/categories/algorithm/" itemprop="url" rel="index"><span itemprop="name">algorithm</span></a>
         </span>
     </span>
 
   
-    <span id="/nirvana/javascript/%E5%89%8D%E7%AB%AF/webpack-optimize/" class="post-meta-item leancloud_visitors" data-flag-title="五种可视化方案分析 webpack 打包性能瓶颈" title="阅读次数">
+    <span id="/nirvana/algorithm/%E7%AE%97%E6%B3%95%E5%AD%A6%E4%B9%A0/%E7%AE%97%E6%B3%95-%E6%9C%89%E6%95%88%E7%9A%84%E6%8B%AC%E5%8F%B7/" class="post-meta-item leancloud_visitors" data-flag-title="算法-有效的括号" title="阅读次数">
       <span class="post-meta-item-icon">
         <i class="far fa-eye"></i>
       </span>
@@ -308,7 +309,876 @@
         <i class="far fa-file-word"></i>
       </span>
       <span class="post-meta-item-text">本文字数：</span>
-      <span>3.6k</span>
+      <span>1.3k</span>
+    </span>
+    <span class="post-meta-item" title="阅读时长">
+      <span class="post-meta-item-icon">
+        <i class="far fa-clock"></i>
+      </span>
+      <span class="post-meta-item-text">阅读时长 &asymp;</span>
+      <span>1 分钟</span>
+    </span>
+</div>
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+          <h2 id="题目"><a href="#题目" class="headerlink" title="题目"></a>题目</h2><p>给定一个只包括 ‘(‘，’)’，’{‘，’}’，’[‘，’]’ 的字符串 s ，判断字符串是否有效。<br>有效字符串需满足：</p>
+<ul>
+<li>左括号必须用相同类型的右括号闭合。</li>
+<li>左括号必须以正确的顺序闭合。<br> ##### 示例 1：<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">输入：s &#x3D; &quot;()&quot;</span><br><span class="line">输出：true</span><br></pre></td></tr></table></figure>
+<h5 id="示例-2："><a href="#示例-2：" class="headerlink" title="示例 2："></a>示例 2：</h5><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">输入：s &#x3D; &quot;()[]&#123;&#125;&quot;</span><br><span class="line">输出：true</span><br></pre></td></tr></table></figure>
+<h5 id="示例-3："><a href="#示例-3：" class="headerlink" title="示例 3："></a>示例 3：</h5><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">输入：s &#x3D; &quot;(]&quot;</span><br><span class="line">输出：false</span><br></pre></td></tr></table></figure>
+<h5 id="示例-4："><a href="#示例-4：" class="headerlink" title="示例 4："></a>示例 4：</h5><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">输入：s &#x3D; &quot;([)]&quot;</span><br><span class="line">输出：false</span><br></pre></td></tr></table></figure>
+<h5 id="示例-5："><a href="#示例-5：" class="headerlink" title="示例 5："></a>示例 5：</h5><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">输入：s &#x3D; &quot;&#123;[]&#125;&quot;</span><br><span class="line">输出：true</span><br></pre></td></tr></table></figure></li>
+</ul>
+<blockquote>
+<p>来源：力扣（LeetCode）<br>链接：<a target="_blank" rel="noopener" href="https://leetcode-cn.com/problems/valid-parentheses">https://leetcode-cn.com/problems/valid-parentheses</a><br>著作权归领扣网络所有。商业转载请联系官方授权，非商业转载请注明出处。</p>
+</blockquote>
+<h2 id="解答"><a href="#解答" class="headerlink" title="解答"></a>解答</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br></pre></td><td class="code"><pre><span class="line">&#x2F;**</span><br><span class="line"> * @param &#123;string&#125; s</span><br><span class="line"> * @return &#123;boolean&#125;</span><br><span class="line"> *&#x2F;</span><br><span class="line">var isValid &#x3D; function(s) &#123;</span><br><span class="line">    if(s.length % 2 !&#x3D; 0 )&#123;&#x2F;&#x2F;字符串长度是偶数</span><br><span class="line">        return false;</span><br><span class="line">    &#125;</span><br><span class="line">    let temp &#x3D;[s.charAt(0)];&#x2F;&#x2F;代比较数组</span><br><span class="line">    let flag &#x3D; true;</span><br><span class="line">    for(let i &#x3D;1;i&lt;s.length ;i++)&#123;</span><br><span class="line">        &#x2F;&#x2F;括号都是成对出现的，当出现右括号时，</span><br><span class="line">        &#x2F;&#x2F;如果最后一位不是对应的左括号，则不匹配，需要退出循环，</span><br><span class="line">        &#x2F;&#x2F;如果匹配，退出最后一位</span><br><span class="line">        &#x2F;&#x2F;如果当前为左括号，则放入数组中</span><br><span class="line">        switch(s.charAt(i))&#123;</span><br><span class="line">            case &#39;)&#39;:</span><br><span class="line">                temp.slice(-1) &#x3D;&#x3D; &#39;(&#39;?temp.pop():flag&#x3D;false;</span><br><span class="line">                break;</span><br><span class="line">            case &#39;&#125;&#39;:</span><br><span class="line">                temp.slice(-1) &#x3D;&#x3D; &#39;&#123;&#39;?temp.pop():flag&#x3D;false;</span><br><span class="line">                break;</span><br><span class="line">            case &#39;]&#39;:</span><br><span class="line">                temp.slice(-1) &#x3D;&#x3D; &#39;[&#39;?temp.pop():flag&#x3D;false;</span><br><span class="line">                break;</span><br><span class="line">            default:</span><br><span class="line">                temp.push(s.charAt(i));</span><br><span class="line">                break;</span><br><span class="line">        &#125;</span><br><span class="line">        if(!flag)&#123;</span><br><span class="line">            break;</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">    return !flag||temp.length&gt;0?false:true;</span><br><span class="line">&#125;;</span><br></pre></td></tr></table></figure>
+
+<h2 id="复杂度分析"><a href="#复杂度分析" class="headerlink" title="复杂度分析"></a>复杂度分析</h2><ul>
+<li>时间复杂度：O(n)，其中 n 是字符串 s 的长度。</li>
+<li>空间复杂度：O(n)，最差情况为字符串全部为左括号。</li>
+</ul>
+
+      
+    </div>
+
+    
+    
+    
+
+    <footer class="post-footer">
+        <div class="post-eof"></div>
+      
+    </footer>
+  </article>
+</div>
+
+
+
+
+    
+
+
+<div class="post-block">
+  
+  
+
+  <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="">
+    <link itemprop="mainEntityOfPage" href="https://lzhwweb.github.io/nirvana/algorithm/%E7%AE%97%E6%B3%95%E5%AD%A6%E4%B9%A0/%E7%AE%97%E6%B3%95-%E5%8F%AA%E5%87%BA%E7%8E%B0%E4%B8%80%E6%AC%A1%E7%9A%84%E6%95%B0%E5%AD%97/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/nirvana/images/headphoto.jpeg">
+      <meta itemprop="name" content="nirvana">
+      <meta itemprop="description" content="个人学习笔记">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="涅槃快乐是金">
+    </span>
+      <header class="post-header">
+        <h2 class="post-title" itemprop="name headline">
+          <a href="/nirvana/algorithm/%E7%AE%97%E6%B3%95%E5%AD%A6%E4%B9%A0/%E7%AE%97%E6%B3%95-%E5%8F%AA%E5%87%BA%E7%8E%B0%E4%B8%80%E6%AC%A1%E7%9A%84%E6%95%B0%E5%AD%97/" class="post-title-link" itemprop="url">算法-只出现一次的数字</a>
+        </h2>
+
+        <div class="post-meta-container">
+          <div class="post-meta">
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-calendar"></i>
+      </span>
+      <span class="post-meta-item-text">发表于</span>
+      
+
+      <time title="创建时间：2021-04-21 14:57:30 / 修改时间：14:57:53" itemprop="dateCreated datePublished" datetime="2021-04-21T14:57:30+08:00">2021-04-21</time>
+    </span>
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-folder"></i>
+      </span>
+      <span class="post-meta-item-text">分类于</span>
+        <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+          <a href="/nirvana/categories/algorithm/" itemprop="url" rel="index"><span itemprop="name">algorithm</span></a>
+        </span>
+    </span>
+
+  
+    <span id="/nirvana/algorithm/%E7%AE%97%E6%B3%95%E5%AD%A6%E4%B9%A0/%E7%AE%97%E6%B3%95-%E5%8F%AA%E5%87%BA%E7%8E%B0%E4%B8%80%E6%AC%A1%E7%9A%84%E6%95%B0%E5%AD%97/" class="post-meta-item leancloud_visitors" data-flag-title="算法-只出现一次的数字" title="阅读次数">
+      <span class="post-meta-item-icon">
+        <i class="far fa-eye"></i>
+      </span>
+      <span class="post-meta-item-text">阅读次数：</span>
+      <span class="leancloud-visitors-count"></span>
+    </span>
+      </div>
+      <div class="post-meta">
+    <span class="post-meta-item" title="本文字数">
+      <span class="post-meta-item-icon">
+        <i class="far fa-file-word"></i>
+      </span>
+      <span class="post-meta-item-text">本文字数：</span>
+      <span>676</span>
+    </span>
+    <span class="post-meta-item" title="阅读时长">
+      <span class="post-meta-item-icon">
+        <i class="far fa-clock"></i>
+      </span>
+      <span class="post-meta-item-text">阅读时长 &asymp;</span>
+      <span>1 分钟</span>
+    </span>
+</div>
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+          <h2 id="题目"><a href="#题目" class="headerlink" title="题目"></a>题目</h2><p>给定一个非空整数数组，除了某个元素只出现一次以外，其余每个元素均出现两次。找出那个只出现了一次的元素。</p>
+<blockquote>
+<p>说明：<br>你的算法应该具有线性时间复杂度。 你可以不使用额外空间来实现吗？</p>
+</blockquote>
+<h5 id="示例-1"><a href="#示例-1" class="headerlink" title="示例 1:"></a>示例 1:</h5><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">输入: [2,2,1]</span><br><span class="line">输出: 1</span><br></pre></td></tr></table></figure>
+<h5 id="示例-2"><a href="#示例-2" class="headerlink" title="示例 2:"></a>示例 2:</h5><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">输入: [4,1,2,1,2]</span><br><span class="line">输出: 4</span><br></pre></td></tr></table></figure>
+<h2 id="解答"><a href="#解答" class="headerlink" title="解答"></a>解答</h2><p>如果不考虑时间复杂度和空间复杂度的限制，这道题有很多种解法，如找一个数组储存数字，如果再次出现则删除，最后剩余数字为只出现一次的数字。但是这种算法都需要新增空间来存储临时对象。</p>
+<p>如何才能做到线性时间复杂度和常数空间复杂度呢？</p>
+<p>答案是使用<code>位运算</code>。对于这道题，可使用异或运算 ⊕。异或运算有以下三个性质。</p>
+<ul>
+<li>任何数和 00 做异或运算，结果仍然是原来的数，即 a⊕0=a。</li>
+<li>任何数和其自身做异或运算，结果是 0，即 a⊕a=0。</li>
+<li>异或运算满足交换律和结合律，即 a⊕b⊕a=b⊕a⊕a=b⊕(a⊕a)=b⊕0=b。</li>
+</ul>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line">&#x2F;**</span><br><span class="line"> * @param &#123;number[]&#125; nums</span><br><span class="line"> * @return &#123;number&#125;</span><br><span class="line"> *&#x2F;</span><br><span class="line">var singleNumber &#x3D; function(nums) &#123;</span><br><span class="line">    let single &#x3D; 0;</span><br><span class="line">    nums.forEach((item)&#x3D;&gt;&#123;</span><br><span class="line">        single ^&#x3D; item;&#x2F;&#x2F;javascript中的异或操作为^</span><br><span class="line">    &#125;);</span><br><span class="line">    return single;</span><br><span class="line">&#125;;</span><br></pre></td></tr></table></figure>
+<h2 id="复杂度分析"><a href="#复杂度分析" class="headerlink" title="复杂度分析"></a>复杂度分析</h2><ul>
+<li>时间复杂度：<code>O(n)</code>，其中 n 是数组长度。只需要对数组遍历一次。</li>
+<li>空间复杂度：<code>O(1)</code>。</li>
+</ul>
+
+      
+    </div>
+
+    
+    
+    
+
+    <footer class="post-footer">
+        <div class="post-eof"></div>
+      
+    </footer>
+  </article>
+</div>
+
+
+
+
+    
+
+
+<div class="post-block">
+  
+  
+
+  <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="">
+    <link itemprop="mainEntityOfPage" href="https://lzhwweb.github.io/nirvana/algorithm/%E7%AE%97%E6%B3%95%E5%AD%A6%E4%B9%A0/%E7%AE%97%E6%B3%95-%E7%88%AC%E6%A5%BC%E6%A2%AF/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/nirvana/images/headphoto.jpeg">
+      <meta itemprop="name" content="nirvana">
+      <meta itemprop="description" content="个人学习笔记">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="涅槃快乐是金">
+    </span>
+      <header class="post-header">
+        <h2 class="post-title" itemprop="name headline">
+          <a href="/nirvana/algorithm/%E7%AE%97%E6%B3%95%E5%AD%A6%E4%B9%A0/%E7%AE%97%E6%B3%95-%E7%88%AC%E6%A5%BC%E6%A2%AF/" class="post-title-link" itemprop="url">算法-爬楼梯</a>
+        </h2>
+
+        <div class="post-meta-container">
+          <div class="post-meta">
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-calendar"></i>
+      </span>
+      <span class="post-meta-item-text">发表于</span>
+      
+
+      <time title="创建时间：2021-04-21 14:55:33 / 修改时间：14:55:48" itemprop="dateCreated datePublished" datetime="2021-04-21T14:55:33+08:00">2021-04-21</time>
+    </span>
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-folder"></i>
+      </span>
+      <span class="post-meta-item-text">分类于</span>
+        <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+          <a href="/nirvana/categories/algorithm/" itemprop="url" rel="index"><span itemprop="name">algorithm</span></a>
+        </span>
+    </span>
+
+  
+    <span id="/nirvana/algorithm/%E7%AE%97%E6%B3%95%E5%AD%A6%E4%B9%A0/%E7%AE%97%E6%B3%95-%E7%88%AC%E6%A5%BC%E6%A2%AF/" class="post-meta-item leancloud_visitors" data-flag-title="算法-爬楼梯" title="阅读次数">
+      <span class="post-meta-item-icon">
+        <i class="far fa-eye"></i>
+      </span>
+      <span class="post-meta-item-text">阅读次数：</span>
+      <span class="leancloud-visitors-count"></span>
+    </span>
+      </div>
+      <div class="post-meta">
+    <span class="post-meta-item" title="本文字数">
+      <span class="post-meta-item-icon">
+        <i class="far fa-file-word"></i>
+      </span>
+      <span class="post-meta-item-text">本文字数：</span>
+      <span>1.1k</span>
+    </span>
+    <span class="post-meta-item" title="阅读时长">
+      <span class="post-meta-item-icon">
+        <i class="far fa-clock"></i>
+      </span>
+      <span class="post-meta-item-text">阅读时长 &asymp;</span>
+      <span>1 分钟</span>
+    </span>
+</div>
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+          <h2 id="题目"><a href="#题目" class="headerlink" title="题目"></a>题目</h2><p>假设你正在爬楼梯。需要 n 阶你才能到达楼顶。<br>每次你可以爬 1 或 2 个台阶。你有多少种不同的方法可以爬到楼顶呢？</p>
+<blockquote>
+<p>注意：给定 n 是一个正整数。</p>
+</blockquote>
+<h5 id="示例-1："><a href="#示例-1：" class="headerlink" title="示例 1："></a>示例 1：</h5><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">输入： 2</span><br><span class="line">输出： 2</span><br><span class="line">解释： 有两种方法可以爬到楼顶。</span><br><span class="line">1.  1 阶 + 1 阶</span><br><span class="line">2.  2 阶</span><br></pre></td></tr></table></figure>
+<h5 id="示例-2："><a href="#示例-2：" class="headerlink" title="示例 2："></a>示例 2：</h5><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">输入： 3</span><br><span class="line">输出： 3</span><br><span class="line">解释： 有三种方法可以爬到楼顶。</span><br><span class="line">1.  1 阶 + 1 阶 + 1 阶</span><br><span class="line">2.  1 阶 + 2 阶</span><br><span class="line">3.  2 阶 + 1 阶</span><br></pre></td></tr></table></figure>
+<h2 id="解答"><a href="#解答" class="headerlink" title="解答"></a>解答</h2><p>用 f(x)f(x) 表示爬到第 xx 级台阶的方案数，考虑最后一步可能跨了一级台阶，也可能跨了两级台阶，所以我们可以列出如下式子：<br><code>f(x) = f(x - 1) + f(x - 2)</code><br>它意味着爬到第 xx 级台阶的方案数是爬到第 x - 1级台阶的方案数和爬到第 x - 2x级台阶的方案数的和。很好理解，因为每次只能爬 11 级或 22 级，所以 f(x)只能从 f(x - 1) 和 f(x - 2)转移过来，而这里要统计方案总数，我们就需要对这两项的贡献求和。</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br></pre></td><td class="code"><pre><span class="line">&#x2F;**</span><br><span class="line"> * @param &#123;number&#125; n</span><br><span class="line"> * @return &#123;number&#125;</span><br><span class="line"> *&#x2F;</span><br><span class="line">var climbStairs &#x3D; function(n) &#123;</span><br><span class="line">    let p &#x3D; 0, q &#x3D; 0, r &#x3D; 1;</span><br><span class="line">    for (let i &#x3D; 1; i &lt;&#x3D; n; ++i) &#123;</span><br><span class="line">        p &#x3D; q;</span><br><span class="line">        q &#x3D; r;</span><br><span class="line">        r &#x3D; p + q;</span><br><span class="line">    &#125;</span><br><span class="line">    return r;</span><br><span class="line">&#125;;</span><br><span class="line"></span><br><span class="line">&#x2F;&#x2F;递归写法</span><br><span class="line"></span><br><span class="line">&#x2F;**</span><br><span class="line"> * @param &#123;number&#125; n</span><br><span class="line"> * @return &#123;number&#125;</span><br><span class="line"> *&#x2F;</span><br><span class="line">var climbStairs &#x3D; function(n) &#123;</span><br><span class="line">    &#x2F;&#x2F;实现f（x）&#x3D; f(x-1)+f(x-2);</span><br><span class="line">    &#x2F;&#x2F; 优化效率，可以记住已算过的数据，直接返回；</span><br><span class="line">    if(n &#x3D;&#x3D; 1)&#123;</span><br><span class="line">        return 1;</span><br><span class="line">    &#125;else if(n &#x3D;&#x3D; 2 )&#123;</span><br><span class="line">        return 2;</span><br><span class="line">    &#125;else&#123;</span><br><span class="line">        return climbStairs(n-1)+climbStairs(n-2);</span><br><span class="line">    &#125;</span><br><span class="line">&#125;;</span><br><span class="line"></span><br></pre></td></tr></table></figure>
+<h2 id="复杂度分析"><a href="#复杂度分析" class="headerlink" title="复杂度分析"></a>复杂度分析</h2><p>时间复杂度：循环执行 n 次，每次花费常数的时间代价，故渐进时间复杂度为 O(n)。<br>空间复杂度：这里只用了常数个变量作为辅助空间，故渐进空间复杂度为 O(1)。</p>
+
+      
+    </div>
+
+    
+    
+    
+
+    <footer class="post-footer">
+        <div class="post-eof"></div>
+      
+    </footer>
+  </article>
+</div>
+
+
+
+
+    
+
+
+<div class="post-block">
+  
+  
+
+  <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="">
+    <link itemprop="mainEntityOfPage" href="https://lzhwweb.github.io/nirvana/algorithm/%E7%AE%97%E6%B3%95%E5%AD%A6%E4%B9%A0/%E7%AE%97%E6%B3%95-%E7%BD%97%E9%A9%AC%E6%95%B0%E5%AD%97%E8%BD%AC%E6%95%B4%E6%95%B0/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/nirvana/images/headphoto.jpeg">
+      <meta itemprop="name" content="nirvana">
+      <meta itemprop="description" content="个人学习笔记">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="涅槃快乐是金">
+    </span>
+      <header class="post-header">
+        <h2 class="post-title" itemprop="name headline">
+          <a href="/nirvana/algorithm/%E7%AE%97%E6%B3%95%E5%AD%A6%E4%B9%A0/%E7%AE%97%E6%B3%95-%E7%BD%97%E9%A9%AC%E6%95%B0%E5%AD%97%E8%BD%AC%E6%95%B4%E6%95%B0/" class="post-title-link" itemprop="url">算法-罗马数字转整数</a>
+        </h2>
+
+        <div class="post-meta-container">
+          <div class="post-meta">
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-calendar"></i>
+      </span>
+      <span class="post-meta-item-text">发表于</span>
+      
+
+      <time title="创建时间：2021-04-21 14:54:43 / 修改时间：14:55:10" itemprop="dateCreated datePublished" datetime="2021-04-21T14:54:43+08:00">2021-04-21</time>
+    </span>
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-folder"></i>
+      </span>
+      <span class="post-meta-item-text">分类于</span>
+        <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+          <a href="/nirvana/categories/algorithm/" itemprop="url" rel="index"><span itemprop="name">algorithm</span></a>
+        </span>
+    </span>
+
+  
+    <span id="/nirvana/algorithm/%E7%AE%97%E6%B3%95%E5%AD%A6%E4%B9%A0/%E7%AE%97%E6%B3%95-%E7%BD%97%E9%A9%AC%E6%95%B0%E5%AD%97%E8%BD%AC%E6%95%B4%E6%95%B0/" class="post-meta-item leancloud_visitors" data-flag-title="算法-罗马数字转整数" title="阅读次数">
+      <span class="post-meta-item-icon">
+        <i class="far fa-eye"></i>
+      </span>
+      <span class="post-meta-item-text">阅读次数：</span>
+      <span class="leancloud-visitors-count"></span>
+    </span>
+      </div>
+      <div class="post-meta">
+    <span class="post-meta-item" title="本文字数">
+      <span class="post-meta-item-icon">
+        <i class="far fa-file-word"></i>
+      </span>
+      <span class="post-meta-item-text">本文字数：</span>
+      <span>872</span>
+    </span>
+    <span class="post-meta-item" title="阅读时长">
+      <span class="post-meta-item-icon">
+        <i class="far fa-clock"></i>
+      </span>
+      <span class="post-meta-item-text">阅读时长 &asymp;</span>
+      <span>1 分钟</span>
+    </span>
+</div>
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+          <h2 id="题目"><a href="#题目" class="headerlink" title="题目"></a>题目</h2><p>罗马数字包含以下七种字符: I， V， X， L，C，D 和 M。<br>|  字符   | 数值  |<br>|  —-  | —-  |<br>|I         |    1|<br>|V        |     5|<br>|X        |     10|<br>|L        |     50|<br>|C        |     100|<br>|D       |      500|<br>|M         |    1000|</p>
+<blockquote>
+<p>例如， 罗马数字 2 写做 II ，即为两个并列的 1。12 写做 XII ，即为 X + II 。 27 写做  XXVII, 即为 XX + V + II 。</p>
+</blockquote>
+<p>通常情况下，罗马数字中小的数字在大的数字的右边。但也存在特例，例如 4 不写做 IIII，而是 IV。数字 1 在数字 5 的左边，所表示的数等于大数 5 减小数 1 得到的数值 4 。同样地，数字 9 表示为 IX。这个特殊的规则只适用于以下六种情况：</p>
+<ul>
+<li>I 可以放在 V (5) 和 X (10) 的左边，来表示 4 和 9。</li>
+<li>X 可以放在 L (50) 和 C (100) 的左边，来表示 40 和 90。 </li>
+<li>C 可以放在 D (500) 和 M (1000) 的左边，来表示 400 和 900。</li>
+<li>给定一个罗马数字，将其转换成整数。输入确保在 1 到 3999 的范围内。</li>
+</ul>
+<h2 id="解答"><a href="#解答" class="headerlink" title="解答"></a>解答</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br></pre></td><td class="code"><pre><span class="line">&#x2F;**</span><br><span class="line"> * @param &#123;string&#125; s</span><br><span class="line"> * @return &#123;number&#125;</span><br><span class="line"> *&#x2F;</span><br><span class="line">var romanToInt &#x3D; function(s) &#123;</span><br><span class="line">    const map &#x3D; &#123;</span><br><span class="line">        I : 1,</span><br><span class="line">        IV: 4,</span><br><span class="line">        V: 5,</span><br><span class="line">        IX: 9,</span><br><span class="line">        X: 10,</span><br><span class="line">        XL: 40,</span><br><span class="line">        L: 50,</span><br><span class="line">        XC: 90,</span><br><span class="line">        C: 100,</span><br><span class="line">        CD: 400,</span><br><span class="line">        D: 500,</span><br><span class="line">        CM: 900,</span><br><span class="line">        M: 1000</span><br><span class="line">    &#125;;</span><br><span class="line">    let ans &#x3D; 0;</span><br><span class="line">    for(let i &#x3D; 0;i &lt; s.length;) &#123;</span><br><span class="line">        if(i + 1 &lt; s.length &amp;&amp; map[s.substring(i, i+2)]) &#123;</span><br><span class="line">            ans +&#x3D; map[s.substring(i, i+2)];</span><br><span class="line">            i +&#x3D; 2;</span><br><span class="line">        &#125; else &#123;</span><br><span class="line">            ans +&#x3D; map[s.substring(i, i+1)];</span><br><span class="line">            i ++;</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">    return ans;</span><br><span class="line">&#125;;</span><br></pre></td></tr></table></figure>
+<p><img src="https://upload-images.jianshu.io/upload_images/10024246-ee76edd2092de74c.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240"></p>
+
+      
+    </div>
+
+    
+    
+    
+
+    <footer class="post-footer">
+        <div class="post-eof"></div>
+      
+    </footer>
+  </article>
+</div>
+
+
+
+
+    
+
+
+<div class="post-block">
+  
+  
+
+  <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="">
+    <link itemprop="mainEntityOfPage" href="https://lzhwweb.github.io/nirvana/algorithm/%E7%AE%97%E6%B3%95%E5%AD%A6%E4%B9%A0/%E7%AE%97%E6%B3%95-%E6%95%B4%E6%95%B0%E5%8F%8D%E8%BD%AC/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/nirvana/images/headphoto.jpeg">
+      <meta itemprop="name" content="nirvana">
+      <meta itemprop="description" content="个人学习笔记">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="涅槃快乐是金">
+    </span>
+      <header class="post-header">
+        <h2 class="post-title" itemprop="name headline">
+          <a href="/nirvana/algorithm/%E7%AE%97%E6%B3%95%E5%AD%A6%E4%B9%A0/%E7%AE%97%E6%B3%95-%E6%95%B4%E6%95%B0%E5%8F%8D%E8%BD%AC/" class="post-title-link" itemprop="url">算法-整数反转</a>
+        </h2>
+
+        <div class="post-meta-container">
+          <div class="post-meta">
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-calendar"></i>
+      </span>
+      <span class="post-meta-item-text">发表于</span>
+      
+
+      <time title="创建时间：2021-04-21 14:54:04 / 修改时间：14:54:20" itemprop="dateCreated datePublished" datetime="2021-04-21T14:54:04+08:00">2021-04-21</time>
+    </span>
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-folder"></i>
+      </span>
+      <span class="post-meta-item-text">分类于</span>
+        <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+          <a href="/nirvana/categories/algorithm/" itemprop="url" rel="index"><span itemprop="name">algorithm</span></a>
+        </span>
+    </span>
+
+  
+    <span id="/nirvana/algorithm/%E7%AE%97%E6%B3%95%E5%AD%A6%E4%B9%A0/%E7%AE%97%E6%B3%95-%E6%95%B4%E6%95%B0%E5%8F%8D%E8%BD%AC/" class="post-meta-item leancloud_visitors" data-flag-title="算法-整数反转" title="阅读次数">
+      <span class="post-meta-item-icon">
+        <i class="far fa-eye"></i>
+      </span>
+      <span class="post-meta-item-text">阅读次数：</span>
+      <span class="leancloud-visitors-count"></span>
+    </span>
+      </div>
+      <div class="post-meta">
+    <span class="post-meta-item" title="本文字数">
+      <span class="post-meta-item-icon">
+        <i class="far fa-file-word"></i>
+      </span>
+      <span class="post-meta-item-text">本文字数：</span>
+      <span>666</span>
+    </span>
+    <span class="post-meta-item" title="阅读时长">
+      <span class="post-meta-item-icon">
+        <i class="far fa-clock"></i>
+      </span>
+      <span class="post-meta-item-text">阅读时长 &asymp;</span>
+      <span>1 分钟</span>
+    </span>
+</div>
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+          <h2 id="题目"><a href="#题目" class="headerlink" title="题目"></a>题目</h2><p>给你一个 32 位的有符号整数 x ，返回将 x 中的数字部分反转后的结果。<br>如果反转后整数超过 32 位的有符号整数的范围 [-2147483648,  2147483648] ，就返回 0。</p>
+<blockquote>
+<p>假设环境不允许存储 64 位整数（有符号或无符号）。</p>
+</blockquote>
+<h5 id="示例-1："><a href="#示例-1：" class="headerlink" title="示例 1："></a>示例 1：</h5><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">输入：x &#x3D; 123</span><br><span class="line">输出：321</span><br></pre></td></tr></table></figure>
+<h5 id="示例-2："><a href="#示例-2：" class="headerlink" title="示例 2："></a>示例 2：</h5><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">输入：x &#x3D; -123</span><br><span class="line">输出：-321</span><br></pre></td></tr></table></figure>
+<h5 id="示例-3："><a href="#示例-3：" class="headerlink" title="示例 3："></a>示例 3：</h5><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">输入：x &#x3D; 120</span><br><span class="line">输出：21</span><br></pre></td></tr></table></figure>
+<h5 id="示例-4："><a href="#示例-4：" class="headerlink" title="示例 4："></a>示例 4：</h5><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">输入：x &#x3D; 0</span><br><span class="line">输出：0</span><br></pre></td></tr></table></figure>
+<h2 id="算法"><a href="#算法" class="headerlink" title="算法"></a>算法</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><span class="line">&#x2F;**</span><br><span class="line"> * @param &#123;number&#125; x</span><br><span class="line"> * @return &#123;number&#125;</span><br><span class="line"> *&#x2F;</span><br><span class="line">var reverse &#x3D; function(x) &#123;</span><br><span class="line">    const temp &#x3D; x.toString();</span><br><span class="line">    const index &#x3D; temp.indexOf(&#39;-&#39;);</span><br><span class="line">    const newStr &#x3D; temp.substring((index+1)).split(&#39;&#39;).reverse().join(&#39;&#39;);</span><br><span class="line">    const reverseNum &#x3D; parseInt(index&#x3D;&#x3D;&#x3D;0?&#39;-&#39;+newStr:newStr);</span><br><span class="line">    if(reverseNum&gt;2147483648 || reverseNum&lt;-2147483648)&#123;</span><br><span class="line">        return 0;</span><br><span class="line">    &#125;</span><br><span class="line">    return reverseNum;</span><br><span class="line">&#125;;</span><br></pre></td></tr></table></figure>
+      
+    </div>
+
+    
+    
+    
+
+    <footer class="post-footer">
+        <div class="post-eof"></div>
+      
+    </footer>
+  </article>
+</div>
+
+
+
+
+    
+
+
+<div class="post-block">
+  
+  
+
+  <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="">
+    <link itemprop="mainEntityOfPage" href="https://lzhwweb.github.io/nirvana/algorithm/%E7%AE%97%E6%B3%95%E5%AD%A6%E4%B9%A0/%E7%AE%97%E6%B3%95-%E4%B8%A4%E6%95%B0%E4%B9%8B%E5%92%8C/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/nirvana/images/headphoto.jpeg">
+      <meta itemprop="name" content="nirvana">
+      <meta itemprop="description" content="个人学习笔记">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="涅槃快乐是金">
+    </span>
+      <header class="post-header">
+        <h2 class="post-title" itemprop="name headline">
+          <a href="/nirvana/algorithm/%E7%AE%97%E6%B3%95%E5%AD%A6%E4%B9%A0/%E7%AE%97%E6%B3%95-%E4%B8%A4%E6%95%B0%E4%B9%8B%E5%92%8C/" class="post-title-link" itemprop="url">算法-两数之和</a>
+        </h2>
+
+        <div class="post-meta-container">
+          <div class="post-meta">
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-calendar"></i>
+      </span>
+      <span class="post-meta-item-text">发表于</span>
+      
+
+      <time title="创建时间：2021-04-21 14:53:00 / 修改时间：14:54:15" itemprop="dateCreated datePublished" datetime="2021-04-21T14:53:00+08:00">2021-04-21</time>
+    </span>
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-folder"></i>
+      </span>
+      <span class="post-meta-item-text">分类于</span>
+        <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+          <a href="/nirvana/categories/algorithm/" itemprop="url" rel="index"><span itemprop="name">algorithm</span></a>
+        </span>
+    </span>
+
+  
+    <span id="/nirvana/algorithm/%E7%AE%97%E6%B3%95%E5%AD%A6%E4%B9%A0/%E7%AE%97%E6%B3%95-%E4%B8%A4%E6%95%B0%E4%B9%8B%E5%92%8C/" class="post-meta-item leancloud_visitors" data-flag-title="算法-两数之和" title="阅读次数">
+      <span class="post-meta-item-icon">
+        <i class="far fa-eye"></i>
+      </span>
+      <span class="post-meta-item-text">阅读次数：</span>
+      <span class="leancloud-visitors-count"></span>
+    </span>
+      </div>
+      <div class="post-meta">
+    <span class="post-meta-item" title="本文字数">
+      <span class="post-meta-item-icon">
+        <i class="far fa-file-word"></i>
+      </span>
+      <span class="post-meta-item-text">本文字数：</span>
+      <span>814</span>
+    </span>
+    <span class="post-meta-item" title="阅读时长">
+      <span class="post-meta-item-icon">
+        <i class="far fa-clock"></i>
+      </span>
+      <span class="post-meta-item-text">阅读时长 &asymp;</span>
+      <span>1 分钟</span>
+    </span>
+</div>
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+          <h2 id="题目"><a href="#题目" class="headerlink" title="题目"></a>题目</h2><p>给定一个整数数组 nums 和一个整数目标值 target，请你在该数组中找出 和为目标值 的那 两个 整数，并返回它们的数组下标。</p>
+<p>你可以假设每种输入只会对应一个答案。但是，数组中同一个元素在答案里不能重复出现。</p>
+<p>你可以按任意顺序返回答案。</p>
+<h5 id="示例-1："><a href="#示例-1：" class="headerlink" title="示例 1："></a>示例 1：</h5><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">输入：nums &#x3D; [2,7,11,15], target &#x3D; 9</span><br><span class="line">输出：[0,1]</span><br><span class="line">解释：因为 nums[0] + nums[1] &#x3D;&#x3D; 9 ，返回 [0, 1] 。</span><br></pre></td></tr></table></figure>
+<h5 id="示例-2："><a href="#示例-2：" class="headerlink" title="示例 2："></a>示例 2：</h5><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">输入：nums &#x3D; [3,2,4], target &#x3D; 6</span><br><span class="line">输出：[1,2]</span><br></pre></td></tr></table></figure>
+<h5 id="示例-3："><a href="#示例-3：" class="headerlink" title="示例 3："></a>示例 3：</h5><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">输入：nums &#x3D; [3,3], target &#x3D; 6</span><br><span class="line">输出：[0,1]</span><br></pre></td></tr></table></figure>
+
+<h2 id="实现："><a href="#实现：" class="headerlink" title="实现："></a>实现：</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br></pre></td><td class="code"><pre><span class="line">&#x2F;**</span><br><span class="line"> * @param &#123;number[]&#125; nums</span><br><span class="line"> * @param &#123;number&#125; target</span><br><span class="line"> * @return &#123;number[]&#125;</span><br><span class="line"> *&#x2F;</span><br><span class="line">var twoSum &#x3D; function(nums, target) &#123;</span><br><span class="line">    let i&#x3D;0,j&#x3D;-1;</span><br><span class="line">    for(;i&lt;nums.length;i++)&#123;</span><br><span class="line">        let temp &#x3D; target-nums[i];&#x2F;&#x2F;找到与当前相差的数</span><br><span class="line">      	let isfind &#x3D; false;</span><br><span class="line">      	for(j&#x3D;i+1;j&lt;nums.length;j++)&#123;&#x2F;&#x2F;从i+1开始，是为了减少循环次数，因为前面的已经比较过了</span><br><span class="line">          if(nums[j]&#x3D;&#x3D;temp)&#123;</span><br><span class="line">            isfind &#x3D; true;</span><br><span class="line">            break;</span><br><span class="line">          &#125;</span><br><span class="line">        &#125;</span><br><span class="line">      if(isfind)&#123;</span><br><span class="line">        break;</span><br><span class="line">      &#125;</span><br><span class="line">    &#125;</span><br><span class="line">    return[i,j]</span><br><span class="line">&#125;;</span><br></pre></td></tr></table></figure>
+      
+    </div>
+
+    
+    
+    
+
+    <footer class="post-footer">
+        <div class="post-eof"></div>
+      
+    </footer>
+  </article>
+</div>
+
+
+
+
+    
+
+
+<div class="post-block">
+  
+  
+
+  <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="">
+    <link itemprop="mainEntityOfPage" href="https://lzhwweb.github.io/nirvana/javascript/%E5%89%8D%E7%AB%AF/Taro%203.2.0%20%E6%AD%A3%E5%BC%8F%E7%89%88%E5%8F%91%E5%B8%83%EF%BC%8C%E6%94%AF%E6%8C%81%20React%20Native/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/nirvana/images/headphoto.jpeg">
+      <meta itemprop="name" content="nirvana">
+      <meta itemprop="description" content="个人学习笔记">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="涅槃快乐是金">
+    </span>
+      <header class="post-header">
+        <h2 class="post-title" itemprop="name headline">
+          <a href="/nirvana/javascript/%E5%89%8D%E7%AB%AF/Taro%203.2.0%20%E6%AD%A3%E5%BC%8F%E7%89%88%E5%8F%91%E5%B8%83%EF%BC%8C%E6%94%AF%E6%8C%81%20React%20Native/" class="post-title-link" itemprop="url">Taro 3.2.0 正式版发布，支持 React Native</a>
+        </h2>
+
+        <div class="post-meta-container">
+          <div class="post-meta">
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-calendar"></i>
+      </span>
+      <span class="post-meta-item-text">发表于</span>
+      
+
+      <time title="创建时间：2021-04-21 14:51:54 / 修改时间：14:52:14" itemprop="dateCreated datePublished" datetime="2021-04-21T14:51:54+08:00">2021-04-21</time>
+    </span>
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-folder"></i>
+      </span>
+      <span class="post-meta-item-text">分类于</span>
+        <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+          <a href="/nirvana/categories/javascript/" itemprop="url" rel="index"><span itemprop="name">javascript</span></a>
+        </span>
+    </span>
+
+  
+    <span id="/nirvana/javascript/%E5%89%8D%E7%AB%AF/Taro%203.2.0%20%E6%AD%A3%E5%BC%8F%E7%89%88%E5%8F%91%E5%B8%83%EF%BC%8C%E6%94%AF%E6%8C%81%20React%20Native/" class="post-meta-item leancloud_visitors" data-flag-title="Taro 3.2.0 正式版发布，支持 React Native" title="阅读次数">
+      <span class="post-meta-item-icon">
+        <i class="far fa-eye"></i>
+      </span>
+      <span class="post-meta-item-text">阅读次数：</span>
+      <span class="leancloud-visitors-count"></span>
+    </span>
+      </div>
+      <div class="post-meta">
+    <span class="post-meta-item" title="本文字数">
+      <span class="post-meta-item-icon">
+        <i class="far fa-file-word"></i>
+      </span>
+      <span class="post-meta-item-text">本文字数：</span>
+      <span>180</span>
+    </span>
+    <span class="post-meta-item" title="阅读时长">
+      <span class="post-meta-item-icon">
+        <i class="far fa-clock"></i>
+      </span>
+      <span class="post-meta-item-text">阅读时长 &asymp;</span>
+      <span>1 分钟</span>
+    </span>
+</div>
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+          <p>Taro 是一个开放式跨端跨框架解决方案，支持使用 React/Vue/Nerv 等框架来开发微信/京东/百度/支付宝/字节跳动/ QQ 小程序/H5 等应用，现已发布 3.2.0 正式版，主要更新内容如下：</p>
+<ul>
+<li>简化编译过程，大大提升了 React Native 编译速度</li>
+<li>source-map 支持</li>
+<li>多 React Native 版本支持，拥抱最新版 0.64</li>
+<li>更丰富API与组件</li>
+<li>API与组件按需引入</li>
+</ul>
+
+      
+    </div>
+
+    
+    
+    
+
+    <footer class="post-footer">
+        <div class="post-eof"></div>
+      
+    </footer>
+  </article>
+</div>
+
+
+
+
+    
+
+
+<div class="post-block">
+  
+  
+
+  <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="">
+    <link itemprop="mainEntityOfPage" href="https://lzhwweb.github.io/nirvana/git/git/git%E4%BF%AE%E6%94%B9%E4%BB%93%E5%BA%93%E5%9C%B0%E5%9D%80/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/nirvana/images/headphoto.jpeg">
+      <meta itemprop="name" content="nirvana">
+      <meta itemprop="description" content="个人学习笔记">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="涅槃快乐是金">
+    </span>
+      <header class="post-header">
+        <h2 class="post-title" itemprop="name headline">
+          <a href="/nirvana/git/git/git%E4%BF%AE%E6%94%B9%E4%BB%93%E5%BA%93%E5%9C%B0%E5%9D%80/" class="post-title-link" itemprop="url">git 修改仓库地址</a>
+        </h2>
+
+        <div class="post-meta-container">
+          <div class="post-meta">
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-calendar"></i>
+      </span>
+      <span class="post-meta-item-text">发表于</span>
+      
+
+      <time title="创建时间：2021-04-21 14:50:53 / 修改时间：14:51:12" itemprop="dateCreated datePublished" datetime="2021-04-21T14:50:53+08:00">2021-04-21</time>
+    </span>
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-folder"></i>
+      </span>
+      <span class="post-meta-item-text">分类于</span>
+        <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+          <a href="/nirvana/categories/git/" itemprop="url" rel="index"><span itemprop="name">git</span></a>
+        </span>
+    </span>
+
+  
+    <span id="/nirvana/git/git/git%E4%BF%AE%E6%94%B9%E4%BB%93%E5%BA%93%E5%9C%B0%E5%9D%80/" class="post-meta-item leancloud_visitors" data-flag-title="git 修改仓库地址" title="阅读次数">
+      <span class="post-meta-item-icon">
+        <i class="far fa-eye"></i>
+      </span>
+      <span class="post-meta-item-text">阅读次数：</span>
+      <span class="leancloud-visitors-count"></span>
+    </span>
+      </div>
+      <div class="post-meta">
+    <span class="post-meta-item" title="本文字数">
+      <span class="post-meta-item-icon">
+        <i class="far fa-file-word"></i>
+      </span>
+      <span class="post-meta-item-text">本文字数：</span>
+      <span>681</span>
+    </span>
+    <span class="post-meta-item" title="阅读时长">
+      <span class="post-meta-item-icon">
+        <i class="far fa-clock"></i>
+      </span>
+      <span class="post-meta-item-text">阅读时长 &asymp;</span>
+      <span>1 分钟</span>
+    </span>
+</div>
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+          <h2 id="1、-通过命令直接修改远程地址"><a href="#1、-通过命令直接修改远程地址" class="headerlink" title="1、 通过命令直接修改远程地址"></a>1、 通过命令直接修改远程地址</h2> <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">&#x2F;&#x2F;进入git_test根目录</span><br><span class="line">git remote 查看所有远程仓库， git remote xxx 查看指定远程仓库地址</span><br><span class="line">git remote set-url origin http:&#x2F;&#x2F;******.git</span><br></pre></td></tr></table></figure>
+<h2 id="2、-通过命令先删除再添加远程仓库"><a href="#2、-通过命令先删除再添加远程仓库" class="headerlink" title="2、 通过命令先删除再添加远程仓库"></a>2、 通过命令先删除再添加远程仓库</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">&#x2F;&#x2F;进入git_test根目录</span><br><span class="line">git remote 查看所有远程仓库， git remote xxx 查看指定远程仓库地址</span><br><span class="line">git remote rm origin</span><br><span class="line">git remote add origin http:&#x2F;&#x2F;********.git</span><br></pre></td></tr></table></figure>
+<h2 id="3、方法三-直接修改配置文件"><a href="#3、方法三-直接修改配置文件" class="headerlink" title="3、方法三 直接修改配置文件"></a>3、方法三 直接修改配置文件</h2><pre><code>//进入git_test/.git
+vim config
+[core]
+repositoryformatversion = 0
+filemode = true
+logallrefupdates = true
+precomposeunicode = true
+[remote &quot;origin&quot;]
+url = http://****.git
+fetch = +refs/heads/*:refs/remotes/origin/*
+[branch &quot;master&quot;]
+remote = origin
+merge = refs/heads/master
+
+修改 [remote “origin”]下面的url即可
+</code></pre>
+<h2 id="4、-通过第三方git客户端修改。"><a href="#4、-通过第三方git客户端修改。" class="headerlink" title="4、 通过第三方git客户端修改。"></a>4、 通过第三方git客户端修改。</h2><p>以SourceTree为例，点击 仓库 -&gt; 仓库配置 -&gt; 远程仓库 即可管理此项目中配置的所有远程仓库， 而且这个界面最下方还可以点击编辑配置文件，同样可以完成方法三。</p>
+
+      
+    </div>
+
+    
+    
+    
+
+    <footer class="post-footer">
+        <div class="post-eof"></div>
+      
+    </footer>
+  </article>
+</div>
+
+
+
+
+    
+
+
+<div class="post-block">
+  
+  
+
+  <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="">
+    <link itemprop="mainEntityOfPage" href="https://lzhwweb.github.io/nirvana/webpack/webpack/webpack%E4%BD%BF%E7%94%A8-%E8%AF%A6%E8%A7%A3DllPlugin/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/nirvana/images/headphoto.jpeg">
+      <meta itemprop="name" content="nirvana">
+      <meta itemprop="description" content="个人学习笔记">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="涅槃快乐是金">
+    </span>
+      <header class="post-header">
+        <h2 class="post-title" itemprop="name headline">
+          <a href="/nirvana/webpack/webpack/webpack%E4%BD%BF%E7%94%A8-%E8%AF%A6%E8%A7%A3DllPlugin/" class="post-title-link" itemprop="url">webpack使用-详解DllPlugin</a>
+        </h2>
+
+        <div class="post-meta-container">
+          <div class="post-meta">
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-calendar"></i>
+      </span>
+      <span class="post-meta-item-text">发表于</span>
+      
+
+      <time title="创建时间：2021-04-21 14:49:59 / 修改时间：14:50:16" itemprop="dateCreated datePublished" datetime="2021-04-21T14:49:59+08:00">2021-04-21</time>
+    </span>
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-folder"></i>
+      </span>
+      <span class="post-meta-item-text">分类于</span>
+        <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+          <a href="/nirvana/categories/webpack/" itemprop="url" rel="index"><span itemprop="name">webpack</span></a>
+        </span>
+    </span>
+
+  
+    <span id="/nirvana/webpack/webpack/webpack%E4%BD%BF%E7%94%A8-%E8%AF%A6%E8%A7%A3DllPlugin/" class="post-meta-item leancloud_visitors" data-flag-title="webpack使用-详解DllPlugin" title="阅读次数">
+      <span class="post-meta-item-icon">
+        <i class="far fa-eye"></i>
+      </span>
+      <span class="post-meta-item-text">阅读次数：</span>
+      <span class="leancloud-visitors-count"></span>
+    </span>
+      </div>
+      <div class="post-meta">
+    <span class="post-meta-item" title="本文字数">
+      <span class="post-meta-item-icon">
+        <i class="far fa-file-word"></i>
+      </span>
+      <span class="post-meta-item-text">本文字数：</span>
+      <span>3.8k</span>
     </span>
     <span class="post-meta-item" title="阅读时长">
       <span class="post-meta-item-icon">
@@ -326,1004 +1196,50 @@
     
     
     <div class="post-body" itemprop="articleBody">
-          <h3 id="一、测量构建时间"><a href="#一、测量构建时间" class="headerlink" title="一、测量构建时间"></a>一、测量构建时间</h3><p>优化 webpack 构建速度的第一步是知道将精力集中在哪里。我们可以通过 <code>speed-measure-webpack-plugin</code> 测量你的 webpack 构建期间各个阶段花费的时间：</p>
-<p><strong>步骤一：安装 speed-measure-webpack-plugin</strong></p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">npm install speed-measure-webpack-plugin --save-dev</span><br><span class="line">复制代码</span><br></pre></td></tr></table></figure>
-
-<p><strong>步骤二：配置</strong></p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">&#x2F;&#x2F; 分析打包时间</span><br><span class="line">const SpeedMeasurePlugin &#x3D; require(&quot;speed-measure-webpack-plugin&quot;);</span><br><span class="line">const smp &#x3D; new SpeedMeasurePlugin();</span><br><span class="line">&#x2F;&#x2F; ...</span><br><span class="line">module.exports &#x3D; smp.wrap(prodWebpackConfig)</span><br><span class="line">复制代码</span><br></pre></td></tr></table></figure>
-
-<p><img src="https://upload-images.jianshu.io/upload_images/10024246-f71fb869cd81189a.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240"></p>
-<p>它能够：</p>
-<ul>
-<li>  分析整个打包总耗时；</li>
-<li>  每个插件和 loader 的耗时情况；</li>
-</ul>
-<p>方便开发人员定位打包耗时瓶颈。</p>
-<h3 id="二、分析包内容"><a href="#二、分析包内容" class="headerlink" title="二、分析包内容"></a>二、分析包内容</h3><p>webpack-bundle-analyzer 扫描 bundle 并构建其内部内容的可视化。使用此可视化来查找大的或不必要的依赖项。</p>
-<p><strong>步骤一：安装 webpack-bundle-analyzer</strong></p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">npm install webpack-bundle-analyzer --save-dev</span><br><span class="line">复制代码</span><br></pre></td></tr></table></figure>
-
-<p><strong>步骤二：配置</strong></p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line">&#x2F;&#x2F; 分析包内容</span><br><span class="line">const BundleAnalyzerPlugin &#x3D; require(&#39;webpack-bundle-analyzer&#39;).BundleAnalyzerPlugin;</span><br><span class="line">module.exports &#x3D; &#123;</span><br><span class="line">  plugins: [</span><br><span class="line">    &#x2F;&#x2F; 开启 BundleAnalyzerPlugin</span><br><span class="line">    new BundleAnalyzerPlugin(),</span><br><span class="line">  ],</span><br><span class="line">&#125;;</span><br><span class="line">复制代码</span><br></pre></td></tr></table></figure>
-
-<p>一般运行在生产版本中，该插件将在浏览器中打开统计信息结果页面。</p>
-<p><img src="https://upload-images.jianshu.io/upload_images/10024246-55abc35c2b173da6.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240"></p>
-<p><strong>注意：webpack4 在 <code>production</code> 环境下默认启动了 <code>ModuleConcatenationPlugin</code> （预编译所有模块到一个闭包中，提升代码在浏览器中的执行速度），它可能会合并webpack-bundle-analyzer 输出中的模块的一部分，从而使报告不太详细。 如果你使用此插件，请在分析过程中将其禁用。设置如下：</strong></p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">module.exports &#x3D; &#123;</span><br><span class="line">  &#x2F;&#x2F; ...</span><br><span class="line">  optimization: &#123;</span><br><span class="line">    &#x2F;&#x2F; </span><br><span class="line">    concatenateModules: false,</span><br><span class="line">  &#125;</span><br><span class="line">&#125;;</span><br><span class="line">复制代码</span><br></pre></td></tr></table></figure>
-
-<p>具体来说，使用 webpack-bundle-analyzer 能可视化的反映：</p>
-<ul>
-<li>  打包出的文件中都包含了什么；</li>
-<li>  每个文件的尺寸在总体中的占比，哪些文件尺寸大，思考一下，为什么那么大，是否有替换方案，是否使用了它包含的所有代码；</li>
-<li>  模块之间的包含关系；</li>
-<li>  是否有重复的依赖项，是否存在一个库在多个文件中重复？ 或者捆绑包中是否具有同一库的多个版本？</li>
-<li>  是否有相似的依赖库， 尝试使用一种依赖库实现相似的功能。</li>
-<li>  每个文件的压缩后的大小。</li>
-</ul>
-<h3 id="三、在线分析工具"><a href="#三、在线分析工具" class="headerlink" title="三、在线分析工具"></a>三、在线分析工具</h3><p>如果你对在本地安装插件进行测量分析包方式感觉不爽的话，这里将会推荐几款在线测量工具，但都需要 webpack 统计文件。</p>
-<h4 id="1-生成统计文件-stats-json"><a href="#1-生成统计文件-stats-json" class="headerlink" title="1. 生成统计文件 stats.json"></a>1. 生成统计文件 <code>stats.json</code></h4><p>使用 webpack 编译源代码时，用户可以生成一个包含有关模块统计信息的 JSON 文件。 这些统计信息可用于分析应用程序的依赖关系图以及优化编译速度。 该文件通常是按以下方式生成的：</p>
-<p>在 webpack 启动时带入参数：<code>--profile --json &gt; stats.json</code> ，例如：</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">webpack --config webpack.config.prod.js --profile --json &gt; stats.json</span><br><span class="line">复制代码</span><br></pre></td></tr></table></figure>
-
-<ul>
-<li>  <code>--profile</code>：记录下构建过程中的耗时信息</li>
-<li>  <code>--json</code>：以 JSON 的格式输出构建结果，最后只输出一个 <code>.json</code> 文件，这个文件（<code>stats.json</code>）中包括所有构建相关的信息</li>
-<li>  <code>&gt; stats.json</code> ：是 UNIX/Linux 系统中的管道命令、含义是把 <code>webpack --profile --json</code> 输出的内容通过管道输出到 <code>stats.json</code> 文件中</li>
-</ul>
-<p>执行命令后，会在项目中多出一个 <code>stats.json</code> 文件，接下来将 <code>stats.json</code> 文件上传到以下在线工具上，以可视化分析包的组成。</p>
-<p>常用的在线工具有：</p>
-<ul>
-<li>  官方可视化分析工具 Webapck Analyse：生成一个图表，让你可视化了解项目的依赖关系、模块大小及耗时等；</li>
-<li>  Webpack Visualizer：生成一个饼状图，可视化 bundle 内容；</li>
-<li>  webpack bundle optimize helper：此工具会分析你的 bundle，并为你提供可操作的改进措施建议，以减少 bundle 体积大小。</li>
-</ul>
-<h4 id="2-官方可视化分析工具-Webapck-Analyse"><a href="#2-官方可视化分析工具-Webapck-Analyse" class="headerlink" title="2. 官方可视化分析工具 Webapck Analyse"></a>2. 官方可视化分析工具 Webapck Analyse</h4><p><a target="_blank" rel="noopener" href="http://webpack.github.io/analyse/">Webapck Analyse</a> 是一个在线 Web 应用，它为你提供了对包的更全面的分析，并且它绘制了项目中所有依赖模块的图形，这对于依赖关系较少的项目非常有用。</p>
-<p>打开 <a target="_blank" rel="noopener" href="http://webpack.github.io/analyse/">Webapck Analyse</a> ，上传 <code>stats.json</code>：</p>
-<p><img src="https://upload-images.jianshu.io/upload_images/10024246-cdf2f57c826f8d8a.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240"></p>
-<p>Webpack Analyse 不会把你选择的 <code>stats.json</code> 文件发达到服务器，而是在浏览器本地解析，你不用担心自己的代码为此而泄露。 选择文件后，你马上就能如下的效果图：</p>
-<p><img src="https://upload-images.jianshu.io/upload_images/10024246-b4a1cc7f4ec92539.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240"></p>
-<p><strong>Modules</strong> ：展示所有的模块，每个模块对应一个文件。并且还包含所有模块之间的依赖关系图、模块路径、模块ID、模块所属 Chunk、模块大小；</p>
-<p><img src="https://upload-images.jianshu.io/upload_images/10024246-2cf996c3528f9bcb.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240"></p>
-<p><strong>Chunks</strong> ：展示所有的代码块，一个代码块中包含多个模块。并且还包含代码块的ID、名称、大小、每个代码块包含的模块数量，以及代码块之间的依赖关系图；</p>
-<p><strong>Assets</strong> ：展示所有输出的文件资源，包括 <code>.js</code>、<code>.css</code>、图片等。并且还包括文件名称、大小、该文件来自哪个代码块；</p>
-<p><img src="https://upload-images.jianshu.io/upload_images/10024246-bddc32d51392a614.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240"></p>
-<p><strong>Warnings</strong> ：展示构建过程中出现的所有警告信息；</p>
-<p><img src="https://upload-images.jianshu.io/upload_images/10024246-210b137a0478fa88.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240"></p>
-<p><strong>Errors</strong> ：展示构建过程中出现的所有错误信息；<br><img src="https://upload-images.jianshu.io/upload_images/10024246-8a479c1eef699870.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240"></p>
-<p><strong>Hints</strong> ：展示处理每个模块的过程中的耗时。</p>
-<p><img src="https://upload-images.jianshu.io/upload_images/10024246-8f41bdba3a5b0d37.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240"></p>
-<h4 id="3-Webpack-Visualizer-分析工具"><a href="#3-Webpack-Visualizer-分析工具" class="headerlink" title="3. Webpack Visualizer 分析工具"></a>3. Webpack Visualizer 分析工具</h4><p>可视化并分析您的Webpack捆绑包，以查看哪些模块正在占用空间，哪些可能是重复的。</p>
-<p>它既可作为插件使用，也可以在线使用，是一种较新的工具。</p>
-<p><strong>方式一：作为插件使用</strong></p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">npm install webpack-visualizer-plugin --dev-save</span><br><span class="line">复制代码</span><br></pre></td></tr></table></figure>
-
-<p>配置：</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line">&#x2F;&#x2F; 分析包内容</span><br><span class="line">const Visualizer &#x3D; require(&#39;webpack-visualizer-plugin&#39;);</span><br><span class="line">module.exports &#x3D; &#123;</span><br><span class="line">  plugins: [</span><br><span class="line">    &#x2F;&#x2F; 开启 Visualizer</span><br><span class="line">    &#x2F;&#x2F; 默认输出为 stats.html，这里为 statistics.html</span><br><span class="line">    new Visualizer(&#123;</span><br><span class="line">      filename: &#39;.&#x2F;statistics.html&#39;</span><br><span class="line">    &#125;)</span><br><span class="line">  ],</span><br><span class="line">&#125;;</span><br><span class="line">复制代码</span><br></pre></td></tr></table></figure>
-
-<p>然后在浏览器中直接打开 <code>statistics.html</code> 就可以看到分析结果了：</p>
-<p><img src="https://upload-images.jianshu.io/upload_images/10024246-4cecd9f30e511265.gif?imageMogr2/auto-orient/strip"></p>
-<p><strong>方式二：在线使用</strong></p>
-<p>打开 <a target="_blank" rel="noopener" href="http://chrisbateman.github.io/webpack-visualizer/">chrisbateman.github.io/webpack-vis…</a> ，上传 <code>stats.json</code> 既可看到分析结果。</p>
-<h4 id="4-webpack-bundle-optimize-helper-分析工具"><a href="#4-webpack-bundle-optimize-helper-分析工具" class="headerlink" title="4. webpack bundle optimize helper 分析工具"></a>4. webpack bundle optimize helper 分析工具</h4><p>打开 <a target="_blank" rel="noopener" href="https://webpack.jakoblind.no/optimize/">webpack.jakoblind.no/optimize/</a> ，上传 <code>stats.json</code> 既可看到分析结果及优化建议：</p>
-<p><img src="https://upload-images.jianshu.io/upload_images/10024246-432920dbb121086a.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240"></p>
-<h3 id="四、总结"><a href="#四、总结" class="headerlink" title="四、总结"></a>四、总结</h3><p>我们总共介绍了以下 <code>5</code> 种测量工具，每种工具都提供了对包分析的不同视角，例如：</p>
-<ul>
-<li>  在开发过程中，当向项目引入新包时，我个人经常使用 Webpack Visualizer ，饼状图给出了关于大小的比例的即时反馈；</li>
-<li>  在分析每次构建版本的耗时情况时，相对于其它 <code>4</code> 中，<code>speed-measure-webpack-plugin</code> 能够获取每个插件和 loader 的耗时情况，帮助你将注意力集中在需要优化的插件上；</li>
-<li>  <code>webpack-bundle-analyzer</code> 能够将 bundle 内容展示为便捷的、交互式、可缩放的树状图形式；</li>
-<li>  Webapck Analyse 相对于其它 <code>4</code> 种，能够对包进行全方位的分析；</li>
-<li>  相对于其它 <code>4</code> 种，webpack bundle optimize helper 能提供可操作的改进措施建议；</li>
-</ul>
-<blockquote>
-<p>作者：前端瓶子君<br>链接：<a target="_blank" rel="noopener" href="https://juejin.cn/post/6844904056985485320">https://juejin.cn/post/6844904056985485320</a></p>
+          <h3 id="什么是DLL"><a href="#什么是DLL" class="headerlink" title="什么是DLL"></a>什么是DLL</h3><blockquote>
+<p>DLL(Dynamic Link Library)文件为动态链接库文件,在Windows中，许多应用程序并不是一个完整的可执行文件，它们被分割成一些相对独立的动态链接库，即DLL文件，放置于系统中。当我们执行某一个程序时，相应的DLL文件就会被调用。</p>
 </blockquote>
-
-      
-    </div>
-
-    
-    
-    
-
-    <footer class="post-footer">
-        <div class="post-eof"></div>
-      
-    </footer>
-  </article>
-</div>
-
-
-
-
-    
-
-
-<div class="post-block">
-  
-  
-
-  <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="">
-    <link itemprop="mainEntityOfPage" href="https://lzhwweb.github.io/nirvana/javascript/%E5%89%8D%E7%AB%AF/Hexo-Next-leancloud/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="image" content="/nirvana/images/headphoto.jpeg">
-      <meta itemprop="name" content="nirvana">
-      <meta itemprop="description" content="个人学习笔记">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="涅槃快乐是金">
-    </span>
-      <header class="post-header">
-        <h2 class="post-title" itemprop="name headline">
-          <a href="/nirvana/javascript/%E5%89%8D%E7%AB%AF/Hexo-Next-leancloud/" class="post-title-link" itemprop="url">Hexo Next leancloud文章阅读次数配置</a>
-        </h2>
-
-        <div class="post-meta-container">
-          <div class="post-meta">
-    <span class="post-meta-item">
-      <span class="post-meta-item-icon">
-        <i class="far fa-calendar"></i>
-      </span>
-      <span class="post-meta-item-text">发表于</span>
-      
-
-      <time title="创建时间：2021-03-20 23:39:18 / 修改时间：23:40:57" itemprop="dateCreated datePublished" datetime="2021-03-20T23:39:18+08:00">2021-03-20</time>
-    </span>
-    <span class="post-meta-item">
-      <span class="post-meta-item-icon">
-        <i class="far fa-folder"></i>
-      </span>
-      <span class="post-meta-item-text">分类于</span>
-        <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-          <a href="/nirvana/categories/javascript/" itemprop="url" rel="index"><span itemprop="name">javascript</span></a>
-        </span>
-    </span>
-
-  
-    <span id="/nirvana/javascript/%E5%89%8D%E7%AB%AF/Hexo-Next-leancloud/" class="post-meta-item leancloud_visitors" data-flag-title="Hexo Next leancloud文章阅读次数配置" title="阅读次数">
-      <span class="post-meta-item-icon">
-        <i class="far fa-eye"></i>
-      </span>
-      <span class="post-meta-item-text">阅读次数：</span>
-      <span class="leancloud-visitors-count"></span>
-    </span>
-      </div>
-      <div class="post-meta">
-    <span class="post-meta-item" title="本文字数">
-      <span class="post-meta-item-icon">
-        <i class="far fa-file-word"></i>
-      </span>
-      <span class="post-meta-item-text">本文字数：</span>
-      <span>2.4k</span>
-    </span>
-    <span class="post-meta-item" title="阅读时长">
-      <span class="post-meta-item-icon">
-        <i class="far fa-clock"></i>
-      </span>
-      <span class="post-meta-item-text">阅读时长 &asymp;</span>
-      <span>2 分钟</span>
-    </span>
-</div>
-
-        </div>
-      </header>
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-          <h1 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h1><p>由于<code>Next</code>主题修复了<code>leancloud</code>的安全问题, 导致以前<code>leancloud</code>失效, 所以重新介绍如何配置<code>leancloud</code></p>
-<blockquote>
-<p>所有使用该插件而未经修复的NexT站点或使用类似方法集成Leancloud访客统计功能的站点都被认为是不安全的，请尽快修复</p>
-</blockquote>
-<p>效果如图<br><img src="https://upload-images.jianshu.io/upload_images/10024246-4c34cbaf05fa0929.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240"></p>
-<h1 id="注册Leancloud并创建应用"><a href="#注册Leancloud并创建应用" class="headerlink" title="注册Leancloud并创建应用"></a>注册Leancloud并创建应用</h1><ol>
-<li><p> 首先，前往Leancloud官网<a target="_blank" rel="noopener" href="https://leancloud.cn/dashboard/login.html#/signup">leancloud.cn</a>进行注册，并登陆。</p>
-</li>
-<li><p>点击<strong>创建应用</strong><br> <img src="https://upload-images.jianshu.io/upload_images/10024246-89aca6e79e05f569.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240"></p>
-</li>
-<li><p>输入应用的名称(随便起都行), 选择<strong>开发版</strong>, 点击<strong>创建</strong><br> <img src="https://upload-images.jianshu.io/upload_images/10024246-097016813d541b77.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240"></p>
-</li>
-<li><p>创建成功后点击右上角的设置<strong>小齿轮</strong><br> <img src="https://upload-images.jianshu.io/upload_images/10024246-3db198f1151cdcbf.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240"></p>
-</li>
-<li><p>点击<strong>存储</strong>-<strong>创建Class</strong>-<strong>Class名称</strong>设置为<code>Counter</code>(必须为<code>Counter</code>)-选择<strong>无限制</strong>-点击<strong>创建</strong><br> <img src="https://upload-images.jianshu.io/upload_images/10024246-432bb8b837df5c25.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240"></p>
-</li>
-<li><p>创建后点击<strong>设置</strong>-点击<strong>应用Key</strong>-获取<strong>App ID</strong>和<strong>App Key</strong><br> <img src="https://upload-images.jianshu.io/upload_images/10024246-9535fa3e0ed7959c.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240"></p>
-</li>
-<li><p>将获取到的<strong>App ID</strong>和<strong>App Key</strong>设置到<code>Next</code>主题配置文件<code>_config.yml</code><br> <em>配置文件已存在这个配置, 只要把id和key加上去就好了</em></p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">leancloud_visitors:</span><br><span class="line"> enable: true</span><br><span class="line"> app_id: &lt;&lt;your app id&gt;&gt;</span><br><span class="line"> app_key: &lt;&lt;your app key&gt;&gt;</span><br></pre></td></tr></table></figure></li>
-<li><p>点击<strong>安全中心</strong>, 填写自己博客对应的域名（注意协议、域名和端口号需严格一致）<br> <img src="https://upload-images.jianshu.io/upload_images/10024246-0a2fe8df57f0f3c6.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240"></p>
-</li>
-<li><p>点击<strong>云引擎</strong>-点击<strong>部署</strong>-点击<strong>在线编辑</strong><br> <img src="https://upload-images.jianshu.io/upload_images/10024246-e403d7af8cb3c367.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240"></p>
-</li>
-<li><p> 点击<strong>创建函数</strong>-选择<strong>Hook</strong>-AV.Cloud.选择<strong>beforeSave</strong>-类选择<strong>Counter</strong>-<strong>添加代码</strong>-点击<strong>保存</strong></p>
-</li>
-</ol>
-<p><img src="https://upload-images.jianshu.io/upload_images/10024246-fd6294350d1575b8.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240"></p>
-<p><img src="https://upload-images.jianshu.io/upload_images/10024246-e68e0a9d45123d5a.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240"></p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">var query &#x3D; new AV.Query(&quot;Counter&quot;);</span><br><span class="line">if (request.object.updatedKeys.indexOf(&#39;time&#39;) !&#x3D;&#x3D; -1) &#123;</span><br><span class="line">     return query.get(request.object.id).then(function (obj) &#123;</span><br><span class="line">     if (obj.get(&quot;time&quot;) + 1 !&#x3D;&#x3D; request.object.get(&quot;time&quot;)) &#123;</span><br><span class="line">     throw new AV.Cloud.Error(&#39;Invalid update!&#39;);</span><br><span class="line">   &#125;</span><br><span class="line"> &#125;)</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-<ol start="11">
-<li>点击<strong>部署</strong><br><img src="https://upload-images.jianshu.io/upload_images/10024246-6f2cb6e065606ee4.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240"></li>
-</ol>
-<pre><code>![](https://upload-images.jianshu.io/upload_images/10024246-7f0f70d529036253.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240)
-</code></pre>
-<ol start="12">
-<li>待出现红框处的成功部署信息后，点击<strong>关闭</strong><br><img src="https://upload-images.jianshu.io/upload_images/10024246-74bb624ee196b414.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240"></li>
-</ol>
-<h1 id="设置权限"><a href="#设置权限" class="headerlink" title="设置权限"></a>设置权限</h1><ol>
-<li> 打开<code>Next</code>主题配置文件<code>_config.yml</code>, 将leancloud_visitors下的security设置为true（如没有则新增）</li>
-</ol>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line">leancloud_visitors:</span><br><span class="line"> enable: true</span><br><span class="line"> app_id: &lt;&lt;your app id&gt;&gt; # 同前文的id</span><br><span class="line"> app_key: &lt;&lt;your app key&gt;&gt; # 同前文的key</span><br><span class="line"> # Dependencies: https:&#x2F;&#x2F;github.com&#x2F;theme-next&#x2F;hexo-leancloud-counter-security</span><br><span class="line"> security: true</span><br><span class="line"> # 由于Leancloud免费版的云引擎存在请求线程数和运行时间限制以及休眠机制，</span><br><span class="line"> # 很多时候访客数量加载会很慢。</span><br><span class="line"> # 如果设置betterPerformance为true，</span><br><span class="line"> # 则网页则会在提交请求之前直接显示访客人数为查询到的人数+1，以增加用户体验。</span><br><span class="line"> betterPerformance: false</span><br></pre></td></tr></table></figure>
-
-<ol start="2">
-<li><p> 打开站点配置文件<code>_config.yml</code></p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">leancloud_counter_security:</span><br><span class="line"> enable_sync: true</span><br><span class="line"> app_id: &lt;&lt;your app id&gt;&gt;   # 同前文的id</span><br><span class="line"> app_key: &lt;&lt;your app key&gt;&gt; # 同前文的key</span><br><span class="line"> username: </span><br><span class="line"> password:</span><br></pre></td></tr></table></figure></li>
-<li><p> 打开命令行<code>cmd</code>并进入站点文件夹，键入以下命令以安装<code>hexo-leancloud-counter-security</code>插件</p>
-</li>
-</ol>
-<p>复制 </p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">npm install hexo-leancloud-counter-security --save</span><br></pre></td></tr></table></figure>
-
-<ol start="4">
-<li> 接着键入命令<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">hexo lc-counter register &lt;&lt;username&gt;&gt; &lt;&lt;password&gt;&gt;</span><br></pre></td></tr></table></figure></li>
-</ol>
-<p><strong>PS:</strong> 将<code>&lt;&lt;username&gt;&gt;</code>和<code>&lt;&lt;password&gt;&gt;</code>替换为你自己的用户名和密码（不必与leancloud的账号）相同。<strong>此用户名和密码将在hexo部署时使用。</strong></p>
-<ol start="5">
-<li> 打开站点配置文件<code>_config.yml</code>, 将<code>&lt;&lt;username&gt;&gt;</code>和<code>&lt;&lt;password&gt;&gt;</code>替换为你刚刚设置的用户名和密码</li>
-</ol>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">leancloud_counter_security:</span><br><span class="line"> enable_sync: true</span><br><span class="line"> app_id: &lt;&lt;your app id&gt;&gt;   # 同前文的id</span><br><span class="line"> app_key: &lt;&lt;your app key&gt;&gt; # 同前文的key</span><br><span class="line"> username: &lt;&lt;username&gt;&gt;    #如留空则将在部署时询问</span><br><span class="line"> password: &lt;&lt;password&gt;&gt;    #建议留空以保证安全性，如留空则将在部署时询问</span><br></pre></td></tr></table></figure>
-
-<ol start="6">
-<li><p>返回Leancloud控制台的应用内, 检查_User表中是否出现一条记录（图示以用户名为admin为例）<br> <img src="https://upload-images.jianshu.io/upload_images/10024246-999c5edc89f7b563.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240"></p>
-</li>
-<li><p>进入<strong>Counter</strong>表, 打开<strong>权限设置</strong><br> <img src="https://upload-images.jianshu.io/upload_images/10024246-787b5c61ae91e7f2.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240"></p>
-<p> <img src="https://upload-images.jianshu.io/upload_images/10024246-37f02ef456350fe9.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240"></p>
-<p> <img src="https://upload-images.jianshu.io/upload_images/10024246-65c41acaf06d5c02.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240"></p>
-<p> <img src="https://upload-images.jianshu.io/upload_images/10024246-7f8593a5f8c45141.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240"></p>
-</li>
-</ol>
-<p><strong>至此配置完成</strong></p>
-
-      
-    </div>
-
-    
-    
-    
-
-    <footer class="post-footer">
-        <div class="post-eof"></div>
-      
-    </footer>
-  </article>
-</div>
-
-
-
-
-    
-
-
-<div class="post-block">
-  
-  
-
-  <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="">
-    <link itemprop="mainEntityOfPage" href="https://lzhwweb.github.io/nirvana/javascript/%E5%89%8D%E7%AB%AF/path-to-regexp/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="image" content="/nirvana/images/headphoto.jpeg">
-      <meta itemprop="name" content="nirvana">
-      <meta itemprop="description" content="个人学习笔记">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="涅槃快乐是金">
-    </span>
-      <header class="post-header">
-        <h2 class="post-title" itemprop="name headline">
-          <a href="/nirvana/javascript/%E5%89%8D%E7%AB%AF/path-to-regexp/" class="post-title-link" itemprop="url">url 的正则表达式：path-to-regexp</a>
-        </h2>
-
-        <div class="post-meta-container">
-          <div class="post-meta">
-    <span class="post-meta-item">
-      <span class="post-meta-item-icon">
-        <i class="far fa-calendar"></i>
-      </span>
-      <span class="post-meta-item-text">发表于</span>
-      
-
-      <time title="创建时间：2021-03-20 17:46:44 / 修改时间：17:47:06" itemprop="dateCreated datePublished" datetime="2021-03-20T17:46:44+08:00">2021-03-20</time>
-    </span>
-    <span class="post-meta-item">
-      <span class="post-meta-item-icon">
-        <i class="far fa-folder"></i>
-      </span>
-      <span class="post-meta-item-text">分类于</span>
-        <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-          <a href="/nirvana/categories/javascript/" itemprop="url" rel="index"><span itemprop="name">javascript</span></a>
-        </span>
-    </span>
-
-  
-    <span id="/nirvana/javascript/%E5%89%8D%E7%AB%AF/path-to-regexp/" class="post-meta-item leancloud_visitors" data-flag-title="url 的正则表达式：path-to-regexp" title="阅读次数">
-      <span class="post-meta-item-icon">
-        <i class="far fa-eye"></i>
-      </span>
-      <span class="post-meta-item-text">阅读次数：</span>
-      <span class="leancloud-visitors-count"></span>
-    </span>
-      </div>
-      <div class="post-meta">
-    <span class="post-meta-item" title="本文字数">
-      <span class="post-meta-item-icon">
-        <i class="far fa-file-word"></i>
-      </span>
-      <span class="post-meta-item-text">本文字数：</span>
-      <span>1.7k</span>
-    </span>
-    <span class="post-meta-item" title="阅读时长">
-      <span class="post-meta-item-icon">
-        <i class="far fa-clock"></i>
-      </span>
-      <span class="post-meta-item-text">阅读时长 &asymp;</span>
-      <span>2 分钟</span>
-    </span>
-</div>
-
-        </div>
-      </header>
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-          <h2 id="概述"><a href="#概述" class="headerlink" title="概述"></a>概述</h2><p>该工具库用来处理 url 中地址与参数，能够很方便得到我们想要的数据。</p>
-<p>js 中有 RegExp 方法做正则表达式校验，而 path-to-regexp 可以看成是 url 字符串的正则表达式。</p>
-<h2 id="使用"><a href="#使用" class="headerlink" title="使用"></a>使用</h2><p>第三方库，使用前先进行安装：</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ npm install path-to-regexp</span><br></pre></td></tr></table></figure>
-<p>在 js 中使用：</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">const pathToRegexp &#x3D; require(&#39;path-to-regexp&#39;);</span><br></pre></td></tr></table></figure>
-<h2 id="API-介绍"><a href="#API-介绍" class="headerlink" title="API 介绍"></a>API 介绍</h2><h5 id="1-pathToRegexp"><a href="#1-pathToRegexp" class="headerlink" title="1. pathToRegexp()"></a>1. pathToRegexp()</h5><p>作用：这里这个方法可以类比于 js 中 new ExpReg(‘xxx’)。</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">var pathToRegexp &#x3D; require(&#39;path-to-regexp&#39;)</span><br><span class="line"></span><br><span class="line">var re &#x3D; pathToRegexp(&#39;&#x2F;foo&#x2F;:bar&#39;)</span><br><span class="line">console.log(re);	</span><br></pre></td></tr></table></figure>
-<p>打印结果如下:</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">&#x2F;^\&#x2F;foo\&#x2F;((?:[^\&#x2F;]+?))(?:\&#x2F;(?&#x3D;$))?$&#x2F;i</span><br></pre></td></tr></table></figure>
-<p>要注意两点，一点是我们自己的 url 地址，一条是匹配规则。</p>
-<h5 id="2-exec"><a href="#2-exec" class="headerlink" title="2. exec()"></a>2. exec()</h5><p>作用：匹配 url 地址与规则是否相符。</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">var pathToRegexp &#x3D; require(&#39;path-to-regexp&#39;)</span><br><span class="line"></span><br><span class="line">var re &#x3D; pathToRegexp(&#39;&#x2F;foo&#x2F;:bar&#39;);     &#x2F;&#x2F; 匹配规则</span><br><span class="line">var match1 &#x3D; re.exec(&#39;&#x2F;test&#x2F;route&#39;);    &#x2F;&#x2F; url 路径</span><br><span class="line">var match2 &#x3D; re.exec(&#39;&#x2F;foo&#x2F;route&#39;);     &#x2F;&#x2F; url 路径</span><br><span class="line"></span><br><span class="line">console.log(match1);</span><br><span class="line">console.log(match2);</span><br></pre></td></tr></table></figure>
-<p>打印结果如下：</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">null</span><br><span class="line">[ &#39;&#x2F;foo&#x2F;route&#39;, &#39;route&#39;, index: 0, input: &#39;&#x2F;foo&#x2F;route&#39; ]</span><br></pre></td></tr></table></figure>
-<p>说明：</p>
-<p>上述代码中，第一个 url 路径与匹配规则不相符返回 null，第二个 url 路径与匹配规则相符，返回一个数组。</p>
-<h5 id="3-parse"><a href="#3-parse" class="headerlink" title="3. parse()"></a>3. parse()</h5><p>作用：解析 url 字符串中的参数部分（:id）。</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">var pathToRegexp &#x3D; require(&#39;path-to-regexp&#39;);</span><br><span class="line"></span><br><span class="line">var url &#x3D; &#39;&#x2F;user&#x2F;:id&#39;;</span><br><span class="line">console.log(pathToRegexp.parse(url));</span><br></pre></td></tr></table></figure>
-<p>打印结果如下：</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">[ &#39;&#x2F;user&#39;,</span><br><span class="line">  &#123; name: &#39;id&#39;,</span><br><span class="line">    prefix: &#39;&#x2F;&#39;,</span><br><span class="line">    delimiter: &#39;&#x2F;&#39;,</span><br><span class="line">    optional: false,</span><br><span class="line">    repeat: false,</span><br><span class="line">    partial: false,</span><br><span class="line">    pattern: &#39;[^\\&#x2F;]+?&#39; &#125; ]</span><br></pre></td></tr></table></figure>
-<p>说明：返回一个数组，从第二个数据可以就可以得到 url 地址携带参数的属性名称（item.name）。</p>
-<p>当然，url 中携带参数出了 :id 这种形式，还有 /user?id=11 这种，使用 parse() 方法解析自行查看结果。</p>
-<h5 id="4-compile"><a href="#4-compile" class="headerlink" title="4. compile()"></a>4. compile()</h5><p>作用：快速填充 url 字符串的参数值。</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">var pathToRegexp &#x3D; require(&#39;path-to-regexp&#39;)</span><br><span class="line"></span><br><span class="line">var url &#x3D; &#39;&#x2F;user&#x2F;:id&#x2F;:name&#39;</span><br><span class="line">var data &#x3D; &#123;id: 10001, name: &#39;bob&#39;&#125;</span><br><span class="line">console.log(pathToRegexp.compile(url)(data))</span><br></pre></td></tr></table></figure>
-<p>打印结果：</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">&#x2F;user&#x2F;10001&#x2F;bob</span><br></pre></td></tr></table></figure>
-      
-    </div>
-
-    
-    
-    
-
-    <footer class="post-footer">
-        <div class="post-eof"></div>
-      
-    </footer>
-  </article>
-</div>
-
-
-
-
-    
-
-
-<div class="post-block">
-  
-  
-
-  <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="">
-    <link itemprop="mainEntityOfPage" href="https://lzhwweb.github.io/nirvana/javascript/%E5%89%8D%E7%AB%AF/optimize-css-assets-webpack-plugin/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="image" content="/nirvana/images/headphoto.jpeg">
-      <meta itemprop="name" content="nirvana">
-      <meta itemprop="description" content="个人学习笔记">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="涅槃快乐是金">
-    </span>
-      <header class="post-header">
-        <h2 class="post-title" itemprop="name headline">
-          <a href="/nirvana/javascript/%E5%89%8D%E7%AB%AF/optimize-css-assets-webpack-plugin/" class="post-title-link" itemprop="url">webpack之插件optimize css assets webpack plugin</a>
-        </h2>
-
-        <div class="post-meta-container">
-          <div class="post-meta">
-    <span class="post-meta-item">
-      <span class="post-meta-item-icon">
-        <i class="far fa-calendar"></i>
-      </span>
-      <span class="post-meta-item-text">发表于</span>
-      
-
-      <time title="创建时间：2021-03-20 17:44:26 / 修改时间：17:45:40" itemprop="dateCreated datePublished" datetime="2021-03-20T17:44:26+08:00">2021-03-20</time>
-    </span>
-    <span class="post-meta-item">
-      <span class="post-meta-item-icon">
-        <i class="far fa-folder"></i>
-      </span>
-      <span class="post-meta-item-text">分类于</span>
-        <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-          <a href="/nirvana/categories/javascript/" itemprop="url" rel="index"><span itemprop="name">javascript</span></a>
-        </span>
-    </span>
-
-  
-    <span id="/nirvana/javascript/%E5%89%8D%E7%AB%AF/optimize-css-assets-webpack-plugin/" class="post-meta-item leancloud_visitors" data-flag-title="webpack之插件optimize css assets webpack plugin" title="阅读次数">
-      <span class="post-meta-item-icon">
-        <i class="far fa-eye"></i>
-      </span>
-      <span class="post-meta-item-text">阅读次数：</span>
-      <span class="leancloud-visitors-count"></span>
-    </span>
-      </div>
-      <div class="post-meta">
-    <span class="post-meta-item" title="本文字数">
-      <span class="post-meta-item-icon">
-        <i class="far fa-file-word"></i>
-      </span>
-      <span class="post-meta-item-text">本文字数：</span>
-      <span>1.4k</span>
-    </span>
-    <span class="post-meta-item" title="阅读时长">
-      <span class="post-meta-item-icon">
-        <i class="far fa-clock"></i>
-      </span>
-      <span class="post-meta-item-text">阅读时长 &asymp;</span>
-      <span>1 分钟</span>
-    </span>
-</div>
-
-        </div>
-      </header>
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-          <h2 id="1-安装："><a href="#1-安装：" class="headerlink" title="1. 安装："></a>1. 安装：</h2><p>主要是用来压缩css文件</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">npm i -D optimize-css-assets-webpack-plugin</span><br><span class="line">&#x2F;&#x2F; webpack 3及以下</span><br><span class="line">npm i -D optimize-css-assets-webpack-plugin@3.2.0 </span><br></pre></td></tr></table></figure>
-<h2 id="2-webpack-config-js配置"><a href="#2-webpack-config-js配置" class="headerlink" title="2. webpack.config.js配置"></a>2. webpack.config.js配置</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br></pre></td><td class="code"><pre><span class="line">var OptimizeCssAssetsPlugin &#x3D; require(&#39;optimize-css-assets-webpack-plugin&#39;);</span><br><span class="line">const MiniCssExtractPlugin &#x3D; require(&#39;mini-css-extract-plugin&#39;);</span><br><span class="line"></span><br><span class="line">module.exports &#x3D; &#123;</span><br><span class="line">  module: &#123;</span><br><span class="line">    rules: [</span><br><span class="line">      &#123;</span><br><span class="line">        test: &#x2F;\.css$&#x2F;,</span><br><span class="line">        loader: MiniCssExtractPlugin.extract(&#39;style-loader&#39;, &#39;css-loader&#39;)</span><br><span class="line">        loader: MiniCssExtractPlugin.loader,</span><br><span class="line">        options: &#123;publicPath: &#39;&#x2F;public&#x2F;path&#x2F;to&#x2F;&#39; &#125;</span><br><span class="line">      &#125;</span><br><span class="line">    ]</span><br><span class="line">  &#125;,</span><br><span class="line">  plugins: [</span><br><span class="line">    new ExtractTextPlugin(&#39;styles.css&#39;),</span><br><span class="line">    &#x2F;&#x2F;new OptimizeCssAssetsPlugin()</span><br><span class="line">    new OptimizeCSSAssetsPlugin(&#123;</span><br><span class="line">      assetNameRegExp: &#x2F;\.css$&#x2F;g,</span><br><span class="line">      cssProcessor: require(&#39;cssnano&#39;),</span><br><span class="line">      cssProcessorPluginOptions: &#123;</span><br><span class="line">        preset: [&#39;default&#39;, &#123; discardComments: &#123; removeAll: true &#125; &#125;],</span><br><span class="line">      &#125;,</span><br><span class="line">      canPrint: true</span><br><span class="line">    &#125;),</span><br><span class="line">  ]</span><br><span class="line">&#125;;</span><br></pre></td></tr></table></figure>
-<h2 id="3-参数"><a href="#3-参数" class="headerlink" title="3. 参数"></a>3. 参数</h2><p>assetNameRegExp：一个正则表达式，指示应优化\最小化的资产的名称。提供的正则表达式针对配置中<br>ExtractTextPlugin实例导出的文件的文件名运行，而不是源CSS文件的文件名。默认为/.css$/g<br>cssProcessor：用于优化\最小化CSS的CSS处理器，默认为cssnano。这应该是一个跟随<br>cssnano.process接口的函数（接收CSS和选项参数并返回一个Promise）。<br>cssProcessorOptions：传递给cssProcessor的选项，默认为 {}<br>cssProcessorPluginOptions：传递给cssProcessor的插件选项，默认为 {}<br>canPrint：一个布尔值，指示插件是否可以将消息打印到控制台，默认为 true</p>
-<blockquote>
-<p>webpack4.X版本中，webpack -p命令，是可以默认压缩js文件的
-  </p>
-</blockquote>
-
-      
-    </div>
-
-    
-    
-    
-
-    <footer class="post-footer">
-        <div class="post-eof"></div>
-      
-    </footer>
-  </article>
-</div>
-
-
-
-
-    
-
-
-<div class="post-block">
-  
-  
-
-  <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="">
-    <link itemprop="mainEntityOfPage" href="https://lzhwweb.github.io/nirvana/javascript/%E5%89%8D%E7%AB%AF/dotenv/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="image" content="/nirvana/images/headphoto.jpeg">
-      <meta itemprop="name" content="nirvana">
-      <meta itemprop="description" content="个人学习笔记">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="涅槃快乐是金">
-    </span>
-      <header class="post-header">
-        <h2 class="post-title" itemprop="name headline">
-          <a href="/nirvana/javascript/%E5%89%8D%E7%AB%AF/dotenv/" class="post-title-link" itemprop="url">dotenv，从文件加载环境变量</a>
-        </h2>
-
-        <div class="post-meta-container">
-          <div class="post-meta">
-    <span class="post-meta-item">
-      <span class="post-meta-item-icon">
-        <i class="far fa-calendar"></i>
-      </span>
-      <span class="post-meta-item-text">发表于</span>
-      
-
-      <time title="创建时间：2021-03-20 17:42:53 / 修改时间：17:43:10" itemprop="dateCreated datePublished" datetime="2021-03-20T17:42:53+08:00">2021-03-20</time>
-    </span>
-    <span class="post-meta-item">
-      <span class="post-meta-item-icon">
-        <i class="far fa-folder"></i>
-      </span>
-      <span class="post-meta-item-text">分类于</span>
-        <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-          <a href="/nirvana/categories/javascript/" itemprop="url" rel="index"><span itemprop="name">javascript</span></a>
-        </span>
-    </span>
-
-  
-    <span id="/nirvana/javascript/%E5%89%8D%E7%AB%AF/dotenv/" class="post-meta-item leancloud_visitors" data-flag-title="dotenv，从文件加载环境变量" title="阅读次数">
-      <span class="post-meta-item-icon">
-        <i class="far fa-eye"></i>
-      </span>
-      <span class="post-meta-item-text">阅读次数：</span>
-      <span class="leancloud-visitors-count"></span>
-    </span>
-      </div>
-      <div class="post-meta">
-    <span class="post-meta-item" title="本文字数">
-      <span class="post-meta-item-icon">
-        <i class="far fa-file-word"></i>
-      </span>
-      <span class="post-meta-item-text">本文字数：</span>
-      <span>520</span>
-    </span>
-    <span class="post-meta-item" title="阅读时长">
-      <span class="post-meta-item-icon">
-        <i class="far fa-clock"></i>
-      </span>
-      <span class="post-meta-item-text">阅读时长 &asymp;</span>
-      <span>1 分钟</span>
-    </span>
-</div>
-
-        </div>
-      </header>
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-          <p>Node.js程序运行时加载不同的配置，比如开发环境和生产环境的数据数据库配置就可能不一样，使用 process.env.DB_HOST 环境变量，可以在Node.js程序内部方便获取参数信息。</p>
-<p>但是，程序启动时，怎样将环境变量传递给程序，这可能会是一个相对麻烦的事情，因为这关系到操作系统层的配置问题。</p>
-<h2 id="dotenv"><a href="#dotenv" class="headerlink" title="dotenv"></a>dotenv</h2><p>dotenv是一个可以使得Node.js从文件中加载环境变量的库，使用dotenv，我们只需要将程序的环境变量配置写在.env文件中。</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"># .env file</span><br><span class="line">DB_HOST&#x3D;localhost</span><br><span class="line">DB_USER&#x3D;root</span><br><span class="line">DB_PASS&#x3D;s1mpl3</span><br></pre></td></tr></table></figure>
-<p>然后，在Node.js程序启动时运行：</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">require(&#39;dotenv&#39;).config()</span><br></pre></td></tr></table></figure>
-<p>接着，我们就可以在接下来的程序中方便地使用环境变量了：</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">const db &#x3D; require(&#39;db&#39;)</span><br><span class="line">db.connect(&#123;</span><br><span class="line">  host: process.env.DB_HOST,</span><br><span class="line">  username: process.env.DB_USER,</span><br><span class="line">  password: process.env.DB_PASS</span><br><span class="line">&#125;)</span><br></pre></td></tr></table></figure>
-      
-    </div>
-
-    
-    
-    
-
-    <footer class="post-footer">
-        <div class="post-eof"></div>
-      
-    </footer>
-  </article>
-</div>
-
-
-
-
-    
-
-
-<div class="post-block">
-  
-  
-
-  <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="">
-    <link itemprop="mainEntityOfPage" href="https://lzhwweb.github.io/nirvana/javascript/%E5%89%8D%E7%AB%AF/node-rw-file/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="image" content="/nirvana/images/headphoto.jpeg">
-      <meta itemprop="name" content="nirvana">
-      <meta itemprop="description" content="个人学习笔记">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="涅槃快乐是金">
-    </span>
-      <header class="post-header">
-        <h2 class="post-title" itemprop="name headline">
-          <a href="/nirvana/javascript/%E5%89%8D%E7%AB%AF/node-rw-file/" class="post-title-link" itemprop="url">Nodejs读取目录下的文件并编辑</a>
-        </h2>
-
-        <div class="post-meta-container">
-          <div class="post-meta">
-    <span class="post-meta-item">
-      <span class="post-meta-item-icon">
-        <i class="far fa-calendar"></i>
-      </span>
-      <span class="post-meta-item-text">发表于</span>
-      
-
-      <time title="创建时间：2021-03-20 17:41:26 / 修改时间：17:41:48" itemprop="dateCreated datePublished" datetime="2021-03-20T17:41:26+08:00">2021-03-20</time>
-    </span>
-    <span class="post-meta-item">
-      <span class="post-meta-item-icon">
-        <i class="far fa-folder"></i>
-      </span>
-      <span class="post-meta-item-text">分类于</span>
-        <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-          <a href="/nirvana/categories/javascript/" itemprop="url" rel="index"><span itemprop="name">javascript</span></a>
-        </span>
-    </span>
-
-  
-    <span id="/nirvana/javascript/%E5%89%8D%E7%AB%AF/node-rw-file/" class="post-meta-item leancloud_visitors" data-flag-title="Nodejs读取目录下的文件并编辑" title="阅读次数">
-      <span class="post-meta-item-icon">
-        <i class="far fa-eye"></i>
-      </span>
-      <span class="post-meta-item-text">阅读次数：</span>
-      <span class="leancloud-visitors-count"></span>
-    </span>
-      </div>
-      <div class="post-meta">
-    <span class="post-meta-item" title="本文字数">
-      <span class="post-meta-item-icon">
-        <i class="far fa-file-word"></i>
-      </span>
-      <span class="post-meta-item-text">本文字数：</span>
-      <span>1k</span>
-    </span>
-    <span class="post-meta-item" title="阅读时长">
-      <span class="post-meta-item-icon">
-        <i class="far fa-clock"></i>
-      </span>
-      <span class="post-meta-item-text">阅读时长 &asymp;</span>
-      <span>1 分钟</span>
-    </span>
-</div>
-
-        </div>
-      </header>
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-          <p>node下读取和编辑文件都是使用<code>fs</code>组件</p>
-<h2 id="引用模块"><a href="#引用模块" class="headerlink" title="引用模块"></a>引用模块</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">const fs &#x3D; require(&#39;fs&#39;);</span><br></pre></td></tr></table></figure>
-<h2 id="读取文件夹"><a href="#读取文件夹" class="headerlink" title="读取文件夹"></a>读取文件夹</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br></pre></td><td class="code"><pre><span class="line">&#x2F;**</span><br><span class="line">* path - 文件路径。</span><br><span class="line">* callback - 回调函数，回调函数带有两个参数err, files，err 为错误信息，files 为 目录下的文件数组列表。</span><br><span class="line">**&#x2F;</span><br><span class="line"></span><br><span class="line">fs.readdir(path, callback)</span><br><span class="line">#异步 readdir(3). 读取目录的内容。</span><br><span class="line">fs.readdirSync(path)</span><br><span class="line">#同步 readdir().返回文件数组列表。</span><br><span class="line"></span><br><span class="line">&#x2F;&#x2F;demo</span><br><span class="line">const fs &#x3D; require(&#39;fs&#39;);</span><br><span class="line">const path &#x3D; require(&#39;path&#39;);</span><br><span class="line">fs.readdir(pathName, function(err, files)&#123;</span><br><span class="line">    var dirs &#x3D; [];</span><br><span class="line">    (function iterator(i)&#123;</span><br><span class="line">      if(i &#x3D;&#x3D; files.length) &#123;</span><br><span class="line">        console.log(dirs);</span><br><span class="line">      &#125;</span><br><span class="line">      fs.stat(path.join(pathName, files[i]), function(err, data)&#123;     </span><br><span class="line">        if(data.isFile())&#123;               </span><br><span class="line">            dirs.push(files[i]);</span><br><span class="line">            iterator(i+1);</span><br><span class="line">       &#125;);   </span><br><span class="line">    &#125;)(0);</span><br><span class="line">&#125;);</span><br></pre></td></tr></table></figure>
-
-<h2 id="编辑文件"><a href="#编辑文件" class="headerlink" title="编辑文件"></a>编辑文件</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br></pre></td><td class="code"><pre><span class="line">var fs &#x3D; require(&quot;fs&quot;);</span><br><span class="line"></span><br><span class="line">&#x2F;&#x2F; 异步读取</span><br><span class="line">fs.readFile(&#39;input.txt&#39;, function (err, data) &#123;</span><br><span class="line">   if (err) &#123;</span><br><span class="line">       return console.error(err);</span><br><span class="line">   &#125;</span><br><span class="line">   console.log(&quot;异步读取: &quot; + data.toString());</span><br><span class="line">&#125;);</span><br><span class="line"></span><br><span class="line">&#x2F;&#x2F; 同步读取</span><br><span class="line">var data &#x3D; fs.readFileSync(&#39;input.txt&#39;);</span><br><span class="line">console.log(&quot;同步读取: &quot; + data.toString());</span><br><span class="line"></span><br><span class="line">console.log(&quot;程序执行完毕。&quot;);</span><br></pre></td></tr></table></figure>
-
-      
-    </div>
-
-    
-    
-    
-
-    <footer class="post-footer">
-        <div class="post-eof"></div>
-      
-    </footer>
-  </article>
-</div>
-
-
-
-
-    
-
-
-<div class="post-block">
-  
-  
-
-  <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="">
-    <link itemprop="mainEntityOfPage" href="https://lzhwweb.github.io/nirvana/javascript/%E5%89%8D%E7%AB%AF/webpack4error/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="image" content="/nirvana/images/headphoto.jpeg">
-      <meta itemprop="name" content="nirvana">
-      <meta itemprop="description" content="个人学习笔记">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="涅槃快乐是金">
-    </span>
-      <header class="post-header">
-        <h2 class="post-title" itemprop="name headline">
-          <a href="/nirvana/javascript/%E5%89%8D%E7%AB%AF/webpack4error/" class="post-title-link" itemprop="url">关于 webpack-cli4.0 及以上版本 和 webpack-dev-server 之间的依赖报connot find module “webpack-cli/bin/config-yargs”</a>
-        </h2>
-
-        <div class="post-meta-container">
-          <div class="post-meta">
-    <span class="post-meta-item">
-      <span class="post-meta-item-icon">
-        <i class="far fa-calendar"></i>
-      </span>
-      <span class="post-meta-item-text">发表于</span>
-      
-
-      <time title="创建时间：2021-03-15 13:15:56 / 修改时间：13:18:54" itemprop="dateCreated datePublished" datetime="2021-03-15T13:15:56+08:00">2021-03-15</time>
-    </span>
-    <span class="post-meta-item">
-      <span class="post-meta-item-icon">
-        <i class="far fa-folder"></i>
-      </span>
-      <span class="post-meta-item-text">分类于</span>
-        <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-          <a href="/nirvana/categories/javascript/" itemprop="url" rel="index"><span itemprop="name">javascript</span></a>
-        </span>
-    </span>
-
-  
-    <span id="/nirvana/javascript/%E5%89%8D%E7%AB%AF/webpack4error/" class="post-meta-item leancloud_visitors" data-flag-title="关于 webpack-cli4.0 及以上版本 和 webpack-dev-server 之间的依赖报connot find module “webpack-cli/bin/config-yargs”" title="阅读次数">
-      <span class="post-meta-item-icon">
-        <i class="far fa-eye"></i>
-      </span>
-      <span class="post-meta-item-text">阅读次数：</span>
-      <span class="leancloud-visitors-count"></span>
-    </span>
-      </div>
-      <div class="post-meta">
-    <span class="post-meta-item" title="本文字数">
-      <span class="post-meta-item-icon">
-        <i class="far fa-file-word"></i>
-      </span>
-      <span class="post-meta-item-text">本文字数：</span>
-      <span>640</span>
-    </span>
-    <span class="post-meta-item" title="阅读时长">
-      <span class="post-meta-item-icon">
-        <i class="far fa-clock"></i>
-      </span>
-      <span class="post-meta-item-text">阅读时长 &asymp;</span>
-      <span>1 分钟</span>
-    </span>
-</div>
-
-        </div>
-      </header>
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-          <p>今天在执行webpack-dev-server命令时，一直报Error: Cannot find module ‘webpack-cli/bin/config-yargs’<br>在执行npm run dev命令时报：</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">connot find module “webpack-cli&#x2F;bin&#x2F;config-yargs”</span><br></pre></td></tr></table></figure>
-<p><img src="https://upload-images.jianshu.io/upload_images/10024246-6c0ce76392782d11.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240"></p>
-<h2 id="方案一"><a href="#方案一" class="headerlink" title="方案一"></a>方案一</h2><p>可以通过对webpack-cli进行降级处理，成功解决问题。<br>步骤：<br>一：</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">npm uninstall webpack-cli   &#x2F;&#x2F;这是进行局部删除webpack-cli脚手架</span><br></pre></td></tr></table></figure>
-<p>二;</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">npm install webpack-cli@3.3.11    &#x2F;&#x2F;@后面的数字指定不同的版本，版本应该低于4.0</span><br></pre></td></tr></table></figure>
-<h2 id="方案二"><a href="#方案二" class="headerlink" title="方案二"></a>方案二</h2><p><img src="https://upload-images.jianshu.io/upload_images/10024246-8e6a60a3309046c2.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240"></p>
-<p>在 webpack 官网上可以看到依赖的下载与设置方法没有改变，启动命令发生了改变。<br>直接 webpack serve –open，就可以了。</p>
-<p>依赖关系</p>
-<table>
-<thead>
-<tr>
-<th>依赖</th>
-<th>版本</th>
-<th>新版本</th>
-</tr>
-</thead>
-<tbody><tr>
-<td>webpack</td>
-<td>4</td>
-<td>5</td>
-</tr>
-<tr>
-<td>webpack-cli</td>
-<td>3</td>
-<td>4</td>
-</tr>
-<tr>
-<td>webpack-dev-server</td>
-<td>3</td>
-<td>3</td>
-</tr>
-</tbody></table>
-<p>之前的依赖关系是 webpack-dev-server 依赖于 webpack-cli 内部的 config-yargs，cli 升级到 4.0 以后，统一了 webpack 命令的入口文件，反过来依赖 webpack-dev-server 来实现 webpack serve –open 的命令。</p>
-<p>原文链接：<a target="_blank" rel="noopener" href="https://blog.csdn.net/weixin_40599109/article/details/109582365">https://blog.csdn.net/weixin_40599109/article/details/109582365</a></p>
-
-      
-    </div>
-
-    
-    
-    
-
-    <footer class="post-footer">
-        <div class="post-eof"></div>
-      
-    </footer>
-  </article>
-</div>
-
-
-
-
-    
-
-
-<div class="post-block">
-  
-  
-
-  <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="">
-    <link itemprop="mainEntityOfPage" href="https://lzhwweb.github.io/nirvana/javascript/%E5%89%8D%E7%AB%AF/why-devdependencies/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="image" content="/nirvana/images/headphoto.jpeg">
-      <meta itemprop="name" content="nirvana">
-      <meta itemprop="description" content="个人学习笔记">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="涅槃快乐是金">
-    </span>
-      <header class="post-header">
-        <h2 class="post-title" itemprop="name headline">
-          <a href="/nirvana/javascript/%E5%89%8D%E7%AB%AF/why-devdependencies/" class="post-title-link" itemprop="url">为什么是 devDependencies?</a>
-        </h2>
-
-        <div class="post-meta-container">
-          <div class="post-meta">
-    <span class="post-meta-item">
-      <span class="post-meta-item-icon">
-        <i class="far fa-calendar"></i>
-      </span>
-      <span class="post-meta-item-text">发表于</span>
-      
-
-      <time title="创建时间：2021-03-13 11:35:44 / 修改时间：11:37:45" itemprop="dateCreated datePublished" datetime="2021-03-13T11:35:44+08:00">2021-03-13</time>
-    </span>
-    <span class="post-meta-item">
-      <span class="post-meta-item-icon">
-        <i class="far fa-folder"></i>
-      </span>
-      <span class="post-meta-item-text">分类于</span>
-        <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-          <a href="/nirvana/categories/javascript/" itemprop="url" rel="index"><span itemprop="name">javascript</span></a>
-        </span>
-    </span>
-
-  
-    <span id="/nirvana/javascript/%E5%89%8D%E7%AB%AF/why-devdependencies/" class="post-meta-item leancloud_visitors" data-flag-title="为什么是 devDependencies?" title="阅读次数">
-      <span class="post-meta-item-icon">
-        <i class="far fa-eye"></i>
-      </span>
-      <span class="post-meta-item-text">阅读次数：</span>
-      <span class="leancloud-visitors-count"></span>
-    </span>
-      </div>
-      <div class="post-meta">
-    <span class="post-meta-item" title="本文字数">
-      <span class="post-meta-item-icon">
-        <i class="far fa-file-word"></i>
-      </span>
-      <span class="post-meta-item-text">本文字数：</span>
-      <span>2.7k</span>
-    </span>
-    <span class="post-meta-item" title="阅读时长">
-      <span class="post-meta-item-icon">
-        <i class="far fa-clock"></i>
-      </span>
-      <span class="post-meta-item-text">阅读时长 &asymp;</span>
-      <span>2 分钟</span>
-    </span>
-</div>
-
-        </div>
-      </header>
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-          <p><code>dependencies</code> 和 <code>devDependencies</code> 有什么区别？我使用的包应该放到什么地方？上网找资料，大神群咨询。得到的答案是：</p>
-<ul>
-<li>  生产环境用到的放在 <code>dependencies</code>中;</li>
-<li>  开发环境用到的放在 <code>devDependencies</code>中;</li>
-</ul>
-<p>现实中发现：无论放到<code>dependencies</code>中，还是<code>devDependencies</code>，运行 <code>npm install</code> 时都会安装，没有差别，团队合作也OK，照玩不误啊。把<code>koa</code>放到<code>devDependencies</code>中有没有问题？把<code>webpack</code>放到<code>dependencies</code>又会怎么样？</p>
-<p>直到我要把自己的开源项目发布到 <code>npm</code> 时，才明白了大神的意思。</p>
-<h2 id="生产环境-or-开发环境？"><a href="#生产环境-or-开发环境？" class="headerlink" title="生产环境 or 开发环境？"></a>生产环境 or 开发环境？</h2><p>先来看个问题：<strong>小明</strong>使用 <code>webpack</code> 开发 <code>web项目</code> 的环境，是什么环境？</p>
-<p>答案是<code>开发环境，但同时也是</code>生产环境`。</p>
-<p>相对于 <code>小明的项目</code> 是 <strong>开发环境</strong>，但相对 <code>webpack</code>，就是<strong>生产环境</strong>。</p>
-<h2 id="从实践中理解两者的区别"><a href="#从实践中理解两者的区别" class="headerlink" title="从实践中理解两者的区别"></a>从实践中理解两者的区别</h2><p>用开源项目 <a target="_blank" rel="noopener" href="https://github.com/visionmedia/debug">debug</a> 项目举例。它的 <code>package.json</code> 相关内容如下：</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br></pre></td><td class="code"><pre><span class="line">&#123;</span><br><span class="line">  &quot;dependencies&quot;: &#123;</span><br><span class="line">    &quot;ms&quot;: &quot;^2.1.1&quot;</span><br><span class="line">  &#125;,</span><br><span class="line">  &quot;devDependencies&quot;: &#123;</span><br><span class="line">    &quot;brfs&quot;: &quot;^2.0.1&quot;,</span><br><span class="line">    &quot;browserify&quot;: &quot;^16.2.3&quot;,</span><br><span class="line">    &quot;coveralls&quot;: &quot;^3.0.2&quot;,</span><br><span class="line">    &quot;istanbul&quot;: &quot;^0.4.5&quot;,</span><br><span class="line">    &quot;karma&quot;: &quot;^3.1.4&quot;,</span><br><span class="line">    &quot;karma-browserify&quot;: &quot;^6.0.0&quot;,</span><br><span class="line">    &quot;karma-chrome-launcher&quot;: &quot;^2.2.0&quot;,</span><br><span class="line">    &quot;karma-mocha&quot;: &quot;^1.3.0&quot;,</span><br><span class="line">    &quot;mocha&quot;: &quot;^5.2.0&quot;,</span><br><span class="line">    &quot;mocha-lcov-reporter&quot;: &quot;^1.2.0&quot;,</span><br><span class="line">    &quot;xo&quot;: &quot;^0.23.0&quot;</span><br><span class="line">  &#125;</span><br><span class="line">&#125;</span><br><span class="line"></span><br></pre></td></tr></table></figure>
-
-<h3 id="使用debug-npm-install-debug"><a href="#使用debug-npm-install-debug" class="headerlink" title="使用debug (npm install debug)"></a>使用debug (npm install debug)</h3><p>我们在使用<code>debug</code>时，需要这样用（大部分用户的使用方式）</p>
-<p>手动创建一个项目</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">npm init</span><br><span class="line">npm install debug --save</span><br><span class="line"></span><br></pre></td></tr></table></figure>
-
-<p>查看 <code>node_modules</code> 目录中的内容</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">-- node_modules</span><br><span class="line">  -- debug</span><br><span class="line">  -- ms</span><br><span class="line"></span><br></pre></td></tr></table></figure>
-
-<p>可以看出， <code>npm</code> 只安装了 <code>debug</code> 和 <code>ms(debug的dependencies包含的package)</code>。<br>因为现在的环境相对于 <code>debug</code> 来说，是生产环境，所以 <code>npm</code> 只安装了 <code>debug</code> 的生产依赖。</p>
-<h3 id="开发debug-git-clone-debug"><a href="#开发debug-git-clone-debug" class="headerlink" title="开发debug (git clone debug)"></a>开发debug (git clone debug)</h3><p>作为 <code>debug</code> 项目的 <strong>开发者</strong> 或 <strong>二次开发者</strong> ，才会这样用。</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">git clone https:&#x2F;&#x2F;github.com&#x2F;visionmedia&#x2F;debug.git</span><br><span class="line">cd debug</span><br><span class="line">npm install</span><br><span class="line"></span><br></pre></td></tr></table></figure>
-
-<p>查看<code>node_modules</code></p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line">-- node_modules</span><br><span class="line">  -- debug</span><br><span class="line">  -- ms</span><br><span class="line">  -- brfs</span><br><span class="line">  -- xo</span><br><span class="line">  -- connect</span><br><span class="line">  -- date-format</span><br><span class="line">  -- ...... 共653个package</span><br><span class="line"></span><br></pre></td></tr></table></figure>
-
-<p>可以看出， <code>npm</code> 安装了 <code>dependencies</code>、<code>devDependencies</code> 以及 <code>它们的dependencies</code>。<br>因为现在的环境相对于<code>debug</code>来说，是开发环境，所以<code>npm</code>安装了<code>debug</code>的所有依赖，以及它们的生产依赖。</p>
-<p>对比以上结果，可以看出，一般情况下开发环境所需要安装的依赖<strong>远多于</strong>生产环境。</p>
-<h2 id="非常规玩法（挑战规范，知其所以然）"><a href="#非常规玩法（挑战规范，知其所以然）" class="headerlink" title="非常规玩法（挑战规范，知其所以然）"></a>非常规玩法（挑战规范，知其所以然）</h2><p>根据以上的实践分析，总结出一些<strong>玩</strong>法：</p>
+<p>举个例子：很多产品都用到螺丝，但是工厂在生产不同产品时，不需要每次连带着把螺丝也生产出来，因为螺丝可以单独生产，并给多种产品使用。在这里螺丝的作用就可以理解为是dll。</p>
+<h3 id="为什么要使用Dll"><a href="#为什么要使用Dll" class="headerlink" title="为什么要使用Dll"></a>为什么要使用Dll</h3><p>通常来说，我们的代码都可以至少简单区分成<strong>业务代码</strong>和<strong>第三方库</strong>。如果不做处理，每次构建时都需要把所有的代码重新构建一次，耗费大量的时间。然后大部分情况下，很多第三方库的代码并不会发生变更（除非是版本升级），这时就可以用到dll：<strong>把复用性较高的第三方模块打包到动态链接库中，在不升级这些库的情况下，动态库不需要重新打包，每次构建只重新打包业务代码</strong>。</p>
+<p>还是上面的例子：把每次构建，当做是生产产品的过程，我们把生产螺丝的过程先提取出来，之后我们不管调整产品的功能或者设计（对应于业务代码变更），<strong>都不必重复生产螺丝（第三方模块不需要重复打包）</strong>；除非是<strong>产品要使用新型号的螺丝（第三方模块需要升级）</strong>，才需要去重新生产新的螺丝，然后接下来又可以专注于调整产品本身。</p>
+<h2 id="基本用法"><a href="#基本用法" class="headerlink" title="基本用法"></a>基本用法</h2><p>使用dll时，可以把构建过程分成dll构建过程和主构建过程（实质也就是如此），所以需要两个构建配置文件，例如叫做<code>webpack.config.js</code>和<code>webpack.dll.config.js</code>。</p>
+<h3 id="1-使用DLLPlugin打包需要分离到动态库的模块"><a href="#1-使用DLLPlugin打包需要分离到动态库的模块" class="headerlink" title="1. 使用DLLPlugin打包需要分离到动态库的模块"></a>1. 使用<code>DLLPlugin</code>打包需要分离到动态库的模块</h3><p><code>DllPlugin</code>是<code>webpack</code>内置的插件，不需要额外安装，直接配置<code>webpack.dll.config.js</code>文件：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br></pre></td><td class="code"><pre><span class="line">module.exports &#x3D; &#123;&#x3D;</span><br><span class="line">  entry: &#123;</span><br><span class="line">    &#x2F;&#x2F; 第三方库</span><br><span class="line">    react: [&#39;react&#39;, &#39;react-dom&#39;, &#39;react-redux&#39;]</span><br><span class="line">  &#125;,</span><br><span class="line">  output: &#123;</span><br><span class="line">    &#x2F;&#x2F; 输出的动态链接库的文件名称，[name] 代表当前动态链接库的名称，</span><br><span class="line">    filename: &#39;[name].dll.js&#39;,</span><br><span class="line">    path: resolve(&#39;dist&#x2F;dll&#39;),</span><br><span class="line">    &#x2F;&#x2F; library必须和后面dllplugin中的name一致 后面会说明</span><br><span class="line">    library: &#39;[name]_dll_[hash]&#39;</span><br><span class="line">  &#125;,</span><br><span class="line">  plugins: [</span><br><span class="line">  &#x2F;&#x2F; 接入 DllPlugin</span><br><span class="line">    new webpack.DllPlugin(&#123;</span><br><span class="line">      &#x2F;&#x2F; 动态链接库的全局变量名称，需要和 output.library 中保持一致</span><br><span class="line">      &#x2F;&#x2F; 该字段的值也就是输出的 manifest.json 文件 中 name 字段的值</span><br><span class="line">      name: &#39;[name]_dll_[hash]&#39;,</span><br><span class="line">      &#x2F;&#x2F; 描述动态链接库的 manifest.json 文件输出时的文件名称</span><br><span class="line">      path: path.join(__dirname, &#39;dist&#x2F;dll&#39;, &#39;[name].manifest.json&#39;)</span><br><span class="line">    &#125;),</span><br><span class="line">  ]</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<p>我们先来看看，这一步到底做了什么。执行：<code>webpack --config webpack.dll.config</code>，然后到指定的输出文件夹查看输出：</p>
 <ol>
-<li><p> 如果所有依赖包<strong>都是开放环境</strong>要用到的包，并且不会发布到<code>npm</code>让别人使用（如<code>webpack</code>打包完成后发布<code>dist</code>的前端项目），因为生产环境不再需要依赖这些包(甚至都不需要<code>nodejs</code>)，这时你把<strong>依赖</strong>放到哪里，完全<strong>随你开心</strong>。但为了避免有人说闲话，应该放到<code>devDependencies</code>中。</p>
+<li> <code>react.dll</code>文件里是使用数组保存的模块，索引值就作为id；</li>
+<li> <code>react.manifest.json</code>文件里，是用来描述对应的dll文件里保存的模块</li>
+</ol>
+<p>里暴露出刚刚构建的所有模块，如下：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">&#123;</span><br><span class="line">  &quot;name&quot;:&quot;react_dll_553e24e2c44987d2578f&quot;,</span><br><span class="line">  &quot;content&quot;:&#123;</span><br><span class="line">    &quot;.&#x2F;node_modules&#x2F;webpack&#x2F;node_modules&#x2F;process&#x2F;browser.js&quot;:&#123;&quot;id&quot;:0,&quot;meta&quot;:&#123;&#125;&#125;,&quot;.&#x2F;node_modules&#x2F;react&#x2F;node_modules&#x2F;fbjs&#x2F;lib&#x2F;invariant.js&quot;:&#123;&quot;id&quot;:1,&quot;meta&quot;:&#123;&#125;&#125;,&quot;.&#x2F;node_modules&#x2F;react&#x2F;lib&#x2F;Object.assign.js&quot;:&#123;&quot;id&quot;:2,&quot;meta&quot;:&#123;&#125;&#125;,&quot;.&#x2F;node_modules&#x2F;react&#x2F;node_modules&#x2F;fbjs&#x2F;lib&#x2F;warning.js&quot;:&#123;&quot;id&quot;:3,&quot;meta&quot;:&#123;&#125;&#125;</span><br><span class="line">    &#x2F;&#x2F;省略相似代码</span><br><span class="line">  &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<h3 id="2-在主构建配置文件使用动态库文件"><a href="#2-在主构建配置文件使用动态库文件" class="headerlink" title="2. 在主构建配置文件使用动态库文件"></a>2. 在主构建配置文件使用动态库文件</h3><p>在<code>webpack.config</code>中使用dll要用到<code>DllReferencePlugin</code>,这个插件通过引用 dll 的 manifest 文件来把依赖的名称映射到模块的 id 上，之后再在需要的时候通过内置的 <strong>webpack_require</strong> 函数来 require 他们.</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">new webpack.DllReferencePlugin(&#123;</span><br><span class="line">  context: __dirname,</span><br><span class="line">  manifest: require(&#39;.&#x2F;dist&#x2F;dll&#x2F;react.manifest.json&#39;)</span><br><span class="line">&#125;),</span><br></pre></td></tr></table></figure>
+
+<p>第一步产出的<code>manifest</code>文件就用在这里，给主构建流程作为查找dll的依据：<strong>DllReferencePlugin去 manifest.json 文件读取 name 字段的值，把值的内容作为在从全局变量中获取动态链接库中内容时的全局变量名</strong>，因此：在 webpack_dll.config.js 文件中，DllPlugin 中的 name 参数必须和 output.library 中保持一致。</p>
+<h3 id="3-在入口文件引入dll文件。"><a href="#3-在入口文件引入dll文件。" class="headerlink" title="3. 在入口文件引入dll文件。"></a>3. 在入口文件引入dll文件。</h3><p>生成的dll暴露出的是全局函数，因此还需要在入口文件里面引入对应的dll文件。</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">&lt;body&gt;</span><br><span class="line">  &lt;div id&#x3D;&quot;app&quot;&gt;&lt;&#x2F;div&gt;</span><br><span class="line">  &lt;!--引用dll文件--&gt;</span><br><span class="line">  &lt;script src&#x3D;&quot;..&#x2F;..&#x2F;dist&#x2F;dll&#x2F;react.dll.js&quot; &gt;&lt;&#x2F;script&gt;</span><br><span class="line">&lt;&#x2F;body&gt;</span><br></pre></td></tr></table></figure>
+
+<h2 id="作用"><a href="#作用" class="headerlink" title="作用"></a>作用</h2><p>首先从前面的介绍，至少可以看出dll的两个作用</p>
+<ol>
+<li><p>分离代码，业务代码和第三方模块可以被打包到不同的文件里，这个有几个好处：</p>
+<ul>
+<li>  避免打包出单个文件的大小太大，不利于调试</li>
+<li>  将单个大文件拆成多个小文件之后，一定情况下有利于加载（不超出浏览器一次性请求的文件数情况下，并行下载肯定比串行快）</li>
+</ul>
 </li>
-<li><p> 如果所有依赖包<strong>都是生产环境</strong>要用到的包，并且不会发布到<code>npm</code>让别人使用。如<strong>web</strong>项目常用的<code>express</code>和<code>koa</code>，是生产环境运行必须的包，你也可以随便放 <strong>（惊不惊喜意不意外）</strong>，在生产环境中，部署生产环境时使用<code>npm install</code>，一样会把所有包安装下来，不影响生产环境的运行。为了避免有人说闲话，还是要放到<code>dependencies</code>中。</p>
-</li>
-<li><p> 如果既有开发依赖又有生产依赖，并且不会发布到<code>npm</code>让别人使用。你还是可以随便放。<code>npm install</code> 会安装所有包。但就会产生问题，<strong>生产环境安装了开发环境的包</strong>，这个问题会死人吗？不太清楚，但项目是可以运行的。要避免这些额外的消耗，就要区分两种包的位置。在生产环境中使用<code>npm install --production</code>，则只会安装<code>dependencies</code>中的依赖。外翻篇：如果你开心，也可以把<strong>开发依赖</strong>包放到<code>devDependencies</code>，<strong>生产依赖</strong>包放到<code>dependencies</code>，生产环境就用<code>npm install --only=dev</code>，这样只会安装<code>devDependencies</code>中的<del>生产</del>依赖。</p>
-</li>
-<li><p> 如果是一个要发布到<code>npm</code>的项目，生产依赖就<strong>一定</strong>要放在<code>dependencies</code>中（缺失会导致运行出错）；开发依赖<strong>应该</strong>放在<code>devDependencies</code>中，这样可以不浪费用户资源，如果放到<code>dependencies</code>中，用户端就会安装很多多余的依赖，浪费大量资源，增加版本冲突概率。</p>
+<li><p> 提升构建速度。第三方库没有变更时，由于我们只构建业务相关代码，相比全部重新构建自然要快的多。</p>
 </li>
 </ol>
-<h2 id="总结"><a href="#总结" class="headerlink" title="总结"></a>总结</h2><p>简单总结，当<strong>生产依赖</strong>和<strong>开发依赖</strong>分别放到不同位置时，会导致的问题：</p>
-<table>
-<thead>
-<tr>
-<th>玩法</th>
-<th>dependencies</th>
-<th>devDependencies</th>
-<th>内部项目</th>
-<th>作为npm包发布</th>
-</tr>
-</thead>
-<tbody><tr>
-<td>规范</td>
-<td>生产依赖</td>
-<td>开发依赖</td>
-<td>-</td>
-<td>-</td>
-</tr>
-<tr>
-<td>开发依赖放在dependencies中</td>
-<td>生产依赖、开发依赖</td>
-<td>-</td>
-<td>浪费生产环境资源</td>
-<td>浪费大量用户资源</td>
-</tr>
-<tr>
-<td>生产依赖放在devDependencies中</td>
-<td>-</td>
-<td>生产依赖、开发依赖</td>
-<td>浪费生产环境资源、部署方式怪异</td>
-<td>用户无法正常运行</td>
-</tr>
-<tr>
-<td>反着放</td>
-<td>开发依赖</td>
-<td>生产依赖</td>
-<td>部署方式怪异</td>
-<td>浪费大量用户资源、用户无法正常运行</td>
-</tr>
-</tbody></table>
-<p>可以看出，在内部项目中，只要团队能玩得转（也不关心生产环境的资源浪费），可以不用太在意规范。但如果是要发布到npm的项目，甚至是开源项目，就要特别注意。<strong>自己可以乱来，但给用户的，应该是最好的</strong>。</p>
+<h2 id="注意事项"><a href="#注意事项" class="headerlink" title="注意事项"></a>注意事项</h2><p>从前面可以看到dll带来的优点，但<strong>并不意味着我们就应该把除业务代码外的所有代码全部都丢到dll中</strong>，举一个例子：<br>1.对于<code>lodash</code>这种第三方库，正确的用法是只去<code>import</code>所需的函数（用什么引什么），例如：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">&#x2F;&#x2F; 正确用法</span><br><span class="line">import isPlainObject from &#39;lodash&#x2F;isPlainObject&#39;</span><br><span class="line"></span><br><span class="line">&#x2F;&#x2F;错误用法</span><br><span class="line">import &#123; isPlainObject &#125; from &#39;lodash&#39;</span><br></pre></td></tr></table></figure>
+
+<p>这两种写法的差别在于，打包时webpack会根据引用去打包依赖的内容，所以第一种写法，webpack只会打包lodash的isPlainObject库，第二种写法却会打包整个<code>lodash</code>。现在假设在项目中只是用到不同模块对lodash里的某几个函数并且没有对于某个函数重复使用非常多次，那么这时候把<code>lodash</code>添加到dll中，带来的收益就并不明显，反而导致2个问题：</p>
+<ol>
+<li> 由于打包了整个<code>lodash</code>，而导致打包后的文件<strong>总大小</strong>（注意是总大小）比原先还要大</li>
+<li> 在dll打包太多内容也需要耗费时间，虽然我们一般只在第三方模块更新之后才进行重新预编译（就是dll打包的过程），但是如果这个时间太长的话体验也不好、</li>
+</ol>
 
       
     </div>
@@ -1350,7 +1266,7 @@
   
 
   <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="">
-    <link itemprop="mainEntityOfPage" href="https://lzhwweb.github.io/nirvana/javascript/%E5%89%8D%E7%AB%AF/CodeReview%E6%80%BB%E7%BB%93/">
+    <link itemprop="mainEntityOfPage" href="https://lzhwweb.github.io/nirvana/git/git/GIT%E4%BD%BF%E7%94%A8%E4%B9%8B%E8%AE%BE%E7%BD%AESSHKEY/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="image" content="/nirvana/images/headphoto.jpeg">
@@ -1363,7 +1279,7 @@
     </span>
       <header class="post-header">
         <h2 class="post-title" itemprop="name headline">
-          <a href="/nirvana/javascript/%E5%89%8D%E7%AB%AF/CodeReview%E6%80%BB%E7%BB%93/" class="post-title-link" itemprop="url">CodeReview总结</a>
+          <a href="/nirvana/git/git/GIT%E4%BD%BF%E7%94%A8%E4%B9%8B%E8%AE%BE%E7%BD%AESSHKEY/" class="post-title-link" itemprop="url">GIT使用之设置SSH KEY</a>
         </h2>
 
         <div class="post-meta-container">
@@ -1373,28 +1289,22 @@
         <i class="far fa-calendar"></i>
       </span>
       <span class="post-meta-item-text">发表于</span>
+      
 
-      <time title="创建时间：2021-03-11 21:12:40" itemprop="dateCreated datePublished" datetime="2021-03-11T21:12:40+08:00">2021-03-11</time>
+      <time title="创建时间：2021-04-21 14:48:46 / 修改时间：14:49:05" itemprop="dateCreated datePublished" datetime="2021-04-21T14:48:46+08:00">2021-04-21</time>
     </span>
-      <span class="post-meta-item">
-        <span class="post-meta-item-icon">
-          <i class="far fa-calendar-check"></i>
-        </span>
-        <span class="post-meta-item-text">更新于</span>
-        <time title="修改时间：2021-03-10 13:43:55" itemprop="dateModified" datetime="2021-03-10T13:43:55+08:00">2021-03-10</time>
-      </span>
     <span class="post-meta-item">
       <span class="post-meta-item-icon">
         <i class="far fa-folder"></i>
       </span>
       <span class="post-meta-item-text">分类于</span>
         <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-          <a href="/nirvana/categories/javascript/" itemprop="url" rel="index"><span itemprop="name">javascript</span></a>
+          <a href="/nirvana/categories/git/" itemprop="url" rel="index"><span itemprop="name">git</span></a>
         </span>
     </span>
 
   
-    <span id="/nirvana/javascript/%E5%89%8D%E7%AB%AF/CodeReview%E6%80%BB%E7%BB%93/" class="post-meta-item leancloud_visitors" data-flag-title="CodeReview总结" title="阅读次数">
+    <span id="/nirvana/git/git/GIT%E4%BD%BF%E7%94%A8%E4%B9%8B%E8%AE%BE%E7%BD%AESSHKEY/" class="post-meta-item leancloud_visitors" data-flag-title="GIT使用之设置SSH KEY" title="阅读次数">
       <span class="post-meta-item-icon">
         <i class="far fa-eye"></i>
       </span>
@@ -1408,14 +1318,14 @@
         <i class="far fa-file-word"></i>
       </span>
       <span class="post-meta-item-text">本文字数：</span>
-      <span>2.2k</span>
+      <span>401</span>
     </span>
     <span class="post-meta-item" title="阅读时长">
       <span class="post-meta-item-icon">
         <i class="far fa-clock"></i>
       </span>
       <span class="post-meta-item-text">阅读时长 &asymp;</span>
-      <span>2 分钟</span>
+      <span>1 分钟</span>
     </span>
 </div>
 
@@ -1426,201 +1336,22 @@
     
     
     <div class="post-body" itemprop="articleBody">
-          <p>我们时常会听到团队成员说：</p>
+          <h2 id="检查是否设置过SSH-Key"><a href="#检查是否设置过SSH-Key" class="headerlink" title="检查是否设置过SSH Key**"></a>检查是否设置过SSH Key**</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">cd ~&#x2F;.ssh </span><br></pre></td></tr></table></figure>
+<h2 id="本地生成key"><a href="#本地生成key" class="headerlink" title="本地生成key"></a>本地生成key</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">ssh-****** -t rsa -C &#39;xxxxx.com&#39;</span><br></pre></td></tr></table></figure>
 <ul>
-<li>“这个项目搞代码审查简直是在浪费时间。”</li>
-<li>“我没时间做代码审查。”</li>
-<li>“发布会延迟，是因为我那个卑鄙的同事还没有审查过我的代码。”</li>
-<li>“你能相信我的同事居然要求我改我的代码吗？我这么优雅完美的代码哪里还需要改呢。”</li>
+<li>执行命令后需要进行3次或4次确认：</li>
+<li>确认秘钥的保存路径（如果不需要改路径则直接回车）；</li>
+<li>如果上一步置顶的保存路径下已经有秘钥文件，则需要确认是否覆盖（如果之前的秘钥不再需要则直接回车覆盖，如需要则手动拷贝到其他目录后再覆盖）；</li>
+<li>创建密码（如果不需要密码则直接回车）；</li>
+<li>确认密码；</li>
 </ul>
-<h2 id="我们为什么要做代码审查？"><a href="#我们为什么要做代码审查？" class="headerlink" title="我们为什么要做代码审查？"></a><strong>我们为什么要做代码审查？</strong></h2><p>任何专业的软件开发人员其最重要的目标之一就是要不断提高自己的工作质量。但是只有团队协作才能力往一处使，劲往一处用，提高软件质量。代码审查是实现这一目标最重要的途径之一。特别是，代码审查可以：</p>
-<ul>
-<li>  从另一个角度发现缺陷和更好的解决办法。</li>
-<li>  确保至少另外还有一人熟悉你的代码。</li>
-<li>  通过翻阅资深开发人员的代码，帮助培训新员工。</li>
-<li>  促进知识共享。</li>
-<li>  激励开发人员更好地写代码、解决代码中的问题，以免在审查时被别人揪出来。</li>
-</ul>
-<h2 id="代码审查要彻底"><a href="#代码审查要彻底" class="headerlink" title="代码审查要彻底"></a><strong>代码审查要彻底</strong></h2><p>然而，除非能实实在在彻彻底底地在代码审查上花时间和精力，否则上述目标是很难实现的。</p>
-<p>我的看法是大概25％的原始开发时间应该花在代码审查上。举个例子，如果一个开发人员需要用两天时间来实现某个程式，那么就应该花大约4小时进行审查。</p>
-<p>当然时间并不是最重要的，关键是要看你能否正确审查代码。你必须了解你正在审查的代码。这意味着你不仅仅要知道它的的语法，还必须理解代码是如何融入应用程序这个大环境下，成为组件或库的一部分。如果你不能把握每一行代码的含义，那么你的审查就不到位，也不会非常有价值。这也是为什么良好执行的代码审查，大多不可能迅速被完成：因为我们需要时间来研究各种代码，如能触发给定功能以确保第三方API正确使用的代码。</p>
-<p>在审查时，除了要寻找代码缺陷和其他问题，你还应该确保：</p>
-<ul>
-<li>  囊括所有必要的测试。</li>
-<li>  已经写入了恰当的设计文档。</li>
-</ul>
-<p>即使是那些擅于写测试和文档的开发人员，也会在改变代码的时候忘记更新。代码评审时就应该确保这些资料不会随着时间而变得毫无用处。</p>
-<h2 id="避免过度的代码审查"><a href="#避免过度的代码审查" class="headerlink" title="避免过度的代码审查"></a><strong>避免过度的代码审查</strong></h2><p>开发人员应该努力清空积压的审查任务。有一种方法是在早上代码审查，在开始自己的开发工作之前先搞定审查任务。当然你也可以午饭前后或者是一天结束之时审查代码。总而言之，你应该将代码当作是日常工作的一部分，而不是工作的负累，所以你应该避免：</p>
-<ul>
-<li>  没有时间处理积压的审查任务。</li>
-<li>  由于审查的没有完成而导致了延迟发布。</li>
-<li>  傻乎乎地再去审查已经不相干的代码，在交给你之后已经被改的面目全非。</li>
-<li>  因为时间紧迫急急忙忙地走个过场。</li>
-</ul>
-<h2 id="编写可审查的代码"><a href="#编写可审查的代码" class="headerlink" title="编写可审查的代码"></a><strong>编写可审查的代码</strong></h2><p>出现代码积压而失控的问题，审查人员并不是唯一一个需要负责的人。举个例子，如果你的同事花了一周时间为一个大型程序添加了乱七八糟的代码，那么发布的补丁就会变得很难审查，有太多的内容需要理解和钻研。甚至于连代码目的和基本架构都看得云里雾里。这是写代码的不是。</p>
-<p>在编写可审查的代码之前，还需要做一些准备。如果需要做一些棘手的架构决策，那么最好和审查人员先讨论一番。这将能让你的代码更容易审阅和理解，因为他们提前已经知道你想实现什么以及计划如何实现。这也可以避免，要是审查人员之后提出一个截然不同又更好的方法，而导致你不得不重写一大片代码的情况。</p>
-<p>项目架构应该在设计文档中详细描述。这很重要，因为它能让新的项目人员更快地理解现有的代码库，还能有助于审查人员更好地完成他们的工作。此外，单元测试能让审查人员更好地理解各个组件的使用。</p>
-<p>如果在你的补丁中还包含了第三方代码，那么单独提交。试想一下，要是代码中间插进去9000行jQuery，是不是大大增加了审查的难度！</p>
-<p>创建可审查代码最重要的步骤之一就是给你的代码审查做注释。这需要你自己预先审查过，然后在你认为有助于审查人员理解的地方添加注释。我发现，注释后的代码审查所需的时间相对较短（通常只需几分钟）。当然，代码注释还是应该酌情使用。此外，有研究表明，开发人员自己在给代码注释的时候也会发现许多存在的缺陷。</p>
-<h2 id="代码重构"><a href="#代码重构" class="headerlink" title="代码重构"></a><strong>代码重构</strong></h2><p>有时候，我们必须重构代码库。如果恰巧碰到的是一个大型的应用程序，那可能就会需要几天的时间（甚至更多），同时会产生大量的补丁。在这种情况下，想要做到标准流程的代码评审可能是不切实际的。</p>
-<p>最好的解决办法是逐步重构代码。先给定一个合理范围，确定相应的代码库，然后朝着目标方向做整改和重构。第一部分完成之后，审查并发布，然后进行第二部分的重构……，直到全部完成。这种阶段式的方法可能并不总是可行的，但是如果我们在思考和规划时使用这样的方法，可以避免重构时大规模的单片补丁。当然这种方式可能需要的重构时间更多，但是也会产出更高质量的代码，以及更加轻松的审查过程。</p>
-<h2 id="解决争端"><a href="#解决争端" class="headerlink" title="解决争端"></a><strong>解决争端</strong></h2><p>毫无疑问，团队中的每个成员都是人才，但是这也很容易导致在面对特定的编码问题时，会出现意见分歧的情况。作为开发人员，我们应该保持开放的态度，并且也要能虚心接受审查人员给出的不同意见。</p>
-<p>而作为审查人员，说话要委婉。在提建议之前，先考虑一下你的意见是否真的更好或者仅仅只是因为品味不同而已。如果你选择的代码区域确实需要改进的，那么整个说服过程就会简单得多。并且话要这样讲，“这里还值得考虑一下……”，“有人建议说……”，而不是“我闭着眼睛写的算法也能比你的高效。”</p>
-<p>当然如果你们双方都不肯妥协的话，可以要求你们都尊重的开发人员来看一看，给出他的意见。<br>译文链接：<a target="_blank" rel="noopener" href="http://www.codeceo.com/article/code-review-5-tips.html">http://www.codeceo.com/article/code-review-5-tips.html</a><br>英文原文：<a target="_blank" rel="noopener" href="https://medium.com/@salsita/practical-lessons-in-peer-code-review-b4dbc84e88d3">Practical Lessons in Peer Code Review</a></p>
+<h2 id="进入ssh目录下查看公钥"><a href="#进入ssh目录下查看公钥" class="headerlink" title="进入ssh目录下查看公钥**"></a>进入ssh目录下查看公钥**</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">cat id_rsa.pub</span><br></pre></td></tr></table></figure>
 
-      
-    </div>
+<p><strong>4. 将公钥添加至账号，github或者gitlab</strong><br><img src="https://upload-images.jianshu.io/upload_images/10024246-3704a5eb0c6d6b6a.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240"></p>
+<p><img src="https://upload-images.jianshu.io/upload_images/10024246-dda69dc9797750b7.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240"></p>
+<h2 id="配置用户名和邮箱"><a href="#配置用户名和邮箱" class="headerlink" title="配置用户名和邮箱**"></a>配置用户名和邮箱**</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">git config --global user.name &quot;xxx&quot;  #commit时显示的用户名 </span><br><span class="line">git config --global user.email &quot;xxx@qq.com&quot;</span><br></pre></td></tr></table></figure>
 
-    
-    
-    
-
-    <footer class="post-footer">
-        <div class="post-eof"></div>
-      
-    </footer>
-  </article>
-</div>
-
-
-
-
-    
-
-
-<div class="post-block">
-  
-  
-
-  <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="">
-    <link itemprop="mainEntityOfPage" href="https://lzhwweb.github.io/nirvana/javascript/%E5%89%8D%E7%AB%AF/JS-Array%E5%B8%B8%E7%94%A8%E6%96%B9%E6%B3%95%E8%AF%A6%E8%A7%A3%E5%8F%8A%E5%85%BC%E5%AE%B9%E6%80%A7%E4%BB%A3%E7%A0%81%EF%BC%88%E4%B8%80%EF%BC%89/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="image" content="/nirvana/images/headphoto.jpeg">
-      <meta itemprop="name" content="nirvana">
-      <meta itemprop="description" content="个人学习笔记">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="涅槃快乐是金">
-    </span>
-      <header class="post-header">
-        <h2 class="post-title" itemprop="name headline">
-          <a href="/nirvana/javascript/%E5%89%8D%E7%AB%AF/JS-Array%E5%B8%B8%E7%94%A8%E6%96%B9%E6%B3%95%E8%AF%A6%E8%A7%A3%E5%8F%8A%E5%85%BC%E5%AE%B9%E6%80%A7%E4%BB%A3%E7%A0%81%EF%BC%88%E4%B8%80%EF%BC%89/" class="post-title-link" itemprop="url">JS Array常用方法详解及兼容性代码（一）</a>
-        </h2>
-
-        <div class="post-meta-container">
-          <div class="post-meta">
-    <span class="post-meta-item">
-      <span class="post-meta-item-icon">
-        <i class="far fa-calendar"></i>
-      </span>
-      <span class="post-meta-item-text">发表于</span>
-
-      <time title="创建时间：2021-03-11 21:12:40" itemprop="dateCreated datePublished" datetime="2021-03-11T21:12:40+08:00">2021-03-11</time>
-    </span>
-      <span class="post-meta-item">
-        <span class="post-meta-item-icon">
-          <i class="far fa-calendar-check"></i>
-        </span>
-        <span class="post-meta-item-text">更新于</span>
-        <time title="修改时间：2021-03-10 22:09:59" itemprop="dateModified" datetime="2021-03-10T22:09:59+08:00">2021-03-10</time>
-      </span>
-    <span class="post-meta-item">
-      <span class="post-meta-item-icon">
-        <i class="far fa-folder"></i>
-      </span>
-      <span class="post-meta-item-text">分类于</span>
-        <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-          <a href="/nirvana/categories/javascript/" itemprop="url" rel="index"><span itemprop="name">javascript</span></a>
-        </span>
-    </span>
-
-  
-    <span id="/nirvana/javascript/%E5%89%8D%E7%AB%AF/JS-Array%E5%B8%B8%E7%94%A8%E6%96%B9%E6%B3%95%E8%AF%A6%E8%A7%A3%E5%8F%8A%E5%85%BC%E5%AE%B9%E6%80%A7%E4%BB%A3%E7%A0%81%EF%BC%88%E4%B8%80%EF%BC%89/" class="post-meta-item leancloud_visitors" data-flag-title="JS Array常用方法详解及兼容性代码（一）" title="阅读次数">
-      <span class="post-meta-item-icon">
-        <i class="far fa-eye"></i>
-      </span>
-      <span class="post-meta-item-text">阅读次数：</span>
-      <span class="leancloud-visitors-count"></span>
-    </span>
-      </div>
-      <div class="post-meta">
-    <span class="post-meta-item" title="本文字数">
-      <span class="post-meta-item-icon">
-        <i class="far fa-file-word"></i>
-      </span>
-      <span class="post-meta-item-text">本文字数：</span>
-      <span>7k</span>
-    </span>
-    <span class="post-meta-item" title="阅读时长">
-      <span class="post-meta-item-icon">
-        <i class="far fa-clock"></i>
-      </span>
-      <span class="post-meta-item-text">阅读时长 &asymp;</span>
-      <span>6 分钟</span>
-    </span>
-</div>
-
-        </div>
-      </header>
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-          <p>[ES5中，Array新增API之forEach、filter、map、reduce]</p>
-<h2 id="一：-forEach"><a href="#一：-forEach" class="headerlink" title="一： forEach"></a>一： forEach</h2><p>forEach() 方法对数组的每个元素执行一次提供的函数。<br><strong>注意:</strong> <code>没有返回一个新数组! &amp; 没有返回值!</code><br><strong>应用场景：</strong>为一些相同的元素，绑定事件处理器！</p>
-<p><strong>语法:</strong></p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">array.forEach(callback(currentValue, index, array)&#123;</span><br><span class="line">    &#x2F;&#x2F;do something</span><br><span class="line">&#125;, this)</span><br><span class="line"></span><br><span class="line">array.forEach(callback[, thisArg])</span><br></pre></td></tr></table></figure>
-
-<p><strong>参数：</strong><br><code>callback</code>:<br>为数组中每个元素执行的函数，该函数接收三个参数：</p>
-<blockquote>
-<p><code>currentValue(当前值)</code><br>数组中正在处理的当前元素。<br><code>index(索引)</code><br>数组中正在处理的当前元素的索引。<br><code>array</code><br>forEach()方法正在操作的数组。</p>
-</blockquote>
-<p><code>thisArg</code>可选<br>可选参数。当执行回调 函数时用作this的值(参考对象)。</p>
-<p><strong>返回值</strong><br>undefined</p>
-<p><strong>注意：</strong><code>没有办法中止或者跳出 forEach 循环，除了抛出一个异常。如果你需要这样，使用forEach()方法是错误的，你可以用一个简单的循环作为替代。如果您正在测试一个数组里的元素是否符合某条件，且需要返回一个布尔值，那么可使用 Array.every或 Array.some。如果可用，新方法 find()或者findIndex 也可被用于真值测试的提早终止。</code></p>
-<p><strong>兼容旧环境</strong></p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br></pre></td><td class="code"><pre><span class="line">if (!Array.prototype.forEach) &#123;</span><br><span class="line"></span><br><span class="line">  Array.prototype.forEach &#x3D; function(callback, thisArg) &#123;</span><br><span class="line"></span><br><span class="line">    var T, k;</span><br><span class="line"></span><br><span class="line">    if (this &#x3D;&#x3D; null) &#123;</span><br><span class="line">      throw new TypeError(&#39; this is null or not defined&#39;);</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    &#x2F;&#x2F; 1. Let O be the result of calling toObject() passing the</span><br><span class="line">    &#x2F;&#x2F; |this| value as the argument.</span><br><span class="line">    var O &#x3D; Object(this);</span><br><span class="line"></span><br><span class="line">    &#x2F;&#x2F; 2. Let lenValue be the result of calling the Get() internal</span><br><span class="line">    &#x2F;&#x2F; method of O with the argument &quot;length&quot;.</span><br><span class="line">    &#x2F;&#x2F; 3. Let len be toUint32(lenValue).</span><br><span class="line">    var len &#x3D; O.length &gt;&gt;&gt; 0;</span><br><span class="line"></span><br><span class="line">    &#x2F;&#x2F; 4. If isCallable(callback) is false, throw a TypeError exception. </span><br><span class="line">    &#x2F;&#x2F; See: http:&#x2F;&#x2F;es5.github.com&#x2F;#x9.11</span><br><span class="line">    if (typeof callback !&#x3D;&#x3D; &quot;function&quot;) &#123;</span><br><span class="line">      throw new TypeError(callback + &#39; is not a function&#39;);</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    &#x2F;&#x2F; 5. If thisArg was supplied, let T be thisArg; else let</span><br><span class="line">    &#x2F;&#x2F; T be undefined.</span><br><span class="line">    if (arguments.length &gt; 1) &#123;</span><br><span class="line">      T &#x3D; thisArg;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    &#x2F;&#x2F; 6. Let k be 0</span><br><span class="line">    k &#x3D; 0;</span><br><span class="line"></span><br><span class="line">    &#x2F;&#x2F; 7. Repeat, while k &lt; len</span><br><span class="line">    while (k &lt; len) &#123;</span><br><span class="line"></span><br><span class="line">      var kValue;</span><br><span class="line"></span><br><span class="line">      &#x2F;&#x2F; a. Let Pk be ToString(k).</span><br><span class="line">      &#x2F;&#x2F;    This is implicit for LHS operands of the in operator</span><br><span class="line">      &#x2F;&#x2F; b. Let kPresent be the result of calling the HasProperty</span><br><span class="line">      &#x2F;&#x2F;    internal method of O with argument Pk.</span><br><span class="line">      &#x2F;&#x2F;    This step can be combined with c</span><br><span class="line">      &#x2F;&#x2F; c. If kPresent is true, then</span><br><span class="line">      if (k in O) &#123;</span><br><span class="line"></span><br><span class="line">        &#x2F;&#x2F; i. Let kValue be the result of calling the Get internal</span><br><span class="line">        &#x2F;&#x2F; method of O with argument Pk.</span><br><span class="line">        kValue &#x3D; O[k];</span><br><span class="line"></span><br><span class="line">        &#x2F;&#x2F; ii. Call the Call internal method of callback with T as</span><br><span class="line">        &#x2F;&#x2F; the this value and argument list containing kValue, k, and O.</span><br><span class="line">        callback.call(T, kValue, k, O);</span><br><span class="line">      &#125;</span><br><span class="line">      &#x2F;&#x2F; d. Increase k by 1.</span><br><span class="line">      k++;</span><br><span class="line">    &#125;</span><br><span class="line">    &#x2F;&#x2F; 8. return undefined</span><br><span class="line">  &#125;;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-
-<h2 id="二：filter"><a href="#二：filter" class="headerlink" title="二：filter"></a>二：filter</h2><p>filter() 方法创建一个新数组, 其包含通过所提供函数实现的测试的所有元素。 </p>
-<p><strong>语法:</strong></p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">var new_array &#x3D; arr.filter(callback[, thisArg])</span><br></pre></td></tr></table></figure>
-
-<p><strong>参数：</strong><br><code>callback</code>:<br>用来测试数组的每个元素的函数。调用时使用参数 (element, index, array)。<br>返回true表示保留该元素（通过测试），false则不保留<br><code>thisArg</code>可选<br>可选参数。当执行回调 函数时用作this的值(参考对象)。</p>
-<p><strong>返回值</strong><br>一个新的通过测试的元素的集合的数组</p>
-<p><strong>注意：</strong><code>filter 不会改变原数组，它返回过滤后的新数组。</code></p>
-<p><strong>兼容旧环境</strong></p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br></pre></td><td class="code"><pre><span class="line">if (!Array.prototype.filter)</span><br><span class="line">&#123;</span><br><span class="line">  Array.prototype.filter &#x3D; function(fun &#x2F;* , thisArg*&#x2F;)</span><br><span class="line">  &#123;</span><br><span class="line">    &quot;use strict&quot;;</span><br><span class="line"></span><br><span class="line">    if (this &#x3D;&#x3D;&#x3D; void 0 || this &#x3D;&#x3D;&#x3D; null)</span><br><span class="line">      throw new TypeError();</span><br><span class="line"></span><br><span class="line">    var t &#x3D; Object(this);</span><br><span class="line">    var len &#x3D; t.length &gt;&gt;&gt; 0;</span><br><span class="line">    if (typeof fun !&#x3D;&#x3D; &quot;function&quot;)</span><br><span class="line">      throw new TypeError();</span><br><span class="line"></span><br><span class="line">    var res &#x3D; [];</span><br><span class="line">    var thisArg &#x3D; arguments.length &gt;&#x3D; 2 ? arguments[1] : void 0;</span><br><span class="line">    for (var i &#x3D; 0; i &lt; len; i++)</span><br><span class="line">    &#123;</span><br><span class="line">      if (i in t)</span><br><span class="line">      &#123;</span><br><span class="line">        var val &#x3D; t[i];</span><br><span class="line"></span><br><span class="line">        &#x2F;&#x2F; NOTE: Technically this should Object.defineProperty at</span><br><span class="line">        &#x2F;&#x2F;       the next index, as push can be affected by</span><br><span class="line">        &#x2F;&#x2F;       properties on Object.prototype and Array.prototype.</span><br><span class="line">        &#x2F;&#x2F;       But that method&#39;s new, and collisions should be</span><br><span class="line">        &#x2F;&#x2F;       rare, so use the more-compatible alternative.</span><br><span class="line">        if (fun.call(thisArg, val, i, t))</span><br><span class="line">          res.push(val);</span><br><span class="line">      &#125;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    return res;</span><br><span class="line">  &#125;;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-<h2 id="三：map"><a href="#三：map" class="headerlink" title="三：map"></a>三：map</h2><p>map() 方法创建一个新数组，其结果是该数组中的每个元素都调用一个提供的函数后返回的结果。<br><strong>语法:</strong></p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">let new_array &#x3D; arr.map(function callback(currentValue, index, array) &#123; </span><br><span class="line">    &#x2F;&#x2F; Return element for new_array </span><br><span class="line">&#125;[, thisArg])</span><br></pre></td></tr></table></figure>
-
-<p><strong>参数：</strong><br><code>callback</code>:<br>生成新数组元素的函数，使用三个参数：</p>
-<blockquote>
-<p><code>currentValue</code><br>callback 的第一个参数，数组中正在处理的当前元素。<br><code>index</code><br>callback 的第二个参数，数组中正在处理的当前元素的索引。<br><code>array</code><br>callback 的第三个参数，map 方法被调用的数组。</p>
-</blockquote>
-<p><code>thisArg</code>可选<br>可选参数。当执行回调 函数时用作this的值(参考对象)。</p>
-<p><strong>返回值</strong><br>一个新数组，每个元素都是回调函数的结果。</p>
-<p><strong>注意：</strong><code>不修改调用它的原数组本身（当然可以在 callback 执行时改变原数组）。</code></p>
-<p><strong>兼容旧环境</strong></p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br></pre></td><td class="code"><pre><span class="line">if (!Array.prototype.map) &#123;</span><br><span class="line">  Array.prototype.map &#x3D; function(callback, thisArg) &#123;</span><br><span class="line"></span><br><span class="line">    var T, A, k;</span><br><span class="line"></span><br><span class="line">    if (this &#x3D;&#x3D; null) &#123;</span><br><span class="line">      throw new TypeError(&quot; this is null or not defined&quot;);</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    &#x2F;&#x2F; 1. 将O赋值为调用map方法的数组.</span><br><span class="line">    var O &#x3D; Object(this);</span><br><span class="line"></span><br><span class="line">    &#x2F;&#x2F; 2.将len赋值为数组O的长度.</span><br><span class="line">    var len &#x3D; O.length &gt;&gt;&gt; 0;</span><br><span class="line"></span><br><span class="line">    &#x2F;&#x2F; 3.如果callback不是函数,则抛出TypeError异常.</span><br><span class="line">    if (Object.prototype.toString.call(callback) !&#x3D; &quot;[object Function]&quot;) &#123;</span><br><span class="line">      throw new TypeError(callback + &quot; is not a function&quot;);</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    &#x2F;&#x2F; 4. 如果参数thisArg有值,则将T赋值为thisArg;否则T为undefined.</span><br><span class="line">    if (thisArg) &#123;</span><br><span class="line">      T &#x3D; thisArg;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    &#x2F;&#x2F; 5. 创建新数组A,长度为原数组O长度len</span><br><span class="line">    A &#x3D; new Array(len);</span><br><span class="line"></span><br><span class="line">    &#x2F;&#x2F; 6. 将k赋值为0</span><br><span class="line">    k &#x3D; 0;</span><br><span class="line"></span><br><span class="line">    &#x2F;&#x2F; 7. 当 k &lt; len 时,执行循环.</span><br><span class="line">    while(k &lt; len) &#123;</span><br><span class="line"></span><br><span class="line">      var kValue, mappedValue;</span><br><span class="line"></span><br><span class="line">      &#x2F;&#x2F;遍历O,k为原数组索引</span><br><span class="line">      if (k in O) &#123;</span><br><span class="line"></span><br><span class="line">        &#x2F;&#x2F;kValue为索引k对应的值.</span><br><span class="line">        kValue &#x3D; O[ k ];</span><br><span class="line"></span><br><span class="line">        &#x2F;&#x2F; 执行callback,this指向T,参数有三个.分别是kValue:值,k:索引,O:原数组.</span><br><span class="line">        mappedValue &#x3D; callback.call(T, kValue, k, O);</span><br><span class="line"></span><br><span class="line">        &#x2F;&#x2F; 返回值添加到新数组A中.</span><br><span class="line">        A[ k ] &#x3D; mappedValue;</span><br><span class="line">      &#125;</span><br><span class="line">      &#x2F;&#x2F; k自增1</span><br><span class="line">      k++;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    &#x2F;&#x2F; 8. 返回新数组A</span><br><span class="line">    return A;</span><br><span class="line">  &#125;;      </span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-<h2 id="四：reduce"><a href="#四：reduce" class="headerlink" title="四：reduce"></a>四：reduce</h2><p>reduce() 方法对累加器和数组中的每个元素（从左到右）应用一个函数，将其减少为单个值。<br><strong>语法:</strong></p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">arr.reduce(callback[, initialValue])</span><br></pre></td></tr></table></figure>
-
-<p><strong>参数：</strong><br><code>callback</code>:<br>执行数组中每个值的函数，包含四个参数：</p>
-<blockquote>
-<p><code>accumulator</code><br>累加器累加回调的返回值; 它是上一次调用回调时返回的累积值，或initialValue（如下所示）。<br><code>currentValue</code><br>数组中正在处理的元素。<br><code>currentIndex</code>可选<br>数组中正在处理的当前元素的索引。 如果提供了initialValue，则索引号为0，否则为索引为1。<br><code>array</code>可选<br>调用reduce的数组</p>
-</blockquote>
-<p><code>initialValue</code>可选<br>用作第一个调用 callback的第一个参数的值。 如果没有提供初始值，则将使用数组中的第一个元素。 在没有初始值的空数组上调用 reduce 将报错。</p>
-<p><strong>返回值</strong><br>函数累计处理的结果</p>
-<p><strong>注意：</strong><code>如果没有提供initialValue，reduce 会从索引1的地方开始执行 callback 方法，跳过第一个索引。如果提供initialValue，从索引0开始。</code></p>
-<p><strong>兼容旧环境</strong></p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br></pre></td><td class="code"><pre><span class="line">if (!Array.prototype.reduce) &#123;</span><br><span class="line">  Object.defineProperty(Array.prototype, &#39;reduce&#39;, &#123;</span><br><span class="line">    value: function(callback &#x2F;*, initialValue*&#x2F;) &#123;</span><br><span class="line">      if (this &#x3D;&#x3D;&#x3D; null) &#123;</span><br><span class="line">        throw new TypeError( &#39;Array.prototype.reduce &#39; + </span><br><span class="line">          &#39;called on null or undefined&#39; );</span><br><span class="line">      &#125;</span><br><span class="line">      if (typeof callback !&#x3D;&#x3D; &#39;function&#39;) &#123;</span><br><span class="line">        throw new TypeError( callback +</span><br><span class="line">          &#39; is not a function&#39;);</span><br><span class="line">      &#125;</span><br><span class="line"></span><br><span class="line">      &#x2F;&#x2F; 1. Let O be ? ToObject(this value).</span><br><span class="line">      var o &#x3D; Object(this);</span><br><span class="line"></span><br><span class="line">      &#x2F;&#x2F; 2. Let len be ? ToLength(? Get(O, &quot;length&quot;)).</span><br><span class="line">      var len &#x3D; o.length &gt;&gt;&gt; 0; </span><br><span class="line"></span><br><span class="line">      &#x2F;&#x2F; Steps 3, 4, 5, 6, 7      </span><br><span class="line">      var k &#x3D; 0; </span><br><span class="line">      var value;</span><br><span class="line"></span><br><span class="line">      if (arguments.length &gt;&#x3D; 2) &#123;</span><br><span class="line">        value &#x3D; arguments[1];</span><br><span class="line">      &#125; else &#123;</span><br><span class="line">        while (k &lt; len &amp;&amp; !(k in o)) &#123;</span><br><span class="line">          k++; </span><br><span class="line">        &#125;</span><br><span class="line"></span><br><span class="line">        &#x2F;&#x2F; 3. If len is 0 and initialValue is not present,</span><br><span class="line">        &#x2F;&#x2F;    throw a TypeError exception.</span><br><span class="line">        if (k &gt;&#x3D; len) &#123;</span><br><span class="line">          throw new TypeError( &#39;Reduce of empty array &#39; +</span><br><span class="line">            &#39;with no initial value&#39; );</span><br><span class="line">        &#125;</span><br><span class="line">        value &#x3D; o[k++];</span><br><span class="line">      &#125;</span><br><span class="line"></span><br><span class="line">      &#x2F;&#x2F; 8. Repeat, while k &lt; len</span><br><span class="line">      while (k &lt; len) &#123;</span><br><span class="line">        &#x2F;&#x2F; a. Let Pk be ! ToString(k).</span><br><span class="line">        &#x2F;&#x2F; b. Let kPresent be ? HasProperty(O, Pk).</span><br><span class="line">        &#x2F;&#x2F; c. If kPresent is true, then</span><br><span class="line">        &#x2F;&#x2F;    i.  Let kValue be ? Get(O, Pk).</span><br><span class="line">        &#x2F;&#x2F;    ii. Let accumulator be ? Call(</span><br><span class="line">        &#x2F;&#x2F;          callbackfn, undefined,</span><br><span class="line">        &#x2F;&#x2F;          « accumulator, kValue, k, O »).</span><br><span class="line">        if (k in o) &#123;</span><br><span class="line">          value &#x3D; callback(value, o[k], k, o);</span><br><span class="line">        &#125;</span><br><span class="line"></span><br><span class="line">        &#x2F;&#x2F; d. Increase k by 1.      </span><br><span class="line">        k++;</span><br><span class="line">      &#125;</span><br><span class="line"></span><br><span class="line">      &#x2F;&#x2F; 9. Return accumulator.</span><br><span class="line">      return value;</span><br><span class="line">    &#125;</span><br><span class="line">  &#125;);</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-
-
-
-
+<h2 id="查看配置信息"><a href="#查看配置信息" class="headerlink" title="查看配置信息**"></a>查看配置信息**</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">git config --list</span><br></pre></td></tr></table></figure>
 
       
     </div>
@@ -1640,7 +1371,7 @@
 
 
   <nav class="pagination">
-    <span class="page-number current">1</span><a class="page-number" href="/nirvana/page/2/">2</a><span class="space">&hellip;</span><a class="page-number" href="/nirvana/page/19/">19</a><a class="extend next" rel="next" href="/nirvana/page/2/"><i class="fa fa-angle-right" aria-label="下一页"></i></a>
+    <span class="page-number current">1</span><a class="page-number" href="/nirvana/page/2/">2</a><span class="space">&hellip;</span><a class="page-number" href="/nirvana/page/22/">22</a><a class="extend next" rel="next" href="/nirvana/page/2/"><i class="fa fa-angle-right" aria-label="下一页"></i></a>
   </nav>
 
 
@@ -1686,14 +1417,14 @@
       <i class="fa fa-chart-line"></i>
     </span>
       <span>站点总字数：</span>
-    <span title="站点总字数">538k</span>
+    <span title="站点总字数">603k</span>
   </span>
   <span class="post-meta-item">
     <span class="post-meta-item-icon">
       <i class="fa fa-coffee"></i>
     </span>
       <span>站点阅读时长 &asymp;</span>
-    <span title="站点阅读时长">8:09</span>
+    <span title="站点阅读时长">9:08</span>
   </span>
 </div>
   <div class="powered-by">由 <a href="https://hexo.io/" class="theme-link" rel="noopener" target="_blank">Hexo</a> & <a href="https://theme-next.js.org/" class="theme-link" rel="noopener" target="_blank">NexT.Gemini</a> 强力驱动

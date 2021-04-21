@@ -7689,4 +7689,1374 @@ iptables服务命令</li>
         <category>javascript</category>
       </categories>
   </entry>
+  <entry>
+    <title>GIT使用之设置SSH KEY</title>
+    <url>/nirvana/git/git/GIT%E4%BD%BF%E7%94%A8%E4%B9%8B%E8%AE%BE%E7%BD%AESSHKEY/</url>
+    <content><![CDATA[<h2 id="检查是否设置过SSH-Key"><a href="#检查是否设置过SSH-Key" class="headerlink" title="检查是否设置过SSH Key**"></a>检查是否设置过SSH Key**</h2><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">cd ~&#x2F;.ssh </span><br></pre></td></tr></table></figure>
+<h2 id="本地生成key"><a href="#本地生成key" class="headerlink" title="本地生成key"></a>本地生成key</h2><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">ssh-****** -t rsa -C &#39;xxxxx.com&#39;</span><br></pre></td></tr></table></figure>
+<ul>
+<li>执行命令后需要进行3次或4次确认：</li>
+<li>确认秘钥的保存路径（如果不需要改路径则直接回车）；</li>
+<li>如果上一步置顶的保存路径下已经有秘钥文件，则需要确认是否覆盖（如果之前的秘钥不再需要则直接回车覆盖，如需要则手动拷贝到其他目录后再覆盖）；</li>
+<li>创建密码（如果不需要密码则直接回车）；</li>
+<li>确认密码；</li>
+</ul>
+<h2 id="进入ssh目录下查看公钥"><a href="#进入ssh目录下查看公钥" class="headerlink" title="进入ssh目录下查看公钥**"></a>进入ssh目录下查看公钥**</h2><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">cat id_rsa.pub</span><br></pre></td></tr></table></figure>
+
+<p><strong>4. 将公钥添加至账号，github或者gitlab</strong><br><img src="https://upload-images.jianshu.io/upload_images/10024246-3704a5eb0c6d6b6a.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240"></p>
+<p><img src="https://upload-images.jianshu.io/upload_images/10024246-dda69dc9797750b7.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240"></p>
+<h2 id="配置用户名和邮箱"><a href="#配置用户名和邮箱" class="headerlink" title="配置用户名和邮箱**"></a>配置用户名和邮箱**</h2><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">git config --global user.name &quot;xxx&quot;  #commit时显示的用户名 </span><br><span class="line">git config --global user.email &quot;xxx@qq.com&quot;</span><br></pre></td></tr></table></figure>
+
+<h2 id="查看配置信息"><a href="#查看配置信息" class="headerlink" title="查看配置信息**"></a>查看配置信息**</h2><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">git config --list</span><br></pre></td></tr></table></figure>
+]]></content>
+      <categories>
+        <category>git</category>
+      </categories>
+  </entry>
+  <entry>
+    <title>git 修改仓库地址</title>
+    <url>/nirvana/git/git/git%E4%BF%AE%E6%94%B9%E4%BB%93%E5%BA%93%E5%9C%B0%E5%9D%80/</url>
+    <content><![CDATA[<h2 id="1、-通过命令直接修改远程地址"><a href="#1、-通过命令直接修改远程地址" class="headerlink" title="1、 通过命令直接修改远程地址"></a>1、 通过命令直接修改远程地址</h2> <figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">&#x2F;&#x2F;进入git_test根目录</span><br><span class="line">git remote 查看所有远程仓库， git remote xxx 查看指定远程仓库地址</span><br><span class="line">git remote set-url origin http:&#x2F;&#x2F;******.git</span><br></pre></td></tr></table></figure>
+<h2 id="2、-通过命令先删除再添加远程仓库"><a href="#2、-通过命令先删除再添加远程仓库" class="headerlink" title="2、 通过命令先删除再添加远程仓库"></a>2、 通过命令先删除再添加远程仓库</h2><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">&#x2F;&#x2F;进入git_test根目录</span><br><span class="line">git remote 查看所有远程仓库， git remote xxx 查看指定远程仓库地址</span><br><span class="line">git remote rm origin</span><br><span class="line">git remote add origin http:&#x2F;&#x2F;********.git</span><br></pre></td></tr></table></figure>
+<h2 id="3、方法三-直接修改配置文件"><a href="#3、方法三-直接修改配置文件" class="headerlink" title="3、方法三 直接修改配置文件"></a>3、方法三 直接修改配置文件</h2><pre><code>//进入git_test/.git
+vim config
+[core]
+repositoryformatversion = 0
+filemode = true
+logallrefupdates = true
+precomposeunicode = true
+[remote &quot;origin&quot;]
+url = http://****.git
+fetch = +refs/heads/*:refs/remotes/origin/*
+[branch &quot;master&quot;]
+remote = origin
+merge = refs/heads/master
+
+修改 [remote “origin”]下面的url即可
+</code></pre>
+<h2 id="4、-通过第三方git客户端修改。"><a href="#4、-通过第三方git客户端修改。" class="headerlink" title="4、 通过第三方git客户端修改。"></a>4、 通过第三方git客户端修改。</h2><p>以SourceTree为例，点击 仓库 -&gt; 仓库配置 -&gt; 远程仓库 即可管理此项目中配置的所有远程仓库， 而且这个界面最下方还可以点击编辑配置文件，同样可以完成方法三。</p>
+]]></content>
+      <categories>
+        <category>git</category>
+      </categories>
+  </entry>
+  <entry>
+    <title>dotenv，从文件加载环境变量</title>
+    <url>/nirvana/webpack/webpack/webpackdotenv/</url>
+    <content><![CDATA[<p>Node.js程序运行时加载不同的配置，比如开发环境和生产环境的数据数据库配置就可能不一样，使用 process.env.DB_HOST 环境变量，可以在Node.js程序内部方便获取参数信息。</p>
+<p>但是，程序启动时，怎样将环境变量传递给程序，这可能会是一个相对麻烦的事情，因为这关系到操作系统层的配置问题。</p>
+<h2 id="dotenv"><a href="#dotenv" class="headerlink" title="dotenv"></a>dotenv</h2><p>dotenv是一个可以使得Node.js从文件中加载环境变量的库，使用dotenv，我们只需要将程序的环境变量配置写在.env文件中。</p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line"># .env file</span><br><span class="line">DB_HOST&#x3D;localhost</span><br><span class="line">DB_USER&#x3D;root</span><br><span class="line">DB_PASS&#x3D;s1mpl3</span><br></pre></td></tr></table></figure>
+<p>然后，在Node.js程序启动时运行：</p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">require(&#39;dotenv&#39;).config()</span><br></pre></td></tr></table></figure>
+<p>接着，我们就可以在接下来的程序中方便地使用环境变量了：</p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">const db &#x3D; require(&#39;db&#39;)</span><br><span class="line">db.connect(&#123;</span><br><span class="line">  host: process.env.DB_HOST,</span><br><span class="line">  username: process.env.DB_USER,</span><br><span class="line">  password: process.env.DB_PASS</span><br><span class="line">&#125;)</span><br></pre></td></tr></table></figure>]]></content>
+      <categories>
+        <category>webpack</category>
+      </categories>
+  </entry>
+  <entry>
+    <title>webpack使用-详解DllPlugin</title>
+    <url>/nirvana/webpack/webpack/webpack%E4%BD%BF%E7%94%A8-%E8%AF%A6%E8%A7%A3DllPlugin/</url>
+    <content><![CDATA[<h3 id="什么是DLL"><a href="#什么是DLL" class="headerlink" title="什么是DLL"></a>什么是DLL</h3><blockquote>
+<p>DLL(Dynamic Link Library)文件为动态链接库文件,在Windows中，许多应用程序并不是一个完整的可执行文件，它们被分割成一些相对独立的动态链接库，即DLL文件，放置于系统中。当我们执行某一个程序时，相应的DLL文件就会被调用。</p>
+</blockquote>
+<p>举个例子：很多产品都用到螺丝，但是工厂在生产不同产品时，不需要每次连带着把螺丝也生产出来，因为螺丝可以单独生产，并给多种产品使用。在这里螺丝的作用就可以理解为是dll。</p>
+<h3 id="为什么要使用Dll"><a href="#为什么要使用Dll" class="headerlink" title="为什么要使用Dll"></a>为什么要使用Dll</h3><p>通常来说，我们的代码都可以至少简单区分成<strong>业务代码</strong>和<strong>第三方库</strong>。如果不做处理，每次构建时都需要把所有的代码重新构建一次，耗费大量的时间。然后大部分情况下，很多第三方库的代码并不会发生变更（除非是版本升级），这时就可以用到dll：<strong>把复用性较高的第三方模块打包到动态链接库中，在不升级这些库的情况下，动态库不需要重新打包，每次构建只重新打包业务代码</strong>。</p>
+<p>还是上面的例子：把每次构建，当做是生产产品的过程，我们把生产螺丝的过程先提取出来，之后我们不管调整产品的功能或者设计（对应于业务代码变更），<strong>都不必重复生产螺丝（第三方模块不需要重复打包）</strong>；除非是<strong>产品要使用新型号的螺丝（第三方模块需要升级）</strong>，才需要去重新生产新的螺丝，然后接下来又可以专注于调整产品本身。</p>
+<h2 id="基本用法"><a href="#基本用法" class="headerlink" title="基本用法"></a>基本用法</h2><p>使用dll时，可以把构建过程分成dll构建过程和主构建过程（实质也就是如此），所以需要两个构建配置文件，例如叫做<code>webpack.config.js</code>和<code>webpack.dll.config.js</code>。</p>
+<h3 id="1-使用DLLPlugin打包需要分离到动态库的模块"><a href="#1-使用DLLPlugin打包需要分离到动态库的模块" class="headerlink" title="1. 使用DLLPlugin打包需要分离到动态库的模块"></a>1. 使用<code>DLLPlugin</code>打包需要分离到动态库的模块</h3><p><code>DllPlugin</code>是<code>webpack</code>内置的插件，不需要额外安装，直接配置<code>webpack.dll.config.js</code>文件：</p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">module.exports &#x3D; &#123;&#x3D;</span><br><span class="line">  entry: &#123;</span><br><span class="line">    &#x2F;&#x2F; 第三方库</span><br><span class="line">    react: [&#39;react&#39;, &#39;react-dom&#39;, &#39;react-redux&#39;]</span><br><span class="line">  &#125;,</span><br><span class="line">  output: &#123;</span><br><span class="line">    &#x2F;&#x2F; 输出的动态链接库的文件名称，[name] 代表当前动态链接库的名称，</span><br><span class="line">    filename: &#39;[name].dll.js&#39;,</span><br><span class="line">    path: resolve(&#39;dist&#x2F;dll&#39;),</span><br><span class="line">    &#x2F;&#x2F; library必须和后面dllplugin中的name一致 后面会说明</span><br><span class="line">    library: &#39;[name]_dll_[hash]&#39;</span><br><span class="line">  &#125;,</span><br><span class="line">  plugins: [</span><br><span class="line">  &#x2F;&#x2F; 接入 DllPlugin</span><br><span class="line">    new webpack.DllPlugin(&#123;</span><br><span class="line">      &#x2F;&#x2F; 动态链接库的全局变量名称，需要和 output.library 中保持一致</span><br><span class="line">      &#x2F;&#x2F; 该字段的值也就是输出的 manifest.json 文件 中 name 字段的值</span><br><span class="line">      name: &#39;[name]_dll_[hash]&#39;,</span><br><span class="line">      &#x2F;&#x2F; 描述动态链接库的 manifest.json 文件输出时的文件名称</span><br><span class="line">      path: path.join(__dirname, &#39;dist&#x2F;dll&#39;, &#39;[name].manifest.json&#39;)</span><br><span class="line">    &#125;),</span><br><span class="line">  ]</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<p>我们先来看看，这一步到底做了什么。执行：<code>webpack --config webpack.dll.config</code>，然后到指定的输出文件夹查看输出：</p>
+<ol>
+<li> <code>react.dll</code>文件里是使用数组保存的模块，索引值就作为id；</li>
+<li> <code>react.manifest.json</code>文件里，是用来描述对应的dll文件里保存的模块</li>
+</ol>
+<p>里暴露出刚刚构建的所有模块，如下：</p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">&#123;</span><br><span class="line">  &quot;name&quot;:&quot;react_dll_553e24e2c44987d2578f&quot;,</span><br><span class="line">  &quot;content&quot;:&#123;</span><br><span class="line">    &quot;.&#x2F;node_modules&#x2F;webpack&#x2F;node_modules&#x2F;process&#x2F;browser.js&quot;:&#123;&quot;id&quot;:0,&quot;meta&quot;:&#123;&#125;&#125;,&quot;.&#x2F;node_modules&#x2F;react&#x2F;node_modules&#x2F;fbjs&#x2F;lib&#x2F;invariant.js&quot;:&#123;&quot;id&quot;:1,&quot;meta&quot;:&#123;&#125;&#125;,&quot;.&#x2F;node_modules&#x2F;react&#x2F;lib&#x2F;Object.assign.js&quot;:&#123;&quot;id&quot;:2,&quot;meta&quot;:&#123;&#125;&#125;,&quot;.&#x2F;node_modules&#x2F;react&#x2F;node_modules&#x2F;fbjs&#x2F;lib&#x2F;warning.js&quot;:&#123;&quot;id&quot;:3,&quot;meta&quot;:&#123;&#125;&#125;</span><br><span class="line">    &#x2F;&#x2F;省略相似代码</span><br><span class="line">  &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<h3 id="2-在主构建配置文件使用动态库文件"><a href="#2-在主构建配置文件使用动态库文件" class="headerlink" title="2. 在主构建配置文件使用动态库文件"></a>2. 在主构建配置文件使用动态库文件</h3><p>在<code>webpack.config</code>中使用dll要用到<code>DllReferencePlugin</code>,这个插件通过引用 dll 的 manifest 文件来把依赖的名称映射到模块的 id 上，之后再在需要的时候通过内置的 <strong>webpack_require</strong> 函数来 require 他们.</p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">new webpack.DllReferencePlugin(&#123;</span><br><span class="line">  context: __dirname,</span><br><span class="line">  manifest: require(&#39;.&#x2F;dist&#x2F;dll&#x2F;react.manifest.json&#39;)</span><br><span class="line">&#125;),</span><br></pre></td></tr></table></figure>
+
+<p>第一步产出的<code>manifest</code>文件就用在这里，给主构建流程作为查找dll的依据：<strong>DllReferencePlugin去 manifest.json 文件读取 name 字段的值，把值的内容作为在从全局变量中获取动态链接库中内容时的全局变量名</strong>，因此：在 webpack_dll.config.js 文件中，DllPlugin 中的 name 参数必须和 output.library 中保持一致。</p>
+<h3 id="3-在入口文件引入dll文件。"><a href="#3-在入口文件引入dll文件。" class="headerlink" title="3. 在入口文件引入dll文件。"></a>3. 在入口文件引入dll文件。</h3><p>生成的dll暴露出的是全局函数，因此还需要在入口文件里面引入对应的dll文件。</p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">&lt;body&gt;</span><br><span class="line">  &lt;div id&#x3D;&quot;app&quot;&gt;&lt;&#x2F;div&gt;</span><br><span class="line">  &lt;!--引用dll文件--&gt;</span><br><span class="line">  &lt;script src&#x3D;&quot;..&#x2F;..&#x2F;dist&#x2F;dll&#x2F;react.dll.js&quot; &gt;&lt;&#x2F;script&gt;</span><br><span class="line">&lt;&#x2F;body&gt;</span><br></pre></td></tr></table></figure>
+
+<h2 id="作用"><a href="#作用" class="headerlink" title="作用"></a>作用</h2><p>首先从前面的介绍，至少可以看出dll的两个作用</p>
+<ol>
+<li><p>分离代码，业务代码和第三方模块可以被打包到不同的文件里，这个有几个好处：</p>
+<ul>
+<li>  避免打包出单个文件的大小太大，不利于调试</li>
+<li>  将单个大文件拆成多个小文件之后，一定情况下有利于加载（不超出浏览器一次性请求的文件数情况下，并行下载肯定比串行快）</li>
+</ul>
+</li>
+<li><p> 提升构建速度。第三方库没有变更时，由于我们只构建业务相关代码，相比全部重新构建自然要快的多。</p>
+</li>
+</ol>
+<h2 id="注意事项"><a href="#注意事项" class="headerlink" title="注意事项"></a>注意事项</h2><p>从前面可以看到dll带来的优点，但<strong>并不意味着我们就应该把除业务代码外的所有代码全部都丢到dll中</strong>，举一个例子：<br>1.对于<code>lodash</code>这种第三方库，正确的用法是只去<code>import</code>所需的函数（用什么引什么），例如：</p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">&#x2F;&#x2F; 正确用法</span><br><span class="line">import isPlainObject from &#39;lodash&#x2F;isPlainObject&#39;</span><br><span class="line"></span><br><span class="line">&#x2F;&#x2F;错误用法</span><br><span class="line">import &#123; isPlainObject &#125; from &#39;lodash&#39;</span><br></pre></td></tr></table></figure>
+
+<p>这两种写法的差别在于，打包时webpack会根据引用去打包依赖的内容，所以第一种写法，webpack只会打包lodash的isPlainObject库，第二种写法却会打包整个<code>lodash</code>。现在假设在项目中只是用到不同模块对lodash里的某几个函数并且没有对于某个函数重复使用非常多次，那么这时候把<code>lodash</code>添加到dll中，带来的收益就并不明显，反而导致2个问题：</p>
+<ol>
+<li> 由于打包了整个<code>lodash</code>，而导致打包后的文件<strong>总大小</strong>（注意是总大小）比原先还要大</li>
+<li> 在dll打包太多内容也需要耗费时间，虽然我们一般只在第三方模块更新之后才进行重新预编译（就是dll打包的过程），但是如果这个时间太长的话体验也不好、</li>
+</ol>
+]]></content>
+      <categories>
+        <category>webpack</category>
+      </categories>
+  </entry>
+  <entry>
+    <title>五种可视化方案分析 webpack 打包性能瓶颈</title>
+    <url>/nirvana/webpack/webpack/%E4%BA%94%E7%A7%8D%E5%8F%AF%E8%A7%86%E5%8C%96%E6%96%B9%E6%A1%88%E5%88%86%E6%9E%90webpack%E6%89%93%E5%8C%85%E6%80%A7%E8%83%BD%E7%93%B6%E9%A2%88/</url>
+    <content><![CDATA[<h3 id="一、测量构建时间"><a href="#一、测量构建时间" class="headerlink" title="一、测量构建时间"></a>一、测量构建时间</h3><p>优化 webpack 构建速度的第一步是知道将精力集中在哪里。我们可以通过 <code>speed-measure-webpack-plugin</code> 测量你的 webpack 构建期间各个阶段花费的时间：</p>
+<p><strong>步骤一：安装 speed-measure-webpack-plugin</strong></p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">npm install speed-measure-webpack-plugin --save-dev</span><br><span class="line">复制代码</span><br></pre></td></tr></table></figure>
+
+<p><strong>步骤二：配置</strong></p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">&#x2F;&#x2F; 分析打包时间</span><br><span class="line">const SpeedMeasurePlugin &#x3D; require(&quot;speed-measure-webpack-plugin&quot;);</span><br><span class="line">const smp &#x3D; new SpeedMeasurePlugin();</span><br><span class="line">&#x2F;&#x2F; ...</span><br><span class="line">module.exports &#x3D; smp.wrap(prodWebpackConfig)</span><br><span class="line">复制代码</span><br></pre></td></tr></table></figure>
+
+<p><img src="https://upload-images.jianshu.io/upload_images/10024246-f71fb869cd81189a.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240"></p>
+<p>它能够：</p>
+<ul>
+<li>  分析整个打包总耗时；</li>
+<li>  每个插件和 loader 的耗时情况；</li>
+</ul>
+<p>方便开发人员定位打包耗时瓶颈。</p>
+<h3 id="二、分析包内容"><a href="#二、分析包内容" class="headerlink" title="二、分析包内容"></a>二、分析包内容</h3><p>webpack-bundle-analyzer 扫描 bundle 并构建其内部内容的可视化。使用此可视化来查找大的或不必要的依赖项。</p>
+<p><strong>步骤一：安装 webpack-bundle-analyzer</strong></p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">npm install webpack-bundle-analyzer --save-dev</span><br><span class="line">复制代码</span><br></pre></td></tr></table></figure>
+
+<p><strong>步骤二：配置</strong></p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">&#x2F;&#x2F; 分析包内容</span><br><span class="line">const BundleAnalyzerPlugin &#x3D; require(&#39;webpack-bundle-analyzer&#39;).BundleAnalyzerPlugin;</span><br><span class="line">module.exports &#x3D; &#123;</span><br><span class="line">  plugins: [</span><br><span class="line">    &#x2F;&#x2F; 开启 BundleAnalyzerPlugin</span><br><span class="line">    new BundleAnalyzerPlugin(),</span><br><span class="line">  ],</span><br><span class="line">&#125;;</span><br><span class="line">复制代码</span><br></pre></td></tr></table></figure>
+
+<p>一般运行在生产版本中，该插件将在浏览器中打开统计信息结果页面。</p>
+<p><img src="https://upload-images.jianshu.io/upload_images/10024246-55abc35c2b173da6.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240"></p>
+<p><strong>注意：webpack4 在 <code>production</code> 环境下默认启动了 <code>ModuleConcatenationPlugin</code> （预编译所有模块到一个闭包中，提升代码在浏览器中的执行速度），它可能会合并webpack-bundle-analyzer 输出中的模块的一部分，从而使报告不太详细。 如果你使用此插件，请在分析过程中将其禁用。设置如下：</strong></p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">module.exports &#x3D; &#123;</span><br><span class="line">  &#x2F;&#x2F; ...</span><br><span class="line">  optimization: &#123;</span><br><span class="line">    &#x2F;&#x2F; </span><br><span class="line">    concatenateModules: false,</span><br><span class="line">  &#125;</span><br><span class="line">&#125;;</span><br><span class="line">复制代码</span><br></pre></td></tr></table></figure>
+
+<p>具体来说，使用 webpack-bundle-analyzer 能可视化的反映：</p>
+<ul>
+<li>  打包出的文件中都包含了什么；</li>
+<li>  每个文件的尺寸在总体中的占比，哪些文件尺寸大，思考一下，为什么那么大，是否有替换方案，是否使用了它包含的所有代码；</li>
+<li>  模块之间的包含关系；</li>
+<li>  是否有重复的依赖项，是否存在一个库在多个文件中重复？ 或者捆绑包中是否具有同一库的多个版本？</li>
+<li>  是否有相似的依赖库， 尝试使用一种依赖库实现相似的功能。</li>
+<li>  每个文件的压缩后的大小。</li>
+</ul>
+<h3 id="三、在线分析工具"><a href="#三、在线分析工具" class="headerlink" title="三、在线分析工具"></a>三、在线分析工具</h3><p>如果你对在本地安装插件进行测量分析包方式感觉不爽的话，这里将会推荐几款在线测量工具，但都需要 webpack 统计文件。</p>
+<h4 id="1-生成统计文件-stats-json"><a href="#1-生成统计文件-stats-json" class="headerlink" title="1. 生成统计文件 stats.json"></a>1. 生成统计文件 <code>stats.json</code></h4><p>使用 webpack 编译源代码时，用户可以生成一个包含有关模块统计信息的 JSON 文件。 这些统计信息可用于分析应用程序的依赖关系图以及优化编译速度。 该文件通常是按以下方式生成的：</p>
+<p>在 webpack 启动时带入参数：<code>--profile --json &gt; stats.json</code> ，例如：</p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">webpack --config webpack.config.prod.js --profile --json &gt; stats.json</span><br><span class="line">复制代码</span><br></pre></td></tr></table></figure>
+
+<ul>
+<li>  <code>--profile</code>：记录下构建过程中的耗时信息</li>
+<li>  <code>--json</code>：以 JSON 的格式输出构建结果，最后只输出一个 <code>.json</code> 文件，这个文件（<code>stats.json</code>）中包括所有构建相关的信息</li>
+<li>  <code>&gt; stats.json</code> ：是 UNIX/Linux 系统中的管道命令、含义是把 <code>webpack --profile --json</code> 输出的内容通过管道输出到 <code>stats.json</code> 文件中</li>
+</ul>
+<p>执行命令后，会在项目中多出一个 <code>stats.json</code> 文件，接下来将 <code>stats.json</code> 文件上传到以下在线工具上，以可视化分析包的组成。</p>
+<p>常用的在线工具有：</p>
+<ul>
+<li>  官方可视化分析工具 Webapck Analyse：生成一个图表，让你可视化了解项目的依赖关系、模块大小及耗时等；</li>
+<li>  Webpack Visualizer：生成一个饼状图，可视化 bundle 内容；</li>
+<li>  webpack bundle optimize helper：此工具会分析你的 bundle，并为你提供可操作的改进措施建议，以减少 bundle 体积大小。</li>
+</ul>
+<h4 id="2-官方可视化分析工具-Webapck-Analyse"><a href="#2-官方可视化分析工具-Webapck-Analyse" class="headerlink" title="2. 官方可视化分析工具 Webapck Analyse"></a>2. 官方可视化分析工具 Webapck Analyse</h4><p><a href="http://webpack.github.io/analyse/">Webapck Analyse</a> 是一个在线 Web 应用，它为你提供了对包的更全面的分析，并且它绘制了项目中所有依赖模块的图形，这对于依赖关系较少的项目非常有用。</p>
+<p>打开 <a href="http://webpack.github.io/analyse/">Webapck Analyse</a> ，上传 <code>stats.json</code>：</p>
+<p><img src="https://upload-images.jianshu.io/upload_images/10024246-cdf2f57c826f8d8a.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240"></p>
+<p>Webpack Analyse 不会把你选择的 <code>stats.json</code> 文件发达到服务器，而是在浏览器本地解析，你不用担心自己的代码为此而泄露。 选择文件后，你马上就能如下的效果图：</p>
+<p><img src="https://upload-images.jianshu.io/upload_images/10024246-b4a1cc7f4ec92539.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240"></p>
+<p><strong>Modules</strong> ：展示所有的模块，每个模块对应一个文件。并且还包含所有模块之间的依赖关系图、模块路径、模块ID、模块所属 Chunk、模块大小；</p>
+<p><img src="https://upload-images.jianshu.io/upload_images/10024246-2cf996c3528f9bcb.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240"></p>
+<p><strong>Chunks</strong> ：展示所有的代码块，一个代码块中包含多个模块。并且还包含代码块的ID、名称、大小、每个代码块包含的模块数量，以及代码块之间的依赖关系图；</p>
+<p><strong>Assets</strong> ：展示所有输出的文件资源，包括 <code>.js</code>、<code>.css</code>、图片等。并且还包括文件名称、大小、该文件来自哪个代码块；</p>
+<p><img src="https://upload-images.jianshu.io/upload_images/10024246-bddc32d51392a614.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240"></p>
+<p><strong>Warnings</strong> ：展示构建过程中出现的所有警告信息；</p>
+<p><img src="https://upload-images.jianshu.io/upload_images/10024246-210b137a0478fa88.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240"></p>
+<p><strong>Errors</strong> ：展示构建过程中出现的所有错误信息；<br><img src="https://upload-images.jianshu.io/upload_images/10024246-8a479c1eef699870.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240"></p>
+<p><strong>Hints</strong> ：展示处理每个模块的过程中的耗时。</p>
+<p><img src="https://upload-images.jianshu.io/upload_images/10024246-8f41bdba3a5b0d37.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240"></p>
+<h4 id="3-Webpack-Visualizer-分析工具"><a href="#3-Webpack-Visualizer-分析工具" class="headerlink" title="3. Webpack Visualizer 分析工具"></a>3. Webpack Visualizer 分析工具</h4><p>可视化并分析您的Webpack捆绑包，以查看哪些模块正在占用空间，哪些可能是重复的。</p>
+<p>它既可作为插件使用，也可以在线使用，是一种较新的工具。</p>
+<p><strong>方式一：作为插件使用</strong></p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">npm install webpack-visualizer-plugin --dev-save</span><br><span class="line">复制代码</span><br></pre></td></tr></table></figure>
+
+<p>配置：</p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">&#x2F;&#x2F; 分析包内容</span><br><span class="line">const Visualizer &#x3D; require(&#39;webpack-visualizer-plugin&#39;);</span><br><span class="line">module.exports &#x3D; &#123;</span><br><span class="line">  plugins: [</span><br><span class="line">    &#x2F;&#x2F; 开启 Visualizer</span><br><span class="line">    &#x2F;&#x2F; 默认输出为 stats.html，这里为 statistics.html</span><br><span class="line">    new Visualizer(&#123;</span><br><span class="line">      filename: &#39;.&#x2F;statistics.html&#39;</span><br><span class="line">    &#125;)</span><br><span class="line">  ],</span><br><span class="line">&#125;;</span><br><span class="line">复制代码</span><br></pre></td></tr></table></figure>
+
+<p>然后在浏览器中直接打开 <code>statistics.html</code> 就可以看到分析结果了：</p>
+<p><img src="https://upload-images.jianshu.io/upload_images/10024246-4cecd9f30e511265.gif?imageMogr2/auto-orient/strip"></p>
+<p><strong>方式二：在线使用</strong></p>
+<p>打开 <a href="http://chrisbateman.github.io/webpack-visualizer/">chrisbateman.github.io/webpack-vis…</a> ，上传 <code>stats.json</code> 既可看到分析结果。</p>
+<h4 id="4-webpack-bundle-optimize-helper-分析工具"><a href="#4-webpack-bundle-optimize-helper-分析工具" class="headerlink" title="4. webpack bundle optimize helper 分析工具"></a>4. webpack bundle optimize helper 分析工具</h4><p>打开 <a href="https://webpack.jakoblind.no/optimize/">webpack.jakoblind.no/optimize/</a> ，上传 <code>stats.json</code> 既可看到分析结果及优化建议：</p>
+<p><img src="https://upload-images.jianshu.io/upload_images/10024246-432920dbb121086a.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240"></p>
+<h3 id="四、总结"><a href="#四、总结" class="headerlink" title="四、总结"></a>四、总结</h3><p>我们总共介绍了以下 <code>5</code> 种测量工具，每种工具都提供了对包分析的不同视角，例如：</p>
+<ul>
+<li>  在开发过程中，当向项目引入新包时，我个人经常使用 Webpack Visualizer ，饼状图给出了关于大小的比例的即时反馈；</li>
+<li>  在分析每次构建版本的耗时情况时，相对于其它 <code>4</code> 中，<code>speed-measure-webpack-plugin</code> 能够获取每个插件和 loader 的耗时情况，帮助你将注意力集中在需要优化的插件上；</li>
+<li>  <code>webpack-bundle-analyzer</code> 能够将 bundle 内容展示为便捷的、交互式、可缩放的树状图形式；</li>
+<li>  Webapck Analyse 相对于其它 <code>4</code> 种，能够对包进行全方位的分析；</li>
+<li>  相对于其它 <code>4</code> 种，webpack bundle optimize helper 能提供可操作的改进措施建议；</li>
+</ul>
+<blockquote>
+<p>作者：前端瓶子君<br>链接：<a href="https://juejin.cn/post/6844904056985485320">https://juejin.cn/post/6844904056985485320</a></p>
+</blockquote>
+]]></content>
+      <categories>
+        <category>webpack</category>
+      </categories>
+  </entry>
+  <entry>
+    <title>算法-两数之和</title>
+    <url>/nirvana/algorithm/%E7%AE%97%E6%B3%95%E5%AD%A6%E4%B9%A0/%E7%AE%97%E6%B3%95-%E4%B8%A4%E6%95%B0%E4%B9%8B%E5%92%8C/</url>
+    <content><![CDATA[<h2 id="题目"><a href="#题目" class="headerlink" title="题目"></a>题目</h2><p>给定一个整数数组 nums 和一个整数目标值 target，请你在该数组中找出 和为目标值 的那 两个 整数，并返回它们的数组下标。</p>
+<p>你可以假设每种输入只会对应一个答案。但是，数组中同一个元素在答案里不能重复出现。</p>
+<p>你可以按任意顺序返回答案。</p>
+<h5 id="示例-1："><a href="#示例-1：" class="headerlink" title="示例 1："></a>示例 1：</h5><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">输入：nums &#x3D; [2,7,11,15], target &#x3D; 9</span><br><span class="line">输出：[0,1]</span><br><span class="line">解释：因为 nums[0] + nums[1] &#x3D;&#x3D; 9 ，返回 [0, 1] 。</span><br></pre></td></tr></table></figure>
+<h5 id="示例-2："><a href="#示例-2：" class="headerlink" title="示例 2："></a>示例 2：</h5><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">输入：nums &#x3D; [3,2,4], target &#x3D; 6</span><br><span class="line">输出：[1,2]</span><br></pre></td></tr></table></figure>
+<h5 id="示例-3："><a href="#示例-3：" class="headerlink" title="示例 3："></a>示例 3：</h5><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">输入：nums &#x3D; [3,3], target &#x3D; 6</span><br><span class="line">输出：[0,1]</span><br></pre></td></tr></table></figure>
+
+<h2 id="实现："><a href="#实现：" class="headerlink" title="实现："></a>实现：</h2><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">&#x2F;**</span><br><span class="line"> * @param &#123;number[]&#125; nums</span><br><span class="line"> * @param &#123;number&#125; target</span><br><span class="line"> * @return &#123;number[]&#125;</span><br><span class="line"> *&#x2F;</span><br><span class="line">var twoSum &#x3D; function(nums, target) &#123;</span><br><span class="line">    let i&#x3D;0,j&#x3D;-1;</span><br><span class="line">    for(;i&lt;nums.length;i++)&#123;</span><br><span class="line">        let temp &#x3D; target-nums[i];&#x2F;&#x2F;找到与当前相差的数</span><br><span class="line">      	let isfind &#x3D; false;</span><br><span class="line">      	for(j&#x3D;i+1;j&lt;nums.length;j++)&#123;&#x2F;&#x2F;从i+1开始，是为了减少循环次数，因为前面的已经比较过了</span><br><span class="line">          if(nums[j]&#x3D;&#x3D;temp)&#123;</span><br><span class="line">            isfind &#x3D; true;</span><br><span class="line">            break;</span><br><span class="line">          &#125;</span><br><span class="line">        &#125;</span><br><span class="line">      if(isfind)&#123;</span><br><span class="line">        break;</span><br><span class="line">      &#125;</span><br><span class="line">    &#125;</span><br><span class="line">    return[i,j]</span><br><span class="line">&#125;;</span><br></pre></td></tr></table></figure>]]></content>
+      <categories>
+        <category>algorithm</category>
+      </categories>
+  </entry>
+  <entry>
+    <title>算法-只出现一次的数字</title>
+    <url>/nirvana/algorithm/%E7%AE%97%E6%B3%95%E5%AD%A6%E4%B9%A0/%E7%AE%97%E6%B3%95-%E5%8F%AA%E5%87%BA%E7%8E%B0%E4%B8%80%E6%AC%A1%E7%9A%84%E6%95%B0%E5%AD%97/</url>
+    <content><![CDATA[<h2 id="题目"><a href="#题目" class="headerlink" title="题目"></a>题目</h2><p>给定一个非空整数数组，除了某个元素只出现一次以外，其余每个元素均出现两次。找出那个只出现了一次的元素。</p>
+<blockquote>
+<p>说明：<br>你的算法应该具有线性时间复杂度。 你可以不使用额外空间来实现吗？</p>
+</blockquote>
+<h5 id="示例-1"><a href="#示例-1" class="headerlink" title="示例 1:"></a>示例 1:</h5><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">输入: [2,2,1]</span><br><span class="line">输出: 1</span><br></pre></td></tr></table></figure>
+<h5 id="示例-2"><a href="#示例-2" class="headerlink" title="示例 2:"></a>示例 2:</h5><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">输入: [4,1,2,1,2]</span><br><span class="line">输出: 4</span><br></pre></td></tr></table></figure>
+<h2 id="解答"><a href="#解答" class="headerlink" title="解答"></a>解答</h2><p>如果不考虑时间复杂度和空间复杂度的限制，这道题有很多种解法，如找一个数组储存数字，如果再次出现则删除，最后剩余数字为只出现一次的数字。但是这种算法都需要新增空间来存储临时对象。</p>
+<p>如何才能做到线性时间复杂度和常数空间复杂度呢？</p>
+<p>答案是使用<code>位运算</code>。对于这道题，可使用异或运算 ⊕。异或运算有以下三个性质。</p>
+<ul>
+<li>任何数和 00 做异或运算，结果仍然是原来的数，即 a⊕0=a。</li>
+<li>任何数和其自身做异或运算，结果是 0，即 a⊕a=0。</li>
+<li>异或运算满足交换律和结合律，即 a⊕b⊕a=b⊕a⊕a=b⊕(a⊕a)=b⊕0=b。</li>
+</ul>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">&#x2F;**</span><br><span class="line"> * @param &#123;number[]&#125; nums</span><br><span class="line"> * @return &#123;number&#125;</span><br><span class="line"> *&#x2F;</span><br><span class="line">var singleNumber &#x3D; function(nums) &#123;</span><br><span class="line">    let single &#x3D; 0;</span><br><span class="line">    nums.forEach((item)&#x3D;&gt;&#123;</span><br><span class="line">        single ^&#x3D; item;&#x2F;&#x2F;javascript中的异或操作为^</span><br><span class="line">    &#125;);</span><br><span class="line">    return single;</span><br><span class="line">&#125;;</span><br></pre></td></tr></table></figure>
+<h2 id="复杂度分析"><a href="#复杂度分析" class="headerlink" title="复杂度分析"></a>复杂度分析</h2><ul>
+<li>时间复杂度：<code>O(n)</code>，其中 n 是数组长度。只需要对数组遍历一次。</li>
+<li>空间复杂度：<code>O(1)</code>。</li>
+</ul>
+]]></content>
+      <categories>
+        <category>algorithm</category>
+      </categories>
+  </entry>
+  <entry>
+    <title>算法-整数反转</title>
+    <url>/nirvana/algorithm/%E7%AE%97%E6%B3%95%E5%AD%A6%E4%B9%A0/%E7%AE%97%E6%B3%95-%E6%95%B4%E6%95%B0%E5%8F%8D%E8%BD%AC/</url>
+    <content><![CDATA[<h2 id="题目"><a href="#题目" class="headerlink" title="题目"></a>题目</h2><p>给你一个 32 位的有符号整数 x ，返回将 x 中的数字部分反转后的结果。<br>如果反转后整数超过 32 位的有符号整数的范围 [-2147483648,  2147483648] ，就返回 0。</p>
+<blockquote>
+<p>假设环境不允许存储 64 位整数（有符号或无符号）。</p>
+</blockquote>
+<h5 id="示例-1："><a href="#示例-1：" class="headerlink" title="示例 1："></a>示例 1：</h5><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">输入：x &#x3D; 123</span><br><span class="line">输出：321</span><br></pre></td></tr></table></figure>
+<h5 id="示例-2："><a href="#示例-2：" class="headerlink" title="示例 2："></a>示例 2：</h5><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">输入：x &#x3D; -123</span><br><span class="line">输出：-321</span><br></pre></td></tr></table></figure>
+<h5 id="示例-3："><a href="#示例-3：" class="headerlink" title="示例 3："></a>示例 3：</h5><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">输入：x &#x3D; 120</span><br><span class="line">输出：21</span><br></pre></td></tr></table></figure>
+<h5 id="示例-4："><a href="#示例-4：" class="headerlink" title="示例 4："></a>示例 4：</h5><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">输入：x &#x3D; 0</span><br><span class="line">输出：0</span><br></pre></td></tr></table></figure>
+<h2 id="算法"><a href="#算法" class="headerlink" title="算法"></a>算法</h2><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">&#x2F;**</span><br><span class="line"> * @param &#123;number&#125; x</span><br><span class="line"> * @return &#123;number&#125;</span><br><span class="line"> *&#x2F;</span><br><span class="line">var reverse &#x3D; function(x) &#123;</span><br><span class="line">    const temp &#x3D; x.toString();</span><br><span class="line">    const index &#x3D; temp.indexOf(&#39;-&#39;);</span><br><span class="line">    const newStr &#x3D; temp.substring((index+1)).split(&#39;&#39;).reverse().join(&#39;&#39;);</span><br><span class="line">    const reverseNum &#x3D; parseInt(index&#x3D;&#x3D;&#x3D;0?&#39;-&#39;+newStr:newStr);</span><br><span class="line">    if(reverseNum&gt;2147483648 || reverseNum&lt;-2147483648)&#123;</span><br><span class="line">        return 0;</span><br><span class="line">    &#125;</span><br><span class="line">    return reverseNum;</span><br><span class="line">&#125;;</span><br></pre></td></tr></table></figure>]]></content>
+      <categories>
+        <category>algorithm</category>
+      </categories>
+  </entry>
+  <entry>
+    <title>算法-有效的括号</title>
+    <url>/nirvana/algorithm/%E7%AE%97%E6%B3%95%E5%AD%A6%E4%B9%A0/%E7%AE%97%E6%B3%95-%E6%9C%89%E6%95%88%E7%9A%84%E6%8B%AC%E5%8F%B7/</url>
+    <content><![CDATA[<h2 id="题目"><a href="#题目" class="headerlink" title="题目"></a>题目</h2><p>给定一个只包括 ‘(‘，’)’，’{‘，’}’，’[‘，’]’ 的字符串 s ，判断字符串是否有效。<br>有效字符串需满足：</p>
+<ul>
+<li>左括号必须用相同类型的右括号闭合。</li>
+<li>左括号必须以正确的顺序闭合。<br> ##### 示例 1：<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">输入：s &#x3D; &quot;()&quot;</span><br><span class="line">输出：true</span><br></pre></td></tr></table></figure>
+<h5 id="示例-2："><a href="#示例-2：" class="headerlink" title="示例 2："></a>示例 2：</h5><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">输入：s &#x3D; &quot;()[]&#123;&#125;&quot;</span><br><span class="line">输出：true</span><br></pre></td></tr></table></figure>
+<h5 id="示例-3："><a href="#示例-3：" class="headerlink" title="示例 3："></a>示例 3：</h5><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">输入：s &#x3D; &quot;(]&quot;</span><br><span class="line">输出：false</span><br></pre></td></tr></table></figure>
+<h5 id="示例-4："><a href="#示例-4：" class="headerlink" title="示例 4："></a>示例 4：</h5><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">输入：s &#x3D; &quot;([)]&quot;</span><br><span class="line">输出：false</span><br></pre></td></tr></table></figure>
+<h5 id="示例-5："><a href="#示例-5：" class="headerlink" title="示例 5："></a>示例 5：</h5><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">输入：s &#x3D; &quot;&#123;[]&#125;&quot;</span><br><span class="line">输出：true</span><br></pre></td></tr></table></figure></li>
+</ul>
+<blockquote>
+<p>来源：力扣（LeetCode）<br>链接：<a href="https://leetcode-cn.com/problems/valid-parentheses">https://leetcode-cn.com/problems/valid-parentheses</a><br>著作权归领扣网络所有。商业转载请联系官方授权，非商业转载请注明出处。</p>
+</blockquote>
+<h2 id="解答"><a href="#解答" class="headerlink" title="解答"></a>解答</h2><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">&#x2F;**</span><br><span class="line"> * @param &#123;string&#125; s</span><br><span class="line"> * @return &#123;boolean&#125;</span><br><span class="line"> *&#x2F;</span><br><span class="line">var isValid &#x3D; function(s) &#123;</span><br><span class="line">    if(s.length % 2 !&#x3D; 0 )&#123;&#x2F;&#x2F;字符串长度是偶数</span><br><span class="line">        return false;</span><br><span class="line">    &#125;</span><br><span class="line">    let temp &#x3D;[s.charAt(0)];&#x2F;&#x2F;代比较数组</span><br><span class="line">    let flag &#x3D; true;</span><br><span class="line">    for(let i &#x3D;1;i&lt;s.length ;i++)&#123;</span><br><span class="line">        &#x2F;&#x2F;括号都是成对出现的，当出现右括号时，</span><br><span class="line">        &#x2F;&#x2F;如果最后一位不是对应的左括号，则不匹配，需要退出循环，</span><br><span class="line">        &#x2F;&#x2F;如果匹配，退出最后一位</span><br><span class="line">        &#x2F;&#x2F;如果当前为左括号，则放入数组中</span><br><span class="line">        switch(s.charAt(i))&#123;</span><br><span class="line">            case &#39;)&#39;:</span><br><span class="line">                temp.slice(-1) &#x3D;&#x3D; &#39;(&#39;?temp.pop():flag&#x3D;false;</span><br><span class="line">                break;</span><br><span class="line">            case &#39;&#125;&#39;:</span><br><span class="line">                temp.slice(-1) &#x3D;&#x3D; &#39;&#123;&#39;?temp.pop():flag&#x3D;false;</span><br><span class="line">                break;</span><br><span class="line">            case &#39;]&#39;:</span><br><span class="line">                temp.slice(-1) &#x3D;&#x3D; &#39;[&#39;?temp.pop():flag&#x3D;false;</span><br><span class="line">                break;</span><br><span class="line">            default:</span><br><span class="line">                temp.push(s.charAt(i));</span><br><span class="line">                break;</span><br><span class="line">        &#125;</span><br><span class="line">        if(!flag)&#123;</span><br><span class="line">            break;</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">    return !flag||temp.length&gt;0?false:true;</span><br><span class="line">&#125;;</span><br></pre></td></tr></table></figure>
+
+<h2 id="复杂度分析"><a href="#复杂度分析" class="headerlink" title="复杂度分析"></a>复杂度分析</h2><ul>
+<li>时间复杂度：O(n)，其中 n 是字符串 s 的长度。</li>
+<li>空间复杂度：O(n)，最差情况为字符串全部为左括号。</li>
+</ul>
+]]></content>
+      <categories>
+        <category>algorithm</category>
+      </categories>
+  </entry>
+  <entry>
+    <title>算法-爬楼梯</title>
+    <url>/nirvana/algorithm/%E7%AE%97%E6%B3%95%E5%AD%A6%E4%B9%A0/%E7%AE%97%E6%B3%95-%E7%88%AC%E6%A5%BC%E6%A2%AF/</url>
+    <content><![CDATA[<h2 id="题目"><a href="#题目" class="headerlink" title="题目"></a>题目</h2><p>假设你正在爬楼梯。需要 n 阶你才能到达楼顶。<br>每次你可以爬 1 或 2 个台阶。你有多少种不同的方法可以爬到楼顶呢？</p>
+<blockquote>
+<p>注意：给定 n 是一个正整数。</p>
+</blockquote>
+<h5 id="示例-1："><a href="#示例-1：" class="headerlink" title="示例 1："></a>示例 1：</h5><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">输入： 2</span><br><span class="line">输出： 2</span><br><span class="line">解释： 有两种方法可以爬到楼顶。</span><br><span class="line">1.  1 阶 + 1 阶</span><br><span class="line">2.  2 阶</span><br></pre></td></tr></table></figure>
+<h5 id="示例-2："><a href="#示例-2：" class="headerlink" title="示例 2："></a>示例 2：</h5><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">输入： 3</span><br><span class="line">输出： 3</span><br><span class="line">解释： 有三种方法可以爬到楼顶。</span><br><span class="line">1.  1 阶 + 1 阶 + 1 阶</span><br><span class="line">2.  1 阶 + 2 阶</span><br><span class="line">3.  2 阶 + 1 阶</span><br></pre></td></tr></table></figure>
+<h2 id="解答"><a href="#解答" class="headerlink" title="解答"></a>解答</h2><p>用 f(x)f(x) 表示爬到第 xx 级台阶的方案数，考虑最后一步可能跨了一级台阶，也可能跨了两级台阶，所以我们可以列出如下式子：<br><code>f(x) = f(x - 1) + f(x - 2)</code><br>它意味着爬到第 xx 级台阶的方案数是爬到第 x - 1级台阶的方案数和爬到第 x - 2x级台阶的方案数的和。很好理解，因为每次只能爬 11 级或 22 级，所以 f(x)只能从 f(x - 1) 和 f(x - 2)转移过来，而这里要统计方案总数，我们就需要对这两项的贡献求和。</p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">&#x2F;**</span><br><span class="line"> * @param &#123;number&#125; n</span><br><span class="line"> * @return &#123;number&#125;</span><br><span class="line"> *&#x2F;</span><br><span class="line">var climbStairs &#x3D; function(n) &#123;</span><br><span class="line">    let p &#x3D; 0, q &#x3D; 0, r &#x3D; 1;</span><br><span class="line">    for (let i &#x3D; 1; i &lt;&#x3D; n; ++i) &#123;</span><br><span class="line">        p &#x3D; q;</span><br><span class="line">        q &#x3D; r;</span><br><span class="line">        r &#x3D; p + q;</span><br><span class="line">    &#125;</span><br><span class="line">    return r;</span><br><span class="line">&#125;;</span><br><span class="line"></span><br><span class="line">&#x2F;&#x2F;递归写法</span><br><span class="line"></span><br><span class="line">&#x2F;**</span><br><span class="line"> * @param &#123;number&#125; n</span><br><span class="line"> * @return &#123;number&#125;</span><br><span class="line"> *&#x2F;</span><br><span class="line">var climbStairs &#x3D; function(n) &#123;</span><br><span class="line">    &#x2F;&#x2F;实现f（x）&#x3D; f(x-1)+f(x-2);</span><br><span class="line">    &#x2F;&#x2F; 优化效率，可以记住已算过的数据，直接返回；</span><br><span class="line">    if(n &#x3D;&#x3D; 1)&#123;</span><br><span class="line">        return 1;</span><br><span class="line">    &#125;else if(n &#x3D;&#x3D; 2 )&#123;</span><br><span class="line">        return 2;</span><br><span class="line">    &#125;else&#123;</span><br><span class="line">        return climbStairs(n-1)+climbStairs(n-2);</span><br><span class="line">    &#125;</span><br><span class="line">&#125;;</span><br><span class="line"></span><br></pre></td></tr></table></figure>
+<h2 id="复杂度分析"><a href="#复杂度分析" class="headerlink" title="复杂度分析"></a>复杂度分析</h2><p>时间复杂度：循环执行 n 次，每次花费常数的时间代价，故渐进时间复杂度为 O(n)。<br>空间复杂度：这里只用了常数个变量作为辅助空间，故渐进空间复杂度为 O(1)。</p>
+]]></content>
+      <categories>
+        <category>algorithm</category>
+      </categories>
+  </entry>
+  <entry>
+    <title>算法-罗马数字转整数</title>
+    <url>/nirvana/algorithm/%E7%AE%97%E6%B3%95%E5%AD%A6%E4%B9%A0/%E7%AE%97%E6%B3%95-%E7%BD%97%E9%A9%AC%E6%95%B0%E5%AD%97%E8%BD%AC%E6%95%B4%E6%95%B0/</url>
+    <content><![CDATA[<h2 id="题目"><a href="#题目" class="headerlink" title="题目"></a>题目</h2><p>罗马数字包含以下七种字符: I， V， X， L，C，D 和 M。<br>|  字符   | 数值  |<br>|  —-  | —-  |<br>|I         |    1|<br>|V        |     5|<br>|X        |     10|<br>|L        |     50|<br>|C        |     100|<br>|D       |      500|<br>|M         |    1000|</p>
+<blockquote>
+<p>例如， 罗马数字 2 写做 II ，即为两个并列的 1。12 写做 XII ，即为 X + II 。 27 写做  XXVII, 即为 XX + V + II 。</p>
+</blockquote>
+<p>通常情况下，罗马数字中小的数字在大的数字的右边。但也存在特例，例如 4 不写做 IIII，而是 IV。数字 1 在数字 5 的左边，所表示的数等于大数 5 减小数 1 得到的数值 4 。同样地，数字 9 表示为 IX。这个特殊的规则只适用于以下六种情况：</p>
+<ul>
+<li>I 可以放在 V (5) 和 X (10) 的左边，来表示 4 和 9。</li>
+<li>X 可以放在 L (50) 和 C (100) 的左边，来表示 40 和 90。 </li>
+<li>C 可以放在 D (500) 和 M (1000) 的左边，来表示 400 和 900。</li>
+<li>给定一个罗马数字，将其转换成整数。输入确保在 1 到 3999 的范围内。</li>
+</ul>
+<h2 id="解答"><a href="#解答" class="headerlink" title="解答"></a>解答</h2><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">&#x2F;**</span><br><span class="line"> * @param &#123;string&#125; s</span><br><span class="line"> * @return &#123;number&#125;</span><br><span class="line"> *&#x2F;</span><br><span class="line">var romanToInt &#x3D; function(s) &#123;</span><br><span class="line">    const map &#x3D; &#123;</span><br><span class="line">        I : 1,</span><br><span class="line">        IV: 4,</span><br><span class="line">        V: 5,</span><br><span class="line">        IX: 9,</span><br><span class="line">        X: 10,</span><br><span class="line">        XL: 40,</span><br><span class="line">        L: 50,</span><br><span class="line">        XC: 90,</span><br><span class="line">        C: 100,</span><br><span class="line">        CD: 400,</span><br><span class="line">        D: 500,</span><br><span class="line">        CM: 900,</span><br><span class="line">        M: 1000</span><br><span class="line">    &#125;;</span><br><span class="line">    let ans &#x3D; 0;</span><br><span class="line">    for(let i &#x3D; 0;i &lt; s.length;) &#123;</span><br><span class="line">        if(i + 1 &lt; s.length &amp;&amp; map[s.substring(i, i+2)]) &#123;</span><br><span class="line">            ans +&#x3D; map[s.substring(i, i+2)];</span><br><span class="line">            i +&#x3D; 2;</span><br><span class="line">        &#125; else &#123;</span><br><span class="line">            ans +&#x3D; map[s.substring(i, i+1)];</span><br><span class="line">            i ++;</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">    return ans;</span><br><span class="line">&#125;;</span><br></pre></td></tr></table></figure>
+<p><img src="https://upload-images.jianshu.io/upload_images/10024246-ee76edd2092de74c.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240"></p>
+]]></content>
+      <categories>
+        <category>algorithm</category>
+      </categories>
+  </entry>
+  <entry>
+    <title>CSS在线工具</title>
+    <url>/nirvana/javascript/%E5%89%8D%E7%AB%AF/CSS%E5%9C%A8%E7%BA%BF%E5%B7%A5%E5%85%B7/</url>
+    <content><![CDATA[<h2 id="CSS-在线工具"><a href="#CSS-在线工具" class="headerlink" title="CSS 在线工具"></a>CSS 在线工具</h2><p><a href="http://apps.eky.hk/css-triangle-generator/zh-hant">CSS 三角形生成器</a></p>
+<p><a href="http://code.ciaoca.com/style/hexcolor/">CSS 半透明背景色转换</a></p>
+<p><a href="http://code.ciaoca.com/style/bubble/">CSS 气泡对话框生成器</a></p>
+<p><a href="http://www.cssmatic.com/gradient-generator">CSS Matic 背景渐变色生成器</a></p>
+<p><a href="http://www.colorzilla.com/gradient-editor/">ColorZilla CSS 背景渐变色生成器</a></p>
+<p><a href="http://layerstyles.org/builder.html">Layer Styles CSS 阴影、边框、渐变背景生成器</a></p>
+<p><a href="http://border-image.com/">CSS 图片边框生成器</a></p>
+<p><a href="https://scotch.io/demos/visual-guide-to-css3-flexbox-flexbox-playground">Flexbox 演示</a></p>
+<p><a href="http://the-echoplex.net/flexyboxes/">Flexbox 生成器</a></p>
+<p><a href="http://css3generator.com/">CSS3 代码生成器</a></p>
+]]></content>
+      <categories>
+        <category>javascript</category>
+      </categories>
+  </entry>
+  <entry>
+    <title>Hexo Next leancloud文章阅读次数配置</title>
+    <url>/nirvana/javascript/%E5%89%8D%E7%AB%AF/HexoNextleancloud%E6%96%87%E7%AB%A0%E9%98%85%E8%AF%BB%E6%AC%A1%E6%95%B0%E9%85%8D%E7%BD%AE/</url>
+    <content><![CDATA[<h1 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h1><p>由于<code>Next</code>主题修复了<code>leancloud</code>的安全问题, 导致以前<code>leancloud</code>失效, 所以重新介绍如何配置<code>leancloud</code></p>
+<blockquote>
+<p>所有使用该插件而未经修复的NexT站点或使用类似方法集成Leancloud访客统计功能的站点都被认为是不安全的，请尽快修复</p>
+</blockquote>
+<p>效果如图<br><img src="https://upload-images.jianshu.io/upload_images/10024246-4c34cbaf05fa0929.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240"></p>
+<h1 id="注册Leancloud并创建应用"><a href="#注册Leancloud并创建应用" class="headerlink" title="注册Leancloud并创建应用"></a>注册Leancloud并创建应用</h1><ol>
+<li><p> 首先，前往Leancloud官网<a href="https://leancloud.cn/dashboard/login.html#/signup">leancloud.cn</a>进行注册，并登陆。</p>
+</li>
+<li><p>点击<strong>创建应用</strong><br> <img src="https://upload-images.jianshu.io/upload_images/10024246-89aca6e79e05f569.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240"></p>
+</li>
+<li><p>输入应用的名称(随便起都行), 选择<strong>开发版</strong>, 点击<strong>创建</strong><br> <img src="https://upload-images.jianshu.io/upload_images/10024246-097016813d541b77.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240"></p>
+</li>
+<li><p>创建成功后点击右上角的设置<strong>小齿轮</strong><br> <img src="https://upload-images.jianshu.io/upload_images/10024246-3db198f1151cdcbf.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240"></p>
+</li>
+<li><p>点击<strong>存储</strong>-<strong>创建Class</strong>-<strong>Class名称</strong>设置为<code>Counter</code>(必须为<code>Counter</code>)-选择<strong>无限制</strong>-点击<strong>创建</strong><br> <img src="https://upload-images.jianshu.io/upload_images/10024246-432bb8b837df5c25.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240"></p>
+</li>
+<li><p>创建后点击<strong>设置</strong>-点击<strong>应用Key</strong>-获取<strong>App ID</strong>和<strong>App Key</strong><br> <img src="https://upload-images.jianshu.io/upload_images/10024246-9535fa3e0ed7959c.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240"></p>
+</li>
+<li><p>将获取到的<strong>App ID</strong>和<strong>App Key</strong>设置到<code>Next</code>主题配置文件<code>_config.yml</code><br> <em>配置文件已存在这个配置, 只要把id和key加上去就好了</em></p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">leancloud_visitors:</span><br><span class="line"> enable: true</span><br><span class="line"> app_id: &lt;&lt;your app id&gt;&gt;</span><br><span class="line"> app_key: &lt;&lt;your app key&gt;&gt;</span><br></pre></td></tr></table></figure></li>
+<li><p>点击<strong>安全中心</strong>, 填写自己博客对应的域名（注意协议、域名和端口号需严格一致）<br> <img src="https://upload-images.jianshu.io/upload_images/10024246-0a2fe8df57f0f3c6.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240"></p>
+</li>
+<li><p>点击<strong>云引擎</strong>-点击<strong>部署</strong>-点击<strong>在线编辑</strong><br> <img src="https://upload-images.jianshu.io/upload_images/10024246-e403d7af8cb3c367.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240"></p>
+</li>
+<li><p> 点击<strong>创建函数</strong>-选择<strong>Hook</strong>-AV.Cloud.选择<strong>beforeSave</strong>-类选择<strong>Counter</strong>-<strong>添加代码</strong>-点击<strong>保存</strong></p>
+</li>
+</ol>
+<p><img src="https://upload-images.jianshu.io/upload_images/10024246-fd6294350d1575b8.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240"></p>
+<p><img src="https://upload-images.jianshu.io/upload_images/10024246-e68e0a9d45123d5a.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240"></p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">var query &#x3D; new AV.Query(&quot;Counter&quot;);</span><br><span class="line">if (request.object.updatedKeys.indexOf(&#39;time&#39;) !&#x3D;&#x3D; -1) &#123;</span><br><span class="line">     return query.get(request.object.id).then(function (obj) &#123;</span><br><span class="line">     if (obj.get(&quot;time&quot;) + 1 !&#x3D;&#x3D; request.object.get(&quot;time&quot;)) &#123;</span><br><span class="line">     throw new AV.Cloud.Error(&#39;Invalid update!&#39;);</span><br><span class="line">   &#125;</span><br><span class="line"> &#125;)</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<ol start="11">
+<li>点击<strong>部署</strong><br><img src="https://upload-images.jianshu.io/upload_images/10024246-6f2cb6e065606ee4.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240"></li>
+</ol>
+<pre><code>![](https://upload-images.jianshu.io/upload_images/10024246-7f0f70d529036253.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240)
+</code></pre>
+<ol start="12">
+<li>待出现红框处的成功部署信息后，点击<strong>关闭</strong><br><img src="https://upload-images.jianshu.io/upload_images/10024246-74bb624ee196b414.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240"></li>
+</ol>
+<h1 id="设置权限"><a href="#设置权限" class="headerlink" title="设置权限"></a>设置权限</h1><ol>
+<li> 打开<code>Next</code>主题配置文件<code>_config.yml</code>, 将leancloud_visitors下的security设置为true（如没有则新增）</li>
+</ol>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">leancloud_visitors:</span><br><span class="line"> enable: true</span><br><span class="line"> app_id: &lt;&lt;your app id&gt;&gt; # 同前文的id</span><br><span class="line"> app_key: &lt;&lt;your app key&gt;&gt; # 同前文的key</span><br><span class="line"> # Dependencies: https:&#x2F;&#x2F;github.com&#x2F;theme-next&#x2F;hexo-leancloud-counter-security</span><br><span class="line"> security: true</span><br><span class="line"> # 由于Leancloud免费版的云引擎存在请求线程数和运行时间限制以及休眠机制，</span><br><span class="line"> # 很多时候访客数量加载会很慢。</span><br><span class="line"> # 如果设置betterPerformance为true，</span><br><span class="line"> # 则网页则会在提交请求之前直接显示访客人数为查询到的人数+1，以增加用户体验。</span><br><span class="line"> betterPerformance: false</span><br></pre></td></tr></table></figure>
+
+<ol start="2">
+<li><p> 打开站点配置文件<code>_config.yml</code></p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">leancloud_counter_security:</span><br><span class="line"> enable_sync: true</span><br><span class="line"> app_id: &lt;&lt;your app id&gt;&gt;   # 同前文的id</span><br><span class="line"> app_key: &lt;&lt;your app key&gt;&gt; # 同前文的key</span><br><span class="line"> username: </span><br><span class="line"> password:</span><br></pre></td></tr></table></figure></li>
+<li><p> 打开命令行<code>cmd</code>并进入站点文件夹，键入以下命令以安装<code>hexo-leancloud-counter-security</code>插件</p>
+</li>
+</ol>
+<p>复制 </p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">npm install hexo-leancloud-counter-security --save</span><br></pre></td></tr></table></figure>
+
+<ol start="4">
+<li> 接着键入命令<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">hexo lc-counter register &lt;&lt;username&gt;&gt; &lt;&lt;password&gt;&gt;</span><br></pre></td></tr></table></figure></li>
+</ol>
+<p><strong>PS:</strong> 将<code>&lt;&lt;username&gt;&gt;</code>和<code>&lt;&lt;password&gt;&gt;</code>替换为你自己的用户名和密码（不必与leancloud的账号）相同。<strong>此用户名和密码将在hexo部署时使用。</strong></p>
+<ol start="5">
+<li> 打开站点配置文件<code>_config.yml</code>, 将<code>&lt;&lt;username&gt;&gt;</code>和<code>&lt;&lt;password&gt;&gt;</code>替换为你刚刚设置的用户名和密码</li>
+</ol>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">leancloud_counter_security:</span><br><span class="line"> enable_sync: true</span><br><span class="line"> app_id: &lt;&lt;your app id&gt;&gt;   # 同前文的id</span><br><span class="line"> app_key: &lt;&lt;your app key&gt;&gt; # 同前文的key</span><br><span class="line"> username: &lt;&lt;username&gt;&gt;    #如留空则将在部署时询问</span><br><span class="line"> password: &lt;&lt;password&gt;&gt;    #建议留空以保证安全性，如留空则将在部署时询问</span><br></pre></td></tr></table></figure>
+
+<ol start="6">
+<li><p>返回Leancloud控制台的应用内, 检查_User表中是否出现一条记录（图示以用户名为admin为例）<br> <img src="https://upload-images.jianshu.io/upload_images/10024246-999c5edc89f7b563.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240"></p>
+</li>
+<li><p>进入<strong>Counter</strong>表, 打开<strong>权限设置</strong><br> <img src="https://upload-images.jianshu.io/upload_images/10024246-787b5c61ae91e7f2.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240"></p>
+<p> <img src="https://upload-images.jianshu.io/upload_images/10024246-37f02ef456350fe9.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240"></p>
+<p> <img src="https://upload-images.jianshu.io/upload_images/10024246-65c41acaf06d5c02.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240"></p>
+<p> <img src="https://upload-images.jianshu.io/upload_images/10024246-7f8593a5f8c45141.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240"></p>
+</li>
+</ol>
+<p><strong>至此配置完成</strong></p>
+]]></content>
+      <categories>
+        <category>javascript</category>
+      </categories>
+  </entry>
+  <entry>
+    <title>Javascript执行效率小结</title>
+    <url>/nirvana/javascript/%E5%89%8D%E7%AB%AF/Javascript%E6%89%A7%E8%A1%8C%E6%95%88%E7%8E%87%E5%B0%8F%E7%BB%93/</url>
+    <content><![CDATA[<p><strong>Javascript</strong>是一门非常灵活的语言，我们可以随心所欲的书写各种风格的代码，不同风格的代码也必然也会导致执行效率的差异，开发过程中零零散散地接触到许多提高代码性能的方法，整理一下平时比较常见并且容易规避的问题。</p>
+<hr>
+<h2 id="Javascript自身执行效率"><a href="#Javascript自身执行效率" class="headerlink" title="Javascript自身执行效率**"></a>Javascript自身执行效率**</h2><p>Javascript中的作用域链、闭包、原型继承、eval等特性，在提供各种神奇功能的同时也带来了各种效率问题，用之不慎就会导致执行效率低下。</p>
+<h4 id="1、全局导入"><a href="#1、全局导入" class="headerlink" title="1、全局导入"></a><strong>1、全局导入</strong></h4><p>我们在编码过程中多多少少会使用到一些全局变量（window,document,自定义全局变量等等），了解<a href="https://coding.imooc.com/?c=java">java</a>script作用域链的人都知道，在局部作用域中访问全局变量需要一层一层遍历整个作用域链直至顶级作用域，而局部变量的访问效率则会更快更高，因此在局部作用域中高频率使用一些全局对象时可以将其导入到局部作用域中，例如：</p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">&#x2F;&#x2F;1、作为参数传入模块</span><br><span class="line"> (function(window,$)&#123;</span><br><span class="line">      var xxx &#x3D; window.xxx;</span><br><span class="line">      $(&quot;#xxx1&quot;).xxx();</span><br><span class="line">      $(&quot;#xxx2&quot;).xxx();</span><br><span class="line">  &#125;)(window,jQuery);</span><br><span class="line">  </span><br><span class="line">  &#x2F;&#x2F;2、暂存到局部变量</span><br><span class="line">  function()&#123;</span><br><span class="line">     var doc &#x3D; document;</span><br><span class="line">     var global &#x3D; window.global;</span><br><span class="line"> &#125;</span><br></pre></td></tr></table></figure>
+
+<h4 id="2、eval以及类eval问题"><a href="#2、eval以及类eval问题" class="headerlink" title="2、eval以及类eval问题"></a><strong>2、eval以及类eval问题</strong></h4><p>我们都知道eval可以将一段字符串当做js代码来执行处理，据说使用eval执行的代码比不使用eval的代码慢100倍以上（具体效率我没有测试，有兴趣同学可以测试一下）</p>
+<p>JavaScript 代码在执行前会进行类似“预编译”的操作：首先会创建一个当前执行环境下的活动对象，并将那些用 var 申明的变量设置为活动对象的属性，但是此时这些变量的赋值都是 undefined，并将那些以 function 定义的函数也添加为活动对象的属性，而且它们的值正是函数的定义。但是，如果你使用了“eval”，则“eval”中的代码（实际上为字符串）无法预先识别其上下文，无法被提前解析和优化，即无法进行预编译的操作。所以，其性能也会大幅度降低</p>
+<p>其实现在大家一般都很少会用eval了，这里我想说的是两个类eval的场景(new Function{},setTimeout,setInterver)</p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">setTimtout(&quot;alert(1)&quot;,1000);</span><br><span class="line"></span><br><span class="line">setInterver(&quot;alert(1)&quot;,1000);</span><br><span class="line"></span><br><span class="line">(new Function(&quot;alert(1)&quot;))();</span><br></pre></td></tr></table></figure>
+
+<p>上述几种类型代码执行效率都会比较低，因此建议直接传入匿名方法、或者方法的引用给setTimeout方法</p>
+<p><strong>3、闭包结束后释放掉不再被引用的变量</strong></p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">var f &#x3D; (function()&#123;</span><br><span class="line">    var a &#x3D; &#123;name:&quot;var3&quot;&#125;;</span><br><span class="line">    var b &#x3D; [&quot;var1&quot;,&quot;var2&quot;];</span><br><span class="line">    var c &#x3D; document.getElementByTagName(&quot;li&quot;);</span><br><span class="line">    &#x2F;&#x2F;****其它变量</span><br><span class="line">    &#x2F;&#x2F;***一些运算</span><br><span class="line">    var res &#x3D; function()&#123;</span><br><span class="line">        alert(a.name);</span><br><span class="line">    &#125;</span><br><span class="line">    return res;</span><br><span class="line">&#125;)()</span><br></pre></td></tr></table></figure>
+
+<p>上述代码中变量f的返回值是由一个立即执行函数构成的闭包中返回的方法res，该变量保留了对于这个闭包中所有变量（a,b,c等）的引用，因此这两个变量会一直驻留在内存空间中,尤其是对于dom元素的引用对内存的消耗会很大，而我们在res中只使用到了a变量的值，因此，在闭包返回前我们可以将其它变量释放</p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">var f &#x3D; (function()&#123;</span><br><span class="line">    var a &#x3D; &#123;name:&quot;var3&quot;&#125;;</span><br><span class="line">    var b &#x3D; [&quot;var1&quot;,&quot;var2&quot;];</span><br><span class="line">    var c &#x3D; document.getElementByTagName(&quot;li&quot;);</span><br><span class="line">    &#x2F;&#x2F;****其它变量</span><br><span class="line">    &#x2F;&#x2F;***一些运算</span><br><span class="line">    &#x2F;&#x2F;闭包返回前释放掉不再使用的变量</span><br><span class="line">    b &#x3D; c &#x3D; null;</span><br><span class="line">    var res &#x3D; function()&#123;</span><br><span class="line">        alert(a.name);</span><br><span class="line">        &#125;</span><br><span class="line">    return res;</span><br><span class="line">&#125;)()</span><br></pre></td></tr></table></figure>
+
+<hr>
+<h2 id="Js操作dom的效率"><a href="#Js操作dom的效率" class="headerlink" title="Js操作dom的效率"></a><strong>Js操作dom的效率</strong></h2><p>在web开发过程中，前端执行效率的瓶颈往往都是在dom操作上面，dom操作是一件很耗性能的事情，如何才能在dom操作过程中尽量节约性能呢？</p>
+<h4 id="1、减少reflow"><a href="#1、减少reflow" class="headerlink" title="1、减少reflow"></a><strong>1、减少reflow</strong></h4><h6 id="什么是reflow？"><a href="#什么是reflow？" class="headerlink" title="什么是reflow？"></a><strong>什么是reflow？</strong></h6><p>当 DOM 元素的属性发生变化 (如 color) 时, 浏览器会通知 render 重新描绘相应的元素, 此过程称为 repaint。</p>
+<p>如果该次变化涉及元素布局 (如 width), 浏览器则抛弃原有属性, 重新计算并把结果传递给 render 以重新描绘页面元素, 此过程称为 reflow。</p>
+<h6 id="减少reflow的方法"><a href="#减少reflow的方法" class="headerlink" title="减少reflow的方法"></a><strong>减少reflow的方法</strong></h6><ol>
+<li> 先将元素从document中删除，完成修改后再把元素放回原来的位置（当对某元素及其子元素进行大量reflow操作时，1,2两种方法效果才会比较明显）</li>
+<li> 将元素的display设置为”none”，完成修改后再把display修改为原来的值</li>
+<li> 修改多个样式属性时定义class类代替多次修改style属性（for certain同学推荐）</li>
+<li> 大量添加元素到页面时使用documentFragment</li>
+</ol>
+<p>例如</p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">for(var i&#x3D;0;i&lt;100:i++)&#123;</span><br><span class="line">    var child &#x3D; docuemnt.createElement(&quot;li&quot;);</span><br><span class="line">    child.innerHtml &#x3D; &quot;child&quot;;</span><br><span class="line">    document.getElementById(&quot;parent&quot;).appendChild(child);</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<p>上述代码会多次操作dom，效率比较低，可以改为下面的形式 创建documentFragment，将所有元素加入到docuemntFragment不会改变dom结构，最后将其添加到页面，只进行了一次reflow</p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">var frag &#x3D; document.createDocumentFragment();</span><br><span class="line">for(var i&#x3D;0;i&lt;100:i++)&#123;</span><br><span class="line">        var child &#x3D; docuemnt.createElement(&quot;li&quot;);</span><br><span class="line">        child.innerHtml &#x3D; &quot;child&quot;;</span><br><span class="line">    frag.appendChild(child);</span><br><span class="line">&#125;</span><br><span class="line">document.getElementById(&quot;parent&quot;).appendChild(frag);</span><br></pre></td></tr></table></figure>
+
+<h4 id="2、暂存dom状态信息"><a href="#2、暂存dom状态信息" class="headerlink" title="2、暂存dom状态信息"></a><strong>2、暂存dom状态信息</strong></h4><p>当代码中需要多次访问元素的状态信息，在状态不变的情况下我们可以将其暂存到变量中，这样可以避免多次访问dom带来内存的开销，典型的例子就是：</p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">ar lis &#x3D; document.getElementByTagName(&quot;li&quot;);</span><br><span class="line">for(var i&#x3D;1;i&lt;lis.length;i++)&#123;</span><br><span class="line">    &#x2F;&#x2F;***</span><br><span class="line">&#125;</span><br><span class="line">上述方式会在每一次循环都去访问dom元素，我们可以简单将代码优化如下</span><br><span class="line">var lis &#x3D; document.getElementByTagName(&quot;li&quot;);</span><br><span class="line">for(var i&#x3D;1,j&#x3D;lis.length ;i&lt;j;i++)&#123;</span><br><span class="line">    &#x2F;&#x2F;***</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<h4 id="3、缩小选择器的查找范围"><a href="#3、缩小选择器的查找范围" class="headerlink" title="3、缩小选择器的查找范围"></a><strong>3、缩小选择器的查找范围</strong></h4><p>查找dom元素时尽量避免大面积遍历页面元素，尽量使用精准选择器，或者指定上下文以缩小查找范围，以jquery为例</p>
+<ul>
+<li>  少用模糊匹配的选择器：例如$(“[name*=’_fix’]”)，多用诸如id以及逐步缩小范围的复合选择器$(“li.active”)等</li>
+<li>  指定上下文：例如$(“#parent .class”)，$(“.class”,$el)等</li>
+</ul>
+<h4 id="4、使用事件委托"><a href="#4、使用事件委托" class="headerlink" title="4、使用事件委托"></a><strong>4、使用事件委托</strong></h4><p><strong>使用场景：</strong>一个有大量记录的列表，每条记录都需要绑定点击事件，在鼠标点击后实现某些功能，我们通常的做法是给每条记录都绑定监听事件，这种做法会导致页面会有大量的事件监听器，效率比较低下。</p>
+<p><strong>基本原理</strong>：我们都知道dom规范中事件是会冒泡的，也就是说在不主动阻止事件冒泡的情况下任何一个元素的事件都会按照dom树的结构逐级冒泡至顶端。而event对象中也提供了event.target（IE下是srcElement）指向事件源，因此我们即使在父级元素上监听该事件也可以找到触发该事件的最原始的元素，这就是委托的基本原理。废话不多说，上示例</p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">$(&quot;ul li&quot;).bind(&quot;click&quot;,function()&#123;</span><br><span class="line">    alert($(this).attr(&quot;data&quot;));</span><br><span class="line">&#125;)</span><br></pre></td></tr></table></figure>
+
+<p>上述写法其实是给所有的li元素都绑定了click事件来监听鼠标点击每一个元素的事件，这样页面上会有大量的事件监听器。</p>
+<p>根据上面介绍的监听事件的原理我们来改写一下</p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">$(&quot;ul&quot;).bind(&quot;click&quot;,function(e)&#123;</span><br><span class="line">    if(e.target.nodeName.toLowerCase() &#x3D;&#x3D;&#x3D;&quot;li&quot;)&#123;</span><br><span class="line">        alert($(e.target).attr(&quot;data&quot;));</span><br><span class="line">    &#125;</span><br><span class="line">&#125;)</span><br></pre></td></tr></table></figure>
+
+<p>这样一来，我们就可以只添加一个事件监听器去捕获所有li上触发的事件，并做出相应的操作。</p>
+<p>当然，我们不必每次都做事件源的判断工作，可以将其抽象一下交给工具类来完成。jquery中的delegate()方法就实现了该功能</p>
+<p>语法是这样的$(selector).delegate(childSelector,event,data,function)，例如：</p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">$(&quot;div&quot;).delegate(&quot;button&quot;,&quot;click&quot;,function()&#123;</span><br><span class="line">  $(&quot;p&quot;).slideToggle();</span><br><span class="line">&#125;);</span><br></pre></td></tr></table></figure>
+
+<p>参数说明（引自w3school）</p>
+<p><img src="https://upload-images.jianshu.io/upload_images/10024246-bc187628fe535bc2.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="图片描述" title="Javascript执行效率小结_"></p>
+<p>**Tips:**事件委托还有一个好处就是，即使在事件绑定之后动态添加的元素上触发的事件同样可以监听到哦，这样就不用在每次动态加入元素到页面后都为其绑定事件了</p>
+<p>暂时先总结到这。</p>
+<hr>
+<p>原文来自：<a href="http://www.cnblogs.com/gewei/archive/2013/03/29/2988180.html">www.cnblogs.com/gewei/archive/2013/03/29/2988180.html</a></p>
+]]></content>
+      <categories>
+        <category>javascript</category>
+      </categories>
+  </entry>
+  <entry>
+    <title>Taro 3.2.0 正式版发布，支持 React Native</title>
+    <url>/nirvana/javascript/%E5%89%8D%E7%AB%AF/Taro%203.2.0%20%E6%AD%A3%E5%BC%8F%E7%89%88%E5%8F%91%E5%B8%83%EF%BC%8C%E6%94%AF%E6%8C%81%20React%20Native/</url>
+    <content><![CDATA[<p>Taro 是一个开放式跨端跨框架解决方案，支持使用 React/Vue/Nerv 等框架来开发微信/京东/百度/支付宝/字节跳动/ QQ 小程序/H5 等应用，现已发布 3.2.0 正式版，主要更新内容如下：</p>
+<ul>
+<li>简化编译过程，大大提升了 React Native 编译速度</li>
+<li>source-map 支持</li>
+<li>多 React Native 版本支持，拥抱最新版 0.64</li>
+<li>更丰富API与组件</li>
+<li>API与组件按需引入</li>
+</ul>
+]]></content>
+      <categories>
+        <category>javascript</category>
+      </categories>
+  </entry>
+  <entry>
+    <title>chrome新增功能：分组和排列</title>
+    <url>/nirvana/javascript/%E5%89%8D%E7%AB%AF/chrome%E6%96%B0%E5%A2%9E%E5%8A%9F%E8%83%BD%EF%BC%9A%E5%88%86%E7%BB%84%E5%92%8C%E6%8E%92%E5%88%97/</url>
+    <content><![CDATA[<h2 id="标签页分组"><a href="#标签页分组" class="headerlink" title="标签页分组"></a>标签页分组</h2><hr>
+<p>当打开多个标签页时遇到需要对打开的标签页进行管理， Google 加入了对标签页分组这项新功能，通过将相同类型的标签页放置在同一标签页组内，通过颜色名称等标记标签页栏，从而将不同的标签页明显地区别出来，对比此前都是同一颜色的标签页，显然在使用上要高效得多。<br><img src="https://upload-images.jianshu.io/upload_images/10024246-4ce13c576433f407.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240"></p>
+<h5 id="为标签页分组"><a href="#为标签页分组" class="headerlink" title="为标签页分组"></a>为标签页分组</h5><ol>
+<li> 打开 <a href="https://chrome.google.com/">Chrome 浏览器</a>。</li>
+<li> 点击“打开新的标签页”按钮 </li>
+<li>根据需要执行相应操作：<ul>
+<li>  要将某个标签页添加到现有群组，请将此标签页拖入该群组。</li>
+<li>要将某个标签页添加到新的群组中，请执行以下操作：<ol>
+<li>点击“打开新的标签页”按钮 <br>  右键点击相应标签页 <br>  选择<strong>向新群组中添加标签页</strong>。</li>
+<li> 输入群组名称。</li>
+<li>（可选）您还可以执行以下操作：<ul>
+<li>  为相应标签页选择一种颜色。</li>
+<li>  向该群组添加更多标签页。</li>
+<li>  移除该群组。</li>
+</ul>
+</li>
+</ol>
+</li>
+</ul>
+</li>
+</ol>
+<h3 id="排列标签页"><a href="#排列标签页" class="headerlink" title="排列标签页"></a>排列标签页</h3><ul>
+<li>  <strong>要更改标签页的排列顺序</strong>，请沿浏览器窗口顶部拖动标签页。</li>
+<li>  <strong>要将某个标签页固定到左侧</strong>，请右键点击该标签页，然后选择<strong>固定</strong>。已固定标签页的尺寸较小，并且只显示网站的图标。</li>
+<li>  <strong>要取消固定某个标签页</strong>，请右键点击该标签页，然后选择<strong>取消固定</strong>。</li>
+<li>  <strong>要将标签页移到其他窗口</strong>，请右键点击该标签页，然后选择<strong>将标签页移至新窗口</strong>。</li>
+</ul>
+]]></content>
+      <categories>
+        <category>javascript</category>
+      </categories>
+  </entry>
+  <entry>
+    <title>Nodejs读取目录下的文件并编辑</title>
+    <url>/nirvana/javascript/%E5%89%8D%E7%AB%AF/nodereadfile/</url>
+    <content><![CDATA[<p>node下读取和编辑文件都是使用<code>fs</code>组件</p>
+<h2 id="引用模块"><a href="#引用模块" class="headerlink" title="引用模块"></a>引用模块</h2><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">const fs &#x3D; require(&#39;fs&#39;);</span><br></pre></td></tr></table></figure>
+<h2 id="读取文件夹"><a href="#读取文件夹" class="headerlink" title="读取文件夹"></a>读取文件夹</h2><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">&#x2F;**</span><br><span class="line">* path - 文件路径。</span><br><span class="line">* callback - 回调函数，回调函数带有两个参数err, files，err 为错误信息，files 为 目录下的文件数组列表。</span><br><span class="line">**&#x2F;</span><br><span class="line"></span><br><span class="line">fs.readdir(path, callback)</span><br><span class="line">#异步 readdir(3). 读取目录的内容。</span><br><span class="line">fs.readdirSync(path)</span><br><span class="line">#同步 readdir().返回文件数组列表。</span><br><span class="line"></span><br><span class="line">&#x2F;&#x2F;demo</span><br><span class="line">const fs &#x3D; require(&#39;fs&#39;);</span><br><span class="line">const path &#x3D; require(&#39;path&#39;);</span><br><span class="line">fs.readdir(pathName, function(err, files)&#123;</span><br><span class="line">    var dirs &#x3D; [];</span><br><span class="line">    (function iterator(i)&#123;</span><br><span class="line">      if(i &#x3D;&#x3D; files.length) &#123;</span><br><span class="line">        console.log(dirs);</span><br><span class="line">      &#125;</span><br><span class="line">      fs.stat(path.join(pathName, files[i]), function(err, data)&#123;     </span><br><span class="line">        if(data.isFile())&#123;               </span><br><span class="line">            dirs.push(files[i]);</span><br><span class="line">            iterator(i+1);</span><br><span class="line">       &#125;);   </span><br><span class="line">    &#125;)(0);</span><br><span class="line">&#125;);</span><br></pre></td></tr></table></figure>
+
+<h2 id="编辑文件"><a href="#编辑文件" class="headerlink" title="编辑文件"></a>编辑文件</h2><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">var fs &#x3D; require(&quot;fs&quot;);</span><br><span class="line"></span><br><span class="line">&#x2F;&#x2F; 异步读取</span><br><span class="line">fs.readFile(&#39;input.txt&#39;, function (err, data) &#123;</span><br><span class="line">   if (err) &#123;</span><br><span class="line">       return console.error(err);</span><br><span class="line">   &#125;</span><br><span class="line">   console.log(&quot;异步读取: &quot; + data.toString());</span><br><span class="line">&#125;);</span><br><span class="line"></span><br><span class="line">&#x2F;&#x2F; 同步读取</span><br><span class="line">var data &#x3D; fs.readFileSync(&#39;input.txt&#39;);</span><br><span class="line">console.log(&quot;同步读取: &quot; + data.toString());</span><br><span class="line"></span><br><span class="line">console.log(&quot;程序执行完毕。&quot;);</span><br></pre></td></tr></table></figure>
+]]></content>
+      <categories>
+        <category>javascript</category>
+      </categories>
+  </entry>
+  <entry>
+    <title>socke.io.emit 方法</title>
+    <url>/nirvana/javascript/%E5%89%8D%E7%AB%AF/socke_io_emit/</url>
+    <content><![CDATA[<p>emit可以很方便的发送数据,例如：</p>
+<ul>
+<li><p>socket.emit(‘action’):<br>表示发送了一个action命令，命令是字符串的，在另一端接收时，可以这么写： socket.on(‘action’,function(){…});</p>
+</li>
+<li><p>socket.emit(‘action’,data)<br>表示发送了一个action命令，还有data数据，在另一端接收时，可以这么写： socket.on(‘action’,function(data){…});</p>
+</li>
+<li><p>socket.emit(action,arg1,arg2)<br>表示发送了一个action命令，还有两个数据，在另一端接收时，可以这么写： socket.on(‘action’,function(arg1,arg2){…});</p>
+</li>
+<li><p>socket.emit(action,arg1,arg2,arg3,arg4); 是多个参数<br>在emit方法中包含回调函数，例如：</p>
+</li>
+<li><p>socket.emit(‘action’,data, function(arg1,arg2){…} );<br>回调函数可以在另一端调用，另一端可以这么写：socket.on(‘action’,function(data,fn){   fn(‘a’,’b’) ;  });</p>
+</li>
+</ul>
+<p>上面的data数据可以有0个或者多个，相应的在另一端改变function中参数的个数即可，function中的参数个数和顺序应该和发送时一致<br>上面的fn表示另一个端传递过来的参数，是个函数，写fn(‘a’,’b’) ;会回调函数执行。一次发送不应该写多个回调，否则只有最后一个起效，回调应作为最后一个参数。</p>
+<p>例子：一个js文件(内容是下面的服务器端)，同一目录下放一个helloworld.html文件(内容是下面的客户端)，启动服务器，访问<a href="http://127.0.0.1/">http://127.0.0.1/</a></p>
+<h5 id="客户端："><a href="#客户端：" class="headerlink" title="客户端："></a>客户端：</h5><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">&lt;!DOCTYPE HTML PUBLIC &quot;-&#x2F;&#x2F;W3C&#x2F;&#x2F;DTD HTML 4.01 Transitional&#x2F;&#x2F;EN&quot; &quot;http:&#x2F;&#x2F;www.w3.org&#x2F;TR&#x2F;html4&#x2F;loose.dtd&quot;&gt;</span><br><span class="line">&lt;html&gt;</span><br><span class="line"> &lt;head&gt;</span><br><span class="line">  &lt;title&gt; New Document &lt;&#x2F;title&gt;</span><br><span class="line">  &lt;meta name&#x3D;&quot;Generator&quot; content&#x3D;&quot;EditPlus&quot;&gt;</span><br><span class="line">  &lt;meta name&#x3D;&quot;Author&quot; content&#x3D;&quot;&quot;&gt;</span><br><span class="line">  &lt;meta name&#x3D;&quot;Keywords&quot; content&#x3D;&quot;&quot;&gt;</span><br><span class="line">  &lt;meta name&#x3D;&quot;Description&quot; content&#x3D;&quot;&quot;&gt;</span><br><span class="line"> &lt;&#x2F;head&gt;</span><br><span class="line">	&lt;script src&#x3D;&quot;&#x2F;socket.io&#x2F;socket.io.js&quot;&gt;&lt;&#x2F;script&gt;</span><br><span class="line">&lt;script&gt;</span><br><span class="line">  var socket &#x3D; io.connect(&#39;ws:&#x2F;&#x2F;127.0.0.1&#x2F;&#39;);</span><br><span class="line">  socket.emit(&#39;msg&#39;,&#39;You get my message?&#39;,function(data)&#123;</span><br><span class="line">    alert(data);</span><br><span class="line">   &#125;); </span><br><span class="line">&lt;&#x2F;script&gt;</span><br><span class="line"> &lt;body&gt;</span><br><span class="line"> </span><br><span class="line"> &lt;&#x2F;body&gt;</span><br><span class="line">&lt;&#x2F;html&gt;</span><br></pre></td></tr></table></figure>
+
+<h5 id="服务器端："><a href="#服务器端：" class="headerlink" title="服务器端："></a>服务器端：</h5><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">var server&#x3D;require(&#39;http&#39;).createServer(handler); </span><br><span class="line">var io &#x3D; require(&#39;socket.io&#39;).listen(server);</span><br><span class="line">var fs&#x3D;require(&#39;fs&#39;);</span><br><span class="line">server.listen(80);</span><br><span class="line">function handler(req,res)&#123;</span><br><span class="line">	fs.readFile(__dirname+&#39;&#x2F;helloworld.html&#39;,</span><br><span class="line">	function(err, data)&#123;</span><br><span class="line">		if(err)&#123;</span><br><span class="line">			res.writeHead(500);</span><br><span class="line">			return res.end(&#39;Error loading index.html&#39;);</span><br><span class="line">		&#125;</span><br><span class="line">		res.writeHead(200);</span><br><span class="line">		res.end(data);</span><br><span class="line">	&#125;);</span><br><span class="line">&#125;</span><br><span class="line">io.sockets.on(&#39;connection&#39;, function (socket) &#123;</span><br><span class="line">	  socket.on(&#39;msg&#39;, function (data,fn) &#123;</span><br><span class="line">		console.log(&#39;received message from client:&#39;+data);</span><br><span class="line">		fn(&#39;The server has been successfully received your message:&#39;+data);</span><br><span class="line">	  &#125;); </span><br><span class="line">&#125;);</span><br></pre></td></tr></table></figure>]]></content>
+      <categories>
+        <category>javascript</category>
+      </categories>
+  </entry>
+  <entry>
+    <title>什么是全栈开发者？</title>
+    <url>/nirvana/javascript/%E5%89%8D%E7%AB%AF/%E4%BB%80%E4%B9%88%E6%98%AF%E5%85%A8%E6%A0%88%E5%BC%80%E5%8F%91%E8%80%85%EF%BC%9F/</url>
+    <content><![CDATA[<p>英文原文：What is a Full Stack developer?<br>翻译者来自<a href="http://www.oschina开源社区./">www.oschina开源社区。</a></p>
+<hr>
+<p>最近很流行全栈开发，那么全栈开发者是什么意思呢？</p>
+<p>对我来说全栈开发者是对每一层都熟悉的人，如果不真正对所有的软件技术感兴趣不会对它们精通。<br>好的开发者熟悉整个堆栈，他们是知道如何使生活周边的事更容易的人。这就是为什么在办公室我如此反对偏执的原因，当然，政治及沟通挑战在大型组织中还是按固有的套路。我认为Facebook所持有的招聘政策是：如果聪明的人用脑用心，就能在更短的时间内构件更好的产品。</p>
+<hr>
+<p><strong>全栈的层：</strong></p>
+<p>1、服务器、网络和服务器环境<br>知道哪里可能崩了和为什么会崩，没有什么是理所当然的。<br>适当的使用文件系统，云存储、网络资源，必须具备数据冗余和可用性的概念。<br>知道应用的伸缩性对硬件的需求。<br>什么是多线程和竞争条件？想想看，在开发机上你可能看不到这些，但是现实环境中它们就是会发生。<br>全栈coder还要能与运维并肩作战。提供有价值的错误信息和日志。确保它们是可靠的，因为运维会在你之前看到这些东西。（原文为DevOps）<br>2、数据建模<br>如果数据模型有缺陷，业务逻辑和上层逻辑就要用奇怪的代码（很丑）来弥补数据模型的缺陷。<br>全栈开发者要能够建立合理的、标准的关系模型，包括外键、索引、视图、查找表等。<br>全栈开发者要熟悉非关系型数据存储（应该指的不止是NoSQL），并且知道它们相对关系型存储优势所在。<br>3、业务逻辑<br>应用提供的核心价值。<br>可靠的面向对象技能。<br>可能会用到的框架。<br>4、API层、Action 层、MVC<br>理解外部对数据模型和业务逻辑的操作。<br>该层会有很多框架应用。<br>全栈开发者要具备编写清晰、一致和易用的接口。过高的复杂度让人厌恶。<br>5、UI<br>全栈coder：a)知道如何创建可读的页面布局；b)或者明白自己需要帮助设计师。A或B，关键是要能有好的视觉设计。<br>掌握HTML5和CSS。<br>JS正在逐步成为语言新锐，Javascript的世界里已经完成了很多激动人心的工作（node, backbone, knockout…）。<br>6.用户体验<br>全栈coder要知道用户需要的就是It works！<br>一个好的系统不会废了用户的手腕和眼睛。一个全栈coder会发现和审视需要8次点击、3步操作的流程，并最终把它一键搞定。<br>提供有价值的错误信息。如果崩溃了，就要向用户致歉。有时候程序员会写出让用户自我感觉很二的错误信息。<br>7.知道用户和业务到底要什么<br>现在我们模糊了架构的界限，但却可能远离了实际需求。<br>全栈coder要明确知道用户使用软件时的场景，而且要领会业务。</p>
+<p><strong>关于这个问题的其它方面：</strong><br>编写高质量的单元测试能力。顺便说一下现如今连JS也可以做单元测试了。<br>持续集成。发掘程序构建中重复、可自动化的流程，在一定程度上自动完成测试、文档和部署。<br>对安全性的敏感，不同的层都可能有自己的脆弱点。<br><strong>最后：</strong><br>应用严重依赖一个特定的第三方实现（lib、系统、硬件等）是非常糟糕的实践。全栈开发者要知道了解全面不代表就可以走捷径。当然在抛弃原型法中，他们可以这么干。<br>在技术起步时很需要全栈开发者的多面技能。然而，在团队定型后，会越来越需要专注技能。<br>我不觉得在具备了多语言、多平台甚至跨行业的职业生涯之前，你可以称自己为全栈开发者。全栈远超“高级工程师”，它更接近是多语言的开发者并且能在更高的角度看到之间的关联。注意在我的列表中只有3-5项涉及到编码。</p>
+<hr>
+<p><a href="http://www.oschina.net/translate/what-is-a-full-stack-developer">http://www.oschina.net/translate/what-is-a-full-stack-developer</a></p>
+]]></content>
+      <categories>
+        <category>javascript</category>
+      </categories>
+  </entry>
+  <entry>
+    <title>【译】生产环境下的Node.js——开源监控工具</title>
+    <url>/nirvana/javascript/%E5%89%8D%E7%AB%AF/%E3%80%90%E8%AF%91%E3%80%91%E7%94%9F%E4%BA%A7%E7%8E%AF%E5%A2%83%E4%B8%8B%E7%9A%84Node%E2%80%94%E2%80%94%E5%BC%80%E6%BA%90%E7%9B%91%E6%8E%A7%E5%B7%A5%E5%85%B7/</url>
+    <content><![CDATA[<p>你认为Node.js应用程序可以拥有的最重要的功能是什么？ 是花哨的全文模糊匹配搜索，还是用socket进行实时聊天呢？ 你能告诉我可以添加到Node.js应用中的最高级，最惊人和最吸引人的功能是什么么？</p>
+<p>想知道我的么？<strong>高性能和不间断服务</strong>。高性能应用程序需要做好以下三点：</p>
+<ol>
+<li> 最短的停机时间；</li>
+<li> 可预测的资源使用率；</li>
+<li> 根据负载有效扩展</li>
+</ol>
+<p>在第1部分，<a href="https://sematext.com/blog/top-nodejs-metrics-to-watch/">Node.js要监控的关键指标</a>中，我们讨论了您应该监控的关键Node.js指标，以便了解应用程序的运行状况。 我还解释了你应该避免的Node.js中的错误做法，例如阻塞线程和造成内存泄漏，还有一些巧妙的技巧可以用来提高应用程序的性能，比如使用集群模块创建工作进程和将长时间运行的任务从主线程分离开来用独立线程运行。</p>
+<p>在本文中，我将描述如何使用5种不同的开源工具监控Node.js应用程序。它们可能没有像<code>Sematext</code>或<code>Datadog</code>那样功能全面，但它们是开源产品，可以完全由自己控制。</p>
+<p><img src="https://upload-images.jianshu.io/upload_images/10024246-2cb6935ebf2df783.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240"></p>
+<h2 id="Appmetrics"><a href="#Appmetrics" class="headerlink" title="Appmetrics"></a>Appmetrics</h2><p>Node应用指标监控看板显示了运行中的Node.js应用程序的性能数据。这是一个简单的模块，在Node.js入口文件的顶部应用并初始化。你可以通过在终端中运行以下命令从npm安装。</p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">$ npm install appmetrics-dash</span><br><span class="line">复制代码</span><br></pre></td></tr></table></figure>
+
+<p>Appmetrics提供了一个非常易于使用的Web仪表板。为了获得所有由应用程序创建的HTTP服务的仪表板，你需要做的是在app.js(或者以其他命名的入口文件)文件中添加以下代码段。</p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">&#x2F;&#x2F; Before all other &#39;require&#39; statements</span><br><span class="line">require(&#39;appmetrics-dash&#39;).attach()</span><br><span class="line">复制代码</span><br></pre></td></tr></table></figure>
+
+<p>之后你将通过这个请求路径<code>/appmetrics-dash</code>中看到大量有用的指标。</p>
+<ul>
+<li>  CPU Profiling</li>
+<li>  HTTP传入请求</li>
+<li>  HTTP吞吐量</li>
+<li>  平均响应时间（前5名）</li>
+<li>  CPU</li>
+<li>  内存</li>
+<li>  堆（Heap)</li>
+<li>  事件循环时间（Event Loop Times）</li>
+<li>  环境</li>
+<li>  其他请求</li>
+<li>  HTTP出站请求</li>
+</ul>
+<p>此工具不仅显示指标。它允许您直接从仪表板生成Node.js报告和堆快照(Heap Snapshots)。 除此之外，您还可以使用Flame Graphs,非常酷的开源工具。</p>
+<p><img src="https://upload-images.jianshu.io/upload_images/10024246-78124460b252f2d6.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240"></p>
+<h2 id="Express-Status-Monitor"><a href="#Express-Status-Monitor" class="headerlink" title="Express Status Monitor"></a>Express Status Monitor</h2><p>Express.js是当前Node.js开发人员的的首选框架。 <a href="https://github.com/RafalWilinski/express-status-monitor">Express Status Monitor</a>是一个非常简单的独立模块，您可以将其添加到Express应用。它公开了一个<code>/status</code>路由，在Socket.io和Chart.js的帮助下报告实时服务器指标。</p>
+<p>从npm安装即可。</p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">$ npm install express-status-monitor</span><br><span class="line">复制代码</span><br></pre></td></tr></table></figure>
+
+<p>安装完这个模块之后，你需要在其他中间件或者路由之前添加它。</p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">app.use(require(&#39;express-status-monitor&#39;)())</span><br><span class="line">复制代码</span><br></pre></td></tr></table></figure>
+
+<p>之后一旦你运行你的应用，你就可以通过<code>/status</code>路由检查你的Node.js指标。</p>
+<p><img src="https://upload-images.jianshu.io/upload_images/10024246-7351c6135a0f03ec.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240"></p>
+<h2 id="Prometheus"><a href="#Prometheus" class="headerlink" title="Prometheus"></a>Prometheus</h2><p>除非你生活在原始时代，不然你一定听说过<a href="https://prometheus.io/">Prometheus</a>。这是目前我们能使用的最著名的开源监控工具。Prometheus 100%开源并由社区驱动。所有的组件在遵从Apache 2 License开源协议并可以从GitHub下载。它是由<a href="https://cncf.io/">CNCF</a>（Cloud Native Computing Foundation）管理并已经毕业<a href="https://www.cncf.io/projects/">成员项目</a>之一，跟它同样的成员项目包括<code>Kubernetes</code>和<code>Fluentd</code>等。</p>
+<p>要开始使用Prometheus进行监控，您需要下载最新版本并进行安装。</p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">$ tar xvfz prometheus-\*.tar.gz</span><br><span class="line">$ cd prometheus-\*</span><br><span class="line">复制代码</span><br></pre></td></tr></table></figure>
+
+<p>然后通过运行可执行文件启动它，但在运行此命令之前，需要创建一个<code>prometheus.yml</code>文件。 它是一个配置文件，用于配置在哪些targets上，通过抓取HTTP端点数据监控哪些指标。</p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line"># prometheus.yml</span><br><span class="line">scrape_configs:</span><br><span class="line">  - job_name: &#39;prometheus&#39;</span><br><span class="line">    scrape_interval: 1s</span><br><span class="line">    static_configs:</span><br><span class="line">      - targets: [&#39;127.0.0.1:3000&#39;]</span><br><span class="line">        labels:</span><br><span class="line">          service: &#39;test-prom&#39;</span><br><span class="line">          group: &#39;production&#39;</span><br><span class="line">复制代码</span><br></pre></td></tr></table></figure>
+
+<p>现在你可以使用Prometheus了。</p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">$ .&#x2F;prometheus --config.file&#x3D;prometheus.yml</span><br><span class="line">复制代码</span><br></pre></td></tr></table></figure>
+
+<p>但是，我很懒，而且我非常喜欢Docker。 所以我的做法是运行官方的<a href="https://hub.docker.com/r/prom/prometheus/">Prometheus Docker镜像</a>，避免下载它的所有麻烦。</p>
+<h2 id="Prometheus-and-Docker"><a href="#Prometheus-and-Docker" class="headerlink" title="Prometheus and Docker"></a>Prometheus and Docker</h2><p>首先，进到Node.js应用程序的根目录。在这里，创建一个<code>prometheus-data</code>目录并将<code>prometheus.yml</code>文件放入其中。完成此操作后，运行Prometheus Docker容器。</p>
+<p>获取正式的Prometheus Docker镜像并使用docker run命令运行该镜像。</p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">$ docker run -d \</span><br><span class="line">    --name prometheus \</span><br><span class="line">    --network&#x3D;&quot;host&quot; \</span><br><span class="line">    -v &quot;$(pwd)&#x2F;prometheus-data&quot;:&#x2F;prometheus-data \</span><br><span class="line">    prom&#x2F;prometheus \</span><br><span class="line">    --config.file&#x3D;&#x2F;prometheus-data&#x2F;prometheus.yml</span><br><span class="line">复制代码</span><br></pre></td></tr></table></figure>
+
+<p>我选择使用-network =“host”运行容器，让Prometheus容器可以通过本机localhost地址访问，并且这样做，Node.js应用程序的也能通过本机HTTP端口访问到。否则，如果你将Prometheus和Node.js分别运行在容器内，则需要在两者之间建立一个<a href="https://docs.docker.com/network/bridge/">网络</a>，以便彼此之间只能相互访问到。</p>
+<p><code>-v</code>选项用于将<code>prometheus-data</code>目录从主机映射到容器内的同名目录。</p>
+<p>在Prometheus容器运行后，需要在Node.js应用程序中添加配置的代码以暴露一个监控数据接口。 首先需要从npm安装适用于Node.js的<a href="https://www.npmjs.com/package/prom-client">Prometheus客户端</a>。</p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">$ npm install prom-client</span><br><span class="line">复制代码</span><br></pre></td></tr></table></figure>
+
+<p>接在添加相关Prometheus相关配置代码</p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">&#x2F;&#x2F; after all &#39;require&#39; statements</span><br><span class="line">const client &#x3D; require(&#39;prom-client&#39;)</span><br><span class="line">const collectDefaultMetrics &#x3D; client.collectDefaultMetrics</span><br><span class="line">collectDefaultMetrics(&#123; timeout: 1000 &#125;)</span><br><span class="line">app.get(&#39;&#x2F;metrics&#39;, (req, res) &#x3D;&gt; &#123;</span><br><span class="line">  res.set(&#39;Content-Type&#39;, client.register.contentType)</span><br><span class="line">  res.end(client.register.metrics())</span><br><span class="line">&#125;)</span><br><span class="line">复制代码</span><br></pre></td></tr></table></figure>
+
+<p>接下来你只需运行Node.js应用之后，通过<code>http://localhost:9090/graph</code>就可以看到Prometheus图表</p>
+<p><img src="https://upload-images.jianshu.io/upload_images/10024246-9476399a27b7749c.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240"></p>
+<h2 id="Clinic-js"><a href="#Clinic-js" class="headerlink" title="Clinic.js"></a>Clinic.js</h2><p>Clinic.js包含三个工具，可帮助诊断和查明Node.js性能问题。它的使用非常简单。你需要做的就是从npm安装模块并运行它。它将为您生成报告，使故障排除变得更加容易。</p>
+<p>使用如下命令安装Clinic.js</p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">$ npm install clinic</span><br><span class="line">复制代码</span><br></pre></td></tr></table></figure>
+
+<p>一旦安装完毕，就可以选择要生成的报告类型了。你可以选择以下三种报告类型。</p>
+<ul>
+<li>Doctor<ol>
+<li> 通过注入探针来收集指标</li>
+<li> 评估健康和启发式</li>
+<li> 提供修复推荐</li>
+</ol>
+</li>
+<li>Bubbleprof- 一种全新的，完全独特的方法来分析Node.js代码<ol>
+<li> 使用async_hooks收集指标</li>
+<li> 跟踪操作之间的延迟</li>
+<li> 创建气泡图</li>
+</ol>
+</li>
+<li>Flame - 使用火焰图揭示代码中的瓶颈和热路径<ol>
+<li> 通过CPU采样收集指标</li>
+<li> 跟踪栈顶频率</li>
+<li> 创建火焰图</li>
+</ol>
+</li>
+</ul>
+<p>让我们从运行Doctor并测试node.js应用程序开始。</p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">$ clinic doctor -- node app.js</span><br><span class="line">复制代码</span><br></pre></td></tr></table></figure>
+
+<p>在程序运行时，使用压测工具运行负载测试。</p>
+<p><img src="https://upload-images.jianshu.io/upload_images/10024246-bd3a71c2bc4a339e.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240"></p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">$ loadtest -n 1000 -c 100 [http:&#x2F;&#x2F;localhost:3000&#x2F;api](http:&#x2F;&#x2F;localhost:3000&#x2F;api)</span><br><span class="line">复制代码</span><br></pre></td></tr></table></figure>
+
+<p>一旦完成运行，停止服务器和Clinic.js Doctor将打开您可以查看的报告。</p>
+<p>使用相同的方法，您可以运行Bubbleprof或Flame并获取相应工具的图形报告。</p>
+<p><img src="https://upload-images.jianshu.io/upload_images/10024246-765b447fe955aec8.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240"><br><img src="https://upload-images.jianshu.io/upload_images/10024246-530a6b47fb727c99.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240"></p>
+<h2 id="PM2"><a href="#PM2" class="headerlink" title="PM2"></a>PM2</h2><p>使用PM2在生产中运行Node.js应用程序变得更加容易。 它是一个进程管理器，可以轻松地让您以集群模式运行应用程序。通俗来说，它将为您的主机每个CPU核心都生成一个进程。</p>
+<p>首先安装<a href="https://www.npmjs.com/package/pm2">PM2</a></p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">$ npm install pm2 -g</span><br><span class="line">复制代码</span><br></pre></td></tr></table></figure>
+
+<p>安装完成后，如果您的主源文件是app.js，则通过在终端中运行此命令来生成PM2守护程序。</p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">$ pm2 start app.js -i 0</span><br><span class="line">复制代码</span><br></pre></td></tr></table></figure>
+
+<p><code>-i 0</code>标志实例个数。这将以集群模式运行Node.js应用程序，其中数字0表示CPU核心数。你可以手动输入你想要的任何数字，但让PM2计算核心个数并自动产生相应个数的工作进程更简单些。</p>
+<p>使用PM2查看<a href="https://github.com/Unitech/pm2">Node.js监控数据</a>也很容易</p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">$ pm2 monit</span><br><span class="line">复制代码</span><br></pre></td></tr></table></figure>
+
+<p>此命令将在终端中打开仪表板。在这里，您可以监视进程，日志，循环延迟，进程内存和CPU。</p>
+<p><img src="https://upload-images.jianshu.io/upload_images/10024246-a0830b788f0a2447.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240"></p>
+<h2 id="使用开源工具将监控Node-js方案进行包装"><a href="#使用开源工具将监控Node-js方案进行包装" class="headerlink" title="使用开源工具将监控Node.js方案进行包装"></a>使用开源工具将监控Node.js方案进行包装</h2><p>性能指标对于让用户满意至关重要。在本文中，我向您展示了如何使用5种不同的开源工具向Node.js应用程序添加监视。 在了解了本系列第1部分<a href="https://sematext.com/blog/top-nodejs-metrics-to-watch/">Node.js要监控的关键指标</a>之后，添加工具来监控现实生活中的应用程序是自然的学习进程。 本系列的最后一部分将介绍<a href="https://sematext.com/blog/nodejs-monitoring-made-easy-with-sematext/">使用Sematext进行生产环境下Node.js监控</a>。</p>
+<p>如果你想查看示例代码，这里是一个包含所有的<a href="https://github.com/adnanrahic/nodejs-monitoring-sematext/tree/develop">实例代码 repo</a>。你还可以克隆下来并选择任何工具打开。</p>
+<p>如果你需要更多软件的全栈可观察性，请查看<a href="https://sematext.com/">Sematext</a>。 我们正在推动<a href="https://github.com/sematext">开源我们的产品</a>并产生影响。</p>
+<p>原文：<a href="https://dev.to/sematext/node-js-open-source-monitoring-tools-440a">Node.js Open-Source Monitoring Tools</a></p>
+<h2 id="参考资料"><a href="#参考资料" class="headerlink" title="参考资料"></a>参考资料</h2><ul>
+<li>  <a href="https://www.ctolib.com/docs/sfile/prometheus-book/index.html">Prometheus操作指南</a></li>
+<li>  <a href="https://www.ibm.com/developerworks/cn/cloud/library/cl-lo-prometheus-getting-started-and-practice/">Prometheus 入门与实践</a></li>
+</ul>
+</article>
+
+<p>作者：Make_a_decision<br>链接：<a href="https://juejin.cn/post/6844903859479904264">https://juejin.cn/post/6844903859479904264</a><br>来源：掘金<br>著作权归作者所有。商业转载请联系作者获得授权，非商业转载请注明出处。</p>
+]]></content>
+      <categories>
+        <category>javascript</category>
+      </categories>
+  </entry>
+  <entry>
+    <title>你必须知道的CSS权重</title>
+    <url>/nirvana/javascript/%E5%89%8D%E7%AB%AF/%E4%BD%A0%E5%BF%85%E9%A1%BB%E7%9F%A5%E9%81%93%E7%9A%84CSS%E6%9D%83%E9%87%8D/</url>
+    <content><![CDATA[<h1 id="层叠"><a href="#层叠" class="headerlink" title="层叠"></a>层叠</h1><p>我们都知道CSS的全称是<code>Cascading Style Sheets</code> 也就是<code>层叠样式表</code></p>
+<p>那么当多个选择器同时选中一个元素时 会发生什么呢</p>
+<p>这就是CSS需要解决的问题</p>
+<ul>
+<li><p>  <code>声明冲突</code>：同一个样式，多次应用到同一个元素</p>
+</li>
+<li><p>  <code>层叠</code>：<code>解决声明冲突的过程</code>，浏览器自动处理（<code>权重计算</code>）</p>
+</li>
+</ul>
+<hr>
+<h2 id="1-比较重要性"><a href="#1-比较重要性" class="headerlink" title="1. 比较重要性"></a>1. 比较重要性</h2><p>重要性从高到低：</p>
+<ol>
+<li><p> 作者样式表中的 <code>!important</code>样式</p>
+</li>
+<li><p> 作者样式表中的普通样式</p>
+</li>
+<li><p> 浏览器默认样式表中的样式</p>
+</li>
+</ol>
+<blockquote>
+<p>作者样式表：开发者书写的样式</p>
+</blockquote>
+<hr>
+<ul>
+<li>  我们知道 class 选择器的权重是高于元素选择器的</li>
+</ul>
+<p>但当元素选择器的背景样式设置了 <code>!important</code> 时， <code>重要性变得最高</code>，所以优先显示</p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">&lt;style&gt;</span><br><span class="line">	&#x2F;&#x2F;元素选择器</span><br><span class="line">       div&#123;</span><br><span class="line">           width : 100px;</span><br><span class="line">           height : 100px;</span><br><span class="line">           background: #008c8c !important; </span><br><span class="line">       &#125;</span><br><span class="line">       &#x2F;&#x2F;class选择器</span><br><span class="line">       .box&#123;</span><br><span class="line">           background: red;</span><br><span class="line">       &#125;</span><br><span class="line">   &lt;&#x2F;style&gt;</span><br><span class="line"></span><br></pre></td></tr></table></figure>
+
+<p><img src="https://upload-images.jianshu.io/upload_images/10024246-f18dace6fd391bd2.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240"></p>
+<ul>
+<li>  浏览器默认样式表就是浏览器赋予元素的默认样式</li>
+</ul>
+<p><img src="https://upload-images.jianshu.io/upload_images/10024246-5c456121502d0f93.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="在这里插入图片描述"></p>
+<p>上图右上角的标志就是浏览器的默认样式</p>
+<p><img src="https://upload-images.jianshu.io/upload_images/10024246-d022fb5fbae9dec9.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240"></p>
+<p>浏览器默认样式可以被我们书写的样式覆盖</p>
+<hr>
+<h2 id="2-比较特殊性"><a href="#2-比较特殊性" class="headerlink" title="2. 比较特殊性"></a>2. 比较特殊性</h2><p>看选择器的<code>权重</code>：</p>
+<ul>
+<li><p>  总体规则：选择器选中的范围越窄，权重越大，越特殊</p>
+</li>
+<li><p>具体规则：通过选择器，计算出一个四位数（x x x x）</p>
+<p>  1.千位：如果是内联样式，记1，否则记0 （<code>内联样式权重 ：1000</code>）</p>
+<p>  2.百位：等于选择器中所有id选择器的数量 （<code>id选择器权重 ：100</code>）</p>
+<p>  3.十位：等于选择器中所有类选择器、属性选择器、伪类选择器的数量 （<code>类选择器、属性选择器、伪类选择器的权重 ：10</code>）</p>
+<p>  4.个位：等于元素选择器、伪元素选择器的数量 （ <code>元素、伪元素的权重 ：1</code>）</p>
+</li>
+</ul>
+<blockquote>
+<p>计数规则是逢256进一<br>一般情况下 256个class选择器可以干掉一个id选择器</p>
+</blockquote>
+<hr>
+<ul>
+<li>  id选择器 &gt; class选择器 显示绿色</li>
+</ul>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">.box&#123;</span><br><span class="line">       background: red;</span><br><span class="line">       &#125;</span><br><span class="line">   #box&#123;</span><br><span class="line">       background: green;</span><br><span class="line">   &#125;</span><br><span class="line"></span><br></pre></td></tr></table></figure>
+
+<p><img src="https://upload-images.jianshu.io/upload_images/10024246-150316ad111e2bd9.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240"></p>
+<ul>
+<li>  class选择器 &gt; 元素选择器 显示红色</li>
+</ul>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">div&#123;</span><br><span class="line">       width : 100px;</span><br><span class="line">       height : 100px;</span><br><span class="line">       background: #008c8c; </span><br><span class="line">       display : inline-block;</span><br><span class="line">   &#125;</span><br><span class="line">   .box&#123;</span><br><span class="line">       background: red;</span><br><span class="line">   &#125;</span><br><span class="line"></span><br></pre></td></tr></table></figure>
+
+<p><img src="https://upload-images.jianshu.io/upload_images/10024246-acf09262530ff7bb.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240"></p>
+<ul>
+<li>  权重简单计算 ：权重高的优先显示</li>
+</ul>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">&#x2F;&#x2F;计算四位数：元素选择器有一个十位加1为0010 class选择器有一个百位加1为0110</span><br><span class="line">&#x2F;&#x2F;简单一点 ：div元素选择器权重为10 class选择器为100 加起来就是110</span><br><span class="line">div.box&#123;</span><br><span class="line">       background: red;</span><br><span class="line">   &#125;</span><br><span class="line">   &#x2F;&#x2F;id选择器有一个千位加1为1000</span><br><span class="line">   &#x2F;&#x2F;简单一点 ：id选择器权重为1000</span><br><span class="line">   #box&#123;</span><br><span class="line">       background: green;</span><br><span class="line">   &#125;</span><br><span class="line"></span><br></pre></td></tr></table></figure>
+
+<p><img src="https://upload-images.jianshu.io/upload_images/10024246-0603442fdf3a2e60.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240"></p>
+<ul>
+<li>  剩下的就不一一列举了</li>
+</ul>
+<hr>
+<h2 id="3-比较源次序"><a href="#3-比较源次序" class="headerlink" title="3. 比较源次序"></a>3. 比较源次序</h2><p><code>代码书写靠后的优先</code></p>
+<p>后面的代码会覆盖前面的代码</p>
+<hr>
+<h2 id="比较顺序"><a href="#比较顺序" class="headerlink" title="比较顺序"></a>比较顺序</h2><ul>
+<li>  当重要性一致并且设置的<code>属性冲突</code>时 才会去比较特殊性</li>
+</ul>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">&#x2F;&#x2F;当重要性一致时 id选择器的权重大于class选择器</span><br><span class="line"> .box&#123;</span><br><span class="line">       background: red !important;</span><br><span class="line">    &#125;</span><br><span class="line">    #box&#123;</span><br><span class="line">       background: green !important;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br></pre></td></tr></table></figure>
+
+<p><img src="https://upload-images.jianshu.io/upload_images/10024246-1ae09aac7a39ae82.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="在这里插入图片描述"></p>
+<ul>
+<li>  当特殊性一致时 才会去比较源次序</li>
+</ul>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">&#x2F;&#x2F;当两个都是class选择器时 书写靠后的代码优先显示</span><br><span class="line">.box&#123;</span><br><span class="line">       background: green ;</span><br><span class="line">   &#125;</span><br><span class="line">   .box&#123;</span><br><span class="line">       background: red ;</span><br><span class="line">   &#125;</span><br><span class="line"></span><br></pre></td></tr></table></figure>
+
+<p><img src="https://upload-images.jianshu.io/upload_images/10024246-9a1bf0d0b20de846.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240"></p>
+<hr>
+<h2 id="补充"><a href="#补充" class="headerlink" title="补充"></a>补充</h2><ul>
+<li>  由于我们<code>自己写的代码的重要性高于浏览器默认样式</code></li>
+</ul>
+<p>所以我们可以在制作页面之前链接一份<code>重置样式表</code> 把我们不想要的默认样式给覆盖掉 比如无序列表的小圆点 去除默认的外边距内边距等等</p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">&lt;link rel&#x3D;&quot;stylesheet&quot; href&#x3D;&quot;reset.css&quot;&gt;</span><br><span class="line"></span><br></pre></td></tr></table></figure>
+
+<ul>
+<li>  CSS存在继承机制 但是<code>CSS的继承是发生在层叠之后的</code></li>
+</ul>
+<p>这就是有时候为什么明明样式继承了父元素、权重也没有错却没有显示的问题</p>
+<p>原因就是继承的样式被浏览器的默认样式给覆盖了</p>
+<blockquote>
+<p>本文链接：<a href="https://blog.csdn.net/weixin_45178648/article/details/104897517">https://blog.csdn.net/weixin_45178648/article/details/104897517</a></p>
+</blockquote>
+]]></content>
+      <categories>
+        <category>javascript</category>
+      </categories>
+  </entry>
+  <entry>
+    <title>使用keymetrics实时监控Node.js程序</title>
+    <url>/nirvana/javascript/%E5%89%8D%E7%AB%AF/%E4%BD%BF%E7%94%A8keymetrics%E5%AE%9E%E6%97%B6%E7%9B%91%E6%8E%A7Node%E7%A8%8B%E5%BA%8F/</url>
+    <content><![CDATA[<p>通过pm2能守护node.js程序永远在线，在实际应用中是非常有必要的。另外，pm2配合keymetrics能实时监控node.js程序的运行，达到监控node.js程序的目的。</p>
+<blockquote>
+<p>安装pm2</p>
+</blockquote>
+<p>pm2可以使我们的node.js或io.js程序永远在线。这是<a href="https://www.npmjs.com/package/pm2">pm2</a>的官方介绍：</p>
+<p><code>PM2 is a production process manager for Node.js applications with a built-in load balancer. It allows you to keep applications alive forever, to reload them without downtime and to facilitate common system admin tasks.</code></p>
+<p>安装pm2</p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">npm install -g pm2</span><br></pre></td></tr></table></figure>
+<p>启动一个node.js程序</p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">&#x2F;&#x2F;进入到app的目录去启动&#96;</span><br><span class="line"></span><br><span class="line">pm2 start index.js --name &#39;ghost&#39;</span><br><span class="line"></span><br></pre></td></tr></table></figure>
+
+<p>其他常用命令：</p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">&#x2F;&#x2F;查看pm2守护的app</span><br><span class="line">pm2 list</span><br><span class="line">&#x2F;&#x2F;或者</span><br><span class="line">pm2 status</span><br><span class="line">&#x2F;&#x2F;重启，restart后面跟--name后面指定的名字</span><br><span class="line">pm2 restart ghost</span><br><span class="line">&#x2F;&#x2F;查看进程的使用资源情况</span><br><span class="line">pm2 monit</span><br><span class="line">&#x2F;&#x2F;查看log</span><br><span class="line">pm2 logs ghost</span><br><span class="line">&#x2F;&#x2F;查看app的更多详细信息，后面跟id</span><br><span class="line">pm2 describe 1</span><br><span class="line">&#x2F;&#x2F;升级pm2，升级完毕后自动加载之前运行中的所有app</span><br><span class="line">npm install pm2@latest -g ; pm2 updatePM2</span><br></pre></td></tr></table></figure>
+
+<p>使用Keymetrics可以配合pm2来监控node.js程序（也支持io.js程序的监控）。</p>
+<blockquote>
+<p>安装Keymetrics<br>首先需要注册Keymetrics：<br><a href="https://app.keymetrics.io/#/register">https://app.keymetrics.io/#/register</a></p>
+</blockquote>
+<p>登录后，通过new bucket新建，然后进入控制面板，可以看到分配的public key 和secret key。然后，在安装有pm2的服务器端输入以下命令</p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">pm2 interact your-secret-key your-public-key</span><br></pre></td></tr></table></figure>
+
+<p>监控成功后，会有类似下面的提示：</p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">[Keymetrics.io] [Agent created] Agent ACTIVE - Web Access: [https:&#x2F;&#x2F;app.keymetrics.io&#x2F;](https:&#x2F;&#x2F;app.keymetrics.io&#x2F;)</span><br></pre></td></tr></table></figure>
+<p>此时，pm2会把收集到的统计信息实时地推送到Keymetrics，我们可以在Keymetrics的后台中实时地查看到node.js程序的运行信息，其中还有一些快捷操作，如重启node.js程序等。</p>
+<p><img src="https://upload-images.jianshu.io/upload_images/10024246-cb89932826f59578.jpg?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240"></p>
+]]></content>
+      <categories>
+        <category>javascript</category>
+      </categories>
+  </entry>
+  <entry>
+    <title>关于BABEL</title>
+    <url>/nirvana/javascript/%E5%89%8D%E7%AB%AF/%E5%85%B3%E4%BA%8EBABEL/</url>
+    <content><![CDATA[<h2 id="什么是-BABEL"><a href="#什么是-BABEL" class="headerlink" title="什么是 BABEL"></a>什么是 BABEL</h2><blockquote>
+<p>Babel 官方文档: <a href="https://babeljs.io/">https://babeljs.io/</a></p>
+</blockquote>
+<p>我们知道各个浏览器对 JavaScript 版本的支持各不相同，有很多优秀的新语法都不能直接在浏览器中运行。为了解决这个“沟通不畅”的问题，所以就有了 Babel，Babel 的出现使得我们可以无须顾忌的去使用 ES6+ 的语法。</p>
+<blockquote>
+<p>Babel is a JavaScript compiler.</p>
+</blockquote>
+<p>这也是为何我们必须使用 ES6+ 语法的前提条件。</p>
+<h2 id="BABEL-如何编译"><a href="#BABEL-如何编译" class="headerlink" title="BABEL 如何编译"></a>BABEL 如何编译</h2><p>先看下面这张图：<img src="https://upload-images.jianshu.io/upload_images/10024246-d39f2e8ae58b73a1.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240"></p>
+<p>你会发现 ES6 的语法确实被编译成浏览器可以识别的版本了，你是不是也在问这是怎么做到的呢？</p>
+<h3 id="BABEL-编译的阶段"><a href="#BABEL-编译的阶段" class="headerlink" title="BABEL 编译的阶段"></a>BABEL 编译的阶段</h3><blockquote>
+<p>babel 总共分为三个阶段：解析，转换，生成。</p>
+</blockquote>
+<p>我们需要知道现在 babel 本身是不具备这种转化功能，提供这些转化功能的是一个个 plugin。所以我们没有配置任何 plugin 的时候，经过 Babel 输出的代码是没有改变的。</p>
+<p><img src="https://upload-images.jianshu.io/upload_images/10024246-5e8ec00624dcbc19.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="640?wx_fmt=png"></p>
+<h3 id="PLUGIN-——-TRANSFORM-的载体"><a href="#PLUGIN-——-TRANSFORM-的载体" class="headerlink" title="PLUGIN —— TRANSFORM 的载体"></a>PLUGIN —— TRANSFORM 的载体</h3><blockquote>
+<p>Babel 自 6.0 起，就不再对代码进行转换。现在只负责图中的 parse 和 generate 流程，转换代码的 transform 过程全都交给插件去做。</p>
+</blockquote>
+<p>例子：</p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">&#x2F;&#x2F; 模板字面量	</span><br><span class="line">const name &#x3D; &#39;小生方勤&#39;;	</span><br><span class="line">let hello &#x3D; &#96;hello $&#123;name&#125;&#96;;</span><br></pre></td></tr></table></figure>
+
+<p>上面是一个简单的模板字面量的例子，我们清楚这个是 ES6 的新特性，在不支持 ES6 的运行平台这段代码是会报错的，所以我们需要 Babel 来将其编译成 ES5 的代码。</p>
+<p>所以我们需要如下来配置 babel：</p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">&#x2F;&#x2F; .babelrc 文件	</span><br><span class="line">&#123; 	</span><br><span class="line">  &quot;plugins&quot;: [	</span><br><span class="line">    &quot;transform-es2015-template-literals&quot;  &#x2F;&#x2F; 转译模版字符串的 plugins	</span><br><span class="line">  ],	</span><br><span class="line">  &quot;presets&quot;: [&quot;env&quot;, &quot;stage-2&quot;]	</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<p><strong>preset（即一组预先设定的插件）</strong></p>
+<blockquote>
+<p>preset: babel 插件集合的预设，包含某些插件 plugin。显然像上面那样一个一个配置插件会非常的麻烦，为了方便，babel 为我们提供了一个配置项叫做 persets（预设）。</p>
+</blockquote>
+<p>当前 babel 推荐使用 babel-preset-env 替代 babel-preset-es201X ,env 的支持范围更广，包含es201X 的所有语法编译，并且它可以根据项目运行平台的支持情况自行选择编译版本。</p>
+<h4 id="PLUGINS-与-PRESETS-同时存在的执行顺序"><a href="#PLUGINS-与-PRESETS-同时存在的执行顺序" class="headerlink" title="PLUGINS 与 PRESETS 同时存在的执行顺序"></a>PLUGINS 与 PRESETS 同时存在的执行顺序</h4><ol>
+<li><p> 先执行 plugins 的配置项,再执行 Preset 的配置项；</p>
+</li>
+<li><p> plugins 配置项，按照声明顺序执行；</p>
+</li>
+<li><p> Preset 配置项，按照声明逆序执行。</p>
+</li>
+</ol>
+<p>列入以下代码的执行顺序为：</p>
+<ol>
+<li><p> transform-es2015-template-literals</p>
+</li>
+<li><p> stage-2</p>
+</li>
+<li><p> env</p>
+</li>
+</ol>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">&#x2F;&#x2F; .babelrc 文件	</span><br><span class="line">&#123; 	</span><br><span class="line">    &quot;plugins&quot;: [	</span><br><span class="line">        &quot;transform-es2015-template-literals&quot;,  &#x2F;&#x2F; 转译模版字符串的 plugins	</span><br><span class="line">    ],	</span><br><span class="line">    &quot;presets&quot;: [	</span><br><span class="line">        [&quot;env&quot;, &#123;	</span><br><span class="line">            &#x2F;&#x2F; 是否自动引入 polyfill，开启此选项必须保证已经安装了 babel-polyfill	</span><br><span class="line">            &#x2F;&#x2F; “usage” | “entry” | false, defaults to false.	</span><br><span class="line">            &quot;useBuiltIns&quot;: &quot;usage&quot;	</span><br><span class="line">        &#125;], &quot;stage-2&quot;]	</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<p><strong>这里讲一讲 useBuiltIns 配置</strong></p>
+<p>我们可能在全局引入 babel-polyfill，这样打包后的整个文件体积必然是会变大的。</p>
+<p>但是通过设置 <code>&quot;useBuiltIns&quot;:&quot;usage&quot;</code> 能够把 babel-polyfill 中你需要用到的部分提取出来，不需要的去除。</p>
+<p><strong>useBuiltIns 参数说明：</strong></p>
+<ol>
+<li><p> false: 不对 polyfills 做任何操作</p>
+</li>
+<li><p> entry: 根据 target 中浏览器版本的支持，将 polyfills 拆分引入，仅引入有浏览器不支持的 polyfill</p>
+</li>
+<li><p> usage(新)：检测代码中 ES6/7/8 等的使用情况，仅仅加载代码中用到的 polyfills</p>
+</li>
+</ol>
+<h2 id="BABEL-相关模块简要说明"><a href="#BABEL-相关模块简要说明" class="headerlink" title="BABEL 相关模块简要说明"></a>BABEL 相关模块简要说明</h2><p>了解过 Babel 的同学，是否也觉得的模块有点多呢？我开始学习的时候就有这种感觉。其实每个模块是各司其职的。</p>
+<p><img src="https://upload-images.jianshu.io/upload_images/10024246-15ad7a0856c930aa.JPEG?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240"></p>
+<h3 id="BABEL-CORE（核心）"><a href="#BABEL-CORE（核心）" class="headerlink" title="BABEL-CORE（核心）"></a>BABEL-CORE（核心）</h3><p>这个模块是最能顾名思义的了，即 babel 的核心模块。babel 的核心 api 都在这个模块中。也就是这个模块会把我们写的 js 代码抽象成 AST 树；然后再将 plugins 转译好的内容解析为 js 代码。</p>
+<p>具体怎么工作的这里就不详细说了，因为我也不知道。</p>
+<h3 id="BABEL-CLI"><a href="#BABEL-CLI" class="headerlink" title="BABEL-CLI"></a>BABEL-CLI</h3><blockquote>
+<p>babel-cli 官方文档：<a href="https://babeljs.io/docs/en/babel-cli/">https://babeljs.io/docs/en/babel-cli/</a></p>
+</blockquote>
+<p>babel-cli 是一个通过命令行对 js 文件进行转换的工具。</p>
+<p>当然我们一般不会使用到这个模块，因为一般我们都不会手动去做这个工作，这个工作基本都集成到模块化管理工具中去了，比如 webpack、Rollup 等。</p>
+<p>简单使用（需要先安装 babel-cli）：</p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">babel test.js -o compiled.js</span><br></pre></td></tr></table></figure>
+
+<h3 id="BABEL-NODE"><a href="#BABEL-NODE" class="headerlink" title="BABEL-NODE"></a>BABEL-NODE</h3><p>babel-node 是 babel-cli 的一部分，所以它在安装 babel-cli 的时候也同时安装了。</p>
+<p>它使 ES6+ 可以直接运行在 node 环境中。</p>
+<h3 id="BABEL-POLYFILL-内部集成了-CORE-JS-和-REGENERATOR"><a href="#BABEL-POLYFILL-内部集成了-CORE-JS-和-REGENERATOR" class="headerlink" title="BABEL-POLYFILL(内部集成了 CORE-JS 和 REGENERATOR)"></a>BABEL-POLYFILL(内部集成了 CORE-JS 和 REGENERATOR)</h3><p>babel 对一些新的 API 是无法转换，比如 Generator、Set、Proxy、Promise 等全局对象，以及新增的一些方法：includes、Array.form 等。所以这个时候就需要一些工具来为浏览器做这个兼容。</p>
+<blockquote>
+<p>官网的定义：babel-polyfill 是为了模拟一个完整的 ES6+ 环境，旨在用于应用程序而不是库/工具。</p>
+</blockquote>
+<p><strong>babel-polyfill 主要有两个缺点：</strong></p>
+<ol>
+<li><p> 使用 babel-polyfill 会导致打出来的包非常大，很多其实没有用到，对资源来说是一种浪费。</p>
+</li>
+<li><p> babel-polyfill 可能会污染全局变量，给很多类的原型链上都作了修改，这就有不可控的因素存在。</p>
+</li>
+</ol>
+<p>因为上面两个问题，所以在 Babel7 中增加了 babel-preset-env，我们设置 <code>&quot;useBuiltIns&quot;:&quot;usage&quot;</code>这个参数值就可以实现按需加载 babel-polyfill 啦。</p>
+<h3 id="BABEL-RUNTIME-amp-BABEL-PLUGIN-TRANSFORM-RUNTIME"><a href="#BABEL-RUNTIME-amp-BABEL-PLUGIN-TRANSFORM-RUNTIME" class="headerlink" title="BABEL-RUNTIME &amp; BABEL-PLUGIN-TRANSFORM-RUNTIME"></a>BABEL-RUNTIME &amp; BABEL-PLUGIN-TRANSFORM-RUNTIME</h3><blockquote>
+<p>在使用 Babel6 的时候， .babelrc 文件中会使用 babel-plugin-transform-runtime，而 package.json 中的 dependencies 同时包含了 babel-runtime，因为在使用 babel-plugin-transform-runtime 的时候必须把 babel-runtime 当做依赖。</p>
+</blockquote>
+<p>.babelrc 配置：</p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">&#123;	</span><br><span class="line">  &quot;presets&quot;: [	</span><br><span class="line">    [&quot;env&quot;]	</span><br><span class="line">  ],	</span><br><span class="line">  &quot;plugins&quot;: [	</span><br><span class="line">    [&quot;transform-runtime&quot;, &#123;	</span><br><span class="line">      &quot;helpers&quot;: false, &#x2F;&#x2F; defaults to true	</span><br><span class="line">      &quot;polyfill&quot;: false, &#x2F;&#x2F; defaults to true	</span><br><span class="line">      &quot;regenerator&quot;: true, &#x2F;&#x2F; defaults to true	</span><br><span class="line">      &quot;moduleName&quot;: &quot;babel-runtime&quot; &#x2F;&#x2F; defaults to &quot;babel-runtime&quot;	</span><br><span class="line">    &#125;]	</span><br><span class="line">  ]	</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<p>我们在启用插件 babel-plugin-transform-runtime 后，Babel 就会使用 babel-runtime 下的工具函数，将一些浏览器不能支持的特性重写，然后在项目中使用。</p>
+<blockquote>
+<p>babel-runtime 内部也集成了 core-js、 regenerator、helpers 等</p>
+</blockquote>
+<p>由于采用了沙盒机制，这种做法不会污染全局变量，也不会去修改内建类的原型，所以会有重复引用的问题。</p>
+<p>现在最好的实践应该是在 babel-preset-env 设置 “useBuiltIns”: “usage”，按需引入 polyfill。</p>
+<h3 id="三种方案对比"><a href="#三种方案对比" class="headerlink" title="三种方案对比"></a>三种方案对比</h3><table>
+<thead>
+<tr>
+<th>方案</th>
+<th>优点</th>
+<th>缺点</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>@babel/runtime &amp; @babel/plugin-transform-runtime</td>
+<td>按需引入, 打包体积小</td>
+<td>不能兼容实例方法</td>
+</tr>
+<tr>
+<td>@babel/polyfill</td>
+<td>完整模拟 ES2015+ 环境</td>
+<td>打包体积过大, 污染全局对象和内置的对象原型</td>
+</tr>
+<tr>
+<td>@babel/preset-env</td>
+<td>按需引入, 可配置性高</td>
+<td>小生不知 -_-</td>
+</tr>
+</tbody></table>
+<h2 id="BABEL7-的一些变化"><a href="#BABEL7-的一些变化" class="headerlink" title="BABEL7 的一些变化"></a>BABEL7 的一些变化</h2><h3 id="PRESET-的变更："><a href="#PRESET-的变更：" class="headerlink" title="PRESET 的变更："></a>PRESET 的变更：</h3><blockquote>
+<p>淘汰 es201x，删除 stage-x，推荐 env</p>
+</blockquote>
+<p>如果你还在使用 es201x，官方建议使用 env 进行替换。<strong>淘汰并不是删除，只是不推荐使用</strong>。</p>
+<p>但 stage-x 是直接被删了，也就是说在 babel7 中使用 es201X 是会报错的。</p>
+<h3 id="包名称变化"><a href="#包名称变化" class="headerlink" title="包名称变化"></a>包名称变化</h3><p>babel 7 的一个重大变化，把所有 babel-* 重命名为 @babel/*，</p>
+<p>例如：</p>
+<ol>
+<li><p> babel-cli —&gt; @babel/cli。</p>
+</li>
+<li><p> babel-preset-env —&gt; @babel/preset-env</p>
+</li>
+</ol>
+<h3 id="低版本-NODE-不再支持"><a href="#低版本-NODE-不再支持" class="headerlink" title="低版本 NODE 不再支持"></a>低版本 NODE 不再支持</h3><p>babel 7.0 开始不再支持 nodejs 0.10, 0.12, 4, 5 这四个版本，相当于要求 nodejs &gt;= 6。</p>
+<p>还有一些包从其他包独立出来的变化等等</p>
+]]></content>
+      <categories>
+        <category>javascript</category>
+      </categories>
+  </entry>
+  <entry>
+    <title>写给前端面试者</title>
+    <url>/nirvana/javascript/%E5%89%8D%E7%AB%AF/%E5%86%99%E7%BB%99%E5%89%8D%E7%AB%AF%E9%9D%A2%E8%AF%95%E8%80%85/</url>
+    <content><![CDATA[<p>不管是刚毕业踏入社会的还是在职场久经奋战的，都经历过被面这一环节。当然也有很多同学开始在面人，为自己的团队选择优秀的血液。而我也是属于这一类，这些年都有在帮公司或朋友的团队物色人才和面试同学。今年在手淘也一样，在给同学面试过程中，让我开始在思考，而且思考了很久，所以这几天静下来写了这篇文章，希望这篇文章对于刚毕业的大学生或者还在继续参加工作面试的同学有所帮助。</p>
+<p>在这篇文章中，将不涉及任何的面试题，我只想和大家聊聊面试者与被面者之间的感受。</p>
+<p><strong>什么是前端</strong></p>
+<p>什么是前端？在这里不做阐述，如果您对这个问题感兴趣的话，建议您可以阅读早前写过的一篇博文**<a href="http://www.w3cplus.com/front-end-trip-on-road.html">《前端路上的旅行》</a>**，文章中对什么是前端做过一些介绍，虽然不是非常的准确，但大概意思是表达到了。</p>
+<p><strong>为什么选择前端</strong></p>
+<p>对于这样的问题，是找不到准确而又正确的答案。既然您参加的面试是有关于前端的工作，那么试问？您有思考过这个问题吗？</p>
+<p>如果你是一位从事过前端工作的同学，你或许会这样回答：</p>
+<ul>
+<li>  我喜欢前端，前端的工作给我即写即得，比起编程更为简单，更知性</li>
+<li>  前端入门的门槛低，一不小心就入这个行业，后悔已莫及</li>
+<li>  无奈的选择，当初团队没前端，从别的职位转过来的，然后就这样干下来了</li>
+<li>  前端前景大，大家都知道**<a href="http://100offer.com/blog/posts/83">全世界都在招前端</a><strong>，而且都很难招（</strong><a href="http://www.zhihu.com/question/19923687">知乎上的热贴：为什么前端工程师很难找？</a>**）</li>
+<li>  或许还有更多的回答…</li>
+</ul>
+<p>但对于刚毕业的同学，还从未踏入过职场的大学生而言，或许就从未没有思考过，为什么自己选择前端？我臆测下，可能有这样的几个场景：</p>
+<ul>
+<li>  学长拉下水，不知不觉去面试了前端</li>
+<li>  非计算机专业而对自己专业又不太感兴趣，但又为了毕业之后有份工作，找了门好学的，容易混饭的先整上</li>
+<li>  盲目的跟风，听说前端好，那就前端吧</li>
+<li>  无任何职业的未来思考，首先解决毕业后的工作问题</li>
+<li>  或许还能很多不同的场景…</li>
+</ul>
+<p>不管你是什么样的出发点，既然你选择去面试前端这样的一份工作，你是否有静下心来思考过，自己为什么选择这个行业（甚至可以说，你一点都不了解的行业）。说实在的，还是很多前端面试官会问你这样的一个问题？虽然这样的问题，没有准确或者规范的答案，毕竟不是技术问题，有源可查。</p>
+<p><strong>面试前的一些准备工作</strong></p>
+<p>说实在的，面试是一件非常头疼的事情。每个人都痛恨面试。虽然你面试的工作机会不一定能拿到，但这也并不意味着你在这方面的能力不行。主要是因为面试的不确定因素太多太多，而且面试还需要一些技巧，不管是面试官或被面者。</p>
+<p>不同的人，会因为不同的因素获得不同的面试资格。或许你参加面试的时候，直到面试官坐在你面前之前，有可能他都没有看过或者记得你的简历内容（这样的情景是存在的）。当然，也有另外一个场景，在面试官坐到你面前之前，面试官司通过不同的途径对你已做了一些了解。</p>
+<p>就此而言，参加面试者应该做这样的假设：面试官将会深入调查你。因此，当你参加面试之前，你应该做一些准备工作：</p>
+<p><strong>用心写好简历</strong></p>
+<p>简历是你向面试官展示自己的第一张名片。简历的好也坏直接会影响你在面试官心中的第一印象(这个一点也不夸张)。对于有工作经验的同学，一份好的简历应该做到：</p>
+<blockquote>
+<p>要低调的告诉招聘方，爷很NB。</p>
+</blockquote>
+<p>如何做到这一点，可以看看@Easy给程序员写简历的建议**<a href="http://get.jobdeer.com/744.get">《如何写好技术简历》</a>**。</p>
+<p>而对于应届毕业生，要注意的就更多了。虽然你没有过多的经验，但你要做到你的简历简单明了，具有较强的针对性，切勿简历上介绍自己<strong>精通xxx语言，获得xxx奖学金，得了xxx奖</strong>之类，这一切都是浮云，面试官不会因为你在学校当了什么会的干部，拿了多少奖学金太感兴趣，面试官对你感兴趣的是，你在学校做了什么事情，你有什么作品可拿出手。</p>
+<p>那么什么是好简历？简单描述几点：</p>
+<ul>
+<li>  <strong>匹配：</strong>简历上每一个元素为应聘岗位而“生”；</li>
+<li>  <strong>措辞：</strong>行文流畅，容易理解，描述具体而明确；</li>
+<li>  <strong>模板：</strong>商务简洁，突出胜任岗位的核心竞争力。</li>
+</ul>
+<p>有两点特别强调一下：<strong>尽量让你的信息在一页上展示完；不要使用表格来做你的简历。</strong> 而现在的学生，简历大多都是使用表格来制作(至少我很讨厌使用表格制作的简历)。</p>
+<p><strong>保持通信顺畅</strong></p>
+<p>保持通信的顺畅是很重要的一点，直接会影响你会不会失去一次面试的机会。因为联系你大多都会直接通过简历上的电话。如果面试官想通知你参加面试，而你的电话总是处理关机或者无法接通的情景之下，可想而知，你将会失去这样的一次机会，而这样的一次机会或许就是改变你命运的一次机会。</p>
+<p>这次校招我就碰到这样的现象，打电话给大学生通知其面试，但总是处于无法接通。可想而知，就算我再求闲若渴，我也没有这么的时间给你不停的打电话。</p>
+<p>需不需要准备面试题</p>
+<p>很多同学喜欢去搜集一些前端面试题，而且网上这样的面试题也非常的多，比如：</p>
+<ul>
+<li>  <a href="http://segmentfault.com/a/1190000000465431">前端开发面试题</a></li>
+<li>  <a href="http://www.w3cplus.com/css/front-end-web-development-quiz.html">Web前端开发测试题</a></li>
+<li>  <a href="https://github.com/h5bp/Front-end-Developer-Interview-Questions">Front-end Job Interview Questions</a></li>
+<li>  <a href="http://www.moejser.com/post/qian-duan-kai-fa/han-dong-winterde-mian-shi-ti">寒冬winter的面试题</a></li>
+<li>  <a href="http://www.w3cplus.com/css/interview-question-css.html">有关于CSS的面试题和练习</a></li>
+</ul>
+<p>那么去面试前准备这些题的答案是否有用处（很多面霸把网上出现的题都撸了个遍）。下面发表一下个人看法。</p>
+<p>个人认为这些题只能帮助你对相关知识有一定的了解，但对于拿去应付面试还是有所欠缺。你花时间只是背下了这些题的答案，有可能你并没有吃透其中的为什么？就算面试官问到了其中的一些题，你一开始会觉得很幸运，你知道答案是什么？但你没有考虑到的是，就算你碰到了，你知道了答案，你根本无法知道面试官就此题会接下来问你什么。可想而知，如果你只是背题，接下来的为什么？你可能就不知道回答了。</p>
+<p>就我个人而言，我一般不备题，随时根据面试者的自我介绍和相关了解之后才出题。对于这样的随机性，你的备题方案是否还有用处呢？</p>
+<p>当然，古人云“有备无患”，这是好事，经过这些题，爱钻研的会去再问为什么？不爱钻研的也对相关知识有一个面的了解。最主要的是，面试碰到了相关的题，你不会再紧张，你会有些许的自信。</p>
+<p><strong>面试要注意的细节</strong></p>
+<p>细节很多时候会决定你的成败。那么在第一次参加面试时还是有些细节需要注意。</p>
+<p><strong>时间观念</strong></p>
+<p>可能跟你首页基本上是会通过电话或者视频面试，一是节约彼此时间。那么这个时候不管是面试官或被面者都需要有一定的时间观念，不能迟到。如果你有事情会耽搁，应该事先通知彼此。而在现实中没有时间观念的还是很多的。我讲两个自己亲身经历过的事情。</p>
+<p>记得有一次在上海去一家公司面试前端。约好的时间是下午两点钟。我请了个假，屁颠屁颠的到达目的地，填好表格。面试方行政通知我等几分钟，面试官就来。可我足足等了半小时，还未见到面试官影子。追问之下，行政告诉我，已通知面试官了，稍后就到。可我等了近一个小时之后，还是没有见到面试官，如此之下，我闪人了。结果在地铁中接到人事电话，问我为什么走了？那么答案还需要我说吗？</p>
+<p>上面是自己去被面的一次经历，那么今年面试一大学生，经历的故事让我直接无语。提前一天约好时间面试，结果小朋友告诉我在外面办理事情，不能面试。为了招到人才，我也就忍了，再次约好下午某个时间点，当我再次打电话去的时候，小朋友告诉我马上要和同学去聚餐。此时的我，真想大声吼两声，昵玛，没时间别答应我呀，可我还是忍了。</p>
+<p>不管是哪种情形，没有时间观念和失约对于被面者和面试官都不是一个好的体验。何况我们的工作，其中有一个较为重要的就是让你的用户体验好。而且这已不是一个简单的细节，而是失去自己为人的原则，再高一点就是诚信都失了，何来的机会。</p>
+<p><strong>真诚面对</strong></p>
+<p>当你的技术不能达标时，只要你的人品达标，也能为自己增加不少分数。可能是由于自己的情节，我个人较为喜欢诚实的孩子。喜欢说一不二的孩子。因为你的诚实有可能会打动你的面试官，他会觉得你是可塑之才，说不定给你一个机会。或许很多人都会讨厌那种浮夸之徒吧。自己不会又想想尽一切办法，在面试官面前展示你这方面很优秀，其实有时候这样做会得到相反的效果。</p>
+<p><strong>尽量展示自己的软实力</strong></p>
+<p>每个人都有自己好的一面也有自己不足的一面，那么在面试的时候，应该尽量展示自己优秀的一面。对于校招生或实习生而言，面试官真的不太在乎你所掌握的技术如何？而更再意的是你是不是有发展的潜力。你处事的能力，学习的能力，解决问题的能力等等。而自己问题都是在和你聊天的过程中去掌握的，所以你应该借此机会，向面试官展示你这方面的软实力。</p>
+<p><strong>面试中的总结</strong></p>
+<p>多做几次总结会让自己更认识自己。虽然你有面试的机会，但这并不代表你能通过面试，那么每一次的面试失败就是你下一次面试成功的铺垫。我建议每次面试完之后去做一些总结，特别对于刚刚毕业的学生。通过总结你会清楚的知道：</p>
+<ul>
+<li>  <strong>技术：</strong>技术方面缺少什么？面试官看重的是什么？</li>
+<li>  <strong>软实力：</strong>自己拿分项是哪些？自己丢分项是哪些？自己面试过程的沟通能力如何？</li>
+<li>  <strong>失败原因：</strong>面试失败原因是什么？是由于技术不足？还是其他原因造成自己面试失败？</li>
+<li>  还可以去思考更多的为什么？…</li>
+</ul>
+<p><strong>校招面试的现象</strong></p>
+<p>这次面试主要针对的是校招生和实习生，总觉得他们都有一个普遍的现象。这些现像和@kejun在2011年写的博文**<a href="http://hikejun.com/blog/2011/10/26/%E8%BF%91%E6%9C%9F%E9%9D%A2%E8%AF%95%E6%84%9F%E5%8F%97/">《近期面试感受》</a>**非常的类似。</p>
+<blockquote>
+<p>以下部分内容引用@kejun的博文<a href="http://hikejun.com/blog/2011/10/26/%E8%BF%91%E6%9C%9F%E9%9D%A2%E8%AF%95%E6%84%9F%E5%8F%97/">《近期面试感受》</a></p>
+</blockquote>
+<p><strong>用的不是技术，更多是技巧</strong></p>
+<p>由于学校里没有系统的前端开发课程，导致对HTML/CSS/JavaScript基本概念的理解非常薄弱。大部分人的学习方式是：先看书，然后觉得书和实践离得很远就直接实践，遇到问题就去网上搜、QQ群问，而这些方式得来的都仅是“技巧”性的东西。或者是跟着学校里的“牛人”学，掺着各种好的、坏的经验全盘接受。</p>
+<p><strong>“搜索”式学习害人不浅</strong></p>
+<p>面试中有同学觉得书上写的东西不实用，更喜欢边实践边学。但往往实践中主要解决具体问题，从网上搜到一个不好的例子，自己又不足以区分好坏。然后，就把它当成一个解决问题的模式，如果没人纠正，可能几年下来都这么用。网上的资源非常丰富，要区分“技术”和“技巧”。还是那句话，对技术人员来说技巧性的东西不应该太重。</p>
+<p><strong>热衷新技术</strong></p>
+<p>古人讲究温故而知新还是很有道理的。学习新技术可以给自我镀金，欠缺基础的东西就会内力不足，这样在应用的过程中就会有问题。</p>
+<p><strong>学到“二手货”</strong></p>
+<p>国内前端技术社区的分享质量总体还是不高。那些照搬国外，加上自己片面认识的资源就是“二手货”。这些资源在看的时候要慧眼识珠啊。最好还是直接看第一手资料。</p>
+<p><strong>光看不用，坐等机会</strong></p>
+<p>很多同学表示正在看什么什么，或正准备学什么什么。但就是没动手写过，总是希望在实习公司有实践机会。这样的机会可能永远也没有呢，完善自我的技能，是需要自己给自己创造机会，写一些demo，搞一些个人项目，参加一些技术交流，持续关注该技术的发展……坐等只能浪费时间。</p>
+<p><strong>不注重基础</strong></p>
+<p>正如前面所说，学校没有系统的前端课程，同学获取的知识点都是看书和网上获取，而且这些知识点又是零散型的。造成对很多问题只知其一不知其二。更为可怕的是，很多同学太过自信，觉得HTML/CSS都太简单了，只是JavaScript稍微难一点，这也造成自己对知识的认知度不足。另外还有一些同学太过急于求成，认为看了几个HTML标签和CSS属性自己就懂了。事实是你离其还甚远。</p>
+<p><strong>目标过大</strong></p>
+<p>毕业后选择BAT这样的大公司实习或就业，对于很多同学来说都是梦寐以求的。然而能进入这些公司的人却少之又少。很多人都在问”<strong><a href="http://www.zhihu.com/question/26188893">国内大型互联网公司（如BAT）对于web前端开发方向校招都考些什么？</a></strong>“,但这也仅停留在技术上的面试，却从未思考，BAT这些大公司需要的是技术型人才，而不是技巧型人才。那么你是属于技术型还是技巧型呢？</p>
+<p>话又说回来，有目标是好事，能让自己有一个清晰的方向，但过于盲目却会让自己失去自信，失去未来，这样是得不尝失。与其如此，还不如思考一下，自己更适合什么样的环境去实习或工作。这跟追妹子是类似的“可遇不可求”。</p>
+<p><strong>总结</strong></p>
+<p>这事一篇与技术没有任何关系的文章，这也不是一篇心灵鸡汤，更像是泼冷水。而这些观点仅是我自己的建解，如果说得不对，您可以忽略，更希望你能指正。同时更希望的是，这篇文章对于正在面试或即将面试前端工作的同学有所帮助或有所感悟。</p>
+<blockquote>
+<p>作者：大漠<br>文章源自：<a href="http://www.w3cplus.com/css/write-to-front-end-developer-interview.html">http://www.w3cplus.com/css/write-to-front-end-developer-interview.html</a></p>
+</blockquote>
+]]></content>
+      <categories>
+        <category>javascript</category>
+      </categories>
+  </entry>
+  <entry>
+    <title>利用 JSON.stringify 深拷贝的弊端</title>
+    <url>/nirvana/javascript/%E5%89%8D%E7%AB%AF/%E5%88%A9%E7%94%A8%20JSON.stringify%20%E6%B7%B1%E6%8B%B7%E8%B4%9D%E7%9A%84%E5%BC%8A%E7%AB%AF/</url>
+    <content><![CDATA[<p>深拷贝不仅将原对象的各个属性逐个复制出去，而且将原对象各个属性所包含的对象也依次采用深拷贝的方法递归复制到新对象上。</p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">function deepClone(obj)&#123;</span><br><span class="line">    let obj_ &#x3D; JSON.stringify(obj),</span><br><span class="line">    loneObj &#x3D; JSON.parse(obj_);</span><br><span class="line">    return loneObj</span><br><span class="line">&#125;</span><br><span class="line">let a&#x3D;[1,2,3,4,[2,3,4]],</span><br><span class="line">b &#x3D; deepClone(a);</span><br><span class="line">console.log(a,b);</span><br></pre></td></tr></table></figure>
+<p>结果：<br><img src="https://upload-images.jianshu.io/upload_images/10024246-e4e276aba8a446aa.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240"></p>
+<h2 id="弊端："><a href="#弊端：" class="headerlink" title="弊端："></a>弊端：</h2><h5 id="1-如果-obj-里面有时间对象，则-JSON-stringify-后再-JSON-parse-的结果，时间将转为字符串的形式，而不是对象的形式"><a href="#1-如果-obj-里面有时间对象，则-JSON-stringify-后再-JSON-parse-的结果，时间将转为字符串的形式，而不是对象的形式" class="headerlink" title="1.如果 obj 里面有时间对象，则 JSON.stringify 后再 JSON.parse 的结果，时间将转为字符串的形式，而不是对象的形式"></a>1.如果 obj 里面有时间对象，则 JSON.stringify 后再 JSON.parse 的结果，时间将转为字符串的形式，而不是对象的形式</h5><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">let obj &#x3D; &#123;</span><br><span class="line">    a:123,</span><br><span class="line">    b:[new Date(),new Date()]</span><br><span class="line">&#125;</span><br><span class="line">let newObj &#x3D; JSON.parse(JSON.stringify(obj));</span><br><span class="line">console.log(obj,newObj);</span><br></pre></td></tr></table></figure>
+<p>例如：<br><img src="https://upload-images.jianshu.io/upload_images/10024246-f7c03875bd5412ae.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240"></p>
+<h5 id="2-如果-obj-里有-RegExp-正则表达式的缩写-、Error-对象，则序列化的结果将只得到空对象；"><a href="#2-如果-obj-里有-RegExp-正则表达式的缩写-、Error-对象，则序列化的结果将只得到空对象；" class="headerlink" title="2.如果 obj 里有 RegExp (正则表达式的缩写)、Error 对象，则序列化的结果将只得到空对象；"></a>2.如果 obj 里有 RegExp (正则表达式的缩写)、Error 对象，则序列化的结果将只得到空对象；</h5><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">let obj &#x3D; &#123;</span><br><span class="line">    a:123,</span><br><span class="line">    b:&#x2F;aabb[a-z]\d&#x2F;,</span><br><span class="line">    c:new TypeError(&#39;typeError&#39;)</span><br><span class="line">&#125;</span><br><span class="line">let newObj &#x3D; JSON.parse(JSON.stringify(obj));</span><br><span class="line">console.log(obj,newObj);</span><br></pre></td></tr></table></figure>
+<p><img src="https://upload-images.jianshu.io/upload_images/10024246-0e273cafa2f303ca.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240"><br><img src="https://upload-images.jianshu.io/upload_images/10024246-814ec09b0a942374.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240"></p>
+<h5 id="3、如果-obj-里有函数（function），undefined，Symbol-则序列化的结果会把-function-或-undefined-丢失；"><a href="#3、如果-obj-里有函数（function），undefined，Symbol-则序列化的结果会把-function-或-undefined-丢失；" class="headerlink" title="3、如果 obj 里有函数（function），undefined，Symbol 则序列化的结果会把 function 或 undefined 丢失；"></a>3、如果 obj 里有函数（function），undefined，Symbol 则序列化的结果会把 function 或 undefined 丢失；</h5><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">let obj &#x3D; &#123;</span><br><span class="line">    a:123,</span><br><span class="line">    fn:function()&#123;let a &#x3D; 123;console.log(a)&#125;,</span><br><span class="line">    c:undefined,</span><br><span class="line">    d:Symbol(&#39;foo&#39;)</span><br><span class="line">&#125;</span><br><span class="line">let newObj &#x3D; JSON.parse(JSON.stringify(obj));</span><br><span class="line">console.log(obj,newObj);</span><br></pre></td></tr></table></figure>
+<p><img src="https://upload-images.jianshu.io/upload_images/10024246-25b032809dfcf831.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240"></p>
+<h5 id="4、如果obj里有-NaN、Infinity-和-Infinity，则序列化的结果会变成-null"><a href="#4、如果obj里有-NaN、Infinity-和-Infinity，则序列化的结果会变成-null" class="headerlink" title="4、如果obj里有 NaN、Infinity 和 -Infinity，则序列化的结果会变成 null"></a>4、如果obj里有 NaN、Infinity 和 -Infinity，则序列化的结果会变成 null</h5><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">let obj &#x3D; &#123;</span><br><span class="line">    a:123,</span><br><span class="line">    b:NaN,</span><br><span class="line">    c:Infinity,</span><br><span class="line">    d:-Infinity</span><br><span class="line">&#125;</span><br><span class="line">let newObj &#x3D; JSON.parse(JSON.stringify(obj));</span><br><span class="line">console.log(obj,newObj);</span><br></pre></td></tr></table></figure>
+<p><img src="https://upload-images.jianshu.io/upload_images/10024246-7b63f03dccb24601.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240"></p>
+<h5 id="5、JSON-stringify-只能序列化对象的可枚举的自有属性，例如如果-obj-中的对象是有构造函数生成的，-则使用-JSON-parse-JSON-stringify-obj-深拷贝后，会丢弃对象的-constructor；"><a href="#5、JSON-stringify-只能序列化对象的可枚举的自有属性，例如如果-obj-中的对象是有构造函数生成的，-则使用-JSON-parse-JSON-stringify-obj-深拷贝后，会丢弃对象的-constructor；" class="headerlink" title="5、JSON.stringify() 只能序列化对象的可枚举的自有属性，例如如果 obj 中的对象是有构造函数生成的， 则使用 JSON.parse(JSON.stringify(obj)) 深拷贝后，会丢弃对象的 constructor；"></a>5、JSON.stringify() 只能序列化对象的可枚举的自有属性，例如如果 obj 中的对象是有构造函数生成的， 则使用 JSON.parse(JSON.stringify(obj)) 深拷贝后，会丢弃对象的 constructor；</h5><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">class Student&#123;</span><br><span class="line">    constructor()&#123;</span><br><span class="line">        this.a &#x3D; 1;</span><br><span class="line">        this.b &#x3D; 2;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br><span class="line">let obj &#x3D; &#123;</span><br><span class="line">    a:123,</span><br><span class="line">    b:new Student()</span><br><span class="line">&#125;</span><br><span class="line">let newObj &#x3D; JSON.parse(JSON.stringify(obj));</span><br><span class="line">console.log(obj,newObj);</span><br></pre></td></tr></table></figure>
+<p><img src="https://upload-images.jianshu.io/upload_images/10024246-71619104d9168a18.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240"></p>
+<p>手动设置某属性不可枚举：</p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">let obj &#x3D; &#123;</span><br><span class="line">    a:123,</span><br><span class="line">    b:234</span><br><span class="line">&#125;</span><br><span class="line">Object.defineProperty(obj,&#39;c&#39;,&#123;</span><br><span class="line">    value:22,</span><br><span class="line">    enumerable:false,</span><br><span class="line">&#125;)</span><br><span class="line">let newObj &#x3D; JSON.parse(JSON.stringify(obj));</span><br><span class="line">console.log(obj,newObj);</span><br></pre></td></tr></table></figure>
+<p><img src="https://upload-images.jianshu.io/upload_images/10024246-739d98fb75d5d364.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240"></p>
+<h5 id="6、如果对象中存在循环引用的情况也无法正确实现深拷贝；"><a href="#6、如果对象中存在循环引用的情况也无法正确实现深拷贝；" class="headerlink" title="6、如果对象中存在循环引用的情况也无法正确实现深拷贝；"></a>6、如果对象中存在循环引用的情况也无法正确实现深拷贝；</h5><p>总结：</p>
+<ul>
+<li>Date 对象变为字符串</li>
+<li>RegExp、Error 对象变为空对象 {}</li>
+<li>函数、undefined、Symbol 属性丢失</li>
+<li>NaN、Infinity、-Infinity 变为 null</li>
+<li>enumerable 为 false 的属性丢失</li>
+<li>循环引用的对象不能正确拷贝<br>用法简单，然而使用这种方法会有一些隐藏的坑：因为在序列化 JavaScript 对象时，所有函数和原型成员会被有意忽略。</li>
+</ul>
+<p>通俗点说，JSON.parse(JSON.stringfy(X))，其中 X 只能是 Number, String, Boolean, Array,扁平对象，即那些能够被 JSON 直接表示的数据结构。</p>
+<h2 id="JSON-stringify-常用方式"><a href="#JSON-stringify-常用方式" class="headerlink" title="JSON.stringify() 常用方式"></a>JSON.stringify() 常用方式</h2><p>1.判断数组是否包含某对象，或者判断对象是否相等<br>是否相等：</p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">let obj &#x3D; &#123;</span><br><span class="line">    a:123,</span><br><span class="line">    b:456,</span><br><span class="line">&#125;</span><br><span class="line">let obj2 &#x3D; &#123;</span><br><span class="line">    a:123,</span><br><span class="line">    b:456,</span><br><span class="line">&#125;</span><br><span class="line">console.log(JSON.stringify(obj) &#x3D;&#x3D;&#x3D; JSON.stringify(obj2));&#x2F;&#x2F;true</span><br></pre></td></tr></table></figure>
+<p>2.是否包含：</p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">let arr &#x3D; [</span><br><span class="line">    &#123;a:1,b:2&#125;,</span><br><span class="line">    &#123;a:2,b:3&#125;,</span><br><span class="line">    &#123;a:3,b:4&#125;</span><br><span class="line">]</span><br><span class="line">let obj &#x3D; &#123;a:2,b:3&#125;</span><br><span class="line">console.log(JSON.stringify(arr).includes(JSON.stringify(obj)));&#x2F;&#x2F;true</span><br></pre></td></tr></table></figure>
+<p>3.让 localStorage / sessionStorage 可以存储对象。<br>localStorage/sessionStorage 默认只能存储字符串，而实际开发中，我们往往需要存储的数据多为对象类型，那么这里我们就可以在存储时利用 Json.stringify() 将对象转为字符串,取出时利用 JSON.parse() 将字符串转为对象即可。</p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">sessionStorage.setItem(&#39;user&#39;,JSON.stringify(&#123;name:&#39;aaa&#39;,age:16&#125;));</span><br><span class="line">console.log(JSON.parse(sessionStorage.getItem(&#39;user&#39;)));&#x2F;&#x2F;&#123;name: &quot;aaa&quot;, age: 16&#125;</span><br></pre></td></tr></table></figure>
+<p>4.JSON.stringify()与toString()这两者虽然都可以将目标值转为字符串，但本质上还是有区别的</p>
+<p>```<br>let arr = [12,12,12];<br>console.log(JSON.stringify(arr),arr.toString());<br>//[12,12,12] 12,12,12<br> ````</p>
+]]></content>
+      <categories>
+        <category>javascript</category>
+      </categories>
+  </entry>
+  <entry>
+    <title>前端学习方向</title>
+    <url>/nirvana/javascript/%E5%89%8D%E7%AB%AF/%E5%89%8D%E7%AB%AF%E5%AD%A6%E4%B9%A0%E6%96%B9%E5%90%91/</url>
+    <content><![CDATA[<p>最近一直在思考，个人潜在技术方向的下个关注点，看了下网上建议有以下：</p>
+<p>1.数据可视化<br>2.IOT前端架构<br>3.跨平台技术，flutter,weex,rn等<br>4.前端智能组件技术<br>5.WebRTC实时音视频技术<br>6.Serverless技术<br>7.跨端小程序，小游戏<br>8.Css环境感应技术<br>9.javascript面向硬件编程<br>10.同构架构</p>
+<p>结合公司现在的状况和个人兴趣，打算花费一个季度的时间去研究并落地<code>Serverless技术</code>，实现接口的BFF能力。</p>
+]]></content>
+      <categories>
+        <category>javascript</category>
+      </categories>
+  </entry>
+  <entry>
+    <title>理解JavaScript内联命名函数</title>
+    <url>/nirvana/javascript/%E5%89%8D%E7%AB%AF/%E7%90%86%E8%A7%A3JavaScript%E5%86%85%E8%81%94%E5%91%BD%E5%90%8D%E5%87%BD%E6%95%B0/</url>
+    <content><![CDATA[<p>在使用JavaScript递归调用时，我们往往会在函数内部调用函数自身(通过函数名)，但是当我们改变了定义时所用函数名的指向时，那么这个递归函数指针关联的递归函数也将随之失效。</p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">var factorial &#x3D; function (num) &#123;</span><br><span class="line">    if (num &lt;&#x3D; 1) &#123;</span><br><span class="line">        return 1;</span><br><span class="line">    &#125; else &#123;</span><br><span class="line">        return num * factorial(num - 1);</span><br><span class="line">    &#125;</span><br><span class="line">&#125;;</span><br><span class="line">console.log(factorial(5)); &#x2F;&#x2F; 120;</span><br><span class="line">var anothorFactorial &#x3D; factorial;</span><br><span class="line">factorial &#x3D; null;</span><br><span class="line">console.log(anothorFactorial(5)); &#x2F;&#x2F; Uncaught TypeError: factorial is not a function</span><br></pre></td></tr></table></figure>
+<p>在非严格模式下我们可以使用 num * arguments.callee(num - 1)来代替函数名。<br>严格模式下，通常会采用内联命名函数来解决这个问题。</p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">var factorial &#x3D; (function f(num) &#123;</span><br><span class="line">    if (num &lt;&#x3D; 1) &#123;</span><br><span class="line">        return 1;</span><br><span class="line">    &#125; else &#123;</span><br><span class="line">        return num*f(num - 1);</span><br><span class="line">    &#125;</span><br><span class="line">&#125;);</span><br><span class="line">console.log(factorial(5)); &#x2F;&#x2F; 120</span><br><span class="line">var anothorFactorial &#x3D; factorial;</span><br><span class="line">factorial &#x3D; null;</span><br><span class="line">console.log(anothorFactorial(5)); &#x2F;&#x2F; 120</span><br></pre></td></tr></table></figure>
+
+<p>这种方式的函数调用区别于下面这种方式：</p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line"> function f(num) &#123;</span><br><span class="line">    if (num &lt;&#x3D; 1) &#123;</span><br><span class="line">        return 1;</span><br><span class="line">    &#125; else &#123;</span><br><span class="line">        return num*f(num - 1);</span><br><span class="line">    &#125;</span><br><span class="line">&#125;;</span><br><span class="line">var factorial &#x3D; f;</span><br><span class="line">var anothorFactorial &#x3D; factorial;</span><br><span class="line">factorial &#x3D; null;</span><br><span class="line">console.log(anothorFactorial(5)); &#x2F;&#x2F; 120</span><br><span class="line">f &#x3D; null;</span><br><span class="line">console.log(anothorFactorial(5)); &#x2F;&#x2F; Uncaught TypeError: f is not a function</span><br></pre></td></tr></table></figure>
+
+<p>给函数表达式的匿名函数命名并不会改变表达式的性质，即不会让它变成一个函数声明</p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">var factorial &#x3D; function f() &#123;</span><br><span class="line">    console.log(factorial &#x3D;&#x3D; f); &#x2F;&#x2F; true</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">factorial(); &#x2F;&#x2F;true</span><br><span class="line">console.log(typeof f); &#x2F;&#x2F; undefined</span><br><span class="line">f(); &#x2F;&#x2F; Uncaught ReferenceError: f is not defined</span><br></pre></td></tr></table></figure>
+
+<p>上述代码证明:尽管我们可以给内联函数命名，但是这些名称只能在自身函数内部才是可见的。使用内联方式调用，其本质和函数表达式没有太大不同，唯一的区别就是内联命名函数在函数内部提供了一个仅仅可供自身调用的函数指针，该指针指向函数自身。</p>
+]]></content>
+      <categories>
+        <category>javascript</category>
+      </categories>
+  </entry>
+  <entry>
+    <title>程序员如何在简历上写“我换了一个灯泡”？</title>
+    <url>/nirvana/javascript/%E5%89%8D%E7%AB%AF/%E7%A8%8B%E5%BA%8F%E5%91%98%E5%A6%82%E4%BD%95%E5%9C%A8%E7%AE%80%E5%8E%86%E4%B8%8A%E5%86%99%E2%80%9C%E6%88%91%E6%8D%A2%E4%BA%86%E4%B8%80%E4%B8%AA%E7%81%AF%E6%B3%A1%E2%80%9D%EF%BC%9F/</url>
+    <content><![CDATA[<p>每个人都会有这样的问题：<code>为什么看上去差不多的技术和资历，有人可以一个月收到二三十个offer，有人只有寥寥几个？</code><br>        答案与简历相关。<br>虽然技术有高有低、资历有深有浅，个人客观情况在短时间无法改变（经历造假可鄙），但是，如何将它们呈现在简历中是有技巧的。<br>比如：如果要在简历上写<code>“我换了一个灯泡”,</code>大家会怎么写?<br><strong>@字节跳动员工：</strong>在没有造成任何成本超支以及安全事故的情况下,独立成功管理了环境照明系统的升级与安装<br><strong>@阿里员工：</strong>我联合了硬件排查部门、采购部门、电力工程部门等等,结合这些资源,我顺利的找到了问题所在。最后推动各个部门协同工作,在大家共同努力之下最后成功和囻满的解决了问题。最后,我总结了一套流程,打造了一个x系统,用于自动检测类似问题。 一旦发现问题,系统将自动下发指令给正确的业务部分,自动完成整个工程,解决问题。大大的节省了資源以前需要100个人才能解决的问题,现在只需要10个人即可完成失去光明的时间,由以前的一个月,缩短到了1小时,在线时间达到9999999%。<br>**@网易员工:**我觉得这个难点在于理解整个电力系统架构,准确找到开关,并在尽可能减少业务损失情况下更换受损业务子模块。顺便我觉得可以优化成热更流程,在不关开关情况下换,但要非常小心,操作要干净快速。<br>**@百度员工;**为保障大家工作的顺利进行,我克服艰难亲自为大家换了办公室灯泡<br>**@京东员工:**负责办公室照明系统<br>**@苏宁员工:**重现光明。<br>**@移动员工:**后面紧着造成的后果,业绩、成绩、亮点,以及过程中的困难<br>**@腾讯员工:**我参与了公司的《爱是一道光》项目,前期独立完成整体架构搭建，后期与团队共同分享胜利的喜悦。<br><strong>@后厂村程序员</strong></p>
+<ul>
+<li>1.讲解电灯发明的历史理论基础</li>
+<li> 2.讲解电灯的分类以及优缺点选型 </li>
+<li>3.讲解之前灯的缺点替换的必要性 </li>
+<li>4.讲解如何在不断电并且不灭灯的情况下换灯无损切换 </li>
+<li>5.讲解换灯后的优点收益 </li>
+<li>6.讲解如何将这套方法推广到各个系统方法论 </li>
+</ul>
+]]></content>
+      <categories>
+        <category>javascript</category>
+      </categories>
+  </entry>
+  <entry>
+    <title>happy pack 原理解析</title>
+    <url>/nirvana/webpack/webpack/happypack%E5%8E%9F%E7%90%86%E8%A7%A3%E6%9E%90/</url>
+    <content><![CDATA[<h2 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h2><p>当 webpack 打包速度很慢的时候，我们想过很多办法去优化打包速度，**<a href="https://segmentfault.com/a/1190000021037299?utm_source=tag-newest#">happypack</a>** 就是一个用来加速打包的插件。</p>
+<p>本质上， <strong>happypack</strong> 是用通过 js 的多进程来实现打包加速，需要注意的是，创建子进程和子进程和主进程之间通信也是有开销的，当你的 <strong>loader</strong> 很慢的时候，可以加上 <strong>happypack</strong>，否则，可能会编译的更慢！</p>
+<h2 id="happypack-加载入口"><a href="#happypack-加载入口" class="headerlink" title="happypack 加载入口"></a>happypack 加载入口</h2><p><img src="https://upload-images.jianshu.io/upload_images/10024246-69d6936ccc37b38f.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240"><br>HappyPack位于webpack和您的主要源文件（例如JS源）之间，在该文件中，大量的加载程序发生转换。每次webpack解析模块时，HappyPack都会获取该模块及其所有依赖项，并将这些文件分发到多个工作程序“线程”。</p>
+<h3 id="webpack-的配置"><a href="#webpack-的配置" class="headerlink" title="webpack 的配置"></a>webpack 的配置</h3><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">var HappyPack &#x3D; require(&#39;happypack&#39;);</span><br><span class="line">var happyThreadPool &#x3D; HappyPack.ThreadPool(&#123; size: os.cpus().length &#125;);</span><br><span class="line"></span><br><span class="line">...</span><br><span class="line">module: &#123;</span><br><span class="line">        rules: [</span><br><span class="line">            &#123;</span><br><span class="line">                test: &#x2F;\.(js?|tsx?|ts?)$&#x2F;,</span><br><span class="line">                include: [</span><br><span class="line">                    path.resolve(__dirname, &#39;src&#39;),</span><br><span class="line">                ],</span><br><span class="line">                use: [</span><br><span class="line">                    &#123;</span><br><span class="line">                        loader: &#39;happypack&#x2F;loader?id&#x3D;happyBabel&#39;,</span><br><span class="line">                    &#125;,</span><br><span class="line">                ],</span><br><span class="line">            &#125;,</span><br><span class="line">...</span><br><span class="line">plugins: [</span><br><span class="line">        new HappyPack(&#123;</span><br><span class="line">            id: &#39;happyBabel&#39;,</span><br><span class="line">            loaders: [&#39;babel-loader&#39;],</span><br><span class="line">            threadPool: happyThreadPool,</span><br><span class="line">            verbose: true,</span><br><span class="line">        &#125;)</span><br><span class="line">]</span><br><span class="line">...</span><br></pre></td></tr></table></figure>
+
+<p>可以看到 happypack 是通过 <strong><a href="https://segmentfault.com/a/1190000021037299?utm_source=tag-newest#">loader</a></strong> 调用 <strong><a href="https://segmentfault.com/a/1190000021037299?utm_source=tag-newest#">plugin</a></strong> 来打成插件的目的。<strong>loader</strong> 指向 <strong>HappyLoader.js</strong> , loader 执行的时候，根据 <strong>?</strong> 后面的 <strong>id</strong> 来找到对应的插件。</p>
+<h2 id="happypack-解析过程"><a href="#happypack-解析过程" class="headerlink" title="happypack 解析过程"></a>happypack 解析过程</h2><h3 id="参数初始化"><a href="#参数初始化" class="headerlink" title="参数初始化"></a>参数初始化</h3><p>在我们指定的 happypack loader 加载之前，webpack 会根据 option 初始化配置信息之后再去执行 loader。</p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">&#x2F;&#x2F; HappyPlugin.js</span><br><span class="line">this.name &#x3D; &#39;HappyPack&#39;;</span><br><span class="line">  this.state &#x3D; &#123;</span><br><span class="line">    loaders: [],</span><br><span class="line">    baseLoaderRequest: &#39;&#39;,</span><br><span class="line">    foregroundThreadPool: null,</span><br><span class="line">    verbose: false,</span><br><span class="line">    debug: false,</span><br><span class="line">  &#125;;</span><br><span class="line"></span><br><span class="line">  this.config &#x3D; OptionParser(userConfig, &#123;</span><br><span class="line">    id:                       &#123; type: &#39;string&#39;, default: &#39;1&#39; &#125;,</span><br><span class="line">    compilerId:               &#123; type: &#39;string&#39;, default: &#39;default&#39; &#125;,</span><br><span class="line">    tempDir:                  &#123; deprecated: true &#125;,</span><br><span class="line">    threads:                  &#123; type: &#39;number&#39;, default: 3 &#125;,</span><br><span class="line">    threadPool:               &#123; type: &#39;object&#39;, default: null &#125;,</span><br><span class="line">    verbose:                  &#123; type: &#39;boolean&#39;, default: true &#125;,</span><br><span class="line">    verboseWhenProfiling:     &#123; type: &#39;boolean&#39;, default: false &#125;,</span><br><span class="line">    debug:                    &#123; type: &#39;boolean&#39;, default: process.env.DEBUG &#x3D;&#x3D;&#x3D; &#39;1&#39; &#125;,</span><br><span class="line">    enabled:                  &#123; deprecated: true &#125;,</span><br><span class="line">    &#x2F;&#x2F; we don&#39;t want this to be documented &#x2F; exposed since it&#39;s an</span><br><span class="line">    &#x2F;&#x2F; implementation detail + not having it on means a bug, but we&#39;re making it</span><br><span class="line">    &#x2F;&#x2F; configurable for testing purposes</span><br><span class="line">    bufferedMessaging:        &#123; type: &#39;boolean&#39;, default: process.platform &#x3D;&#x3D;&#x3D; &#39;win32&#39; &#125;,</span><br><span class="line">    loaders:                  &#123;</span><br><span class="line">      validate: function(value) &#123;</span><br><span class="line">        if (!Array.isArray(value)) &#123;</span><br><span class="line">          return &#39;Loaders must be an array!&#39;;</span><br><span class="line">        &#125;</span><br><span class="line">        else if (value.length &#x3D;&#x3D;&#x3D; 0) &#123;</span><br><span class="line">          return &#39;You must specify at least one loader!&#39;;</span><br><span class="line">        &#125;</span><br><span class="line">        else if (value.some(function(loader) &#123;</span><br><span class="line">          return typeof loader !&#x3D;&#x3D; &#39;string&#39; &amp;&amp; !loader.path &amp;&amp; !loader.loader;</span><br><span class="line">        &#125;)) &#123;</span><br><span class="line">          return &#39;Loader must have a @path or @loader property or be a string.&#39;</span><br><span class="line">        &#125;</span><br><span class="line">      &#125;,</span><br><span class="line">    &#125;</span><br><span class="line">  &#125;, &quot;HappyPack&quot;);</span><br><span class="line"></span><br><span class="line">  this.id &#x3D; this.config.id;</span><br></pre></td></tr></table></figure>
+
+<p>**OptionParser **方法是一个参数校验，初始化的方法<br>参数说明:</p>
+<ul>
+<li>  id: 在配置文件中设置的与 loader 关联的 id 首先会设置到实例上，为了后续 loader 与 plugin 能进行一对一匹配，在 *** HappyLoader.js** 中有相对应的判断</li>
+<li>  compilerId: 用于查找当前 webpack compioler 对象的上下文，默认 default</li>
+<li>  tmpDir: 存放打包缓存文件的位置</li>
+<li>  verbose: 是否输出过程日志</li>
+<li>  debug: 是否输出父子进程之间的 debug 信息</li>
+<li>  bufferedMessaging: 在 windows 系统中是否是通过 buffered 传输</li>
+<li>  loaders: 因为配置中文件的处理 loader 都指向了 happypack 提供的 loader ,这里配置的对应文件实际需要运行的 loader</li>
+</ul>
+<h3 id="进程池创建"><a href="#进程池创建" class="headerlink" title="进程池创建"></a>进程池创建</h3><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">&#x2F;&#x2F; HappyPlugin.prototype.apply</span><br><span class="line">this.threadPool &#x3D; this.config.threadPool || HappyThreadPool(&#123;</span><br><span class="line">    id: this.id,</span><br><span class="line">    size: this.config.threads,</span><br><span class="line">    verbose: this.state.verbose,</span><br><span class="line">    debug: this.state.debug,</span><br><span class="line">    bufferedMessaging: this.config.bufferedMessaging,</span><br><span class="line">&#125;);</span><br></pre></td></tr></table></figure>
+
+<h4 id="rpcHandler"><a href="#rpcHandler" class="headerlink" title="rpcHandler"></a>rpcHandler</h4><p>在创建子进程之前会生成一个 rpcHandler 对象, rpcHandler 是 **HappyRPCHandler **的实例<br><em>HappyRPCHandler.js</em></p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">function HappyRPCHandler() &#123;</span><br><span class="line">  this.activeLoaders &#x3D; new SharedPtrMap();</span><br><span class="line">  this.activeCompilers &#x3D; new SharedPtrMap();</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<p><em>SharedPtrMap</em> 给 <em>activeLoaders</em> 和 <em>activeCompilers</em> 定义了set、get 和 delete 方法，用于其他方法赋值</p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">HappyRPCHandler.prototype.registerActiveCompiler &#x3D; function(id, compiler) &#123;</span><br><span class="line">  this.activeCompilers.set(id || DEFAULT_COMPILER_ID, compiler);</span><br><span class="line">&#125;;</span><br><span class="line">HappyRPCHandler.prototype.unregisterActiveCompiler &#x3D; function(id) &#123;</span><br><span class="line">  this.activeCompilers.delete(id || DEFAULT_COMPILER_ID);</span><br><span class="line">&#125;;</span><br><span class="line"></span><br><span class="line">HappyRPCHandler.prototype.registerActiveLoader &#x3D; function(id, instance) &#123;</span><br><span class="line">  this.activeLoaders.set(id || DEFAULT_LOADER_ID, instance);</span><br><span class="line">&#125;;</span><br><span class="line"></span><br><span class="line">HappyRPCHandler.prototype.unregisterActiveLoader &#x3D; function(id) &#123;</span><br><span class="line">  this.activeLoaders.delete(id || DEFAULT_LOADER_ID);</span><br><span class="line">&#125;;</span><br></pre></td></tr></table></figure>
+
+<p><strong>rpcHandler</strong> 的主要作用是: 绑定当前运行的 loader 与 compiler ，同时在文件中，针对 loader 与 compiler 定义调用接口:</p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">COMPILER_RPCs &#x3D; &#123;</span><br><span class="line">  resolve: function(compiler, payload, done) &#123;</span><br><span class="line">    var resolver &#x3D; compiler.resolvers.normal;</span><br><span class="line">    var resolve &#x3D; compiler.resolvers.normal.resolve;</span><br><span class="line">    ...</span><br><span class="line">    resolve.call(resolver, payload.context, payload.context, payload.resource, done);</span><br><span class="line">  &#125;,</span><br><span class="line">&#125;;</span><br></pre></td></tr></table></figure>
+
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">LOADER_RPCS &#x3D; &#123;</span><br><span class="line">  emitWarning: function(loader, payload) &#123;</span><br><span class="line">    loader.emitWarning(payload.message);</span><br><span class="line">  &#125;,</span><br><span class="line">  emitError: function(loader, payload) &#123;</span><br><span class="line">      loader.emitError(payload.message);</span><br><span class="line">  &#125;,</span><br><span class="line">  addDependency: function(loader, payload) &#123;</span><br><span class="line">      loader.addDependency(payload.file);</span><br><span class="line">  &#125;,</span><br><span class="line">  addContextDependency: function(loader, payload) &#123;</span><br><span class="line">      loader.addContextDependency(payload.file);</span><br><span class="line">  &#125;,</span><br><span class="line">&#125;;</span><br></pre></td></tr></table></figure>
+
+<h4 id="创建子进程"><a href="#创建子进程" class="headerlink" title="创建子进程"></a>创建子进程</h4><p><em>HappyThreadPool.js</em></p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">  var threads &#x3D; createThreads(config.size, rpcHandler, &#123;</span><br><span class="line">    id: config.id,</span><br><span class="line">    verbose: config.verbose,</span><br><span class="line">    debug: config.debug,</span><br><span class="line">    buffered: config.hasOwnProperty(&#39;bufferedMessaging&#39;) ?</span><br><span class="line">      config.bufferedMessaging :</span><br><span class="line">      process.platform &#x3D;&#x3D;&#x3D; &#39;win32&#39;,</span><br><span class="line">  &#125;);</span><br><span class="line">  ...</span><br><span class="line">  ...</span><br><span class="line">function createThreads(count, rpcHandler, config) &#123;</span><br><span class="line">  var set &#x3D; []</span><br><span class="line"></span><br><span class="line">  for (var threadId &#x3D; 0; threadId &lt; count; ++threadId) &#123;</span><br><span class="line">    var fullThreadId &#x3D; config.id ? [ config.id, threadId ].join(&#39;:&#39;) : threadId;</span><br><span class="line">    set.push(HappyThread(fullThreadId, rpcHandler, config));</span><br><span class="line">  &#125;</span><br><span class="line"></span><br><span class="line">  return set;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<p><strong>threads</strong> 为 <strong>HappyThread</strong> 返回的操作子进程的对象</p>
+<p><em>HappyThread.js</em></p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">var WORKER_BIN &#x3D; path.resolve(__dirname, &#39;HappyWorkerChannel.js&#39;);</span><br><span class="line">....</span><br><span class="line"> return &#123;</span><br><span class="line">    open: function(onReady) &#123;</span><br><span class="line">      var emitReady &#x3D; Once(onReady);</span><br><span class="line"></span><br><span class="line">      fd &#x3D; fork(WORKER_BIN, [id, JSON.stringify(&#123; buffered: config.buffered &#125;)], &#123;</span><br><span class="line">        &#x2F;&#x2F; Do not pass through any arguments that were passed to the main</span><br><span class="line">        &#x2F;&#x2F; process (webpack or node) because they could have unwanted</span><br><span class="line">        &#x2F;&#x2F; side-effects, see issue #47</span><br><span class="line">        execArgv: [],</span><br><span class="line">      &#125;);</span><br><span class="line"></span><br><span class="line">      fd.on(&#39;error&#39;, throwError);</span><br><span class="line">      fd.on(&#39;exit&#39;, function(exitCode) &#123;</span><br><span class="line">        if (exitCode !&#x3D;&#x3D; 0) &#123;</span><br><span class="line">          emitReady(&#39;HappyPack: worker exited abnormally with code &#39; + exitCode);</span><br><span class="line">        &#125;</span><br><span class="line">      &#125;);</span><br><span class="line"></span><br><span class="line">      fd.on(&#39;message&#39;, function(message) &#123;</span><br><span class="line"></span><br><span class="line">      &#125;);</span><br><span class="line">    &#125;,</span><br><span class="line"></span><br><span class="line">    configure: function(compilerId, compilerOptions, done) &#123;</span><br><span class="line"></span><br><span class="line">    &#125;,</span><br><span class="line"></span><br><span class="line">    &#x2F;**</span><br><span class="line">     * @param &#123;Object&#125; params</span><br><span class="line">     * @param &#123;String&#125; params.compiledPath</span><br><span class="line">     * @param &#123;Object&#125; params.loaderContext</span><br><span class="line">     *</span><br><span class="line">     * @param &#123;Function&#125; done</span><br><span class="line">     *&#x2F;</span><br><span class="line">    compile: function(params, done) &#123;</span><br><span class="line"></span><br><span class="line">    &#125;,</span><br><span class="line"></span><br><span class="line">    isOpen: function() &#123;</span><br><span class="line">      return !!fd;</span><br><span class="line">    &#125;,</span><br><span class="line"></span><br><span class="line">    close: function() &#123;</span><br><span class="line"></span><br><span class="line">    &#125;,</span><br><span class="line">  &#125;;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<p>到目前为止，子进程已经创建完成。</p>
+<h3 id="初始化"><a href="#初始化" class="headerlink" title="初始化"></a>初始化</h3><p>我们回到 <strong>HappyPlugin.js</strong>，</p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">compiler.plugin(&#39;watch-run&#39;, function(_, done) &#123;</span><br><span class="line">    if (engageWatchMode() &#x3D;&#x3D;&#x3D; fnOnce.ALREADY_CALLED) &#123;</span><br><span class="line">      done();</span><br><span class="line">    &#125;</span><br><span class="line">    else &#123;</span><br><span class="line">      that.start(compiler, done);</span><br><span class="line">    &#125;</span><br><span class="line">&#125;);</span><br><span class="line"></span><br><span class="line">compiler.plugin(&#39;run&#39;, that.start.bind(that));</span><br><span class="line"></span><br></pre></td></tr></table></figure>
+
+<p>看到这里在 <strong>run</strong> 和 <strong>watch-tun</strong> 两个 <strong><a href="https://segmentfault.com/a/1190000021037299?utm_source=tag-newest#">钩子</a></strong> 中调用了 this.start 进行初始化.</p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">HappyPlugin.prototype.start &#x3D; function(compiler, done) &#123;</span><br><span class="line">  var that &#x3D; this;</span><br><span class="line">  ...</span><br><span class="line">  async.series([</span><br><span class="line">    function resolveLoaders(callback) &#123;&#125;,</span><br><span class="line">    function launchAndConfigureThreads(callback) &#123;&#125;,</span><br><span class="line">    function announceReadiness(callback) &#123;&#125;</span><br><span class="line">  ], done);</span><br><span class="line">&#125;;</span><br></pre></td></tr></table></figure>
+
+<p>start函数通过 <strong><a href="https://segmentfault.com/a/1190000021037299?utm_source=tag-newest#">async.series</a></strong> 将整个过程串联起来。</p>
+<p>1） resolveLoaders<br>loader 解析，把 loaders 和 baseLoaderRequest 塞到 this.state 里面</p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">function resolveLoaders(callback) &#123;</span><br><span class="line">      var normalLoaders &#x3D; that.config.loaders.reduce(function(list, entry) &#123;</span><br><span class="line">        return list.concat(WebpackUtils.normalizeLoader(entry));</span><br><span class="line">      &#125;, []);</span><br><span class="line"></span><br><span class="line">      var loaderPaths &#x3D; normalLoaders.map(function(loader) &#123;</span><br><span class="line">        return loader.path;</span><br><span class="line">      &#125;);</span><br><span class="line"></span><br><span class="line">      WebpackUtils.resolveLoaders(compiler, loaderPaths, function(err, resolvedPaths) &#123;</span><br><span class="line">        if (err) return callback(err);</span><br><span class="line"></span><br><span class="line">        var withResolvedPaths &#x3D; normalLoaders.map(function(loader, index) &#123;</span><br><span class="line">          var resolvedPath &#x3D; resolvedPaths[index];</span><br><span class="line"></span><br><span class="line">          return Object.assign(&#123;&#125;, loader, &#123;</span><br><span class="line">            path: resolvedPath,</span><br><span class="line">            request: loader.query ? (loader.path + loader.query) : loader.path</span><br><span class="line">          &#125;)</span><br><span class="line">        &#125;)</span><br><span class="line"></span><br><span class="line">        that.state.loaders &#x3D; withResolvedPaths;</span><br><span class="line">        that.state.baseLoaderRequest &#x3D; withResolvedPaths.map(function(loader) &#123;</span><br><span class="line">          return loader.path + (loader.query || &#39;&#39;);</span><br><span class="line">        &#125;).join(&#39;!&#39;);</span><br><span class="line"></span><br><span class="line">        callback();</span><br><span class="line">      &#125;);</span><br><span class="line">    &#125;,</span><br></pre></td></tr></table></figure>
+
+<p>2） launchAndConfigureThreads<br>启动和初始化进程</p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">that.threadPool.start(that.config.compilerId, compiler, serializedOptions, callback);</span><br></pre></td></tr></table></figure>
+
+<p>这里调用到了 <em>HappyThreadPool.js</em> 里的 <strong>start</strong> 方法<br>that.threadPool 是进程池创建得到的对象<br>参数说明：</p>
+<ul>
+<li>  that.config.compilerId: 用于查找当前 webpack compioler 对象的上下文，默认 default</li>
+<li>  compiler： 当前上下文compiler对象</li>
+<li>  serializedOptions: webpack的入参，例如 webpack.common.js 的参数</li>
+<li>  callback: 可以理解为下一步，<strong>async</strong> 库的使用方法</li>
+</ul>
+<p>** 第一步：registerActiveCompiler: <code>RPCHandler</code> 绑定 <code>compiler</code></p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">rpcHandler.registerActiveCompiler(compilerId, compiler);</span><br></pre></td></tr></table></figure>
+
+<p>** 第二步: 找到当前没打开的子进程，调用 <code>open</code> fork 一份子进程<br><em>HappyThreadPool.js</em></p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">async.parallel(threads.filter(not(send(&#39;isOpen&#39;))).map(get(&#39;open&#39;))</span><br></pre></td></tr></table></figure>
+
+<p><em>HappyThread.js</em></p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">open: function(onReady) &#123;</span><br><span class="line">      var emitReady &#x3D; Once(onReady);</span><br><span class="line"></span><br><span class="line">      fd &#x3D; fork(WORKER_BIN, [id, JSON.stringify(&#123; buffered: config.buffered &#125;)], &#123;</span><br><span class="line">        execArgv: [],</span><br><span class="line">      &#125;);</span><br><span class="line"></span><br><span class="line">      fd.on(&#39;error&#39;, throwError);</span><br><span class="line">      fd.on(&#39;exit&#39;, function(exitCode) &#123;</span><br><span class="line">        if (exitCode !&#x3D;&#x3D; 0) &#123;</span><br><span class="line">          emitReady(&#39;HappyPack: worker exited abnormally with code &#39; + exitCode);</span><br><span class="line">        &#125;</span><br><span class="line">      &#125;);</span><br><span class="line"></span><br><span class="line">      fd.on(&#39;message&#39;, function(message) &#123;</span><br><span class="line">        &#x2F;&#x2F; message 判断</span><br><span class="line">      &#125;);</span><br><span class="line">    &#125;,</span><br></pre></td></tr></table></figure>
+
+<p>子进程运行文件 <code>WORKER_BIN</code> 对应的是 <code>HappyWorkerChannel.js</code></p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">var HappyWorker &#x3D; require(&#39;.&#x2F;HappyWorker&#39;);</span><br><span class="line"></span><br><span class="line">if (process.argv[1] &#x3D;&#x3D;&#x3D; __filename) &#123;</span><br><span class="line">  startAsWorker();</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">function startAsWorker() &#123;</span><br><span class="line">  HappyWorkerChannel(String(process.argv[2]), process);</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">function HappyWorkerChannel(id, fd, config) &#123;</span><br><span class="line">  var fakeCompilers &#x3D; &#123;&#125;;</span><br><span class="line">  var workers &#x3D; &#123;&#125;;</span><br><span class="line"></span><br><span class="line">  fd.on(&#39;message&#39;, accept)</span><br><span class="line">  send(&#123; name: &#39;READY&#39; &#125;);</span><br><span class="line"></span><br><span class="line">  function accept(message) &#123;</span><br><span class="line">   &#x2F;&#x2F; 省略函数内容</span><br><span class="line">  &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<p>通过 <em>fd.on(‘message’, accept)</em> 来监听主进程发送过来的消息</p>
+<p>** 第三步: 子进程都生成之后，调用 <code>configure</code> 初始化</p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">async.parallel(threads.map(function(thread) &#123;</span><br><span class="line">  return function(callback) &#123;</span><br><span class="line">    thread.configure(compilerId, compilerOptions, callback);</span><br><span class="line">  &#125;</span><br><span class="line">&#125;), done);</span><br></pre></td></tr></table></figure>
+
+<p>同样的，来到了 <em>HappyThread.js</em> 的 **configure **方法,</p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">configure: function(compilerId, compilerOptions, done) &#123;</span><br><span class="line">  var messageId &#x3D; generateMessageId();</span><br><span class="line"></span><br><span class="line">  callbacks[messageId] &#x3D; done;</span><br><span class="line"></span><br><span class="line">  send(&#123;</span><br><span class="line">    id: messageId,</span><br><span class="line">    name: &#39;CONFIGURE&#39;,</span><br><span class="line">    data: &#123;</span><br><span class="line">      compilerId: compilerId,</span><br><span class="line">      compilerOptions: compilerOptions</span><br><span class="line">    &#125;</span><br><span class="line">  &#125;);</span><br><span class="line">&#125;,</span><br></pre></td></tr></table></figure>
+
+<p>给子进程发送了一条 <code>CONFIGURE</code> 消息，<em>HappyWorkerChannel</em> 接收到做了如下处理</p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">findOrCreateFakeCompiler(message.data.compilerId)</span><br><span class="line">    .configure(JSONSerializer.deserialize(message.data.compilerOptions));</span><br><span class="line"></span><br><span class="line">send(&#123;</span><br><span class="line">    id: message.id,</span><br><span class="line">    name: &#39;CONFIGURE_DONE&#39;</span><br><span class="line">&#125;);</span><br></pre></td></tr></table></figure>
+
+<p><strong>findOrCreateFakeCompiler</strong> 方法给 <code>workers</code> 和 <code>fakeCompiler</code> 赋值</p>
+<ul>
+<li>  fakeCompilers 是根据接收到的 messageId 作为key，来生成对应的模拟编译环境, 可以理解为为了模拟执行 loader 而模拟出来的上下文</li>
+<li>  workers 是对应的子进程</li>
+</ul>
+<p>同时调用 <code>fakeCompiler</code> 的 configure 来初始化默认的 webpack 配置和编译上下文。</p>
+<p>至此，happyPack 的初始化工作全部做完。</p>
+<h3 id="开始编译"><a href="#开始编译" class="headerlink" title="开始编译"></a>开始编译</h3><h4 id="入口"><a href="#入口" class="headerlink" title="入口"></a>入口</h4><p>在 webpack 流程中，在源码文件完成内容读取之后，开始进入到 loader 的编译执行阶段，这时 HappyLoader 作为编译逻辑入口，开始进行编译流程。</p>
+<p><em>HappyLoader</em></p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">function HappyLoader(sourceCode, sourceMap) &#123;</span><br><span class="line">  var query, compilerId, loaderId, remoteLoaderId, happyPlugin;</span><br><span class="line">  var callback &#x3D; this.async();</span><br><span class="line">  var pluginList &#x3D; locatePluginList(this);</span><br><span class="line"></span><br><span class="line">  query &#x3D; loaderUtils.getOptions(this) || &#123;&#125;;</span><br><span class="line">  compilerId &#x3D; query.compilerId || DEFAULT_COMPILER_ID;</span><br><span class="line">  loaderId &#x3D; query.id || DEFAULT_LOADER_ID;</span><br><span class="line">  remoteLoaderId &#x3D; &#39;Loader::&#39; + compilerId + loaderId.toString() + &#39;:&#39; + this.resource;</span><br><span class="line"></span><br><span class="line">  happyPlugin &#x3D; pluginList.filter(isHappy(loaderId))[0];</span><br><span class="line"></span><br><span class="line">  happyPlugin.compile(this, addWebpack2Context(this, &#123;</span><br><span class="line">    compilerId: compilerId,</span><br><span class="line">    context: this.context,</span><br><span class="line">    minimize: this.minimize,</span><br><span class="line">    remoteLoaderId: remoteLoaderId,</span><br><span class="line">    request: happyPlugin.generateRequest(this.resource),</span><br><span class="line">    resource: this.resource,</span><br><span class="line">    resourcePath: this.resourcePath,</span><br><span class="line">    resourceQuery: this.resourceQuery,</span><br><span class="line">    sourceCode: sourceCode,</span><br><span class="line">    sourceMap: sourceMap,</span><br><span class="line">    target: this.target,</span><br><span class="line">    useSourceMap: this._module.useSourceMap,</span><br><span class="line">  &#125;), callback);</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<p>根据 loader 配置 <code>？</code>后面的参数找到对应的插件。<br>同时将原本的 <strong>loaderContext(this指向)</strong> 对象的一些参数例如 <strong>this.resource</strong>、<strong>this.resourcePath</strong> 等透传到 <strong>HappyPlugin.compile</strong> 方法进行编译</p>
+<h4 id="编译"><a href="#编译" class="headerlink" title="编译"></a>编译</h4><p>编译的起始位置在 <strong>HappyPlugin</strong> 的 <strong>compile</strong> 方法</p>
+<p><em>HappyPlugin.js</em></p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">HappyPlugin.prototype.compile &#x3D; function(loader, loaderContext, done) &#123;</span><br><span class="line">  var threadPool &#x3D; this.state.foregroundThreadPool || this.threadPool;</span><br><span class="line"></span><br><span class="line">  threadPool.compile(loaderContext.remoteLoaderId, loader, &#123;</span><br><span class="line">    loaders: this.state.loaders,</span><br><span class="line">    loaderContext: loaderContext,</span><br><span class="line">  &#125;, function(err, result) &#123;</span><br><span class="line">    if (err) &#123;</span><br><span class="line">      done(ErrorSerializer.deserialize(err));</span><br><span class="line">    &#125;</span><br><span class="line">    else &#123;</span><br><span class="line">      done(null,</span><br><span class="line">        result.compiledSource || &#39;&#39;,</span><br><span class="line">        SourceMapSerializer.deserialize(result.compiledMap)</span><br><span class="line">      );</span><br><span class="line">    &#125;</span><br><span class="line">  &#125;);</span><br><span class="line">&#125;;</span><br></pre></td></tr></table></figure>
+
+<p>这里调用了进程池的 compile<br><em>HappyThreadPool.js</em></p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">compile: function(loaderId, loader, params, done) &#123;</span><br><span class="line">  var worker &#x3D; getThread();</span><br><span class="line"></span><br><span class="line">  rpcHandler.registerActiveLoader(loaderId, loader);</span><br><span class="line"></span><br><span class="line">  worker.compile(params, function(message) &#123;</span><br><span class="line">    rpcHandler.unregisterActiveLoader(loaderId);</span><br><span class="line"></span><br><span class="line">    done(message.error, message.data);</span><br><span class="line">  &#125;);</span><br><span class="line">&#125;,</span><br></pre></td></tr></table></figure>
+
+<p>这里第一步是给 <strong>rpcHandler</strong> 注册了当前的 loader 信息<br>第二步 通过<strong>getThread</strong>找到了对应的进程，调用了 <em>HappyThread.js</em></p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">&#x2F;&#x2F;getThread</span><br><span class="line">function RoundRobinThreadPool(threads) &#123;</span><br><span class="line">  var lastThreadId &#x3D; 0;</span><br><span class="line"></span><br><span class="line">  return function getThread() &#123;</span><br><span class="line">    var threadId &#x3D; lastThreadId;</span><br><span class="line"></span><br><span class="line">    lastThreadId++;</span><br><span class="line"></span><br><span class="line">    if (lastThreadId &gt;&#x3D; threads.length) &#123;</span><br><span class="line">      lastThreadId &#x3D; 0;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    return threads[threadId];</span><br><span class="line">  &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<p>RoundRobinThreadPool 这里的递增取对应进程很巧妙<br>最终是由 <em>HappyThread.js</em> 给子进程发了一个 <code>COMPILE</code> 消息</p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">&#x2F;&#x2F; HappyThread.js</span><br><span class="line">&#x2F;**</span><br><span class="line"> * @param &#123;Object&#125; params</span><br><span class="line"> * @param &#123;String&#125; params.compiledPath</span><br><span class="line"> * @param &#123;Object&#125; params.loaderContext</span><br><span class="line"> *</span><br><span class="line"> * @param &#123;Function&#125; done</span><br><span class="line"> *&#x2F;</span><br><span class="line">compile: function(params, done) &#123;</span><br><span class="line">  var messageId &#x3D; generateMessageId();</span><br><span class="line"></span><br><span class="line">  callbacks[messageId] &#x3D; done;</span><br><span class="line"></span><br><span class="line">  send(&#123;</span><br><span class="line">    id: messageId,</span><br><span class="line">    name: &#39;COMPILE&#39;,</span><br><span class="line">    data: params,</span><br><span class="line">  &#125;);</span><br><span class="line">&#125;,</span><br></pre></td></tr></table></figure>
+
+<p>这里的 messageId 是个从 0 开始的递增数字，完成回调方法的存储注册，方便完成编译之后找到回调方法传递信息回主进程。同时在 thread 这一层，也是将参数透传给子进程执行编译。</p>
+<p>子进程收到消息<br><em>HappyWorkerChannel.js</em></p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">COMPILE: function(message) &#123;</span><br><span class="line">    getWorker(message.data.loaderContext.compilerId)</span><br><span class="line">        .compile(message.data, function(err, data) &#123;</span><br><span class="line">          send(&#123;</span><br><span class="line">            id: message.id,</span><br><span class="line">            name: &#39;COMPILED&#39;,</span><br><span class="line">            error: err,</span><br><span class="line">            data: data</span><br><span class="line">          &#125;);</span><br><span class="line">        &#125;);</span><br><span class="line">&#125;,</span><br></pre></td></tr></table></figure>
+
+<p>收到消息后，调用 <strong>worker.compile</strong><br><em>HappyWorker.js</em></p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">&#x2F;**</span><br><span class="line"> * @param  &#123;Object&#125; params</span><br><span class="line"> * @param  &#123;Object&#125; params.loaderContext</span><br><span class="line"> * @param  &#123;String&#125; params.loaderContext.sourceCode</span><br><span class="line"> * @param  &#123;?String|?Object&#125; params.loaderContext.sourceMap</span><br><span class="line"> * @param  &#123;Array.&lt;String&gt;&#125; params.loaders</span><br><span class="line"> * @param  &#123;Function&#125; done</span><br><span class="line"> *&#x2F;</span><br><span class="line">HappyWorker.prototype.compile &#x3D; function(params, done) &#123;</span><br><span class="line">  assert(typeof params.loaderContext.resourcePath &#x3D;&#x3D;&#x3D; &#39;string&#39;,</span><br><span class="line">    &quot;ArgumentError: expected params.sourcePath to contain path to the source file.&quot;</span><br><span class="line">  );</span><br><span class="line"></span><br><span class="line">  assert(Array.isArray(params.loaders),</span><br><span class="line">    &quot;ArgumentError: expected params.loaders to contain a list of loaders.&quot;</span><br><span class="line">  );</span><br><span class="line"></span><br><span class="line">  applyLoaders(&#123;</span><br><span class="line">    compiler: this._compiler,</span><br><span class="line">    loaders: params.loaders,</span><br><span class="line">    loaderContext: params.loaderContext,</span><br><span class="line">  &#125;, params.loaderContext.sourceCode, params.loaderContext.sourceMap, function(err, source, sourceMap) &#123;</span><br><span class="line">    if (err) &#123;</span><br><span class="line">      done(ErrorSerializer.serialize(err))</span><br><span class="line">    &#125;</span><br><span class="line">    else &#123;</span><br><span class="line">      done(null, &#123;</span><br><span class="line">        compiledSource: source,</span><br><span class="line">        compiledMap: SourceMapSerializer.serialize(sourceMap)</span><br><span class="line">      &#125;);</span><br><span class="line">    &#125;</span><br><span class="line">  &#125;);</span><br><span class="line">&#125;;</span><br></pre></td></tr></table></figure>
+
+<p>在 HappyWorker.js 中的<code>compile</code>方法中，调用<code>applyLoaders</code>进行 loader 方法执行。<code>applyLoaders</code>是<code>happypack</code>中对<code>webpack</code>中 loader 执行过程进行模拟，对应 NormalModuleMixin.js 中的<a href="https://github.com/webpack/core/blob/master/lib/NormalModuleMixin.js#L49"><code>doBuild</code></a>方法。完成对文件的字符串处理编译。</p>
+<p>根据<code>err</code>判断是否成功。如果判断成功，则将对应文件的编译后内容写入之前传递进来的<code>compiledPath</code>,反之，则会把错误内容写入。</p>
+<p>关于 <strong>loader</strong> 内部的执行机制可以点<a href="https://segmentfault.com/a/1190000021037299?utm_source=tag-newest#">这里</a></p>
+<h4 id="编译结束"><a href="#编译结束" class="headerlink" title="编译结束"></a>编译结束</h4><p>当 webpack 整体编译流程结束后， happypack 开始进行一些善后工作</p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">&#x2F;&#x2F; HappyPlugin.js</span><br><span class="line"></span><br><span class="line">compiler.plugin(&#39;done&#39;, that.stop.bind(that));</span><br><span class="line"></span><br><span class="line">HappyPlugin.prototype.stop &#x3D; function() &#123;</span><br><span class="line">  if (this.config.cache) &#123;</span><br><span class="line">    this.cache.save();</span><br><span class="line">  &#125;</span><br><span class="line"></span><br><span class="line">  this.threadPool.stop();</span><br><span class="line">&#125;;</span><br><span class="line"></span><br></pre></td></tr></table></figure>
+
+<h4 id="整体流程"><a href="#整体流程" class="headerlink" title="整体流程"></a>整体流程</h4><p>结合webpack的编译，整体流程可以参考下图<br><img src="https://upload-images.jianshu.io/upload_images/10024246-3f564e9018081005.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240"></p>
+<h2 id="后记"><a href="#后记" class="headerlink" title="后记"></a>后记</h2><p>happypack 源码阅读需要对 webpack 有一定的了解，阅读难度主要在于webpack相关的api的了解。有兴趣的同学可以一起讨论</p>
+<blockquote>
+<p>转载自<a href="https://segmentfault.com/a/1190000021037299?utm_source=tag-newest">https://segmentfault.com/a/1190000021037299?utm_source=tag-newest</a></p>
+</blockquote>
+]]></content>
+      <categories>
+        <category>webpack</category>
+      </categories>
+  </entry>
 </search>
