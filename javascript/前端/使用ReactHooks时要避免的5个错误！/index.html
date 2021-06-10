@@ -1,0 +1,627 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=2">
+<meta name="theme-color" content="#222">
+<meta name="generator" content="Hexo 5.4.0">
+ <meta name="referrer" content="no-referrer"/>
+
+  <link rel="apple-touch-icon" sizes="180x180" href="/nirvana/images/apple-touch-icon-next.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="/nirvana/images/favicon-32x32-next.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="/nirvana/images/favicon-16x16-next.png">
+  <link rel="mask-icon" href="/nirvana/images/logo.svg" color="#222">
+
+<link rel="stylesheet" href="/nirvana/css/main.css">
+
+
+
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@5.15.2/css/all.min.css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/animate.css@3.1.1/animate.min.css">
+
+<script class="hexo-configurations">
+    var NexT = window.NexT || {};
+    var CONFIG = {"hostname":"lzhwweb.github.io","root":"/nirvana/","images":"/nirvana/images","scheme":"Gemini","version":"8.2.2","exturl":false,"sidebar":{"position":"left","display":"post","padding":18,"offset":12},"copycode":false,"bookmark":{"enable":true,"color":"#222","save":"auto"},"fancybox":false,"mediumzoom":false,"lazyload":false,"pangu":false,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},"motion":{"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"fadeInDown","post_body":"fadeInDown","coll_header":"fadeInLeft","sidebar":"fadeInUp"}},"prism":false,"i18n":{"placeholder":"搜索...","empty":"没有找到任何搜索结果：${query}","hits_time":"找到 ${hits} 个搜索结果（用时 ${time} 毫秒）","hits":"找到 ${hits} 个搜索结果"},"path":"/nirvana/search.xml","localsearch":{"enable":true,"trigger":"auto","top_n_per_article":1,"unescape":false,"preload":false}};
+  </script>
+<meta name="description" content="本文已经过原作者 Shadeed 授权翻译。 很有可能你已经读过很多关于如何使用React Hook 的文章。但有时候，知道何时不使用与知道如何使用同样重要。 在这篇文章中，主要介绍一下 React hooks 错误使用方式，以及如何解决它们。    不要更改 Hook 调用顺序   不要使用过时状态   不要创建过时的闭包   不要将状态用于基础结构数据   不要忘记清理副作用  1.不要更改">
+<meta property="og:type" content="article">
+<meta property="og:title" content="使用React Hooks 时要避免的5个错误！">
+<meta property="og:url" content="https://lzhwweb.github.io/nirvana/javascript/%E5%89%8D%E7%AB%AF/%E4%BD%BF%E7%94%A8ReactHooks%E6%97%B6%E8%A6%81%E9%81%BF%E5%85%8D%E7%9A%845%E4%B8%AA%E9%94%99%E8%AF%AF%EF%BC%81/index.html">
+<meta property="og:site_name" content="涅槃快乐是金">
+<meta property="og:description" content="本文已经过原作者 Shadeed 授权翻译。 很有可能你已经读过很多关于如何使用React Hook 的文章。但有时候，知道何时不使用与知道如何使用同样重要。 在这篇文章中，主要介绍一下 React hooks 错误使用方式，以及如何解决它们。    不要更改 Hook 调用顺序   不要使用过时状态   不要创建过时的闭包   不要将状态用于基础结构数据   不要忘记清理副作用  1.不要更改">
+<meta property="og:locale" content="zh_CN">
+<meta property="og:image" content="https://upload-images.jianshu.io/upload_images/10024246-147e46cb421a86ae?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240">
+<meta property="og:image" content="https://upload-images.jianshu.io/upload_images/10024246-35c8a5691d0d6056?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240">
+<meta property="article:published_time" content="2021-06-10T08:51:15.000Z">
+<meta property="article:modified_time" content="2021-06-10T08:51:39.935Z">
+<meta property="article:author" content="nirvana">
+<meta property="article:tag" content="前端,javascript,node,git,webpack,css">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="https://upload-images.jianshu.io/upload_images/10024246-147e46cb421a86ae?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240">
+
+
+<link rel="canonical" href="https://lzhwweb.github.io/nirvana/javascript/%E5%89%8D%E7%AB%AF/%E4%BD%BF%E7%94%A8ReactHooks%E6%97%B6%E8%A6%81%E9%81%BF%E5%85%8D%E7%9A%845%E4%B8%AA%E9%94%99%E8%AF%AF%EF%BC%81/">
+
+
+<script class="page-configurations">
+  // https://hexo.io/docs/variables.html
+  CONFIG.page = {
+    sidebar: "",
+    isHome : false,
+    isPost : true,
+    lang   : 'zh-CN'
+  };
+</script>
+<title>使用React Hooks 时要避免的5个错误！ | 涅槃快乐是金</title>
+  
+
+
+
+
+  <noscript>
+  <style>
+  body { margin-top: 2rem; }
+
+  .use-motion .menu-item,
+  .use-motion .sidebar,
+  .use-motion .post-block,
+  .use-motion .pagination,
+  .use-motion .comments,
+  .use-motion .post-header,
+  .use-motion .post-body,
+  .use-motion .collection-header {
+    visibility: visible;
+  }
+
+  .use-motion .header,
+  .use-motion .site-brand-container .toggle,
+  .use-motion .footer { opacity: initial; }
+
+  .use-motion .site-title,
+  .use-motion .site-subtitle,
+  .use-motion .custom-logo-image {
+    opacity: initial;
+    top: initial;
+  }
+
+  .use-motion .logo-line {
+    transform: scaleX(1);
+  }
+
+  .search-pop-overlay, .sidebar-nav { display: none; }
+  .sidebar-panel { display: block; }
+  </style>
+</noscript>
+
+</head>
+
+<body itemscope itemtype="http://schema.org/WebPage" class="use-motion">
+  <div class="headband"></div>
+
+  <main class="main">
+    <header class="header" itemscope itemtype="http://schema.org/WPHeader">
+      <div class="header-inner"><div class="site-brand-container">
+  <div class="site-nav-toggle">
+    <div class="toggle" aria-label="切换导航栏" role="button">
+        <span class="toggle-line"></span>
+        <span class="toggle-line"></span>
+        <span class="toggle-line"></span>
+    </div>
+  </div>
+
+  <div class="site-meta">
+
+    <a href="/nirvana/" class="brand" rel="start">
+      <i class="logo-line"></i>
+      <h1 class="site-title">涅槃快乐是金</h1>
+      <i class="logo-line"></i>
+    </a>
+  </div>
+
+  <div class="site-nav-right">
+    <div class="toggle popup-trigger">
+        <i class="fa fa-search fa-fw fa-lg"></i>
+    </div>
+  </div>
+</div>
+
+
+
+<nav class="site-nav">
+  <ul class="main-menu menu">
+        <li class="menu-item menu-item-home"><a href="/nirvana/" rel="section">首页</a></li>
+        <li class="menu-item menu-item-git"><a href="/nirvana/categories/git" rel="section">git</a></li>
+        <li class="menu-item menu-item-linux"><a href="/nirvana/categories/linux" rel="section">linux</a></li>
+        <li class="menu-item menu-item-android"><a href="/nirvana/categories/android" rel="section">android</a></li>
+        <li class="menu-item menu-item-随笔"><a href="/nirvana/categories/informal" rel="section">随笔</a></li>
+        <li class="menu-item menu-item-mac"><a href="/nirvana/categories/mac" rel="section">mac</a></li>
+        <li class="menu-item menu-item-react-native"><a href="/nirvana/categories/reactnative" rel="section">react-native</a></li>
+        <li class="menu-item menu-item-算法"><a href="/nirvana/categories/algorithm" rel="section">算法</a></li>
+        <li class="menu-item menu-item-读书笔记"><a href="/nirvana/categories/note" rel="section">读书笔记</a></li>
+        <li class="menu-item menu-item-开发工具"><a href="/nirvana/categories/tool" rel="section">开发工具</a></li>
+        <li class="menu-item menu-item-设计模式(ts)"><a href="/nirvana/categories/DesignPattern" rel="section">设计模式(TS)</a></li>
+        <li class="menu-item menu-item-前端"><a href="/nirvana/categories/javascript" rel="section">前端</a></li>
+        <li class="menu-item menu-item-webpack"><a href="/nirvana/categories/webpack" rel="section">webpack</a></li>
+      <li class="menu-item menu-item-search">
+        <a role="button" class="popup-trigger"><i class="fa fa-search fa-fw"></i>搜索
+        </a>
+      </li>
+  </ul>
+</nav>
+
+
+
+  <div class="search-pop-overlay">
+    <div class="popup search-popup"><div class="search-header">
+  <span class="search-icon">
+    <i class="fa fa-search"></i>
+  </span>
+  <div class="search-input-container">
+    <input autocomplete="off" autocapitalize="off" maxlength="80"
+           placeholder="搜索..." spellcheck="false"
+           type="search" class="search-input">
+  </div>
+  <span class="popup-btn-close" role="button">
+    <i class="fa fa-times-circle"></i>
+  </span>
+</div>
+<div class="search-result-container no-result">
+  <div class="search-result-icon">
+    <i class="fa fa-spinner fa-pulse fa-5x"></i>
+  </div>
+</div>
+
+    </div>
+  </div>
+
+</div>
+        
+  
+  <div class="toggle sidebar-toggle" role="button">
+    <span class="toggle-line"></span>
+    <span class="toggle-line"></span>
+    <span class="toggle-line"></span>
+  </div>
+
+  <aside class="sidebar">
+
+    <div class="sidebar-inner sidebar-nav-active sidebar-toc-active">
+      <ul class="sidebar-nav">
+        <li class="sidebar-nav-toc">
+          文章目录
+        </li>
+        <li class="sidebar-nav-overview">
+          站点概览
+        </li>
+      </ul>
+
+      <div class="sidebar-panel-container">
+        <!--noindex-->
+        <div class="post-toc-wrap sidebar-panel">
+            <div class="post-toc animated"><ol class="nav"><li class="nav-item nav-level-3"><a class="nav-link" href="#1-%E4%B8%8D%E8%A6%81%E6%9B%B4%E6%94%B9-Hook-%E8%B0%83%E7%94%A8%E9%A1%BA%E5%BA%8F"><span class="nav-text">1.不要更改 Hook 调用顺序</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#2-%E4%B8%8D%E8%A6%81%E4%BD%BF%E7%94%A8%E8%BF%87%E6%97%B6%E7%8A%B6%E6%80%81"><span class="nav-text">2.不要使用过时状态</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#3-%E4%B8%8D%E8%A6%81%E5%88%9B%E5%BB%BA%E8%BF%87%E6%97%B6%E7%9A%84%E9%97%AD%E5%8C%85"><span class="nav-text">3.不要创建过时的闭包</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#4-%E4%B8%8D%E8%A6%81%E5%B0%86%E7%8A%B6%E6%80%81%E7%94%A8%E4%BA%8E%E5%9F%BA%E7%A1%80%E7%BB%93%E6%9E%84%E6%95%B0%E6%8D%AE"><span class="nav-text">4.不要将状态用于基础结构数据</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#5-%E4%B8%8D%E8%A6%81%E5%BF%98%E8%AE%B0%E6%B8%85%E7%90%86%E5%89%AF%E4%BD%9C%E7%94%A8"><span class="nav-text">5.不要忘记清理副作用</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#6-%E6%80%BB%E7%BB%93"><span class="nav-text">6. 总结</span></a></li></ol></div>
+        </div>
+        <!--/noindex-->
+
+        <div class="site-overview-wrap sidebar-panel">
+          <div class="site-author site-overview-item animated" itemprop="author" itemscope itemtype="http://schema.org/Person">
+    <img class="site-author-image" itemprop="image" alt="nirvana"
+      src="/nirvana/images/headphoto.jpeg">
+  <p class="site-author-name" itemprop="name">nirvana</p>
+  <div class="site-description" itemprop="description">个人学习笔记</div>
+</div>
+<div class="site-state-wrap site-overview-item animated">
+  <nav class="site-state">
+      <div class="site-state-item site-state-posts">
+          <a href="/nirvana/archives">
+          <span class="site-state-item-count">249</span>
+          <span class="site-state-item-name">日志</span>
+        </a>
+      </div>
+      <div class="site-state-item site-state-categories">
+        <span class="site-state-item-count">12</span>
+        <span class="site-state-item-name">分类</span>
+      </div>
+  </nav>
+</div>
+  <div class="links-of-author site-overview-item animated">
+      <span class="links-of-author-item">
+        <a href="https://github.com/lzhwWeb" title="GitHub → https:&#x2F;&#x2F;github.com&#x2F;lzhwWeb" rel="noopener" target="_blank"><i class="fab fa-github fa-fw"></i></a>
+      </span>
+  </div>
+
+
+
+        </div>
+      </div>
+        <div class="back-to-top animated" role="button">
+          <i class="fa fa-arrow-up"></i>
+          <span>0%</span>
+        </div>
+    </div>
+  </aside>
+  <div class="sidebar-dimmer"></div>
+
+
+    </header>
+
+    
+  <div class="reading-progress-bar"></div>
+  <a role="button" class="book-mark-link book-mark-link-fixed"></a>
+
+<noscript>
+  <div class="noscript-warning">Theme NexT works best with JavaScript enabled</div>
+</noscript>
+
+
+    <div class="main-inner post posts-expand">
+
+
+  
+
+
+<div class="post-block">
+  
+  
+
+  <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="zh-CN">
+    <link itemprop="mainEntityOfPage" href="https://lzhwweb.github.io/nirvana/javascript/%E5%89%8D%E7%AB%AF/%E4%BD%BF%E7%94%A8ReactHooks%E6%97%B6%E8%A6%81%E9%81%BF%E5%85%8D%E7%9A%845%E4%B8%AA%E9%94%99%E8%AF%AF%EF%BC%81/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/nirvana/images/headphoto.jpeg">
+      <meta itemprop="name" content="nirvana">
+      <meta itemprop="description" content="个人学习笔记">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="涅槃快乐是金">
+    </span>
+      <header class="post-header">
+        <h1 class="post-title" itemprop="name headline">
+          使用React Hooks 时要避免的5个错误！
+        </h1>
+
+        <div class="post-meta-container">
+          <div class="post-meta">
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-calendar"></i>
+      </span>
+      <span class="post-meta-item-text">发表于</span>
+      
+
+      <time title="创建时间：2021-06-10 16:51:15 / 修改时间：16:51:39" itemprop="dateCreated datePublished" datetime="2021-06-10T16:51:15+08:00">2021-06-10</time>
+    </span>
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-folder"></i>
+      </span>
+      <span class="post-meta-item-text">分类于</span>
+        <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+          <a href="/nirvana/categories/javascript/" itemprop="url" rel="index"><span itemprop="name">javascript</span></a>
+        </span>
+    </span>
+
+  
+    <span id="/nirvana/javascript/%E5%89%8D%E7%AB%AF/%E4%BD%BF%E7%94%A8ReactHooks%E6%97%B6%E8%A6%81%E9%81%BF%E5%85%8D%E7%9A%845%E4%B8%AA%E9%94%99%E8%AF%AF%EF%BC%81/" class="post-meta-item leancloud_visitors" data-flag-title="使用React Hooks 时要避免的5个错误！" title="阅读次数">
+      <span class="post-meta-item-icon">
+        <i class="far fa-eye"></i>
+      </span>
+      <span class="post-meta-item-text">阅读次数：</span>
+      <span class="leancloud-visitors-count"></span>
+    </span>
+      </div>
+      <div class="post-meta">
+    <span class="post-meta-item" title="本文字数">
+      <span class="post-meta-item-icon">
+        <i class="far fa-file-word"></i>
+      </span>
+      <span class="post-meta-item-text">本文字数：</span>
+      <span>8.4k</span>
+    </span>
+    <span class="post-meta-item" title="阅读时长">
+      <span class="post-meta-item-icon">
+        <i class="far fa-clock"></i>
+      </span>
+      <span class="post-meta-item-text">阅读时长 &asymp;</span>
+      <span>8 分钟</span>
+    </span>
+</div>
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+        <p>本文已经过原作者 Shadeed 授权翻译。</p>
+<p>很有可能你已经读过很多关于如何使用React Hook 的文章。但有时候，知道何时不使用与知道如何使用同样重要。</p>
+<p>在这篇文章中，主要介绍一下 React hooks 错误使用方式，以及如何解决它们。</p>
+<ul>
+<li>  不要更改 Hook 调用顺序</li>
+<li>  不要使用过时状态</li>
+<li>  不要创建过时的闭包</li>
+<li>  不要将状态用于基础结构数据</li>
+<li>  不要忘记清理副作用</li>
+</ul>
+<h3 id="1-不要更改-Hook-调用顺序"><a href="#1-不要更改-Hook-调用顺序" class="headerlink" title="1.不要更改 Hook 调用顺序"></a>1.不要更改 Hook 调用顺序</h3><p>在写这篇文章的前几天，我编写了一个通过id获取游戏信息的组件，下面是一个简单的版本 <code>FetchGame</code>：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br></pre></td><td class="code"><pre><span class="line">function FetchGame(&#123; id &#125;) &#123;</span><br><span class="line">  if (!id) &#123;</span><br><span class="line">    return &#39;Please select a game to fetch&#39;;</span><br><span class="line">  &#125;</span><br><span class="line"></span><br><span class="line">  const [game, setGame] &#x3D; useState(&#123; </span><br><span class="line">    name: &#39;&#39;,</span><br><span class="line">    description: &#39;&#39; </span><br><span class="line">  &#125;);</span><br><span class="line"></span><br><span class="line">  useEffect(() &#x3D;&gt; &#123;</span><br><span class="line">    const fetchGame &#x3D; async () &#x3D;&gt; &#123;</span><br><span class="line">      const response &#x3D; await fetch(&#96;&#x2F;api&#x2F;game&#x2F;$&#123;id&#125;&#96;);</span><br><span class="line">      const fetchedGame &#x3D; await response.json();</span><br><span class="line">      setGame(fetchedGame);</span><br><span class="line">    &#125;;</span><br><span class="line">    fetchGame();</span><br><span class="line">  &#125;, [id]);</span><br><span class="line"></span><br><span class="line">  return (</span><br><span class="line">    &lt;div&gt; &lt;div&gt;Name: &#123;game.name&#125;&lt;&#x2F;div&gt; &lt;div&gt;Description: &#123;game.description&#125;&lt;&#x2F;div&gt; &lt;&#x2F;div&gt;</span><br><span class="line">  ); </span><br></pre></td></tr></table></figure>
+
+<p>组件<code>FetchGame</code> 接收 <code>id</code>（即要获取的游戏的ID）。<code>useEffect()</code>  在<code>await fetch(/game/$&#123;id&#125;)</code>提取游戏信息并将其保存到状态变量<code>game</code>中。</p>
+<p>打开演示(<a target="_blank" rel="noopener" href="https://codesandbox.io/s/hooks-order-warning-rdxpg?file=/pages/index.js">https://codesandbox.io/s/hooks-order-warning-rdxpg?file=/pages/index.js</a>) 。组件正确地执行获取操作，并使用获取的数据更新状态。但是看看tab Eslint警告: 有 Hook 执行顺序不正确的问题。</p>
+<p><img src="https://upload-images.jianshu.io/upload_images/10024246-147e46cb421a86ae?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="图片"></p>
+<p>问题发生在这一判断：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">function FetchGame(&#123; id &#125;) &#123;</span><br><span class="line"> if (!id) &#123; return &#39;Please select a game to fetch&#39;; &#125;  </span><br><span class="line">   &#x2F;&#x2F; ...</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<p>当<code>id</code>为空时，组件渲染<code>&#39;Please select a game to fetch&#39;</code>并退出，不调用任何 Hook。</p>
+<p>但是，如果 <code>id</code>不为空（例如等于’1’），则会调用<code>useState()</code>和 <code>useEffect()</code>。</p>
+<p>有条件地执行 Hook 可能会导致难以调试的意外错误。React Hook的内部工作方式要求组件在渲染之间总是以相同的顺序调用 Hook。</p>
+<p>这正是钩子的第一条规则:不要在循环、条件或嵌套函数内调用 Hook。</p>
+<p>解决方法就是将条件判断放到 Hook 后面：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br></pre></td><td class="code"><pre><span class="line">function FetchGame(&#123; id &#125;) &#123;</span><br><span class="line">  const [game, setGame] &#x3D; useState(&#123; </span><br><span class="line">    name: &#39;&#39;,</span><br><span class="line">    description: &#39;&#39; </span><br><span class="line">  &#125;);</span><br><span class="line"></span><br><span class="line">  useEffect(() &#x3D;&gt; &#123;</span><br><span class="line">    const fetchGame &#x3D; async () &#x3D;&gt; &#123;</span><br><span class="line">      const response &#x3D; await fetch(&#96;&#x2F;api&#x2F;game&#x2F;$&#123;id&#125;&#96;);</span><br><span class="line">      const fetchedGame &#x3D; await response.json();</span><br><span class="line">      setGame(fetchedGame);</span><br><span class="line">    &#125;;</span><br><span class="line"> if (id) &#123;      fetchGame();     &#125;  &#125;, [id]);</span><br><span class="line"></span><br><span class="line"> if (!id) &#123; return &#39;Please select a game to fetch&#39;; &#125;</span><br><span class="line">  return (</span><br><span class="line">    &lt;div&gt;</span><br><span class="line"> &lt;div&gt;Name: &#123;game.name&#125;&lt;&#x2F;div&gt;</span><br><span class="line"> &lt;div&gt;Description: &#123;game.description&#125;&lt;&#x2F;div&gt;</span><br><span class="line"> &lt;&#x2F;div&gt;</span><br><span class="line">  );</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<p>现在，无论<code>id</code>是否为空，<code>useState()</code>和<code>useEffect()</code> 总是以相同的顺序被调用，这就是 Hook 应该始终被调用的方式。</p>
+<h3 id="2-不要使用过时状态"><a href="#2-不要使用过时状态" class="headerlink" title="2.不要使用过时状态"></a>2.不要使用过时状态</h3><p>下面的组件<code>MyIncreaser</code>在单击按钮时增加状态变量<code>count</code>:</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br></pre></td><td class="code"><pre><span class="line">function MyIncreaser() &#123;</span><br><span class="line">  const [count, setCount] &#x3D; useState(0);</span><br><span class="line"></span><br><span class="line">  const increase &#x3D; useCallback(() &#x3D;&gt; &#123;</span><br><span class="line">    setCount(count + 1);</span><br><span class="line">  &#125;, [count]);</span><br><span class="line"></span><br><span class="line">  const handleClick &#x3D; () &#123;</span><br><span class="line"> increase(); increase(); increase();  &#125;;</span><br><span class="line"></span><br><span class="line">  return (</span><br><span class="line">    &lt;&gt;</span><br><span class="line"> &lt;button onClick&#x3D;&#123;handleClick&#125;&gt;Increase&lt;&#x2F;button&gt;</span><br><span class="line"> &lt;div&gt;Counter: &#123;count&#125;&lt;&#x2F;div&gt;</span><br><span class="line"> &lt;&#x2F;&gt;</span><br><span class="line">  );</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<p>这里有趣一点的是，<code>handleClick</code>调用了3次状态更新。</p>
+<p>现在，在打开演示之前，问一个问题：如果单击一次按钮，计数器是否增加<code>3</code>？</p>
+<p>打开演示（<a target="_blank" rel="noopener" href="https://codesandbox.io/s/stale-variable-jo32q?file=/src/index.js%EF%BC%89%EF%BC%8C%E7%82%B9%E5%87%BB%E6%8C%89%E9%92%AE%E4%B8%80%E6%AC%A1%EF%BC%8C%E7%9C%8B%E7%9C%8B%E7%BB%93%E6%9E%9C%E3%80%82">https://codesandbox.io/s/stale-variable-jo32q?file=/src/index.js），点击按钮一次，看看结果。</a></p>
+<p>不好意思，即使在<code>handleClick()</code>中3次调用了<code>increase()</code>，计数也只增加了<code>1</code>。</p>
+<p>问题在于<code>setCount(count + 1)</code>状态更新器。当按钮被点击时，React调用<code>setCount(count + 1)</code>3次</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><span class="line"> const handleClick &#x3D; () &#123;</span><br><span class="line">    increase();</span><br><span class="line">    increase();</span><br><span class="line">    increase();</span><br><span class="line">  &#125;;</span><br><span class="line"></span><br><span class="line">&#x2F;&#x2F; 等价:</span><br><span class="line"></span><br><span class="line">  const handleClick &#x3D; () &#123;</span><br><span class="line">    setCount(count + 1);</span><br><span class="line">    &#x2F;&#x2F; count variable is now stale</span><br><span class="line">    setCount(count + 1);</span><br><span class="line">    setCount(count + 1);</span><br><span class="line">  &#125;;</span><br></pre></td></tr></table></figure>
+
+<p><code>setCount(count + 1)</code>的第一次调用正确地将计数器更新为<code>count + 1 = 0 + 1 = 1</code>。但是，接下来的两次<code>setCount(count + 1)</code>调用也将计数设置为<code>1</code>，因为它们使用了过时的<code>stale</code>状态。</p>
+<p>通过使用函数方式更新状态来解决过时的状态。我们用<code>setCount(count =&gt; count + 1)</code>代替<code>setCount(count + 1)</code>：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br></pre></td><td class="code"><pre><span class="line">function MyIncreaser() &#123;</span><br><span class="line">  const [count, setCount] &#x3D; useState(0);</span><br><span class="line"></span><br><span class="line">  const increase &#x3D; useCallback(() &#x3D;&gt; &#123;</span><br><span class="line"> setCount(count &#x3D;&gt; count + 1);  &#125;, []);</span><br><span class="line"></span><br><span class="line">  const handleClick &#x3D; () &#123;</span><br><span class="line">    increase();</span><br><span class="line">    increase();</span><br><span class="line">    increase();</span><br><span class="line">  &#125;;</span><br><span class="line"></span><br><span class="line">  return (</span><br><span class="line">    &lt;&gt;</span><br><span class="line"> &lt;button onClick&#x3D;&#123;handleClick&#125;&gt;Increase&lt;&#x2F;button&gt;</span><br><span class="line"> &lt;div&gt;Counter: &#123;count&#125;&lt;&#x2F;div&gt;</span><br><span class="line"> &lt;&#x2F;&gt;</span><br><span class="line">  );</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<p>这里有一个好规则可以避免遇到过时的变量：</p>
+<p>如果你使用当前状态来计算下一个状态，总是使用函数方式来更新状态:<code>setValue(prevValue =&gt; prevValue + someResult)</code>。</p>
+<h3 id="3-不要创建过时的闭包"><a href="#3-不要创建过时的闭包" class="headerlink" title="3.不要创建过时的闭包"></a>3.不要创建过时的闭包</h3><p>React Hook 很大程序上依赖于闭包的概念。依赖闭包是它们如此富有表现力的原因。</p>
+<p>JavaScript 中的闭包是从其词法作用域捕获变量的函数。不管闭包在哪里执行，它总是可以从定义它的地方访问变量。</p>
+<p>当使用 Hook 接受回调作为参数时(如<code>useEffect(callback, deps)</code>， <code>useCallback(callback, deps))</code>，你可能会创建一个过时的闭包，一个捕获了过时的状态或变量的闭包。</p>
+<p>我们来看看一个使用<code>useEffect(callback, deps)</code> 而忘记正确设置依赖关系时创建的过时闭包的例子。</p>
+<p>在组件<code>&lt;WatchCount&gt;</code>中，<code>useEffect()</code>每2秒打印一次<code>count</code>的值</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><span class="line">const [count, setCount] &#x3D; useState(0);</span><br><span class="line"></span><br><span class="line">  useEffect(function() &#123;</span><br><span class="line">    setInterval(function log() &#123;</span><br><span class="line">      console.log(&#96;Count is: $&#123;count&#125;&#96;);</span><br><span class="line">    &#125;, 2000);</span><br><span class="line">  &#125;, []);</span><br><span class="line"></span><br><span class="line">  const handleClick &#x3D; () &#x3D;&gt; setCount(count &#x3D;&gt; count + 1);</span><br><span class="line"></span><br><span class="line">  return (</span><br><span class="line">    &lt;&gt; &lt;button onClick&#x3D;&#123;handleClick&#125;&gt;Increase&lt;&#x2F;button&gt; &lt;div&gt;Counter: &#123;count&#125;&lt;&#x2F;div&gt; &lt;&#x2F;&gt;</span><br><span class="line">  );</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<p>打开演示(<a target="_blank" rel="noopener" href="https://codesandbox.io/s/stale-variable-jo32q?file=/src/index.js)%EF%BC%8C%E7%82%B9%E5%87%BB%E6%8C%89%E9%92%AE%E3%80%82%E5%9C%A8%E6%8E%A7%E5%88%B6%E5%8F%B0%E6%9F%A5%E7%9C%8B%EF%BC%8C%E6%AF%8F2%E7%A7%92%E6%89%93%E5%8D%B0%E7%9A%84%E9%83%BD">https://codesandbox.io/s/stale-variable-jo32q?file=/src/index.js)，点击按钮。在控制台查看，每2秒打印的都</a> 是 <code>Count is: 0</code>,，不管<code>count</code>状态变量的实际值是多少。</p>
+<p>为啥这样子？</p>
+<p>第一次渲染时， <code>log</code> 函数捕获到的 <code>count</code> 的值为 <code>0</code>。</p>
+<p>之后，当按钮被单击并且<code>count</code>增加时，<code>setInterval</code>取到的 <code>count</code> 值仍然是从初始渲染中捕获<code>count</code>为0的值。<code>log</code> 函数是一个过时的闭包，因为它捕获了一个过时的状态变量<code>count</code>。</p>
+<p>解决方案是让<code>useEffect()</code>知道闭包<code>log</code>依赖于<code>count</code>，并正确重置计时器</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br></pre></td><td class="code"><pre><span class="line">function WatchCount() &#123;</span><br><span class="line">  const [count, setCount] &#x3D; useState(0);</span><br><span class="line"></span><br><span class="line">  useEffect(function() &#123;</span><br><span class="line">    const id &#x3D; setInterval(function log() &#123;</span><br><span class="line">      console.log(&#96;Count is: $&#123;count&#125;&#96;);</span><br><span class="line">    &#125;, 2000);</span><br><span class="line"> return () &#x3D;&gt; clearInterval(id); &#125;, [count]);</span><br><span class="line">  const handleClick &#x3D; () &#x3D;&gt; setCount(count &#x3D;&gt; count + 1);</span><br><span class="line"></span><br><span class="line">  return (</span><br><span class="line">    &lt;&gt;</span><br><span class="line"> &lt;button onClick&#x3D;&#123;handleClick&#125;&gt;Increase&lt;&#x2F;button&gt;</span><br><span class="line"> &lt;div&gt;Counter: &#123;count&#125;&lt;&#x2F;div&gt;</span><br><span class="line"> &lt;&#x2F;&gt;</span><br><span class="line">  );</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<p>正确设置依赖关系后，一旦<code>count</code>发生变化，<code>useEffect()</code>就会更新<code>setInterval()</code>的闭包。</p>
+<p>为了防止闭包捕获旧值：确保提供给 Hook 的回调函数中使用依赖项。</p>
+<h3 id="4-不要将状态用于基础结构数据"><a href="#4-不要将状态用于基础结构数据" class="headerlink" title="4.不要将状态用于基础结构数据"></a>4.不要将状态用于基础结构数据</h3><p>有一次，我需要在状态更新上调用副作用，在第一个渲染不用调用副作用。<code>useEffect(callback, deps)</code>总是在挂载组件后调用回调函数:所以我想避免这种情况。</p>
+<p>我找到了以下的解决方案</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br></pre></td><td class="code"><pre><span class="line">function MyComponent() &#123;</span><br><span class="line">  const [isFirst, setIsFirst] &#x3D; useState(true);</span><br><span class="line">  const [count, setCount] &#x3D; useState(0);</span><br><span class="line"></span><br><span class="line">  useEffect(() &#x3D;&gt; &#123;</span><br><span class="line">    if (isFirst) &#123;</span><br><span class="line">      setIsFirst(false);</span><br><span class="line">      return;</span><br><span class="line">    &#125;</span><br><span class="line">    console.log(&#39;The counter increased!&#39;);</span><br><span class="line">  &#125;, [count]);</span><br><span class="line"></span><br><span class="line">  return (</span><br><span class="line">    &lt;button onClick&#x3D;&#123;() &#x3D;&gt; setCount(count &#x3D;&gt; count + 1)&#125;&gt; Increase &lt;&#x2F;button&gt;</span><br><span class="line">  );</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<p>状态变量<code>isFirst</code>用来判断是否是第一次渲染。一旦更新<code>setIsFirst(false)</code>，就会出现另一个无缘无故的重新渲染。</p>
+<p>保持<code>count</code>状态是有意义的，因为界面需要渲染 count 的值。但是，<code>isFirst</code>不能直接用于计算输出。</p>
+<p>是否为第一个渲染的信息不应存储在该状态中。基础结构数据，例如有关渲染周期（即首次渲染，渲染数量），计时器ID（<code>setTimeout()</code>，<code>setInterval()</code>），对DOM元素的直接引用等详细信息，应使用引用<code>useRef()</code>进行存储和更新。</p>
+<p>我们将有关首次渲染的信息存储到 Ref 中：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br></pre></td><td class="code"><pre><span class="line"> const isFirstRef &#x3D; useRef(true);  const [count, setCount] &#x3D; useState(0);</span><br><span class="line"></span><br><span class="line">  useEffect(() &#x3D;&gt; &#123;</span><br><span class="line">    if (isFirstRef.current) &#123;</span><br><span class="line">      isFirstRef.current &#x3D; false;</span><br><span class="line">      return;</span><br><span class="line">    &#125;</span><br><span class="line">    console.log(&#39;The counter increased!&#39;);</span><br><span class="line">  &#125;, [count]);</span><br><span class="line"></span><br><span class="line">  return (</span><br><span class="line">    &lt;button onClick&#x3D;&#123;() &#x3D;&gt; setCounter(count &#x3D;&gt; count + 1)&#125;&gt;</span><br><span class="line"> Increase</span><br><span class="line"> &lt;&#x2F;button&gt;</span><br><span class="line">  );</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<p><code>isFirstRef</code>是一个引用，用于保存是否为组件的第一个渲染的信息。<code>isFirstRef.current</code>属性用于访问和更新引用的值。</p>
+<p><strong>重要说明：更新参考<code>isFirstRef.current = false</code>不会触发重新渲染。</strong></p>
+<h3 id="5-不要忘记清理副作用"><a href="#5-不要忘记清理副作用" class="headerlink" title="5.不要忘记清理副作用"></a>5.不要忘记清理副作用</h3><p>很多副作用，比如获取请求或使用<code>setTimeout()</code>这样的计时器，都是异步的。</p>
+<p>如果组件卸载或不再需要该副作用的结果，请不要忘记清理该副作用。</p>
+<p>下面的组件有一个按钮。当按钮被点击时，计数器每秒钟延迟增加<code>1</code>：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br></pre></td><td class="code"><pre><span class="line">function DelayedIncreaser() &#123;  const [count, setCount] &#x3D; useState(0);  const [incrfunction DelayedIncreaser() &#123;</span><br><span class="line">  const [count, setCount] &#x3D; useState(0);</span><br><span class="line">  const [increase, setShouldIncrease] &#x3D; useState(false);</span><br><span class="line"></span><br><span class="line">  useEffect(() &#x3D;&gt; &#123;</span><br><span class="line">    if (increase) &#123;</span><br><span class="line">      setInterval(() &#x3D;&gt; &#123;</span><br><span class="line">        setCount(count &#x3D;&gt; count + 1)</span><br><span class="line">      &#125;, 1000);</span><br><span class="line">    &#125;</span><br><span class="line">  &#125;, [increase]);</span><br><span class="line"></span><br><span class="line">  return (</span><br><span class="line">    &lt;&gt; &lt;button onClick&#x3D;&#123;() &#x3D;&gt; setShouldIncrease(true)&#125;&gt; Start increasing &lt;&#x2F;button&gt; &lt;div&gt;Count: &#123;count&#125;&lt;&#x2F;div&gt; &lt;&#x2F;&gt;</span><br><span class="line">  );</span><br><span class="line">&#125;</span><br><span class="line"></span><br></pre></td></tr></table></figure>
+
+<p>打开演示（<a target="_blank" rel="noopener" href="https://codesandbox.io/s/unmounted-state-update-n1d3u?file=/src/index.js%EF%BC%89%EF%BC%8C%E7%82%B9%E5%87%BB%E5%BC%80%E5%A7%8B%E6%8C%89%E9%92%AE%E3%80%82%E6%AD%A3%E5%A6%82%E9%A2%84%E6%9C%9F%E7%9A%84%E9%82%A3%E6%A0%B7%EF%BC%8C%E7%8A%B6%E6%80%81%E5%8F%98%E9%87%8F%60count%60%E6%AF%8F%E7%A7%92%E9%92%9F%E9%83%BD%E4%BC%9A%E5%A2%9E%E5%8A%A0%E3%80%82">https://codesandbox.io/s/unmounted-state-update-n1d3u?file=/src/index.js），点击开始按钮。正如预期的那样，状态变量`count`每秒钟都会增加。</a></p>
+<p>在进行递增操作时，单击<code>umount</code> 按钮，卸载组件。React会在控制台中警告更新卸载组件的状态。</p>
+<p><img src="https://upload-images.jianshu.io/upload_images/10024246-35c8a5691d0d6056?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="图片"></p>
+<p>修复<code>DelayedIncreaser</code>很简单：只需从<code>useEffect()</code>的回调中返回清除函数：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line"> &#x2F;&#x2F; ...</span><br><span class="line"></span><br><span class="line">  useEffect(() &#x3D;&gt; &#123;</span><br><span class="line">    if (increase) &#123;</span><br><span class="line">      const id &#x3D; setInterval(() &#x3D;&gt; &#123;</span><br><span class="line">        setCount(count &#x3D;&gt; count + 1)</span><br><span class="line">      &#125;, 1000);</span><br><span class="line"> return () &#x3D;&gt; clearInterval(id);    &#125;</span><br><span class="line">  &#125;, [increase]);</span><br><span class="line"></span><br><span class="line">  &#x2F;&#x2F; ...</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<p>也就是说，每次编写副作用代码时，都要问自己它是否应该清理。计时器，频繁请求(如上传文件)，sockets 几乎总是需要清理。</p>
+<h3 id="6-总结"><a href="#6-总结" class="headerlink" title="6. 总结"></a>6. 总结</h3><p>从React钩子开始的最好方法是学习如何使用它们。</p>
+<p>但你也会遇到这样的情况:你无法理解为什么他们的行为与你预期的不同。知道如何使用React Hook还不够:你还应该知道何时不使用它们。</p>
+<p>首先不要做的是有条件地渲染 Hook 或改变 Hook 调用的顺序。无论Props 或状态值是什么，React都期望组件总是以相同的顺序调用Hook。</p>
+<p>要避免的第二件事是使用过时的状态值。要避免过时 状态，请使用函数方式更新状态。</p>
+<p>不要忘记指出接受回调函数作为参数的 Hook 的依赖关系:例如<code>useEffect(callback, deps)</code>，<code>useCallback(callback, deps</code>),这可以解决过时闭包问题。</p>
+<p>不要将基础结构数据（例如有关组件渲染周期，<code>setTimeout()</code>或<code>setInterval()</code>）存储到状态中。经验法则是将此类数据保存在 Ref 中。</p>
+<p>最后，别忘了清除你的副作用。</p>
+<hr>
+<blockquote>
+<p>作者：Shadeed    来源：dmitripavlutin原文：<a target="_blank" rel="noopener" href="https://dmitripavlutin.com/react-hooks-mistakes-to-avoid/">https://dmitripavlutin.com/react-hooks-mistakes-to-avoid/</a></p>
+</blockquote>
+
+    </div>
+
+    
+    
+    
+
+    <footer class="post-footer">
+
+        
+
+          <div class="post-nav">
+            <div class="post-nav-item">
+                <a href="/nirvana/javascript/%E5%89%8D%E7%AB%AF/ReactHooks%E4%BA%86%E8%A7%A3%E4%B8%80%E4%B8%8B%EF%BC%9F%E8%B6%85%E7%AE%80%E5%8D%95%E5%85%A5%E9%97%A8Hooks/" rel="prev" title="React Hooks了解一下？超简单入门Hooks">
+                  <i class="fa fa-chevron-left"></i> React Hooks了解一下？超简单入门Hooks
+                </a>
+            </div>
+            <div class="post-nav-item">
+                <a href="/nirvana/webpack/webpack/%E6%88%91%E4%BB%AC%E5%A6%82%E4%BD%95%E6%89%8B%E5%86%99%E4%B8%80%E4%B8%AAbabel/" rel="next" title="webpack插件babel，我们如何手写一个babel，以及babel的原理">
+                  webpack插件babel，我们如何手写一个babel，以及babel的原理 <i class="fa fa-chevron-right"></i>
+                </a>
+            </div>
+          </div>
+    </footer>
+  </article>
+</div>
+
+
+
+
+
+
+
+<script>
+  window.addEventListener('tabs:register', () => {
+    let { activeClass } = CONFIG.comments;
+    if (CONFIG.comments.storage) {
+      activeClass = localStorage.getItem('comments_active') || activeClass;
+    }
+    if (activeClass) {
+      const activeTab = document.querySelector(`a[href="#comment-${activeClass}"]`);
+      if (activeTab) {
+        activeTab.click();
+      }
+    }
+  });
+  if (CONFIG.comments.storage) {
+    window.addEventListener('tabs:click', event => {
+      if (!event.target.matches('.tabs-comment .tab-content .tab-pane')) return;
+      const commentClass = event.target.classList[1];
+      localStorage.setItem('comments_active', commentClass);
+    });
+  }
+</script>
+</div>
+  </main>
+
+  <footer class="footer">
+    <div class="footer-inner">
+
+
+<div class="copyright">
+  &copy; 
+  <span itemprop="copyrightYear">2021</span>
+  <span class="with-love">
+    <i class="fa fa-heart"></i>
+  </span>
+  <span class="author" itemprop="copyrightHolder">nirvana</span>
+</div>
+<div class="wordcount">
+  <span class="post-meta-item">
+    <span class="post-meta-item-icon">
+      <i class="fa fa-chart-line"></i>
+    </span>
+      <span>站点总字数：</span>
+    <span title="站点总字数">736k</span>
+  </span>
+  <span class="post-meta-item">
+    <span class="post-meta-item-icon">
+      <i class="fa fa-coffee"></i>
+    </span>
+      <span>站点阅读时长 &asymp;</span>
+    <span title="站点阅读时长">11:09</span>
+  </span>
+</div>
+  <div class="powered-by">由 <a href="https://hexo.io/" class="theme-link" rel="noopener" target="_blank">Hexo</a> & <a href="https://theme-next.js.org/" class="theme-link" rel="noopener" target="_blank">NexT.Gemini</a> 强力驱动
+  </div>
+
+    </div>
+  </footer>
+
+  
+  <script src="https://cdn.jsdelivr.net/npm/animejs@3.2.1/lib/anime.min.js"></script>
+<script src="/nirvana/js/utils.js"></script><script src="/nirvana/js/motion.js"></script><script src="/nirvana/js/next-boot.js"></script><script src="/nirvana/js/bookmark.js"></script>
+
+  
+<script src="/nirvana/js/local-search.js"></script>
+
+
+
+
+
+
+  
+
+
+<script>
+  (function() {
+    function leancloudSelector(url) {
+      url = encodeURI(url);
+      return document.getElementById(url).querySelector('.leancloud-visitors-count');
+    }
+
+    function addCount(Counter) {
+      const visitors = document.querySelector('.leancloud_visitors');
+      const url = decodeURI(visitors.id);
+      const title = visitors.dataset.flagTitle;
+
+      Counter('get', '/classes/Counter?where=' + encodeURIComponent(JSON.stringify({ url })))
+        .then(response => response.json())
+        .then(({ results }) => {
+          if (results.length > 0) {
+            const counter = results[0];
+            leancloudSelector(url).innerText = counter.time + 1;
+            Counter('put', '/classes/Counter/' + counter.objectId, { time: { '__op': 'Increment', 'amount': 1 } })
+              .catch(error => {
+                console.error('Failed to save visitor count', error);
+              });
+          } else {
+              leancloudSelector(url).innerText = 'Counter not initialized! More info at console err msg.';
+              console.error('ATTENTION! LeanCloud counter has security bug, see how to solve it here: https://github.com/theme-next/hexo-leancloud-counter-security. \n However, you can still use LeanCloud without security, by setting `security` option to `false`.');
+            
+          }
+        })
+        .catch(error => {
+          console.error('LeanCloud Counter Error', error);
+        });
+    }
+
+    function showTime(Counter) {
+      const visitors = document.querySelectorAll('.leancloud_visitors');
+      const entries = [...visitors].map(element => {
+        return decodeURI(element.id);
+      });
+
+      Counter('get', '/classes/Counter?where=' + encodeURIComponent(JSON.stringify({ url: { '$in': entries } })))
+        .then(response => response.json())
+        .then(({ results }) => {
+          for (let url of entries) {
+            const target = results.find(item => item.url === url);
+            leancloudSelector(url).innerText = target ? target.time : 0;
+          }
+        })
+        .catch(error => {
+          console.error('LeanCloud Counter Error', error);
+        });
+    }
+
+    const { app_id, app_key, server_url } = {"enable":true,"app_id":"SPsNUvBhME7XmrjzCfHkUu3e-gzGzoHsz","app_key":"4TONafemiIzvJUwqLa7WveoL","server_url":"https://leancloud.cn","security":true,"betterPerformance":false};
+    function fetchData(api_server) {
+      const Counter = (method, url, data) => {
+        return fetch(`${api_server}/1.1${url}`, {
+          method,
+          headers: {
+            'X-LC-Id'     : app_id,
+            'X-LC-Key'    : app_key,
+            'Content-Type': 'application/json',
+          },
+          body: JSON.stringify(data)
+        });
+      };
+      if (CONFIG.page.isPost) {
+        if (CONFIG.hostname !== location.hostname) return;
+        addCount(Counter);
+      } else if (document.querySelectorAll('.post-title-link').length >= 1) {
+        showTime(Counter);
+      }
+    }
+
+    const api_server = app_id.slice(-9) === '-MdYXbMMI' ? `https://${app_id.slice(0, 8).toLowerCase()}.api.lncldglobal.com` : server_url;
+
+    if (api_server) {
+      fetchData(api_server);
+    } else {
+      fetch('https://app-router.leancloud.cn/2/route?appId=' + app_id)
+        .then(response => response.json())
+        .then(({ api_server }) => {
+          fetchData('https://' + api_server);
+        });
+    }
+  })();
+</script>
+
+
+
+</body>
+</html>

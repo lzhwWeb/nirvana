@@ -1,0 +1,701 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=2">
+<meta name="theme-color" content="#222">
+<meta name="generator" content="Hexo 5.4.0">
+ <meta name="referrer" content="no-referrer"/>
+
+  <link rel="apple-touch-icon" sizes="180x180" href="/nirvana/images/apple-touch-icon-next.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="/nirvana/images/favicon-32x32-next.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="/nirvana/images/favicon-16x16-next.png">
+  <link rel="mask-icon" href="/nirvana/images/logo.svg" color="#222">
+
+<link rel="stylesheet" href="/nirvana/css/main.css">
+
+
+
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@5.15.2/css/all.min.css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/animate.css@3.1.1/animate.min.css">
+
+<script class="hexo-configurations">
+    var NexT = window.NexT || {};
+    var CONFIG = {"hostname":"lzhwweb.github.io","root":"/nirvana/","images":"/nirvana/images","scheme":"Gemini","version":"8.2.2","exturl":false,"sidebar":{"position":"left","display":"post","padding":18,"offset":12},"copycode":false,"bookmark":{"enable":true,"color":"#222","save":"auto"},"fancybox":false,"mediumzoom":false,"lazyload":false,"pangu":false,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},"motion":{"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"fadeInDown","post_body":"fadeInDown","coll_header":"fadeInLeft","sidebar":"fadeInUp"}},"prism":false,"i18n":{"placeholder":"搜索...","empty":"没有找到任何搜索结果：${query}","hits_time":"找到 ${hits} 个搜索结果（用时 ${time} 毫秒）","hits":"找到 ${hits} 个搜索结果"},"path":"/nirvana/search.xml","localsearch":{"enable":true,"trigger":"auto","top_n_per_article":1,"unescape":false,"preload":false}};
+  </script>
+<meta name="description" content="为什么要服务端渲染(ssr)至于为什么要服务端渲染，我相信大家都有所闻，而且每个人都能说出几点来。 首屏等待在 SPA 模式下，所有的数据请求和 Dom 渲染都在浏览器端完成，所以当我们第一次访问页面的时候很可能会存在“白屏”等待，而服务端渲染所有数据请求和 html内容已在服务端处理完成，浏览器收到的是完整的 html 内容，可以更快的看到渲染内容，在服务端完成数据请求肯定是要比在浏览器端效率要">
+<meta property="og:type" content="article">
+<meta property="og:title" content="一文吃透React SSR服务端同构渲染">
+<meta property="og:url" content="https://lzhwweb.github.io/nirvana/javascript/%E5%89%8D%E7%AB%AF/%E4%B8%80%E6%96%87%E5%90%83%E9%80%8FReactSSR%E6%9C%8D%E5%8A%A1%E7%AB%AF%E5%90%8C%E6%9E%84%E6%B8%B2%E6%9F%93/index.html">
+<meta property="og:site_name" content="涅槃快乐是金">
+<meta property="og:description" content="为什么要服务端渲染(ssr)至于为什么要服务端渲染，我相信大家都有所闻，而且每个人都能说出几点来。 首屏等待在 SPA 模式下，所有的数据请求和 Dom 渲染都在浏览器端完成，所以当我们第一次访问页面的时候很可能会存在“白屏”等待，而服务端渲染所有数据请求和 html内容已在服务端处理完成，浏览器收到的是完整的 html 内容，可以更快的看到渲染内容，在服务端完成数据请求肯定是要比在浏览器端效率要">
+<meta property="og:locale" content="zh_CN">
+<meta property="og:image" content="https://upload-images.jianshu.io/upload_images/10024246-ba28fc3e201b3ca0.jpg?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240">
+<meta property="og:image" content="https://upload-images.jianshu.io/upload_images/10024246-4ea344d1832c1cca.jpg?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240">
+<meta property="article:published_time" content="2021-06-10T08:41:24.000Z">
+<meta property="article:modified_time" content="2021-06-10T09:02:24.825Z">
+<meta property="article:author" content="nirvana">
+<meta property="article:tag" content="前端,javascript,node,git,webpack,css">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="https://upload-images.jianshu.io/upload_images/10024246-ba28fc3e201b3ca0.jpg?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240">
+
+
+<link rel="canonical" href="https://lzhwweb.github.io/nirvana/javascript/%E5%89%8D%E7%AB%AF/%E4%B8%80%E6%96%87%E5%90%83%E9%80%8FReactSSR%E6%9C%8D%E5%8A%A1%E7%AB%AF%E5%90%8C%E6%9E%84%E6%B8%B2%E6%9F%93/">
+
+
+<script class="page-configurations">
+  // https://hexo.io/docs/variables.html
+  CONFIG.page = {
+    sidebar: "",
+    isHome : false,
+    isPost : true,
+    lang   : 'zh-CN'
+  };
+</script>
+<title>一文吃透React SSR服务端同构渲染 | 涅槃快乐是金</title>
+  
+
+
+
+
+  <noscript>
+  <style>
+  body { margin-top: 2rem; }
+
+  .use-motion .menu-item,
+  .use-motion .sidebar,
+  .use-motion .post-block,
+  .use-motion .pagination,
+  .use-motion .comments,
+  .use-motion .post-header,
+  .use-motion .post-body,
+  .use-motion .collection-header {
+    visibility: visible;
+  }
+
+  .use-motion .header,
+  .use-motion .site-brand-container .toggle,
+  .use-motion .footer { opacity: initial; }
+
+  .use-motion .site-title,
+  .use-motion .site-subtitle,
+  .use-motion .custom-logo-image {
+    opacity: initial;
+    top: initial;
+  }
+
+  .use-motion .logo-line {
+    transform: scaleX(1);
+  }
+
+  .search-pop-overlay, .sidebar-nav { display: none; }
+  .sidebar-panel { display: block; }
+  </style>
+</noscript>
+
+</head>
+
+<body itemscope itemtype="http://schema.org/WebPage" class="use-motion">
+  <div class="headband"></div>
+
+  <main class="main">
+    <header class="header" itemscope itemtype="http://schema.org/WPHeader">
+      <div class="header-inner"><div class="site-brand-container">
+  <div class="site-nav-toggle">
+    <div class="toggle" aria-label="切换导航栏" role="button">
+        <span class="toggle-line"></span>
+        <span class="toggle-line"></span>
+        <span class="toggle-line"></span>
+    </div>
+  </div>
+
+  <div class="site-meta">
+
+    <a href="/nirvana/" class="brand" rel="start">
+      <i class="logo-line"></i>
+      <h1 class="site-title">涅槃快乐是金</h1>
+      <i class="logo-line"></i>
+    </a>
+  </div>
+
+  <div class="site-nav-right">
+    <div class="toggle popup-trigger">
+        <i class="fa fa-search fa-fw fa-lg"></i>
+    </div>
+  </div>
+</div>
+
+
+
+<nav class="site-nav">
+  <ul class="main-menu menu">
+        <li class="menu-item menu-item-home"><a href="/nirvana/" rel="section">首页</a></li>
+        <li class="menu-item menu-item-git"><a href="/nirvana/categories/git" rel="section">git</a></li>
+        <li class="menu-item menu-item-linux"><a href="/nirvana/categories/linux" rel="section">linux</a></li>
+        <li class="menu-item menu-item-android"><a href="/nirvana/categories/android" rel="section">android</a></li>
+        <li class="menu-item menu-item-随笔"><a href="/nirvana/categories/informal" rel="section">随笔</a></li>
+        <li class="menu-item menu-item-mac"><a href="/nirvana/categories/mac" rel="section">mac</a></li>
+        <li class="menu-item menu-item-react-native"><a href="/nirvana/categories/reactnative" rel="section">react-native</a></li>
+        <li class="menu-item menu-item-算法"><a href="/nirvana/categories/algorithm" rel="section">算法</a></li>
+        <li class="menu-item menu-item-读书笔记"><a href="/nirvana/categories/note" rel="section">读书笔记</a></li>
+        <li class="menu-item menu-item-开发工具"><a href="/nirvana/categories/tool" rel="section">开发工具</a></li>
+        <li class="menu-item menu-item-设计模式(ts)"><a href="/nirvana/categories/DesignPattern" rel="section">设计模式(TS)</a></li>
+        <li class="menu-item menu-item-前端"><a href="/nirvana/categories/javascript" rel="section">前端</a></li>
+        <li class="menu-item menu-item-webpack"><a href="/nirvana/categories/webpack" rel="section">webpack</a></li>
+      <li class="menu-item menu-item-search">
+        <a role="button" class="popup-trigger"><i class="fa fa-search fa-fw"></i>搜索
+        </a>
+      </li>
+  </ul>
+</nav>
+
+
+
+  <div class="search-pop-overlay">
+    <div class="popup search-popup"><div class="search-header">
+  <span class="search-icon">
+    <i class="fa fa-search"></i>
+  </span>
+  <div class="search-input-container">
+    <input autocomplete="off" autocapitalize="off" maxlength="80"
+           placeholder="搜索..." spellcheck="false"
+           type="search" class="search-input">
+  </div>
+  <span class="popup-btn-close" role="button">
+    <i class="fa fa-times-circle"></i>
+  </span>
+</div>
+<div class="search-result-container no-result">
+  <div class="search-result-icon">
+    <i class="fa fa-spinner fa-pulse fa-5x"></i>
+  </div>
+</div>
+
+    </div>
+  </div>
+
+</div>
+        
+  
+  <div class="toggle sidebar-toggle" role="button">
+    <span class="toggle-line"></span>
+    <span class="toggle-line"></span>
+    <span class="toggle-line"></span>
+  </div>
+
+  <aside class="sidebar">
+
+    <div class="sidebar-inner sidebar-nav-active sidebar-toc-active">
+      <ul class="sidebar-nav">
+        <li class="sidebar-nav-toc">
+          文章目录
+        </li>
+        <li class="sidebar-nav-overview">
+          站点概览
+        </li>
+      </ul>
+
+      <div class="sidebar-panel-container">
+        <!--noindex-->
+        <div class="post-toc-wrap sidebar-panel">
+            <div class="post-toc animated"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#%E4%B8%BA%E4%BB%80%E4%B9%88%E8%A6%81%E6%9C%8D%E5%8A%A1%E7%AB%AF%E6%B8%B2%E6%9F%93-ssr"><span class="nav-text">为什么要服务端渲染(ssr)</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#%E9%A6%96%E5%B1%8F%E7%AD%89%E5%BE%85"><span class="nav-text">首屏等待</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E6%B2%A1%E8%80%83%E8%99%91seo%E7%9A%84%E6%84%9F%E5%8F%97"><span class="nav-text">没考虑seo的感受</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#SSR-SPA-%E4%BD%93%E9%AA%8C%E5%8D%87%E7%BA%A7"><span class="nav-text">SSR + SPA 体验升级</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#%E6%A0%B8%E5%BF%83%E5%8E%9F%E7%90%86"><span class="nav-text">核心原理</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#react-ssr"><span class="nav-text">react ssr</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#%E4%BB%8E-ejs-%E5%BC%80%E5%A7%8B"><span class="nav-text">从 ejs 开始</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#jsx-%E5%88%B0%E5%AD%97%E7%AC%A6%E4%B8%B2"><span class="nav-text">jsx 到字符串</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#%E5%BC%95%E5%87%BA%E9%97%AE%E9%A2%98"><span class="nav-text">引出问题</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#%E5%90%8C%E6%9E%84%E6%89%8D%E6%98%AF%E6%A0%B8%E5%BF%83"><span class="nav-text">同构才是核心</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#%E8%B7%AF%E7%94%B1%E5%90%8C%E6%9E%84"><span class="nav-text">路由同构</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E6%95%B0%E6%8D%AE%E5%90%8C%E6%9E%84%EF%BC%88%E9%A2%84%E5%8F%96%E5%90%8C%E6%9E%84%EF%BC%89"><span class="nav-text">数据同构（预取同构）</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E6%B8%B2%E6%9F%93%E5%90%8C%E6%9E%84"><span class="nav-text">渲染同构</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#%E6%95%B0%E6%8D%AE%E6%B3%A8%E6%B0%B4"><span class="nav-text">数据注水</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E6%95%B0%E6%8D%AE%E8%84%B1%E6%B0%B4"><span class="nav-text">数据脱水</span></a></li></ol></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#css-%E8%BF%87%E6%BB%A4"><span class="nav-text">css 过滤</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#%E5%8A%A8%E6%80%81%E8%B7%AF%E7%94%B1%E7%9A%84-SSR"><span class="nav-text">动态路由的 SSR</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%A6%82%E4%BD%95%E5%AE%9E%E7%8E%B0%E7%BB%84%E4%BB%B6%E7%9A%84%E6%8C%89%E9%9C%80%E5%8A%A0%E8%BD%BD%EF%BC%9F"><span class="nav-text">如何实现组件的按需加载？</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%8A%A8%E6%80%81%E8%B7%AF%E7%94%B1-SSR-%E5%8F%8C%E7%AB%AF%E9%85%8D%E7%BD%AE"><span class="nav-text">动态路由 SSR 双端配置</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#ssr-%E6%A8%A1%E5%BC%8F%E4%B8%8B-server-%E7%AB%AF%E5%A6%82%E4%BD%95%E5%A4%84%E7%90%86%E8%B7%AF%E7%94%B1%E6%8C%89%E9%9C%80%E5%8A%A0%E8%BD%BD"><span class="nav-text">ssr 模式下 server 端如何处理路由按需加载</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#ssr-%E6%A8%A1%E5%BC%8F%E4%B8%8B-client-%E7%AB%AF%E5%A6%82%E4%BD%95%E5%A4%84%E7%90%86%E8%B7%AF%E7%94%B1%E6%8C%89%E9%9C%80%E5%8A%A0%E8%BD%BD"><span class="nav-text">ssr 模式下 client 端如何处理路由按需加载</span></a></li></ol></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#%E5%85%B6%E4%BB%96"><span class="nav-text">其他</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#SEO-%E6%94%AF%E6%8C%81"><span class="nav-text">SEO 支持</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#fetch-%E5%90%8C%E6%9E%84"><span class="nav-text">fetch 同构</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#TODO-%E5%92%8C-%E6%80%9D%E8%80%83"><span class="nav-text">TODO 和 思考</span></a></li></ol></div>
+        </div>
+        <!--/noindex-->
+
+        <div class="site-overview-wrap sidebar-panel">
+          <div class="site-author site-overview-item animated" itemprop="author" itemscope itemtype="http://schema.org/Person">
+    <img class="site-author-image" itemprop="image" alt="nirvana"
+      src="/nirvana/images/headphoto.jpeg">
+  <p class="site-author-name" itemprop="name">nirvana</p>
+  <div class="site-description" itemprop="description">个人学习笔记</div>
+</div>
+<div class="site-state-wrap site-overview-item animated">
+  <nav class="site-state">
+      <div class="site-state-item site-state-posts">
+          <a href="/nirvana/archives">
+          <span class="site-state-item-count">249</span>
+          <span class="site-state-item-name">日志</span>
+        </a>
+      </div>
+      <div class="site-state-item site-state-categories">
+        <span class="site-state-item-count">12</span>
+        <span class="site-state-item-name">分类</span>
+      </div>
+  </nav>
+</div>
+  <div class="links-of-author site-overview-item animated">
+      <span class="links-of-author-item">
+        <a href="https://github.com/lzhwWeb" title="GitHub → https:&#x2F;&#x2F;github.com&#x2F;lzhwWeb" rel="noopener" target="_blank"><i class="fab fa-github fa-fw"></i></a>
+      </span>
+  </div>
+
+
+
+        </div>
+      </div>
+        <div class="back-to-top animated" role="button">
+          <i class="fa fa-arrow-up"></i>
+          <span>0%</span>
+        </div>
+    </div>
+  </aside>
+  <div class="sidebar-dimmer"></div>
+
+
+    </header>
+
+    
+  <div class="reading-progress-bar"></div>
+  <a role="button" class="book-mark-link book-mark-link-fixed"></a>
+
+<noscript>
+  <div class="noscript-warning">Theme NexT works best with JavaScript enabled</div>
+</noscript>
+
+
+    <div class="main-inner post posts-expand">
+
+
+  
+
+
+<div class="post-block">
+  
+  
+
+  <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="zh-CN">
+    <link itemprop="mainEntityOfPage" href="https://lzhwweb.github.io/nirvana/javascript/%E5%89%8D%E7%AB%AF/%E4%B8%80%E6%96%87%E5%90%83%E9%80%8FReactSSR%E6%9C%8D%E5%8A%A1%E7%AB%AF%E5%90%8C%E6%9E%84%E6%B8%B2%E6%9F%93/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/nirvana/images/headphoto.jpeg">
+      <meta itemprop="name" content="nirvana">
+      <meta itemprop="description" content="个人学习笔记">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="涅槃快乐是金">
+    </span>
+      <header class="post-header">
+        <h1 class="post-title" itemprop="name headline">
+          一文吃透React SSR服务端同构渲染
+        </h1>
+
+        <div class="post-meta-container">
+          <div class="post-meta">
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-calendar"></i>
+      </span>
+      <span class="post-meta-item-text">发表于</span>
+      
+
+      <time title="创建时间：2021-06-10 16:41:24 / 修改时间：17:02:24" itemprop="dateCreated datePublished" datetime="2021-06-10T16:41:24+08:00">2021-06-10</time>
+    </span>
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-folder"></i>
+      </span>
+      <span class="post-meta-item-text">分类于</span>
+        <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+          <a href="/nirvana/categories/javascript/" itemprop="url" rel="index"><span itemprop="name">javascript</span></a>
+        </span>
+    </span>
+
+  
+    <span id="/nirvana/javascript/%E5%89%8D%E7%AB%AF/%E4%B8%80%E6%96%87%E5%90%83%E9%80%8FReactSSR%E6%9C%8D%E5%8A%A1%E7%AB%AF%E5%90%8C%E6%9E%84%E6%B8%B2%E6%9F%93/" class="post-meta-item leancloud_visitors" data-flag-title="一文吃透React SSR服务端同构渲染" title="阅读次数">
+      <span class="post-meta-item-icon">
+        <i class="far fa-eye"></i>
+      </span>
+      <span class="post-meta-item-text">阅读次数：</span>
+      <span class="leancloud-visitors-count"></span>
+    </span>
+      </div>
+      <div class="post-meta">
+    <span class="post-meta-item" title="本文字数">
+      <span class="post-meta-item-icon">
+        <i class="far fa-file-word"></i>
+      </span>
+      <span class="post-meta-item-text">本文字数：</span>
+      <span>24k</span>
+    </span>
+    <span class="post-meta-item" title="阅读时长">
+      <span class="post-meta-item-icon">
+        <i class="far fa-clock"></i>
+      </span>
+      <span class="post-meta-item-text">阅读时长 &asymp;</span>
+      <span>22 分钟</span>
+    </span>
+</div>
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+        <h1 id="为什么要服务端渲染-ssr"><a href="#为什么要服务端渲染-ssr" class="headerlink" title="为什么要服务端渲染(ssr)"></a>为什么要服务端渲染(ssr)</h1><p>至于为什么要服务端渲染，我相信大家都有所闻，而且每个人都能说出几点来。</p>
+<h2 id="首屏等待"><a href="#首屏等待" class="headerlink" title="首屏等待"></a>首屏等待</h2><p>在 SPA 模式下，所有的数据请求和 Dom 渲染都在浏览器端完成，所以当我们第一次访问页面的时候很可能会存在“白屏”等待，而服务端渲染所有数据请求和 html内容已在服务端处理完成，浏览器收到的是完整的 html 内容，可以更快的看到渲染内容，在服务端完成数据请求肯定是要比在浏览器端效率要高的多。</p>
+<h2 id="没考虑seo的感受"><a href="#没考虑seo的感受" class="headerlink" title="没考虑seo的感受"></a>没考虑seo的感受</h2><p>有些网站的流量来源主要还是靠搜索引擎，所以网站的 seo 还是很重要的，而 SPA 模式对搜索引擎不够友好，要想彻底解决这个问题只能采用服务端直出。改变不了别人（搜索yinqing），只能改变自己。</p>
+<h2 id="SSR-SPA-体验升级"><a href="#SSR-SPA-体验升级" class="headerlink" title="SSR + SPA 体验升级"></a>SSR + SPA 体验升级</h2><p>只实现 SSR 其实没啥意义，技术上没有任何发展和进步，否则 SPA 技术就不会出现。但是单纯的 SPA又不够完美，所以最好的方案就是这两种体验和技术的结合，第一次访问页面是服务端渲染，基于第一次访问后续的交互就是 SPA 的效果和体验，还不影响SEO 效果，这就有点完美了。单纯实现 ssr 很简单，毕竟这是传统技术，也不分语言，随便用 php 、jsp、asp、node 等都可以实现。但是要实现两种技术的结合，同时可以最大限度的重用代码（同构），减少开发维护成本，那就需要采用 react 或者 vue等前端框架相结合 node (ssr) 来实现。</p>
+<p>本文主要说 React SSR 技术 ,当然 vue 也一样，只是技术栈不同而已。</p>
+<h1 id="核心原理"><a href="#核心原理" class="headerlink" title="核心原理"></a>核心原理</h1><p>整体来说 react 服务端渲染原理不复杂，其中最核心的内容就是同构。</p>
+<p>node server 接收客户端请求，得到当前的req url path,然后在已有的路由表内查找到对应的组件，拿到需要请求的数据，将数据作为 props、context或者store 形式传入组件，然后基于 react 内置的服务端渲染api renderToString() or renderToNodeStream() 把组件渲染为 html字符串或者 stream 流, 在把最终的 html 进行输出前需要将数据注入到浏览器端(注水)，server 输出(response)后浏览器端可以得到数据(脱水)，浏览器开始进行渲染和节点对比，然后执行组件的componentDidMount 完成组件内事件绑定和一些交互，浏览器重用了服务端输出的 html 节点，整个流程结束。</p>
+<p>技术点确实不少，但更多的是架构和工程层面的，需要把各个知识点进行链接和整合。这里放一个架构图：</p>
+<p><img src="https://upload-images.jianshu.io/upload_images/10024246-ba28fc3e201b3ca0.jpg?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240"></p>
+<h1 id="react-ssr"><a href="#react-ssr" class="headerlink" title="react ssr"></a>react ssr</h1><h2 id="从-ejs-开始"><a href="#从-ejs-开始" class="headerlink" title="从 ejs 开始"></a>从 ejs 开始</h2><p>实现 ssr 很简单，先看一个 node ejs的栗子。</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><span class="line">&#x2F;&#x2F; index.html</span><br><span class="line">&lt;!DOCTYPE html&gt;</span><br><span class="line">&lt;html lang&#x3D;&quot;en&quot;&gt;</span><br><span class="line">&lt;head&gt;</span><br><span class="line">   &lt;meta charset&#x3D;&quot;UTF-8&quot;&gt;</span><br><span class="line">   &lt;meta name&#x3D;&quot;viewport&quot; content&#x3D;&quot;width&#x3D;device-width, initial-scale&#x3D;1.0&quot;&gt;</span><br><span class="line">   &lt;meta http-equiv&#x3D;&quot;X-UA-Compatible&quot; content&#x3D;&quot;ie&#x3D;edge&quot;&gt;</span><br><span class="line">   &lt;title&gt;react ssr &lt;%&#x3D; title %&gt;&lt;&#x2F;title&gt;</span><br><span class="line">&lt;&#x2F;head&gt;</span><br><span class="line">&lt;body&gt;</span><br><span class="line">   &lt;%&#x3D;  data %&gt;</span><br><span class="line">&lt;&#x2F;body&gt;</span><br><span class="line">&lt;&#x2F;html&gt;</span><br><span class="line"></span><br></pre></td></tr></table></figure>
+
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br></pre></td><td class="code"><pre><span class="line"> &#x2F;&#x2F;node ssr</span><br><span class="line"> const ejs &#x3D; require(&#39;ejs&#39;);</span><br><span class="line"> const http &#x3D; require(&#39;http&#39;);</span><br><span class="line"></span><br><span class="line">http.createServer((req, res) &#x3D;&gt; &#123;</span><br><span class="line">    if (req.url &#x3D;&#x3D;&#x3D; &#39;&#x2F;&#39;) &#123;</span><br><span class="line">        res.writeHead(200, &#123;</span><br><span class="line">            &#39;Content-Type&#39;: &#39;text&#x2F;html&#39; </span><br><span class="line">        &#125;);</span><br><span class="line">        &#x2F;&#x2F; 渲染文件 index.ejs</span><br><span class="line">        ejs.renderFile(&#39;.&#x2F;views&#x2F;index.ejs&#39;, &#123;</span><br><span class="line">            title: &#39;react ssr&#39;, </span><br><span class="line">            data: &#39;首页&#39;&#125;, </span><br><span class="line">            (err, data) &#x3D;&gt; &#123;</span><br><span class="line">            if (err ) &#123;</span><br><span class="line">                console.log(err);</span><br><span class="line">            &#125; else &#123;</span><br><span class="line">                res.end(data);</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;)</span><br><span class="line">    &#125;</span><br><span class="line">&#125;).listen(8080);</span><br><span class="line"></span><br></pre></td></tr></table></figure>
+
+<h2 id="jsx-到字符串"><a href="#jsx-到字符串" class="headerlink" title="jsx 到字符串"></a>jsx 到字符串</h2><p>上面我们结合 ejs模板引擎 ，实现了一个服务端渲染的输出，html 和 数据直接输出到客户端。参考以上，我们结合 react组件 来实现服务端渲染直出，使用 jsx 来代替 ejs，之前是在 html 里使用 ejs 来绑定数据，现在改写成使用jsx 来绑定数据,使用 react 内置 api 来把组件渲染为 html 字符串，其他没有差别。</p>
+<p>为什么react 组件可以被转换为 html字符串呢？简单的说我们写的 jsx 看上去就像在写 html（其实写的是对象） 标签，其实经过编译后都会转换成React.createElement方法，最终会被转换成一个对象(虚拟DOM)，而且和平台无关，有了这个对象，想转换成什么那就看心情了。</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br></pre></td><td class="code"><pre><span class="line">const  React  &#x3D; require(&#39;react&#39;);</span><br><span class="line"></span><br><span class="line">const &#123; renderToString&#125;  &#x3D; require( &#39;react-dom&#x2F;server&#39;);</span><br><span class="line"></span><br><span class="line">const http &#x3D; require(&#39;http&#39;);</span><br><span class="line"></span><br><span class="line">&#x2F;&#x2F;组件</span><br><span class="line">class Index extends React.Component&#123;</span><br><span class="line">    constructor(props)&#123;</span><br><span class="line">        super(props);</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    render()&#123;</span><br><span class="line">        return &lt;h1&gt;&#123;this.props.data.title&#125;&lt;&#x2F;h1&gt;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">&#x2F;&#x2F;模拟数据的获取</span><br><span class="line">const fetch &#x3D; function () &#123;</span><br><span class="line">    return &#123;</span><br><span class="line">        title:&#39;react ssr&#39;,</span><br><span class="line">        data:[]</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">&#x2F;&#x2F;服务</span><br><span class="line">http.createServer((req, res) &#x3D;&gt; &#123;</span><br><span class="line">    if (req.url &#x3D;&#x3D;&#x3D; &#39;&#x2F;&#39;) &#123;</span><br><span class="line">        res.writeHead(200, &#123;</span><br><span class="line">            &#39;Content-Type&#39;: &#39;text&#x2F;html&#39;</span><br><span class="line">        &#125;);</span><br><span class="line"></span><br><span class="line">        const data &#x3D; fetch();</span><br><span class="line"></span><br><span class="line">        const html &#x3D; renderToString(&lt;Index data&#x3D;&#123;data&#125;&#x2F;&gt;);</span><br><span class="line">        res.end(html);</span><br><span class="line">    &#125;</span><br><span class="line">&#125;).listen(8080);</span><br><span class="line"></span><br></pre></td></tr></table></figure>
+
+<p><strong>ps</strong>:以上代码不能直接运行，需要结合babel 使用 @babel/preset-react 进行转换</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">npx babel script.js --out-file script-compiled.js --presets&#x3D;@babel&#x2F;preset-react</span><br></pre></td></tr></table></figure>
+
+<h1 id="引出问题"><a href="#引出问题" class="headerlink" title="引出问题"></a>引出问题</h1><p>在上面非常简单的就是实现了 react ssr ,把jsx作为模板引擎，不要小看上面的一小段代码，他可以帮我们引出一系列的问题，这也是完整实现 react ssr 的基石。</p>
+<ul>
+<li>  双端路由如何维护？</li>
+</ul>
+<p>首先我们会发现我在 server 端定义了路由 ‘/‘，但是在 react SPA 模式下我们需要使用react-router来定义路由。那是不是就需要维护两套路由呢？</p>
+<ul>
+<li>  获取数据的方法和逻辑写在哪里？</li>
+</ul>
+<p>发现数据获取的fetch 写的独立的方法，和组件没有任何关联，我们更希望的是每个路由都有自己的 fetch 方法。</p>
+<ul>
+<li>  服务端 html 节点无法重用</li>
+</ul>
+<p>虽然组件在服务端得到了数据，也能渲染到浏览器内，但是当浏览器端进行组件渲染的时候直出的内容会一闪而过消失。</p>
+<p>好了，问题有了，接下来我们就一步一步的来解决这些问题。</p>
+<h1 id="同构才是核心"><a href="#同构才是核心" class="headerlink" title="同构才是核心"></a>同构才是核心</h1><p>react ssr 的核心就是同构，没有同构的 ssr 是没有意义的。</p>
+<p>所谓同构就是采用一套代码，构建双端（server 和 client）逻辑，最大限度的重用代码，不用维护两套代码。而传统的服务端渲染是无法做到的，react 的出现打破了这个瓶颈，并且现在已经得到了比较广泛的应用。</p>
+<h2 id="路由同构"><a href="#路由同构" class="headerlink" title="路由同构"></a>路由同构</h2><p>双端使用同一套路由规则，node server 通过req url path 进行组件的查找，得到需要渲染的组件。</p>
+<p>//组件和路由配置 ，供双端使用 routes-config.js</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br></pre></td><td class="code"><pre><span class="line">class Detail extends React.Component&#123;</span><br><span class="line">    render()&#123;</span><br><span class="line">        return &lt;div&gt;detail&lt;&#x2F;div&gt;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">class Index extends React.Component &#123;</span><br><span class="line">    render() &#123;</span><br><span class="line">        return &lt;div&gt;index&lt;&#x2F;div&gt;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">const routes &#x3D; [</span><br><span class="line">            &#123;</span><br><span class="line">                path: &quot;&#x2F;&quot;,</span><br><span class="line">                exact: true,</span><br><span class="line">                component: Home</span><br><span class="line">            &#125;,</span><br><span class="line">            &#123;</span><br><span class="line">                path: &#39;&#x2F;detail&#39;, exact: true,</span><br><span class="line">                component:Detail,</span><br><span class="line">            &#125;,</span><br><span class="line">            &#123;</span><br><span class="line">                path: &#39;&#x2F;detail&#x2F;:a&#x2F;:b&#39;, exact: true,</span><br><span class="line">                component: Detail</span><br><span class="line">            &#125; </span><br><span class="line">];</span><br><span class="line">&#x2F;&#x2F;导出路由表</span><br><span class="line">export default routes;</span><br></pre></td></tr></table></figure>
+
+<p>//客户端 路由组件</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br></pre></td><td class="code"><pre><span class="line">import routes from &#39;.&#x2F;routes-config.js&#39;;</span><br><span class="line">function App()&#123;</span><br><span class="line">    return (</span><br><span class="line">        &lt;Layout&gt;</span><br><span class="line">            &lt;Switch&gt;</span><br><span class="line">                        &#123;</span><br><span class="line">                            routes.map((item,index)&#x3D;&gt;&#123;</span><br><span class="line">                                return &lt;Route path&#x3D;&#123;item.path&#125; key&#x3D;&#123;index&#125; exact&#x3D;&#123;item.exact&#125; render&#x3D;&#123;item.component&#125;&gt;&lt;&#x2F;Route&gt;</span><br><span class="line">                            &#125;)</span><br><span class="line">                        &#125;</span><br><span class="line">            &lt;&#x2F;Switch&gt;</span><br><span class="line">        &lt;&#x2F;Layout&gt;</span><br><span class="line">    );</span><br><span class="line">&#125;</span><br><span class="line">export default App;</span><br></pre></td></tr></table></figure>
+
+<p><strong>node server 进行组件查找</strong></p>
+<p>路由匹配其实就是对 组件path 规则的匹配，如果规则不复杂可以自己写，如果情况很多种还是使用官方提供的库来完成。</p>
+<p><strong>matchRoutes(routes, pathname)</strong></p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br></pre></td><td class="code"><pre><span class="line">&#x2F;&#x2F;引入官方库</span><br><span class="line">import &#123; matchRoutes &#125; from &quot;react-router-config&quot;;</span><br><span class="line">import routes from &#39;.&#x2F;routes-config.js&#39;;</span><br><span class="line"></span><br><span class="line">const path &#x3D; req.path;</span><br><span class="line"></span><br><span class="line">const branch &#x3D; matchRoutes(routes, path);</span><br><span class="line"></span><br><span class="line">&#x2F;&#x2F;得到要渲染的组件</span><br><span class="line">const Component &#x3D; branch[0].route.component;</span><br><span class="line"></span><br><span class="line">&#x2F;&#x2F;node server </span><br><span class="line">http.createServer((req, res) &#x3D;&gt; &#123;</span><br><span class="line"></span><br><span class="line">        const url &#x3D; req.url;</span><br><span class="line">        &#x2F;&#x2F;简单容错，排除图片等资源文件的请求</span><br><span class="line">        if(url.indexOf(&#39;.&#39;)&gt;-1) &#123; res.end(&#39;&#39;); return false;&#125;</span><br><span class="line"></span><br><span class="line">        res.writeHead(200, &#123;</span><br><span class="line">            &#39;Content-Type&#39;: &#39;text&#x2F;html&#39;</span><br><span class="line">        &#125;);</span><br><span class="line">        const data &#x3D; fetch();</span><br><span class="line"></span><br><span class="line">        &#x2F;&#x2F;查找组件</span><br><span class="line">        const branch &#x3D;  matchRoutes(routes,url);</span><br><span class="line"></span><br><span class="line">        &#x2F;&#x2F;得到组件</span><br><span class="line">        const Component &#x3D; branch[0].route.component;</span><br><span class="line"></span><br><span class="line">        &#x2F;&#x2F;将组件渲染为 html 字符串</span><br><span class="line">        const html &#x3D; renderToString(&lt;Component data&#x3D;&#123;data&#125;&#x2F;&gt;);</span><br><span class="line"></span><br><span class="line">        res.end(html);</span><br><span class="line"></span><br><span class="line"> &#125;).listen(8080);</span><br><span class="line"></span><br></pre></td></tr></table></figure>
+
+<p>可以看下matchRoutes方法的返回值,其中route.component 就是 要渲染的组件</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line">[</span><br><span class="line">    &#123; </span><br><span class="line"></span><br><span class="line">    route:</span><br><span class="line">        &#123; path: &#39;&#x2F;detail&#39;, exact: true, component: [Function: Detail] &#125;,</span><br><span class="line">    match:</span><br><span class="line">        &#123; path: &#39;&#x2F;detail&#39;, url: &#39;&#x2F;detail&#39;, isExact: true, params: &#123;&#125; &#125; </span><br><span class="line"></span><br><span class="line">    &#125;</span><br><span class="line">]</span><br><span class="line"></span><br></pre></td></tr></table></figure>
+
+<p>react-router-config 这个库由react 官方维护，功能是实现嵌套路由的查找，代码没有多少，有兴趣可以看看。</p>
+<p><strong>文章走到这里，相信你已经知道了路由同构，所以上面的第一个问题 ： 【双端路由如何维护？】 解决了。</strong></p>
+<h2 id="数据同构（预取同构）"><a href="#数据同构（预取同构）" class="headerlink" title="数据同构（预取同构）"></a>数据同构（预取同构）</h2><p>这里开始解决我们最开始发现的第二个问题 - 【获取数据的方法和逻辑写在哪里？】</p>
+<p>数据预取同构，解决双端如何使用同一套数据请求方法来进行数据请求。</p>
+<p>先说下流程，在查找到要渲染的组件后，需要预先得到此组件所需要的数据，然后将数据传递给组件后，再进行组件的渲染。</p>
+<p>我们可以通过给组件定义静态方法来处理，组件内定义异步数据请求的方法也合情合理，同时声明为静态（static），在 server 端和组件内都也可以直接通过组件（function） 来进行访问。</p>
+<p>比如 Index.getInitialProps</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br></pre></td><td class="code"><pre><span class="line">&#x2F;&#x2F;组件</span><br><span class="line">class Index extends React.Component&#123;</span><br><span class="line">    constructor(props)&#123;</span><br><span class="line">        super(props);</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    &#x2F;&#x2F;数据预取方法  静态 异步 方法</span><br><span class="line">    static async  getInitialProps(opt) &#123;</span><br><span class="line">        const fetch1 &#x3D;await fetch(&#39;&#x2F;xxx.com&#x2F;a&#39;);</span><br><span class="line">        const fetch2 &#x3D; await fetch(&#39;&#x2F;xxx.com&#x2F;b&#39;);</span><br><span class="line"></span><br><span class="line">        return &#123;</span><br><span class="line">            res:[fetch1,fetch2]</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    render()&#123;</span><br><span class="line">        return &lt;h1&gt;&#123;this.props.data.title&#125;&lt;&#x2F;h1&gt;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">&#x2F;&#x2F;node server </span><br><span class="line">http.createServer((req, res) &#x3D;&gt; &#123;</span><br><span class="line"></span><br><span class="line">        const url &#x3D; req.url;</span><br><span class="line">        if(url.indexOf(&#39;.&#39;)&gt;-1) &#123; res.end(&#39;&#39;); return false;&#125;</span><br><span class="line"></span><br><span class="line">        res.writeHead(200, &#123;</span><br><span class="line">            &#39;Content-Type&#39;: &#39;text&#x2F;html&#39;</span><br><span class="line">        &#125;);</span><br><span class="line"></span><br><span class="line">        &#x2F;&#x2F;组件查找</span><br><span class="line">        const branch &#x3D;  matchRoutes(routes,url);</span><br><span class="line"></span><br><span class="line">        &#x2F;&#x2F;得到组件</span><br><span class="line">        const Component &#x3D; branch[0].route.component;</span><br><span class="line"></span><br><span class="line">        &#x2F;&#x2F;数据预取</span><br><span class="line">        const data &#x3D; Component.getInitialProps(branch[0].match.params);</span><br><span class="line"></span><br><span class="line">        &#x2F;&#x2F;传入数据，渲染组件为 html 字符串</span><br><span class="line">        const html &#x3D; renderToString(&lt;Component data&#x3D;&#123;data&#125;&#x2F;&gt;);</span><br><span class="line"></span><br><span class="line">        res.end(html);</span><br><span class="line"></span><br><span class="line"> &#125;).listen(8080);</span><br><span class="line"></span><br></pre></td></tr></table></figure>
+
+<p>另外还有在声明路由的时候把数据请求方法关联到路由中，比如定一个 loadData 方法，然后在查找到路由后就可以判断是否存在loadData这个方法。</p>
+<p>看下参考代码</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line">const loadBranchData &#x3D; (location) &#x3D;&gt; &#123;</span><br><span class="line">  const branch &#x3D; matchRoutes(routes, location.pathname)</span><br><span class="line"></span><br><span class="line">  const promises &#x3D; branch.map((&#123; route, match &#125;) &#x3D;&gt; &#123;</span><br><span class="line">    return route.loadData</span><br><span class="line">      ? route.loadData(match)</span><br><span class="line">      : Promise.resolve(null)</span><br><span class="line">  &#125;)</span><br><span class="line"></span><br><span class="line">  return Promise.all(promises)</span><br><span class="line">&#125;</span><br><span class="line"></span><br></pre></td></tr></table></figure>
+
+<p>上面这种方式实现上没什么问题，但从职责划分的角度来说有些不够清晰，我还是比较喜欢直接通过组件来得到异步方法。</p>
+<p>好了，到这里我们的第二个问题 - 【获取数据的方法和逻辑写在哪里？】 解决了。</p>
+<h2 id="渲染同构"><a href="#渲染同构" class="headerlink" title="渲染同构"></a>渲染同构</h2><p>假设我们现在基于上面已经实现的代码，同时我们也使用 webpack 进行了配置，对代码进行了转换和打包，整个服务可以跑起来。</p>
+<p>路由能够正确匹配，数据预取正常，服务端可以直出组件的 html ，浏览器加载 js 代码正常，查看网页源代码能看到 html 内容，好像我们的整个流程已经走完。</p>
+<p>但是当浏览器端的 js 执行完成后，发现数据重新请求了，组件的重新渲染导致页面看上去有些闪烁。</p>
+<p>这是因为在浏览器端，双端节点对比失败，导致组件重新渲染，也就是只有当服务端和浏览器端渲染的组件具有相同的props 和 DOM 结构的时候，组件才能只渲染一次。</p>
+<p>刚刚我们实现了双端的数据预取同构，但是数据也仅仅是服务端有，浏览器端是没有这个数据，当客户端进行首次组件渲染的时候没有初始化的数据，渲染出的节点肯定和服务端直出的节点不同，导致组件重新渲染。</p>
+<h3 id="数据注水"><a href="#数据注水" class="headerlink" title="数据注水"></a>数据注水</h3><p>在服务端将预取的数据注入到浏览器，使浏览器端可以访问到，客户端进行渲染前将数据传入对应的组件即可，这样就保证了props的一致。</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br><span class="line">63</span><br><span class="line">64</span><br><span class="line">65</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line">&#x2F;&#x2F;node server  参考代码</span><br><span class="line">http.createServer((req, res) &#x3D;&gt; &#123;</span><br><span class="line"></span><br><span class="line">        const url &#x3D; req.url;</span><br><span class="line">        if(url.indexOf(&#39;.&#39;)&gt;-1) &#123; res.end(&#39;&#39;); return false;&#125;</span><br><span class="line"></span><br><span class="line">        res.writeHead(200, &#123;</span><br><span class="line">            &#39;Content-Type&#39;: &#39;text&#x2F;html&#39;</span><br><span class="line">        &#125;);</span><br><span class="line"></span><br><span class="line">        console.log(url);</span><br><span class="line"></span><br><span class="line">        &#x2F;&#x2F;查找组件</span><br><span class="line">        const branch &#x3D;  matchRoutes(routes,url);</span><br><span class="line">        &#x2F;&#x2F;得到组件</span><br><span class="line">        const Component &#x3D; branch[0].route.component;</span><br><span class="line"></span><br><span class="line">        &#x2F;&#x2F;数据预取</span><br><span class="line">        const data &#x3D; Component.getInitialProps(branch[0].match.params);</span><br><span class="line"></span><br><span class="line">        &#x2F;&#x2F;组件渲染为 html</span><br><span class="line">        const html &#x3D; renderToString(&lt;Component data&#x3D;&#123;data&#125;&#x2F;&gt;);</span><br><span class="line"></span><br><span class="line">        &#x2F;&#x2F;数据注水</span><br><span class="line">        const propsData &#x3D; &#96;&lt;textarea id&#x3D;&quot;krs-server-render-data-BOX&quot;&gt;$&#123;JSON.stringify(data)&#125;&lt;&#x2F;textarea&gt;&#96;;</span><br><span class="line"></span><br><span class="line">        &#x2F;&#x2F; 通过 ejs 模板引擎将数据注入到页面</span><br><span class="line">        ejs.renderFile(&#39;.&#x2F;index.html&#39;, &#123;</span><br><span class="line">            htmlContent: html,  </span><br><span class="line">            propsData</span><br><span class="line">        &#125;,  &#x2F;&#x2F; 渲染的数据key: 对应到了ejs中的index</span><br><span class="line">            (err, data) &#x3D;&gt; &#123;</span><br><span class="line">                if (err) &#123;</span><br><span class="line">                    console.log(err);</span><br><span class="line">                &#125; else &#123;</span><br><span class="line">                    console.log(data);</span><br><span class="line">                    res.end(data);</span><br><span class="line">                &#125;</span><br><span class="line">            &#125;)</span><br><span class="line"></span><br><span class="line"> &#125;).listen(8080);</span><br><span class="line"></span><br><span class="line"> &#x2F;&#x2F;node ejs html</span><br><span class="line"></span><br><span class="line"> &lt;!DOCTYPE html&gt;</span><br><span class="line">&lt;html lang&#x3D;&quot;en&quot;&gt;</span><br><span class="line"></span><br><span class="line">&lt;head&gt;</span><br><span class="line">    &lt;meta charset&#x3D;&quot;UTF-8&quot;&gt;</span><br><span class="line">    &lt;meta name&#x3D;&quot;viewport&quot; content&#x3D;&quot;width&#x3D;device-width, initial-scale&#x3D;1.0&quot;&gt;</span><br><span class="line">    &lt;meta http-equiv&#x3D;&quot;X-UA-Compatible&quot; content&#x3D;&quot;ie&#x3D;edge&quot;&gt;</span><br><span class="line">&lt;&#x2F;head&gt;</span><br><span class="line"></span><br><span class="line">&lt;body&gt;</span><br><span class="line">    &lt;div id&#x3D;&quot;rootEle&quot;&gt;</span><br><span class="line">        &lt;%- htmlContent %&gt; &#x2F;&#x2F;组件 html内容</span><br><span class="line">    &lt;&#x2F;div&gt;</span><br><span class="line"></span><br><span class="line">    &lt;%- propsData %&gt; &#x2F;&#x2F;组件 init  state ，现在是个字符串</span><br><span class="line">&lt;&#x2F;body&gt;</span><br><span class="line"></span><br><span class="line">&lt;&#x2F;html&gt;</span><br><span class="line">&lt;&#x2F;body&gt;</span><br><span class="line"></span><br></pre></td></tr></table></figure>
+
+<p>需要借助 ejs 模板，将数据绑定到页面上，为了防止 XSS攻击，这里我把数据写到了 textarea 标签里。</p>
+<p>下图中，我看着明文数据难受，对数据做了base64编码 ，用之前需要转码，看个人需要。<br><img src="https://upload-images.jianshu.io/upload_images/10024246-4ea344d1832c1cca.jpg?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="image"></p>
+<h3 id="数据脱水"><a href="#数据脱水" class="headerlink" title="数据脱水"></a>数据脱水</h3><p>上一步数据已经注入到了浏览器端，这一步要在客户端组件渲染前先拿到数据，并且传入组件就可以了。</p>
+<p>客户端可以直接使用id=krs-server-render-data-BOX 进行数据获取。</p>
+<p>第一个方法简单粗暴，可直接在组件内的constructor 构造函数 内进行获取，如果怕代码重复，可以写一个高阶组件。</p>
+<p>第二个方法可以通过 context 传递，只需要在入口处传入，在组件中声明 static contextType 即可。</p>
+<p>我是采用context 传递，为了后面方便集成 redux 状态管理 。</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line">&#x2F;&#x2F; 定义 context 生产者 组件</span><br><span class="line"></span><br><span class="line">import React,&#123;createContext&#125; from &#39;react&#39;;</span><br><span class="line">import RootContext from &#39;.&#x2F;route-context&#39;;</span><br><span class="line"></span><br><span class="line">export default class Index extends React.Component &#123;</span><br><span class="line">    constructor(props,context) &#123;</span><br><span class="line">        super(props);</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    render() &#123;</span><br><span class="line">        return &lt;RootContext.Provider value&#x3D;&#123;this.props.initialData||&#123;&#125;&#125;&gt;</span><br><span class="line">            &#123;this.props.children&#125;</span><br><span class="line">        &lt;&#x2F;RootContext.Provider&gt;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">&#x2F;&#x2F;入口  app.js</span><br><span class="line">import React from &#39;react&#39;;</span><br><span class="line">import ReactDOM from &#39;react-dom&#39;;</span><br><span class="line">import &#123; BrowserRouter &#125; from &#39;react-router-dom&#39;;</span><br><span class="line">import Routes from &#39;..&#x2F;&#39;;</span><br><span class="line">import Provider from &#39;.&#x2F;provider&#39;;</span><br><span class="line"></span><br><span class="line">&#x2F;&#x2F;渲染入口  接收脱水数据</span><br><span class="line">function renderUI(initialData) &#123;</span><br><span class="line">    ReactDOM.hydrate(&lt;BrowserRouter&gt;&lt;Provider initialData&#x3D;&#123;initialData&#125;&gt;</span><br><span class="line">        &lt;Routes &#x2F;&gt;</span><br><span class="line">    &lt;&#x2F;Provider&gt;</span><br><span class="line">    &lt;&#x2F;BrowserRouter&gt;, document.getElementById(&#39;rootEle&#39;), (e) &#x3D;&gt; &#123;</span><br><span class="line">    &#125;);</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">&#x2F;&#x2F;函数执行入口</span><br><span class="line">function entryIndex() &#123;</span><br><span class="line">    let APP_INIT_DATA &#x3D; &#123;&#125;;</span><br><span class="line">    let state &#x3D; true;</span><br><span class="line"></span><br><span class="line">    &#x2F;&#x2F;取得数据</span><br><span class="line">    let stateText &#x3D; document.getElementById(&#39;krs-server-render-data-BOX&#39;);</span><br><span class="line"></span><br><span class="line">    if (stateText) &#123;</span><br><span class="line">        APP_INIT_DATA &#x3D; JSON.parse(stateText.value || &#39;&#123;&#125;&#39;);</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    if (APP_INIT_DATA) &#123;&#x2F;&#x2F;客户端渲染</span><br><span class="line"></span><br><span class="line">        renderUI(APP_INIT_DATA);</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">&#x2F;&#x2F;入口执行</span><br><span class="line">entryIndex();</span><br><span class="line"></span><br></pre></td></tr></table></figure>
+
+<p>行文至此，核心的内容已经基本说完，剩下的就是组件内如何使用脱水的数据。</p>
+<p>下面通过 context 拿到数据 , 代码仅供参考，可根据自己的需求来进行封装和调整。</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br><span class="line">63</span><br><span class="line">64</span><br><span class="line">65</span><br><span class="line">66</span><br><span class="line">67</span><br><span class="line">68</span><br><span class="line">69</span><br></pre></td><td class="code"><pre><span class="line">import React from &#39;react&#39;;</span><br><span class="line">import &#39;.&#x2F;css&#x2F;index.scss&#39;;</span><br><span class="line"></span><br><span class="line">export default class Index extends React.Component &#123;</span><br><span class="line"></span><br><span class="line">    constructor(props, context) &#123;</span><br><span class="line">        super(props, context);</span><br><span class="line"></span><br><span class="line">        &#x2F;&#x2F;将context 存储到 state </span><br><span class="line">        this.state &#x3D; &#123;</span><br><span class="line">            ... context</span><br><span class="line">        &#125;</span><br><span class="line"></span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    &#x2F;&#x2F;设置此参数 才能拿到 context 数据</span><br><span class="line">    static contextType &#x3D; RootContext;</span><br><span class="line"></span><br><span class="line">    &#x2F;&#x2F;数据预取方法</span><br><span class="line">    static async getInitialProps(krsOpt) &#123;</span><br><span class="line"></span><br><span class="line">        if (__SERVER__) &#123;</span><br><span class="line">            &#x2F;&#x2F;如果是服务端渲染的话  可以做的处理,node 端设置的全局变量</span><br><span class="line">        &#125;</span><br><span class="line"></span><br><span class="line">        const fetch1 &#x3D; fetch.postForm(&#39;&#x2F;fe_api&#x2F;filed-manager&#x2F;get-detail-of-type&#39;, &#123;</span><br><span class="line">            data: &#123; ofTypeId: 4000 &#125;</span><br><span class="line">        &#125;);</span><br><span class="line"></span><br><span class="line">        const fecth2 &#x3D; fetch.postForm(&#39;&#x2F;fe_api&#x2F;filed-manager&#x2F;get-detail-of-type&#39;, &#123;</span><br><span class="line">            data: &#123; ofTypeId: 2000 &#125;</span><br><span class="line">        &#125;);</span><br><span class="line"></span><br><span class="line">        const resArr &#x3D; await fetch.multipleFetch(fetch1, fecth2);</span><br><span class="line">        &#x2F;&#x2F;返回所有数据</span><br><span class="line">        return &#123;</span><br><span class="line">            page: &#123;&#125;,</span><br><span class="line">            fetchData: resArr</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    componentDidMount() &#123;</span><br><span class="line">        if (!this.isSSR) &#123; &#x2F;&#x2F;非服务端渲染需要自身进行数据获取</span><br><span class="line">            Index.getInitialProps(this.props.krsOpt).then(data &#x3D;&gt; &#123;</span><br><span class="line">                this.setState(&#123;</span><br><span class="line">                    ...data</span><br><span class="line">                &#125;, () &#x3D;&gt; &#123;</span><br><span class="line">                   &#x2F;&#x2F;可有的一些操作</span><br><span class="line">                &#125;);</span><br><span class="line">            &#125;);</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    render() &#123;</span><br><span class="line"></span><br><span class="line">        &#x2F;&#x2F;得到 state 内的数据，进行逻辑判断和容错，然后渲染</span><br><span class="line">        const &#123; page, fetchData &#125; &#x3D; this.state;</span><br><span class="line">        const [res] &#x3D; fetchData || [];</span><br><span class="line"></span><br><span class="line">        return &lt;div className&#x3D;&quot;detailBox&quot;&gt;</span><br><span class="line">            &#123;</span><br><span class="line">                res &amp;&amp; res.data.map(item &#x3D;&gt; &#123;</span><br><span class="line">                    return &lt;div key&#x3D;&#123;item.id&#125;&gt;&#123;item.keyId&#125;:&#123;item.keyName&#125;---&#123;item.setContent&#125;&lt;&#x2F;div&gt;</span><br><span class="line">                &#125;)</span><br><span class="line">            &#125;</span><br><span class="line">        &lt;&#x2F;div&gt;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br><span class="line"></span><br></pre></td></tr></table></figure>
+
+<p>到此我们的第三个问题：【服务端 html 节点无法重用 】已经解决,但人不够完美，请继续看。</p>
+<h1 id="css-过滤"><a href="#css-过滤" class="headerlink" title="css 过滤"></a>css 过滤</h1><p>我们在写组件的时候大部分都会导入相关的 css 文件。</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line">import &#39;.&#x2F;css&#x2F;index.scss&#39;;&#x2F;&#x2F;导入css</span><br><span class="line"></span><br><span class="line">&#x2F;&#x2F;组件</span><br><span class="line">class Index extends React.Component&#123;</span><br><span class="line">    constructor(props)&#123;</span><br><span class="line">        super(props);</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    static async  getInitialProps() &#123;</span><br><span class="line">        const fetch1 &#x3D;await fetch(&#39;&#x2F;xxx.com&#x2F;a&#39;);</span><br><span class="line">        const fetch2 &#x3D; await fetch(&#39;&#x2F;xxx.com&#x2F;b&#39;);</span><br><span class="line"></span><br><span class="line">        return &#123;</span><br><span class="line">            res:[fetch1,fetch2]</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    render()&#123;</span><br><span class="line">        return &lt;h1&gt;&#123;this.props.data.title&#125;&lt;&#x2F;h1&gt;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<p>但是这个 css 文件在服务端无法执行，其实想想在服务端本来就不需要渲染 css 。为什么不直接干掉？ 所以为了方便，我这里写了一个babel 插件，在编译的时候干掉 css 的导入代码。</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line">&#x2F;**</span><br><span class="line"> * 删除 css 的引入</span><br><span class="line"> * 可能社区已经有现成的插件但是不想费劲儿找了，还是自己写一个吧。 </span><br><span class="line"> *&#x2F;</span><br><span class="line">module.exports &#x3D; function (&#123; types: babelTypes &#125;) &#123;</span><br><span class="line">    return &#123;</span><br><span class="line">        name: &quot;no-require-css&quot;,</span><br><span class="line">        visitor: &#123;</span><br><span class="line">            ImportDeclaration(path, state) &#123;</span><br><span class="line">                let importFile &#x3D; path.node.source.value;</span><br><span class="line">                if(importFile.indexOf(&#39;.scss&#39;)&gt;-1)&#123;</span><br><span class="line">                    &#x2F;&#x2F; 干掉css 导入</span><br><span class="line">                    path.remove();</span><br><span class="line">                &#125;</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;;</span><br><span class="line">&#125;;</span><br><span class="line"></span><br><span class="line">&#x2F;&#x2F;.babelrc 中使用</span><br><span class="line"></span><br><span class="line"> &quot;plugins&quot;: [</span><br><span class="line">                &quot;.&#x2F;webpack&#x2F;babel&#x2F;plugin&#x2F;no-require-css&quot;  &#x2F;&#x2F;引入        </span><br><span class="line">            ]</span><br></pre></td></tr></table></figure>
+
+<p><a target="_blank" rel="noopener" href="https://www.renrenfan.com.cn/">资源搜索网站大全</a> <a target="_blank" rel="noopener" href="https://www.renrenfan.com.cn/">https://www.renrenfan.com.cn</a> <a target="_blank" rel="noopener" href="https://www.houdianzi.com/">广州VI设计公司</a><a target="_blank" rel="noopener" href="https://www.houdianzi.com/">https://www.houdianzi.com</a></p>
+<h1 id="动态路由的-SSR"><a href="#动态路由的-SSR" class="headerlink" title="动态路由的 SSR"></a>动态路由的 SSR</h1><p>现在要说一个更加核心的内容，也是本文的一个压轴亮点，可以说是<strong>全网唯一</strong>,我之前也看过很多文章和资料都没有细说这一块儿的实现。</p>
+<p>不知道你有没有发现，上面我们已经一步一步的实现了 React SSR 同构 的完整流程，但是总感觉少点什么东西。</p>
+<p>SPA模式下大部分都会实现组件分包和按需加载，防止所有代码打包在一个文件过大影响页面的加载和渲染，影响用户体验。</p>
+<p>那么基于 SSR 的组件按需加载如何实现呢？</p>
+<p>当然我们所限定按需的粒度是路由级别的，请求不同的路由动态加载对应的组件。</p>
+<h2 id="如何实现组件的按需加载？"><a href="#如何实现组件的按需加载？" class="headerlink" title="如何实现组件的按需加载？"></a>如何实现组件的按需加载？</h2><p>在 webpack2 时期主要使用require.ensure方法来实现按需加载，他会单独打包指定的文件，在当下 webpack4，有了更加规范的的方式实现按需加载，那就是动态导入 import(‘./xx.js’),当然实现的效果和 require.ensure是相同的。</p>
+<p>咱们这里只说如何借助这个规范实现按需加载的路由，关于动态导入的实现原理先按下不表。</p>
+<p>我们都知道 import 方法传入一个js文件地址，返回值是一个 promise 对象，然后在 then 方法内回调得到按需的组件。他的原理其实就是通过 jsonp 的方式，动态请求脚本，然后在回调内得到组件。</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">import(&#39;..&#x2F;index&#39;).then(res&#x3D;&gt;&#123;</span><br><span class="line">    &#x2F;&#x2F;xxxx</span><br><span class="line">&#125;);</span><br></pre></td></tr></table></figure>
+
+<p>那现在我们已经得到了几个比较有用的信息。</p>
+<ul>
+<li>  如何加载脚本 - import 结合 webpack 自动完成</li>
+<li>  脚本是否加载完成 - 通过在 then 方法回调进行处理</li>
+<li>  获取异步按组件 - 通过在 then 方法回调内获取</li>
+</ul>
+<p>我们可以试着把上面的逻辑抽象成为一个组件，然后在路由配置的地方进行导入后，那么是不是就完成了组件的按需加载呢？</p>
+<p>先看下按需加载组件, 目的是在 import 完成的时候得到按需的组件，然后更改容器组件的 state，将这个异步组件进行渲染。</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line">&#x2F;**</span><br><span class="line"> * 按需加载的容器组件</span><br><span class="line"> * @class Bundle</span><br><span class="line"> * @extends &#123;Component&#125;</span><br><span class="line"> *&#x2F;</span><br><span class="line">export default class Async extends React.Component &#123;</span><br><span class="line">    constructor(props) &#123;</span><br><span class="line">        super(props);</span><br><span class="line">        this.state &#x3D; &#123;</span><br><span class="line">            COMPT: null</span><br><span class="line">        &#125;;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    UNSAFE_componentWillMount() &#123;</span><br><span class="line">        &#x2F;&#x2F;执行组件加载</span><br><span class="line">        if (!this.state.COMPT) &#123;</span><br><span class="line">            this.load(this.props);</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    load(props) &#123;</span><br><span class="line">        this.setState(&#123;</span><br><span class="line">            COMPT: null</span><br><span class="line">        &#125;);</span><br><span class="line">        &#x2F;&#x2F;注意这里，返回Promise对象; C.default 指向按需组件</span><br><span class="line">        props.load().then((C) &#x3D;&gt; &#123;</span><br><span class="line">            this.setState(&#123;</span><br><span class="line">                COMPT: C.default ? C.default : COMPT</span><br><span class="line">            &#125;);</span><br><span class="line">        &#125;);</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    render() &#123;</span><br><span class="line">        return this.state.COMPT ? this.props.children(this.state.COMPT) : &lt;span&gt;正在加载......&lt;&#x2F;span&gt;;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br><span class="line"></span><br></pre></td></tr></table></figure>
+
+<p>Async 容器组件接收一个 props 传过来的 load 方法，返回值是 Promise类型，用来动态导入组件。</p>
+<p>在生命周期 UNSAFE_componentWillMount 得到按需的组件，并将组件存储到 state.COMPT内,同时在 render 方法中判断这个状态的可用性，然后调用this.props.children 方法进行渲染。</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">&#x2F;&#x2F;调用</span><br><span class="line">const LazyPageCom &#x3D; (props) &#x3D;&gt; (</span><br><span class="line">    &lt;Async load&#x3D;&#123;() &#x3D;&gt; import(&#39;..&#x2F;index&#39;)&#125;&gt;</span><br><span class="line">        &#123;(C) &#x3D;&gt; &lt;C &#123;...props&#125; &#x2F;&gt;&#125;&#x2F;&#x2F;返回函数组件</span><br><span class="line">    &lt;&#x2F;Async&gt;</span><br><span class="line">);</span><br><span class="line"></span><br></pre></td></tr></table></figure>
+
+<p>当然这只是其中一种方法，也有很多是通过 react-loadable 库来进行实现，但是实现思路基本相同,有兴趣的可以看下源码。</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br></pre></td><td class="code"><pre><span class="line">&#x2F;&#x2F;参考代码</span><br><span class="line">import React from &#39;react&#39;;</span><br><span class="line">import Loadable from &#39;react-loadable&#39;;</span><br><span class="line"></span><br><span class="line">&#x2F;&#x2F;loading 组件</span><br><span class="line">const Loading &#x3D;()&#x3D;&gt;&#123;</span><br><span class="line">    return (</span><br><span class="line">        &lt;div&gt;loading&lt;&#x2F;div&gt;</span><br><span class="line">    ) </span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">&#x2F;&#x2F;导出组件</span><br><span class="line">export default Loadable(&#123;</span><br><span class="line">    loader:import(&#39;..&#x2F;index&#39;),</span><br><span class="line">    loading:Loading</span><br><span class="line">&#125;);</span><br><span class="line"></span><br></pre></td></tr></table></figure>
+
+<p>到这里我们已经实现了组件的按需加载，剩下就是配置到路由。</p>
+<p>看下伪代码</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line">&#x2F;&#x2F;index.js</span><br><span class="line"></span><br><span class="line">class Index extends React.Component &#123;</span><br><span class="line"></span><br><span class="line">    render() &#123;</span><br><span class="line">        return &lt;div&gt;detail&lt;&#x2F;div&gt;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">&#x2F;&#x2F;detail.js</span><br><span class="line"></span><br><span class="line">class Detail extends React.Component &#123;</span><br><span class="line"></span><br><span class="line">    render() &#123;</span><br><span class="line">        return &lt;div&gt;detail&lt;&#x2F;div&gt;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">&#x2F;&#x2F;routes.js</span><br><span class="line"></span><br><span class="line">&#x2F;&#x2F;按需加载 index 组件</span><br><span class="line">const AyncIndex &#x3D; (props) &#x3D;&gt; (</span><br><span class="line">    &lt;Async load&#x3D;&#123;() &#x3D;&gt; import(&#39;..&#x2F;index&#39;)&#125;&gt;</span><br><span class="line">        &#123;(C) &#x3D;&gt; &lt;C &#123;...props&#125; &#x2F;&gt;&#125;</span><br><span class="line">    &lt;&#x2F;Async&gt;</span><br><span class="line">);</span><br><span class="line"></span><br><span class="line">&#x2F;&#x2F;按需加载 detai 组件</span><br><span class="line">const AyncDetail &#x3D; (props) &#x3D;&gt; (</span><br><span class="line">    &lt;Async load&#x3D;&#123;() &#x3D;&gt; import(&#39;..&#x2F;index&#39;)&#125;&gt;</span><br><span class="line">        &#123;(C) &#x3D;&gt; &lt;C &#123;...props&#125; &#x2F;&gt;&#125;</span><br><span class="line">    &lt;&#x2F;Async&gt;</span><br><span class="line">);</span><br><span class="line"></span><br><span class="line">const routes &#x3D; [</span><br><span class="line"></span><br><span class="line">    &#123;</span><br><span class="line">        path: &quot;&#x2F;&quot;,</span><br><span class="line">        exact: true,</span><br><span class="line">        component: AyncIndex</span><br><span class="line">    &#125;,</span><br><span class="line">    &#123;</span><br><span class="line">        path: &#39;&#x2F;detail&#39;, exact: true,</span><br><span class="line">        component: AyncDetail,</span><br><span class="line">    &#125;</span><br><span class="line">];</span><br><span class="line"></span><br></pre></td></tr></table></figure>
+
+<p>结合路由的按需加载已经配置完成，先不管 server端 是否需要进行调整，此时的代码是可以运行的，按需也是 ok 的。</p>
+<p>但是ssr无效了，查看网页源代码无内容。</p>
+<h2 id="动态路由-SSR-双端配置"><a href="#动态路由-SSR-双端配置" class="headerlink" title="动态路由 SSR 双端配置"></a>动态路由 SSR 双端配置</h2><p>ssr无效了,这是什么原因呢？</p>
+<p>上面我们在做路由同构的时候，双端使用的是同一个 route配置文件routes-config.js,现在组件改成了按需加载，所以在路由查找后得到的组件发生改变了 - AyncDetail,AyncIndex，根本无法转换出组件内容。</p>
+<h3 id="ssr-模式下-server-端如何处理路由按需加载"><a href="#ssr-模式下-server-端如何处理路由按需加载" class="headerlink" title="ssr 模式下 server 端如何处理路由按需加载"></a>ssr 模式下 server 端如何处理路由按需加载</h3><p>其实很简单，也是参考客户端的处理方式，对路由配置进行二次处理。server 端在进行组件查找前，强制执行 import 方法，得到一个全新的静态路由表，再去进行组件的查找。</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line">&#x2F;&#x2F;获得静态路由</span><br><span class="line"></span><br><span class="line">import routes from &#39;routes-config.js&#39;;&#x2F;&#x2F;得到动态路由的配置</span><br><span class="line"></span><br><span class="line">export async function getStaticRoutes() &#123;</span><br><span class="line"></span><br><span class="line">    const staticRoutes &#x3D; [];&#x2F;&#x2F;存放新路由</span><br><span class="line"></span><br><span class="line">    for (; i &lt; len; i++) &#123;</span><br><span class="line">        let item &#x3D; routes[i];</span><br><span class="line"></span><br><span class="line">        &#x2F;&#x2F;存放静态路由</span><br><span class="line">        staticRoutes.push(&#123;</span><br><span class="line">            ...item,</span><br><span class="line">            ...&#123;</span><br><span class="line">                component: (await item.component().props.load()).default</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;);</span><br><span class="line"></span><br><span class="line">    &#125;</span><br><span class="line">    return staticRoutes; &#x2F;&#x2F;返回静态路由</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<p>如今我们离目标更近了一步，server端已兼容了按需路由的查找。但是还没完！</p>
+<p>我们这个时候访问页面的话，ssr 生效了，查看网页源代码可以看到对应的 html 内容。</p>
+<p>但是页面上会显示直出的内容，然后显示<span>正在加载……</span> ,瞬间又变成直出的内容。</p>
+<h3 id="ssr-模式下-client-端如何处理路由按需加载"><a href="#ssr-模式下-client-端如何处理路由按需加载" class="headerlink" title="ssr 模式下 client 端如何处理路由按需加载"></a>ssr 模式下 client 端如何处理路由按需加载</h3><p>这个是为什么呢？</p>
+<p>是不是看的有点累了，再坚持一下就成功了。</p>
+<p>其实有问题才是最好的学习方式，问题解决了，路就通了。</p>
+<p>首先我们知道浏览器端会对已有的节点进行双端对比，如果对比失败就会重新渲染，这很明显就是个问题。</p>
+<p>咱分析一下，首先服务端直出了 html 内容，而此时浏览器端js执行完后需要做按需加载，在按需加载前的组件默认的内容就是<span>正在加载……</span> 这个缺省内容和服务端直出的 html 内容完全不同，所以对比失败，页面会渲染成 <span>正在加载……</span>,然后按需加载完成后组件再次渲染，此时渲染的就是真正的组件了。</p>
+<p><strong>如何解决呢？</strong></p>
+<p>其实也并不复杂，只是不确定是否可行，试过就知道。</p>
+<p>既然客户端需要处理按需，那么我们等这个按需组件加载完后再进行渲染是不是就可以了呢？</p>
+<p>答案是：可以的！</p>
+<p><strong>如何按需呢？</strong></p>
+<p>向“服务端同学”学习，找到对应的组件并强制 执行import按需，只是这里不是转换为静态路由，只找到按需的组件完成动态加载即可。</p>
+<p>既然有了思路，那就撸起代码。</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line">import React,&#123;createContext&#125; from &#39;react&#39;;</span><br><span class="line">import RootContext from &#39;.&#x2F;route-context&#39;;</span><br><span class="line"></span><br><span class="line">export default class Index extends React.Component &#123;</span><br><span class="line">    constructor(props,context) &#123;</span><br><span class="line">        super(props);</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    render() &#123;</span><br><span class="line">        return &lt;RootContext.Provider value&#x3D;&#123;this.props.initialData||&#123;&#125;&#125;&gt;</span><br><span class="line">            &#123;this.props.children&#125;</span><br><span class="line">        &lt;&#x2F;RootContext.Provider&gt;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">&#x2F;&#x2F;入口  app.js</span><br><span class="line">import React from &#39;react&#39;;</span><br><span class="line">import ReactDOM from &#39;react-dom&#39;;</span><br><span class="line">import &#123; BrowserRouter &#125; from &#39;react-router-dom&#39;;</span><br><span class="line">import Routes from &#39;..&#x2F;&#39;;</span><br><span class="line">import Provider from &#39;.&#x2F;provider&#39;;</span><br><span class="line"></span><br><span class="line">&#x2F;&#x2F;渲染入口</span><br><span class="line">function renderUI(initialData) &#123;</span><br><span class="line">    ReactDOM.hydrate(&lt;BrowserRouter&gt;&lt;Provider initialData&#x3D;&#123;initialData&#125;&gt;</span><br><span class="line">        &lt;Routes &#x2F;&gt;</span><br><span class="line">    &lt;&#x2F;Provider&gt;</span><br><span class="line">    &lt;&#x2F;BrowserRouter&gt;, document.getElementById(&#39;rootEle&#39;), (e) &#x3D;&gt; &#123;</span><br><span class="line">    &#125;);</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">function entryIndex() &#123;</span><br><span class="line">    let APP_INIT_DATA &#x3D; &#123;&#125;;</span><br><span class="line">    let state &#x3D; true;</span><br><span class="line"></span><br><span class="line">    &#x2F;&#x2F;取得数据</span><br><span class="line">    let stateText &#x3D; document.getElementById(&#39;krs-server-render-data-BOX&#39;);</span><br><span class="line"></span><br><span class="line">    &#x2F;&#x2F;数据脱水</span><br><span class="line">    if (stateText) &#123;</span><br><span class="line">        APP_INIT_DATA &#x3D; JSON.parse(stateText.value || &#39;&#123;&#125;&#39;);</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    if (APP_INIT_DATA) &#123;&#x2F;&#x2F;客户端渲染</span><br><span class="line"></span><br><span class="line">        - renderUI(true, APP_INIT_DATA);</span><br><span class="line">        &#x2F;&#x2F;查找组件</span><br><span class="line">        + matchComponent(document.location.pathname, routesConfig()).then(res &#x3D;&gt; &#123;</span><br><span class="line">            renderUI(true, APP_INIT_DATA);</span><br><span class="line">        &#125;);</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">&#x2F;&#x2F;执行入口</span><br><span class="line">entryIndex();</span><br><span class="line"></span><br></pre></td></tr></table></figure>
+
+<p>matchComponent 是我封装的一个组件查找的方法，在文章开始已经介绍过类似的实现，代码就不贴了。</p>
+<p><strong>核心亮点说完，整个流程基本结束，剩下的都是些有的没的了，我打算要收工了。</strong></p>
+<h1 id="其他"><a href="#其他" class="headerlink" title="其他"></a>其他</h1><h2 id="SEO-支持"><a href="#SEO-支持" class="headerlink" title="SEO 支持"></a>SEO 支持</h2><p>页面的 SEO 效果取决于页面的主体内容和页面的 TDK（标题 title,描述 description,关键词 keyword）以及关键词的分布和密度，现在我们实现了 ssr所以页面的主体内容有了，那如何设置页面的标题并且让每个页面（路由）的标题都不同呢？</p>
+<p>只要我们每请求一个路由的时候返回不同的 tdk 就可以了。</p>
+<p>这里我在所对应组件数据预取的方法内加了约定，返回的数据为固定格式，必须包含 page 对象，page 对象内包含 tdk 的信息。</p>
+<p>看代码瞬间就明白。</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line">import &#39;.&#x2F;css&#x2F;index.scss&#39;;</span><br><span class="line"></span><br><span class="line">&#x2F;&#x2F;组件</span><br><span class="line">class Index extends React.Component&#123;</span><br><span class="line">    constructor(props)&#123;</span><br><span class="line">        super(props);</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    static async  getInitialProps() &#123;</span><br><span class="line">        const fetch1 &#x3D;await fetch(&#39;&#x2F;xxx.com&#x2F;a&#39;);</span><br><span class="line">        const fetch2 &#x3D; await fetch(&#39;&#x2F;xxx.com&#x2F;b&#39;);</span><br><span class="line"></span><br><span class="line">        return &#123;</span><br><span class="line">            page:&#123;</span><br><span class="line">                tdk:&#123;</span><br><span class="line">                    title:&#39;标题&#39;,</span><br><span class="line">                    keyword:&#39;关键词&#39;,</span><br><span class="line">                    description:&#39;描述&#39;</span><br><span class="line">                &#125;</span><br><span class="line">            &#125;</span><br><span class="line">            res:[fetch1,fetch2]</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    render()&#123;</span><br><span class="line">        return &lt;h1&gt;&#123;this.props.data.title&#125;&lt;&#x2F;h1&gt;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<p>这样你的 tdk 可以根据你的需要设置成静态还是从接口拿到的。然后可以在 esj 模板里进行绑定，也可以在 componentDidMount通过 js<br>document.title=this.state.page.tdk.title设置页面的标题。</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br></pre></td><td class="code"><pre><span class="line">&lt;!DOCTYPE html&gt;</span><br><span class="line">&lt;html lang&#x3D;&quot;en&quot;&gt;</span><br><span class="line">&lt;head&gt;</span><br><span class="line">   &lt;meta charset&#x3D;&quot;UTF-8&quot;&gt;</span><br><span class="line">   &lt;meta name&#x3D;&quot;viewport&quot; content&#x3D;&quot;width&#x3D;device-width, initial-scale&#x3D;1.0&quot;&gt;</span><br><span class="line">   &lt;meta http-equiv&#x3D;&quot;X-UA-Compatible&quot; content&#x3D;&quot;ie&#x3D;edge&quot;&gt;</span><br><span class="line">   &lt;meta name&#x3D;&quot;keywords&quot; content&#x3D;&quot;&lt;%&#x3D;page.tdk.keyword%&gt;&quot; &#x2F;&gt;</span><br><span class="line">   &lt;meta name&#x3D;&quot;description&quot; content&#x3D;&quot;content&#x3D;&quot;&lt;%&#x3D;page.tdk.description%&gt;&quot; &#x2F;&gt;</span><br><span class="line">   &lt;title&gt;&lt;%&#x3D;page.tdk.title%&gt;&lt;&#x2F;title&gt;</span><br><span class="line">&lt;&#x2F;head&gt;</span><br><span class="line">&lt;body&gt;</span><br><span class="line">   &lt;div id&#x3D;&quot;rootEle&quot;&gt;</span><br><span class="line">       &lt;%- htmlContent %&gt;</span><br><span class="line">   &lt;&#x2F;div&gt;</span><br><span class="line">   &lt;%- propsData %&gt;</span><br><span class="line">&lt;&#x2F;body&gt;</span><br><span class="line">&lt;&#x2F;html&gt;</span><br><span class="line">&lt;&#x2F;body&gt;</span><br><span class="line">&lt;%page.staticSource.js.forEach(function(item)&#123;%&gt;</span><br><span class="line"></span><br></pre></td></tr></table></figure>
+
+<h2 id="fetch-同构"><a href="#fetch-同构" class="headerlink" title="fetch 同构"></a>fetch 同构</h2><p>可以使用isomorphic-fetch、axios或者whatwg-fetch + node-fetch 等库来实现支持双端的 fetch 数据请求，这里推荐使用axios 主要是比较方便。</p>
+<h1 id="TODO-和-思考"><a href="#TODO-和-思考" class="headerlink" title="TODO 和 思考"></a>TODO 和 思考</h1><p>没有介绍结合 redux 状态管理的 ssr 实现，其实也不复杂，关键还是看业务中是否需要使用redux，因为文中已经实现了使用 context 传递数据，直接改成按store 传递也很容易,但是更多的还是对 react-redux 的应用。</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line">&#x2F;&#x2F;渲染入口 代码仅供参考 </span><br><span class="line">function renderUI(initialData) &#123;</span><br><span class="line">   ReactDOM.hydrate(&lt;BrowserRouter&gt;&lt;Provider store&#x3D;&#123;initialData&#125;&gt;</span><br><span class="line">       &lt;Routes &#x2F;&gt;</span><br><span class="line">   &lt;&#x2F;Provider&gt;</span><br><span class="line">   &lt;&#x2F;BrowserRouter&gt;, document.getElementById(&#39;rootEle&#39;), (e) &#x3D;&gt; &#123;</span><br><span class="line">   &#125;);</span><br><span class="line">&#125;</span><br><span class="line"></span><br></pre></td></tr></table></figure>
+
+<p>服务端同构渲染虽然可以提升首屏的出现时间，利于 SEO，对低端用户友好，但是开发复杂度有所提高，代码需要兼容双端运行（runtime）,还有一些库只能在浏览器端运行，在服务端加载会直接报错，这种情况就需要进行做一些特殊处理。</p>
+<p>同时也会大大的增加服务端负载，当然这都容易解决，可以改用renderToNodeStream() 方法通过流式输出来提升服务端渲染性能，可以进行监控和扩容，所以是否需要 ssr 模式，还要看具体的产品线和用户定位。</p>
+
+    </div>
+
+    
+    
+    
+
+    <footer class="post-footer">
+
+        
+
+          <div class="post-nav">
+            <div class="post-nav-item">
+                <a href="/nirvana/javascript/%E5%89%8D%E7%AB%AF/CSS%E6%96%B0%E7%89%B9%E6%80%A7contain%EF%BC%8C%E6%8E%A7%E5%88%B6%E9%A1%B5%E9%9D%A2%E7%9A%84%E9%87%8D%E7%BB%98%E4%B8%8E%E9%87%8D%E6%8E%92/" rel="prev" title="CSS新特性contain，控制页面的重绘与重排">
+                  <i class="fa fa-chevron-left"></i> CSS新特性contain，控制页面的重绘与重排
+                </a>
+            </div>
+            <div class="post-nav-item">
+                <a href="/nirvana/webpack/webpack/TapableHook%E4%BB%8B%E7%BB%8D/" rel="next" title="Tapable Hook介绍">
+                  Tapable Hook介绍 <i class="fa fa-chevron-right"></i>
+                </a>
+            </div>
+          </div>
+    </footer>
+  </article>
+</div>
+
+
+
+
+
+
+
+<script>
+  window.addEventListener('tabs:register', () => {
+    let { activeClass } = CONFIG.comments;
+    if (CONFIG.comments.storage) {
+      activeClass = localStorage.getItem('comments_active') || activeClass;
+    }
+    if (activeClass) {
+      const activeTab = document.querySelector(`a[href="#comment-${activeClass}"]`);
+      if (activeTab) {
+        activeTab.click();
+      }
+    }
+  });
+  if (CONFIG.comments.storage) {
+    window.addEventListener('tabs:click', event => {
+      if (!event.target.matches('.tabs-comment .tab-content .tab-pane')) return;
+      const commentClass = event.target.classList[1];
+      localStorage.setItem('comments_active', commentClass);
+    });
+  }
+</script>
+</div>
+  </main>
+
+  <footer class="footer">
+    <div class="footer-inner">
+
+
+<div class="copyright">
+  &copy; 
+  <span itemprop="copyrightYear">2021</span>
+  <span class="with-love">
+    <i class="fa fa-heart"></i>
+  </span>
+  <span class="author" itemprop="copyrightHolder">nirvana</span>
+</div>
+<div class="wordcount">
+  <span class="post-meta-item">
+    <span class="post-meta-item-icon">
+      <i class="fa fa-chart-line"></i>
+    </span>
+      <span>站点总字数：</span>
+    <span title="站点总字数">736k</span>
+  </span>
+  <span class="post-meta-item">
+    <span class="post-meta-item-icon">
+      <i class="fa fa-coffee"></i>
+    </span>
+      <span>站点阅读时长 &asymp;</span>
+    <span title="站点阅读时长">11:09</span>
+  </span>
+</div>
+  <div class="powered-by">由 <a href="https://hexo.io/" class="theme-link" rel="noopener" target="_blank">Hexo</a> & <a href="https://theme-next.js.org/" class="theme-link" rel="noopener" target="_blank">NexT.Gemini</a> 强力驱动
+  </div>
+
+    </div>
+  </footer>
+
+  
+  <script src="https://cdn.jsdelivr.net/npm/animejs@3.2.1/lib/anime.min.js"></script>
+<script src="/nirvana/js/utils.js"></script><script src="/nirvana/js/motion.js"></script><script src="/nirvana/js/next-boot.js"></script><script src="/nirvana/js/bookmark.js"></script>
+
+  
+<script src="/nirvana/js/local-search.js"></script>
+
+
+
+
+
+
+  
+
+
+<script>
+  (function() {
+    function leancloudSelector(url) {
+      url = encodeURI(url);
+      return document.getElementById(url).querySelector('.leancloud-visitors-count');
+    }
+
+    function addCount(Counter) {
+      const visitors = document.querySelector('.leancloud_visitors');
+      const url = decodeURI(visitors.id);
+      const title = visitors.dataset.flagTitle;
+
+      Counter('get', '/classes/Counter?where=' + encodeURIComponent(JSON.stringify({ url })))
+        .then(response => response.json())
+        .then(({ results }) => {
+          if (results.length > 0) {
+            const counter = results[0];
+            leancloudSelector(url).innerText = counter.time + 1;
+            Counter('put', '/classes/Counter/' + counter.objectId, { time: { '__op': 'Increment', 'amount': 1 } })
+              .catch(error => {
+                console.error('Failed to save visitor count', error);
+              });
+          } else {
+              leancloudSelector(url).innerText = 'Counter not initialized! More info at console err msg.';
+              console.error('ATTENTION! LeanCloud counter has security bug, see how to solve it here: https://github.com/theme-next/hexo-leancloud-counter-security. \n However, you can still use LeanCloud without security, by setting `security` option to `false`.');
+            
+          }
+        })
+        .catch(error => {
+          console.error('LeanCloud Counter Error', error);
+        });
+    }
+
+    function showTime(Counter) {
+      const visitors = document.querySelectorAll('.leancloud_visitors');
+      const entries = [...visitors].map(element => {
+        return decodeURI(element.id);
+      });
+
+      Counter('get', '/classes/Counter?where=' + encodeURIComponent(JSON.stringify({ url: { '$in': entries } })))
+        .then(response => response.json())
+        .then(({ results }) => {
+          for (let url of entries) {
+            const target = results.find(item => item.url === url);
+            leancloudSelector(url).innerText = target ? target.time : 0;
+          }
+        })
+        .catch(error => {
+          console.error('LeanCloud Counter Error', error);
+        });
+    }
+
+    const { app_id, app_key, server_url } = {"enable":true,"app_id":"SPsNUvBhME7XmrjzCfHkUu3e-gzGzoHsz","app_key":"4TONafemiIzvJUwqLa7WveoL","server_url":"https://leancloud.cn","security":true,"betterPerformance":false};
+    function fetchData(api_server) {
+      const Counter = (method, url, data) => {
+        return fetch(`${api_server}/1.1${url}`, {
+          method,
+          headers: {
+            'X-LC-Id'     : app_id,
+            'X-LC-Key'    : app_key,
+            'Content-Type': 'application/json',
+          },
+          body: JSON.stringify(data)
+        });
+      };
+      if (CONFIG.page.isPost) {
+        if (CONFIG.hostname !== location.hostname) return;
+        addCount(Counter);
+      } else if (document.querySelectorAll('.post-title-link').length >= 1) {
+        showTime(Counter);
+      }
+    }
+
+    const api_server = app_id.slice(-9) === '-MdYXbMMI' ? `https://${app_id.slice(0, 8).toLowerCase()}.api.lncldglobal.com` : server_url;
+
+    if (api_server) {
+      fetchData(api_server);
+    } else {
+      fetch('https://app-router.leancloud.cn/2/route?appId=' + app_id)
+        .then(response => response.json())
+        .then(({ api_server }) => {
+          fetchData('https://' + api_server);
+        });
+    }
+  })();
+</script>
+
+
+
+</body>
+</html>

@@ -207,12 +207,12 @@
   <nav class="site-state">
       <div class="site-state-item site-state-posts">
           <a href="/nirvana/archives">
-          <span class="site-state-item-count">209</span>
+          <span class="site-state-item-count">249</span>
           <span class="site-state-item-name">日志</span>
         </a>
       </div>
       <div class="site-state-item site-state-categories">
-        <span class="site-state-item-count">13</span>
+        <span class="site-state-item-count">12</span>
         <span class="site-state-item-name">分类</span>
       </div>
   </nav>
@@ -257,7 +257,7 @@
   
 
   <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="">
-    <link itemprop="mainEntityOfPage" href="https://lzhwweb.github.io/nirvana/javascript/%E5%89%8D%E7%AB%AF/JavaScript%E9%9D%A2%E8%AF%95%E9%A2%98/">
+    <link itemprop="mainEntityOfPage" href="https://lzhwweb.github.io/nirvana/javascript/%E5%89%8D%E7%AB%AF/%E5%89%8D%E7%AB%AF%E5%AD%A6%E4%B9%A0%E6%96%B9%E5%90%91/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="image" content="/nirvana/images/headphoto.jpeg">
@@ -270,7 +270,7 @@
     </span>
       <header class="post-header">
         <h2 class="post-title" itemprop="name headline">
-          <a href="/nirvana/javascript/%E5%89%8D%E7%AB%AF/JavaScript%E9%9D%A2%E8%AF%95%E9%A2%98/" class="post-title-link" itemprop="url">JavaScript面试题</a>
+          <a href="/nirvana/javascript/%E5%89%8D%E7%AB%AF/%E5%89%8D%E7%AB%AF%E5%AD%A6%E4%B9%A0%E6%96%B9%E5%90%91/" class="post-title-link" itemprop="url">前端学习方向</a>
         </h2>
 
         <div class="post-meta-container">
@@ -281,14 +281,14 @@
       </span>
       <span class="post-meta-item-text">发表于</span>
 
-      <time title="创建时间：2021-03-11 21:12:40" itemprop="dateCreated datePublished" datetime="2021-03-11T21:12:40+08:00">2021-03-11</time>
+      <time title="创建时间：2021-04-21 14:37:46" itemprop="dateCreated datePublished" datetime="2021-04-21T14:37:46+08:00">2021-04-21</time>
     </span>
       <span class="post-meta-item">
         <span class="post-meta-item-icon">
           <i class="far fa-calendar-check"></i>
         </span>
         <span class="post-meta-item-text">更新于</span>
-        <time title="修改时间：2021-03-10 13:43:55" itemprop="dateModified" datetime="2021-03-10T13:43:55+08:00">2021-03-10</time>
+        <time title="修改时间：2021-06-10 17:02:24" itemprop="dateModified" datetime="2021-06-10T17:02:24+08:00">2021-06-10</time>
       </span>
     <span class="post-meta-item">
       <span class="post-meta-item-icon">
@@ -301,7 +301,7 @@
     </span>
 
   
-    <span id="/nirvana/javascript/%E5%89%8D%E7%AB%AF/JavaScript%E9%9D%A2%E8%AF%95%E9%A2%98/" class="post-meta-item leancloud_visitors" data-flag-title="JavaScript面试题" title="阅读次数">
+    <span id="/nirvana/javascript/%E5%89%8D%E7%AB%AF/%E5%89%8D%E7%AB%AF%E5%AD%A6%E4%B9%A0%E6%96%B9%E5%90%91/" class="post-meta-item leancloud_visitors" data-flag-title="前端学习方向" title="阅读次数">
       <span class="post-meta-item-icon">
         <i class="far fa-eye"></i>
       </span>
@@ -315,7 +315,7 @@
         <i class="far fa-file-word"></i>
       </span>
       <span class="post-meta-item-text">本文字数：</span>
-      <span>1.4k</span>
+      <span>216</span>
     </span>
     <span class="post-meta-item" title="阅读时长">
       <span class="post-meta-item-icon">
@@ -333,33 +333,9 @@
     
     
     <div class="post-body" itemprop="articleBody">
-          <h2 id="作用域"><a href="#作用域" class="headerlink" title="作用域"></a>作用域</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"> (function()&#123; </span><br><span class="line">        var a &#x3D; b &#x3D;5;</span><br><span class="line">    &#125;)();</span><br><span class="line">console.log(b);</span><br></pre></td></tr></table></figure>
-
-<p><strong>答案：</strong><code>5</code></p>
-<blockquote>
-<p>这个问题考查的要点是两个不同的作用域，’a’被var声明成了一个局部变量，但是’b’实际上没有被定义，所以它是一个全局变量。<br>这个问题还牵扯到另个一个比较重要的问题，就是strict mode，如果你选择了strict mode，上面的代码就会报Uncaught ReferenceError，因为b没有被定义，它可以帮你检查出代码的一些问题：</p>
-</blockquote>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"> (function()&#123; </span><br><span class="line">      &#39;use strict&#39;; </span><br><span class="line">      var a &#x3D; window.b &#x3D;5;</span><br><span class="line">    &#125;)();</span><br><span class="line">console.log(b);</span><br></pre></td></tr></table></figure>
-<h2 id="创建“native”方法"><a href="#创建“native”方法" class="headerlink" title="创建“native”方法"></a>创建“native”方法</h2><p>写一个重复打印字符串对象的方法，输入一个整数，这个整数代表重复打印的字数，比如：</p>
-<p> console.log(‘hello’.repeatify(3));</p>
-<p>这样会打印出hellohellohello。</p>
-<h3 id="答案："><a href="#答案：" class="headerlink" title="答案："></a>答案：</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">String.prototype.repeatify &#x3D;String.prototype.repeatify ||function(times)&#123;</span><br><span class="line">    var str &#x3D;&#39;&#39;;</span><br><span class="line">    for(var i &#x3D;0; i &lt; times; i++)&#123;</span><br><span class="line">    str +&#x3D;this;</span><br><span class="line">    &#125;</span><br><span class="line">    return str;</span><br><span class="line">    &#125;;</span><br></pre></td></tr></table></figure>
-<p>这个问题考查的是开发者对JavaScript继承和prototype属性的了解程度。</p>
-<h2 id="Hoisting"><a href="#Hoisting" class="headerlink" title="Hoisting"></a>Hoisting</h2><p>下面这段代码的输出结果是什么？</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">function test()&#123;</span><br><span class="line">   console.log(a);</span><br><span class="line">   console.log(foo()); var a &#x3D;1; function foo()&#123;</span><br><span class="line">   return2;</span><br><span class="line">   &#125;</span><br><span class="line">   &#125;</span><br><span class="line"></span><br><span class="line">   test();</span><br></pre></td></tr></table></figure>
-<p><strong>答案:</strong><code>undefined和2</code></p>
-<p>上面的代码和下面这段是等效的：</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">function test()&#123; var a; function foo()&#123;</span><br><span class="line">    return2;</span><br><span class="line">    &#125;</span><br><span class="line">    console.log(a);</span><br><span class="line">    console.log(foo());</span><br><span class="line">    a &#x3D;1;</span><br><span class="line">    &#125;</span><br><span class="line">    test();</span><br></pre></td></tr></table></figure>
-<h2 id="在JavaScript中如何执行"><a href="#在JavaScript中如何执行" class="headerlink" title="在JavaScript中如何执行"></a>在JavaScript中如何执行</h2><p>通过下面的代码给出结果，解释一下你的答案：</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line">var obj &#x3D;&#123;</span><br><span class="line">    fullname:&#39;Colin Ihrig&#39;,</span><br><span class="line">    prop:&#123;</span><br><span class="line">          fullname:&#39;Aurelio De Rosa&#39;,</span><br><span class="line">          getFullname:function()&#123;</span><br><span class="line">                  return this.fullname;</span><br><span class="line">           &#125;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;;</span><br><span class="line">console.log(obj.prop.getFullname()); var test &#x3D; obj.prop.getFullname;</span><br><span class="line">console.log(test());</span><br></pre></td></tr></table></figure>
-
-<p><strong>答案：</strong><code>Aurelio De Rosa 和John Doe</code></p>
-<h2 id="call-和-apply"><a href="#call-和-apply" class="headerlink" title="call() 和 apply()"></a>call() 和 apply()</h2><p>解决前面的问题之后让最后一个console.log()输出Aurelio De Rosa.</p>
-<p><strong>答案：</strong></p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">console.log(test.call(obj.prop));</span><br></pre></td></tr></table></figure>
-<blockquote>
-<p>这个问题在于call()还是apply()。 </p>
-</blockquote>
+          <p>最近一直在思考，个人潜在技术方向的下个关注点，看了下网上建议有以下：</p>
+<p>1.数据可视化<br>2.IOT前端架构<br>3.跨平台技术，flutter,weex,rn等<br>4.前端智能组件技术<br>5.WebRTC实时音视频技术<br>6.Serverless技术<br>7.跨端小程序，小游戏<br>8.Css环境感应技术<br>9.javascript面向硬件编程<br>10.同构架构</p>
+<p>结合公司现在的状况和个人兴趣，打算花费一个季度的时间去研究并落地<code>Serverless技术</code>，实现接口的BFF能力。</p>
 
       
     </div>
@@ -386,7 +362,7 @@
   
 
   <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="">
-    <link itemprop="mainEntityOfPage" href="https://lzhwweb.github.io/nirvana/javascript/%E5%89%8D%E7%AB%AF/Javascript%E8%87%AA%E8%BA%AB%E6%89%A7%E8%A1%8C%E6%95%88%E7%8E%87/">
+    <link itemprop="mainEntityOfPage" href="https://lzhwweb.github.io/nirvana/javascript/%E5%89%8D%E7%AB%AF/%E7%90%86%E8%A7%A3JavaScript%E5%86%85%E8%81%94%E5%91%BD%E5%90%8D%E5%87%BD%E6%95%B0/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="image" content="/nirvana/images/headphoto.jpeg">
@@ -399,7 +375,7 @@
     </span>
       <header class="post-header">
         <h2 class="post-title" itemprop="name headline">
-          <a href="/nirvana/javascript/%E5%89%8D%E7%AB%AF/Javascript%E8%87%AA%E8%BA%AB%E6%89%A7%E8%A1%8C%E6%95%88%E7%8E%87/" class="post-title-link" itemprop="url">Javascript自身执行效率</a>
+          <a href="/nirvana/javascript/%E5%89%8D%E7%AB%AF/%E7%90%86%E8%A7%A3JavaScript%E5%86%85%E8%81%94%E5%91%BD%E5%90%8D%E5%87%BD%E6%95%B0/" class="post-title-link" itemprop="url">理解JavaScript内联命名函数</a>
         </h2>
 
         <div class="post-meta-container">
@@ -410,14 +386,14 @@
       </span>
       <span class="post-meta-item-text">发表于</span>
 
-      <time title="创建时间：2021-03-11 21:12:40" itemprop="dateCreated datePublished" datetime="2021-03-11T21:12:40+08:00">2021-03-11</time>
+      <time title="创建时间：2021-04-21 14:37:02" itemprop="dateCreated datePublished" datetime="2021-04-21T14:37:02+08:00">2021-04-21</time>
     </span>
       <span class="post-meta-item">
         <span class="post-meta-item-icon">
           <i class="far fa-calendar-check"></i>
         </span>
         <span class="post-meta-item-text">更新于</span>
-        <time title="修改时间：2021-03-10 13:43:55" itemprop="dateModified" datetime="2021-03-10T13:43:55+08:00">2021-03-10</time>
+        <time title="修改时间：2021-06-10 17:02:24" itemprop="dateModified" datetime="2021-06-10T17:02:24+08:00">2021-06-10</time>
       </span>
     <span class="post-meta-item">
       <span class="post-meta-item-icon">
@@ -430,7 +406,7 @@
     </span>
 
   
-    <span id="/nirvana/javascript/%E5%89%8D%E7%AB%AF/Javascript%E8%87%AA%E8%BA%AB%E6%89%A7%E8%A1%8C%E6%95%88%E7%8E%87/" class="post-meta-item leancloud_visitors" data-flag-title="Javascript自身执行效率" title="阅读次数">
+    <span id="/nirvana/javascript/%E5%89%8D%E7%AB%AF/%E7%90%86%E8%A7%A3JavaScript%E5%86%85%E8%81%94%E5%91%BD%E5%90%8D%E5%87%BD%E6%95%B0/" class="post-meta-item leancloud_visitors" data-flag-title="理解JavaScript内联命名函数" title="阅读次数">
       <span class="post-meta-item-icon">
         <i class="far fa-eye"></i>
       </span>
@@ -444,14 +420,14 @@
         <i class="far fa-file-word"></i>
       </span>
       <span class="post-meta-item-text">本文字数：</span>
-      <span>1.9k</span>
+      <span>1.5k</span>
     </span>
     <span class="post-meta-item" title="阅读时长">
       <span class="post-meta-item-icon">
         <i class="far fa-clock"></i>
       </span>
       <span class="post-meta-item-text">阅读时长 &asymp;</span>
-      <span>2 分钟</span>
+      <span>1 分钟</span>
     </span>
 </div>
 
@@ -462,17 +438,18 @@
     
     
     <div class="post-body" itemprop="articleBody">
-          <p>Javascript中的作用域链、闭包、原型继承、eval等特性，在提供各种神奇功能的同时也带来了各种效率问题，用之不慎就会导致执行效率低下。</p>
-<h2 id="1、全局导入"><a href="#1、全局导入" class="headerlink" title="1、全局导入"></a>1、全局导入</h2><p>我们在编码过程中多多少少会使用到一些全局变量（window,document,自定义全局变量等等），了解javascript作用域链的人都知道，在局部作用域中访问全局变量需要一层一层遍历整个作用域链直至顶级作用域，而局部变量的访问效率则会更快更高，因此在局部作用域中高频率使用一些全局对象时可以将其导入到局部作用域中，例如：</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line"> &#x2F;&#x2F;1、作为参数传入模块</span><br><span class="line">  (function(window,$)&#123;</span><br><span class="line">      var xxx &#x3D; window.xxx;</span><br><span class="line">      $(&quot;#xxx1&quot;).xxx();</span><br><span class="line">      $(&quot;#xxx2&quot;).xxx();</span><br><span class="line">  &#125;)(window,jQuery);</span><br><span class="line">  </span><br><span class="line">  &#x2F;&#x2F;2、暂存到局部变量</span><br><span class="line">  function()&#123;</span><br><span class="line">     var doc &#x3D; document;</span><br><span class="line">     var global &#x3D; window.global;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-<h2 id="2、eval以及类eval问题"><a href="#2、eval以及类eval问题" class="headerlink" title="2、eval以及类eval问题"></a>2、eval以及类eval问题</h2><p>我们都知道eval可以将一段字符串当做js代码来执行处理，据说使用eval执行的代码比不使用eval的代码慢100倍以上（具体效率我没有测试，有兴趣同学可以测试一下）</p>
-<p>JavaScript 代码在执行前会进行类似“预编译”的操作：首先会创建一个当前执行环境下的活动对象，并将那些用 var 申明的变量设置为活动对象的属性，但是此时这些变量的赋值都是 undefined，并将那些以 function 定义的函数也添加为活动对象的属性，而且它们的值正是函数的定义。但是，如果你使用了“eval”，则“eval”中的代码（实际上为字符串）无法预先识别其上下文，无法被提前解析和优化，即无法进行预编译的操作。所以，其性能也会大幅度降低</p>
-<p>其实现在大家一般都很少会用eval了，这里我想说的是两个类eval的场景</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">(new Function&#123;&#125;,setTimeout,setInterver)</span><br><span class="line"></span><br><span class="line">setTimtout(&quot;alert(1)&quot;,1000);</span><br><span class="line"></span><br><span class="line">setInterver(&quot;alert(1)&quot;,1000);</span><br><span class="line"></span><br><span class="line">(new Function(&quot;alert(1)&quot;))();</span><br></pre></td></tr></table></figure>
-<p>上述几种类型代码执行效率都会比较低，因此建议直接传入匿名方法、或者方法的引用给setTimeout方法</p>
-<h2 id="3、闭包结束后释放掉不再被引用的变量"><a href="#3、闭包结束后释放掉不再被引用的变量" class="headerlink" title="3、闭包结束后释放掉不再被引用的变量"></a>3、闭包结束后释放掉不再被引用的变量</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line">var f &#x3D; (function()&#123;</span><br><span class="line">    var a &#x3D; &#123;name:&quot;var3&quot;&#125;;</span><br><span class="line">    var b &#x3D; [&quot;var1&quot;,&quot;var2&quot;];</span><br><span class="line">    var c &#x3D; document.getElementByTagName(&quot;li&quot;);</span><br><span class="line">    &#x2F;&#x2F;****其它变量</span><br><span class="line">    &#x2F;&#x2F;***一些运算</span><br><span class="line">    var res &#x3D; function()&#123;</span><br><span class="line">        alert(a.name);</span><br><span class="line">    &#125;</span><br><span class="line">    return res;</span><br><span class="line">&#125;)()</span><br></pre></td></tr></table></figure>
-<p>上述代码中变量f的返回值是由一个立即执行函数构成的闭包中返回的方法res，该变量保留了对于这个闭包中所有变量（a,b,c等）的引用，因此这两个变量会一直驻留在内存空间中,尤其是对于dom元素的引用对内存的消耗会很大，而我们在res中只使用到了a变量的值，因此，在闭包返回前我们可以将其它变量释放</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line">var f &#x3D; (function()&#123;</span><br><span class="line">    var a &#x3D; &#123;name:&quot;var3&quot;&#125;;</span><br><span class="line">    var b &#x3D; [&quot;var1&quot;,&quot;var2&quot;];</span><br><span class="line">    var c &#x3D; document.getElementByTagName(&quot;li&quot;);</span><br><span class="line">    &#x2F;&#x2F;****其它变量</span><br><span class="line">    &#x2F;&#x2F;***一些运算</span><br><span class="line">    &#x2F;&#x2F;闭包返回前释放掉不再使用的变量</span><br><span class="line">    b &#x3D; c &#x3D; null;</span><br><span class="line">    var res &#x3D; function()&#123;</span><br><span class="line">        alert(a.name);</span><br><span class="line">        &#125;</span><br><span class="line">    return res;</span><br><span class="line">&#125;)()</span><br></pre></td></tr></table></figure>
+          <p>在使用JavaScript递归调用时，我们往往会在函数内部调用函数自身(通过函数名)，但是当我们改变了定义时所用函数名的指向时，那么这个递归函数指针关联的递归函数也将随之失效。</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line">var factorial &#x3D; function (num) &#123;</span><br><span class="line">    if (num &lt;&#x3D; 1) &#123;</span><br><span class="line">        return 1;</span><br><span class="line">    &#125; else &#123;</span><br><span class="line">        return num * factorial(num - 1);</span><br><span class="line">    &#125;</span><br><span class="line">&#125;;</span><br><span class="line">console.log(factorial(5)); &#x2F;&#x2F; 120;</span><br><span class="line">var anothorFactorial &#x3D; factorial;</span><br><span class="line">factorial &#x3D; null;</span><br><span class="line">console.log(anothorFactorial(5)); &#x2F;&#x2F; Uncaught TypeError: factorial is not a function</span><br></pre></td></tr></table></figure>
+<p>在非严格模式下我们可以使用 num * arguments.callee(num - 1)来代替函数名。<br>严格模式下，通常会采用内联命名函数来解决这个问题。</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line">var factorial &#x3D; (function f(num) &#123;</span><br><span class="line">    if (num &lt;&#x3D; 1) &#123;</span><br><span class="line">        return 1;</span><br><span class="line">    &#125; else &#123;</span><br><span class="line">        return num*f(num - 1);</span><br><span class="line">    &#125;</span><br><span class="line">&#125;);</span><br><span class="line">console.log(factorial(5)); &#x2F;&#x2F; 120</span><br><span class="line">var anothorFactorial &#x3D; factorial;</span><br><span class="line">factorial &#x3D; null;</span><br><span class="line">console.log(anothorFactorial(5)); &#x2F;&#x2F; 120</span><br></pre></td></tr></table></figure>
+
+<p>这种方式的函数调用区别于下面这种方式：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line"> function f(num) &#123;</span><br><span class="line">    if (num &lt;&#x3D; 1) &#123;</span><br><span class="line">        return 1;</span><br><span class="line">    &#125; else &#123;</span><br><span class="line">        return num*f(num - 1);</span><br><span class="line">    &#125;</span><br><span class="line">&#125;;</span><br><span class="line">var factorial &#x3D; f;</span><br><span class="line">var anothorFactorial &#x3D; factorial;</span><br><span class="line">factorial &#x3D; null;</span><br><span class="line">console.log(anothorFactorial(5)); &#x2F;&#x2F; 120</span><br><span class="line">f &#x3D; null;</span><br><span class="line">console.log(anothorFactorial(5)); &#x2F;&#x2F; Uncaught TypeError: f is not a function</span><br></pre></td></tr></table></figure>
+
+<p>给函数表达式的匿名函数命名并不会改变表达式的性质，即不会让它变成一个函数声明</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">var factorial &#x3D; function f() &#123;</span><br><span class="line">    console.log(factorial &#x3D;&#x3D; f); &#x2F;&#x2F; true</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">factorial(); &#x2F;&#x2F;true</span><br><span class="line">console.log(typeof f); &#x2F;&#x2F; undefined</span><br><span class="line">f(); &#x2F;&#x2F; Uncaught ReferenceError: f is not defined</span><br></pre></td></tr></table></figure>
+
+<p>上述代码证明:尽管我们可以给内联函数命名，但是这些名称只能在自身函数内部才是可见的。使用内联方式调用，其本质和函数表达式没有太大不同，唯一的区别就是内联命名函数在函数内部提供了一个仅仅可供自身调用的函数指针，该指针指向函数自身。</p>
 
       
     </div>
@@ -499,7 +476,7 @@
   
 
   <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="">
-    <link itemprop="mainEntityOfPage" href="https://lzhwweb.github.io/nirvana/javascript/%E5%89%8D%E7%AB%AF/Js%E6%93%8D%E4%BD%9Cdom%E7%9A%84%E6%95%88%E7%8E%87/">
+    <link itemprop="mainEntityOfPage" href="https://lzhwweb.github.io/nirvana/javascript/%E5%89%8D%E7%AB%AF/%E7%A8%8B%E5%BA%8F%E5%91%98%E5%A6%82%E4%BD%95%E5%9C%A8%E7%AE%80%E5%8E%86%E4%B8%8A%E5%86%99%E2%80%9C%E6%88%91%E6%8D%A2%E4%BA%86%E4%B8%80%E4%B8%AA%E7%81%AF%E6%B3%A1%E2%80%9D%EF%BC%9F/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="image" content="/nirvana/images/headphoto.jpeg">
@@ -512,7 +489,7 @@
     </span>
       <header class="post-header">
         <h2 class="post-title" itemprop="name headline">
-          <a href="/nirvana/javascript/%E5%89%8D%E7%AB%AF/Js%E6%93%8D%E4%BD%9Cdom%E7%9A%84%E6%95%88%E7%8E%87/" class="post-title-link" itemprop="url">Js操作dom的效率</a>
+          <a href="/nirvana/javascript/%E5%89%8D%E7%AB%AF/%E7%A8%8B%E5%BA%8F%E5%91%98%E5%A6%82%E4%BD%95%E5%9C%A8%E7%AE%80%E5%8E%86%E4%B8%8A%E5%86%99%E2%80%9C%E6%88%91%E6%8D%A2%E4%BA%86%E4%B8%80%E4%B8%AA%E7%81%AF%E6%B3%A1%E2%80%9D%EF%BC%9F/" class="post-title-link" itemprop="url">程序员如何在简历上写“我换了一个灯泡”？</a>
         </h2>
 
         <div class="post-meta-container">
@@ -523,14 +500,14 @@
       </span>
       <span class="post-meta-item-text">发表于</span>
 
-      <time title="创建时间：2021-03-11 21:12:40" itemprop="dateCreated datePublished" datetime="2021-03-11T21:12:40+08:00">2021-03-11</time>
+      <time title="创建时间：2021-04-21 14:36:06" itemprop="dateCreated datePublished" datetime="2021-04-21T14:36:06+08:00">2021-04-21</time>
     </span>
       <span class="post-meta-item">
         <span class="post-meta-item-icon">
           <i class="far fa-calendar-check"></i>
         </span>
         <span class="post-meta-item-text">更新于</span>
-        <time title="修改时间：2021-03-10 13:43:55" itemprop="dateModified" datetime="2021-03-10T13:43:55+08:00">2021-03-10</time>
+        <time title="修改时间：2021-06-10 17:02:25" itemprop="dateModified" datetime="2021-06-10T17:02:25+08:00">2021-06-10</time>
       </span>
     <span class="post-meta-item">
       <span class="post-meta-item-icon">
@@ -543,7 +520,7 @@
     </span>
 
   
-    <span id="/nirvana/javascript/%E5%89%8D%E7%AB%AF/Js%E6%93%8D%E4%BD%9Cdom%E7%9A%84%E6%95%88%E7%8E%87/" class="post-meta-item leancloud_visitors" data-flag-title="Js操作dom的效率" title="阅读次数">
+    <span id="/nirvana/javascript/%E5%89%8D%E7%AB%AF/%E7%A8%8B%E5%BA%8F%E5%91%98%E5%A6%82%E4%BD%95%E5%9C%A8%E7%AE%80%E5%8E%86%E4%B8%8A%E5%86%99%E2%80%9C%E6%88%91%E6%8D%A2%E4%BA%86%E4%B8%80%E4%B8%AA%E7%81%AF%E6%B3%A1%E2%80%9D%EF%BC%9F/" class="post-meta-item leancloud_visitors" data-flag-title="程序员如何在简历上写“我换了一个灯泡”？" title="阅读次数">
       <span class="post-meta-item-icon">
         <i class="far fa-eye"></i>
       </span>
@@ -557,14 +534,14 @@
         <i class="far fa-file-word"></i>
       </span>
       <span class="post-meta-item-text">本文字数：</span>
-      <span>2.7k</span>
+      <span>813</span>
     </span>
     <span class="post-meta-item" title="阅读时长">
       <span class="post-meta-item-icon">
         <i class="far fa-clock"></i>
       </span>
       <span class="post-meta-item-text">阅读时长 &asymp;</span>
-      <span>2 分钟</span>
+      <span>1 分钟</span>
     </span>
 </div>
 
@@ -575,54 +552,15 @@
     
     
     <div class="post-body" itemprop="articleBody">
-          <p>在web开发过程中，前端执行效率的瓶颈往往都是在dom操作上面，dom操作是一件很耗性能的事情，如何才能在dom操作过程中尽量节约性能呢？</p>
-<p><strong>1、减少reflow</strong></p>
-<p><strong>什么是reflow？</strong></p>
-<p>当 DOM 元素的属性发生变化 (如 color) 时, 浏览器会通知 render 重新描绘相应的元素, 此过程称为 repaint。</p>
-<p>如果该次变化涉及元素布局 (如 width), 浏览器则抛弃原有属性, 重新计算并把结果传递给 render 以重新描绘页面元素, 此过程称为 reflow。</p>
-<p><strong>减少reflow的方法</strong></p>
-<ol>
-<li> 先将元素从document中删除，完成修改后再把元素放回原来的位置（当对某元素及其子元素进行大量reflow操作时，1,2两种方法效果才会比较明显）</li>
-<li> 将元素的display设置为”none”，完成修改后再把display修改为原来的值</li>
-<li> 修改多个样式属性时定义class类代替多次修改style属性（for certain同学推荐）</li>
-<li> 大量添加元素到页面时使用documentFragment</li>
-</ol>
-<p>例如</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">for(var i&#x3D;0;i&lt;100:i++)&#123;</span><br><span class="line">    var child &#x3D; docuemnt.createElement(&quot;li&quot;);</span><br><span class="line">    child.innerHtml &#x3D; &quot;child&quot;;</span><br><span class="line">    document.getElementById(&quot;parent&quot;).appendChild(child);</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-
-<p>上述代码会多次操作dom，效率比较低，可以改为下面的形式 创建documentFragment，将所有元素加入到docuemntFragment不会改变dom结构，最后将其添加到页面，只进行了一次reflow</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">var frag &#x3D; document.createDocumentFragment();</span><br><span class="line">for(var i&#x3D;0;i&lt;100:i++)&#123;</span><br><span class="line">        var child &#x3D; docuemnt.createElement(&quot;li&quot;);</span><br><span class="line">        child.innerHtml &#x3D; &quot;child&quot;;</span><br><span class="line">    frag.appendChild(child);</span><br><span class="line">&#125;</span><br><span class="line">document.getElementById(&quot;parent&quot;).appendChild(frag);</span><br></pre></td></tr></table></figure>
-
-<p><strong>2、暂存dom状态信息</strong></p>
-<p>当代码中需要多次访问元素的状态信息，在状态不变的情况下我们可以将其暂存到变量中，这样可以避免多次访问dom带来内存的开销，典型的例子就是：</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line">ar lis &#x3D; document.getElementByTagName(&quot;li&quot;);</span><br><span class="line">for(var i&#x3D;1;i&lt;lis.length;i++)&#123;</span><br><span class="line">    &#x2F;&#x2F;***</span><br><span class="line">&#125;</span><br><span class="line">上述方式会在每一次循环都去访问dom元素，我们可以简单将代码优化如下</span><br><span class="line">var lis &#x3D; document.getElementByTagName(&quot;li&quot;);</span><br><span class="line">for(var i&#x3D;1,j&#x3D;lis.length ;i&lt;j;i++)&#123;</span><br><span class="line">    &#x2F;&#x2F;***</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-
-<p><strong>3、缩小选择器的查找范围</strong></p>
-<p>查找dom元素时尽量避免大面积遍历页面元素，尽量使用精准选择器，或者指定上下文以缩小查找范围，以jquery为例</p>
+          <p>每个人都会有这样的问题：<code>为什么看上去差不多的技术和资历，有人可以一个月收到二三十个offer，有人只有寥寥几个？</code><br>        答案与简历相关。<br>虽然技术有高有低、资历有深有浅，个人客观情况在短时间无法改变（经历造假可鄙），但是，如何将它们呈现在简历中是有技巧的。<br>比如：如果要在简历上写<code>“我换了一个灯泡”,</code>大家会怎么写?<br><strong>@字节跳动员工：</strong>在没有造成任何成本超支以及安全事故的情况下,独立成功管理了环境照明系统的升级与安装<br><strong>@阿里员工：</strong>我联合了硬件排查部门、采购部门、电力工程部门等等,结合这些资源,我顺利的找到了问题所在。最后推动各个部门协同工作,在大家共同努力之下最后成功和囻满的解决了问题。最后,我总结了一套流程,打造了一个x系统,用于自动检测类似问题。 一旦发现问题,系统将自动下发指令给正确的业务部分,自动完成整个工程,解决问题。大大的节省了資源以前需要100个人才能解决的问题,现在只需要10个人即可完成失去光明的时间,由以前的一个月,缩短到了1小时,在线时间达到9999999%。<br>**@网易员工:**我觉得这个难点在于理解整个电力系统架构,准确找到开关,并在尽可能减少业务损失情况下更换受损业务子模块。顺便我觉得可以优化成热更流程,在不关开关情况下换,但要非常小心,操作要干净快速。<br>**@百度员工;**为保障大家工作的顺利进行,我克服艰难亲自为大家换了办公室灯泡<br>**@京东员工:**负责办公室照明系统<br>**@苏宁员工:**重现光明。<br>**@移动员工:**后面紧着造成的后果,业绩、成绩、亮点,以及过程中的困难<br>**@腾讯员工:**我参与了公司的《爱是一道光》项目,前期独立完成整体架构搭建，后期与团队共同分享胜利的喜悦。<br><strong>@后厂村程序员</strong></p>
 <ul>
-<li>  少用模糊匹配的选择器：例如$(“[name*=’_fix’]”)，多用诸如id以及逐步缩小范围的复合选择器$(“li.active”)等</li>
-<li>  指定上下文：例如$(“#parent .class”)，$(“.class”,$el)等</li>
+<li>1.讲解电灯发明的历史理论基础</li>
+<li> 2.讲解电灯的分类以及优缺点选型 </li>
+<li>3.讲解之前灯的缺点替换的必要性 </li>
+<li>4.讲解如何在不断电并且不灭灯的情况下换灯无损切换 </li>
+<li>5.讲解换灯后的优点收益 </li>
+<li>6.讲解如何将这套方法推广到各个系统方法论 </li>
 </ul>
-<p><strong>4、使用事件委托</strong></p>
-<p><strong>使用场景：</strong>一个有大量记录的列表，每条记录都需要绑定点击事件，在鼠标点击后实现某些功能，我们通常的做法是给每条记录都绑定监听事件，这种做法会导致页面会有大量的事件监听器，效率比较低下。</p>
-<p><strong>基本原理</strong>：我们都知道dom规范中事件是会冒泡的，也就是说在不主动阻止事件冒泡的情况下任何一个元素的事件都会按照dom树的结构逐级冒泡至顶端。而event对象中也提供了event.target（IE下是srcElement）指向事件源，因此我们即使在父级元素上监听该事件也可以找到触发该事件的最原始的元素，这就是委托的基本原理。废话不多说，上示例</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">$(&quot;ul li&quot;).bind(&quot;click&quot;,function()&#123;</span><br><span class="line">    alert($(this).attr(&quot;data&quot;));</span><br><span class="line">&#125;)</span><br></pre></td></tr></table></figure>
-
-<p>上述写法其实是给所有的li元素都绑定了click事件来监听鼠标点击每一个元素的事件，这样页面上会有大量的事件监听器。</p>
-<p>根据上面介绍的监听事件的原理我们来改写一下</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">$(&quot;ul&quot;).bind(&quot;click&quot;,function(e)&#123;</span><br><span class="line">    if(e.target.nodeName.toLowerCase() &#x3D;&#x3D;&#x3D;&quot;li&quot;)&#123;</span><br><span class="line">        alert($(e.target).attr(&quot;data&quot;));</span><br><span class="line">    &#125;</span><br><span class="line">&#125;)</span><br></pre></td></tr></table></figure>
-
-<p>这样一来，我们就可以只添加一个事件监听器去捕获所有li上触发的事件，并做出相应的操作。</p>
-<p>当然，我们不必每次都做事件源的判断工作，可以将其抽象一下交给工具类来完成。jquery中的delegate()方法就实现了该功能</p>
-<p>语法是这样的$(selector).delegate(childSelector,event,data,function)，例如：</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">$(&quot;div&quot;).delegate(&quot;button&quot;,&quot;click&quot;,function()&#123;</span><br><span class="line">  $(&quot;p&quot;).slideToggle();</span><br><span class="line">&#125;);</span><br></pre></td></tr></table></figure>
-
-<p>参数说明（引自w3school）</p>
-<p><img src="https://upload-images.jianshu.io/upload_images/10024246-d8f6aee706ebe272.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" title="Javascript执行效率小结_"></p>
-<p>**Tips:**事件委托还有一个好处就是，即使在事件绑定之后动态添加的元素上触发的事件同样可以监听到哦，这样就不用在每次动态加入元素到页面后都为其绑定事件了</p>
-<p>暂时先总结到这。</p>
-<hr>
-<p>原文来自：<a target="_blank" rel="noopener" href="http://www.cnblogs.com/gewei/archive/2013/03/29/2988180.html">www.cnblogs.com/gewei/archive/2013/03/29/2988180.html</a></p>
 
       
     </div>
@@ -649,7 +587,7 @@
   
 
   <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="">
-    <link itemprop="mainEntityOfPage" href="https://lzhwweb.github.io/nirvana/javascript/%E5%89%8D%E7%AB%AF/Mac%E5%BA%94%E7%94%A8%E7%A8%8B%E5%BA%8F%E6%97%A0%E6%B3%95%E6%89%93%E5%BC%80%E6%88%96%E6%96%87%E4%BB%B6%E6%8D%9F%E5%9D%8F%E7%9A%84%E5%A4%84%E7%90%86%E6%96%B9%E6%B3%95/">
+    <link itemprop="mainEntityOfPage" href="https://lzhwweb.github.io/nirvana/javascript/%E5%89%8D%E7%AB%AF/%E4%BD%BF%E7%94%A8keymetrics%E5%AE%9E%E6%97%B6%E7%9B%91%E6%8E%A7Node%E7%A8%8B%E5%BA%8F/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="image" content="/nirvana/images/headphoto.jpeg">
@@ -662,7 +600,7 @@
     </span>
       <header class="post-header">
         <h2 class="post-title" itemprop="name headline">
-          <a href="/nirvana/javascript/%E5%89%8D%E7%AB%AF/Mac%E5%BA%94%E7%94%A8%E7%A8%8B%E5%BA%8F%E6%97%A0%E6%B3%95%E6%89%93%E5%BC%80%E6%88%96%E6%96%87%E4%BB%B6%E6%8D%9F%E5%9D%8F%E7%9A%84%E5%A4%84%E7%90%86%E6%96%B9%E6%B3%95/" class="post-title-link" itemprop="url">Mac应用程序无法打开或文件损坏的处理方法</a>
+          <a href="/nirvana/javascript/%E5%89%8D%E7%AB%AF/%E4%BD%BF%E7%94%A8keymetrics%E5%AE%9E%E6%97%B6%E7%9B%91%E6%8E%A7Node%E7%A8%8B%E5%BA%8F/" class="post-title-link" itemprop="url">使用keymetrics实时监控Node.js程序</a>
         </h2>
 
         <div class="post-meta-container">
@@ -673,14 +611,14 @@
       </span>
       <span class="post-meta-item-text">发表于</span>
 
-      <time title="创建时间：2021-03-11 21:12:40" itemprop="dateCreated datePublished" datetime="2021-03-11T21:12:40+08:00">2021-03-11</time>
+      <time title="创建时间：2021-04-21 14:34:28" itemprop="dateCreated datePublished" datetime="2021-04-21T14:34:28+08:00">2021-04-21</time>
     </span>
       <span class="post-meta-item">
         <span class="post-meta-item-icon">
           <i class="far fa-calendar-check"></i>
         </span>
         <span class="post-meta-item-text">更新于</span>
-        <time title="修改时间：2021-03-10 13:43:55" itemprop="dateModified" datetime="2021-03-10T13:43:55+08:00">2021-03-10</time>
+        <time title="修改时间：2021-06-10 17:02:24" itemprop="dateModified" datetime="2021-06-10T17:02:24+08:00">2021-06-10</time>
       </span>
     <span class="post-meta-item">
       <span class="post-meta-item-icon">
@@ -693,7 +631,7 @@
     </span>
 
   
-    <span id="/nirvana/javascript/%E5%89%8D%E7%AB%AF/Mac%E5%BA%94%E7%94%A8%E7%A8%8B%E5%BA%8F%E6%97%A0%E6%B3%95%E6%89%93%E5%BC%80%E6%88%96%E6%96%87%E4%BB%B6%E6%8D%9F%E5%9D%8F%E7%9A%84%E5%A4%84%E7%90%86%E6%96%B9%E6%B3%95/" class="post-meta-item leancloud_visitors" data-flag-title="Mac应用程序无法打开或文件损坏的处理方法" title="阅读次数">
+    <span id="/nirvana/javascript/%E5%89%8D%E7%AB%AF/%E4%BD%BF%E7%94%A8keymetrics%E5%AE%9E%E6%97%B6%E7%9B%91%E6%8E%A7Node%E7%A8%8B%E5%BA%8F/" class="post-meta-item leancloud_visitors" data-flag-title="使用keymetrics实时监控Node.js程序" title="阅读次数">
       <span class="post-meta-item-icon">
         <i class="far fa-eye"></i>
       </span>
@@ -707,7 +645,7 @@
         <i class="far fa-file-word"></i>
       </span>
       <span class="post-meta-item-text">本文字数：</span>
-      <span>465</span>
+      <span>1.2k</span>
     </span>
     <span class="post-meta-item" title="阅读时长">
       <span class="post-meta-item-icon">
@@ -725,28 +663,31 @@
     
     
     <div class="post-body" itemprop="articleBody">
-          <p>Mac应用程序无法打开或文件损坏的处理方法</p>
-<h2 id="方法一"><a href="#方法一" class="headerlink" title="方法一"></a>方法一</h2><p>大多数用户在安装 Mac 应用时，经常会遇到提示 “ XXX.app 已损坏，打不开。您应该将它移到废纸篓 ” 或 “ 打不开 XXX.app，因为它来自身份不明的开发者 ” ，如下图所示：</p>
-<p><img src="http://upload-images.jianshu.io/upload_images/10024246-acb847a54e1d04dc.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" title="1516261454857950.png"></p>
-<p><img src="http://upload-images.jianshu.io/upload_images/10024246-6dc056c4a2b86b69.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" title="1516261464940638.png"></p>
-<p>  遇到这种情况，解决的方法很简单，步骤如下：</p>
-<p><strong>1. 打开系统偏好设置界面，进入安全性与隐私</strong></p>
-<p><img src="http://upload-images.jianshu.io/upload_images/10024246-11dc656bdb44769d.jpeg?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="屏幕快照 2018-01-18 下午2.54.11.jpg" title="1516261331253960.jpeg"></p>
-<p><strong>2. 点按左下角的锁头图标，解锁更改权限</strong></p>
-<p><strong>3. 将允许从以下位置下载的应用，更改为 “ 任何来源 ” ，然后再打开应用即可</strong></p>
-<p><img src="http://upload-images.jianshu.io/upload_images/10024246-d9101881c093b84a.jpeg?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" title="1516261394740817.jpeg"></p>
-<p>若没有“任何来源”这个选项（macOS Sierra 10.12及以上的用户可能会遇到），按以下步骤执行：</p>
-<p>打开终端（Terminal.app）</p>
-<p>拷贝粘贴 sudo spctl –master-disable，按回车键</p>
-<p>输入你的账户密码，按回车键确认执行（该密码不会显示，直接输入即可）</p>
-<p><img src="http://upload-images.jianshu.io/upload_images/10024246-0b13724e32c58228.jpg?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240"></p>
-<h2 id="方法二"><a href="#方法二" class="headerlink" title="方法二"></a>方法二</h2><p>如安装应用时，出现 “ 打不开 XXX.app，因为它来自身份不明的开发者 ” ，并提示你的软件在什么位置什么时间下载了磁盘影像。如图所示：</p>
-<p><img src="http://upload-images.jianshu.io/upload_images/10024246-f6ffe536b22e1916.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" title="1522042275384344.png"></p>
-<p>  遇到这种情况，方法如下：</p>
-<p><strong>1、将软件放入“应用程序”后，点击软件 右键-打开 ，如图所示：</strong></p>
-<p><img src="http://upload-images.jianshu.io/upload_images/10024246-8a9f9c4ab31e0aeb.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" title="1522044010422080.png"></p>
-<p><strong>2、弹出以下对话框后，你打开即可。</strong></p>
-<p><img src="http://upload-images.jianshu.io/upload_images/10024246-1f7894dba90e9353.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" title="1522043712276473.png"></p>
+          <p>通过pm2能守护node.js程序永远在线，在实际应用中是非常有必要的。另外，pm2配合keymetrics能实时监控node.js程序的运行，达到监控node.js程序的目的。</p>
+<blockquote>
+<p>安装pm2</p>
+</blockquote>
+<p>pm2可以使我们的node.js或io.js程序永远在线。这是<a target="_blank" rel="noopener" href="https://www.npmjs.com/package/pm2">pm2</a>的官方介绍：</p>
+<p><code>PM2 is a production process manager for Node.js applications with a built-in load balancer. It allows you to keep applications alive forever, to reload them without downtime and to facilitate common system admin tasks.</code></p>
+<p>安装pm2</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">npm install -g pm2</span><br></pre></td></tr></table></figure>
+<p>启动一个node.js程序</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">&#x2F;&#x2F;进入到app的目录去启动&#96;</span><br><span class="line"></span><br><span class="line">pm2 start index.js --name &#39;ghost&#39;</span><br><span class="line"></span><br></pre></td></tr></table></figure>
+
+<p>其他常用命令：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><span class="line">&#x2F;&#x2F;查看pm2守护的app</span><br><span class="line">pm2 list</span><br><span class="line">&#x2F;&#x2F;或者</span><br><span class="line">pm2 status</span><br><span class="line">&#x2F;&#x2F;重启，restart后面跟--name后面指定的名字</span><br><span class="line">pm2 restart ghost</span><br><span class="line">&#x2F;&#x2F;查看进程的使用资源情况</span><br><span class="line">pm2 monit</span><br><span class="line">&#x2F;&#x2F;查看log</span><br><span class="line">pm2 logs ghost</span><br><span class="line">&#x2F;&#x2F;查看app的更多详细信息，后面跟id</span><br><span class="line">pm2 describe 1</span><br><span class="line">&#x2F;&#x2F;升级pm2，升级完毕后自动加载之前运行中的所有app</span><br><span class="line">npm install pm2@latest -g ; pm2 updatePM2</span><br></pre></td></tr></table></figure>
+
+<p>使用Keymetrics可以配合pm2来监控node.js程序（也支持io.js程序的监控）。</p>
+<blockquote>
+<p>安装Keymetrics<br>首先需要注册Keymetrics：<br><a target="_blank" rel="noopener" href="https://app.keymetrics.io/#/register">https://app.keymetrics.io/#/register</a></p>
+</blockquote>
+<p>登录后，通过new bucket新建，然后进入控制面板，可以看到分配的public key 和secret key。然后，在安装有pm2的服务器端输入以下命令</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">pm2 interact your-secret-key your-public-key</span><br></pre></td></tr></table></figure>
+
+<p>监控成功后，会有类似下面的提示：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">[Keymetrics.io] [Agent created] Agent ACTIVE - Web Access: [https:&#x2F;&#x2F;app.keymetrics.io&#x2F;](https:&#x2F;&#x2F;app.keymetrics.io&#x2F;)</span><br></pre></td></tr></table></figure>
+<p>此时，pm2会把收集到的统计信息实时地推送到Keymetrics，我们可以在Keymetrics的后台中实时地查看到node.js程序的运行信息，其中还有一些快捷操作，如重启node.js程序等。</p>
+<p><img src="https://upload-images.jianshu.io/upload_images/10024246-cb89932826f59578.jpg?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240"></p>
 
       
     </div>
@@ -773,7 +714,7 @@
   
 
   <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="">
-    <link itemprop="mainEntityOfPage" href="https://lzhwweb.github.io/nirvana/javascript/%E5%89%8D%E7%AB%AF/Node%E8%BF%9B%E7%A8%8B%E7%AE%A1%E7%90%86%E5%99%A8PM2/">
+    <link itemprop="mainEntityOfPage" href="https://lzhwweb.github.io/nirvana/javascript/%E5%89%8D%E7%AB%AF/%E3%80%90%E8%AF%91%E3%80%91%E7%94%9F%E4%BA%A7%E7%8E%AF%E5%A2%83%E4%B8%8B%E7%9A%84Node%E2%80%94%E2%80%94%E5%BC%80%E6%BA%90%E7%9B%91%E6%8E%A7%E5%B7%A5%E5%85%B7/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="image" content="/nirvana/images/headphoto.jpeg">
@@ -786,7 +727,7 @@
     </span>
       <header class="post-header">
         <h2 class="post-title" itemprop="name headline">
-          <a href="/nirvana/javascript/%E5%89%8D%E7%AB%AF/Node%E8%BF%9B%E7%A8%8B%E7%AE%A1%E7%90%86%E5%99%A8PM2/" class="post-title-link" itemprop="url">Node进程管理器PM2</a>
+          <a href="/nirvana/javascript/%E5%89%8D%E7%AB%AF/%E3%80%90%E8%AF%91%E3%80%91%E7%94%9F%E4%BA%A7%E7%8E%AF%E5%A2%83%E4%B8%8B%E7%9A%84Node%E2%80%94%E2%80%94%E5%BC%80%E6%BA%90%E7%9B%91%E6%8E%A7%E5%B7%A5%E5%85%B7/" class="post-title-link" itemprop="url">【译】生产环境下的Node.js——开源监控工具</a>
         </h2>
 
         <div class="post-meta-container">
@@ -797,14 +738,14 @@
       </span>
       <span class="post-meta-item-text">发表于</span>
 
-      <time title="创建时间：2021-03-11 21:12:40" itemprop="dateCreated datePublished" datetime="2021-03-11T21:12:40+08:00">2021-03-11</time>
+      <time title="创建时间：2021-04-21 14:32:19" itemprop="dateCreated datePublished" datetime="2021-04-21T14:32:19+08:00">2021-04-21</time>
     </span>
       <span class="post-meta-item">
         <span class="post-meta-item-icon">
           <i class="far fa-calendar-check"></i>
         </span>
         <span class="post-meta-item-text">更新于</span>
-        <time title="修改时间：2021-03-10 13:43:55" itemprop="dateModified" datetime="2021-03-10T13:43:55+08:00">2021-03-10</time>
+        <time title="修改时间：2021-06-10 17:02:25" itemprop="dateModified" datetime="2021-06-10T17:02:25+08:00">2021-06-10</time>
       </span>
     <span class="post-meta-item">
       <span class="post-meta-item-icon">
@@ -817,7 +758,7 @@
     </span>
 
   
-    <span id="/nirvana/javascript/%E5%89%8D%E7%AB%AF/Node%E8%BF%9B%E7%A8%8B%E7%AE%A1%E7%90%86%E5%99%A8PM2/" class="post-meta-item leancloud_visitors" data-flag-title="Node进程管理器PM2" title="阅读次数">
+    <span id="/nirvana/javascript/%E5%89%8D%E7%AB%AF/%E3%80%90%E8%AF%91%E3%80%91%E7%94%9F%E4%BA%A7%E7%8E%AF%E5%A2%83%E4%B8%8B%E7%9A%84Node%E2%80%94%E2%80%94%E5%BC%80%E6%BA%90%E7%9B%91%E6%8E%A7%E5%B7%A5%E5%85%B7/" class="post-meta-item leancloud_visitors" data-flag-title="【译】生产环境下的Node.js——开源监控工具" title="阅读次数">
       <span class="post-meta-item-icon">
         <i class="far fa-eye"></i>
       </span>
@@ -849,79 +790,129 @@
     
     
     <div class="post-body" itemprop="articleBody">
-          <p><code>PM2</code>是一个带有<strong>负载均衡</strong>功能的<code>Node</code>应用的进程管理器。<code>PM2</code>可以利用服务器上的<strong>所有CPU</strong>，并保证进程永远都活着，<strong>0秒的重载</strong>，部署管理<strong>多个</strong>Node项目。<code>PM2</code>是<code>Node</code>线上部署完美的管理工具。</p>
-<h4 id="1、基本指令"><a href="#1、基本指令" class="headerlink" title="1、基本指令"></a>1、基本指令</h4><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br></pre></td><td class="code"><pre><span class="line">npm install pm2 -g ： 全局安装。</span><br><span class="line"></span><br><span class="line">pm2 start app.js ： 启动服务，入口文件是app.js。</span><br><span class="line"></span><br><span class="line">pm2 start app.js -i [n] --name [name] ： 启动n个进程，名字命名为name。</span><br><span class="line"></span><br><span class="line">npm restart  [name or id] ： 重启服务。</span><br><span class="line"></span><br><span class="line">npm reload  [name or id] ： 和rastart功能相同，但是可以实现0s的无缝衔接；如果有nginx的使用经验，可以</span><br><span class="line">对比nginx reload指令。</span><br><span class="line"></span><br><span class="line">pm2 start app.js --max_memory_restart 1024M ： 当内存超过1024M时自动重启。 如果工程中有比较棘手的内</span><br><span class="line">存泄露问题，这个算是一个折中方案。</span><br><span class="line"></span><br><span class="line">pm2 monit ： 对服务进行监控。</span><br><span class="line"></span><br></pre></td></tr></table></figure>
-
-<h4 id="2、查看服务进程数"><a href="#2、查看服务进程数" class="headerlink" title="2、查看服务进程数"></a>2、查看服务进程数</h4><p>至于要启动几个进程，可以通过服务器的内核数进行确定，几个内核就启动几个服务。指令如下：</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line"># 查看物理CPU个数</span><br><span class="line"> cat &#x2F;proc&#x2F;cpuinfo| grep &quot;physical id&quot; | sort| uniq | wc -l</span><br><span class="line"></span><br><span class="line"> # 查看每个物理CPU中core的个数(即核数)</span><br><span class="line"> cat &#x2F;proc&#x2F;cpuinfo| grep &quot;cpu cores&quot;| uniq</span><br><span class="line"></span><br><span class="line"> # 查看逻辑CPU的个数</span><br><span class="line"> cat &#x2F;proc&#x2F;cpuinfo| grep &quot;processor&quot;| wc -l</span><br><span class="line"></span><br></pre></td></tr></table></figure>
-
-<p>当然可以启动多个端口，一个端口号对应一个服务，这样的话就需要nignx来做负载均衡了。</p>
-<h4 id="3、-是否需要nginx"><a href="#3、-是否需要nginx" class="headerlink" title="3、 是否需要nginx"></a>3、 是否需要nginx</h4><p>nginx可以做的事情主要有两个：</p>
-<blockquote>
+          <p>你认为Node.js应用程序可以拥有的最重要的功能是什么？ 是花哨的全文模糊匹配搜索，还是用socket进行实时聊天呢？ 你能告诉我可以添加到Node.js应用中的最高级，最惊人和最吸引人的功能是什么么？</p>
+<p>想知道我的么？<strong>高性能和不间断服务</strong>。高性能应用程序需要做好以下三点：</p>
 <ol>
-<li> 反向代理，实现简单的负载均衡： 如果有多台服务器或者一台服务器多个端口，可以考虑用nginx。</li>
-<li> 静态资源缓存：把一些静态资源（如静态页面，js等资源文件）放到nginx里，可以极大的提高服务的性能。</li>
+<li> 最短的停机时间；</li>
+<li> 可预测的资源使用率；</li>
+<li> 根据负载有效扩展</li>
 </ol>
-</blockquote>
-<h4 id="4、fork与cluster启动模式"><a href="#4、fork与cluster启动模式" class="headerlink" title="4、fork与cluster启动模式"></a>4、fork与cluster启动模式</h4><p>开发环境中多以fork的方式启动，生产环境中多用cluster方式启动</p>
-<p><a target="_blank" rel="noopener" href="https://camo.githubusercontent.com/73722a2868ba4cfad76e1e57a6ae2dd06e512e04/687474703a2f2f7777312e73696e61696d672e636e2f6c617267652f616534396261353767793166646f7a7134333167616a32316630303963373730"><img src="http://upload-images.jianshu.io/upload_images/10024246-dbf8192d633005bd?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240"></a> </p>
-<p>上面的示例图中可以看一“watching”一项，这个项默认是disabled，可以通过如下命令开启</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">pm2 start app.js --name m --watch</span><br></pre></td></tr></table></figure>
+<p>在第1部分，<a target="_blank" rel="noopener" href="https://sematext.com/blog/top-nodejs-metrics-to-watch/">Node.js要监控的关键指标</a>中，我们讨论了您应该监控的关键Node.js指标，以便了解应用程序的运行状况。 我还解释了你应该避免的Node.js中的错误做法，例如阻塞线程和造成内存泄漏，还有一些巧妙的技巧可以用来提高应用程序的性能，比如使用集群模块创建工作进程和将长时间运行的任务从主线程分离开来用独立线程运行。</p>
+<p>在本文中，我将描述如何使用5种不同的开源工具监控Node.js应用程序。它们可能没有像<code>Sematext</code>或<code>Datadog</code>那样功能全面，但它们是开源产品，可以完全由自己控制。</p>
+<p><img src="https://upload-images.jianshu.io/upload_images/10024246-2cb6935ebf2df783.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240"></p>
+<h2 id="Appmetrics"><a href="#Appmetrics" class="headerlink" title="Appmetrics"></a>Appmetrics</h2><p>Node应用指标监控看板显示了运行中的Node.js应用程序的性能数据。这是一个简单的模块，在Node.js入口文件的顶部应用并初始化。你可以通过在终端中运行以下命令从npm安装。</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">$ npm install appmetrics-dash</span><br><span class="line">复制代码</span><br></pre></td></tr></table></figure>
 
-<p><strong>建议：这个适合在开发时用，可以省不少时间，生产环境下最好不要用</strong></p>
-<ol>
-<li><p> cluster是fork的派生，cluster支持所有cluster拥有的特性；</p>
-</li>
-<li><p> fork不支持socket地址端口复用，cluster支持地址端口复用。因为只有node的cluster模块支持socket选项SO_REUSEADDR；</p>
-</li>
+<p>Appmetrics提供了一个非常易于使用的Web仪表板。为了获得所有由应用程序创建的HTTP服务的仪表板，你需要做的是在app.js(或者以其他命名的入口文件)文件中添加以下代码段。</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">&#x2F;&#x2F; Before all other &#39;require&#39; statements</span><br><span class="line">require(&#39;appmetrics-dash&#39;).attach()</span><br><span class="line">复制代码</span><br></pre></td></tr></table></figure>
+
+<p>之后你将通过这个请求路径<code>/appmetrics-dash</code>中看到大量有用的指标。</p>
+<ul>
+<li>  CPU Profiling</li>
+<li>  HTTP传入请求</li>
+<li>  HTTP吞吐量</li>
+<li>  平均响应时间（前5名）</li>
+<li>  CPU</li>
+<li>  内存</li>
+<li>  堆（Heap)</li>
+<li>  事件循环时间（Event Loop Times）</li>
+<li>  环境</li>
+<li>  其他请求</li>
+<li>  HTTP出站请求</li>
+</ul>
+<p>此工具不仅显示指标。它允许您直接从仪表板生成Node.js报告和堆快照(Heap Snapshots)。 除此之外，您还可以使用Flame Graphs,非常酷的开源工具。</p>
+<p><img src="https://upload-images.jianshu.io/upload_images/10024246-78124460b252f2d6.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240"></p>
+<h2 id="Express-Status-Monitor"><a href="#Express-Status-Monitor" class="headerlink" title="Express Status Monitor"></a>Express Status Monitor</h2><p>Express.js是当前Node.js开发人员的的首选框架。 <a target="_blank" rel="noopener" href="https://github.com/RafalWilinski/express-status-monitor">Express Status Monitor</a>是一个非常简单的独立模块，您可以将其添加到Express应用。它公开了一个<code>/status</code>路由，在Socket.io和Chart.js的帮助下报告实时服务器指标。</p>
+<p>从npm安装即可。</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">$ npm install express-status-monitor</span><br><span class="line">复制代码</span><br></pre></td></tr></table></figure>
+
+<p>安装完这个模块之后，你需要在其他中间件或者路由之前添加它。</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">app.use(require(&#39;express-status-monitor&#39;)())</span><br><span class="line">复制代码</span><br></pre></td></tr></table></figure>
+
+<p>之后一旦你运行你的应用，你就可以通过<code>/status</code>路由检查你的Node.js指标。</p>
+<p><img src="https://upload-images.jianshu.io/upload_images/10024246-7351c6135a0f03ec.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240"></p>
+<h2 id="Prometheus"><a href="#Prometheus" class="headerlink" title="Prometheus"></a>Prometheus</h2><p>除非你生活在原始时代，不然你一定听说过<a target="_blank" rel="noopener" href="https://prometheus.io/">Prometheus</a>。这是目前我们能使用的最著名的开源监控工具。Prometheus 100%开源并由社区驱动。所有的组件在遵从Apache 2 License开源协议并可以从GitHub下载。它是由<a target="_blank" rel="noopener" href="https://cncf.io/">CNCF</a>（Cloud Native Computing Foundation）管理并已经毕业<a target="_blank" rel="noopener" href="https://www.cncf.io/projects/">成员项目</a>之一，跟它同样的成员项目包括<code>Kubernetes</code>和<code>Fluentd</code>等。</p>
+<p>要开始使用Prometheus进行监控，您需要下载最新版本并进行安装。</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">$ tar xvfz prometheus-\*.tar.gz</span><br><span class="line">$ cd prometheus-\*</span><br><span class="line">复制代码</span><br></pre></td></tr></table></figure>
+
+<p>然后通过运行可执行文件启动它，但在运行此命令之前，需要创建一个<code>prometheus.yml</code>文件。 它是一个配置文件，用于配置在哪些targets上，通过抓取HTTP端点数据监控哪些指标。</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line"># prometheus.yml</span><br><span class="line">scrape_configs:</span><br><span class="line">  - job_name: &#39;prometheus&#39;</span><br><span class="line">    scrape_interval: 1s</span><br><span class="line">    static_configs:</span><br><span class="line">      - targets: [&#39;127.0.0.1:3000&#39;]</span><br><span class="line">        labels:</span><br><span class="line">          service: &#39;test-prom&#39;</span><br><span class="line">          group: &#39;production&#39;</span><br><span class="line">复制代码</span><br></pre></td></tr></table></figure>
+
+<p>现在你可以使用Prometheus了。</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">$ .&#x2F;prometheus --config.file&#x3D;prometheus.yml</span><br><span class="line">复制代码</span><br></pre></td></tr></table></figure>
+
+<p>但是，我很懒，而且我非常喜欢Docker。 所以我的做法是运行官方的<a target="_blank" rel="noopener" href="https://hub.docker.com/r/prom/prometheus/">Prometheus Docker镜像</a>，避免下载它的所有麻烦。</p>
+<h2 id="Prometheus-and-Docker"><a href="#Prometheus-and-Docker" class="headerlink" title="Prometheus and Docker"></a>Prometheus and Docker</h2><p>首先，进到Node.js应用程序的根目录。在这里，创建一个<code>prometheus-data</code>目录并将<code>prometheus.yml</code>文件放入其中。完成此操作后，运行Prometheus Docker容器。</p>
+<p>获取正式的Prometheus Docker镜像并使用docker run命令运行该镜像。</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">$ docker run -d \</span><br><span class="line">    --name prometheus \</span><br><span class="line">    --network&#x3D;&quot;host&quot; \</span><br><span class="line">    -v &quot;$(pwd)&#x2F;prometheus-data&quot;:&#x2F;prometheus-data \</span><br><span class="line">    prom&#x2F;prometheus \</span><br><span class="line">    --config.file&#x3D;&#x2F;prometheus-data&#x2F;prometheus.yml</span><br><span class="line">复制代码</span><br></pre></td></tr></table></figure>
+
+<p>我选择使用-network =“host”运行容器，让Prometheus容器可以通过本机localhost地址访问，并且这样做，Node.js应用程序的也能通过本机HTTP端口访问到。否则，如果你将Prometheus和Node.js分别运行在容器内，则需要在两者之间建立一个<a target="_blank" rel="noopener" href="https://docs.docker.com/network/bridge/">网络</a>，以便彼此之间只能相互访问到。</p>
+<p><code>-v</code>选项用于将<code>prometheus-data</code>目录从主机映射到容器内的同名目录。</p>
+<p>在Prometheus容器运行后，需要在Node.js应用程序中添加配置的代码以暴露一个监控数据接口。 首先需要从npm安装适用于Node.js的<a target="_blank" rel="noopener" href="https://www.npmjs.com/package/prom-client">Prometheus客户端</a>。</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">$ npm install prom-client</span><br><span class="line">复制代码</span><br></pre></td></tr></table></figure>
+
+<p>接在添加相关Prometheus相关配置代码</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line">&#x2F;&#x2F; after all &#39;require&#39; statements</span><br><span class="line">const client &#x3D; require(&#39;prom-client&#39;)</span><br><span class="line">const collectDefaultMetrics &#x3D; client.collectDefaultMetrics</span><br><span class="line">collectDefaultMetrics(&#123; timeout: 1000 &#125;)</span><br><span class="line">app.get(&#39;&#x2F;metrics&#39;, (req, res) &#x3D;&gt; &#123;</span><br><span class="line">  res.set(&#39;Content-Type&#39;, client.register.contentType)</span><br><span class="line">  res.end(client.register.metrics())</span><br><span class="line">&#125;)</span><br><span class="line">复制代码</span><br></pre></td></tr></table></figure>
+
+<p>接下来你只需运行Node.js应用之后，通过<code>http://localhost:9090/graph</code>就可以看到Prometheus图表</p>
+<p><img src="https://upload-images.jianshu.io/upload_images/10024246-9476399a27b7749c.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240"></p>
+<h2 id="Clinic-js"><a href="#Clinic-js" class="headerlink" title="Clinic.js"></a>Clinic.js</h2><p>Clinic.js包含三个工具，可帮助诊断和查明Node.js性能问题。它的使用非常简单。你需要做的就是从npm安装模块并运行它。它将为您生成报告，使故障排除变得更加容易。</p>
+<p>使用如下命令安装Clinic.js</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">$ npm install clinic</span><br><span class="line">复制代码</span><br></pre></td></tr></table></figure>
+
+<p>一旦安装完毕，就可以选择要生成的报告类型了。你可以选择以下三种报告类型。</p>
+<ul>
+<li>Doctor<ol>
+<li> 通过注入探针来收集指标</li>
+<li> 评估健康和启发式</li>
+<li> 提供修复推荐</li>
 </ol>
-<p><code>fork不可以启动多个实例进程，cluster可以启动多个实例。但node的child_process.fork是可以实现启动多个进程的，但是为什么没有实现呢？就个人理解，node多为提供网络服务，启动多个实例需要地址端口复用，此时便可使用cluster模式实现，但fork模式并不支持地址端口复用，多实例进程启动会产生异常错误。但对于常驻任务脚本而言，不需要提供网络服务，此时多进程启动可以实现，同时也提高了任务处理效率。对于上述需求，可以两种方式实现，一是配置app0,app1,app2方式启动多个进程，二是通过应用实例自身调用child_process.fork多进程编程实现；</code></p>
-<p>fork模式可以应用于其他语言，如php，python，perl，ruby，bash，coffee， 而cluster只能应用于node;</p>
-<p>fork不支持定时重启，cluster支持定时重启。定时重启也就是配置中的cron_restart配置项。</p>
-<h4 id="5、pm2的监控"><a href="#5、pm2的监控" class="headerlink" title="5、pm2的监控"></a>5、pm2的监控</h4><p>pm2的监控有两种方式：</p>
-<h5 id="①cli方式监控"><a href="#①cli方式监控" class="headerlink" title="①cli方式监控"></a>①cli方式监控</h5><p>pm2 monit是专门用来监控的命令，监控项包括cpu与内存</p>
-<p><a target="_blank" rel="noopener" href="https://camo.githubusercontent.com/26aaca8e82f519f00ecf5800ac232430364d3736/687474703a2f2f7777312e73696e61696d672e636e2f6c617267652f616534396261353767793166646f7a7876773475356a32316b77306470343161"><img src="http://upload-images.jianshu.io/upload_images/10024246-f1ba4e586096426d?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240"></a> </p>
-<p>缺点monit展示内容太过粗糙，不够详细</p>
-<h5 id="②pm2-list展示当前所有pm2的管理项目"><a href="#②pm2-list展示当前所有pm2的管理项目" class="headerlink" title="②pm2 list展示当前所有pm2的管理项目"></a>②pm2 list展示当前所有pm2的管理项目</h5><p><a target="_blank" rel="noopener" href="https://camo.githubusercontent.com/ced3e54eb50b8cdfad838f6114d1661f292ae735/687474703a2f2f7777312e73696e61696d672e636e2f6c617267652f6165343962613537677931666470303061377177306a32316663306361677035"><img src="http://upload-images.jianshu.io/upload_images/10024246-15f8e419621a2c5b?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240"></a> </p>
-<p>可以查看出每个进程的运行状态。</p>
-<p>如果需要更详细的监控内容，对于cli而言一般都是可以实现的。</p>
-<p>这种监控方式的缺点：</p>
-<blockquote>
-<p>a. 不够直观，需要自己去执行命令并分析结果；</p>
-</blockquote>
-<blockquote>
-<p>b. 不便于多台服务器的应用监控管理；</p>
-</blockquote>
-<h4 id="6、日志问题"><a href="#6、日志问题" class="headerlink" title="6、日志问题"></a>6、日志问题</h4><p>日志系统对于任意应用而言，通常都是必不可少的一个辅助功能。pm2的相关文件默认存放于$HOME/.pm2/目录下，其日志主要有两类：</p>
-<p><a target="_blank" rel="noopener" href="https://camo.githubusercontent.com/7b9ac5eb511f8f93e60ed37bd9dbfeb03d43c63d/687474703a2f2f7777312e73696e61696d672e636e2f6c617267652f61653439626135376779316664703067317a356a626a32316b32303673713564"><img src="http://upload-images.jianshu.io/upload_images/10024246-999dcbf8be916146?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240"></a> </p>
-<p>a. pm2自身的日志，存放于$HOME/.pm2/pm2.log；</p>
-<p>b. pm2所管理的应用的日志，存放于$HOME/.pm2/logs/目录下，标准谁出日志存放于${APP_NAME}_out.log，标准错误日志存放于${APP_NAME}_error.log；</p>
-<p>这里之所以把日志单独说明一下是因为，如果程序开发不严谨，为了调试程序，导致应用产生大量标准输出，使服务器本身记录大量的日志，导致服务磁盘满载问题。一般而言，pm2管理的应用本身都有自己日志系统，所以对于这种不必要的输出内容需禁用日志，重定向到/dev/null。</p>
-<p>与crontab比较，也有类似情况，crontab自身日志，与其管理的应用本身的输出。应用脚本输出一定需要重定向到/dev/null，因为该输出内容会以邮件的形式发送给用户，内容存储在邮件文件，会产生意向不到的结果，或会导致脚本压根不被执行；</p>
-<h4 id="7、高级用法"><a href="#7、高级用法" class="headerlink" title="7、高级用法"></a>7、高级用法</h4><p>pm2支持配置文件启动：<br>pm2 ecosystem： 生成配置文件ecosystem.json<br>pm2 startOrRestart /file/path/ecosystem.json : 通过配置文件启动服务</p>
-<p>如下是开发时ecosystem.json的内容：</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br></pre></td><td class="code"><pre><span class="line">&#123;</span><br><span class="line">    &#x2F;**</span><br><span class="line">    * Application configuration section</span><br><span class="line">    * http:&#x2F;&#x2F;pm2.keymetrics.io&#x2F;docs&#x2F;usage&#x2F;application-declaration&#x2F;</span><br><span class="line">    * 多个服务，依次放到apps对应的数组里</span><br><span class="line">    *&#x2F;</span><br><span class="line">    apps : [</span><br><span class="line">    &#x2F;&#x2F; First application</span><br><span class="line">        &#123;</span><br><span class="line">            name      : &quot;nova&quot;,</span><br><span class="line">            max_memory_restart: &quot;300M&quot;,</span><br><span class="line">            script    : &quot;&#x2F;root&#x2F;nova&#x2F;app.js&quot;,</span><br><span class="line">            out_file : &quot;&#x2F;logs&#x2F;nova_out.log&quot;,</span><br><span class="line">            error_file : &quot;&#x2F;logs&#x2F;nova_error.log&quot;,</span><br><span class="line">            instances  : 4,</span><br><span class="line">            exec_mode  : &quot;cluster&quot;,</span><br><span class="line">            env: &#123;</span><br><span class="line">                NODE_ENV: &quot;production&quot;</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;</span><br><span class="line">    ]</span><br><span class="line"> &#125;</span><br><span class="line"></span><br></pre></td></tr></table></figure>
-
-<p>上述采用cluster模式启动了4个服务进程；如果服务占用的内存超过300M，会自动进行重启。</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br></pre></td><td class="code"><pre><span class="line"> 配置项</span><br><span class="line"></span><br><span class="line">name  应用进程名称；</span><br><span class="line"></span><br><span class="line">script  启动脚本路径；</span><br><span class="line"></span><br><span class="line">cwd  应用启动的路径，关于script与cwd的区别举例说明：在&#x2F;home&#x2F;polo&#x2F;目录下运行&#x2F;data&#x2F;release&#x2F;node&#x2F;</span><br><span class="line">index.js，此处script为&#x2F;data&#x2F;release&#x2F;node&#x2F;index.js，cwd为&#x2F;home&#x2F;polo&#x2F;；</span><br><span class="line"></span><br><span class="line">args  传递给脚本的参数；</span><br><span class="line"></span><br><span class="line">interpreter  指定的脚本解释器；</span><br><span class="line"></span><br><span class="line">interpreter_args  传递给解释器的参数；</span><br><span class="line"></span><br><span class="line">instances  应用启动实例个数，仅在cluster模式有效，默认为fork；</span><br><span class="line"></span><br><span class="line">exec_mode  应用启动模式，支持fork和cluster模式；</span><br><span class="line"></span><br><span class="line">watch  监听重启，启用情况下，文件夹或子文件夹下变化应用自动重启；</span><br><span class="line"></span><br><span class="line">ignore_watch  忽略监听的文件夹，支持正则表达式；</span><br><span class="line"></span><br><span class="line">max_memory_restart  最大内存限制数，超出自动重启；</span><br><span class="line"></span><br><span class="line">env  环境变量，object类型，如&#123;&quot;NODE_ENV&quot;:&quot;production&quot;, &quot;ID&quot;: &quot;42&quot;&#125;；</span><br><span class="line"></span><br><span class="line">log_date_format  指定日志日期格式，如YYYY-MM-DD HH:mm:ss；</span><br><span class="line"></span><br><span class="line">error_file  记录标准错误流，$HOME&#x2F;.pm2&#x2F;logs&#x2F;XXXerr.log)，代码错误可在此文件查找；</span><br><span class="line"></span><br><span class="line">out_file  记录标准输出流，$HOME&#x2F;.pm2&#x2F;logs&#x2F;XXXout.log)，如应用打印大量的标准输出，会导致pm2日志过大；</span><br><span class="line"></span><br><span class="line">min_uptime  应用运行少于时间被认为是异常启动；</span><br><span class="line"></span><br><span class="line">max_restarts  最大异常重启次数，即小于min_uptime运行时间重启次数；</span><br><span class="line"></span><br><span class="line">autorestart  默认为true, 发生异常的情况下自动重启；</span><br><span class="line"></span><br><span class="line">cron_restart  crontab时间格式重启应用，目前只支持cluster模式；</span><br><span class="line"></span><br><span class="line">force  默认false，如果true，可以重复启动一个脚本。pm2不建议这么做；</span><br><span class="line"></span><br><span class="line">restart_delay  异常重启情况下，延时重启时间；</span><br><span class="line"></span><br></pre></td></tr></table></figure>
-
-<h4 id="8、稳定运行建议"><a href="#8、稳定运行建议" class="headerlink" title="8、稳定运行建议"></a>8、稳定运行建议</h4><p>PM2是一款非常优秀的Node进程管理工具，它有着丰富的特性：能够充分利用多核CPU且能够负载均衡、能够帮助应用在崩溃后、指定时间(cluster model)和超出最大内存限制等情况下实现自动重启。</p>
-<p>个人几点看法保证常驻应用进程稳定运行：</p>
-<ol>
-<li><p> 定时重启，应用进程运行时间久了或许总会产生一些意料之外的问题，定时可以规避一些不可测的情况；</p>
 </li>
-<li><p> 最大内存限制，根据观察设定合理内存限制，保证应用异常运行；</p>
-</li>
-<li><p> 合理min_uptime，min_uptime是应用正常启动的最小持续运行时长，超出此时间则被判定为异常启动；</p>
-</li>
-<li><p> 设定异常重启延时restart_delay，对于异常情况导致应用停止，设定异常重启延迟可防止应用在不可测情况下不断重启的导致重启次数过多等问题；</p>
-</li>
-<li><p> 设置异常重启次数，如果应用不断异常重启，并超过一定的限制次数，说明此时的环境长时间处于不可控状态，服务器异常。此时便可停止尝试，发出错误警告通知等。</p>
-</li>
+<li>Bubbleprof- 一种全新的，完全独特的方法来分析Node.js代码<ol>
+<li> 使用async_hooks收集指标</li>
+<li> 跟踪操作之间的延迟</li>
+<li> 创建气泡图</li>
 </ol>
-<p>关于pm2的使用，主要还是运用于常驻脚本。</p>
-<h4 id="9、自动化部署"><a href="#9、自动化部署" class="headerlink" title="9、自动化部署"></a>9、自动化部署</h4><p>通过shell脚本实现资源拉取、服务重启、nginx缓存更新等操作，再配合pm2的监控功能，就初步达到了一个后端工程部署的标配了。</p>
-<h2 id="参考资料："><a href="#参考资料：" class="headerlink" title="参考资料："></a>参考资料：</h2><p><a target="_blank" rel="noopener" href="http://pm2.keymetrics.io/">1.pm2官网</a><br><a target="_blank" rel="noopener" href="https://github.com/Unitech/pm2">2.pm2 github</a></p>
+</li>
+<li>Flame - 使用火焰图揭示代码中的瓶颈和热路径<ol>
+<li> 通过CPU采样收集指标</li>
+<li> 跟踪栈顶频率</li>
+<li> 创建火焰图</li>
+</ol>
+</li>
+</ul>
+<p>让我们从运行Doctor并测试node.js应用程序开始。</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">$ clinic doctor -- node app.js</span><br><span class="line">复制代码</span><br></pre></td></tr></table></figure>
+
+<p>在程序运行时，使用压测工具运行负载测试。</p>
+<p><img src="https://upload-images.jianshu.io/upload_images/10024246-bd3a71c2bc4a339e.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240"></p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">$ loadtest -n 1000 -c 100 [http:&#x2F;&#x2F;localhost:3000&#x2F;api](http:&#x2F;&#x2F;localhost:3000&#x2F;api)</span><br><span class="line">复制代码</span><br></pre></td></tr></table></figure>
+
+<p>一旦完成运行，停止服务器和Clinic.js Doctor将打开您可以查看的报告。</p>
+<p>使用相同的方法，您可以运行Bubbleprof或Flame并获取相应工具的图形报告。</p>
+<p><img src="https://upload-images.jianshu.io/upload_images/10024246-765b447fe955aec8.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240"><br><img src="https://upload-images.jianshu.io/upload_images/10024246-530a6b47fb727c99.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240"></p>
+<h2 id="PM2"><a href="#PM2" class="headerlink" title="PM2"></a>PM2</h2><p>使用PM2在生产中运行Node.js应用程序变得更加容易。 它是一个进程管理器，可以轻松地让您以集群模式运行应用程序。通俗来说，它将为您的主机每个CPU核心都生成一个进程。</p>
+<p>首先安装<a target="_blank" rel="noopener" href="https://www.npmjs.com/package/pm2">PM2</a></p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">$ npm install pm2 -g</span><br><span class="line">复制代码</span><br></pre></td></tr></table></figure>
+
+<p>安装完成后，如果您的主源文件是app.js，则通过在终端中运行此命令来生成PM2守护程序。</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">$ pm2 start app.js -i 0</span><br><span class="line">复制代码</span><br></pre></td></tr></table></figure>
+
+<p><code>-i 0</code>标志实例个数。这将以集群模式运行Node.js应用程序，其中数字0表示CPU核心数。你可以手动输入你想要的任何数字，但让PM2计算核心个数并自动产生相应个数的工作进程更简单些。</p>
+<p>使用PM2查看<a target="_blank" rel="noopener" href="https://github.com/Unitech/pm2">Node.js监控数据</a>也很容易</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">$ pm2 monit</span><br><span class="line">复制代码</span><br></pre></td></tr></table></figure>
+
+<p>此命令将在终端中打开仪表板。在这里，您可以监视进程，日志，循环延迟，进程内存和CPU。</p>
+<p><img src="https://upload-images.jianshu.io/upload_images/10024246-a0830b788f0a2447.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240"></p>
+<h2 id="使用开源工具将监控Node-js方案进行包装"><a href="#使用开源工具将监控Node-js方案进行包装" class="headerlink" title="使用开源工具将监控Node.js方案进行包装"></a>使用开源工具将监控Node.js方案进行包装</h2><p>性能指标对于让用户满意至关重要。在本文中，我向您展示了如何使用5种不同的开源工具向Node.js应用程序添加监视。 在了解了本系列第1部分<a target="_blank" rel="noopener" href="https://sematext.com/blog/top-nodejs-metrics-to-watch/">Node.js要监控的关键指标</a>之后，添加工具来监控现实生活中的应用程序是自然的学习进程。 本系列的最后一部分将介绍<a target="_blank" rel="noopener" href="https://sematext.com/blog/nodejs-monitoring-made-easy-with-sematext/">使用Sematext进行生产环境下Node.js监控</a>。</p>
+<p>如果你想查看示例代码，这里是一个包含所有的<a target="_blank" rel="noopener" href="https://github.com/adnanrahic/nodejs-monitoring-sematext/tree/develop">实例代码 repo</a>。你还可以克隆下来并选择任何工具打开。</p>
+<p>如果你需要更多软件的全栈可观察性，请查看<a target="_blank" rel="noopener" href="https://sematext.com/">Sematext</a>。 我们正在推动<a target="_blank" rel="noopener" href="https://github.com/sematext">开源我们的产品</a>并产生影响。</p>
+<p>原文：<a target="_blank" rel="noopener" href="https://dev.to/sematext/node-js-open-source-monitoring-tools-440a">Node.js Open-Source Monitoring Tools</a></p>
+<h2 id="参考资料"><a href="#参考资料" class="headerlink" title="参考资料"></a>参考资料</h2><ul>
+<li>  <a target="_blank" rel="noopener" href="https://www.ctolib.com/docs/sfile/prometheus-book/index.html">Prometheus操作指南</a></li>
+<li>  <a target="_blank" rel="noopener" href="https://www.ibm.com/developerworks/cn/cloud/library/cl-lo-prometheus-getting-started-and-practice/">Prometheus 入门与实践</a></li>
+</ul>
+<p>作者：Make_a_decision<br>链接：<a target="_blank" rel="noopener" href="https://juejin.cn/post/6844903859479904264">https://juejin.cn/post/6844903859479904264</a><br>来源：掘金<br>著作权归作者所有。商业转载请联系作者获得授权，非商业转载请注明出处。</p>
 
       
     </div>
@@ -948,7 +939,7 @@
   
 
   <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="">
-    <link itemprop="mainEntityOfPage" href="https://lzhwweb.github.io/nirvana/javascript/%E5%89%8D%E7%AB%AF/TypeScript%E6%B3%9B%E5%9E%8B%E7%9A%84%E5%9F%BA%E6%9C%AC%E4%BD%BF%E7%94%A8%E5%92%8C%E7%90%86%E8%A7%A3/">
+    <link itemprop="mainEntityOfPage" href="https://lzhwweb.github.io/nirvana/webpack/webpack/%E4%BA%94%E7%A7%8D%E5%8F%AF%E8%A7%86%E5%8C%96%E6%96%B9%E6%A1%88%E5%88%86%E6%9E%90webpack%E6%89%93%E5%8C%85%E6%80%A7%E8%83%BD%E7%93%B6%E9%A2%88/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="image" content="/nirvana/images/headphoto.jpeg">
@@ -961,7 +952,7 @@
     </span>
       <header class="post-header">
         <h2 class="post-title" itemprop="name headline">
-          <a href="/nirvana/javascript/%E5%89%8D%E7%AB%AF/TypeScript%E6%B3%9B%E5%9E%8B%E7%9A%84%E5%9F%BA%E6%9C%AC%E4%BD%BF%E7%94%A8%E5%92%8C%E7%90%86%E8%A7%A3/" class="post-title-link" itemprop="url">TypeScript泛型的基本使用和理解</a>
+          <a href="/nirvana/webpack/webpack/%E4%BA%94%E7%A7%8D%E5%8F%AF%E8%A7%86%E5%8C%96%E6%96%B9%E6%A1%88%E5%88%86%E6%9E%90webpack%E6%89%93%E5%8C%85%E6%80%A7%E8%83%BD%E7%93%B6%E9%A2%88/" class="post-title-link" itemprop="url">五种可视化方案分析 webpack 打包性能瓶颈</a>
         </h2>
 
         <div class="post-meta-container">
@@ -971,28 +962,22 @@
         <i class="far fa-calendar"></i>
       </span>
       <span class="post-meta-item-text">发表于</span>
+      
 
-      <time title="创建时间：2021-03-11 21:12:40" itemprop="dateCreated datePublished" datetime="2021-03-11T21:12:40+08:00">2021-03-11</time>
+      <time title="创建时间：2021-04-21 14:30:50 / 修改时间：15:37:21" itemprop="dateCreated datePublished" datetime="2021-04-21T14:30:50+08:00">2021-04-21</time>
     </span>
-      <span class="post-meta-item">
-        <span class="post-meta-item-icon">
-          <i class="far fa-calendar-check"></i>
-        </span>
-        <span class="post-meta-item-text">更新于</span>
-        <time title="修改时间：2021-03-10 13:43:55" itemprop="dateModified" datetime="2021-03-10T13:43:55+08:00">2021-03-10</time>
-      </span>
     <span class="post-meta-item">
       <span class="post-meta-item-icon">
         <i class="far fa-folder"></i>
       </span>
       <span class="post-meta-item-text">分类于</span>
         <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-          <a href="/nirvana/categories/javascript/" itemprop="url" rel="index"><span itemprop="name">javascript</span></a>
+          <a href="/nirvana/categories/webpack/" itemprop="url" rel="index"><span itemprop="name">webpack</span></a>
         </span>
     </span>
 
   
-    <span id="/nirvana/javascript/%E5%89%8D%E7%AB%AF/TypeScript%E6%B3%9B%E5%9E%8B%E7%9A%84%E5%9F%BA%E6%9C%AC%E4%BD%BF%E7%94%A8%E5%92%8C%E7%90%86%E8%A7%A3/" class="post-meta-item leancloud_visitors" data-flag-title="TypeScript泛型的基本使用和理解" title="阅读次数">
+    <span id="/nirvana/webpack/webpack/%E4%BA%94%E7%A7%8D%E5%8F%AF%E8%A7%86%E5%8C%96%E6%96%B9%E6%A1%88%E5%88%86%E6%9E%90webpack%E6%89%93%E5%8C%85%E6%80%A7%E8%83%BD%E7%93%B6%E9%A2%88/" class="post-meta-item leancloud_visitors" data-flag-title="五种可视化方案分析 webpack 打包性能瓶颈" title="阅读次数">
       <span class="post-meta-item-icon">
         <i class="far fa-eye"></i>
       </span>
@@ -1006,7 +991,201 @@
         <i class="far fa-file-word"></i>
       </span>
       <span class="post-meta-item-text">本文字数：</span>
-      <span>2.5k</span>
+      <span>3.6k</span>
+    </span>
+    <span class="post-meta-item" title="阅读时长">
+      <span class="post-meta-item-icon">
+        <i class="far fa-clock"></i>
+      </span>
+      <span class="post-meta-item-text">阅读时长 &asymp;</span>
+      <span>3 分钟</span>
+    </span>
+</div>
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+          <h3 id="一、测量构建时间"><a href="#一、测量构建时间" class="headerlink" title="一、测量构建时间"></a>一、测量构建时间</h3><p>优化 webpack 构建速度的第一步是知道将精力集中在哪里。我们可以通过 <code>speed-measure-webpack-plugin</code> 测量你的 webpack 构建期间各个阶段花费的时间：</p>
+<p><strong>步骤一：安装 speed-measure-webpack-plugin</strong></p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">npm install speed-measure-webpack-plugin --save-dev</span><br><span class="line">复制代码</span><br></pre></td></tr></table></figure>
+
+<p><strong>步骤二：配置</strong></p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">&#x2F;&#x2F; 分析打包时间</span><br><span class="line">const SpeedMeasurePlugin &#x3D; require(&quot;speed-measure-webpack-plugin&quot;);</span><br><span class="line">const smp &#x3D; new SpeedMeasurePlugin();</span><br><span class="line">&#x2F;&#x2F; ...</span><br><span class="line">module.exports &#x3D; smp.wrap(prodWebpackConfig)</span><br><span class="line">复制代码</span><br></pre></td></tr></table></figure>
+
+<p><img src="https://upload-images.jianshu.io/upload_images/10024246-f71fb869cd81189a.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240"></p>
+<p>它能够：</p>
+<ul>
+<li>  分析整个打包总耗时；</li>
+<li>  每个插件和 loader 的耗时情况；</li>
+</ul>
+<p>方便开发人员定位打包耗时瓶颈。</p>
+<h3 id="二、分析包内容"><a href="#二、分析包内容" class="headerlink" title="二、分析包内容"></a>二、分析包内容</h3><p>webpack-bundle-analyzer 扫描 bundle 并构建其内部内容的可视化。使用此可视化来查找大的或不必要的依赖项。</p>
+<p><strong>步骤一：安装 webpack-bundle-analyzer</strong></p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">npm install webpack-bundle-analyzer --save-dev</span><br><span class="line">复制代码</span><br></pre></td></tr></table></figure>
+
+<p><strong>步骤二：配置</strong></p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line">&#x2F;&#x2F; 分析包内容</span><br><span class="line">const BundleAnalyzerPlugin &#x3D; require(&#39;webpack-bundle-analyzer&#39;).BundleAnalyzerPlugin;</span><br><span class="line">module.exports &#x3D; &#123;</span><br><span class="line">  plugins: [</span><br><span class="line">    &#x2F;&#x2F; 开启 BundleAnalyzerPlugin</span><br><span class="line">    new BundleAnalyzerPlugin(),</span><br><span class="line">  ],</span><br><span class="line">&#125;;</span><br><span class="line">复制代码</span><br></pre></td></tr></table></figure>
+
+<p>一般运行在生产版本中，该插件将在浏览器中打开统计信息结果页面。</p>
+<p><img src="https://upload-images.jianshu.io/upload_images/10024246-55abc35c2b173da6.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240"></p>
+<p><strong>注意：webpack4 在 <code>production</code> 环境下默认启动了 <code>ModuleConcatenationPlugin</code> （预编译所有模块到一个闭包中，提升代码在浏览器中的执行速度），它可能会合并webpack-bundle-analyzer 输出中的模块的一部分，从而使报告不太详细。 如果你使用此插件，请在分析过程中将其禁用。设置如下：</strong></p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">module.exports &#x3D; &#123;</span><br><span class="line">  &#x2F;&#x2F; ...</span><br><span class="line">  optimization: &#123;</span><br><span class="line">    &#x2F;&#x2F; </span><br><span class="line">    concatenateModules: false,</span><br><span class="line">  &#125;</span><br><span class="line">&#125;;</span><br><span class="line">复制代码</span><br></pre></td></tr></table></figure>
+
+<p>具体来说，使用 webpack-bundle-analyzer 能可视化的反映：</p>
+<ul>
+<li>  打包出的文件中都包含了什么；</li>
+<li>  每个文件的尺寸在总体中的占比，哪些文件尺寸大，思考一下，为什么那么大，是否有替换方案，是否使用了它包含的所有代码；</li>
+<li>  模块之间的包含关系；</li>
+<li>  是否有重复的依赖项，是否存在一个库在多个文件中重复？ 或者捆绑包中是否具有同一库的多个版本？</li>
+<li>  是否有相似的依赖库， 尝试使用一种依赖库实现相似的功能。</li>
+<li>  每个文件的压缩后的大小。</li>
+</ul>
+<h3 id="三、在线分析工具"><a href="#三、在线分析工具" class="headerlink" title="三、在线分析工具"></a>三、在线分析工具</h3><p>如果你对在本地安装插件进行测量分析包方式感觉不爽的话，这里将会推荐几款在线测量工具，但都需要 webpack 统计文件。</p>
+<h4 id="1-生成统计文件-stats-json"><a href="#1-生成统计文件-stats-json" class="headerlink" title="1. 生成统计文件 stats.json"></a>1. 生成统计文件 <code>stats.json</code></h4><p>使用 webpack 编译源代码时，用户可以生成一个包含有关模块统计信息的 JSON 文件。 这些统计信息可用于分析应用程序的依赖关系图以及优化编译速度。 该文件通常是按以下方式生成的：</p>
+<p>在 webpack 启动时带入参数：<code>--profile --json &gt; stats.json</code> ，例如：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">webpack --config webpack.config.prod.js --profile --json &gt; stats.json</span><br><span class="line">复制代码</span><br></pre></td></tr></table></figure>
+
+<ul>
+<li>  <code>--profile</code>：记录下构建过程中的耗时信息</li>
+<li>  <code>--json</code>：以 JSON 的格式输出构建结果，最后只输出一个 <code>.json</code> 文件，这个文件（<code>stats.json</code>）中包括所有构建相关的信息</li>
+<li>  <code>&gt; stats.json</code> ：是 UNIX/Linux 系统中的管道命令、含义是把 <code>webpack --profile --json</code> 输出的内容通过管道输出到 <code>stats.json</code> 文件中</li>
+</ul>
+<p>执行命令后，会在项目中多出一个 <code>stats.json</code> 文件，接下来将 <code>stats.json</code> 文件上传到以下在线工具上，以可视化分析包的组成。</p>
+<p>常用的在线工具有：</p>
+<ul>
+<li>  官方可视化分析工具 Webapck Analyse：生成一个图表，让你可视化了解项目的依赖关系、模块大小及耗时等；</li>
+<li>  Webpack Visualizer：生成一个饼状图，可视化 bundle 内容；</li>
+<li>  webpack bundle optimize helper：此工具会分析你的 bundle，并为你提供可操作的改进措施建议，以减少 bundle 体积大小。</li>
+</ul>
+<h4 id="2-官方可视化分析工具-Webapck-Analyse"><a href="#2-官方可视化分析工具-Webapck-Analyse" class="headerlink" title="2. 官方可视化分析工具 Webapck Analyse"></a>2. 官方可视化分析工具 Webapck Analyse</h4><p><a target="_blank" rel="noopener" href="http://webpack.github.io/analyse/">Webapck Analyse</a> 是一个在线 Web 应用，它为你提供了对包的更全面的分析，并且它绘制了项目中所有依赖模块的图形，这对于依赖关系较少的项目非常有用。</p>
+<p>打开 <a target="_blank" rel="noopener" href="http://webpack.github.io/analyse/">Webapck Analyse</a> ，上传 <code>stats.json</code>：</p>
+<p><img src="https://upload-images.jianshu.io/upload_images/10024246-cdf2f57c826f8d8a.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240"></p>
+<p>Webpack Analyse 不会把你选择的 <code>stats.json</code> 文件发达到服务器，而是在浏览器本地解析，你不用担心自己的代码为此而泄露。 选择文件后，你马上就能如下的效果图：</p>
+<p><img src="https://upload-images.jianshu.io/upload_images/10024246-b4a1cc7f4ec92539.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240"></p>
+<p><strong>Modules</strong> ：展示所有的模块，每个模块对应一个文件。并且还包含所有模块之间的依赖关系图、模块路径、模块ID、模块所属 Chunk、模块大小；</p>
+<p><img src="https://upload-images.jianshu.io/upload_images/10024246-2cf996c3528f9bcb.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240"></p>
+<p><strong>Chunks</strong> ：展示所有的代码块，一个代码块中包含多个模块。并且还包含代码块的ID、名称、大小、每个代码块包含的模块数量，以及代码块之间的依赖关系图；</p>
+<p><strong>Assets</strong> ：展示所有输出的文件资源，包括 <code>.js</code>、<code>.css</code>、图片等。并且还包括文件名称、大小、该文件来自哪个代码块；</p>
+<p><img src="https://upload-images.jianshu.io/upload_images/10024246-bddc32d51392a614.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240"></p>
+<p><strong>Warnings</strong> ：展示构建过程中出现的所有警告信息；</p>
+<p><img src="https://upload-images.jianshu.io/upload_images/10024246-210b137a0478fa88.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240"></p>
+<p><strong>Errors</strong> ：展示构建过程中出现的所有错误信息；<br><img src="https://upload-images.jianshu.io/upload_images/10024246-8a479c1eef699870.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240"></p>
+<p><strong>Hints</strong> ：展示处理每个模块的过程中的耗时。</p>
+<p><img src="https://upload-images.jianshu.io/upload_images/10024246-8f41bdba3a5b0d37.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240"></p>
+<h4 id="3-Webpack-Visualizer-分析工具"><a href="#3-Webpack-Visualizer-分析工具" class="headerlink" title="3. Webpack Visualizer 分析工具"></a>3. Webpack Visualizer 分析工具</h4><p>可视化并分析您的Webpack捆绑包，以查看哪些模块正在占用空间，哪些可能是重复的。</p>
+<p>它既可作为插件使用，也可以在线使用，是一种较新的工具。</p>
+<p><strong>方式一：作为插件使用</strong></p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">npm install webpack-visualizer-plugin --dev-save</span><br><span class="line">复制代码</span><br></pre></td></tr></table></figure>
+
+<p>配置：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line">&#x2F;&#x2F; 分析包内容</span><br><span class="line">const Visualizer &#x3D; require(&#39;webpack-visualizer-plugin&#39;);</span><br><span class="line">module.exports &#x3D; &#123;</span><br><span class="line">  plugins: [</span><br><span class="line">    &#x2F;&#x2F; 开启 Visualizer</span><br><span class="line">    &#x2F;&#x2F; 默认输出为 stats.html，这里为 statistics.html</span><br><span class="line">    new Visualizer(&#123;</span><br><span class="line">      filename: &#39;.&#x2F;statistics.html&#39;</span><br><span class="line">    &#125;)</span><br><span class="line">  ],</span><br><span class="line">&#125;;</span><br><span class="line">复制代码</span><br></pre></td></tr></table></figure>
+
+<p>然后在浏览器中直接打开 <code>statistics.html</code> 就可以看到分析结果了：</p>
+<p><img src="https://upload-images.jianshu.io/upload_images/10024246-4cecd9f30e511265.gif?imageMogr2/auto-orient/strip"></p>
+<p><strong>方式二：在线使用</strong></p>
+<p>打开 <a target="_blank" rel="noopener" href="http://chrisbateman.github.io/webpack-visualizer/">chrisbateman.github.io/webpack-vis…</a> ，上传 <code>stats.json</code> 既可看到分析结果。</p>
+<h4 id="4-webpack-bundle-optimize-helper-分析工具"><a href="#4-webpack-bundle-optimize-helper-分析工具" class="headerlink" title="4. webpack bundle optimize helper 分析工具"></a>4. webpack bundle optimize helper 分析工具</h4><p>打开 <a target="_blank" rel="noopener" href="https://webpack.jakoblind.no/optimize/">webpack.jakoblind.no/optimize/</a> ，上传 <code>stats.json</code> 既可看到分析结果及优化建议：</p>
+<p><img src="https://upload-images.jianshu.io/upload_images/10024246-432920dbb121086a.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240"></p>
+<h3 id="四、总结"><a href="#四、总结" class="headerlink" title="四、总结"></a>四、总结</h3><p>我们总共介绍了以下 <code>5</code> 种测量工具，每种工具都提供了对包分析的不同视角，例如：</p>
+<ul>
+<li>  在开发过程中，当向项目引入新包时，我个人经常使用 Webpack Visualizer ，饼状图给出了关于大小的比例的即时反馈；</li>
+<li>  在分析每次构建版本的耗时情况时，相对于其它 <code>4</code> 中，<code>speed-measure-webpack-plugin</code> 能够获取每个插件和 loader 的耗时情况，帮助你将注意力集中在需要优化的插件上；</li>
+<li>  <code>webpack-bundle-analyzer</code> 能够将 bundle 内容展示为便捷的、交互式、可缩放的树状图形式；</li>
+<li>  Webapck Analyse 相对于其它 <code>4</code> 种，能够对包进行全方位的分析；</li>
+<li>  相对于其它 <code>4</code> 种，webpack bundle optimize helper 能提供可操作的改进措施建议；</li>
+</ul>
+<blockquote>
+<p>作者：前端瓶子君<br>链接：<a target="_blank" rel="noopener" href="https://juejin.cn/post/6844904056985485320">https://juejin.cn/post/6844904056985485320</a></p>
+</blockquote>
+
+      
+    </div>
+
+    
+    
+    
+
+    <footer class="post-footer">
+        <div class="post-eof"></div>
+      
+    </footer>
+  </article>
+</div>
+
+
+
+
+    
+
+
+<div class="post-block">
+  
+  
+
+  <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="">
+    <link itemprop="mainEntityOfPage" href="https://lzhwweb.github.io/nirvana/javascript/%E5%89%8D%E7%AB%AF/HexoNextleancloud%E6%96%87%E7%AB%A0%E9%98%85%E8%AF%BB%E6%AC%A1%E6%95%B0%E9%85%8D%E7%BD%AE/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/nirvana/images/headphoto.jpeg">
+      <meta itemprop="name" content="nirvana">
+      <meta itemprop="description" content="个人学习笔记">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="涅槃快乐是金">
+    </span>
+      <header class="post-header">
+        <h2 class="post-title" itemprop="name headline">
+          <a href="/nirvana/javascript/%E5%89%8D%E7%AB%AF/HexoNextleancloud%E6%96%87%E7%AB%A0%E9%98%85%E8%AF%BB%E6%AC%A1%E6%95%B0%E9%85%8D%E7%BD%AE/" class="post-title-link" itemprop="url">Hexo Next leancloud文章阅读次数配置</a>
+        </h2>
+
+        <div class="post-meta-container">
+          <div class="post-meta">
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-calendar"></i>
+      </span>
+      <span class="post-meta-item-text">发表于</span>
+
+      <time title="创建时间：2021-04-21 14:28:48" itemprop="dateCreated datePublished" datetime="2021-04-21T14:28:48+08:00">2021-04-21</time>
+    </span>
+      <span class="post-meta-item">
+        <span class="post-meta-item-icon">
+          <i class="far fa-calendar-check"></i>
+        </span>
+        <span class="post-meta-item-text">更新于</span>
+        <time title="修改时间：2021-06-10 17:02:25" itemprop="dateModified" datetime="2021-06-10T17:02:25+08:00">2021-06-10</time>
+      </span>
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-folder"></i>
+      </span>
+      <span class="post-meta-item-text">分类于</span>
+        <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+          <a href="/nirvana/categories/javascript/" itemprop="url" rel="index"><span itemprop="name">javascript</span></a>
+        </span>
+    </span>
+
+  
+    <span id="/nirvana/javascript/%E5%89%8D%E7%AB%AF/HexoNextleancloud%E6%96%87%E7%AB%A0%E9%98%85%E8%AF%BB%E6%AC%A1%E6%95%B0%E9%85%8D%E7%BD%AE/" class="post-meta-item leancloud_visitors" data-flag-title="Hexo Next leancloud文章阅读次数配置" title="阅读次数">
+      <span class="post-meta-item-icon">
+        <i class="far fa-eye"></i>
+      </span>
+      <span class="post-meta-item-text">阅读次数：</span>
+      <span class="leancloud-visitors-count"></span>
+    </span>
+      </div>
+      <div class="post-meta">
+    <span class="post-meta-item" title="本文字数">
+      <span class="post-meta-item-icon">
+        <i class="far fa-file-word"></i>
+      </span>
+      <span class="post-meta-item-text">本文字数：</span>
+      <span>2.4k</span>
     </span>
     <span class="post-meta-item" title="阅读时长">
       <span class="post-meta-item-icon">
@@ -1024,241 +1203,77 @@
     
     
     <div class="post-body" itemprop="articleBody">
-          <h2 id="泛型"><a href="#泛型" class="headerlink" title="泛型"></a>泛型</h2><p>许多时候，标注的具体类型并不能确定，比如一个函数的参数类型</p>
-<p>在像C#和Java这样的语言中，可以使用<code>泛型</code>来创建可重用的组件，一个组件可以支持多种类型的数据。 这样用户就可以以自己的数据类型来使用组件。</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">function getVal(obj, k) &#123;    return obj[k];&#125;</span><br></pre></td></tr></table></figure>
-
-<p>上面的函数，我们想实现的是获取一个对象指定的 k 所对应的值</p>
-<p>那么实际使用的时候，obj 的类型是 不确定的 自然 k 的取值范围也是不确定的</p>
-<p>它需要我们在具体调用的时候才能确定</p>
-<p>这个时候这种定义过程不确定类型的需求就可以通过泛型来解决</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">function getVal&lt;T&gt;(obj: T, k: keyof T) &#123;    return obj[k];&#125;</span><br></pre></td></tr></table></figure>
-<p>所谓的泛型，就是给可变(不定)的类型定义变量(参数)， &lt;&gt; 类似 ()</p>
-<h3 id="泛型类"><a href="#泛型类" class="headerlink" title="泛型类"></a>泛型类</h3><p>在面向对象章节中，我们曾经给大家讲过一个基于泛型使用的例子:模拟组件</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br></pre></td><td class="code"><pre><span class="line">abstract class Component&lt;T1, T2&gt; &#123;</span><br><span class="line">    props: T1;</span><br><span class="line">		state: T2;</span><br><span class="line">    constructor(props: T1) &#123; </span><br><span class="line">        this.props &#x3D; props;</span><br><span class="line">    &#125;</span><br><span class="line">   	abstract render(): string;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">interface IMyComponentProps &#123;</span><br><span class="line">    val: number;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">interface IMyComponentState &#123;</span><br><span class="line">		x: number; </span><br><span class="line">&#125;</span><br><span class="line">class MyComponent extends Component&lt;IMyComponentProps, IMyComponentState&gt; &#123;</span><br><span class="line">    constructor(props: IMyComponentProps) &#123;</span><br><span class="line">        super(props);</span><br><span class="line">				this.state &#x3D; &#123; </span><br><span class="line">						x: 1</span><br><span class="line">				&#125; </span><br><span class="line">		&#125;</span><br><span class="line"></span><br><span class="line">    render() &#123; </span><br><span class="line">        this.props.val;</span><br><span class="line">        this.state.x;</span><br><span class="line">        return &#39;&lt;myComponent &#x2F;&gt;&#39;;</span><br><span class="line">     &#125;</span><br><span class="line">&#125;</span><br><span class="line">let myComponent &#x3D; new MyComponent(&#123;val: 1&#125;); </span><br><span class="line">myComponent.render();</span><br></pre></td></tr></table></figure>
-
-<h3 id="泛型接口"><a href="#泛型接口" class="headerlink" title="泛型接口"></a>泛型接口</h3><p>我们还可以在接口中使用泛型 后端提供了一些接口 用以返回一些数据</p>
-<p>依据返回的数据格式定义如下接口:</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">interface IResponseData &#123;</span><br><span class="line">    code: number;</span><br><span class="line">    message?: string;</span><br><span class="line">		data: any; </span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-
-<p>根据接口，我们封装对应的一些方法</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">function getData(url: string) &#123; </span><br><span class="line">	return fetch(url).then(res &#x3D;&gt; &#123;</span><br><span class="line">		return res.json();</span><br><span class="line">	&#125;).then( (data: IResponseData) &#x3D;&gt; &#123;</span><br><span class="line">        return data;</span><br><span class="line">  &#125;);</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-<p>但是，我们会发现该接口的 data 项的具体格式不确定，不同的接口会返回的数据是不一样的，当我们 想根据具体当前请求的接口返回具体 data 格式的时候，就比较麻烦了，因为 getData 并不清楚你调 用的具体接口是什么，对应的数据又会是什么样的</p>
-<p>这个时候我们可以对 IResponseData 使用泛型</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">interface IResponseData&lt;T&gt; &#123;</span><br><span class="line">    code: number;</span><br><span class="line">    message?: string;</span><br><span class="line">		data: T; </span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">function getData&lt;U&gt;(url: string) &#123; </span><br><span class="line">	return fetch(url).then(res &#x3D;&gt; &#123;</span><br><span class="line">  			return res.json();</span><br><span class="line">  &#125;).then( (data: IResponseData&lt;U&gt;) &#x3D;&gt; &#123;</span><br><span class="line">       return data;</span><br><span class="line">  &#125;);</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-
-<p>定义不同的数据接口</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line">&#x2F;&#x2F; 用户接口</span><br><span class="line">interface IResponseUserData &#123;</span><br><span class="line">    id: number;</span><br><span class="line">    username: string;</span><br><span class="line">    email: string;</span><br><span class="line">&#125;</span><br><span class="line">&#x2F;&#x2F; 文章接口</span><br><span class="line">interface IResponseArticleData &#123;</span><br><span class="line">    id: number;</span><br><span class="line">    title: string;</span><br><span class="line">    author: IResponseUserData;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-
-<p>调用具体代码</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br></pre></td><td class="code"><pre><span class="line">~(async function()&#123;</span><br><span class="line">    let user &#x3D; await getData&lt;IResponseUserData&gt;(&#39;&#39;); </span><br><span class="line">    if (user.code &#x3D;&#x3D;&#x3D; 1) &#123;</span><br><span class="line">    		console.log(user.message); </span><br><span class="line">    &#125; else &#123;</span><br><span class="line">    		console.log(user.data.username); </span><br><span class="line">    &#125;</span><br><span class="line">    let articles &#x3D; await getData&lt;IResponseArticleData&gt;(&#39;&#39;); </span><br><span class="line">    if (articles.code &#x3D;&#x3D;&#x3D; 1) &#123;</span><br><span class="line">        console.log(articles.message); </span><br><span class="line">    &#125; else &#123;</span><br><span class="line">        console.log(articles.data.id);</span><br><span class="line">        console.log(articles.data.author.username); </span><br><span class="line">    &#125;</span><br><span class="line">&#125;);</span><br></pre></td></tr></table></figure>
-
-      
-    </div>
-
-    
-    
-    
-
-    <footer class="post-footer">
-        <div class="post-eof"></div>
-      
-    </footer>
-  </article>
-</div>
-
-
-
-
-    
-
-
-<div class="post-block">
-  
-  
-
-  <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="">
-    <link itemprop="mainEntityOfPage" href="https://lzhwweb.github.io/nirvana/javascript/%E5%89%8D%E7%AB%AF/TypeScript%E8%A3%85%E9%A5%B0%E5%99%A8%EF%BC%88decorators%EF%BC%89/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="image" content="/nirvana/images/headphoto.jpeg">
-      <meta itemprop="name" content="nirvana">
-      <meta itemprop="description" content="个人学习笔记">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="涅槃快乐是金">
-    </span>
-      <header class="post-header">
-        <h2 class="post-title" itemprop="name headline">
-          <a href="/nirvana/javascript/%E5%89%8D%E7%AB%AF/TypeScript%E8%A3%85%E9%A5%B0%E5%99%A8%EF%BC%88decorators%EF%BC%89/" class="post-title-link" itemprop="url">TypeScript装饰器（decorators）</a>
-        </h2>
-
-        <div class="post-meta-container">
-          <div class="post-meta">
-    <span class="post-meta-item">
-      <span class="post-meta-item-icon">
-        <i class="far fa-calendar"></i>
-      </span>
-      <span class="post-meta-item-text">发表于</span>
-
-      <time title="创建时间：2021-03-11 21:12:40" itemprop="dateCreated datePublished" datetime="2021-03-11T21:12:40+08:00">2021-03-11</time>
-    </span>
-      <span class="post-meta-item">
-        <span class="post-meta-item-icon">
-          <i class="far fa-calendar-check"></i>
-        </span>
-        <span class="post-meta-item-text">更新于</span>
-        <time title="修改时间：2021-03-10 13:43:55" itemprop="dateModified" datetime="2021-03-10T13:43:55+08:00">2021-03-10</time>
-      </span>
-    <span class="post-meta-item">
-      <span class="post-meta-item-icon">
-        <i class="far fa-folder"></i>
-      </span>
-      <span class="post-meta-item-text">分类于</span>
-        <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-          <a href="/nirvana/categories/javascript/" itemprop="url" rel="index"><span itemprop="name">javascript</span></a>
-        </span>
-    </span>
-
-  
-    <span id="/nirvana/javascript/%E5%89%8D%E7%AB%AF/TypeScript%E8%A3%85%E9%A5%B0%E5%99%A8%EF%BC%88decorators%EF%BC%89/" class="post-meta-item leancloud_visitors" data-flag-title="TypeScript装饰器（decorators）" title="阅读次数">
-      <span class="post-meta-item-icon">
-        <i class="far fa-eye"></i>
-      </span>
-      <span class="post-meta-item-text">阅读次数：</span>
-      <span class="leancloud-visitors-count"></span>
-    </span>
-      </div>
-      <div class="post-meta">
-    <span class="post-meta-item" title="本文字数">
-      <span class="post-meta-item-icon">
-        <i class="far fa-file-word"></i>
-      </span>
-      <span class="post-meta-item-text">本文字数：</span>
-      <span>7.7k</span>
-    </span>
-    <span class="post-meta-item" title="阅读时长">
-      <span class="post-meta-item-icon">
-        <i class="far fa-clock"></i>
-      </span>
-      <span class="post-meta-item-text">阅读时长 &asymp;</span>
-      <span>7 分钟</span>
-    </span>
-</div>
-
-        </div>
-      </header>
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-          <h2 id="什么是装饰器"><a href="#什么是装饰器" class="headerlink" title="什么是装饰器"></a>什么是装饰器</h2><p>装饰器是一种特殊类型的声明，它能够被附加到类声明，方法， 访问符，属性或参数上。  装饰器使用 @expression这种形式，expression求值后必须为一个函数，它会在运行时被调用，被装饰的声明信息做为参数传入。</p>
-<p>通俗的理解可以认为就是在原有代码外层包装了一层处理逻辑。<br>个人认为装饰器是一种解决方案，而并非是狭义的***@Decorator***，后者仅仅是一个语法糖罢了。</p>
-<p>装饰器在身边的例子随处可见，一个简单的例子</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">水龙头上边的起泡器就是一个装饰器，在装上以后就会把空气混入水流中，掺杂很多泡泡在水里。</span><br><span class="line">但是起泡器安装与否对水龙头本身并没有什么影响，即使拆掉起泡器，也会照样工作，水龙头的作用在于阀门的控制，至于水中掺不掺杂气泡则不是水龙头需要关心的。</span><br></pre></td></tr></table></figure>
-
-<p>在TypeScript中装饰器还属于实验性语法，你必须在命令行或<code>tsconfig.json</code>里启用<code>experimentalDecorators</code>编译器选项：</p>
-<p>命令行:</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">tsc --target ES5 --experimentalDecorators</span><br></pre></td></tr></table></figure>
-
-<p>tsconfig.json:</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">&#123;</span><br><span class="line">    &quot;compilerOptions&quot;: &#123;</span><br><span class="line">        &quot;target&quot;: &quot;ES5&quot;,</span><br><span class="line">        &quot;experimentalDecorators&quot;: true</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-
-<h3 id="为什么要用装饰器"><a href="#为什么要用装饰器" class="headerlink" title="为什么要用装饰器"></a>为什么要用装饰器</h3><p>可能有些时候，我们会对传入参数的类型判断、对返回值的排序、过滤，对函数添加节流、防抖或其他的功能性代码，基于多个类的继承，各种各样的与函数逻辑本身无关的、重复性的代码。<br>所以，对于装饰器，可以简单地理解为是非侵入式的行为修改。</p>
-<h3 id="如何定义装饰器"><a href="#如何定义装饰器" class="headerlink" title="如何定义装饰器"></a>如何定义装饰器</h3><p>装饰器本身其实就是一个函数，理论上忽略参数的话，任何函数都可以当做装饰器使用。<br>helloword.ts</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">function helloWord(target: any) &#123;</span><br><span class="line">    console.log(&#39;hello Word!&#39;);</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">@helloWord</span><br><span class="line">class HelloWordClass &#123;</span><br><span class="line"></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-<p>使用<code>tsc</code>编译后,执行命令<code>node helloword.js</code>，输出结果如下：</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">hello Word!</span><br></pre></td></tr></table></figure>
-
-<p>装饰器组合<br>多个装饰器可以同时应用到一个声明上，就像下面的示例：</p>
-<p>书写在同一行上：</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">@f @g x</span><br></pre></td></tr></table></figure>
-<p>书写在多行上：</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">@f</span><br><span class="line">@g</span><br><span class="line">x</span><br></pre></td></tr></table></figure>
-
-<h3 id="装饰器执行时机"><a href="#装饰器执行时机" class="headerlink" title="装饰器执行时机"></a>装饰器执行时机</h3><p>修饰器对类的行为的改变，是代码编译时发生的（不是TypeScript编译，而是js在执行机中编译阶段），而不是在运行时。这意味着，修饰器能在编译阶段运行代码。也就是说，修饰器本质就是编译时执行的函数。<br>在Node.js环境中模块一加载时就会执行</p>
-<p>但是实际场景中，有时希望向装饰器传入一些参数, 如下：</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">@Path(&quot;&#x2F;hello&quot;, &quot;world&quot;)</span><br><span class="line">class HelloService &#123;&#125;</span><br></pre></td></tr></table></figure>
-<p>此时上面装饰器方法就不满足了（VSCode编译报错），这是我们可以借助<em><strong>JavaScript中函数柯里化特性</strong></em></p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">function Path(p1: string, p2: string) &#123;</span><br><span class="line">    return function (target) &#123; &#x2F;&#x2F;  这才是真正装饰器</span><br><span class="line">        &#x2F;&#x2F; do something </span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-<h3 id="装饰器类型"><a href="#装饰器类型" class="headerlink" title="装饰器类型"></a>装饰器类型</h3><p>装饰器的类型有：类装饰器、访问器装饰器、属性装饰器、方法装饰器、参数装饰器，但是没有函数装饰器(function)。</p>
-<h4 id="1-类装饰器"><a href="#1-类装饰器" class="headerlink" title="1.类装饰器"></a>1.类装饰器</h4><p>应用于类构造函数，其参数是类的构造函数。<br><em><strong>注意class并不是像Java那种强类型语言中的类，而是JavaScript构造函数的语法糖。</strong></em></p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br></pre></td><td class="code"><pre><span class="line">function addAge(args: number) &#123;</span><br><span class="line">    return function (target: Function) &#123;</span><br><span class="line">        target.prototype.age &#x3D; args;</span><br><span class="line">    &#125;;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">@addAge(18)</span><br><span class="line">class Hello &#123;</span><br><span class="line">    name: string;</span><br><span class="line">    age: number;</span><br><span class="line">    constructor() &#123;</span><br><span class="line">        console.log(&#39;hello&#39;);</span><br><span class="line">        this.name &#x3D; &#39;yugo&#39;;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">console.log(Hello.prototype.age);&#x2F;&#x2F;18</span><br><span class="line">let hello &#x3D; new Hello();</span><br><span class="line"></span><br><span class="line">console.log(hello.age);&#x2F;&#x2F;18</span><br></pre></td></tr></table></figure>
-<h4 id="2-方法装饰器"><a href="#2-方法装饰器" class="headerlink" title="2.方法装饰器"></a>2.方法装饰器</h4><p>它会被应用到方法的 属性描述符上，可以用来监视，修改或者替换方法定义。<br>方法装饰会在运行时传入下列3个参数：</p>
-<ul>
-<li>1、对于静态成员来说是类的构造函数，对于实例成员是类的原型对象。</li>
-<li>2、成员的名字。</li>
-<li>3、成员的属性描述符{value: any, writable: boolean, enumerable: boolean, configurable: boolean}。</li>
-</ul>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br></pre></td><td class="code"><pre><span class="line">function addAge(constructor: Function) &#123;</span><br><span class="line">  constructor.prototype.age &#x3D; 18;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">function method(target: any, propertyKey: string, descriptor: PropertyDescriptor) &#123;</span><br><span class="line">   console.log(target);</span><br><span class="line">   console.log(&quot;prop &quot; + propertyKey);</span><br><span class="line">   console.log(&quot;desc &quot; + JSON.stringify(descriptor) + &quot;\n\n&quot;);</span><br><span class="line">&#125;;</span><br><span class="line"></span><br><span class="line">@addAge</span><br><span class="line">class Hello&#123;</span><br><span class="line">  name: string;</span><br><span class="line">  age: number;</span><br><span class="line">  constructor() &#123;</span><br><span class="line">    console.log(&#39;hello&#39;);</span><br><span class="line">    this.name &#x3D; &#39;yugo&#39;;</span><br><span class="line">  &#125;</span><br><span class="line"></span><br><span class="line">  @method</span><br><span class="line">  hello()&#123;</span><br><span class="line">    return &#39;instance method&#39;;</span><br><span class="line">  &#125;</span><br><span class="line"></span><br><span class="line">  @method</span><br><span class="line">  static shello()&#123;</span><br><span class="line">    return &#39;static method&#39;;</span><br><span class="line">  &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-<p>我们得到的结果是</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">Hello &#123; hello: [Function] &#125;</span><br><span class="line">prop hello</span><br><span class="line">desc &#123;&quot;writable&quot;:true,&quot;enumerable&quot;:true,&quot;configurable&quot;:true&#125;</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">&#123; [Function: Hello] shello: [Function] &#125;</span><br><span class="line">prop shello</span><br><span class="line">desc &#123;&quot;writable&quot;:true,&quot;enumerable&quot;:true,&quot;configurable&quot;:true&#125;</span><br></pre></td></tr></table></figure>
-
-<p>假如我们修饰的是 hello 这个实例方法，第一个参数将是原型对象，也就是 Hello.prototype。</p>
-<p>假如是 shello 这个静态方法，则第一个参数是构造器 constructor。</p>
-<p>第二个参数分别是属性名，第三个参数是属性修饰对象。</p>
-<p><strong>注意：</strong>在vscode编辑时有时会报作为表达式调用时，无法解析方法修饰器的签名。错误，此时需要在<code>tsconfig.json</code>中增加<code>target</code>配置项：</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">&#123;</span><br><span class="line">    &quot;compilerOptions&quot;: &#123;</span><br><span class="line">        &quot;target&quot;: &quot;es6&quot;,</span><br><span class="line">        &quot;experimentalDecorators&quot;: true,</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-
-<h4 id="3-访问器装饰器"><a href="#3-访问器装饰器" class="headerlink" title="3. 访问器装饰器"></a>3. 访问器装饰器</h4><p>访问器装饰器应用于访问器的属性描述符，可用于观察，修改或替换访问者的定义。 访问器装饰器不能在声明文件中使用，也不能在任何其他环境上下文中使用（例如在声明类中）。</p>
+          <h1 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h1><p>由于<code>Next</code>主题修复了<code>leancloud</code>的安全问题, 导致以前<code>leancloud</code>失效, 所以重新介绍如何配置<code>leancloud</code></p>
 <blockquote>
-<p>注意: TypeScript不允许为单个成员装饰get和set访问器。相反，该成员的所有装饰器必须应用于按文档顺序指定的第一个访问器。这是因为装饰器适用于属性描述符，它结合了get和set访问器，而不是单独的每个声明。</p>
+<p>所有使用该插件而未经修复的NexT站点或使用类似方法集成Leancloud访客统计功能的站点都被认为是不安全的，请尽快修复</p>
 </blockquote>
-<p>访问器装饰器表达式会在运行时当作函数被调用，传入下列3个参数：</p>
-<ul>
-<li>对于静态成员来说是类的构造函数，对于实例成员是类的原型对象。</li>
-<li>成员的名字。</li>
-<li>成员的属性描述符。<blockquote>
-<p>注意  如果代码输出目标版本小于ES5，Property Descriptor将会是undefined。</p>
-</blockquote>
+<p>效果如图<br><img src="https://upload-images.jianshu.io/upload_images/10024246-4c34cbaf05fa0929.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240"></p>
+<h1 id="注册Leancloud并创建应用"><a href="#注册Leancloud并创建应用" class="headerlink" title="注册Leancloud并创建应用"></a>注册Leancloud并创建应用</h1><ol>
+<li><p> 首先，前往Leancloud官网<a target="_blank" rel="noopener" href="https://leancloud.cn/dashboard/login.html#/signup">leancloud.cn</a>进行注册，并登陆。</p>
 </li>
-</ul>
-<p>如果访问器装饰器返回一个值，它会被用作方法的<em>属性描述符</em>。</p>
-<blockquote>
-<p>注意  如果代码输出目标版本小于<code>ES5</code>返回值会被忽略。</p>
-</blockquote>
-<p>下面是使用了访问器装饰器（<code>@configurable</code>）的例子，应用于<code>Point</code>类的成员上：</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><span class="line"> class Point &#123;</span><br><span class="line">    private _x: number;</span><br><span class="line">    private _y: number;</span><br><span class="line">    constructor(x: number, y: number) &#123;</span><br><span class="line">        this._x &#x3D; x;</span><br><span class="line">        this._y &#x3D; y;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    @configurable(false)</span><br><span class="line">    get x() &#123; return this._x; &#125;</span><br><span class="line"></span><br><span class="line">    @configurable(false)</span><br><span class="line">    get y() &#123; return this._y; &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-
-<p>我们可以通过如下函数声明来定义<code>@configurable</code>装饰器：</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">function configurable(value: boolean) &#123;</span><br><span class="line">    return function (target: any, propertyKey: string, descriptor: PropertyDescriptor) &#123;</span><br><span class="line">        descriptor.configurable &#x3D; value;</span><br><span class="line">    &#125;;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-
-
-<h4 id="4-方法参数装饰器"><a href="#4-方法参数装饰器" class="headerlink" title="4. 方法参数装饰器"></a>4. 方法参数装饰器</h4><p>参数装饰器表达式会在运行时当作函数被调用，传入下列3个参数：</p>
-<ul>
-<li>1、对于静态成员来说是类的构造函数，对于实例成员是类的原型对象。</li>
-<li>2、参数的名字。</li>
-<li>3、参数在函数参数列表中的索引。</li>
-</ul>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br></pre></td><td class="code"><pre><span class="line">const parseConf &#x3D; [];</span><br><span class="line">class Modal &#123;</span><br><span class="line">    @parseFunc</span><br><span class="line">    public addOne(@parse(&#39;number&#39;) num) &#123;</span><br><span class="line">        console.log(&#39;num:&#39;, num);</span><br><span class="line">        return num + 1;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">&#x2F;&#x2F; 在函数调用前执行格式化操作</span><br><span class="line">function parseFunc(target, name, descriptor) &#123;</span><br><span class="line">    const originalMethod &#x3D; descriptor.value;</span><br><span class="line">    descriptor.value &#x3D; function (...args: any[]) &#123;</span><br><span class="line">        for (let index &#x3D; 0; index &lt; parseConf.length; index++) &#123;</span><br><span class="line">            const type &#x3D; parseConf[index];</span><br><span class="line">            console.log(type);</span><br><span class="line">            switch (type) &#123;</span><br><span class="line">                case &#39;number&#39;:</span><br><span class="line">                    args[index] &#x3D; Number(args[index]);</span><br><span class="line">                    break;</span><br><span class="line">                case &#39;string&#39;:</span><br><span class="line">                    args[index] &#x3D; String(args[index]);</span><br><span class="line">                    break;</span><br><span class="line">                case &#39;boolean&#39;:</span><br><span class="line">                    args[index] &#x3D; String(args[index]) &#x3D;&#x3D;&#x3D; &#39;true&#39;;</span><br><span class="line">                    break;</span><br><span class="line">            &#125;</span><br><span class="line">            return originalMethod.apply(this, args);</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;;</span><br><span class="line">    return descriptor;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">&#x2F;&#x2F; 向全局对象中添加对应的格式化信息</span><br><span class="line">function parse(type) &#123;</span><br><span class="line">    return function (target, name, index) &#123;</span><br><span class="line">        parseConf[index] &#x3D; type;</span><br><span class="line">        console.log(&#39;parseConf[index]:&#39;, type);</span><br><span class="line">    &#125;;</span><br><span class="line">&#125;</span><br><span class="line">let modal &#x3D; new Modal();</span><br><span class="line">console.log(modal.addOne(&#39;10&#39;)); &#x2F;&#x2F; 11</span><br></pre></td></tr></table></figure>
-
-<h4 id="5-属性装饰器"><a href="#5-属性装饰器" class="headerlink" title="5. 属性装饰器"></a>5. 属性装饰器</h4><p>属性装饰器表达式会在运行时当作函数被调用，传入下列2个参数：</p>
-<ul>
-<li>1、对于静态成员来说是类的构造函数，对于实例成员是类的原型对象。</li>
-<li>2、成员的名字。</li>
-</ul>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br></pre></td><td class="code"><pre><span class="line">function log(target: any, propertyKey: string) &#123;</span><br><span class="line">    let value &#x3D; target[propertyKey];</span><br><span class="line">    &#x2F;&#x2F; 用来替换的getter</span><br><span class="line">    const getter &#x3D; function () &#123;</span><br><span class="line">        console.log(&#96;Getter for $&#123;propertyKey&#125; returned $&#123;value&#125;&#96;);</span><br><span class="line">        return value;</span><br><span class="line">    &#125;</span><br><span class="line">    &#x2F;&#x2F; 用来替换的setter</span><br><span class="line">    const setter &#x3D; function (newVal) &#123;</span><br><span class="line">        console.log(&#96;Set $&#123;propertyKey&#125; to $&#123;newVal&#125;&#96;);</span><br><span class="line">        value &#x3D; newVal;</span><br><span class="line">    &#125;;</span><br><span class="line">    &#x2F;&#x2F; 替换属性，先删除原先的属性，再重新定义属性</span><br><span class="line">    if (delete this[propertyKey]) &#123;</span><br><span class="line">        Object.defineProperty(target, propertyKey, &#123;</span><br><span class="line">            get: getter,</span><br><span class="line">            set: setter,</span><br><span class="line">            enumerable: true,</span><br><span class="line">            configurable: true</span><br><span class="line">        &#125;);</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br><span class="line">class Calculator &#123;</span><br><span class="line">    @log</span><br><span class="line">    public num: number;</span><br><span class="line">    square() &#123;</span><br><span class="line">        return this.num * this.num;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br><span class="line">let cal &#x3D; new Calculator();</span><br><span class="line">cal.num &#x3D; 2;</span><br><span class="line">console.log(cal.square());</span><br><span class="line">&#x2F;&#x2F; Set num to 2</span><br><span class="line">&#x2F;&#x2F; Getter for num returned 2</span><br><span class="line">&#x2F;&#x2F; Getter for num returned 2</span><br><span class="line">&#x2F;&#x2F; 4</span><br></pre></td></tr></table></figure>
-<h3 id="装饰器加载顺序"><a href="#装饰器加载顺序" class="headerlink" title="装饰器加载顺序"></a>装饰器加载顺序</h3><p><img src="https://upload-images.jianshu.io/upload_images/10024246-9464275773b2a9c2.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240"></p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br></pre></td><td class="code"><pre><span class="line">function ClassDecorator() &#123;</span><br><span class="line">    return function (target) &#123;</span><br><span class="line">        console.log(&quot;I am class decorator&quot;);</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br><span class="line">function MethodDecorator() &#123;</span><br><span class="line">    return function (target, methodName: string, descriptor: PropertyDescriptor) &#123;</span><br><span class="line">        console.log(&quot;I am method decorator&quot;);</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br><span class="line">function Param1Decorator() &#123;</span><br><span class="line">    return function (target, methodName: string, paramIndex: number) &#123;</span><br><span class="line">        console.log(&quot;I am parameter1 decorator&quot;);</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br><span class="line">function Param2Decorator() &#123;</span><br><span class="line">    return function (target, methodName: string, paramIndex: number) &#123;</span><br><span class="line">        console.log(&quot;I am parameter2 decorator&quot;);</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br><span class="line">function PropertyDecorator() &#123;</span><br><span class="line">    return function (target, propertyName: string) &#123;</span><br><span class="line">        console.log(&quot;I am property decorator&quot;);</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">@ClassDecorator()</span><br><span class="line">class Hello &#123;</span><br><span class="line">    @PropertyDecorator()</span><br><span class="line">    greeting: string;</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">    @MethodDecorator()</span><br><span class="line">    greet( @Param1Decorator() p1: string, @Param2Decorator() p2: string) &#123; &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-<p>输出结果：</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">I am property decorator</span><br><span class="line">I am parameter2 decorator</span><br><span class="line">I am parameter1 decorator</span><br><span class="line">I am method decorator</span><br><span class="line">I am class decorator</span><br></pre></td></tr></table></figure>
-<p>从上述例子得出如下结论：</p>
-<ol>
-<li><p>有多个参数装饰器时：从最后一个参数依次向前执行</p>
+<li><p>点击<strong>创建应用</strong><br> <img src="https://upload-images.jianshu.io/upload_images/10024246-89aca6e79e05f569.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240"></p>
 </li>
-<li><p>方法和方法参数中参数装饰器先执行。</p>
+<li><p>输入应用的名称(随便起都行), 选择<strong>开发版</strong>, 点击<strong>创建</strong><br> <img src="https://upload-images.jianshu.io/upload_images/10024246-097016813d541b77.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240"></p>
 </li>
-<li><p>类装饰器总是最后执行。</p>
+<li><p>创建成功后点击右上角的设置<strong>小齿轮</strong><br> <img src="https://upload-images.jianshu.io/upload_images/10024246-3db198f1151cdcbf.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240"></p>
 </li>
-<li><p>方法和属性装饰器，谁在前面谁先执行。因为参数属于方法一部分，所以参数会一直紧紧挨着方法执行。</p>
+<li><p>点击<strong>存储</strong>-<strong>创建Class</strong>-<strong>Class名称</strong>设置为<code>Counter</code>(必须为<code>Counter</code>)-选择<strong>无限制</strong>-点击<strong>创建</strong><br> <img src="https://upload-images.jianshu.io/upload_images/10024246-432bb8b837df5c25.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240"></p>
+</li>
+<li><p>创建后点击<strong>设置</strong>-点击<strong>应用Key</strong>-获取<strong>App ID</strong>和<strong>App Key</strong><br> <img src="https://upload-images.jianshu.io/upload_images/10024246-9535fa3e0ed7959c.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240"></p>
+</li>
+<li><p>将获取到的<strong>App ID</strong>和<strong>App Key</strong>设置到<code>Next</code>主题配置文件<code>_config.yml</code><br> <em>配置文件已存在这个配置, 只要把id和key加上去就好了</em></p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">leancloud_visitors:</span><br><span class="line"> enable: true</span><br><span class="line"> app_id: &lt;&lt;your app id&gt;&gt;</span><br><span class="line"> app_key: &lt;&lt;your app key&gt;&gt;</span><br></pre></td></tr></table></figure></li>
+<li><p>点击<strong>安全中心</strong>, 填写自己博客对应的域名（注意协议、域名和端口号需严格一致）<br> <img src="https://upload-images.jianshu.io/upload_images/10024246-0a2fe8df57f0f3c6.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240"></p>
+</li>
+<li><p>点击<strong>云引擎</strong>-点击<strong>部署</strong>-点击<strong>在线编辑</strong><br> <img src="https://upload-images.jianshu.io/upload_images/10024246-e403d7af8cb3c367.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240"></p>
+</li>
+<li><p> 点击<strong>创建函数</strong>-选择<strong>Hook</strong>-AV.Cloud.选择<strong>beforeSave</strong>-类选择<strong>Counter</strong>-<strong>添加代码</strong>-点击<strong>保存</strong></p>
 </li>
 </ol>
-<p>上述例子中属性和方法调换位置，输出如下结果：</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">I am parameter2 decorator</span><br><span class="line">I am parameter1 decorator</span><br><span class="line">I am method decorator</span><br><span class="line">I am property decorator</span><br><span class="line">I am class decorator</span><br></pre></td></tr></table></figure>
+<p><img src="https://upload-images.jianshu.io/upload_images/10024246-fd6294350d1575b8.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240"></p>
+<p><img src="https://upload-images.jianshu.io/upload_images/10024246-e68e0a9d45123d5a.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240"></p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">var query &#x3D; new AV.Query(&quot;Counter&quot;);</span><br><span class="line">if (request.object.updatedKeys.indexOf(&#39;time&#39;) !&#x3D;&#x3D; -1) &#123;</span><br><span class="line">     return query.get(request.object.id).then(function (obj) &#123;</span><br><span class="line">     if (obj.get(&quot;time&quot;) + 1 !&#x3D;&#x3D; request.object.get(&quot;time&quot;)) &#123;</span><br><span class="line">     throw new AV.Cloud.Error(&#39;Invalid update!&#39;);</span><br><span class="line">   &#125;</span><br><span class="line"> &#125;)</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<ol start="11">
+<li>点击<strong>部署</strong><br><img src="https://upload-images.jianshu.io/upload_images/10024246-6f2cb6e065606ee4.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240"></li>
+</ol>
+<pre><code>![](https://upload-images.jianshu.io/upload_images/10024246-7f0f70d529036253.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240)
+</code></pre>
+<ol start="12">
+<li>待出现红框处的成功部署信息后，点击<strong>关闭</strong><br><img src="https://upload-images.jianshu.io/upload_images/10024246-74bb624ee196b414.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240"></li>
+</ol>
+<h1 id="设置权限"><a href="#设置权限" class="headerlink" title="设置权限"></a>设置权限</h1><ol>
+<li> 打开<code>Next</code>主题配置文件<code>_config.yml</code>, 将leancloud_visitors下的security设置为true（如没有则新增）</li>
+</ol>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line">leancloud_visitors:</span><br><span class="line"> enable: true</span><br><span class="line"> app_id: &lt;&lt;your app id&gt;&gt; # 同前文的id</span><br><span class="line"> app_key: &lt;&lt;your app key&gt;&gt; # 同前文的key</span><br><span class="line"> # Dependencies: https:&#x2F;&#x2F;github.com&#x2F;theme-next&#x2F;hexo-leancloud-counter-security</span><br><span class="line"> security: true</span><br><span class="line"> # 由于Leancloud免费版的云引擎存在请求线程数和运行时间限制以及休眠机制，</span><br><span class="line"> # 很多时候访客数量加载会很慢。</span><br><span class="line"> # 如果设置betterPerformance为true，</span><br><span class="line"> # 则网页则会在提交请求之前直接显示访客人数为查询到的人数+1，以增加用户体验。</span><br><span class="line"> betterPerformance: false</span><br></pre></td></tr></table></figure>
+
+<ol start="2">
+<li><p> 打开站点配置文件<code>_config.yml</code></p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">leancloud_counter_security:</span><br><span class="line"> enable_sync: true</span><br><span class="line"> app_id: &lt;&lt;your app id&gt;&gt;   # 同前文的id</span><br><span class="line"> app_key: &lt;&lt;your app key&gt;&gt; # 同前文的key</span><br><span class="line"> username: </span><br><span class="line"> password:</span><br></pre></td></tr></table></figure></li>
+<li><p> 打开命令行<code>cmd</code>并进入站点文件夹，键入以下命令以安装<code>hexo-leancloud-counter-security</code>插件</p>
+</li>
+</ol>
+<p>复制 </p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">npm install hexo-leancloud-counter-security --save</span><br></pre></td></tr></table></figure>
+
+<ol start="4">
+<li> 接着键入命令<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">hexo lc-counter register &lt;&lt;username&gt;&gt; &lt;&lt;password&gt;&gt;</span><br></pre></td></tr></table></figure></li>
+</ol>
+<p><strong>PS:</strong> 将<code>&lt;&lt;username&gt;&gt;</code>和<code>&lt;&lt;password&gt;&gt;</code>替换为你自己的用户名和密码（不必与leancloud的账号）相同。<strong>此用户名和密码将在hexo部署时使用。</strong></p>
+<ol start="5">
+<li> 打开站点配置文件<code>_config.yml</code>, 将<code>&lt;&lt;username&gt;&gt;</code>和<code>&lt;&lt;password&gt;&gt;</code>替换为你刚刚设置的用户名和密码</li>
+</ol>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">leancloud_counter_security:</span><br><span class="line"> enable_sync: true</span><br><span class="line"> app_id: &lt;&lt;your app id&gt;&gt;   # 同前文的id</span><br><span class="line"> app_key: &lt;&lt;your app key&gt;&gt; # 同前文的key</span><br><span class="line"> username: &lt;&lt;username&gt;&gt;    #如留空则将在部署时询问</span><br><span class="line"> password: &lt;&lt;password&gt;&gt;    #建议留空以保证安全性，如留空则将在部署时询问</span><br></pre></td></tr></table></figure>
+
+<ol start="6">
+<li><p>返回Leancloud控制台的应用内, 检查_User表中是否出现一条记录（图示以用户名为admin为例）<br> <img src="https://upload-images.jianshu.io/upload_images/10024246-999c5edc89f7b563.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240"></p>
+</li>
+<li><p>进入<strong>Counter</strong>表, 打开<strong>权限设置</strong><br> <img src="https://upload-images.jianshu.io/upload_images/10024246-787b5c61ae91e7f2.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240"></p>
+<p> <img src="https://upload-images.jianshu.io/upload_images/10024246-37f02ef456350fe9.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240"></p>
+<p> <img src="https://upload-images.jianshu.io/upload_images/10024246-65c41acaf06d5c02.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240"></p>
+<p> <img src="https://upload-images.jianshu.io/upload_images/10024246-7f8593a5f8c45141.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240"></p>
+</li>
+</ol>
+<p><strong>至此配置完成</strong></p>
 
       
     </div>
@@ -1285,7 +1300,7 @@
   
 
   <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="">
-    <link itemprop="mainEntityOfPage" href="https://lzhwweb.github.io/nirvana/javascript/%E5%89%8D%E7%AB%AF/URL%E7%BC%96%E7%A0%81/">
+    <link itemprop="mainEntityOfPage" href="https://lzhwweb.github.io/nirvana/javascript/%E5%89%8D%E7%AB%AF/nodereadfile/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="image" content="/nirvana/images/headphoto.jpeg">
@@ -1298,7 +1313,7 @@
     </span>
       <header class="post-header">
         <h2 class="post-title" itemprop="name headline">
-          <a href="/nirvana/javascript/%E5%89%8D%E7%AB%AF/URL%E7%BC%96%E7%A0%81/" class="post-title-link" itemprop="url">URL编码</a>
+          <a href="/nirvana/javascript/%E5%89%8D%E7%AB%AF/nodereadfile/" class="post-title-link" itemprop="url">Nodejs读取目录下的文件并编辑</a>
         </h2>
 
         <div class="post-meta-container">
@@ -1309,14 +1324,14 @@
       </span>
       <span class="post-meta-item-text">发表于</span>
 
-      <time title="创建时间：2021-03-11 21:12:40" itemprop="dateCreated datePublished" datetime="2021-03-11T21:12:40+08:00">2021-03-11</time>
+      <time title="创建时间：2021-04-21 14:27:21" itemprop="dateCreated datePublished" datetime="2021-04-21T14:27:21+08:00">2021-04-21</time>
     </span>
       <span class="post-meta-item">
         <span class="post-meta-item-icon">
           <i class="far fa-calendar-check"></i>
         </span>
         <span class="post-meta-item-text">更新于</span>
-        <time title="修改时间：2021-03-10 13:43:55" itemprop="dateModified" datetime="2021-03-10T13:43:55+08:00">2021-03-10</time>
+        <time title="修改时间：2021-06-10 17:02:25" itemprop="dateModified" datetime="2021-06-10T17:02:25+08:00">2021-06-10</time>
       </span>
     <span class="post-meta-item">
       <span class="post-meta-item-icon">
@@ -1329,7 +1344,7 @@
     </span>
 
   
-    <span id="/nirvana/javascript/%E5%89%8D%E7%AB%AF/URL%E7%BC%96%E7%A0%81/" class="post-meta-item leancloud_visitors" data-flag-title="URL编码" title="阅读次数">
+    <span id="/nirvana/javascript/%E5%89%8D%E7%AB%AF/nodereadfile/" class="post-meta-item leancloud_visitors" data-flag-title="Nodejs读取目录下的文件并编辑" title="阅读次数">
       <span class="post-meta-item-icon">
         <i class="far fa-eye"></i>
       </span>
@@ -1343,134 +1358,7 @@
         <i class="far fa-file-word"></i>
       </span>
       <span class="post-meta-item-text">本文字数：</span>
-      <span>4k</span>
-    </span>
-    <span class="post-meta-item" title="阅读时长">
-      <span class="post-meta-item-icon">
-        <i class="far fa-clock"></i>
-      </span>
-      <span class="post-meta-item-text">阅读时长 &asymp;</span>
-      <span>4 分钟</span>
-    </span>
-</div>
-
-        </div>
-      </header>
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-          <p>URL的架构——————-<br><scheme>://<username>:<password>@<host>:<port>/<parameters>?<query>#<fragment><br>&lt;模式&gt; ://&lt;用户名&gt;:&lt;密码&gt;@&lt;主机地址&gt;:&lt;端口&gt;/&lt;路径&gt;;&lt;参数&gt;?&lt;查询&gt;#&lt;信息片断&gt;</p>
-<p>模式——-<br>通常是指用来访问URL所标明地址的资源的协议.<br>如果一个模式向IANA注册过,那么它就是官方的(如HTTP,FTP)<br>但也有非官方的(未注册)的模式在普遍使用,(如SFTP,svn)<br>scheme: 为一部分,//不属于分隔符的一部分,是URL下一部分的开始.</p>
-<p>{ …..//&lt;用户名&gt;:&lt;密码&gt;@&lt;主机地址&gt;:&lt;端口&gt;…}—————————————————————<br>构成了URL的权限控制部分</p>
-<p>只提供用户名<br><a href="ftp://some_user@code.google.com/">ftp://some_user@code.google.com/</a><br>提供用户名和密码<br><a href="ftp://some_user:password@code.google.com/">ftp://some_user:password@code.google.com/</a><br>如果你不提供用户名和密码,而你试图访问的URL要求你提供,那么应用程序(如:浏览器)将提供一些默认值.</p>
-<p>主机———<br>主机地址可以是域名或IP地址,正如我们所知,域名会解析成IP地址(通过DNS查找)以确定我们正在尝试访问<br>的机器的地址.</p>
-<p>端口——–<br>它告诉我们,我们连接到机器上的指定应用正在监听什么网络端口,如果省略,则使用默认值 ,HTTP的默认为80</p>
-<p>路径——–<br>以 / 作为前缀从URL组成部分中分离.一个路径由一系列的 / 字符分隔的片断组成.<br>告诉我们资源在服务器上的位置,每个路径片断都可以包含参数,以 ;  号与路径片断隔开,如:<br><a target="_blank" rel="noopener" href="http://www.soon.com/aaa;para1=xxx/bbb;para2=yyy/my.html">http://www.soon.com/aaa;para1=xxx/bbb;para2=yyy/my.html</a><br>这样的URL是完全有效的.</p>
-<p>参数———<br>它们可以出现在路径之后,查询字符串之前,以 ; 号与URL的其它部分和其它参数隔开,如:<br><a target="_blank" rel="noopener" href="http://www.soon.com/aaa/bbb/ccc/my.html;para1=xyz;para2=abc">http://www.soon.com/aaa/bbb/ccc/my.html;para1=xyz;para2=abc</a><br>它们不是很常见.</p>
-<p>查询———<br>它们十分常见.<br>这是发送一些参数到服务器资源上的首选方式.<br>这些以  关键字=值  的查询对以?号与URL的其它部分隔开,并且以&amp;符号与其它的 [查询对] 分开.使用 ; 号将 [查询对] 分开也是合法的. </p>
-<blockquote>
-<p><a target="_blank" rel="noopener" href="http://www.soon.com/bbs/about.html?para1=ok&amp;para2=yes">http://www.soon.com/bbs/about.html?para1=ok&amp;para2=yes</a>    等价于<br><a target="_blank" rel="noopener" href="http://www.soon.com/bbs/about.html?para1=ok;para2=yes">http://www.soon.com/bbs/about.html?para1=ok;para2=yes</a></p>
-</blockquote>
-<p>信息片断—————<br>这是一个URL的可选部分,用于描述资源的一个特定部分.我们通常看到它们用于链接到HTML文档中的特定部分.信息片断以#号与URL的其它部分隔开.当从服务器请求一个以URL寻址的资源时,客户端通常不会发送信息片断到服务器(至少HTTP协议不会).一旦客户端获取资源,它将使用信息片断处理有关部分.————————– 上面是URL的九大部分 —————————–</p>
-<p> URL该如何进行正确的编码?哪些字符可以在URL中安全的使用?<br> 哪些字符不能使用?</p>
-<h2 id="URL的特殊字符"><a href="#URL的特殊字符" class="headerlink" title=" URL的特殊字符"></a> URL的特殊字符</h2><p> 当几种特定的字符集合出现在URL中时,你必须特别注意:</p>
-<p>首先,在URL中有特殊意义的字符,也就是保留字符:<br> ;    /    ?   :     @     &amp;     =     +    $     ,        {10个}<br> 这意味着,这些字符通常在URL中使用时,是有特殊含义的(如 “:”把每一个部分分隔开来),如果一个URL的某一部分(如查询参数的一部分)可能包含这些字符之一,则应该在放入URL之前对其进行转义处理.<br>  第二组需要注意的字符集是非保留字符集.如下:<br>  -  _   .   !   ~   *   ‘   (   )             {9个}<br> 这些字符可以被用于URL的任何位置(有些地方,不允许它们出现.使用它们作为URL的一部分时,你不需要进行编码/转义处理.你可以对它们进行转义操作且不影响URL的语义,但不建议这么做.<br>第三组  不推荐字符 也就是避用字符集合使用它们是不明智的:<br>{  }  |   \   ^  [   ]   `::数字1键前::       {8个}<br>不明智的原因:网关有时会修改这样的字符,或者将其作为分隔符使用.这并不意味着网关总会修改这些字符,但这种情况可能发生.如果真是要使用这些字符,请做转义处理.<br>第四组   例外字符集<br>这组字符集是所有的ASCII控制字符组成.包含空格字符以下列字符:<br>&lt;   &gt;   #   %   “      {5 个}<br>控制字符是不可打印的US-ASCII字符(十六进制00~1F及7F)<br>如果使用,请转义处理.有些字符#(哈希)和%(百分比)在URL上下文中有着特殊含义,你可以把它们当作保留字符对待.这个集合中的其它字符无法被打印,因此对它们进行转义是唯一的表示方式, &lt;   &gt;   “   这三个字符需要被转义，因为这些字符通常用来在文本中分隔URL</p>
-<p>编码/转义————————-<br>通常将它的ASCII十六进制值加上一个%字符．<br>如空格字符的URL编码是　%20<br>%字符本身被编码为%25</p>
-<p>这就是你所需要知道的所有URL的特殊字符，当然，从这些字符外，英文字母<br>和数字是可以直接使用而不需要进行编码的：）</p>
-<p>！！！　必须记住<br>URL应该始终保持其编码形式．只有当你要拆分URL的时候，才应该对其进行<br>解码．每个URL部分，都必须分别进行编码．<br>应该避免重复编码／解码一个URL．如果你编码一个URL一次，但解码两次，而<br>这个URL包含%字符，那么你将破坏掉你的URL<br>可以查看　RFC 2396 中的定义</p>
-<p>绝对URL和相对URL———————————-<br>如果一个URL包含scheme部分的话（如http），那它就可以被看做绝对URL．<br>但相对URL就有点复杂了．<br>相对URL永远是代表着相对于另外一个URL而言的，其它的URL被称为base URL.<br>将相对URL变成绝对URL的形式，我们首先要了解它的base URL，接着把它跟相<br>对URL的语法结合之后就得到绝对URL．<br>在一个HTML文档中看到的相对URL，在这种情况有两个方法找到它的对应的<br>base URL．<br>１,base URL可能由html的<base>标签指出．<br>２,如果没有指定base标签，那么该html文档的url地址就被视为它的base URL.<br>一旦我们有了base URL ,我们就可以试着将我们的相对URL转成绝对URL.<br>首先要将相对URL拆分成单个的结构（scheme,authority(host,post),path,query<br>string,fragment)<br>拆解完成后，有几个地方需要注意，因为它们可能说明我们转换的相对URL不一定对．<br>１,如果没有［scheme］［authority］或［path］，那么这个相对URL是base URL的<br>一个引用．<br>２,如果有［scheme］，那么这个相对URL其实是绝对URL，所以用绝对URL的方式处理．<br>３,如果没有［scheme］，但是有［authority(host,post)］，那么我们相对URL可能是网路位址那么我们根据base URL的［模式］并且把它跟相对URL用://结合起来．<br>４,如果没有上述的这些特殊情形，那我们得到的则是一个完全的相对URL．现在我们需要根据如下的程序进行处理．<br>５,我们从base URL继承它的scheme以及authority(host,post).<br>６,如果相对URL开头是一个/，那么它是一个绝对路径，我们可以通过继承得到的authoruity和host，用适当的分隔号产生绝对url<br>７,如果相对URL的开头不是一个/，那我们把base URL中／以后的东西都移除．然后把我们相对URL加上去得到最后的路径，再根据前面的几个字符对相对URL做一点小处理．<br>８,如果最后的路径包含./　　<br>我们直接把它去掉（这代表我们的相对URL由./开始，就像./blah.html)<br>９,如果最后的路径包含../　　<br>我们可以去掉它并且把路径上移一个区段，就好像把所有像样的路径组合都去掉＂＜segment＞/../＂,持续这个过程，直到找不到任何的../这表示我们的相对路径开头是多个../像是../blah.htm或../../blah.html<br>１０,如果路径的结尾是.. ,那就去掉它并且把路径上移一个区段，比如移除””<segment>/../“<br> 这表示我们的相对路径是．．<br> １１,如果路径的结尾是．，那就把它去掉，表示我们的相对路径很有可能是．<br> 根据这些规则我们可以简单把相对URL的query或者fragment利用合适的分隔符号<br> 包含到我们的URL中去，这样就将相对URL转换成了绝对URL．</p>
-<p> 范例：<br> base:  <a target="_blank" rel="noopener" href="http://www.blah.com/yadda1/yadda2/yadda3?param1=foo#barrelative:rel1">http://www.blah.com/yadda1/yadda2/yadda3?param1=foo#barrelative:rel1</a><br> final  :  <a target="_blank" rel="noopener" href="http://www.blah.com/yadda1/yadda2/rel1">http://www.blah.com/yadda1/yadda2/rel1</a></p>
-<p> base:  <a target="_blank" rel="noopener" href="http://www.blah.com/yadda1/yadda2/yadda3?param1=foo#barrelative:/rel1">http://www.blah.com/yadda1/yadda2/yadda3?param1=foo#barrelative:/rel1</a><br> final :   <a target="_blank" rel="noopener" href="http://www.blah.com/rel1">http://www.blah.com/rel1</a></p>
-<p> base:  <a target="_blank" rel="noopener" href="http://www.blah.com/yadda1/yadda2/yadda3?param1=foo#barrelative:../rel1">http://www.blah.com/yadda1/yadda2/yadda3?param1=foo#barrelative:../rel1</a><br> base:  <a target="_blank" rel="noopener" href="http://www.blah.com/yadda1/rel1">http://www.blah.com/yadda1/rel1</a></p>
-<p> base:  <a target="_blank" rel="noopener" href="http://www.blah.com/yadda1/yadda2/yadda3?param1=foo#barrelative:./rel1?param2=baz#bar2">http://www.blah.com/yadda1/yadda2/yadda3?param1=foo#barrelative:./rel1?param2=baz#bar2</a><br> final:    <a target="_blank" rel="noopener" href="http://www.blah.com/yadda1/yadda2/rel1?param2=baz#bar2">http://www.blah.com/yadda1/yadda2/rel1?param2=baz#bar2</a></p>
-<p>base:    <a target="_blank" rel="noopener" href="http://www.blah.com/yadda1/yadda2/yadda3?param1=foo#barrelative">http://www.blah.com/yadda1/yadda2/yadda3?param1=foo#barrelative</a>: ..<br> final :    <a target="_blank" rel="noopener" href="http://www.blah.com/yadda1/">http://www.blah.com/yadda1/</a></p>
-
-      
-    </div>
-
-    
-    
-    
-
-    <footer class="post-footer">
-        <div class="post-eof"></div>
-      
-    </footer>
-  </article>
-</div>
-
-
-
-
-    
-
-
-<div class="post-block">
-  
-  
-
-  <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="">
-    <link itemprop="mainEntityOfPage" href="https://lzhwweb.github.io/nirvana/javascript/%E5%89%8D%E7%AB%AF/Unable-to-boot-device-due-to-insufficient-system-resources-/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="image" content="/nirvana/images/headphoto.jpeg">
-      <meta itemprop="name" content="nirvana">
-      <meta itemprop="description" content="个人学习笔记">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="涅槃快乐是金">
-    </span>
-      <header class="post-header">
-        <h2 class="post-title" itemprop="name headline">
-          <a href="/nirvana/javascript/%E5%89%8D%E7%AB%AF/Unable-to-boot-device-due-to-insufficient-system-resources-/" class="post-title-link" itemprop="url">Unable to boot device due to insufficient system resources</a>
-        </h2>
-
-        <div class="post-meta-container">
-          <div class="post-meta">
-    <span class="post-meta-item">
-      <span class="post-meta-item-icon">
-        <i class="far fa-calendar"></i>
-      </span>
-      <span class="post-meta-item-text">发表于</span>
-
-      <time title="创建时间：2021-03-11 21:12:40" itemprop="dateCreated datePublished" datetime="2021-03-11T21:12:40+08:00">2021-03-11</time>
-    </span>
-      <span class="post-meta-item">
-        <span class="post-meta-item-icon">
-          <i class="far fa-calendar-check"></i>
-        </span>
-        <span class="post-meta-item-text">更新于</span>
-        <time title="修改时间：2021-03-10 22:12:17" itemprop="dateModified" datetime="2021-03-10T22:12:17+08:00">2021-03-10</time>
-      </span>
-    <span class="post-meta-item">
-      <span class="post-meta-item-icon">
-        <i class="far fa-folder"></i>
-      </span>
-      <span class="post-meta-item-text">分类于</span>
-        <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-          <a href="/nirvana/categories/javascript/" itemprop="url" rel="index"><span itemprop="name">javascript</span></a>
-        </span>
-    </span>
-
-  
-    <span id="/nirvana/javascript/%E5%89%8D%E7%AB%AF/Unable-to-boot-device-due-to-insufficient-system-resources-/" class="post-meta-item leancloud_visitors" data-flag-title="Unable to boot device due to insufficient system resources" title="阅读次数">
-      <span class="post-meta-item-icon">
-        <i class="far fa-eye"></i>
-      </span>
-      <span class="post-meta-item-text">阅读次数：</span>
-      <span class="leancloud-visitors-count"></span>
-    </span>
-      </div>
-      <div class="post-meta">
-    <span class="post-meta-item" title="本文字数">
-      <span class="post-meta-item-icon">
-        <i class="far fa-file-word"></i>
-      </span>
-      <span class="post-meta-item-text">本文字数：</span>
-      <span>163</span>
+      <span>1k</span>
     </span>
     <span class="post-meta-item" title="阅读时长">
       <span class="post-meta-item-icon">
@@ -1488,8 +1376,11 @@
     
     
     <div class="post-body" itemprop="articleBody">
-          <p>iOS模拟器当启动的模拟器数量过多时，会提示：<br><img src="https://upload-images.jianshu.io/upload_images/10024246-e6efd02dc51166b2.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240"><br>该问题是模拟器的内存超出最大限额，可以通过修改内存大小来启动更多的模拟器</p>
-<p>sudo launchctl limit maxfiles 2000 unlimited<br><a target="_blank" rel="noopener" href="https://help.apple.com/simulator/mac/9.0/index.html#/dev8a5f2aa4e">https://help.apple.com/simulator/mac/9.0/index.html#/dev8a5f2aa4e</a></p>
+          <p>node下读取和编辑文件都是使用<code>fs</code>组件</p>
+<h2 id="引用模块"><a href="#引用模块" class="headerlink" title="引用模块"></a>引用模块</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">const fs &#x3D; require(&#39;fs&#39;);</span><br></pre></td></tr></table></figure>
+<h2 id="读取文件夹"><a href="#读取文件夹" class="headerlink" title="读取文件夹"></a>读取文件夹</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br></pre></td><td class="code"><pre><span class="line">&#x2F;**</span><br><span class="line">* path - 文件路径。</span><br><span class="line">* callback - 回调函数，回调函数带有两个参数err, files，err 为错误信息，files 为 目录下的文件数组列表。</span><br><span class="line">**&#x2F;</span><br><span class="line"></span><br><span class="line">fs.readdir(path, callback)</span><br><span class="line">#异步 readdir(3). 读取目录的内容。</span><br><span class="line">fs.readdirSync(path)</span><br><span class="line">#同步 readdir().返回文件数组列表。</span><br><span class="line"></span><br><span class="line">&#x2F;&#x2F;demo</span><br><span class="line">const fs &#x3D; require(&#39;fs&#39;);</span><br><span class="line">const path &#x3D; require(&#39;path&#39;);</span><br><span class="line">fs.readdir(pathName, function(err, files)&#123;</span><br><span class="line">    var dirs &#x3D; [];</span><br><span class="line">    (function iterator(i)&#123;</span><br><span class="line">      if(i &#x3D;&#x3D; files.length) &#123;</span><br><span class="line">        console.log(dirs);</span><br><span class="line">      &#125;</span><br><span class="line">      fs.stat(path.join(pathName, files[i]), function(err, data)&#123;     </span><br><span class="line">        if(data.isFile())&#123;               </span><br><span class="line">            dirs.push(files[i]);</span><br><span class="line">            iterator(i+1);</span><br><span class="line">       &#125;);   </span><br><span class="line">    &#125;)(0);</span><br><span class="line">&#125;);</span><br></pre></td></tr></table></figure>
+
+<h2 id="编辑文件"><a href="#编辑文件" class="headerlink" title="编辑文件"></a>编辑文件</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br></pre></td><td class="code"><pre><span class="line">var fs &#x3D; require(&quot;fs&quot;);</span><br><span class="line"></span><br><span class="line">&#x2F;&#x2F; 异步读取</span><br><span class="line">fs.readFile(&#39;input.txt&#39;, function (err, data) &#123;</span><br><span class="line">   if (err) &#123;</span><br><span class="line">       return console.error(err);</span><br><span class="line">   &#125;</span><br><span class="line">   console.log(&quot;异步读取: &quot; + data.toString());</span><br><span class="line">&#125;);</span><br><span class="line"></span><br><span class="line">&#x2F;&#x2F; 同步读取</span><br><span class="line">var data &#x3D; fs.readFileSync(&#39;input.txt&#39;);</span><br><span class="line">console.log(&quot;同步读取: &quot; + data.toString());</span><br><span class="line"></span><br><span class="line">console.log(&quot;程序执行完毕。&quot;);</span><br></pre></td></tr></table></figure>
 
       
     </div>
@@ -1516,7 +1407,7 @@
   
 
   <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="">
-    <link itemprop="mainEntityOfPage" href="https://lzhwweb.github.io/nirvana/javascript/%E5%89%8D%E7%AB%AF/WEB%E5%89%8D%E7%AB%AF%E5%BC%80%E5%8F%91%E8%80%85%E5%B8%B8%E7%94%A8%E7%9A%84%E4%BB%A3%E7%A0%81/">
+    <link itemprop="mainEntityOfPage" href="https://lzhwweb.github.io/nirvana/webpack/webpack/webpackdotenv/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="image" content="/nirvana/images/headphoto.jpeg">
@@ -1529,7 +1420,7 @@
     </span>
       <header class="post-header">
         <h2 class="post-title" itemprop="name headline">
-          <a href="/nirvana/javascript/%E5%89%8D%E7%AB%AF/WEB%E5%89%8D%E7%AB%AF%E5%BC%80%E5%8F%91%E8%80%85%E5%B8%B8%E7%94%A8%E7%9A%84%E4%BB%A3%E7%A0%81/" class="post-title-link" itemprop="url">WEB前端开发者常用的代码</a>
+          <a href="/nirvana/webpack/webpack/webpackdotenv/" class="post-title-link" itemprop="url">dotenv，从文件加载环境变量</a>
         </h2>
 
         <div class="post-meta-container">
@@ -1540,14 +1431,14 @@
       </span>
       <span class="post-meta-item-text">发表于</span>
 
-      <time title="创建时间：2021-03-11 21:12:40" itemprop="dateCreated datePublished" datetime="2021-03-11T21:12:40+08:00">2021-03-11</time>
+      <time title="创建时间：2021-04-14 15:34:17" itemprop="dateCreated datePublished" datetime="2021-04-14T15:34:17+08:00">2021-04-14</time>
     </span>
       <span class="post-meta-item">
         <span class="post-meta-item-icon">
           <i class="far fa-calendar-check"></i>
         </span>
         <span class="post-meta-item-text">更新于</span>
-        <time title="修改时间：2021-03-10 13:43:55" itemprop="dateModified" datetime="2021-03-10T13:43:55+08:00">2021-03-10</time>
+        <time title="修改时间：2021-04-21 15:37:21" itemprop="dateModified" datetime="2021-04-21T15:37:21+08:00">2021-04-21</time>
       </span>
     <span class="post-meta-item">
       <span class="post-meta-item-icon">
@@ -1555,12 +1446,12 @@
       </span>
       <span class="post-meta-item-text">分类于</span>
         <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-          <a href="/nirvana/categories/javascript/" itemprop="url" rel="index"><span itemprop="name">javascript</span></a>
+          <a href="/nirvana/categories/webpack/" itemprop="url" rel="index"><span itemprop="name">webpack</span></a>
         </span>
     </span>
 
   
-    <span id="/nirvana/javascript/%E5%89%8D%E7%AB%AF/WEB%E5%89%8D%E7%AB%AF%E5%BC%80%E5%8F%91%E8%80%85%E5%B8%B8%E7%94%A8%E7%9A%84%E4%BB%A3%E7%A0%81/" class="post-meta-item leancloud_visitors" data-flag-title="WEB前端开发者常用的代码" title="阅读次数">
+    <span id="/nirvana/webpack/webpack/webpackdotenv/" class="post-meta-item leancloud_visitors" data-flag-title="dotenv，从文件加载环境变量" title="阅读次数">
       <span class="post-meta-item-icon">
         <i class="far fa-eye"></i>
       </span>
@@ -1574,14 +1465,14 @@
         <i class="far fa-file-word"></i>
       </span>
       <span class="post-meta-item-text">本文字数：</span>
-      <span>5.7k</span>
+      <span>520</span>
     </span>
     <span class="post-meta-item" title="阅读时长">
       <span class="post-meta-item-icon">
         <i class="far fa-clock"></i>
       </span>
       <span class="post-meta-item-text">阅读时长 &asymp;</span>
-      <span>5 分钟</span>
+      <span>1 分钟</span>
     </span>
 </div>
 
@@ -1592,69 +1483,136 @@
     
     
     <div class="post-body" itemprop="articleBody">
-          <p>1、将彻底屏蔽鼠标右键</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">oncontextmenu&#x3D;&quot;window.event.returnValue&#x3D;false&quot; </span><br><span class="line">&lt;table border oncontextmenu&#x3D;return(false)&gt;&lt;td&gt;no&lt;&#x2F;table&gt; &#x2F;&#x2F;可用于 Table</span><br></pre></td></tr></table></figure>
-<p>2、取消选取、防止复制</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">&lt;body onselectstart&#x3D;&quot;return false&quot;&gt;</span><br></pre></td></tr></table></figure>
-<p>3.JS不允许粘贴</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">&lt;body onpaste&#x3D;&quot;return false&quot;&gt;</span><br></pre></td></tr></table></figure>
-<p>4、JS防止复制</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">&lt;body oncopy&#x3D;&quot;return false;&quot; oncut&#x3D;&quot;return false;&quot;&gt;</span><br></pre></td></tr></table></figure>
-<p>5、IE 地址栏前换成自己的图标</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">&lt;link rel&#x3D;&quot;Shortcut Icon&quot; href&#x3D;&quot;favicon.ico&quot;&gt;</span><br><span class="line">&#x2F;&#x2F;在文件的根目录放进去这个图片，后缀修改成ico就可以了</span><br></pre></td></tr></table></figure>
-<p>6.可以在收藏夹中显示出你的图标<br>  <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">&lt;link rel&#x3D;&quot;Bookmark&quot; href&#x3D;&quot;favicon.ico&quot;&gt;</span><br></pre></td></tr></table></figure><br>7.关闭输入法</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">&lt;input style&#x3D;&quot;ime-mode:disabled&quot;&gt;</span><br></pre></td></tr></table></figure>
-<p>8、永远都会带着框架</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">&lt;script language&#x3D;&quot;JavaScript&quot;&gt;&lt;!– if (window &#x3D;&#x3D; top)top.location.href &#x3D; “frames.htm&quot;; &#x2F;&#x2F;frames.htm 为框架网页 &#x2F;&#x2F; –&gt;&lt;&#x2F;script&gt;</span><br></pre></td></tr></table></figure>
-<p>9、防止被人 frame</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">&lt;SCRIPT LANGUAGE&#x3D;JAVASCRIPT&gt;&lt;!– if (top.location !&#x3D; self.location)top.location&#x3D;self.location; &#x2F;&#x2F; –&gt;&lt;&#x2F;SCRIPT&gt;</span><br></pre></td></tr></table></figure>
-<p>10、网页将不能被另存为</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">&lt;noscript&gt;&lt;iframe src&#x3D;*.Html&gt;&lt;&#x2F;iframe&gt;&lt;&#x2F;noscript&gt;</span><br></pre></td></tr></table></figure>
-<p>11、查看网页源代码</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">&lt;input type&#x3D;button value&#x3D;“查看网页源代码&quot;onclick&#x3D;&quot;window.location &#x3D; “view-source:&quot;+ “http:&#x2F;&#x2F;www.pconline.com.cn&quot;&quot;&gt;</span><br></pre></td></tr></table></figure>
-<p>12、光标是停在文本框文字的最后</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line">&lt;script language&#x3D;&quot;javascript&quot;&gt; </span><br><span class="line">function cc() &#123; </span><br><span class="line">      var e &#x3D; event.srcElement; </span><br><span class="line">      var r &#x3D;e.createTextRange();</span><br><span class="line">       r.moveStart(“character&quot;,e.value.length); </span><br><span class="line">      r.collapse(true); </span><br><span class="line">      r.select(); </span><br><span class="line">&#125;</span><br><span class="line"> &lt;&#x2F;script&gt; </span><br><span class="line">&lt;input type&#x3D;text name&#x3D;text1 value&#x3D;&quot;123″ onfocus&#x3D;&quot;cc()&quot;&gt;</span><br></pre></td></tr></table></figure>
-<p>13、判断上一页的来源</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">javascript: document.referrer</span><br></pre></td></tr></table></figure>
-<p>14、最小化、最大化、关闭窗口</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">&lt;object id&#x3D;hh1 classid&#x3D;&quot;clsid:ADB880A6-D8FF-11CF-9377-00AA003B7A11″&gt; &lt;param name&#x3D;&quot;Command&quot; value&#x3D;&quot;Minimize&quot;&gt;&lt;&#x2F;object&gt; &lt;object id&#x3D;hh2 classid&#x3D;&quot;clsid:ADB880A6-D8FF-11CF-9377-00AA003B7A11″&gt; &lt;param name&#x3D;&quot;Command&quot; value&#x3D;&quot;Maximize&quot;&gt;&lt;&#x2F;object&gt; &lt;OBJECT id&#x3D;hh3 classid&#x3D;&quot;clsid:adb880a6-d8ff-11cf-9377-00aa003b7a11″&gt; &lt;PARAM NAME&#x3D;&quot;Command&quot; VALUE&#x3D;&quot;Close&quot;&gt;&lt;&#x2F;OBJECT&gt; &lt;input type&#x3D;button value&#x3D;最小化 onclick&#x3D;hh1.Click()&gt; &lt;input type&#x3D;button value&#x3D;最大化 onclick&#x3D;hh2.Click()&gt; &lt;input type&#x3D;button value&#x3D;关闭 onclick&#x3D;hh3.Click()&gt; 本例适用于 IE</span><br></pre></td></tr></table></figure>
-<p>15.屏蔽功能键 Shift,Alt,Ctrl</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">&lt;script&gt; </span><br><span class="line">function look()&#123;</span><br><span class="line">   if(event.shiftKey) </span><br><span class="line">  alert(“禁止按 Shift 键!&quot;); </span><br><span class="line">  &#x2F;&#x2F;可以换成 ALT CTRL</span><br><span class="line">&#125; </span><br><span class="line">document.onkeydown&#x3D;look;</span><br><span class="line"> &lt;&#x2F;script&gt;</span><br></pre></td></tr></table></figure>
-<p>16、网页不会被缓存</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">&lt;META HTTP-EQUIV&#x3D;&quot;pragma&quot; CONTENT&#x3D;&quot;no-cache&quot;&gt; </span><br><span class="line">&lt;META HTTP-EQUIV&#x3D;&quot;Cache-Control&quot; CONTENT&#x3D;&quot;no-cache, must-revalidate&quot;&gt; </span><br><span class="line">&lt;META HTTP-EQUIV&#x3D;&quot;expires&quot; CONTENT&#x3D;&quot;Wed, 26 Feb 1997 08:21:57 GMT&quot;&gt; &#x2F;&#x2F;或者&lt;META HTTP-EQUIV&#x3D;&quot;expires&quot; CONTENT&#x3D;&quot;0″&gt;</span><br></pre></td></tr></table></figure>
-<p>17、怎样让表单没有凹凸感？</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">&lt;input type&#x3D;text style&#x3D;&quot;border:1 solid #000000″&gt; 或 &lt;input type&#x3D;text style&#x3D;&quot;border-left:none; border-right:none; border-top:none; border-bottom: 1 solid #000000″&gt;&lt;&#x2F;textarea&gt;</span><br></pre></td></tr></table></figure>
-<p>18.div span layer的区别？</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">&lt;div&gt;(division)用来定义大段的页面元素，会产生转行 &lt;span&gt;用来定义同一行内的元素，跟&lt;div&gt;的唯一区别是不产生转行 &lt;layer&gt;是 ns 的标记，ie 不支持，相当于&lt;div&gt;</span><br></pre></td></tr></table></figure>
-<p>19.让弹出窗口总是在最上面:</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">&lt;body onblur&#x3D;&quot;this.focus();&quot;&gt;</span><br></pre></td></tr></table></figure>
-<p>20.不要滚动条?</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">&#x2F;&#x2F;让竖条没有: </span><br><span class="line">&lt;body style&#x3D;&quot;overflow:scroll;overflow-y:hidden&quot;&gt; &lt;&#x2F;body&gt; </span><br><span class="line">&#x2F;&#x2F;&#x2F;让横条没有: </span><br><span class="line">&lt;body style&#x3D;&quot;overflow:scroll;overflow-x:hidden&quot;&gt; &lt;&#x2F;body&gt; </span><br><span class="line">&#x2F;&#x2F;两个都去掉</span><br><span class="line"> &lt;body scroll&#x3D;&quot;no&quot;&gt; &lt;&#x2F;body&gt;</span><br></pre></td></tr></table></figure>
-<p>21.怎样去掉图片链接点击后，图片周围的虚线？</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">&lt;a href&#x3D;&quot;#&quot; onFocus&#x3D;&quot;this.blur()&quot;&gt;&lt;img src&#x3D;&quot;logo.jpg&quot; border&#x3D;0&gt;&lt;&#x2F;a&gt;</span><br></pre></td></tr></table></figure>
-<p>22.电子邮件处理提交表单</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">&lt;form name&#x3D;&quot;form1″ method&#x3D;&quot;post&quot; action&#x3D;&quot;mailto:****@***.com&quot; enctype&#x3D;&quot;text&#x2F;plain&quot;&gt; </span><br><span class="line">      &lt;input type&#x3D;submit&gt;</span><br><span class="line"> &lt;&#x2F;form&gt;</span><br></pre></td></tr></table></figure>
-<p>23.在打开的子窗口刷新父窗口的代码里如何写？</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">window.opener.location.reload()   </span><br></pre></td></tr></table></figure>
-<p> 24.如何设定打开页面的大小 </p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">&lt;body onload&#x3D;&quot;top.resizeTo(300,200);&quot;&gt;</span><br><span class="line"> &#x2F;&#x2F;打开页面的位置</span><br><span class="line">&lt;body onload&#x3D;&quot;top.moveBy(300,200);&quot;&gt;</span><br></pre></td></tr></table></figure>
-<p>25.在页面中如何加入不是满铺的背景图片,拉动页面时背景图不动</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">&lt;STYLE&gt; body &#123;background-image:none; background-repeat:no-repeat; background-position:center;background-attachment: fixed&#125; &lt;&#x2F;STYLE&gt;</span><br></pre></td></tr></table></figure>
-<p>26、检查一段字符串是否全由数字组成</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">function checkNum(str)&#123;</span><br><span class="line">  return str.match(\&#x2F;D&#x2F;)&#x3D;&#x3D;null</span><br><span class="line">&#125;</span><br><span class="line">alert(checkNum(&quot;1232142141&quot;)) </span><br><span class="line">alert(checkNum(&quot;123214214a1&quot;))</span><br></pre></td></tr></table></figure>
-<p>27、获得一个窗口的大小</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">document.body.clientWidth; document.body.clientHeight</span><br></pre></td></tr></table></figure>
-<p>28、怎么判断是否是字符</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">if (&#x2F;[^&#x2F;x00-&#x2F;xff]&#x2F;g.test(s)) alert(“含有汉字&quot;); else alert(“全是字符&quot;);</span><br></pre></td></tr></table></figure>
-<p>29、TEXTAREA 自适应文字行数的多少</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">&lt;textarea rows&#x3D;1 name&#x3D;s1 cols&#x3D;27 onpropertychange&#x3D;&quot;this.style.posHeight&#x3D;this.scrollHeight&quot;&gt; &lt;&#x2F;textarea&gt;</span><br></pre></td></tr></table></figure>
-<p>30、日期减去天数等于第二个日期</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line">&lt;script language&#x3D;Javascript&gt; </span><br><span class="line">function cc(dd,dadd) &#123; </span><br><span class="line">    &#x2F;&#x2F;可以加上错误处理 </span><br><span class="line">    var a &#x3D; new Date(dd) </span><br><span class="line">    a &#x3D; a.valueOf() </span><br><span class="line">    a &#x3D; a - dadd * 24 * 60 * 60 * 1000 </span><br><span class="line">    a &#x3D; new Date(a)         </span><br><span class="line">    alert(a.getFullYear() + &quot;年&quot; + (a.getMonth() + 1) + &quot;月&quot; + a.getDate() + &quot;日&quot;)</span><br><span class="line"> &#125;  </span><br><span class="line">cc(“12&#x2F;23&#x2F;2002&quot;,2) </span><br><span class="line">&lt;&#x2F;script&gt;</span><br></pre></td></tr></table></figure>
-<p>31、ENTER 键可以让光标移到下一个输入框</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">&lt;input onkeydown&#x3D;&quot;if(event.keyCode&#x3D;&#x3D;13)event.keyCode&#x3D;9″&gt;</span><br></pre></td></tr></table></figure>
-<p>32、各种样式的光标</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br></pre></td><td class="code"><pre><span class="line">auto ：标准光标 default ：标准箭头</span><br><span class="line">hand ：手形光标</span><br><span class="line">wait ：等待光标</span><br><span class="line">text ：I 形光标</span><br><span class="line">vertical-text ：水平 I 形光标</span><br><span class="line">no-drop ：不可拖动光标</span><br><span class="line">not-allowed ：无效光标</span><br><span class="line">help ：?帮助光标</span><br><span class="line">all-scroll ：三角方向标</span><br><span class="line">move ：移动标</span><br><span class="line">crosshair ：十字标</span><br><span class="line">e-resize</span><br><span class="line">n-resize</span><br><span class="line">nw-resize</span><br><span class="line">w-resize</span><br><span class="line">s-resize</span><br><span class="line">se-resize</span><br><span class="line">sw-resize</span><br></pre></td></tr></table></figure>
+          <p>Node.js程序运行时加载不同的配置，比如开发环境和生产环境的数据数据库配置就可能不一样，使用 process.env.DB_HOST 环境变量，可以在Node.js程序内部方便获取参数信息。</p>
+<p>但是，程序启动时，怎样将环境变量传递给程序，这可能会是一个相对麻烦的事情，因为这关系到操作系统层的配置问题。</p>
+<h2 id="dotenv"><a href="#dotenv" class="headerlink" title="dotenv"></a>dotenv</h2><p>dotenv是一个可以使得Node.js从文件中加载环境变量的库，使用dotenv，我们只需要将程序的环境变量配置写在.env文件中。</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"># .env file</span><br><span class="line">DB_HOST&#x3D;localhost</span><br><span class="line">DB_USER&#x3D;root</span><br><span class="line">DB_PASS&#x3D;s1mpl3</span><br></pre></td></tr></table></figure>
+<p>然后，在Node.js程序启动时运行：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">require(&#39;dotenv&#39;).config()</span><br></pre></td></tr></table></figure>
+<p>接着，我们就可以在接下来的程序中方便地使用环境变量了：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">const db &#x3D; require(&#39;db&#39;)</span><br><span class="line">db.connect(&#123;</span><br><span class="line">  host: process.env.DB_HOST,</span><br><span class="line">  username: process.env.DB_USER,</span><br><span class="line">  password: process.env.DB_PASS</span><br><span class="line">&#125;)</span><br></pre></td></tr></table></figure>
+      
+    </div>
 
+    
+    
+    
+
+    <footer class="post-footer">
+        <div class="post-eof"></div>
+      
+    </footer>
+  </article>
+</div>
+
+
+
+
+    
+
+
+<div class="post-block">
+  
+  
+
+  <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="">
+    <link itemprop="mainEntityOfPage" href="https://lzhwweb.github.io/nirvana/javascript/%E5%89%8D%E7%AB%AF/path-to-regexp/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/nirvana/images/headphoto.jpeg">
+      <meta itemprop="name" content="nirvana">
+      <meta itemprop="description" content="个人学习笔记">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="涅槃快乐是金">
+    </span>
+      <header class="post-header">
+        <h2 class="post-title" itemprop="name headline">
+          <a href="/nirvana/javascript/%E5%89%8D%E7%AB%AF/path-to-regexp/" class="post-title-link" itemprop="url">url 的正则表达式：path-to-regexp</a>
+        </h2>
+
+        <div class="post-meta-container">
+          <div class="post-meta">
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-calendar"></i>
+      </span>
+      <span class="post-meta-item-text">发表于</span>
+      
+
+      <time title="创建时间：2021-03-20 17:46:44 / 修改时间：17:47:06" itemprop="dateCreated datePublished" datetime="2021-03-20T17:46:44+08:00">2021-03-20</time>
+    </span>
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-folder"></i>
+      </span>
+      <span class="post-meta-item-text">分类于</span>
+        <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+          <a href="/nirvana/categories/javascript/" itemprop="url" rel="index"><span itemprop="name">javascript</span></a>
+        </span>
+    </span>
+
+  
+    <span id="/nirvana/javascript/%E5%89%8D%E7%AB%AF/path-to-regexp/" class="post-meta-item leancloud_visitors" data-flag-title="url 的正则表达式：path-to-regexp" title="阅读次数">
+      <span class="post-meta-item-icon">
+        <i class="far fa-eye"></i>
+      </span>
+      <span class="post-meta-item-text">阅读次数：</span>
+      <span class="leancloud-visitors-count"></span>
+    </span>
+      </div>
+      <div class="post-meta">
+    <span class="post-meta-item" title="本文字数">
+      <span class="post-meta-item-icon">
+        <i class="far fa-file-word"></i>
+      </span>
+      <span class="post-meta-item-text">本文字数：</span>
+      <span>1.7k</span>
+    </span>
+    <span class="post-meta-item" title="阅读时长">
+      <span class="post-meta-item-icon">
+        <i class="far fa-clock"></i>
+      </span>
+      <span class="post-meta-item-text">阅读时长 &asymp;</span>
+      <span>2 分钟</span>
+    </span>
+</div>
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+          <h2 id="概述"><a href="#概述" class="headerlink" title="概述"></a>概述</h2><p>该工具库用来处理 url 中地址与参数，能够很方便得到我们想要的数据。</p>
+<p>js 中有 RegExp 方法做正则表达式校验，而 path-to-regexp 可以看成是 url 字符串的正则表达式。</p>
+<h2 id="使用"><a href="#使用" class="headerlink" title="使用"></a>使用</h2><p>第三方库，使用前先进行安装：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ npm install path-to-regexp</span><br></pre></td></tr></table></figure>
+<p>在 js 中使用：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">const pathToRegexp &#x3D; require(&#39;path-to-regexp&#39;);</span><br></pre></td></tr></table></figure>
+<h2 id="API-介绍"><a href="#API-介绍" class="headerlink" title="API 介绍"></a>API 介绍</h2><h5 id="1-pathToRegexp"><a href="#1-pathToRegexp" class="headerlink" title="1. pathToRegexp()"></a>1. pathToRegexp()</h5><p>作用：这里这个方法可以类比于 js 中 new ExpReg(‘xxx’)。</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">var pathToRegexp &#x3D; require(&#39;path-to-regexp&#39;)</span><br><span class="line"></span><br><span class="line">var re &#x3D; pathToRegexp(&#39;&#x2F;foo&#x2F;:bar&#39;)</span><br><span class="line">console.log(re);	</span><br></pre></td></tr></table></figure>
+<p>打印结果如下:</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">&#x2F;^\&#x2F;foo\&#x2F;((?:[^\&#x2F;]+?))(?:\&#x2F;(?&#x3D;$))?$&#x2F;i</span><br></pre></td></tr></table></figure>
+<p>要注意两点，一点是我们自己的 url 地址，一条是匹配规则。</p>
+<h5 id="2-exec"><a href="#2-exec" class="headerlink" title="2. exec()"></a>2. exec()</h5><p>作用：匹配 url 地址与规则是否相符。</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">var pathToRegexp &#x3D; require(&#39;path-to-regexp&#39;)</span><br><span class="line"></span><br><span class="line">var re &#x3D; pathToRegexp(&#39;&#x2F;foo&#x2F;:bar&#39;);     &#x2F;&#x2F; 匹配规则</span><br><span class="line">var match1 &#x3D; re.exec(&#39;&#x2F;test&#x2F;route&#39;);    &#x2F;&#x2F; url 路径</span><br><span class="line">var match2 &#x3D; re.exec(&#39;&#x2F;foo&#x2F;route&#39;);     &#x2F;&#x2F; url 路径</span><br><span class="line"></span><br><span class="line">console.log(match1);</span><br><span class="line">console.log(match2);</span><br></pre></td></tr></table></figure>
+<p>打印结果如下：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">null</span><br><span class="line">[ &#39;&#x2F;foo&#x2F;route&#39;, &#39;route&#39;, index: 0, input: &#39;&#x2F;foo&#x2F;route&#39; ]</span><br></pre></td></tr></table></figure>
+<p>说明：</p>
+<p>上述代码中，第一个 url 路径与匹配规则不相符返回 null，第二个 url 路径与匹配规则相符，返回一个数组。</p>
+<h5 id="3-parse"><a href="#3-parse" class="headerlink" title="3. parse()"></a>3. parse()</h5><p>作用：解析 url 字符串中的参数部分（:id）。</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">var pathToRegexp &#x3D; require(&#39;path-to-regexp&#39;);</span><br><span class="line"></span><br><span class="line">var url &#x3D; &#39;&#x2F;user&#x2F;:id&#39;;</span><br><span class="line">console.log(pathToRegexp.parse(url));</span><br></pre></td></tr></table></figure>
+<p>打印结果如下：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">[ &#39;&#x2F;user&#39;,</span><br><span class="line">  &#123; name: &#39;id&#39;,</span><br><span class="line">    prefix: &#39;&#x2F;&#39;,</span><br><span class="line">    delimiter: &#39;&#x2F;&#39;,</span><br><span class="line">    optional: false,</span><br><span class="line">    repeat: false,</span><br><span class="line">    partial: false,</span><br><span class="line">    pattern: &#39;[^\\&#x2F;]+?&#39; &#125; ]</span><br></pre></td></tr></table></figure>
+<p>说明：返回一个数组，从第二个数据可以就可以得到 url 地址携带参数的属性名称（item.name）。</p>
+<p>当然，url 中携带参数出了 :id 这种形式，还有 /user?id=11 这种，使用 parse() 方法解析自行查看结果。</p>
+<h5 id="4-compile"><a href="#4-compile" class="headerlink" title="4. compile()"></a>4. compile()</h5><p>作用：快速填充 url 字符串的参数值。</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">var pathToRegexp &#x3D; require(&#39;path-to-regexp&#39;)</span><br><span class="line"></span><br><span class="line">var url &#x3D; &#39;&#x2F;user&#x2F;:id&#x2F;:name&#39;</span><br><span class="line">var data &#x3D; &#123;id: 10001, name: &#39;bob&#39;&#125;</span><br><span class="line">console.log(pathToRegexp.compile(url)(data))</span><br></pre></td></tr></table></figure>
+<p>打印结果：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">&#x2F;user&#x2F;10001&#x2F;bob</span><br></pre></td></tr></table></figure>
       
     </div>
 
@@ -1673,7 +1631,7 @@
 
 
   <nav class="pagination">
-    <a class="extend prev" rel="prev" href="/nirvana/page/6/"><i class="fa fa-angle-left" aria-label="上一页"></i></a><a class="page-number" href="/nirvana/">1</a><span class="space">&hellip;</span><a class="page-number" href="/nirvana/page/6/">6</a><span class="page-number current">7</span><a class="page-number" href="/nirvana/page/8/">8</a><span class="space">&hellip;</span><a class="page-number" href="/nirvana/page/21/">21</a><a class="extend next" rel="next" href="/nirvana/page/8/"><i class="fa fa-angle-right" aria-label="下一页"></i></a>
+    <a class="extend prev" rel="prev" href="/nirvana/page/6/"><i class="fa fa-angle-left" aria-label="上一页"></i></a><a class="page-number" href="/nirvana/">1</a><span class="space">&hellip;</span><a class="page-number" href="/nirvana/page/6/">6</a><span class="page-number current">7</span><a class="page-number" href="/nirvana/page/8/">8</a><span class="space">&hellip;</span><a class="page-number" href="/nirvana/page/25/">25</a><a class="extend next" rel="next" href="/nirvana/page/8/"><i class="fa fa-angle-right" aria-label="下一页"></i></a>
   </nav>
 
 
@@ -1719,14 +1677,14 @@
       <i class="fa fa-chart-line"></i>
     </span>
       <span>站点总字数：</span>
-    <span title="站点总字数">595k</span>
+    <span title="站点总字数">736k</span>
   </span>
   <span class="post-meta-item">
     <span class="post-meta-item-icon">
       <i class="fa fa-coffee"></i>
     </span>
       <span>站点阅读时长 &asymp;</span>
-    <span title="站点阅读时长">9:01</span>
+    <span title="站点阅读时长">11:09</span>
   </span>
 </div>
   <div class="powered-by">由 <a href="https://hexo.io/" class="theme-link" rel="noopener" target="_blank">Hexo</a> & <a href="https://theme-next.js.org/" class="theme-link" rel="noopener" target="_blank">NexT.Gemini</a> 强力驱动

@@ -1,0 +1,558 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=2">
+<meta name="theme-color" content="#222">
+<meta name="generator" content="Hexo 5.4.0">
+ <meta name="referrer" content="no-referrer"/>
+
+  <link rel="apple-touch-icon" sizes="180x180" href="/nirvana/images/apple-touch-icon-next.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="/nirvana/images/favicon-32x32-next.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="/nirvana/images/favicon-16x16-next.png">
+  <link rel="mask-icon" href="/nirvana/images/logo.svg" color="#222">
+
+<link rel="stylesheet" href="/nirvana/css/main.css">
+
+
+
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@5.15.2/css/all.min.css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/animate.css@3.1.1/animate.min.css">
+
+<script class="hexo-configurations">
+    var NexT = window.NexT || {};
+    var CONFIG = {"hostname":"lzhwweb.github.io","root":"/nirvana/","images":"/nirvana/images","scheme":"Gemini","version":"8.2.2","exturl":false,"sidebar":{"position":"left","display":"post","padding":18,"offset":12},"copycode":false,"bookmark":{"enable":true,"color":"#222","save":"auto"},"fancybox":false,"mediumzoom":false,"lazyload":false,"pangu":false,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},"motion":{"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"fadeInDown","post_body":"fadeInDown","coll_header":"fadeInLeft","sidebar":"fadeInUp"}},"prism":false,"i18n":{"placeholder":"搜索...","empty":"没有找到任何搜索结果：${query}","hits_time":"找到 ${hits} 个搜索结果（用时 ${time} 毫秒）","hits":"找到 ${hits} 个搜索结果"},"path":"/nirvana/search.xml","localsearch":{"enable":true,"trigger":"auto","top_n_per_article":1,"unescape":false,"preload":false}};
+  </script>
+<meta name="description" content="概要设计 -系统名称：*****文档修订历史|版本号 | 作者 |备注    |修订日期| |  —-  | —-  |  —-  | —-  ||v1.0|****|创建模版    |2020-7-29|   1. 需求背景【【描述需求背景或者开发重构的目的&#x2F;出发点】原先大家写文档都是本机写文档，然后评审时统一交给主持人进行投影，文档版本管理也比较混乱 2. 需求分析2.1. 产品需求分析【产品">
+<meta property="og:type" content="article">
+<meta property="og:title" content="概要设计 - 模版">
+<meta property="og:url" content="https://lzhwweb.github.io/nirvana/javascript/%E5%89%8D%E7%AB%AF/%E6%A6%82%E8%A6%81%E8%AE%BE%E8%AE%A1%E6%A8%A1%E7%89%88/index.html">
+<meta property="og:site_name" content="涅槃快乐是金">
+<meta property="og:description" content="概要设计 -系统名称：*****文档修订历史|版本号 | 作者 |备注    |修订日期| |  —-  | —-  |  —-  | —-  ||v1.0|****|创建模版    |2020-7-29|   1. 需求背景【【描述需求背景或者开发重构的目的&#x2F;出发点】原先大家写文档都是本机写文档，然后评审时统一交给主持人进行投影，文档版本管理也比较混乱 2. 需求分析2.1. 产品需求分析【产品">
+<meta property="og:locale" content="zh_CN">
+<meta property="article:published_time" content="2021-06-10T08:35:18.000Z">
+<meta property="article:modified_time" content="2021-06-10T09:02:24.825Z">
+<meta property="article:author" content="nirvana">
+<meta property="article:tag" content="前端,javascript,node,git,webpack,css">
+<meta name="twitter:card" content="summary">
+
+
+<link rel="canonical" href="https://lzhwweb.github.io/nirvana/javascript/%E5%89%8D%E7%AB%AF/%E6%A6%82%E8%A6%81%E8%AE%BE%E8%AE%A1%E6%A8%A1%E7%89%88/">
+
+
+<script class="page-configurations">
+  // https://hexo.io/docs/variables.html
+  CONFIG.page = {
+    sidebar: "",
+    isHome : false,
+    isPost : true,
+    lang   : 'zh-CN'
+  };
+</script>
+<title>概要设计 - 模版 | 涅槃快乐是金</title>
+  
+
+
+
+
+  <noscript>
+  <style>
+  body { margin-top: 2rem; }
+
+  .use-motion .menu-item,
+  .use-motion .sidebar,
+  .use-motion .post-block,
+  .use-motion .pagination,
+  .use-motion .comments,
+  .use-motion .post-header,
+  .use-motion .post-body,
+  .use-motion .collection-header {
+    visibility: visible;
+  }
+
+  .use-motion .header,
+  .use-motion .site-brand-container .toggle,
+  .use-motion .footer { opacity: initial; }
+
+  .use-motion .site-title,
+  .use-motion .site-subtitle,
+  .use-motion .custom-logo-image {
+    opacity: initial;
+    top: initial;
+  }
+
+  .use-motion .logo-line {
+    transform: scaleX(1);
+  }
+
+  .search-pop-overlay, .sidebar-nav { display: none; }
+  .sidebar-panel { display: block; }
+  </style>
+</noscript>
+
+</head>
+
+<body itemscope itemtype="http://schema.org/WebPage" class="use-motion">
+  <div class="headband"></div>
+
+  <main class="main">
+    <header class="header" itemscope itemtype="http://schema.org/WPHeader">
+      <div class="header-inner"><div class="site-brand-container">
+  <div class="site-nav-toggle">
+    <div class="toggle" aria-label="切换导航栏" role="button">
+        <span class="toggle-line"></span>
+        <span class="toggle-line"></span>
+        <span class="toggle-line"></span>
+    </div>
+  </div>
+
+  <div class="site-meta">
+
+    <a href="/nirvana/" class="brand" rel="start">
+      <i class="logo-line"></i>
+      <h1 class="site-title">涅槃快乐是金</h1>
+      <i class="logo-line"></i>
+    </a>
+  </div>
+
+  <div class="site-nav-right">
+    <div class="toggle popup-trigger">
+        <i class="fa fa-search fa-fw fa-lg"></i>
+    </div>
+  </div>
+</div>
+
+
+
+<nav class="site-nav">
+  <ul class="main-menu menu">
+        <li class="menu-item menu-item-home"><a href="/nirvana/" rel="section">首页</a></li>
+        <li class="menu-item menu-item-git"><a href="/nirvana/categories/git" rel="section">git</a></li>
+        <li class="menu-item menu-item-linux"><a href="/nirvana/categories/linux" rel="section">linux</a></li>
+        <li class="menu-item menu-item-android"><a href="/nirvana/categories/android" rel="section">android</a></li>
+        <li class="menu-item menu-item-随笔"><a href="/nirvana/categories/informal" rel="section">随笔</a></li>
+        <li class="menu-item menu-item-mac"><a href="/nirvana/categories/mac" rel="section">mac</a></li>
+        <li class="menu-item menu-item-react-native"><a href="/nirvana/categories/reactnative" rel="section">react-native</a></li>
+        <li class="menu-item menu-item-算法"><a href="/nirvana/categories/algorithm" rel="section">算法</a></li>
+        <li class="menu-item menu-item-读书笔记"><a href="/nirvana/categories/note" rel="section">读书笔记</a></li>
+        <li class="menu-item menu-item-开发工具"><a href="/nirvana/categories/tool" rel="section">开发工具</a></li>
+        <li class="menu-item menu-item-设计模式(ts)"><a href="/nirvana/categories/DesignPattern" rel="section">设计模式(TS)</a></li>
+        <li class="menu-item menu-item-前端"><a href="/nirvana/categories/javascript" rel="section">前端</a></li>
+        <li class="menu-item menu-item-webpack"><a href="/nirvana/categories/webpack" rel="section">webpack</a></li>
+      <li class="menu-item menu-item-search">
+        <a role="button" class="popup-trigger"><i class="fa fa-search fa-fw"></i>搜索
+        </a>
+      </li>
+  </ul>
+</nav>
+
+
+
+  <div class="search-pop-overlay">
+    <div class="popup search-popup"><div class="search-header">
+  <span class="search-icon">
+    <i class="fa fa-search"></i>
+  </span>
+  <div class="search-input-container">
+    <input autocomplete="off" autocapitalize="off" maxlength="80"
+           placeholder="搜索..." spellcheck="false"
+           type="search" class="search-input">
+  </div>
+  <span class="popup-btn-close" role="button">
+    <i class="fa fa-times-circle"></i>
+  </span>
+</div>
+<div class="search-result-container no-result">
+  <div class="search-result-icon">
+    <i class="fa fa-spinner fa-pulse fa-5x"></i>
+  </div>
+</div>
+
+    </div>
+  </div>
+
+</div>
+        
+  
+  <div class="toggle sidebar-toggle" role="button">
+    <span class="toggle-line"></span>
+    <span class="toggle-line"></span>
+    <span class="toggle-line"></span>
+  </div>
+
+  <aside class="sidebar">
+
+    <div class="sidebar-inner sidebar-nav-active sidebar-toc-active">
+      <ul class="sidebar-nav">
+        <li class="sidebar-nav-toc">
+          文章目录
+        </li>
+        <li class="sidebar-nav-overview">
+          站点概览
+        </li>
+      </ul>
+
+      <div class="sidebar-panel-container">
+        <!--noindex-->
+        <div class="post-toc-wrap sidebar-panel">
+            <div class="post-toc animated"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#%E6%A6%82%E8%A6%81%E8%AE%BE%E8%AE%A1"><span class="nav-text">概要设计 -</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#1-%E9%9C%80%E6%B1%82%E8%83%8C%E6%99%AF"><span class="nav-text">1. 需求背景</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#2-%E9%9C%80%E6%B1%82%E5%88%86%E6%9E%90"><span class="nav-text">2. 需求分析</span></a><ol class="nav-child"><li class="nav-item nav-level-5"><a class="nav-link" href="#2-1-%E4%BA%A7%E5%93%81%E9%9C%80%E6%B1%82%E5%88%86%E6%9E%90%E3%80%90%E4%BA%A7%E5%93%81%E9%9C%80%E6%B1%82%E9%80%82%E7%94%A8%E3%80%91"><span class="nav-text">2.1. 产品需求分析【产品需求适用】</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#2-2-%E6%8A%80%E6%9C%AF%E6%8A%80%E6%9C%AF%E9%9C%80%E6%B1%82%E5%88%86%E6%9E%90%E3%80%90%E6%8A%80%E6%9C%AF%E4%BC%98%E5%8C%96%E9%80%82%E7%94%A8%E3%80%91"><span class="nav-text">2.2. 技术技术需求分析【技术优化适用】</span></a></li></ol></li></ol></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#3-%E6%95%B4%E4%BD%93%E5%AE%9E%E7%8E%B0%E6%96%B9%E6%A1%88"><span class="nav-text">3. 整体实现方案</span></a><ol class="nav-child"><li class="nav-item nav-level-5"><a class="nav-link" href="#3-1-%E6%95%B4%E4%BD%93%E6%A1%86%E6%9E%B6%E5%9B%BE"><span class="nav-text">3.1. 整体框架图</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#3-2-%E6%A0%B8%E5%BF%83%E5%8A%9F%E8%83%BD%E6%B5%81%E7%A8%8B%E5%9B%BE"><span class="nav-text">3.2. 核心功能流程图</span></a></li></ol></li></ol></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#4-%E6%A8%A1%E5%9D%97%E8%AE%BE%E8%AE%A1"><span class="nav-text">4. 模块设计</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#5-%E6%8E%A5%E5%8F%A3%E8%AE%BE%E8%AE%A1"><span class="nav-text">5. 接口设计</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#6-%E5%BC%82%E5%B8%B8%E6%B5%81%E7%A8%8B%E8%AE%BE%E8%AE%A1"><span class="nav-text">6.异常流程设计</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#7-%E9%A3%8E%E9%99%A9%E5%8F%8A%E5%BA%94%E5%AF%B9%E6%96%B9%E6%A1%88"><span class="nav-text">7. 风险及应对方案</span></a><ol class="nav-child"><li class="nav-item nav-level-5"><a class="nav-link" href="#7-1-%E8%B5%84%E6%8D%9F%E9%A3%8E%E9%99%A9%E5%88%86%E6%9E%90"><span class="nav-text">7.1. 资损风险分析</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#7-2-%E5%AE%89%E5%85%A8%E9%A3%8E%E9%99%A9%E5%88%86%E6%9E%90"><span class="nav-text">7.2. 安全风险分析</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#7-3-%E6%8E%A5%E5%8F%A3%E6%94%B9%E5%8A%A8%E6%98%AF%E5%90%A6%E5%85%BC%E5%AE%B9%E8%80%81%E7%89%88%E6%9C%AC"><span class="nav-text">7.3. 接口改动是否兼容老版本</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#7-4-%E4%BB%A3%E7%A0%81%E6%94%B9%E5%8A%A8%E6%98%AF%E5%90%A6%E5%85%BC%E5%AE%B9%E8%80%81%E7%89%88"><span class="nav-text">7.4. 代码改动是否兼容老版</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#7-5-%E8%B7%AF%E7%94%B1%E4%BF%AE%E6%94%B9%E5%88%A0%E9%99%A4%E6%98%AF%E5%90%A6%E5%B7%B2%E6%A3%80%E6%9F%A5%E9%A1%B5%E9%9D%A2%E6%8A%95%E6%94%BE%E6%83%85%E5%86%B5"><span class="nav-text">7.5. 路由修改删除是否已检查页面投放情况</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#7-6-%E5%85%B6%E5%AE%83%E9%A3%8E%E9%99%A9%E8%AF%B4%E6%98%8E"><span class="nav-text">7.6. 其它风险说明</span></a></li></ol></li></ol></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#8-%E5%90%84%E8%8A%82%E7%82%B9%E9%87%8C%E7%A8%8B%E7%A2%91"><span class="nav-text">8. 各节点里程碑</span></a></li></ol></li></ol></div>
+        </div>
+        <!--/noindex-->
+
+        <div class="site-overview-wrap sidebar-panel">
+          <div class="site-author site-overview-item animated" itemprop="author" itemscope itemtype="http://schema.org/Person">
+    <img class="site-author-image" itemprop="image" alt="nirvana"
+      src="/nirvana/images/headphoto.jpeg">
+  <p class="site-author-name" itemprop="name">nirvana</p>
+  <div class="site-description" itemprop="description">个人学习笔记</div>
+</div>
+<div class="site-state-wrap site-overview-item animated">
+  <nav class="site-state">
+      <div class="site-state-item site-state-posts">
+          <a href="/nirvana/archives">
+          <span class="site-state-item-count">249</span>
+          <span class="site-state-item-name">日志</span>
+        </a>
+      </div>
+      <div class="site-state-item site-state-categories">
+        <span class="site-state-item-count">12</span>
+        <span class="site-state-item-name">分类</span>
+      </div>
+  </nav>
+</div>
+  <div class="links-of-author site-overview-item animated">
+      <span class="links-of-author-item">
+        <a href="https://github.com/lzhwWeb" title="GitHub → https:&#x2F;&#x2F;github.com&#x2F;lzhwWeb" rel="noopener" target="_blank"><i class="fab fa-github fa-fw"></i></a>
+      </span>
+  </div>
+
+
+
+        </div>
+      </div>
+        <div class="back-to-top animated" role="button">
+          <i class="fa fa-arrow-up"></i>
+          <span>0%</span>
+        </div>
+    </div>
+  </aside>
+  <div class="sidebar-dimmer"></div>
+
+
+    </header>
+
+    
+  <div class="reading-progress-bar"></div>
+  <a role="button" class="book-mark-link book-mark-link-fixed"></a>
+
+<noscript>
+  <div class="noscript-warning">Theme NexT works best with JavaScript enabled</div>
+</noscript>
+
+
+    <div class="main-inner post posts-expand">
+
+
+  
+
+
+<div class="post-block">
+  
+  
+
+  <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="zh-CN">
+    <link itemprop="mainEntityOfPage" href="https://lzhwweb.github.io/nirvana/javascript/%E5%89%8D%E7%AB%AF/%E6%A6%82%E8%A6%81%E8%AE%BE%E8%AE%A1%E6%A8%A1%E7%89%88/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/nirvana/images/headphoto.jpeg">
+      <meta itemprop="name" content="nirvana">
+      <meta itemprop="description" content="个人学习笔记">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="涅槃快乐是金">
+    </span>
+      <header class="post-header">
+        <h1 class="post-title" itemprop="name headline">
+          概要设计 - 模版
+        </h1>
+
+        <div class="post-meta-container">
+          <div class="post-meta">
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-calendar"></i>
+      </span>
+      <span class="post-meta-item-text">发表于</span>
+      
+
+      <time title="创建时间：2021-06-10 16:35:18 / 修改时间：17:02:24" itemprop="dateCreated datePublished" datetime="2021-06-10T16:35:18+08:00">2021-06-10</time>
+    </span>
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-folder"></i>
+      </span>
+      <span class="post-meta-item-text">分类于</span>
+        <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+          <a href="/nirvana/categories/javascript/" itemprop="url" rel="index"><span itemprop="name">javascript</span></a>
+        </span>
+    </span>
+
+  
+    <span id="/nirvana/javascript/%E5%89%8D%E7%AB%AF/%E6%A6%82%E8%A6%81%E8%AE%BE%E8%AE%A1%E6%A8%A1%E7%89%88/" class="post-meta-item leancloud_visitors" data-flag-title="概要设计 - 模版" title="阅读次数">
+      <span class="post-meta-item-icon">
+        <i class="far fa-eye"></i>
+      </span>
+      <span class="post-meta-item-text">阅读次数：</span>
+      <span class="leancloud-visitors-count"></span>
+    </span>
+      </div>
+      <div class="post-meta">
+    <span class="post-meta-item" title="本文字数">
+      <span class="post-meta-item-icon">
+        <i class="far fa-file-word"></i>
+      </span>
+      <span class="post-meta-item-text">本文字数：</span>
+      <span>858</span>
+    </span>
+    <span class="post-meta-item" title="阅读时长">
+      <span class="post-meta-item-icon">
+        <i class="far fa-clock"></i>
+      </span>
+      <span class="post-meta-item-text">阅读时长 &asymp;</span>
+      <span>1 分钟</span>
+    </span>
+</div>
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+        <h1 id="概要设计"><a href="#概要设计" class="headerlink" title="概要设计 -"></a>概要设计 -</h1><p>系统名称：*****<br>文档修订历史<br>|版本号 | 作者 |备注    |修订日期|<br> |  —-  | —-  |  —-  | —-  |<br>|v1.0|****|创建模版    |2020-7-29|</p>
+<p> </p>
+<h2 id="1-需求背景"><a href="#1-需求背景" class="headerlink" title="1. 需求背景"></a>1. 需求背景</h2><p>【【描述需求背景或者开发重构的目的/出发点】<br>原先大家写文档都是本机写文档，然后评审时统一交给主持人进行投影，文档版本管理也比较混乱</p>
+<h2 id="2-需求分析"><a href="#2-需求分析" class="headerlink" title="2. 需求分析"></a>2. 需求分析</h2><h5 id="2-1-产品需求分析【产品需求适用】"><a href="#2-1-产品需求分析【产品需求适用】" class="headerlink" title="2.1. 产品需求分析【产品需求适用】"></a>2.1. 产品需求分析【产品需求适用】</h5><p>【用于描述对产品提出的需求的理解和分析：产品定位、新增功能、业务目标等，避免对需求的理解和产品不一致，导致做无用功】<br>XXXX。。。</p>
+<h5 id="2-2-技术技术需求分析【技术优化适用】"><a href="#2-2-技术技术需求分析【技术优化适用】" class="headerlink" title="2.2. 技术技术需求分析【技术优化适用】"></a>2.2. 技术技术需求分析【技术优化适用】</h5><p>【用于描述对技术团队提出的技术需求的理解和分析：技术债务清理、市场反馈问题改善、性能体验优化、技术指标达成、技术方案更新等。此处应包含技术改善项目和大致的实现策略】<br>XXXX。。。</p>
+<h2 id="3-整体实现方案"><a href="#3-整体实现方案" class="headerlink" title="3. 整体实现方案"></a>3. 整体实现方案</h2><h5 id="3-1-整体框架图"><a href="#3-1-整体框架图" class="headerlink" title="3.1. 整体框架图"></a>3.1. 整体框架图</h5><p>【展示应用整体的框架图，包括整体结构、应用分层、模块解耦】<br>XXXX。。。
+ </p>
+<h5 id="3-2-核心功能流程图"><a href="#3-2-核心功能流程图" class="headerlink" title="3.2. 核心功能流程图"></a>3.2. 核心功能流程图</h5><p>【展示新增核心功能的流程图，帮助梳理整个功能的逻辑，减少编码过程中由于前期考虑不周导致的不稳定性和随机bug】<br>XXXX。。。
+ </p>
+<h2 id="4-模块设计"><a href="#4-模块设计" class="headerlink" title="4. 模块设计"></a>4. 模块设计</h2><p>【根据原型或者UX稿识别需要新增或修改的页面、模块、组件，尽量解耦】<br>XXXX。。。
+ </p>
+<h2 id="5-接口设计"><a href="#5-接口设计" class="headerlink" title="5. 接口设计"></a>5. 接口设计</h2><p>【列出所有关联接口及功能描述，详细参数交互后续补充，标注新增或修改】<br>XXXX。。。</p>
+<h2 id="6-异常流程设计"><a href="#6-异常流程设计" class="headerlink" title="6.异常流程设计"></a>6.异常流程设计</h2><p>【列出所有交互异常流程处理方案，接口异常处理方案】</p>
+<h2 id="7-风险及应对方案"><a href="#7-风险及应对方案" class="headerlink" title="7. 风险及应对方案"></a>7. 风险及应对方案</h2><p>【列出开发相关的风险项：资损风险、安全风险、指标达成风险、进度风险等，以及针对各项风险的应对方案。如设计中包含，需详细说明；如不包含，请写明【确认无此风险】</p>
+<h5 id="7-1-资损风险分析"><a href="#7-1-资损风险分析" class="headerlink" title="7.1. 资损风险分析"></a>7.1. 资损风险分析</h5><p>XXXX。。。
+ </p>
+<h5 id="7-2-安全风险分析"><a href="#7-2-安全风险分析" class="headerlink" title="7.2. 安全风险分析"></a>7.2. 安全风险分析</h5><p>XXXX。。。
+ </p>
+<h5 id="7-3-接口改动是否兼容老版本"><a href="#7-3-接口改动是否兼容老版本" class="headerlink" title="7.3. 接口改动是否兼容老版本"></a>7.3. 接口改动是否兼容老版本</h5><p>XXXX。。。
+ </p>
+<h5 id="7-4-代码改动是否兼容老版"><a href="#7-4-代码改动是否兼容老版" class="headerlink" title="7.4. 代码改动是否兼容老版"></a>7.4. 代码改动是否兼容老版</h5><p>XXXX。。。
+ </p>
+<h5 id="7-5-路由修改删除是否已检查页面投放情况"><a href="#7-5-路由修改删除是否已检查页面投放情况" class="headerlink" title="7.5. 路由修改删除是否已检查页面投放情况"></a>7.5. 路由修改删除是否已检查页面投放情况</h5><p>XXXX。。。
+ </p>
+<h5 id="7-6-其它风险说明"><a href="#7-6-其它风险说明" class="headerlink" title="7.6. 其它风险说明"></a>7.6. 其它风险说明</h5><p>XXXX。。。
+ </p>
+<h2 id="8-各节点里程碑"><a href="#8-各节点里程碑" class="headerlink" title="8. 各节点里程碑"></a>8. 各节点里程碑</h2><p>【列出各领域的关键事项及时间节点，以便各领域协同、项目透明、进度可预知】<br>XXXX。。。
+ </p>
+
+    </div>
+
+    
+    
+    
+
+    <footer class="post-footer">
+
+        
+
+          <div class="post-nav">
+            <div class="post-nav-item">
+                <a href="/nirvana/javascript/%E5%89%8D%E7%AB%AF/canvas%E5%89%8D%E7%AB%AF%E5%9B%BE%E7%89%87%E5%90%88%E6%88%90-Fabric/" rel="prev" title="canvas前端图片合成-Fabric.js">
+                  <i class="fa fa-chevron-left"></i> canvas前端图片合成-Fabric.js
+                </a>
+            </div>
+            <div class="post-nav-item">
+                <a href="/nirvana/javascript/%E5%89%8D%E7%AB%AF/%E4%BD%BF%E7%94%A8Whistle%E8%B0%83%E8%AF%95Web/" rel="next" title="使用Whistle调试Web">
+                  使用Whistle调试Web <i class="fa fa-chevron-right"></i>
+                </a>
+            </div>
+          </div>
+    </footer>
+  </article>
+</div>
+
+
+
+
+
+
+
+<script>
+  window.addEventListener('tabs:register', () => {
+    let { activeClass } = CONFIG.comments;
+    if (CONFIG.comments.storage) {
+      activeClass = localStorage.getItem('comments_active') || activeClass;
+    }
+    if (activeClass) {
+      const activeTab = document.querySelector(`a[href="#comment-${activeClass}"]`);
+      if (activeTab) {
+        activeTab.click();
+      }
+    }
+  });
+  if (CONFIG.comments.storage) {
+    window.addEventListener('tabs:click', event => {
+      if (!event.target.matches('.tabs-comment .tab-content .tab-pane')) return;
+      const commentClass = event.target.classList[1];
+      localStorage.setItem('comments_active', commentClass);
+    });
+  }
+</script>
+</div>
+  </main>
+
+  <footer class="footer">
+    <div class="footer-inner">
+
+
+<div class="copyright">
+  &copy; 
+  <span itemprop="copyrightYear">2021</span>
+  <span class="with-love">
+    <i class="fa fa-heart"></i>
+  </span>
+  <span class="author" itemprop="copyrightHolder">nirvana</span>
+</div>
+<div class="wordcount">
+  <span class="post-meta-item">
+    <span class="post-meta-item-icon">
+      <i class="fa fa-chart-line"></i>
+    </span>
+      <span>站点总字数：</span>
+    <span title="站点总字数">736k</span>
+  </span>
+  <span class="post-meta-item">
+    <span class="post-meta-item-icon">
+      <i class="fa fa-coffee"></i>
+    </span>
+      <span>站点阅读时长 &asymp;</span>
+    <span title="站点阅读时长">11:09</span>
+  </span>
+</div>
+  <div class="powered-by">由 <a href="https://hexo.io/" class="theme-link" rel="noopener" target="_blank">Hexo</a> & <a href="https://theme-next.js.org/" class="theme-link" rel="noopener" target="_blank">NexT.Gemini</a> 强力驱动
+  </div>
+
+    </div>
+  </footer>
+
+  
+  <script src="https://cdn.jsdelivr.net/npm/animejs@3.2.1/lib/anime.min.js"></script>
+<script src="/nirvana/js/utils.js"></script><script src="/nirvana/js/motion.js"></script><script src="/nirvana/js/next-boot.js"></script><script src="/nirvana/js/bookmark.js"></script>
+
+  
+<script src="/nirvana/js/local-search.js"></script>
+
+
+
+
+
+
+  
+
+
+<script>
+  (function() {
+    function leancloudSelector(url) {
+      url = encodeURI(url);
+      return document.getElementById(url).querySelector('.leancloud-visitors-count');
+    }
+
+    function addCount(Counter) {
+      const visitors = document.querySelector('.leancloud_visitors');
+      const url = decodeURI(visitors.id);
+      const title = visitors.dataset.flagTitle;
+
+      Counter('get', '/classes/Counter?where=' + encodeURIComponent(JSON.stringify({ url })))
+        .then(response => response.json())
+        .then(({ results }) => {
+          if (results.length > 0) {
+            const counter = results[0];
+            leancloudSelector(url).innerText = counter.time + 1;
+            Counter('put', '/classes/Counter/' + counter.objectId, { time: { '__op': 'Increment', 'amount': 1 } })
+              .catch(error => {
+                console.error('Failed to save visitor count', error);
+              });
+          } else {
+              leancloudSelector(url).innerText = 'Counter not initialized! More info at console err msg.';
+              console.error('ATTENTION! LeanCloud counter has security bug, see how to solve it here: https://github.com/theme-next/hexo-leancloud-counter-security. \n However, you can still use LeanCloud without security, by setting `security` option to `false`.');
+            
+          }
+        })
+        .catch(error => {
+          console.error('LeanCloud Counter Error', error);
+        });
+    }
+
+    function showTime(Counter) {
+      const visitors = document.querySelectorAll('.leancloud_visitors');
+      const entries = [...visitors].map(element => {
+        return decodeURI(element.id);
+      });
+
+      Counter('get', '/classes/Counter?where=' + encodeURIComponent(JSON.stringify({ url: { '$in': entries } })))
+        .then(response => response.json())
+        .then(({ results }) => {
+          for (let url of entries) {
+            const target = results.find(item => item.url === url);
+            leancloudSelector(url).innerText = target ? target.time : 0;
+          }
+        })
+        .catch(error => {
+          console.error('LeanCloud Counter Error', error);
+        });
+    }
+
+    const { app_id, app_key, server_url } = {"enable":true,"app_id":"SPsNUvBhME7XmrjzCfHkUu3e-gzGzoHsz","app_key":"4TONafemiIzvJUwqLa7WveoL","server_url":"https://leancloud.cn","security":true,"betterPerformance":false};
+    function fetchData(api_server) {
+      const Counter = (method, url, data) => {
+        return fetch(`${api_server}/1.1${url}`, {
+          method,
+          headers: {
+            'X-LC-Id'     : app_id,
+            'X-LC-Key'    : app_key,
+            'Content-Type': 'application/json',
+          },
+          body: JSON.stringify(data)
+        });
+      };
+      if (CONFIG.page.isPost) {
+        if (CONFIG.hostname !== location.hostname) return;
+        addCount(Counter);
+      } else if (document.querySelectorAll('.post-title-link').length >= 1) {
+        showTime(Counter);
+      }
+    }
+
+    const api_server = app_id.slice(-9) === '-MdYXbMMI' ? `https://${app_id.slice(0, 8).toLowerCase()}.api.lncldglobal.com` : server_url;
+
+    if (api_server) {
+      fetchData(api_server);
+    } else {
+      fetch('https://app-router.leancloud.cn/2/route?appId=' + app_id)
+        .then(response => response.json())
+        .then(({ api_server }) => {
+          fetchData('https://' + api_server);
+        });
+    }
+  })();
+</script>
+
+
+
+</body>
+</html>

@@ -207,12 +207,12 @@
   <nav class="site-state">
       <div class="site-state-item site-state-posts">
           <a href="/nirvana/archives">
-          <span class="site-state-item-count">209</span>
+          <span class="site-state-item-count">249</span>
           <span class="site-state-item-name">日志</span>
         </a>
       </div>
       <div class="site-state-item site-state-categories">
-        <span class="site-state-item-count">13</span>
+        <span class="site-state-item-count">12</span>
         <span class="site-state-item-name">分类</span>
       </div>
   </nav>
@@ -257,7 +257,7 @@
   
 
   <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="">
-    <link itemprop="mainEntityOfPage" href="https://lzhwweb.github.io/nirvana/linux/linux/nginx%E8%87%AA%E5%8A%A8%E6%B7%BB%E5%8A%A0%E5%86%85%E7%BD%91%E7%AB%AF%E5%8F%A3/">
+    <link itemprop="mainEntityOfPage" href="https://lzhwweb.github.io/nirvana/reactnative/react-native/react-native-0-63%E5%90%AF%E5%8A%A8%E9%97%AE%E9%A2%98/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="image" content="/nirvana/images/headphoto.jpeg">
@@ -270,7 +270,7 @@
     </span>
       <header class="post-header">
         <h2 class="post-title" itemprop="name headline">
-          <a href="/nirvana/linux/linux/nginx%E8%87%AA%E5%8A%A8%E6%B7%BB%E5%8A%A0%E5%86%85%E7%BD%91%E7%AB%AF%E5%8F%A3/" class="post-title-link" itemprop="url">nginx自动添加内网端口</a>
+          <a href="/nirvana/reactnative/react-native/react-native-0-63%E5%90%AF%E5%8A%A8%E9%97%AE%E9%A2%98/" class="post-title-link" itemprop="url">react-native-0-63启动问题</a>
         </h2>
 
         <div class="post-meta-container">
@@ -280,28 +280,22 @@
         <i class="far fa-calendar"></i>
       </span>
       <span class="post-meta-item-text">发表于</span>
+      
 
-      <time title="创建时间：2021-03-09 21:12:40" itemprop="dateCreated datePublished" datetime="2021-03-09T21:12:40+08:00">2021-03-09</time>
+      <time title="创建时间：2021-03-10 21:12:40 / 修改时间：13:43:55" itemprop="dateCreated datePublished" datetime="2021-03-10T21:12:40+08:00">2021-03-10</time>
     </span>
-      <span class="post-meta-item">
-        <span class="post-meta-item-icon">
-          <i class="far fa-calendar-check"></i>
-        </span>
-        <span class="post-meta-item-text">更新于</span>
-        <time title="修改时间：2021-03-10 13:43:55" itemprop="dateModified" datetime="2021-03-10T13:43:55+08:00">2021-03-10</time>
-      </span>
     <span class="post-meta-item">
       <span class="post-meta-item-icon">
         <i class="far fa-folder"></i>
       </span>
       <span class="post-meta-item-text">分类于</span>
         <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-          <a href="/nirvana/categories/linux/" itemprop="url" rel="index"><span itemprop="name">linux</span></a>
+          <a href="/nirvana/categories/reactnative/" itemprop="url" rel="index"><span itemprop="name">reactnative</span></a>
         </span>
     </span>
 
   
-    <span id="/nirvana/linux/linux/nginx%E8%87%AA%E5%8A%A8%E6%B7%BB%E5%8A%A0%E5%86%85%E7%BD%91%E7%AB%AF%E5%8F%A3/" class="post-meta-item leancloud_visitors" data-flag-title="nginx自动添加内网端口" title="阅读次数">
+    <span id="/nirvana/reactnative/react-native/react-native-0-63%E5%90%AF%E5%8A%A8%E9%97%AE%E9%A2%98/" class="post-meta-item leancloud_visitors" data-flag-title="react-native-0-63启动问题" title="阅读次数">
       <span class="post-meta-item-icon">
         <i class="far fa-eye"></i>
       </span>
@@ -315,7 +309,7 @@
         <i class="far fa-file-word"></i>
       </span>
       <span class="post-meta-item-text">本文字数：</span>
-      <span>346</span>
+      <span>520</span>
     </span>
     <span class="post-meta-item" title="阅读时长">
       <span class="post-meta-item-icon">
@@ -333,11 +327,7 @@
     
     
     <div class="post-body" itemprop="articleBody">
-          <h2 id="现象："><a href="#现象：" class="headerlink" title="现象："></a>现象：</h2><p>1.内网nginx服务器提供web的端口为8080；<br>2.通过路由的转换，将8080端口映射为外网的80端口（<code>www.test.com</code>）；<br>3.访问二级目录<code>www.test.com/test</code>,此时nginx会出现访问出错，并自动更改端口为内网的8080，即<code>www.test.com:8080/test/</code>；<br>4.排除了nginx自动添加斜杠的问题，因为nginx从0.8.48这个版本后就已经设置为自动添加了，即</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">server_name_in_redirect off;&#x2F;&#x2F;默认是off了</span><br></pre></td></tr></table></figure>
-<h2 id="原因："><a href="#原因：" class="headerlink" title="原因："></a>原因：</h2><p>通过端口映射时，nginx会自动添加内网端口，修改路径导致路径访问出错；</p>
-<h2 id="解决："><a href="#解决：" class="headerlink" title="解决："></a>解决：</h2><p>在server里面加入</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">port_in_redirect off;&#x2F;&#x2F;关闭自动添加端口</span><br></pre></td></tr></table></figure>
+          <p>1、<code>OpenSSL-Universal</code> requires CocoaPods version <code>&gt;= &quot;1.9</code>“<br>podinstall时提示需要把CocoaPods升级到1.9，但是通过brew install CocoaPods，发现安装的版本是1.6.1，brew upgrade CocoaPods 发现版本无法升级，后来查到1.9的版本需要通过<code>gem install -n /usr/local/bin cocoapods --pre</code>才能安装最新的版本<br>2、Typedef redefinition with different types (‘uint8_t’ (aka ‘unsigned char’) vs ‘enum clockid_t’)<br>changing <code>iOS Deployment Target</code> of <code>Flipper-Folly Pods</code> to “iOS 9.0”, this error disappeared.<br><a target="_blank" rel="noopener" href="https://user-images.githubusercontent.com/3139234/78309578-52984600-7586-11ea-9d27-cefdc6e7ca0f.png"><img src="https://upload-images.jianshu.io/upload_images/10024246-e337b36acb480adc.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240"></a><br>3、 ‘event2/event-config.h’ file not found<br> Flipper-Folly的版本有问题，需要指定版本<br>use_flipper!修改为use_flipper!({ ‘Flipper-Folly’ =&gt; ‘2.3.0’ })<br>重新pod install即可</p>
 
       
     </div>
@@ -364,7 +354,7 @@
   
 
   <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="">
-    <link itemprop="mainEntityOfPage" href="https://lzhwweb.github.io/nirvana/git/git/git-code-count/">
+    <link itemprop="mainEntityOfPage" href="https://lzhwweb.github.io/nirvana/reactnative/react-native/iOS-RN-0-45%E4%BB%A5%E4%B8%8A%E7%89%88%E6%9C%AC%E7%BD%91%E7%BB%9C%E9%97%AE%E9%A2%98%E6%97%A0%E6%B3%95%E5%90%AF%E5%8A%A8/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="image" content="/nirvana/images/headphoto.jpeg">
@@ -377,7 +367,7 @@
     </span>
       <header class="post-header">
         <h2 class="post-title" itemprop="name headline">
-          <a href="/nirvana/git/git/git-code-count/" class="post-title-link" itemprop="url">git代码统计</a>
+          <a href="/nirvana/reactnative/react-native/iOS-RN-0-45%E4%BB%A5%E4%B8%8A%E7%89%88%E6%9C%AC%E7%BD%91%E7%BB%9C%E9%97%AE%E9%A2%98%E6%97%A0%E6%B3%95%E5%90%AF%E5%8A%A8/" class="post-title-link" itemprop="url">iOS-RN-0-45以上版本网络问题无法启动</a>
         </h2>
 
         <div class="post-meta-container">
@@ -387,28 +377,22 @@
         <i class="far fa-calendar"></i>
       </span>
       <span class="post-meta-item-text">发表于</span>
+      
 
-      <time title="创建时间：2021-03-09 21:12:40" itemprop="dateCreated datePublished" datetime="2021-03-09T21:12:40+08:00">2021-03-09</time>
+      <time title="创建时间：2021-03-10 21:12:40 / 修改时间：13:43:55" itemprop="dateCreated datePublished" datetime="2021-03-10T21:12:40+08:00">2021-03-10</time>
     </span>
-      <span class="post-meta-item">
-        <span class="post-meta-item-icon">
-          <i class="far fa-calendar-check"></i>
-        </span>
-        <span class="post-meta-item-text">更新于</span>
-        <time title="修改时间：2021-03-10 13:43:55" itemprop="dateModified" datetime="2021-03-10T13:43:55+08:00">2021-03-10</time>
-      </span>
     <span class="post-meta-item">
       <span class="post-meta-item-icon">
         <i class="far fa-folder"></i>
       </span>
       <span class="post-meta-item-text">分类于</span>
         <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-          <a href="/nirvana/categories/git/" itemprop="url" rel="index"><span itemprop="name">git</span></a>
+          <a href="/nirvana/categories/reactnative/" itemprop="url" rel="index"><span itemprop="name">reactnative</span></a>
         </span>
     </span>
 
   
-    <span id="/nirvana/git/git/git-code-count/" class="post-meta-item leancloud_visitors" data-flag-title="git代码统计" title="阅读次数">
+    <span id="/nirvana/reactnative/react-native/iOS-RN-0-45%E4%BB%A5%E4%B8%8A%E7%89%88%E6%9C%AC%E7%BD%91%E7%BB%9C%E9%97%AE%E9%A2%98%E6%97%A0%E6%B3%95%E5%90%AF%E5%8A%A8/" class="post-meta-item leancloud_visitors" data-flag-title="iOS-RN-0-45以上版本网络问题无法启动" title="阅读次数">
       <span class="post-meta-item-icon">
         <i class="far fa-eye"></i>
       </span>
@@ -422,7 +406,340 @@
         <i class="far fa-file-word"></i>
       </span>
       <span class="post-meta-item-text">本文字数：</span>
-      <span>1.7k</span>
+      <span>1k</span>
+    </span>
+    <span class="post-meta-item" title="阅读时长">
+      <span class="post-meta-item-icon">
+        <i class="far fa-clock"></i>
+      </span>
+      <span class="post-meta-item-text">阅读时长 &asymp;</span>
+      <span>1 分钟</span>
+    </span>
+</div>
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+          <p>RN iOS 0.45以上版本开始需要依赖一些第三方编译库，但这些库在国内下载都非常困难（一般的翻墙工具都很难下载）<br>未来RN不同版本可能依赖不同版本的第三方编译库，具体所需库和版本请查看<a target="_blank" rel="noopener" href="https://github.com/facebook/react-native/blob/master/scripts/ios-install-third-party.sh">ios-install-third-party.sh</a>文件，注意先把左上角的branch切换到对应的版本.</p>
+<p><img src="http://upload-images.jianshu.io/upload_images/10024246-4967270af295b740.jpg?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="1515804427550.jpg"></p>
+<p>在文件最下面找到需要第三方编译库</p>
+<p><img src="http://upload-images.jianshu.io/upload_images/10024246-182697a23377bd82.jpg?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="1515804585324.jpg"></p>
+<p>我现在使用的52版本的内容为</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">fetch_and_unpack glog-0.3.4.tar.gz https:&#x2F;&#x2F;github.com&#x2F;google&#x2F;glog&#x2F;archive&#x2F;v0.3.4.tar.gz 69f91cd5a1de35ead0bc4103ea87294b0206a456 &quot;\&quot;$SCRIPTDIR&#x2F;ios-configure-glog.sh\&quot;&quot;</span><br><span class="line">fetch_and_unpack double-conversion-1.1.5.tar.gz https:&#x2F;&#x2F;github.com&#x2F;google&#x2F;double-conversion&#x2F;archive&#x2F;v1.1.5.tar.gz 96a8aba1b4ce7d4a7a3c123be26c379c2fed1def</span><br><span class="line">fetch_and_unpack boost_1_63_0.tar.gz https:&#x2F;&#x2F;github.com&#x2F;react-native-community&#x2F;boost-for-react-native&#x2F;releases&#x2F;download&#x2F;v1.63.0-0&#x2F;boost_1_63_0.tar.gz c3f57e1d22a995e608983effbb752b54b6eab741</span><br><span class="line">fetch_and_unpack folly-2016.09.26.00.tar.gz https:&#x2F;&#x2F;github.com&#x2F;facebook&#x2F;folly&#x2F;archive&#x2F;v2016.09.26.00.tar.gz f3b928b5039235bad6cece638c597c6684d1e4e6</span><br></pre></td></tr></table></figure>
+
+<p>下载完后需要把文件copy到***~/.rncache***下，然后就可以运行RN程序了</p>
+
+      
+    </div>
+
+    
+    
+    
+
+    <footer class="post-footer">
+        <div class="post-eof"></div>
+      
+    </footer>
+  </article>
+</div>
+
+
+
+
+    
+
+
+<div class="post-block">
+  
+  
+
+  <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="">
+    <link itemprop="mainEntityOfPage" href="https://lzhwweb.github.io/nirvana/tool/%E5%BC%80%E5%8F%91%E5%B7%A5%E5%85%B7/VSCode%E8%AE%BE%E7%BD%AE%E5%A4%A7%E5%B0%8F%E5%86%99%E8%BD%AC%E6%8D%A2%E7%9A%84%E5%BF%AB%E6%8D%B7%E9%94%AE/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/nirvana/images/headphoto.jpeg">
+      <meta itemprop="name" content="nirvana">
+      <meta itemprop="description" content="个人学习笔记">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="涅槃快乐是金">
+    </span>
+      <header class="post-header">
+        <h2 class="post-title" itemprop="name headline">
+          <a href="/nirvana/tool/%E5%BC%80%E5%8F%91%E5%B7%A5%E5%85%B7/VSCode%E8%AE%BE%E7%BD%AE%E5%A4%A7%E5%B0%8F%E5%86%99%E8%BD%AC%E6%8D%A2%E7%9A%84%E5%BF%AB%E6%8D%B7%E9%94%AE/" class="post-title-link" itemprop="url">VSCode设置大小写转换的快捷键</a>
+        </h2>
+
+        <div class="post-meta-container">
+          <div class="post-meta">
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-calendar"></i>
+      </span>
+      <span class="post-meta-item-text">发表于</span>
+      
+
+      <time title="创建时间：2021-03-10 21:12:40 / 修改时间：13:43:55" itemprop="dateCreated datePublished" datetime="2021-03-10T21:12:40+08:00">2021-03-10</time>
+    </span>
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-folder"></i>
+      </span>
+      <span class="post-meta-item-text">分类于</span>
+        <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+          <a href="/nirvana/categories/tool/" itemprop="url" rel="index"><span itemprop="name">tool</span></a>
+        </span>
+    </span>
+
+  
+    <span id="/nirvana/tool/%E5%BC%80%E5%8F%91%E5%B7%A5%E5%85%B7/VSCode%E8%AE%BE%E7%BD%AE%E5%A4%A7%E5%B0%8F%E5%86%99%E8%BD%AC%E6%8D%A2%E7%9A%84%E5%BF%AB%E6%8D%B7%E9%94%AE/" class="post-meta-item leancloud_visitors" data-flag-title="VSCode设置大小写转换的快捷键" title="阅读次数">
+      <span class="post-meta-item-icon">
+        <i class="far fa-eye"></i>
+      </span>
+      <span class="post-meta-item-text">阅读次数：</span>
+      <span class="leancloud-visitors-count"></span>
+    </span>
+      </div>
+      <div class="post-meta">
+    <span class="post-meta-item" title="本文字数">
+      <span class="post-meta-item-icon">
+        <i class="far fa-file-word"></i>
+      </span>
+      <span class="post-meta-item-text">本文字数：</span>
+      <span>776</span>
+    </span>
+    <span class="post-meta-item" title="阅读时长">
+      <span class="post-meta-item-icon">
+        <i class="far fa-clock"></i>
+      </span>
+      <span class="post-meta-item-text">阅读时长 &asymp;</span>
+      <span>1 分钟</span>
+    </span>
+</div>
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+          <p>一 、默认情况下VS Code的编辑菜单或快捷键中没有 转换为大写，转换为小写的功能</p>
+<p>解决方案1：使用键盘配置，开启转换为小写，转换为大写的快捷键 </p>
+<p>以VS中的 快捷键为例：</p>
+<p>小写 -》Ctrl+Shift+l</p>
+<p>大写=》Ctrl+Shift+U</p>
+<p>自定义大小写转换的快捷键步骤如下:</p>
+<p> 1.点击【文件】-【首选项】-【键盘快捷方式】菜单。</p>
+<p><img src="https://upload-images.jianshu.io/upload_images/10024246-d5ee5749c318312e.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240"> </p>
+<p><img src="https://upload-images.jianshu.io/upload_images/10024246-423b8ab14aade804.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240"></p>
+<p>2.输入 “转换为大写”, 会出现搜索结果【转换为大写】,鼠标悬停在该结果上, 点击前面的”加号” 或 双击, 会弹出输入自定义快捷键的弹窗。</p>
+<p><img src="https://upload-images.jianshu.io/upload_images/10024246-60e4e6fcbe5fa6b2.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240"> </p>
+<p><img src="https://upload-images.jianshu.io/upload_images/10024246-3f1c888971fb2a73.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240"> </p>
+<p>3.在键盘上面按下Ctrl、Shift和u, 然后按Enter键, 即可成功绑定转换为大写快捷键。</p>
+<p><img src="https://upload-images.jianshu.io/upload_images/10024246-65a4b55675f8717b.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240"> </p>
+<p><img src="https://upload-images.jianshu.io/upload_images/10024246-9ecd4ce60718de32.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240"></p>
+<p>4.同理，搜索”转换为小写”, 鼠标悬停在结果上, 点击前面的”加号” 或 双击, 弹出设置快捷键的弹窗，在键盘上面按下Ctrl、Shift和l, 然后按Enter键, 即可成功绑定转换为小写快捷键。</p>
+<p><img src="https://upload-images.jianshu.io/upload_images/10024246-7f3e695948c286af.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240"></p>
+<hr>
+<p>##解决方案2，直接修改keybings.json 添加配置</p>
+<pre><code>&#123;
+    &quot;key&quot;: &quot;ctrl+shift+u&quot;,
+    &quot;command&quot;: &quot;editor.action.transformToUppercase&quot;,
+    &quot;when&quot;: &quot;editorTextFocus&quot;
+&#125;,
+&#123;
+    &quot;key&quot;: &quot;ctrl+shift+l&quot;,
+    &quot;command&quot;: &quot;editor.action.transformToLowercase&quot;,
+    &quot;when&quot;: &quot;editorTextFocus&quot;
+&#125;
+</code></pre>
+<p>最终设置的自定义的大小写转换快捷键如下: </p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">转换为大写: Ctrl+Shift+u</span><br><span class="line">转换为小写: Ctrl+Shift+l</span><br></pre></td></tr></table></figure>
+
+      
+    </div>
+
+    
+    
+    
+
+    <footer class="post-footer">
+        <div class="post-eof"></div>
+      
+    </footer>
+  </article>
+</div>
+
+
+
+
+    
+
+
+<div class="post-block">
+  
+  
+
+  <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="">
+    <link itemprop="mainEntityOfPage" href="https://lzhwweb.github.io/nirvana/tool/%E5%BC%80%E5%8F%91%E5%B7%A5%E5%85%B7/chrome-%E8%B4%A6%E5%8F%B7%E6%89%8B%E5%8A%A8%E5%90%8C%E6%AD%A5/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/nirvana/images/headphoto.jpeg">
+      <meta itemprop="name" content="nirvana">
+      <meta itemprop="description" content="个人学习笔记">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="涅槃快乐是金">
+    </span>
+      <header class="post-header">
+        <h2 class="post-title" itemprop="name headline">
+          <a href="/nirvana/tool/%E5%BC%80%E5%8F%91%E5%B7%A5%E5%85%B7/chrome-%E8%B4%A6%E5%8F%B7%E6%89%8B%E5%8A%A8%E5%90%8C%E6%AD%A5/" class="post-title-link" itemprop="url">chrome 账号手动同步</a>
+        </h2>
+
+        <div class="post-meta-container">
+          <div class="post-meta">
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-calendar"></i>
+      </span>
+      <span class="post-meta-item-text">发表于</span>
+      
+
+      <time title="创建时间：2021-03-10 21:12:40 / 修改时间：22:05:29" itemprop="dateCreated datePublished" datetime="2021-03-10T21:12:40+08:00">2021-03-10</time>
+    </span>
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-folder"></i>
+      </span>
+      <span class="post-meta-item-text">分类于</span>
+        <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+          <a href="/nirvana/categories/tool/" itemprop="url" rel="index"><span itemprop="name">tool</span></a>
+        </span>
+    </span>
+
+  
+    <span id="/nirvana/tool/%E5%BC%80%E5%8F%91%E5%B7%A5%E5%85%B7/chrome-%E8%B4%A6%E5%8F%B7%E6%89%8B%E5%8A%A8%E5%90%8C%E6%AD%A5/" class="post-meta-item leancloud_visitors" data-flag-title="chrome 账号手动同步" title="阅读次数">
+      <span class="post-meta-item-icon">
+        <i class="far fa-eye"></i>
+      </span>
+      <span class="post-meta-item-text">阅读次数：</span>
+      <span class="leancloud-visitors-count"></span>
+    </span>
+      </div>
+      <div class="post-meta">
+    <span class="post-meta-item" title="本文字数">
+      <span class="post-meta-item-icon">
+        <i class="far fa-file-word"></i>
+      </span>
+      <span class="post-meta-item-text">本文字数：</span>
+      <span>166</span>
+    </span>
+    <span class="post-meta-item" title="阅读时长">
+      <span class="post-meta-item-icon">
+        <i class="far fa-clock"></i>
+      </span>
+      <span class="post-meta-item-text">阅读时长 &asymp;</span>
+      <span>1 分钟</span>
+    </span>
+</div>
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+          <p>解决chrome不能自动同步问题，可以进行手动同步。</p>
+<p>不需要删除数据，不需要关闭账户！</p>
+<p>首先你懂得</p>
+<p>chrome地址栏中输入： chrome://sync-internals/<br>进行如图操作</p>
+<p>注意：目前这种方式是完全可行的，如果点击disable sync 再次点击 request 等待一会还是没有反应，且网络正常，请尝试关闭并打开一次浏览器再操作。<br><img src="https://upload-images.jianshu.io/upload_images/10024246-d2dfb140d7189280?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="image"><br><img src="https://upload-images.jianshu.io/upload_images/10024246-f0837051d08d3136?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="image"><br><img src="https://upload-images.jianshu.io/upload_images/10024246-c83c5ed3762650d6?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="image"></p>
+
+      
+    </div>
+
+    
+    
+    
+
+    <footer class="post-footer">
+        <div class="post-eof"></div>
+      
+    </footer>
+  </article>
+</div>
+
+
+
+
+    
+
+
+<div class="post-block">
+  
+  
+
+  <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="">
+    <link itemprop="mainEntityOfPage" href="https://lzhwweb.github.io/nirvana/tool/%E5%BC%80%E5%8F%91%E5%B7%A5%E5%85%B7/%E5%B8%B8%E7%94%A8%E7%9A%84VS-Code%E6%8F%92%E4%BB%B6/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/nirvana/images/headphoto.jpeg">
+      <meta itemprop="name" content="nirvana">
+      <meta itemprop="description" content="个人学习笔记">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="涅槃快乐是金">
+    </span>
+      <header class="post-header">
+        <h2 class="post-title" itemprop="name headline">
+          <a href="/nirvana/tool/%E5%BC%80%E5%8F%91%E5%B7%A5%E5%85%B7/%E5%B8%B8%E7%94%A8%E7%9A%84VS-Code%E6%8F%92%E4%BB%B6/" class="post-title-link" itemprop="url">常用的VS-Code插件</a>
+        </h2>
+
+        <div class="post-meta-container">
+          <div class="post-meta">
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-calendar"></i>
+      </span>
+      <span class="post-meta-item-text">发表于</span>
+      
+
+      <time title="创建时间：2021-03-10 21:12:40 / 修改时间：13:43:55" itemprop="dateCreated datePublished" datetime="2021-03-10T21:12:40+08:00">2021-03-10</time>
+    </span>
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-folder"></i>
+      </span>
+      <span class="post-meta-item-text">分类于</span>
+        <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+          <a href="/nirvana/categories/tool/" itemprop="url" rel="index"><span itemprop="name">tool</span></a>
+        </span>
+    </span>
+
+  
+    <span id="/nirvana/tool/%E5%BC%80%E5%8F%91%E5%B7%A5%E5%85%B7/%E5%B8%B8%E7%94%A8%E7%9A%84VS-Code%E6%8F%92%E4%BB%B6/" class="post-meta-item leancloud_visitors" data-flag-title="常用的VS-Code插件" title="阅读次数">
+      <span class="post-meta-item-icon">
+        <i class="far fa-eye"></i>
+      </span>
+      <span class="post-meta-item-text">阅读次数：</span>
+      <span class="leancloud-visitors-count"></span>
+    </span>
+      </div>
+      <div class="post-meta">
+    <span class="post-meta-item" title="本文字数">
+      <span class="post-meta-item-icon">
+        <i class="far fa-file-word"></i>
+      </span>
+      <span class="post-meta-item-text">本文字数：</span>
+      <span>2.1k</span>
     </span>
     <span class="post-meta-item" title="阅读时长">
       <span class="post-meta-item-icon">
@@ -440,37 +757,17 @@
     
     
     <div class="post-body" itemprop="articleBody">
-          <h2 id="命令行"><a href="#命令行" class="headerlink" title="命令行"></a>命令行</h2><h3 id="查看git上的个人代码量："><a href="#查看git上的个人代码量：" class="headerlink" title="查看git上的个人代码量："></a>查看git上的个人代码量：</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">git log --author&#x3D;&quot;username&quot; --pretty&#x3D;tformat: --numstat | awk &#39;&#123; add +&#x3D; $1; subs +&#x3D; $2; loc +&#x3D; $1 - $2 &#125; END &#123; printf &quot;added lines: %s, removed lines: %s, total lines: %s\n&quot;, add, subs, loc &#125;&#39; -</span><br></pre></td></tr></table></figure>
-
-<p>结果示例：(记得修改 username)</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">added lines: 120745, removed lines: 71738, total lines: 49007</span><br></pre></td></tr></table></figure>
-
-<h3 id="统计每个人增删行数"><a href="#统计每个人增删行数" class="headerlink" title="统计每个人增删行数"></a>统计每个人增删行数</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">git log --format&#x3D;&#39;%aN&#39; | sort -u | while read name; do echo -en &quot;$name\t&quot;; git log --author&#x3D;&quot;$name&quot; --pretty&#x3D;tformat: --numstat | awk &#39;&#123; add +&#x3D; $1; subs +&#x3D; $2; loc +&#x3D; $1 - $2 &#125; END &#123; printf &quot;added lines: %s, removed lines: %s, total lines: %s\n&quot;, add, subs, loc &#125;&#39; -; done</span><br></pre></td></tr></table></figure>
-
-<p>结果示例</p>
-<p><img src="https://upload-images.jianshu.io/upload_images/10024246-9d65172280d94945.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240"></p>
-<p>###统计时间段每个人增删行数</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">git log  --format&#x3D;&#39;%aN&#39; | sort -u | while read name; do echo -en &quot;$name\t&quot;; git log --author&#x3D;&quot;$name&quot; --pretty&#x3D;tformat:  --since &#x3D;&#x3D;2020-1-1 --until&#x3D;2020-2-15 --numstat | awk &#39;&#123; add +&#x3D; $1; subs +&#x3D; $2; loc +&#x3D; $1 - $2 &#125; END &#123; printf &quot;added lines: %s, removed lines: %s, total lines: %s\n&quot;, add, subs, loc &#125;&#39; -; done</span><br></pre></td></tr></table></figure>
-
-<h3 id="查看仓库提交者排名前-5"><a href="#查看仓库提交者排名前-5" class="headerlink" title="查看仓库提交者排名前 5"></a>查看仓库提交者排名前 5</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">git log --pretty&#x3D;&#39;%aN&#39; | sort | uniq -c | sort -k1 -n -r | head -n 5</span><br></pre></td></tr></table></figure>
-
-<h3 id="贡献值统计"><a href="#贡献值统计" class="headerlink" title="贡献值统计"></a>贡献值统计</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">git log --pretty&#x3D;&#39;%aN&#39; | sort -u | wc -l</span><br></pre></td></tr></table></figure>
-
-<h3 id="提交数统计"><a href="#提交数统计" class="headerlink" title="提交数统计"></a>提交数统计</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">git log --oneline | wc -l</span><br></pre></td></tr></table></figure>
-
-<h3 id="添加或修改的代码行数："><a href="#添加或修改的代码行数：" class="headerlink" title="添加或修改的代码行数："></a>添加或修改的代码行数：</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">git log --stat|perl -ne &#39;END &#123; print $c &#125; $c +&#x3D; $1 if &#x2F;(\d+) insertions&#x2F;&#39;</span><br></pre></td></tr></table></figure>
-
-<h2 id="使用gitstats"><a href="#使用gitstats" class="headerlink" title="使用gitstats"></a>使用gitstats</h2><p><a target="_blank" rel="noopener" href="https://github.com/hoxu/gitstats">GitStats项目</a>，用Python开发的一个工具，通过封装Git命令来实现统计出来代码情况并且生成可浏览的网页。官方文档可以参考这里。</p>
-<h3 id="使用方法"><a href="#使用方法" class="headerlink" title="使用方法"></a>使用方法</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">git clone git:&#x2F;&#x2F;github.com&#x2F;hoxu&#x2F;gitstats.git</span><br><span class="line">cd gitstats</span><br><span class="line">.&#x2F;gitstats 你的项目的位置 生成统计的文件夹位置</span><br></pre></td></tr></table></figure>
-<p>可能会提示(我的为 mac os)</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">env: python2: No such file or directory</span><br></pre></td></tr></table></figure>
-<p>可以进行 python2 的链接</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">sudo ln -sf &#x2F;usr&#x2F;bin&#x2F;python2.7 &#x2F;usr&#x2F;local&#x2F;bin&#x2F;python2</span><br></pre></td></tr></table></figure>
-
-<p>没有安装gnuplot画图程序，那么需要安装再执行：</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">&#x2F;&#x2F;mac osx</span><br><span class="line">brew install gnuplot</span><br><span class="line">&#x2F;&#x2F;centos linux</span><br><span class="line">yum install gnuplot</span><br></pre></td></tr></table></figure>
-
-<p>生成的统计文件为HTML：<br><img src="https://upload-images.jianshu.io/upload_images/10024246-194e0a1a7127a69f.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240"></p>
+          <h2 id="Bracket-Pair-Colorizer-2"><a href="#Bracket-Pair-Colorizer-2" class="headerlink" title="Bracket Pair Colorizer 2"></a>Bracket Pair Colorizer 2</h2><p><img src="https://upload-images.jianshu.io/upload_images/10024246-4e1925a599eb769a?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240"></p>
+<p>帮助我搞清楚 JavaScript 中复杂的嵌套 promise。顾名思义，它可以让方括号对变色，帮我弄清楚是否在某个地方搞糊涂了（例如缺少方括号）。它默认匹配 ()、[] 和{}等普通括号，但如果需要你也可以定义自定义括号。<br>它还有其他许多很酷的功能，例如定义颜色或为活动括号显示装订线之类。值得尝试一波。<br><strong>项目地址</strong><br><a target="_blank" rel="noopener" href="https://github.com/CoenraadS/Bracket-Pair-Colorizer-2">https://github.com/CoenraadS/Bracket-Pair-Colorizer-2</a><br> <strong>Marketplace</strong><br><a target="_blank" rel="noopener" href="https://marketplace.visualstudio.com/items?itemName=CoenraadS.bracket-pair-colorizer-2">https://marketplace.visualstudio.com/items?itemName=CoenraadS.bracket-pair-colorizer-2</a></p>
+<h2 id="NPM-Intellisense"><a href="#NPM-Intellisense" class="headerlink" title="NPM Intellisense"></a>NPM Intellisense</h2><p><img src="https://upload-images.jianshu.io/upload_images/10024246-db143f4cae36955c?imageMogr2/auto-orient/strip"></p>
+<p>如动图所示，它能自动完成以 NPM 包为目标的 require import 语句。这可以提供很多帮助，尤其是当你的项目变得很大，并且在 package.json 中包含很多依赖项时。<br> <strong>项目地址</strong><br><a target="_blank" rel="noopener" href="https://github.com/ChristianKohler/NpmIntellisense">https://github.com/ChristianKohler/NpmIntellisense</a><br><strong>Marketplace</strong><br><a target="_blank" rel="noopener" href="https://marketplace.visualstudio.com/items?itemName=christian-kohler.npm-intellisense">https://marketplace.visualstudio.com/items?itemName=christian-kohler.npm-intellisense</a></p>
+<h2 id="Path-Intellisense"><a href="#Path-Intellisense" class="headerlink" title="Path Intellisense"></a>Path Intellisense</h2><p><img src="https://upload-images.jianshu.io/upload_images/10024246-afb2416b7e73f8e8.gif?imageMogr2/auto-orient/strip"></p>
+<p>这是 NPM Intellisense 的姐妹插件。它会执行相同的自动补全，不过针对的是你的文件系统。<br><strong>项目地址</strong><br><a target="_blank" rel="noopener" href="https://github.com/ChristianKohler/PathIntellisense">https://github.com/ChristianKohler/PathIntellisense</a><br><strong>Marketplace</strong><br><a target="_blank" rel="noopener" href="https://marketplace.visualstudio.com/items?itemName=christian-kohler.path-intellisense">https://marketplace.visualstudio.com/items?itemName=christian-kohler.path-intellisense</a></p>
+<h2 id="Quokka-js"><a href="#Quokka-js" class="headerlink" title="Quokka.js"></a>Quokka.js</h2><p><img src="https://upload-images.jianshu.io/upload_images/10024246-ccab0e9d884fce5f.gif?imageMogr2/auto-orient/strip"><br>如果你只是想尝试一些东西，不想费劲先设置项目，那么这款工具就是一个很好的辅助。通过实时检查输出，它会立即将输出显示在 JavaScript/TypeScript 代码旁边，如动图所示。这是一个很好的扩展，特别适合调试目的。<br><strong>项目地址</strong><br><a target="_blank" rel="noopener" href="https://quokkajs.com/">https://quokkajs.com/</a><br><strong>Marketplace</strong><br><a target="_blank" rel="noopener" href="https://marketplace.visualstudio.com/items?itemName=WallabyJs.quokka-vscode">https://marketplace.visualstudio.com/items?itemName=WallabyJs.quokka-vscode</a></p>
+<h2 id="Docker"><a href="#Docker" class="headerlink" title="Docker"></a>Docker</h2><p>这个扩展是处理多个 Docker 映像和容器的必备，因为你可以用它快速浏览正在运行哪些容器、构建哪些映像以及创建哪些网络。<br><strong>项目地址</strong><br><a target="_blank" rel="noopener" href="https://github.com/microsoft/vscode-docker">https://github.com/microsoft/vscode-docker</a><br><strong>Marketplace</strong><br><a target="_blank" rel="noopener" href="https://marketplace.visualstudio.com/items?itemName=ms-azuretools.vscode-docker">https://marketplace.visualstudio.com/items?itemName=ms-azuretools.vscode-docker</a></p>
+<h2 id="Live-Server"><a href="#Live-Server" class="headerlink" title="Live Server"></a>Live Server</h2><p><img src="https://upload-images.jianshu.io/upload_images/10024246-6aae06bf0f4fff6b.gif?imageMogr2/auto-orient/strip"><br>这个扩展为本地开发服务器提供了热重载功能，也就是说它会在保存对文件所做的任何更改后立即刷新页面。它在状态栏中有一个漂亮的“Go Live”按钮，你只需单击一下即可启动服务器。<br><strong>项目地址</strong><br><a target="_blank" rel="noopener" href="https://github.com/ritwickdey/vscode-live-server">https://github.com/ritwickdey/vscode-live-server</a><br><strong>Marketplace</strong><br><a target="_blank" rel="noopener" href="https://marketplace.visualstudio.com/items?itemName=ritwickdey.LiveServer">https://marketplace.visualstudio.com/items?itemName=ritwickdey.LiveServer</a></p>
+<h2 id="Auto-Close-Tag-和-Auto-Rename-Tag"><a href="#Auto-Close-Tag-和-Auto-Rename-Tag" class="headerlink" title="Auto Close Tag 和 Auto Rename Tag"></a>Auto Close Tag 和 Auto Rename Tag</h2><p><img src="https://upload-images.jianshu.io/upload_images/10024246-879775d67e33686b.gif?imageMogr2/auto-orient/strip"><br>它们是 VS Code 的两个小插件，可通过自动重命名和关闭标签来帮助你维护 HTML 文件。这也适用于 React 自己的 JSX 语法。<br><strong>Auto Close Tag</strong><br><a target="_blank" rel="noopener" href="https://github.com/formulahendry/vscode-auto-close-tag/https://marketplace.visualstudio.com/items?itemName=formulahendry.auto-close-tag">https://github.com/formulahendry/vscode-auto-close-tag/https://marketplace.visualstudio.com/items?itemName=formulahendry.auto-close-tag</a><br> <strong>Auto Rename Tag</strong><br><a target="_blank" rel="noopener" href="https://github.com/formulahendry/vscode-auto-rename-tag/https://marketplace.visualstudio.com/items?itemName=formulahendry.auto-rename-tag">https://github.com/formulahendry/vscode-auto-rename-tag/https://marketplace.visualstudio.com/items?itemName=formulahendry.auto-rename-tag</a></p>
+<h2 id="Markdown-Preview-Enhanced"><a href="#Markdown-Preview-Enhanced" class="headerlink" title="Markdown Preview Enhanced"></a>Markdown Preview Enhanced</h2><p><img src="https://upload-images.jianshu.io/upload_images/10024246-fe3e4c69847e2ade.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240"><br> Markdown 预览工具。它不仅为你提供预览，而且还有同步滚动、PDF 导出和 PlantUML 的功能。<br><strong>项目地址</strong><br><a target="_blank" rel="noopener" href="https://github.com/shd101wyy/vscode-markdown-preview-enhanced">https://github.com/shd101wyy/vscode-markdown-preview-enhanced</a><br><strong>Marketplace</strong><br><a target="_blank" rel="noopener" href="https://marketplace.visualstudio.com/items?itemName=shd101wyy.markdown-preview-enhanced">https://marketplace.visualstudio.com/items?itemName=shd101wyy.markdown-preview-enhanced</a></p>
 
       
     </div>
@@ -497,7 +794,7 @@
   
 
   <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="">
-    <link itemprop="mainEntityOfPage" href="https://lzhwweb.github.io/nirvana/informal/%E9%9A%8F%E7%AC%94/2020%E5%B9%B4%E6%80%BB%E7%BB%93/">
+    <link itemprop="mainEntityOfPage" href="https://lzhwweb.github.io/nirvana/tool/%E5%BC%80%E5%8F%91%E5%B7%A5%E5%85%B7/%E8%B0%B7%E6%AD%8C%E6%B5%8F%E8%A7%88%E5%99%A8SwitchyOmega%E6%8F%92%E4%BB%B6%E5%AE%89%E8%A3%85%E4%BD%BF%E7%94%A8%E6%95%99%E7%A8%8B/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="image" content="/nirvana/images/headphoto.jpeg">
@@ -510,7 +807,7 @@
     </span>
       <header class="post-header">
         <h2 class="post-title" itemprop="name headline">
-          <a href="/nirvana/informal/%E9%9A%8F%E7%AC%94/2020%E5%B9%B4%E6%80%BB%E7%BB%93/" class="post-title-link" itemprop="url">2020三件事</a>
+          <a href="/nirvana/tool/%E5%BC%80%E5%8F%91%E5%B7%A5%E5%85%B7/%E8%B0%B7%E6%AD%8C%E6%B5%8F%E8%A7%88%E5%99%A8SwitchyOmega%E6%8F%92%E4%BB%B6%E5%AE%89%E8%A3%85%E4%BD%BF%E7%94%A8%E6%95%99%E7%A8%8B/" class="post-title-link" itemprop="url">谷歌浏览器SwitchyOmega插件安装使用教程</a>
         </h2>
 
         <div class="post-meta-container">
@@ -520,28 +817,22 @@
         <i class="far fa-calendar"></i>
       </span>
       <span class="post-meta-item-text">发表于</span>
+      
 
-      <time title="创建时间：2021-03-09 21:12:40" itemprop="dateCreated datePublished" datetime="2021-03-09T21:12:40+08:00">2021-03-09</time>
+      <time title="创建时间：2021-03-10 21:12:40 / 修改时间：13:43:55" itemprop="dateCreated datePublished" datetime="2021-03-10T21:12:40+08:00">2021-03-10</time>
     </span>
-      <span class="post-meta-item">
-        <span class="post-meta-item-icon">
-          <i class="far fa-calendar-check"></i>
-        </span>
-        <span class="post-meta-item-text">更新于</span>
-        <time title="修改时间：2021-03-10 13:43:55" itemprop="dateModified" datetime="2021-03-10T13:43:55+08:00">2021-03-10</time>
-      </span>
     <span class="post-meta-item">
       <span class="post-meta-item-icon">
         <i class="far fa-folder"></i>
       </span>
       <span class="post-meta-item-text">分类于</span>
         <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-          <a href="/nirvana/categories/informal/" itemprop="url" rel="index"><span itemprop="name">informal</span></a>
+          <a href="/nirvana/categories/tool/" itemprop="url" rel="index"><span itemprop="name">tool</span></a>
         </span>
     </span>
 
   
-    <span id="/nirvana/informal/%E9%9A%8F%E7%AC%94/2020%E5%B9%B4%E6%80%BB%E7%BB%93/" class="post-meta-item leancloud_visitors" data-flag-title="2020三件事" title="阅读次数">
+    <span id="/nirvana/tool/%E5%BC%80%E5%8F%91%E5%B7%A5%E5%85%B7/%E8%B0%B7%E6%AD%8C%E6%B5%8F%E8%A7%88%E5%99%A8SwitchyOmega%E6%8F%92%E4%BB%B6%E5%AE%89%E8%A3%85%E4%BD%BF%E7%94%A8%E6%95%99%E7%A8%8B/" class="post-meta-item leancloud_visitors" data-flag-title="谷歌浏览器SwitchyOmega插件安装使用教程" title="阅读次数">
       <span class="post-meta-item-icon">
         <i class="far fa-eye"></i>
       </span>
@@ -555,7 +846,7 @@
         <i class="far fa-file-word"></i>
       </span>
       <span class="post-meta-item-text">本文字数：</span>
-      <span>421</span>
+      <span>563</span>
     </span>
     <span class="post-meta-item" title="阅读时长">
       <span class="post-meta-item-icon">
@@ -573,13 +864,27 @@
     
     
     <div class="post-body" itemprop="articleBody">
-          <p>##2020三件事：</p>
-<ul>
-<li>户口迁移：<br>自从毕业后，来到这边10多年，终于把户口迁移过来，同时小朋友的户口也转过来，小朋友上学不再像被歧视一样被统筹，每年都要提交积分信息，转学也先被歧视。</li>
-<li>解决住房：<br>上班10多年，一直租房住，大件东西不敢买，每天担心被房东赶，办积分还要求房东，想更新个家具都先想想这个能不能带走。19年终于把房子买下来，花了3个月前后折腾，有过争吵和取舍。庆幸在年前疫情没爆发的时候住了进去。房子虽然小，但是是自己的，也敢瞎折腾了。</li>
-<li>个人晋升：<br>今年工作上有了一定的提升，团队变大了，事情更多了，每天想安静的写个代码都很难，更多的是和外部产品、业务去扯皮，团队内要平衡大家的需求和期望。更痛苦的是要绩效排名，总要排个A、B、C、D的先后，更痛苦的是和人员沟通，用领导的话说“绩效好，怎么沟通气氛都是融洽的；绩效不好，如何沟通都是尴尬的”。期望21年在这块有新的提升。</li>
-</ul>
-<p>遗憾：<br> 生活中对小朋友和家人的关心不够。和小朋友的沟通不够耐心，后面要改进。</p>
+          <p>SwitchyOmega是Chrome浏览器上的代理扩展程序,可以轻松快捷的管理和切换多个代理设置。接管浏览器代理方式，可瞬间切换代理和本地连接方式，配合socks5（等其他代理工具）可实现只代理部分国内无法访问的网站。</p>
+<p><img src="https://upload-images.jianshu.io/upload_images/10024246-61233ce7d20819e9.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240"></p>
+<blockquote>
+<p>安装方法</p>
+</blockquote>
+<p>1、在线安装</p>
+<p>在可以访问外网的环境下，从Chrome应用商店来安装：<a target="_blank" rel="noopener" href="https://chrome.google.com/webstore/detail/padekgcemlokbadohgkifijomclgjgif">https://chrome.google.com/webstore/detail/padekgcemlokbadohgkifijomclgjgif</a></p>
+<p>2、离线安装</p>
+<p>去github下载最新版安装包：<a target="_blank" rel="noopener" href="https://github.com/FelisCatus/SwitchyOmega/releases">https://github.com/FelisCatus/SwitchyOmega/releases</a></p>
+<blockquote>
+<p>使用方式</p>
+</blockquote>
+<p>1、新建一个情景模式</p>
+<p><img src="https://upload-images.jianshu.io/upload_images/10024246-3937342562f3571e.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="谷歌浏览器SwitchyOmega插件安装使用教程"></p>
+<p>上图中，前两种是最常用的，如果是第一次使用，那就记住前两种即可，第一种是指定代理的方式，每次访问一定会从设置的代理中走，第二种是动态切换的方式，比如说你想让百度走国内的网络，而让谷歌走国外的网络。</p>
+<p>2、配置情景模式</p>
+<p><img src="https://upload-images.jianshu.io/upload_images/10024246-27088b3d66156959.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="谷歌浏览器SwitchyOmega插件安装使用教程"></p>
+<p>我这里使用的是SSR的默认代理端口1080做演示，大家根据自己的代理工具来配置即可，注意“代理协议”别选错了。</p>
+<p>3、配置自动切换</p>
+<p><img src="https://upload-images.jianshu.io/upload_images/10024246-312d117ca68260d4.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="谷歌浏览器SwitchyOmega插件安装使用教程"></p>
+<p>前两步完成之后，就已经可以了，但是每次使用的时候，需要在浏览器上手动点一下来切换（不是之前提到的浏览器代理设置），而这一步配置了自动切换以后，会自动根据域名来匹配情景模式。</p>
 
       
     </div>
@@ -606,7 +911,7 @@
   
 
   <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="">
-    <link itemprop="mainEntityOfPage" href="https://lzhwweb.github.io/nirvana/informal/%E9%9A%8F%E7%AC%94/%E5%86%85%E5%8A%9F%E4%B8%8E%E6%88%90%E5%8A%9F/">
+    <link itemprop="mainEntityOfPage" href="https://lzhwweb.github.io/nirvana/algorithm/%E7%AE%97%E6%B3%95%E5%AD%A6%E4%B9%A0/%E5%86%92%E6%B3%A1%E6%8E%92%E5%BA%8F/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="image" content="/nirvana/images/headphoto.jpeg">
@@ -619,7 +924,7 @@
     </span>
       <header class="post-header">
         <h2 class="post-title" itemprop="name headline">
-          <a href="/nirvana/informal/%E9%9A%8F%E7%AC%94/%E5%86%85%E5%8A%9F%E4%B8%8E%E6%88%90%E5%8A%9F/" class="post-title-link" itemprop="url">内功与成功？</a>
+          <a href="/nirvana/algorithm/%E7%AE%97%E6%B3%95%E5%AD%A6%E4%B9%A0/%E5%86%92%E6%B3%A1%E6%8E%92%E5%BA%8F/" class="post-title-link" itemprop="url">冒泡排序</a>
         </h2>
 
         <div class="post-meta-container">
@@ -629,28 +934,22 @@
         <i class="far fa-calendar"></i>
       </span>
       <span class="post-meta-item-text">发表于</span>
+      
 
-      <time title="创建时间：2021-03-09 21:12:40" itemprop="dateCreated datePublished" datetime="2021-03-09T21:12:40+08:00">2021-03-09</time>
+      <time title="创建时间：2021-03-10 21:12:40 / 修改时间：13:43:55" itemprop="dateCreated datePublished" datetime="2021-03-10T21:12:40+08:00">2021-03-10</time>
     </span>
-      <span class="post-meta-item">
-        <span class="post-meta-item-icon">
-          <i class="far fa-calendar-check"></i>
-        </span>
-        <span class="post-meta-item-text">更新于</span>
-        <time title="修改时间：2021-03-10 13:43:55" itemprop="dateModified" datetime="2021-03-10T13:43:55+08:00">2021-03-10</time>
-      </span>
     <span class="post-meta-item">
       <span class="post-meta-item-icon">
         <i class="far fa-folder"></i>
       </span>
       <span class="post-meta-item-text">分类于</span>
         <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-          <a href="/nirvana/categories/informal/" itemprop="url" rel="index"><span itemprop="name">informal</span></a>
+          <a href="/nirvana/categories/algorithm/" itemprop="url" rel="index"><span itemprop="name">algorithm</span></a>
         </span>
     </span>
 
   
-    <span id="/nirvana/informal/%E9%9A%8F%E7%AC%94/%E5%86%85%E5%8A%9F%E4%B8%8E%E6%88%90%E5%8A%9F/" class="post-meta-item leancloud_visitors" data-flag-title="内功与成功？" title="阅读次数">
+    <span id="/nirvana/algorithm/%E7%AE%97%E6%B3%95%E5%AD%A6%E4%B9%A0/%E5%86%92%E6%B3%A1%E6%8E%92%E5%BA%8F/" class="post-meta-item leancloud_visitors" data-flag-title="冒泡排序" title="阅读次数">
       <span class="post-meta-item-icon">
         <i class="far fa-eye"></i>
       </span>
@@ -664,7 +963,7 @@
         <i class="far fa-file-word"></i>
       </span>
       <span class="post-meta-item-text">本文字数：</span>
-      <span>184</span>
+      <span>547</span>
     </span>
     <span class="post-meta-item" title="阅读时长">
       <span class="post-meta-item-icon">
@@ -682,7 +981,8 @@
     
     
     <div class="post-body" itemprop="articleBody">
-          <p> <br>你能够专注，舍得死磕，必然就会克服很多困难和挑战。长此以往，随着时间的推移，优势也悄然形成。在这个追求速成的时代，人人都渴望快速成功，幻想年薪百万。可是，大多数人都忘了，万丈高楼平地起，要想走上金字塔的顶端，首先要砌好地基、打好基础，房子才能越起越高。通往成功最有效的路径，永远是紧盯自己的目标，苦练内功。前期找准方向、扎进土壤、认真生长，后期才能破土而出、扶摇直上。</p>
+          <hr>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br></pre></td><td class="code"><pre><span class="line">&#x2F;**</span><br><span class="line"> * 冒泡排序基础</span><br><span class="line"> * arry:数组，必传</span><br><span class="line"> * type:排序方式，默认值1，1：升序，0：降序</span><br><span class="line"> **&#x2F;</span><br><span class="line">function bubbleSort(arry,type &#x3D; 1)&#123;</span><br><span class="line">    if(Object.prototype.toString.call(arry) !&#x3D;&#x3D; &#39;[object Array]&#39;)&#123;&#x2F;&#x2F;判断是否数组</span><br><span class="line">        return false;</span><br><span class="line">    &#125;</span><br><span class="line">    for (let i&#x3D;0;i&lt;arry.length;i++)&#123;</span><br><span class="line">        for(let j&#x3D;0;j&lt;arry.length-i;j++)&#123;</span><br><span class="line">            if((type &#x3D;&#x3D; 1 &amp;&amp; arry[j]&gt;arry[j+1])||(type &#x3D;&#x3D; 0 &amp;&amp; arry[j]&lt;arry[j+1]))&#123;</span><br><span class="line">                let temp &#x3D; arry[j];</span><br><span class="line">                arry[j] &#x3D; arry[j+1];</span><br><span class="line">                arry[j+1] &#x3D; temp;</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">    return arry;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 
       
     </div>
@@ -709,7 +1009,7 @@
   
 
   <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="">
-    <link itemprop="mainEntityOfPage" href="https://lzhwweb.github.io/nirvana/informal/%E9%9A%8F%E7%AC%94/%E5%8D%95%E5%8F%8D%E6%91%84%E5%BD%B1%E5%85%A5%E9%97%A8%E7%AE%80%E6%98%8E%E5%8F%A3%E8%AF%80/">
+    <link itemprop="mainEntityOfPage" href="https://lzhwweb.github.io/nirvana/algorithm/%E7%AE%97%E6%B3%95%E5%AD%A6%E4%B9%A0/%E5%88%A4%E6%96%AD%E6%98%AF%E5%90%A6%E5%9B%9E%E6%96%87/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="image" content="/nirvana/images/headphoto.jpeg">
@@ -722,7 +1022,7 @@
     </span>
       <header class="post-header">
         <h2 class="post-title" itemprop="name headline">
-          <a href="/nirvana/informal/%E9%9A%8F%E7%AC%94/%E5%8D%95%E5%8F%8D%E6%91%84%E5%BD%B1%E5%85%A5%E9%97%A8%E7%AE%80%E6%98%8E%E5%8F%A3%E8%AF%80/" class="post-title-link" itemprop="url">单反摄影入门简明口诀</a>
+          <a href="/nirvana/algorithm/%E7%AE%97%E6%B3%95%E5%AD%A6%E4%B9%A0/%E5%88%A4%E6%96%AD%E6%98%AF%E5%90%A6%E5%9B%9E%E6%96%87/" class="post-title-link" itemprop="url">判断是否回文</a>
         </h2>
 
         <div class="post-meta-container">
@@ -732,28 +1032,22 @@
         <i class="far fa-calendar"></i>
       </span>
       <span class="post-meta-item-text">发表于</span>
+      
 
-      <time title="创建时间：2021-03-09 21:12:40" itemprop="dateCreated datePublished" datetime="2021-03-09T21:12:40+08:00">2021-03-09</time>
+      <time title="创建时间：2021-03-10 21:12:40 / 修改时间：13:43:55" itemprop="dateCreated datePublished" datetime="2021-03-10T21:12:40+08:00">2021-03-10</time>
     </span>
-      <span class="post-meta-item">
-        <span class="post-meta-item-icon">
-          <i class="far fa-calendar-check"></i>
-        </span>
-        <span class="post-meta-item-text">更新于</span>
-        <time title="修改时间：2021-03-10 13:43:55" itemprop="dateModified" datetime="2021-03-10T13:43:55+08:00">2021-03-10</time>
-      </span>
     <span class="post-meta-item">
       <span class="post-meta-item-icon">
         <i class="far fa-folder"></i>
       </span>
       <span class="post-meta-item-text">分类于</span>
         <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-          <a href="/nirvana/categories/informal/" itemprop="url" rel="index"><span itemprop="name">informal</span></a>
+          <a href="/nirvana/categories/algorithm/" itemprop="url" rel="index"><span itemprop="name">algorithm</span></a>
         </span>
     </span>
 
   
-    <span id="/nirvana/informal/%E9%9A%8F%E7%AC%94/%E5%8D%95%E5%8F%8D%E6%91%84%E5%BD%B1%E5%85%A5%E9%97%A8%E7%AE%80%E6%98%8E%E5%8F%A3%E8%AF%80/" class="post-meta-item leancloud_visitors" data-flag-title="单反摄影入门简明口诀" title="阅读次数">
+    <span id="/nirvana/algorithm/%E7%AE%97%E6%B3%95%E5%AD%A6%E4%B9%A0/%E5%88%A4%E6%96%AD%E6%98%AF%E5%90%A6%E5%9B%9E%E6%96%87/" class="post-meta-item leancloud_visitors" data-flag-title="判断是否回文" title="阅读次数">
       <span class="post-meta-item-icon">
         <i class="far fa-eye"></i>
       </span>
@@ -767,7 +1061,7 @@
         <i class="far fa-file-word"></i>
       </span>
       <span class="post-meta-item-text">本文字数：</span>
-      <span>1.1k</span>
+      <span>450</span>
     </span>
     <span class="post-meta-item" title="阅读时长">
       <span class="post-meta-item-icon">
@@ -785,7 +1079,8 @@
     
     
     <div class="post-body" itemprop="articleBody">
-          <p> <br>单反摄影入门简明口诀（葵花宝典）<br>    1、拍人像<br>    拍人长焦大圈先，（AV光圈优先自动曝光模式，长焦大光圈浅景深，宜于突出主题虚化背景，通常F5.6及以上）<br>    测光对焦眼脸线，（用中央重点测光或点测光，拍摄头部焦点对眼，半身对脸，全身对身体曲线）<br>    多换角度背景远，（摄影者与被摄者多换角度，被摄者距离背景尽量远，以便虚化背景）<br>    活用补光快门线。（活用闪光灯等补光设备，防止抖动可用三脚架和快门线。）<br>    2、拍风光<br>    拍摄风光光圈先，（AV光圈优先自动曝光模式）<br>    光圈宜小景深远，<br>    调白平衡单驱动，（根据光线情况调整白平衡，采用单次驱动模式）<br>    无限远处对焦点。<br>    3、拍花卉<br>    拍摄花卉微距镜，（最好用微距镜头）<br>    大圈近摄远背景，（大光圈；近距离拍摄，摄距越近，景深越小；花后的背景尽量远）<br>    逆光长焦强对比，（焦距越长，景深越小；花的颜色和背景色彩对比越强越好）<br>    花大构图蕊居中。<br>    4、拍动物<br>    动物总是动不停，<br>    模式宜用P自动，（程序自动曝光，以拍摄时机为优先）<br>    智能伺服焦对眼，（对总是动个不停的动物应该采用人工智能伺服自动对焦模式，对焦时对准动物的眼）<br>    使用连拍虚背景。<br>    5、拍夜景<br>    拍摄夜景别太晚，（天有余光，不要太黑）<br>    夜衡低感快门慢，（夜间白平衡，较低的感光度ISO100，快门1/11）<br>    8-9光圈负补偿，（白增黑减：-0.5-1补偿）<br>    脚架门线防抖颤。（使用三脚架、快门线）<br>    6、拍剪影<br>    要拍剪影用逆光，<br>    对着亮处点测光，<br>    通常四百感光度，<br>    曝光补偿减二档。<br>    7、拍运动物体<br>    运动物体宜连拍，<br>    快门优先抓动态，（TV快门优先，根据动体速度、动向、焦距定快门：动体快快门也要快）<br>    感光稍高追动体，（通常ISO400。要拍动感，用追随法，快门应低于1/60秒）<br>    自动对焦快门快。<br>    8、拍雨丝<br>    拍雨风斜出动感，（大风斜雨效果好）<br>    大圈慢速背景暗，（大光圈，快门速度1/30左右，采用暗背景）<br>    焦雨正比夜光好，（焦距大，雨丝长；焦距小，雨丝短。利用夜光拍摄效果好）<br>    逆光远摄借叶檐。（用逆光，摄距适当远一点，借用叶子、雨伞、房檐滴水和地面积水反光）<br>    9拍雪飘<br>    要拍雪飘速要慢，（快门1/30左右）<br>    焦距定在中短段，<br>    光圈设置8-11，<br>    深色背景显动感。<br>    10、拍雪景<br>    拍雪关键测曝光，<br>    亮白补偿二三档，（白增黑减：+2-3补偿）<br>    巧设前景忌顺光，（设前景增加色彩对比，最好用逆光和侧逆光）<br>    拍人点测对脸上。（如雪景里拍人，对人脸点测光）<br>    11、拍霞光<br>    拍霞圈8测云空，（对着较亮的天空和云彩测光）<br>    负一补偿设前景，（白增黑减：-1补偿）<br>    朝霞早来晚霞晚，（拍朝霞要在太阳升出地平线之前，晚霞在没太阳之后，不宜太早和太晚）<br>    遇到水光拍倒影。<br>    12、画面布置<br>    见山寻侧光，<br>    见水拍倒影，<br>    有云天要多，<br>    无云地七成。<br>    黄金分割线，<br>    主体交点行。<br>2019一起浪 旅行日记</p>
+          <hr>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br></pre></td><td class="code"><pre><span class="line">&#x2F;**</span><br><span class="line"> * 判断是否回文</span><br><span class="line">**&#x2F;</span><br><span class="line">function checkPlalindrome(str)&#123;</span><br><span class="line">  if(!str)&#123;&#x2F;&#x2F;为空，或者长度能整除2</span><br><span class="line">    return false</span><br><span class="line">  &#125;</span><br><span class="line">  </span><br><span class="line">  let isOdd &#x3D; str.length % 2;</span><br><span class="line">  let mid &#x3D; Math.floor(str.length&#x2F;2);&#x2F;&#x2F;中间数</span><br><span class="line">  let flag &#x3D; true;</span><br><span class="line">  for (let i &#x3D; 0;i&lt;mid;i++)&#123;</span><br><span class="line">    console.log(str.substr(i,1),str.substr(i+mid+isOdd,1))</span><br><span class="line">    if(!(str.substr(i,1) &#x3D;&#x3D; str.substr(i+mid+isOdd,1)))&#123;</span><br><span class="line">      flag &#x3D; false;</span><br><span class="line">      break;</span><br><span class="line">    &#125;</span><br><span class="line">  &#125;</span><br><span class="line">  return flag;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 
       
     </div>
@@ -812,7 +1107,7 @@
   
 
   <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="">
-    <link itemprop="mainEntityOfPage" href="https://lzhwweb.github.io/nirvana/informal/%E9%9A%8F%E7%AC%94/%E5%AD%A9%E5%AD%90%EF%BC%8C%E4%BD%A0%E4%B8%BA%E4%BB%80%E4%B9%88%E8%A6%81%E5%8A%AA%E5%8A%9B%EF%BC%9F/">
+    <link itemprop="mainEntityOfPage" href="https://lzhwweb.github.io/nirvana/algorithm/%E7%AE%97%E6%B3%95%E5%AD%A6%E4%B9%A0/%E5%9F%BA%E6%95%B0%E6%8E%92%E5%BA%8F/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="image" content="/nirvana/images/headphoto.jpeg">
@@ -825,7 +1120,7 @@
     </span>
       <header class="post-header">
         <h2 class="post-title" itemprop="name headline">
-          <a href="/nirvana/informal/%E9%9A%8F%E7%AC%94/%E5%AD%A9%E5%AD%90%EF%BC%8C%E4%BD%A0%E4%B8%BA%E4%BB%80%E4%B9%88%E8%A6%81%E5%8A%AA%E5%8A%9B%EF%BC%9F/" class="post-title-link" itemprop="url">孩子，你为什么要努力？</a>
+          <a href="/nirvana/algorithm/%E7%AE%97%E6%B3%95%E5%AD%A6%E4%B9%A0/%E5%9F%BA%E6%95%B0%E6%8E%92%E5%BA%8F/" class="post-title-link" itemprop="url">基数排序</a>
         </h2>
 
         <div class="post-meta-container">
@@ -835,28 +1130,22 @@
         <i class="far fa-calendar"></i>
       </span>
       <span class="post-meta-item-text">发表于</span>
+      
 
-      <time title="创建时间：2021-03-09 21:12:40" itemprop="dateCreated datePublished" datetime="2021-03-09T21:12:40+08:00">2021-03-09</time>
+      <time title="创建时间：2021-03-10 21:12:40 / 修改时间：13:43:55" itemprop="dateCreated datePublished" datetime="2021-03-10T21:12:40+08:00">2021-03-10</time>
     </span>
-      <span class="post-meta-item">
-        <span class="post-meta-item-icon">
-          <i class="far fa-calendar-check"></i>
-        </span>
-        <span class="post-meta-item-text">更新于</span>
-        <time title="修改时间：2021-03-10 13:43:55" itemprop="dateModified" datetime="2021-03-10T13:43:55+08:00">2021-03-10</time>
-      </span>
     <span class="post-meta-item">
       <span class="post-meta-item-icon">
         <i class="far fa-folder"></i>
       </span>
       <span class="post-meta-item-text">分类于</span>
         <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-          <a href="/nirvana/categories/informal/" itemprop="url" rel="index"><span itemprop="name">informal</span></a>
+          <a href="/nirvana/categories/algorithm/" itemprop="url" rel="index"><span itemprop="name">algorithm</span></a>
         </span>
     </span>
 
   
-    <span id="/nirvana/informal/%E9%9A%8F%E7%AC%94/%E5%AD%A9%E5%AD%90%EF%BC%8C%E4%BD%A0%E4%B8%BA%E4%BB%80%E4%B9%88%E8%A6%81%E5%8A%AA%E5%8A%9B%EF%BC%9F/" class="post-meta-item leancloud_visitors" data-flag-title="孩子，你为什么要努力？" title="阅读次数">
+    <span id="/nirvana/algorithm/%E7%AE%97%E6%B3%95%E5%AD%A6%E4%B9%A0/%E5%9F%BA%E6%95%B0%E6%8E%92%E5%BA%8F/" class="post-meta-item leancloud_visitors" data-flag-title="基数排序" title="阅读次数">
       <span class="post-meta-item-icon">
         <i class="far fa-eye"></i>
       </span>
@@ -870,213 +1159,7 @@
         <i class="far fa-file-word"></i>
       </span>
       <span class="post-meta-item-text">本文字数：</span>
-      <span>275</span>
-    </span>
-    <span class="post-meta-item" title="阅读时长">
-      <span class="post-meta-item-icon">
-        <i class="far fa-clock"></i>
-      </span>
-      <span class="post-meta-item-text">阅读时长 &asymp;</span>
-      <span>1 分钟</span>
-    </span>
-</div>
-
-        </div>
-      </header>
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-          <p> <br>1.努力，是为了对得起珍贵的自己<br>2.努力，让你发现“原来我可以”<br>3.努力，让你拥有选择的自由和权利<br>4.努力，可以优化你的成长环境<br>5.努力，让身心有一个栖居之地<br>6.努力，和优秀互为因果<br>7.什么才是真的努力？<br>努力不是一时的事，而是一生的事。<br>努力不是过度透支，而是尽力而为。<br>努力不是一项苦役，而是带有回甘。<br>努力不是表面用力，而是在看不见的地方持续深度用力。<br>努力，并不必然意味着将来一片坦途，但可以让我们自己问心无愧！且让我们一起努力每一天，让每一天都成为自己个人传记里清晰的一页，并在这份传记的最后掩卷感叹“生而为人，真好”，而不是“生而为人，我很抱歉”！</p>
-
-      
-    </div>
-
-    
-    
-    
-
-    <footer class="post-footer">
-        <div class="post-eof"></div>
-      
-    </footer>
-  </article>
-</div>
-
-
-
-
-    
-
-
-<div class="post-block">
-  
-  
-
-  <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="">
-    <link itemprop="mainEntityOfPage" href="https://lzhwweb.github.io/nirvana/informal/%E9%9A%8F%E7%AC%94/%E7%99%BE%E8%88%AC%E4%B9%90%E5%99%A8%EF%BC%8C%E5%94%A2%E5%91%90%E4%B8%BA%E7%8E%8B/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="image" content="/nirvana/images/headphoto.jpeg">
-      <meta itemprop="name" content="nirvana">
-      <meta itemprop="description" content="个人学习笔记">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="涅槃快乐是金">
-    </span>
-      <header class="post-header">
-        <h2 class="post-title" itemprop="name headline">
-          <a href="/nirvana/informal/%E9%9A%8F%E7%AC%94/%E7%99%BE%E8%88%AC%E4%B9%90%E5%99%A8%EF%BC%8C%E5%94%A2%E5%91%90%E4%B8%BA%E7%8E%8B/" class="post-title-link" itemprop="url">百般乐器，唢呐为王</a>
-        </h2>
-
-        <div class="post-meta-container">
-          <div class="post-meta">
-    <span class="post-meta-item">
-      <span class="post-meta-item-icon">
-        <i class="far fa-calendar"></i>
-      </span>
-      <span class="post-meta-item-text">发表于</span>
-
-      <time title="创建时间：2021-03-09 21:12:40" itemprop="dateCreated datePublished" datetime="2021-03-09T21:12:40+08:00">2021-03-09</time>
-    </span>
-      <span class="post-meta-item">
-        <span class="post-meta-item-icon">
-          <i class="far fa-calendar-check"></i>
-        </span>
-        <span class="post-meta-item-text">更新于</span>
-        <time title="修改时间：2021-03-10 13:43:55" itemprop="dateModified" datetime="2021-03-10T13:43:55+08:00">2021-03-10</time>
-      </span>
-    <span class="post-meta-item">
-      <span class="post-meta-item-icon">
-        <i class="far fa-folder"></i>
-      </span>
-      <span class="post-meta-item-text">分类于</span>
-        <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-          <a href="/nirvana/categories/informal/" itemprop="url" rel="index"><span itemprop="name">informal</span></a>
-        </span>
-    </span>
-
-  
-    <span id="/nirvana/informal/%E9%9A%8F%E7%AC%94/%E7%99%BE%E8%88%AC%E4%B9%90%E5%99%A8%EF%BC%8C%E5%94%A2%E5%91%90%E4%B8%BA%E7%8E%8B/" class="post-meta-item leancloud_visitors" data-flag-title="百般乐器，唢呐为王" title="阅读次数">
-      <span class="post-meta-item-icon">
-        <i class="far fa-eye"></i>
-      </span>
-      <span class="post-meta-item-text">阅读次数：</span>
-      <span class="leancloud-visitors-count"></span>
-    </span>
-      </div>
-      <div class="post-meta">
-    <span class="post-meta-item" title="本文字数">
-      <span class="post-meta-item-icon">
-        <i class="far fa-file-word"></i>
-      </span>
-      <span class="post-meta-item-text">本文字数：</span>
-      <span>156</span>
-    </span>
-    <span class="post-meta-item" title="阅读时长">
-      <span class="post-meta-item-icon">
-        <i class="far fa-clock"></i>
-      </span>
-      <span class="post-meta-item-text">阅读时长 &asymp;</span>
-      <span>1 分钟</span>
-    </span>
-</div>
-
-        </div>
-      </header>
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-          <p>百般乐器，唢呐为王，<br>不是升天，就是拜堂，<br>千年琵琶，万年筝，<br>一把二胡拉一生。<br>唢呐一响全剧终，<br>曲一响，布一盖，<br>全村老小等上菜，<br>走的走，抬的抬，<br>后面跟着一片白。<br>棺一抬，土一埋，<br>亲朋好友哭起来，<br>鞭炮响，唢呐吹，<br>前面抬，后面追，<br>初闻不知唢呐意，再闻以是棺中人。<br>两耳不闻棺外事，一心只蹦黄泉迪，<br>一路嗨到阎王殿，从此不恋人世间</p>
-
-      
-    </div>
-
-    
-    
-    
-
-    <footer class="post-footer">
-        <div class="post-eof"></div>
-      
-    </footer>
-  </article>
-</div>
-
-
-
-
-    
-
-
-<div class="post-block">
-  
-  
-
-  <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="">
-    <link itemprop="mainEntityOfPage" href="https://lzhwweb.github.io/nirvana/git/git/git-delete-orgin/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="image" content="/nirvana/images/headphoto.jpeg">
-      <meta itemprop="name" content="nirvana">
-      <meta itemprop="description" content="个人学习笔记">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="涅槃快乐是金">
-    </span>
-      <header class="post-header">
-        <h2 class="post-title" itemprop="name headline">
-          <a href="/nirvana/git/git/git-delete-orgin/" class="post-title-link" itemprop="url">Git 清除远端已删除的分支</a>
-        </h2>
-
-        <div class="post-meta-container">
-          <div class="post-meta">
-    <span class="post-meta-item">
-      <span class="post-meta-item-icon">
-        <i class="far fa-calendar"></i>
-      </span>
-      <span class="post-meta-item-text">发表于</span>
-
-      <time title="创建时间：2021-03-09 21:05:00" itemprop="dateCreated datePublished" datetime="2021-03-09T21:05:00+08:00">2021-03-09</time>
-    </span>
-      <span class="post-meta-item">
-        <span class="post-meta-item-icon">
-          <i class="far fa-calendar-check"></i>
-        </span>
-        <span class="post-meta-item-text">更新于</span>
-        <time title="修改时间：2021-03-10 13:43:55" itemprop="dateModified" datetime="2021-03-10T13:43:55+08:00">2021-03-10</time>
-      </span>
-    <span class="post-meta-item">
-      <span class="post-meta-item-icon">
-        <i class="far fa-folder"></i>
-      </span>
-      <span class="post-meta-item-text">分类于</span>
-        <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-          <a href="/nirvana/categories/git/" itemprop="url" rel="index"><span itemprop="name">git</span></a>
-        </span>
-    </span>
-
-  
-    <span id="/nirvana/git/git/git-delete-orgin/" class="post-meta-item leancloud_visitors" data-flag-title="Git 清除远端已删除的分支" title="阅读次数">
-      <span class="post-meta-item-icon">
-        <i class="far fa-eye"></i>
-      </span>
-      <span class="post-meta-item-text">阅读次数：</span>
-      <span class="leancloud-visitors-count"></span>
-    </span>
-      </div>
-      <div class="post-meta">
-    <span class="post-meta-item" title="本文字数">
-      <span class="post-meta-item-icon">
-        <i class="far fa-file-word"></i>
-      </span>
-      <span class="post-meta-item-text">本文字数：</span>
-      <span>1.7k</span>
+      <span>1.9k</span>
     </span>
     <span class="post-meta-item" title="阅读时长">
       <span class="post-meta-item-icon">
@@ -1094,14 +1177,12 @@
     
     
     <div class="post-body" itemprop="articleBody">
-          <p>使用 git branch -a 命令可以查看所有本地分支和远程分支（git branch -r 可以只查看远程分支）<br>发现很多在远程仓库已经删除的分支在本地依然可以看到。</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line"># git branch -a</span><br><span class="line">  2-android-tableview-resize</span><br><span class="line">  20180131hotfix</span><br><span class="line">  master</span><br><span class="line">  release0308_v52</span><br><span class="line">  release0322</span><br><span class="line">* release20180412_from0326</span><br><span class="line">  remotes&#x2F;origin&#x2F;2-android-tableview-resize</span><br><span class="line">  remotes&#x2F;origin&#x2F;20180131hotfix</span><br><span class="line">  remotes&#x2F;origin&#x2F;HEAD -&gt; origin&#x2F;master</span><br><span class="line">  remotes&#x2F;origin&#x2F;dev</span><br><span class="line">  remotes&#x2F;origin&#x2F;dev_cache_renxj</span><br></pre></td></tr></table></figure>
-
-<p>使用命令 git remote show origin，可以查看remote地址，远程分支，还有本地分支与之相对应关系等信息。</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br></pre></td><td class="code"><pre><span class="line"># git remote show origin</span><br><span class="line">* remote origin</span><br><span class="line">  Fetch URL: git@*********</span><br><span class="line">  Push  URL: git@**********</span><br><span class="line">  HEAD branch: master</span><br><span class="line">  Remote branches:</span><br><span class="line">    2-android-tableview-resize                        tracked</span><br><span class="line">    20180131hotfix                                    tracked</span><br><span class="line">    master                                            tracked</span><br><span class="line">    mergeFrom0808AndDev                               tracked</span><br><span class="line">    refs&#x2F;remotes&#x2F;origin&#x2F;3IN1                          stale (use &#39;git remote prune&#39; to remove)</span><br><span class="line">    refs&#x2F;remotes&#x2F;origin&#x2F;3IN1_v052                     stale (use &#39;git remote prune&#39; to remove)</span><br><span class="line">    refs&#x2F;remotes&#x2F;origin&#x2F;dev20171214                   stale (use &#39;git remote prune&#39; to remove)</span><br><span class="line">......</span><br><span class="line">    release1228                                       tracked</span><br><span class="line">    release20180130                                   tracked</span><br><span class="line">  Local branches configured for &#39;git pull&#39;:</span><br><span class="line">    2-android-tableview-resize                  merges with remote 2-android-tableview-resize</span><br><span class="line">    20180131hotfix                              merges with remote 20180131hotfix</span><br><span class="line">    3IN1                                        merges with remote 3IN1</span><br><span class="line">    dev                                         merges with remote dev</span><br><span class="line">    dev20171214                                 merges with remote dev20171214</span><br><span class="line">......</span><br><span class="line">  Local refs configured for &#39;git push&#39;:</span><br><span class="line">    2-android-tableview-resize                  pushes to 2-android-tableview-resize                  (up to date)</span><br><span class="line">    20180131hotfix                              pushes to 20180131hotfix                              (up to date)</span><br><span class="line">........</span><br></pre></td></tr></table></figure>
-<p>此时我们可以看到那些远程仓库已经不存在的分支，根据提示，使用 git remote prune origin 命令：</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">git remote prune origin</span><br><span class="line">Pruning origin</span><br><span class="line">URL: git@**********</span><br><span class="line"> * [pruned] origin&#x2F;3IN1</span><br><span class="line"> * [pruned] origin&#x2F;3IN1_v052</span><br><span class="line"> * [pruned] origin&#x2F;dev20171214</span><br><span class="line">........</span><br></pre></td></tr></table></figure>
-<p>这样就删除了那些远程仓库不存在的分支。</p>
+          <p>基数排序是一种借助多关键字排序思想对单逻辑关键字进行排序的方法。</p>
+<p>所谓的多关键字排序就是有多个优先级不同的关键字。比如说成绩的排序，如果两个人总分相同，则语文高的排在前面，语文成绩也相同则数学高的排在前面。。。如果对数字进行排序，那么个位、十位、百位就是不同优先级的关键字，如果要进行升序排序，那么个位、十位、百位优先级一次增加。<br>基数排序是通过多次的收分配和收集来实现的，关键字优先级低的先进行分配和收集。<br>基数排序是一种非比较型整数排序算法，其原理是将整数按位数切割成不同的数字，然后按每个位数分别比较。由于整数也可以表达字符串（比如名字或日期）和特定格式的浮点数，所以基数排序也不是只能使用于整数。<br><img src="https://upload-images.jianshu.io/upload_images/10024246-9e0f7e92428e6637.gif?imageMogr2/auto-orient/strip"></p>
+<p>实现代码：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br></pre></td><td class="code"><pre><span class="line">&#x2F;**</span><br><span class="line"> * 基数排序</span><br><span class="line"> * @param &#123;Array&lt;Number&gt;&#125; arry 要排序的数组</span><br><span class="line"> *&#x2F;</span><br><span class="line">function RadixSort(arry) &#123;</span><br><span class="line">    if (arry.length &#x3D;&#x3D; 0) &#123;&#x2F;&#x2F;判断数组不为空</span><br><span class="line">        return [];</span><br><span class="line">    &#125;</span><br><span class="line">    const maxDigit &#x3D; getMaxDigit(getMaxValue(arry));&#x2F;&#x2F;最大数位数</span><br><span class="line">    for (let i &#x3D; 0; i &lt; maxDigit; i++) &#123;</span><br><span class="line">        let count &#x3D; [];</span><br><span class="line">        for (let j &#x3D; 0; j &lt; arry.length; j++) &#123;</span><br><span class="line">            const length &#x3D; &#96;$&#123;arry[j]&#125;&#96;.length;&#x2F;&#x2F;当前数位数</span><br><span class="line">            let bucket &#x3D; 0;</span><br><span class="line">            if (length &gt; i) &#123;&#x2F;&#x2F;当前位数不为空</span><br><span class="line">                bucket &#x3D; parseInt(&#96;$&#123;arry[j]&#125;&#96;.substr(length - i - 1, 1));</span><br><span class="line">            &#125;</span><br><span class="line">            if (!count[bucket]) &#123;</span><br><span class="line">                count[bucket] &#x3D; [];</span><br><span class="line">            &#125;</span><br><span class="line">            count[bucket].push(arry[j]);&#x2F;&#x2F;位数数组填充</span><br><span class="line">        &#125;</span><br><span class="line">        for (let t &#x3D; 0, pos &#x3D; 0; t &lt; count.length; t++) &#123;&#x2F;&#x2F;根据新数组重新排序</span><br><span class="line">            let value &#x3D; null;</span><br><span class="line">            if (count[t]) &#123;</span><br><span class="line">                while ((value &#x3D; count[t].shift()) !&#x3D; null) &#123;</span><br><span class="line">                    arry[pos++] &#x3D; value;</span><br><span class="line">                &#125;</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;</span><br><span class="line">        console.log(arry)</span><br><span class="line">    &#125;</span><br><span class="line">    return arry;</span><br><span class="line">&#125;</span><br><span class="line">&#x2F;**</span><br><span class="line"> * 获取数组中最大数</span><br><span class="line"> * @param arry 排序数组</span><br><span class="line"> *&#x2F;</span><br><span class="line">function getMaxValue(arry) &#123;</span><br><span class="line">    let maxValue &#x3D; arry[0];</span><br><span class="line">    for (let i &#x3D; 1; i &lt; arry.length; i++) &#123;</span><br><span class="line">        if (arry[i] &gt; maxValue) &#123;</span><br><span class="line">            maxValue &#x3D; arry[i]</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">    return maxValue;</span><br><span class="line">&#125;</span><br><span class="line">&#x2F;**</span><br><span class="line"> * 整数位数</span><br><span class="line"> * @param value 整数</span><br><span class="line"> *&#x2F;</span><br><span class="line">function getMaxDigit(value) &#123;</span><br><span class="line">    return &#96;$&#123;value&#125;&#96;.length;</span><br><span class="line">&#125;</span><br><span class="line">RadixSort([72, 6, 57, 88, 60, 42, 11183, 73, 1148, 185])</span><br></pre></td></tr></table></figure>
+<p>运行结果：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">[ 60, 72, 42, 11183, 73, 185, 6, 57, 88, 1148 ]&#x2F;&#x2F;个位排序</span><br><span class="line">[ 6, 42, 1148, 57, 60, 72, 73, 11183, 185, 88 ]&#x2F;&#x2F;十位排序</span><br><span class="line">[ 6, 42, 57, 60, 72, 73, 88, 1148, 11183, 185 ]&#x2F;&#x2F;百位排序</span><br><span class="line">[ 6, 42, 57, 60, 72, 73, 88, 185, 1148, 11183 ]&#x2F;&#x2F;千位排序</span><br><span class="line">[ 6, 42, 57, 60, 72, 73, 88, 185, 1148, 11183 ]&#x2F;&#x2F;万位排序</span><br></pre></td></tr></table></figure>
 
       
     </div>
@@ -1128,7 +1209,7 @@
   
 
   <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="">
-    <link itemprop="mainEntityOfPage" href="https://lzhwweb.github.io/nirvana/git/git/gitCount/">
+    <link itemprop="mainEntityOfPage" href="https://lzhwweb.github.io/nirvana/algorithm/%E7%AE%97%E6%B3%95%E5%AD%A6%E4%B9%A0/%E5%BF%AB%E9%80%9F%E6%8E%92%E5%BA%8F/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="image" content="/nirvana/images/headphoto.jpeg">
@@ -1141,7 +1222,7 @@
     </span>
       <header class="post-header">
         <h2 class="post-title" itemprop="name headline">
-          <a href="/nirvana/git/git/gitCount/" class="post-title-link" itemprop="url">Git统计每个人提交的Commit次数和代码行数</a>
+          <a href="/nirvana/algorithm/%E7%AE%97%E6%B3%95%E5%AD%A6%E4%B9%A0/%E5%BF%AB%E9%80%9F%E6%8E%92%E5%BA%8F/" class="post-title-link" itemprop="url">快速排序</a>
         </h2>
 
         <div class="post-meta-container">
@@ -1151,28 +1232,22 @@
         <i class="far fa-calendar"></i>
       </span>
       <span class="post-meta-item-text">发表于</span>
+      
 
-      <time title="创建时间：2021-03-09 20:35:36" itemprop="dateCreated datePublished" datetime="2021-03-09T20:35:36+08:00">2021-03-09</time>
+      <time title="创建时间：2021-03-10 21:12:40 / 修改时间：13:43:55" itemprop="dateCreated datePublished" datetime="2021-03-10T21:12:40+08:00">2021-03-10</time>
     </span>
-      <span class="post-meta-item">
-        <span class="post-meta-item-icon">
-          <i class="far fa-calendar-check"></i>
-        </span>
-        <span class="post-meta-item-text">更新于</span>
-        <time title="修改时间：2021-03-10 13:43:55" itemprop="dateModified" datetime="2021-03-10T13:43:55+08:00">2021-03-10</time>
-      </span>
     <span class="post-meta-item">
       <span class="post-meta-item-icon">
         <i class="far fa-folder"></i>
       </span>
       <span class="post-meta-item-text">分类于</span>
         <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-          <a href="/nirvana/categories/git/" itemprop="url" rel="index"><span itemprop="name">git</span></a>
+          <a href="/nirvana/categories/algorithm/" itemprop="url" rel="index"><span itemprop="name">algorithm</span></a>
         </span>
     </span>
 
   
-    <span id="/nirvana/git/git/gitCount/" class="post-meta-item leancloud_visitors" data-flag-title="Git统计每个人提交的Commit次数和代码行数" title="阅读次数">
+    <span id="/nirvana/algorithm/%E7%AE%97%E6%B3%95%E5%AD%A6%E4%B9%A0/%E5%BF%AB%E9%80%9F%E6%8E%92%E5%BA%8F/" class="post-meta-item leancloud_visitors" data-flag-title="快速排序" title="阅读次数">
       <span class="post-meta-item-icon">
         <i class="far fa-eye"></i>
       </span>
@@ -1186,14 +1261,14 @@
         <i class="far fa-file-word"></i>
       </span>
       <span class="post-meta-item-text">本文字数：</span>
-      <span>388</span>
+      <span>2.4k</span>
     </span>
     <span class="post-meta-item" title="阅读时长">
       <span class="post-meta-item-icon">
         <i class="far fa-clock"></i>
       </span>
       <span class="post-meta-item-text">阅读时长 &asymp;</span>
-      <span>1 分钟</span>
+      <span>2 分钟</span>
     </span>
 </div>
 
@@ -1204,7 +1279,20 @@
     
     
     <div class="post-body" itemprop="articleBody">
-          <p>提交次<code>git shortlog --numbered --summary</code><br>查看所有的<code>commit数git log --oneline | wc -l</code><br>提交删除行数<code>git log --author=&quot;$(git config --get user.name)&quot; --pretty=tformat: --numstat | awk &#39;&#123; add += $1 ; subs += $2 ; loc += $1 - $2 &#125; END &#123; printf &quot;added lines: %s removed lines : %s total lines: %s\n&quot;,add,subs,loc &#125;&#39;</code><br>使用cloc统计代码行数给力：<br>安装<code>brew install cloc</code><br>统计目录下的所有文件，代码行数<code>cloc ./</code><br>排除文件夹<code>cloc ./ --exclude-dir=Pods,Tests,Utility</code></p>
+          <p>快速排序由于排序效率在同为O(N*logN)的几种排序方法中效率较高，因此经常被采用，再加上快速排序思想—-分治法也确实实用，因此很多软件公司的笔试面试，包括像腾讯，微软等知名IT公司都喜欢考这个。</p>
+<p>快速排序是C.R.A.Hoare于1962年提出的一种划分交换排序。它采用了一种分治的策略，通常称其为分治法(Divide-and-ConquerMethod)。</p>
+<p>该方法的基本思想是：</p>
+<p>1．先从数列中取出一个数作为基准数。<br>2．分区过程，将比这个数大的数全放到它的右边，小于或等于它的数全放到它的左边。<br>3．再对左右区间重复第二步，直到各区间只有一个数。<br><img src="https://upload-images.jianshu.io/upload_images/10024246-3f6f3e05a50e33ae.gif?imageMogr2/auto-orient/strip" alt="一次快排过程"><br>以一个数组作为示例，取区间第一个数为基准数。<br>|0|1|2|3|4|<br>|  —-  | —-  |—-|  —-  | —-  |<br>|<em><strong>6</strong></em>|3|7|4|1|<br>初始时，i = 0;  j = 5;   X = a[i] = 6</p>
+<p>由于已经将 a[0] 中的数保存到 X 中，可以理解成在数组 a[0] 上挖了个坑，可以将其它数据填充到这来。</p>
+<p>1、从j开始向前找一个比X小或等于X的数。<br>2、当j=4，符合条件，将a[4]挖出再填到上一个坑a[0]中。a[0]=a[4]; i++;  这样一个坑a[0]就被搞定了，但又形成了一个新坑a[4]，这怎么办了？简单，再找数字来填a[4]这个坑。<br>3、这次从i开始向后找一个大于X的数，当i=2，符合条件，将a[2]挖出再填到上一个坑中a[4]=a[2]; j–;<br>数组变为<br>|0|1|2|3|4|<br>|  —-  | —-  |—-|  —-  | —-  |<br>|<strong>1</strong>|3|<strong>7</strong>|4|<strong>7</strong>|<br>i = 2;   j = 4;   X=6<br>4、再重复上面的步骤，先从后向前找，再从前向后找。<br>5、从j开始向前找，当j=3，符合条件，将a[3]挖出填到上一个坑中，a[2] = a[3]; i++;</p>
+<p>从i开始向后找，当i=3时，由于i==j退出。</p>
+<p>此时，i = j = 3，而a[3]刚好又是上次挖的坑，因此将X填入a[3]。</p>
+<p>数组变为：<br>|0|1|2|3|4|<br>|  —-  | —-  |—-|  —-  | —-  |<br>|1|3|4|6|7|</p>
+<p>再重复上面的步骤，先从后向前找，再从前向后找。</p>
+<h3 id="代码实现"><a href="#代码实现" class="headerlink" title="代码实现"></a>代码实现</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br></pre></td><td class="code"><pre><span class="line">&#x2F;**</span><br><span class="line"> * 快速排序</span><br><span class="line"> * @param &#123;Array&lt;Number&gt;&#125; arry 要排序的数组</span><br><span class="line"> *&#x2F;</span><br><span class="line">function quickSort(arry, left, right) &#123;</span><br><span class="line">    if (arry.length &#x3D;&#x3D; 0) &#123;&#x2F;&#x2F;判断数组不为空</span><br><span class="line">        return [];</span><br><span class="line">    &#125;</span><br><span class="line">    let [l, r] &#x3D; [left, right];</span><br><span class="line">    if (l &lt; r) &#123;</span><br><span class="line">        let temp &#x3D; arry[l];&#x2F;&#x2F;即arry[l]就是第一个坑</span><br><span class="line">        while (l &lt; r) &#123;</span><br><span class="line">            &#x2F;&#x2F; 从右向左找小于temp的数来填arry[l]</span><br><span class="line">            while (l &lt; r &amp;&amp; arry[r] &gt; temp) &#123;</span><br><span class="line">                r--;</span><br><span class="line">            &#125;</span><br><span class="line">            if (l &lt; r) &#123;</span><br><span class="line">                arry[l] &#x3D; arry[r]; &#x2F;&#x2F;将arry[r]填到arry[l]中，arry[r]就形成了一个新的坑</span><br><span class="line">                l++;</span><br><span class="line">            &#125;</span><br><span class="line">            &#x2F;&#x2F; 从左向右找大于temp的数来填arry[r]</span><br><span class="line">            while (l &lt; r &amp;&amp; arry[l] &lt; temp) &#123;</span><br><span class="line">                l++;</span><br><span class="line">            &#125;</span><br><span class="line">            if (l &lt; r) &#123;</span><br><span class="line">                arry[r] &#x3D; arry[l]; &#x2F;&#x2F;将arry[l]填到arry[r]中，arry[l]就形成了一个新的坑</span><br><span class="line">                r--;</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;</span><br><span class="line">        arry[l] &#x3D; temp;&#x2F;&#x2F;将temp填入arry[l]的坑</span><br><span class="line">        console.log(arry, l);</span><br><span class="line">        &#x2F;&#x2F; 递归调用 </span><br><span class="line">        quickSort(arry, left, l - 1);</span><br><span class="line">        quickSort(arry, l + 1, right);</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p>运行结果：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><span class="line">quickSort([72, 6, 57, 88, 60, 42, 83, 73, 48, 85], 0, 9);</span><br><span class="line">[ 48, 6, 57, 42, 60, 72, 83, 73, 88, 85 ] 5</span><br><span class="line">&#x2F;&#x2F;第一次排序72为观察数，分界为5；左边都是小于，右边都是大于</span><br><span class="line">[ 42, 6, 48, 57, 60, 72, 83, 73, 88, 85 ] 2</span><br><span class="line">&#x2F;&#x2F;数组左边0-5继续续排序，48为观察数，分界为2</span><br><span class="line">[ 6, 42, 48, 57, 60, 72, 83, 73, 88, 85 ] 1</span><br><span class="line">&#x2F;&#x2F;数组左边0-2继续排序，42为观察数，分界结果为1，</span><br><span class="line">&#x2F;&#x2F;这时再递归发现1&lt;1-1;结束递归，开始右边排序</span><br><span class="line">[ 6, 42, 48, 57, 60, 72, 83, 73, 88, 85 ] 3</span><br><span class="line">&#x2F;&#x2F;右边排序其实是开始于[ 42, 6, 48 , 57, 60, 72, 83, 73, 88, 85 ] 这个数组，57为观察数，排序区间为3-5，发现已经是正序，继续递归上次的右边排序</span><br><span class="line">[ 6, 42, 48, 57, 60, 72, 73, 83, 88, 85 ] 7</span><br><span class="line">&#x2F;&#x2F;右边排序其实是开始于[ 48, 6, 57, 42, 60, 72, 83, 73, 88, 85 ]这个数组基于分界点5的右边数组，83为观察数，排序区间为6-9，排序分界结果为7</span><br><span class="line">[ 6, 42, 48, 57, 60, 72, 73, 83, 85, 88 ] 9</span><br><span class="line">&#x2F;&#x2F;再次递归，右边已正序</span><br></pre></td></tr></table></figure>
+<h3 id="复杂度"><a href="#复杂度" class="headerlink" title="复杂度"></a>复杂度</h3><p>时间复杂度：O(nlogn)<br>空间复杂度：快速排序使用递归，递归使用栈，因此它的空间复杂度为O(logn)<br>稳定性：快速排序无法保证相等的元素的相对位置不变，因此它是不稳定的排序算法</p>
 
       
     </div>
@@ -1224,7 +1312,7 @@
 
 
   <nav class="pagination">
-    <a class="extend prev" rel="prev" href="/nirvana/page/20/"><i class="fa fa-angle-left" aria-label="上一页"></i></a><a class="page-number" href="/nirvana/">1</a><span class="space">&hellip;</span><a class="page-number" href="/nirvana/page/20/">20</a><span class="page-number current">21</span>
+    <a class="extend prev" rel="prev" href="/nirvana/page/20/"><i class="fa fa-angle-left" aria-label="上一页"></i></a><a class="page-number" href="/nirvana/">1</a><span class="space">&hellip;</span><a class="page-number" href="/nirvana/page/20/">20</a><span class="page-number current">21</span><a class="page-number" href="/nirvana/page/22/">22</a><span class="space">&hellip;</span><a class="page-number" href="/nirvana/page/25/">25</a><a class="extend next" rel="next" href="/nirvana/page/22/"><i class="fa fa-angle-right" aria-label="下一页"></i></a>
   </nav>
 
 
@@ -1270,14 +1358,14 @@
       <i class="fa fa-chart-line"></i>
     </span>
       <span>站点总字数：</span>
-    <span title="站点总字数">595k</span>
+    <span title="站点总字数">736k</span>
   </span>
   <span class="post-meta-item">
     <span class="post-meta-item-icon">
       <i class="fa fa-coffee"></i>
     </span>
       <span>站点阅读时长 &asymp;</span>
-    <span title="站点阅读时长">9:01</span>
+    <span title="站点阅读时长">11:09</span>
   </span>
 </div>
   <div class="powered-by">由 <a href="https://hexo.io/" class="theme-link" rel="noopener" target="_blank">Hexo</a> & <a href="https://theme-next.js.org/" class="theme-link" rel="noopener" target="_blank">NexT.Gemini</a> 强力驱动

@@ -1,0 +1,586 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=2">
+<meta name="theme-color" content="#222">
+<meta name="generator" content="Hexo 5.4.0">
+ <meta name="referrer" content="no-referrer"/>
+
+  <link rel="apple-touch-icon" sizes="180x180" href="/nirvana/images/apple-touch-icon-next.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="/nirvana/images/favicon-32x32-next.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="/nirvana/images/favicon-16x16-next.png">
+  <link rel="mask-icon" href="/nirvana/images/logo.svg" color="#222">
+
+<link rel="stylesheet" href="/nirvana/css/main.css">
+
+
+
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@5.15.2/css/all.min.css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/animate.css@3.1.1/animate.min.css">
+
+<script class="hexo-configurations">
+    var NexT = window.NexT || {};
+    var CONFIG = {"hostname":"lzhwweb.github.io","root":"/nirvana/","images":"/nirvana/images","scheme":"Gemini","version":"8.2.2","exturl":false,"sidebar":{"position":"left","display":"post","padding":18,"offset":12},"copycode":false,"bookmark":{"enable":true,"color":"#222","save":"auto"},"fancybox":false,"mediumzoom":false,"lazyload":false,"pangu":false,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},"motion":{"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"fadeInDown","post_body":"fadeInDown","coll_header":"fadeInLeft","sidebar":"fadeInUp"}},"prism":false,"i18n":{"placeholder":"搜索...","empty":"没有找到任何搜索结果：${query}","hits_time":"找到 ${hits} 个搜索结果（用时 ${time} 毫秒）","hits":"找到 ${hits} 个搜索结果"},"path":"/nirvana/search.xml","localsearch":{"enable":true,"trigger":"auto","top_n_per_article":1,"unescape":false,"preload":false}};
+  </script>
+<meta name="description" content="PS：本文所针对的场景，都是复杂业务场景下的 Web 应用。简单的 Web 应用不适合复杂的架构模式，它为带来巨大的成本。 在接触了领域驱动设计的概念，其中关于核心域的想法让人颇为激动。而在微服务架构中，核心域是一个或者多个服务的域，而位于核心域的核心则是领域模型。简单地来说，对于一个系统来说，它的核心的核心的 ”核心“ 就是：领域模型。 过去，当我们谈及领域模型的时候，我们往往将其置于 Web">
+<meta property="og:type" content="article">
+<meta property="og:title" content="前后端一体化：前后端分离将死？">
+<meta property="og:url" content="https://lzhwweb.github.io/nirvana/javascript/%E5%89%8D%E7%AB%AF/%E5%89%8D%E5%90%8E%E7%AB%AF%E4%B8%80%E4%BD%93%E5%8C%96:%E5%89%8D%E5%90%8E%E7%AB%AF%E5%88%86%E7%A6%BB%E5%B0%86%E6%AD%BB%EF%BC%9F/index.html">
+<meta property="og:site_name" content="涅槃快乐是金">
+<meta property="og:description" content="PS：本文所针对的场景，都是复杂业务场景下的 Web 应用。简单的 Web 应用不适合复杂的架构模式，它为带来巨大的成本。 在接触了领域驱动设计的概念，其中关于核心域的想法让人颇为激动。而在微服务架构中，核心域是一个或者多个服务的域，而位于核心域的核心则是领域模型。简单地来说，对于一个系统来说，它的核心的核心的 ”核心“ 就是：领域模型。 过去，当我们谈及领域模型的时候，我们往往将其置于 Web">
+<meta property="og:locale" content="zh_CN">
+<meta property="article:published_time" content="2021-06-10T08:23:39.000Z">
+<meta property="article:modified_time" content="2021-06-10T09:02:25.240Z">
+<meta property="article:author" content="nirvana">
+<meta property="article:tag" content="前端,javascript,node,git,webpack,css">
+<meta name="twitter:card" content="summary">
+
+
+<link rel="canonical" href="https://lzhwweb.github.io/nirvana/javascript/%E5%89%8D%E7%AB%AF/%E5%89%8D%E5%90%8E%E7%AB%AF%E4%B8%80%E4%BD%93%E5%8C%96:%E5%89%8D%E5%90%8E%E7%AB%AF%E5%88%86%E7%A6%BB%E5%B0%86%E6%AD%BB%EF%BC%9F/">
+
+
+<script class="page-configurations">
+  // https://hexo.io/docs/variables.html
+  CONFIG.page = {
+    sidebar: "",
+    isHome : false,
+    isPost : true,
+    lang   : 'zh-CN'
+  };
+</script>
+<title>前后端一体化：前后端分离将死？ | 涅槃快乐是金</title>
+  
+
+
+
+
+  <noscript>
+  <style>
+  body { margin-top: 2rem; }
+
+  .use-motion .menu-item,
+  .use-motion .sidebar,
+  .use-motion .post-block,
+  .use-motion .pagination,
+  .use-motion .comments,
+  .use-motion .post-header,
+  .use-motion .post-body,
+  .use-motion .collection-header {
+    visibility: visible;
+  }
+
+  .use-motion .header,
+  .use-motion .site-brand-container .toggle,
+  .use-motion .footer { opacity: initial; }
+
+  .use-motion .site-title,
+  .use-motion .site-subtitle,
+  .use-motion .custom-logo-image {
+    opacity: initial;
+    top: initial;
+  }
+
+  .use-motion .logo-line {
+    transform: scaleX(1);
+  }
+
+  .search-pop-overlay, .sidebar-nav { display: none; }
+  .sidebar-panel { display: block; }
+  </style>
+</noscript>
+
+</head>
+
+<body itemscope itemtype="http://schema.org/WebPage" class="use-motion">
+  <div class="headband"></div>
+
+  <main class="main">
+    <header class="header" itemscope itemtype="http://schema.org/WPHeader">
+      <div class="header-inner"><div class="site-brand-container">
+  <div class="site-nav-toggle">
+    <div class="toggle" aria-label="切换导航栏" role="button">
+        <span class="toggle-line"></span>
+        <span class="toggle-line"></span>
+        <span class="toggle-line"></span>
+    </div>
+  </div>
+
+  <div class="site-meta">
+
+    <a href="/nirvana/" class="brand" rel="start">
+      <i class="logo-line"></i>
+      <h1 class="site-title">涅槃快乐是金</h1>
+      <i class="logo-line"></i>
+    </a>
+  </div>
+
+  <div class="site-nav-right">
+    <div class="toggle popup-trigger">
+        <i class="fa fa-search fa-fw fa-lg"></i>
+    </div>
+  </div>
+</div>
+
+
+
+<nav class="site-nav">
+  <ul class="main-menu menu">
+        <li class="menu-item menu-item-home"><a href="/nirvana/" rel="section">首页</a></li>
+        <li class="menu-item menu-item-git"><a href="/nirvana/categories/git" rel="section">git</a></li>
+        <li class="menu-item menu-item-linux"><a href="/nirvana/categories/linux" rel="section">linux</a></li>
+        <li class="menu-item menu-item-android"><a href="/nirvana/categories/android" rel="section">android</a></li>
+        <li class="menu-item menu-item-随笔"><a href="/nirvana/categories/informal" rel="section">随笔</a></li>
+        <li class="menu-item menu-item-mac"><a href="/nirvana/categories/mac" rel="section">mac</a></li>
+        <li class="menu-item menu-item-react-native"><a href="/nirvana/categories/reactnative" rel="section">react-native</a></li>
+        <li class="menu-item menu-item-算法"><a href="/nirvana/categories/algorithm" rel="section">算法</a></li>
+        <li class="menu-item menu-item-读书笔记"><a href="/nirvana/categories/note" rel="section">读书笔记</a></li>
+        <li class="menu-item menu-item-开发工具"><a href="/nirvana/categories/tool" rel="section">开发工具</a></li>
+        <li class="menu-item menu-item-设计模式(ts)"><a href="/nirvana/categories/DesignPattern" rel="section">设计模式(TS)</a></li>
+        <li class="menu-item menu-item-前端"><a href="/nirvana/categories/javascript" rel="section">前端</a></li>
+        <li class="menu-item menu-item-webpack"><a href="/nirvana/categories/webpack" rel="section">webpack</a></li>
+      <li class="menu-item menu-item-search">
+        <a role="button" class="popup-trigger"><i class="fa fa-search fa-fw"></i>搜索
+        </a>
+      </li>
+  </ul>
+</nav>
+
+
+
+  <div class="search-pop-overlay">
+    <div class="popup search-popup"><div class="search-header">
+  <span class="search-icon">
+    <i class="fa fa-search"></i>
+  </span>
+  <div class="search-input-container">
+    <input autocomplete="off" autocapitalize="off" maxlength="80"
+           placeholder="搜索..." spellcheck="false"
+           type="search" class="search-input">
+  </div>
+  <span class="popup-btn-close" role="button">
+    <i class="fa fa-times-circle"></i>
+  </span>
+</div>
+<div class="search-result-container no-result">
+  <div class="search-result-icon">
+    <i class="fa fa-spinner fa-pulse fa-5x"></i>
+  </div>
+</div>
+
+    </div>
+  </div>
+
+</div>
+        
+  
+  <div class="toggle sidebar-toggle" role="button">
+    <span class="toggle-line"></span>
+    <span class="toggle-line"></span>
+    <span class="toggle-line"></span>
+  </div>
+
+  <aside class="sidebar">
+
+    <div class="sidebar-inner sidebar-nav-active sidebar-toc-active">
+      <ul class="sidebar-nav">
+        <li class="sidebar-nav-toc">
+          文章目录
+        </li>
+        <li class="sidebar-nav-overview">
+          站点概览
+        </li>
+      </ul>
+
+      <div class="sidebar-panel-container">
+        <!--noindex-->
+        <div class="post-toc-wrap sidebar-panel">
+            <div class="post-toc animated"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%BC%95%E5%AD%90-1%EF%BC%9A%E6%A8%A1%E5%9E%8B%E4%B8%80%E8%87%B4%E5%8C%96"><span class="nav-text">引子 1：模型一致化</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%BC%95%E5%AD%90-2%EF%BC%9AJavaScript-TypeScript-%E9%87%8D%E5%86%99%E4%B8%80%E5%88%87"><span class="nav-text">引子 2：JavaScript &#x2F; TypeScript 重写一切</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#%E7%BA%AF-Node-js-%E5%90%8E%E7%AB%AF%E5%BA%94%E7%94%A8"><span class="nav-text">纯 Node.js 后端应用</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Serverless-%E5%BA%94%E7%94%A8"><span class="nav-text">Serverless 应用</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%BC%95%E5%AD%90-3%EF%BC%9A%E7%BA%AF%E7%BC%96%E8%AF%91%E5%88%B0-JavaScript"><span class="nav-text">引子 3：纯编译到 JavaScript</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%BC%95%E5%AD%90-4%EF%BC%9A%E5%85%B1%E4%BA%AB%E9%A2%86%E5%9F%9F%E6%A8%A1%E5%9E%8B-%E6%A8%A1%E5%BC%8F%E5%BA%93"><span class="nav-text">引子 4：共享领域模型&#x2F;模式库</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%BC%95%E5%AD%90-5%EF%BC%9A%E9%A2%86%E5%9F%9F%E6%A8%A1%E5%9E%8B%E7%BC%96%E8%AF%91%E5%88%B0-WASM"><span class="nav-text">引子 5：领域模型编译到 WASM</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%BC%95%E5%AD%90-6%EF%BC%9AComponentLess"><span class="nav-text">引子 6：ComponentLess</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#ComponentLess"><span class="nav-text">ComponentLess</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#DSL-%E6%8A%BD%E8%B1%A1%E5%8C%96%E4%BB%A3%E7%A0%81"><span class="nav-text">DSL 抽象化代码</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E6%A8%A1%E5%9E%8B%E5%A4%8D%E7%94%A8"><span class="nav-text">模型复用</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%89%8D%E5%90%8E%E7%AB%AF%E5%88%86%E7%A6%BB%E5%B0%86%E6%AD%BB%EF%BC%9F"><span class="nav-text">前后端分离将死？</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%85%B6%E5%AE%83"><span class="nav-text">其它</span></a></li></ol></div>
+        </div>
+        <!--/noindex-->
+
+        <div class="site-overview-wrap sidebar-panel">
+          <div class="site-author site-overview-item animated" itemprop="author" itemscope itemtype="http://schema.org/Person">
+    <img class="site-author-image" itemprop="image" alt="nirvana"
+      src="/nirvana/images/headphoto.jpeg">
+  <p class="site-author-name" itemprop="name">nirvana</p>
+  <div class="site-description" itemprop="description">个人学习笔记</div>
+</div>
+<div class="site-state-wrap site-overview-item animated">
+  <nav class="site-state">
+      <div class="site-state-item site-state-posts">
+          <a href="/nirvana/archives">
+          <span class="site-state-item-count">249</span>
+          <span class="site-state-item-name">日志</span>
+        </a>
+      </div>
+      <div class="site-state-item site-state-categories">
+        <span class="site-state-item-count">12</span>
+        <span class="site-state-item-name">分类</span>
+      </div>
+  </nav>
+</div>
+  <div class="links-of-author site-overview-item animated">
+      <span class="links-of-author-item">
+        <a href="https://github.com/lzhwWeb" title="GitHub → https:&#x2F;&#x2F;github.com&#x2F;lzhwWeb" rel="noopener" target="_blank"><i class="fab fa-github fa-fw"></i></a>
+      </span>
+  </div>
+
+
+
+        </div>
+      </div>
+        <div class="back-to-top animated" role="button">
+          <i class="fa fa-arrow-up"></i>
+          <span>0%</span>
+        </div>
+    </div>
+  </aside>
+  <div class="sidebar-dimmer"></div>
+
+
+    </header>
+
+    
+  <div class="reading-progress-bar"></div>
+  <a role="button" class="book-mark-link book-mark-link-fixed"></a>
+
+<noscript>
+  <div class="noscript-warning">Theme NexT works best with JavaScript enabled</div>
+</noscript>
+
+
+    <div class="main-inner post posts-expand">
+
+
+  
+
+
+<div class="post-block">
+  
+  
+
+  <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="zh-CN">
+    <link itemprop="mainEntityOfPage" href="https://lzhwweb.github.io/nirvana/javascript/%E5%89%8D%E7%AB%AF/%E5%89%8D%E5%90%8E%E7%AB%AF%E4%B8%80%E4%BD%93%E5%8C%96:%E5%89%8D%E5%90%8E%E7%AB%AF%E5%88%86%E7%A6%BB%E5%B0%86%E6%AD%BB%EF%BC%9F/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/nirvana/images/headphoto.jpeg">
+      <meta itemprop="name" content="nirvana">
+      <meta itemprop="description" content="个人学习笔记">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="涅槃快乐是金">
+    </span>
+      <header class="post-header">
+        <h1 class="post-title" itemprop="name headline">
+          前后端一体化：前后端分离将死？
+        </h1>
+
+        <div class="post-meta-container">
+          <div class="post-meta">
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-calendar"></i>
+      </span>
+      <span class="post-meta-item-text">发表于</span>
+      
+
+      <time title="创建时间：2021-06-10 16:23:39 / 修改时间：17:02:25" itemprop="dateCreated datePublished" datetime="2021-06-10T16:23:39+08:00">2021-06-10</time>
+    </span>
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-folder"></i>
+      </span>
+      <span class="post-meta-item-text">分类于</span>
+        <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+          <a href="/nirvana/categories/javascript/" itemprop="url" rel="index"><span itemprop="name">javascript</span></a>
+        </span>
+    </span>
+
+  
+    <span id="/nirvana/javascript/%E5%89%8D%E7%AB%AF/%E5%89%8D%E5%90%8E%E7%AB%AF%E4%B8%80%E4%BD%93%E5%8C%96:%E5%89%8D%E5%90%8E%E7%AB%AF%E5%88%86%E7%A6%BB%E5%B0%86%E6%AD%BB%EF%BC%9F/" class="post-meta-item leancloud_visitors" data-flag-title="前后端一体化：前后端分离将死？" title="阅读次数">
+      <span class="post-meta-item-icon">
+        <i class="far fa-eye"></i>
+      </span>
+      <span class="post-meta-item-text">阅读次数：</span>
+      <span class="leancloud-visitors-count"></span>
+    </span>
+      </div>
+      <div class="post-meta">
+    <span class="post-meta-item" title="本文字数">
+      <span class="post-meta-item-icon">
+        <i class="far fa-file-word"></i>
+      </span>
+      <span class="post-meta-item-text">本文字数：</span>
+      <span>4.1k</span>
+    </span>
+    <span class="post-meta-item" title="阅读时长">
+      <span class="post-meta-item-icon">
+        <i class="far fa-clock"></i>
+      </span>
+      <span class="post-meta-item-text">阅读时长 &asymp;</span>
+      <span>4 分钟</span>
+    </span>
+</div>
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+        <p>PS：本文所针对的场景，都是复杂业务场景下的 Web 应用。简单的 Web 应用不适合复杂的架构模式，它为带来巨大的成本。</p>
+<p>在接触了领域驱动设计的概念，其中关于核心域的想法让人颇为激动。而在微服务架构中，核心域是一个或者多个服务的域，而位于核心域的核心则是领域模型。简单地来说，对于一个系统来说，它的核心的核心的 ”核心“ 就是：领域模型。</p>
+<p>过去，当我们谈及领域模型的时候，我们往往将其置于 Web 后端的领域。当我 GET 了一些基本的理念之后，便尝试整合到前端架构中。去年，我开始了 在项目上的第一次尝试，并在 GitHub 上创建了 <a target="_blank" rel="noopener" href="https://github.com/phodal/clean-frontend">clean-frontend</a> 项目，它以 Angular 作为示例，介绍了如何开发一个整洁前端架构的前端应用。</p>
+<h2 id="引子-1：模型一致化"><a href="#引子-1：模型一致化" class="headerlink" title="引子 1：模型一致化"></a>引子 1：模型一致化</h2><p>我习惯于在公司的项目中引入成熟的框架，从几年前的 Angular.js 到近几年的 Angular，完整的框架能为企业带来更少的维护成本，从而降低软件开发成本。几年前，我们引入了 Angular 之后，便开始大量地 TypeScript 项目实践。作为一个支持静态类型的语言，它非常适合于开发大型应用、企业应用，在这一点上你可以从 React、Vue 等框架建议使用 TypeScript 看到一种趋势。</p>
+<p>采纳了 TypeScript 之后，当前端从后端获取到数据之后，那么它需要将 JSON 数据映射到对应的 interface。如此一来，前端的模型也就有了对应的领域模型。而这个数据模型和后端的数据模型应该是完成一致的，但是实际上，它往往是落后的。后端的 API 发生的变更之后，才需要前端同步去修改模型。</p>
+<p>而当我作为一个前端的 Tech Lead 来考虑这个问题的时候，我首先想到的是：读取后端的 Java 代码，然后生成对应的前端模型。在没有造 Chapi 的轮子之前，通过 TypeScript Compiler 转换获得对应的类型，是我觉得比较靠谱的方案。在有了 Chapi 之后，我觉得它们都是小问题了。</p>
+<p>不过，然后我一想这样做的意义并不大，还不如：套用后端的契约测试，造一个前端的自动化契约测试，即：<a target="_blank" rel="noopener" href="http://github.com/phodal/mest">mest</a>。它通过 API 返回数据和 TypeScript 的 Interface 来完成对于契约的测试。一个简单的测试数据如下：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">url,interface</span><br><span class="line">https:&#x2F;&#x2F;phodal.github.io&#x2F;mest-test&#x2F;error.json,mock&#x2F;IError.ts</span><br></pre></td></tr></table></figure>
+
+<p>通过 HTTP 请求获取对应的测试数据，再将其与本地的模型进行比较。</p>
+<p>不过呢，我们还要使用 JavaScript 语言重写部分 Java 代码，那么我们为什么不要 JavaScript / TypeScript 重写一切呢？</p>
+<h2 id="引子-2：JavaScript-TypeScript-重写一切"><a href="#引子-2：JavaScript-TypeScript-重写一切" class="headerlink" title="引子 2：JavaScript / TypeScript 重写一切"></a>引子 2：JavaScript / TypeScript 重写一切</h2><p>遗憾的是，使用 JavaScript 编写后端应用（BFF、胶水层除外），在大部分的大公司是比较难的。内部的生态链和运维影响了技术决策，使用 C++ 不香吗，使用 JavaScript 会存在无人在背后支持。</p>
+<h3 id="纯-Node-js-后端应用"><a href="#纯-Node-js-后端应用" class="headerlink" title="纯 Node.js 后端应用"></a>纯 Node.js 后端应用</h3><p>在过去的几年里，我建议：小公司的后端应用<strong>不要</strong>使用 JavaScript / TypeScript 编写，因为运维、监控、APM 等生态尚不够完善。小公司应该优先投资于业务领域，在基础设施的投入见效比较短，除非能控制好开发人员的流动性。</p>
+<p>不过，不管怎样，已经有大量的小公司因为人力成本的原因，已经使用上了 Node.js 来开发后端应用。</p>
+<h3 id="Serverless-应用"><a href="#Serverless-应用" class="headerlink" title="Serverless 应用"></a>Serverless 应用</h3><p>而随着 JavaScript 系生态的完善，基础设施已经不是会成为小公司的负担，我便觉得这是一个好的时机。不过，我指的是采用 Serverlesss 架构，而非自建 JavaScript 系生态。Serverless 不仅帮助小企业解决了基础设施的问题，还能为小企业降低软件运维成本。一旦企业做大之后，也可以自建采用 OpenFaas 等开源方案解决 Serverless 的供应商锁定问题。</p>
+<p>不论是 Node.js 后端应用还是 Serverless 应用，因为使用的是同一种语言，我们可以轻松地在前后端之间共享代码，可以是 Git submodule、NPM 包、远程等等的方式。</p>
+<h2 id="引子-3：纯编译到-JavaScript"><a href="#引子-3：纯编译到-JavaScript" class="headerlink" title="引子 3：纯编译到 JavaScript"></a>引子 3：纯编译到 JavaScript</h2><p>市面上有各种各样支持 compile to js 的语言、框架，诸如于 Kotlin.js、Scala.js、Python.js 等等。</p>
+<p>对于小前端的应用来说，这种架构非常的不错。它相当于是渐进式的系统架构方案，当前采用了主流的前端框架，而非传统的后端渲染机制，并统一了技术栈，降低了组织内部的学习成本。不过，它带来额外的调试因素，毕竟每多一层封装，系统的复杂度就需要 * 2。</p>
+<p>而为了让框架的使用者支持不同的框架 React、Angular、Vue，这个框架还需要提供这些框架的 bind 或者是 wrapper，以提升框架使用者的幸福感。</p>
+<p>但是，我们的挑战依然是复杂的前端应用，以及它难以消除交互的复杂度。</p>
+<h2 id="引子-4：共享领域模型-模式库"><a href="#引子-4：共享领域模型-模式库" class="headerlink" title="引子 4：共享领域模型/模式库"></a>引子 4：共享领域模型/模式库</h2><p>开始之前，我不得不强调一，领域模型是一种包含数据和行为的抽血模型。</p>
+<p>编译到 JavaScript 是一种轻前端的方案，而对于重前端的项目来说，它们完成可以采用一种新的模式：共享领域模型。即将领域模型作为模式库，提供给前后端一起使用。即，我们只需要编译所需要的部分。</p>
+<p>这在我使用了 Kotlin 的多平台技术（multiplatform）重写了 Chapi 的 domain 层之后，我意识到了这是一个非常迷人的方案。我即使用在前端代码中使用 Chapi 的领域模型，我还需要在后端的代码中使用这套模型。原先，我需要手动翻译一行行代码，现在我并不需要这样的一个步骤。只需要在 pom.xml、build.gradle 或者是 package.json 中引入依赖及其对应的版本即可。</p>
+<p>在引入了这部分的代码之后，我们再关注于 UI 交互部分即可。</p>
+<h2 id="引子-5：领域模型编译到-WASM"><a href="#引子-5：领域模型编译到-WASM" class="headerlink" title="引子 5：领域模型编译到 WASM"></a>引子 5：领域模型编译到 WASM</h2><p>考虑到并非所有的语言都能支持 compile to JavaScript，一种颇为有效的方式就是使用 WASM。</p>
+<blockquote>
+<p>WebAssembly 或称 wasm 是一个实验性的低端编程语言，应用于浏览器内的客户端。WebAssembly 将让开发者能运用自己熟悉的编程语言编译，再藉虚拟机引擎在浏览器内运行。 —— <a target="_blank" rel="noopener" href="https://zh.wikipedia.org/zh-cn/WebAssembly">维基百科</a></p>
+</blockquote>
+<p>我尝试将使用 Go 编写的 Coca 编译成 WASM，但是遇到一系列的问题（我已经忘了），体积似乎是个问题，所以我尝试使用 Rust 去构建另外一种可能性。Rust 官方提供了 Rust Webpack Template，因此我可以将其集成到我现有的前端应用中。只是呢，似乎还没有人会使用 Rust 去编写后端应用。</p>
+<p>但是 WASM 提供了一种更友好的方式，即我们不需要重写现有的代码，而是只需要添加一些代码，便可以将现有的后端模型代码提到给前端使用。并且，与混淆后的 JavaScript 相比，它看上去更加安全 —— 学习成本更高一些。</p>
+<h2 id="引子-6：ComponentLess"><a href="#引子-6：ComponentLess" class="headerlink" title="引子 6：ComponentLess"></a>引子 6：ComponentLess</h2><p>在研究 Serverless 和微前端的期间，我突然有了一点想法，我对于客户端领域的 Serverless 式架构有了一些基本的构想，叫：ComponentLess。尽管有了一些基础的理念，但是还缺乏一个真实可用的 Demo，所以我并没有定义出什么是 ComponentLess。</p>
+<p>起先，我以为无代码编程是一个 ComponentLess 方向，但是一研究发现并不是。无代码编程倾向于可视化编程，而 ComponentLess 倾向于使用 DSL 编程。就这一点来说，我便偏向于使用 Web Components + WAM 技术来构建新的前端架构。</p>
+<h3 id="ComponentLess"><a href="#ComponentLess" class="headerlink" title="ComponentLess"></a>ComponentLess</h3><p>从单体应用转向微服务架构的一大特质是，组件（非单指 UI 组件，可以视为服务）由函数调用转向了 HTTP 调用。而 Serverless 进一步地将微服务的服务级别 HTTP 调用，细化为函数级别的 HTTP 调用。</p>
+<p>对于前端领域来说，也是如此。微前端将单体应用拆分一个个的独立运行前端应用，我们可以随意地组合这些应用。进一步地，结合诸如于 Web Component 这样的组件级方案，便可以将拆分细分为到 UI 组件的粒度。我们可以使用 （HTML Imports 已遗弃）script 标签从远程导入：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">&lt;script type&#x3D;&quot;module&quot; src&#x3D;&quot;my-element.js&quot;&gt;&lt;&#x2F;script&gt;</span><br><span class="line">&lt;my-element&gt;&lt;&#x2F;my-element&gt;</span><br></pre></td></tr></table></figure>
+
+<p>因此，在未来，不论是前端开发人员，还是开发人员，都可以通过集成组件的方式来开发应用。也就是说，我们只需要关注于编写核心业务代码即可，剩下的部分可以通过一些特殊的方式来实现。</p>
+<h3 id="DSL-抽象化代码"><a href="#DSL-抽象化代码" class="headerlink" title="DSL 抽象化代码"></a>DSL 抽象化代码</h3><p>ComponentLess + Serverless 是<strong>代码即基础设施</strong>开始的一个标志。当代码开始作为基础设施的一部分时，代码便需要以某种方式才能组合到一起。在 Serverless Framework 中，开发人员通过配置接入服务端所使用的基础信息。而 YAML 配置本身也是 DSL 的一种，缺乏灵活度，但是使用非常简单。</p>
+<p>事实上，这是两个选择：</p>
+<ul>
+<li>  配置 + 编程语言。 上手容易，迁移难</li>
+<li>  DSL。 上手复杂，易于迁移</li>
+</ul>
+<p>但是，无论如何我还是如何 DSL，它听上去有着更丰富的 KPI。至于如何抽象化基础设计代码，可以参考《<a target="_blank" rel="noopener" href="https://github.com/phodal/cloud-dev">云研发：研发即代码</a>》一文。</p>
+<h3 id="模型复用"><a href="#模型复用" class="headerlink" title="模型复用"></a>模型复用</h3><p>不论是 ComponentLess 还是 Serverless，它们都是由函数、UI 组件变为一个独立可运行的单元。为了与别人交互，它需要包含输入和输出。而输入和输出本身是需要一个数据模型作为支撑的，以此才能完成整个系统的稳定性。</p>
+<p>而这个话题已经回到我们开头所讨论的内容里。</p>
+<h2 id="前后端分离将死？"><a href="#前后端分离将死？" class="headerlink" title="前后端分离将死？"></a>前后端分离将死？</h2><p>在所有的引子里， 我们已经准备了所有的论据，所以只需要：</p>
+<ul>
+<li>  使用可以跨前后端的语言，构建领域模型</li>
+<li>  将后端服务、前端设施细化为更小的组件</li>
+<li>  设计 DSL 将领域模型转换到特定平台的代码</li>
+</ul>
+<p>你就可以杀死前后端分离，就是这么简单。</p>
+<p>前后端分离将死，不是现在，但是可能在五年后开始。</p>
+<p>你说呢？</p>
+<h2 id="其它"><a href="#其它" class="headerlink" title="其它"></a>其它</h2><p>架构，没有终点。</p>
+
+    </div>
+
+    
+    
+    
+
+    <footer class="post-footer">
+
+        
+
+          <div class="post-nav">
+            <div class="post-nav-item">
+                <a href="/nirvana/javascript/%E5%89%8D%E7%AB%AF/undefined%E5%92%8Cnull/" rel="prev" title="undefined 和 null">
+                  <i class="fa fa-chevron-left"></i> undefined 和 null
+                </a>
+            </div>
+            <div class="post-nav-item">
+                <a href="/nirvana/javascript/%E5%89%8D%E7%AB%AF/meta%E5%9F%BA%E7%A1%80%E7%9F%A5%E8%AF%86/" rel="next" title="meta基础知识">
+                  meta基础知识 <i class="fa fa-chevron-right"></i>
+                </a>
+            </div>
+          </div>
+    </footer>
+  </article>
+</div>
+
+
+
+
+
+
+
+<script>
+  window.addEventListener('tabs:register', () => {
+    let { activeClass } = CONFIG.comments;
+    if (CONFIG.comments.storage) {
+      activeClass = localStorage.getItem('comments_active') || activeClass;
+    }
+    if (activeClass) {
+      const activeTab = document.querySelector(`a[href="#comment-${activeClass}"]`);
+      if (activeTab) {
+        activeTab.click();
+      }
+    }
+  });
+  if (CONFIG.comments.storage) {
+    window.addEventListener('tabs:click', event => {
+      if (!event.target.matches('.tabs-comment .tab-content .tab-pane')) return;
+      const commentClass = event.target.classList[1];
+      localStorage.setItem('comments_active', commentClass);
+    });
+  }
+</script>
+</div>
+  </main>
+
+  <footer class="footer">
+    <div class="footer-inner">
+
+
+<div class="copyright">
+  &copy; 
+  <span itemprop="copyrightYear">2021</span>
+  <span class="with-love">
+    <i class="fa fa-heart"></i>
+  </span>
+  <span class="author" itemprop="copyrightHolder">nirvana</span>
+</div>
+<div class="wordcount">
+  <span class="post-meta-item">
+    <span class="post-meta-item-icon">
+      <i class="fa fa-chart-line"></i>
+    </span>
+      <span>站点总字数：</span>
+    <span title="站点总字数">736k</span>
+  </span>
+  <span class="post-meta-item">
+    <span class="post-meta-item-icon">
+      <i class="fa fa-coffee"></i>
+    </span>
+      <span>站点阅读时长 &asymp;</span>
+    <span title="站点阅读时长">11:09</span>
+  </span>
+</div>
+  <div class="powered-by">由 <a href="https://hexo.io/" class="theme-link" rel="noopener" target="_blank">Hexo</a> & <a href="https://theme-next.js.org/" class="theme-link" rel="noopener" target="_blank">NexT.Gemini</a> 强力驱动
+  </div>
+
+    </div>
+  </footer>
+
+  
+  <script src="https://cdn.jsdelivr.net/npm/animejs@3.2.1/lib/anime.min.js"></script>
+<script src="/nirvana/js/utils.js"></script><script src="/nirvana/js/motion.js"></script><script src="/nirvana/js/next-boot.js"></script><script src="/nirvana/js/bookmark.js"></script>
+
+  
+<script src="/nirvana/js/local-search.js"></script>
+
+
+
+
+
+
+  
+
+
+<script>
+  (function() {
+    function leancloudSelector(url) {
+      url = encodeURI(url);
+      return document.getElementById(url).querySelector('.leancloud-visitors-count');
+    }
+
+    function addCount(Counter) {
+      const visitors = document.querySelector('.leancloud_visitors');
+      const url = decodeURI(visitors.id);
+      const title = visitors.dataset.flagTitle;
+
+      Counter('get', '/classes/Counter?where=' + encodeURIComponent(JSON.stringify({ url })))
+        .then(response => response.json())
+        .then(({ results }) => {
+          if (results.length > 0) {
+            const counter = results[0];
+            leancloudSelector(url).innerText = counter.time + 1;
+            Counter('put', '/classes/Counter/' + counter.objectId, { time: { '__op': 'Increment', 'amount': 1 } })
+              .catch(error => {
+                console.error('Failed to save visitor count', error);
+              });
+          } else {
+              leancloudSelector(url).innerText = 'Counter not initialized! More info at console err msg.';
+              console.error('ATTENTION! LeanCloud counter has security bug, see how to solve it here: https://github.com/theme-next/hexo-leancloud-counter-security. \n However, you can still use LeanCloud without security, by setting `security` option to `false`.');
+            
+          }
+        })
+        .catch(error => {
+          console.error('LeanCloud Counter Error', error);
+        });
+    }
+
+    function showTime(Counter) {
+      const visitors = document.querySelectorAll('.leancloud_visitors');
+      const entries = [...visitors].map(element => {
+        return decodeURI(element.id);
+      });
+
+      Counter('get', '/classes/Counter?where=' + encodeURIComponent(JSON.stringify({ url: { '$in': entries } })))
+        .then(response => response.json())
+        .then(({ results }) => {
+          for (let url of entries) {
+            const target = results.find(item => item.url === url);
+            leancloudSelector(url).innerText = target ? target.time : 0;
+          }
+        })
+        .catch(error => {
+          console.error('LeanCloud Counter Error', error);
+        });
+    }
+
+    const { app_id, app_key, server_url } = {"enable":true,"app_id":"SPsNUvBhME7XmrjzCfHkUu3e-gzGzoHsz","app_key":"4TONafemiIzvJUwqLa7WveoL","server_url":"https://leancloud.cn","security":true,"betterPerformance":false};
+    function fetchData(api_server) {
+      const Counter = (method, url, data) => {
+        return fetch(`${api_server}/1.1${url}`, {
+          method,
+          headers: {
+            'X-LC-Id'     : app_id,
+            'X-LC-Key'    : app_key,
+            'Content-Type': 'application/json',
+          },
+          body: JSON.stringify(data)
+        });
+      };
+      if (CONFIG.page.isPost) {
+        if (CONFIG.hostname !== location.hostname) return;
+        addCount(Counter);
+      } else if (document.querySelectorAll('.post-title-link').length >= 1) {
+        showTime(Counter);
+      }
+    }
+
+    const api_server = app_id.slice(-9) === '-MdYXbMMI' ? `https://${app_id.slice(0, 8).toLowerCase()}.api.lncldglobal.com` : server_url;
+
+    if (api_server) {
+      fetchData(api_server);
+    } else {
+      fetch('https://app-router.leancloud.cn/2/route?appId=' + app_id)
+        .then(response => response.json())
+        .then(({ api_server }) => {
+          fetchData('https://' + api_server);
+        });
+    }
+  })();
+</script>
+
+
+
+</body>
+</html>

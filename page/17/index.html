@@ -207,12 +207,12 @@
   <nav class="site-state">
       <div class="site-state-item site-state-posts">
           <a href="/nirvana/archives">
-          <span class="site-state-item-count">209</span>
+          <span class="site-state-item-count">249</span>
           <span class="site-state-item-name">日志</span>
         </a>
       </div>
       <div class="site-state-item site-state-categories">
-        <span class="site-state-item-count">13</span>
+        <span class="site-state-item-count">12</span>
         <span class="site-state-item-name">分类</span>
       </div>
   </nav>
@@ -257,7 +257,7 @@
   
 
   <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="">
-    <link itemprop="mainEntityOfPage" href="https://lzhwweb.github.io/nirvana/reactnative/react-native/react-native-0-63%E5%90%AF%E5%8A%A8%E9%97%AE%E9%A2%98/">
+    <link itemprop="mainEntityOfPage" href="https://lzhwweb.github.io/nirvana/DesignPattern/%E8%AE%BE%E8%AE%A1%E6%A8%A1%E5%BC%8F%EF%BC%88TypeScript%EF%BC%89/Memento-Pattern%EF%BC%88%E5%A4%87%E5%BF%98%E5%BD%95%E6%A8%A1%E5%BC%8F%EF%BC%89/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="image" content="/nirvana/images/headphoto.jpeg">
@@ -270,7 +270,7 @@
     </span>
       <header class="post-header">
         <h2 class="post-title" itemprop="name headline">
-          <a href="/nirvana/reactnative/react-native/react-native-0-63%E5%90%AF%E5%8A%A8%E9%97%AE%E9%A2%98/" class="post-title-link" itemprop="url">react-native-0-63启动问题</a>
+          <a href="/nirvana/DesignPattern/%E8%AE%BE%E8%AE%A1%E6%A8%A1%E5%BC%8F%EF%BC%88TypeScript%EF%BC%89/Memento-Pattern%EF%BC%88%E5%A4%87%E5%BF%98%E5%BD%95%E6%A8%A1%E5%BC%8F%EF%BC%89/" class="post-title-link" itemprop="url">Memento-Pattern（备忘录模式）</a>
         </h2>
 
         <div class="post-meta-container">
@@ -280,22 +280,28 @@
         <i class="far fa-calendar"></i>
       </span>
       <span class="post-meta-item-text">发表于</span>
-      
 
-      <time title="创建时间：2021-03-10 21:12:40 / 修改时间：13:43:55" itemprop="dateCreated datePublished" datetime="2021-03-10T21:12:40+08:00">2021-03-10</time>
+      <time title="创建时间：2021-03-11 21:12:40" itemprop="dateCreated datePublished" datetime="2021-03-11T21:12:40+08:00">2021-03-11</time>
     </span>
+      <span class="post-meta-item">
+        <span class="post-meta-item-icon">
+          <i class="far fa-calendar-check"></i>
+        </span>
+        <span class="post-meta-item-text">更新于</span>
+        <time title="修改时间：2021-03-10 13:43:55" itemprop="dateModified" datetime="2021-03-10T13:43:55+08:00">2021-03-10</time>
+      </span>
     <span class="post-meta-item">
       <span class="post-meta-item-icon">
         <i class="far fa-folder"></i>
       </span>
       <span class="post-meta-item-text">分类于</span>
         <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-          <a href="/nirvana/categories/reactnative/" itemprop="url" rel="index"><span itemprop="name">reactnative</span></a>
+          <a href="/nirvana/categories/DesignPattern/" itemprop="url" rel="index"><span itemprop="name">DesignPattern</span></a>
         </span>
     </span>
 
   
-    <span id="/nirvana/reactnative/react-native/react-native-0-63%E5%90%AF%E5%8A%A8%E9%97%AE%E9%A2%98/" class="post-meta-item leancloud_visitors" data-flag-title="react-native-0-63启动问题" title="阅读次数">
+    <span id="/nirvana/DesignPattern/%E8%AE%BE%E8%AE%A1%E6%A8%A1%E5%BC%8F%EF%BC%88TypeScript%EF%BC%89/Memento-Pattern%EF%BC%88%E5%A4%87%E5%BF%98%E5%BD%95%E6%A8%A1%E5%BC%8F%EF%BC%89/" class="post-meta-item leancloud_visitors" data-flag-title="Memento-Pattern（备忘录模式）" title="阅读次数">
       <span class="post-meta-item-icon">
         <i class="far fa-eye"></i>
       </span>
@@ -309,14 +315,14 @@
         <i class="far fa-file-word"></i>
       </span>
       <span class="post-meta-item-text">本文字数：</span>
-      <span>520</span>
+      <span>5.1k</span>
     </span>
     <span class="post-meta-item" title="阅读时长">
       <span class="post-meta-item-icon">
         <i class="far fa-clock"></i>
       </span>
       <span class="post-meta-item-text">阅读时长 &asymp;</span>
-      <span>1 分钟</span>
+      <span>5 分钟</span>
     </span>
 </div>
 
@@ -327,7 +333,28 @@
     
     
     <div class="post-body" itemprop="articleBody">
-          <p>1、<code>OpenSSL-Universal</code> requires CocoaPods version <code>&gt;= &quot;1.9</code>“<br>podinstall时提示需要把CocoaPods升级到1.9，但是通过brew install CocoaPods，发现安装的版本是1.6.1，brew upgrade CocoaPods 发现版本无法升级，后来查到1.9的版本需要通过<code>gem install -n /usr/local/bin cocoapods --pre</code>才能安装最新的版本<br>2、Typedef redefinition with different types (‘uint8_t’ (aka ‘unsigned char’) vs ‘enum clockid_t’)<br>changing <code>iOS Deployment Target</code> of <code>Flipper-Folly Pods</code> to “iOS 9.0”, this error disappeared.<br><a target="_blank" rel="noopener" href="https://user-images.githubusercontent.com/3139234/78309578-52984600-7586-11ea-9d27-cefdc6e7ca0f.png"><img src="https://upload-images.jianshu.io/upload_images/10024246-e337b36acb480adc.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240"></a><br>3、 ‘event2/event-config.h’ file not found<br> Flipper-Folly的版本有问题，需要指定版本<br>use_flipper!修改为use_flipper!({ ‘Flipper-Folly’ =&gt; ‘2.3.0’ })<br>重新pod install即可</p>
+          <h2 id="备忘录模式"><a href="#备忘录模式" class="headerlink" title="备忘录模式"></a>备忘录模式</h2><p>备忘录模式（Memento Pattern）保存一个对象的某个状态，以便在适当的时候恢复对象。备忘录模式属于行为型模式。</p>
+<h2 id="使用场景"><a href="#使用场景" class="headerlink" title="使用场景"></a>使用场景</h2><p>使用Memento模式可以实现应用程序的以下功能</p>
+<ul>
+<li>Undo（撤销）</li>
+<li>Redo（重做）</li>
+<li>History（历史记录）</li>
+<li>Snapshot（快照）<h2 id="实现"><a href="#实现" class="headerlink" title="实现"></a>实现</h2>手机水果和获取金钱数的掷骰子游戏<h3 id="Memento类：表示主人公"><a href="#Memento类：表示主人公" class="headerlink" title="Memento类：表示主人公"></a>Memento类：表示主人公</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br></pre></td><td class="code"><pre><span class="line">&#x2F;**</span><br><span class="line"> * Memento类，主人公</span><br><span class="line"> *&#x2F;</span><br><span class="line">export default class Memento &#123;</span><br><span class="line">    public money: number;&#x2F;&#x2F;金钱</span><br><span class="line">    public fruits: Array&lt;string&gt;;&#x2F;&#x2F;水果</span><br><span class="line">    &#x2F;**</span><br><span class="line">     * 获取当前金钱</span><br><span class="line">     *&#x2F;</span><br><span class="line">    public getMoney(): number &#123;</span><br><span class="line">        return this.money;</span><br><span class="line">    &#125;</span><br><span class="line">    constructor(money: number) &#123;</span><br><span class="line">        this.money &#x3D; money;</span><br><span class="line">        this.fruits &#x3D; new Array();</span><br><span class="line">    &#125;</span><br><span class="line">    &#x2F;**</span><br><span class="line">     * 添加水果</span><br><span class="line">     * @param fruit 水果</span><br><span class="line">     *&#x2F;</span><br><span class="line">    public addFruit(fruit: string) &#123;</span><br><span class="line">        this.fruits.push(fruit);</span><br><span class="line">    &#125;</span><br><span class="line">    &#x2F;**</span><br><span class="line">     * 获取当前水果</span><br><span class="line">     *&#x2F;</span><br><span class="line">    public getFruits(): Array&lt;string&gt; &#123;</span><br><span class="line">        return JSON.parse(JSON.stringify(this.fruits));</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+Gamer类：表示游戏主人公的类<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br><span class="line">63</span><br><span class="line">64</span><br><span class="line">65</span><br><span class="line">66</span><br><span class="line">67</span><br><span class="line">68</span><br><span class="line">69</span><br></pre></td><td class="code"><pre><span class="line">import Memento from &quot;.&#x2F;Memento&quot;;</span><br><span class="line"></span><br><span class="line">export default class Gamer &#123;</span><br><span class="line">    private money: number;&#x2F;&#x2F;所持金钱</span><br><span class="line">    private fruits: Array&lt;string&gt; &#x3D; new Array();&#x2F;&#x2F;获得的水果</span><br><span class="line">    private fruitname: string[] &#x3D; [&quot;苹果&quot;, &quot;葡萄&quot;, &quot;香蕉&quot;, &quot;橘子&quot;];&#x2F;&#x2F;水果种类</span><br><span class="line">    constructor(money: number) &#123;&#x2F;&#x2F;构造函数</span><br><span class="line">        this.money &#x3D; money;</span><br><span class="line">    &#125;</span><br><span class="line">    &#x2F;**</span><br><span class="line">     * 获取当前所持金钱</span><br><span class="line">     *&#x2F;</span><br><span class="line">    public getMoney(): number &#123;</span><br><span class="line">        return this.money;</span><br><span class="line">    &#125;</span><br><span class="line">    &#x2F;**</span><br><span class="line">     * 掷骰子游戏</span><br><span class="line">     *&#x2F;</span><br><span class="line">    public bet(): void &#123;</span><br><span class="line">        const dice &#x3D; Math.ceil(Math.random() * 6);&#x2F;&#x2F;骰子随机数</span><br><span class="line">        if (dice &#x3D;&#x3D; 1) &#123;&#x2F;&#x2F;1金钱+100</span><br><span class="line">            this.money +&#x3D; 100;</span><br><span class="line">            console.log(&quot;所持金钱增加了。&quot;)</span><br><span class="line">        &#125; else if (dice &#x3D;&#x3D; 2) &#123;&#x2F;&#x2F;2金钱减半</span><br><span class="line">            this.money &#x2F;&#x3D; 2;</span><br><span class="line">            console.log(&quot;所持金钱减半&quot;);</span><br><span class="line">        &#125; else if (dice &#x3D;&#x3D; 6) &#123;&#x2F;&#x2F;6获取水果</span><br><span class="line">            const f &#x3D; this.getFruit();</span><br><span class="line">            console.log(&#96;获得了水果（$&#123;f&#125;）。&#96;);</span><br><span class="line">            this.fruits.push(f)</span><br><span class="line">        &#125; else &#123;&#x2F;&#x2F;其他没奖励</span><br><span class="line">            console.log(&quot;什么都没有发生。&quot;)</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">    &#x2F;**</span><br><span class="line">     * 创建快照</span><br><span class="line">     *&#x2F;</span><br><span class="line">    public createMemento(): Memento &#123;</span><br><span class="line">        const m: Memento &#x3D; new Memento(this.money);</span><br><span class="line">        this.fruits.forEach((item) &#x3D;&gt; &#123;</span><br><span class="line">            if (item.indexOf(&quot;好吃的&quot;) &#x3D;&#x3D; 0) &#123;&#x2F;&#x2F;只保存还吃的水果</span><br><span class="line">                m.addFruit(item)</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;)</span><br><span class="line">        return m;</span><br><span class="line">    &#125;</span><br><span class="line">    &#x2F;**</span><br><span class="line">     * 撤销操作</span><br><span class="line">     * @param memento 快照</span><br><span class="line">     *&#x2F;</span><br><span class="line">    public restoreMemento(memento: Memento) &#123;</span><br><span class="line">        this.money &#x3D; memento.money;</span><br><span class="line">        this.fruits &#x3D; memento.getFruits();</span><br><span class="line">    &#125;</span><br><span class="line">    public toString(): string &#123;</span><br><span class="line">        return &#96;[money &#x3D; $&#123;this.money&#125;, fruits &#x3D; $&#123;JSON.stringify(this.fruits)&#125;]&#96;</span><br><span class="line">    &#125;</span><br><span class="line">    &#x2F;**</span><br><span class="line">     * 获取水果，增加随机数，只有大于0.5才表示水果是好吃的</span><br><span class="line">     *&#x2F;</span><br><span class="line">    private getFruit(): string &#123;</span><br><span class="line">        let prefix &#x3D; &quot;&quot;;</span><br><span class="line">        if (Math.random() &gt;&#x3D; 0.5) &#123;</span><br><span class="line">            prefix &#x3D; &quot;好吃的&quot;;</span><br><span class="line">        &#125;</span><br><span class="line"></span><br><span class="line">        return &#96;$&#123;prefix&#125;$&#123;this.fruitname[Math.floor(Math.random() * this.fruitname.length)]&#125; &#96;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+#index.ts运行<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br></pre></td><td class="code"><pre><span class="line">import Gamer from &quot;.&#x2F;Gamer&quot;;</span><br><span class="line">import Memento from &quot;.&#x2F;Memento&quot;;</span><br><span class="line"></span><br><span class="line">const gamer: Gamer &#x3D; new Gamer(100);</span><br><span class="line">let memento: Memento &#x3D; gamer.createMemento();</span><br><span class="line">for (let i &#x3D; 0; i &lt; 100; i++) &#123;</span><br><span class="line">    console.log(&#96;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;$&#123;i&#125;&#96;);</span><br><span class="line">    console.log(&#96;当前状态：$&#123;gamer&#125;&#96;);</span><br><span class="line">    gamer.bet();</span><br><span class="line">    console.log(&#96;所持金钱为$&#123;gamer.getMoney()&#125;元&#96;);</span><br><span class="line">    console.log(&#96;$&#123;gamer.getMoney()&#125;元,$&#123;memento.getMoney()&#125;&#96;);</span><br><span class="line">    if (gamer.getMoney() &gt; memento.getMoney()) &#123;</span><br><span class="line">        console.log(&quot;所持金钱增加了许多，因此保存当前游戏状态&quot;);</span><br><span class="line">        memento &#x3D; gamer.createMemento();</span><br><span class="line">    &#125; else if (gamer.getMoney() &lt; memento.getMoney() &#x2F; 2) &#123;</span><br><span class="line">        console.log(&quot;所持金钱减少了许多，因此将游戏恢复至以前的状态&quot;);</span><br><span class="line">        gamer.restoreMemento(memento);</span><br><span class="line"></span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<h2 id="结果"><a href="#结果" class="headerlink" title="结果"></a>结果</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br></pre></td><td class="code"><pre><span class="line">&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;0</span><br><span class="line">当前状态：[money &#x3D; 100, fruits &#x3D; []]</span><br><span class="line">所持金钱增加了。</span><br><span class="line">所持金钱为200元</span><br><span class="line">200元,100</span><br><span class="line">所持金钱增加了许多，因此保存当前游戏状态</span><br><span class="line">&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;1</span><br><span class="line">当前状态：[money &#x3D; 200, fruits &#x3D; []]</span><br><span class="line">所持金钱减半</span><br><span class="line">所持金钱为100元</span><br><span class="line">100元,200</span><br><span class="line">&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;2</span><br><span class="line">当前状态：[money &#x3D; 100, fruits &#x3D; []]</span><br><span class="line">所持金钱增加了。</span><br><span class="line">所持金钱为200元</span><br><span class="line">200元,200</span><br><span class="line">&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;3</span><br><span class="line">当前状态：[money &#x3D; 200, fruits &#x3D; []]</span><br><span class="line">所持金钱减半</span><br><span class="line">所持金钱为100元</span><br><span class="line">100元,200</span><br><span class="line">&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;4</span><br><span class="line">当前状态：[money &#x3D; 100, fruits &#x3D; []]</span><br><span class="line">什么都没有发生。</span><br><span class="line">所持金钱为100元</span><br><span class="line">100元,200</span><br><span class="line">&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;5</span><br><span class="line">当前状态：[money &#x3D; 100, fruits &#x3D; []]</span><br><span class="line">什么都没有发生。</span><br><span class="line">所持金钱为100元</span><br><span class="line">100元,200</span><br><span class="line">&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;6</span><br><span class="line">当前状态：[money &#x3D; 100, fruits &#x3D; []]</span><br><span class="line">什么都没有发生。</span><br><span class="line">所持金钱为100元</span><br><span class="line">100元,200</span><br><span class="line">&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;7</span><br><span class="line">当前状态：[money &#x3D; 100, fruits &#x3D; []]</span><br><span class="line">所持金钱增加了。</span><br><span class="line">所持金钱为200元</span><br><span class="line">200元,200</span><br><span class="line">&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;8</span><br><span class="line">当前状态：[money &#x3D; 200, fruits &#x3D; []]</span><br><span class="line">什么都没有发生。</span><br><span class="line">所持金钱为200元</span><br><span class="line">200元,200</span><br><span class="line">&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;9</span><br><span class="line">当前状态：[money &#x3D; 200, fruits &#x3D; []]</span><br><span class="line">什么都没有发生。</span><br><span class="line">所持金钱为200元</span><br><span class="line">200元,200</span><br></pre></td></tr></table></figure>
+##类图<br><img src="https://upload-images.jianshu.io/upload_images/10024246-965b1afc66f88f92.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="类图"></li>
+</ul>
+<h2 id="结构"><a href="#结构" class="headerlink" title="结构"></a>结构</h2><ul>
+<li>Originator（生成者）<br>Originator角色保存自己的最新状态时生产Memento角色，当吧以前保存的Memento角色传递给Originator角色时，它会将自己恢复至生成该Memento角色时的状态。在示例中Gamer类扮演该角色</li>
+<li>Memento（备忘录）<br>Memento角色会将Originator角色的内部信息整合在一起，在Memento角色中虽然保存了Originator角色信息，但不会向外部公开这些信息<br>Memento角色有以下两种接口（API）</li>
+<li><code>wide interface---宽接口</code><br>宽接口是指所有用于获取恢复对象状态信息的方法的集合。由于宽接口会暴露所有信息，所以能使用宽接口的只有Originator角色</li>
+<li><code>narrow interface ---窄接口</code><br>可以通过窄接口获取的Memento的信息有限，有效放在信息泄露</li>
+</ul>
+<p>示例中Memento类扮演该角色</p>
+<ul>
+<li>Caretaker（负责人）<br>当Caretaker角色想要保存当前Originator角色状态时，会通知Originator角色，Originator接到同事后会生成Memento角色的实例并返回给Caretaker角色。为了Originator状态恢复，Caretaker会一直保存Memento实例。<br>示例中index扮演该角色</li>
+</ul>
 
       
     </div>
@@ -354,7 +381,7 @@
   
 
   <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="">
-    <link itemprop="mainEntityOfPage" href="https://lzhwweb.github.io/nirvana/reactnative/react-native/iOS-RN-0-45%E4%BB%A5%E4%B8%8A%E7%89%88%E6%9C%AC%E7%BD%91%E7%BB%9C%E9%97%AE%E9%A2%98%E6%97%A0%E6%B3%95%E5%90%AF%E5%8A%A8/">
+    <link itemprop="mainEntityOfPage" href="https://lzhwweb.github.io/nirvana/DesignPattern/%E8%AE%BE%E8%AE%A1%E6%A8%A1%E5%BC%8F%EF%BC%88TypeScript%EF%BC%89/Observer%E6%A8%A1%E5%BC%8F%EF%BC%88%E8%A7%82%E5%AF%9F%E8%80%85%E6%A8%A1%E5%BC%8F%EF%BC%89/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="image" content="/nirvana/images/headphoto.jpeg">
@@ -367,7 +394,7 @@
     </span>
       <header class="post-header">
         <h2 class="post-title" itemprop="name headline">
-          <a href="/nirvana/reactnative/react-native/iOS-RN-0-45%E4%BB%A5%E4%B8%8A%E7%89%88%E6%9C%AC%E7%BD%91%E7%BB%9C%E9%97%AE%E9%A2%98%E6%97%A0%E6%B3%95%E5%90%AF%E5%8A%A8/" class="post-title-link" itemprop="url">iOS-RN-0-45以上版本网络问题无法启动</a>
+          <a href="/nirvana/DesignPattern/%E8%AE%BE%E8%AE%A1%E6%A8%A1%E5%BC%8F%EF%BC%88TypeScript%EF%BC%89/Observer%E6%A8%A1%E5%BC%8F%EF%BC%88%E8%A7%82%E5%AF%9F%E8%80%85%E6%A8%A1%E5%BC%8F%EF%BC%89/" class="post-title-link" itemprop="url">Observer模式（观察者模式）</a>
         </h2>
 
         <div class="post-meta-container">
@@ -377,22 +404,28 @@
         <i class="far fa-calendar"></i>
       </span>
       <span class="post-meta-item-text">发表于</span>
-      
 
-      <time title="创建时间：2021-03-10 21:12:40 / 修改时间：13:43:55" itemprop="dateCreated datePublished" datetime="2021-03-10T21:12:40+08:00">2021-03-10</time>
+      <time title="创建时间：2021-03-11 21:12:40" itemprop="dateCreated datePublished" datetime="2021-03-11T21:12:40+08:00">2021-03-11</time>
     </span>
+      <span class="post-meta-item">
+        <span class="post-meta-item-icon">
+          <i class="far fa-calendar-check"></i>
+        </span>
+        <span class="post-meta-item-text">更新于</span>
+        <time title="修改时间：2021-03-10 13:43:55" itemprop="dateModified" datetime="2021-03-10T13:43:55+08:00">2021-03-10</time>
+      </span>
     <span class="post-meta-item">
       <span class="post-meta-item-icon">
         <i class="far fa-folder"></i>
       </span>
       <span class="post-meta-item-text">分类于</span>
         <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-          <a href="/nirvana/categories/reactnative/" itemprop="url" rel="index"><span itemprop="name">reactnative</span></a>
+          <a href="/nirvana/categories/DesignPattern/" itemprop="url" rel="index"><span itemprop="name">DesignPattern</span></a>
         </span>
     </span>
 
   
-    <span id="/nirvana/reactnative/react-native/iOS-RN-0-45%E4%BB%A5%E4%B8%8A%E7%89%88%E6%9C%AC%E7%BD%91%E7%BB%9C%E9%97%AE%E9%A2%98%E6%97%A0%E6%B3%95%E5%90%AF%E5%8A%A8/" class="post-meta-item leancloud_visitors" data-flag-title="iOS-RN-0-45以上版本网络问题无法启动" title="阅读次数">
+    <span id="/nirvana/DesignPattern/%E8%AE%BE%E8%AE%A1%E6%A8%A1%E5%BC%8F%EF%BC%88TypeScript%EF%BC%89/Observer%E6%A8%A1%E5%BC%8F%EF%BC%88%E8%A7%82%E5%AF%9F%E8%80%85%E6%A8%A1%E5%BC%8F%EF%BC%89/" class="post-meta-item leancloud_visitors" data-flag-title="Observer模式（观察者模式）" title="阅读次数">
       <span class="post-meta-item-icon">
         <i class="far fa-eye"></i>
       </span>
@@ -406,14 +439,14 @@
         <i class="far fa-file-word"></i>
       </span>
       <span class="post-meta-item-text">本文字数：</span>
-      <span>1k</span>
+      <span>5.2k</span>
     </span>
     <span class="post-meta-item" title="阅读时长">
       <span class="post-meta-item-icon">
         <i class="far fa-clock"></i>
       </span>
       <span class="post-meta-item-text">阅读时长 &asymp;</span>
-      <span>1 分钟</span>
+      <span>5 分钟</span>
     </span>
 </div>
 
@@ -424,14 +457,31 @@
     
     
     <div class="post-body" itemprop="articleBody">
-          <p>RN iOS 0.45以上版本开始需要依赖一些第三方编译库，但这些库在国内下载都非常困难（一般的翻墙工具都很难下载）<br>未来RN不同版本可能依赖不同版本的第三方编译库，具体所需库和版本请查看<a target="_blank" rel="noopener" href="https://github.com/facebook/react-native/blob/master/scripts/ios-install-third-party.sh">ios-install-third-party.sh</a>文件，注意先把左上角的branch切换到对应的版本.</p>
-<p><img src="http://upload-images.jianshu.io/upload_images/10024246-4967270af295b740.jpg?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="1515804427550.jpg"></p>
-<p>在文件最下面找到需要第三方编译库</p>
-<p><img src="http://upload-images.jianshu.io/upload_images/10024246-182697a23377bd82.jpg?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="1515804585324.jpg"></p>
-<p>我现在使用的52版本的内容为</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">fetch_and_unpack glog-0.3.4.tar.gz https:&#x2F;&#x2F;github.com&#x2F;google&#x2F;glog&#x2F;archive&#x2F;v0.3.4.tar.gz 69f91cd5a1de35ead0bc4103ea87294b0206a456 &quot;\&quot;$SCRIPTDIR&#x2F;ios-configure-glog.sh\&quot;&quot;</span><br><span class="line">fetch_and_unpack double-conversion-1.1.5.tar.gz https:&#x2F;&#x2F;github.com&#x2F;google&#x2F;double-conversion&#x2F;archive&#x2F;v1.1.5.tar.gz 96a8aba1b4ce7d4a7a3c123be26c379c2fed1def</span><br><span class="line">fetch_and_unpack boost_1_63_0.tar.gz https:&#x2F;&#x2F;github.com&#x2F;react-native-community&#x2F;boost-for-react-native&#x2F;releases&#x2F;download&#x2F;v1.63.0-0&#x2F;boost_1_63_0.tar.gz c3f57e1d22a995e608983effbb752b54b6eab741</span><br><span class="line">fetch_and_unpack folly-2016.09.26.00.tar.gz https:&#x2F;&#x2F;github.com&#x2F;facebook&#x2F;folly&#x2F;archive&#x2F;v2016.09.26.00.tar.gz f3b928b5039235bad6cece638c597c6684d1e4e6</span><br></pre></td></tr></table></figure>
-
-<p>下载完后需要把文件copy到***~/.rncache***下，然后就可以运行RN程序了</p>
+          <p>观察者模式（Observer Pattern）:当观察对象的状态变化时，会自动通知给观察者。观察者模式属于行为型模式。</p>
+<h2 id="介绍"><a href="#介绍" class="headerlink" title="介绍"></a>介绍</h2><ul>
+<li><strong>意图：</strong>当被观察对象的状态变化时，所有依赖于它的对象都得到通知并被自动更新。</li>
+<li><strong>主要解决：</strong>被观察对象状态改变给其他对象通知的问题，而且要考虑到易用和低耦合，保证高度的协作。</li>
+<li><strong>何时使用：</strong>被观察对象的状态发生改变，所有的依赖对象（观察者对象）都将得到通知，进行广播通知。</li>
+<li><strong>如何解决：</strong>使用面向对象技术，可以将这种依赖关系弱化。</li>
+<li><strong>优点：</strong><br>1、观察者和被观察者是抽象耦合的。<br>2、建立一套触发机制。</li>
+<li><strong>缺点：</strong><br>1、如果一个被观察者对象有很多的直接和间接的观察者的话，将所有的观察者都通知到会花费很多时间。<br>2、如果在观察者和观察目标之间有循环依赖的话，观察目标会触发它们之间进行循环调用，可能导致系统崩溃。<br>3、观察者模式没有相应的机制让观察者知道所观察的目标对象是怎么发生变化的，而仅仅只是知道观察目标发生了变化。</li>
+</ul>
+<p><em>注意事项：1、避免循环引用。2、如果顺序执行，某一观察者错误会导致系统卡壳，一般采用异步方式。</em></p>
+<h2 id="示例"><a href="#示例" class="headerlink" title="示例"></a>示例</h2><h5 id="Observer-ts-表示观察者的接口"><a href="#Observer-ts-表示观察者的接口" class="headerlink" title="Observer.ts 表示观察者的接口"></a>Observer.ts 表示观察者的接口</h5><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">import NumberGenerator from &quot;.&#x2F;NumberGenerator&quot;;</span><br><span class="line"></span><br><span class="line">export interface Observer &#123;</span><br><span class="line">    update(generator: NumberGenerator): void;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<h5 id="NumberGenerator-ts-表示生产数值对象的抽象类"><a href="#NumberGenerator-ts-表示生产数值对象的抽象类" class="headerlink" title="NumberGenerator.ts 表示生产数值对象的抽象类"></a>NumberGenerator.ts 表示生产数值对象的抽象类</h5><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br></pre></td><td class="code"><pre><span class="line">import &#123; Observer &#125; from &quot;.&#x2F;Observer&quot;;</span><br><span class="line"></span><br><span class="line">export default abstract class NumberGenerator &#123;</span><br><span class="line">    private observers: Array&lt;Observer&gt; &#x3D; new Array();</span><br><span class="line">    public addObserver(observer: Observer): void &#123;&#x2F;&#x2F;注册Observe</span><br><span class="line">        this.observers.push(observer);</span><br><span class="line">    &#125;</span><br><span class="line">    public delete(observer: Observer) &#123;&#x2F;&#x2F;删除Observe</span><br><span class="line">        const index &#x3D; this.observers.indexOf(observer);</span><br><span class="line">        this.observers.splice(index, 1);</span><br><span class="line">    &#125;</span><br><span class="line">    public notifyObservers() &#123;&#x2F;&#x2F;通知被Observe对象变化</span><br><span class="line">        this.observers.forEach((observer) &#x3D;&gt; &#123;</span><br><span class="line">            observer.update(this);</span><br><span class="line">        &#125;)</span><br><span class="line">    &#125;</span><br><span class="line">    public abstract getNumber(): number;</span><br><span class="line">    public abstract execute(): void;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<h5 id="RandomNumberGenerator-ts-生产随机数的类"><a href="#RandomNumberGenerator-ts-生产随机数的类" class="headerlink" title="RandomNumberGenerator.ts 生产随机数的类"></a>RandomNumberGenerator.ts 生产随机数的类</h5><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><span class="line">import NumberGenerator from &quot;.&#x2F;NumberGenerator&quot;;</span><br><span class="line"></span><br><span class="line">export default class RandomNumberGenerator extends NumberGenerator &#123;</span><br><span class="line">    private num: number;</span><br><span class="line">    public getNumber(): number &#123;</span><br><span class="line">        return this.num;</span><br><span class="line">    &#125;</span><br><span class="line">    public execute(): void &#123;</span><br><span class="line">        for (let i &#x3D; 0; i &lt; 10; i++) &#123;&#x2F;&#x2F;变化10次</span><br><span class="line">            this.num &#x3D; Math.ceil(Math.random() * 30);&#x2F;&#x2F;生产随机数</span><br><span class="line">            this.notifyObservers();&#x2F;&#x2F;通知数值变化</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<h5 id="DigitObserver-ts-表示以数字形式显示数值的类"><a href="#DigitObserver-ts-表示以数字形式显示数值的类" class="headerlink" title="DigitObserver.ts 表示以数字形式显示数值的类"></a>DigitObserver.ts 表示以数字形式显示数值的类</h5><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">import &#123; Observer &#125; from &quot;.&#x2F;Observer&quot;;</span><br><span class="line">import NumberGenerator from &quot;.&#x2F;NumberGenerator&quot;;</span><br><span class="line"></span><br><span class="line">export default class DigitObserver implements Observer &#123;</span><br><span class="line">    public update(generator: NumberGenerator) &#123;</span><br><span class="line">        console.log(&#96;DigitObserver:$&#123;generator.getNumber()&#125;&#96;)</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<h5 id="GraphObserver-ts-表示以简单图形表示数值的类"><a href="#GraphObserver-ts-表示以简单图形表示数值的类" class="headerlink" title="GraphObserver.ts 表示以简单图形表示数值的类"></a>GraphObserver.ts 表示以简单图形表示数值的类</h5><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line">import &#123; Observer &#125; from &quot;.&#x2F;Observer&quot;;</span><br><span class="line">import NumberGenerator from &quot;.&#x2F;NumberGenerator&quot;;</span><br><span class="line"></span><br><span class="line">export default class GraphObserver implements Observer &#123;</span><br><span class="line">    public update(generator: NumberGenerator): void &#123;</span><br><span class="line">        let str &#x3D; &#96;DigitObserver:&#96;;</span><br><span class="line">        const count: number &#x3D; generator.getNumber();</span><br><span class="line">        for (let i &#x3D; 0; i &lt; count; i++) &#123;</span><br><span class="line">            str +&#x3D; &quot;*&quot;;</span><br><span class="line">        &#125;</span><br><span class="line">        console.log(str);</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<h5 id="IncrementNumberGenerator-ts-自增数据变化"><a href="#IncrementNumberGenerator-ts-自增数据变化" class="headerlink" title="IncrementNumberGenerator.ts 自增数据变化"></a>IncrementNumberGenerator.ts 自增数据变化</h5><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br></pre></td><td class="code"><pre><span class="line">import NumberGenerator from &quot;.&#x2F;NumberGenerator&quot;</span><br><span class="line"></span><br><span class="line">export default class IncrementNumberGenerator extends NumberGenerator &#123;</span><br><span class="line">    private num: number;&#x2F;&#x2F;自增开始数据</span><br><span class="line">    private step: number;&#x2F;&#x2F;每次自增数据</span><br><span class="line">    private end: number;&#x2F;&#x2F;最大数值</span><br><span class="line">    constructor(num: number, end: number, step: number) &#123;</span><br><span class="line">        super();</span><br><span class="line">        this.num &#x3D; num;</span><br><span class="line">        this.step &#x3D; step;</span><br><span class="line">        this.end &#x3D; end;</span><br><span class="line">    &#125;</span><br><span class="line">    public getNumber(): number &#123;</span><br><span class="line">        return this.num;</span><br><span class="line">    &#125;</span><br><span class="line">    public execute(): void &#123;</span><br><span class="line">        while (this.num &lt; this.end) &#123;</span><br><span class="line">            this.notifyObservers();</span><br><span class="line">            this.num +&#x3D; this.step;</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<h5 id="index-ts"><a href="#index-ts" class="headerlink" title="index.ts"></a>index.ts</h5><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line">import DigitObserver from &quot;.&#x2F;DigitObserver&quot;;</span><br><span class="line">import &#123; Observer &#125; from &quot;.&#x2F;Observer&quot;;</span><br><span class="line">import GraphObserver from &quot;.&#x2F;GraphObserver&quot;;</span><br><span class="line">import IncrementNumberGenerator from &quot;.&#x2F;IncrementNumberGenerator&quot;;</span><br><span class="line"></span><br><span class="line">const generator: IncrementNumberGenerator &#x3D; new IncrementNumberGenerator(10, 50, 5);</span><br><span class="line">const observer1: Observer &#x3D; new DigitObserver();</span><br><span class="line">const observer2: Observer &#x3D; new GraphObserver();</span><br><span class="line">generator.addObserver(observer1);</span><br><span class="line">generator.addObserver(observer2);</span><br><span class="line">generator.execute();</span><br></pre></td></tr></table></figure>
+<h5 id="result"><a href="#result" class="headerlink" title="result"></a>result</h5><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br></pre></td><td class="code"><pre><span class="line">******IncrementNumberGenerator********</span><br><span class="line">DigitObserver:10</span><br><span class="line">DigitObserver:**********</span><br><span class="line">DigitObserver:15</span><br><span class="line">DigitObserver:***************</span><br><span class="line">DigitObserver:20</span><br><span class="line">DigitObserver:********************</span><br><span class="line">DigitObserver:25</span><br><span class="line">DigitObserver:*************************</span><br><span class="line">DigitObserver:30</span><br><span class="line">DigitObserver:******************************</span><br><span class="line">DigitObserver:35</span><br><span class="line">DigitObserver:***********************************</span><br><span class="line">DigitObserver:40</span><br><span class="line">DigitObserver:****************************************</span><br><span class="line">DigitObserver:45</span><br><span class="line">DigitObserver:*********************************************</span><br><span class="line">******RandomNumberGenerator********</span><br><span class="line">DigitObserver:6</span><br><span class="line">DigitObserver:******</span><br><span class="line">DigitObserver:3</span><br><span class="line">DigitObserver:***</span><br><span class="line">DigitObserver:12</span><br><span class="line">DigitObserver:************</span><br><span class="line">DigitObserver:23</span><br><span class="line">DigitObserver:***********************</span><br><span class="line">DigitObserver:27</span><br><span class="line">DigitObserver:***************************</span><br><span class="line">DigitObserver:3</span><br><span class="line">DigitObserver:***</span><br><span class="line">DigitObserver:30</span><br><span class="line">DigitObserver:******************************</span><br><span class="line">DigitObserver:5</span><br><span class="line">DigitObserver:*****</span><br><span class="line">DigitObserver:29</span><br><span class="line">DigitObserver:*****************************</span><br><span class="line">DigitObserver:26</span><br><span class="line">DigitObserver:**************************</span><br></pre></td></tr></table></figure>
+<h2 id="类图"><a href="#类图" class="headerlink" title="类图"></a>类图</h2><p><img src="https://upload-images.jianshu.io/upload_images/10024246-df33cae6f551999c.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="类图"></p>
+<h2 id="角色"><a href="#角色" class="headerlink" title="角色"></a>角色</h2><ul>
+<li>Subject（观察对象）<br>Subject角色表示观察对象，Subject角色定义了注册观察者和删除观察者的方法，此外，它还声明了“获取现在的状态”的方法。在示例中NumberGenerator扮演该角色</li>
+<li>ConcreteSubject（具体的观察对象）<br>ConcreteSubject角色表示具体的观察者对象，当自身状态变化时，它会通知所以已经注册的Observe角色，示例中RandomNumberGenerator、IncrementNumberGenerator扮演该角色</li>
+<li>Observer（观察者）<br>Observer角色负责解释来自Subject角色的状态变化的通知，为此，它声明了update方法。示例中Observer接口扮演此角色</li>
+<li>ConcreteObserver（具体的观察者）<br>ConcreteObserver角色表示具体的Observer。当他的update方法被调用后，它去获取要观察的对象的最新状态，在示例中，由DigitObserver、GraphObserver扮演此角色</li>
+</ul>
 
       
     </div>
@@ -458,7 +508,7 @@
   
 
   <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="">
-    <link itemprop="mainEntityOfPage" href="https://lzhwweb.github.io/nirvana/tool/%E5%BC%80%E5%8F%91%E5%B7%A5%E5%85%B7/VSCode%E8%AE%BE%E7%BD%AE%E5%A4%A7%E5%B0%8F%E5%86%99%E8%BD%AC%E6%8D%A2%E7%9A%84%E5%BF%AB%E6%8D%B7%E9%94%AE/">
+    <link itemprop="mainEntityOfPage" href="https://lzhwweb.github.io/nirvana/DesignPattern/%E8%AE%BE%E8%AE%A1%E6%A8%A1%E5%BC%8F%EF%BC%88TypeScript%EF%BC%89/Prototype-Pattern(%E5%8E%9F%E5%9E%8B%E6%A8%A1%E5%BC%8F%EF%BC%89/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="image" content="/nirvana/images/headphoto.jpeg">
@@ -471,7 +521,7 @@
     </span>
       <header class="post-header">
         <h2 class="post-title" itemprop="name headline">
-          <a href="/nirvana/tool/%E5%BC%80%E5%8F%91%E5%B7%A5%E5%85%B7/VSCode%E8%AE%BE%E7%BD%AE%E5%A4%A7%E5%B0%8F%E5%86%99%E8%BD%AC%E6%8D%A2%E7%9A%84%E5%BF%AB%E6%8D%B7%E9%94%AE/" class="post-title-link" itemprop="url">VSCode设置大小写转换的快捷键</a>
+          <a href="/nirvana/DesignPattern/%E8%AE%BE%E8%AE%A1%E6%A8%A1%E5%BC%8F%EF%BC%88TypeScript%EF%BC%89/Prototype-Pattern(%E5%8E%9F%E5%9E%8B%E6%A8%A1%E5%BC%8F%EF%BC%89/" class="post-title-link" itemprop="url">Prototype-Pattern(原型模式）</a>
         </h2>
 
         <div class="post-meta-container">
@@ -481,22 +531,28 @@
         <i class="far fa-calendar"></i>
       </span>
       <span class="post-meta-item-text">发表于</span>
-      
 
-      <time title="创建时间：2021-03-10 21:12:40 / 修改时间：13:43:55" itemprop="dateCreated datePublished" datetime="2021-03-10T21:12:40+08:00">2021-03-10</time>
+      <time title="创建时间：2021-03-11 21:12:40" itemprop="dateCreated datePublished" datetime="2021-03-11T21:12:40+08:00">2021-03-11</time>
     </span>
+      <span class="post-meta-item">
+        <span class="post-meta-item-icon">
+          <i class="far fa-calendar-check"></i>
+        </span>
+        <span class="post-meta-item-text">更新于</span>
+        <time title="修改时间：2021-03-10 13:43:55" itemprop="dateModified" datetime="2021-03-10T13:43:55+08:00">2021-03-10</time>
+      </span>
     <span class="post-meta-item">
       <span class="post-meta-item-icon">
         <i class="far fa-folder"></i>
       </span>
       <span class="post-meta-item-text">分类于</span>
         <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-          <a href="/nirvana/categories/tool/" itemprop="url" rel="index"><span itemprop="name">tool</span></a>
+          <a href="/nirvana/categories/DesignPattern/" itemprop="url" rel="index"><span itemprop="name">DesignPattern</span></a>
         </span>
     </span>
 
   
-    <span id="/nirvana/tool/%E5%BC%80%E5%8F%91%E5%B7%A5%E5%85%B7/VSCode%E8%AE%BE%E7%BD%AE%E5%A4%A7%E5%B0%8F%E5%86%99%E8%BD%AC%E6%8D%A2%E7%9A%84%E5%BF%AB%E6%8D%B7%E9%94%AE/" class="post-meta-item leancloud_visitors" data-flag-title="VSCode设置大小写转换的快捷键" title="阅读次数">
+    <span id="/nirvana/DesignPattern/%E8%AE%BE%E8%AE%A1%E6%A8%A1%E5%BC%8F%EF%BC%88TypeScript%EF%BC%89/Prototype-Pattern(%E5%8E%9F%E5%9E%8B%E6%A8%A1%E5%BC%8F%EF%BC%89/" class="post-meta-item leancloud_visitors" data-flag-title="Prototype-Pattern(原型模式）" title="阅读次数">
       <span class="post-meta-item-icon">
         <i class="far fa-eye"></i>
       </span>
@@ -510,236 +566,7 @@
         <i class="far fa-file-word"></i>
       </span>
       <span class="post-meta-item-text">本文字数：</span>
-      <span>776</span>
-    </span>
-    <span class="post-meta-item" title="阅读时长">
-      <span class="post-meta-item-icon">
-        <i class="far fa-clock"></i>
-      </span>
-      <span class="post-meta-item-text">阅读时长 &asymp;</span>
-      <span>1 分钟</span>
-    </span>
-</div>
-
-        </div>
-      </header>
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-          <p>一 、默认情况下VS Code的编辑菜单或快捷键中没有 转换为大写，转换为小写的功能</p>
-<p>解决方案1：使用键盘配置，开启转换为小写，转换为大写的快捷键 </p>
-<p>以VS中的 快捷键为例：</p>
-<p>小写 -》Ctrl+Shift+l</p>
-<p>大写=》Ctrl+Shift+U</p>
-<p>自定义大小写转换的快捷键步骤如下:</p>
-<p> 1.点击【文件】-【首选项】-【键盘快捷方式】菜单。</p>
-<p><img src="https://upload-images.jianshu.io/upload_images/10024246-d5ee5749c318312e.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240"> </p>
-<p><img src="https://upload-images.jianshu.io/upload_images/10024246-423b8ab14aade804.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240"></p>
-<p>2.输入 “转换为大写”, 会出现搜索结果【转换为大写】,鼠标悬停在该结果上, 点击前面的”加号” 或 双击, 会弹出输入自定义快捷键的弹窗。</p>
-<p><img src="https://upload-images.jianshu.io/upload_images/10024246-60e4e6fcbe5fa6b2.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240"> </p>
-<p><img src="https://upload-images.jianshu.io/upload_images/10024246-3f1c888971fb2a73.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240"> </p>
-<p>3.在键盘上面按下Ctrl、Shift和u, 然后按Enter键, 即可成功绑定转换为大写快捷键。</p>
-<p><img src="https://upload-images.jianshu.io/upload_images/10024246-65a4b55675f8717b.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240"> </p>
-<p><img src="https://upload-images.jianshu.io/upload_images/10024246-9ecd4ce60718de32.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240"></p>
-<p>4.同理，搜索”转换为小写”, 鼠标悬停在结果上, 点击前面的”加号” 或 双击, 弹出设置快捷键的弹窗，在键盘上面按下Ctrl、Shift和l, 然后按Enter键, 即可成功绑定转换为小写快捷键。</p>
-<p><img src="https://upload-images.jianshu.io/upload_images/10024246-7f3e695948c286af.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240"></p>
-<hr>
-<p>##解决方案2，直接修改keybings.json 添加配置</p>
-<pre><code>&#123;
-    &quot;key&quot;: &quot;ctrl+shift+u&quot;,
-    &quot;command&quot;: &quot;editor.action.transformToUppercase&quot;,
-    &quot;when&quot;: &quot;editorTextFocus&quot;
-&#125;,
-&#123;
-    &quot;key&quot;: &quot;ctrl+shift+l&quot;,
-    &quot;command&quot;: &quot;editor.action.transformToLowercase&quot;,
-    &quot;when&quot;: &quot;editorTextFocus&quot;
-&#125;
-</code></pre>
-<p>最终设置的自定义的大小写转换快捷键如下: </p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">转换为大写: Ctrl+Shift+u</span><br><span class="line">转换为小写: Ctrl+Shift+l</span><br></pre></td></tr></table></figure>
-
-      
-    </div>
-
-    
-    
-    
-
-    <footer class="post-footer">
-        <div class="post-eof"></div>
-      
-    </footer>
-  </article>
-</div>
-
-
-
-
-    
-
-
-<div class="post-block">
-  
-  
-
-  <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="">
-    <link itemprop="mainEntityOfPage" href="https://lzhwweb.github.io/nirvana/tool/%E5%BC%80%E5%8F%91%E5%B7%A5%E5%85%B7/chrome-%E8%B4%A6%E5%8F%B7%E6%89%8B%E5%8A%A8%E5%90%8C%E6%AD%A5/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="image" content="/nirvana/images/headphoto.jpeg">
-      <meta itemprop="name" content="nirvana">
-      <meta itemprop="description" content="个人学习笔记">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="涅槃快乐是金">
-    </span>
-      <header class="post-header">
-        <h2 class="post-title" itemprop="name headline">
-          <a href="/nirvana/tool/%E5%BC%80%E5%8F%91%E5%B7%A5%E5%85%B7/chrome-%E8%B4%A6%E5%8F%B7%E6%89%8B%E5%8A%A8%E5%90%8C%E6%AD%A5/" class="post-title-link" itemprop="url">chrome 账号手动同步</a>
-        </h2>
-
-        <div class="post-meta-container">
-          <div class="post-meta">
-    <span class="post-meta-item">
-      <span class="post-meta-item-icon">
-        <i class="far fa-calendar"></i>
-      </span>
-      <span class="post-meta-item-text">发表于</span>
-      
-
-      <time title="创建时间：2021-03-10 21:12:40 / 修改时间：22:05:29" itemprop="dateCreated datePublished" datetime="2021-03-10T21:12:40+08:00">2021-03-10</time>
-    </span>
-    <span class="post-meta-item">
-      <span class="post-meta-item-icon">
-        <i class="far fa-folder"></i>
-      </span>
-      <span class="post-meta-item-text">分类于</span>
-        <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-          <a href="/nirvana/categories/tool/" itemprop="url" rel="index"><span itemprop="name">tool</span></a>
-        </span>
-    </span>
-
-  
-    <span id="/nirvana/tool/%E5%BC%80%E5%8F%91%E5%B7%A5%E5%85%B7/chrome-%E8%B4%A6%E5%8F%B7%E6%89%8B%E5%8A%A8%E5%90%8C%E6%AD%A5/" class="post-meta-item leancloud_visitors" data-flag-title="chrome 账号手动同步" title="阅读次数">
-      <span class="post-meta-item-icon">
-        <i class="far fa-eye"></i>
-      </span>
-      <span class="post-meta-item-text">阅读次数：</span>
-      <span class="leancloud-visitors-count"></span>
-    </span>
-      </div>
-      <div class="post-meta">
-    <span class="post-meta-item" title="本文字数">
-      <span class="post-meta-item-icon">
-        <i class="far fa-file-word"></i>
-      </span>
-      <span class="post-meta-item-text">本文字数：</span>
-      <span>166</span>
-    </span>
-    <span class="post-meta-item" title="阅读时长">
-      <span class="post-meta-item-icon">
-        <i class="far fa-clock"></i>
-      </span>
-      <span class="post-meta-item-text">阅读时长 &asymp;</span>
-      <span>1 分钟</span>
-    </span>
-</div>
-
-        </div>
-      </header>
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-          <p>解决chrome不能自动同步问题，可以进行手动同步。</p>
-<p>不需要删除数据，不需要关闭账户！</p>
-<p>首先你懂得</p>
-<p>chrome地址栏中输入： chrome://sync-internals/<br>进行如图操作</p>
-<p>注意：目前这种方式是完全可行的，如果点击disable sync 再次点击 request 等待一会还是没有反应，且网络正常，请尝试关闭并打开一次浏览器再操作。<br><img src="https://upload-images.jianshu.io/upload_images/10024246-d2dfb140d7189280?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="image"><br><img src="https://upload-images.jianshu.io/upload_images/10024246-f0837051d08d3136?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="image"><br><img src="https://upload-images.jianshu.io/upload_images/10024246-c83c5ed3762650d6?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="image"></p>
-
-      
-    </div>
-
-    
-    
-    
-
-    <footer class="post-footer">
-        <div class="post-eof"></div>
-      
-    </footer>
-  </article>
-</div>
-
-
-
-
-    
-
-
-<div class="post-block">
-  
-  
-
-  <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="">
-    <link itemprop="mainEntityOfPage" href="https://lzhwweb.github.io/nirvana/tool/%E5%BC%80%E5%8F%91%E5%B7%A5%E5%85%B7/%E5%B8%B8%E7%94%A8%E7%9A%84VS-Code%E6%8F%92%E4%BB%B6/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="image" content="/nirvana/images/headphoto.jpeg">
-      <meta itemprop="name" content="nirvana">
-      <meta itemprop="description" content="个人学习笔记">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="涅槃快乐是金">
-    </span>
-      <header class="post-header">
-        <h2 class="post-title" itemprop="name headline">
-          <a href="/nirvana/tool/%E5%BC%80%E5%8F%91%E5%B7%A5%E5%85%B7/%E5%B8%B8%E7%94%A8%E7%9A%84VS-Code%E6%8F%92%E4%BB%B6/" class="post-title-link" itemprop="url">常用的VS-Code插件</a>
-        </h2>
-
-        <div class="post-meta-container">
-          <div class="post-meta">
-    <span class="post-meta-item">
-      <span class="post-meta-item-icon">
-        <i class="far fa-calendar"></i>
-      </span>
-      <span class="post-meta-item-text">发表于</span>
-      
-
-      <time title="创建时间：2021-03-10 21:12:40 / 修改时间：13:43:55" itemprop="dateCreated datePublished" datetime="2021-03-10T21:12:40+08:00">2021-03-10</time>
-    </span>
-    <span class="post-meta-item">
-      <span class="post-meta-item-icon">
-        <i class="far fa-folder"></i>
-      </span>
-      <span class="post-meta-item-text">分类于</span>
-        <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-          <a href="/nirvana/categories/tool/" itemprop="url" rel="index"><span itemprop="name">tool</span></a>
-        </span>
-    </span>
-
-  
-    <span id="/nirvana/tool/%E5%BC%80%E5%8F%91%E5%B7%A5%E5%85%B7/%E5%B8%B8%E7%94%A8%E7%9A%84VS-Code%E6%8F%92%E4%BB%B6/" class="post-meta-item leancloud_visitors" data-flag-title="常用的VS-Code插件" title="阅读次数">
-      <span class="post-meta-item-icon">
-        <i class="far fa-eye"></i>
-      </span>
-      <span class="post-meta-item-text">阅读次数：</span>
-      <span class="leancloud-visitors-count"></span>
-    </span>
-      </div>
-      <div class="post-meta">
-    <span class="post-meta-item" title="本文字数">
-      <span class="post-meta-item-icon">
-        <i class="far fa-file-word"></i>
-      </span>
-      <span class="post-meta-item-text">本文字数：</span>
-      <span>2.1k</span>
+      <span>1.8k</span>
     </span>
     <span class="post-meta-item" title="阅读时长">
       <span class="post-meta-item-icon">
@@ -757,134 +584,257 @@
     
     
     <div class="post-body" itemprop="articleBody">
-          <h2 id="Bracket-Pair-Colorizer-2"><a href="#Bracket-Pair-Colorizer-2" class="headerlink" title="Bracket Pair Colorizer 2"></a>Bracket Pair Colorizer 2</h2><p><img src="https://upload-images.jianshu.io/upload_images/10024246-4e1925a599eb769a?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240"></p>
-<p>帮助我搞清楚 JavaScript 中复杂的嵌套 promise。顾名思义，它可以让方括号对变色，帮我弄清楚是否在某个地方搞糊涂了（例如缺少方括号）。它默认匹配 ()、[] 和{}等普通括号，但如果需要你也可以定义自定义括号。<br>它还有其他许多很酷的功能，例如定义颜色或为活动括号显示装订线之类。值得尝试一波。<br><strong>项目地址</strong><br><a target="_blank" rel="noopener" href="https://github.com/CoenraadS/Bracket-Pair-Colorizer-2">https://github.com/CoenraadS/Bracket-Pair-Colorizer-2</a><br> <strong>Marketplace</strong><br><a target="_blank" rel="noopener" href="https://marketplace.visualstudio.com/items?itemName=CoenraadS.bracket-pair-colorizer-2">https://marketplace.visualstudio.com/items?itemName=CoenraadS.bracket-pair-colorizer-2</a></p>
-<h2 id="NPM-Intellisense"><a href="#NPM-Intellisense" class="headerlink" title="NPM Intellisense"></a>NPM Intellisense</h2><p><img src="https://upload-images.jianshu.io/upload_images/10024246-db143f4cae36955c?imageMogr2/auto-orient/strip"></p>
-<p>如动图所示，它能自动完成以 NPM 包为目标的 require import 语句。这可以提供很多帮助，尤其是当你的项目变得很大，并且在 package.json 中包含很多依赖项时。<br> <strong>项目地址</strong><br><a target="_blank" rel="noopener" href="https://github.com/ChristianKohler/NpmIntellisense">https://github.com/ChristianKohler/NpmIntellisense</a><br><strong>Marketplace</strong><br><a target="_blank" rel="noopener" href="https://marketplace.visualstudio.com/items?itemName=christian-kohler.npm-intellisense">https://marketplace.visualstudio.com/items?itemName=christian-kohler.npm-intellisense</a></p>
-<h2 id="Path-Intellisense"><a href="#Path-Intellisense" class="headerlink" title="Path Intellisense"></a>Path Intellisense</h2><p><img src="https://upload-images.jianshu.io/upload_images/10024246-afb2416b7e73f8e8.gif?imageMogr2/auto-orient/strip"></p>
-<p>这是 NPM Intellisense 的姐妹插件。它会执行相同的自动补全，不过针对的是你的文件系统。<br><strong>项目地址</strong><br><a target="_blank" rel="noopener" href="https://github.com/ChristianKohler/PathIntellisense">https://github.com/ChristianKohler/PathIntellisense</a><br><strong>Marketplace</strong><br><a target="_blank" rel="noopener" href="https://marketplace.visualstudio.com/items?itemName=christian-kohler.path-intellisense">https://marketplace.visualstudio.com/items?itemName=christian-kohler.path-intellisense</a></p>
-<h2 id="Quokka-js"><a href="#Quokka-js" class="headerlink" title="Quokka.js"></a>Quokka.js</h2><p><img src="https://upload-images.jianshu.io/upload_images/10024246-ccab0e9d884fce5f.gif?imageMogr2/auto-orient/strip"><br>如果你只是想尝试一些东西，不想费劲先设置项目，那么这款工具就是一个很好的辅助。通过实时检查输出，它会立即将输出显示在 JavaScript/TypeScript 代码旁边，如动图所示。这是一个很好的扩展，特别适合调试目的。<br><strong>项目地址</strong><br><a target="_blank" rel="noopener" href="https://quokkajs.com/">https://quokkajs.com/</a><br><strong>Marketplace</strong><br><a target="_blank" rel="noopener" href="https://marketplace.visualstudio.com/items?itemName=WallabyJs.quokka-vscode">https://marketplace.visualstudio.com/items?itemName=WallabyJs.quokka-vscode</a></p>
-<h2 id="Docker"><a href="#Docker" class="headerlink" title="Docker"></a>Docker</h2><p>这个扩展是处理多个 Docker 映像和容器的必备，因为你可以用它快速浏览正在运行哪些容器、构建哪些映像以及创建哪些网络。<br><strong>项目地址</strong><br><a target="_blank" rel="noopener" href="https://github.com/microsoft/vscode-docker">https://github.com/microsoft/vscode-docker</a><br><strong>Marketplace</strong><br><a target="_blank" rel="noopener" href="https://marketplace.visualstudio.com/items?itemName=ms-azuretools.vscode-docker">https://marketplace.visualstudio.com/items?itemName=ms-azuretools.vscode-docker</a></p>
-<h2 id="Live-Server"><a href="#Live-Server" class="headerlink" title="Live Server"></a>Live Server</h2><p><img src="https://upload-images.jianshu.io/upload_images/10024246-6aae06bf0f4fff6b.gif?imageMogr2/auto-orient/strip"><br>这个扩展为本地开发服务器提供了热重载功能，也就是说它会在保存对文件所做的任何更改后立即刷新页面。它在状态栏中有一个漂亮的“Go Live”按钮，你只需单击一下即可启动服务器。<br><strong>项目地址</strong><br><a target="_blank" rel="noopener" href="https://github.com/ritwickdey/vscode-live-server">https://github.com/ritwickdey/vscode-live-server</a><br><strong>Marketplace</strong><br><a target="_blank" rel="noopener" href="https://marketplace.visualstudio.com/items?itemName=ritwickdey.LiveServer">https://marketplace.visualstudio.com/items?itemName=ritwickdey.LiveServer</a></p>
-<h2 id="Auto-Close-Tag-和-Auto-Rename-Tag"><a href="#Auto-Close-Tag-和-Auto-Rename-Tag" class="headerlink" title="Auto Close Tag 和 Auto Rename Tag"></a>Auto Close Tag 和 Auto Rename Tag</h2><p><img src="https://upload-images.jianshu.io/upload_images/10024246-879775d67e33686b.gif?imageMogr2/auto-orient/strip"><br>它们是 VS Code 的两个小插件，可通过自动重命名和关闭标签来帮助你维护 HTML 文件。这也适用于 React 自己的 JSX 语法。<br><strong>Auto Close Tag</strong><br><a target="_blank" rel="noopener" href="https://github.com/formulahendry/vscode-auto-close-tag/https://marketplace.visualstudio.com/items?itemName=formulahendry.auto-close-tag">https://github.com/formulahendry/vscode-auto-close-tag/https://marketplace.visualstudio.com/items?itemName=formulahendry.auto-close-tag</a><br> <strong>Auto Rename Tag</strong><br><a target="_blank" rel="noopener" href="https://github.com/formulahendry/vscode-auto-rename-tag/https://marketplace.visualstudio.com/items?itemName=formulahendry.auto-rename-tag">https://github.com/formulahendry/vscode-auto-rename-tag/https://marketplace.visualstudio.com/items?itemName=formulahendry.auto-rename-tag</a></p>
-<h2 id="Markdown-Preview-Enhanced"><a href="#Markdown-Preview-Enhanced" class="headerlink" title="Markdown Preview Enhanced"></a>Markdown Preview Enhanced</h2><p><img src="https://upload-images.jianshu.io/upload_images/10024246-fe3e4c69847e2ade.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240"><br> Markdown 预览工具。它不仅为你提供预览，而且还有同步滚动、PDF 导出和 PlantUML 的功能。<br><strong>项目地址</strong><br><a target="_blank" rel="noopener" href="https://github.com/shd101wyy/vscode-markdown-preview-enhanced">https://github.com/shd101wyy/vscode-markdown-preview-enhanced</a><br><strong>Marketplace</strong><br><a target="_blank" rel="noopener" href="https://marketplace.visualstudio.com/items?itemName=shd101wyy.markdown-preview-enhanced">https://marketplace.visualstudio.com/items?itemName=shd101wyy.markdown-preview-enhanced</a></p>
-
-      
-    </div>
-
-    
-    
-    
-
-    <footer class="post-footer">
-        <div class="post-eof"></div>
-      
-    </footer>
-  </article>
-</div>
-
-
-
-
-    
-
-
-<div class="post-block">
-  
-  
-
-  <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="">
-    <link itemprop="mainEntityOfPage" href="https://lzhwweb.github.io/nirvana/tool/%E5%BC%80%E5%8F%91%E5%B7%A5%E5%85%B7/%E8%B0%B7%E6%AD%8C%E6%B5%8F%E8%A7%88%E5%99%A8SwitchyOmega%E6%8F%92%E4%BB%B6%E5%AE%89%E8%A3%85%E4%BD%BF%E7%94%A8%E6%95%99%E7%A8%8B/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="image" content="/nirvana/images/headphoto.jpeg">
-      <meta itemprop="name" content="nirvana">
-      <meta itemprop="description" content="个人学习笔记">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="涅槃快乐是金">
-    </span>
-      <header class="post-header">
-        <h2 class="post-title" itemprop="name headline">
-          <a href="/nirvana/tool/%E5%BC%80%E5%8F%91%E5%B7%A5%E5%85%B7/%E8%B0%B7%E6%AD%8C%E6%B5%8F%E8%A7%88%E5%99%A8SwitchyOmega%E6%8F%92%E4%BB%B6%E5%AE%89%E8%A3%85%E4%BD%BF%E7%94%A8%E6%95%99%E7%A8%8B/" class="post-title-link" itemprop="url">谷歌浏览器SwitchyOmega插件安装使用教程</a>
-        </h2>
-
-        <div class="post-meta-container">
-          <div class="post-meta">
-    <span class="post-meta-item">
-      <span class="post-meta-item-icon">
-        <i class="far fa-calendar"></i>
-      </span>
-      <span class="post-meta-item-text">发表于</span>
-      
-
-      <time title="创建时间：2021-03-10 21:12:40 / 修改时间：13:43:55" itemprop="dateCreated datePublished" datetime="2021-03-10T21:12:40+08:00">2021-03-10</time>
-    </span>
-    <span class="post-meta-item">
-      <span class="post-meta-item-icon">
-        <i class="far fa-folder"></i>
-      </span>
-      <span class="post-meta-item-text">分类于</span>
-        <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-          <a href="/nirvana/categories/tool/" itemprop="url" rel="index"><span itemprop="name">tool</span></a>
-        </span>
-    </span>
-
-  
-    <span id="/nirvana/tool/%E5%BC%80%E5%8F%91%E5%B7%A5%E5%85%B7/%E8%B0%B7%E6%AD%8C%E6%B5%8F%E8%A7%88%E5%99%A8SwitchyOmega%E6%8F%92%E4%BB%B6%E5%AE%89%E8%A3%85%E4%BD%BF%E7%94%A8%E6%95%99%E7%A8%8B/" class="post-meta-item leancloud_visitors" data-flag-title="谷歌浏览器SwitchyOmega插件安装使用教程" title="阅读次数">
-      <span class="post-meta-item-icon">
-        <i class="far fa-eye"></i>
-      </span>
-      <span class="post-meta-item-text">阅读次数：</span>
-      <span class="leancloud-visitors-count"></span>
-    </span>
-      </div>
-      <div class="post-meta">
-    <span class="post-meta-item" title="本文字数">
-      <span class="post-meta-item-icon">
-        <i class="far fa-file-word"></i>
-      </span>
-      <span class="post-meta-item-text">本文字数：</span>
-      <span>563</span>
-    </span>
-    <span class="post-meta-item" title="阅读时长">
-      <span class="post-meta-item-icon">
-        <i class="far fa-clock"></i>
-      </span>
-      <span class="post-meta-item-text">阅读时长 &asymp;</span>
-      <span>1 分钟</span>
-    </span>
-</div>
-
-        </div>
-      </header>
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-          <p>SwitchyOmega是Chrome浏览器上的代理扩展程序,可以轻松快捷的管理和切换多个代理设置。接管浏览器代理方式，可瞬间切换代理和本地连接方式，配合socks5（等其他代理工具）可实现只代理部分国内无法访问的网站。</p>
-<p><img src="https://upload-images.jianshu.io/upload_images/10024246-61233ce7d20819e9.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240"></p>
-<blockquote>
-<p>安装方法</p>
+          <p><strong>原型模式（Prototype Pattern）</strong>：是指原型实例指向创建对象的种类，并通过拷贝这些原型创建新的对象，是一种用来创建对象的模式，也就是创建一个对象作为另一个对象的prototype属性。这种类型的设计模式属于创建型模式<br>在js中原型设计模式的使用要比java、C中要简单的多。</p>
+<h2 id="1、Object-create"><a href="#1、Object-create" class="headerlink" title="1、Object.create()"></a>1、Object.create()</h2><blockquote>
+<p>1、定义: 创建一个可指定原型对象的并可以包含可选自定义属性的对象；<br>2、 Object.create(proto [, properties]);  可选，用于配置新对象的属性;</p>
 </blockquote>
-<p>1、在线安装</p>
-<p>在可以访问外网的环境下，从Chrome应用商店来安装：<a target="_blank" rel="noopener" href="https://chrome.google.com/webstore/detail/padekgcemlokbadohgkifijomclgjgif">https://chrome.google.com/webstore/detail/padekgcemlokbadohgkifijomclgjgif</a></p>
-<p>2、离线安装</p>
-<p>去github下载最新版安装包：<a target="_blank" rel="noopener" href="https://github.com/FelisCatus/SwitchyOmega/releases">https://github.com/FelisCatus/SwitchyOmega/releases</a></p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br></pre></td><td class="code"><pre><span class="line">方法说明</span><br><span class="line">1. proto: 要创建新对象的 原型，必须，可为 null; 这个 proto 要是已经创建的[new过]，或 对象.prototype 才有价值;</span><br><span class="line"></span><br><span class="line">2. properties: 可选，结构为:</span><br><span class="line"></span><br><span class="line">&#123;</span><br><span class="line"></span><br><span class="line">     propField: &#123;</span><br><span class="line"></span><br><span class="line">           value: &#39;val&#39;|&#123;&#125;|function()&#123;&#125;,</span><br><span class="line"></span><br><span class="line">           writable: true|false,</span><br><span class="line"></span><br><span class="line">           enumerable: true|false,</span><br><span class="line"></span><br><span class="line">           configurable: true|false,</span><br><span class="line"></span><br><span class="line">           get:function()&#123;return 10&#125;,</span><br><span class="line"></span><br><span class="line">           set:function(value)&#123;&#125;</span><br><span class="line"></span><br><span class="line">     &#125;</span><br><span class="line"></span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">自定的属性有以下的四种本置属性：</span><br><span class="line"></span><br><span class="line">value: 自定义属性值;</span><br><span class="line"></span><br><span class="line">writable: 该项值是否可编辑，默认为 false, 当为 true 时，obj.prodField 可赋值；否则只读;</span><br><span class="line"></span><br><span class="line">enumerable: 可枚举; </span><br><span class="line"></span><br><span class="line">confirurable: 可配置;</span><br><span class="line">还可以包含 set, get 访问器方法；</span><br><span class="line">其中，[set, get] 与 value 和 writable 不能同时出现；</span><br><span class="line"></span><br></pre></td></tr></table></figure>
+<h5 id="示例"><a href="#示例" class="headerlink" title="示例"></a>示例</h5><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br></pre></td><td class="code"><pre><span class="line">* 原型模式使用</span><br><span class="line"> * Object.create</span><br><span class="line"> * **&#x2F;</span><br><span class="line">const person &#x3D; &#123;</span><br><span class="line">  isHuman: false,</span><br><span class="line">  printIntroduction: function() &#123;</span><br><span class="line">    console.log(&#96;My name is $&#123;this.name&#125;. Am I human? $&#123;this.isHuman&#125;&#96;);</span><br><span class="line">  &#125;</span><br><span class="line">&#125;;</span><br><span class="line"></span><br><span class="line">const me &#x3D; Object.create(person);</span><br><span class="line"></span><br><span class="line">me.name &#x3D; &#39;Matthew&#39;; &#x2F;&#x2F; &quot;name&quot; is a property set on &quot;me&quot;, but not on &quot;person&quot;</span><br><span class="line">me.isHuman &#x3D; true; &#x2F;&#x2F; inherited properties can be overwritten</span><br><span class="line"></span><br><span class="line">me.printIntroduction();</span><br><span class="line">&#x2F;&#x2F; expected output: &quot;My name is Matthew. Am I human? true&quot;</span><br></pre></td></tr></table></figure>
+<h2 id="2、prototype-来创建对象变量"><a href="#2、prototype-来创建对象变量" class="headerlink" title="2、prototype 来创建对象变量"></a>2、prototype 来创建对象变量</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br></pre></td><td class="code"><pre><span class="line">&#x2F;***</span><br><span class="line"> * 使用prototype来创建实例对象</span><br><span class="line"> * @param name</span><br><span class="line"> * @returns &#123;createPerson.Person&#125;</span><br><span class="line"> *&#x2F;</span><br><span class="line">function createPerson(name)&#123;</span><br><span class="line">  function  Person()&#123;</span><br><span class="line">&#125;;</span><br><span class="line"> </span><br><span class="line">  Person.prototype &#x3D; person;</span><br><span class="line">  let newPerson &#x3D; new Person();</span><br><span class="line">  newPerson.name &#x3D; name;</span><br><span class="line">  return newPerson;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">let me &#x3D; createPerson(&quot;Matthew&quot;);</span><br><span class="line">me.isHuman &#x3D; true;</span><br><span class="line"></span><br><span class="line">me.printIntroduction();</span><br><span class="line">&#x2F;&#x2F; expected output: &quot;My name is Matthew. Am I human? true&quot;</span><br></pre></td></tr></table></figure>
+<h2 id="java版类图"><a href="#java版类图" class="headerlink" title="java版类图"></a><code>java版类图</code></h2><p><img src="https://upload-images.jianshu.io/upload_images/10024246-b2c242cddd8b223f.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240"></p>
+
+      
+    </div>
+
+    
+    
+    
+
+    <footer class="post-footer">
+        <div class="post-eof"></div>
+      
+    </footer>
+  </article>
+</div>
+
+
+
+
+    
+
+
+<div class="post-block">
+  
+  
+
+  <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="">
+    <link itemprop="mainEntityOfPage" href="https://lzhwweb.github.io/nirvana/DesignPattern/%E8%AE%BE%E8%AE%A1%E6%A8%A1%E5%BC%8F%EF%BC%88TypeScript%EF%BC%89/Proxy-Pattern(%E4%BB%A3%E7%90%86%E6%A8%A1%E5%BC%8F)/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/nirvana/images/headphoto.jpeg">
+      <meta itemprop="name" content="nirvana">
+      <meta itemprop="description" content="个人学习笔记">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="涅槃快乐是金">
+    </span>
+      <header class="post-header">
+        <h2 class="post-title" itemprop="name headline">
+          <a href="/nirvana/DesignPattern/%E8%AE%BE%E8%AE%A1%E6%A8%A1%E5%BC%8F%EF%BC%88TypeScript%EF%BC%89/Proxy-Pattern(%E4%BB%A3%E7%90%86%E6%A8%A1%E5%BC%8F)/" class="post-title-link" itemprop="url">Proxy-Pattern(代理模式)</a>
+        </h2>
+
+        <div class="post-meta-container">
+          <div class="post-meta">
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-calendar"></i>
+      </span>
+      <span class="post-meta-item-text">发表于</span>
+
+      <time title="创建时间：2021-03-11 21:12:40" itemprop="dateCreated datePublished" datetime="2021-03-11T21:12:40+08:00">2021-03-11</time>
+    </span>
+      <span class="post-meta-item">
+        <span class="post-meta-item-icon">
+          <i class="far fa-calendar-check"></i>
+        </span>
+        <span class="post-meta-item-text">更新于</span>
+        <time title="修改时间：2021-03-10 13:43:55" itemprop="dateModified" datetime="2021-03-10T13:43:55+08:00">2021-03-10</time>
+      </span>
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-folder"></i>
+      </span>
+      <span class="post-meta-item-text">分类于</span>
+        <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+          <a href="/nirvana/categories/DesignPattern/" itemprop="url" rel="index"><span itemprop="name">DesignPattern</span></a>
+        </span>
+    </span>
+
+  
+    <span id="/nirvana/DesignPattern/%E8%AE%BE%E8%AE%A1%E6%A8%A1%E5%BC%8F%EF%BC%88TypeScript%EF%BC%89/Proxy-Pattern(%E4%BB%A3%E7%90%86%E6%A8%A1%E5%BC%8F)/" class="post-meta-item leancloud_visitors" data-flag-title="Proxy-Pattern(代理模式)" title="阅读次数">
+      <span class="post-meta-item-icon">
+        <i class="far fa-eye"></i>
+      </span>
+      <span class="post-meta-item-text">阅读次数：</span>
+      <span class="leancloud-visitors-count"></span>
+    </span>
+      </div>
+      <div class="post-meta">
+    <span class="post-meta-item" title="本文字数">
+      <span class="post-meta-item-icon">
+        <i class="far fa-file-word"></i>
+      </span>
+      <span class="post-meta-item-text">本文字数：</span>
+      <span>1.7k</span>
+    </span>
+    <span class="post-meta-item" title="阅读时长">
+      <span class="post-meta-item-icon">
+        <i class="far fa-clock"></i>
+      </span>
+      <span class="post-meta-item-text">阅读时长 &asymp;</span>
+      <span>2 分钟</span>
+    </span>
+</div>
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+          <p>代理模式（Proxy Pattern）：代理模式给某一个对象提供一个代理对象，并由代理对象控制对原对象的引用。这种类型的设计模式属于结构型模式。</p>
+<h2 id="介绍"><a href="#介绍" class="headerlink" title="介绍"></a>介绍</h2><ul>
+<li><strong>意图：</strong>为其他对象提供一种代理以控制对这个对象的访问。</li>
+<li><strong>主要解决：</strong>不直接操作对象的情况下,对此对象进行访问。</li>
+<li><strong>何时使用：</strong>想在访问一个类时做一些控制。</li>
+<li><strong>应用实例：</strong>买火车票不一定在火车站买，也可以去代售点。</li>
+<li><strong>优点：</strong><br>1、职责清晰。<br>2、高扩展性。<br>3、智能化。</li>
+<li><strong>缺点：</strong><br>1、由于在客户端和真实主题之间增加了代理对象，因此有些类型的代理模式可能会造成请求的处理速度变慢。<br>2、实现代理模式需要额外的工作，有些代理模式的实现非常复杂。</li>
+<li><strong>使用场景：</strong><br>1、远程代理。<br>2、虚拟代理。<br>3、Copy-on-Write 代理。<br>4、保护（Protect or Access）代理。<br>5、Cache代理。<br>6、防火墙（Firewall）代理。<br>7、同步化（Synchronization）代理。<br>8、智能引用（Smart Reference）代理。</li>
+<li><strong>注意事项：</strong><br>1、和适配器模式的区别：适配器模式主要改变所考虑对象的接口，而代理模式不能改变所代理类的接口。<br>2、和装饰器模式的区别：装饰器模式为了增强功能，而代理模式是为了加以控制。<h2 id="示例"><a href="#示例" class="headerlink" title="示例"></a>示例</h2><h5 id="BuyHouse-ts-创建服务类接口"><a href="#BuyHouse-ts-创建服务类接口" class="headerlink" title="BuyHouse.ts 创建服务类接口"></a>BuyHouse.ts 创建服务类接口</h5><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">export interface BuyHouse &#123;</span><br><span class="line">    buyHosue(): void;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<h5 id="BuyHouseImpl-ts-实现服务接口"><a href="#BuyHouseImpl-ts-实现服务接口" class="headerlink" title="BuyHouseImpl.ts 实现服务接口"></a>BuyHouseImpl.ts 实现服务接口</h5><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line">import &#123; BuyHouse &#125; from &quot;.&#x2F;BuyHouse&quot;;</span><br><span class="line"></span><br><span class="line">export default class BuyHouseImpl implements BuyHouse &#123;</span><br><span class="line"></span><br><span class="line">    constructor() &#123;</span><br><span class="line"></span><br><span class="line">    &#125;</span><br><span class="line">    public buyHosue(): void &#123;</span><br><span class="line">        console.log(&quot;我要买房&quot;);</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<h5 id="BuyHouseProxy-ts-创建代理类"><a href="#BuyHouseProxy-ts-创建代理类" class="headerlink" title="BuyHouseProxy.ts 创建代理类"></a>BuyHouseProxy.ts 创建代理类</h5><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><span class="line">import &#123; BuyHouse &#125; from &quot;.&#x2F;BuyHouse&quot;;</span><br><span class="line"></span><br><span class="line">export default class BuyHouseProxy implements BuyHouse &#123;</span><br><span class="line">    private buyHouse: BuyHouse;</span><br><span class="line">    constructor(buyHouse: BuyHouse) &#123;</span><br><span class="line">        this.buyHouse &#x3D; buyHouse;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    public buyHosue(): void &#123;</span><br><span class="line">        console.log(&quot;买房前准备&quot;);</span><br><span class="line">        this.buyHouse.buyHosue();</span><br><span class="line">        console.log(&quot;买房后装修&quot;);</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<h5 id="index-ts"><a href="#index-ts" class="headerlink" title="index.ts"></a>index.ts</h5><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">import BuyHouseImpl from &quot;.&#x2F;BuyHouseImpl&quot;;</span><br><span class="line">import BuyHouseProxy from &quot;.&#x2F;BuyHouseProxy&quot;;</span><br><span class="line"></span><br><span class="line">const buyHouse &#x3D; new BuyHouseImpl();</span><br><span class="line">buyHouse.buyHosue();</span><br><span class="line">const buyHouseProxy &#x3D; new BuyHouseProxy(buyHouse);</span><br><span class="line">buyHouseProxy.buyHosue();</span><br></pre></td></tr></table></figure>
+<h2 id="类图"><a href="#类图" class="headerlink" title="类图"></a>类图</h2><img src="https://upload-images.jianshu.io/upload_images/10024246-b4f89a6249dd3f0b.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240"><h2 id="角色："><a href="#角色：" class="headerlink" title="角色："></a>角色：</h2></li>
+<li>Subject(主体)：声明了RealSubject和Proxy的共同接口。由于存在Subject角色，所以Client角色不必在意他所使用的的究竟是RealSubject还是Proxy。</li>
+<li>RealSubject（实际的主体）：也称为委托角色或者被代理角色。定义了代理对象所代表的目标对象。</li>
+<li>Proxy（代理人）：也叫委托类、代理类。Proxy角色处理来自Client的请求，代理对象通常在客户端调用传递给目标对象之前或之后，执行某个操作，而不是单纯地将调用传递给目标对象。</li>
+</ul>
+
+      
+    </div>
+
+    
+    
+    
+
+    <footer class="post-footer">
+        <div class="post-eof"></div>
+      
+    </footer>
+  </article>
+</div>
+
+
+
+
+    
+
+
+<div class="post-block">
+  
+  
+
+  <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="">
+    <link itemprop="mainEntityOfPage" href="https://lzhwweb.github.io/nirvana/DesignPattern/%E8%AE%BE%E8%AE%A1%E6%A8%A1%E5%BC%8F%EF%BC%88TypeScript%EF%BC%89/Singleton%E6%A8%A1%E5%BC%8F/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/nirvana/images/headphoto.jpeg">
+      <meta itemprop="name" content="nirvana">
+      <meta itemprop="description" content="个人学习笔记">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="涅槃快乐是金">
+    </span>
+      <header class="post-header">
+        <h2 class="post-title" itemprop="name headline">
+          <a href="/nirvana/DesignPattern/%E8%AE%BE%E8%AE%A1%E6%A8%A1%E5%BC%8F%EF%BC%88TypeScript%EF%BC%89/Singleton%E6%A8%A1%E5%BC%8F/" class="post-title-link" itemprop="url">Singleton模式</a>
+        </h2>
+
+        <div class="post-meta-container">
+          <div class="post-meta">
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-calendar"></i>
+      </span>
+      <span class="post-meta-item-text">发表于</span>
+
+      <time title="创建时间：2021-03-11 21:12:40" itemprop="dateCreated datePublished" datetime="2021-03-11T21:12:40+08:00">2021-03-11</time>
+    </span>
+      <span class="post-meta-item">
+        <span class="post-meta-item-icon">
+          <i class="far fa-calendar-check"></i>
+        </span>
+        <span class="post-meta-item-text">更新于</span>
+        <time title="修改时间：2021-03-10 13:43:55" itemprop="dateModified" datetime="2021-03-10T13:43:55+08:00">2021-03-10</time>
+      </span>
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-folder"></i>
+      </span>
+      <span class="post-meta-item-text">分类于</span>
+        <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+          <a href="/nirvana/categories/DesignPattern/" itemprop="url" rel="index"><span itemprop="name">DesignPattern</span></a>
+        </span>
+    </span>
+
+  
+    <span id="/nirvana/DesignPattern/%E8%AE%BE%E8%AE%A1%E6%A8%A1%E5%BC%8F%EF%BC%88TypeScript%EF%BC%89/Singleton%E6%A8%A1%E5%BC%8F/" class="post-meta-item leancloud_visitors" data-flag-title="Singleton模式" title="阅读次数">
+      <span class="post-meta-item-icon">
+        <i class="far fa-eye"></i>
+      </span>
+      <span class="post-meta-item-text">阅读次数：</span>
+      <span class="leancloud-visitors-count"></span>
+    </span>
+      </div>
+      <div class="post-meta">
+    <span class="post-meta-item" title="本文字数">
+      <span class="post-meta-item-icon">
+        <i class="far fa-file-word"></i>
+      </span>
+      <span class="post-meta-item-text">本文字数：</span>
+      <span>2.2k</span>
+    </span>
+    <span class="post-meta-item" title="阅读时长">
+      <span class="post-meta-item-icon">
+        <i class="far fa-clock"></i>
+      </span>
+      <span class="post-meta-item-text">阅读时长 &asymp;</span>
+      <span>2 分钟</span>
+    </span>
+</div>
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+          <p><strong>单例模式（Singleton）</strong>这种类型的设计模式属于创建型模式，它提供了一种创建对象的最佳方式。该类负责创建自己的对象，同时确保只有单个对象被创建。这个类提供了一种访问其唯一的对象的方式，可以直接访问，不需要实例化该类的对象。</p>
 <blockquote>
-<p>使用方式</p>
+<p>注意：<br>1、单例类只能有一个实例。<br>2、单例类必须自己创建自己的唯一实例。<br>3、单例类必须给所有其他对象提供这一实例。</p>
 </blockquote>
-<p>1、新建一个情景模式</p>
-<p><img src="https://upload-images.jianshu.io/upload_images/10024246-3937342562f3571e.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="谷歌浏览器SwitchyOmega插件安装使用教程"></p>
-<p>上图中，前两种是最常用的，如果是第一次使用，那就记住前两种即可，第一种是指定代理的方式，每次访问一定会从设置的代理中走，第二种是动态切换的方式，比如说你想让百度走国内的网络，而让谷歌走国外的网络。</p>
-<p>2、配置情景模式</p>
-<p><img src="https://upload-images.jianshu.io/upload_images/10024246-27088b3d66156959.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="谷歌浏览器SwitchyOmega插件安装使用教程"></p>
-<p>我这里使用的是SSR的默认代理端口1080做演示，大家根据自己的代理工具来配置即可，注意“代理协议”别选错了。</p>
-<p>3、配置自动切换</p>
-<p><img src="https://upload-images.jianshu.io/upload_images/10024246-312d117ca68260d4.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="谷歌浏览器SwitchyOmega插件安装使用教程"></p>
-<p>前两步完成之后，就已经可以了，但是每次使用的时候，需要在浏览器上手动点一下来切换（不是之前提到的浏览器代理设置），而这一步配置了自动切换以后，会自动根据域名来匹配情景模式。</p>
+<h3 id="介绍"><a href="#介绍" class="headerlink" title="介绍"></a>介绍</h3><p><strong>意图：</strong>保证一个类仅有一个实例，并提供一个访问它的全局访问点。<br><strong>主要解决：</strong>一个全局使用的类频繁地创建与销毁。<br><strong>何时使用：</strong>当您想控制实例数目，节省系统资源的时候。<br><strong>关键代码：</strong>构造函数是私有的。<br><strong>优点：</strong></p>
+<blockquote>
+<p>1、在内存里只有一个实例，减少了内存的开销，尤其是频繁的创建和销毁实例（比如管理学院首页页面缓存）。<br>2、避免对资源的多重占用（比如写文件操作）。</p>
+</blockquote>
+<p><strong>缺点：</strong>没有接口，不能继承，与单一职责原则冲突，一个类应该只关心内部逻辑，而不关心外面怎么样来实例化。<br><em><strong>注意事项：getInstance() 方法中需要使用同步锁 synchronized (Singleton.class) 防止多线程同时进入造成 instance 被多次实例化。</strong></em><br><strong>TicketMaker类：</strong>饿汉模式</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><span class="line">&#x2F;&#x2F;饿汉式，从名字上也很好理解，就是“比较勤”，实例在初始化的时候就已经建好了，不管你有没有用到，都先建好了再说。好处是没有线程安全的问题，坏处是浪费内存空间。</span><br><span class="line">export default class TicketMaker &#123;</span><br><span class="line">    private static ticketMaker: TicketMaker &#x3D; new TicketMaker();</span><br><span class="line">    private ticket: number &#x3D; 1000;</span><br><span class="line">    private constructor() &#123;</span><br><span class="line">        console.log(&quot;初始化TicketMaker&quot;);</span><br><span class="line">    &#125;</span><br><span class="line">    public getNextTicketNumber(): number &#123;</span><br><span class="line">        return this.ticket++;</span><br><span class="line">    &#125;</span><br><span class="line">    public static getInstance(): TicketMaker &#123;</span><br><span class="line">        return this.ticketMaker;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<blockquote>
+<p><em><strong>注意：</strong></em>在饿汉模式下，如果通过new生产对象，会出现对象创建2次,可以把constructor函数设置为私有，防止通过new来生产新对象,所有函数的创建通过getInstance实现</p>
+</blockquote>
+<p><strong>TicketMaker类：</strong>懒汉模式</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br></pre></td><td class="code"><pre><span class="line">&#x2F;&#x2F;懒汉式，顾名思义就是实例在用到的时候才去创建，“比较懒”，用的时候才去检查有没有实例，如果有则返回，没有则新建。</span><br><span class="line">export default class TicketMaker &#123;</span><br><span class="line">    private static ticketMaker: TicketMaker;</span><br><span class="line">    private ticket: number &#x3D; 1000;</span><br><span class="line">    constructor() &#123;</span><br><span class="line">        console.log(&quot;初始化TicketMaker&quot;);</span><br><span class="line">    &#125;</span><br><span class="line">    public getNextTicketNumber(): number &#123;</span><br><span class="line">        return this.ticket++;</span><br><span class="line">    &#125;</span><br><span class="line">    public static getInstance(): TicketMaker &#123;</span><br><span class="line">        if (!this.ticketMaker) &#123;</span><br><span class="line">            this.ticketMaker &#x3D; new TicketMaker();</span><br><span class="line">        &#125;</span><br><span class="line">        return this.ticketMaker;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p><strong>main 函数：</strong></p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line">import TicketMaker from &quot;.&#x2F;TicketMaker&quot;;</span><br><span class="line">const ticketMaker1 &#x3D; TicketMaker.getInstance();</span><br><span class="line">for (let i &#x3D; 0; i &lt; 10; i++) &#123;</span><br><span class="line">    console.log(&#96;第$&#123;i&#125;个$&#123;ticketMaker1.getNextTicketNumber()&#125;&#96;);</span><br><span class="line">&#125;</span><br><span class="line">const ticketMaker2 &#x3D; TicketMaker.getInstance();</span><br><span class="line">for (let i &#x3D; 0; i &lt; 10; i++) &#123;</span><br><span class="line">    console.log(&#96;第$&#123;i&#125;个$&#123;ticketMaker2.getNextTicketNumber()&#125;&#96;);</span><br><span class="line">&#125;</span><br><span class="line">console.log(ticketMaker1 &#x3D;&#x3D;&#x3D; ticketMaker2);</span><br></pre></td></tr></table></figure>
+<p><strong>输出：</strong></p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line">初始化TicketMaker</span><br><span class="line">第0个1000</span><br><span class="line">第1个1001</span><br><span class="line">第2个1002</span><br><span class="line">第3个1003</span><br><span class="line">第4个1004</span><br><span class="line">第0个1005</span><br><span class="line">第1个1006</span><br><span class="line">第2个1007</span><br><span class="line">第3个1008</span><br><span class="line">第4个1009</span><br><span class="line">true</span><br></pre></td></tr></table></figure>
+<h3 id="结构："><a href="#结构：" class="headerlink" title="结构："></a>结构：</h3><p>**Singleton:**Singleton角色有一个返回唯一实例的static方法，改方法总是返回同一实例</p>
+<h3 id="类图："><a href="#类图：" class="headerlink" title="类图："></a>类图：</h3><p><img src="https://upload-images.jianshu.io/upload_images/5180339-a9aade0286215a70.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/246/format/webp" alt="Singleton类图"></p>
 
       
     </div>
@@ -911,7 +861,7 @@
   
 
   <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="">
-    <link itemprop="mainEntityOfPage" href="https://lzhwweb.github.io/nirvana/algorithm/%E7%AE%97%E6%B3%95%E5%AD%A6%E4%B9%A0/%E5%86%92%E6%B3%A1%E6%8E%92%E5%BA%8F/">
+    <link itemprop="mainEntityOfPage" href="https://lzhwweb.github.io/nirvana/DesignPattern/%E8%AE%BE%E8%AE%A1%E6%A8%A1%E5%BC%8F%EF%BC%88TypeScript%EF%BC%89/State-Pattern%E6%A8%A1%E5%BC%8F%EF%BC%88%E7%8A%B6%E6%80%81%E6%A8%A1%E5%BC%8F%EF%BC%89/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="image" content="/nirvana/images/headphoto.jpeg">
@@ -924,7 +874,7 @@
     </span>
       <header class="post-header">
         <h2 class="post-title" itemprop="name headline">
-          <a href="/nirvana/algorithm/%E7%AE%97%E6%B3%95%E5%AD%A6%E4%B9%A0/%E5%86%92%E6%B3%A1%E6%8E%92%E5%BA%8F/" class="post-title-link" itemprop="url">冒泡排序</a>
+          <a href="/nirvana/DesignPattern/%E8%AE%BE%E8%AE%A1%E6%A8%A1%E5%BC%8F%EF%BC%88TypeScript%EF%BC%89/State-Pattern%E6%A8%A1%E5%BC%8F%EF%BC%88%E7%8A%B6%E6%80%81%E6%A8%A1%E5%BC%8F%EF%BC%89/" class="post-title-link" itemprop="url">State-Pattern模式（状态模式）</a>
         </h2>
 
         <div class="post-meta-container">
@@ -934,22 +884,28 @@
         <i class="far fa-calendar"></i>
       </span>
       <span class="post-meta-item-text">发表于</span>
-      
 
-      <time title="创建时间：2021-03-10 21:12:40 / 修改时间：13:43:55" itemprop="dateCreated datePublished" datetime="2021-03-10T21:12:40+08:00">2021-03-10</time>
+      <time title="创建时间：2021-03-11 21:12:40" itemprop="dateCreated datePublished" datetime="2021-03-11T21:12:40+08:00">2021-03-11</time>
     </span>
+      <span class="post-meta-item">
+        <span class="post-meta-item-icon">
+          <i class="far fa-calendar-check"></i>
+        </span>
+        <span class="post-meta-item-text">更新于</span>
+        <time title="修改时间：2021-03-10 13:43:55" itemprop="dateModified" datetime="2021-03-10T13:43:55+08:00">2021-03-10</time>
+      </span>
     <span class="post-meta-item">
       <span class="post-meta-item-icon">
         <i class="far fa-folder"></i>
       </span>
       <span class="post-meta-item-text">分类于</span>
         <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-          <a href="/nirvana/categories/algorithm/" itemprop="url" rel="index"><span itemprop="name">algorithm</span></a>
+          <a href="/nirvana/categories/DesignPattern/" itemprop="url" rel="index"><span itemprop="name">DesignPattern</span></a>
         </span>
     </span>
 
   
-    <span id="/nirvana/algorithm/%E7%AE%97%E6%B3%95%E5%AD%A6%E4%B9%A0/%E5%86%92%E6%B3%A1%E6%8E%92%E5%BA%8F/" class="post-meta-item leancloud_visitors" data-flag-title="冒泡排序" title="阅读次数">
+    <span id="/nirvana/DesignPattern/%E8%AE%BE%E8%AE%A1%E6%A8%A1%E5%BC%8F%EF%BC%88TypeScript%EF%BC%89/State-Pattern%E6%A8%A1%E5%BC%8F%EF%BC%88%E7%8A%B6%E6%80%81%E6%A8%A1%E5%BC%8F%EF%BC%89/" class="post-meta-item leancloud_visitors" data-flag-title="State-Pattern模式（状态模式）" title="阅读次数">
       <span class="post-meta-item-icon">
         <i class="far fa-eye"></i>
       </span>
@@ -963,14 +919,14 @@
         <i class="far fa-file-word"></i>
       </span>
       <span class="post-meta-item-text">本文字数：</span>
-      <span>547</span>
+      <span>4.2k</span>
     </span>
     <span class="post-meta-item" title="阅读时长">
       <span class="post-meta-item-icon">
         <i class="far fa-clock"></i>
       </span>
       <span class="post-meta-item-text">阅读时长 &asymp;</span>
-      <span>1 分钟</span>
+      <span>4 分钟</span>
     </span>
 </div>
 
@@ -981,8 +937,25 @@
     
     
     <div class="post-body" itemprop="articleBody">
-          <hr>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br></pre></td><td class="code"><pre><span class="line">&#x2F;**</span><br><span class="line"> * 冒泡排序基础</span><br><span class="line"> * arry:数组，必传</span><br><span class="line"> * type:排序方式，默认值1，1：升序，0：降序</span><br><span class="line"> **&#x2F;</span><br><span class="line">function bubbleSort(arry,type &#x3D; 1)&#123;</span><br><span class="line">    if(Object.prototype.toString.call(arry) !&#x3D;&#x3D; &#39;[object Array]&#39;)&#123;&#x2F;&#x2F;判断是否数组</span><br><span class="line">        return false;</span><br><span class="line">    &#125;</span><br><span class="line">    for (let i&#x3D;0;i&lt;arry.length;i++)&#123;</span><br><span class="line">        for(let j&#x3D;0;j&lt;arry.length-i;j++)&#123;</span><br><span class="line">            if((type &#x3D;&#x3D; 1 &amp;&amp; arry[j]&gt;arry[j+1])||(type &#x3D;&#x3D; 0 &amp;&amp; arry[j]&lt;arry[j+1]))&#123;</span><br><span class="line">                let temp &#x3D; arry[j];</span><br><span class="line">                arry[j] &#x3D; arry[j+1];</span><br><span class="line">                arry[j+1] &#x3D; temp;</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">    return arry;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+          <p><strong>状态模式（State Pattern）</strong>：用类来表示状态。这种类型的设计模式属于行为型模式。</p>
+<h2 id="介绍"><a href="#介绍" class="headerlink" title="介绍"></a>介绍</h2><ul>
+<li><strong>意图：</strong>用类来表示状态，允许对象在内部状态发生改变时改变它的行为</li>
+<li><strong>主要解决：</strong>对象的行为依赖于它的状态（属性），并且可以根据它的状态改变而改变它的相关行为。</li>
+<li><strong>如何解决：</strong>将各种具体的状态类抽象出来。</li>
+<li><strong>优点：</strong><br>1、封装了转换规则。<br>2、枚举可能的状态，在枚举状态之前需要确定状态种类。<br>3、将所有与某个状态有关的行为放到一个类中，并且可以方便地增加新的状态，只需要改变对象状态即可改变对象的行为。<br>4、允许状态转换逻辑与状态对象合成一体，而不是某一个巨大的条件语句块。<br>5、可以让多个环境对象共享一个状态对象，从而减少系统中对象的个数。</li>
+<li><strong>缺点：</strong><br>1、状态模式的使用必然会增加系统类和对象的个数。<br>2、状态模式的结构与实现都较为复杂，如果使用不当将导致程序结构和代码的混乱。<br>3、状态模式对”开闭原则”的支持并不太好，对于可以切换状态的状态模式，增加新的状态类需要修改那些负责状态转换的源代码，否则无法切换到新增状态，而且修改某个状态类的行为也需修改对应类的源代码。</li>
+<li><strong>使用场景：</strong><br>1、行为随状态改变而改变的场景。<br>2、条件、分支语句的代替者。<h2 id="示例"><a href="#示例" class="headerlink" title="示例"></a>示例</h2><h5 id="State-ts-表示金库状态的接口"><a href="#State-ts-表示金库状态的接口" class="headerlink" title="State.ts 表示金库状态的接口"></a>State.ts 表示金库状态的接口</h5><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">import &#123; Context &#125; from &quot;.&#x2F;Context&quot;;</span><br><span class="line"></span><br><span class="line">export interface State &#123;</span><br><span class="line">    doClock(context: Context, hour: number): void;</span><br><span class="line">    doUse(context: Context): void;</span><br><span class="line">    doAlarm(context: Context): void;</span><br><span class="line">    doPhone(context: Context): void;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<h5 id="DayState-ts-表示白天状态的类，实现了State的接口"><a href="#DayState-ts-表示白天状态的类，实现了State的接口" class="headerlink" title="DayState.ts 表示白天状态的类，实现了State的接口"></a>DayState.ts 表示白天状态的类，实现了State的接口</h5><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br></pre></td><td class="code"><pre><span class="line">import &#123; Context &#125; from &quot;.&#x2F;Context&quot;;</span><br><span class="line">import &#123; State &#125; from &quot;.&#x2F;State&quot;;</span><br><span class="line">import NightState from &quot;.&#x2F;NightState&quot;;</span><br><span class="line"></span><br><span class="line">export default class DayState implements State &#123;</span><br><span class="line">    private static singleton: DayState &#x3D; new DayState();</span><br><span class="line">    public static getInstance(): DayState &#123;</span><br><span class="line">        return this.singleton;</span><br><span class="line">    &#125;</span><br><span class="line">    doClock(context: Context, hour: number): void &#123;</span><br><span class="line">        if (hour &lt; 9 || hour &gt;&#x3D; 17) &#123;</span><br><span class="line">            context.changeState(NightState.getInstance());</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">    doUse(context: Context): void &#123;</span><br><span class="line">        context.recordLog(&quot;使用金库（白天）&quot;);</span><br><span class="line">    &#125;</span><br><span class="line">    doAlarm(context: Context): void &#123;</span><br><span class="line">        context.callSecurityCenter(&quot;按下警铃（白天）&quot;)</span><br><span class="line">    &#125;</span><br><span class="line">    doPhone(context: Context): void &#123;</span><br><span class="line">        context.callSecurityCenter(&quot;正常通话（白天）&quot;)</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    public toString(): string &#123;</span><br><span class="line">        return &quot;[白天]&quot;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<h5 id="NightState-ts-表示晚上状态的类，实现了State的接口"><a href="#NightState-ts-表示晚上状态的类，实现了State的接口" class="headerlink" title="NightState.ts 表示晚上状态的类，实现了State的接口"></a>NightState.ts 表示晚上状态的类，实现了State的接口</h5><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br></pre></td><td class="code"><pre><span class="line">import &#123; Context &#125; from &quot;.&#x2F;Context&quot;;</span><br><span class="line">import &#123; State &#125; from &quot;.&#x2F;State&quot;;</span><br><span class="line">import DayState from &quot;.&#x2F;DayState&quot;;</span><br><span class="line"></span><br><span class="line">export default class NightState implements State &#123;</span><br><span class="line">    private static singleton: NightState &#x3D; new NightState();</span><br><span class="line">    public static getInstance(): NightState &#123;</span><br><span class="line">        return this.singleton;</span><br><span class="line">    &#125;</span><br><span class="line">    doClock(context: Context, hour: number): void &#123;</span><br><span class="line">        if (hour &gt;&#x3D; 9 &amp;&amp; hour &lt; 17) &#123;</span><br><span class="line">            context.changeState(DayState.getInstance())</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">    doUse(context: Context): void &#123;</span><br><span class="line">        context.recordLog(&quot;紧急：晚上使用金库！&quot;);</span><br><span class="line">    &#125;</span><br><span class="line">    doAlarm(context: Context): void &#123;</span><br><span class="line">        context.callSecurityCenter(&quot;按下警铃（晚上）&quot;)</span><br><span class="line">    &#125;</span><br><span class="line">    doPhone(context: Context): void &#123;</span><br><span class="line">        context.callSecurityCenter(&quot;晚上的通话录音&quot;)</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    public toString(): string &#123;</span><br><span class="line">        return &quot;[晚上]&quot;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<h5 id="Context-ts-表示管理金库的状态，并与报警中心联系的接口"><a href="#Context-ts-表示管理金库的状态，并与报警中心联系的接口" class="headerlink" title="Context.ts 表示管理金库的状态，并与报警中心联系的接口"></a>Context.ts 表示管理金库的状态，并与报警中心联系的接口</h5><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">import &#123; State &#125; from &quot;.&#x2F;State&quot;;</span><br><span class="line"></span><br><span class="line">export interface Context &#123;</span><br><span class="line">    setClock(hour: number): void;</span><br><span class="line">    changeState(state: State): void;</span><br><span class="line">    callSecurityCenter(msg: string): void;</span><br><span class="line">    recordLog(msg: string): void;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<h5 id="Safe-ts-实现了Context接口"><a href="#Safe-ts-实现了Context接口" class="headerlink" title="Safe.ts 实现了Context接口"></a>Safe.ts 实现了Context接口</h5><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br></pre></td><td class="code"><pre><span class="line">import &#123; Context &#125; from &quot;.&#x2F;Context&quot;;</span><br><span class="line">import &#123; State &#125; from &quot;.&#x2F;State&quot;;</span><br><span class="line">import DayState from &quot;.&#x2F;DayState&quot;;</span><br><span class="line"></span><br><span class="line">export default class Safe implements Context &#123;</span><br><span class="line">    public state: State &#x3D; DayState.getInstance();</span><br><span class="line"></span><br><span class="line">    private clock: number;</span><br><span class="line">    public setClock(hour: number): void &#123;</span><br><span class="line">        this.clock &#x3D; hour;</span><br><span class="line">        console.log(&#96;当前时间是$&#123;hour&#125;&#96;);</span><br><span class="line">        this.state.doClock(this, this.clock);</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    public changeState(state: State): void &#123;</span><br><span class="line">        console.log(&#96;从$&#123;this.state&#125;状态变为了$&#123;state&#125;状态&#96;);</span><br><span class="line">        this.state &#x3D; state;</span><br><span class="line">    &#125;</span><br><span class="line">    public callSecurityCenter(msg: string): void &#123;</span><br><span class="line">        console.log(&#96;call!$&#123;msg&#125;&#96;);</span><br><span class="line">    &#125;</span><br><span class="line">    public recordLog(msg: string): void &#123;</span><br><span class="line">        console.log(&#96;record....!$&#123;msg&#125;&#96;);</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<h5 id="index-ts"><a href="#index-ts" class="headerlink" title="index.ts"></a>index.ts</h5><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line">import Safe from &quot;.&#x2F;Safe&quot;;</span><br><span class="line"></span><br><span class="line">const safe: Safe &#x3D; new Safe();</span><br><span class="line">safe.setClock(10);</span><br><span class="line">safe.state.doUse(safe);</span><br><span class="line">safe.state.doAlarm(safe);</span><br><span class="line">safe.state.doPhone(safe);</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">safe.setClock(20);</span><br><span class="line">safe.state.doUse(safe);</span><br><span class="line">safe.state.doAlarm(safe);</span><br><span class="line">safe.state.doPhone(safe);</span><br></pre></td></tr></table></figure>
+<h5 id="result"><a href="#result" class="headerlink" title="result"></a>result</h5><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line">当前时间是10</span><br><span class="line">record....!使用金库（白天）</span><br><span class="line">call!按下警铃（白天）</span><br><span class="line">call!正常通话（白天）</span><br><span class="line">当前时间是20</span><br><span class="line">从[白天]状态变为了[晚上]状态</span><br><span class="line">record....!紧急：晚上使用金库！</span><br><span class="line">call!按下警铃（晚上）</span><br><span class="line">call!晚上的通话录音</span><br></pre></td></tr></table></figure>
+<h2 id="类图"><a href="#类图" class="headerlink" title="类图"></a>类图</h2><img src="https://upload-images.jianshu.io/upload_images/10024246-43d4a68e88cdf387.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="类图"><h2 id="角色"><a href="#角色" class="headerlink" title="角色"></a>角色</h2></li>
+<li>State（状态）<br>State定义了根据不同状态进行不同处理的接口，该接口是那些<code>处理内容依赖于状态的方法的集合</code>。</li>
+<li>ConcreteState（具体状态）<br>ConcreteState角色表示各个具体的状态，实现了State的接口。示例中DayState和NightState</li>
+<li>Context（状况、前后关系、上下文）<br>Context角色持有当前状态的ConcreteState，此外，它还定义了供外部调用者使用State模式的接口。示例中Context和Safe类为该角色</li>
+</ul>
 
       
     </div>
@@ -1009,7 +982,7 @@
   
 
   <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="">
-    <link itemprop="mainEntityOfPage" href="https://lzhwweb.github.io/nirvana/algorithm/%E7%AE%97%E6%B3%95%E5%AD%A6%E4%B9%A0/%E5%88%A4%E6%96%AD%E6%98%AF%E5%90%A6%E5%9B%9E%E6%96%87/">
+    <link itemprop="mainEntityOfPage" href="https://lzhwweb.github.io/nirvana/DesignPattern/%E8%AE%BE%E8%AE%A1%E6%A8%A1%E5%BC%8F%EF%BC%88TypeScript%EF%BC%89/Strategy-Pattern%E6%A8%A1%E5%BC%8F%EF%BC%88%E7%AD%96%E7%95%A5%E6%A8%A1%E5%BC%8F%EF%BC%89/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="image" content="/nirvana/images/headphoto.jpeg">
@@ -1022,7 +995,7 @@
     </span>
       <header class="post-header">
         <h2 class="post-title" itemprop="name headline">
-          <a href="/nirvana/algorithm/%E7%AE%97%E6%B3%95%E5%AD%A6%E4%B9%A0/%E5%88%A4%E6%96%AD%E6%98%AF%E5%90%A6%E5%9B%9E%E6%96%87/" class="post-title-link" itemprop="url">判断是否回文</a>
+          <a href="/nirvana/DesignPattern/%E8%AE%BE%E8%AE%A1%E6%A8%A1%E5%BC%8F%EF%BC%88TypeScript%EF%BC%89/Strategy-Pattern%E6%A8%A1%E5%BC%8F%EF%BC%88%E7%AD%96%E7%95%A5%E6%A8%A1%E5%BC%8F%EF%BC%89/" class="post-title-link" itemprop="url">Strategy-Pattern模式（策略模式）</a>
         </h2>
 
         <div class="post-meta-container">
@@ -1032,22 +1005,28 @@
         <i class="far fa-calendar"></i>
       </span>
       <span class="post-meta-item-text">发表于</span>
-      
 
-      <time title="创建时间：2021-03-10 21:12:40 / 修改时间：13:43:55" itemprop="dateCreated datePublished" datetime="2021-03-10T21:12:40+08:00">2021-03-10</time>
+      <time title="创建时间：2021-03-11 21:12:40" itemprop="dateCreated datePublished" datetime="2021-03-11T21:12:40+08:00">2021-03-11</time>
     </span>
+      <span class="post-meta-item">
+        <span class="post-meta-item-icon">
+          <i class="far fa-calendar-check"></i>
+        </span>
+        <span class="post-meta-item-text">更新于</span>
+        <time title="修改时间：2021-03-10 13:43:55" itemprop="dateModified" datetime="2021-03-10T13:43:55+08:00">2021-03-10</time>
+      </span>
     <span class="post-meta-item">
       <span class="post-meta-item-icon">
         <i class="far fa-folder"></i>
       </span>
       <span class="post-meta-item-text">分类于</span>
         <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-          <a href="/nirvana/categories/algorithm/" itemprop="url" rel="index"><span itemprop="name">algorithm</span></a>
+          <a href="/nirvana/categories/DesignPattern/" itemprop="url" rel="index"><span itemprop="name">DesignPattern</span></a>
         </span>
     </span>
 
   
-    <span id="/nirvana/algorithm/%E7%AE%97%E6%B3%95%E5%AD%A6%E4%B9%A0/%E5%88%A4%E6%96%AD%E6%98%AF%E5%90%A6%E5%9B%9E%E6%96%87/" class="post-meta-item leancloud_visitors" data-flag-title="判断是否回文" title="阅读次数">
+    <span id="/nirvana/DesignPattern/%E8%AE%BE%E8%AE%A1%E6%A8%A1%E5%BC%8F%EF%BC%88TypeScript%EF%BC%89/Strategy-Pattern%E6%A8%A1%E5%BC%8F%EF%BC%88%E7%AD%96%E7%95%A5%E6%A8%A1%E5%BC%8F%EF%BC%89/" class="post-meta-item leancloud_visitors" data-flag-title="Strategy-Pattern模式（策略模式）" title="阅读次数">
       <span class="post-meta-item-icon">
         <i class="far fa-eye"></i>
       </span>
@@ -1061,14 +1040,14 @@
         <i class="far fa-file-word"></i>
       </span>
       <span class="post-meta-item-text">本文字数：</span>
-      <span>450</span>
+      <span>4.8k</span>
     </span>
     <span class="post-meta-item" title="阅读时长">
       <span class="post-meta-item-icon">
         <i class="far fa-clock"></i>
       </span>
       <span class="post-meta-item-text">阅读时长 &asymp;</span>
-      <span>1 分钟</span>
+      <span>4 分钟</span>
     </span>
 </div>
 
@@ -1079,8 +1058,32 @@
     
     
     <div class="post-body" itemprop="articleBody">
-          <hr>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br></pre></td><td class="code"><pre><span class="line">&#x2F;**</span><br><span class="line"> * 判断是否回文</span><br><span class="line">**&#x2F;</span><br><span class="line">function checkPlalindrome(str)&#123;</span><br><span class="line">  if(!str)&#123;&#x2F;&#x2F;为空，或者长度能整除2</span><br><span class="line">    return false</span><br><span class="line">  &#125;</span><br><span class="line">  </span><br><span class="line">  let isOdd &#x3D; str.length % 2;</span><br><span class="line">  let mid &#x3D; Math.floor(str.length&#x2F;2);&#x2F;&#x2F;中间数</span><br><span class="line">  let flag &#x3D; true;</span><br><span class="line">  for (let i &#x3D; 0;i&lt;mid;i++)&#123;</span><br><span class="line">    console.log(str.substr(i,1),str.substr(i+mid+isOdd,1))</span><br><span class="line">    if(!(str.substr(i,1) &#x3D;&#x3D; str.substr(i+mid+isOdd,1)))&#123;</span><br><span class="line">      flag &#x3D; false;</span><br><span class="line">      break;</span><br><span class="line">    &#125;</span><br><span class="line">  &#125;</span><br><span class="line">  return flag;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+          <p><strong>策略模式（Strategy Pattern）</strong>:一个类的行为或其算法可以在运行时更改。这种类型的设计模式属于行为型模式。</p>
+<h2 id="介绍"><a href="#介绍" class="headerlink" title="介绍"></a>介绍</h2><ul>
+<li><strong>意图：</strong>定义一系列的算法,把它们一个个封装起来, 并且使它们可相互替换。</li>
+<li><strong>主要解决：</strong>在有多种算法相似的情况下，使用 if…else 所带来的复杂和难以维护。</li>
+<li><strong>何时使用：</strong>一个系统有许多许多类，而区分它们的只是他们直接的行为。</li>
+<li><strong>如何解决：</strong>将这些算法封装成一个一个的类，任意地替换。</li>
+<li><strong>关键代码：</strong>实现同一个接口。</li>
+<li><strong>优点：</strong><br>1、算法可以自由切换。<br>2、避免使用多重条件判断。<br>3、扩展性良好。</li>
+<li><strong>缺点：</strong><br>1、策略类会增多。<br>2、所有策略类都需要对外暴露。<blockquote>
+<p>注意事项：如果一个系统的策略多于四个，就需要考虑使用混合模式，解决策略类膨胀的问题。</p>
+</blockquote>
+</li>
+</ul>
+<h2 id="示例"><a href="#示例" class="headerlink" title="示例"></a>示例</h2><h5 id="Hand-ts-表示猜拳游戏中的手势类"><a href="#Hand-ts-表示猜拳游戏中的手势类" class="headerlink" title="Hand.ts 表示猜拳游戏中的手势类"></a>Hand.ts 表示猜拳游戏中的手势类</h5><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br></pre></td><td class="code"><pre><span class="line">export default class Hand &#123;</span><br><span class="line">    public HANDVALUE_GUU &#x3D; 0;&#x2F;&#x2F;表示石头的值</span><br><span class="line">    public HANDVALUE_CHO &#x3D; 1;&#x2F;&#x2F;表示剪刀的值</span><br><span class="line">    public HANDVALUE_PAA &#x3D; 2;&#x2F;&#x2F;表示布的值</span><br><span class="line"></span><br><span class="line">    private name: Array&lt;string&gt; &#x3D; [&quot;石头&quot;, &quot;剪刀&quot;, &quot;布&quot;];</span><br><span class="line"></span><br><span class="line">    private handValue: number;</span><br><span class="line">    constructor(handValue: number) &#123;</span><br><span class="line">        this.handValue &#x3D; handValue;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    public getHand(handValue: number): Hand &#123;</span><br><span class="line">        return new Hand(handValue);</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    public isStrongerThan(h: Hand): boolean &#123;</span><br><span class="line">        return this.fight(h) &#x3D;&#x3D; 1;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    public isWeakerThan(h: Hand): boolean &#123;</span><br><span class="line">        return this.fight(h) &#x3D;&#x3D; -1;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    private fight(h: Hand): number &#123;</span><br><span class="line">        if (this.handValue &#x3D;&#x3D; h.handValue) &#123;</span><br><span class="line">            return 0;</span><br><span class="line">        &#125; else if ((this.handValue + 1) % 3 &gt; h.handValue) &#123;</span><br><span class="line">            return 1;</span><br><span class="line">        &#125; else &#123;</span><br><span class="line">            return -1;</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">    public toString(): string &#123;</span><br><span class="line">        return this.name[this.handValue];</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<h5 id="Strategy-ts-表示猜拳游戏中的策略的类"><a href="#Strategy-ts-表示猜拳游戏中的策略的类" class="headerlink" title="Strategy.ts 表示猜拳游戏中的策略的类"></a>Strategy.ts 表示猜拳游戏中的策略的类</h5><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">import Hand from &quot;.&#x2F;Hand&quot;;</span><br><span class="line"></span><br><span class="line">export interface Strategy &#123;</span><br><span class="line">    nextHand(): Hand;</span><br><span class="line">    study(win: boolean): void;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<h5 id="WinningStrategy-ts-表示如果这局获胜，那么下一局同样手势的类"><a href="#WinningStrategy-ts-表示如果这局获胜，那么下一局同样手势的类" class="headerlink" title="WinningStrategy.ts 表示如果这局获胜，那么下一局同样手势的类"></a>WinningStrategy.ts 表示如果这局获胜，那么下一局同样手势的类</h5><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br></pre></td><td class="code"><pre><span class="line">import &#123; Strategy &#125; from &quot;.&#x2F;type&quot;;</span><br><span class="line">import Hand from &quot;.&#x2F;Hand&quot;;</span><br><span class="line"></span><br><span class="line">export default class WinningStrategy implements Strategy &#123;</span><br><span class="line">    private win: boolean &#x3D; false;</span><br><span class="line">    private prevHand: Hand;</span><br><span class="line">    constructor() &#123;</span><br><span class="line">    &#125;</span><br><span class="line">    public nextHand(): Hand &#123;</span><br><span class="line">        if (!this.win) &#123;</span><br><span class="line">            const random &#x3D; Math.floor(Math.random() * 3);</span><br><span class="line">            const hand &#x3D; new Hand(random);</span><br><span class="line">            this.prevHand &#x3D; hand.getHand(random);</span><br><span class="line">        &#125;</span><br><span class="line">        return this.prevHand;</span><br><span class="line">    &#125;</span><br><span class="line">    public study(win: boolean) &#123;</span><br><span class="line">        this.win &#x3D; win;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<h5 id="RandomStragegy-ts-表示每次都随机手势"><a href="#RandomStragegy-ts-表示每次都随机手势" class="headerlink" title="RandomStragegy.ts 表示每次都随机手势"></a>RandomStragegy.ts 表示每次都随机手势</h5><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><span class="line">import &#123; Strategy &#125; from &quot;.&#x2F;type&quot;;</span><br><span class="line">import Hand from &quot;.&#x2F;Hand&quot;;</span><br><span class="line"></span><br><span class="line">export default class RandomStragegy implements Strategy &#123;</span><br><span class="line">    constructor() &#123;</span><br><span class="line">    &#125;</span><br><span class="line">    public nextHand(): Hand &#123;</span><br><span class="line">        const random &#x3D; Math.floor(Math.random() * 3);</span><br><span class="line">        const hand &#x3D; new Hand(random);</span><br><span class="line">        return hand.getHand(random);</span><br><span class="line">    &#125;</span><br><span class="line">    public study(win: boolean) &#123;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<h5 id="Player-ts-猜拳游戏的选手类"><a href="#Player-ts-猜拳游戏的选手类" class="headerlink" title="Player.ts 猜拳游戏的选手类"></a>Player.ts 猜拳游戏的选手类</h5><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br></pre></td><td class="code"><pre><span class="line">import &#123; Strategy &#125; from &quot;.&#x2F;type&quot;;</span><br><span class="line">import Hand from &quot;.&#x2F;Hand&quot;;</span><br><span class="line"></span><br><span class="line">export default class Play &#123;</span><br><span class="line">    private name: string;</span><br><span class="line">    private winCount: number &#x3D; 0;</span><br><span class="line">    private loseCount: number &#x3D; 0;</span><br><span class="line">    private gameCount: number &#x3D; 0;</span><br><span class="line">    private stragegy: Strategy</span><br><span class="line">    constructor(name: string, stragegy: Strategy) &#123;</span><br><span class="line">        this.name &#x3D; name;</span><br><span class="line">        this.stragegy &#x3D; stragegy;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    public nextHand(): Hand &#123;</span><br><span class="line">        return this.stragegy.nextHand()</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    public win(): void &#123;</span><br><span class="line">        this.stragegy.study(true);</span><br><span class="line">        this.winCount++;</span><br><span class="line">        this.gameCount++;</span><br><span class="line">    &#125;</span><br><span class="line">    public lose(): void &#123;</span><br><span class="line">        this.stragegy.study(false);</span><br><span class="line">        this.loseCount++;</span><br><span class="line">        this.gameCount++;</span><br><span class="line">    &#125;</span><br><span class="line">    public even() &#123;</span><br><span class="line">        this.gameCount++;</span><br><span class="line">    &#125;</span><br><span class="line">    public toString(): string &#123;</span><br><span class="line">        return &#96;[$&#123;this.name&#125;:$&#123;this.gameCount&#125; games,$&#123;this.winCount&#125; win,$&#123;this.loseCount&#125; lose]&#96;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<h5 id="index-ts"><a href="#index-ts" class="headerlink" title="index.ts"></a>index.ts</h5><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br></pre></td><td class="code"><pre><span class="line">import Play from &quot;.&#x2F;Play&quot;;</span><br><span class="line">import WinningStrategy from &quot;.&#x2F;WinningStrategy&quot;;</span><br><span class="line">import RandomStragegy from &quot;.&#x2F;RandomStragegy&quot;;</span><br><span class="line"></span><br><span class="line">const play1: Play &#x3D; new Play(&quot;Trao&quot;, new WinningStrategy());&#x2F;&#x2F;坚持上一次赢</span><br><span class="line">const play2: Play &#x3D; new Play(&quot;Haha&quot;, new RandomStragegy());&#x2F;&#x2F;随机</span><br><span class="line">for (let i &#x3D; 0; i &lt; 20; i++) &#123;</span><br><span class="line">    const nextHand1 &#x3D; play1.nextHand();</span><br><span class="line">    const nextHand2 &#x3D; play2.nextHand();</span><br><span class="line">    if (nextHand1.isStrongerThan(nextHand2)) &#123;</span><br><span class="line">        console.log(&#96;Winner $&#123;play1.toString()&#125; $&#123;nextHand1.toString()&#125;&#96;);</span><br><span class="line">        play1.win();</span><br><span class="line">        play2.lose();</span><br><span class="line">    &#125; else if (nextHand2.isStrongerThan(nextHand1)) &#123;</span><br><span class="line">        console.log(&#96;Winner $&#123;play2.toString()&#125;  $&#123;nextHand2.toString()&#125;&#96;);</span><br><span class="line">        play2.win();</span><br><span class="line">        play1.lose();</span><br><span class="line">    &#125; else &#123;</span><br><span class="line">        console.log(&#96;Even... $&#123;nextHand1.toString()&#125;&#96;);</span><br><span class="line">        play2.even();</span><br><span class="line">        play1.even();</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<h5 id="result"><a href="#result" class="headerlink" title="result"></a>result</h5><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br></pre></td><td class="code"><pre><span class="line">Even... 布</span><br><span class="line">Even... 布</span><br><span class="line">Even... 布</span><br><span class="line">Even... 剪刀</span><br><span class="line">Winner [Haha:5 games,1 win,0 lose]  剪刀</span><br><span class="line">Winner [Trao:6 games,1 win,1 lose] 剪刀</span><br><span class="line">Even... 剪刀</span><br><span class="line">Even... 剪刀</span><br><span class="line">Even... 剪刀</span><br><span class="line">Winner [Trao:10 games,2 win,1 lose] 剪刀</span><br><span class="line">Even... 剪刀</span><br><span class="line">Winner [Trao:12 games,3 win,1 lose] 剪刀</span><br><span class="line">Even... 剪刀</span><br><span class="line">Winner [Trao:14 games,4 win,1 lose] 剪刀</span><br><span class="line">Winner [Trao:15 games,5 win,1 lose] 剪刀</span><br><span class="line">Even... 剪刀</span><br><span class="line">Even... 剪刀</span><br><span class="line">Winner [Trao:18 games,6 win,1 lose] 剪刀</span><br><span class="line">Winner [Trao:19 games,7 win,1 lose] 剪刀</span><br><span class="line">Even... 剪刀</span><br><span class="line">————————————Result————————————————</span><br><span class="line">Result [Trao:20 games,7 win,1 lose]</span><br><span class="line">Result [Haha:20 games,1 win,7 lose]</span><br></pre></td></tr></table></figure>
+<h2 id="类图"><a href="#类图" class="headerlink" title="类图"></a>类图</h2><p><img src="https://upload-images.jianshu.io/upload_images/10024246-78dcce422e6de9d8.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240"></p>
+<h2 id="角色"><a href="#角色" class="headerlink" title="角色"></a>角色</h2><ul>
+<li>Strategy（策略）<br>Strategy角色决定实现策略所必须的接口</li>
+<li>ConcreteStrategy（具体的策略）<br>ConcreteStrategy角色负责实现Strategy角色的接口，即负责实现具体的策略（方法、算法）。</li>
+<li>Context（上下文）<br>负责使用Strategy角色。Context角色保存ConcreteStrategy角色的实例，彬使用ConcreteStrategy角色去实现需求</li>
+</ul>
 
       
     </div>
@@ -1107,7 +1110,7 @@
   
 
   <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="">
-    <link itemprop="mainEntityOfPage" href="https://lzhwweb.github.io/nirvana/algorithm/%E7%AE%97%E6%B3%95%E5%AD%A6%E4%B9%A0/%E5%9F%BA%E6%95%B0%E6%8E%92%E5%BA%8F/">
+    <link itemprop="mainEntityOfPage" href="https://lzhwweb.github.io/nirvana/DesignPattern/%E8%AE%BE%E8%AE%A1%E6%A8%A1%E5%BC%8F%EF%BC%88TypeScript%EF%BC%89/Template-Method%EF%BC%88%E6%A8%A1%E6%9D%BF%E6%96%B9%E6%B3%95%E8%AE%BE%E8%AE%A1%E6%A8%A1%E5%BC%8F%EF%BC%89/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="image" content="/nirvana/images/headphoto.jpeg">
@@ -1120,7 +1123,7 @@
     </span>
       <header class="post-header">
         <h2 class="post-title" itemprop="name headline">
-          <a href="/nirvana/algorithm/%E7%AE%97%E6%B3%95%E5%AD%A6%E4%B9%A0/%E5%9F%BA%E6%95%B0%E6%8E%92%E5%BA%8F/" class="post-title-link" itemprop="url">基数排序</a>
+          <a href="/nirvana/DesignPattern/%E8%AE%BE%E8%AE%A1%E6%A8%A1%E5%BC%8F%EF%BC%88TypeScript%EF%BC%89/Template-Method%EF%BC%88%E6%A8%A1%E6%9D%BF%E6%96%B9%E6%B3%95%E8%AE%BE%E8%AE%A1%E6%A8%A1%E5%BC%8F%EF%BC%89/" class="post-title-link" itemprop="url">Template-Method（模板方法设计模式）</a>
         </h2>
 
         <div class="post-meta-container">
@@ -1130,22 +1133,28 @@
         <i class="far fa-calendar"></i>
       </span>
       <span class="post-meta-item-text">发表于</span>
-      
 
-      <time title="创建时间：2021-03-10 21:12:40 / 修改时间：13:43:55" itemprop="dateCreated datePublished" datetime="2021-03-10T21:12:40+08:00">2021-03-10</time>
+      <time title="创建时间：2021-03-11 21:12:40" itemprop="dateCreated datePublished" datetime="2021-03-11T21:12:40+08:00">2021-03-11</time>
     </span>
+      <span class="post-meta-item">
+        <span class="post-meta-item-icon">
+          <i class="far fa-calendar-check"></i>
+        </span>
+        <span class="post-meta-item-text">更新于</span>
+        <time title="修改时间：2021-03-10 13:43:55" itemprop="dateModified" datetime="2021-03-10T13:43:55+08:00">2021-03-10</time>
+      </span>
     <span class="post-meta-item">
       <span class="post-meta-item-icon">
         <i class="far fa-folder"></i>
       </span>
       <span class="post-meta-item-text">分类于</span>
         <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-          <a href="/nirvana/categories/algorithm/" itemprop="url" rel="index"><span itemprop="name">algorithm</span></a>
+          <a href="/nirvana/categories/DesignPattern/" itemprop="url" rel="index"><span itemprop="name">DesignPattern</span></a>
         </span>
     </span>
 
   
-    <span id="/nirvana/algorithm/%E7%AE%97%E6%B3%95%E5%AD%A6%E4%B9%A0/%E5%9F%BA%E6%95%B0%E6%8E%92%E5%BA%8F/" class="post-meta-item leancloud_visitors" data-flag-title="基数排序" title="阅读次数">
+    <span id="/nirvana/DesignPattern/%E8%AE%BE%E8%AE%A1%E6%A8%A1%E5%BC%8F%EF%BC%88TypeScript%EF%BC%89/Template-Method%EF%BC%88%E6%A8%A1%E6%9D%BF%E6%96%B9%E6%B3%95%E8%AE%BE%E8%AE%A1%E6%A8%A1%E5%BC%8F%EF%BC%89/" class="post-meta-item leancloud_visitors" data-flag-title="Template-Method（模板方法设计模式）" title="阅读次数">
       <span class="post-meta-item-icon">
         <i class="far fa-eye"></i>
       </span>
@@ -1159,109 +1168,7 @@
         <i class="far fa-file-word"></i>
       </span>
       <span class="post-meta-item-text">本文字数：</span>
-      <span>1.9k</span>
-    </span>
-    <span class="post-meta-item" title="阅读时长">
-      <span class="post-meta-item-icon">
-        <i class="far fa-clock"></i>
-      </span>
-      <span class="post-meta-item-text">阅读时长 &asymp;</span>
-      <span>2 分钟</span>
-    </span>
-</div>
-
-        </div>
-      </header>
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-          <p>基数排序是一种借助多关键字排序思想对单逻辑关键字进行排序的方法。</p>
-<p>所谓的多关键字排序就是有多个优先级不同的关键字。比如说成绩的排序，如果两个人总分相同，则语文高的排在前面，语文成绩也相同则数学高的排在前面。。。如果对数字进行排序，那么个位、十位、百位就是不同优先级的关键字，如果要进行升序排序，那么个位、十位、百位优先级一次增加。<br>基数排序是通过多次的收分配和收集来实现的，关键字优先级低的先进行分配和收集。<br>基数排序是一种非比较型整数排序算法，其原理是将整数按位数切割成不同的数字，然后按每个位数分别比较。由于整数也可以表达字符串（比如名字或日期）和特定格式的浮点数，所以基数排序也不是只能使用于整数。<br><img src="https://upload-images.jianshu.io/upload_images/10024246-9e0f7e92428e6637.gif?imageMogr2/auto-orient/strip"></p>
-<p>实现代码：</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br></pre></td><td class="code"><pre><span class="line">&#x2F;**</span><br><span class="line"> * 基数排序</span><br><span class="line"> * @param &#123;Array&lt;Number&gt;&#125; arry 要排序的数组</span><br><span class="line"> *&#x2F;</span><br><span class="line">function RadixSort(arry) &#123;</span><br><span class="line">    if (arry.length &#x3D;&#x3D; 0) &#123;&#x2F;&#x2F;判断数组不为空</span><br><span class="line">        return [];</span><br><span class="line">    &#125;</span><br><span class="line">    const maxDigit &#x3D; getMaxDigit(getMaxValue(arry));&#x2F;&#x2F;最大数位数</span><br><span class="line">    for (let i &#x3D; 0; i &lt; maxDigit; i++) &#123;</span><br><span class="line">        let count &#x3D; [];</span><br><span class="line">        for (let j &#x3D; 0; j &lt; arry.length; j++) &#123;</span><br><span class="line">            const length &#x3D; &#96;$&#123;arry[j]&#125;&#96;.length;&#x2F;&#x2F;当前数位数</span><br><span class="line">            let bucket &#x3D; 0;</span><br><span class="line">            if (length &gt; i) &#123;&#x2F;&#x2F;当前位数不为空</span><br><span class="line">                bucket &#x3D; parseInt(&#96;$&#123;arry[j]&#125;&#96;.substr(length - i - 1, 1));</span><br><span class="line">            &#125;</span><br><span class="line">            if (!count[bucket]) &#123;</span><br><span class="line">                count[bucket] &#x3D; [];</span><br><span class="line">            &#125;</span><br><span class="line">            count[bucket].push(arry[j]);&#x2F;&#x2F;位数数组填充</span><br><span class="line">        &#125;</span><br><span class="line">        for (let t &#x3D; 0, pos &#x3D; 0; t &lt; count.length; t++) &#123;&#x2F;&#x2F;根据新数组重新排序</span><br><span class="line">            let value &#x3D; null;</span><br><span class="line">            if (count[t]) &#123;</span><br><span class="line">                while ((value &#x3D; count[t].shift()) !&#x3D; null) &#123;</span><br><span class="line">                    arry[pos++] &#x3D; value;</span><br><span class="line">                &#125;</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;</span><br><span class="line">        console.log(arry)</span><br><span class="line">    &#125;</span><br><span class="line">    return arry;</span><br><span class="line">&#125;</span><br><span class="line">&#x2F;**</span><br><span class="line"> * 获取数组中最大数</span><br><span class="line"> * @param arry 排序数组</span><br><span class="line"> *&#x2F;</span><br><span class="line">function getMaxValue(arry) &#123;</span><br><span class="line">    let maxValue &#x3D; arry[0];</span><br><span class="line">    for (let i &#x3D; 1; i &lt; arry.length; i++) &#123;</span><br><span class="line">        if (arry[i] &gt; maxValue) &#123;</span><br><span class="line">            maxValue &#x3D; arry[i]</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">    return maxValue;</span><br><span class="line">&#125;</span><br><span class="line">&#x2F;**</span><br><span class="line"> * 整数位数</span><br><span class="line"> * @param value 整数</span><br><span class="line"> *&#x2F;</span><br><span class="line">function getMaxDigit(value) &#123;</span><br><span class="line">    return &#96;$&#123;value&#125;&#96;.length;</span><br><span class="line">&#125;</span><br><span class="line">RadixSort([72, 6, 57, 88, 60, 42, 11183, 73, 1148, 185])</span><br></pre></td></tr></table></figure>
-<p>运行结果：</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">[ 60, 72, 42, 11183, 73, 185, 6, 57, 88, 1148 ]&#x2F;&#x2F;个位排序</span><br><span class="line">[ 6, 42, 1148, 57, 60, 72, 73, 11183, 185, 88 ]&#x2F;&#x2F;十位排序</span><br><span class="line">[ 6, 42, 57, 60, 72, 73, 88, 1148, 11183, 185 ]&#x2F;&#x2F;百位排序</span><br><span class="line">[ 6, 42, 57, 60, 72, 73, 88, 185, 1148, 11183 ]&#x2F;&#x2F;千位排序</span><br><span class="line">[ 6, 42, 57, 60, 72, 73, 88, 185, 1148, 11183 ]&#x2F;&#x2F;万位排序</span><br></pre></td></tr></table></figure>
-
-      
-    </div>
-
-    
-    
-    
-
-    <footer class="post-footer">
-        <div class="post-eof"></div>
-      
-    </footer>
-  </article>
-</div>
-
-
-
-
-    
-
-
-<div class="post-block">
-  
-  
-
-  <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="">
-    <link itemprop="mainEntityOfPage" href="https://lzhwweb.github.io/nirvana/algorithm/%E7%AE%97%E6%B3%95%E5%AD%A6%E4%B9%A0/%E5%BF%AB%E9%80%9F%E6%8E%92%E5%BA%8F/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="image" content="/nirvana/images/headphoto.jpeg">
-      <meta itemprop="name" content="nirvana">
-      <meta itemprop="description" content="个人学习笔记">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="涅槃快乐是金">
-    </span>
-      <header class="post-header">
-        <h2 class="post-title" itemprop="name headline">
-          <a href="/nirvana/algorithm/%E7%AE%97%E6%B3%95%E5%AD%A6%E4%B9%A0/%E5%BF%AB%E9%80%9F%E6%8E%92%E5%BA%8F/" class="post-title-link" itemprop="url">快速排序</a>
-        </h2>
-
-        <div class="post-meta-container">
-          <div class="post-meta">
-    <span class="post-meta-item">
-      <span class="post-meta-item-icon">
-        <i class="far fa-calendar"></i>
-      </span>
-      <span class="post-meta-item-text">发表于</span>
-      
-
-      <time title="创建时间：2021-03-10 21:12:40 / 修改时间：13:43:55" itemprop="dateCreated datePublished" datetime="2021-03-10T21:12:40+08:00">2021-03-10</time>
-    </span>
-    <span class="post-meta-item">
-      <span class="post-meta-item-icon">
-        <i class="far fa-folder"></i>
-      </span>
-      <span class="post-meta-item-text">分类于</span>
-        <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-          <a href="/nirvana/categories/algorithm/" itemprop="url" rel="index"><span itemprop="name">algorithm</span></a>
-        </span>
-    </span>
-
-  
-    <span id="/nirvana/algorithm/%E7%AE%97%E6%B3%95%E5%AD%A6%E4%B9%A0/%E5%BF%AB%E9%80%9F%E6%8E%92%E5%BA%8F/" class="post-meta-item leancloud_visitors" data-flag-title="快速排序" title="阅读次数">
-      <span class="post-meta-item-icon">
-        <i class="far fa-eye"></i>
-      </span>
-      <span class="post-meta-item-text">阅读次数：</span>
-      <span class="leancloud-visitors-count"></span>
-    </span>
-      </div>
-      <div class="post-meta">
-    <span class="post-meta-item" title="本文字数">
-      <span class="post-meta-item-icon">
-        <i class="far fa-file-word"></i>
-      </span>
-      <span class="post-meta-item-text">本文字数：</span>
-      <span>2.4k</span>
+      <span>2k</span>
     </span>
     <span class="post-meta-item" title="阅读时长">
       <span class="post-meta-item-icon">
@@ -1279,20 +1186,284 @@
     
     
     <div class="post-body" itemprop="articleBody">
-          <p>快速排序由于排序效率在同为O(N*logN)的几种排序方法中效率较高，因此经常被采用，再加上快速排序思想—-分治法也确实实用，因此很多软件公司的笔试面试，包括像腾讯，微软等知名IT公司都喜欢考这个。</p>
-<p>快速排序是C.R.A.Hoare于1962年提出的一种划分交换排序。它采用了一种分治的策略，通常称其为分治法(Divide-and-ConquerMethod)。</p>
-<p>该方法的基本思想是：</p>
-<p>1．先从数列中取出一个数作为基准数。<br>2．分区过程，将比这个数大的数全放到它的右边，小于或等于它的数全放到它的左边。<br>3．再对左右区间重复第二步，直到各区间只有一个数。<br><img src="https://upload-images.jianshu.io/upload_images/10024246-3f6f3e05a50e33ae.gif?imageMogr2/auto-orient/strip" alt="一次快排过程"><br>以一个数组作为示例，取区间第一个数为基准数。<br>|0|1|2|3|4|<br>|  —-  | —-  |—-|  —-  | —-  |<br>|<em><strong>6</strong></em>|3|7|4|1|<br>初始时，i = 0;  j = 5;   X = a[i] = 6</p>
-<p>由于已经将 a[0] 中的数保存到 X 中，可以理解成在数组 a[0] 上挖了个坑，可以将其它数据填充到这来。</p>
-<p>1、从j开始向前找一个比X小或等于X的数。<br>2、当j=4，符合条件，将a[4]挖出再填到上一个坑a[0]中。a[0]=a[4]; i++;  这样一个坑a[0]就被搞定了，但又形成了一个新坑a[4]，这怎么办了？简单，再找数字来填a[4]这个坑。<br>3、这次从i开始向后找一个大于X的数，当i=2，符合条件，将a[2]挖出再填到上一个坑中a[4]=a[2]; j–;<br>数组变为<br>|0|1|2|3|4|<br>|  —-  | —-  |—-|  —-  | —-  |<br>|<strong>1</strong>|3|<strong>7</strong>|4|<strong>7</strong>|<br>i = 2;   j = 4;   X=6<br>4、再重复上面的步骤，先从后向前找，再从前向后找。<br>5、从j开始向前找，当j=3，符合条件，将a[3]挖出填到上一个坑中，a[2] = a[3]; i++;</p>
-<p>从i开始向后找，当i=3时，由于i==j退出。</p>
-<p>此时，i = j = 3，而a[3]刚好又是上次挖的坑，因此将X填入a[3]。</p>
-<p>数组变为：<br>|0|1|2|3|4|<br>|  —-  | —-  |—-|  —-  | —-  |<br>|1|3|4|6|7|</p>
-<p>再重复上面的步骤，先从后向前找，再从前向后找。</p>
-<h3 id="代码实现"><a href="#代码实现" class="headerlink" title="代码实现"></a>代码实现</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br></pre></td><td class="code"><pre><span class="line">&#x2F;**</span><br><span class="line"> * 快速排序</span><br><span class="line"> * @param &#123;Array&lt;Number&gt;&#125; arry 要排序的数组</span><br><span class="line"> *&#x2F;</span><br><span class="line">function quickSort(arry, left, right) &#123;</span><br><span class="line">    if (arry.length &#x3D;&#x3D; 0) &#123;&#x2F;&#x2F;判断数组不为空</span><br><span class="line">        return [];</span><br><span class="line">    &#125;</span><br><span class="line">    let [l, r] &#x3D; [left, right];</span><br><span class="line">    if (l &lt; r) &#123;</span><br><span class="line">        let temp &#x3D; arry[l];&#x2F;&#x2F;即arry[l]就是第一个坑</span><br><span class="line">        while (l &lt; r) &#123;</span><br><span class="line">            &#x2F;&#x2F; 从右向左找小于temp的数来填arry[l]</span><br><span class="line">            while (l &lt; r &amp;&amp; arry[r] &gt; temp) &#123;</span><br><span class="line">                r--;</span><br><span class="line">            &#125;</span><br><span class="line">            if (l &lt; r) &#123;</span><br><span class="line">                arry[l] &#x3D; arry[r]; &#x2F;&#x2F;将arry[r]填到arry[l]中，arry[r]就形成了一个新的坑</span><br><span class="line">                l++;</span><br><span class="line">            &#125;</span><br><span class="line">            &#x2F;&#x2F; 从左向右找大于temp的数来填arry[r]</span><br><span class="line">            while (l &lt; r &amp;&amp; arry[l] &lt; temp) &#123;</span><br><span class="line">                l++;</span><br><span class="line">            &#125;</span><br><span class="line">            if (l &lt; r) &#123;</span><br><span class="line">                arry[r] &#x3D; arry[l]; &#x2F;&#x2F;将arry[l]填到arry[r]中，arry[l]就形成了一个新的坑</span><br><span class="line">                r--;</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;</span><br><span class="line">        arry[l] &#x3D; temp;&#x2F;&#x2F;将temp填入arry[l]的坑</span><br><span class="line">        console.log(arry, l);</span><br><span class="line">        &#x2F;&#x2F; 递归调用 </span><br><span class="line">        quickSort(arry, left, l - 1);</span><br><span class="line">        quickSort(arry, l + 1, right);</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-<p>运行结果：</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><span class="line">quickSort([72, 6, 57, 88, 60, 42, 83, 73, 48, 85], 0, 9);</span><br><span class="line">[ 48, 6, 57, 42, 60, 72, 83, 73, 88, 85 ] 5</span><br><span class="line">&#x2F;&#x2F;第一次排序72为观察数，分界为5；左边都是小于，右边都是大于</span><br><span class="line">[ 42, 6, 48, 57, 60, 72, 83, 73, 88, 85 ] 2</span><br><span class="line">&#x2F;&#x2F;数组左边0-5继续续排序，48为观察数，分界为2</span><br><span class="line">[ 6, 42, 48, 57, 60, 72, 83, 73, 88, 85 ] 1</span><br><span class="line">&#x2F;&#x2F;数组左边0-2继续排序，42为观察数，分界结果为1，</span><br><span class="line">&#x2F;&#x2F;这时再递归发现1&lt;1-1;结束递归，开始右边排序</span><br><span class="line">[ 6, 42, 48, 57, 60, 72, 83, 73, 88, 85 ] 3</span><br><span class="line">&#x2F;&#x2F;右边排序其实是开始于[ 42, 6, 48 , 57, 60, 72, 83, 73, 88, 85 ] 这个数组，57为观察数，排序区间为3-5，发现已经是正序，继续递归上次的右边排序</span><br><span class="line">[ 6, 42, 48, 57, 60, 72, 73, 83, 88, 85 ] 7</span><br><span class="line">&#x2F;&#x2F;右边排序其实是开始于[ 48, 6, 57, 42, 60, 72, 83, 73, 88, 85 ]这个数组基于分界点5的右边数组，83为观察数，排序区间为6-9，排序分界结果为7</span><br><span class="line">[ 6, 42, 48, 57, 60, 72, 73, 83, 85, 88 ] 9</span><br><span class="line">&#x2F;&#x2F;再次递归，右边已正序</span><br></pre></td></tr></table></figure>
-<h3 id="复杂度"><a href="#复杂度" class="headerlink" title="复杂度"></a>复杂度</h3><p>时间复杂度：O(nlogn)<br>空间复杂度：快速排序使用递归，递归使用栈，因此它的空间复杂度为O(logn)<br>稳定性：快速排序无法保证相等的元素的相对位置不变，因此它是不稳定的排序算法</p>
+          <h3 id="模板方法设计模式"><a href="#模板方法设计模式" class="headerlink" title="模板方法设计模式"></a>模板方法设计模式</h3><blockquote>
+<p>在模板模式（Template Method）中，一个抽象类公开定义了执行它的方法的方式/模板。它的子类可以按需要重写方法实现，但调用将以抽象类中定义的方式进行。这种类型的设计模式属于行为型模式。</p>
+</blockquote>
+<h3 id="介绍"><a href="#介绍" class="headerlink" title="介绍"></a>介绍</h3><ul>
+<li><p><strong>意图：</strong>定义一个操作中的算法的骨架，而将一些步骤延迟到子类中。模板方法使得子类可以不改变一个算法的结构即可重定义该算法的某些特定步骤。</p>
+</li>
+<li><p><strong>主要解决：</strong>一些方法通用，却在每一个子类都重新写了这一方法。</p>
+</li>
+<li><p><strong>何时使用：</strong>有一些通用的方法。</p>
+</li>
+<li><p><strong>如何解决：</strong>将这些通用算法抽象出来。</p>
+</li>
+<li><p><strong>关键代码：</strong>在抽象类实现，其他步骤在子类实现。</p>
+</li>
+<li><p><strong>优点：</strong></p>
+<blockquote>
+<ol>
+<li> 封装不变部分，扩展可变部分。 </li>
+<li>提取公共代码，便于维护。 </li>
+<li>行为由父类控制，子类实现。</li>
+</ol>
+</blockquote>
+</li>
+<li><p><strong>使用场景：</strong></p>
+<blockquote>
+<ol>
+<li>有多个子类共有的方法，且逻辑相同。 </li>
+<li>重要的、复杂的方法，可以考虑作为模板方法。</li>
+</ol>
+</blockquote>
+</li>
+</ul>
+<h3 id="AbstractDisplay类：定义打印逻辑"><a href="#AbstractDisplay类：定义打印逻辑" class="headerlink" title="AbstractDisplay类：定义打印逻辑"></a>AbstractDisplay类：定义打印逻辑</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line">export default abstract class AbstractDisplay &#123;</span><br><span class="line">    public abstract open(): void;</span><br><span class="line">    public abstract print(): void;</span><br><span class="line">    public abstract close(): void;</span><br><span class="line">    public display(): void &#123;</span><br><span class="line">        this.open();</span><br><span class="line">        for (let i &#x3D; 0; i &lt; 5; i++) &#123;</span><br><span class="line">            this.print();</span><br><span class="line">        &#125;</span><br><span class="line">        this.close();</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<h3 id="CharDisplay类-打印方式"><a href="#CharDisplay类-打印方式" class="headerlink" title="CharDisplay类:打印方式"></a>CharDisplay类:打印方式</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br></pre></td><td class="code"><pre><span class="line">import AbstractDisplay from &quot;.&#x2F;AbstractDisplay&quot;;</span><br><span class="line"></span><br><span class="line">export default class CharDisplay extends AbstractDisplay &#123;</span><br><span class="line">    private ch: string;</span><br><span class="line"></span><br><span class="line">    constructor(ch: string) &#123;</span><br><span class="line">        super();</span><br><span class="line">        this.ch &#x3D; ch;</span><br><span class="line">    &#125;</span><br><span class="line">    public open() &#123;</span><br><span class="line">        console.log(&quot;《&quot;);</span><br><span class="line">    &#125;</span><br><span class="line">    public print() &#123;</span><br><span class="line">        console.log(this.ch);</span><br><span class="line">    &#125;</span><br><span class="line">    public close() &#123;</span><br><span class="line">        console.log(&quot;》&quot;);</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<h3 id="StringDisplay类："><a href="#StringDisplay类：" class="headerlink" title="StringDisplay类："></a>StringDisplay类：</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br></pre></td><td class="code"><pre><span class="line">import AbstractDisplay from &quot;.&#x2F;AbstractDisplay&quot;;</span><br><span class="line"></span><br><span class="line">export default class StringDisplay extends AbstractDisplay &#123;</span><br><span class="line">    private str: string;</span><br><span class="line">    constructor(str: string) &#123;</span><br><span class="line">        super();</span><br><span class="line">        this.str &#x3D; str;</span><br><span class="line">    &#125;</span><br><span class="line">    public open() &#123;</span><br><span class="line">        console.log(&quot;+-----+&quot;);</span><br><span class="line">    &#125;</span><br><span class="line">    public print() &#123;</span><br><span class="line">        console.log(&#96;|$&#123;this.str&#125;|&#96;);</span><br><span class="line">    &#125;</span><br><span class="line">    public close() &#123;</span><br><span class="line">        console.log(&quot;+-----+&quot;);</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<h3 id="main函数"><a href="#main函数" class="headerlink" title="main函数"></a>main函数</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">import AbstractDisplay from &quot;.&#x2F;AbstractDisplay&quot;</span><br><span class="line">import CharDisplay from &quot;.&#x2F;CharDisplay&quot;</span><br><span class="line">import StringDisplay from &quot;.&#x2F;StringDisplay&quot;;</span><br><span class="line"></span><br><span class="line">const d1: AbstractDisplay &#x3D; new CharDisplay(&quot;H&quot;);</span><br><span class="line">const d2: AbstractDisplay &#x3D; new StringDisplay(&quot;Hello&quot;)</span><br><span class="line">d1.display();</span><br><span class="line">d2.display();</span><br></pre></td></tr></table></figure>
+<h3 id="输出"><a href="#输出" class="headerlink" title="输出"></a>输出</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><span class="line">《</span><br><span class="line">H</span><br><span class="line">H</span><br><span class="line">H</span><br><span class="line">H</span><br><span class="line">H</span><br><span class="line">》</span><br><span class="line">+-----+</span><br><span class="line">|Hello|</span><br><span class="line">|Hello|</span><br><span class="line">|Hello|</span><br><span class="line">|Hello|</span><br><span class="line">|Hello|</span><br><span class="line">+-----+</span><br></pre></td></tr></table></figure>
+<h3 id="结构"><a href="#结构" class="headerlink" title="结构"></a>结构</h3><p>AbstractClass（抽象类）：AbstractClass不仅负责实现模板方法，还负责声明模板方法中所使用的的抽象方法，这些方法在ConcreteClass去实现<br>ConcreteClass（具体子类）：具体实现AbstractClass类中定义的抽象方法</p>
+<h3 id="类图"><a href="#类图" class="headerlink" title="类图"></a>类图</h3><p><img src="https://upload-images.jianshu.io/upload_images/10024246-7f402cd441e847d6.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="Template Method类图"></p>
+
+      
+    </div>
+
+    
+    
+    
+
+    <footer class="post-footer">
+        <div class="post-eof"></div>
+      
+    </footer>
+  </article>
+</div>
+
+
+
+
+    
+
+
+<div class="post-block">
+  
+  
+
+  <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="">
+    <link itemprop="mainEntityOfPage" href="https://lzhwweb.github.io/nirvana/DesignPattern/%E8%AE%BE%E8%AE%A1%E6%A8%A1%E5%BC%8F%EF%BC%88TypeScript%EF%BC%89/Visitor-Pattern(%E8%AE%BF%E9%97%AE%E8%80%85%E6%A8%A1%E5%BC%8F)/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/nirvana/images/headphoto.jpeg">
+      <meta itemprop="name" content="nirvana">
+      <meta itemprop="description" content="个人学习笔记">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="涅槃快乐是金">
+    </span>
+      <header class="post-header">
+        <h2 class="post-title" itemprop="name headline">
+          <a href="/nirvana/DesignPattern/%E8%AE%BE%E8%AE%A1%E6%A8%A1%E5%BC%8F%EF%BC%88TypeScript%EF%BC%89/Visitor-Pattern(%E8%AE%BF%E9%97%AE%E8%80%85%E6%A8%A1%E5%BC%8F)/" class="post-title-link" itemprop="url">Visitor-Pattern(访问者模式)</a>
+        </h2>
+
+        <div class="post-meta-container">
+          <div class="post-meta">
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-calendar"></i>
+      </span>
+      <span class="post-meta-item-text">发表于</span>
+
+      <time title="创建时间：2021-03-11 21:12:40" itemprop="dateCreated datePublished" datetime="2021-03-11T21:12:40+08:00">2021-03-11</time>
+    </span>
+      <span class="post-meta-item">
+        <span class="post-meta-item-icon">
+          <i class="far fa-calendar-check"></i>
+        </span>
+        <span class="post-meta-item-text">更新于</span>
+        <time title="修改时间：2021-03-10 13:43:55" itemprop="dateModified" datetime="2021-03-10T13:43:55+08:00">2021-03-10</time>
+      </span>
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-folder"></i>
+      </span>
+      <span class="post-meta-item-text">分类于</span>
+        <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+          <a href="/nirvana/categories/DesignPattern/" itemprop="url" rel="index"><span itemprop="name">DesignPattern</span></a>
+        </span>
+    </span>
+
+  
+    <span id="/nirvana/DesignPattern/%E8%AE%BE%E8%AE%A1%E6%A8%A1%E5%BC%8F%EF%BC%88TypeScript%EF%BC%89/Visitor-Pattern(%E8%AE%BF%E9%97%AE%E8%80%85%E6%A8%A1%E5%BC%8F)/" class="post-meta-item leancloud_visitors" data-flag-title="Visitor-Pattern(访问者模式)" title="阅读次数">
+      <span class="post-meta-item-icon">
+        <i class="far fa-eye"></i>
+      </span>
+      <span class="post-meta-item-text">阅读次数：</span>
+      <span class="leancloud-visitors-count"></span>
+    </span>
+      </div>
+      <div class="post-meta">
+    <span class="post-meta-item" title="本文字数">
+      <span class="post-meta-item-icon">
+        <i class="far fa-file-word"></i>
+      </span>
+      <span class="post-meta-item-text">本文字数：</span>
+      <span>4.7k</span>
+    </span>
+    <span class="post-meta-item" title="阅读时长">
+      <span class="post-meta-item-icon">
+        <i class="far fa-clock"></i>
+      </span>
+      <span class="post-meta-item-text">阅读时长 &asymp;</span>
+      <span>4 分钟</span>
+    </span>
+</div>
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+          <p><strong>访问者模式（Visitor Pattern）</strong>访问者模式是一种将数据操作和数据结构分离的设计模式。这种类型的设计模式属于行为型模式。根据模式，元素对象已接受访问者对象，这样访问者对象就可以处理元素对象上的操作。</p>
+<h2 id="介绍"><a href="#介绍" class="headerlink" title="介绍"></a>介绍</h2><ul>
+<li><strong>意图：</strong>主要将数据结构与数据操作分离。</li>
+<li><strong>主要解决：</strong>稳定的数据结构和易变的操作耦合问题。</li>
+<li><strong>何时使用：</strong>需要对一个对象结构中的对象进行很多不同的并且不相关的操作，而需要避免让这些操作”污染”这些对象的类，使用访问者模式将这些封装到类中。</li>
+<li><strong>如何解决：</strong>在被访问的类里面加一个对外提供接待访问者的接口。</li>
+<li><strong>关键代码：</strong>在数据基础类里面有一个方法接受访问者，将自身引用传入访问者。</li>
+<li><strong>优点：</strong><br>1、符合单一职责原则。<br>2、优秀的扩展性。<br>3、灵活性。</li>
+<li><strong>缺点：</strong><br>1、具体元素对访问者公布细节，违反了迪米特原则。<br>2、具体元素变更比较困难。<br>3、违反了依赖倒置原则，依赖了具体类，没有依赖抽象。</li>
+<li><strong>使用场景：</strong><br>1、对象结构中对象对应的类很少改变，但经常需要在此对象结构上定义新的操作。<br>2、需要对一个对象结构中的对象进行很多不同的并且不相关的操作，而需要避免让这些操作”污染”这些对象的类，也不希望在增加新操作时修改这些类。<blockquote>
+<p>注意事项：访问者可以对功能进行统一，可以做报表、UI、拦截器与过滤器。</p>
+</blockquote>
+</li>
+</ul>
+<h2 id="示例"><a href="#示例" class="headerlink" title="示例"></a>示例</h2><h5 id="ComputerPart-ts-表示元素的接口"><a href="#ComputerPart-ts-表示元素的接口" class="headerlink" title="ComputerPart.ts 表示元素的接口"></a>ComputerPart.ts 表示元素的接口</h5><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">import &#123; ComputerPartVisitor &#125; from &quot;.&#x2F;ComputerPartVisitor&quot;;</span><br><span class="line"></span><br><span class="line">export interface ComputerPart &#123;</span><br><span class="line">    accept(computerPartVisitor: ComputerPartVisitor): void;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<h5 id="Keyboard-ts-键盘实体类"><a href="#Keyboard-ts-键盘实体类" class="headerlink" title="Keyboard.ts 键盘实体类"></a>Keyboard.ts 键盘实体类</h5><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line">import &#123; ComputerPartVisitor &#125; from &quot;.&#x2F;ComputerPartVisitor&quot;;</span><br><span class="line">import &#123; ComputerPart &#125; from &quot;.&#x2F;ComputerPart&quot;;</span><br><span class="line"></span><br><span class="line">export default class Keyboard implements ComputerPart &#123;</span><br><span class="line">    public name: string;</span><br><span class="line">    public accept(computerPartVisitor: ComputerPartVisitor): void &#123;</span><br><span class="line">        this.name &#x3D; &quot;Keyboard&quot;;</span><br><span class="line">        computerPartVisitor.visit(this);</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<h5 id="Mouse-ts-鼠标实体类"><a href="#Mouse-ts-鼠标实体类" class="headerlink" title="Mouse.ts 鼠标实体类"></a>Mouse.ts 鼠标实体类</h5><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line">import &#123; ComputerPartVisitor &#125; from &quot;.&#x2F;ComputerPartVisitor&quot;;</span><br><span class="line">import &#123; ComputerPart &#125; from &quot;.&#x2F;ComputerPart&quot;;</span><br><span class="line"></span><br><span class="line">export default class Mouse implements ComputerPart &#123;</span><br><span class="line">    public name: string;</span><br><span class="line">    public accept(computerPartVisitor: ComputerPartVisitor): void &#123;</span><br><span class="line">        this.name &#x3D; &quot;Mouse&quot;;</span><br><span class="line">        computerPartVisitor.visit(this);</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<h5 id="Monitor-ts-显示器实体类"><a href="#Monitor-ts-显示器实体类" class="headerlink" title="Monitor.ts 显示器实体类"></a>Monitor.ts 显示器实体类</h5><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line">import &#123; ComputerPartVisitor &#125; from &quot;.&#x2F;ComputerPartVisitor&quot;;</span><br><span class="line">import &#123; ComputerPart &#125; from &quot;.&#x2F;ComputerPart&quot;;</span><br><span class="line"></span><br><span class="line">export default class Monitor implements ComputerPart &#123;</span><br><span class="line">    public name: string;</span><br><span class="line">    public accept(computerPartVisitor: ComputerPartVisitor): void &#123;</span><br><span class="line">        this.name &#x3D; &quot;Monitor&quot;;</span><br><span class="line">        computerPartVisitor.visit(this);</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<h5 id="Computer-ts-计算机实体类"><a href="#Computer-ts-计算机实体类" class="headerlink" title="Computer.ts 计算机实体类"></a>Computer.ts 计算机实体类</h5><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br></pre></td><td class="code"><pre><span class="line">import &#123; ComputerPartVisitor &#125; from &quot;.&#x2F;ComputerPartVisitor&quot;;</span><br><span class="line">import Mouse from &quot;.&#x2F;Mouse&quot;;</span><br><span class="line">import Keyboard from &quot;.&#x2F;Keyboard&quot;;</span><br><span class="line">import Monitor from &quot;.&#x2F;Monitor&quot;;</span><br><span class="line">import &#123; ComputerPart &#125; from &quot;.&#x2F;ComputerPart&quot;;</span><br><span class="line"></span><br><span class="line">export default class Computer implements ComputerPart &#123;</span><br><span class="line"></span><br><span class="line">    private parts: ComputerPart[];</span><br><span class="line">    public name: string;</span><br><span class="line">    constructor() &#123;</span><br><span class="line">        this.parts &#x3D; [new Mouse(), new Keyboard(), new Monitor()];</span><br><span class="line">        this.name &#x3D; &quot;Computer&quot;;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">    public accept(computerPartVisitor: ComputerPartVisitor): void &#123;</span><br><span class="line">        for (let i &#x3D; 0; i &lt; this.parts.length; i++) &#123;</span><br><span class="line">            this.parts[i].accept(computerPartVisitor);</span><br><span class="line">        &#125;</span><br><span class="line">        computerPartVisitor.visit(this);</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<h5 id="ComputerPartVisitor-ts-访问者的接口"><a href="#ComputerPartVisitor-ts-访问者的接口" class="headerlink" title="ComputerPartVisitor.ts 访问者的接口"></a>ComputerPartVisitor.ts 访问者的接口</h5><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">import Computer from &quot;.&#x2F;Computer&quot;;</span><br><span class="line">import Mouse from &quot;.&#x2F;Mouse&quot;;</span><br><span class="line">import Keyboard from &quot;.&#x2F;Keyboard&quot;;</span><br><span class="line">import Monitor from &quot;.&#x2F;Monitor&quot;;</span><br><span class="line"></span><br><span class="line">export interface ComputerPartVisitor &#123;</span><br><span class="line">    visit(obj: Computer | Mouse | Keyboard | Monitor): void;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<h5 id="ComputerPartDisplayVisitor-ts-创建实现了上述类的实体访问者。"><a href="#ComputerPartDisplayVisitor-ts-创建实现了上述类的实体访问者。" class="headerlink" title="ComputerPartDisplayVisitor.ts 创建实现了上述类的实体访问者。"></a>ComputerPartDisplayVisitor.ts 创建实现了上述类的实体访问者。</h5><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br></pre></td><td class="code"><pre><span class="line">import &#123; ComputerPartVisitor &#125; from &quot;.&#x2F;ComputerPartVisitor&quot;;</span><br><span class="line">import Computer from &quot;.&#x2F;Computer&quot;;</span><br><span class="line">import Mouse from &quot;.&#x2F;Mouse&quot;;</span><br><span class="line">import Keyboard from &quot;.&#x2F;Keyboard&quot;;</span><br><span class="line">import Monitor from &quot;.&#x2F;Monitor&quot;;</span><br><span class="line"></span><br><span class="line">export default class ComputerPartDisplayVisitor implements ComputerPartVisitor &#123;</span><br><span class="line">    public visit(obj: Computer | Mouse | Keyboard | Monitor): void &#123;&#x2F;&#x2F;JavaScript中没有重载</span><br><span class="line">        console.log(obj.name)</span><br><span class="line">        if (obj.name &#x3D;&#x3D;&#x3D; &quot;Computer&quot;) &#123;</span><br><span class="line">            console.log(&quot;Displaying Computer.&quot;);</span><br><span class="line"></span><br><span class="line">        &#125; else if (obj.name &#x3D;&#x3D;&#x3D; &quot;Mouse&quot;) &#123;</span><br><span class="line"></span><br><span class="line">            console.log(&quot;Displaying Mouse.&quot;);</span><br><span class="line">        &#125; else if (obj.name &#x3D;&#x3D;&#x3D; &quot;Keyboard&quot;) &#123;</span><br><span class="line"></span><br><span class="line">            console.log(&quot;Displaying Keyboard.&quot;);</span><br><span class="line">        &#125; else &#123;</span><br><span class="line">            console.log(&quot;Displaying Monitor.&quot;);</span><br><span class="line"></span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<h5 id="index-ts"><a href="#index-ts" class="headerlink" title="index.ts"></a>index.ts</h5><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">import &#123; ComputerPart &#125; from &quot;.&#x2F;ComputerPart&quot;;</span><br><span class="line">import Computer from &quot;.&#x2F;Computer&quot;;</span><br><span class="line">import ComputerPartDisplayVisitor from &quot;.&#x2F;ComputerPartDisplayVisitor&quot;;</span><br><span class="line"></span><br><span class="line">const computer: ComputerPart &#x3D; new Computer();</span><br><span class="line">computer.accept(new ComputerPartDisplayVisitor());</span><br></pre></td></tr></table></figure>
+<h5 id="result"><a href="#result" class="headerlink" title="result"></a>result</h5><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">Mouse</span><br><span class="line">Displaying Mouse.</span><br><span class="line">Keyboard</span><br><span class="line">Displaying Keyboard.</span><br><span class="line">Monitor</span><br><span class="line">Displaying Monitor.</span><br><span class="line">Computer</span><br><span class="line">Displaying Computer.</span><br></pre></td></tr></table></figure>
+<h2 id="类图"><a href="#类图" class="headerlink" title="类图"></a>类图</h2><p><img src="https://upload-images.jianshu.io/upload_images/10024246-23af8b73c70c1911.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240"></p>
+<h2 id="角色"><a href="#角色" class="headerlink" title="角色"></a>角色</h2><ul>
+<li>Visitor(访问者)<br>Visitor角色负责对数据结构中每个具体的元素声明一个访问的visit方法，visit方法是用来操作元素的方法，负责实现该方法的是concreteVisitor角色</li>
+<li>ConcreteVisitor（具体的访问者）<br>ConcreteVisitor角色负责实现Visitor角色定影的接口，它要实现所有的visit方法，即实现如何处理每个ConcreteElement角色。ConcreteVisitor角色的内部状态会随着visit的变化而变化</li>
+<li>Element（元素）<br>Element角色表示Visitor角色的访问对象。它声明了接受访问者的accept方法。accept方法接受的参数是Visitor角色。</li>
+<li>ConcreteElement<br>ConcreteElement负责实现Element角色定义的接口</li>
+<li>ObjectStructure（对象结构）<br>ObjectStructure角色负责吃力Element角色的集合。ConcreteVisitor角色为每个Element都准备了处理方法。</li>
+</ul>
+
+      
+    </div>
+
+    
+    
+    
+
+    <footer class="post-footer">
+        <div class="post-eof"></div>
+      
+    </footer>
+  </article>
+</div>
+
+
+
+
+    
+
+
+<div class="post-block">
+  
+  
+
+  <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="">
+    <link itemprop="mainEntityOfPage" href="https://lzhwweb.github.io/nirvana/DesignPattern/%E8%AE%BE%E8%AE%A1%E6%A8%A1%E5%BC%8F%EF%BC%88TypeScript%EF%BC%89/%E5%AE%8C%E7%BB%93%E6%84%9F%E6%83%B3/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/nirvana/images/headphoto.jpeg">
+      <meta itemprop="name" content="nirvana">
+      <meta itemprop="description" content="个人学习笔记">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="涅槃快乐是金">
+    </span>
+      <header class="post-header">
+        <h2 class="post-title" itemprop="name headline">
+          <a href="/nirvana/DesignPattern/%E8%AE%BE%E8%AE%A1%E6%A8%A1%E5%BC%8F%EF%BC%88TypeScript%EF%BC%89/%E5%AE%8C%E7%BB%93%E6%84%9F%E6%83%B3/" class="post-title-link" itemprop="url">完结感想</a>
+        </h2>
+
+        <div class="post-meta-container">
+          <div class="post-meta">
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-calendar"></i>
+      </span>
+      <span class="post-meta-item-text">发表于</span>
+
+      <time title="创建时间：2021-03-11 21:12:40" itemprop="dateCreated datePublished" datetime="2021-03-11T21:12:40+08:00">2021-03-11</time>
+    </span>
+      <span class="post-meta-item">
+        <span class="post-meta-item-icon">
+          <i class="far fa-calendar-check"></i>
+        </span>
+        <span class="post-meta-item-text">更新于</span>
+        <time title="修改时间：2021-03-10 13:43:55" itemprop="dateModified" datetime="2021-03-10T13:43:55+08:00">2021-03-10</time>
+      </span>
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-folder"></i>
+      </span>
+      <span class="post-meta-item-text">分类于</span>
+        <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+          <a href="/nirvana/categories/DesignPattern/" itemprop="url" rel="index"><span itemprop="name">DesignPattern</span></a>
+        </span>
+    </span>
+
+  
+    <span id="/nirvana/DesignPattern/%E8%AE%BE%E8%AE%A1%E6%A8%A1%E5%BC%8F%EF%BC%88TypeScript%EF%BC%89/%E5%AE%8C%E7%BB%93%E6%84%9F%E6%83%B3/" class="post-meta-item leancloud_visitors" data-flag-title="完结感想" title="阅读次数">
+      <span class="post-meta-item-icon">
+        <i class="far fa-eye"></i>
+      </span>
+      <span class="post-meta-item-text">阅读次数：</span>
+      <span class="leancloud-visitors-count"></span>
+    </span>
+      </div>
+      <div class="post-meta">
+    <span class="post-meta-item" title="本文字数">
+      <span class="post-meta-item-icon">
+        <i class="far fa-file-word"></i>
+      </span>
+      <span class="post-meta-item-text">本文字数：</span>
+      <span>339</span>
+    </span>
+    <span class="post-meta-item" title="阅读时长">
+      <span class="post-meta-item-icon">
+        <i class="far fa-clock"></i>
+      </span>
+      <span class="post-meta-item-text">阅读时长 &asymp;</span>
+      <span>1 分钟</span>
+    </span>
+</div>
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+          <p>从2020.03.28到2021.01.11接近一年的时间才完成这个系列，还是有很多感触的。</p>
+<p>现在一直在用TS开发，TS解决了以前JS虽然是面向对象的语言，但是和java、C、PHP这种强类型的语言相比，没有明确的class，interface这些面向对象的定义，想做一些设计模式的开发就会写的不伦不类，有了TS终于能够写真正的面向对象的代码了。</p>
+<p>自从拿到看到关于《设计模式》这本书，就想写一下用TS来实现相关设计模式的想法，顺便复习下相关内容，本来计划1、2个月就能完成这件事，但是计划赶不上变化，其实就是拖延症，前面几分钟热度，后来就是给自己找各种理由，根本没写几个。</p>
+<p>直到最近碰到了日更活动，为了给自己一定的压力，就参与进去，才发现人的潜力是无穷的，逼一逼还是有潜力可挖的。🤩</p>
 
       
     </div>
@@ -1312,7 +1483,7 @@
 
 
   <nav class="pagination">
-    <a class="extend prev" rel="prev" href="/nirvana/page/16/"><i class="fa fa-angle-left" aria-label="上一页"></i></a><a class="page-number" href="/nirvana/">1</a><span class="space">&hellip;</span><a class="page-number" href="/nirvana/page/16/">16</a><span class="page-number current">17</span><a class="page-number" href="/nirvana/page/18/">18</a><span class="space">&hellip;</span><a class="page-number" href="/nirvana/page/21/">21</a><a class="extend next" rel="next" href="/nirvana/page/18/"><i class="fa fa-angle-right" aria-label="下一页"></i></a>
+    <a class="extend prev" rel="prev" href="/nirvana/page/16/"><i class="fa fa-angle-left" aria-label="上一页"></i></a><a class="page-number" href="/nirvana/">1</a><span class="space">&hellip;</span><a class="page-number" href="/nirvana/page/16/">16</a><span class="page-number current">17</span><a class="page-number" href="/nirvana/page/18/">18</a><span class="space">&hellip;</span><a class="page-number" href="/nirvana/page/25/">25</a><a class="extend next" rel="next" href="/nirvana/page/18/"><i class="fa fa-angle-right" aria-label="下一页"></i></a>
   </nav>
 
 
@@ -1358,14 +1529,14 @@
       <i class="fa fa-chart-line"></i>
     </span>
       <span>站点总字数：</span>
-    <span title="站点总字数">595k</span>
+    <span title="站点总字数">736k</span>
   </span>
   <span class="post-meta-item">
     <span class="post-meta-item-icon">
       <i class="fa fa-coffee"></i>
     </span>
       <span>站点阅读时长 &asymp;</span>
-    <span title="站点阅读时长">9:01</span>
+    <span title="站点阅读时长">11:09</span>
   </span>
 </div>
   <div class="powered-by">由 <a href="https://hexo.io/" class="theme-link" rel="noopener" target="_blank">Hexo</a> & <a href="https://theme-next.js.org/" class="theme-link" rel="noopener" target="_blank">NexT.Gemini</a> 强力驱动

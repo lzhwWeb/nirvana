@@ -207,12 +207,12 @@
   <nav class="site-state">
       <div class="site-state-item site-state-posts">
           <a href="/nirvana/archives">
-          <span class="site-state-item-count">209</span>
+          <span class="site-state-item-count">249</span>
           <span class="site-state-item-name">日志</span>
         </a>
       </div>
       <div class="site-state-item site-state-categories">
-        <span class="site-state-item-count">13</span>
+        <span class="site-state-item-count">12</span>
         <span class="site-state-item-name">分类</span>
       </div>
   </nav>
@@ -257,7 +257,7 @@
   
 
   <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="">
-    <link itemprop="mainEntityOfPage" href="https://lzhwweb.github.io/nirvana/git/git/git-seach-special-char/">
+    <link itemprop="mainEntityOfPage" href="https://lzhwweb.github.io/nirvana/mac/mac/macOS%E7%B3%BB%E7%BB%9F%E4%B8%8B%E5%AE%89%E8%A3%85Homebrew%E6%85%A2/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="image" content="/nirvana/images/headphoto.jpeg">
@@ -270,7 +270,7 @@
     </span>
       <header class="post-header">
         <h2 class="post-title" itemprop="name headline">
-          <a href="/nirvana/git/git/git-seach-special-char/" class="post-title-link" itemprop="url">如何在Github中搜索特殊字符</a>
+          <a href="/nirvana/mac/mac/macOS%E7%B3%BB%E7%BB%9F%E4%B8%8B%E5%AE%89%E8%A3%85Homebrew%E6%85%A2/" class="post-title-link" itemprop="url">macOS系统下安装Homebrew慢</a>
         </h2>
 
         <div class="post-meta-container">
@@ -280,28 +280,22 @@
         <i class="far fa-calendar"></i>
       </span>
       <span class="post-meta-item-text">发表于</span>
+      
 
-      <time title="创建时间：2021-03-09 21:21:13" itemprop="dateCreated datePublished" datetime="2021-03-09T21:21:13+08:00">2021-03-09</time>
+      <time title="创建时间：2021-03-10 21:12:40 / 修改时间：13:43:55" itemprop="dateCreated datePublished" datetime="2021-03-10T21:12:40+08:00">2021-03-10</time>
     </span>
-      <span class="post-meta-item">
-        <span class="post-meta-item-icon">
-          <i class="far fa-calendar-check"></i>
-        </span>
-        <span class="post-meta-item-text">更新于</span>
-        <time title="修改时间：2021-03-10 13:43:55" itemprop="dateModified" datetime="2021-03-10T13:43:55+08:00">2021-03-10</time>
-      </span>
     <span class="post-meta-item">
       <span class="post-meta-item-icon">
         <i class="far fa-folder"></i>
       </span>
       <span class="post-meta-item-text">分类于</span>
         <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-          <a href="/nirvana/categories/git/" itemprop="url" rel="index"><span itemprop="name">git</span></a>
+          <a href="/nirvana/categories/mac/" itemprop="url" rel="index"><span itemprop="name">mac</span></a>
         </span>
     </span>
 
   
-    <span id="/nirvana/git/git/git-seach-special-char/" class="post-meta-item leancloud_visitors" data-flag-title="如何在Github中搜索特殊字符" title="阅读次数">
+    <span id="/nirvana/mac/mac/macOS%E7%B3%BB%E7%BB%9F%E4%B8%8B%E5%AE%89%E8%A3%85Homebrew%E6%85%A2/" class="post-meta-item leancloud_visitors" data-flag-title="macOS系统下安装Homebrew慢" title="阅读次数">
       <span class="post-meta-item-icon">
         <i class="far fa-eye"></i>
       </span>
@@ -315,14 +309,14 @@
         <i class="far fa-file-word"></i>
       </span>
       <span class="post-meta-item-text">本文字数：</span>
-      <span>182</span>
+      <span>1.8k</span>
     </span>
     <span class="post-meta-item" title="阅读时长">
       <span class="post-meta-item-icon">
         <i class="far fa-clock"></i>
       </span>
       <span class="post-meta-item-text">阅读时长 &asymp;</span>
-      <span>1 分钟</span>
+      <span>2 分钟</span>
     </span>
 </div>
 
@@ -333,12 +327,26 @@
     
     
     <div class="post-body" itemprop="articleBody">
-          <p>github仓库中搜索包含特殊字符的字符串(例如” example.com”或” Example：”)</p>
-<h2 id="方法"><a href="#方法" class="headerlink" title="方法"></a>方法</h2><p>使用空格代替字符，然后将搜索词放在引号中。 它会给您最接近的结果。<br>我有一个库调用sg.createNode，所以我搜索了”sg createNote”，其中大多数返回的结果包括sg.createNote。</p>
-<h2 id="结果"><a href="#结果" class="headerlink" title="结果"></a>结果</h2><p><img src="https://upload-images.jianshu.io/upload_images/10024246-e3184421d579a0d4.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240"></p>
+          <h4 id="1-获取install文件并编辑"><a href="#1-获取install文件并编辑" class="headerlink" title="1.获取install文件并编辑"></a>1.获取install文件并编辑</h4><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">cd ~</span><br><span class="line">curl -fsSL https:&#x2F;&#x2F;raw.githubusercontent.com&#x2F;Homebrew&#x2F;install&#x2F;master&#x2F;install &gt;&gt; brew_install</span><br></pre></td></tr></table></figure>
+
 <blockquote>
-<p>暂时没有找到能够精准匹配特殊字符的方法，但是已经基本够用了</p>
+<p>编辑的话直接在Finder里面搜索brew_install，双击之后打开，一般会用<strong>Xcode</strong>打开。原文说的“<strong>注释掉BREW_REPO = “<a target="_blank" rel="noopener" href="https://github.com/Homebrew/brew&quot;.freeze%E5%92%8CCORE_TAP_REPO">https://github.com/Homebrew/brew&quot;.freeze和CORE_TAP_REPO</a> = “<a target="_blank" rel="noopener" href="https://github.com/Homebrew/homebrew-core&quot;.freeze">https://github.com/Homebrew/homebrew-core&quot;.freeze</a></strong>”，新版没有<strong>CORE_TAP_REPO</strong>这一行，不过没关系，新增上去就行了。</p>
 </blockquote>
+<p><strong>修改后代码和截图如下</strong></p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line">#!&#x2F;usr&#x2F;bin&#x2F;ruby</span><br><span class="line"># This script installs to &#x2F;usr&#x2F;local only. To install elsewhere (which is</span><br><span class="line"># unsupported) you can untar https:&#x2F;&#x2F;github.com&#x2F;Homebrew&#x2F;brew&#x2F;tarball&#x2F;master</span><br><span class="line"># anywhere you like.</span><br><span class="line">HOMEBREW_PREFIX &#x3D; &quot;&#x2F;usr&#x2F;local&quot;.freeze</span><br><span class="line">HOMEBREW_REPOSITORY &#x3D; &quot;&#x2F;usr&#x2F;local&#x2F;Homebrew&quot;.freeze</span><br><span class="line">HOMEBREW_CORE_TAP &#x3D; &quot;&#x2F;usr&#x2F;local&#x2F;Homebrew&#x2F;Library&#x2F;Taps&#x2F;homebrew&#x2F;homebrew-core&quot;.freeze</span><br><span class="line">HOMEBREW_CACHE &#x3D; &quot;#&#123;ENV[&quot;HOME&quot;]&#125;&#x2F;Library&#x2F;Caches&#x2F;Homebrew&quot;.freeze</span><br><span class="line">#BREW_REPO &#x3D; &quot;https:&#x2F;&#x2F;github.com&#x2F;Homebrew&#x2F;brew&quot;.freeze#修改前</span><br><span class="line">BREW_REPO &#x3D; &quot;git:&#x2F;&#x2F;mirrors.ustc.edu.cn&#x2F;brew.git&quot;.freeze#修改后</span><br><span class="line">CORE_TAP_REPO &#x3D; &quot;git:&#x2F;&#x2F;mirrors.ustc.edu.cn&#x2F;homebrew-core.git&quot;.freeze#新增</span><br></pre></td></tr></table></figure>
+
+<p><img src="https://upload-images.jianshu.io/upload_images/10024246-03688f54a0acd5dc.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240"></p>
+<h4 id="2-开始安装"><a href="#2-开始安装" class="headerlink" title="2.开始安装"></a>2.开始安装</h4><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">&#x2F;usr&#x2F;bin&#x2F;ruby ~&#x2F;brew_install</span><br></pre></td></tr></table></figure>
+
+<blockquote>
+<p>在这里我没有遇到原文下面提问的朋友遇到的卡住报错不动等问题，仅停顿了一会儿。</p>
+</blockquote>
+<h4 id="3-替换源"><a href="#3-替换源" class="headerlink" title="3.替换源"></a>3.替换源</h4><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">#替换homebrew默认源</span><br><span class="line">cd &quot;$(brew --repo)&quot;</span><br><span class="line">git remote set-url origin git:&#x2F;&#x2F;mirrors.ustc.edu.cn&#x2F;brew.git</span><br><span class="line"></span><br><span class="line">#替换homebrew-core源</span><br><span class="line">cd &quot;$(brew --repo)&#x2F;Library&#x2F;Taps&#x2F;homebrew&#x2F;homebrew-core&quot;</span><br><span class="line">git remote set-url origin git:&#x2F;&#x2F;mirrors.ustc.edu.cn&#x2F;homebrew-core.git</span><br><span class="line"></span><br></pre></td></tr></table></figure>
+
+<h4 id="4-brew更新"><a href="#4-brew更新" class="headerlink" title="4.brew更新"></a>4.brew更新</h4><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">brew update</span><br></pre></td></tr></table></figure>
+
+<p><strong>最后:</strong></p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">echo &#39;export HOMEBREW_BOTTLE_DOMAIN&#x3D;https:&#x2F;&#x2F;mirrors.ustc.edu.cn&#x2F;homebrew-bottles&#39; &gt;&gt; ~&#x2F;.bash_profile</span><br><span class="line">source ~&#x2F;.bash_profile</span><br></pre></td></tr></table></figure>
 
       
     </div>
@@ -365,7 +373,7 @@
   
 
   <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="">
-    <link itemprop="mainEntityOfPage" href="https://lzhwweb.github.io/nirvana/git/git/git-seach/">
+    <link itemprop="mainEntityOfPage" href="https://lzhwweb.github.io/nirvana/mac/mac/mac%E4%B8%8B%E5%AE%89%E8%A3%85nginx/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="image" content="/nirvana/images/headphoto.jpeg">
@@ -378,7 +386,7 @@
     </span>
       <header class="post-header">
         <h2 class="post-title" itemprop="name headline">
-          <a href="/nirvana/git/git/git-seach/" class="post-title-link" itemprop="url">GitHub 常用搜索语法</a>
+          <a href="/nirvana/mac/mac/mac%E4%B8%8B%E5%AE%89%E8%A3%85nginx/" class="post-title-link" itemprop="url">mac下安装nginx</a>
         </h2>
 
         <div class="post-meta-container">
@@ -388,28 +396,22 @@
         <i class="far fa-calendar"></i>
       </span>
       <span class="post-meta-item-text">发表于</span>
+      
 
-      <time title="创建时间：2021-03-09 21:19:18" itemprop="dateCreated datePublished" datetime="2021-03-09T21:19:18+08:00">2021-03-09</time>
+      <time title="创建时间：2021-03-10 21:12:40 / 修改时间：13:43:55" itemprop="dateCreated datePublished" datetime="2021-03-10T21:12:40+08:00">2021-03-10</time>
     </span>
-      <span class="post-meta-item">
-        <span class="post-meta-item-icon">
-          <i class="far fa-calendar-check"></i>
-        </span>
-        <span class="post-meta-item-text">更新于</span>
-        <time title="修改时间：2021-03-10 13:43:55" itemprop="dateModified" datetime="2021-03-10T13:43:55+08:00">2021-03-10</time>
-      </span>
     <span class="post-meta-item">
       <span class="post-meta-item-icon">
         <i class="far fa-folder"></i>
       </span>
       <span class="post-meta-item-text">分类于</span>
         <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-          <a href="/nirvana/categories/git/" itemprop="url" rel="index"><span itemprop="name">git</span></a>
+          <a href="/nirvana/categories/mac/" itemprop="url" rel="index"><span itemprop="name">mac</span></a>
         </span>
     </span>
 
   
-    <span id="/nirvana/git/git/git-seach/" class="post-meta-item leancloud_visitors" data-flag-title="GitHub 常用搜索语法" title="阅读次数">
+    <span id="/nirvana/mac/mac/mac%E4%B8%8B%E5%AE%89%E8%A3%85nginx/" class="post-meta-item leancloud_visitors" data-flag-title="mac下安装nginx" title="阅读次数">
       <span class="post-meta-item-icon">
         <i class="far fa-eye"></i>
       </span>
@@ -423,14 +425,14 @@
         <i class="far fa-file-word"></i>
       </span>
       <span class="post-meta-item-text">本文字数：</span>
-      <span>3.6k</span>
+      <span>2.6k</span>
     </span>
     <span class="post-meta-item" title="阅读时长">
       <span class="post-meta-item-icon">
         <i class="far fa-clock"></i>
       </span>
       <span class="post-meta-item-text">阅读时长 &asymp;</span>
-      <span>3 分钟</span>
+      <span>2 分钟</span>
     </span>
 </div>
 
@@ -441,258 +443,69 @@
     
     
     <div class="post-body" itemprop="articleBody">
-          <p><strong><a target="_blank" rel="noopener" href="https://docs.github.com/cn/github/searching-for-information-on-github/searching-for-repositories">官网</a></strong></p>
-<h1 id="搜索仓库"><a href="#搜索仓库" class="headerlink" title="搜索仓库"></a>搜索仓库</h1><p>您可以在 GitHub 上搜索仓库，并使用这些仓库搜索限定符的任意组合缩小结果范围。<br>您可以在所有 GitHub 内全局搜索仓库，也可以在特定组织内搜索仓库<br>要在搜索结果中包括复刻，您需要将 <code>fork:true</code> 或 <code>fork:only</code> 添加到查询。 </p>
-<p><strong>Tips:</strong></p>
-<ul>
-<li>  有关可以添加到任何搜索限定符以进一步改善结果的搜索语法列表，请参阅“<a target="_blank" rel="noopener" href="https://docs.github.com/cn/free-pro-team@latest/articles/understanding-the-search-syntax">了解搜索语法</a>”。</li>
-<li>  对多个字词的搜索词使用引号。 例如，如果要搜索具有标签 “In progress” 的议题，可搜索 <code>label:&quot;in progress&quot;</code>。 搜索不区分大小写。</li>
-</ul>
-<h3 id="按仓库名称、说明或自述文件内容搜索"><a href="#按仓库名称、说明或自述文件内容搜索" class="headerlink" title="按仓库名称、说明或自述文件内容搜索"></a>按仓库名称、说明或自述文件内容搜索</h3><p>通过 <code>in</code> 限定符，您可以将搜索限制为仓库名称、仓库说明、自述文件内容或这些的任意组合。 如果省略此限定符，则只搜索仓库名称和说明。</p>
-<table>
-<thead>
-<tr>
-<th>限定符</th>
-<th>示例</th>
-</tr>
-</thead>
-<tbody><tr>
-<td><code>in:name</code></td>
-<td><strong>jquery in:name</strong> matches repositories with “jquery” in the repository name.</td>
-</tr>
-<tr>
-<td><code>in:description</code></td>
-<td><strong>jquery in:name,description</strong> matches repositories with “jquery” in the repository name or description.</td>
-</tr>
-<tr>
-<td><code>in:readme</code></td>
-<td><strong>jquery in:readme</strong>  matches repositories mentioning “jquery” in the repository’s README file.</td>
-</tr>
-<tr>
-<td><code>repo:owner/name</code></td>
-<td><strong>repo:octocat/hello-world</strong> 匹配特定仓库名称。</td>
-</tr>
-</tbody></table>
-<h3 id="基于仓库的内容搜索"><a href="#基于仓库的内容搜索" class="headerlink" title="基于仓库的内容搜索"></a>基于仓库的内容搜索</h3><p>除了使用 <code>in:readme</code> 以外，无法通过搜索仓库内的特定内容来查找仓库。 要搜索仓库内的特定文件或内容，您可以使用查找器或代码特定的搜索限定符。<br>| 限定符 | 示例 |<br>| — | — |<br>| <code>in:readme</code> | <strong>octocat in:readme</strong> matches repositories mentioning “octocat” in the repository’s README file. |</p>
-<h3 id="在用户或组织的仓库内搜索"><a href="#在用户或组织的仓库内搜索" class="headerlink" title="在用户或组织的仓库内搜索"></a>在用户或组织的仓库内搜索</h3><p>要在特定用户或组织拥有的所有仓库中搜索，您可以使用 <code>user</code> 或 <code>org</code> 限定符。</p>
-<table>
-<thead>
-<tr>
-<th>限定符</th>
-<th>示例</th>
-</tr>
-</thead>
-<tbody><tr>
-<td><code>user:*USERNAME*</code></td>
-<td><strong>user:defunkt forks:&gt;100</strong> 匹配来自 @defunkt、拥有超过 100 复刻的仓库。</td>
-</tr>
-<tr>
-<td><code>org:*ORGNAME*</code></td>
-<td><strong>org:github</strong> 匹配来自 GitHub 的仓库。</td>
-</tr>
-</tbody></table>
-<h3 id="按仓库大小搜索"><a href="#按仓库大小搜索" class="headerlink" title="按仓库大小搜索"></a>按仓库大小搜索</h3><p>The <code>size</code> qualifier finds repositories that match a certain size (in kilobytes), using greater than, less than, and range qualifiers<br>| 限定符 | 示例 |<br>| — | — |<br>| <code>size:*n*</code> | <strong>size:1000</strong> 匹配恰好为 1 MB 的仓库。 |<br>|  | <strong>size:&gt;=30000</strong> 匹配至少为 30 MB 的仓库。 |<br>|  | <strong>size:&lt;50</strong> 匹配小于 50 KB 的仓库。 |<br>|  | <strong>size:50..120</strong> 匹配介于 50 KB 与 120 KB 之间的仓库。 |</p>
-<h3 id="按关注者数量搜索"><a href="#按关注者数量搜索" class="headerlink" title="按关注者数量搜索"></a>按关注者数量搜索</h3><table>
-<thead>
-<tr>
-<th>限定符</th>
-<th>示例</th>
-</tr>
-</thead>
-<tbody><tr>
-<td><code>followers:*n*</code></td>
-<td><strong>node followers:&gt;=10000</strong> 匹配有 10,000 或更多关注者提及文字 “node” 的仓库。</td>
-</tr>
-<tr>
-<td></td>
-<td><strong>styleguide linter followers:1..10</strong> 匹配拥有 1 到 10 个关注者并且提及 “styleguide linter” 一词的的仓库。</td>
-</tr>
-</tbody></table>
-<h3 id="按复刻数量搜索"><a href="#按复刻数量搜索" class="headerlink" title="按复刻数量搜索"></a>按复刻数量搜索</h3><table>
-<thead>
-<tr>
-<th>限定符</th>
-<th>示例</th>
-</tr>
-</thead>
-<tbody><tr>
-<td><code>forks:*n*</code></td>
-<td><strong>forks:5</strong> 匹配具有至少 205 个复刻的仓库。</td>
-</tr>
-<tr>
-<td></td>
-<td><strong>forks:&lt;90</strong> 匹配具有少于 90 个复刻的仓库。</td>
-</tr>
-<tr>
-<td></td>
-<td><strong>forks:10..20</strong> 匹配具有 10 到 20 个复刻的仓库。</td>
-</tr>
-</tbody></table>
-<h3 id="按星号数量搜索"><a href="#按星号数量搜索" class="headerlink" title="按星号数量搜索"></a>按星号数量搜索</h3><table>
-<thead>
-<tr>
-<th>限定符</th>
-<th>示例</th>
-</tr>
-</thead>
-<tbody><tr>
-<td><code>stars:*n*</code></td>
-<td><strong>stars:500</strong> 匹配恰好具有 500 个星号的仓库。</td>
-</tr>
-<tr>
-<td></td>
-<td><strong>stars:10..20</strong> 匹配具有 10 到 20 个星号、小于 1000 KB 的仓库。</td>
-</tr>
-<tr>
-<td></td>
-<td><strong>stars:&gt;=500 fork:true language:php</strong> 匹配具有至少 500 个星号，包括复刻的星号（以 PHP 编写）的仓库。</td>
-</tr>
-</tbody></table>
-<h3 id="按仓库创建或上次更新时间搜索"><a href="#按仓库创建或上次更新时间搜索" class="headerlink" title="按仓库创建或上次更新时间搜索"></a>按仓库创建或上次更新时间搜索</h3><p>您可以基于创建时间或上次更新时间过滤仓库。 对于仓库创建，您可以使用 <code>created</code> 限定符；要了解仓库上次更新的时间，您要使用 <code>pushed</code> 限定符。 <code>pushed</code> 限定符将返回仓库列表，按仓库中任意分支上最近进行的提交排序。</p>
-<p>两者均采用日期作为参数。 日期格式必须遵循 <a target="_blank" rel="noopener" href="http://en.wikipedia.org/wiki/ISO_8601">ISO8601</a>标准，即 <code>YYYY-MM-DD</code>（年-月-日）。 您也可以在日期后添加可选的时间信息 <code>THH:MM:SS+00:00</code>，以便按小时、分钟和秒进行搜索。 这是 <code>T</code>，随后是 <code>HH:MM:SS</code>（时-分-秒）和 UTC 偏移 (<code>+00:00</code>)。</p>
-<table>
-<thead>
-<tr>
-<th>限定符</th>
-<th>示例</th>
-</tr>
-</thead>
-<tbody><tr>
-<td><code>created:*YYYY-MM-DD*</code></td>
-<td><strong>webos created:&lt;2011-01-01</strong> 匹配具有 “webos” 字样、在 2011 年之前创建的仓库。</td>
-</tr>
-<tr>
-<td><code>pushed:*YYYY-MM-DD*</code></td>
-<td><strong>css pushed:&gt;2013-02-01</strong> 匹配具有 “css” 字样、在 2013 年 1 月之后收到推送的仓库。</td>
-</tr>
-<tr>
-<td></td>
-<td><strong>case pushed:&gt;=2013-03-06 fork:only</strong> 匹配具有 “case” 字样、在 2013 年 3 月 6 日或之后收到推送并且作为复刻的仓库。</td>
-</tr>
-</tbody></table>
-<h3 id="按语言搜索"><a href="#按语言搜索" class="headerlink" title="按语言搜索"></a>按语言搜索</h3><p>You can search repositories based on the language of the code in the repositories.</p>
-<table>
-<thead>
-<tr>
-<th>限定符</th>
-<th>示例</th>
-</tr>
-</thead>
-<tbody><tr>
-<td><code>language:*LANGUAGE*</code></td>
-<td><strong>rails language:javascript</strong> 匹配具有 “rails” 字样、以 JavaScript 编写的仓库。</td>
-</tr>
-</tbody></table>
-<h3 id="按主题搜索"><a href="#按主题搜索" class="headerlink" title="按主题搜索"></a>按主题搜索</h3><table>
-<thead>
-<tr>
-<th>限定符</th>
-<th>示例</th>
-</tr>
-</thead>
-<tbody><tr>
-<td><code>topic:*TOPIC*</code></td>
-<td><strong>topic:jekyll</strong> 匹配已归类为 “jekyll” 主题的仓库。</td>
-</tr>
-</tbody></table>
-<h3 id="按主题数量搜索"><a href="#按主题数量搜索" class="headerlink" title="按主题数量搜索"></a>按主题数量搜索</h3><table>
-<thead>
-<tr>
-<th>限定符</th>
-<th>示例</th>
-</tr>
-</thead>
-<tbody><tr>
-<td><code>topics:*n*</code></td>
-<td><strong>topics:5</strong> 匹配具有五个主题的仓库。</td>
-</tr>
-<tr>
-<td></td>
-<td><strong>topics:&gt;3</strong>  匹配超过三个主题的仓库。</td>
-</tr>
-</tbody></table>
-<h3 id="按许可搜索"><a href="#按许可搜索" class="headerlink" title="按许可搜索"></a>按许可搜索</h3><table>
-<thead>
-<tr>
-<th>限定符</th>
-<th>示例</th>
-</tr>
-</thead>
-<tbody><tr>
-<td><code>license:*LICENSE_KEYWORD*</code></td>
-<td><strong>license:apache-2.0</strong>  匹配根据 Apache License 2.0 授权的仓库。</td>
-</tr>
-</tbody></table>
-<h3 id="Search-by-repository-visibility"><a href="#Search-by-repository-visibility" class="headerlink" title="Search by repository visibility"></a>Search by repository visibility</h3><p>You can filter your search based on the visibility of the repositories. </p>
-<table>
-<thead>
-<tr>
-<th>Qualifier</th>
-<th>Example</th>
-</tr>
-</thead>
-<tbody><tr>
-<td><code>is:public</code></td>
-<td><strong>is:public org:github</strong>  matches public repositories owned by GitHub.</td>
-</tr>
-<tr>
-<td><code>is:internal</code></td>
-<td><strong>is:internal test</strong> matches internal repositories that you can access and contain the word “test”.</td>
-</tr>
-<tr>
-<td><code>is:private</code></td>
-<td><strong>is:private pages</strong>  matches private repositories that you can access and contain the word “pages.”</td>
-</tr>
-</tbody></table>
-<h3 id="基于仓库是否为镜像搜索"><a href="#基于仓库是否为镜像搜索" class="headerlink" title="基于仓库是否为镜像搜索"></a>基于仓库是否为镜像搜索</h3><table>
-<thead>
-<tr>
-<th>限定符</th>
-<th>示例</th>
-</tr>
-</thead>
-<tbody><tr>
-<td><code>mirror:true</code></td>
-<td><strong>mirror:true GNOME</strong>  matches repositories that are mirrors and contain the word “GNOME.”</td>
-</tr>
-<tr>
-<td><code>mirror:false</code></td>
-<td><strong>mirror:false GNOME</strong>  matches repositories that are not mirrors and contain the word “GNOME.”</td>
-</tr>
-</tbody></table>
-<h3 id="基于仓库是否已存档搜索"><a href="#基于仓库是否已存档搜索" class="headerlink" title="基于仓库是否已存档搜索"></a>基于仓库是否已存档搜索</h3><table>
-<thead>
-<tr>
-<th>限定符</th>
-<th>示例</th>
-</tr>
-</thead>
-<tbody><tr>
-<td><code>archived:true</code></td>
-<td><strong>archived:true GNOME</strong>  matches repositories that are archived and contain the word “GNOME.”</td>
-</tr>
-<tr>
-<td><code>archived:false</code></td>
-<td><strong>archived:false GNOME</strong> matches repositories that are not archived and contain the word “GNOME.”</td>
-</tr>
-</tbody></table>
-<h3 id="基于具有-good-first-issue-或-help-wanted-标签的议题数量搜索"><a href="#基于具有-good-first-issue-或-help-wanted-标签的议题数量搜索" class="headerlink" title="基于具有 good first issue 或 help wanted 标签的议题数量搜索"></a>基于具有 <code>good first issue</code> 或 <code>help wanted</code> 标签的议题数量搜索</h3><p>您可以使用限定符 <code>help-wanted-issues:&gt;n</code> 和 <code>good-first-issues:&gt;n</code> 搜索具有最少数量标签为 <code>help-wanted</code> 或 <code>good-first-issue</code> 议题的仓库。。</p>
-<table>
-<thead>
-<tr>
-<th>限定符</th>
-<th>示例</th>
-</tr>
-</thead>
-<tbody><tr>
-<td><code>good-first-issues:&gt;n</code></td>
-<td><strong>good-first-issues:&gt;2 javascript</strong>  匹配具有超过两个标签为 <code>good-first-issue</code> 的议题且包含 “javascript” 字样的仓库。</td>
-</tr>
-<tr>
-<td><code>help-wanted-issues:&gt;n</code></td>
-<td><strong>help-wanted-issues:&gt;4 react</strong>  匹配具有超过四个标签为 <code>help-wanted</code> 的议题且包含 “React” 字样的仓库。</td>
-</tr>
-</tbody></table>
+          <p>安装工具：</p>
+<p><a target="_blank" rel="noopener" href="https://brew.sh/index_zh-cn.html">homebrew</a>（还没用过的小伙伴可以点链接进行了解或者自行百度）</p>
+<p>步骤：</p>
+<p>　　1、打开终端，习惯性命令：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">brew update</span><br></pre></td></tr></table></figure>
+<p>//结果：Already up-to-date.</pre></p>
+<p>　　2、终端继续执行命令：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">brew search nginx   &#x2F;&#x2F;查询要安装的软件是否存在</span><br></pre></td></tr></table></figure>
+
+<p>　　3、这里我们多执行一步“废”命令，不过有利于我们后面的配置：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">brew info nginx</span><br></pre></td></tr></table></figure>
+
+<p>　　运行结果：</p>
+<p>　　<img src="https://upload-images.jianshu.io/upload_images/10024246-4c9ce6a852151bf0.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240"></p>
+<p>　　我们可以看到，nginx在本地还未安装（Not installed），nginx的来源（From），Docroot默认为/usr/local/var/www，在/usr/local/etc/nginx/nginx.conf配置文件中默认端口被配置为8080从而使nginx运行时不需要加sudo，nginx将在/usr/local/etc/nginx/servers/目录中加载所有文件，以及我们可以通过最简单的命令 ‘nginx’ 来启动nginx。</p>
+<p>　　4、正式开始安装：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">brew install nginx</span><br></pre></td></tr></table></figure>
+
+<p><img src="https://upload-images.jianshu.io/upload_images/10024246-de5daa8180b3f4c3.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240"></p>
+<p>　　5、查看nginx安装目录（是否如info所说）：　</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">open &#x2F;usr&#x2F;local&#x2F;etc&#x2F;nginx&#x2F;</span><br></pre></td></tr></table></figure>
+
+<p>　　　　<img src="https://upload-images.jianshu.io/upload_images/10024246-90142c4098d678f3.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240"></p>
+<p>　　成功打开nginx目录，也可以看到如info所说servers目录以及nginx.conf的配置文件（后面会用到这个配置文件）。但我们并没有找到nginx被安装到了哪里。</p>
+<p>　　终端继续执行：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">open &#x2F;usr&#x2F;local&#x2F;Cellar&#x2F;nginx  &#x2F;&#x2F;其实这个才是nginx被安装到的目录</span><br></pre></td></tr></table></figure>
+
+<p>　　<img src="https://upload-images.jianshu.io/upload_images/10024246-4a716a1bef024b54.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240"></p>
+<p>　　会看到一个以当前安装的nginx的版本号为名称的文件夹，这个就是我们安装的nginx根目录啦。进入1.12.2_1/bin 目录，会看到nginx的可执行启动文件。</p>
+<p>　　同样的，我们在1.12.2_1/目录下还可以看到一个名字为html的快捷方式文件夹（暂且就这么叫吧），进入该目录我们会发现其实它指向的就是/usr/local/var/www目录，这个在上面我们查看的info信息中有提到（Dcroot）</p>
+<p> 　　6、启动nginx，终端输入如下命令：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">nginx</span><br></pre></td></tr></table></figure>
+
+<p>　　没有报错即为启动成功。<br>　　7、访问验证：</p>
+<p>　　　　打开浏览器访问localhost:8080,这里跟网上的一些教程会有些不一样，正常情况下到这一步就会能看到nginx的欢迎界面啦，然而博主却遇到了坑爹的情况（如果你能正常看到nginx欢迎界面，可以直接跳过这一步了）</p>
+<p><img src="https://upload-images.jianshu.io/upload_images/10024246-c85425af5395d326.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240"></p>
+<p> 　　想必这个错误大家都很熟悉了，我就不再多做解释，接下来直接说原因（该原因仅为猜测，因为无从验证）：安装的nginx会默认在html（也就是/usr/local/var/www）目录下生成一个欢迎页面文件，而出现上面这种情况就是欢迎页面文件没有生成（至于为什么没有生成就不得而知了，一切都是猜测）。</p>
+<p>　　那在解决这个问题之前，我们先来了解一下nginx的配置文件吧（nginx.conf）:</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">cat &#x2F;usr&#x2F;local&#x2F;etc&#x2F;nginx&#x2F;nginx.conf</span><br></pre></td></tr></table></figure>
+
+<p>　　显示配置文件的代码为：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br></pre></td><td class="code"><pre><span class="line">#user  nobody;</span><br><span class="line">worker_processes 1;</span><br><span class="line"></span><br><span class="line">#error_log  logs&#x2F;error.log;</span><br><span class="line">#error_log  logs&#x2F;error.log  notice;</span><br><span class="line">#error_log  logs&#x2F;error.log  info;</span><br><span class="line"></span><br><span class="line">#pid        logs&#x2F;nginx.pid;</span><br><span class="line"></span><br><span class="line">events &#123;</span><br><span class="line">    worker_connections 1024;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">http &#123;</span><br><span class="line">    include       mime.types;</span><br><span class="line">    default_type  application&#x2F;octet-stream;</span><br><span class="line"></span><br><span class="line">    #log_format  main &#39;$remote_addr - $remote_user [$time_local] &quot;$request&quot; &#39; # &#39;$status $body_bytes_sent &quot;$http_referer&quot; &#39; # &#39;&quot;$http_user_agent&quot; &quot;$http_x_forwarded_for&quot;&#39;;</span><br><span class="line"></span><br><span class="line">    #access_log  logs&#x2F;access.log  main;</span><br><span class="line"></span><br><span class="line">    sendfile        on;</span><br><span class="line">    #tcp_nopush     on;</span><br><span class="line"></span><br><span class="line">    #keepalive_timeout 0;</span><br><span class="line">    keepalive_timeout 65;</span><br><span class="line"></span><br><span class="line">    #gzip  on;</span><br><span class="line"></span><br><span class="line">    server &#123;</span><br><span class="line">　　　　 #侦听8080端口</span><br><span class="line">        listen 8080;</span><br><span class="line">　　　　 #定义使用 localhost访问</span><br><span class="line">        server_name  localhost;</span><br><span class="line"></span><br><span class="line">        #charset koi8-r;</span><br><span class="line"></span><br><span class="line">        #access_log  logs&#x2F;host.access.log  main;</span><br><span class="line"></span><br><span class="line">        location &#x2F; &#123;</span><br><span class="line">　　　　　　　#定义服务器的默认网站根目录位置</span><br><span class="line">            root   html;</span><br><span class="line">　　　　　　  #定义首页索引文件的名称</span><br><span class="line">            index  index.html index.htm;</span><br><span class="line">        &#125;</span><br><span class="line">　　　　　...</span><br><span class="line">　　　　　...</span><br><span class="line">　　　　　... (注释代码太多，就不全部贴出来了)  include servers&#x2F;*;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p>　　通过配置文件我们可以看到其默认的网站根目录为html（即/usr/local/var/www），而默认的索引文件为index.html 和 index.htm，这下就找到原因了，原来我们的根目录少了首页索引文件，那就来手动创建一个吧：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">cd &#x2F;usr&#x2F;local&#x2F;var&#x2F;www&#x2F;                      &#x2F;&#x2F;进入到www目录下</span><br><span class="line">touch index.html                            &#x2F;&#x2F;创建一个新的index.html文件</span><br><span class="line">vim index.html                              &#x2F;&#x2F;编辑该文件 &lt;&#x2F;pre&gt;</span><br><span class="line">&#96;&#96;&#96;&#96;</span><br><span class="line">　　将如下代码写入index.html文件中：</span><br></pre></td></tr></table></figure>
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>title</title>
+</head>
+<body>
+    <div>
+        <h1>我的nginx欢迎页面</h1>
+    </div>
+</body>
+</html>
+```
+
+
+<p>　　回到浏览器（localhost:8080）刷新：</p>
+<p><img src="https://upload-images.jianshu.io/upload_images/10024246-669dfb5bb1851e49.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240"></p>
+<p>　　OK，大功告成啦！</p>
 
       
     </div>
@@ -719,7 +532,7 @@
   
 
   <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="">
-    <link itemprop="mainEntityOfPage" href="https://lzhwweb.github.io/nirvana/android/android/Android%E4%B8%8A%E8%B6%85%E7%BA%A7%E5%A5%BD%E7%94%A8%E7%9A%84%E5%89%8D%E7%AB%AF%E8%B0%83%E8%AF%95%E6%96%B9%E6%B3%95%EF%BC%88adb-reverse%EF%BC%89/">
+    <link itemprop="mainEntityOfPage" href="https://lzhwweb.github.io/nirvana/mac/mac/%E5%88%A9%E7%94%A8proxychains%E5%9C%A8%E7%BB%88%E7%AB%AF%E4%BD%BF%E7%94%A8socks5%E4%BB%A3%E7%90%86/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="image" content="/nirvana/images/headphoto.jpeg">
@@ -732,7 +545,7 @@
     </span>
       <header class="post-header">
         <h2 class="post-title" itemprop="name headline">
-          <a href="/nirvana/android/android/Android%E4%B8%8A%E8%B6%85%E7%BA%A7%E5%A5%BD%E7%94%A8%E7%9A%84%E5%89%8D%E7%AB%AF%E8%B0%83%E8%AF%95%E6%96%B9%E6%B3%95%EF%BC%88adb-reverse%EF%BC%89/" class="post-title-link" itemprop="url">Android上超级好用的前端调试方法（adb-reverse）</a>
+          <a href="/nirvana/mac/mac/%E5%88%A9%E7%94%A8proxychains%E5%9C%A8%E7%BB%88%E7%AB%AF%E4%BD%BF%E7%94%A8socks5%E4%BB%A3%E7%90%86/" class="post-title-link" itemprop="url">利用proxychains在终端使用socks5代理</a>
         </h2>
 
         <div class="post-meta-container">
@@ -742,28 +555,22 @@
         <i class="far fa-calendar"></i>
       </span>
       <span class="post-meta-item-text">发表于</span>
+      
 
-      <time title="创建时间：2021-03-09 21:12:40" itemprop="dateCreated datePublished" datetime="2021-03-09T21:12:40+08:00">2021-03-09</time>
+      <time title="创建时间：2021-03-10 21:12:40 / 修改时间：13:43:55" itemprop="dateCreated datePublished" datetime="2021-03-10T21:12:40+08:00">2021-03-10</time>
     </span>
-      <span class="post-meta-item">
-        <span class="post-meta-item-icon">
-          <i class="far fa-calendar-check"></i>
-        </span>
-        <span class="post-meta-item-text">更新于</span>
-        <time title="修改时间：2021-03-10 13:43:55" itemprop="dateModified" datetime="2021-03-10T13:43:55+08:00">2021-03-10</time>
-      </span>
     <span class="post-meta-item">
       <span class="post-meta-item-icon">
         <i class="far fa-folder"></i>
       </span>
       <span class="post-meta-item-text">分类于</span>
         <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-          <a href="/nirvana/categories/android/" itemprop="url" rel="index"><span itemprop="name">android</span></a>
+          <a href="/nirvana/categories/mac/" itemprop="url" rel="index"><span itemprop="name">mac</span></a>
         </span>
     </span>
 
   
-    <span id="/nirvana/android/android/Android%E4%B8%8A%E8%B6%85%E7%BA%A7%E5%A5%BD%E7%94%A8%E7%9A%84%E5%89%8D%E7%AB%AF%E8%B0%83%E8%AF%95%E6%96%B9%E6%B3%95%EF%BC%88adb-reverse%EF%BC%89/" class="post-meta-item leancloud_visitors" data-flag-title="Android上超级好用的前端调试方法（adb-reverse）" title="阅读次数">
+    <span id="/nirvana/mac/mac/%E5%88%A9%E7%94%A8proxychains%E5%9C%A8%E7%BB%88%E7%AB%AF%E4%BD%BF%E7%94%A8socks5%E4%BB%A3%E7%90%86/" class="post-meta-item leancloud_visitors" data-flag-title="利用proxychains在终端使用socks5代理" title="阅读次数">
       <span class="post-meta-item-icon">
         <i class="far fa-eye"></i>
       </span>
@@ -777,7 +584,7 @@
         <i class="far fa-file-word"></i>
       </span>
       <span class="post-meta-item-text">本文字数：</span>
-      <span>374</span>
+      <span>879</span>
     </span>
     <span class="post-meta-item" title="阅读时长">
       <span class="post-meta-item-icon">
@@ -795,10 +602,16 @@
     
     
     <div class="post-body" itemprop="articleBody">
-          <p>前端开发前端页面，经常需要改两行代码就要看看页面效果。如果是兼容桌面浏览器的页面还好办，在本地启动服务，写两句代码refresh一下就可以看到效果了，但是更多的时候，页面是必须在APP中加载，用到APP提供的JsApi的，桌面浏览器根本没法使用页面的功能。</p>
-<p>android手机可硬使用adb reverse，终端中输入执行一下adb，列出的帮助文档中，有这样一段：<br><img src="https://upload-images.jianshu.io/upload_images/10024246-f14f2905f7b87eb0.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240"></p>
-<p>Android允许我们通过ADB，把Android上的某个端口映射到电脑（adb forward），或者把电脑的某个端口映射到Android系统（adb reverse）。</p>
-<p>假设电脑上开启的服务，监听的端口为8000。Android手机通过USB连接电脑后，执行 adb reversetcp:8000 tcp:8000，然后在手机中访问127.0.0.1:8000，就可以访问到电脑上启动的服务了，</p>
+          <h3 id="1-proxychains安装"><a href="#1-proxychains安装" class="headerlink" title="1.proxychains安装"></a>1.proxychains安装</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">git clone https:&#x2F;&#x2F;github.com&#x2F;rofl0r&#x2F;proxychains-ng.git</span><br><span class="line">cd proxychains-ng</span><br><span class="line">.&#x2F;configure</span><br><span class="line">make &amp;&amp; make install</span><br><span class="line">cp .&#x2F;src&#x2F;proxychains.conf &#x2F;etc&#x2F;proxychains.conf</span><br><span class="line">cd .. &amp;&amp; rm -rf proxychains-ng (先修改再cp)</span><br></pre></td></tr></table></figure>
+<p>也可以用<code>brew install proxychains-ng</code>安装。<br>2.编辑proxychains配置</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">vim &#x2F;etc&#x2F;proxychains.conf</span><br></pre></td></tr></table></figure>
+<p>3.将socks4 127.0.0.1 9095改为</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">socks5 127.0.0.1 1080</span><br></pre></td></tr></table></figure>
+<p><em><strong>ps: 默认的socks4 127.0.0.1 9095是tor代理，而socks5 127.0.0.1 1080是shadowsocks的代理。</strong></em></p>
+<p>proxychains.conf文件说明了代理配置格式,如下,这里根据自己使用的代理来配置就行了。</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line">ProxyList format</span><br><span class="line"> 94 #       type  ip  port  [user pass]</span><br><span class="line"> 95 #       (values separated by &#39;tab&#39; or &#39;blank&#39;)</span><br><span class="line"> 96 #</span><br><span class="line"> 97 #       only numeric ipv4 addresses are valid</span><br><span class="line"> 98 #</span><br><span class="line"> 99 #</span><br><span class="line">100 #        Examples:</span><br><span class="line">101 #</span><br><span class="line">102 #       socks5  192.168.67.78   1080    lamer   secret</span><br><span class="line">103 #       http    192.168.89.3    8080    justu   hidden</span><br><span class="line">104 #       socks4  192.168.1.49    1080</span><br><span class="line">105 #       http    192.168.39.93   8080</span><br></pre></td></tr></table></figure>
+<p>4.使用方法<br>在需要代理的命令前加上 proxychains4 ，如：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">proxychains4 wget http:&#x2F;&#x2F;xxx.com&#x2F;xxx.zip</span><br></pre></td></tr></table></figure>
 
       
     </div>
@@ -825,7 +638,7 @@
   
 
   <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="">
-    <link itemprop="mainEntityOfPage" href="https://lzhwweb.github.io/nirvana/android/android/Mac-%E9%85%8D%E7%BD%AE-adb/">
+    <link itemprop="mainEntityOfPage" href="https://lzhwweb.github.io/nirvana/mac/mac/mac%E7%BB%88%E7%AB%AF%E5%88%87%E6%8D%A2%E7%94%A8%E6%88%B7/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="image" content="/nirvana/images/headphoto.jpeg">
@@ -838,7 +651,7 @@
     </span>
       <header class="post-header">
         <h2 class="post-title" itemprop="name headline">
-          <a href="/nirvana/android/android/Mac-%E9%85%8D%E7%BD%AE-adb/" class="post-title-link" itemprop="url">Mac-配置-adb</a>
+          <a href="/nirvana/mac/mac/mac%E7%BB%88%E7%AB%AF%E5%88%87%E6%8D%A2%E7%94%A8%E6%88%B7/" class="post-title-link" itemprop="url">mac终端切换用户</a>
         </h2>
 
         <div class="post-meta-container">
@@ -848,28 +661,22 @@
         <i class="far fa-calendar"></i>
       </span>
       <span class="post-meta-item-text">发表于</span>
+      
 
-      <time title="创建时间：2021-03-09 21:12:40" itemprop="dateCreated datePublished" datetime="2021-03-09T21:12:40+08:00">2021-03-09</time>
+      <time title="创建时间：2021-03-10 21:12:40 / 修改时间：13:43:55" itemprop="dateCreated datePublished" datetime="2021-03-10T21:12:40+08:00">2021-03-10</time>
     </span>
-      <span class="post-meta-item">
-        <span class="post-meta-item-icon">
-          <i class="far fa-calendar-check"></i>
-        </span>
-        <span class="post-meta-item-text">更新于</span>
-        <time title="修改时间：2021-03-10 13:43:55" itemprop="dateModified" datetime="2021-03-10T13:43:55+08:00">2021-03-10</time>
-      </span>
     <span class="post-meta-item">
       <span class="post-meta-item-icon">
         <i class="far fa-folder"></i>
       </span>
       <span class="post-meta-item-text">分类于</span>
         <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-          <a href="/nirvana/categories/android/" itemprop="url" rel="index"><span itemprop="name">android</span></a>
+          <a href="/nirvana/categories/mac/" itemprop="url" rel="index"><span itemprop="name">mac</span></a>
         </span>
     </span>
 
   
-    <span id="/nirvana/android/android/Mac-%E9%85%8D%E7%BD%AE-adb/" class="post-meta-item leancloud_visitors" data-flag-title="Mac-配置-adb" title="阅读次数">
+    <span id="/nirvana/mac/mac/mac%E7%BB%88%E7%AB%AF%E5%88%87%E6%8D%A2%E7%94%A8%E6%88%B7/" class="post-meta-item leancloud_visitors" data-flag-title="mac终端切换用户" title="阅读次数">
       <span class="post-meta-item-icon">
         <i class="far fa-eye"></i>
       </span>
@@ -883,7 +690,7 @@
         <i class="far fa-file-word"></i>
       </span>
       <span class="post-meta-item-text">本文字数：</span>
-      <span>791</span>
+      <span>359</span>
     </span>
     <span class="post-meta-item" title="阅读时长">
       <span class="post-meta-item-icon">
@@ -901,33 +708,9 @@
     
     
     <div class="post-body" itemprop="articleBody">
-          <p>第一步：打开终端，进入根目录。</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$HOME (进入根目录)</span><br></pre></td></tr></table></figure>
-
-<p>第二步：创建 .bash_profile 文件（已存在则无需创建）。</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">touch .bash_profile （创建 .bash_profile 文件）</span><br></pre></td></tr></table></figure>
-<p>第三步：打开并编辑 .bash_profile 文件。</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">open -e .bash_profile （打开编辑 .bash_profile）</span><br></pre></td></tr></table></figure>
-<p>在该文件中配置 adb 的路径信息，比如我的（注意替换为你的路径）：</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">export ANDROID_HOME&#x3D;&#x2F;Users&#x2F;mac&#x2F;Library&#x2F;Android&#x2F;sdk</span><br><span class="line">export PATH&#x3D;$PATH:$ANDROID_HOME&#x2F;tools</span><br><span class="line">export PATH&#x3D;$PATH:$ANDROID_HOME&#x2F;platform-tools</span><br></pre></td></tr></table></figure>
-<p>第四步：使配置生效。</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">source .bash_profile</span><br></pre></td></tr></table></figure>
-<p>到这里， 如果输入 adb 后并没有提示：</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">-bash: adb: command not found</span><br></pre></td></tr></table></figure>
-<p>就表示已经配置成功了。</p>
-<p>但是如果你此时退出终端，然后重新打开终端输入 adb，又提示你：</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">-bash: adb: command not found</span><br></pre></td></tr></table></figure>
-<p>那么你就需要做如下操作了，首先检查你的 shell：</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">echo $SHELL</span><br></pre></td></tr></table></figure>
-<p>如果是 base，就把：</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">~&#x2F;.bash_profile</span><br></pre></td></tr></table></figure>
-<p>追加到 ~/.bashrc 末尾。</p>
-<p>如果是 zsh，就把</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">~&#x2F;.bash_profile</span><br></pre></td></tr></table></figure>
-<p>追加到 ~/.zshrc 末尾。</p>
-<p>如果没有对于的 .bashrc 、.zshrc 文件，那么按照上面对应的命令新建一个即可。<br>这里以 shell 为 base 以及没有 .bashrc 文件为例，贴一下终端代码：</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">$HOME</span><br><span class="line">touch .bashrc</span><br><span class="line">open -e .bashrc</span><br></pre></td></tr></table></figure>
-<p>将 ~/.bash_profile 保存到刚打开的文件中，重新打开终端</p>
+          <p>1、mac终端切换用户到root<br>sudo -i即可</p>
+<p>2、mac终端切换成普通用户<br>su - test（test为用户名）即可</p>
+<p>3、mac可以设置命令别名<br>如ll，正常情况下，mac终端不识别ll命令，但是alias 命令设置别名后，终端即可以设别ll命令：alias ll=’ls -la’；但是没有修改系统文件，则该命令只能临时生效，下次再打开终端，还是不能识别ll命令，永久生效办法，请修改系统文件，方法有多种，请自行百度（如果不是ll命令，其他命令同理）<br>————————————————<br>版权声明：本文为CSDN博主「CoberOJ_」的原创文章，遵循 CC 4.0 BY-SA 版权协议，转载请附上原文出处链接及本声明。<br>原文链接：<a target="_blank" rel="noopener" href="https://blog.csdn.net/huodoubi/article/details/69948483">https://blog.csdn.net/huodoubi/article/details/69948483</a></p>
 
       
     </div>
@@ -954,7 +737,7 @@
   
 
   <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="">
-    <link itemprop="mainEntityOfPage" href="https://lzhwweb.github.io/nirvana/linux/linux/Linux%E4%B8%8Biptables%E9%98%B2%E7%81%AB%E5%A2%99%E9%85%8D%E7%BD%AE%E8%AF%A6%E8%A7%A3/">
+    <link itemprop="mainEntityOfPage" href="https://lzhwweb.github.io/nirvana/mac/mac/%E8%8B%B9%E6%9E%9CMac%E6%93%8D%E4%BD%9C%E7%B3%BB%E7%BB%9F%E4%B8%8B%E6%80%8E%E4%B9%88%E6%98%BE%E7%A4%BA%E9%9A%90%E8%97%8F%E6%96%87%E4%BB%B6/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="image" content="/nirvana/images/headphoto.jpeg">
@@ -967,7 +750,7 @@
     </span>
       <header class="post-header">
         <h2 class="post-title" itemprop="name headline">
-          <a href="/nirvana/linux/linux/Linux%E4%B8%8Biptables%E9%98%B2%E7%81%AB%E5%A2%99%E9%85%8D%E7%BD%AE%E8%AF%A6%E8%A7%A3/" class="post-title-link" itemprop="url">Linux下iptables防火墙配置详解</a>
+          <a href="/nirvana/mac/mac/%E8%8B%B9%E6%9E%9CMac%E6%93%8D%E4%BD%9C%E7%B3%BB%E7%BB%9F%E4%B8%8B%E6%80%8E%E4%B9%88%E6%98%BE%E7%A4%BA%E9%9A%90%E8%97%8F%E6%96%87%E4%BB%B6/" class="post-title-link" itemprop="url">苹果Mac操作系统下怎么显示隐藏文件</a>
         </h2>
 
         <div class="post-meta-container">
@@ -977,28 +760,22 @@
         <i class="far fa-calendar"></i>
       </span>
       <span class="post-meta-item-text">发表于</span>
+      
 
-      <time title="创建时间：2021-03-09 21:12:40" itemprop="dateCreated datePublished" datetime="2021-03-09T21:12:40+08:00">2021-03-09</time>
+      <time title="创建时间：2021-03-10 21:12:40 / 修改时间：13:43:55" itemprop="dateCreated datePublished" datetime="2021-03-10T21:12:40+08:00">2021-03-10</time>
     </span>
-      <span class="post-meta-item">
-        <span class="post-meta-item-icon">
-          <i class="far fa-calendar-check"></i>
-        </span>
-        <span class="post-meta-item-text">更新于</span>
-        <time title="修改时间：2021-03-10 13:43:55" itemprop="dateModified" datetime="2021-03-10T13:43:55+08:00">2021-03-10</time>
-      </span>
     <span class="post-meta-item">
       <span class="post-meta-item-icon">
         <i class="far fa-folder"></i>
       </span>
       <span class="post-meta-item-text">分类于</span>
         <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-          <a href="/nirvana/categories/linux/" itemprop="url" rel="index"><span itemprop="name">linux</span></a>
+          <a href="/nirvana/categories/mac/" itemprop="url" rel="index"><span itemprop="name">mac</span></a>
         </span>
     </span>
 
   
-    <span id="/nirvana/linux/linux/Linux%E4%B8%8Biptables%E9%98%B2%E7%81%AB%E5%A2%99%E9%85%8D%E7%BD%AE%E8%AF%A6%E8%A7%A3/" class="post-meta-item leancloud_visitors" data-flag-title="Linux下iptables防火墙配置详解" title="阅读次数">
+    <span id="/nirvana/mac/mac/%E8%8B%B9%E6%9E%9CMac%E6%93%8D%E4%BD%9C%E7%B3%BB%E7%BB%9F%E4%B8%8B%E6%80%8E%E4%B9%88%E6%98%BE%E7%A4%BA%E9%9A%90%E8%97%8F%E6%96%87%E4%BB%B6/" class="post-meta-item leancloud_visitors" data-flag-title="苹果Mac操作系统下怎么显示隐藏文件" title="阅读次数">
       <span class="post-meta-item-icon">
         <i class="far fa-eye"></i>
       </span>
@@ -1012,144 +789,7 @@
         <i class="far fa-file-word"></i>
       </span>
       <span class="post-meta-item-text">本文字数：</span>
-      <span>4.2k</span>
-    </span>
-    <span class="post-meta-item" title="阅读时长">
-      <span class="post-meta-item-icon">
-        <i class="far fa-clock"></i>
-      </span>
-      <span class="post-meta-item-text">阅读时长 &asymp;</span>
-      <span>4 分钟</span>
-    </span>
-</div>
-
-        </div>
-      </header>
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-          <ol>
-<li>iptables命令及参数介绍<br>iptables常用命令：<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line">iptables -A 将一个规则添加到链末尾</span><br><span class="line">iptables -D 将指定的链中删除规则</span><br><span class="line">iptables -F 将指定的链中删除所有规则</span><br><span class="line">iptables -I 将在指定链的指定编号位置插入一个规则</span><br><span class="line">iptables -L 列出指定链中所有规则</span><br><span class="line">iptables -t nat -L 列出所有NAT链中所有规则</span><br><span class="line">iptables -N 建立用户定义链</span><br><span class="line">iptables -X 删除用户定义链</span><br><span class="line">iptables -P 修改链的默认设置，如将iptables -P INPUT DROP (将INPUT链设置为DROP)</span><br></pre></td></tr></table></figure>
-常见设置参数介绍：<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><span class="line">--dport 指定目标TCP&#x2F;IP端口 如 –dport 80</span><br><span class="line">--sport 指定源TCP&#x2F;IP端口 如 –sport 80</span><br><span class="line">-p tcp 指定协议为tcp</span><br><span class="line">-p icmp 指定协议为ICMP</span><br><span class="line">-p udp 指定协议为UDP</span><br><span class="line">-j DROP 拒绝</span><br><span class="line">-j ACCEPT 允许</span><br><span class="line">-j REJECT 拒绝并向发出消息的计算机发一个消息</span><br><span class="line">-j LOG 在&#x2F;var&#x2F;log&#x2F;messages中登记分组匹配的记录</span><br><span class="line">-m mac –mac 绑定MAC地址</span><br><span class="line">-m limit –limit 1&#x2F;s 1&#x2F;m 设置时间策列</span><br><span class="line">-s 10.10.0.0或10.10.0.0&#x2F;16 指定源地址或地址段</span><br><span class="line">-d 10.10.0.0或10.10.0.0&#x2F;16 指定目标地址或地址段</span><br><span class="line">-s ! 10.10.0.0 指定源地址以外的</span><br></pre></td></tr></table></figure>
-iptables配置文件<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">配置文件位置： &#x2F;etc&#x2F;sysconfig&#x2F;iptables</span><br></pre></td></tr></table></figure>
-iptables服务命令</li>
-</ol>
-<p>– 启动服务</p>
-<h1 id="etc-init-d-iptables-start"><a href="#etc-init-d-iptables-start" class="headerlink" title="/etc/init.d/iptables start"></a>/etc/init.d/iptables start</h1><h1 id="service-iptables-start"><a href="#service-iptables-start" class="headerlink" title="service iptables start"></a>service iptables start</h1><p>– 停止服务</p>
-<h1 id="etc-init-d-iptables-stop"><a href="#etc-init-d-iptables-stop" class="headerlink" title="/etc/init.d/iptables stop"></a>/etc/init.d/iptables stop</h1><h1 id="service-iptables-stop"><a href="#service-iptables-stop" class="headerlink" title="service iptables stop"></a>service iptables stop</h1><p>– 重启服务</p>
-<h1 id="etc-init-d-iptables-restart"><a href="#etc-init-d-iptables-restart" class="headerlink" title="/etc/init.d/iptables restart"></a>/etc/init.d/iptables restart</h1><h1 id="service-iptables-restart"><a href="#service-iptables-restart" class="headerlink" title="service iptables restart"></a>service iptables restart</h1><p>– 保存设置</p>
-<h1 id="etc-init-d-iptables-save"><a href="#etc-init-d-iptables-save" class="headerlink" title="/etc/init.d/iptables save"></a>/etc/init.d/iptables save</h1><h1 id="service-iptables-save"><a href="#service-iptables-save" class="headerlink" title="service iptables save"></a>service iptables save</h1><ol start="2">
-<li>配置Filter表防火墙<br>查看iptables的配置信息</li>
-</ol>
-<h1 id="iptables-L-n"><a href="#iptables-L-n" class="headerlink" title="iptables -L -n"></a>iptables -L -n</h1><p>清除原有防火墙规则</p>
-<p>清除预设表filter中的所有规则链的规则</p>
-<h1 id="iptables-F"><a href="#iptables-F" class="headerlink" title="iptables -F"></a>iptables -F</h1><p>清除预设表filter中使用者自定链中的规则</p>
-<h1 id="iptables-X"><a href="#iptables-X" class="headerlink" title="iptables -X"></a>iptables -X</h1><p>保存防火墙设置</p>
-<h1 id="etc-init-d-iptables-save-1"><a href="#etc-init-d-iptables-save-1" class="headerlink" title="/etc/init.d/iptables save"></a>/etc/init.d/iptables save</h1><p>或</p>
-<h1 id="service-iptables-save-1"><a href="#service-iptables-save-1" class="headerlink" title="service iptables save"></a>service iptables save</h1><p>设定预设规则</p>
-<p>– 请求接入包丢弃<br>[root@home ~]# iptables -p INPUT DROP<br>– 接受响应数据包<br>[root@home ~]# iptables -p OUTPUT ACCEPT<br>– 转发数据包丢弃<br>[root@home ~]# iptables -p FORWARD DROP<br>添加防火墙规则</p>
-<p>首先添加INPUT链,INPUT链的默认规则是DROP,所以我们就写需要ACCETP(通过)的链。</p>
-<p>开启SSH服务端口<br>[root@tp ~]# iptables -A INPUT -p tcp –dport 22 -j ACCEPT<br>[root@tp ~]# iptables -A OUTPUT -p tcp –sport 22 -j ACCEPT<br>注:如果在预设设置把OUTPUT设置成DROP策略的话，就需要设置OUTPUT规则，否则无法进行SSH连接。</p>
-<p>开启Web服务端口<br>[root@tp ~]# iptables -A OUTPUT -p tcp –sport 80 -j ACCEPT<br>[root@tp ~]# iptables -A INPUT -p tcp –dport 80 -j ACCEPT<br>开启邮件服务的25、110端口<br>[root@tp ~]# iptables -A INPUT -p tcp –dport 110 -j ACCEPT<br>[root@tp ~]# iptables -A INPUT -p tcp –dport 25 -j ACCEPT<br>开启FTP服务的21端口<br>[root@tp ~]# iptables -A INPUT -p tcp –dport 21 -j ACCEPT<br>[root@tp ~]# iptables -A INPUT -p tcp –dport 20 -j ACCEPT<br>开启DNS服务的53端口<br>[root@tp ~]# iptables -A INPUT -p tcp –dport 53 -j ACCEPT<br>设置icmp服务<br>[root@tp ~]# iptables -A OUTPUT -p icmp -j ACCEPT (OUTPUT设置成DROP的话)<br>[root@tp ~]# iptables -A INPUT -p icmp -j ACCEPT    (INPUT设置成DROP的话)<br>允许loopback<br>不然会导致DNS无法正常关闭等问题</p>
-<p>[root@tp ~]# IPTABLES -A INPUT -i lo -p all -j ACCEPT<br>(如果是INPUT DROP)<br>[root@tp ~]# IPTABLES -A OUTPUT -o lo -p all -j ACCEPT<br>(如果是OUTPUT DROP)<br>减少不安全的端口连接<br>[root@tp ~]# iptables -A OUTPUT -p tcp –sport 31337 -j DROP<br>[root@tp ~]# iptables -A OUTPUT -p tcp –dport 31337 -j DROP<br>说明：有些特洛伊木马会扫描端口31337到31340(即黑客语言中的 elite 端口)上的服务。既然合法服务都不使用这些非标准端口来通信,阻塞这些端口能够有效地减少你的网络上可能被感染的机器和它们的远程主服务器进行独立通信的机会。此外，其他端口也一样,像:31335、27444、27665、20034 NetBus、9704、137-139（smb）,2049(NFS)端口也应被禁止。</p>
-<p>只允许某台主机或某个网段进行SSH连接<br>只允许192.168.0.3的机器进行SSH连接</p>
-<p>[root@tp ~]# iptables -A INPUT -s 192.168.0.3 -p tcp –dport 22 -j ACCEPT<br>如果允许或限制一段IP地址可用192.168.0.0/24表示192.168.0.1-255端的所有IP, 24表示子网掩码数。</p>
-<p>[root@tp ~]# iptables -A INPUT -s 192.168.0.0/24 -p tcp –dport 22 -j ACCEPT<br>注意：指定某个主机或者某个网段进行SSH连接，需要在iptables配置文件中的-A INPUT -p tcp -m tcp –dport 22 -j ACCEPT<br>删除，因为它表示所有地址都可以登陆.</p>
-<p>如果只允许除了192.168.0.3的主机外都能进行SSH连接</p>
-<p>[root@tp ~]# iptables -A INPUT -s ! 192.168.0.3 -p tcp –dport 22 -j ACCEPT<br>开启转发功能<br>在做NAT网络配置时,FORWARD默认规则是DROP时,必须开启数据包转发功能</p>
-<p>[root@tp ~]# iptables -A FORWARD -i eth0 -o eth1 -m state –state RELATED,ESTABLISHED -j ACCEPT<br>[root@tp ~]# iptables -A FORWARD -i eth1 -o eh0 -j ACCEPT<br>丢弃坏的TCP包<br>[root@tp ~]#iptables -A FORWARD -p TCP ! –syn -m state –state NEW -j DROP<br>处理IP碎片数量，防止DDOS攻击，允许每秒100个<br>[root@tp ~]#iptables -A FORWARD -f -m limit –limit 100/s –limit-burst 100 -j ACCEPT<br>设置ICMP包过滤, 允许每秒1个包, 限制触发条件是10个包<br>[root@tp ~]#iptables -A FORWARD -p icmp -m limit –limit 1/s –limit-burst 10 -j ACCEPT<br>DROP非法连接<br>[root@tp ~]# iptables -A INPUT   -m state –state INVALID -j DROP<br>[root@tp ~]# iptables -A OUTPUT  -m state –state INVALID -j DROP<br>[root@tp ~]# iptables -A FORWARD -m state –state INVALID -j DROP<br>允许所有已经建立的和相关的连接<br>[root@tp ~]# iptables-A INPUT -m state –state ESTABLISHED,RELATED -j ACCEPT<br>[root@tp ~]# iptables-A OUTPUT -m state –state ESTABLISHED,RELATED -j ACCEPT<br>[root@tp ~]# /etc/rc.d/init.d/iptables save<br>3. 配置NAT表防火墙<br>查看本机关于NAT的设置情况</p>
-<p>[root@tp rc.d]# iptables -t nat -L<br>清除NAT规则</p>
-<p>[root@tp ~]# iptables -F -t nat<br>[root@tp ~]# iptables -X -t nat<br>[root@tp ~]# iptables -Z -t nat<br>添加规则</p>
-<p>添加基本的NAT地址转换，添加规则时，我们只添加DROP链，因为默认链全是ACCEPT。</p>
-<p>防止外网用内网IP欺骗<br>[root@tp sysconfig]# iptables -t nat -A PREROUTING -i eth0 -s 10.0.0.0/8 -j DROP<br>[root@tp sysconfig]# iptables -t nat -A PREROUTING -i eth0 -s 172.16.0.0/12 -j DROP<br>[root@tp sysconfig]# iptables -t nat -A PREROUTING -i eth0 -s 192.168.0.0/16 -j DROP<br>禁止与211.101.46.253的所有连接<br>[root@tp ~]# iptables -t nat -A PREROUTING -d 211.101.46.253 -j DROP<br>禁用FTP(21)端口<br>[root@tp ~]# iptables -t nat -A PREROUTING -p tcp –dport 21 -j DROP<br>只禁用211.101.46.253地址的FTP连接,其他连接可以进行。</p>
-<p>[root@tp ~]# iptables -t nat -A PREROUTING -p tcp –dport 21 -d 211.101.46.253 -j DROP</p>
-
-      
-    </div>
-
-    
-    
-    
-
-    <footer class="post-footer">
-        <div class="post-eof"></div>
-      
-    </footer>
-  </article>
-</div>
-
-
-
-
-    
-
-
-<div class="post-block">
-  
-  
-
-  <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="">
-    <link itemprop="mainEntityOfPage" href="https://lzhwweb.github.io/nirvana/linux/linux/linux%E4%B8%8Byum%E5%AE%89%E8%A3%85%E6%9C%80%E6%96%B0%E7%A8%B3%E5%AE%9A%E7%89%88nginx/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="image" content="/nirvana/images/headphoto.jpeg">
-      <meta itemprop="name" content="nirvana">
-      <meta itemprop="description" content="个人学习笔记">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="涅槃快乐是金">
-    </span>
-      <header class="post-header">
-        <h2 class="post-title" itemprop="name headline">
-          <a href="/nirvana/linux/linux/linux%E4%B8%8Byum%E5%AE%89%E8%A3%85%E6%9C%80%E6%96%B0%E7%A8%B3%E5%AE%9A%E7%89%88nginx/" class="post-title-link" itemprop="url">linux下yum安装最新稳定版nginx</a>
-        </h2>
-
-        <div class="post-meta-container">
-          <div class="post-meta">
-    <span class="post-meta-item">
-      <span class="post-meta-item-icon">
-        <i class="far fa-calendar"></i>
-      </span>
-      <span class="post-meta-item-text">发表于</span>
-
-      <time title="创建时间：2021-03-09 21:12:40" itemprop="dateCreated datePublished" datetime="2021-03-09T21:12:40+08:00">2021-03-09</time>
-    </span>
-      <span class="post-meta-item">
-        <span class="post-meta-item-icon">
-          <i class="far fa-calendar-check"></i>
-        </span>
-        <span class="post-meta-item-text">更新于</span>
-        <time title="修改时间：2021-03-10 13:43:55" itemprop="dateModified" datetime="2021-03-10T13:43:55+08:00">2021-03-10</time>
-      </span>
-    <span class="post-meta-item">
-      <span class="post-meta-item-icon">
-        <i class="far fa-folder"></i>
-      </span>
-      <span class="post-meta-item-text">分类于</span>
-        <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-          <a href="/nirvana/categories/linux/" itemprop="url" rel="index"><span itemprop="name">linux</span></a>
-        </span>
-    </span>
-
-  
-    <span id="/nirvana/linux/linux/linux%E4%B8%8Byum%E5%AE%89%E8%A3%85%E6%9C%80%E6%96%B0%E7%A8%B3%E5%AE%9A%E7%89%88nginx/" class="post-meta-item leancloud_visitors" data-flag-title="linux下yum安装最新稳定版nginx" title="阅读次数">
-      <span class="post-meta-item-icon">
-        <i class="far fa-eye"></i>
-      </span>
-      <span class="post-meta-item-text">阅读次数：</span>
-      <span class="leancloud-visitors-count"></span>
-    </span>
-      </div>
-      <div class="post-meta">
-    <span class="post-meta-item" title="本文字数">
-      <span class="post-meta-item-icon">
-        <i class="far fa-file-word"></i>
-      </span>
-      <span class="post-meta-item-text">本文字数：</span>
-      <span>611</span>
+      <span>451</span>
     </span>
     <span class="post-meta-item" title="阅读时长">
       <span class="post-meta-item-icon">
@@ -1167,21 +807,7 @@ iptables服务命令</li>
     
     
     <div class="post-body" itemprop="articleBody">
-          <h2 id="摘抄nginx官网文档"><a href="#摘抄nginx官网文档" class="headerlink" title="摘抄nginx官网文档"></a>摘抄nginx官网文档</h2><p>URL：<a target="_blank" rel="noopener" href="http://nginx.org/en/linux_packages.html#stable" title="http://nginx.org/en/linux_packages.html#stable">http://nginx.org/en/linux_packages.html#stable</a></p>
-<p>To set up the yum repository for RHEL/CentOS, create the file named <code>/etc/yum.repos.d/nginx.repo</code> with the following contents:</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">[nginx]</span><br><span class="line">name&#x3D;nginx repo</span><br><span class="line">baseurl&#x3D;http:&#x2F;&#x2F;nginx.org&#x2F;packages&#x2F;centos&#x2F;7&#x2F;$basearch&#x2F;</span><br><span class="line">gpgcheck&#x3D;0 </span><br><span class="line">enabled&#x3D;1</span><br></pre></td></tr></table></figure>
-
-<p>Replace “<code>OS</code>” with “<code>rhel</code>” or “<code>centos</code>”, depending on the distribution used, and “<code>OSRELEASE</code>” with “<code>6</code>” or “<code>7</code>”, for 6.x or 7.x versions, respectively.</p>
-<p>执行如下命令进行yum安装nginx</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">yum install nginx</span><br></pre></td></tr></table></figure>
-
-<p>查看nginx版本</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"># 查看nginx版本</span><br><span class="line">nginx -v</span><br><span class="line"></span><br><span class="line"># 查看编译参数</span><br><span class="line">nginx -V&lt;&#x2F;pre&gt;</span><br></pre></td></tr></table></figure>
-<p> 查看安装目录</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">rpm -ql nginx</span><br></pre></td></tr></table></figure>
-
-<p>查看配置文件</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"># 用于日志切割</span><br><span class="line"> &#x2F;etc&#x2F;logrotate.d&#x2F;nginx</span><br></pre></td></tr></table></figure>
+          <p>方法一：<br>第一步：打开「终端」应用程序。<br>第二步：输入如下命令：<br><code>defaults write com.apple.finder AppleShowAllFiles -boolean true ; killall Finder</code><br>第三步：按下「Return」键确认。<br>现在你将会在 Finder 窗口中看到那些隐藏的文件和文件夹了。<br>如果你想再次隐藏原本的隐藏文件和文件夹的话，将上述命令替换成<br><code>defaults write com.apple.finder AppleShowAllFiles -boolean false ; killall Finder</code><br>即可。<br>方法二：<br>Finder界面是，最上方，通过“前往”进入“电脑”或文件夹，先进入到需要显示隐藏文件的文件夹下<br>接着按<code>Command+F</code>,在窗格上会显示搜索栏<br>然后将第一个下列选择项“种类kind”选择为“其它Other”，当选择“其它”时，弹出新的搜索窗口，找到下面的“文件不可见File invisible”项，勾上后面的对勾，再单击“好OK”即可，返回文件夹，就可以看到，隐藏的文件已经显示出来了</p>
 
       
     </div>
@@ -1208,7 +834,7 @@ iptables服务命令</li>
   
 
   <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="">
-    <link itemprop="mainEntityOfPage" href="https://lzhwweb.github.io/nirvana/linux/linux/linux-%E6%9F%A5%E7%9C%8B%E6%95%B4%E4%B8%AA%E6%A0%B9%E7%9B%AE%E5%BD%95%E4%B8%8B%E5%90%84%E4%B8%AA%E6%96%87%E4%BB%B6%E5%8D%A0%E7%94%A8%E6%83%85%E5%86%B5/">
+    <link itemprop="mainEntityOfPage" href="https://lzhwweb.github.io/nirvana/mac/mac/%E8%A7%A3%E5%86%B3-mac-%EF%BC%88windows%EF%BC%89%E7%BB%88%E7%AB%AF%E4%B8%8A%E4%BB%A3%E7%90%86%E7%9A%84%E9%9A%BE%E9%A2%98/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="image" content="/nirvana/images/headphoto.jpeg">
@@ -1221,7 +847,7 @@ iptables服务命令</li>
     </span>
       <header class="post-header">
         <h2 class="post-title" itemprop="name headline">
-          <a href="/nirvana/linux/linux/linux-%E6%9F%A5%E7%9C%8B%E6%95%B4%E4%B8%AA%E6%A0%B9%E7%9B%AE%E5%BD%95%E4%B8%8B%E5%90%84%E4%B8%AA%E6%96%87%E4%BB%B6%E5%8D%A0%E7%94%A8%E6%83%85%E5%86%B5/" class="post-title-link" itemprop="url">linux 查看磁盘空间占用情况</a>
+          <a href="/nirvana/mac/mac/%E8%A7%A3%E5%86%B3-mac-%EF%BC%88windows%EF%BC%89%E7%BB%88%E7%AB%AF%E4%B8%8A%E4%BB%A3%E7%90%86%E7%9A%84%E9%9A%BE%E9%A2%98/" class="post-title-link" itemprop="url">解决-mac-（windows）终端上代理的难题</a>
         </h2>
 
         <div class="post-meta-container">
@@ -1231,150 +857,22 @@ iptables服务命令</li>
         <i class="far fa-calendar"></i>
       </span>
       <span class="post-meta-item-text">发表于</span>
+      
 
-      <time title="创建时间：2021-03-09 21:12:40" itemprop="dateCreated datePublished" datetime="2021-03-09T21:12:40+08:00">2021-03-09</time>
+      <time title="创建时间：2021-03-10 21:12:40 / 修改时间：13:43:55" itemprop="dateCreated datePublished" datetime="2021-03-10T21:12:40+08:00">2021-03-10</time>
     </span>
-      <span class="post-meta-item">
-        <span class="post-meta-item-icon">
-          <i class="far fa-calendar-check"></i>
-        </span>
-        <span class="post-meta-item-text">更新于</span>
-        <time title="修改时间：2021-03-10 13:43:55" itemprop="dateModified" datetime="2021-03-10T13:43:55+08:00">2021-03-10</time>
-      </span>
     <span class="post-meta-item">
       <span class="post-meta-item-icon">
         <i class="far fa-folder"></i>
       </span>
       <span class="post-meta-item-text">分类于</span>
         <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-          <a href="/nirvana/categories/linux/" itemprop="url" rel="index"><span itemprop="name">linux</span></a>
+          <a href="/nirvana/categories/mac/" itemprop="url" rel="index"><span itemprop="name">mac</span></a>
         </span>
     </span>
 
   
-    <span id="/nirvana/linux/linux/linux-%E6%9F%A5%E7%9C%8B%E6%95%B4%E4%B8%AA%E6%A0%B9%E7%9B%AE%E5%BD%95%E4%B8%8B%E5%90%84%E4%B8%AA%E6%96%87%E4%BB%B6%E5%8D%A0%E7%94%A8%E6%83%85%E5%86%B5/" class="post-meta-item leancloud_visitors" data-flag-title="linux 查看磁盘空间占用情况" title="阅读次数">
-      <span class="post-meta-item-icon">
-        <i class="far fa-eye"></i>
-      </span>
-      <span class="post-meta-item-text">阅读次数：</span>
-      <span class="leancloud-visitors-count"></span>
-    </span>
-      </div>
-      <div class="post-meta">
-    <span class="post-meta-item" title="本文字数">
-      <span class="post-meta-item-icon">
-        <i class="far fa-file-word"></i>
-      </span>
-      <span class="post-meta-item-text">本文字数：</span>
-      <span>520</span>
-    </span>
-    <span class="post-meta-item" title="阅读时长">
-      <span class="post-meta-item-icon">
-        <i class="far fa-clock"></i>
-      </span>
-      <span class="post-meta-item-text">阅读时长 &asymp;</span>
-      <span>1 分钟</span>
-    </span>
-</div>
-
-        </div>
-      </header>
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-          <p>服务器运行一点时间后各种的项目文件，日志文件，数据库备份登，会越来越多，在linux下不像是win下一样直接右键属性可以查看，那么怎么看呢？  用到的命令 du 和 df 命令。</p>
-<p>先上代码：</p>
-<ol>
-<li>    df -h 命令查看磁盘空间<br><img src="https://upload-images.jianshu.io/upload_images/10024246-7ce57bd365e173f7.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240"></li>
-</ol>
-<ol start="2">
-<li>  du -ah –max-depth=1  /    查看根目录下各个文件占用情况<br><img src="https://upload-images.jianshu.io/upload_images/10024246-c3a3064e29607710.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240"></li>
-</ol>
-<p>max-depth表示目录的深度。</p>
-<ol start="2">
-<li>查看某个目录   du -bsh 命令看一下常用的usr目录大小</li>
-</ol>
-<p>    du -bsh 可以看到uer 目录占用了2.8G<br><img src="https://upload-images.jianshu.io/upload_images/10024246-165d469d572f959c.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240"></p>
-<ol start="3">
-<li> 进入usr目录用find 命令找到大于100M文件   find . -size +100M <br>    可以看到 小写的m不识别</li>
-</ol>
-<p><img src="https://upload-images.jianshu.io/upload_images/10024246-704e938a03244f0d.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240"></p>
-<p>二、du常用的选项：<br>　　-h：以人类可读的方式显示<br>　　-a：显示目录占用的磁盘空间大小，还要显示其下目录和文件占用磁盘空间的大小<br>　　-s：显示目录占用的磁盘空间大小，不要显示其下子目录和文件占用的磁盘空间大小<br>　　-c：显示几个目录或文件占用的磁盘空间大小，还要统计它们的总和<br>　　–apparent-size：显示目录或文件自身的大小<br>　　-l ：统计硬链接占用磁盘空间的大小<br>　　-L：统计符号链接所指向的文件占用的磁盘空间大小</p>
-<p>du -sh : 查看当前目录总共占的容量。而不单独列出各子项占用的容量 </p>
-<p>du -lh –max-depth=1 : 查看当前目录下一级子文件和子目录占用的磁盘容量。</p>
-
-      
-    </div>
-
-    
-    
-    
-
-    <footer class="post-footer">
-        <div class="post-eof"></div>
-      
-    </footer>
-  </article>
-</div>
-
-
-
-
-    
-
-
-<div class="post-block">
-  
-  
-
-  <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="">
-    <link itemprop="mainEntityOfPage" href="https://lzhwweb.github.io/nirvana/linux/linux/linux%E4%B8%8B%E5%AE%89%E8%A3%85nginx/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="image" content="/nirvana/images/headphoto.jpeg">
-      <meta itemprop="name" content="nirvana">
-      <meta itemprop="description" content="个人学习笔记">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="涅槃快乐是金">
-    </span>
-      <header class="post-header">
-        <h2 class="post-title" itemprop="name headline">
-          <a href="/nirvana/linux/linux/linux%E4%B8%8B%E5%AE%89%E8%A3%85nginx/" class="post-title-link" itemprop="url">linux版本：CentOS7 64位</a>
-        </h2>
-
-        <div class="post-meta-container">
-          <div class="post-meta">
-    <span class="post-meta-item">
-      <span class="post-meta-item-icon">
-        <i class="far fa-calendar"></i>
-      </span>
-      <span class="post-meta-item-text">发表于</span>
-
-      <time title="创建时间：2021-03-09 21:12:40" itemprop="dateCreated datePublished" datetime="2021-03-09T21:12:40+08:00">2021-03-09</time>
-    </span>
-      <span class="post-meta-item">
-        <span class="post-meta-item-icon">
-          <i class="far fa-calendar-check"></i>
-        </span>
-        <span class="post-meta-item-text">更新于</span>
-        <time title="修改时间：2021-03-10 13:43:55" itemprop="dateModified" datetime="2021-03-10T13:43:55+08:00">2021-03-10</time>
-      </span>
-    <span class="post-meta-item">
-      <span class="post-meta-item-icon">
-        <i class="far fa-folder"></i>
-      </span>
-      <span class="post-meta-item-text">分类于</span>
-        <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-          <a href="/nirvana/categories/linux/" itemprop="url" rel="index"><span itemprop="name">linux</span></a>
-        </span>
-    </span>
-
-  
-    <span id="/nirvana/linux/linux/linux%E4%B8%8B%E5%AE%89%E8%A3%85nginx/" class="post-meta-item leancloud_visitors" data-flag-title="linux版本：CentOS7 64位" title="阅读次数">
+    <span id="/nirvana/mac/mac/%E8%A7%A3%E5%86%B3-mac-%EF%BC%88windows%EF%BC%89%E7%BB%88%E7%AB%AF%E4%B8%8A%E4%BB%A3%E7%90%86%E7%9A%84%E9%9A%BE%E9%A2%98/" class="post-meta-item leancloud_visitors" data-flag-title="解决-mac-（windows）终端上代理的难题" title="阅读次数">
       <span class="post-meta-item-icon">
         <i class="far fa-eye"></i>
       </span>
@@ -1406,49 +904,28 @@ iptables服务命令</li>
     
     
     <div class="post-body" itemprop="articleBody">
-          <p>【yum 安装最新版nginx：<a target="_blank" rel="noopener" href="https://www.jianshu.com/p/a2de35ee5283">https://www.jianshu.com/p/a2de35ee5283</a>】</p>
-<p>在安装nginx前首先要确认系统中安装了<code>**gcc、pcre-devel、zlib-devel、openssl-devel**</code>。</p>
-<p>Linux下检查是否安装过某软件包：<a target="_blank" rel="noopener" href="https://www.jianshu.com/p/356c2d9deff1">https://www.jianshu.com/p/356c2d9deff1</a></p>
-<p>安装命令：</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">yum -y install gcc pcre-devel zlib-devel openssl openssl-devel</span><br></pre></td></tr></table></figure>
-
-<p>nginx下载地址：<a target="_blank" rel="noopener" href="https://nginx.org/download/">https://nginx.org/download/</a></p>
-<p>下载“nginx-1.18.0.tar.gz”，移动到/usr/local/下。</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line">## 解压</span><br><span class="line">tar -zxvf nginx-1.18.0.tar.gz</span><br><span class="line"></span><br><span class="line">##进入nginx目录</span><br><span class="line">cd nginx-1.18.0</span><br><span class="line">## 配置</span><br><span class="line">.&#x2F;configure --prefix&#x3D;&#x2F;usr&#x2F;local&#x2F;nginx</span><br><span class="line"># make</span><br><span class="line">make</span><br><span class="line">make install</span><br></pre></td></tr></table></figure>
-
-<p>OK，现在可以执行make 了。 </p>
-<p>   <img src="https://upload-images.jianshu.io/upload_images/10024246-e43e02b3dca9408f.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240"></p>
-<p>执行make、make install命令</p>
-<p>测试是否安装成功</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"># cd到刚才配置的安装目录</span><br><span class="line">&#x2F;usr&#x2F;loca&#x2F;nginx&#x2F;</span><br><span class="line">.&#x2F;sbin&#x2F;nginx -t</span><br></pre></td></tr></table></figure>
-
-<p><code>**错误信息**</code>：</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">nginx: [alert] could not open error log file: open() &quot;&#x2F;usr&#x2F;local&#x2F;nginx&#x2F;logs&#x2F;error.log&quot; failed (2: No such file or directory)</span><br><span class="line">2016&#x2F;09&#x2F;13 19:08:56 [emerg] 6996#0: open() &quot;&#x2F;usr&#x2F;local&#x2F;nginx&#x2F;logs&#x2F;access.log&quot; failed (2: No such file or directory)</span><br></pre></td></tr></table></figure>
-<p>原因分析：nginx/目录下没有logs文件夹</p>
-<p><code>**解决方法**</code>：</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">mkdir logs</span><br><span class="line">chmod 700 logs</span><br></pre></td></tr></table></figure>
-
-<p>正常情况的信息输出：</p>
-<p>nginx: the configuration file /usr/local/nginx/conf/nginx.conf syntax is ok<br>nginx: configuration file /usr/local/nginx/conf/nginx.conf test is successful</p>
-<p>启动nginx </p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">cd &#x2F;usr&#x2F;local&#x2F;nginx&#x2F;sbin</span><br><span class="line">.&#x2F;nginx &#x2F;&#x2F;启动nginx</span><br></pre></td></tr></table></figure>
-
-<p>在浏览器中输入服务器的ip地址，如：<a target="_blank" rel="noopener" href="http://localhost/">http://localhost</a></p>
-<p>##问题排查：<br>服务器的80端口是打不开的。</p>
-<p>因为我使用的linux系统版本是CentOS7，所以可以在服务器中执行如下命令来验证</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">firewall-cmd --query-port&#x3D;80&#x2F;tcp</span><br></pre></td></tr></table></figure>
-<p><img src="https://upload-images.jianshu.io/upload_images/10024246-fd24ff6c7af0da76.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240"></p>
-<p>显然80端口没有开启。</p>
-<p>下面我们开启80端口：</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">firewall-cmd --add-port&#x3D;80&#x2F;tcp --permanent</span><br><span class="line">#重启防火墙</span><br><span class="line">systemctl restart firewalld&lt;&#x2F;pre&gt;</span><br><span class="line"></span><br></pre></td></tr></table></figure>
-<p> –permanent   #永久生效，没有此参数重启后失效<br>   <img src="https://upload-images.jianshu.io/upload_images/10024246-ac48aec75fe6b5c3.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240"></p>
-<p>刷新浏览器</p>
-<p><img src="https://upload-images.jianshu.io/upload_images/10024246-3209134f65b0a8f5.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240"></p>
-<p><strong>====================== 分割线 ====================</strong></p>
-<p>配置完毕！</p>
-<p>2、配置nginx开机自启动</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">vim &#x2F;etc&#x2F;rc.d&#x2F;rc.local&lt;&#x2F;pre&gt;</span><br></pre></td></tr></table></figure>
-<p><img src="https://upload-images.jianshu.io/upload_images/10024246-475fc49e832b0290.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="image"></p>
+          <p>买了 ss （shadowsocks）帐号，装了 ss 代理的软件，浏览器上也装了代理的插件，一直用的都挺好的，但是最近遇到了一些情况</p>
+<p>情况1：最近网络抽风，网页上访问 github 还好，但是在终端里，git clone 一个 repository，或者在 webstorm 中检出一个 github 上的repository，那是相当的痛苦</p>
+<p>情况2：同事在安装 brew 的过程中，需要下载 github 上的repository，于是遭受了和上面一样的痛苦</p>
+<p>不仅仅如此，为了解决类似的麻烦，很多人使用了 cnpm（淘宝出的代替 npm 的工具），或者更换各种包仓库的地址为国内镜像的地址，归根到底为一个原因，终端里的命令：诸如 wget，curl，git ，npm 等等，不好设置代理翻墙。</p>
+<p>经过本人的探索，找出了一条解决之道，先不说麻不麻烦，总归是解决了长久以来困扰自己的问题</p>
+<p>你所需要的，要有一个 ss 帐号，mac 上安装 shadowsocksX，已设置本地代理：socks5：127.0.0.1：1080</p>
+<p>还需要另外一个神器：proxifier</p>
+<p>举个例子，在终端里 git clone 一个repository，究竟是什么程序发起了网络请求，我现在可以直接告诉你答案，是 git-remote-https，请求 github.com:443，使用proxifier，就可以做到这一点，定位到是什么程序，请求的 host 以及 port，并且给它设置代理</p>
+<p>下面这张图就是proxifier的庐山真面目了<br><img src="http://upload-images.jianshu.io/upload_images/10024246-fd097bed09c20d84.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="1515804585324.jpg"><br>上面的日志给出了详细的解释<br>当我在终端里敲下 npm install xxx，对应的就是 node 请求 registry.npmjs.org:443<br>当我在webstorm中设置 github 帐户的时候，对应的是 webstorm，请求 api.github.com:443<br>当我在 git clone repository的时候，对应的是git-remote-https 请求 github.com:443</p>
+<p>第一步：你得在shadowsocksX中开启 socks5 的本地代理，这是最重要的前提<br>第二步：在proxifier使用第一步设置的代理，如下图所示<br><img src="http://upload-images.jianshu.io/upload_images/10024246-92b4c7cb079bde84.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="1515804585324.jpg"><br>第三步：设置代理规则<br>image_1b4og01u91alg1ggk1mh51omdurr1g.png-479.7kB</p>
+<p>解释一下我所设置的规则：<br>image_1b4og4c2k2i6j8b1jdjd03has1t.png-185.6kB<br>规则匹配的顺序是从上往下的 </p>
+<ol>
+<li>生效的第一条规则是shadowsocksX，因为我们的代理就是靠这个程序的，所以不能让它自己代理自己，否则proxifier 会报无限循环，动作选 direct </li>
+<li>规则 github，这里也并没有指定程序git-remote-https，因为 像 webstorm等 GUI 之流，也会访问 github：443的请求，所以不指定程序，只限制 主机和端口，应用范围就不限于终端了 </li>
+<li>规则 node，解决 npm install 的代理，可以不用 cnpm 了 </li>
+<li>规则 brew，解决终端下使用 brew 安装 package 的代理 </li>
+<li>规则 google-analytics，，解决终端下使用 brew 安装 package 的代理 </li>
+<li>规则 default，不能删除，当匹配不到任何规则的时候，使用该规则</li>
+</ol>
+<p>任何一个连接请求，从上往下匹配，匹配到了，就会停止<br>以上就是我摸索出来的方法，如果 ss 速度快的话，相信我，你会开心死的</p>
+<p>一言以蔽之，如果你在终端中发起了网络请求速度很慢的话，可以先把 default 规则，设置为socks5代理（只有设置为代理，日志才会记录），然后分析一下请求的 host：port，然后就可以添加规则了，这样的话，就做到只给部分请求走代理，如果你觉得这样很麻烦，<br>也可以简单粗暴的，将 default 规则设置为 socks5代理，其余的规则全部禁用，那就是全部的请求走代理</p>
+<p><a target="_blank" rel="noopener" href="https://pan.baidu.com/s/1qYdGRBA">Mac 版 shadowsocksX 和 proxifier 下载</a></p>
 
       
     </div>
@@ -1475,7 +952,7 @@ iptables服务命令</li>
   
 
   <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="">
-    <link itemprop="mainEntityOfPage" href="https://lzhwweb.github.io/nirvana/linux/linux/linux%E4%B8%8B%E6%A3%80%E6%9F%A5%E6%98%AF%E5%90%A6%E5%AE%89%E8%A3%85%E8%BF%87%E6%9F%90%E8%BD%AF%E4%BB%B6%E5%8C%85/">
+    <link itemprop="mainEntityOfPage" href="https://lzhwweb.github.io/nirvana/reactnative/react-native/React-Native-1px%E5%A4%84%E7%90%86/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="image" content="/nirvana/images/headphoto.jpeg">
@@ -1488,7 +965,7 @@ iptables服务命令</li>
     </span>
       <header class="post-header">
         <h2 class="post-title" itemprop="name headline">
-          <a href="/nirvana/linux/linux/linux%E4%B8%8B%E6%A3%80%E6%9F%A5%E6%98%AF%E5%90%A6%E5%AE%89%E8%A3%85%E8%BF%87%E6%9F%90%E8%BD%AF%E4%BB%B6%E5%8C%85/" class="post-title-link" itemprop="url">linux下检查是否安装过某软件包</a>
+          <a href="/nirvana/reactnative/react-native/React-Native-1px%E5%A4%84%E7%90%86/" class="post-title-link" itemprop="url">React-Native-1px处理</a>
         </h2>
 
         <div class="post-meta-container">
@@ -1498,28 +975,22 @@ iptables服务命令</li>
         <i class="far fa-calendar"></i>
       </span>
       <span class="post-meta-item-text">发表于</span>
+      
 
-      <time title="创建时间：2021-03-09 21:12:40" itemprop="dateCreated datePublished" datetime="2021-03-09T21:12:40+08:00">2021-03-09</time>
+      <time title="创建时间：2021-03-10 21:12:40 / 修改时间：13:43:55" itemprop="dateCreated datePublished" datetime="2021-03-10T21:12:40+08:00">2021-03-10</time>
     </span>
-      <span class="post-meta-item">
-        <span class="post-meta-item-icon">
-          <i class="far fa-calendar-check"></i>
-        </span>
-        <span class="post-meta-item-text">更新于</span>
-        <time title="修改时间：2021-03-10 13:43:55" itemprop="dateModified" datetime="2021-03-10T13:43:55+08:00">2021-03-10</time>
-      </span>
     <span class="post-meta-item">
       <span class="post-meta-item-icon">
         <i class="far fa-folder"></i>
       </span>
       <span class="post-meta-item-text">分类于</span>
         <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-          <a href="/nirvana/categories/linux/" itemprop="url" rel="index"><span itemprop="name">linux</span></a>
+          <a href="/nirvana/categories/reactnative/" itemprop="url" rel="index"><span itemprop="name">reactnative</span></a>
         </span>
     </span>
 
   
-    <span id="/nirvana/linux/linux/linux%E4%B8%8B%E6%A3%80%E6%9F%A5%E6%98%AF%E5%90%A6%E5%AE%89%E8%A3%85%E8%BF%87%E6%9F%90%E8%BD%AF%E4%BB%B6%E5%8C%85/" class="post-meta-item leancloud_visitors" data-flag-title="linux下检查是否安装过某软件包" title="阅读次数">
+    <span id="/nirvana/reactnative/react-native/React-Native-1px%E5%A4%84%E7%90%86/" class="post-meta-item leancloud_visitors" data-flag-title="React-Native-1px处理" title="阅读次数">
       <span class="post-meta-item-icon">
         <i class="far fa-eye"></i>
       </span>
@@ -1533,7 +1004,7 @@ iptables服务命令</li>
         <i class="far fa-file-word"></i>
       </span>
       <span class="post-meta-item-text">本文字数：</span>
-      <span>262</span>
+      <span>220</span>
     </span>
     <span class="post-meta-item" title="阅读时长">
       <span class="post-meta-item-icon">
@@ -1551,13 +1022,8 @@ iptables服务命令</li>
     
     
     <div class="post-body" itemprop="articleBody">
-          <p>1、rpm包安装的，可以用 rpm -qa 看到，如果要查找某软件包是否安装，用** rpm -qa | grep “软件或者包的名字”**</p>
-<p>2、以deb包安装的，可以用 dpkg -l 看到。如果是查找指定软件包，用 <strong>dpkg -l | grep “软件或者包的名字”</strong></p>
-<p>3、yum方法安装的，可以用 yum list installed 查找，如果是查找指定包，用 <strong>yum list installed | grep “软件名或者包名”</strong></p>
-<p><strong>举例：查看是否安装了gcc</strong></p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">yum list installed | grep &quot;gcc&quot;</span><br></pre></td></tr></table></figure>
-<p>安装gcc</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">yum -y install gcc</span><br></pre></td></tr></table></figure>
+          <p>当UI设计图上标注某间距为1px时，只需在间距设置的地方填如下值：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line">import &#123;</span><br><span class="line">  View,</span><br><span class="line">  StyleSheet,</span><br><span class="line">  PixelRatio, </span><br><span class="line">&#125; from &#39;react-native&#39;</span><br><span class="line">&#x2F;&#x2F;要用到 PixelRatio.get() 则需从react-native组件中引用 PixelRatio</span><br><span class="line">1px:&#123;</span><br><span class="line">        height:1 &#x2F; PixelRatio.get()</span><br><span class="line">    &#125;</span><br></pre></td></tr></table></figure>
 
       
     </div>
@@ -1584,7 +1050,7 @@ iptables服务命令</li>
   
 
   <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="">
-    <link itemprop="mainEntityOfPage" href="https://lzhwweb.github.io/nirvana/linux/linux/nginx%E6%97%A5%E5%B8%B8%E7%BB%B4%E6%8A%A4%E5%B8%B8%E7%94%A8%E5%91%BD%E4%BB%A4/">
+    <link itemprop="mainEntityOfPage" href="https://lzhwweb.github.io/nirvana/reactnative/react-native/React-Native-%E5%9F%BA%E6%9C%AC%E5%91%BD%E4%BB%A4%E6%B1%87%E6%80%BB/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="image" content="/nirvana/images/headphoto.jpeg">
@@ -1597,7 +1063,7 @@ iptables服务命令</li>
     </span>
       <header class="post-header">
         <h2 class="post-title" itemprop="name headline">
-          <a href="/nirvana/linux/linux/nginx%E6%97%A5%E5%B8%B8%E7%BB%B4%E6%8A%A4%E5%B8%B8%E7%94%A8%E5%91%BD%E4%BB%A4/" class="post-title-link" itemprop="url">nginx日常维护常用命令</a>
+          <a href="/nirvana/reactnative/react-native/React-Native-%E5%9F%BA%E6%9C%AC%E5%91%BD%E4%BB%A4%E6%B1%87%E6%80%BB/" class="post-title-link" itemprop="url">React-Native-基本命令汇总</a>
         </h2>
 
         <div class="post-meta-container">
@@ -1607,28 +1073,22 @@ iptables服务命令</li>
         <i class="far fa-calendar"></i>
       </span>
       <span class="post-meta-item-text">发表于</span>
+      
 
-      <time title="创建时间：2021-03-09 21:12:40" itemprop="dateCreated datePublished" datetime="2021-03-09T21:12:40+08:00">2021-03-09</time>
+      <time title="创建时间：2021-03-10 21:12:40 / 修改时间：13:43:55" itemprop="dateCreated datePublished" datetime="2021-03-10T21:12:40+08:00">2021-03-10</time>
     </span>
-      <span class="post-meta-item">
-        <span class="post-meta-item-icon">
-          <i class="far fa-calendar-check"></i>
-        </span>
-        <span class="post-meta-item-text">更新于</span>
-        <time title="修改时间：2021-03-20 23:53:47" itemprop="dateModified" datetime="2021-03-20T23:53:47+08:00">2021-03-20</time>
-      </span>
     <span class="post-meta-item">
       <span class="post-meta-item-icon">
         <i class="far fa-folder"></i>
       </span>
       <span class="post-meta-item-text">分类于</span>
         <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-          <a href="/nirvana/categories/linux/" itemprop="url" rel="index"><span itemprop="name">linux</span></a>
+          <a href="/nirvana/categories/reactnative/" itemprop="url" rel="index"><span itemprop="name">reactnative</span></a>
         </span>
     </span>
 
   
-    <span id="/nirvana/linux/linux/nginx%E6%97%A5%E5%B8%B8%E7%BB%B4%E6%8A%A4%E5%B8%B8%E7%94%A8%E5%91%BD%E4%BB%A4/" class="post-meta-item leancloud_visitors" data-flag-title="nginx日常维护常用命令" title="阅读次数">
+    <span id="/nirvana/reactnative/react-native/React-Native-%E5%9F%BA%E6%9C%AC%E5%91%BD%E4%BB%A4%E6%B1%87%E6%80%BB/" class="post-meta-item leancloud_visitors" data-flag-title="React-Native-基本命令汇总" title="阅读次数">
       <span class="post-meta-item-icon">
         <i class="far fa-eye"></i>
       </span>
@@ -1642,14 +1102,14 @@ iptables服务命令</li>
         <i class="far fa-file-word"></i>
       </span>
       <span class="post-meta-item-text">本文字数：</span>
-      <span>3.2k</span>
+      <span>8k</span>
     </span>
     <span class="post-meta-item" title="阅读时长">
       <span class="post-meta-item-icon">
         <i class="far fa-clock"></i>
       </span>
       <span class="post-meta-item-text">阅读时长 &asymp;</span>
-      <span>3 分钟</span>
+      <span>7 分钟</span>
     </span>
 </div>
 
@@ -1660,36 +1120,300 @@ iptables服务命令</li>
     
     
     <div class="post-body" itemprop="articleBody">
-          <p>这篇文章主要介绍了nginx日常维护如nginx启动、重启、关闭等常用命令,需要的朋友可以参考下</p>
-<h2 id="一、简明nginx常用命令"><a href="#一、简明nginx常用命令" class="headerlink" title="一、简明nginx常用命令"></a><strong>一、简明nginx常用命令</strong></h2><h5 id="1-启动-Nginx"><a href="#1-启动-Nginx" class="headerlink" title="1. 启动 Nginx"></a>1. 启动 Nginx</h5><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">@ubuntu:sudo .&#x2F;sbin&#x2F;nginx</span><br></pre></td></tr></table></figure>
-<h5 id="2-停止-Nginx"><a href="#2-停止-Nginx" class="headerlink" title="2. 停止 Nginx"></a>2. 停止 Nginx</h5><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">@ubuntu:sudo .&#x2F;sbin&#x2F;nginx -s stop</span><br><span class="line">@ubuntu:sudo .&#x2F;sbin&#x2F;nginx -s quit</span><br></pre></td></tr></table></figure>
-<p>-s都是采用向 Nginx 发送信号的方式。</p>
-<h5 id="3-Nginx-重载配置"><a href="#3-Nginx-重载配置" class="headerlink" title="3. Nginx 重载配置"></a>3. Nginx 重载配置</h5><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">@ubuntu:sudo .&#x2F;sbin&#x2F;nginx -s reload</span><br></pre></td></tr></table></figure>
-<p>上述是采用向 Nginx 发送信号的方式，或者使用：</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">@ubuntu:service nginx reload</span><br></pre></td></tr></table></figure>
-<h5 id="4-指定配置文件"><a href="#4-指定配置文件" class="headerlink" title="4. 指定配置文件"></a>4. 指定配置文件</h5><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">@ubuntu:sudo .&#x2F;sbin&#x2F;nginx -c &#x2F;usr&#x2F;local&#x2F;nginx&#x2F;conf&#x2F;nginx.conf</span><br></pre></td></tr></table></figure>
-<p>-c表示configuration，指定配置文件。</p>
-<h5 id="5-查看-Nginx-版本"><a href="#5-查看-Nginx-版本" class="headerlink" title="5. 查看 Nginx 版本"></a>5. 查看 Nginx 版本</h5><p>有两种可以查看 Nginx 的版本信息的参数。第一种如下：</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">@ubuntu:&#x2F;usr&#x2F;local&#x2F;nginx$ .&#x2F;sbin&#x2F;nginx -v</span><br><span class="line">nginx: nginx version: nginx&#x2F;1.0.0</span><br></pre></td></tr></table></figure>
-<p>另一种显示的是详细的版本信息：</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">@ubuntu:&#x2F;usr&#x2F;local&#x2F;nginx$ .&#x2F;sbin&#x2F;nginx -V</span><br><span class="line">nginx: nginx version: nginx&#x2F;1.0.0</span><br><span class="line">nginx: built by gcc 4.3.3 (Ubuntu 4.3.3-5ubuntu4) </span><br><span class="line">nginx: TLS SNI support enabled</span><br><span class="line">nginx: configure arguments: --with-http_ssl_module --with-openssl&#x3D;&#x2F;home&#x2F;luming&#x2F;openssl-1.0.0d&#x2F;</span><br></pre></td></tr></table></figure>
-<h5 id="6-检查配置文件是否正确"><a href="#6-检查配置文件是否正确" class="headerlink" title="6. 检查配置文件是否正确"></a>6. 检查配置文件是否正确</h5><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">@ubuntu:&#x2F;usr&#x2F;local&#x2F;nginx$ .&#x2F;sbin&#x2F;nginx -t</span><br><span class="line">nginx: [alert] could not open error log file: open() &quot;&#x2F;usr&#x2F;local&#x2F;nginx&#x2F;logs&#x2F;error.log&quot; failed (13: Permission denied)</span><br><span class="line">nginx: the configuration file &#x2F;usr&#x2F;local&#x2F;nginx&#x2F;conf&#x2F;nginx.conf syntax is ok</span><br><span class="line">2012&#x2F;01&#x2F;09 16:45:09 [emerg] 23898#0: open() &quot;&#x2F;usr&#x2F;local&#x2F;nginx&#x2F;logs&#x2F;nginx.pid&quot; failed (13: Permission denied)</span><br><span class="line">nginx: configuration file &#x2F;usr&#x2F;local&#x2F;nginx&#x2F;conf&#x2F;nginx.conf test failed</span><br></pre></td></tr></table></figure>
-<p>如果出现如上的提示信息，表示没有访问错误日志文件和进程，可以sudo（super user do）一下：</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line">poerchant@ubuntu:&#x2F;usr&#x2F;local&#x2F;nginx$ sudo .&#x2F;sbin&#x2F;nginx -t</span><br><span class="line">nginx: the configuration file &#x2F;usr&#x2F;local&#x2F;nginx&#x2F;conf&#x2F;nginx.conf syntax is ok</span><br><span class="line">nginx: configuration file &#x2F;usr&#x2F;local&#x2F;nginx&#x2F;conf&#x2F;nginx.conf test is successful</span><br></pre></td></tr></table></figure>
-<p>如果显示如上，则表示配置文件正确。否则，会有相关提示。</p>
-<h5 id="7-显示帮助信息"><a href="#7-显示帮助信息" class="headerlink" title="7. 显示帮助信息"></a>7. 显示帮助信息</h5><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">@ubuntu:&#x2F;user&#x2F;local&#x2F;nginx$ .&#x2F;sbin&#x2F;nginx -h</span><br></pre></td></tr></table></figure>
-<p>或者：</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">@ubuntu:&#x2F;user&#x2F;local&#x2F;nginx$ .&#x2F;sbin&#x2F;nginx -?</span><br></pre></td></tr></table></figure>
-<p>以上这些涵盖了 Nginx 日常维护的所有基本操作，另外还有向 master 进程发送信号的相关命令，我们会在下面看到。</p>
-<h2 id="二、在Linux下通过master发送信号的相关命令"><a href="#二、在Linux下通过master发送信号的相关命令" class="headerlink" title="二、在Linux下通过master发送信号的相关命令"></a>二、在Linux下通过master发送信号的相关命令</h2><h5 id="停止操作"><a href="#停止操作" class="headerlink" title="停止操作"></a><strong>停止操作</strong></h5><p>停止操作是通过向nginx进程发送信号（什么是信号请参阅linux文 章）来进行的</p>
-<p>步骤1：查询nginx主进程号<br>ps -ef | grep nginx<br>在进程列表里 面找master进程，它的编号就是主进程号了。<br>步骤2：发送信号<br>从容停止Nginx：<br>kill -QUIT 主进程号<br>快速停止Nginx：<br>kill -TERM 主进程号<br>强制停止Nginx：<br>pkill -9 nginx</p>
-<p>另外， 若在nginx.conf配置了pid文件存放路径则该文件存放的就是Nginx主进程号，如果没指定则放在nginx的logs目录下。有了pid文 件，我们就不用先查询Nginx的主进程号，而直接向Nginx发送信号了，命令如下：<br>kill -信号类型 ‘/usr/nginx/logs/nginx.pid’ （推荐）</p>
-<h5 id="平滑重启"><a href="#平滑重启" class="headerlink" title="平滑重启"></a><strong>平滑重启</strong></h5><p>如果更改了配置就要重启Nginx，要先关闭Nginx再打开？不是的，可以向Nginx 发送信号，平滑重启。<br>平滑重启命令：<br>kill -HUP 住进称号或进程号文件路径<br>或者使用</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line">nginx -s reload（推荐）</span><br><span class="line">或</span><br><span class="line">&#x2F;usr&#x2F;nginx&#x2F;sbin&#x2F;nginx -s reload</span><br></pre></td></tr></table></figure>
-<p>注意，修改了配置文件后最好先检查一下修改过的配置文件是否正 确，以免重启后Nginx出现错误影响服务器稳定运行。判断Nginx配置是否正确命令如下：<br>nginx -t -c /usr/nginx/conf/nginx.conf<br>或者<br>nginx -t （推荐）<br>或<br>/usr/nginx/sbin/nginx -t</p>
-<h5 id="平滑升级"><a href="#平滑升级" class="headerlink" title="平滑升级"></a><strong>平滑升级</strong></h5><p>如果服务器正在运行的Nginx要进行升级、添加或删除模块时，我们需 要停掉服务器并做相应修改，这样服务器就要在一段时间内停止服务，Nginx可以在不停机的情况下进行各种升级动作而不影响服务器运行。<br>步骤1：<br>如 果升级Nginx程序，先用新程序替换旧程序文件，编译安装的话新程序直接编译到Nginx安装目录中。<br>步 骤2：执行命令<br>kill -USR2 旧版程序的主进程号或进程文件名<br>此时旧的Nginx主进程将会把自己的进程文件改名为.oldbin，然后执行新版 Nginx。新旧Nginx会同市运行，共同处理请求。<br>这时要逐步停止旧版 Nginx，输入命令：<br>kill -WINCH 旧版主进程号<br>慢慢旧的工作进程就都会随着任务执行完毕而退出，新版的Nginx的工作进程会逐渐取代旧版 工作进程。</p>
-<p>此 时，我们可以决定使用新版还是恢复到旧版。<br>不重载配置启动新/旧工作进程<br>kill -HUP 旧/新版主进程号<br>从容关闭旧/新进程<br>kill -QUIT 旧/新主进程号<br>如果此时报错，提示还有进程没有结束就用下面命令先关闭旧/新工作进程，再关闭主进程号：<br>kill -TERM 旧/新工作进程号</p>
-<p>这样下来，如果要恢复到旧版本，只需要上面的几个步 骤都是操作新版主进程号，如果要用新版本就上面的几个步骤都操作旧版主进程号就行了。</p>
+          <p>最近进行React Native的一些优化工作，发现React Native提供了很多简单方便的配置，但是自己一直没有使用过，而且React Native提供了非常好的help功能，会列出对应的说明和example，这边简单整理下一些常用的命令。</p>
+<h2 id="1-查看所有命令-react-native-–help"><a href="#1-查看所有命令-react-native-–help" class="headerlink" title="1. 查看所有命令 react-native –help"></a>1. 查看所有命令 <em><strong>react-native –help</strong></em></h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br></pre></td><td class="code"><pre><span class="line">mac:react-native --help</span><br><span class="line"></span><br><span class="line">  Usage: react-native [options] [command]</span><br><span class="line"></span><br><span class="line">  Options:</span><br><span class="line"></span><br><span class="line">    -V, --version                      output the version number</span><br><span class="line">    -h, --help                         output usage information</span><br><span class="line"></span><br><span class="line">  Commands:</span><br><span class="line"></span><br><span class="line">    start [options]                    starts the webserver</span><br><span class="line">    run-ios [options]                  builds your app and starts it on iOS simulator</span><br><span class="line">    run-android [options]              builds your app and starts it on a connected Android emulator or device</span><br><span class="line">    new-library [options]              generates a native library bridge</span><br><span class="line">    bundle [options]                   builds the javascript bundle for offline use</span><br><span class="line">    unbundle [options]                 builds javascript as &quot;unbundle&quot; for offline use</span><br><span class="line">    eject [options]                    Re-create the iOS and Android folders and native code</span><br><span class="line">    link [options] [packageName]       links all native dependencies (updates native build files)</span><br><span class="line">    unlink [options] &lt;packageName&gt;     unlink native dependency</span><br><span class="line">    install [options] &lt;packageName&gt;    install and link native dependencies</span><br><span class="line">    uninstall [options] &lt;packageName&gt;  uninstall and unlink native dependencies</span><br><span class="line">    upgrade [options]                  upgrade your app&#39;s template files to the latest version; run this after updating the react-native version in your package.json and running npm install</span><br><span class="line">    log-android [options]              starts adb logcat</span><br><span class="line">    log-ios [options]                  starts iOS device syslog tail</span><br><span class="line">    info [options]                     Get relevant version info about OS, toolchain and libraries</span><br></pre></td></tr></table></figure>
+
+<h2 id="2-最常用的启动命令react-native-start"><a href="#2-最常用的启动命令react-native-start" class="headerlink" title="2. 最常用的启动命令react-native start"></a>2. 最常用的启动命令<em><strong>react-native start</strong></em></h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br></pre></td><td class="code"><pre><span class="line">mac:react-native start --help</span><br><span class="line">react-native start [options]</span><br><span class="line">  starts the webserver</span><br><span class="line"></span><br><span class="line">  Options:</span><br><span class="line"></span><br><span class="line">    --port [number]                                                (default: 8081)</span><br><span class="line">    --host [string]                                                (default: )</span><br><span class="line">    --root [list]                                                 add another root(s) to be used by the packager in this project (default: )</span><br><span class="line">    --projectRoots [list]                                         override the root(s) to be used by the packager (default: &#x2F;Users&#x2F;mac&#x2F;mallCategory)</span><br><span class="line">    --assetExts [list]                                            Specify any additional asset extensions to be used by the packager (default: )</span><br><span class="line">    --sourceExts [list]                                           Specify any additional source extensions to be used by the packager (default: )</span><br><span class="line">    --platforms [list]                                            Specify any additional platforms to be used by the packager (default: )</span><br><span class="line">    --providesModuleNodeModules [list]                            Specify any npm packages that import dependencies with providesModule (default: react-native,react-native-windows)</span><br><span class="line">    --max-workers [number]                                        Specifies the maximum number of workers the worker-pool will spawn for transforming files. This defaults to the number of the cores available on your machine.</span><br><span class="line">    --skipflow                                                    Disable flow checks</span><br><span class="line">    --nonPersistent                                               Disable file watcher</span><br><span class="line">    --transformer [string]                                        Specify a custom transformer to be used</span><br><span class="line">    --reset-cache, --resetCache                                   Removes cached files</span><br><span class="line">    --custom-log-reporter-path, --customLogReporterPath [string]  Path to a JavaScript file that exports a log reporter as a replacement for TerminalReporter</span><br><span class="line">    --verbose                                                     Enables logging</span><br><span class="line">    --https                                                       Enables https connections to the server</span><br><span class="line">    --key [path]                                                  Path to custom SSL key</span><br><span class="line">    --cert [path]                                                 Path to custom SSL cert</span><br><span class="line">    --config [string]                                             Path to the CLI configuration file</span><br><span class="line">    -h, --help                                                    output usage information</span><br></pre></td></tr></table></figure>
+
+<h2 id="3-iOS启动命令-react-native-–run-ios"><a href="#3-iOS启动命令-react-native-–run-ios" class="headerlink" title="3. iOS启动命令 react-native –run-ios"></a>3. iOS启动命令 <em><strong>react-native –run-ios</strong></em></h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br></pre></td><td class="code"><pre><span class="line">mac: react-native run-ios --help</span><br><span class="line"></span><br><span class="line">  react-native run-ios [options]</span><br><span class="line">  builds your app and starts it on iOS simulator</span><br><span class="line"></span><br><span class="line">  Options:</span><br><span class="line"></span><br><span class="line">    --simulator [string]      Explicitly set simulator to use (default: iPhone 6)</span><br><span class="line">    --configuration [string]  Explicitly set the scheme configuration to use</span><br><span class="line">    --scheme [string]         Explicitly set Xcode scheme to use</span><br><span class="line">    --project-path [string]   Path relative to project root where the Xcode project (.xcodeproj) lives. The default is &#39;ios&#39;. (default: ios)</span><br><span class="line">    --device [string]         Explicitly set device to use by name.  The value is not required if you have a single device connected.</span><br><span class="line">    --udid [string]           Explicitly set device to use by udid</span><br><span class="line">    --no-packager             Do not launch packager while building</span><br><span class="line">    --verbose                 Do not use xcpretty even if installed</span><br><span class="line">    --config [string]         Path to the CLI configuration file</span><br><span class="line">    -h, --help                output usage information</span><br><span class="line"></span><br><span class="line">  Example usage:</span><br><span class="line"></span><br><span class="line">    Run on a different simulator, e.g. iPhone 5:</span><br><span class="line">    react-native run-ios --simulator &quot;iPhone 5&quot;</span><br><span class="line"></span><br><span class="line">    Pass a non-standard location of iOS directory:</span><br><span class="line">    react-native run-ios --project-path &quot;.&#x2F;app&#x2F;ios&quot;</span><br><span class="line"></span><br><span class="line">    Run on a connected device, e.g. Max&#39;s iPhone:</span><br><span class="line">    react-native run-ios --device &quot;Max&#39;s iPhone&quot;</span><br></pre></td></tr></table></figure>
+<h2 id="4-Android-启动命令-react-native-run-android"><a href="#4-Android-启动命令-react-native-run-android" class="headerlink" title="4. Android 启动命令 react-native run-android"></a>4. Android 启动命令 <em><strong>react-native run-android</strong></em></h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br></pre></td><td class="code"><pre><span class="line">mac: react-native run-android --help</span><br><span class="line"></span><br><span class="line">  react-native run-android [options]</span><br><span class="line">  builds your app and starts it on a connected Android emulator or device</span><br><span class="line"></span><br><span class="line">  Options:</span><br><span class="line"></span><br><span class="line">    --install-debug</span><br><span class="line">    --root [string]           Override the root directory for the android build (which contains the android directory) (default: )</span><br><span class="line">    --flavor [string]         --flavor has been deprecated. Use --variant instead</span><br><span class="line">    --variant [string]</span><br><span class="line">    --appFolder [string]      Specify a different application folder name for the android source. (default: app)</span><br><span class="line">    --appId [string]          Specify an applicationId to launch after build. (default: )</span><br><span class="line">    --appIdSuffix [string]    Specify an applicationIdSuffix to launch after build. (default: )</span><br><span class="line">    --main-activity [string]  Name of the activity to start (default: MainActivity)</span><br><span class="line">    --deviceId [string]       builds your app and starts it on a specific device&#x2F;simulator with the given device id (listed by running &quot;adb devices&quot; on the command line).</span><br><span class="line">    --no-packager             Do not launch packager while building</span><br><span class="line">    --port [number]            (default: 8081)</span><br><span class="line">    --config [string]         Path to the CLI configuration file</span><br><span class="line">    -h, --help                output usage information</span><br></pre></td></tr></table></figure>
+
+<h2 id="5-生成bundle文件-react-native-bundle"><a href="#5-生成bundle文件-react-native-bundle" class="headerlink" title="5. 生成bundle文件 react-native bundle"></a>5. 生成bundle文件 <em><strong>react-native bundle</strong></em></h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br></pre></td><td class="code"><pre><span class="line">mac: react-native bundle --help</span><br><span class="line"></span><br><span class="line">  react-native bundle [options]</span><br><span class="line">  builds the javascript bundle for offline use</span><br><span class="line"></span><br><span class="line">  Options:</span><br><span class="line"></span><br><span class="line">    --entry-file &lt;path&gt;                Path to the root JS file, either absolute or relative to JS root</span><br><span class="line">    --platform [string]                Either &quot;ios&quot; or &quot;android&quot; (default: ios)</span><br><span class="line">    --transformer [string]             Specify a custom transformer to be used</span><br><span class="line">    --dev [boolean]                    If false, warnings are disabled and the bundle is minified (default: true)</span><br><span class="line">    --bundle-output &lt;string&gt;           File name where to store the resulting bundle, ex. &#x2F;tmp&#x2F;groups.bundle</span><br><span class="line">    --bundle-encoding [string]         Encoding the bundle should be written in (https:&#x2F;&#x2F;nodejs.org&#x2F;api&#x2F;buffer.html#buffer_buffer). (default: utf8)</span><br><span class="line">    --max-workers [number]             Specifies the maximum number of workers the worker-pool will spawn for transforming files.This defaults to the number of the cores available on your machine.</span><br><span class="line">    --sourcemap-output [string]        File name where to store the sourcemap file for resulting bundle, ex. &#x2F;tmp&#x2F;groups.map</span><br><span class="line">    --sourcemap-sources-root [string]  Path to make sourcemap&#39;s sources entries relative to, ex. &#x2F;root&#x2F;dir</span><br><span class="line">    --sourcemap-use-absolute-path      Report SourceMapURL using its full path</span><br><span class="line">    --assets-dest [string]             Directory name where to store assets referenced in the bundle</span><br><span class="line">    --verbose                          Enables logging</span><br><span class="line">    --reset-cache                      Removes cached files</span><br><span class="line">    --read-global-cache                Try to fetch transformed JS code from the global cache, if configured.</span><br><span class="line">    --config [string]                  Path to the CLI configuration file</span><br><span class="line">    -h, --help                         output usage information</span><br></pre></td></tr></table></figure>
+<h2 id="5-生成unbundle文件-react-native-unbundle"><a href="#5-生成unbundle文件-react-native-unbundle" class="headerlink" title="5. 生成unbundle文件 react-native unbundle"></a>5. 生成unbundle文件 <em><strong>react-native unbundle</strong></em></h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br></pre></td><td class="code"><pre><span class="line">mac: react-native unbundle --help</span><br><span class="line"></span><br><span class="line">  react-native unbundle [options]</span><br><span class="line">  builds javascript as &quot;unbundle&quot; for offline use</span><br><span class="line"></span><br><span class="line">  Options:</span><br><span class="line"></span><br><span class="line">    --entry-file &lt;path&gt;                Path to the root JS file, either absolute or relative to JS root</span><br><span class="line">    --platform [string]                Either &quot;ios&quot; or &quot;android&quot; (default: ios)</span><br><span class="line">    --transformer [string]             Specify a custom transformer to be used</span><br><span class="line">    --dev [boolean]                    If false, warnings are disabled and the bundle is minified (default: true)</span><br><span class="line">    --bundle-output &lt;string&gt;           File name where to store the resulting bundle, ex. &#x2F;tmp&#x2F;groups.bundle</span><br><span class="line">    --bundle-encoding [string]         Encoding the bundle should be written in (https:&#x2F;&#x2F;nodejs.org&#x2F;api&#x2F;buffer.html#buffer_buffer). (default: utf8)</span><br><span class="line">    --max-workers [number]             Specifies the maximum number of workers the worker-pool will spawn for transforming files.This defaults to the number of the cores available on your machine.</span><br><span class="line">    --sourcemap-output [string]        File name where to store the sourcemap file for resulting bundle, ex. &#x2F;tmp&#x2F;groups.map</span><br><span class="line">    --sourcemap-sources-root [string]  Path to make sourcemap&#39;s sources entries relative to, ex. &#x2F;root&#x2F;dir</span><br><span class="line">    --sourcemap-use-absolute-path      Report SourceMapURL using its full path</span><br><span class="line">    --assets-dest [string]             Directory name where to store assets referenced in the bundle</span><br><span class="line">    --verbose                          Enables logging</span><br><span class="line">    --reset-cache                      Removes cached files</span><br><span class="line">    --read-global-cache                Try to fetch transformed JS code from the global cache, if configured.</span><br><span class="line">    --indexed-unbundle                 Force indexed unbundle file format, even when building for android</span><br><span class="line">    --config [string]                  Path to the CLI configuration file</span><br><span class="line">    -h, --help                         output usage information</span><br></pre></td></tr></table></figure>
+
+<h2 id="6-查看React-Native相关的信息-react-native-info"><a href="#6-查看React-Native相关的信息-react-native-info" class="headerlink" title="6. 查看React Native相关的信息 react-native info"></a>6. 查看React Native相关的信息 <em><strong>react-native info</strong></em></h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><span class="line">mac: react-native info</span><br><span class="line"></span><br><span class="line">Environment:</span><br><span class="line">  OS: macOS High Sierra 10.13.6</span><br><span class="line">  Node: 10.0.0</span><br><span class="line">  Yarn: 1.9.4</span><br><span class="line">  npm: 5.6.0</span><br><span class="line">  Watchman: 4.7.0</span><br><span class="line">  Xcode: Xcode 10.1 Build version 10B61</span><br><span class="line">  Android Studio: 1.4 AI-141.2343393</span><br><span class="line"></span><br><span class="line">Packages: (wanted &#x3D;&gt; installed)</span><br><span class="line">  react: 16.2.0</span><br><span class="line">  react-native: 0.52.0</span><br></pre></td></tr></table></figure>
+
+      
+    </div>
+
+    
+    
+    
+
+    <footer class="post-footer">
+        <div class="post-eof"></div>
+      
+    </footer>
+  </article>
+</div>
+
+
+
+
+    
+
+
+<div class="post-block">
+  
+  
+
+  <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="">
+    <link itemprop="mainEntityOfPage" href="https://lzhwweb.github.io/nirvana/reactnative/react-native/React-native-%E6%8A%80%E6%9C%AF%E5%9C%A8%E5%A3%B9%E9%92%B1%E5%8C%85%E4%B8%AD%E7%9A%84%E5%AE%9E%E8%B7%B5%E5%8F%8A%E4%BC%98%E5%8C%96/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/nirvana/images/headphoto.jpeg">
+      <meta itemprop="name" content="nirvana">
+      <meta itemprop="description" content="个人学习笔记">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="涅槃快乐是金">
+    </span>
+      <header class="post-header">
+        <h2 class="post-title" itemprop="name headline">
+          <a href="/nirvana/reactnative/react-native/React-native-%E6%8A%80%E6%9C%AF%E5%9C%A8%E5%A3%B9%E9%92%B1%E5%8C%85%E4%B8%AD%E7%9A%84%E5%AE%9E%E8%B7%B5%E5%8F%8A%E4%BC%98%E5%8C%96/" class="post-title-link" itemprop="url">React-native-技术在壹钱包中的实践及优化</a>
+        </h2>
+
+        <div class="post-meta-container">
+          <div class="post-meta">
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-calendar"></i>
+      </span>
+      <span class="post-meta-item-text">发表于</span>
+      
+
+      <time title="创建时间：2021-03-10 21:12:40 / 修改时间：13:43:55" itemprop="dateCreated datePublished" datetime="2021-03-10T21:12:40+08:00">2021-03-10</time>
+    </span>
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-folder"></i>
+      </span>
+      <span class="post-meta-item-text">分类于</span>
+        <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+          <a href="/nirvana/categories/reactnative/" itemprop="url" rel="index"><span itemprop="name">reactnative</span></a>
+        </span>
+    </span>
+
+  
+    <span id="/nirvana/reactnative/react-native/React-native-%E6%8A%80%E6%9C%AF%E5%9C%A8%E5%A3%B9%E9%92%B1%E5%8C%85%E4%B8%AD%E7%9A%84%E5%AE%9E%E8%B7%B5%E5%8F%8A%E4%BC%98%E5%8C%96/" class="post-meta-item leancloud_visitors" data-flag-title="React-native-技术在壹钱包中的实践及优化" title="阅读次数">
+      <span class="post-meta-item-icon">
+        <i class="far fa-eye"></i>
+      </span>
+      <span class="post-meta-item-text">阅读次数：</span>
+      <span class="leancloud-visitors-count"></span>
+    </span>
+      </div>
+      <div class="post-meta">
+    <span class="post-meta-item" title="本文字数">
+      <span class="post-meta-item-icon">
+        <i class="far fa-file-word"></i>
+      </span>
+      <span class="post-meta-item-text">本文字数：</span>
+      <span>4k</span>
+    </span>
+    <span class="post-meta-item" title="阅读时长">
+      <span class="post-meta-item-icon">
+        <i class="far fa-clock"></i>
+      </span>
+      <span class="post-meta-item-text">阅读时长 &asymp;</span>
+      <span>4 分钟</span>
+    </span>
+</div>
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+          <p><img src="https://upload-images.jianshu.io/upload_images/10024246-5cee99438e7340ea.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240"></p>
+<p><img src="https://upload-images.jianshu.io/upload_images/10024246-cb00304de33dc6a7.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240"></p>
+<p><img src="https://upload-images.jianshu.io/upload_images/10024246-0be45ffec5a24d23.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240"></p>
+<p><img src="https://upload-images.jianshu.io/upload_images/10024246-438492d08e3f2b1b.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240"></p>
+<p>REACT-NATIVE作为前端框架，到现在大概有三年的时间。我这边先分享一下为什么使用REACT-NATIVE。</p>
+<p>首先REACT-NATIVE的开发效率，使用javaScript开发原生应用，提出Learn Once, Write Anywhere<br>的开发思想。兼容前端的最大优势灵活发布，可以支持线上业务功快速迭代和随时更新发布。又保证了用户体验，整体体验接近原生，远优于Hybrld和Web APP。同时整个框架保持很高的社区热度，自身框架不断的升级优化，有丰富的第三方组件。</p>
+<p><img src="https://upload-images.jianshu.io/upload_images/10024246-9e2b86157dc6a78a.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240"></p>
+<p>我们一开始接触RN是2015年，当时RN刚刚发布，在2015年12月基于0.17版本开发了同时兼容iOS和Android的Demo，整体体验还可以；同时我们一直在关注RN的发展，在2016年9月使用RN0.38版本开发收银台业务，12月份正式上线运行，同时实现了包括bundle拆分，热更新的技术。整体运行了3个月的事件，产品和运营对该技术的体验比较满意和认可，就在公司推进该框架的接入；2017年3月，商城业务接入，5月正式支撑公司大型活动，技术上实现了RN单实例，单文件diff；在2017年我们整个商城业务的主流程全部接入了RN，2018年又接入了理财商城业务。</p>
+<p><img src="https://upload-images.jianshu.io/upload_images/10024246-9beeb7a89b7a3c43.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240"></p>
+<p>壹钱包的应用场景，我们有搜索分类，还有详情、会场、收银台、理财，后面就是我们正在做的5.20的活动，页面活动有很多的，商城里面很多应用，当时统计了一下，一个商品会场里面图片大概600多张，如果是RN原生的技术不优化的话，是无法支持这么大的应用场景，对于REACT-NATIVE我们做了性能优化。</p>
+<p><img src="https://upload-images.jianshu.io/upload_images/10024246-8973f3d7940d9de9.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240"></p>
+<p><img src="https://upload-images.jianshu.io/upload_images/10024246-40029c5e215d9329.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240"></p>
+<p><img src="https://upload-images.jianshu.io/upload_images/10024246-c3cdf376c6f745a6.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240"></p>
+<p>关注过RN的人知道，其实REACT-NATIVE对于安卓的支持较晚，安卓的性能不是很好，所以我们在安卓上进行较深入的优化。<br>RN是通过reactprop和react method两个注解声明暴露给js的属性和方法的，通过react-native init 的工程中rn框架并未进行优化，所有注解的处理是在运行时进行，这是一个非常耗时的过程。此外，通过反射的形式修改属性和调用方法也是不高效的。我们基于rn开源项目，编译出自己的rn库，完成了对注解的编译时优化。rn开源代码中有react prop注解的处理器，只需要开启就行。右边这幅图就是编译过程中生成的优化代码。针对react method注解的优化思路也是类似，我们自己开发出一套注解处理器，并修改rn源码，使优化生效。右边这幅图展示的就是编译阶段生成的优化代码。通过注解的编译时优化，rn框架初始化过程中的关键方法处理速度提升了60倍。</p>
+<p><img src="https://upload-images.jianshu.io/upload_images/10024246-9f76b114a1aeeabc.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240"></p>
+<p>除了注解优化，我们还对rn框架进行了诸多优化。<br>这些措施包括了比如我们在iOS方面的RCTImage改造，支持共享客户端缓存，支持动态注册RN模块，清除日志相关影响，无操作时，尽量不去执行刷新操作。</p>
+<p><img src="https://upload-images.jianshu.io/upload_images/10024246-6437a0f4b2e9fed1.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240"></p>
+<p>RN主要性能瓶颈在Javascript的执行 ，JS也是非常耗时的。RN框架代码是整体比较大，压缩之后大概500多K，如果多个业务接入RN的话，每个业务都打包框架代码时，造成很多资源浪费。业务开发并不关心当前框架是什么版本，只负责业务开发的，我们把框架代码独立更加方便于其他业务进行接入，方便业务进行开发。<br>我们做了JS bundle拆分，分为是框架JS和业务JS，框架JS通过global.react=require（react）,global.reactNative=require（react-native）把react和react-native对象定义为全局变量;业务JS通过webpack替换代码中的react和react-native对象为全局对象，实现RN框架的引入。<br>Bundle拆分后，在执行时还是要合并加载的，单我们不是简单的把框架JS和业务JS直接合并，那样拆分就没有太多意义。我们这边提出了一个新的方案，只加载一个框架JS，因为所有的业务JS执行都是基于框架执行的，加载一个RN框架就可以支撑所有的业务，你不需要再去对每个业务执行框架；对于单独加载框架JS，我们做过统计，哪怕只加载RN框架的话，其实耗时也是很严重的；所以我们加载业务JS都是基于当前的框架去执行的。通过这样的方式我们实现了RN的单实例共享。</p>
+<p><img src="https://upload-images.jianshu.io/upload_images/10024246-276644512e726e96.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240"></p>
+<p>其他方面，我们去JS加载做了一些其他的优化，比如JS moudle加载之后，我们会把它放到这里面，不会重复加载，当有相同业务打开的时候，我们去执行缓存中的JS代码。APP启动的时候，我们预加载RN实例，我们在打开APP的时候，我们先把框架执行，当打开RN业务时，我们这个时候不需要再去执行整个框架，我们直接执行业务代码，这样就会大大提升业务整体的性能，我们对于业务JS进行智能预加载。</p>
+<p><img src="https://upload-images.jianshu.io/upload_images/10024246-6514e5443290fb01.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240"></p>
+<p>我们在商品详情页启动耗时，有一半的业务场景在400毫秒到300毫秒打开，这个能够保证我们的页面完成最基本的要求就是秒开的场景。</p>
+<p><img src="https://upload-images.jianshu.io/upload_images/10024246-2c81b8e6aa60111a.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240"></p>
+<p><img src="https://upload-images.jianshu.io/upload_images/10024246-5e86df631134e037.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240"></p>
+<p>RN一个优势就是支持灵活发布，我们能对业务进行热更新，我们有一个专门管理和发布的平台。我们RN开发统一在git上开发，所有业务放在Git仓库；为了RN打包，我们基于Node开发了自动化打包平台，当需要发布业务的时候，我们通过自动化打包平台，自动化去打包生成业务和框架的zip包，上传到我们的发布系统，发布系统根据新的zip包，进行BSDIFF算法生成增量更新，这样用户更新不需要现在这个新业务zip包，只需要下载diff增量内容，<br>最大限度的降低用户流量，统计下来增量升级流量降低90%以上。这个时候如果我们对应的业务需要打开对应的RN的业务的时候，我们先去读取配置，这个决定你当前的版本是否支持RN，然后打开业务。</p>
+<p><img src="https://upload-images.jianshu.io/upload_images/10024246-0088928e23b9583f.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240"></p>
+<p><img src="https://upload-images.jianshu.io/upload_images/10024246-97cb7ac0864cb890.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240"></p>
+<p>RN支持使用Native组件，但是我们在开发中并不是全部依赖于native组件，自定义组件开发有对应的原则，优先使用Native已有的UI组件，如自定义键盘、密码。减少Native与JS间的交互，如倒计时。JS实现效果不佳或者实现困难，如滚轮选择器（picker）。现有组件无法支持当前业务需求，如列表组件（TableView）。</p>
+<p><img src="https://upload-images.jianshu.io/upload_images/10024246-f1249558ac8b1088.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240"></p>
+<p>RN提供的listview几乎无复用和flatview是基于原生组件的滚动事件进行复用，这样会有一定的延时，原生列表组件在复用上更加高效，所以基于原生组件上，开发了自己的RN列表组件；如图是我们在优化TableView的修改思路。优化过后有非常大的提升。</p>
+<p><img src="https://upload-images.jianshu.io/upload_images/10024246-ba16b2305c7a8815.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240"></p>
+<p>大家看一下这是我们现在REACT-NATIVE实现的业务场景。绿色的就是我们经常看到的所谓的60帧的刷新频率线，现在的页面基本上正常滚动的话，都是在60帧，整体体验是非常接近原生的。</p>
+<p><img src="https://upload-images.jianshu.io/upload_images/10024246-b5cefe1b5284ec2b.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240"></p>
+<p><img src="https://upload-images.jianshu.io/upload_images/10024246-a82a765cd5d68a45.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240"></p>
+<p>RN包括JS，包括Native都需要对异常进行捕获，因为RN异常会造成App的crush，这样对于整体业务体验非常不理想，我们做了对应的捕获方案。</p>
+<p>我们分为两块，一个就是JS异常，还有就是Native异常。JS异常我们使用RN提供的使用ErrorUtils全局捕获异常。Native异常，Android通过SetNativeModuleCallEXceptionHandler捕获；iOS通过捕获RCTCurrentFatalHandler的红屏错误，并监听RCTJavaScriptDidFailToLoadNotification 的异常通知，另外在打开业务时会检测RCTRootView，如果5秒内未加载ContentView也会认为异常。 捕获到异常我们会记录异常灰度，并对业务进行降级跳转到H5页面</p>
+<p><img src="https://upload-images.jianshu.io/upload_images/10024246-da7b7fd0ff3d3957.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240"></p>
+<p>RN框架版本升级，RN开发是2017年开始进行，版本为0382，RN框架升级迭代是非常快的，现在已经到54了；RN的框架升级过程中，框架自己也在解决自己的Bug，性能也是提高很多，稳定性也提升了。Native端框架整体性能、稳定性提升，其中Android布局方式发生了很大的变化<br>；React.js版本由15升级到16，在异常处理，服务端渲染和核心架构方面（引入 Fiber）都有了重大更新。基于此我们要升级我们对应的RN框架，跟上RN整体框架的版本步伐。</p>
+<p><img src="https://upload-images.jianshu.io/upload_images/10024246-9a4ecffbaf5d6cd6.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240"></p>
+<p>下面是RN的框架，上面是我们对应的业务，当我们选择去升级RN的时候，这个时候出现了比较严重的问题，由于它的版本差别太大了，整体业务出现很大问题，38版本下的业务代码无法在52版本运行，52版本的业务代码也无法在38版本上运行；开发那边讨论的时候，同时开展两条业务也不太现实，产品也不同意放弃旧的框架业务，基于此，我们做了一个框架兼容层，去屏蔽掉38和52的框架差异，实现基于一套业务代码能够同时在38和52上面同时运行，对于业务来讲，不需要关注框架的一些差异，只是按照对应的业务开发业务代码。</p>
+<p><img src="https://upload-images.jianshu.io/upload_images/10024246-663c02b507ddb0ef.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240"></p>
+<p>在升级的时候我们查看了了React和React-native的变动日志。React升级变动，废弃React createClass，使用独立包，create-react-class代替。独立React.PropTypes，使用新包prop-types，React-native中使用ViewPropTypes替换View.propTypes 。iOS修改了Native的事件发送机制，由EventDispatcher改为 EventBlock。</p>
+<p><img src="https://upload-images.jianshu.io/upload_images/10024246-2ea6778d0374176f.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240"></p>
+<p>大家可以看到RN框架升级之后，52相对38整体业务有很大的提升，我们现在刚才看到的一个图表，50%的业务我们能够在200毫秒内打开，70%的业务能够在300-400毫秒内，整体业务提升相对以前的38框架大概提升了50%的效果。</p>
+<p><img src="https://upload-images.jianshu.io/upload_images/10024246-9717988db8365892.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240"></p>
+<p><img src="https://upload-images.jianshu.io/upload_images/10024246-c5cb55c11a3e0fbb.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240"></p>
+<p>RN未来的展望，在APP内部业务RN的逐步替换；JS异常定位；RN单页化，现有业务都是通过native打开，造成数据无法共享，通过单页化，业务通过前端自己打开业务；现在RN是Learn once，Write anywhere，现有业务要求我们即存在RN又有对应的H5场景，同一个需求需要开发2遍，开发压力较大，下期目标实现Write once，run anywhere，完成同一套代码支持Web和RN；最后就是我们的对外输出RN的自定义组件和解决方案。</p>
+
+      
+    </div>
+
+    
+    
+    
+
+    <footer class="post-footer">
+        <div class="post-eof"></div>
+      
+    </footer>
+  </article>
+</div>
+
+
+
+
+    
+
+
+<div class="post-block">
+  
+  
+
+  <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="">
+    <link itemprop="mainEntityOfPage" href="https://lzhwweb.github.io/nirvana/reactnative/react-native/Text%E7%BB%84%E4%BB%B6/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/nirvana/images/headphoto.jpeg">
+      <meta itemprop="name" content="nirvana">
+      <meta itemprop="description" content="个人学习笔记">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="涅槃快乐是金">
+    </span>
+      <header class="post-header">
+        <h2 class="post-title" itemprop="name headline">
+          <a href="/nirvana/reactnative/react-native/Text%E7%BB%84%E4%BB%B6/" class="post-title-link" itemprop="url">Text组件</a>
+        </h2>
+
+        <div class="post-meta-container">
+          <div class="post-meta">
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-calendar"></i>
+      </span>
+      <span class="post-meta-item-text">发表于</span>
+      
+
+      <time title="创建时间：2021-03-10 21:12:40 / 修改时间：13:43:55" itemprop="dateCreated datePublished" datetime="2021-03-10T21:12:40+08:00">2021-03-10</time>
+    </span>
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-folder"></i>
+      </span>
+      <span class="post-meta-item-text">分类于</span>
+        <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+          <a href="/nirvana/categories/reactnative/" itemprop="url" rel="index"><span itemprop="name">reactnative</span></a>
+        </span>
+    </span>
+
+  
+    <span id="/nirvana/reactnative/react-native/Text%E7%BB%84%E4%BB%B6/" class="post-meta-item leancloud_visitors" data-flag-title="Text组件" title="阅读次数">
+      <span class="post-meta-item-icon">
+        <i class="far fa-eye"></i>
+      </span>
+      <span class="post-meta-item-text">阅读次数：</span>
+      <span class="leancloud-visitors-count"></span>
+    </span>
+      </div>
+      <div class="post-meta">
+    <span class="post-meta-item" title="本文字数">
+      <span class="post-meta-item-icon">
+        <i class="far fa-file-word"></i>
+      </span>
+      <span class="post-meta-item-text">本文字数：</span>
+      <span>5k</span>
+    </span>
+    <span class="post-meta-item" title="阅读时长">
+      <span class="post-meta-item-icon">
+        <i class="far fa-clock"></i>
+      </span>
+      <span class="post-meta-item-text">阅读时长 &asymp;</span>
+      <span>5 分钟</span>
+    </span>
+</div>
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+          <h2 id="介绍"><a href="#介绍" class="headerlink" title="介绍"></a>介绍</h2><p>该Text组件为React中一个基本组件，该和Android中的TextView组件相类似用来显示基本的文本信息，该控件除了基本的显示布局之外，可以进行嵌套显示，设置样式，以及可以做事件(例如:点击)处理。下面我们来一个实例：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br></pre></td><td class="code"><pre><span class="line">&#x2F;**</span><br><span class="line"> * 进行简单Text组件使用实例</span><br><span class="line"> * Sample React Native App  test.android.js</span><br><span class="line"> * https:&#x2F;&#x2F;github.com&#x2F;facebook&#x2F;react-native</span><br><span class="line"> *&#x2F;</span><br><span class="line">&#39;use strict&#39;;</span><br><span class="line">import React, &#123; Component &#125; from &#39;react&#39;;</span><br><span class="line">import &#123;</span><br><span class="line">  AppRegistry,</span><br><span class="line">  Text,</span><br><span class="line">  View,</span><br><span class="line">  StyleSheet,</span><br><span class="line">&#125; from &#39;react-native&#39;;</span><br><span class="line">var styles &#x3D; StyleSheet.create(&#123;</span><br><span class="line">     titleBase:&#123;</span><br><span class="line">        margin:10,</span><br><span class="line">        textAlign:&#39;center&#39;,</span><br><span class="line">        color:&#39;red&#39;,</span><br><span class="line">        fontSize:28,</span><br><span class="line">        fontFamily:&#39;Cochin&#39;,</span><br><span class="line">     &#125;,</span><br><span class="line">     title:&#123;</span><br><span class="line">        color:&#39;green&#39;,</span><br><span class="line">        fontWeight:&#39;bold&#39;,</span><br><span class="line">     &#125;,</span><br><span class="line">&#125;);</span><br><span class="line">var TestText &#x3D; React.createClass(&#123;</span><br><span class="line">  render: function() &#123;</span><br><span class="line">    return (</span><br><span class="line">      &lt;Text style&#x3D;&#123;styles.titleBase&#125;&gt;</span><br><span class="line">         I am root text!</span><br><span class="line">         &lt;Text style&#x3D;&#123;styles.title&#125;&gt;</span><br><span class="line">              I am chid text!</span><br><span class="line">          &lt;&#x2F;Text&gt;</span><br><span class="line">      &lt;&#x2F;Text&gt;</span><br><span class="line">    );</span><br><span class="line">  &#125;</span><br><span class="line">&#125;);</span><br><span class="line">AppRegistry.registerComponent(&#39;TestText&#39;, () &#x3D;&gt; TestText);</span><br><span class="line"></span><br></pre></td></tr></table></figure>
+
+<p>上述实例采用TextView的嵌套方式，最外层的Text的Style titleBase定义相关风格，内层的风格style定义相关风格，我们可以看到运行效果，如果内层没有重写外层定义的样式，那么内层会进行继承。如果重写了样式，那么内层会根据自己定义的样式进行渲染，该和CSS样式表差不多。</p>
+<h2 id="属性方法-主要一些可用的属性"><a href="#属性方法-主要一些可用的属性" class="headerlink" title="属性方法(主要一些可用的属性)"></a>属性方法(主要一些可用的属性)</h2><ul>
+<li>  ①.allowFontScaling (bool):控制字体是否根据iOS的设置进行自动缩放-iOS平台,Android平台不适用</li>
+<li>  ②.numberOfLines (number):进行设置Text显示文本的行数，如果显示的内容超过了行数，默认其他多余的信息就不会显示了。</li>
+<li>  ③.onLayout (function) 当布局位置发生变动的时候自动进行触发该方法, 其中该function的参数如下: [code lang=”” start=”” highlight=””]{nativeEvent: {layout: {x, y, width, height}}}[/code]</li>
+<li>  ④.onPress (fcuntion) 该方法当文本发生点击的时候调用该方法.</li>
+</ul>
+<h2 id="风格样式"><a href="#风格样式" class="headerlink" title="风格样式"></a>风格样式</h2><ul>
+<li>  1.继承可以使用View组件的所有Style(具体查看<a target="_blank" rel="noopener" href="http://facebook.github.io/react-native/docs/view.html#style">http://facebook.github.io/react-native/docs/view.html#style</a>)</li>
+<li>  2.color:字体颜色</li>
+<li>  3.fontFamily 字体名称</li>
+<li>  4.fontSize 字体大小</li>
+<li>  5.fontStyle 字体风格(normal,italic)</li>
+<li>  6.fontWeight 字体粗细权重(“normal”, ‘bold’, ‘100’, ‘200’, ‘300’, ‘400’, ‘500’, ‘600’, ‘700’, ‘800’, ‘900’)</li>
+<li>  7.textShadowOffset 设置阴影效果{width: number, height: number}</li>
+<li>  8.textShadowRadius 阴影效果圆角</li>
+<li>  9..textShadowColor 阴影效果的颜色</li>
+<li>  10.letterSpacing 字符间距</li>
+<li>  11.lineHeight 行高</li>
+<li>  12.textAlign 文本对其方式(“auto”, ‘left’, ‘right’, ‘center’, ‘justify’)</li>
+<li>  13.textDecorationLine 横线位置 (“none”, ‘underline’, ‘line-through’, ‘underline line-through’)</li>
+<li>  14.textDecorationStyle 线的风格(“solid”, ‘double’, ‘dotted’, ‘dashed’)</li>
+<li>  15.textDecorationColor 线的颜色</li>
+<li>  16.writingDirection 文本方向(“auto”, ‘ltr’, ‘rtl’)</li>
+</ul>
+<h2 id="特别注意点"><a href="#特别注意点" class="headerlink" title="特别注意点"></a>特别注意点</h2><h3 id="嵌套特点"><a href="#嵌套特点" class="headerlink" title="嵌套特点"></a>嵌套特点</h3><p>和Web上面一直的设计方案，我们通过嵌套包裹的方案，相同的属性的文本可以用父标签进行包裹，然后内部特殊的文本采用子标签方案，具体例子如下:</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">&lt;Text style&#x3D;&#123;&#123;fontWeight: &#39;bold&#39;,fontSize:28&#125;&#125;&gt;</span><br><span class="line">      I am bold</span><br><span class="line">      &lt;Text style&#x3D;&#123;&#123;color: &#39;red&#39;&#125;&#125;&gt;</span><br><span class="line">        and red</span><br><span class="line">    &lt;&#x2F;Text&gt;</span><br><span class="line">&lt;&#x2F;Text&gt;</span><br><span class="line"></span><br></pre></td></tr></table></figure>
+
+<p>整体字体格式为bold以及字体大小为28，不过后边的’and red’的字体颜色为红色。</p>
+<h3 id="容器布局规则"><a href="#容器布局规则" class="headerlink" title="容器布局规则"></a>容器布局规则</h3><p>FlexBox(弹性布局),</p>
+<h3 id="样式继承规格"><a href="#样式继承规格" class="headerlink" title="样式继承规格"></a>样式继承规格</h3><p>组件可以嵌套，而且样式还支持继承，也就说父组件定义了相关样式，如果子组件没有重写样式的话，那么该子组件会继承父组件定义的样式。</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br></pre></td><td class="code"><pre><span class="line">&#x2F;**</span><br><span class="line"> *  Text组件实例演示</span><br><span class="line"> * Sample React Native App</span><br><span class="line"> * https:&#x2F;&#x2F;github.com&#x2F;facebook&#x2F;react-native</span><br><span class="line"> *&#x2F;</span><br><span class="line">&#39;use strict&#39;;</span><br><span class="line"></span><br><span class="line">import React, &#123; Component &#125; from &#39;react&#39;;</span><br><span class="line">import &#123;</span><br><span class="line">  AppRegistry,</span><br><span class="line">  Text,</span><br><span class="line">  View,</span><br><span class="line">  StyleSheet,</span><br><span class="line">&#125; from &#39;react-native&#39;;</span><br><span class="line">var TestText &#x3D; React.createClass(&#123;</span><br><span class="line">  render: function() &#123;</span><br><span class="line">    return (</span><br><span class="line">      &lt;View&gt;</span><br><span class="line">       &lt;Text style&#x3D;&#123;&#123;color:&#39;red&#39;&#125;&#125;&gt;</span><br><span class="line">          My Text One  红色。</span><br><span class="line">       &lt;&#x2F;Text&gt;</span><br><span class="line">       &lt;Text style&#x3D;&#123;&#123;color:&#39;green&#39;,fontSize:20&#125;&#125;&gt; My Text Two 绿色和字体大小。&lt;&#x2F;Text&gt;</span><br><span class="line">       &lt;Text style&#x3D;&#123;&#123;color:&#39;green&#39;,fontFamily:&#39;Cochin&#39;&#125;&#125;&gt; My Text Three 绿色和字体名称。&lt;&#x2F;Text&gt;</span><br><span class="line">       &lt;Text style&#x3D;&#123;&#123;color:&#39;pink&#39;,fontWeight:&#39;bold&#39;&#125;&#125;&gt; My Text Four 粉色和加粗。&lt;&#x2F;Text&gt;</span><br><span class="line">       &lt;Text style&#x3D;&#123;&#123;color:&#39;gray&#39;,fontStyle:&#39;italic&#39;&#125;&#125;&gt; My Text Five 灰色和斜体。&lt;&#x2F;Text&gt;</span><br><span class="line">       &lt;Text style&#x3D;&#123;&#123;textAlign:&#39;center&#39;,fontStyle:&#39;italic&#39;&#125;&#125;&gt; My Text Six 居中和斜体。&lt;&#x2F;Text&gt;</span><br><span class="line">       &lt;Text numberOfLines&#x3D;&#123;1&#125; style&#x3D;&#123;&#123;textAlign:&#39;center&#39;,fontStyle:&#39;italic&#39;&#125;&#125;&gt;测试行数My Text Six 居中和斜体。My Text Six 居中和斜体。 My Text Six 居中和斜体。&lt;&#x2F;Text&gt;</span><br><span class="line">       &lt;Text style&#x3D;&#123;&#123;marginLeft:50,marginTop:50,textAlign:&#39;center&#39;,fontStyle:&#39;italic&#39;&#125;&#125;&gt;设置文本的间距,居左，居顶部50&lt;&#x2F;Text&gt;</span><br><span class="line">       &lt;Text numberOfLines&#x3D;&#123;2&#125; style&#x3D;&#123;&#123;lineHeight:50,textAlign:&#39;center&#39;,fontStyle:&#39;italic&#39;&#125;&#125;&gt;</span><br><span class="line">          测试行高 测试行高 测试行高 测试行高 测试行高 测试行高 测试行高 测试行高 测试行高 测试行高 测试行高 </span><br><span class="line">          测试行高 测试行高 测试行高 测试行高 测试行高 测试行高</span><br><span class="line">       &lt;&#x2F;Text&gt;</span><br><span class="line">      &lt;&#x2F;View&gt;</span><br><span class="line">    );</span><br><span class="line">  &#125;</span><br><span class="line">&#125;);</span><br><span class="line">AppRegistry.registerComponent(&#39;TestText&#39;, () &#x3D;&gt; TestText);</span><br><span class="line"></span><br></pre></td></tr></table></figure>
+
+<h2 id="注"><a href="#注" class="headerlink" title="注"></a>注</h2><p>1、在使用Text的过程中，实现文本垂直居中、水平居中的效果（iOS和Android通用）</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br></pre></td><td class="code"><pre><span class="line">&lt;View  style&#x3D;&#123;styles.textView&#125;&gt;</span><br><span class="line">    &lt;Text style&#x3D;&#123;styles.text&#125;&gt; 水平垂直居中&lt;&#x2F;Text&gt;</span><br><span class="line">&lt;&#x2F;View&gt;</span><br><span class="line"></span><br><span class="line">textView:&#123;</span><br><span class="line">  flexDirection:&#39;column&#39;,</span><br><span class="line">  justifyContent:&#39;center&#39;,</span><br><span class="line">  alignItems:&#39;center&#39;,</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">text:&#123;</span><br><span class="line">    fontSize:12,</span><br><span class="line">    color:&#39;#f2f2f2&#39;,</span><br><span class="line">&#125;</span><br><span class="line"></span><br></pre></td></tr></table></figure>
+
+<p>尽量用view去包裹一层Text组件，text组件只负责基础的文字样式，View组件负责对齐方式等。</p>
+<p>2、在Android平台上，Text组件里使用paddingLeft 属性，不好使，直接顶着View了。</p>
+<p>解决方式：1）将paddingLeft放在View属性上;2）将paddingLeft修改为marginLeft</p>
+<p>建议使用第一种方案修改，把对齐方式交给view去处理，Text只负责文本属性的显示。</p>
 
       
     </div>
@@ -1709,7 +1433,7 @@ iptables服务命令</li>
 
 
   <nav class="pagination">
-    <a class="extend prev" rel="prev" href="/nirvana/page/19/"><i class="fa fa-angle-left" aria-label="上一页"></i></a><a class="page-number" href="/nirvana/">1</a><span class="space">&hellip;</span><a class="page-number" href="/nirvana/page/19/">19</a><span class="page-number current">20</span><a class="page-number" href="/nirvana/page/21/">21</a><a class="extend next" rel="next" href="/nirvana/page/21/"><i class="fa fa-angle-right" aria-label="下一页"></i></a>
+    <a class="extend prev" rel="prev" href="/nirvana/page/19/"><i class="fa fa-angle-left" aria-label="上一页"></i></a><a class="page-number" href="/nirvana/">1</a><span class="space">&hellip;</span><a class="page-number" href="/nirvana/page/19/">19</a><span class="page-number current">20</span><a class="page-number" href="/nirvana/page/21/">21</a><span class="space">&hellip;</span><a class="page-number" href="/nirvana/page/25/">25</a><a class="extend next" rel="next" href="/nirvana/page/21/"><i class="fa fa-angle-right" aria-label="下一页"></i></a>
   </nav>
 
 
@@ -1755,14 +1479,14 @@ iptables服务命令</li>
       <i class="fa fa-chart-line"></i>
     </span>
       <span>站点总字数：</span>
-    <span title="站点总字数">595k</span>
+    <span title="站点总字数">736k</span>
   </span>
   <span class="post-meta-item">
     <span class="post-meta-item-icon">
       <i class="fa fa-coffee"></i>
     </span>
       <span>站点阅读时长 &asymp;</span>
-    <span title="站点阅读时长">9:01</span>
+    <span title="站点阅读时长">11:09</span>
   </span>
 </div>
   <div class="powered-by">由 <a href="https://hexo.io/" class="theme-link" rel="noopener" target="_blank">Hexo</a> & <a href="https://theme-next.js.org/" class="theme-link" rel="noopener" target="_blank">NexT.Gemini</a> 强力驱动
