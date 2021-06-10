@@ -1,7 +1,7 @@
 ---
 title: 利用 JSON.stringify 深拷贝的弊端
 date: 2021-04-21 14:45:27
-category: javascript javascript
+category: javascript
 ---
 深拷贝不仅将原对象的各个属性逐个复制出去，而且将原对象各个属性所包含的对象也依次采用深拷贝的方法递归复制到新对象上。
 ```

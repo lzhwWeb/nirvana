@@ -1,7 +1,7 @@
 ---
 title: 关于BABEL
 date: 2021-04-21 14:47:39
-category: javascript javascript
+category: javascript
 ---
 ## 什么是 BABEL
 

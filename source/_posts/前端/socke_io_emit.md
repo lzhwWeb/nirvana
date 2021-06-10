@@ -1,7 +1,7 @@
 ---
 title: socke.io.emit 方法
 date: 2021-04-21 14:41:10
-category: javascript javascript
+category: javascript
 ---
 emit可以很方便的发送数据,例如：
 

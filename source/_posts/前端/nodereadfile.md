@@ -1,7 +1,7 @@
 ---
 title: Nodejs读取目录下的文件并编辑
 date: 2021-04-21 14:27:21
-category: javascript javascript
+category: javascript
 ---
 node下读取和编辑文件都是使用`fs`组件
 ## 引用模块

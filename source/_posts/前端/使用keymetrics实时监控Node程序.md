@@ -1,7 +1,7 @@
 ---
 title: 使用keymetrics实时监控Node.js程序
 date: 2021-04-21 14:34:28
-category: javascript javascript
+category: javascript
 ---
 通过pm2能守护node.js程序永远在线，在实际应用中是非常有必要的。另外，pm2配合keymetrics能实时监控node.js程序的运行，达到监控node.js程序的目的。
 

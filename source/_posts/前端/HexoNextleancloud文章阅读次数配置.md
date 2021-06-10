@@ -1,7 +1,7 @@
 ---
 title: Hexo Next leancloud文章阅读次数配置
 date: 2021-04-21 14:28:48
-category: javascript javascript
+category: javascript
 ---
 # 前言
 

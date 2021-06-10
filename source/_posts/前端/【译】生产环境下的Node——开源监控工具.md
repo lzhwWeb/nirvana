@@ -1,7 +1,7 @@
 ---
 title: 【译】生产环境下的Node.js——开源监控工具
 date: 2021-04-21 14:32:19
-category: javascript javascript
+category: javascript
 ---
 你认为Node.js应用程序可以拥有的最重要的功能是什么？ 是花哨的全文模糊匹配搜索，还是用socket进行实时聊天呢？ 你能告诉我可以添加到Node.js应用中的最高级，最惊人和最吸引人的功能是什么么？
 

@@ -1,7 +1,7 @@
 ---
 title: 你必须知道的CSS权重
 date: 2021-04-21 14:46:40
-category: javascript javascript
+category: javascript
 ---
 # 层叠
 

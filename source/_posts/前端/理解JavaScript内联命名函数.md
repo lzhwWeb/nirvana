@@ -1,7 +1,7 @@
 ---
 title: 理解JavaScript内联命名函数
 date: 2021-04-21 14:37:02
-category: javascript javascript
+category: javascript
 ---
 在使用JavaScript递归调用时，我们往往会在函数内部调用函数自身(通过函数名)，但是当我们改变了定义时所用函数名的指向时，那么这个递归函数指针关联的递归函数也将随之失效。
 ```

@@ -1,7 +1,7 @@
 ---
 title: chrome新增功能：分组和排列
 date: 2021-04-21 14:42:01
-category: javascript javascript
+category: javascript
 ---
 ## 标签页分组
 ---
